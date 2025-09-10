@@ -25,7 +25,7 @@ namespace Google.Cloud.Bigtable.V2 {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "Ch5nb29nbGUvYmlndGFibGUvdjIvdHlwZXMucHJvdG8SEmdvb2dsZS5iaWd0",
-            "YWJsZS52MhofZ29vZ2xlL2FwaS9maWVsZF9iZWhhdmlvci5wcm90byK4EgoE",
+            "YWJsZS52MhofZ29vZ2xlL2FwaS9maWVsZF9iZWhhdmlvci5wcm90byKHGAoE",
             "VHlwZRI0CgpieXRlc190eXBlGAEgASgLMh4uZ29vZ2xlLmJpZ3RhYmxlLnYy",
             "LlR5cGUuQnl0ZXNIABI2CgtzdHJpbmdfdHlwZRgCIAEoCzIfLmdvb2dsZS5i",
             "aWd0YWJsZS52Mi5UeXBlLlN0cmluZ0gAEjQKCmludDY0X3R5cGUYBSABKAsy",
@@ -43,59 +43,79 @@ namespace Google.Cloud.Bigtable.V2 {
             "dHlwZRgEIAEoCzIcLmdvb2dsZS5iaWd0YWJsZS52Mi5UeXBlLk1hcEgAEjQK",
             "CnByb3RvX3R5cGUYDSABKAsyHi5nb29nbGUuYmlndGFibGUudjIuVHlwZS5Q",
             "cm90b0gAEjIKCWVudW1fdHlwZRgOIAEoCzIdLmdvb2dsZS5iaWd0YWJsZS52",
-            "Mi5UeXBlLkVudW1IABqdAQoFQnl0ZXMSOQoIZW5jb2RpbmcYASABKAsyJy5n",
-            "b29nbGUuYmlndGFibGUudjIuVHlwZS5CeXRlcy5FbmNvZGluZxpZCghFbmNv",
+            "Mi5UeXBlLkVudW1IABqzAQoFQnl0ZXMSOQoIZW5jb2RpbmcYASABKAsyJy5n",
+            "b29nbGUuYmlndGFibGUudjIuVHlwZS5CeXRlcy5FbmNvZGluZxpvCghFbmNv",
             "ZGluZxI6CgNyYXcYASABKAsyKy5nb29nbGUuYmlndGFibGUudjIuVHlwZS5C",
-            "eXRlcy5FbmNvZGluZy5SYXdIABoFCgNSYXdCCgoIZW5jb2RpbmcajQIKBlN0",
-            "cmluZxI6CghlbmNvZGluZxgBIAEoCzIoLmdvb2dsZS5iaWd0YWJsZS52Mi5U",
-            "eXBlLlN0cmluZy5FbmNvZGluZxrGAQoIRW5jb2RpbmcSSAoIdXRmOF9yYXcY",
-            "ASABKAsyMC5nb29nbGUuYmlndGFibGUudjIuVHlwZS5TdHJpbmcuRW5jb2Rp",
-            "bmcuVXRmOFJhd0ICGAFIABJICgp1dGY4X2J5dGVzGAIgASgLMjIuZ29vZ2xl",
-            "LmJpZ3RhYmxlLnYyLlR5cGUuU3RyaW5nLkVuY29kaW5nLlV0ZjhCeXRlc0gA",
-            "Gg0KB1V0ZjhSYXc6AhgBGgsKCVV0ZjhCeXRlc0IKCghlbmNvZGluZxr1AQoF",
-            "SW50NjQSOQoIZW5jb2RpbmcYASABKAsyJy5nb29nbGUuYmlndGFibGUudjIu",
-            "VHlwZS5JbnQ2NC5FbmNvZGluZxqwAQoIRW5jb2RpbmcSUgoQYmlnX2VuZGlh",
-            "bl9ieXRlcxgBIAEoCzI2Lmdvb2dsZS5iaWd0YWJsZS52Mi5UeXBlLkludDY0",
-            "LkVuY29kaW5nLkJpZ0VuZGlhbkJ5dGVzSAAaRAoOQmlnRW5kaWFuQnl0ZXMS",
-            "MgoKYnl0ZXNfdHlwZRgBIAEoCzIeLmdvb2dsZS5iaWd0YWJsZS52Mi5UeXBl",
-            "LkJ5dGVzQgoKCGVuY29kaW5nGgYKBEJvb2waCQoHRmxvYXQzMhoJCgdGbG9h",
-            "dDY0GgsKCVRpbWVzdGFtcBoGCgREYXRlGoQBCgZTdHJ1Y3QSNQoGZmllbGRz",
-            "GAEgAygLMiUuZ29vZ2xlLmJpZ3RhYmxlLnYyLlR5cGUuU3RydWN0LkZpZWxk",
-            "GkMKBUZpZWxkEhIKCmZpZWxkX25hbWUYASABKAkSJgoEdHlwZRgCIAEoCzIY",
-            "Lmdvb2dsZS5iaWd0YWJsZS52Mi5UeXBlGjcKBVByb3RvEhgKEHNjaGVtYV9i",
-            "dW5kbGVfaWQYASABKAkSFAoMbWVzc2FnZV9uYW1lGAIgASgJGjMKBEVudW0S",
-            "GAoQc2NoZW1hX2J1bmRsZV9pZBgBIAEoCRIRCgllbnVtX25hbWUYAiABKAka",
-            "NwoFQXJyYXkSLgoMZWxlbWVudF90eXBlGAEgASgLMhguZ29vZ2xlLmJpZ3Rh",
-            "YmxlLnYyLlR5cGUaXwoDTWFwEioKCGtleV90eXBlGAEgASgLMhguZ29vZ2xl",
-            "LmJpZ3RhYmxlLnYyLlR5cGUSLAoKdmFsdWVfdHlwZRgCIAEoCzIYLmdvb2ds",
-            "ZS5iaWd0YWJsZS52Mi5UeXBlGrcDCglBZ2dyZWdhdGUSLAoKaW5wdXRfdHlw",
-            "ZRgBIAEoCzIYLmdvb2dsZS5iaWd0YWJsZS52Mi5UeXBlEjEKCnN0YXRlX3R5",
-            "cGUYAiABKAsyGC5nb29nbGUuYmlndGFibGUudjIuVHlwZUID4EEDEjUKA3N1",
-            "bRgEIAEoCzImLmdvb2dsZS5iaWd0YWJsZS52Mi5UeXBlLkFnZ3JlZ2F0ZS5T",
-            "dW1IABJfChJobGxwcF91bmlxdWVfY291bnQYBSABKAsyQS5nb29nbGUuYmln",
-            "dGFibGUudjIuVHlwZS5BZ2dyZWdhdGUuSHlwZXJMb2dMb2dQbHVzUGx1c1Vu",
-            "aXF1ZUNvdW50SAASNQoDbWF4GAYgASgLMiYuZ29vZ2xlLmJpZ3RhYmxlLnYy",
-            "LlR5cGUuQWdncmVnYXRlLk1heEgAEjUKA21pbhgHIAEoCzImLmdvb2dsZS5i",
-            "aWd0YWJsZS52Mi5UeXBlLkFnZ3JlZ2F0ZS5NaW5IABoFCgNTdW0aBQoDTWF4",
-            "GgUKA01pbhogCh5IeXBlckxvZ0xvZ1BsdXNQbHVzVW5pcXVlQ291bnRCDAoK",
-            "YWdncmVnYXRvckIGCgRraW5kQrQBChZjb20uZ29vZ2xlLmJpZ3RhYmxlLnYy",
-            "QgpUeXBlc1Byb3RvUAFaOGNsb3VkLmdvb2dsZS5jb20vZ28vYmlndGFibGUv",
-            "YXBpdjIvYmlndGFibGVwYjtiaWd0YWJsZXBiqgIYR29vZ2xlLkNsb3VkLkJp",
-            "Z3RhYmxlLlYyygIYR29vZ2xlXENsb3VkXEJpZ3RhYmxlXFYy6gIbR29vZ2xl",
-            "OjpDbG91ZDo6QmlndGFibGU6OlYyYgZwcm90bzM="));
+            "eXRlcy5FbmNvZGluZy5SYXdIABobCgNSYXcSFAoMZXNjYXBlX251bGxzGAEg",
+            "ASgIQgoKCGVuY29kaW5nGqcCCgZTdHJpbmcSOgoIZW5jb2RpbmcYASABKAsy",
+            "KC5nb29nbGUuYmlndGFibGUudjIuVHlwZS5TdHJpbmcuRW5jb2Rpbmca4AEK",
+            "CEVuY29kaW5nEkgKCHV0ZjhfcmF3GAEgASgLMjAuZ29vZ2xlLmJpZ3RhYmxl",
+            "LnYyLlR5cGUuU3RyaW5nLkVuY29kaW5nLlV0ZjhSYXdCAhgBSAASSAoKdXRm",
+            "OF9ieXRlcxgCIAEoCzIyLmdvb2dsZS5iaWd0YWJsZS52Mi5UeXBlLlN0cmlu",
+            "Zy5FbmNvZGluZy5VdGY4Qnl0ZXNIABoNCgdVdGY4UmF3OgIYARolCglVdGY4",
+            "Qnl0ZXMSGAoQbnVsbF9lc2NhcGVfY2hhchgBIAEoCUIKCghlbmNvZGluZxrl",
+            "AgoFSW50NjQSOQoIZW5jb2RpbmcYASABKAsyJy5nb29nbGUuYmlndGFibGUu",
+            "djIuVHlwZS5JbnQ2NC5FbmNvZGluZxqgAgoIRW5jb2RpbmcSUgoQYmlnX2Vu",
+            "ZGlhbl9ieXRlcxgBIAEoCzI2Lmdvb2dsZS5iaWd0YWJsZS52Mi5UeXBlLklu",
+            "dDY0LkVuY29kaW5nLkJpZ0VuZGlhbkJ5dGVzSAASVgoSb3JkZXJlZF9jb2Rl",
+            "X2J5dGVzGAIgASgLMjguZ29vZ2xlLmJpZ3RhYmxlLnYyLlR5cGUuSW50NjQu",
+            "RW5jb2RpbmcuT3JkZXJlZENvZGVCeXRlc0gAGkgKDkJpZ0VuZGlhbkJ5dGVz",
+            "EjYKCmJ5dGVzX3R5cGUYASABKAsyHi5nb29nbGUuYmlndGFibGUudjIuVHlw",
+            "ZS5CeXRlc0ICGAEaEgoQT3JkZXJlZENvZGVCeXRlc0IKCghlbmNvZGluZxoG",
+            "CgRCb29sGgkKB0Zsb2F0MzIaCQoHRmxvYXQ2NBqoAQoJVGltZXN0YW1wEj0K",
+            "CGVuY29kaW5nGAEgASgLMisuZ29vZ2xlLmJpZ3RhYmxlLnYyLlR5cGUuVGlt",
+            "ZXN0YW1wLkVuY29kaW5nGlwKCEVuY29kaW5nEkQKEXVuaXhfbWljcm9zX2lu",
+            "dDY0GAEgASgLMicuZ29vZ2xlLmJpZ3RhYmxlLnYyLlR5cGUuSW50NjQuRW5j",
+            "b2RpbmdIAEIKCghlbmNvZGluZxoGCgREYXRlGpUECgZTdHJ1Y3QSNQoGZmll",
+            "bGRzGAEgAygLMiUuZ29vZ2xlLmJpZ3RhYmxlLnYyLlR5cGUuU3RydWN0LkZp",
+            "ZWxkEjoKCGVuY29kaW5nGAIgASgLMiguZ29vZ2xlLmJpZ3RhYmxlLnYyLlR5",
+            "cGUuU3RydWN0LkVuY29kaW5nGkMKBUZpZWxkEhIKCmZpZWxkX25hbWUYASAB",
+            "KAkSJgoEdHlwZRgCIAEoCzIYLmdvb2dsZS5iaWd0YWJsZS52Mi5UeXBlGtIC",
+            "CghFbmNvZGluZxJHCglzaW5nbGV0b24YASABKAsyMi5nb29nbGUuYmlndGFi",
+            "bGUudjIuVHlwZS5TdHJ1Y3QuRW5jb2RpbmcuU2luZ2xldG9uSAASUgoPZGVs",
+            "aW1pdGVkX2J5dGVzGAIgASgLMjcuZ29vZ2xlLmJpZ3RhYmxlLnYyLlR5cGUu",
+            "U3RydWN0LkVuY29kaW5nLkRlbGltaXRlZEJ5dGVzSAASVwoSb3JkZXJlZF9j",
+            "b2RlX2J5dGVzGAMgASgLMjkuZ29vZ2xlLmJpZ3RhYmxlLnYyLlR5cGUuU3Ry",
+            "dWN0LkVuY29kaW5nLk9yZGVyZWRDb2RlQnl0ZXNIABoLCglTaW5nbGV0b24a",
+            "IwoORGVsaW1pdGVkQnl0ZXMSEQoJZGVsaW1pdGVyGAEgASgMGhIKEE9yZGVy",
+            "ZWRDb2RlQnl0ZXNCCgoIZW5jb2RpbmcaNwoFUHJvdG8SGAoQc2NoZW1hX2J1",
+            "bmRsZV9pZBgBIAEoCRIUCgxtZXNzYWdlX25hbWUYAiABKAkaMwoERW51bRIY",
+            "ChBzY2hlbWFfYnVuZGxlX2lkGAEgASgJEhEKCWVudW1fbmFtZRgCIAEoCRo3",
+            "CgVBcnJheRIuCgxlbGVtZW50X3R5cGUYASABKAsyGC5nb29nbGUuYmlndGFi",
+            "bGUudjIuVHlwZRpfCgNNYXASKgoIa2V5X3R5cGUYASABKAsyGC5nb29nbGUu",
+            "YmlndGFibGUudjIuVHlwZRIsCgp2YWx1ZV90eXBlGAIgASgLMhguZ29vZ2xl",
+            "LmJpZ3RhYmxlLnYyLlR5cGUatwMKCUFnZ3JlZ2F0ZRIsCgppbnB1dF90eXBl",
+            "GAEgASgLMhguZ29vZ2xlLmJpZ3RhYmxlLnYyLlR5cGUSMQoKc3RhdGVfdHlw",
+            "ZRgCIAEoCzIYLmdvb2dsZS5iaWd0YWJsZS52Mi5UeXBlQgPgQQMSNQoDc3Vt",
+            "GAQgASgLMiYuZ29vZ2xlLmJpZ3RhYmxlLnYyLlR5cGUuQWdncmVnYXRlLlN1",
+            "bUgAEl8KEmhsbHBwX3VuaXF1ZV9jb3VudBgFIAEoCzJBLmdvb2dsZS5iaWd0",
+            "YWJsZS52Mi5UeXBlLkFnZ3JlZ2F0ZS5IeXBlckxvZ0xvZ1BsdXNQbHVzVW5p",
+            "cXVlQ291bnRIABI1CgNtYXgYBiABKAsyJi5nb29nbGUuYmlndGFibGUudjIu",
+            "VHlwZS5BZ2dyZWdhdGUuTWF4SAASNQoDbWluGAcgASgLMiYuZ29vZ2xlLmJp",
+            "Z3RhYmxlLnYyLlR5cGUuQWdncmVnYXRlLk1pbkgAGgUKA1N1bRoFCgNNYXga",
+            "BQoDTWluGiAKHkh5cGVyTG9nTG9nUGx1c1BsdXNVbmlxdWVDb3VudEIMCgph",
+            "Z2dyZWdhdG9yQgYKBGtpbmRCtAEKFmNvbS5nb29nbGUuYmlndGFibGUudjJC",
+            "ClR5cGVzUHJvdG9QAVo4Y2xvdWQuZ29vZ2xlLmNvbS9nby9iaWd0YWJsZS9h",
+            "cGl2Mi9iaWd0YWJsZXBiO2JpZ3RhYmxlcGKqAhhHb29nbGUuQ2xvdWQuQmln",
+            "dGFibGUuVjLKAhhHb29nbGVcQ2xvdWRcQmlndGFibGVcVjLqAhtHb29nbGU6",
+            "OkNsb3VkOjpCaWd0YWJsZTo6VjJiBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Bigtable.V2.Type), global::Google.Cloud.Bigtable.V2.Type.Parser, new[]{ "BytesType", "StringType", "Int64Type", "Float32Type", "Float64Type", "BoolType", "TimestampType", "DateType", "AggregateType", "StructType", "ArrayType", "MapType", "ProtoType", "EnumType" }, new[]{ "Kind" }, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Bigtable.V2.Type.Types.Bytes), global::Google.Cloud.Bigtable.V2.Type.Types.Bytes.Parser, new[]{ "Encoding" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Bigtable.V2.Type.Types.Bytes.Types.Encoding), global::Google.Cloud.Bigtable.V2.Type.Types.Bytes.Types.Encoding.Parser, new[]{ "Raw" }, new[]{ "Encoding" }, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Bigtable.V2.Type.Types.Bytes.Types.Encoding.Types.Raw), global::Google.Cloud.Bigtable.V2.Type.Types.Bytes.Types.Encoding.Types.Raw.Parser, null, null, null, null, null)})}),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Bigtable.V2.Type), global::Google.Cloud.Bigtable.V2.Type.Parser, new[]{ "BytesType", "StringType", "Int64Type", "Float32Type", "Float64Type", "BoolType", "TimestampType", "DateType", "AggregateType", "StructType", "ArrayType", "MapType", "ProtoType", "EnumType" }, new[]{ "Kind" }, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Bigtable.V2.Type.Types.Bytes), global::Google.Cloud.Bigtable.V2.Type.Types.Bytes.Parser, new[]{ "Encoding" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Bigtable.V2.Type.Types.Bytes.Types.Encoding), global::Google.Cloud.Bigtable.V2.Type.Types.Bytes.Types.Encoding.Parser, new[]{ "Raw" }, new[]{ "Encoding" }, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Bigtable.V2.Type.Types.Bytes.Types.Encoding.Types.Raw), global::Google.Cloud.Bigtable.V2.Type.Types.Bytes.Types.Encoding.Types.Raw.Parser, new[]{ "EscapeNulls" }, null, null, null, null)})}),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Bigtable.V2.Type.Types.String), global::Google.Cloud.Bigtable.V2.Type.Types.String.Parser, new[]{ "Encoding" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Bigtable.V2.Type.Types.String.Types.Encoding), global::Google.Cloud.Bigtable.V2.Type.Types.String.Types.Encoding.Parser, new[]{ "Utf8Raw", "Utf8Bytes" }, new[]{ "Encoding" }, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Bigtable.V2.Type.Types.String.Types.Encoding.Types.Utf8Raw), global::Google.Cloud.Bigtable.V2.Type.Types.String.Types.Encoding.Types.Utf8Raw.Parser, null, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Bigtable.V2.Type.Types.String.Types.Encoding.Types.Utf8Bytes), global::Google.Cloud.Bigtable.V2.Type.Types.String.Types.Encoding.Types.Utf8Bytes.Parser, null, null, null, null, null)})}),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Bigtable.V2.Type.Types.Int64), global::Google.Cloud.Bigtable.V2.Type.Types.Int64.Parser, new[]{ "Encoding" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Bigtable.V2.Type.Types.Int64.Types.Encoding), global::Google.Cloud.Bigtable.V2.Type.Types.Int64.Types.Encoding.Parser, new[]{ "BigEndianBytes" }, new[]{ "Encoding" }, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Bigtable.V2.Type.Types.Int64.Types.Encoding.Types.BigEndianBytes), global::Google.Cloud.Bigtable.V2.Type.Types.Int64.Types.Encoding.Types.BigEndianBytes.Parser, new[]{ "BytesType" }, null, null, null, null)})}),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Bigtable.V2.Type.Types.String.Types.Encoding.Types.Utf8Bytes), global::Google.Cloud.Bigtable.V2.Type.Types.String.Types.Encoding.Types.Utf8Bytes.Parser, new[]{ "NullEscapeChar" }, null, null, null, null)})}),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Bigtable.V2.Type.Types.Int64), global::Google.Cloud.Bigtable.V2.Type.Types.Int64.Parser, new[]{ "Encoding" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Bigtable.V2.Type.Types.Int64.Types.Encoding), global::Google.Cloud.Bigtable.V2.Type.Types.Int64.Types.Encoding.Parser, new[]{ "BigEndianBytes", "OrderedCodeBytes" }, new[]{ "Encoding" }, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Bigtable.V2.Type.Types.Int64.Types.Encoding.Types.BigEndianBytes), global::Google.Cloud.Bigtable.V2.Type.Types.Int64.Types.Encoding.Types.BigEndianBytes.Parser, new[]{ "BytesType" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Bigtable.V2.Type.Types.Int64.Types.Encoding.Types.OrderedCodeBytes), global::Google.Cloud.Bigtable.V2.Type.Types.Int64.Types.Encoding.Types.OrderedCodeBytes.Parser, null, null, null, null, null)})}),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Bigtable.V2.Type.Types.Bool), global::Google.Cloud.Bigtable.V2.Type.Types.Bool.Parser, null, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Bigtable.V2.Type.Types.Float32), global::Google.Cloud.Bigtable.V2.Type.Types.Float32.Parser, null, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Bigtable.V2.Type.Types.Float64), global::Google.Cloud.Bigtable.V2.Type.Types.Float64.Parser, null, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Bigtable.V2.Type.Types.Timestamp), global::Google.Cloud.Bigtable.V2.Type.Types.Timestamp.Parser, null, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Bigtable.V2.Type.Types.Timestamp), global::Google.Cloud.Bigtable.V2.Type.Types.Timestamp.Parser, new[]{ "Encoding" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Bigtable.V2.Type.Types.Timestamp.Types.Encoding), global::Google.Cloud.Bigtable.V2.Type.Types.Timestamp.Types.Encoding.Parser, new[]{ "UnixMicrosInt64" }, new[]{ "Encoding" }, null, null, null)}),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Bigtable.V2.Type.Types.Date), global::Google.Cloud.Bigtable.V2.Type.Types.Date.Parser, null, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Bigtable.V2.Type.Types.Struct), global::Google.Cloud.Bigtable.V2.Type.Types.Struct.Parser, new[]{ "Fields" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Bigtable.V2.Type.Types.Struct.Types.Field), global::Google.Cloud.Bigtable.V2.Type.Types.Struct.Types.Field.Parser, new[]{ "FieldName", "Type" }, null, null, null, null)}),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Bigtable.V2.Type.Types.Struct), global::Google.Cloud.Bigtable.V2.Type.Types.Struct.Parser, new[]{ "Fields", "Encoding" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Bigtable.V2.Type.Types.Struct.Types.Field), global::Google.Cloud.Bigtable.V2.Type.Types.Struct.Types.Field.Parser, new[]{ "FieldName", "Type" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Bigtable.V2.Type.Types.Struct.Types.Encoding), global::Google.Cloud.Bigtable.V2.Type.Types.Struct.Types.Encoding.Parser, new[]{ "Singleton", "DelimitedBytes", "OrderedCodeBytes" }, new[]{ "Encoding" }, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Bigtable.V2.Type.Types.Struct.Types.Encoding.Types.Singleton), global::Google.Cloud.Bigtable.V2.Type.Types.Struct.Types.Encoding.Types.Singleton.Parser, null, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Bigtable.V2.Type.Types.Struct.Types.Encoding.Types.DelimitedBytes), global::Google.Cloud.Bigtable.V2.Type.Types.Struct.Types.Encoding.Types.DelimitedBytes.Parser, new[]{ "Delimiter" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Bigtable.V2.Type.Types.Struct.Types.Encoding.Types.OrderedCodeBytes), global::Google.Cloud.Bigtable.V2.Type.Types.Struct.Types.Encoding.Types.OrderedCodeBytes.Parser, null, null, null, null, null)})}),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Bigtable.V2.Type.Types.Proto), global::Google.Cloud.Bigtable.V2.Type.Types.Proto.Parser, new[]{ "SchemaBundleId", "MessageName" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Bigtable.V2.Type.Types.Enum), global::Google.Cloud.Bigtable.V2.Type.Types.Enum.Parser, new[]{ "SchemaBundleId", "EnumName" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Bigtable.V2.Type.Types.Array), global::Google.Cloud.Bigtable.V2.Type.Types.Array.Parser, new[]{ "ElementType" }, null, null, null, null),
@@ -116,25 +136,23 @@ namespace Google.Cloud.Bigtable.V2 {
   /// familiarity and consistency across products and features.
   ///
   /// For compatibility with Bigtable's existing untyped APIs, each `Type` includes
-  /// an `Encoding` which describes how to convert to/from the underlying data.
+  /// an `Encoding` which describes how to convert to or from the underlying data.
   ///
-  /// Each encoding also defines the following properties:
+  /// Each encoding can operate in one of two modes:
   ///
-  ///  * Order-preserving: Does the encoded value sort consistently with the
-  ///    original typed value? Note that Bigtable will always sort data based on
-  ///    the raw encoded value, *not* the decoded type.
-  ///     - Example: BYTES values sort in the same order as their raw encodings.
-  ///     - Counterexample: Encoding INT64 as a fixed-width decimal string does
-  ///       *not* preserve sort order when dealing with negative numbers.
-  ///       `INT64(1) > INT64(-1)`, but `STRING("-00001") > STRING("00001)`.
-  ///  * Self-delimiting: If we concatenate two encoded values, can we always tell
-  ///    where the first one ends and the second one begins?
-  ///     - Example: If we encode INT64s to fixed-width STRINGs, the first value
-  ///       will always contain exactly N digits, possibly preceded by a sign.
-  ///     - Counterexample: If we concatenate two UTF-8 encoded STRINGs, we have
-  ///       no way to tell where the first one ends.
-  ///  * Compatibility: Which other systems have matching encoding schemes? For
-  ///    example, does this encoding have a GoogleSQL equivalent? HBase? Java?
+  ///  - Sorted: In this mode, Bigtable guarantees that `Encode(X) &lt;= Encode(Y)`
+  ///    if and only if `X &lt;= Y`. This is useful anywhere sort order is important,
+  ///    for example when encoding keys.
+  ///  - Distinct: In this mode, Bigtable guarantees that if `X != Y` then
+  ///   `Encode(X) != Encode(Y)`. However, the converse is not guaranteed. For
+  ///    example, both `{'foo': '1', 'bar': '2'}` and `{'bar': '2', 'foo': '1'}`
+  ///    are valid encodings of the same JSON value.
+  ///
+  /// The API clearly documents which mode is used wherever an encoding can be
+  /// configured. Each encoding also documents which values are supported in which
+  /// modes. For example, when encoding INT64 as a numeric STRING, negative numbers
+  /// cannot be encoded in sorted mode. This is because `INT64(1) > INT64(-1)`, but
+  /// `STRING("-00001") > STRING("00001")`.
   /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class Type : pb::IMessage<Type>
@@ -1156,7 +1174,7 @@ namespace Google.Cloud.Bigtable.V2 {
         public const int EncodingFieldNumber = 1;
         private global::Google.Cloud.Bigtable.V2.Type.Types.Bytes.Types.Encoding encoding_;
         /// <summary>
-        /// The encoding to use when converting to/from lower level types.
+        /// The encoding to use when converting to or from lower level types.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -1313,7 +1331,7 @@ namespace Google.Cloud.Bigtable.V2 {
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public static partial class Types {
           /// <summary>
-          /// Rules used to convert to/from lower level types.
+          /// Rules used to convert to or from lower level types.
           /// </summary>
           [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
           public sealed partial class Encoding : pb::IMessage<Encoding>
@@ -1555,10 +1573,11 @@ namespace Google.Cloud.Bigtable.V2 {
             [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
             public static partial class Types {
               /// <summary>
-              /// Leaves the value "as-is"
-              /// * Order-preserving? Yes
-              /// * Self-delimiting? No
-              /// * Compatibility? N/A
+              /// Leaves the value as-is.
+              ///
+              /// Sorted mode: all values are supported.
+              ///
+              /// Distinct mode: all values are supported.
               /// </summary>
               [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
               public sealed partial class Raw : pb::IMessage<Raw>
@@ -1595,6 +1614,7 @@ namespace Google.Cloud.Bigtable.V2 {
                 [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
                 [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
                 public Raw(Raw other) : this() {
+                  escapeNulls_ = other.escapeNulls_;
                   _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
                 }
 
@@ -1602,6 +1622,24 @@ namespace Google.Cloud.Bigtable.V2 {
                 [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
                 public Raw Clone() {
                   return new Raw(this);
+                }
+
+                /// <summary>Field number for the "escape_nulls" field.</summary>
+                public const int EscapeNullsFieldNumber = 1;
+                private bool escapeNulls_;
+                /// <summary>
+                /// If set, allows NULL values to be encoded as the empty string "".
+                ///
+                /// The actual empty string, or any value which only contains the
+                /// null byte `0x00`, has one more null byte appended.
+                /// </summary>
+                [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+                public bool EscapeNulls {
+                  get { return escapeNulls_; }
+                  set {
+                    escapeNulls_ = value;
+                  }
                 }
 
                 [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1619,6 +1657,7 @@ namespace Google.Cloud.Bigtable.V2 {
                   if (ReferenceEquals(other, this)) {
                     return true;
                   }
+                  if (EscapeNulls != other.EscapeNulls) return false;
                   return Equals(_unknownFields, other._unknownFields);
                 }
 
@@ -1626,6 +1665,7 @@ namespace Google.Cloud.Bigtable.V2 {
                 [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
                 public override int GetHashCode() {
                   int hash = 1;
+                  if (EscapeNulls != false) hash ^= EscapeNulls.GetHashCode();
                   if (_unknownFields != null) {
                     hash ^= _unknownFields.GetHashCode();
                   }
@@ -1644,6 +1684,10 @@ namespace Google.Cloud.Bigtable.V2 {
                 #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
                   output.WriteRawMessage(this);
                 #else
+                  if (EscapeNulls != false) {
+                    output.WriteRawTag(8);
+                    output.WriteBool(EscapeNulls);
+                  }
                   if (_unknownFields != null) {
                     _unknownFields.WriteTo(output);
                   }
@@ -1654,6 +1698,10 @@ namespace Google.Cloud.Bigtable.V2 {
                 [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
                 [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
                 void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+                  if (EscapeNulls != false) {
+                    output.WriteRawTag(8);
+                    output.WriteBool(EscapeNulls);
+                  }
                   if (_unknownFields != null) {
                     _unknownFields.WriteTo(ref output);
                   }
@@ -1664,6 +1712,9 @@ namespace Google.Cloud.Bigtable.V2 {
                 [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
                 public int CalculateSize() {
                   int size = 0;
+                  if (EscapeNulls != false) {
+                    size += 1 + 1;
+                  }
                   if (_unknownFields != null) {
                     size += _unknownFields.CalculateSize();
                   }
@@ -1675,6 +1726,9 @@ namespace Google.Cloud.Bigtable.V2 {
                 public void MergeFrom(Raw other) {
                   if (other == null) {
                     return;
+                  }
+                  if (other.EscapeNulls != false) {
+                    EscapeNulls = other.EscapeNulls;
                   }
                   _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
                 }
@@ -1691,6 +1745,10 @@ namespace Google.Cloud.Bigtable.V2 {
                       default:
                         _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
                         break;
+                      case 8: {
+                        EscapeNulls = input.ReadBool();
+                        break;
+                      }
                     }
                   }
                 #endif
@@ -1706,6 +1764,10 @@ namespace Google.Cloud.Bigtable.V2 {
                       default:
                         _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
                         break;
+                      case 8: {
+                        EscapeNulls = input.ReadBool();
+                        break;
+                      }
                     }
                   }
                 }
@@ -1776,7 +1838,7 @@ namespace Google.Cloud.Bigtable.V2 {
         public const int EncodingFieldNumber = 1;
         private global::Google.Cloud.Bigtable.V2.Type.Types.String.Types.Encoding encoding_;
         /// <summary>
-        /// The encoding to use when converting to/from lower level types.
+        /// The encoding to use when converting to or from lower level types.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -1933,7 +1995,7 @@ namespace Google.Cloud.Bigtable.V2 {
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public static partial class Types {
           /// <summary>
-          /// Rules used to convert to/from lower level types.
+          /// Rules used to convert to or from lower level types.
           /// </summary>
           [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
           public sealed partial class Encoding : pb::IMessage<Encoding>
@@ -2389,13 +2451,19 @@ namespace Google.Cloud.Bigtable.V2 {
               }
 
               /// <summary>
-              /// UTF-8 encoding
-              /// * Order-preserving? Yes (code point order)
-              /// * Self-delimiting? No
-              /// * Compatibility?
-              ///    - BigQuery Federation `TEXT` encoding
-              ///    - HBase `Bytes.toBytes`
-              ///    - Java `String#getBytes(StandardCharsets.UTF_8)`
+              /// UTF-8 encoding.
+              ///
+              /// Sorted mode:
+              ///  - All values are supported.
+              ///  - Code point order is preserved.
+              ///
+              /// Distinct mode: all values are supported.
+              ///
+              /// Compatible with:
+              ///
+              ///  - BigQuery `TEXT` encoding
+              ///  - HBase `Bytes.toBytes`
+              ///  - Java `String#getBytes(StandardCharsets.UTF_8)`
               /// </summary>
               [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
               public sealed partial class Utf8Bytes : pb::IMessage<Utf8Bytes>
@@ -2432,6 +2500,7 @@ namespace Google.Cloud.Bigtable.V2 {
                 [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
                 [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
                 public Utf8Bytes(Utf8Bytes other) : this() {
+                  nullEscapeChar_ = other.nullEscapeChar_;
                   _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
                 }
 
@@ -2439,6 +2508,31 @@ namespace Google.Cloud.Bigtable.V2 {
                 [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
                 public Utf8Bytes Clone() {
                   return new Utf8Bytes(this);
+                }
+
+                /// <summary>Field number for the "null_escape_char" field.</summary>
+                public const int NullEscapeCharFieldNumber = 1;
+                private string nullEscapeChar_ = "";
+                /// <summary>
+                /// Single-character escape sequence used to support NULL values.
+                ///
+                /// If set, allows NULL values to be encoded as the empty string "".
+                ///
+                /// The actual empty string, or any value where every character equals
+                /// `null_escape_char`, has one more `null_escape_char` appended.
+                ///
+                /// If `null_escape_char` is set and does not equal the ASCII null
+                /// character `0x00`, then the encoding will not support sorted mode.
+                ///
+                /// .
+                /// </summary>
+                [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+                public string NullEscapeChar {
+                  get { return nullEscapeChar_; }
+                  set {
+                    nullEscapeChar_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+                  }
                 }
 
                 [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -2456,6 +2550,7 @@ namespace Google.Cloud.Bigtable.V2 {
                   if (ReferenceEquals(other, this)) {
                     return true;
                   }
+                  if (NullEscapeChar != other.NullEscapeChar) return false;
                   return Equals(_unknownFields, other._unknownFields);
                 }
 
@@ -2463,6 +2558,7 @@ namespace Google.Cloud.Bigtable.V2 {
                 [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
                 public override int GetHashCode() {
                   int hash = 1;
+                  if (NullEscapeChar.Length != 0) hash ^= NullEscapeChar.GetHashCode();
                   if (_unknownFields != null) {
                     hash ^= _unknownFields.GetHashCode();
                   }
@@ -2481,6 +2577,10 @@ namespace Google.Cloud.Bigtable.V2 {
                 #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
                   output.WriteRawMessage(this);
                 #else
+                  if (NullEscapeChar.Length != 0) {
+                    output.WriteRawTag(10);
+                    output.WriteString(NullEscapeChar);
+                  }
                   if (_unknownFields != null) {
                     _unknownFields.WriteTo(output);
                   }
@@ -2491,6 +2591,10 @@ namespace Google.Cloud.Bigtable.V2 {
                 [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
                 [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
                 void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+                  if (NullEscapeChar.Length != 0) {
+                    output.WriteRawTag(10);
+                    output.WriteString(NullEscapeChar);
+                  }
                   if (_unknownFields != null) {
                     _unknownFields.WriteTo(ref output);
                   }
@@ -2501,6 +2605,9 @@ namespace Google.Cloud.Bigtable.V2 {
                 [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
                 public int CalculateSize() {
                   int size = 0;
+                  if (NullEscapeChar.Length != 0) {
+                    size += 1 + pb::CodedOutputStream.ComputeStringSize(NullEscapeChar);
+                  }
                   if (_unknownFields != null) {
                     size += _unknownFields.CalculateSize();
                   }
@@ -2512,6 +2619,9 @@ namespace Google.Cloud.Bigtable.V2 {
                 public void MergeFrom(Utf8Bytes other) {
                   if (other == null) {
                     return;
+                  }
+                  if (other.NullEscapeChar.Length != 0) {
+                    NullEscapeChar = other.NullEscapeChar;
                   }
                   _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
                 }
@@ -2528,6 +2638,10 @@ namespace Google.Cloud.Bigtable.V2 {
                       default:
                         _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
                         break;
+                      case 10: {
+                        NullEscapeChar = input.ReadString();
+                        break;
+                      }
                     }
                   }
                 #endif
@@ -2543,6 +2657,10 @@ namespace Google.Cloud.Bigtable.V2 {
                       default:
                         _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
                         break;
+                      case 10: {
+                        NullEscapeChar = input.ReadString();
+                        break;
+                      }
                     }
                   }
                 }
@@ -2613,7 +2731,7 @@ namespace Google.Cloud.Bigtable.V2 {
         public const int EncodingFieldNumber = 1;
         private global::Google.Cloud.Bigtable.V2.Type.Types.Int64.Types.Encoding encoding_;
         /// <summary>
-        /// The encoding to use when converting to/from lower level types.
+        /// The encoding to use when converting to or from lower level types.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -2770,7 +2888,7 @@ namespace Google.Cloud.Bigtable.V2 {
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public static partial class Types {
           /// <summary>
-          /// Rules used to convert to/from lower level types.
+          /// Rules used to convert to or from lower level types.
           /// </summary>
           [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
           public sealed partial class Encoding : pb::IMessage<Encoding>
@@ -2811,6 +2929,9 @@ namespace Google.Cloud.Bigtable.V2 {
                 case EncodingOneofCase.BigEndianBytes:
                   BigEndianBytes = other.BigEndianBytes.Clone();
                   break;
+                case EncodingOneofCase.OrderedCodeBytes:
+                  OrderedCodeBytes = other.OrderedCodeBytes.Clone();
+                  break;
               }
 
               _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
@@ -2837,11 +2958,27 @@ namespace Google.Cloud.Bigtable.V2 {
               }
             }
 
+            /// <summary>Field number for the "ordered_code_bytes" field.</summary>
+            public const int OrderedCodeBytesFieldNumber = 2;
+            /// <summary>
+            /// Use `OrderedCodeBytes` encoding.
+            /// </summary>
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public global::Google.Cloud.Bigtable.V2.Type.Types.Int64.Types.Encoding.Types.OrderedCodeBytes OrderedCodeBytes {
+              get { return encodingCase_ == EncodingOneofCase.OrderedCodeBytes ? (global::Google.Cloud.Bigtable.V2.Type.Types.Int64.Types.Encoding.Types.OrderedCodeBytes) encoding_ : null; }
+              set {
+                encoding_ = value;
+                encodingCase_ = value == null ? EncodingOneofCase.None : EncodingOneofCase.OrderedCodeBytes;
+              }
+            }
+
             private object encoding_;
             /// <summary>Enum of possible cases for the "encoding" oneof.</summary>
             public enum EncodingOneofCase {
               None = 0,
               BigEndianBytes = 1,
+              OrderedCodeBytes = 2,
             }
             private EncodingOneofCase encodingCase_ = EncodingOneofCase.None;
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -2873,6 +3010,7 @@ namespace Google.Cloud.Bigtable.V2 {
                 return true;
               }
               if (!object.Equals(BigEndianBytes, other.BigEndianBytes)) return false;
+              if (!object.Equals(OrderedCodeBytes, other.OrderedCodeBytes)) return false;
               if (EncodingCase != other.EncodingCase) return false;
               return Equals(_unknownFields, other._unknownFields);
             }
@@ -2882,6 +3020,7 @@ namespace Google.Cloud.Bigtable.V2 {
             public override int GetHashCode() {
               int hash = 1;
               if (encodingCase_ == EncodingOneofCase.BigEndianBytes) hash ^= BigEndianBytes.GetHashCode();
+              if (encodingCase_ == EncodingOneofCase.OrderedCodeBytes) hash ^= OrderedCodeBytes.GetHashCode();
               hash ^= (int) encodingCase_;
               if (_unknownFields != null) {
                 hash ^= _unknownFields.GetHashCode();
@@ -2905,6 +3044,10 @@ namespace Google.Cloud.Bigtable.V2 {
                 output.WriteRawTag(10);
                 output.WriteMessage(BigEndianBytes);
               }
+              if (encodingCase_ == EncodingOneofCase.OrderedCodeBytes) {
+                output.WriteRawTag(18);
+                output.WriteMessage(OrderedCodeBytes);
+              }
               if (_unknownFields != null) {
                 _unknownFields.WriteTo(output);
               }
@@ -2919,6 +3062,10 @@ namespace Google.Cloud.Bigtable.V2 {
                 output.WriteRawTag(10);
                 output.WriteMessage(BigEndianBytes);
               }
+              if (encodingCase_ == EncodingOneofCase.OrderedCodeBytes) {
+                output.WriteRawTag(18);
+                output.WriteMessage(OrderedCodeBytes);
+              }
               if (_unknownFields != null) {
                 _unknownFields.WriteTo(ref output);
               }
@@ -2931,6 +3078,9 @@ namespace Google.Cloud.Bigtable.V2 {
               int size = 0;
               if (encodingCase_ == EncodingOneofCase.BigEndianBytes) {
                 size += 1 + pb::CodedOutputStream.ComputeMessageSize(BigEndianBytes);
+              }
+              if (encodingCase_ == EncodingOneofCase.OrderedCodeBytes) {
+                size += 1 + pb::CodedOutputStream.ComputeMessageSize(OrderedCodeBytes);
               }
               if (_unknownFields != null) {
                 size += _unknownFields.CalculateSize();
@@ -2950,6 +3100,12 @@ namespace Google.Cloud.Bigtable.V2 {
                     BigEndianBytes = new global::Google.Cloud.Bigtable.V2.Type.Types.Int64.Types.Encoding.Types.BigEndianBytes();
                   }
                   BigEndianBytes.MergeFrom(other.BigEndianBytes);
+                  break;
+                case EncodingOneofCase.OrderedCodeBytes:
+                  if (OrderedCodeBytes == null) {
+                    OrderedCodeBytes = new global::Google.Cloud.Bigtable.V2.Type.Types.Int64.Types.Encoding.Types.OrderedCodeBytes();
+                  }
+                  OrderedCodeBytes.MergeFrom(other.OrderedCodeBytes);
                   break;
               }
 
@@ -2977,6 +3133,15 @@ namespace Google.Cloud.Bigtable.V2 {
                     BigEndianBytes = subBuilder;
                     break;
                   }
+                  case 18: {
+                    global::Google.Cloud.Bigtable.V2.Type.Types.Int64.Types.Encoding.Types.OrderedCodeBytes subBuilder = new global::Google.Cloud.Bigtable.V2.Type.Types.Int64.Types.Encoding.Types.OrderedCodeBytes();
+                    if (encodingCase_ == EncodingOneofCase.OrderedCodeBytes) {
+                      subBuilder.MergeFrom(OrderedCodeBytes);
+                    }
+                    input.ReadMessage(subBuilder);
+                    OrderedCodeBytes = subBuilder;
+                    break;
+                  }
                 }
               }
             #endif
@@ -3001,6 +3166,15 @@ namespace Google.Cloud.Bigtable.V2 {
                     BigEndianBytes = subBuilder;
                     break;
                   }
+                  case 18: {
+                    global::Google.Cloud.Bigtable.V2.Type.Types.Int64.Types.Encoding.Types.OrderedCodeBytes subBuilder = new global::Google.Cloud.Bigtable.V2.Type.Types.Int64.Types.Encoding.Types.OrderedCodeBytes();
+                    if (encodingCase_ == EncodingOneofCase.OrderedCodeBytes) {
+                      subBuilder.MergeFrom(OrderedCodeBytes);
+                    }
+                    input.ReadMessage(subBuilder);
+                    OrderedCodeBytes = subBuilder;
+                    break;
+                  }
                 }
               }
             }
@@ -3012,14 +3186,17 @@ namespace Google.Cloud.Bigtable.V2 {
             [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
             public static partial class Types {
               /// <summary>
-              /// Encodes the value as an 8-byte big endian twos complement `Bytes`
-              /// value.
-              /// * Order-preserving? No (positive values only)
-              /// * Self-delimiting? Yes
-              /// * Compatibility?
-              ///    - BigQuery Federation `BINARY` encoding
-              ///    - HBase `Bytes.toBytes`
-              ///    - Java `ByteBuffer.putLong()` with `ByteOrder.BIG_ENDIAN`
+              /// Encodes the value as an 8-byte big-endian two's complement value.
+              ///
+              /// Sorted mode: non-negative values are supported.
+              ///
+              /// Distinct mode: all values are supported.
+              ///
+              /// Compatible with:
+              ///
+              ///  - BigQuery `BINARY` encoding
+              ///  - HBase `Bytes.toBytes`
+              ///  - Java `ByteBuffer.putLong()` with `ByteOrder.BIG_ENDIAN`
               /// </summary>
               [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
               public sealed partial class BigEndianBytes : pb::IMessage<BigEndianBytes>
@@ -3072,6 +3249,7 @@ namespace Google.Cloud.Bigtable.V2 {
                 /// <summary>
                 /// Deprecated: ignored if set.
                 /// </summary>
+                [global::System.ObsoleteAttribute]
                 [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
                 [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
                 public global::Google.Cloud.Bigtable.V2.Type.Types.Bytes BytesType {
@@ -3216,6 +3394,167 @@ namespace Google.Cloud.Bigtable.V2 {
                         input.ReadMessage(BytesType);
                         break;
                       }
+                    }
+                  }
+                }
+                #endif
+
+              }
+
+              /// <summary>
+              /// Encodes the value in a variable length binary format of up to 10 bytes.
+              /// Values that are closer to zero use fewer bytes.
+              ///
+              /// Sorted mode: all values are supported.
+              ///
+              /// Distinct mode: all values are supported.
+              /// </summary>
+              [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+              public sealed partial class OrderedCodeBytes : pb::IMessage<OrderedCodeBytes>
+              #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+                  , pb::IBufferMessage
+              #endif
+              {
+                private static readonly pb::MessageParser<OrderedCodeBytes> _parser = new pb::MessageParser<OrderedCodeBytes>(() => new OrderedCodeBytes());
+                private pb::UnknownFieldSet _unknownFields;
+                [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+                public static pb::MessageParser<OrderedCodeBytes> Parser { get { return _parser; } }
+
+                [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+                public static pbr::MessageDescriptor Descriptor {
+                  get { return global::Google.Cloud.Bigtable.V2.Type.Types.Int64.Types.Encoding.Descriptor.NestedTypes[1]; }
+                }
+
+                [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+                pbr::MessageDescriptor pb::IMessage.Descriptor {
+                  get { return Descriptor; }
+                }
+
+                [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+                public OrderedCodeBytes() {
+                  OnConstruction();
+                }
+
+                partial void OnConstruction();
+
+                [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+                public OrderedCodeBytes(OrderedCodeBytes other) : this() {
+                  _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+                }
+
+                [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+                public OrderedCodeBytes Clone() {
+                  return new OrderedCodeBytes(this);
+                }
+
+                [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+                public override bool Equals(object other) {
+                  return Equals(other as OrderedCodeBytes);
+                }
+
+                [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+                public bool Equals(OrderedCodeBytes other) {
+                  if (ReferenceEquals(other, null)) {
+                    return false;
+                  }
+                  if (ReferenceEquals(other, this)) {
+                    return true;
+                  }
+                  return Equals(_unknownFields, other._unknownFields);
+                }
+
+                [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+                public override int GetHashCode() {
+                  int hash = 1;
+                  if (_unknownFields != null) {
+                    hash ^= _unknownFields.GetHashCode();
+                  }
+                  return hash;
+                }
+
+                [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+                public override string ToString() {
+                  return pb::JsonFormatter.ToDiagnosticString(this);
+                }
+
+                [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+                public void WriteTo(pb::CodedOutputStream output) {
+                #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+                  output.WriteRawMessage(this);
+                #else
+                  if (_unknownFields != null) {
+                    _unknownFields.WriteTo(output);
+                  }
+                #endif
+                }
+
+                #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+                [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+                void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+                  if (_unknownFields != null) {
+                    _unknownFields.WriteTo(ref output);
+                  }
+                }
+                #endif
+
+                [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+                public int CalculateSize() {
+                  int size = 0;
+                  if (_unknownFields != null) {
+                    size += _unknownFields.CalculateSize();
+                  }
+                  return size;
+                }
+
+                [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+                public void MergeFrom(OrderedCodeBytes other) {
+                  if (other == null) {
+                    return;
+                  }
+                  _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+                }
+
+                [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+                public void MergeFrom(pb::CodedInputStream input) {
+                #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+                  input.ReadRawMessage(this);
+                #else
+                  uint tag;
+                  while ((tag = input.ReadTag()) != 0) {
+                    switch(tag) {
+                      default:
+                        _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+                        break;
+                    }
+                  }
+                #endif
+                }
+
+                #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+                [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+                void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+                  uint tag;
+                  while ((tag = input.ReadTag()) != 0) {
+                    switch(tag) {
+                      default:
+                        _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+                        break;
                     }
                   }
                 }
@@ -3743,6 +4082,7 @@ namespace Google.Cloud.Bigtable.V2 {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public Timestamp(Timestamp other) : this() {
+          encoding_ = other.encoding_ != null ? other.encoding_.Clone() : null;
           _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
         }
 
@@ -3750,6 +4090,21 @@ namespace Google.Cloud.Bigtable.V2 {
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public Timestamp Clone() {
           return new Timestamp(this);
+        }
+
+        /// <summary>Field number for the "encoding" field.</summary>
+        public const int EncodingFieldNumber = 1;
+        private global::Google.Cloud.Bigtable.V2.Type.Types.Timestamp.Types.Encoding encoding_;
+        /// <summary>
+        /// The encoding to use when converting to or from lower level types.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public global::Google.Cloud.Bigtable.V2.Type.Types.Timestamp.Types.Encoding Encoding {
+          get { return encoding_; }
+          set {
+            encoding_ = value;
+          }
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -3767,6 +4122,7 @@ namespace Google.Cloud.Bigtable.V2 {
           if (ReferenceEquals(other, this)) {
             return true;
           }
+          if (!object.Equals(Encoding, other.Encoding)) return false;
           return Equals(_unknownFields, other._unknownFields);
         }
 
@@ -3774,6 +4130,7 @@ namespace Google.Cloud.Bigtable.V2 {
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public override int GetHashCode() {
           int hash = 1;
+          if (encoding_ != null) hash ^= Encoding.GetHashCode();
           if (_unknownFields != null) {
             hash ^= _unknownFields.GetHashCode();
           }
@@ -3792,6 +4149,10 @@ namespace Google.Cloud.Bigtable.V2 {
         #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           output.WriteRawMessage(this);
         #else
+          if (encoding_ != null) {
+            output.WriteRawTag(10);
+            output.WriteMessage(Encoding);
+          }
           if (_unknownFields != null) {
             _unknownFields.WriteTo(output);
           }
@@ -3802,6 +4163,10 @@ namespace Google.Cloud.Bigtable.V2 {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+          if (encoding_ != null) {
+            output.WriteRawTag(10);
+            output.WriteMessage(Encoding);
+          }
           if (_unknownFields != null) {
             _unknownFields.WriteTo(ref output);
           }
@@ -3812,6 +4177,9 @@ namespace Google.Cloud.Bigtable.V2 {
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public int CalculateSize() {
           int size = 0;
+          if (encoding_ != null) {
+            size += 1 + pb::CodedOutputStream.ComputeMessageSize(Encoding);
+          }
           if (_unknownFields != null) {
             size += _unknownFields.CalculateSize();
           }
@@ -3823,6 +4191,12 @@ namespace Google.Cloud.Bigtable.V2 {
         public void MergeFrom(Timestamp other) {
           if (other == null) {
             return;
+          }
+          if (other.encoding_ != null) {
+            if (encoding_ == null) {
+              Encoding = new global::Google.Cloud.Bigtable.V2.Type.Types.Timestamp.Types.Encoding();
+            }
+            Encoding.MergeFrom(other.Encoding);
           }
           _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
         }
@@ -3839,6 +4213,13 @@ namespace Google.Cloud.Bigtable.V2 {
               default:
                 _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
                 break;
+              case 10: {
+                if (encoding_ == null) {
+                  Encoding = new global::Google.Cloud.Bigtable.V2.Type.Types.Timestamp.Types.Encoding();
+                }
+                input.ReadMessage(Encoding);
+                break;
+              }
             }
           }
         #endif
@@ -3854,10 +4235,269 @@ namespace Google.Cloud.Bigtable.V2 {
               default:
                 _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
                 break;
+              case 10: {
+                if (encoding_ == null) {
+                  Encoding = new global::Google.Cloud.Bigtable.V2.Type.Types.Timestamp.Types.Encoding();
+                }
+                input.ReadMessage(Encoding);
+                break;
+              }
             }
           }
         }
         #endif
+
+        #region Nested types
+        /// <summary>Container for nested types declared in the Timestamp message type.</summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public static partial class Types {
+          /// <summary>
+          /// Rules used to convert to or from lower level types.
+          /// </summary>
+          [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+          public sealed partial class Encoding : pb::IMessage<Encoding>
+          #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+              , pb::IBufferMessage
+          #endif
+          {
+            private static readonly pb::MessageParser<Encoding> _parser = new pb::MessageParser<Encoding>(() => new Encoding());
+            private pb::UnknownFieldSet _unknownFields;
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public static pb::MessageParser<Encoding> Parser { get { return _parser; } }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public static pbr::MessageDescriptor Descriptor {
+              get { return global::Google.Cloud.Bigtable.V2.Type.Types.Timestamp.Descriptor.NestedTypes[0]; }
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            pbr::MessageDescriptor pb::IMessage.Descriptor {
+              get { return Descriptor; }
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public Encoding() {
+              OnConstruction();
+            }
+
+            partial void OnConstruction();
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public Encoding(Encoding other) : this() {
+              switch (other.EncodingCase) {
+                case EncodingOneofCase.UnixMicrosInt64:
+                  UnixMicrosInt64 = other.UnixMicrosInt64.Clone();
+                  break;
+              }
+
+              _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public Encoding Clone() {
+              return new Encoding(this);
+            }
+
+            /// <summary>Field number for the "unix_micros_int64" field.</summary>
+            public const int UnixMicrosInt64FieldNumber = 1;
+            /// <summary>
+            /// Encodes the number of microseconds since the Unix epoch using the
+            /// given `Int64` encoding. Values must be microsecond-aligned.
+            ///
+            /// Compatible with:
+            ///
+            ///  - Java `Instant.truncatedTo()` with `ChronoUnit.MICROS`
+            /// </summary>
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public global::Google.Cloud.Bigtable.V2.Type.Types.Int64.Types.Encoding UnixMicrosInt64 {
+              get { return encodingCase_ == EncodingOneofCase.UnixMicrosInt64 ? (global::Google.Cloud.Bigtable.V2.Type.Types.Int64.Types.Encoding) encoding_ : null; }
+              set {
+                encoding_ = value;
+                encodingCase_ = value == null ? EncodingOneofCase.None : EncodingOneofCase.UnixMicrosInt64;
+              }
+            }
+
+            private object encoding_;
+            /// <summary>Enum of possible cases for the "encoding" oneof.</summary>
+            public enum EncodingOneofCase {
+              None = 0,
+              UnixMicrosInt64 = 1,
+            }
+            private EncodingOneofCase encodingCase_ = EncodingOneofCase.None;
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public EncodingOneofCase EncodingCase {
+              get { return encodingCase_; }
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public void ClearEncoding() {
+              encodingCase_ = EncodingOneofCase.None;
+              encoding_ = null;
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public override bool Equals(object other) {
+              return Equals(other as Encoding);
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public bool Equals(Encoding other) {
+              if (ReferenceEquals(other, null)) {
+                return false;
+              }
+              if (ReferenceEquals(other, this)) {
+                return true;
+              }
+              if (!object.Equals(UnixMicrosInt64, other.UnixMicrosInt64)) return false;
+              if (EncodingCase != other.EncodingCase) return false;
+              return Equals(_unknownFields, other._unknownFields);
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public override int GetHashCode() {
+              int hash = 1;
+              if (encodingCase_ == EncodingOneofCase.UnixMicrosInt64) hash ^= UnixMicrosInt64.GetHashCode();
+              hash ^= (int) encodingCase_;
+              if (_unknownFields != null) {
+                hash ^= _unknownFields.GetHashCode();
+              }
+              return hash;
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public override string ToString() {
+              return pb::JsonFormatter.ToDiagnosticString(this);
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public void WriteTo(pb::CodedOutputStream output) {
+            #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+              output.WriteRawMessage(this);
+            #else
+              if (encodingCase_ == EncodingOneofCase.UnixMicrosInt64) {
+                output.WriteRawTag(10);
+                output.WriteMessage(UnixMicrosInt64);
+              }
+              if (_unknownFields != null) {
+                _unknownFields.WriteTo(output);
+              }
+            #endif
+            }
+
+            #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+              if (encodingCase_ == EncodingOneofCase.UnixMicrosInt64) {
+                output.WriteRawTag(10);
+                output.WriteMessage(UnixMicrosInt64);
+              }
+              if (_unknownFields != null) {
+                _unknownFields.WriteTo(ref output);
+              }
+            }
+            #endif
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public int CalculateSize() {
+              int size = 0;
+              if (encodingCase_ == EncodingOneofCase.UnixMicrosInt64) {
+                size += 1 + pb::CodedOutputStream.ComputeMessageSize(UnixMicrosInt64);
+              }
+              if (_unknownFields != null) {
+                size += _unknownFields.CalculateSize();
+              }
+              return size;
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public void MergeFrom(Encoding other) {
+              if (other == null) {
+                return;
+              }
+              switch (other.EncodingCase) {
+                case EncodingOneofCase.UnixMicrosInt64:
+                  if (UnixMicrosInt64 == null) {
+                    UnixMicrosInt64 = new global::Google.Cloud.Bigtable.V2.Type.Types.Int64.Types.Encoding();
+                  }
+                  UnixMicrosInt64.MergeFrom(other.UnixMicrosInt64);
+                  break;
+              }
+
+              _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public void MergeFrom(pb::CodedInputStream input) {
+            #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+              input.ReadRawMessage(this);
+            #else
+              uint tag;
+              while ((tag = input.ReadTag()) != 0) {
+                switch(tag) {
+                  default:
+                    _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+                    break;
+                  case 10: {
+                    global::Google.Cloud.Bigtable.V2.Type.Types.Int64.Types.Encoding subBuilder = new global::Google.Cloud.Bigtable.V2.Type.Types.Int64.Types.Encoding();
+                    if (encodingCase_ == EncodingOneofCase.UnixMicrosInt64) {
+                      subBuilder.MergeFrom(UnixMicrosInt64);
+                    }
+                    input.ReadMessage(subBuilder);
+                    UnixMicrosInt64 = subBuilder;
+                    break;
+                  }
+                }
+              }
+            #endif
+            }
+
+            #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+              uint tag;
+              while ((tag = input.ReadTag()) != 0) {
+                switch(tag) {
+                  default:
+                    _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+                    break;
+                  case 10: {
+                    global::Google.Cloud.Bigtable.V2.Type.Types.Int64.Types.Encoding subBuilder = new global::Google.Cloud.Bigtable.V2.Type.Types.Int64.Types.Encoding();
+                    if (encodingCase_ == EncodingOneofCase.UnixMicrosInt64) {
+                      subBuilder.MergeFrom(UnixMicrosInt64);
+                    }
+                    input.ReadMessage(subBuilder);
+                    UnixMicrosInt64 = subBuilder;
+                    break;
+                  }
+                }
+              }
+            }
+            #endif
+
+          }
+
+        }
+        #endregion
 
       }
 
@@ -4060,6 +4700,7 @@ namespace Google.Cloud.Bigtable.V2 {
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public Struct(Struct other) : this() {
           fields_ = other.fields_.Clone();
+          encoding_ = other.encoding_ != null ? other.encoding_.Clone() : null;
           _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
         }
 
@@ -4083,6 +4724,21 @@ namespace Google.Cloud.Bigtable.V2 {
           get { return fields_; }
         }
 
+        /// <summary>Field number for the "encoding" field.</summary>
+        public const int EncodingFieldNumber = 2;
+        private global::Google.Cloud.Bigtable.V2.Type.Types.Struct.Types.Encoding encoding_;
+        /// <summary>
+        /// The encoding to use when converting to or from lower level types.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public global::Google.Cloud.Bigtable.V2.Type.Types.Struct.Types.Encoding Encoding {
+          get { return encoding_; }
+          set {
+            encoding_ = value;
+          }
+        }
+
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public override bool Equals(object other) {
@@ -4099,6 +4755,7 @@ namespace Google.Cloud.Bigtable.V2 {
             return true;
           }
           if(!fields_.Equals(other.fields_)) return false;
+          if (!object.Equals(Encoding, other.Encoding)) return false;
           return Equals(_unknownFields, other._unknownFields);
         }
 
@@ -4107,6 +4764,7 @@ namespace Google.Cloud.Bigtable.V2 {
         public override int GetHashCode() {
           int hash = 1;
           hash ^= fields_.GetHashCode();
+          if (encoding_ != null) hash ^= Encoding.GetHashCode();
           if (_unknownFields != null) {
             hash ^= _unknownFields.GetHashCode();
           }
@@ -4126,6 +4784,10 @@ namespace Google.Cloud.Bigtable.V2 {
           output.WriteRawMessage(this);
         #else
           fields_.WriteTo(output, _repeated_fields_codec);
+          if (encoding_ != null) {
+            output.WriteRawTag(18);
+            output.WriteMessage(Encoding);
+          }
           if (_unknownFields != null) {
             _unknownFields.WriteTo(output);
           }
@@ -4137,6 +4799,10 @@ namespace Google.Cloud.Bigtable.V2 {
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
           fields_.WriteTo(ref output, _repeated_fields_codec);
+          if (encoding_ != null) {
+            output.WriteRawTag(18);
+            output.WriteMessage(Encoding);
+          }
           if (_unknownFields != null) {
             _unknownFields.WriteTo(ref output);
           }
@@ -4148,6 +4814,9 @@ namespace Google.Cloud.Bigtable.V2 {
         public int CalculateSize() {
           int size = 0;
           size += fields_.CalculateSize(_repeated_fields_codec);
+          if (encoding_ != null) {
+            size += 1 + pb::CodedOutputStream.ComputeMessageSize(Encoding);
+          }
           if (_unknownFields != null) {
             size += _unknownFields.CalculateSize();
           }
@@ -4161,6 +4830,12 @@ namespace Google.Cloud.Bigtable.V2 {
             return;
           }
           fields_.Add(other.fields_);
+          if (other.encoding_ != null) {
+            if (encoding_ == null) {
+              Encoding = new global::Google.Cloud.Bigtable.V2.Type.Types.Struct.Types.Encoding();
+            }
+            Encoding.MergeFrom(other.Encoding);
+          }
           _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
         }
 
@@ -4180,6 +4855,13 @@ namespace Google.Cloud.Bigtable.V2 {
                 fields_.AddEntriesFrom(input, _repeated_fields_codec);
                 break;
               }
+              case 18: {
+                if (encoding_ == null) {
+                  Encoding = new global::Google.Cloud.Bigtable.V2.Type.Types.Struct.Types.Encoding();
+                }
+                input.ReadMessage(Encoding);
+                break;
+              }
             }
           }
         #endif
@@ -4197,6 +4879,13 @@ namespace Google.Cloud.Bigtable.V2 {
                 break;
               case 10: {
                 fields_.AddEntriesFrom(ref input, _repeated_fields_codec);
+                break;
+              }
+              case 18: {
+                if (encoding_ == null) {
+                  Encoding = new global::Google.Cloud.Bigtable.V2.Type.Types.Struct.Types.Encoding();
+                }
+                input.ReadMessage(Encoding);
                 break;
               }
             }
@@ -4452,6 +5141,931 @@ namespace Google.Cloud.Bigtable.V2 {
               }
             }
             #endif
+
+          }
+
+          /// <summary>
+          /// Rules used to convert to or from lower level types.
+          /// </summary>
+          [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+          public sealed partial class Encoding : pb::IMessage<Encoding>
+          #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+              , pb::IBufferMessage
+          #endif
+          {
+            private static readonly pb::MessageParser<Encoding> _parser = new pb::MessageParser<Encoding>(() => new Encoding());
+            private pb::UnknownFieldSet _unknownFields;
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public static pb::MessageParser<Encoding> Parser { get { return _parser; } }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public static pbr::MessageDescriptor Descriptor {
+              get { return global::Google.Cloud.Bigtable.V2.Type.Types.Struct.Descriptor.NestedTypes[1]; }
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            pbr::MessageDescriptor pb::IMessage.Descriptor {
+              get { return Descriptor; }
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public Encoding() {
+              OnConstruction();
+            }
+
+            partial void OnConstruction();
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public Encoding(Encoding other) : this() {
+              switch (other.EncodingCase) {
+                case EncodingOneofCase.Singleton:
+                  Singleton = other.Singleton.Clone();
+                  break;
+                case EncodingOneofCase.DelimitedBytes:
+                  DelimitedBytes = other.DelimitedBytes.Clone();
+                  break;
+                case EncodingOneofCase.OrderedCodeBytes:
+                  OrderedCodeBytes = other.OrderedCodeBytes.Clone();
+                  break;
+              }
+
+              _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public Encoding Clone() {
+              return new Encoding(this);
+            }
+
+            /// <summary>Field number for the "singleton" field.</summary>
+            public const int SingletonFieldNumber = 1;
+            /// <summary>
+            /// Use `Singleton` encoding.
+            /// </summary>
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public global::Google.Cloud.Bigtable.V2.Type.Types.Struct.Types.Encoding.Types.Singleton Singleton {
+              get { return encodingCase_ == EncodingOneofCase.Singleton ? (global::Google.Cloud.Bigtable.V2.Type.Types.Struct.Types.Encoding.Types.Singleton) encoding_ : null; }
+              set {
+                encoding_ = value;
+                encodingCase_ = value == null ? EncodingOneofCase.None : EncodingOneofCase.Singleton;
+              }
+            }
+
+            /// <summary>Field number for the "delimited_bytes" field.</summary>
+            public const int DelimitedBytesFieldNumber = 2;
+            /// <summary>
+            /// Use `DelimitedBytes` encoding.
+            /// </summary>
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public global::Google.Cloud.Bigtable.V2.Type.Types.Struct.Types.Encoding.Types.DelimitedBytes DelimitedBytes {
+              get { return encodingCase_ == EncodingOneofCase.DelimitedBytes ? (global::Google.Cloud.Bigtable.V2.Type.Types.Struct.Types.Encoding.Types.DelimitedBytes) encoding_ : null; }
+              set {
+                encoding_ = value;
+                encodingCase_ = value == null ? EncodingOneofCase.None : EncodingOneofCase.DelimitedBytes;
+              }
+            }
+
+            /// <summary>Field number for the "ordered_code_bytes" field.</summary>
+            public const int OrderedCodeBytesFieldNumber = 3;
+            /// <summary>
+            /// User `OrderedCodeBytes` encoding.
+            /// </summary>
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public global::Google.Cloud.Bigtable.V2.Type.Types.Struct.Types.Encoding.Types.OrderedCodeBytes OrderedCodeBytes {
+              get { return encodingCase_ == EncodingOneofCase.OrderedCodeBytes ? (global::Google.Cloud.Bigtable.V2.Type.Types.Struct.Types.Encoding.Types.OrderedCodeBytes) encoding_ : null; }
+              set {
+                encoding_ = value;
+                encodingCase_ = value == null ? EncodingOneofCase.None : EncodingOneofCase.OrderedCodeBytes;
+              }
+            }
+
+            private object encoding_;
+            /// <summary>Enum of possible cases for the "encoding" oneof.</summary>
+            public enum EncodingOneofCase {
+              None = 0,
+              Singleton = 1,
+              DelimitedBytes = 2,
+              OrderedCodeBytes = 3,
+            }
+            private EncodingOneofCase encodingCase_ = EncodingOneofCase.None;
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public EncodingOneofCase EncodingCase {
+              get { return encodingCase_; }
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public void ClearEncoding() {
+              encodingCase_ = EncodingOneofCase.None;
+              encoding_ = null;
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public override bool Equals(object other) {
+              return Equals(other as Encoding);
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public bool Equals(Encoding other) {
+              if (ReferenceEquals(other, null)) {
+                return false;
+              }
+              if (ReferenceEquals(other, this)) {
+                return true;
+              }
+              if (!object.Equals(Singleton, other.Singleton)) return false;
+              if (!object.Equals(DelimitedBytes, other.DelimitedBytes)) return false;
+              if (!object.Equals(OrderedCodeBytes, other.OrderedCodeBytes)) return false;
+              if (EncodingCase != other.EncodingCase) return false;
+              return Equals(_unknownFields, other._unknownFields);
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public override int GetHashCode() {
+              int hash = 1;
+              if (encodingCase_ == EncodingOneofCase.Singleton) hash ^= Singleton.GetHashCode();
+              if (encodingCase_ == EncodingOneofCase.DelimitedBytes) hash ^= DelimitedBytes.GetHashCode();
+              if (encodingCase_ == EncodingOneofCase.OrderedCodeBytes) hash ^= OrderedCodeBytes.GetHashCode();
+              hash ^= (int) encodingCase_;
+              if (_unknownFields != null) {
+                hash ^= _unknownFields.GetHashCode();
+              }
+              return hash;
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public override string ToString() {
+              return pb::JsonFormatter.ToDiagnosticString(this);
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public void WriteTo(pb::CodedOutputStream output) {
+            #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+              output.WriteRawMessage(this);
+            #else
+              if (encodingCase_ == EncodingOneofCase.Singleton) {
+                output.WriteRawTag(10);
+                output.WriteMessage(Singleton);
+              }
+              if (encodingCase_ == EncodingOneofCase.DelimitedBytes) {
+                output.WriteRawTag(18);
+                output.WriteMessage(DelimitedBytes);
+              }
+              if (encodingCase_ == EncodingOneofCase.OrderedCodeBytes) {
+                output.WriteRawTag(26);
+                output.WriteMessage(OrderedCodeBytes);
+              }
+              if (_unknownFields != null) {
+                _unknownFields.WriteTo(output);
+              }
+            #endif
+            }
+
+            #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+              if (encodingCase_ == EncodingOneofCase.Singleton) {
+                output.WriteRawTag(10);
+                output.WriteMessage(Singleton);
+              }
+              if (encodingCase_ == EncodingOneofCase.DelimitedBytes) {
+                output.WriteRawTag(18);
+                output.WriteMessage(DelimitedBytes);
+              }
+              if (encodingCase_ == EncodingOneofCase.OrderedCodeBytes) {
+                output.WriteRawTag(26);
+                output.WriteMessage(OrderedCodeBytes);
+              }
+              if (_unknownFields != null) {
+                _unknownFields.WriteTo(ref output);
+              }
+            }
+            #endif
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public int CalculateSize() {
+              int size = 0;
+              if (encodingCase_ == EncodingOneofCase.Singleton) {
+                size += 1 + pb::CodedOutputStream.ComputeMessageSize(Singleton);
+              }
+              if (encodingCase_ == EncodingOneofCase.DelimitedBytes) {
+                size += 1 + pb::CodedOutputStream.ComputeMessageSize(DelimitedBytes);
+              }
+              if (encodingCase_ == EncodingOneofCase.OrderedCodeBytes) {
+                size += 1 + pb::CodedOutputStream.ComputeMessageSize(OrderedCodeBytes);
+              }
+              if (_unknownFields != null) {
+                size += _unknownFields.CalculateSize();
+              }
+              return size;
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public void MergeFrom(Encoding other) {
+              if (other == null) {
+                return;
+              }
+              switch (other.EncodingCase) {
+                case EncodingOneofCase.Singleton:
+                  if (Singleton == null) {
+                    Singleton = new global::Google.Cloud.Bigtable.V2.Type.Types.Struct.Types.Encoding.Types.Singleton();
+                  }
+                  Singleton.MergeFrom(other.Singleton);
+                  break;
+                case EncodingOneofCase.DelimitedBytes:
+                  if (DelimitedBytes == null) {
+                    DelimitedBytes = new global::Google.Cloud.Bigtable.V2.Type.Types.Struct.Types.Encoding.Types.DelimitedBytes();
+                  }
+                  DelimitedBytes.MergeFrom(other.DelimitedBytes);
+                  break;
+                case EncodingOneofCase.OrderedCodeBytes:
+                  if (OrderedCodeBytes == null) {
+                    OrderedCodeBytes = new global::Google.Cloud.Bigtable.V2.Type.Types.Struct.Types.Encoding.Types.OrderedCodeBytes();
+                  }
+                  OrderedCodeBytes.MergeFrom(other.OrderedCodeBytes);
+                  break;
+              }
+
+              _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public void MergeFrom(pb::CodedInputStream input) {
+            #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+              input.ReadRawMessage(this);
+            #else
+              uint tag;
+              while ((tag = input.ReadTag()) != 0) {
+                switch(tag) {
+                  default:
+                    _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+                    break;
+                  case 10: {
+                    global::Google.Cloud.Bigtable.V2.Type.Types.Struct.Types.Encoding.Types.Singleton subBuilder = new global::Google.Cloud.Bigtable.V2.Type.Types.Struct.Types.Encoding.Types.Singleton();
+                    if (encodingCase_ == EncodingOneofCase.Singleton) {
+                      subBuilder.MergeFrom(Singleton);
+                    }
+                    input.ReadMessage(subBuilder);
+                    Singleton = subBuilder;
+                    break;
+                  }
+                  case 18: {
+                    global::Google.Cloud.Bigtable.V2.Type.Types.Struct.Types.Encoding.Types.DelimitedBytes subBuilder = new global::Google.Cloud.Bigtable.V2.Type.Types.Struct.Types.Encoding.Types.DelimitedBytes();
+                    if (encodingCase_ == EncodingOneofCase.DelimitedBytes) {
+                      subBuilder.MergeFrom(DelimitedBytes);
+                    }
+                    input.ReadMessage(subBuilder);
+                    DelimitedBytes = subBuilder;
+                    break;
+                  }
+                  case 26: {
+                    global::Google.Cloud.Bigtable.V2.Type.Types.Struct.Types.Encoding.Types.OrderedCodeBytes subBuilder = new global::Google.Cloud.Bigtable.V2.Type.Types.Struct.Types.Encoding.Types.OrderedCodeBytes();
+                    if (encodingCase_ == EncodingOneofCase.OrderedCodeBytes) {
+                      subBuilder.MergeFrom(OrderedCodeBytes);
+                    }
+                    input.ReadMessage(subBuilder);
+                    OrderedCodeBytes = subBuilder;
+                    break;
+                  }
+                }
+              }
+            #endif
+            }
+
+            #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+              uint tag;
+              while ((tag = input.ReadTag()) != 0) {
+                switch(tag) {
+                  default:
+                    _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+                    break;
+                  case 10: {
+                    global::Google.Cloud.Bigtable.V2.Type.Types.Struct.Types.Encoding.Types.Singleton subBuilder = new global::Google.Cloud.Bigtable.V2.Type.Types.Struct.Types.Encoding.Types.Singleton();
+                    if (encodingCase_ == EncodingOneofCase.Singleton) {
+                      subBuilder.MergeFrom(Singleton);
+                    }
+                    input.ReadMessage(subBuilder);
+                    Singleton = subBuilder;
+                    break;
+                  }
+                  case 18: {
+                    global::Google.Cloud.Bigtable.V2.Type.Types.Struct.Types.Encoding.Types.DelimitedBytes subBuilder = new global::Google.Cloud.Bigtable.V2.Type.Types.Struct.Types.Encoding.Types.DelimitedBytes();
+                    if (encodingCase_ == EncodingOneofCase.DelimitedBytes) {
+                      subBuilder.MergeFrom(DelimitedBytes);
+                    }
+                    input.ReadMessage(subBuilder);
+                    DelimitedBytes = subBuilder;
+                    break;
+                  }
+                  case 26: {
+                    global::Google.Cloud.Bigtable.V2.Type.Types.Struct.Types.Encoding.Types.OrderedCodeBytes subBuilder = new global::Google.Cloud.Bigtable.V2.Type.Types.Struct.Types.Encoding.Types.OrderedCodeBytes();
+                    if (encodingCase_ == EncodingOneofCase.OrderedCodeBytes) {
+                      subBuilder.MergeFrom(OrderedCodeBytes);
+                    }
+                    input.ReadMessage(subBuilder);
+                    OrderedCodeBytes = subBuilder;
+                    break;
+                  }
+                }
+              }
+            }
+            #endif
+
+            #region Nested types
+            /// <summary>Container for nested types declared in the Encoding message type.</summary>
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public static partial class Types {
+              /// <summary>
+              /// Uses the encoding of `fields[0].type` as-is.
+              /// Only valid if `fields.size == 1`.
+              /// </summary>
+              [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+              public sealed partial class Singleton : pb::IMessage<Singleton>
+              #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+                  , pb::IBufferMessage
+              #endif
+              {
+                private static readonly pb::MessageParser<Singleton> _parser = new pb::MessageParser<Singleton>(() => new Singleton());
+                private pb::UnknownFieldSet _unknownFields;
+                [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+                public static pb::MessageParser<Singleton> Parser { get { return _parser; } }
+
+                [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+                public static pbr::MessageDescriptor Descriptor {
+                  get { return global::Google.Cloud.Bigtable.V2.Type.Types.Struct.Types.Encoding.Descriptor.NestedTypes[0]; }
+                }
+
+                [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+                pbr::MessageDescriptor pb::IMessage.Descriptor {
+                  get { return Descriptor; }
+                }
+
+                [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+                public Singleton() {
+                  OnConstruction();
+                }
+
+                partial void OnConstruction();
+
+                [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+                public Singleton(Singleton other) : this() {
+                  _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+                }
+
+                [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+                public Singleton Clone() {
+                  return new Singleton(this);
+                }
+
+                [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+                public override bool Equals(object other) {
+                  return Equals(other as Singleton);
+                }
+
+                [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+                public bool Equals(Singleton other) {
+                  if (ReferenceEquals(other, null)) {
+                    return false;
+                  }
+                  if (ReferenceEquals(other, this)) {
+                    return true;
+                  }
+                  return Equals(_unknownFields, other._unknownFields);
+                }
+
+                [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+                public override int GetHashCode() {
+                  int hash = 1;
+                  if (_unknownFields != null) {
+                    hash ^= _unknownFields.GetHashCode();
+                  }
+                  return hash;
+                }
+
+                [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+                public override string ToString() {
+                  return pb::JsonFormatter.ToDiagnosticString(this);
+                }
+
+                [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+                public void WriteTo(pb::CodedOutputStream output) {
+                #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+                  output.WriteRawMessage(this);
+                #else
+                  if (_unknownFields != null) {
+                    _unknownFields.WriteTo(output);
+                  }
+                #endif
+                }
+
+                #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+                [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+                void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+                  if (_unknownFields != null) {
+                    _unknownFields.WriteTo(ref output);
+                  }
+                }
+                #endif
+
+                [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+                public int CalculateSize() {
+                  int size = 0;
+                  if (_unknownFields != null) {
+                    size += _unknownFields.CalculateSize();
+                  }
+                  return size;
+                }
+
+                [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+                public void MergeFrom(Singleton other) {
+                  if (other == null) {
+                    return;
+                  }
+                  _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+                }
+
+                [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+                public void MergeFrom(pb::CodedInputStream input) {
+                #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+                  input.ReadRawMessage(this);
+                #else
+                  uint tag;
+                  while ((tag = input.ReadTag()) != 0) {
+                    switch(tag) {
+                      default:
+                        _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+                        break;
+                    }
+                  }
+                #endif
+                }
+
+                #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+                [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+                void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+                  uint tag;
+                  while ((tag = input.ReadTag()) != 0) {
+                    switch(tag) {
+                      default:
+                        _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+                        break;
+                    }
+                  }
+                }
+                #endif
+
+              }
+
+              /// <summary>
+              /// Fields are encoded independently and concatenated with a configurable
+              /// `delimiter` in between.
+              ///
+              /// A struct with no fields defined is encoded as a single `delimiter`.
+              ///
+              /// Sorted mode:
+              ///
+              ///  - Fields are encoded in sorted mode.
+              ///  - Encoded field values must not contain any bytes &lt;= `delimiter[0]`
+              ///  - Element-wise order is preserved: `A &lt; B` if `A[0] &lt; B[0]`, or if
+              ///    `A[0] == B[0] &amp;&amp; A[1] &lt; B[1]`, etc. Strict prefixes sort first.
+              ///
+              /// Distinct mode:
+              ///
+              ///  - Fields are encoded in distinct mode.
+              ///  - Encoded field values must not contain `delimiter[0]`.
+              /// </summary>
+              [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+              public sealed partial class DelimitedBytes : pb::IMessage<DelimitedBytes>
+              #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+                  , pb::IBufferMessage
+              #endif
+              {
+                private static readonly pb::MessageParser<DelimitedBytes> _parser = new pb::MessageParser<DelimitedBytes>(() => new DelimitedBytes());
+                private pb::UnknownFieldSet _unknownFields;
+                [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+                public static pb::MessageParser<DelimitedBytes> Parser { get { return _parser; } }
+
+                [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+                public static pbr::MessageDescriptor Descriptor {
+                  get { return global::Google.Cloud.Bigtable.V2.Type.Types.Struct.Types.Encoding.Descriptor.NestedTypes[1]; }
+                }
+
+                [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+                pbr::MessageDescriptor pb::IMessage.Descriptor {
+                  get { return Descriptor; }
+                }
+
+                [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+                public DelimitedBytes() {
+                  OnConstruction();
+                }
+
+                partial void OnConstruction();
+
+                [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+                public DelimitedBytes(DelimitedBytes other) : this() {
+                  delimiter_ = other.delimiter_;
+                  _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+                }
+
+                [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+                public DelimitedBytes Clone() {
+                  return new DelimitedBytes(this);
+                }
+
+                /// <summary>Field number for the "delimiter" field.</summary>
+                public const int DelimiterFieldNumber = 1;
+                private pb::ByteString delimiter_ = pb::ByteString.Empty;
+                /// <summary>
+                /// Byte sequence used to delimit concatenated fields. The delimiter must
+                /// contain at least 1 character and at most 50 characters.
+                /// </summary>
+                [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+                public pb::ByteString Delimiter {
+                  get { return delimiter_; }
+                  set {
+                    delimiter_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+                  }
+                }
+
+                [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+                public override bool Equals(object other) {
+                  return Equals(other as DelimitedBytes);
+                }
+
+                [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+                public bool Equals(DelimitedBytes other) {
+                  if (ReferenceEquals(other, null)) {
+                    return false;
+                  }
+                  if (ReferenceEquals(other, this)) {
+                    return true;
+                  }
+                  if (Delimiter != other.Delimiter) return false;
+                  return Equals(_unknownFields, other._unknownFields);
+                }
+
+                [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+                public override int GetHashCode() {
+                  int hash = 1;
+                  if (Delimiter.Length != 0) hash ^= Delimiter.GetHashCode();
+                  if (_unknownFields != null) {
+                    hash ^= _unknownFields.GetHashCode();
+                  }
+                  return hash;
+                }
+
+                [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+                public override string ToString() {
+                  return pb::JsonFormatter.ToDiagnosticString(this);
+                }
+
+                [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+                public void WriteTo(pb::CodedOutputStream output) {
+                #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+                  output.WriteRawMessage(this);
+                #else
+                  if (Delimiter.Length != 0) {
+                    output.WriteRawTag(10);
+                    output.WriteBytes(Delimiter);
+                  }
+                  if (_unknownFields != null) {
+                    _unknownFields.WriteTo(output);
+                  }
+                #endif
+                }
+
+                #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+                [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+                void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+                  if (Delimiter.Length != 0) {
+                    output.WriteRawTag(10);
+                    output.WriteBytes(Delimiter);
+                  }
+                  if (_unknownFields != null) {
+                    _unknownFields.WriteTo(ref output);
+                  }
+                }
+                #endif
+
+                [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+                public int CalculateSize() {
+                  int size = 0;
+                  if (Delimiter.Length != 0) {
+                    size += 1 + pb::CodedOutputStream.ComputeBytesSize(Delimiter);
+                  }
+                  if (_unknownFields != null) {
+                    size += _unknownFields.CalculateSize();
+                  }
+                  return size;
+                }
+
+                [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+                public void MergeFrom(DelimitedBytes other) {
+                  if (other == null) {
+                    return;
+                  }
+                  if (other.Delimiter.Length != 0) {
+                    Delimiter = other.Delimiter;
+                  }
+                  _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+                }
+
+                [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+                public void MergeFrom(pb::CodedInputStream input) {
+                #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+                  input.ReadRawMessage(this);
+                #else
+                  uint tag;
+                  while ((tag = input.ReadTag()) != 0) {
+                    switch(tag) {
+                      default:
+                        _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+                        break;
+                      case 10: {
+                        Delimiter = input.ReadBytes();
+                        break;
+                      }
+                    }
+                  }
+                #endif
+                }
+
+                #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+                [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+                void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+                  uint tag;
+                  while ((tag = input.ReadTag()) != 0) {
+                    switch(tag) {
+                      default:
+                        _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+                        break;
+                      case 10: {
+                        Delimiter = input.ReadBytes();
+                        break;
+                      }
+                    }
+                  }
+                }
+                #endif
+
+              }
+
+              /// <summary>
+              /// Fields are encoded independently and concatenated with the fixed byte
+              /// pair `{0x00, 0x01}` in between.
+              ///
+              /// Any null `(0x00)` byte in an encoded field is replaced by the fixed
+              /// byte pair `{0x00, 0xFF}`.
+              ///
+              /// Fields that encode to the empty string "" have special handling:
+              ///
+              ///  - If *every* field encodes to "", or if the STRUCT has no fields
+              ///    defined, then the STRUCT is encoded as the fixed byte pair
+              ///    `{0x00, 0x00}`.
+              ///  - Otherwise, the STRUCT only encodes until the last non-empty field,
+              ///    omitting any trailing empty fields. Any empty fields that aren't
+              ///    omitted are replaced with the fixed byte pair `{0x00, 0x00}`.
+              ///
+              /// Examples:
+              ///
+              /// ```
+              ///  - STRUCT()             -> "\00\00"
+              ///  - STRUCT("")           -> "\00\00"
+              ///  - STRUCT("", "")       -> "\00\00"
+              ///  - STRUCT("", "B")      -> "\00\00" + "\00\01" + "B"
+              ///  - STRUCT("A", "")      -> "A"
+              ///  - STRUCT("", "B", "")  -> "\00\00" + "\00\01" + "B"
+              ///  - STRUCT("A", "", "C") -> "A" + "\00\01" + "\00\00" + "\00\01" + "C"
+              /// ```
+              ///
+              /// Since null bytes are always escaped, this encoding can cause size
+              /// blowup for encodings like `Int64.BigEndianBytes` that are likely to
+              /// produce many such bytes.
+              ///
+              /// Sorted mode:
+              ///
+              ///  - Fields are encoded in sorted mode.
+              ///  - All values supported by the field encodings are allowed
+              ///  - Element-wise order is preserved: `A &lt; B` if `A[0] &lt; B[0]`, or if
+              ///    `A[0] == B[0] &amp;&amp; A[1] &lt; B[1]`, etc. Strict prefixes sort first.
+              ///
+              /// Distinct mode:
+              ///
+              ///  - Fields are encoded in distinct mode.
+              ///  - All values supported by the field encodings are allowed.
+              /// </summary>
+              [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+              public sealed partial class OrderedCodeBytes : pb::IMessage<OrderedCodeBytes>
+              #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+                  , pb::IBufferMessage
+              #endif
+              {
+                private static readonly pb::MessageParser<OrderedCodeBytes> _parser = new pb::MessageParser<OrderedCodeBytes>(() => new OrderedCodeBytes());
+                private pb::UnknownFieldSet _unknownFields;
+                [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+                public static pb::MessageParser<OrderedCodeBytes> Parser { get { return _parser; } }
+
+                [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+                public static pbr::MessageDescriptor Descriptor {
+                  get { return global::Google.Cloud.Bigtable.V2.Type.Types.Struct.Types.Encoding.Descriptor.NestedTypes[2]; }
+                }
+
+                [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+                pbr::MessageDescriptor pb::IMessage.Descriptor {
+                  get { return Descriptor; }
+                }
+
+                [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+                public OrderedCodeBytes() {
+                  OnConstruction();
+                }
+
+                partial void OnConstruction();
+
+                [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+                public OrderedCodeBytes(OrderedCodeBytes other) : this() {
+                  _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+                }
+
+                [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+                public OrderedCodeBytes Clone() {
+                  return new OrderedCodeBytes(this);
+                }
+
+                [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+                public override bool Equals(object other) {
+                  return Equals(other as OrderedCodeBytes);
+                }
+
+                [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+                public bool Equals(OrderedCodeBytes other) {
+                  if (ReferenceEquals(other, null)) {
+                    return false;
+                  }
+                  if (ReferenceEquals(other, this)) {
+                    return true;
+                  }
+                  return Equals(_unknownFields, other._unknownFields);
+                }
+
+                [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+                public override int GetHashCode() {
+                  int hash = 1;
+                  if (_unknownFields != null) {
+                    hash ^= _unknownFields.GetHashCode();
+                  }
+                  return hash;
+                }
+
+                [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+                public override string ToString() {
+                  return pb::JsonFormatter.ToDiagnosticString(this);
+                }
+
+                [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+                public void WriteTo(pb::CodedOutputStream output) {
+                #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+                  output.WriteRawMessage(this);
+                #else
+                  if (_unknownFields != null) {
+                    _unknownFields.WriteTo(output);
+                  }
+                #endif
+                }
+
+                #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+                [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+                void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+                  if (_unknownFields != null) {
+                    _unknownFields.WriteTo(ref output);
+                  }
+                }
+                #endif
+
+                [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+                public int CalculateSize() {
+                  int size = 0;
+                  if (_unknownFields != null) {
+                    size += _unknownFields.CalculateSize();
+                  }
+                  return size;
+                }
+
+                [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+                public void MergeFrom(OrderedCodeBytes other) {
+                  if (other == null) {
+                    return;
+                  }
+                  _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+                }
+
+                [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+                public void MergeFrom(pb::CodedInputStream input) {
+                #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+                  input.ReadRawMessage(this);
+                #else
+                  uint tag;
+                  while ((tag = input.ReadTag()) != 0) {
+                    switch(tag) {
+                      default:
+                        _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+                        break;
+                    }
+                  }
+                #endif
+                }
+
+                #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+                [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+                void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+                  uint tag;
+                  while ((tag = input.ReadTag()) != 0) {
+                    switch(tag) {
+                      default:
+                        _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+                        break;
+                    }
+                  }
+                }
+                #endif
+
+              }
+
+            }
+            #endregion
 
           }
 
@@ -5406,9 +7020,9 @@ namespace Google.Cloud.Bigtable.V2 {
       /// <summary>
       /// A value that combines incremental updates into a summarized value.
       ///
-      /// Data is never directly written or read using type `Aggregate`. Writes will
-      /// provide either the `input_type` or `state_type`, and reads will always
-      /// return the `state_type` .
+      /// Data is never directly written or read using type `Aggregate`. Writes
+      /// provide either the `input_type` or `state_type`, and reads always return
+      /// the `state_type` .
       /// </summary>
       [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
       public sealed partial class Aggregate : pb::IMessage<Aggregate>
@@ -5475,8 +7089,7 @@ namespace Google.Cloud.Bigtable.V2 {
         public const int InputTypeFieldNumber = 1;
         private global::Google.Cloud.Bigtable.V2.Type inputType_;
         /// <summary>
-        /// Type of the inputs that are accumulated by this `Aggregate`, which must
-        /// specify a full encoding.
+        /// Type of the inputs that are accumulated by this `Aggregate`.
         /// Use `AddInput` mutations to accumulate new inputs.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -5494,7 +7107,7 @@ namespace Google.Cloud.Bigtable.V2 {
         /// <summary>
         /// Output only. Type that holds the internal accumulator state for the
         /// `Aggregate`. This is a function of the `input_type` and `aggregator`
-        /// chosen, and will always specify a full encoding.
+        /// chosen.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
