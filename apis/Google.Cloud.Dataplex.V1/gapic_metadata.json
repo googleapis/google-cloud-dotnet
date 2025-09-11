@@ -5,6 +5,105 @@
   "protoPackage": "google.cloud.dataplex.v1",
   "libraryPackage": "Google.Cloud.Dataplex.V1",
   "services": {
+    "BusinessGlossaryService": {
+      "clients": {
+        "grpc": {
+          "libraryClient": "BusinessGlossaryServiceClient",
+          "rpcs": {
+            "CreateGlossary": {
+              "methods": [
+                "CreateGlossary",
+                "CreateGlossaryAsync"
+              ]
+            },
+            "CreateGlossaryCategory": {
+              "methods": [
+                "CreateGlossaryCategory",
+                "CreateGlossaryCategoryAsync"
+              ]
+            },
+            "CreateGlossaryTerm": {
+              "methods": [
+                "CreateGlossaryTerm",
+                "CreateGlossaryTermAsync"
+              ]
+            },
+            "DeleteGlossary": {
+              "methods": [
+                "DeleteGlossary",
+                "DeleteGlossaryAsync"
+              ]
+            },
+            "DeleteGlossaryCategory": {
+              "methods": [
+                "DeleteGlossaryCategory",
+                "DeleteGlossaryCategoryAsync"
+              ]
+            },
+            "DeleteGlossaryTerm": {
+              "methods": [
+                "DeleteGlossaryTerm",
+                "DeleteGlossaryTermAsync"
+              ]
+            },
+            "GetGlossary": {
+              "methods": [
+                "GetGlossary",
+                "GetGlossaryAsync"
+              ]
+            },
+            "GetGlossaryCategory": {
+              "methods": [
+                "GetGlossaryCategory",
+                "GetGlossaryCategoryAsync"
+              ]
+            },
+            "GetGlossaryTerm": {
+              "methods": [
+                "GetGlossaryTerm",
+                "GetGlossaryTermAsync"
+              ]
+            },
+            "ListGlossaries": {
+              "methods": [
+                "ListGlossaries",
+                "ListGlossariesAsync"
+              ]
+            },
+            "ListGlossaryCategories": {
+              "methods": [
+                "ListGlossaryCategories",
+                "ListGlossaryCategoriesAsync"
+              ]
+            },
+            "ListGlossaryTerms": {
+              "methods": [
+                "ListGlossaryTerms",
+                "ListGlossaryTermsAsync"
+              ]
+            },
+            "UpdateGlossary": {
+              "methods": [
+                "UpdateGlossary",
+                "UpdateGlossaryAsync"
+              ]
+            },
+            "UpdateGlossaryCategory": {
+              "methods": [
+                "UpdateGlossaryCategory",
+                "UpdateGlossaryCategoryAsync"
+              ]
+            },
+            "UpdateGlossaryTerm": {
+              "methods": [
+                "UpdateGlossaryTerm",
+                "UpdateGlossaryTermAsync"
+              ]
+            }
+          }
+        }
+      }
+    },
     "CatalogService": {
       "clients": {
         "grpc": {
@@ -32,6 +131,12 @@
               "methods": [
                 "CreateEntryGroup",
                 "CreateEntryGroupAsync"
+              ]
+            },
+            "CreateEntryLink": {
+              "methods": [
+                "CreateEntryLink",
+                "CreateEntryLinkAsync"
               ]
             },
             "CreateEntryType": {
@@ -64,6 +169,12 @@
                 "DeleteEntryGroupAsync"
               ]
             },
+            "DeleteEntryLink": {
+              "methods": [
+                "DeleteEntryLink",
+                "DeleteEntryLinkAsync"
+              ]
+            },
             "DeleteEntryType": {
               "methods": [
                 "DeleteEntryType",
@@ -86,6 +197,12 @@
               "methods": [
                 "GetEntryGroup",
                 "GetEntryGroupAsync"
+              ]
+            },
+            "GetEntryLink": {
+              "methods": [
+                "GetEntryLink",
+                "GetEntryLinkAsync"
               ]
             },
             "GetEntryType": {

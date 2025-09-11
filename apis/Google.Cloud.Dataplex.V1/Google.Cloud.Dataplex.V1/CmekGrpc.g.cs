@@ -24,7 +24,7 @@ using grpc = global::Grpc.Core;
 
 namespace Google.Cloud.Dataplex.V1 {
   /// <summary>
-  /// Dataplex Cmek Service
+  /// Dataplex Universal Catalog Customer Managed Encryption Keys (CMEK) Service
   /// </summary>
   public static partial class CmekService
   {

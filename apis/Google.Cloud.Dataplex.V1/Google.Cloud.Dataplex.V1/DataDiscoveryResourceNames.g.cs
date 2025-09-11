@@ -15,6 +15,7 @@
 // Generated code. DO NOT EDIT!
 
 #pragma warning disable CS8981
+using gagr = Google.Api.Gax.ResourceNames;
 using gax = Google.Api.Gax;
 using sys = System;
 
@@ -511,6 +512,15 @@ namespace Google.Cloud.Dataplex.V1
                 {
                     get => string.IsNullOrEmpty(Connection) ? null : ConnectionName.Parse(Connection, allowUnparsed: true);
                     set => Connection = value?.ToString() ?? "";
+                }
+
+                /// <summary>
+                /// <see cref="gagr::ProjectName"/>-typed view over the <see cref="Project"/> resource name property.
+                /// </summary>
+                public gagr::ProjectName ProjectAsProjectName
+                {
+                    get => string.IsNullOrEmpty(Project) ? null : gagr::ProjectName.Parse(Project, allowUnparsed: true);
+                    set => Project = value?.ToString() ?? "";
                 }
             }
         }

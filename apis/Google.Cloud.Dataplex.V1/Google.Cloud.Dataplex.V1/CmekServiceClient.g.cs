@@ -246,7 +246,7 @@ namespace Google.Cloud.Dataplex.V1
 
     /// <summary>CmekService client wrapper, for convenient use.</summary>
     /// <remarks>
-    /// Dataplex Cmek Service
+    /// Dataplex Universal Catalog Customer Managed Encryption Keys (CMEK) Service
     /// </remarks>
     public abstract partial class CmekServiceClient
     {
@@ -1022,7 +1022,7 @@ namespace Google.Cloud.Dataplex.V1
 
     /// <summary>CmekService client wrapper implementation, for convenient use.</summary>
     /// <remarks>
-    /// Dataplex Cmek Service
+    /// Dataplex Universal Catalog Customer Managed Encryption Keys (CMEK) Service
     /// </remarks>
     public sealed partial class CmekServiceClientImpl : CmekServiceClient
     {

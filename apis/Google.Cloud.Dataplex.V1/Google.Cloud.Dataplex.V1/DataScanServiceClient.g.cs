@@ -451,7 +451,7 @@ namespace Google.Cloud.Dataplex.V1
         /// Required. The resource name of the parent location:
         /// `projects/{project}/locations/{location_id}`
         /// where `project` refers to a *project_id* or *project_number* and
-        /// `location_id` refers to a GCP region.
+        /// `location_id` refers to a Google Cloud region.
         /// </param>
         /// <param name="dataScan">
         /// Required. DataScan resource.
@@ -482,7 +482,7 @@ namespace Google.Cloud.Dataplex.V1
         /// Required. The resource name of the parent location:
         /// `projects/{project}/locations/{location_id}`
         /// where `project` refers to a *project_id* or *project_number* and
-        /// `location_id` refers to a GCP region.
+        /// `location_id` refers to a Google Cloud region.
         /// </param>
         /// <param name="dataScan">
         /// Required. DataScan resource.
@@ -513,7 +513,7 @@ namespace Google.Cloud.Dataplex.V1
         /// Required. The resource name of the parent location:
         /// `projects/{project}/locations/{location_id}`
         /// where `project` refers to a *project_id* or *project_number* and
-        /// `location_id` refers to a GCP region.
+        /// `location_id` refers to a Google Cloud region.
         /// </param>
         /// <param name="dataScan">
         /// Required. DataScan resource.
@@ -539,7 +539,7 @@ namespace Google.Cloud.Dataplex.V1
         /// Required. The resource name of the parent location:
         /// `projects/{project}/locations/{location_id}`
         /// where `project` refers to a *project_id* or *project_number* and
-        /// `location_id` refers to a GCP region.
+        /// `location_id` refers to a Google Cloud region.
         /// </param>
         /// <param name="dataScan">
         /// Required. DataScan resource.
@@ -570,7 +570,7 @@ namespace Google.Cloud.Dataplex.V1
         /// Required. The resource name of the parent location:
         /// `projects/{project}/locations/{location_id}`
         /// where `project` refers to a *project_id* or *project_number* and
-        /// `location_id` refers to a GCP region.
+        /// `location_id` refers to a Google Cloud region.
         /// </param>
         /// <param name="dataScan">
         /// Required. DataScan resource.
@@ -601,7 +601,7 @@ namespace Google.Cloud.Dataplex.V1
         /// Required. The resource name of the parent location:
         /// `projects/{project}/locations/{location_id}`
         /// where `project` refers to a *project_id* or *project_number* and
-        /// `location_id` refers to a GCP region.
+        /// `location_id` refers to a Google Cloud region.
         /// </param>
         /// <param name="dataScan">
         /// Required. DataScan resource.
@@ -789,7 +789,7 @@ namespace Google.Cloud.Dataplex.V1
         /// Required. The resource name of the dataScan:
         /// `projects/{project}/locations/{location_id}/dataScans/{data_scan_id}`
         /// where `project` refers to a *project_id* or *project_number* and
-        /// `location_id` refers to a GCP region.
+        /// `location_id` refers to a Google Cloud region.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -806,7 +806,7 @@ namespace Google.Cloud.Dataplex.V1
         /// Required. The resource name of the dataScan:
         /// `projects/{project}/locations/{location_id}/dataScans/{data_scan_id}`
         /// where `project` refers to a *project_id* or *project_number* and
-        /// `location_id` refers to a GCP region.
+        /// `location_id` refers to a Google Cloud region.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -823,7 +823,7 @@ namespace Google.Cloud.Dataplex.V1
         /// Required. The resource name of the dataScan:
         /// `projects/{project}/locations/{location_id}/dataScans/{data_scan_id}`
         /// where `project` refers to a *project_id* or *project_number* and
-        /// `location_id` refers to a GCP region.
+        /// `location_id` refers to a Google Cloud region.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -837,7 +837,7 @@ namespace Google.Cloud.Dataplex.V1
         /// Required. The resource name of the dataScan:
         /// `projects/{project}/locations/{location_id}/dataScans/{data_scan_id}`
         /// where `project` refers to a *project_id* or *project_number* and
-        /// `location_id` refers to a GCP region.
+        /// `location_id` refers to a Google Cloud region.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -854,7 +854,7 @@ namespace Google.Cloud.Dataplex.V1
         /// Required. The resource name of the dataScan:
         /// `projects/{project}/locations/{location_id}/dataScans/{data_scan_id}`
         /// where `project` refers to a *project_id* or *project_number* and
-        /// `location_id` refers to a GCP region.
+        /// `location_id` refers to a Google Cloud region.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -871,7 +871,7 @@ namespace Google.Cloud.Dataplex.V1
         /// Required. The resource name of the dataScan:
         /// `projects/{project}/locations/{location_id}/dataScans/{data_scan_id}`
         /// where `project` refers to a *project_id* or *project_number* and
-        /// `location_id` refers to a GCP region.
+        /// `location_id` refers to a Google Cloud region.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -912,7 +912,7 @@ namespace Google.Cloud.Dataplex.V1
         /// Required. The resource name of the dataScan:
         /// `projects/{project}/locations/{location_id}/dataScans/{data_scan_id}`
         /// where `project` refers to a *project_id* or *project_number* and
-        /// `location_id` refers to a GCP region.
+        /// `location_id` refers to a Google Cloud region.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -929,7 +929,7 @@ namespace Google.Cloud.Dataplex.V1
         /// Required. The resource name of the dataScan:
         /// `projects/{project}/locations/{location_id}/dataScans/{data_scan_id}`
         /// where `project` refers to a *project_id* or *project_number* and
-        /// `location_id` refers to a GCP region.
+        /// `location_id` refers to a Google Cloud region.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -946,7 +946,7 @@ namespace Google.Cloud.Dataplex.V1
         /// Required. The resource name of the dataScan:
         /// `projects/{project}/locations/{location_id}/dataScans/{data_scan_id}`
         /// where `project` refers to a *project_id* or *project_number* and
-        /// `location_id` refers to a GCP region.
+        /// `location_id` refers to a Google Cloud region.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -960,7 +960,7 @@ namespace Google.Cloud.Dataplex.V1
         /// Required. The resource name of the dataScan:
         /// `projects/{project}/locations/{location_id}/dataScans/{data_scan_id}`
         /// where `project` refers to a *project_id* or *project_number* and
-        /// `location_id` refers to a GCP region.
+        /// `location_id` refers to a Google Cloud region.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -977,7 +977,7 @@ namespace Google.Cloud.Dataplex.V1
         /// Required. The resource name of the dataScan:
         /// `projects/{project}/locations/{location_id}/dataScans/{data_scan_id}`
         /// where `project` refers to a *project_id* or *project_number* and
-        /// `location_id` refers to a GCP region.
+        /// `location_id` refers to a Google Cloud region.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -994,7 +994,7 @@ namespace Google.Cloud.Dataplex.V1
         /// Required. The resource name of the dataScan:
         /// `projects/{project}/locations/{location_id}/dataScans/{data_scan_id}`
         /// where `project` refers to a *project_id* or *project_number* and
-        /// `location_id` refers to a GCP region.
+        /// `location_id` refers to a Google Cloud region.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -1026,7 +1026,7 @@ namespace Google.Cloud.Dataplex.V1
         /// Required. The resource name of the parent location:
         /// `projects/{project}/locations/{location_id}`
         /// where `project` refers to a *project_id* or *project_number* and
-        /// `location_id` refers to a GCP region.
+        /// `location_id` refers to a Google Cloud region.
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -1062,7 +1062,7 @@ namespace Google.Cloud.Dataplex.V1
         /// Required. The resource name of the parent location:
         /// `projects/{project}/locations/{location_id}`
         /// where `project` refers to a *project_id* or *project_number* and
-        /// `location_id` refers to a GCP region.
+        /// `location_id` refers to a Google Cloud region.
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -1098,7 +1098,7 @@ namespace Google.Cloud.Dataplex.V1
         /// Required. The resource name of the parent location:
         /// `projects/{project}/locations/{location_id}`
         /// where `project` refers to a *project_id* or *project_number* and
-        /// `location_id` refers to a GCP region.
+        /// `location_id` refers to a Google Cloud region.
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -1134,7 +1134,7 @@ namespace Google.Cloud.Dataplex.V1
         /// Required. The resource name of the parent location:
         /// `projects/{project}/locations/{location_id}`
         /// where `project` refers to a *project_id* or *project_number* and
-        /// `location_id` refers to a GCP region.
+        /// `location_id` refers to a Google Cloud region.
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -1197,7 +1197,7 @@ namespace Google.Cloud.Dataplex.V1
         /// Required. The resource name of the DataScan:
         /// `projects/{project}/locations/{location_id}/dataScans/{data_scan_id}`.
         /// where `project` refers to a *project_id* or *project_number* and
-        /// `location_id` refers to a GCP region.
+        /// `location_id` refers to a Google Cloud region.
         /// 
         /// Only **OnDemand** data scans are allowed.
         /// </param>
@@ -1216,7 +1216,7 @@ namespace Google.Cloud.Dataplex.V1
         /// Required. The resource name of the DataScan:
         /// `projects/{project}/locations/{location_id}/dataScans/{data_scan_id}`.
         /// where `project` refers to a *project_id* or *project_number* and
-        /// `location_id` refers to a GCP region.
+        /// `location_id` refers to a Google Cloud region.
         /// 
         /// Only **OnDemand** data scans are allowed.
         /// </param>
@@ -1235,7 +1235,7 @@ namespace Google.Cloud.Dataplex.V1
         /// Required. The resource name of the DataScan:
         /// `projects/{project}/locations/{location_id}/dataScans/{data_scan_id}`.
         /// where `project` refers to a *project_id* or *project_number* and
-        /// `location_id` refers to a GCP region.
+        /// `location_id` refers to a Google Cloud region.
         /// 
         /// Only **OnDemand** data scans are allowed.
         /// </param>
@@ -1251,7 +1251,7 @@ namespace Google.Cloud.Dataplex.V1
         /// Required. The resource name of the DataScan:
         /// `projects/{project}/locations/{location_id}/dataScans/{data_scan_id}`.
         /// where `project` refers to a *project_id* or *project_number* and
-        /// `location_id` refers to a GCP region.
+        /// `location_id` refers to a Google Cloud region.
         /// 
         /// Only **OnDemand** data scans are allowed.
         /// </param>
@@ -1270,7 +1270,7 @@ namespace Google.Cloud.Dataplex.V1
         /// Required. The resource name of the DataScan:
         /// `projects/{project}/locations/{location_id}/dataScans/{data_scan_id}`.
         /// where `project` refers to a *project_id* or *project_number* and
-        /// `location_id` refers to a GCP region.
+        /// `location_id` refers to a Google Cloud region.
         /// 
         /// Only **OnDemand** data scans are allowed.
         /// </param>
@@ -1289,7 +1289,7 @@ namespace Google.Cloud.Dataplex.V1
         /// Required. The resource name of the DataScan:
         /// `projects/{project}/locations/{location_id}/dataScans/{data_scan_id}`.
         /// where `project` refers to a *project_id* or *project_number* and
-        /// `location_id` refers to a GCP region.
+        /// `location_id` refers to a Google Cloud region.
         /// 
         /// Only **OnDemand** data scans are allowed.
         /// </param>
@@ -1332,7 +1332,7 @@ namespace Google.Cloud.Dataplex.V1
         /// Required. The resource name of the DataScanJob:
         /// `projects/{project}/locations/{location_id}/dataScans/{data_scan_id}/jobs/{data_scan_job_id}`
         /// where `project` refers to a *project_id* or *project_number* and
-        /// `location_id` refers to a GCP region.
+        /// `location_id` refers to a Google Cloud region.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -1349,7 +1349,7 @@ namespace Google.Cloud.Dataplex.V1
         /// Required. The resource name of the DataScanJob:
         /// `projects/{project}/locations/{location_id}/dataScans/{data_scan_id}/jobs/{data_scan_job_id}`
         /// where `project` refers to a *project_id* or *project_number* and
-        /// `location_id` refers to a GCP region.
+        /// `location_id` refers to a Google Cloud region.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -1366,7 +1366,7 @@ namespace Google.Cloud.Dataplex.V1
         /// Required. The resource name of the DataScanJob:
         /// `projects/{project}/locations/{location_id}/dataScans/{data_scan_id}/jobs/{data_scan_job_id}`
         /// where `project` refers to a *project_id* or *project_number* and
-        /// `location_id` refers to a GCP region.
+        /// `location_id` refers to a Google Cloud region.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -1380,7 +1380,7 @@ namespace Google.Cloud.Dataplex.V1
         /// Required. The resource name of the DataScanJob:
         /// `projects/{project}/locations/{location_id}/dataScans/{data_scan_id}/jobs/{data_scan_job_id}`
         /// where `project` refers to a *project_id* or *project_number* and
-        /// `location_id` refers to a GCP region.
+        /// `location_id` refers to a Google Cloud region.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -1397,7 +1397,7 @@ namespace Google.Cloud.Dataplex.V1
         /// Required. The resource name of the DataScanJob:
         /// `projects/{project}/locations/{location_id}/dataScans/{data_scan_id}/jobs/{data_scan_job_id}`
         /// where `project` refers to a *project_id* or *project_number* and
-        /// `location_id` refers to a GCP region.
+        /// `location_id` refers to a Google Cloud region.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -1414,7 +1414,7 @@ namespace Google.Cloud.Dataplex.V1
         /// Required. The resource name of the DataScanJob:
         /// `projects/{project}/locations/{location_id}/dataScans/{data_scan_id}/jobs/{data_scan_job_id}`
         /// where `project` refers to a *project_id* or *project_number* and
-        /// `location_id` refers to a GCP region.
+        /// `location_id` refers to a Google Cloud region.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -1446,7 +1446,7 @@ namespace Google.Cloud.Dataplex.V1
         /// Required. The resource name of the parent environment:
         /// `projects/{project}/locations/{location_id}/dataScans/{data_scan_id}`
         /// where `project` refers to a *project_id* or *project_number* and
-        /// `location_id` refers to a GCP region.
+        /// `location_id` refers to a Google Cloud region.
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -1482,7 +1482,7 @@ namespace Google.Cloud.Dataplex.V1
         /// Required. The resource name of the parent environment:
         /// `projects/{project}/locations/{location_id}/dataScans/{data_scan_id}`
         /// where `project` refers to a *project_id* or *project_number* and
-        /// `location_id` refers to a GCP region.
+        /// `location_id` refers to a Google Cloud region.
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -1518,7 +1518,7 @@ namespace Google.Cloud.Dataplex.V1
         /// Required. The resource name of the parent environment:
         /// `projects/{project}/locations/{location_id}/dataScans/{data_scan_id}`
         /// where `project` refers to a *project_id* or *project_number* and
-        /// `location_id` refers to a GCP region.
+        /// `location_id` refers to a Google Cloud region.
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -1554,7 +1554,7 @@ namespace Google.Cloud.Dataplex.V1
         /// Required. The resource name of the parent environment:
         /// `projects/{project}/locations/{location_id}/dataScans/{data_scan_id}`
         /// where `project` refers to a *project_id* or *project_number* and
-        /// `location_id` refers to a GCP region.
+        /// `location_id` refers to a Google Cloud region.
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first

@@ -86,6 +86,9 @@ namespace Google.Cloud.Dataplex.V1
             GetMetadataJobSettings = existing.GetMetadataJobSettings;
             ListMetadataJobsSettings = existing.ListMetadataJobsSettings;
             CancelMetadataJobSettings = existing.CancelMetadataJobSettings;
+            CreateEntryLinkSettings = existing.CreateEntryLinkSettings;
+            DeleteEntryLinkSettings = existing.DeleteEntryLinkSettings;
+            GetEntryLinkSettings = existing.GetEntryLinkSettings;
             LocationsSettings = existing.LocationsSettings;
             IAMPolicySettings = existing.IAMPolicySettings;
             OnCopy(existing);
@@ -685,6 +688,42 @@ namespace Google.Cloud.Dataplex.V1
         public gaxgrpc::CallSettings CancelMetadataJobSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
 
         /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>CatalogServiceClient.CreateEntryLink</c> and <c>CatalogServiceClient.CreateEntryLinkAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>No timeout is applied.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings CreateEntryLinkSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>CatalogServiceClient.DeleteEntryLink</c> and <c>CatalogServiceClient.DeleteEntryLinkAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>No timeout is applied.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings DeleteEntryLinkSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>CatalogServiceClient.GetEntryLink</c> and <c>CatalogServiceClient.GetEntryLinkAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>No timeout is applied.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings GetEntryLinkSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
+
+        /// <summary>
         /// The settings to use for the <see cref="gcl::LocationsClient"/> associated with the client.
         /// </summary>
         public gcl::LocationsSettings LocationsSettings { get; set; } = gcl::LocationsSettings.GetDefault();
@@ -754,10 +793,10 @@ namespace Google.Cloud.Dataplex.V1
     /// <summary>CatalogService client wrapper, for convenient use.</summary>
     /// <remarks>
     /// The primary resources offered by this service are EntryGroups, EntryTypes,
-    /// AspectTypes, and Entries. They collectively let data administrators organize,
-    /// manage, secure, and catalog data located across cloud projects in their
-    /// organization in a variety of storage systems, including Cloud Storage and
-    /// BigQuery.
+    /// AspectTypes, Entries and EntryLinks. They collectively let data
+    /// administrators organize, manage, secure, and catalog data located across
+    /// cloud projects in their organization in a variety of storage systems,
+    /// including Cloud Storage and BigQuery.
     /// </remarks>
     public abstract partial class CatalogServiceClient
     {
@@ -2296,7 +2335,7 @@ namespace Google.Cloud.Dataplex.V1
         /// <param name="parent">
         /// Required. The resource name of the entryGroup, of the form:
         /// projects/{project_number}/locations/{location_id}
-        /// where `location_id` refers to a GCP region.
+        /// where `location_id` refers to a Google Cloud region.
         /// </param>
         /// <param name="entryGroup">
         /// Required. EntryGroup Resource.
@@ -2320,7 +2359,7 @@ namespace Google.Cloud.Dataplex.V1
         /// <param name="parent">
         /// Required. The resource name of the entryGroup, of the form:
         /// projects/{project_number}/locations/{location_id}
-        /// where `location_id` refers to a GCP region.
+        /// where `location_id` refers to a Google Cloud region.
         /// </param>
         /// <param name="entryGroup">
         /// Required. EntryGroup Resource.
@@ -2344,7 +2383,7 @@ namespace Google.Cloud.Dataplex.V1
         /// <param name="parent">
         /// Required. The resource name of the entryGroup, of the form:
         /// projects/{project_number}/locations/{location_id}
-        /// where `location_id` refers to a GCP region.
+        /// where `location_id` refers to a Google Cloud region.
         /// </param>
         /// <param name="entryGroup">
         /// Required. EntryGroup Resource.
@@ -2363,7 +2402,7 @@ namespace Google.Cloud.Dataplex.V1
         /// <param name="parent">
         /// Required. The resource name of the entryGroup, of the form:
         /// projects/{project_number}/locations/{location_id}
-        /// where `location_id` refers to a GCP region.
+        /// where `location_id` refers to a Google Cloud region.
         /// </param>
         /// <param name="entryGroup">
         /// Required. EntryGroup Resource.
@@ -2387,7 +2426,7 @@ namespace Google.Cloud.Dataplex.V1
         /// <param name="parent">
         /// Required. The resource name of the entryGroup, of the form:
         /// projects/{project_number}/locations/{location_id}
-        /// where `location_id` refers to a GCP region.
+        /// where `location_id` refers to a Google Cloud region.
         /// </param>
         /// <param name="entryGroup">
         /// Required. EntryGroup Resource.
@@ -2411,7 +2450,7 @@ namespace Google.Cloud.Dataplex.V1
         /// <param name="parent">
         /// Required. The resource name of the entryGroup, of the form:
         /// projects/{project_number}/locations/{location_id}
-        /// where `location_id` refers to a GCP region.
+        /// where `location_id` refers to a Google Cloud region.
         /// </param>
         /// <param name="entryGroup">
         /// Required. EntryGroup Resource.
@@ -3717,11 +3756,11 @@ namespace Google.Cloud.Dataplex.V1
         /// </summary>
         /// <param name="name">
         /// Required. The project to which the request should be attributed in the
-        /// following form: `projects/{project}/locations/{location}`.
+        /// following form: `projects/{project}/locations/global`.
         /// </param>
         /// <param name="query">
         /// Required. The query against which entries in scope should be matched.
-        /// The query syntax is defined in [Search syntax for Dataplex
+        /// The query syntax is defined in [Search syntax for Dataplex Universal
         /// Catalog](https://cloud.google.com/dataplex/docs/search-syntax).
         /// </param>
         /// <param name="pageToken">
@@ -3757,11 +3796,11 @@ namespace Google.Cloud.Dataplex.V1
         /// </summary>
         /// <param name="name">
         /// Required. The project to which the request should be attributed in the
-        /// following form: `projects/{project}/locations/{location}`.
+        /// following form: `projects/{project}/locations/global`.
         /// </param>
         /// <param name="query">
         /// Required. The query against which entries in scope should be matched.
-        /// The query syntax is defined in [Search syntax for Dataplex
+        /// The query syntax is defined in [Search syntax for Dataplex Universal
         /// Catalog](https://cloud.google.com/dataplex/docs/search-syntax).
         /// </param>
         /// <param name="pageToken">
@@ -3797,11 +3836,11 @@ namespace Google.Cloud.Dataplex.V1
         /// </summary>
         /// <param name="name">
         /// Required. The project to which the request should be attributed in the
-        /// following form: `projects/{project}/locations/{location}`.
+        /// following form: `projects/{project}/locations/global`.
         /// </param>
         /// <param name="query">
         /// Required. The query against which entries in scope should be matched.
-        /// The query syntax is defined in [Search syntax for Dataplex
+        /// The query syntax is defined in [Search syntax for Dataplex Universal
         /// Catalog](https://cloud.google.com/dataplex/docs/search-syntax).
         /// </param>
         /// <param name="pageToken">
@@ -3837,11 +3876,11 @@ namespace Google.Cloud.Dataplex.V1
         /// </summary>
         /// <param name="name">
         /// Required. The project to which the request should be attributed in the
-        /// following form: `projects/{project}/locations/{location}`.
+        /// following form: `projects/{project}/locations/global`.
         /// </param>
         /// <param name="query">
         /// Required. The query against which entries in scope should be matched.
-        /// The query syntax is defined in [Search syntax for Dataplex
+        /// The query syntax is defined in [Search syntax for Dataplex Universal
         /// Catalog](https://cloud.google.com/dataplex/docs/search-syntax).
         /// </param>
         /// <param name="pageToken">
@@ -3873,8 +3912,8 @@ namespace Google.Cloud.Dataplex.V1
         }
 
         /// <summary>
-        /// Creates a metadata job. For example, use a metadata job to import Dataplex
-        /// Catalog entries and aspects from a third-party system into Dataplex.
+        /// Creates a metadata job. For example, use a metadata job to import metadata
+        /// from a third-party system into Dataplex Universal Catalog.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -3883,8 +3922,8 @@ namespace Google.Cloud.Dataplex.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Creates a metadata job. For example, use a metadata job to import Dataplex
-        /// Catalog entries and aspects from a third-party system into Dataplex.
+        /// Creates a metadata job. For example, use a metadata job to import metadata
+        /// from a third-party system into Dataplex Universal Catalog.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -3893,8 +3932,8 @@ namespace Google.Cloud.Dataplex.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Creates a metadata job. For example, use a metadata job to import Dataplex
-        /// Catalog entries and aspects from a third-party system into Dataplex.
+        /// Creates a metadata job. For example, use a metadata job to import metadata
+        /// from a third-party system into Dataplex Universal Catalog.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -3930,8 +3969,8 @@ namespace Google.Cloud.Dataplex.V1
             lro::Operation<MetadataJob, OperationMetadata>.PollOnceFromNameAsync(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), CreateMetadataJobOperationsClient, callSettings);
 
         /// <summary>
-        /// Creates a metadata job. For example, use a metadata job to import Dataplex
-        /// Catalog entries and aspects from a third-party system into Dataplex.
+        /// Creates a metadata job. For example, use a metadata job to import metadata
+        /// from a third-party system into Dataplex Universal Catalog.
         /// </summary>
         /// <param name="parent">
         /// Required. The resource name of the parent location, in the format
@@ -3955,8 +3994,8 @@ namespace Google.Cloud.Dataplex.V1
             }, callSettings);
 
         /// <summary>
-        /// Creates a metadata job. For example, use a metadata job to import Dataplex
-        /// Catalog entries and aspects from a third-party system into Dataplex.
+        /// Creates a metadata job. For example, use a metadata job to import metadata
+        /// from a third-party system into Dataplex Universal Catalog.
         /// </summary>
         /// <param name="parent">
         /// Required. The resource name of the parent location, in the format
@@ -3980,8 +4019,8 @@ namespace Google.Cloud.Dataplex.V1
             }, callSettings);
 
         /// <summary>
-        /// Creates a metadata job. For example, use a metadata job to import Dataplex
-        /// Catalog entries and aspects from a third-party system into Dataplex.
+        /// Creates a metadata job. For example, use a metadata job to import metadata
+        /// from a third-party system into Dataplex Universal Catalog.
         /// </summary>
         /// <param name="parent">
         /// Required. The resource name of the parent location, in the format
@@ -4000,8 +4039,8 @@ namespace Google.Cloud.Dataplex.V1
             CreateMetadataJobAsync(parent, metadataJob, metadataJobId, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Creates a metadata job. For example, use a metadata job to import Dataplex
-        /// Catalog entries and aspects from a third-party system into Dataplex.
+        /// Creates a metadata job. For example, use a metadata job to import metadata
+        /// from a third-party system into Dataplex Universal Catalog.
         /// </summary>
         /// <param name="parent">
         /// Required. The resource name of the parent location, in the format
@@ -4025,8 +4064,8 @@ namespace Google.Cloud.Dataplex.V1
             }, callSettings);
 
         /// <summary>
-        /// Creates a metadata job. For example, use a metadata job to import Dataplex
-        /// Catalog entries and aspects from a third-party system into Dataplex.
+        /// Creates a metadata job. For example, use a metadata job to import metadata
+        /// from a third-party system into Dataplex Universal Catalog.
         /// </summary>
         /// <param name="parent">
         /// Required. The resource name of the parent location, in the format
@@ -4050,8 +4089,8 @@ namespace Google.Cloud.Dataplex.V1
             }, callSettings);
 
         /// <summary>
-        /// Creates a metadata job. For example, use a metadata job to import Dataplex
-        /// Catalog entries and aspects from a third-party system into Dataplex.
+        /// Creates a metadata job. For example, use a metadata job to import metadata
+        /// from a third-party system into Dataplex Universal Catalog.
         /// </summary>
         /// <param name="parent">
         /// Required. The resource name of the parent location, in the format
@@ -4489,15 +4528,422 @@ namespace Google.Cloud.Dataplex.V1
         /// <returns>A Task containing the RPC response.</returns>
         public virtual stt::Task CancelMetadataJobAsync(MetadataJobName name, st::CancellationToken cancellationToken) =>
             CancelMetadataJobAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Creates an Entry Link.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual EntryLink CreateEntryLink(CreateEntryLinkRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Creates an Entry Link.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<EntryLink> CreateEntryLinkAsync(CreateEntryLinkRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Creates an Entry Link.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<EntryLink> CreateEntryLinkAsync(CreateEntryLinkRequest request, st::CancellationToken cancellationToken) =>
+            CreateEntryLinkAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Creates an Entry Link.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The resource name of the parent Entry Group:
+        /// `projects/{project_id_or_number}/locations/{location_id}/entryGroups/{entry_group_id}`.
+        /// </param>
+        /// <param name="entryLink">
+        /// Required. Entry Link resource.
+        /// </param>
+        /// <param name="entryLinkId">
+        /// Required. Entry Link identifier
+        /// * Must contain only lowercase letters, numbers and hyphens.
+        /// * Must start with a letter.
+        /// * Must be between 1-63 characters.
+        /// * Must end with a number or a letter.
+        /// * Must be unique within the EntryGroup.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual EntryLink CreateEntryLink(string parent, EntryLink entryLink, string entryLinkId, gaxgrpc::CallSettings callSettings = null) =>
+            CreateEntryLink(new CreateEntryLinkRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+                EntryLinkId = gax::GaxPreconditions.CheckNotNullOrEmpty(entryLinkId, nameof(entryLinkId)),
+                EntryLink = gax::GaxPreconditions.CheckNotNull(entryLink, nameof(entryLink)),
+            }, callSettings);
+
+        /// <summary>
+        /// Creates an Entry Link.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The resource name of the parent Entry Group:
+        /// `projects/{project_id_or_number}/locations/{location_id}/entryGroups/{entry_group_id}`.
+        /// </param>
+        /// <param name="entryLink">
+        /// Required. Entry Link resource.
+        /// </param>
+        /// <param name="entryLinkId">
+        /// Required. Entry Link identifier
+        /// * Must contain only lowercase letters, numbers and hyphens.
+        /// * Must start with a letter.
+        /// * Must be between 1-63 characters.
+        /// * Must end with a number or a letter.
+        /// * Must be unique within the EntryGroup.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<EntryLink> CreateEntryLinkAsync(string parent, EntryLink entryLink, string entryLinkId, gaxgrpc::CallSettings callSettings = null) =>
+            CreateEntryLinkAsync(new CreateEntryLinkRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+                EntryLinkId = gax::GaxPreconditions.CheckNotNullOrEmpty(entryLinkId, nameof(entryLinkId)),
+                EntryLink = gax::GaxPreconditions.CheckNotNull(entryLink, nameof(entryLink)),
+            }, callSettings);
+
+        /// <summary>
+        /// Creates an Entry Link.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The resource name of the parent Entry Group:
+        /// `projects/{project_id_or_number}/locations/{location_id}/entryGroups/{entry_group_id}`.
+        /// </param>
+        /// <param name="entryLink">
+        /// Required. Entry Link resource.
+        /// </param>
+        /// <param name="entryLinkId">
+        /// Required. Entry Link identifier
+        /// * Must contain only lowercase letters, numbers and hyphens.
+        /// * Must start with a letter.
+        /// * Must be between 1-63 characters.
+        /// * Must end with a number or a letter.
+        /// * Must be unique within the EntryGroup.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<EntryLink> CreateEntryLinkAsync(string parent, EntryLink entryLink, string entryLinkId, st::CancellationToken cancellationToken) =>
+            CreateEntryLinkAsync(parent, entryLink, entryLinkId, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Creates an Entry Link.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The resource name of the parent Entry Group:
+        /// `projects/{project_id_or_number}/locations/{location_id}/entryGroups/{entry_group_id}`.
+        /// </param>
+        /// <param name="entryLink">
+        /// Required. Entry Link resource.
+        /// </param>
+        /// <param name="entryLinkId">
+        /// Required. Entry Link identifier
+        /// * Must contain only lowercase letters, numbers and hyphens.
+        /// * Must start with a letter.
+        /// * Must be between 1-63 characters.
+        /// * Must end with a number or a letter.
+        /// * Must be unique within the EntryGroup.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual EntryLink CreateEntryLink(EntryGroupName parent, EntryLink entryLink, string entryLinkId, gaxgrpc::CallSettings callSettings = null) =>
+            CreateEntryLink(new CreateEntryLinkRequest
+            {
+                ParentAsEntryGroupName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                EntryLinkId = gax::GaxPreconditions.CheckNotNullOrEmpty(entryLinkId, nameof(entryLinkId)),
+                EntryLink = gax::GaxPreconditions.CheckNotNull(entryLink, nameof(entryLink)),
+            }, callSettings);
+
+        /// <summary>
+        /// Creates an Entry Link.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The resource name of the parent Entry Group:
+        /// `projects/{project_id_or_number}/locations/{location_id}/entryGroups/{entry_group_id}`.
+        /// </param>
+        /// <param name="entryLink">
+        /// Required. Entry Link resource.
+        /// </param>
+        /// <param name="entryLinkId">
+        /// Required. Entry Link identifier
+        /// * Must contain only lowercase letters, numbers and hyphens.
+        /// * Must start with a letter.
+        /// * Must be between 1-63 characters.
+        /// * Must end with a number or a letter.
+        /// * Must be unique within the EntryGroup.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<EntryLink> CreateEntryLinkAsync(EntryGroupName parent, EntryLink entryLink, string entryLinkId, gaxgrpc::CallSettings callSettings = null) =>
+            CreateEntryLinkAsync(new CreateEntryLinkRequest
+            {
+                ParentAsEntryGroupName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                EntryLinkId = gax::GaxPreconditions.CheckNotNullOrEmpty(entryLinkId, nameof(entryLinkId)),
+                EntryLink = gax::GaxPreconditions.CheckNotNull(entryLink, nameof(entryLink)),
+            }, callSettings);
+
+        /// <summary>
+        /// Creates an Entry Link.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The resource name of the parent Entry Group:
+        /// `projects/{project_id_or_number}/locations/{location_id}/entryGroups/{entry_group_id}`.
+        /// </param>
+        /// <param name="entryLink">
+        /// Required. Entry Link resource.
+        /// </param>
+        /// <param name="entryLinkId">
+        /// Required. Entry Link identifier
+        /// * Must contain only lowercase letters, numbers and hyphens.
+        /// * Must start with a letter.
+        /// * Must be between 1-63 characters.
+        /// * Must end with a number or a letter.
+        /// * Must be unique within the EntryGroup.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<EntryLink> CreateEntryLinkAsync(EntryGroupName parent, EntryLink entryLink, string entryLinkId, st::CancellationToken cancellationToken) =>
+            CreateEntryLinkAsync(parent, entryLink, entryLinkId, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Deletes an Entry Link.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual EntryLink DeleteEntryLink(DeleteEntryLinkRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Deletes an Entry Link.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<EntryLink> DeleteEntryLinkAsync(DeleteEntryLinkRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Deletes an Entry Link.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<EntryLink> DeleteEntryLinkAsync(DeleteEntryLinkRequest request, st::CancellationToken cancellationToken) =>
+            DeleteEntryLinkAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Deletes an Entry Link.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The resource name of the Entry Link:
+        /// `projects/{project_id_or_number}/locations/{location_id}/entryGroups/{entry_group_id}/entryLinks/{entry_link_id}`.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual EntryLink DeleteEntryLink(string name, gaxgrpc::CallSettings callSettings = null) =>
+            DeleteEntryLink(new DeleteEntryLinkRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Deletes an Entry Link.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The resource name of the Entry Link:
+        /// `projects/{project_id_or_number}/locations/{location_id}/entryGroups/{entry_group_id}/entryLinks/{entry_link_id}`.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<EntryLink> DeleteEntryLinkAsync(string name, gaxgrpc::CallSettings callSettings = null) =>
+            DeleteEntryLinkAsync(new DeleteEntryLinkRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Deletes an Entry Link.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The resource name of the Entry Link:
+        /// `projects/{project_id_or_number}/locations/{location_id}/entryGroups/{entry_group_id}/entryLinks/{entry_link_id}`.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<EntryLink> DeleteEntryLinkAsync(string name, st::CancellationToken cancellationToken) =>
+            DeleteEntryLinkAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Deletes an Entry Link.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The resource name of the Entry Link:
+        /// `projects/{project_id_or_number}/locations/{location_id}/entryGroups/{entry_group_id}/entryLinks/{entry_link_id}`.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual EntryLink DeleteEntryLink(EntryLinkName name, gaxgrpc::CallSettings callSettings = null) =>
+            DeleteEntryLink(new DeleteEntryLinkRequest
+            {
+                EntryLinkName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Deletes an Entry Link.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The resource name of the Entry Link:
+        /// `projects/{project_id_or_number}/locations/{location_id}/entryGroups/{entry_group_id}/entryLinks/{entry_link_id}`.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<EntryLink> DeleteEntryLinkAsync(EntryLinkName name, gaxgrpc::CallSettings callSettings = null) =>
+            DeleteEntryLinkAsync(new DeleteEntryLinkRequest
+            {
+                EntryLinkName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Deletes an Entry Link.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The resource name of the Entry Link:
+        /// `projects/{project_id_or_number}/locations/{location_id}/entryGroups/{entry_group_id}/entryLinks/{entry_link_id}`.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<EntryLink> DeleteEntryLinkAsync(EntryLinkName name, st::CancellationToken cancellationToken) =>
+            DeleteEntryLinkAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Gets an Entry Link.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual EntryLink GetEntryLink(GetEntryLinkRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Gets an Entry Link.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<EntryLink> GetEntryLinkAsync(GetEntryLinkRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Gets an Entry Link.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<EntryLink> GetEntryLinkAsync(GetEntryLinkRequest request, st::CancellationToken cancellationToken) =>
+            GetEntryLinkAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Gets an Entry Link.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The resource name of the Entry Link:
+        /// `projects/{project_id_or_number}/locations/{location_id}/entryGroups/{entry_group_id}/entryLinks/{entry_link_id}`.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual EntryLink GetEntryLink(string name, gaxgrpc::CallSettings callSettings = null) =>
+            GetEntryLink(new GetEntryLinkRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Gets an Entry Link.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The resource name of the Entry Link:
+        /// `projects/{project_id_or_number}/locations/{location_id}/entryGroups/{entry_group_id}/entryLinks/{entry_link_id}`.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<EntryLink> GetEntryLinkAsync(string name, gaxgrpc::CallSettings callSettings = null) =>
+            GetEntryLinkAsync(new GetEntryLinkRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Gets an Entry Link.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The resource name of the Entry Link:
+        /// `projects/{project_id_or_number}/locations/{location_id}/entryGroups/{entry_group_id}/entryLinks/{entry_link_id}`.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<EntryLink> GetEntryLinkAsync(string name, st::CancellationToken cancellationToken) =>
+            GetEntryLinkAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Gets an Entry Link.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The resource name of the Entry Link:
+        /// `projects/{project_id_or_number}/locations/{location_id}/entryGroups/{entry_group_id}/entryLinks/{entry_link_id}`.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual EntryLink GetEntryLink(EntryLinkName name, gaxgrpc::CallSettings callSettings = null) =>
+            GetEntryLink(new GetEntryLinkRequest
+            {
+                EntryLinkName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Gets an Entry Link.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The resource name of the Entry Link:
+        /// `projects/{project_id_or_number}/locations/{location_id}/entryGroups/{entry_group_id}/entryLinks/{entry_link_id}`.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<EntryLink> GetEntryLinkAsync(EntryLinkName name, gaxgrpc::CallSettings callSettings = null) =>
+            GetEntryLinkAsync(new GetEntryLinkRequest
+            {
+                EntryLinkName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Gets an Entry Link.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The resource name of the Entry Link:
+        /// `projects/{project_id_or_number}/locations/{location_id}/entryGroups/{entry_group_id}/entryLinks/{entry_link_id}`.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<EntryLink> GetEntryLinkAsync(EntryLinkName name, st::CancellationToken cancellationToken) =>
+            GetEntryLinkAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
     }
 
     /// <summary>CatalogService client wrapper implementation, for convenient use.</summary>
     /// <remarks>
     /// The primary resources offered by this service are EntryGroups, EntryTypes,
-    /// AspectTypes, and Entries. They collectively let data administrators organize,
-    /// manage, secure, and catalog data located across cloud projects in their
-    /// organization in a variety of storage systems, including Cloud Storage and
-    /// BigQuery.
+    /// AspectTypes, Entries and EntryLinks. They collectively let data
+    /// administrators organize, manage, secure, and catalog data located across
+    /// cloud projects in their organization in a variety of storage systems,
+    /// including Cloud Storage and BigQuery.
     /// </remarks>
     public sealed partial class CatalogServiceClientImpl : CatalogServiceClient
     {
@@ -4552,6 +4998,12 @@ namespace Google.Cloud.Dataplex.V1
         private readonly gaxgrpc::ApiCall<ListMetadataJobsRequest, ListMetadataJobsResponse> _callListMetadataJobs;
 
         private readonly gaxgrpc::ApiCall<CancelMetadataJobRequest, wkt::Empty> _callCancelMetadataJob;
+
+        private readonly gaxgrpc::ApiCall<CreateEntryLinkRequest, EntryLink> _callCreateEntryLink;
+
+        private readonly gaxgrpc::ApiCall<DeleteEntryLinkRequest, EntryLink> _callDeleteEntryLink;
+
+        private readonly gaxgrpc::ApiCall<GetEntryLinkRequest, EntryLink> _callGetEntryLink;
 
         /// <summary>
         /// Constructs a client wrapper for the CatalogService service, with the specified gRPC client and settings.
@@ -4658,6 +5110,15 @@ namespace Google.Cloud.Dataplex.V1
             _callCancelMetadataJob = clientHelper.BuildApiCall<CancelMetadataJobRequest, wkt::Empty>("CancelMetadataJob", grpcClient.CancelMetadataJobAsync, grpcClient.CancelMetadataJob, effectiveSettings.CancelMetadataJobSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callCancelMetadataJob);
             Modify_CancelMetadataJobApiCall(ref _callCancelMetadataJob);
+            _callCreateEntryLink = clientHelper.BuildApiCall<CreateEntryLinkRequest, EntryLink>("CreateEntryLink", grpcClient.CreateEntryLinkAsync, grpcClient.CreateEntryLink, effectiveSettings.CreateEntryLinkSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            Modify_ApiCall(ref _callCreateEntryLink);
+            Modify_CreateEntryLinkApiCall(ref _callCreateEntryLink);
+            _callDeleteEntryLink = clientHelper.BuildApiCall<DeleteEntryLinkRequest, EntryLink>("DeleteEntryLink", grpcClient.DeleteEntryLinkAsync, grpcClient.DeleteEntryLink, effectiveSettings.DeleteEntryLinkSettings).WithGoogleRequestParam("name", request => request.Name);
+            Modify_ApiCall(ref _callDeleteEntryLink);
+            Modify_DeleteEntryLinkApiCall(ref _callDeleteEntryLink);
+            _callGetEntryLink = clientHelper.BuildApiCall<GetEntryLinkRequest, EntryLink>("GetEntryLink", grpcClient.GetEntryLinkAsync, grpcClient.GetEntryLink, effectiveSettings.GetEntryLinkSettings).WithGoogleRequestParam("name", request => request.Name);
+            Modify_ApiCall(ref _callGetEntryLink);
+            Modify_GetEntryLinkApiCall(ref _callGetEntryLink);
             OnConstruction(grpcClient, effectiveSettings, clientHelper);
         }
 
@@ -4714,6 +5175,12 @@ namespace Google.Cloud.Dataplex.V1
         partial void Modify_ListMetadataJobsApiCall(ref gaxgrpc::ApiCall<ListMetadataJobsRequest, ListMetadataJobsResponse> call);
 
         partial void Modify_CancelMetadataJobApiCall(ref gaxgrpc::ApiCall<CancelMetadataJobRequest, wkt::Empty> call);
+
+        partial void Modify_CreateEntryLinkApiCall(ref gaxgrpc::ApiCall<CreateEntryLinkRequest, EntryLink> call);
+
+        partial void Modify_DeleteEntryLinkApiCall(ref gaxgrpc::ApiCall<DeleteEntryLinkRequest, EntryLink> call);
+
+        partial void Modify_GetEntryLinkApiCall(ref gaxgrpc::ApiCall<GetEntryLinkRequest, EntryLink> call);
 
         partial void OnConstruction(CatalogService.CatalogServiceClient grpcClient, CatalogServiceSettings effectiveSettings, gaxgrpc::ClientHelper clientHelper);
 
@@ -4777,6 +5244,12 @@ namespace Google.Cloud.Dataplex.V1
         partial void Modify_ListMetadataJobsRequest(ref ListMetadataJobsRequest request, ref gaxgrpc::CallSettings settings);
 
         partial void Modify_CancelMetadataJobRequest(ref CancelMetadataJobRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_CreateEntryLinkRequest(ref CreateEntryLinkRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_DeleteEntryLinkRequest(ref DeleteEntryLinkRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_GetEntryLinkRequest(ref GetEntryLinkRequest request, ref gaxgrpc::CallSettings settings);
 
         /// <summary>The long-running operations client for <c>CreateEntryType</c>.</summary>
         public override lro::OperationsClient CreateEntryTypeOperationsClient { get; }
@@ -5337,8 +5810,8 @@ namespace Google.Cloud.Dataplex.V1
         public override lro::OperationsClient CreateMetadataJobOperationsClient { get; }
 
         /// <summary>
-        /// Creates a metadata job. For example, use a metadata job to import Dataplex
-        /// Catalog entries and aspects from a third-party system into Dataplex.
+        /// Creates a metadata job. For example, use a metadata job to import metadata
+        /// from a third-party system into Dataplex Universal Catalog.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -5350,8 +5823,8 @@ namespace Google.Cloud.Dataplex.V1
         }
 
         /// <summary>
-        /// Creates a metadata job. For example, use a metadata job to import Dataplex
-        /// Catalog entries and aspects from a third-party system into Dataplex.
+        /// Creates a metadata job. For example, use a metadata job to import metadata
+        /// from a third-party system into Dataplex Universal Catalog.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -5442,6 +5915,78 @@ namespace Google.Cloud.Dataplex.V1
         {
             Modify_CancelMetadataJobRequest(ref request, ref callSettings);
             return _callCancelMetadataJob.Async(request, callSettings);
+        }
+
+        /// <summary>
+        /// Creates an Entry Link.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override EntryLink CreateEntryLink(CreateEntryLinkRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_CreateEntryLinkRequest(ref request, ref callSettings);
+            return _callCreateEntryLink.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Creates an Entry Link.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override stt::Task<EntryLink> CreateEntryLinkAsync(CreateEntryLinkRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_CreateEntryLinkRequest(ref request, ref callSettings);
+            return _callCreateEntryLink.Async(request, callSettings);
+        }
+
+        /// <summary>
+        /// Deletes an Entry Link.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override EntryLink DeleteEntryLink(DeleteEntryLinkRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_DeleteEntryLinkRequest(ref request, ref callSettings);
+            return _callDeleteEntryLink.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Deletes an Entry Link.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override stt::Task<EntryLink> DeleteEntryLinkAsync(DeleteEntryLinkRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_DeleteEntryLinkRequest(ref request, ref callSettings);
+            return _callDeleteEntryLink.Async(request, callSettings);
+        }
+
+        /// <summary>
+        /// Gets an Entry Link.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override EntryLink GetEntryLink(GetEntryLinkRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_GetEntryLinkRequest(ref request, ref callSettings);
+            return _callGetEntryLink.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Gets an Entry Link.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override stt::Task<EntryLink> GetEntryLinkAsync(GetEntryLinkRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_GetEntryLinkRequest(ref request, ref callSettings);
+            return _callGetEntryLink.Async(request, callSettings);
         }
     }
 
