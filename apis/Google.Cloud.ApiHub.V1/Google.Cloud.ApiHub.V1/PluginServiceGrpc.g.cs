@@ -71,6 +71,36 @@ namespace Google.Cloud.ApiHub.V1 {
     static readonly grpc::Marshaller<global::Google.Cloud.ApiHub.V1.EnablePluginRequest> __Marshaller_google_cloud_apihub_v1_EnablePluginRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.ApiHub.V1.EnablePluginRequest.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.ApiHub.V1.DisablePluginRequest> __Marshaller_google_cloud_apihub_v1_DisablePluginRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.ApiHub.V1.DisablePluginRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.ApiHub.V1.CreatePluginRequest> __Marshaller_google_cloud_apihub_v1_CreatePluginRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.ApiHub.V1.CreatePluginRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.ApiHub.V1.ListPluginsRequest> __Marshaller_google_cloud_apihub_v1_ListPluginsRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.ApiHub.V1.ListPluginsRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.ApiHub.V1.ListPluginsResponse> __Marshaller_google_cloud_apihub_v1_ListPluginsResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.ApiHub.V1.ListPluginsResponse.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.ApiHub.V1.DeletePluginRequest> __Marshaller_google_cloud_apihub_v1_DeletePluginRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.ApiHub.V1.DeletePluginRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.LongRunning.Operation> __Marshaller_google_longrunning_Operation = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.LongRunning.Operation.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.ApiHub.V1.CreatePluginInstanceRequest> __Marshaller_google_cloud_apihub_v1_CreatePluginInstanceRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.ApiHub.V1.CreatePluginInstanceRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.ApiHub.V1.ExecutePluginInstanceActionRequest> __Marshaller_google_cloud_apihub_v1_ExecutePluginInstanceActionRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.ApiHub.V1.ExecutePluginInstanceActionRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.ApiHub.V1.GetPluginInstanceRequest> __Marshaller_google_cloud_apihub_v1_GetPluginInstanceRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.ApiHub.V1.GetPluginInstanceRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.ApiHub.V1.PluginInstance> __Marshaller_google_cloud_apihub_v1_PluginInstance = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.ApiHub.V1.PluginInstance.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.ApiHub.V1.ListPluginInstancesRequest> __Marshaller_google_cloud_apihub_v1_ListPluginInstancesRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.ApiHub.V1.ListPluginInstancesRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.ApiHub.V1.ListPluginInstancesResponse> __Marshaller_google_cloud_apihub_v1_ListPluginInstancesResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.ApiHub.V1.ListPluginInstancesResponse.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.ApiHub.V1.EnablePluginInstanceActionRequest> __Marshaller_google_cloud_apihub_v1_EnablePluginInstanceActionRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.ApiHub.V1.EnablePluginInstanceActionRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.ApiHub.V1.DisablePluginInstanceActionRequest> __Marshaller_google_cloud_apihub_v1_DisablePluginInstanceActionRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.ApiHub.V1.DisablePluginInstanceActionRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.ApiHub.V1.UpdatePluginInstanceRequest> __Marshaller_google_cloud_apihub_v1_UpdatePluginInstanceRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.ApiHub.V1.UpdatePluginInstanceRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.ApiHub.V1.DeletePluginInstanceRequest> __Marshaller_google_cloud_apihub_v1_DeletePluginInstanceRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.ApiHub.V1.DeletePluginInstanceRequest.Parser));
 
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.ApiHub.V1.GetPluginRequest, global::Google.Cloud.ApiHub.V1.Plugin> __Method_GetPlugin = new grpc::Method<global::Google.Cloud.ApiHub.V1.GetPluginRequest, global::Google.Cloud.ApiHub.V1.Plugin>(
@@ -96,6 +126,94 @@ namespace Google.Cloud.ApiHub.V1 {
         __Marshaller_google_cloud_apihub_v1_DisablePluginRequest,
         __Marshaller_google_cloud_apihub_v1_Plugin);
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.ApiHub.V1.CreatePluginRequest, global::Google.Cloud.ApiHub.V1.Plugin> __Method_CreatePlugin = new grpc::Method<global::Google.Cloud.ApiHub.V1.CreatePluginRequest, global::Google.Cloud.ApiHub.V1.Plugin>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "CreatePlugin",
+        __Marshaller_google_cloud_apihub_v1_CreatePluginRequest,
+        __Marshaller_google_cloud_apihub_v1_Plugin);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.ApiHub.V1.ListPluginsRequest, global::Google.Cloud.ApiHub.V1.ListPluginsResponse> __Method_ListPlugins = new grpc::Method<global::Google.Cloud.ApiHub.V1.ListPluginsRequest, global::Google.Cloud.ApiHub.V1.ListPluginsResponse>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "ListPlugins",
+        __Marshaller_google_cloud_apihub_v1_ListPluginsRequest,
+        __Marshaller_google_cloud_apihub_v1_ListPluginsResponse);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.ApiHub.V1.DeletePluginRequest, global::Google.LongRunning.Operation> __Method_DeletePlugin = new grpc::Method<global::Google.Cloud.ApiHub.V1.DeletePluginRequest, global::Google.LongRunning.Operation>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "DeletePlugin",
+        __Marshaller_google_cloud_apihub_v1_DeletePluginRequest,
+        __Marshaller_google_longrunning_Operation);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.ApiHub.V1.CreatePluginInstanceRequest, global::Google.LongRunning.Operation> __Method_CreatePluginInstance = new grpc::Method<global::Google.Cloud.ApiHub.V1.CreatePluginInstanceRequest, global::Google.LongRunning.Operation>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "CreatePluginInstance",
+        __Marshaller_google_cloud_apihub_v1_CreatePluginInstanceRequest,
+        __Marshaller_google_longrunning_Operation);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.ApiHub.V1.ExecutePluginInstanceActionRequest, global::Google.LongRunning.Operation> __Method_ExecutePluginInstanceAction = new grpc::Method<global::Google.Cloud.ApiHub.V1.ExecutePluginInstanceActionRequest, global::Google.LongRunning.Operation>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "ExecutePluginInstanceAction",
+        __Marshaller_google_cloud_apihub_v1_ExecutePluginInstanceActionRequest,
+        __Marshaller_google_longrunning_Operation);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.ApiHub.V1.GetPluginInstanceRequest, global::Google.Cloud.ApiHub.V1.PluginInstance> __Method_GetPluginInstance = new grpc::Method<global::Google.Cloud.ApiHub.V1.GetPluginInstanceRequest, global::Google.Cloud.ApiHub.V1.PluginInstance>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "GetPluginInstance",
+        __Marshaller_google_cloud_apihub_v1_GetPluginInstanceRequest,
+        __Marshaller_google_cloud_apihub_v1_PluginInstance);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.ApiHub.V1.ListPluginInstancesRequest, global::Google.Cloud.ApiHub.V1.ListPluginInstancesResponse> __Method_ListPluginInstances = new grpc::Method<global::Google.Cloud.ApiHub.V1.ListPluginInstancesRequest, global::Google.Cloud.ApiHub.V1.ListPluginInstancesResponse>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "ListPluginInstances",
+        __Marshaller_google_cloud_apihub_v1_ListPluginInstancesRequest,
+        __Marshaller_google_cloud_apihub_v1_ListPluginInstancesResponse);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.ApiHub.V1.EnablePluginInstanceActionRequest, global::Google.LongRunning.Operation> __Method_EnablePluginInstanceAction = new grpc::Method<global::Google.Cloud.ApiHub.V1.EnablePluginInstanceActionRequest, global::Google.LongRunning.Operation>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "EnablePluginInstanceAction",
+        __Marshaller_google_cloud_apihub_v1_EnablePluginInstanceActionRequest,
+        __Marshaller_google_longrunning_Operation);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.ApiHub.V1.DisablePluginInstanceActionRequest, global::Google.LongRunning.Operation> __Method_DisablePluginInstanceAction = new grpc::Method<global::Google.Cloud.ApiHub.V1.DisablePluginInstanceActionRequest, global::Google.LongRunning.Operation>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "DisablePluginInstanceAction",
+        __Marshaller_google_cloud_apihub_v1_DisablePluginInstanceActionRequest,
+        __Marshaller_google_longrunning_Operation);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.ApiHub.V1.UpdatePluginInstanceRequest, global::Google.Cloud.ApiHub.V1.PluginInstance> __Method_UpdatePluginInstance = new grpc::Method<global::Google.Cloud.ApiHub.V1.UpdatePluginInstanceRequest, global::Google.Cloud.ApiHub.V1.PluginInstance>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "UpdatePluginInstance",
+        __Marshaller_google_cloud_apihub_v1_UpdatePluginInstanceRequest,
+        __Marshaller_google_cloud_apihub_v1_PluginInstance);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.ApiHub.V1.DeletePluginInstanceRequest, global::Google.LongRunning.Operation> __Method_DeletePluginInstance = new grpc::Method<global::Google.Cloud.ApiHub.V1.DeletePluginInstanceRequest, global::Google.LongRunning.Operation>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "DeletePluginInstance",
+        __Marshaller_google_cloud_apihub_v1_DeletePluginInstanceRequest,
+        __Marshaller_google_longrunning_Operation);
+
     /// <summary>Service descriptor</summary>
     public static global::Google.Protobuf.Reflection.ServiceDescriptor Descriptor
     {
@@ -107,7 +225,7 @@ namespace Google.Cloud.ApiHub.V1 {
     public abstract partial class ApiHubPluginBase
     {
       /// <summary>
-      /// Get details about an API Hub plugin.
+      /// Get an API Hub plugin.
       /// </summary>
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
@@ -144,6 +262,158 @@ namespace Google.Cloud.ApiHub.V1 {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
       }
 
+      /// <summary>
+      /// Create an API Hub plugin resource in the API hub.
+      /// Once a plugin is created, it can be used to create plugin instances.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.ApiHub.V1.Plugin> CreatePlugin(global::Google.Cloud.ApiHub.V1.CreatePluginRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// List all the plugins in a given project and location.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.ApiHub.V1.ListPluginsResponse> ListPlugins(global::Google.Cloud.ApiHub.V1.ListPluginsRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Delete a Plugin in API hub.
+      /// Note, only user owned plugins can be deleted via this method.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.LongRunning.Operation> DeletePlugin(global::Google.Cloud.ApiHub.V1.DeletePluginRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Creates a Plugin instance in the API hub.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.LongRunning.Operation> CreatePluginInstance(global::Google.Cloud.ApiHub.V1.CreatePluginInstanceRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Executes a plugin instance in the API hub.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.LongRunning.Operation> ExecutePluginInstanceAction(global::Google.Cloud.ApiHub.V1.ExecutePluginInstanceActionRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Get an API Hub plugin instance.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.ApiHub.V1.PluginInstance> GetPluginInstance(global::Google.Cloud.ApiHub.V1.GetPluginInstanceRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// List all the plugins in a given project and location.
+      /// `-` can be used as wildcard value for {plugin_id}
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.ApiHub.V1.ListPluginInstancesResponse> ListPluginInstances(global::Google.Cloud.ApiHub.V1.ListPluginInstancesRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Enables a plugin instance in the API hub.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.LongRunning.Operation> EnablePluginInstanceAction(global::Google.Cloud.ApiHub.V1.EnablePluginInstanceActionRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Disables a plugin instance in the API hub.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.LongRunning.Operation> DisablePluginInstanceAction(global::Google.Cloud.ApiHub.V1.DisablePluginInstanceActionRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Updates a plugin instance in the API hub.
+      /// The following fields in the
+      /// [plugin_instance][google.cloud.apihub.v1.PluginInstance] can be updated
+      /// currently:
+      ///
+      /// * [display_name][google.cloud.apihub.v1.PluginInstance.display_name]
+      /// * [schedule_cron_expression][PluginInstance.actions.schedule_cron_expression]
+      ///
+      /// The
+      /// [update_mask][google.cloud.apihub.v1.UpdatePluginInstanceRequest.update_mask]
+      /// should be used to specify the fields being updated.
+      ///
+      /// To update the
+      /// [auth_config][google.cloud.apihub.v1.PluginInstance.auth_config] and
+      /// [additional_config][google.cloud.apihub.v1.PluginInstance.additional_config]
+      /// of the plugin instance, use the
+      /// [ApplyPluginInstanceConfig][google.cloud.apihub.v1.ApiHubPlugin.ApplyPluginInstanceConfig]
+      /// method.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.ApiHub.V1.PluginInstance> UpdatePluginInstance(global::Google.Cloud.ApiHub.V1.UpdatePluginInstanceRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Deletes a plugin instance in the API hub.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.LongRunning.Operation> DeletePluginInstance(global::Google.Cloud.ApiHub.V1.DeletePluginInstanceRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
     }
 
     /// <summary>Client for ApiHubPlugin</summary>
@@ -174,7 +444,7 @@ namespace Google.Cloud.ApiHub.V1 {
       }
 
       /// <summary>
-      /// Get details about an API Hub plugin.
+      /// Get an API Hub plugin.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -187,7 +457,7 @@ namespace Google.Cloud.ApiHub.V1 {
         return GetPlugin(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Get details about an API Hub plugin.
+      /// Get an API Hub plugin.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -198,7 +468,7 @@ namespace Google.Cloud.ApiHub.V1 {
         return CallInvoker.BlockingUnaryCall(__Method_GetPlugin, null, options, request);
       }
       /// <summary>
-      /// Get details about an API Hub plugin.
+      /// Get an API Hub plugin.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -211,7 +481,7 @@ namespace Google.Cloud.ApiHub.V1 {
         return GetPluginAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Get details about an API Hub plugin.
+      /// Get an API Hub plugin.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -325,6 +595,614 @@ namespace Google.Cloud.ApiHub.V1 {
       {
         return CallInvoker.AsyncUnaryCall(__Method_DisablePlugin, null, options, request);
       }
+      /// <summary>
+      /// Create an API Hub plugin resource in the API hub.
+      /// Once a plugin is created, it can be used to create plugin instances.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.ApiHub.V1.Plugin CreatePlugin(global::Google.Cloud.ApiHub.V1.CreatePluginRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return CreatePlugin(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Create an API Hub plugin resource in the API hub.
+      /// Once a plugin is created, it can be used to create plugin instances.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.ApiHub.V1.Plugin CreatePlugin(global::Google.Cloud.ApiHub.V1.CreatePluginRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_CreatePlugin, null, options, request);
+      }
+      /// <summary>
+      /// Create an API Hub plugin resource in the API hub.
+      /// Once a plugin is created, it can be used to create plugin instances.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.ApiHub.V1.Plugin> CreatePluginAsync(global::Google.Cloud.ApiHub.V1.CreatePluginRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return CreatePluginAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Create an API Hub plugin resource in the API hub.
+      /// Once a plugin is created, it can be used to create plugin instances.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.ApiHub.V1.Plugin> CreatePluginAsync(global::Google.Cloud.ApiHub.V1.CreatePluginRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_CreatePlugin, null, options, request);
+      }
+      /// <summary>
+      /// List all the plugins in a given project and location.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.ApiHub.V1.ListPluginsResponse ListPlugins(global::Google.Cloud.ApiHub.V1.ListPluginsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return ListPlugins(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// List all the plugins in a given project and location.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.ApiHub.V1.ListPluginsResponse ListPlugins(global::Google.Cloud.ApiHub.V1.ListPluginsRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_ListPlugins, null, options, request);
+      }
+      /// <summary>
+      /// List all the plugins in a given project and location.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.ApiHub.V1.ListPluginsResponse> ListPluginsAsync(global::Google.Cloud.ApiHub.V1.ListPluginsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return ListPluginsAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// List all the plugins in a given project and location.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.ApiHub.V1.ListPluginsResponse> ListPluginsAsync(global::Google.Cloud.ApiHub.V1.ListPluginsRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_ListPlugins, null, options, request);
+      }
+      /// <summary>
+      /// Delete a Plugin in API hub.
+      /// Note, only user owned plugins can be deleted via this method.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.LongRunning.Operation DeletePlugin(global::Google.Cloud.ApiHub.V1.DeletePluginRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return DeletePlugin(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Delete a Plugin in API hub.
+      /// Note, only user owned plugins can be deleted via this method.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.LongRunning.Operation DeletePlugin(global::Google.Cloud.ApiHub.V1.DeletePluginRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_DeletePlugin, null, options, request);
+      }
+      /// <summary>
+      /// Delete a Plugin in API hub.
+      /// Note, only user owned plugins can be deleted via this method.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> DeletePluginAsync(global::Google.Cloud.ApiHub.V1.DeletePluginRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return DeletePluginAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Delete a Plugin in API hub.
+      /// Note, only user owned plugins can be deleted via this method.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> DeletePluginAsync(global::Google.Cloud.ApiHub.V1.DeletePluginRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_DeletePlugin, null, options, request);
+      }
+      /// <summary>
+      /// Creates a Plugin instance in the API hub.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.LongRunning.Operation CreatePluginInstance(global::Google.Cloud.ApiHub.V1.CreatePluginInstanceRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return CreatePluginInstance(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Creates a Plugin instance in the API hub.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.LongRunning.Operation CreatePluginInstance(global::Google.Cloud.ApiHub.V1.CreatePluginInstanceRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_CreatePluginInstance, null, options, request);
+      }
+      /// <summary>
+      /// Creates a Plugin instance in the API hub.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> CreatePluginInstanceAsync(global::Google.Cloud.ApiHub.V1.CreatePluginInstanceRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return CreatePluginInstanceAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Creates a Plugin instance in the API hub.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> CreatePluginInstanceAsync(global::Google.Cloud.ApiHub.V1.CreatePluginInstanceRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_CreatePluginInstance, null, options, request);
+      }
+      /// <summary>
+      /// Executes a plugin instance in the API hub.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.LongRunning.Operation ExecutePluginInstanceAction(global::Google.Cloud.ApiHub.V1.ExecutePluginInstanceActionRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return ExecutePluginInstanceAction(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Executes a plugin instance in the API hub.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.LongRunning.Operation ExecutePluginInstanceAction(global::Google.Cloud.ApiHub.V1.ExecutePluginInstanceActionRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_ExecutePluginInstanceAction, null, options, request);
+      }
+      /// <summary>
+      /// Executes a plugin instance in the API hub.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> ExecutePluginInstanceActionAsync(global::Google.Cloud.ApiHub.V1.ExecutePluginInstanceActionRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return ExecutePluginInstanceActionAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Executes a plugin instance in the API hub.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> ExecutePluginInstanceActionAsync(global::Google.Cloud.ApiHub.V1.ExecutePluginInstanceActionRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_ExecutePluginInstanceAction, null, options, request);
+      }
+      /// <summary>
+      /// Get an API Hub plugin instance.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.ApiHub.V1.PluginInstance GetPluginInstance(global::Google.Cloud.ApiHub.V1.GetPluginInstanceRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return GetPluginInstance(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Get an API Hub plugin instance.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.ApiHub.V1.PluginInstance GetPluginInstance(global::Google.Cloud.ApiHub.V1.GetPluginInstanceRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_GetPluginInstance, null, options, request);
+      }
+      /// <summary>
+      /// Get an API Hub plugin instance.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.ApiHub.V1.PluginInstance> GetPluginInstanceAsync(global::Google.Cloud.ApiHub.V1.GetPluginInstanceRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return GetPluginInstanceAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Get an API Hub plugin instance.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.ApiHub.V1.PluginInstance> GetPluginInstanceAsync(global::Google.Cloud.ApiHub.V1.GetPluginInstanceRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_GetPluginInstance, null, options, request);
+      }
+      /// <summary>
+      /// List all the plugins in a given project and location.
+      /// `-` can be used as wildcard value for {plugin_id}
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.ApiHub.V1.ListPluginInstancesResponse ListPluginInstances(global::Google.Cloud.ApiHub.V1.ListPluginInstancesRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return ListPluginInstances(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// List all the plugins in a given project and location.
+      /// `-` can be used as wildcard value for {plugin_id}
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.ApiHub.V1.ListPluginInstancesResponse ListPluginInstances(global::Google.Cloud.ApiHub.V1.ListPluginInstancesRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_ListPluginInstances, null, options, request);
+      }
+      /// <summary>
+      /// List all the plugins in a given project and location.
+      /// `-` can be used as wildcard value for {plugin_id}
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.ApiHub.V1.ListPluginInstancesResponse> ListPluginInstancesAsync(global::Google.Cloud.ApiHub.V1.ListPluginInstancesRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return ListPluginInstancesAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// List all the plugins in a given project and location.
+      /// `-` can be used as wildcard value for {plugin_id}
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.ApiHub.V1.ListPluginInstancesResponse> ListPluginInstancesAsync(global::Google.Cloud.ApiHub.V1.ListPluginInstancesRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_ListPluginInstances, null, options, request);
+      }
+      /// <summary>
+      /// Enables a plugin instance in the API hub.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.LongRunning.Operation EnablePluginInstanceAction(global::Google.Cloud.ApiHub.V1.EnablePluginInstanceActionRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return EnablePluginInstanceAction(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Enables a plugin instance in the API hub.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.LongRunning.Operation EnablePluginInstanceAction(global::Google.Cloud.ApiHub.V1.EnablePluginInstanceActionRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_EnablePluginInstanceAction, null, options, request);
+      }
+      /// <summary>
+      /// Enables a plugin instance in the API hub.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> EnablePluginInstanceActionAsync(global::Google.Cloud.ApiHub.V1.EnablePluginInstanceActionRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return EnablePluginInstanceActionAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Enables a plugin instance in the API hub.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> EnablePluginInstanceActionAsync(global::Google.Cloud.ApiHub.V1.EnablePluginInstanceActionRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_EnablePluginInstanceAction, null, options, request);
+      }
+      /// <summary>
+      /// Disables a plugin instance in the API hub.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.LongRunning.Operation DisablePluginInstanceAction(global::Google.Cloud.ApiHub.V1.DisablePluginInstanceActionRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return DisablePluginInstanceAction(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Disables a plugin instance in the API hub.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.LongRunning.Operation DisablePluginInstanceAction(global::Google.Cloud.ApiHub.V1.DisablePluginInstanceActionRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_DisablePluginInstanceAction, null, options, request);
+      }
+      /// <summary>
+      /// Disables a plugin instance in the API hub.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> DisablePluginInstanceActionAsync(global::Google.Cloud.ApiHub.V1.DisablePluginInstanceActionRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return DisablePluginInstanceActionAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Disables a plugin instance in the API hub.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> DisablePluginInstanceActionAsync(global::Google.Cloud.ApiHub.V1.DisablePluginInstanceActionRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_DisablePluginInstanceAction, null, options, request);
+      }
+      /// <summary>
+      /// Updates a plugin instance in the API hub.
+      /// The following fields in the
+      /// [plugin_instance][google.cloud.apihub.v1.PluginInstance] can be updated
+      /// currently:
+      ///
+      /// * [display_name][google.cloud.apihub.v1.PluginInstance.display_name]
+      /// * [schedule_cron_expression][PluginInstance.actions.schedule_cron_expression]
+      ///
+      /// The
+      /// [update_mask][google.cloud.apihub.v1.UpdatePluginInstanceRequest.update_mask]
+      /// should be used to specify the fields being updated.
+      ///
+      /// To update the
+      /// [auth_config][google.cloud.apihub.v1.PluginInstance.auth_config] and
+      /// [additional_config][google.cloud.apihub.v1.PluginInstance.additional_config]
+      /// of the plugin instance, use the
+      /// [ApplyPluginInstanceConfig][google.cloud.apihub.v1.ApiHubPlugin.ApplyPluginInstanceConfig]
+      /// method.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.ApiHub.V1.PluginInstance UpdatePluginInstance(global::Google.Cloud.ApiHub.V1.UpdatePluginInstanceRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return UpdatePluginInstance(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Updates a plugin instance in the API hub.
+      /// The following fields in the
+      /// [plugin_instance][google.cloud.apihub.v1.PluginInstance] can be updated
+      /// currently:
+      ///
+      /// * [display_name][google.cloud.apihub.v1.PluginInstance.display_name]
+      /// * [schedule_cron_expression][PluginInstance.actions.schedule_cron_expression]
+      ///
+      /// The
+      /// [update_mask][google.cloud.apihub.v1.UpdatePluginInstanceRequest.update_mask]
+      /// should be used to specify the fields being updated.
+      ///
+      /// To update the
+      /// [auth_config][google.cloud.apihub.v1.PluginInstance.auth_config] and
+      /// [additional_config][google.cloud.apihub.v1.PluginInstance.additional_config]
+      /// of the plugin instance, use the
+      /// [ApplyPluginInstanceConfig][google.cloud.apihub.v1.ApiHubPlugin.ApplyPluginInstanceConfig]
+      /// method.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.ApiHub.V1.PluginInstance UpdatePluginInstance(global::Google.Cloud.ApiHub.V1.UpdatePluginInstanceRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_UpdatePluginInstance, null, options, request);
+      }
+      /// <summary>
+      /// Updates a plugin instance in the API hub.
+      /// The following fields in the
+      /// [plugin_instance][google.cloud.apihub.v1.PluginInstance] can be updated
+      /// currently:
+      ///
+      /// * [display_name][google.cloud.apihub.v1.PluginInstance.display_name]
+      /// * [schedule_cron_expression][PluginInstance.actions.schedule_cron_expression]
+      ///
+      /// The
+      /// [update_mask][google.cloud.apihub.v1.UpdatePluginInstanceRequest.update_mask]
+      /// should be used to specify the fields being updated.
+      ///
+      /// To update the
+      /// [auth_config][google.cloud.apihub.v1.PluginInstance.auth_config] and
+      /// [additional_config][google.cloud.apihub.v1.PluginInstance.additional_config]
+      /// of the plugin instance, use the
+      /// [ApplyPluginInstanceConfig][google.cloud.apihub.v1.ApiHubPlugin.ApplyPluginInstanceConfig]
+      /// method.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.ApiHub.V1.PluginInstance> UpdatePluginInstanceAsync(global::Google.Cloud.ApiHub.V1.UpdatePluginInstanceRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return UpdatePluginInstanceAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Updates a plugin instance in the API hub.
+      /// The following fields in the
+      /// [plugin_instance][google.cloud.apihub.v1.PluginInstance] can be updated
+      /// currently:
+      ///
+      /// * [display_name][google.cloud.apihub.v1.PluginInstance.display_name]
+      /// * [schedule_cron_expression][PluginInstance.actions.schedule_cron_expression]
+      ///
+      /// The
+      /// [update_mask][google.cloud.apihub.v1.UpdatePluginInstanceRequest.update_mask]
+      /// should be used to specify the fields being updated.
+      ///
+      /// To update the
+      /// [auth_config][google.cloud.apihub.v1.PluginInstance.auth_config] and
+      /// [additional_config][google.cloud.apihub.v1.PluginInstance.additional_config]
+      /// of the plugin instance, use the
+      /// [ApplyPluginInstanceConfig][google.cloud.apihub.v1.ApiHubPlugin.ApplyPluginInstanceConfig]
+      /// method.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.ApiHub.V1.PluginInstance> UpdatePluginInstanceAsync(global::Google.Cloud.ApiHub.V1.UpdatePluginInstanceRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_UpdatePluginInstance, null, options, request);
+      }
+      /// <summary>
+      /// Deletes a plugin instance in the API hub.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.LongRunning.Operation DeletePluginInstance(global::Google.Cloud.ApiHub.V1.DeletePluginInstanceRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return DeletePluginInstance(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Deletes a plugin instance in the API hub.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.LongRunning.Operation DeletePluginInstance(global::Google.Cloud.ApiHub.V1.DeletePluginInstanceRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_DeletePluginInstance, null, options, request);
+      }
+      /// <summary>
+      /// Deletes a plugin instance in the API hub.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> DeletePluginInstanceAsync(global::Google.Cloud.ApiHub.V1.DeletePluginInstanceRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return DeletePluginInstanceAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Deletes a plugin instance in the API hub.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> DeletePluginInstanceAsync(global::Google.Cloud.ApiHub.V1.DeletePluginInstanceRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_DeletePluginInstance, null, options, request);
+      }
       /// <summary>Creates a new instance of client from given <c>ClientBaseConfiguration</c>.</summary>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       protected override ApiHubPluginClient NewInstance(ClientBaseConfiguration configuration)
@@ -341,7 +1219,18 @@ namespace Google.Cloud.ApiHub.V1 {
       return grpc::ServerServiceDefinition.CreateBuilder()
           .AddMethod(__Method_GetPlugin, serviceImpl.GetPlugin)
           .AddMethod(__Method_EnablePlugin, serviceImpl.EnablePlugin)
-          .AddMethod(__Method_DisablePlugin, serviceImpl.DisablePlugin).Build();
+          .AddMethod(__Method_DisablePlugin, serviceImpl.DisablePlugin)
+          .AddMethod(__Method_CreatePlugin, serviceImpl.CreatePlugin)
+          .AddMethod(__Method_ListPlugins, serviceImpl.ListPlugins)
+          .AddMethod(__Method_DeletePlugin, serviceImpl.DeletePlugin)
+          .AddMethod(__Method_CreatePluginInstance, serviceImpl.CreatePluginInstance)
+          .AddMethod(__Method_ExecutePluginInstanceAction, serviceImpl.ExecutePluginInstanceAction)
+          .AddMethod(__Method_GetPluginInstance, serviceImpl.GetPluginInstance)
+          .AddMethod(__Method_ListPluginInstances, serviceImpl.ListPluginInstances)
+          .AddMethod(__Method_EnablePluginInstanceAction, serviceImpl.EnablePluginInstanceAction)
+          .AddMethod(__Method_DisablePluginInstanceAction, serviceImpl.DisablePluginInstanceAction)
+          .AddMethod(__Method_UpdatePluginInstance, serviceImpl.UpdatePluginInstance)
+          .AddMethod(__Method_DeletePluginInstance, serviceImpl.DeletePluginInstance).Build();
     }
 
     /// <summary>Register service method with a service binder with or without implementation. Useful when customizing the service binding logic.
@@ -354,6 +1243,17 @@ namespace Google.Cloud.ApiHub.V1 {
       serviceBinder.AddMethod(__Method_GetPlugin, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.ApiHub.V1.GetPluginRequest, global::Google.Cloud.ApiHub.V1.Plugin>(serviceImpl.GetPlugin));
       serviceBinder.AddMethod(__Method_EnablePlugin, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.ApiHub.V1.EnablePluginRequest, global::Google.Cloud.ApiHub.V1.Plugin>(serviceImpl.EnablePlugin));
       serviceBinder.AddMethod(__Method_DisablePlugin, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.ApiHub.V1.DisablePluginRequest, global::Google.Cloud.ApiHub.V1.Plugin>(serviceImpl.DisablePlugin));
+      serviceBinder.AddMethod(__Method_CreatePlugin, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.ApiHub.V1.CreatePluginRequest, global::Google.Cloud.ApiHub.V1.Plugin>(serviceImpl.CreatePlugin));
+      serviceBinder.AddMethod(__Method_ListPlugins, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.ApiHub.V1.ListPluginsRequest, global::Google.Cloud.ApiHub.V1.ListPluginsResponse>(serviceImpl.ListPlugins));
+      serviceBinder.AddMethod(__Method_DeletePlugin, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.ApiHub.V1.DeletePluginRequest, global::Google.LongRunning.Operation>(serviceImpl.DeletePlugin));
+      serviceBinder.AddMethod(__Method_CreatePluginInstance, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.ApiHub.V1.CreatePluginInstanceRequest, global::Google.LongRunning.Operation>(serviceImpl.CreatePluginInstance));
+      serviceBinder.AddMethod(__Method_ExecutePluginInstanceAction, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.ApiHub.V1.ExecutePluginInstanceActionRequest, global::Google.LongRunning.Operation>(serviceImpl.ExecutePluginInstanceAction));
+      serviceBinder.AddMethod(__Method_GetPluginInstance, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.ApiHub.V1.GetPluginInstanceRequest, global::Google.Cloud.ApiHub.V1.PluginInstance>(serviceImpl.GetPluginInstance));
+      serviceBinder.AddMethod(__Method_ListPluginInstances, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.ApiHub.V1.ListPluginInstancesRequest, global::Google.Cloud.ApiHub.V1.ListPluginInstancesResponse>(serviceImpl.ListPluginInstances));
+      serviceBinder.AddMethod(__Method_EnablePluginInstanceAction, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.ApiHub.V1.EnablePluginInstanceActionRequest, global::Google.LongRunning.Operation>(serviceImpl.EnablePluginInstanceAction));
+      serviceBinder.AddMethod(__Method_DisablePluginInstanceAction, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.ApiHub.V1.DisablePluginInstanceActionRequest, global::Google.LongRunning.Operation>(serviceImpl.DisablePluginInstanceAction));
+      serviceBinder.AddMethod(__Method_UpdatePluginInstance, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.ApiHub.V1.UpdatePluginInstanceRequest, global::Google.Cloud.ApiHub.V1.PluginInstance>(serviceImpl.UpdatePluginInstance));
+      serviceBinder.AddMethod(__Method_DeletePluginInstance, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.ApiHub.V1.DeletePluginInstanceRequest, global::Google.LongRunning.Operation>(serviceImpl.DeletePluginInstance));
     }
 
   }

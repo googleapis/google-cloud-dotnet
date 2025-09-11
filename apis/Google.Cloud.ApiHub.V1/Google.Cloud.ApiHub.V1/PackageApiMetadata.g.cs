@@ -67,7 +67,10 @@ namespace Google.Cloud.ApiHub.V1
         private static scg::IEnumerable<gpr::FileDescriptor> GetFileDescriptors()
         {
             yield return ApihubServiceReflection.Descriptor;
+            yield return CollectServiceReflection.Descriptor;
             yield return CommonFieldsReflection.Descriptor;
+            yield return CurateServiceReflection.Descriptor;
+            yield return DiscoveryServiceReflection.Descriptor;
             yield return HostProjectRegistrationServiceReflection.Descriptor;
             yield return LintingServiceReflection.Descriptor;
             yield return PluginServiceReflection.Descriptor;

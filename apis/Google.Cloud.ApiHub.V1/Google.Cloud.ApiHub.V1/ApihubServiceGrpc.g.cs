@@ -112,13 +112,19 @@ namespace Google.Cloud.ApiHub.V1 {
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.ApiHub.V1.DeleteSpecRequest> __Marshaller_google_cloud_apihub_v1_DeleteSpecRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.ApiHub.V1.DeleteSpecRequest.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-    static readonly grpc::Marshaller<global::Google.Cloud.ApiHub.V1.GetApiOperationRequest> __Marshaller_google_cloud_apihub_v1_GetApiOperationRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.ApiHub.V1.GetApiOperationRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.ApiHub.V1.CreateApiOperationRequest> __Marshaller_google_cloud_apihub_v1_CreateApiOperationRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.ApiHub.V1.CreateApiOperationRequest.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.ApiHub.V1.ApiOperation> __Marshaller_google_cloud_apihub_v1_ApiOperation = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.ApiHub.V1.ApiOperation.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.ApiHub.V1.GetApiOperationRequest> __Marshaller_google_cloud_apihub_v1_GetApiOperationRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.ApiHub.V1.GetApiOperationRequest.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.ApiHub.V1.ListApiOperationsRequest> __Marshaller_google_cloud_apihub_v1_ListApiOperationsRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.ApiHub.V1.ListApiOperationsRequest.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.ApiHub.V1.ListApiOperationsResponse> __Marshaller_google_cloud_apihub_v1_ListApiOperationsResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.ApiHub.V1.ListApiOperationsResponse.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.ApiHub.V1.UpdateApiOperationRequest> __Marshaller_google_cloud_apihub_v1_UpdateApiOperationRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.ApiHub.V1.UpdateApiOperationRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.ApiHub.V1.DeleteApiOperationRequest> __Marshaller_google_cloud_apihub_v1_DeleteApiOperationRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.ApiHub.V1.DeleteApiOperationRequest.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.ApiHub.V1.GetDefinitionRequest> __Marshaller_google_cloud_apihub_v1_GetDefinitionRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.ApiHub.V1.GetDefinitionRequest.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
@@ -299,6 +305,14 @@ namespace Google.Cloud.ApiHub.V1 {
         __Marshaller_google_protobuf_Empty);
 
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.ApiHub.V1.CreateApiOperationRequest, global::Google.Cloud.ApiHub.V1.ApiOperation> __Method_CreateApiOperation = new grpc::Method<global::Google.Cloud.ApiHub.V1.CreateApiOperationRequest, global::Google.Cloud.ApiHub.V1.ApiOperation>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "CreateApiOperation",
+        __Marshaller_google_cloud_apihub_v1_CreateApiOperationRequest,
+        __Marshaller_google_cloud_apihub_v1_ApiOperation);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.ApiHub.V1.GetApiOperationRequest, global::Google.Cloud.ApiHub.V1.ApiOperation> __Method_GetApiOperation = new grpc::Method<global::Google.Cloud.ApiHub.V1.GetApiOperationRequest, global::Google.Cloud.ApiHub.V1.ApiOperation>(
         grpc::MethodType.Unary,
         __ServiceName,
@@ -313,6 +327,22 @@ namespace Google.Cloud.ApiHub.V1 {
         "ListApiOperations",
         __Marshaller_google_cloud_apihub_v1_ListApiOperationsRequest,
         __Marshaller_google_cloud_apihub_v1_ListApiOperationsResponse);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.ApiHub.V1.UpdateApiOperationRequest, global::Google.Cloud.ApiHub.V1.ApiOperation> __Method_UpdateApiOperation = new grpc::Method<global::Google.Cloud.ApiHub.V1.UpdateApiOperationRequest, global::Google.Cloud.ApiHub.V1.ApiOperation>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "UpdateApiOperation",
+        __Marshaller_google_cloud_apihub_v1_UpdateApiOperationRequest,
+        __Marshaller_google_cloud_apihub_v1_ApiOperation);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.ApiHub.V1.DeleteApiOperationRequest, global::Google.Protobuf.WellKnownTypes.Empty> __Method_DeleteApiOperation = new grpc::Method<global::Google.Cloud.ApiHub.V1.DeleteApiOperationRequest, global::Google.Protobuf.WellKnownTypes.Empty>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "DeleteApiOperation",
+        __Marshaller_google_cloud_apihub_v1_DeleteApiOperationRequest,
+        __Marshaller_google_protobuf_Empty);
 
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.ApiHub.V1.GetDefinitionRequest, global::Google.Cloud.ApiHub.V1.Definition> __Method_GetDefinition = new grpc::Method<global::Google.Cloud.ApiHub.V1.GetDefinitionRequest, global::Google.Cloud.ApiHub.V1.Definition>(
@@ -499,7 +529,7 @@ namespace Google.Cloud.ApiHub.V1 {
 
       /// <summary>
       /// Update an API resource in the API hub. The following fields in the
-      /// [API][] can be updated:
+      /// [API][google.cloud.apihub.v1.Api] can be updated:
       ///
       /// * [display_name][google.cloud.apihub.v1.Api.display_name]
       /// * [description][google.cloud.apihub.v1.Api.description]
@@ -509,6 +539,7 @@ namespace Google.Cloud.ApiHub.V1 {
       /// * [team][google.cloud.apihub.v1.Api.team]
       /// * [business_unit][google.cloud.apihub.v1.Api.business_unit]
       /// * [maturity_level][google.cloud.apihub.v1.Api.maturity_level]
+      /// * [api_style][google.cloud.apihub.v1.Api.api_style]
       /// * [attributes][google.cloud.apihub.v1.Api.attributes]
       ///
       /// The
@@ -736,6 +767,20 @@ namespace Google.Cloud.ApiHub.V1 {
       }
 
       /// <summary>
+      /// Create an apiOperation in an API version.
+      /// An apiOperation can be created only if the version has no apiOperations
+      /// which were created by parsing a spec.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.ApiHub.V1.ApiOperation> CreateApiOperation(global::Google.Cloud.ApiHub.V1.CreateApiOperationRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
       /// Get details about a particular operation in API version.
       /// </summary>
       /// <param name="request">The request received from the client.</param>
@@ -755,6 +800,50 @@ namespace Google.Cloud.ApiHub.V1 {
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.ApiHub.V1.ListApiOperationsResponse> ListApiOperations(global::Google.Cloud.ApiHub.V1.ListApiOperationsRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Update an operation in an API version. The following fields in the
+      /// [ApiOperation resource][google.cloud.apihub.v1.ApiOperation] can be
+      /// updated:
+      ///
+      /// * [details.description][ApiOperation.details.description]
+      /// * [details.documentation][ApiOperation.details.documentation]
+      /// * [details.http_operation.path][ApiOperation.details.http_operation.path.path]
+      /// * [details.http_operation.method][ApiOperation.details.http_operation.method]
+      /// * [details.deprecated][ApiOperation.details.deprecated]
+      /// * [attributes][google.cloud.apihub.v1.ApiOperation.attributes]
+      ///
+      /// The
+      /// [update_mask][google.cloud.apihub.v1.UpdateApiOperationRequest.update_mask]
+      /// should be used to specify the fields being updated.
+      ///
+      /// An operation can be updated only if the operation was created via
+      /// [CreateApiOperation][google.cloud.apihub.v1.ApiHub.CreateApiOperation] API.
+      /// If the operation was created by parsing the spec, then it can be edited by
+      /// updating the spec.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.ApiHub.V1.ApiOperation> UpdateApiOperation(global::Google.Cloud.ApiHub.V1.UpdateApiOperationRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Delete an operation in an API version and we can delete only the
+      /// operations created via create API. If the operation was created by parsing
+      /// the spec, then it can be deleted by editing or deleting the spec.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Protobuf.WellKnownTypes.Empty> DeleteApiOperation(global::Google.Cloud.ApiHub.V1.DeleteApiOperationRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
       }
@@ -823,7 +912,11 @@ namespace Google.Cloud.ApiHub.V1 {
       /// * [slo][google.cloud.apihub.v1.Deployment.slo]
       /// * [environment][google.cloud.apihub.v1.Deployment.environment]
       /// * [attributes][google.cloud.apihub.v1.Deployment.attributes]
-      ///
+      /// * [source_project] [google.cloud.apihub.v1.Deployment.source_project]
+      /// * [source_environment]
+      /// [google.cloud.apihub.v1.Deployment.source_environment]
+      /// * [management_url][google.cloud.apihub.v1.Deployment.management_url]
+      /// * [source_uri][google.cloud.apihub.v1.Deployment.source_uri]
       /// The
       /// [update_mask][google.cloud.apihub.v1.UpdateDeploymentRequest.update_mask]
       /// should be used to specify the fields being updated.
@@ -1203,7 +1296,7 @@ namespace Google.Cloud.ApiHub.V1 {
       }
       /// <summary>
       /// Update an API resource in the API hub. The following fields in the
-      /// [API][] can be updated:
+      /// [API][google.cloud.apihub.v1.Api] can be updated:
       ///
       /// * [display_name][google.cloud.apihub.v1.Api.display_name]
       /// * [description][google.cloud.apihub.v1.Api.description]
@@ -1213,6 +1306,7 @@ namespace Google.Cloud.ApiHub.V1 {
       /// * [team][google.cloud.apihub.v1.Api.team]
       /// * [business_unit][google.cloud.apihub.v1.Api.business_unit]
       /// * [maturity_level][google.cloud.apihub.v1.Api.maturity_level]
+      /// * [api_style][google.cloud.apihub.v1.Api.api_style]
       /// * [attributes][google.cloud.apihub.v1.Api.attributes]
       ///
       /// The
@@ -1234,7 +1328,7 @@ namespace Google.Cloud.ApiHub.V1 {
       }
       /// <summary>
       /// Update an API resource in the API hub. The following fields in the
-      /// [API][] can be updated:
+      /// [API][google.cloud.apihub.v1.Api] can be updated:
       ///
       /// * [display_name][google.cloud.apihub.v1.Api.display_name]
       /// * [description][google.cloud.apihub.v1.Api.description]
@@ -1244,6 +1338,7 @@ namespace Google.Cloud.ApiHub.V1 {
       /// * [team][google.cloud.apihub.v1.Api.team]
       /// * [business_unit][google.cloud.apihub.v1.Api.business_unit]
       /// * [maturity_level][google.cloud.apihub.v1.Api.maturity_level]
+      /// * [api_style][google.cloud.apihub.v1.Api.api_style]
       /// * [attributes][google.cloud.apihub.v1.Api.attributes]
       ///
       /// The
@@ -1263,7 +1358,7 @@ namespace Google.Cloud.ApiHub.V1 {
       }
       /// <summary>
       /// Update an API resource in the API hub. The following fields in the
-      /// [API][] can be updated:
+      /// [API][google.cloud.apihub.v1.Api] can be updated:
       ///
       /// * [display_name][google.cloud.apihub.v1.Api.display_name]
       /// * [description][google.cloud.apihub.v1.Api.description]
@@ -1273,6 +1368,7 @@ namespace Google.Cloud.ApiHub.V1 {
       /// * [team][google.cloud.apihub.v1.Api.team]
       /// * [business_unit][google.cloud.apihub.v1.Api.business_unit]
       /// * [maturity_level][google.cloud.apihub.v1.Api.maturity_level]
+      /// * [api_style][google.cloud.apihub.v1.Api.api_style]
       /// * [attributes][google.cloud.apihub.v1.Api.attributes]
       ///
       /// The
@@ -1294,7 +1390,7 @@ namespace Google.Cloud.ApiHub.V1 {
       }
       /// <summary>
       /// Update an API resource in the API hub. The following fields in the
-      /// [API][] can be updated:
+      /// [API][google.cloud.apihub.v1.Api] can be updated:
       ///
       /// * [display_name][google.cloud.apihub.v1.Api.display_name]
       /// * [description][google.cloud.apihub.v1.Api.description]
@@ -1304,6 +1400,7 @@ namespace Google.Cloud.ApiHub.V1 {
       /// * [team][google.cloud.apihub.v1.Api.team]
       /// * [business_unit][google.cloud.apihub.v1.Api.business_unit]
       /// * [maturity_level][google.cloud.apihub.v1.Api.maturity_level]
+      /// * [api_style][google.cloud.apihub.v1.Api.api_style]
       /// * [attributes][google.cloud.apihub.v1.Api.attributes]
       ///
       /// The
@@ -2154,6 +2251,62 @@ namespace Google.Cloud.ApiHub.V1 {
         return CallInvoker.AsyncUnaryCall(__Method_DeleteSpec, null, options, request);
       }
       /// <summary>
+      /// Create an apiOperation in an API version.
+      /// An apiOperation can be created only if the version has no apiOperations
+      /// which were created by parsing a spec.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.ApiHub.V1.ApiOperation CreateApiOperation(global::Google.Cloud.ApiHub.V1.CreateApiOperationRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return CreateApiOperation(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Create an apiOperation in an API version.
+      /// An apiOperation can be created only if the version has no apiOperations
+      /// which were created by parsing a spec.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.ApiHub.V1.ApiOperation CreateApiOperation(global::Google.Cloud.ApiHub.V1.CreateApiOperationRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_CreateApiOperation, null, options, request);
+      }
+      /// <summary>
+      /// Create an apiOperation in an API version.
+      /// An apiOperation can be created only if the version has no apiOperations
+      /// which were created by parsing a spec.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.ApiHub.V1.ApiOperation> CreateApiOperationAsync(global::Google.Cloud.ApiHub.V1.CreateApiOperationRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return CreateApiOperationAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Create an apiOperation in an API version.
+      /// An apiOperation can be created only if the version has no apiOperations
+      /// which were created by parsing a spec.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.ApiHub.V1.ApiOperation> CreateApiOperationAsync(global::Google.Cloud.ApiHub.V1.CreateApiOperationRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_CreateApiOperation, null, options, request);
+      }
+      /// <summary>
       /// Get details about a particular operation in API version.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
@@ -2248,6 +2401,182 @@ namespace Google.Cloud.ApiHub.V1 {
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.ApiHub.V1.ListApiOperationsResponse> ListApiOperationsAsync(global::Google.Cloud.ApiHub.V1.ListApiOperationsRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_ListApiOperations, null, options, request);
+      }
+      /// <summary>
+      /// Update an operation in an API version. The following fields in the
+      /// [ApiOperation resource][google.cloud.apihub.v1.ApiOperation] can be
+      /// updated:
+      ///
+      /// * [details.description][ApiOperation.details.description]
+      /// * [details.documentation][ApiOperation.details.documentation]
+      /// * [details.http_operation.path][ApiOperation.details.http_operation.path.path]
+      /// * [details.http_operation.method][ApiOperation.details.http_operation.method]
+      /// * [details.deprecated][ApiOperation.details.deprecated]
+      /// * [attributes][google.cloud.apihub.v1.ApiOperation.attributes]
+      ///
+      /// The
+      /// [update_mask][google.cloud.apihub.v1.UpdateApiOperationRequest.update_mask]
+      /// should be used to specify the fields being updated.
+      ///
+      /// An operation can be updated only if the operation was created via
+      /// [CreateApiOperation][google.cloud.apihub.v1.ApiHub.CreateApiOperation] API.
+      /// If the operation was created by parsing the spec, then it can be edited by
+      /// updating the spec.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.ApiHub.V1.ApiOperation UpdateApiOperation(global::Google.Cloud.ApiHub.V1.UpdateApiOperationRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return UpdateApiOperation(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Update an operation in an API version. The following fields in the
+      /// [ApiOperation resource][google.cloud.apihub.v1.ApiOperation] can be
+      /// updated:
+      ///
+      /// * [details.description][ApiOperation.details.description]
+      /// * [details.documentation][ApiOperation.details.documentation]
+      /// * [details.http_operation.path][ApiOperation.details.http_operation.path.path]
+      /// * [details.http_operation.method][ApiOperation.details.http_operation.method]
+      /// * [details.deprecated][ApiOperation.details.deprecated]
+      /// * [attributes][google.cloud.apihub.v1.ApiOperation.attributes]
+      ///
+      /// The
+      /// [update_mask][google.cloud.apihub.v1.UpdateApiOperationRequest.update_mask]
+      /// should be used to specify the fields being updated.
+      ///
+      /// An operation can be updated only if the operation was created via
+      /// [CreateApiOperation][google.cloud.apihub.v1.ApiHub.CreateApiOperation] API.
+      /// If the operation was created by parsing the spec, then it can be edited by
+      /// updating the spec.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.ApiHub.V1.ApiOperation UpdateApiOperation(global::Google.Cloud.ApiHub.V1.UpdateApiOperationRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_UpdateApiOperation, null, options, request);
+      }
+      /// <summary>
+      /// Update an operation in an API version. The following fields in the
+      /// [ApiOperation resource][google.cloud.apihub.v1.ApiOperation] can be
+      /// updated:
+      ///
+      /// * [details.description][ApiOperation.details.description]
+      /// * [details.documentation][ApiOperation.details.documentation]
+      /// * [details.http_operation.path][ApiOperation.details.http_operation.path.path]
+      /// * [details.http_operation.method][ApiOperation.details.http_operation.method]
+      /// * [details.deprecated][ApiOperation.details.deprecated]
+      /// * [attributes][google.cloud.apihub.v1.ApiOperation.attributes]
+      ///
+      /// The
+      /// [update_mask][google.cloud.apihub.v1.UpdateApiOperationRequest.update_mask]
+      /// should be used to specify the fields being updated.
+      ///
+      /// An operation can be updated only if the operation was created via
+      /// [CreateApiOperation][google.cloud.apihub.v1.ApiHub.CreateApiOperation] API.
+      /// If the operation was created by parsing the spec, then it can be edited by
+      /// updating the spec.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.ApiHub.V1.ApiOperation> UpdateApiOperationAsync(global::Google.Cloud.ApiHub.V1.UpdateApiOperationRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return UpdateApiOperationAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Update an operation in an API version. The following fields in the
+      /// [ApiOperation resource][google.cloud.apihub.v1.ApiOperation] can be
+      /// updated:
+      ///
+      /// * [details.description][ApiOperation.details.description]
+      /// * [details.documentation][ApiOperation.details.documentation]
+      /// * [details.http_operation.path][ApiOperation.details.http_operation.path.path]
+      /// * [details.http_operation.method][ApiOperation.details.http_operation.method]
+      /// * [details.deprecated][ApiOperation.details.deprecated]
+      /// * [attributes][google.cloud.apihub.v1.ApiOperation.attributes]
+      ///
+      /// The
+      /// [update_mask][google.cloud.apihub.v1.UpdateApiOperationRequest.update_mask]
+      /// should be used to specify the fields being updated.
+      ///
+      /// An operation can be updated only if the operation was created via
+      /// [CreateApiOperation][google.cloud.apihub.v1.ApiHub.CreateApiOperation] API.
+      /// If the operation was created by parsing the spec, then it can be edited by
+      /// updating the spec.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.ApiHub.V1.ApiOperation> UpdateApiOperationAsync(global::Google.Cloud.ApiHub.V1.UpdateApiOperationRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_UpdateApiOperation, null, options, request);
+      }
+      /// <summary>
+      /// Delete an operation in an API version and we can delete only the
+      /// operations created via create API. If the operation was created by parsing
+      /// the spec, then it can be deleted by editing or deleting the spec.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Protobuf.WellKnownTypes.Empty DeleteApiOperation(global::Google.Cloud.ApiHub.V1.DeleteApiOperationRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return DeleteApiOperation(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Delete an operation in an API version and we can delete only the
+      /// operations created via create API. If the operation was created by parsing
+      /// the spec, then it can be deleted by editing or deleting the spec.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Protobuf.WellKnownTypes.Empty DeleteApiOperation(global::Google.Cloud.ApiHub.V1.DeleteApiOperationRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_DeleteApiOperation, null, options, request);
+      }
+      /// <summary>
+      /// Delete an operation in an API version and we can delete only the
+      /// operations created via create API. If the operation was created by parsing
+      /// the spec, then it can be deleted by editing or deleting the spec.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Protobuf.WellKnownTypes.Empty> DeleteApiOperationAsync(global::Google.Cloud.ApiHub.V1.DeleteApiOperationRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return DeleteApiOperationAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Delete an operation in an API version and we can delete only the
+      /// operations created via create API. If the operation was created by parsing
+      /// the spec, then it can be deleted by editing or deleting the spec.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Protobuf.WellKnownTypes.Empty> DeleteApiOperationAsync(global::Google.Cloud.ApiHub.V1.DeleteApiOperationRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_DeleteApiOperation, null, options, request);
       }
       /// <summary>
       /// Get details about a definition in an API version.
@@ -2463,7 +2792,11 @@ namespace Google.Cloud.ApiHub.V1 {
       /// * [slo][google.cloud.apihub.v1.Deployment.slo]
       /// * [environment][google.cloud.apihub.v1.Deployment.environment]
       /// * [attributes][google.cloud.apihub.v1.Deployment.attributes]
-      ///
+      /// * [source_project] [google.cloud.apihub.v1.Deployment.source_project]
+      /// * [source_environment]
+      /// [google.cloud.apihub.v1.Deployment.source_environment]
+      /// * [management_url][google.cloud.apihub.v1.Deployment.management_url]
+      /// * [source_uri][google.cloud.apihub.v1.Deployment.source_uri]
       /// The
       /// [update_mask][google.cloud.apihub.v1.UpdateDeploymentRequest.update_mask]
       /// should be used to specify the fields being updated.
@@ -2492,7 +2825,11 @@ namespace Google.Cloud.ApiHub.V1 {
       /// * [slo][google.cloud.apihub.v1.Deployment.slo]
       /// * [environment][google.cloud.apihub.v1.Deployment.environment]
       /// * [attributes][google.cloud.apihub.v1.Deployment.attributes]
-      ///
+      /// * [source_project] [google.cloud.apihub.v1.Deployment.source_project]
+      /// * [source_environment]
+      /// [google.cloud.apihub.v1.Deployment.source_environment]
+      /// * [management_url][google.cloud.apihub.v1.Deployment.management_url]
+      /// * [source_uri][google.cloud.apihub.v1.Deployment.source_uri]
       /// The
       /// [update_mask][google.cloud.apihub.v1.UpdateDeploymentRequest.update_mask]
       /// should be used to specify the fields being updated.
@@ -2519,7 +2856,11 @@ namespace Google.Cloud.ApiHub.V1 {
       /// * [slo][google.cloud.apihub.v1.Deployment.slo]
       /// * [environment][google.cloud.apihub.v1.Deployment.environment]
       /// * [attributes][google.cloud.apihub.v1.Deployment.attributes]
-      ///
+      /// * [source_project] [google.cloud.apihub.v1.Deployment.source_project]
+      /// * [source_environment]
+      /// [google.cloud.apihub.v1.Deployment.source_environment]
+      /// * [management_url][google.cloud.apihub.v1.Deployment.management_url]
+      /// * [source_uri][google.cloud.apihub.v1.Deployment.source_uri]
       /// The
       /// [update_mask][google.cloud.apihub.v1.UpdateDeploymentRequest.update_mask]
       /// should be used to specify the fields being updated.
@@ -2548,7 +2889,11 @@ namespace Google.Cloud.ApiHub.V1 {
       /// * [slo][google.cloud.apihub.v1.Deployment.slo]
       /// * [environment][google.cloud.apihub.v1.Deployment.environment]
       /// * [attributes][google.cloud.apihub.v1.Deployment.attributes]
-      ///
+      /// * [source_project] [google.cloud.apihub.v1.Deployment.source_project]
+      /// * [source_environment]
+      /// [google.cloud.apihub.v1.Deployment.source_environment]
+      /// * [management_url][google.cloud.apihub.v1.Deployment.management_url]
+      /// * [source_uri][google.cloud.apihub.v1.Deployment.source_uri]
       /// The
       /// [update_mask][google.cloud.apihub.v1.UpdateDeploymentRequest.update_mask]
       /// should be used to specify the fields being updated.
@@ -3339,8 +3684,11 @@ namespace Google.Cloud.ApiHub.V1 {
           .AddMethod(__Method_ListSpecs, serviceImpl.ListSpecs)
           .AddMethod(__Method_UpdateSpec, serviceImpl.UpdateSpec)
           .AddMethod(__Method_DeleteSpec, serviceImpl.DeleteSpec)
+          .AddMethod(__Method_CreateApiOperation, serviceImpl.CreateApiOperation)
           .AddMethod(__Method_GetApiOperation, serviceImpl.GetApiOperation)
           .AddMethod(__Method_ListApiOperations, serviceImpl.ListApiOperations)
+          .AddMethod(__Method_UpdateApiOperation, serviceImpl.UpdateApiOperation)
+          .AddMethod(__Method_DeleteApiOperation, serviceImpl.DeleteApiOperation)
           .AddMethod(__Method_GetDefinition, serviceImpl.GetDefinition)
           .AddMethod(__Method_CreateDeployment, serviceImpl.CreateDeployment)
           .AddMethod(__Method_GetDeployment, serviceImpl.GetDeployment)
@@ -3383,8 +3731,11 @@ namespace Google.Cloud.ApiHub.V1 {
       serviceBinder.AddMethod(__Method_ListSpecs, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.ApiHub.V1.ListSpecsRequest, global::Google.Cloud.ApiHub.V1.ListSpecsResponse>(serviceImpl.ListSpecs));
       serviceBinder.AddMethod(__Method_UpdateSpec, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.ApiHub.V1.UpdateSpecRequest, global::Google.Cloud.ApiHub.V1.Spec>(serviceImpl.UpdateSpec));
       serviceBinder.AddMethod(__Method_DeleteSpec, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.ApiHub.V1.DeleteSpecRequest, global::Google.Protobuf.WellKnownTypes.Empty>(serviceImpl.DeleteSpec));
+      serviceBinder.AddMethod(__Method_CreateApiOperation, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.ApiHub.V1.CreateApiOperationRequest, global::Google.Cloud.ApiHub.V1.ApiOperation>(serviceImpl.CreateApiOperation));
       serviceBinder.AddMethod(__Method_GetApiOperation, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.ApiHub.V1.GetApiOperationRequest, global::Google.Cloud.ApiHub.V1.ApiOperation>(serviceImpl.GetApiOperation));
       serviceBinder.AddMethod(__Method_ListApiOperations, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.ApiHub.V1.ListApiOperationsRequest, global::Google.Cloud.ApiHub.V1.ListApiOperationsResponse>(serviceImpl.ListApiOperations));
+      serviceBinder.AddMethod(__Method_UpdateApiOperation, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.ApiHub.V1.UpdateApiOperationRequest, global::Google.Cloud.ApiHub.V1.ApiOperation>(serviceImpl.UpdateApiOperation));
+      serviceBinder.AddMethod(__Method_DeleteApiOperation, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.ApiHub.V1.DeleteApiOperationRequest, global::Google.Protobuf.WellKnownTypes.Empty>(serviceImpl.DeleteApiOperation));
       serviceBinder.AddMethod(__Method_GetDefinition, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.ApiHub.V1.GetDefinitionRequest, global::Google.Cloud.ApiHub.V1.Definition>(serviceImpl.GetDefinition));
       serviceBinder.AddMethod(__Method_CreateDeployment, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.ApiHub.V1.CreateDeploymentRequest, global::Google.Cloud.ApiHub.V1.Deployment>(serviceImpl.CreateDeployment));
       serviceBinder.AddMethod(__Method_GetDeployment, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.ApiHub.V1.GetDeploymentRequest, global::Google.Cloud.ApiHub.V1.Deployment>(serviceImpl.GetDeployment));

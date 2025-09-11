@@ -64,8 +64,11 @@ namespace Google.Cloud.ApiHub.V1
             ListSpecsSettings = existing.ListSpecsSettings;
             UpdateSpecSettings = existing.UpdateSpecSettings;
             DeleteSpecSettings = existing.DeleteSpecSettings;
+            CreateApiOperationSettings = existing.CreateApiOperationSettings;
             GetApiOperationSettings = existing.GetApiOperationSettings;
             ListApiOperationsSettings = existing.ListApiOperationsSettings;
+            UpdateApiOperationSettings = existing.UpdateApiOperationSettings;
+            DeleteApiOperationSettings = existing.DeleteApiOperationSettings;
             GetDefinitionSettings = existing.GetDefinitionSettings;
             CreateDeploymentSettings = existing.CreateDeploymentSettings;
             GetDeploymentSettings = existing.GetDeploymentSettings;
@@ -156,10 +159,10 @@ namespace Google.Cloud.ApiHub.V1
         /// <remarks>
         /// <list type="bullet">
         /// <item><description>This call will not be retried.</description></item>
-        /// <item><description>Timeout: 60 seconds.</description></item>
+        /// <item><description>Timeout: 300 seconds.</description></item>
         /// </list>
         /// </remarks>
-        public gaxgrpc::CallSettings DeleteApiSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000)));
+        public gaxgrpc::CallSettings DeleteApiSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(300000)));
 
         /// <summary>
         /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to <c>ApiHubClient.CreateVersion</c>
@@ -228,10 +231,10 @@ namespace Google.Cloud.ApiHub.V1
         /// <remarks>
         /// <list type="bullet">
         /// <item><description>This call will not be retried.</description></item>
-        /// <item><description>Timeout: 60 seconds.</description></item>
+        /// <item><description>Timeout: 300 seconds.</description></item>
         /// </list>
         /// </remarks>
-        public gaxgrpc::CallSettings DeleteVersionSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000)));
+        public gaxgrpc::CallSettings DeleteVersionSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(300000)));
 
         /// <summary>
         /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to <c>ApiHubClient.CreateSpec</c>
@@ -318,10 +321,22 @@ namespace Google.Cloud.ApiHub.V1
         /// <remarks>
         /// <list type="bullet">
         /// <item><description>This call will not be retried.</description></item>
-        /// <item><description>Timeout: 60 seconds.</description></item>
+        /// <item><description>Timeout: 300 seconds.</description></item>
         /// </list>
         /// </remarks>
-        public gaxgrpc::CallSettings DeleteSpecSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000)));
+        public gaxgrpc::CallSettings DeleteSpecSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(300000)));
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>ApiHubClient.CreateApiOperation</c> and <c>ApiHubClient.CreateApiOperationAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>No timeout is applied.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings CreateApiOperationSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
 
         /// <summary>
         /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
@@ -358,6 +373,30 @@ namespace Google.Cloud.ApiHub.V1
         /// </list>
         /// </remarks>
         public gaxgrpc::CallSettings ListApiOperationsSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 5, initialBackoff: sys::TimeSpan.FromMilliseconds(1000), maxBackoff: sys::TimeSpan.FromMilliseconds(10000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Unavailable)));
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>ApiHubClient.UpdateApiOperation</c> and <c>ApiHubClient.UpdateApiOperationAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>No timeout is applied.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings UpdateApiOperationSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>ApiHubClient.DeleteApiOperation</c> and <c>ApiHubClient.DeleteApiOperationAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>No timeout is applied.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings DeleteApiOperationSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
 
         /// <summary>
         /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to <c>ApiHubClient.GetDefinition</c>
@@ -1237,7 +1276,7 @@ namespace Google.Cloud.ApiHub.V1
 
         /// <summary>
         /// Update an API resource in the API hub. The following fields in the
-        /// [API][] can be updated:
+        /// [API][google.cloud.apihub.v1.Api] can be updated:
         /// 
         /// * [display_name][google.cloud.apihub.v1.Api.display_name]
         /// * [description][google.cloud.apihub.v1.Api.description]
@@ -1247,6 +1286,7 @@ namespace Google.Cloud.ApiHub.V1
         /// * [team][google.cloud.apihub.v1.Api.team]
         /// * [business_unit][google.cloud.apihub.v1.Api.business_unit]
         /// * [maturity_level][google.cloud.apihub.v1.Api.maturity_level]
+        /// * [api_style][google.cloud.apihub.v1.Api.api_style]
         /// * [attributes][google.cloud.apihub.v1.Api.attributes]
         /// 
         /// The
@@ -1264,7 +1304,7 @@ namespace Google.Cloud.ApiHub.V1
 
         /// <summary>
         /// Update an API resource in the API hub. The following fields in the
-        /// [API][] can be updated:
+        /// [API][google.cloud.apihub.v1.Api] can be updated:
         /// 
         /// * [display_name][google.cloud.apihub.v1.Api.display_name]
         /// * [description][google.cloud.apihub.v1.Api.description]
@@ -1274,6 +1314,7 @@ namespace Google.Cloud.ApiHub.V1
         /// * [team][google.cloud.apihub.v1.Api.team]
         /// * [business_unit][google.cloud.apihub.v1.Api.business_unit]
         /// * [maturity_level][google.cloud.apihub.v1.Api.maturity_level]
+        /// * [api_style][google.cloud.apihub.v1.Api.api_style]
         /// * [attributes][google.cloud.apihub.v1.Api.attributes]
         /// 
         /// The
@@ -1291,7 +1332,7 @@ namespace Google.Cloud.ApiHub.V1
 
         /// <summary>
         /// Update an API resource in the API hub. The following fields in the
-        /// [API][] can be updated:
+        /// [API][google.cloud.apihub.v1.Api] can be updated:
         /// 
         /// * [display_name][google.cloud.apihub.v1.Api.display_name]
         /// * [description][google.cloud.apihub.v1.Api.description]
@@ -1301,6 +1342,7 @@ namespace Google.Cloud.ApiHub.V1
         /// * [team][google.cloud.apihub.v1.Api.team]
         /// * [business_unit][google.cloud.apihub.v1.Api.business_unit]
         /// * [maturity_level][google.cloud.apihub.v1.Api.maturity_level]
+        /// * [api_style][google.cloud.apihub.v1.Api.api_style]
         /// * [attributes][google.cloud.apihub.v1.Api.attributes]
         /// 
         /// The
@@ -1318,7 +1360,7 @@ namespace Google.Cloud.ApiHub.V1
 
         /// <summary>
         /// Update an API resource in the API hub. The following fields in the
-        /// [API][] can be updated:
+        /// [API][google.cloud.apihub.v1.Api] can be updated:
         /// 
         /// * [display_name][google.cloud.apihub.v1.Api.display_name]
         /// * [description][google.cloud.apihub.v1.Api.description]
@@ -1328,6 +1370,7 @@ namespace Google.Cloud.ApiHub.V1
         /// * [team][google.cloud.apihub.v1.Api.team]
         /// * [business_unit][google.cloud.apihub.v1.Api.business_unit]
         /// * [maturity_level][google.cloud.apihub.v1.Api.maturity_level]
+        /// * [api_style][google.cloud.apihub.v1.Api.api_style]
         /// * [attributes][google.cloud.apihub.v1.Api.attributes]
         /// 
         /// The
@@ -1358,7 +1401,7 @@ namespace Google.Cloud.ApiHub.V1
 
         /// <summary>
         /// Update an API resource in the API hub. The following fields in the
-        /// [API][] can be updated:
+        /// [API][google.cloud.apihub.v1.Api] can be updated:
         /// 
         /// * [display_name][google.cloud.apihub.v1.Api.display_name]
         /// * [description][google.cloud.apihub.v1.Api.description]
@@ -1368,6 +1411,7 @@ namespace Google.Cloud.ApiHub.V1
         /// * [team][google.cloud.apihub.v1.Api.team]
         /// * [business_unit][google.cloud.apihub.v1.Api.business_unit]
         /// * [maturity_level][google.cloud.apihub.v1.Api.maturity_level]
+        /// * [api_style][google.cloud.apihub.v1.Api.api_style]
         /// * [attributes][google.cloud.apihub.v1.Api.attributes]
         /// 
         /// The
@@ -1398,7 +1442,7 @@ namespace Google.Cloud.ApiHub.V1
 
         /// <summary>
         /// Update an API resource in the API hub. The following fields in the
-        /// [API][] can be updated:
+        /// [API][google.cloud.apihub.v1.Api] can be updated:
         /// 
         /// * [display_name][google.cloud.apihub.v1.Api.display_name]
         /// * [description][google.cloud.apihub.v1.Api.description]
@@ -1408,6 +1452,7 @@ namespace Google.Cloud.ApiHub.V1
         /// * [team][google.cloud.apihub.v1.Api.team]
         /// * [business_unit][google.cloud.apihub.v1.Api.business_unit]
         /// * [maturity_level][google.cloud.apihub.v1.Api.maturity_level]
+        /// * [api_style][google.cloud.apihub.v1.Api.api_style]
         /// * [attributes][google.cloud.apihub.v1.Api.attributes]
         /// 
         /// The
@@ -1597,8 +1642,11 @@ namespace Google.Cloud.ApiHub.V1
         /// the specified id is already used by another version in the API resource.
         /// * If not provided, a system generated id will be used.
         /// 
-        /// This value should be 4-500 characters, and valid characters
-        /// are /[a-z][A-Z][0-9]-_/.
+        /// This value should be 4-500 characters, overall resource name which will be
+        /// of format
+        /// `projects/{project}/locations/{location}/apis/{api}/versions/{version}`,
+        /// its length is limited to 700 characters and valid characters are
+        /// /[a-z][A-Z][0-9]-_/.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -1628,8 +1676,11 @@ namespace Google.Cloud.ApiHub.V1
         /// the specified id is already used by another version in the API resource.
         /// * If not provided, a system generated id will be used.
         /// 
-        /// This value should be 4-500 characters, and valid characters
-        /// are /[a-z][A-Z][0-9]-_/.
+        /// This value should be 4-500 characters, overall resource name which will be
+        /// of format
+        /// `projects/{project}/locations/{location}/apis/{api}/versions/{version}`,
+        /// its length is limited to 700 characters and valid characters are
+        /// /[a-z][A-Z][0-9]-_/.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -1659,8 +1710,11 @@ namespace Google.Cloud.ApiHub.V1
         /// the specified id is already used by another version in the API resource.
         /// * If not provided, a system generated id will be used.
         /// 
-        /// This value should be 4-500 characters, and valid characters
-        /// are /[a-z][A-Z][0-9]-_/.
+        /// This value should be 4-500 characters, overall resource name which will be
+        /// of format
+        /// `projects/{project}/locations/{location}/apis/{api}/versions/{version}`,
+        /// its length is limited to 700 characters and valid characters are
+        /// /[a-z][A-Z][0-9]-_/.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -1685,8 +1739,11 @@ namespace Google.Cloud.ApiHub.V1
         /// the specified id is already used by another version in the API resource.
         /// * If not provided, a system generated id will be used.
         /// 
-        /// This value should be 4-500 characters, and valid characters
-        /// are /[a-z][A-Z][0-9]-_/.
+        /// This value should be 4-500 characters, overall resource name which will be
+        /// of format
+        /// `projects/{project}/locations/{location}/apis/{api}/versions/{version}`,
+        /// its length is limited to 700 characters and valid characters are
+        /// /[a-z][A-Z][0-9]-_/.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -1716,8 +1773,11 @@ namespace Google.Cloud.ApiHub.V1
         /// the specified id is already used by another version in the API resource.
         /// * If not provided, a system generated id will be used.
         /// 
-        /// This value should be 4-500 characters, and valid characters
-        /// are /[a-z][A-Z][0-9]-_/.
+        /// This value should be 4-500 characters, overall resource name which will be
+        /// of format
+        /// `projects/{project}/locations/{location}/apis/{api}/versions/{version}`,
+        /// its length is limited to 700 characters and valid characters are
+        /// /[a-z][A-Z][0-9]-_/.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -1747,8 +1807,11 @@ namespace Google.Cloud.ApiHub.V1
         /// the specified id is already used by another version in the API resource.
         /// * If not provided, a system generated id will be used.
         /// 
-        /// This value should be 4-500 characters, and valid characters
-        /// are /[a-z][A-Z][0-9]-_/.
+        /// This value should be 4-500 characters, overall resource name which will be
+        /// of format
+        /// `projects/{project}/locations/{location}/apis/{api}/versions/{version}`,
+        /// its length is limited to 700 characters and valid characters are
+        /// /[a-z][A-Z][0-9]-_/.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -2470,8 +2533,11 @@ namespace Google.Cloud.ApiHub.V1
         /// resource.
         /// * If not provided, a system generated id will be used.
         /// 
-        /// This value should be 4-500 characters, and valid characters
-        /// are /[a-z][A-Z][0-9]-_/.
+        /// This value should be 4-500 characters, overall resource name which will be
+        /// of format
+        /// `projects/{project}/locations/{location}/apis/{api}/versions/{version}/specs/{spec}`,
+        /// its length is limited to 1000 characters and valid characters are
+        /// /[a-z][A-Z][0-9]-_/.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -2523,8 +2589,11 @@ namespace Google.Cloud.ApiHub.V1
         /// resource.
         /// * If not provided, a system generated id will be used.
         /// 
-        /// This value should be 4-500 characters, and valid characters
-        /// are /[a-z][A-Z][0-9]-_/.
+        /// This value should be 4-500 characters, overall resource name which will be
+        /// of format
+        /// `projects/{project}/locations/{location}/apis/{api}/versions/{version}/specs/{spec}`,
+        /// its length is limited to 1000 characters and valid characters are
+        /// /[a-z][A-Z][0-9]-_/.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -2576,8 +2645,11 @@ namespace Google.Cloud.ApiHub.V1
         /// resource.
         /// * If not provided, a system generated id will be used.
         /// 
-        /// This value should be 4-500 characters, and valid characters
-        /// are /[a-z][A-Z][0-9]-_/.
+        /// This value should be 4-500 characters, overall resource name which will be
+        /// of format
+        /// `projects/{project}/locations/{location}/apis/{api}/versions/{version}/specs/{spec}`,
+        /// its length is limited to 1000 characters and valid characters are
+        /// /[a-z][A-Z][0-9]-_/.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -2624,8 +2696,11 @@ namespace Google.Cloud.ApiHub.V1
         /// resource.
         /// * If not provided, a system generated id will be used.
         /// 
-        /// This value should be 4-500 characters, and valid characters
-        /// are /[a-z][A-Z][0-9]-_/.
+        /// This value should be 4-500 characters, overall resource name which will be
+        /// of format
+        /// `projects/{project}/locations/{location}/apis/{api}/versions/{version}/specs/{spec}`,
+        /// its length is limited to 1000 characters and valid characters are
+        /// /[a-z][A-Z][0-9]-_/.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -2677,8 +2752,11 @@ namespace Google.Cloud.ApiHub.V1
         /// resource.
         /// * If not provided, a system generated id will be used.
         /// 
-        /// This value should be 4-500 characters, and valid characters
-        /// are /[a-z][A-Z][0-9]-_/.
+        /// This value should be 4-500 characters, overall resource name which will be
+        /// of format
+        /// `projects/{project}/locations/{location}/apis/{api}/versions/{version}/specs/{spec}`,
+        /// its length is limited to 1000 characters and valid characters are
+        /// /[a-z][A-Z][0-9]-_/.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -2730,8 +2808,11 @@ namespace Google.Cloud.ApiHub.V1
         /// resource.
         /// * If not provided, a system generated id will be used.
         /// 
-        /// This value should be 4-500 characters, and valid characters
-        /// are /[a-z][A-Z][0-9]-_/.
+        /// This value should be 4-500 characters, overall resource name which will be
+        /// of format
+        /// `projects/{project}/locations/{location}/apis/{api}/versions/{version}/specs/{spec}`,
+        /// its length is limited to 1000 characters and valid characters are
+        /// /[a-z][A-Z][0-9]-_/.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -3508,6 +3589,257 @@ namespace Google.Cloud.ApiHub.V1
             DeleteSpecAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
+        /// Create an apiOperation in an API version.
+        /// An apiOperation can be created only if the version has no apiOperations
+        /// which were created by parsing a spec.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual ApiOperation CreateApiOperation(CreateApiOperationRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Create an apiOperation in an API version.
+        /// An apiOperation can be created only if the version has no apiOperations
+        /// which were created by parsing a spec.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<ApiOperation> CreateApiOperationAsync(CreateApiOperationRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Create an apiOperation in an API version.
+        /// An apiOperation can be created only if the version has no apiOperations
+        /// which were created by parsing a spec.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<ApiOperation> CreateApiOperationAsync(CreateApiOperationRequest request, st::CancellationToken cancellationToken) =>
+            CreateApiOperationAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Create an apiOperation in an API version.
+        /// An apiOperation can be created only if the version has no apiOperations
+        /// which were created by parsing a spec.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent resource for the operation resource.
+        /// Format:
+        /// `projects/{project}/locations/{location}/apis/{api}/versions/{version}`
+        /// </param>
+        /// <param name="apiOperation">
+        /// Required. The operation resource to create.
+        /// </param>
+        /// <param name="apiOperationId">
+        /// Optional. The ID to use for the operation resource, which will become the
+        /// final component of the operation's resource name. This field is optional.
+        /// 
+        /// * If provided, the same will be used. The service will throw an error if
+        /// the specified id is already used by another operation resource in the API
+        /// hub.
+        /// * If not provided, a system generated id will be used.
+        /// 
+        /// This value should be 4-500 characters, overall resource name which
+        /// will be of format
+        /// `projects/{project}/locations/{location}/apis/{api}/versions/{version}/operations/{operation}`,
+        /// its length is limited to 700 characters, and valid characters are
+        /// /[a-z][A-Z][0-9]-_/.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual ApiOperation CreateApiOperation(string parent, ApiOperation apiOperation, string apiOperationId, gaxgrpc::CallSettings callSettings = null) =>
+            CreateApiOperation(new CreateApiOperationRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+                ApiOperationId = apiOperationId ?? "",
+                ApiOperation = gax::GaxPreconditions.CheckNotNull(apiOperation, nameof(apiOperation)),
+            }, callSettings);
+
+        /// <summary>
+        /// Create an apiOperation in an API version.
+        /// An apiOperation can be created only if the version has no apiOperations
+        /// which were created by parsing a spec.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent resource for the operation resource.
+        /// Format:
+        /// `projects/{project}/locations/{location}/apis/{api}/versions/{version}`
+        /// </param>
+        /// <param name="apiOperation">
+        /// Required. The operation resource to create.
+        /// </param>
+        /// <param name="apiOperationId">
+        /// Optional. The ID to use for the operation resource, which will become the
+        /// final component of the operation's resource name. This field is optional.
+        /// 
+        /// * If provided, the same will be used. The service will throw an error if
+        /// the specified id is already used by another operation resource in the API
+        /// hub.
+        /// * If not provided, a system generated id will be used.
+        /// 
+        /// This value should be 4-500 characters, overall resource name which
+        /// will be of format
+        /// `projects/{project}/locations/{location}/apis/{api}/versions/{version}/operations/{operation}`,
+        /// its length is limited to 700 characters, and valid characters are
+        /// /[a-z][A-Z][0-9]-_/.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<ApiOperation> CreateApiOperationAsync(string parent, ApiOperation apiOperation, string apiOperationId, gaxgrpc::CallSettings callSettings = null) =>
+            CreateApiOperationAsync(new CreateApiOperationRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+                ApiOperationId = apiOperationId ?? "",
+                ApiOperation = gax::GaxPreconditions.CheckNotNull(apiOperation, nameof(apiOperation)),
+            }, callSettings);
+
+        /// <summary>
+        /// Create an apiOperation in an API version.
+        /// An apiOperation can be created only if the version has no apiOperations
+        /// which were created by parsing a spec.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent resource for the operation resource.
+        /// Format:
+        /// `projects/{project}/locations/{location}/apis/{api}/versions/{version}`
+        /// </param>
+        /// <param name="apiOperation">
+        /// Required. The operation resource to create.
+        /// </param>
+        /// <param name="apiOperationId">
+        /// Optional. The ID to use for the operation resource, which will become the
+        /// final component of the operation's resource name. This field is optional.
+        /// 
+        /// * If provided, the same will be used. The service will throw an error if
+        /// the specified id is already used by another operation resource in the API
+        /// hub.
+        /// * If not provided, a system generated id will be used.
+        /// 
+        /// This value should be 4-500 characters, overall resource name which
+        /// will be of format
+        /// `projects/{project}/locations/{location}/apis/{api}/versions/{version}/operations/{operation}`,
+        /// its length is limited to 700 characters, and valid characters are
+        /// /[a-z][A-Z][0-9]-_/.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<ApiOperation> CreateApiOperationAsync(string parent, ApiOperation apiOperation, string apiOperationId, st::CancellationToken cancellationToken) =>
+            CreateApiOperationAsync(parent, apiOperation, apiOperationId, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Create an apiOperation in an API version.
+        /// An apiOperation can be created only if the version has no apiOperations
+        /// which were created by parsing a spec.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent resource for the operation resource.
+        /// Format:
+        /// `projects/{project}/locations/{location}/apis/{api}/versions/{version}`
+        /// </param>
+        /// <param name="apiOperation">
+        /// Required. The operation resource to create.
+        /// </param>
+        /// <param name="apiOperationId">
+        /// Optional. The ID to use for the operation resource, which will become the
+        /// final component of the operation's resource name. This field is optional.
+        /// 
+        /// * If provided, the same will be used. The service will throw an error if
+        /// the specified id is already used by another operation resource in the API
+        /// hub.
+        /// * If not provided, a system generated id will be used.
+        /// 
+        /// This value should be 4-500 characters, overall resource name which
+        /// will be of format
+        /// `projects/{project}/locations/{location}/apis/{api}/versions/{version}/operations/{operation}`,
+        /// its length is limited to 700 characters, and valid characters are
+        /// /[a-z][A-Z][0-9]-_/.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual ApiOperation CreateApiOperation(VersionName parent, ApiOperation apiOperation, string apiOperationId, gaxgrpc::CallSettings callSettings = null) =>
+            CreateApiOperation(new CreateApiOperationRequest
+            {
+                ParentAsVersionName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                ApiOperationId = apiOperationId ?? "",
+                ApiOperation = gax::GaxPreconditions.CheckNotNull(apiOperation, nameof(apiOperation)),
+            }, callSettings);
+
+        /// <summary>
+        /// Create an apiOperation in an API version.
+        /// An apiOperation can be created only if the version has no apiOperations
+        /// which were created by parsing a spec.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent resource for the operation resource.
+        /// Format:
+        /// `projects/{project}/locations/{location}/apis/{api}/versions/{version}`
+        /// </param>
+        /// <param name="apiOperation">
+        /// Required. The operation resource to create.
+        /// </param>
+        /// <param name="apiOperationId">
+        /// Optional. The ID to use for the operation resource, which will become the
+        /// final component of the operation's resource name. This field is optional.
+        /// 
+        /// * If provided, the same will be used. The service will throw an error if
+        /// the specified id is already used by another operation resource in the API
+        /// hub.
+        /// * If not provided, a system generated id will be used.
+        /// 
+        /// This value should be 4-500 characters, overall resource name which
+        /// will be of format
+        /// `projects/{project}/locations/{location}/apis/{api}/versions/{version}/operations/{operation}`,
+        /// its length is limited to 700 characters, and valid characters are
+        /// /[a-z][A-Z][0-9]-_/.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<ApiOperation> CreateApiOperationAsync(VersionName parent, ApiOperation apiOperation, string apiOperationId, gaxgrpc::CallSettings callSettings = null) =>
+            CreateApiOperationAsync(new CreateApiOperationRequest
+            {
+                ParentAsVersionName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                ApiOperationId = apiOperationId ?? "",
+                ApiOperation = gax::GaxPreconditions.CheckNotNull(apiOperation, nameof(apiOperation)),
+            }, callSettings);
+
+        /// <summary>
+        /// Create an apiOperation in an API version.
+        /// An apiOperation can be created only if the version has no apiOperations
+        /// which were created by parsing a spec.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent resource for the operation resource.
+        /// Format:
+        /// `projects/{project}/locations/{location}/apis/{api}/versions/{version}`
+        /// </param>
+        /// <param name="apiOperation">
+        /// Required. The operation resource to create.
+        /// </param>
+        /// <param name="apiOperationId">
+        /// Optional. The ID to use for the operation resource, which will become the
+        /// final component of the operation's resource name. This field is optional.
+        /// 
+        /// * If provided, the same will be used. The service will throw an error if
+        /// the specified id is already used by another operation resource in the API
+        /// hub.
+        /// * If not provided, a system generated id will be used.
+        /// 
+        /// This value should be 4-500 characters, overall resource name which
+        /// will be of format
+        /// `projects/{project}/locations/{location}/apis/{api}/versions/{version}/operations/{operation}`,
+        /// its length is limited to 700 characters, and valid characters are
+        /// /[a-z][A-Z][0-9]-_/.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<ApiOperation> CreateApiOperationAsync(VersionName parent, ApiOperation apiOperation, string apiOperationId, st::CancellationToken cancellationToken) =>
+            CreateApiOperationAsync(parent, apiOperation, apiOperationId, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
         /// Get details about a particular operation in API version.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
@@ -3781,6 +4113,341 @@ namespace Google.Cloud.ApiHub.V1
             }
             return ListApiOperationsAsync(request, callSettings);
         }
+
+        /// <summary>
+        /// Update an operation in an API version. The following fields in the
+        /// [ApiOperation resource][google.cloud.apihub.v1.ApiOperation] can be
+        /// updated:
+        /// 
+        /// * [details.description][ApiOperation.details.description]
+        /// * [details.documentation][ApiOperation.details.documentation]
+        /// * [details.http_operation.path][ApiOperation.details.http_operation.path.path]
+        /// * [details.http_operation.method][ApiOperation.details.http_operation.method]
+        /// * [details.deprecated][ApiOperation.details.deprecated]
+        /// * [attributes][google.cloud.apihub.v1.ApiOperation.attributes]
+        /// 
+        /// The
+        /// [update_mask][google.cloud.apihub.v1.UpdateApiOperationRequest.update_mask]
+        /// should be used to specify the fields being updated.
+        /// 
+        /// An operation can be updated only if the operation was created via
+        /// [CreateApiOperation][google.cloud.apihub.v1.ApiHub.CreateApiOperation] API.
+        /// If the operation was created by parsing the spec, then it can be edited by
+        /// updating the spec.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual ApiOperation UpdateApiOperation(UpdateApiOperationRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Update an operation in an API version. The following fields in the
+        /// [ApiOperation resource][google.cloud.apihub.v1.ApiOperation] can be
+        /// updated:
+        /// 
+        /// * [details.description][ApiOperation.details.description]
+        /// * [details.documentation][ApiOperation.details.documentation]
+        /// * [details.http_operation.path][ApiOperation.details.http_operation.path.path]
+        /// * [details.http_operation.method][ApiOperation.details.http_operation.method]
+        /// * [details.deprecated][ApiOperation.details.deprecated]
+        /// * [attributes][google.cloud.apihub.v1.ApiOperation.attributes]
+        /// 
+        /// The
+        /// [update_mask][google.cloud.apihub.v1.UpdateApiOperationRequest.update_mask]
+        /// should be used to specify the fields being updated.
+        /// 
+        /// An operation can be updated only if the operation was created via
+        /// [CreateApiOperation][google.cloud.apihub.v1.ApiHub.CreateApiOperation] API.
+        /// If the operation was created by parsing the spec, then it can be edited by
+        /// updating the spec.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<ApiOperation> UpdateApiOperationAsync(UpdateApiOperationRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Update an operation in an API version. The following fields in the
+        /// [ApiOperation resource][google.cloud.apihub.v1.ApiOperation] can be
+        /// updated:
+        /// 
+        /// * [details.description][ApiOperation.details.description]
+        /// * [details.documentation][ApiOperation.details.documentation]
+        /// * [details.http_operation.path][ApiOperation.details.http_operation.path.path]
+        /// * [details.http_operation.method][ApiOperation.details.http_operation.method]
+        /// * [details.deprecated][ApiOperation.details.deprecated]
+        /// * [attributes][google.cloud.apihub.v1.ApiOperation.attributes]
+        /// 
+        /// The
+        /// [update_mask][google.cloud.apihub.v1.UpdateApiOperationRequest.update_mask]
+        /// should be used to specify the fields being updated.
+        /// 
+        /// An operation can be updated only if the operation was created via
+        /// [CreateApiOperation][google.cloud.apihub.v1.ApiHub.CreateApiOperation] API.
+        /// If the operation was created by parsing the spec, then it can be edited by
+        /// updating the spec.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<ApiOperation> UpdateApiOperationAsync(UpdateApiOperationRequest request, st::CancellationToken cancellationToken) =>
+            UpdateApiOperationAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Update an operation in an API version. The following fields in the
+        /// [ApiOperation resource][google.cloud.apihub.v1.ApiOperation] can be
+        /// updated:
+        /// 
+        /// * [details.description][ApiOperation.details.description]
+        /// * [details.documentation][ApiOperation.details.documentation]
+        /// * [details.http_operation.path][ApiOperation.details.http_operation.path.path]
+        /// * [details.http_operation.method][ApiOperation.details.http_operation.method]
+        /// * [details.deprecated][ApiOperation.details.deprecated]
+        /// * [attributes][google.cloud.apihub.v1.ApiOperation.attributes]
+        /// 
+        /// The
+        /// [update_mask][google.cloud.apihub.v1.UpdateApiOperationRequest.update_mask]
+        /// should be used to specify the fields being updated.
+        /// 
+        /// An operation can be updated only if the operation was created via
+        /// [CreateApiOperation][google.cloud.apihub.v1.ApiHub.CreateApiOperation] API.
+        /// If the operation was created by parsing the spec, then it can be edited by
+        /// updating the spec.
+        /// </summary>
+        /// <param name="apiOperation">
+        /// Required. The apiOperation resource to update.
+        /// 
+        /// The operation resource's `name` field is used to identify the operation
+        /// resource to update.
+        /// Format:
+        /// `projects/{project}/locations/{location}/apis/{api}/versions/{version}/operations/{operation}`
+        /// </param>
+        /// <param name="updateMask">
+        /// Required. The list of fields to update.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual ApiOperation UpdateApiOperation(ApiOperation apiOperation, wkt::FieldMask updateMask, gaxgrpc::CallSettings callSettings = null) =>
+            UpdateApiOperation(new UpdateApiOperationRequest
+            {
+                ApiOperation = gax::GaxPreconditions.CheckNotNull(apiOperation, nameof(apiOperation)),
+                UpdateMask = gax::GaxPreconditions.CheckNotNull(updateMask, nameof(updateMask)),
+            }, callSettings);
+
+        /// <summary>
+        /// Update an operation in an API version. The following fields in the
+        /// [ApiOperation resource][google.cloud.apihub.v1.ApiOperation] can be
+        /// updated:
+        /// 
+        /// * [details.description][ApiOperation.details.description]
+        /// * [details.documentation][ApiOperation.details.documentation]
+        /// * [details.http_operation.path][ApiOperation.details.http_operation.path.path]
+        /// * [details.http_operation.method][ApiOperation.details.http_operation.method]
+        /// * [details.deprecated][ApiOperation.details.deprecated]
+        /// * [attributes][google.cloud.apihub.v1.ApiOperation.attributes]
+        /// 
+        /// The
+        /// [update_mask][google.cloud.apihub.v1.UpdateApiOperationRequest.update_mask]
+        /// should be used to specify the fields being updated.
+        /// 
+        /// An operation can be updated only if the operation was created via
+        /// [CreateApiOperation][google.cloud.apihub.v1.ApiHub.CreateApiOperation] API.
+        /// If the operation was created by parsing the spec, then it can be edited by
+        /// updating the spec.
+        /// </summary>
+        /// <param name="apiOperation">
+        /// Required. The apiOperation resource to update.
+        /// 
+        /// The operation resource's `name` field is used to identify the operation
+        /// resource to update.
+        /// Format:
+        /// `projects/{project}/locations/{location}/apis/{api}/versions/{version}/operations/{operation}`
+        /// </param>
+        /// <param name="updateMask">
+        /// Required. The list of fields to update.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<ApiOperation> UpdateApiOperationAsync(ApiOperation apiOperation, wkt::FieldMask updateMask, gaxgrpc::CallSettings callSettings = null) =>
+            UpdateApiOperationAsync(new UpdateApiOperationRequest
+            {
+                ApiOperation = gax::GaxPreconditions.CheckNotNull(apiOperation, nameof(apiOperation)),
+                UpdateMask = gax::GaxPreconditions.CheckNotNull(updateMask, nameof(updateMask)),
+            }, callSettings);
+
+        /// <summary>
+        /// Update an operation in an API version. The following fields in the
+        /// [ApiOperation resource][google.cloud.apihub.v1.ApiOperation] can be
+        /// updated:
+        /// 
+        /// * [details.description][ApiOperation.details.description]
+        /// * [details.documentation][ApiOperation.details.documentation]
+        /// * [details.http_operation.path][ApiOperation.details.http_operation.path.path]
+        /// * [details.http_operation.method][ApiOperation.details.http_operation.method]
+        /// * [details.deprecated][ApiOperation.details.deprecated]
+        /// * [attributes][google.cloud.apihub.v1.ApiOperation.attributes]
+        /// 
+        /// The
+        /// [update_mask][google.cloud.apihub.v1.UpdateApiOperationRequest.update_mask]
+        /// should be used to specify the fields being updated.
+        /// 
+        /// An operation can be updated only if the operation was created via
+        /// [CreateApiOperation][google.cloud.apihub.v1.ApiHub.CreateApiOperation] API.
+        /// If the operation was created by parsing the spec, then it can be edited by
+        /// updating the spec.
+        /// </summary>
+        /// <param name="apiOperation">
+        /// Required. The apiOperation resource to update.
+        /// 
+        /// The operation resource's `name` field is used to identify the operation
+        /// resource to update.
+        /// Format:
+        /// `projects/{project}/locations/{location}/apis/{api}/versions/{version}/operations/{operation}`
+        /// </param>
+        /// <param name="updateMask">
+        /// Required. The list of fields to update.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<ApiOperation> UpdateApiOperationAsync(ApiOperation apiOperation, wkt::FieldMask updateMask, st::CancellationToken cancellationToken) =>
+            UpdateApiOperationAsync(apiOperation, updateMask, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Delete an operation in an API version and we can delete only the
+        /// operations created via create API. If the operation was created by parsing
+        /// the spec, then it can be deleted by editing or deleting the spec.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual void DeleteApiOperation(DeleteApiOperationRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Delete an operation in an API version and we can delete only the
+        /// operations created via create API. If the operation was created by parsing
+        /// the spec, then it can be deleted by editing or deleting the spec.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task DeleteApiOperationAsync(DeleteApiOperationRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Delete an operation in an API version and we can delete only the
+        /// operations created via create API. If the operation was created by parsing
+        /// the spec, then it can be deleted by editing or deleting the spec.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task DeleteApiOperationAsync(DeleteApiOperationRequest request, st::CancellationToken cancellationToken) =>
+            DeleteApiOperationAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Delete an operation in an API version and we can delete only the
+        /// operations created via create API. If the operation was created by parsing
+        /// the spec, then it can be deleted by editing or deleting the spec.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the operation resource to delete.
+        /// Format:
+        /// `projects/{project}/locations/{location}/apis/{api}/versions/{version}/operations/{operation}`
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual void DeleteApiOperation(string name, gaxgrpc::CallSettings callSettings = null) =>
+            DeleteApiOperation(new DeleteApiOperationRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Delete an operation in an API version and we can delete only the
+        /// operations created via create API. If the operation was created by parsing
+        /// the spec, then it can be deleted by editing or deleting the spec.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the operation resource to delete.
+        /// Format:
+        /// `projects/{project}/locations/{location}/apis/{api}/versions/{version}/operations/{operation}`
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task DeleteApiOperationAsync(string name, gaxgrpc::CallSettings callSettings = null) =>
+            DeleteApiOperationAsync(new DeleteApiOperationRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Delete an operation in an API version and we can delete only the
+        /// operations created via create API. If the operation was created by parsing
+        /// the spec, then it can be deleted by editing or deleting the spec.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the operation resource to delete.
+        /// Format:
+        /// `projects/{project}/locations/{location}/apis/{api}/versions/{version}/operations/{operation}`
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task DeleteApiOperationAsync(string name, st::CancellationToken cancellationToken) =>
+            DeleteApiOperationAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Delete an operation in an API version and we can delete only the
+        /// operations created via create API. If the operation was created by parsing
+        /// the spec, then it can be deleted by editing or deleting the spec.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the operation resource to delete.
+        /// Format:
+        /// `projects/{project}/locations/{location}/apis/{api}/versions/{version}/operations/{operation}`
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual void DeleteApiOperation(ApiOperationName name, gaxgrpc::CallSettings callSettings = null) =>
+            DeleteApiOperation(new DeleteApiOperationRequest
+            {
+                ApiOperationName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Delete an operation in an API version and we can delete only the
+        /// operations created via create API. If the operation was created by parsing
+        /// the spec, then it can be deleted by editing or deleting the spec.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the operation resource to delete.
+        /// Format:
+        /// `projects/{project}/locations/{location}/apis/{api}/versions/{version}/operations/{operation}`
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task DeleteApiOperationAsync(ApiOperationName name, gaxgrpc::CallSettings callSettings = null) =>
+            DeleteApiOperationAsync(new DeleteApiOperationRequest
+            {
+                ApiOperationName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Delete an operation in an API version and we can delete only the
+        /// operations created via create API. If the operation was created by parsing
+        /// the spec, then it can be deleted by editing or deleting the spec.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the operation resource to delete.
+        /// Format:
+        /// `projects/{project}/locations/{location}/apis/{api}/versions/{version}/operations/{operation}`
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task DeleteApiOperationAsync(ApiOperationName name, st::CancellationToken cancellationToken) =>
+            DeleteApiOperationAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
         /// Get details about a definition in an API version.
@@ -4405,7 +5072,11 @@ namespace Google.Cloud.ApiHub.V1
         /// * [slo][google.cloud.apihub.v1.Deployment.slo]
         /// * [environment][google.cloud.apihub.v1.Deployment.environment]
         /// * [attributes][google.cloud.apihub.v1.Deployment.attributes]
-        /// 
+        /// * [source_project] [google.cloud.apihub.v1.Deployment.source_project]
+        /// * [source_environment]
+        /// [google.cloud.apihub.v1.Deployment.source_environment]
+        /// * [management_url][google.cloud.apihub.v1.Deployment.management_url]
+        /// * [source_uri][google.cloud.apihub.v1.Deployment.source_uri]
         /// The
         /// [update_mask][google.cloud.apihub.v1.UpdateDeploymentRequest.update_mask]
         /// should be used to specify the fields being updated.
@@ -4430,7 +5101,11 @@ namespace Google.Cloud.ApiHub.V1
         /// * [slo][google.cloud.apihub.v1.Deployment.slo]
         /// * [environment][google.cloud.apihub.v1.Deployment.environment]
         /// * [attributes][google.cloud.apihub.v1.Deployment.attributes]
-        /// 
+        /// * [source_project] [google.cloud.apihub.v1.Deployment.source_project]
+        /// * [source_environment]
+        /// [google.cloud.apihub.v1.Deployment.source_environment]
+        /// * [management_url][google.cloud.apihub.v1.Deployment.management_url]
+        /// * [source_uri][google.cloud.apihub.v1.Deployment.source_uri]
         /// The
         /// [update_mask][google.cloud.apihub.v1.UpdateDeploymentRequest.update_mask]
         /// should be used to specify the fields being updated.
@@ -4455,7 +5130,11 @@ namespace Google.Cloud.ApiHub.V1
         /// * [slo][google.cloud.apihub.v1.Deployment.slo]
         /// * [environment][google.cloud.apihub.v1.Deployment.environment]
         /// * [attributes][google.cloud.apihub.v1.Deployment.attributes]
-        /// 
+        /// * [source_project] [google.cloud.apihub.v1.Deployment.source_project]
+        /// * [source_environment]
+        /// [google.cloud.apihub.v1.Deployment.source_environment]
+        /// * [management_url][google.cloud.apihub.v1.Deployment.management_url]
+        /// * [source_uri][google.cloud.apihub.v1.Deployment.source_uri]
         /// The
         /// [update_mask][google.cloud.apihub.v1.UpdateDeploymentRequest.update_mask]
         /// should be used to specify the fields being updated.
@@ -4480,7 +5159,11 @@ namespace Google.Cloud.ApiHub.V1
         /// * [slo][google.cloud.apihub.v1.Deployment.slo]
         /// * [environment][google.cloud.apihub.v1.Deployment.environment]
         /// * [attributes][google.cloud.apihub.v1.Deployment.attributes]
-        /// 
+        /// * [source_project] [google.cloud.apihub.v1.Deployment.source_project]
+        /// * [source_environment]
+        /// [google.cloud.apihub.v1.Deployment.source_environment]
+        /// * [management_url][google.cloud.apihub.v1.Deployment.management_url]
+        /// * [source_uri][google.cloud.apihub.v1.Deployment.source_uri]
         /// The
         /// [update_mask][google.cloud.apihub.v1.UpdateDeploymentRequest.update_mask]
         /// should be used to specify the fields being updated.
@@ -4518,7 +5201,11 @@ namespace Google.Cloud.ApiHub.V1
         /// * [slo][google.cloud.apihub.v1.Deployment.slo]
         /// * [environment][google.cloud.apihub.v1.Deployment.environment]
         /// * [attributes][google.cloud.apihub.v1.Deployment.attributes]
-        /// 
+        /// * [source_project] [google.cloud.apihub.v1.Deployment.source_project]
+        /// * [source_environment]
+        /// [google.cloud.apihub.v1.Deployment.source_environment]
+        /// * [management_url][google.cloud.apihub.v1.Deployment.management_url]
+        /// * [source_uri][google.cloud.apihub.v1.Deployment.source_uri]
         /// The
         /// [update_mask][google.cloud.apihub.v1.UpdateDeploymentRequest.update_mask]
         /// should be used to specify the fields being updated.
@@ -4556,7 +5243,11 @@ namespace Google.Cloud.ApiHub.V1
         /// * [slo][google.cloud.apihub.v1.Deployment.slo]
         /// * [environment][google.cloud.apihub.v1.Deployment.environment]
         /// * [attributes][google.cloud.apihub.v1.Deployment.attributes]
-        /// 
+        /// * [source_project] [google.cloud.apihub.v1.Deployment.source_project]
+        /// * [source_environment]
+        /// [google.cloud.apihub.v1.Deployment.source_environment]
+        /// * [management_url][google.cloud.apihub.v1.Deployment.management_url]
+        /// * [source_uri][google.cloud.apihub.v1.Deployment.source_uri]
         /// The
         /// [update_mask][google.cloud.apihub.v1.UpdateDeploymentRequest.update_mask]
         /// should be used to specify the fields being updated.
@@ -6574,9 +7265,15 @@ namespace Google.Cloud.ApiHub.V1
 
         private readonly gaxgrpc::ApiCall<DeleteSpecRequest, wkt::Empty> _callDeleteSpec;
 
+        private readonly gaxgrpc::ApiCall<CreateApiOperationRequest, ApiOperation> _callCreateApiOperation;
+
         private readonly gaxgrpc::ApiCall<GetApiOperationRequest, ApiOperation> _callGetApiOperation;
 
         private readonly gaxgrpc::ApiCall<ListApiOperationsRequest, ListApiOperationsResponse> _callListApiOperations;
+
+        private readonly gaxgrpc::ApiCall<UpdateApiOperationRequest, ApiOperation> _callUpdateApiOperation;
+
+        private readonly gaxgrpc::ApiCall<DeleteApiOperationRequest, wkt::Empty> _callDeleteApiOperation;
 
         private readonly gaxgrpc::ApiCall<GetDefinitionRequest, Definition> _callGetDefinition;
 
@@ -6676,12 +7373,21 @@ namespace Google.Cloud.ApiHub.V1
             _callDeleteSpec = clientHelper.BuildApiCall<DeleteSpecRequest, wkt::Empty>("DeleteSpec", grpcClient.DeleteSpecAsync, grpcClient.DeleteSpec, effectiveSettings.DeleteSpecSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callDeleteSpec);
             Modify_DeleteSpecApiCall(ref _callDeleteSpec);
+            _callCreateApiOperation = clientHelper.BuildApiCall<CreateApiOperationRequest, ApiOperation>("CreateApiOperation", grpcClient.CreateApiOperationAsync, grpcClient.CreateApiOperation, effectiveSettings.CreateApiOperationSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            Modify_ApiCall(ref _callCreateApiOperation);
+            Modify_CreateApiOperationApiCall(ref _callCreateApiOperation);
             _callGetApiOperation = clientHelper.BuildApiCall<GetApiOperationRequest, ApiOperation>("GetApiOperation", grpcClient.GetApiOperationAsync, grpcClient.GetApiOperation, effectiveSettings.GetApiOperationSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callGetApiOperation);
             Modify_GetApiOperationApiCall(ref _callGetApiOperation);
             _callListApiOperations = clientHelper.BuildApiCall<ListApiOperationsRequest, ListApiOperationsResponse>("ListApiOperations", grpcClient.ListApiOperationsAsync, grpcClient.ListApiOperations, effectiveSettings.ListApiOperationsSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callListApiOperations);
             Modify_ListApiOperationsApiCall(ref _callListApiOperations);
+            _callUpdateApiOperation = clientHelper.BuildApiCall<UpdateApiOperationRequest, ApiOperation>("UpdateApiOperation", grpcClient.UpdateApiOperationAsync, grpcClient.UpdateApiOperation, effectiveSettings.UpdateApiOperationSettings).WithGoogleRequestParam("api_operation.name", request => request.ApiOperation?.Name);
+            Modify_ApiCall(ref _callUpdateApiOperation);
+            Modify_UpdateApiOperationApiCall(ref _callUpdateApiOperation);
+            _callDeleteApiOperation = clientHelper.BuildApiCall<DeleteApiOperationRequest, wkt::Empty>("DeleteApiOperation", grpcClient.DeleteApiOperationAsync, grpcClient.DeleteApiOperation, effectiveSettings.DeleteApiOperationSettings).WithGoogleRequestParam("name", request => request.Name);
+            Modify_ApiCall(ref _callDeleteApiOperation);
+            Modify_DeleteApiOperationApiCall(ref _callDeleteApiOperation);
             _callGetDefinition = clientHelper.BuildApiCall<GetDefinitionRequest, Definition>("GetDefinition", grpcClient.GetDefinitionAsync, grpcClient.GetDefinition, effectiveSettings.GetDefinitionSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callGetDefinition);
             Modify_GetDefinitionApiCall(ref _callGetDefinition);
@@ -6770,9 +7476,15 @@ namespace Google.Cloud.ApiHub.V1
 
         partial void Modify_DeleteSpecApiCall(ref gaxgrpc::ApiCall<DeleteSpecRequest, wkt::Empty> call);
 
+        partial void Modify_CreateApiOperationApiCall(ref gaxgrpc::ApiCall<CreateApiOperationRequest, ApiOperation> call);
+
         partial void Modify_GetApiOperationApiCall(ref gaxgrpc::ApiCall<GetApiOperationRequest, ApiOperation> call);
 
         partial void Modify_ListApiOperationsApiCall(ref gaxgrpc::ApiCall<ListApiOperationsRequest, ListApiOperationsResponse> call);
+
+        partial void Modify_UpdateApiOperationApiCall(ref gaxgrpc::ApiCall<UpdateApiOperationRequest, ApiOperation> call);
+
+        partial void Modify_DeleteApiOperationApiCall(ref gaxgrpc::ApiCall<DeleteApiOperationRequest, wkt::Empty> call);
 
         partial void Modify_GetDefinitionApiCall(ref gaxgrpc::ApiCall<GetDefinitionRequest, Definition> call);
 
@@ -6848,9 +7560,15 @@ namespace Google.Cloud.ApiHub.V1
 
         partial void Modify_DeleteSpecRequest(ref DeleteSpecRequest request, ref gaxgrpc::CallSettings settings);
 
+        partial void Modify_CreateApiOperationRequest(ref CreateApiOperationRequest request, ref gaxgrpc::CallSettings settings);
+
         partial void Modify_GetApiOperationRequest(ref GetApiOperationRequest request, ref gaxgrpc::CallSettings settings);
 
         partial void Modify_ListApiOperationsRequest(ref ListApiOperationsRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_UpdateApiOperationRequest(ref UpdateApiOperationRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_DeleteApiOperationRequest(ref DeleteApiOperationRequest request, ref gaxgrpc::CallSettings settings);
 
         partial void Modify_GetDefinitionRequest(ref GetDefinitionRequest request, ref gaxgrpc::CallSettings settings);
 
@@ -6962,7 +7680,7 @@ namespace Google.Cloud.ApiHub.V1
 
         /// <summary>
         /// Update an API resource in the API hub. The following fields in the
-        /// [API][] can be updated:
+        /// [API][google.cloud.apihub.v1.Api] can be updated:
         /// 
         /// * [display_name][google.cloud.apihub.v1.Api.display_name]
         /// * [description][google.cloud.apihub.v1.Api.description]
@@ -6972,6 +7690,7 @@ namespace Google.Cloud.ApiHub.V1
         /// * [team][google.cloud.apihub.v1.Api.team]
         /// * [business_unit][google.cloud.apihub.v1.Api.business_unit]
         /// * [maturity_level][google.cloud.apihub.v1.Api.maturity_level]
+        /// * [api_style][google.cloud.apihub.v1.Api.api_style]
         /// * [attributes][google.cloud.apihub.v1.Api.attributes]
         /// 
         /// The
@@ -6992,7 +7711,7 @@ namespace Google.Cloud.ApiHub.V1
 
         /// <summary>
         /// Update an API resource in the API hub. The following fields in the
-        /// [API][] can be updated:
+        /// [API][google.cloud.apihub.v1.Api] can be updated:
         /// 
         /// * [display_name][google.cloud.apihub.v1.Api.display_name]
         /// * [description][google.cloud.apihub.v1.Api.description]
@@ -7002,6 +7721,7 @@ namespace Google.Cloud.ApiHub.V1
         /// * [team][google.cloud.apihub.v1.Api.team]
         /// * [business_unit][google.cloud.apihub.v1.Api.business_unit]
         /// * [maturity_level][google.cloud.apihub.v1.Api.maturity_level]
+        /// * [api_style][google.cloud.apihub.v1.Api.api_style]
         /// * [attributes][google.cloud.apihub.v1.Api.attributes]
         /// 
         /// The
@@ -7437,6 +8157,34 @@ namespace Google.Cloud.ApiHub.V1
         }
 
         /// <summary>
+        /// Create an apiOperation in an API version.
+        /// An apiOperation can be created only if the version has no apiOperations
+        /// which were created by parsing a spec.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override ApiOperation CreateApiOperation(CreateApiOperationRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_CreateApiOperationRequest(ref request, ref callSettings);
+            return _callCreateApiOperation.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Create an apiOperation in an API version.
+        /// An apiOperation can be created only if the version has no apiOperations
+        /// which were created by parsing a spec.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override stt::Task<ApiOperation> CreateApiOperationAsync(CreateApiOperationRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_CreateApiOperationRequest(ref request, ref callSettings);
+            return _callCreateApiOperation.Async(request, callSettings);
+        }
+
+        /// <summary>
         /// Get details about a particular operation in API version.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
@@ -7482,6 +8230,94 @@ namespace Google.Cloud.ApiHub.V1
         {
             Modify_ListApiOperationsRequest(ref request, ref callSettings);
             return new gaxgrpc::GrpcPagedAsyncEnumerable<ListApiOperationsRequest, ListApiOperationsResponse, ApiOperation>(_callListApiOperations, request, callSettings);
+        }
+
+        /// <summary>
+        /// Update an operation in an API version. The following fields in the
+        /// [ApiOperation resource][google.cloud.apihub.v1.ApiOperation] can be
+        /// updated:
+        /// 
+        /// * [details.description][ApiOperation.details.description]
+        /// * [details.documentation][ApiOperation.details.documentation]
+        /// * [details.http_operation.path][ApiOperation.details.http_operation.path.path]
+        /// * [details.http_operation.method][ApiOperation.details.http_operation.method]
+        /// * [details.deprecated][ApiOperation.details.deprecated]
+        /// * [attributes][google.cloud.apihub.v1.ApiOperation.attributes]
+        /// 
+        /// The
+        /// [update_mask][google.cloud.apihub.v1.UpdateApiOperationRequest.update_mask]
+        /// should be used to specify the fields being updated.
+        /// 
+        /// An operation can be updated only if the operation was created via
+        /// [CreateApiOperation][google.cloud.apihub.v1.ApiHub.CreateApiOperation] API.
+        /// If the operation was created by parsing the spec, then it can be edited by
+        /// updating the spec.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override ApiOperation UpdateApiOperation(UpdateApiOperationRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_UpdateApiOperationRequest(ref request, ref callSettings);
+            return _callUpdateApiOperation.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Update an operation in an API version. The following fields in the
+        /// [ApiOperation resource][google.cloud.apihub.v1.ApiOperation] can be
+        /// updated:
+        /// 
+        /// * [details.description][ApiOperation.details.description]
+        /// * [details.documentation][ApiOperation.details.documentation]
+        /// * [details.http_operation.path][ApiOperation.details.http_operation.path.path]
+        /// * [details.http_operation.method][ApiOperation.details.http_operation.method]
+        /// * [details.deprecated][ApiOperation.details.deprecated]
+        /// * [attributes][google.cloud.apihub.v1.ApiOperation.attributes]
+        /// 
+        /// The
+        /// [update_mask][google.cloud.apihub.v1.UpdateApiOperationRequest.update_mask]
+        /// should be used to specify the fields being updated.
+        /// 
+        /// An operation can be updated only if the operation was created via
+        /// [CreateApiOperation][google.cloud.apihub.v1.ApiHub.CreateApiOperation] API.
+        /// If the operation was created by parsing the spec, then it can be edited by
+        /// updating the spec.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override stt::Task<ApiOperation> UpdateApiOperationAsync(UpdateApiOperationRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_UpdateApiOperationRequest(ref request, ref callSettings);
+            return _callUpdateApiOperation.Async(request, callSettings);
+        }
+
+        /// <summary>
+        /// Delete an operation in an API version and we can delete only the
+        /// operations created via create API. If the operation was created by parsing
+        /// the spec, then it can be deleted by editing or deleting the spec.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override void DeleteApiOperation(DeleteApiOperationRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_DeleteApiOperationRequest(ref request, ref callSettings);
+            _callDeleteApiOperation.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Delete an operation in an API version and we can delete only the
+        /// operations created via create API. If the operation was created by parsing
+        /// the spec, then it can be deleted by editing or deleting the spec.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override stt::Task DeleteApiOperationAsync(DeleteApiOperationRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_DeleteApiOperationRequest(ref request, ref callSettings);
+            return _callDeleteApiOperation.Async(request, callSettings);
         }
 
         /// <summary>
@@ -7598,7 +8434,11 @@ namespace Google.Cloud.ApiHub.V1
         /// * [slo][google.cloud.apihub.v1.Deployment.slo]
         /// * [environment][google.cloud.apihub.v1.Deployment.environment]
         /// * [attributes][google.cloud.apihub.v1.Deployment.attributes]
-        /// 
+        /// * [source_project] [google.cloud.apihub.v1.Deployment.source_project]
+        /// * [source_environment]
+        /// [google.cloud.apihub.v1.Deployment.source_environment]
+        /// * [management_url][google.cloud.apihub.v1.Deployment.management_url]
+        /// * [source_uri][google.cloud.apihub.v1.Deployment.source_uri]
         /// The
         /// [update_mask][google.cloud.apihub.v1.UpdateDeploymentRequest.update_mask]
         /// should be used to specify the fields being updated.
@@ -7626,7 +8466,11 @@ namespace Google.Cloud.ApiHub.V1
         /// * [slo][google.cloud.apihub.v1.Deployment.slo]
         /// * [environment][google.cloud.apihub.v1.Deployment.environment]
         /// * [attributes][google.cloud.apihub.v1.Deployment.attributes]
-        /// 
+        /// * [source_project] [google.cloud.apihub.v1.Deployment.source_project]
+        /// * [source_environment]
+        /// [google.cloud.apihub.v1.Deployment.source_environment]
+        /// * [management_url][google.cloud.apihub.v1.Deployment.management_url]
+        /// * [source_uri][google.cloud.apihub.v1.Deployment.source_uri]
         /// The
         /// [update_mask][google.cloud.apihub.v1.UpdateDeploymentRequest.update_mask]
         /// should be used to specify the fields being updated.
