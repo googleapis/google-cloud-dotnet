@@ -234,214 +234,256 @@ namespace Google.Cloud.Dataplex.V1 {
             "U2VhcmNoRW50cmllc1Jlc3BvbnNlEj4KB3Jlc3VsdHMYASADKAsyLS5nb29n",
             "bGUuY2xvdWQuZGF0YXBsZXgudjEuU2VhcmNoRW50cmllc1Jlc3VsdBISCgp0",
             "b3RhbF9zaXplGAIgASgFEhcKD25leHRfcGFnZV90b2tlbhgDIAEoCRITCgt1",
-            "bnJlYWNoYWJsZRgEIAMoCSKCAQoKSW1wb3J0SXRlbRIuCgVlbnRyeRgBIAEo",
-            "CzIfLmdvb2dsZS5jbG91ZC5kYXRhcGxleC52MS5FbnRyeRIvCgt1cGRhdGVf",
-            "bWFzaxgCIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5GaWVsZE1hc2sSEwoLYXNw",
-            "ZWN0X2tleXMYAyADKAki0QEKGENyZWF0ZU1ldGFkYXRhSm9iUmVxdWVzdBI5",
-            "CgZwYXJlbnQYASABKAlCKeBBAvpBIwohbG9jYXRpb25zLmdvb2dsZWFwaXMu",
-            "Y29tL0xvY2F0aW9uEkAKDG1ldGFkYXRhX2pvYhgCIAEoCzIlLmdvb2dsZS5j",
-            "bG91ZC5kYXRhcGxleC52MS5NZXRhZGF0YUpvYkID4EECEhwKD21ldGFkYXRh",
-            "X2pvYl9pZBgDIAEoCUID4EEBEhoKDXZhbGlkYXRlX29ubHkYBCABKAhCA+BB",
-            "ASJSChVHZXRNZXRhZGF0YUpvYlJlcXVlc3QSOQoEbmFtZRgBIAEoCUIr4EEC",
-            "+kElCiNkYXRhcGxleC5nb29nbGVhcGlzLmNvbS9NZXRhZGF0YUpvYiKxAQoX",
-            "TGlzdE1ldGFkYXRhSm9ic1JlcXVlc3QSOQoGcGFyZW50GAEgASgJQingQQL6",
-            "QSMKIWxvY2F0aW9ucy5nb29nbGVhcGlzLmNvbS9Mb2NhdGlvbhIWCglwYWdl",
-            "X3NpemUYAiABKAVCA+BBARIXCgpwYWdlX3Rva2VuGAMgASgJQgPgQQESEwoG",
-            "ZmlsdGVyGAQgASgJQgPgQQESFQoIb3JkZXJfYnkYBSABKAlCA+BBASKQAQoY",
-            "TGlzdE1ldGFkYXRhSm9ic1Jlc3BvbnNlEjwKDW1ldGFkYXRhX2pvYnMYASAD",
-            "KAsyJS5nb29nbGUuY2xvdWQuZGF0YXBsZXgudjEuTWV0YWRhdGFKb2ISFwoP",
-            "bmV4dF9wYWdlX3Rva2VuGAIgASgJEh0KFXVucmVhY2hhYmxlX2xvY2F0aW9u",
-            "cxgDIAMoCSJVChhDYW5jZWxNZXRhZGF0YUpvYlJlcXVlc3QSOQoEbmFtZRgB",
-            "IAEoCUIr4EEC+kElCiNkYXRhcGxleC5nb29nbGVhcGlzLmNvbS9NZXRhZGF0",
-            "YUpvYiKDFgoLTWV0YWRhdGFKb2ISFAoEbmFtZRgBIAEoCUIG4EED4EEIEhgK",
-            "A3VpZBgCIAEoCUIL4EED4ozP1wgCCAESNAoLY3JlYXRlX3RpbWUYAyABKAsy",
-            "Gi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wQgPgQQMSNAoLdXBkYXRlX3Rp",
-            "bWUYBCABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wQgPgQQMSRgoG",
-            "bGFiZWxzGAUgAygLMjEuZ29vZ2xlLmNsb3VkLmRhdGFwbGV4LnYxLk1ldGFk",
-            "YXRhSm9iLkxhYmVsc0VudHJ5QgPgQQESPQoEdHlwZRgGIAEoDjIqLmdvb2ds",
-            "ZS5jbG91ZC5kYXRhcGxleC52MS5NZXRhZGF0YUpvYi5UeXBlQgPgQQISSgoL",
-            "aW1wb3J0X3NwZWMYZCABKAsyMy5nb29nbGUuY2xvdWQuZGF0YXBsZXgudjEu",
-            "TWV0YWRhdGFKb2IuSW1wb3J0Sm9iU3BlY0gAEkoKC2V4cG9ydF9zcGVjGGUg",
-            "ASgLMjMuZ29vZ2xlLmNsb3VkLmRhdGFwbGV4LnYxLk1ldGFkYXRhSm9iLkV4",
-            "cG9ydEpvYlNwZWNIABJUCg1pbXBvcnRfcmVzdWx0GMgBIAEoCzI1Lmdvb2ds",
-            "ZS5jbG91ZC5kYXRhcGxleC52MS5NZXRhZGF0YUpvYi5JbXBvcnRKb2JSZXN1",
-            "bHRCA+BBA0gBElQKDWV4cG9ydF9yZXN1bHQYyQEgASgLMjUuZ29vZ2xlLmNs",
-            "b3VkLmRhdGFwbGV4LnYxLk1ldGFkYXRhSm9iLkV4cG9ydEpvYlJlc3VsdEID",
-            "4EEDSAESQQoGc3RhdHVzGAcgASgLMiwuZ29vZ2xlLmNsb3VkLmRhdGFwbGV4",
-            "LnYxLk1ldGFkYXRhSm9iLlN0YXR1c0ID4EEDGuEBCg9JbXBvcnRKb2JSZXN1",
-            "bHQSHAoPZGVsZXRlZF9lbnRyaWVzGAEgASgDQgPgQQMSHAoPdXBkYXRlZF9l",
-            "bnRyaWVzGAIgASgDQgPgQQMSHAoPY3JlYXRlZF9lbnRyaWVzGAMgASgDQgPg",
-            "QQMSHgoRdW5jaGFuZ2VkX2VudHJpZXMYBCABKANCA+BBAxIeChFyZWNyZWF0",
-            "ZWRfZW50cmllcxgGIAEoA0ID4EEDEjQKC3VwZGF0ZV90aW1lGAUgASgLMhou",
-            "Z29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcEID4EEDGkwKD0V4cG9ydEpvYlJl",
-            "c3VsdBIdChBleHBvcnRlZF9lbnRyaWVzGAEgASgDQgPgQQMSGgoNZXJyb3Jf",
-            "bWVzc2FnZRgCIAEoCUID4EEDGrMGCg1JbXBvcnRKb2JTcGVjEh8KEnNvdXJj",
-            "ZV9zdG9yYWdlX3VyaRgBIAEoCUID4EEBEjsKEnNvdXJjZV9jcmVhdGVfdGlt",
-            "ZRgFIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXBCA+BBARJWCgVz",
-            "Y29wZRgCIAEoCzJCLmdvb2dsZS5jbG91ZC5kYXRhcGxleC52MS5NZXRhZGF0",
-            "YUpvYi5JbXBvcnRKb2JTcGVjLkltcG9ydEpvYlNjb3BlQgPgQQISWgoPZW50",
-            "cnlfc3luY19tb2RlGAMgASgOMjwuZ29vZ2xlLmNsb3VkLmRhdGFwbGV4LnYx",
-            "Lk1ldGFkYXRhSm9iLkltcG9ydEpvYlNwZWMuU3luY01vZGVCA+BBAhJbChBh",
-            "c3BlY3Rfc3luY19tb2RlGAQgASgOMjwuZ29vZ2xlLmNsb3VkLmRhdGFwbGV4",
-            "LnYxLk1ldGFkYXRhSm9iLkltcG9ydEpvYlNwZWMuU3luY01vZGVCA+BBAhJU",
-            "Cglsb2dfbGV2ZWwYBiABKA4yPC5nb29nbGUuY2xvdWQuZGF0YXBsZXgudjEu",
-            "TWV0YWRhdGFKb2IuSW1wb3J0Sm9iU3BlYy5Mb2dMZXZlbEID4EEBGtQBCg5J",
-            "bXBvcnRKb2JTY29wZRJACgxlbnRyeV9ncm91cHMYASADKAlCKuBBAvpBJAoi",
-            "ZGF0YXBsZXguZ29vZ2xlYXBpcy5jb20vRW50cnlHcm91cBI+CgtlbnRyeV90",
-            "eXBlcxgCIAMoCUIp4EEC+kEjCiFkYXRhcGxleC5nb29nbGVhcGlzLmNvbS9F",
-            "bnRyeVR5cGUSQAoMYXNwZWN0X3R5cGVzGAMgAygJQirgQQH6QSQKImRhdGFw",
-            "bGV4Lmdvb2dsZWFwaXMuY29tL0FzcGVjdFR5cGUiSgoIU3luY01vZGUSGQoV",
-            "U1lOQ19NT0RFX1VOU1BFQ0lGSUVEEAASCAoERlVMTBABEg8KC0lOQ1JFTUVO",
-            "VEFMEAISCAoETk9ORRADIjoKCExvZ0xldmVsEhkKFUxPR19MRVZFTF9VTlNQ",
-            "RUNJRklFRBAAEgkKBURFQlVHEAESCAoESU5GTxACGq8DCg1FeHBvcnRKb2JT",
-            "cGVjElYKBXNjb3BlGAIgASgLMkIuZ29vZ2xlLmNsb3VkLmRhdGFwbGV4LnYx",
-            "Lk1ldGFkYXRhSm9iLkV4cG9ydEpvYlNwZWMuRXhwb3J0Sm9iU2NvcGVCA+BB",
-            "AhIYCgtvdXRwdXRfcGF0aBgDIAEoCUID4EECGqsCCg5FeHBvcnRKb2JTY29w",
-            "ZRIaChJvcmdhbml6YXRpb25fbGV2ZWwYASABKAgSQgoIcHJvamVjdHMYAiAD",
-            "KAlCMPpBLQorY2xvdWRyZXNvdXJjZW1hbmFnZXIuZ29vZ2xlYXBpcy5jb20v",
-            "UHJvamVjdBI9CgxlbnRyeV9ncm91cHMYAyADKAlCJ/pBJAoiZGF0YXBsZXgu",
-            "Z29vZ2xlYXBpcy5jb20vRW50cnlHcm91cBI7CgtlbnRyeV90eXBlcxgEIAMo",
-            "CUIm+kEjCiFkYXRhcGxleC5nb29nbGVhcGlzLmNvbS9FbnRyeVR5cGUSPQoM",
-            "YXNwZWN0X3R5cGVzGAUgAygJQif6QSQKImRhdGFwbGV4Lmdvb2dsZWFwaXMu",
-            "Y29tL0FzcGVjdFR5cGUaygIKBlN0YXR1cxJGCgVzdGF0ZRgBIAEoDjIyLmdv",
-            "b2dsZS5jbG91ZC5kYXRhcGxleC52MS5NZXRhZGF0YUpvYi5TdGF0dXMuU3Rh",
-            "dGVCA+BBAxIUCgdtZXNzYWdlGAIgASgJQgPgQQMSHwoSY29tcGxldGlvbl9w",
-            "ZXJjZW50GAMgASgFQgPgQQMSNAoLdXBkYXRlX3RpbWUYBCABKAsyGi5nb29n",
-            "bGUucHJvdG9idWYuVGltZXN0YW1wQgPgQQMiigEKBVN0YXRlEhUKEVNUQVRF",
-            "X1VOU1BFQ0lGSUVEEAASCgoGUVVFVUVEEAESCwoHUlVOTklORxACEg0KCUNB",
-            "TkNFTElORxADEgwKCENBTkNFTEVEEAQSDQoJU1VDQ0VFREVEEAUSCgoGRkFJ",
-            "TEVEEAYSGQoVU1VDQ0VFREVEX1dJVEhfRVJST1JTEAcaLQoLTGFiZWxzRW50",
-            "cnkSCwoDa2V5GAEgASgJEg0KBXZhbHVlGAIgASgJOgI4ASI0CgRUeXBlEhQK",
-            "EFRZUEVfVU5TUEVDSUZJRUQQABIKCgZJTVBPUlQQARIKCgZFWFBPUlQQAjps",
-            "6kFpCiNkYXRhcGxleC5nb29nbGVhcGlzLmNvbS9NZXRhZGF0YUpvYhJCcHJv",
-            "amVjdHMve3Byb2plY3R9L2xvY2F0aW9ucy97bG9jYXRpb259L21ldGFkYXRh",
-            "Sm9icy97bWV0YWRhdGFKb2J9QgYKBHNwZWNCCAoGcmVzdWx0KlEKCUVudHJ5",
-            "VmlldxIaChZFTlRSWV9WSUVXX1VOU1BFQ0lGSUVEEAASCQoFQkFTSUMQARII",
-            "CgRGVUxMEAISCgoGQ1VTVE9NEAMSBwoDQUxMEAQqcAoOVHJhbnNmZXJTdGF0",
-            "dXMSHwobVFJBTlNGRVJfU1RBVFVTX1VOU1BFQ0lGSUVEEAASHAoYVFJBTlNG",
-            "RVJfU1RBVFVTX01JR1JBVEVEEAESHwobVFJBTlNGRVJfU1RBVFVTX1RSQU5T",
-            "RkVSUkVEEAIylSkKDkNhdGFsb2dTZXJ2aWNlEuoBCg9DcmVhdGVFbnRyeVR5",
-            "cGUSMC5nb29nbGUuY2xvdWQuZGF0YXBsZXgudjEuQ3JlYXRlRW50cnlUeXBl",
-            "UmVxdWVzdBodLmdvb2dsZS5sb25ncnVubmluZy5PcGVyYXRpb24ihQHKQR4K",
-            "CUVudHJ5VHlwZRIRT3BlcmF0aW9uTWV0YWRhdGHaQR9wYXJlbnQsZW50cnlf",
-            "dHlwZSxlbnRyeV90eXBlX2lkgtPkkwI8Ii4vdjEve3BhcmVudD1wcm9qZWN0",
-            "cy8qL2xvY2F0aW9ucy8qfS9lbnRyeVR5cGVzOgplbnRyeV90eXBlEuwBCg9V",
-            "cGRhdGVFbnRyeVR5cGUSMC5nb29nbGUuY2xvdWQuZGF0YXBsZXgudjEuVXBk",
-            "YXRlRW50cnlUeXBlUmVxdWVzdBodLmdvb2dsZS5sb25ncnVubmluZy5PcGVy",
-            "YXRpb24ihwHKQR4KCUVudHJ5VHlwZRIRT3BlcmF0aW9uTWV0YWRhdGHaQRZl",
-            "bnRyeV90eXBlLHVwZGF0ZV9tYXNrgtPkkwJHMjkvdjEve2VudHJ5X3R5cGUu",
-            "bmFtZT1wcm9qZWN0cy8qL2xvY2F0aW9ucy8qL2VudHJ5VHlwZXMvKn06CmVu",
-            "dHJ5X3R5cGUSzgEKD0RlbGV0ZUVudHJ5VHlwZRIwLmdvb2dsZS5jbG91ZC5k",
-            "YXRhcGxleC52MS5EZWxldGVFbnRyeVR5cGVSZXF1ZXN0Gh0uZ29vZ2xlLmxv",
-            "bmdydW5uaW5nLk9wZXJhdGlvbiJqykEqChVnb29nbGUucHJvdG9idWYuRW1w",
-            "dHkSEU9wZXJhdGlvbk1ldGFkYXRh2kEEbmFtZYLT5JMCMCouL3YxL3tuYW1l",
-            "PXByb2plY3RzLyovbG9jYXRpb25zLyovZW50cnlUeXBlcy8qfRK0AQoOTGlz",
-            "dEVudHJ5VHlwZXMSLy5nb29nbGUuY2xvdWQuZGF0YXBsZXgudjEuTGlzdEVu",
-            "dHJ5VHlwZXNSZXF1ZXN0GjAuZ29vZ2xlLmNsb3VkLmRhdGFwbGV4LnYxLkxp",
-            "c3RFbnRyeVR5cGVzUmVzcG9uc2UiP9pBBnBhcmVudILT5JMCMBIuL3YxL3tw",
-            "YXJlbnQ9cHJvamVjdHMvKi9sb2NhdGlvbnMvKn0vZW50cnlUeXBlcxKhAQoM",
-            "R2V0RW50cnlUeXBlEi0uZ29vZ2xlLmNsb3VkLmRhdGFwbGV4LnYxLkdldEVu",
-            "dHJ5VHlwZVJlcXVlc3QaIy5nb29nbGUuY2xvdWQuZGF0YXBsZXgudjEuRW50",
-            "cnlUeXBlIj3aQQRuYW1lgtPkkwIwEi4vdjEve25hbWU9cHJvamVjdHMvKi9s",
-            "b2NhdGlvbnMvKi9lbnRyeVR5cGVzLyp9EvEBChBDcmVhdGVBc3BlY3RUeXBl",
-            "EjEuZ29vZ2xlLmNsb3VkLmRhdGFwbGV4LnYxLkNyZWF0ZUFzcGVjdFR5cGVS",
-            "ZXF1ZXN0Gh0uZ29vZ2xlLmxvbmdydW5uaW5nLk9wZXJhdGlvbiKKAcpBHwoK",
-            "QXNwZWN0VHlwZRIRT3BlcmF0aW9uTWV0YWRhdGHaQSFwYXJlbnQsYXNwZWN0",
-            "X3R5cGUsYXNwZWN0X3R5cGVfaWSC0+STAj4iLy92MS97cGFyZW50PXByb2pl",
-            "Y3RzLyovbG9jYXRpb25zLyp9L2FzcGVjdFR5cGVzOgthc3BlY3RfdHlwZRLz",
-            "AQoQVXBkYXRlQXNwZWN0VHlwZRIxLmdvb2dsZS5jbG91ZC5kYXRhcGxleC52",
-            "MS5VcGRhdGVBc3BlY3RUeXBlUmVxdWVzdBodLmdvb2dsZS5sb25ncnVubmlu",
-            "Zy5PcGVyYXRpb24ijAHKQR8KCkFzcGVjdFR5cGUSEU9wZXJhdGlvbk1ldGFk",
-            "YXRh2kEXYXNwZWN0X3R5cGUsdXBkYXRlX21hc2uC0+STAkoyOy92MS97YXNw",
-            "ZWN0X3R5cGUubmFtZT1wcm9qZWN0cy8qL2xvY2F0aW9ucy8qL2FzcGVjdFR5",
-            "cGVzLyp9Ogthc3BlY3RfdHlwZRLRAQoQRGVsZXRlQXNwZWN0VHlwZRIxLmdv",
-            "b2dsZS5jbG91ZC5kYXRhcGxleC52MS5EZWxldGVBc3BlY3RUeXBlUmVxdWVz",
-            "dBodLmdvb2dsZS5sb25ncnVubmluZy5PcGVyYXRpb24ia8pBKgoVZ29vZ2xl",
-            "LnByb3RvYnVmLkVtcHR5EhFPcGVyYXRpb25NZXRhZGF0YdpBBG5hbWWC0+ST",
-            "AjEqLy92MS97bmFtZT1wcm9qZWN0cy8qL2xvY2F0aW9ucy8qL2FzcGVjdFR5",
-            "cGVzLyp9ErgBCg9MaXN0QXNwZWN0VHlwZXMSMC5nb29nbGUuY2xvdWQuZGF0",
-            "YXBsZXgudjEuTGlzdEFzcGVjdFR5cGVzUmVxdWVzdBoxLmdvb2dsZS5jbG91",
-            "ZC5kYXRhcGxleC52MS5MaXN0QXNwZWN0VHlwZXNSZXNwb25zZSJA2kEGcGFy",
-            "ZW50gtPkkwIxEi8vdjEve3BhcmVudD1wcm9qZWN0cy8qL2xvY2F0aW9ucy8q",
-            "fS9hc3BlY3RUeXBlcxKlAQoNR2V0QXNwZWN0VHlwZRIuLmdvb2dsZS5jbG91",
-            "ZC5kYXRhcGxleC52MS5HZXRBc3BlY3RUeXBlUmVxdWVzdBokLmdvb2dsZS5j",
-            "bG91ZC5kYXRhcGxleC52MS5Bc3BlY3RUeXBlIj7aQQRuYW1lgtPkkwIxEi8v",
-            "djEve25hbWU9cHJvamVjdHMvKi9sb2NhdGlvbnMvKi9hc3BlY3RUeXBlcy8q",
-            "fRLxAQoQQ3JlYXRlRW50cnlHcm91cBIxLmdvb2dsZS5jbG91ZC5kYXRhcGxl",
-            "eC52MS5DcmVhdGVFbnRyeUdyb3VwUmVxdWVzdBodLmdvb2dsZS5sb25ncnVu",
-            "bmluZy5PcGVyYXRpb24iigHKQR8KCkVudHJ5R3JvdXASEU9wZXJhdGlvbk1l",
-            "dGFkYXRh2kEhcGFyZW50LGVudHJ5X2dyb3VwLGVudHJ5X2dyb3VwX2lkgtPk",
-            "kwI+Ii8vdjEve3BhcmVudD1wcm9qZWN0cy8qL2xvY2F0aW9ucy8qfS9lbnRy",
-            "eUdyb3VwczoLZW50cnlfZ3JvdXAS8wEKEFVwZGF0ZUVudHJ5R3JvdXASMS5n",
-            "b29nbGUuY2xvdWQuZGF0YXBsZXgudjEuVXBkYXRlRW50cnlHcm91cFJlcXVl",
-            "c3QaHS5nb29nbGUubG9uZ3J1bm5pbmcuT3BlcmF0aW9uIowBykEfCgpFbnRy",
-            "eUdyb3VwEhFPcGVyYXRpb25NZXRhZGF0YdpBF2VudHJ5X2dyb3VwLHVwZGF0",
-            "ZV9tYXNrgtPkkwJKMjsvdjEve2VudHJ5X2dyb3VwLm5hbWU9cHJvamVjdHMv",
-            "Ki9sb2NhdGlvbnMvKi9lbnRyeUdyb3Vwcy8qfToLZW50cnlfZ3JvdXAS0QEK",
-            "EERlbGV0ZUVudHJ5R3JvdXASMS5nb29nbGUuY2xvdWQuZGF0YXBsZXgudjEu",
-            "RGVsZXRlRW50cnlHcm91cFJlcXVlc3QaHS5nb29nbGUubG9uZ3J1bm5pbmcu",
-            "T3BlcmF0aW9uImvKQSoKFWdvb2dsZS5wcm90b2J1Zi5FbXB0eRIRT3BlcmF0",
-            "aW9uTWV0YWRhdGHaQQRuYW1lgtPkkwIxKi8vdjEve25hbWU9cHJvamVjdHMv",
-            "Ki9sb2NhdGlvbnMvKi9lbnRyeUdyb3Vwcy8qfRK4AQoPTGlzdEVudHJ5R3Jv",
-            "dXBzEjAuZ29vZ2xlLmNsb3VkLmRhdGFwbGV4LnYxLkxpc3RFbnRyeUdyb3Vw",
-            "c1JlcXVlc3QaMS5nb29nbGUuY2xvdWQuZGF0YXBsZXgudjEuTGlzdEVudHJ5",
-            "R3JvdXBzUmVzcG9uc2UiQNpBBnBhcmVudILT5JMCMRIvL3YxL3twYXJlbnQ9",
-            "cHJvamVjdHMvKi9sb2NhdGlvbnMvKn0vZW50cnlHcm91cHMSpQEKDUdldEVu",
-            "dHJ5R3JvdXASLi5nb29nbGUuY2xvdWQuZGF0YXBsZXgudjEuR2V0RW50cnlH",
-            "cm91cFJlcXVlc3QaJC5nb29nbGUuY2xvdWQuZGF0YXBsZXgudjEuRW50cnlH",
-            "cm91cCI+2kEEbmFtZYLT5JMCMRIvL3YxL3tuYW1lPXByb2plY3RzLyovbG9j",
-            "YXRpb25zLyovZW50cnlHcm91cHMvKn0SvgEKC0NyZWF0ZUVudHJ5EiwuZ29v",
-            "Z2xlLmNsb3VkLmRhdGFwbGV4LnYxLkNyZWF0ZUVudHJ5UmVxdWVzdBofLmdv",
-            "b2dsZS5jbG91ZC5kYXRhcGxleC52MS5FbnRyeSJg2kEVcGFyZW50LGVudHJ5",
-            "LGVudHJ5X2lkgtPkkwJCIjkvdjEve3BhcmVudD1wcm9qZWN0cy8qL2xvY2F0",
-            "aW9ucy8qL2VudHJ5R3JvdXBzLyp9L2VudHJpZXM6BWVudHJ5EsEBCgtVcGRh",
-            "dGVFbnRyeRIsLmdvb2dsZS5jbG91ZC5kYXRhcGxleC52MS5VcGRhdGVFbnRy",
-            "eVJlcXVlc3QaHy5nb29nbGUuY2xvdWQuZGF0YXBsZXgudjEuRW50cnkiY9pB",
-            "EWVudHJ5LHVwZGF0ZV9tYXNrgtPkkwJJMkAvdjEve2VudHJ5Lm5hbWU9cHJv",
-            "amVjdHMvKi9sb2NhdGlvbnMvKi9lbnRyeUdyb3Vwcy8qL2VudHJpZXMvKip9",
-            "OgVlbnRyeRKnAQoLRGVsZXRlRW50cnkSLC5nb29nbGUuY2xvdWQuZGF0YXBs",
-            "ZXgudjEuRGVsZXRlRW50cnlSZXF1ZXN0Gh8uZ29vZ2xlLmNsb3VkLmRhdGFw",
-            "bGV4LnYxLkVudHJ5IknaQQRuYW1lgtPkkwI8KjovdjEve25hbWU9cHJvamVj",
-            "dHMvKi9sb2NhdGlvbnMvKi9lbnRyeUdyb3Vwcy8qL2VudHJpZXMvKip9ErYB",
-            "CgtMaXN0RW50cmllcxIsLmdvb2dsZS5jbG91ZC5kYXRhcGxleC52MS5MaXN0",
-            "RW50cmllc1JlcXVlc3QaLS5nb29nbGUuY2xvdWQuZGF0YXBsZXgudjEuTGlz",
-            "dEVudHJpZXNSZXNwb25zZSJK2kEGcGFyZW50gtPkkwI7EjkvdjEve3BhcmVu",
-            "dD1wcm9qZWN0cy8qL2xvY2F0aW9ucy8qL2VudHJ5R3JvdXBzLyp9L2VudHJp",
-            "ZXMSoQEKCEdldEVudHJ5EikuZ29vZ2xlLmNsb3VkLmRhdGFwbGV4LnYxLkdl",
-            "dEVudHJ5UmVxdWVzdBofLmdvb2dsZS5jbG91ZC5kYXRhcGxleC52MS5FbnRy",
-            "eSJJ2kEEbmFtZYLT5JMCPBI6L3YxL3tuYW1lPXByb2plY3RzLyovbG9jYXRp",
-            "b25zLyovZW50cnlHcm91cHMvKi9lbnRyaWVzLyoqfRKTAQoLTG9va3VwRW50",
-            "cnkSLC5nb29nbGUuY2xvdWQuZGF0YXBsZXgudjEuTG9va3VwRW50cnlSZXF1",
-            "ZXN0Gh8uZ29vZ2xlLmNsb3VkLmRhdGFwbGV4LnYxLkVudHJ5IjWC0+STAi8S",
-            "LS92MS97bmFtZT1wcm9qZWN0cy8qL2xvY2F0aW9ucy8qfTpsb29rdXBFbnRy",
-            "eRK2AQoNU2VhcmNoRW50cmllcxIuLmdvb2dsZS5jbG91ZC5kYXRhcGxleC52",
-            "MS5TZWFyY2hFbnRyaWVzUmVxdWVzdBovLmdvb2dsZS5jbG91ZC5kYXRhcGxl",
-            "eC52MS5TZWFyY2hFbnRyaWVzUmVzcG9uc2UiRNpBCm5hbWUscXVlcnmC0+ST",
-            "AjEiLy92MS97bmFtZT1wcm9qZWN0cy8qL2xvY2F0aW9ucy8qfTpzZWFyY2hF",
-            "bnRyaWVzEvgBChFDcmVhdGVNZXRhZGF0YUpvYhIyLmdvb2dsZS5jbG91ZC5k",
-            "YXRhcGxleC52MS5DcmVhdGVNZXRhZGF0YUpvYlJlcXVlc3QaHS5nb29nbGUu",
-            "bG9uZ3J1bm5pbmcuT3BlcmF0aW9uIo8BykEgCgtNZXRhZGF0YUpvYhIRT3Bl",
-            "cmF0aW9uTWV0YWRhdGHaQSNwYXJlbnQsbWV0YWRhdGFfam9iLG1ldGFkYXRh",
-            "X2pvYl9pZILT5JMCQCIwL3YxL3twYXJlbnQ9cHJvamVjdHMvKi9sb2NhdGlv",
-            "bnMvKn0vbWV0YWRhdGFKb2JzOgxtZXRhZGF0YV9qb2ISqQEKDkdldE1ldGFk",
-            "YXRhSm9iEi8uZ29vZ2xlLmNsb3VkLmRhdGFwbGV4LnYxLkdldE1ldGFkYXRh",
-            "Sm9iUmVxdWVzdBolLmdvb2dsZS5jbG91ZC5kYXRhcGxleC52MS5NZXRhZGF0",
-            "YUpvYiI/2kEEbmFtZYLT5JMCMhIwL3YxL3tuYW1lPXByb2plY3RzLyovbG9j",
-            "YXRpb25zLyovbWV0YWRhdGFKb2JzLyp9ErwBChBMaXN0TWV0YWRhdGFKb2Jz",
-            "EjEuZ29vZ2xlLmNsb3VkLmRhdGFwbGV4LnYxLkxpc3RNZXRhZGF0YUpvYnNS",
-            "ZXF1ZXN0GjIuZ29vZ2xlLmNsb3VkLmRhdGFwbGV4LnYxLkxpc3RNZXRhZGF0",
-            "YUpvYnNSZXNwb25zZSJB2kEGcGFyZW50gtPkkwIyEjAvdjEve3BhcmVudD1w",
-            "cm9qZWN0cy8qL2xvY2F0aW9ucy8qfS9tZXRhZGF0YUpvYnMSqgEKEUNhbmNl",
-            "bE1ldGFkYXRhSm9iEjIuZ29vZ2xlLmNsb3VkLmRhdGFwbGV4LnYxLkNhbmNl",
-            "bE1ldGFkYXRhSm9iUmVxdWVzdBoWLmdvb2dsZS5wcm90b2J1Zi5FbXB0eSJJ",
-            "2kEEbmFtZYLT5JMCPCI3L3YxL3tuYW1lPXByb2plY3RzLyovbG9jYXRpb25z",
-            "LyovbWV0YWRhdGFKb2JzLyp9OmNhbmNlbDoBKhpLykEXZGF0YXBsZXguZ29v",
-            "Z2xlYXBpcy5jb23SQS5odHRwczovL3d3dy5nb29nbGVhcGlzLmNvbS9hdXRo",
-            "L2Nsb3VkLXBsYXRmb3JtQrwBChxjb20uZ29vZ2xlLmNsb3VkLmRhdGFwbGV4",
-            "LnYxQgxDYXRhbG9nUHJvdG9QAVo4Y2xvdWQuZ29vZ2xlLmNvbS9nby9kYXRh",
-            "cGxleC9hcGl2MS9kYXRhcGxleHBiO2RhdGFwbGV4cGKqAhhHb29nbGUuQ2xv",
-            "dWQuRGF0YXBsZXguVjHKAhhHb29nbGVcQ2xvdWRcRGF0YXBsZXhcVjHqAhtH",
-            "b29nbGU6OkNsb3VkOjpEYXRhcGxleDo6VjFiBnByb3RvMw=="));
+            "bnJlYWNoYWJsZRgEIAMoCSK7AQoKSW1wb3J0SXRlbRIuCgVlbnRyeRgBIAEo",
+            "CzIfLmdvb2dsZS5jbG91ZC5kYXRhcGxleC52MS5FbnRyeRI3CgplbnRyeV9s",
+            "aW5rGAQgASgLMiMuZ29vZ2xlLmNsb3VkLmRhdGFwbGV4LnYxLkVudHJ5TGlu",
+            "axIvCgt1cGRhdGVfbWFzaxgCIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5GaWVs",
+            "ZE1hc2sSEwoLYXNwZWN0X2tleXMYAyADKAki0QEKGENyZWF0ZU1ldGFkYXRh",
+            "Sm9iUmVxdWVzdBI5CgZwYXJlbnQYASABKAlCKeBBAvpBIwohbG9jYXRpb25z",
+            "Lmdvb2dsZWFwaXMuY29tL0xvY2F0aW9uEkAKDG1ldGFkYXRhX2pvYhgCIAEo",
+            "CzIlLmdvb2dsZS5jbG91ZC5kYXRhcGxleC52MS5NZXRhZGF0YUpvYkID4EEC",
+            "EhwKD21ldGFkYXRhX2pvYl9pZBgDIAEoCUID4EEBEhoKDXZhbGlkYXRlX29u",
+            "bHkYBCABKAhCA+BBASJSChVHZXRNZXRhZGF0YUpvYlJlcXVlc3QSOQoEbmFt",
+            "ZRgBIAEoCUIr4EEC+kElCiNkYXRhcGxleC5nb29nbGVhcGlzLmNvbS9NZXRh",
+            "ZGF0YUpvYiKxAQoXTGlzdE1ldGFkYXRhSm9ic1JlcXVlc3QSOQoGcGFyZW50",
+            "GAEgASgJQingQQL6QSMKIWxvY2F0aW9ucy5nb29nbGVhcGlzLmNvbS9Mb2Nh",
+            "dGlvbhIWCglwYWdlX3NpemUYAiABKAVCA+BBARIXCgpwYWdlX3Rva2VuGAMg",
+            "ASgJQgPgQQESEwoGZmlsdGVyGAQgASgJQgPgQQESFQoIb3JkZXJfYnkYBSAB",
+            "KAlCA+BBASKQAQoYTGlzdE1ldGFkYXRhSm9ic1Jlc3BvbnNlEjwKDW1ldGFk",
+            "YXRhX2pvYnMYASADKAsyJS5nb29nbGUuY2xvdWQuZGF0YXBsZXgudjEuTWV0",
+            "YWRhdGFKb2ISFwoPbmV4dF9wYWdlX3Rva2VuGAIgASgJEh0KFXVucmVhY2hh",
+            "YmxlX2xvY2F0aW9ucxgDIAMoCSJVChhDYW5jZWxNZXRhZGF0YUpvYlJlcXVl",
+            "c3QSOQoEbmFtZRgBIAEoCUIr4EEC+kElCiNkYXRhcGxleC5nb29nbGVhcGlz",
+            "LmNvbS9NZXRhZGF0YUpvYiLuFwoLTWV0YWRhdGFKb2ISFAoEbmFtZRgBIAEo",
+            "CUIG4EED4EEIEhgKA3VpZBgCIAEoCUIL4EED4ozP1wgCCAESNAoLY3JlYXRl",
+            "X3RpbWUYAyABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wQgPgQQMS",
+            "NAoLdXBkYXRlX3RpbWUYBCABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0",
+            "YW1wQgPgQQMSRgoGbGFiZWxzGAUgAygLMjEuZ29vZ2xlLmNsb3VkLmRhdGFw",
+            "bGV4LnYxLk1ldGFkYXRhSm9iLkxhYmVsc0VudHJ5QgPgQQESPQoEdHlwZRgG",
+            "IAEoDjIqLmdvb2dsZS5jbG91ZC5kYXRhcGxleC52MS5NZXRhZGF0YUpvYi5U",
+            "eXBlQgPgQQISSgoLaW1wb3J0X3NwZWMYZCABKAsyMy5nb29nbGUuY2xvdWQu",
+            "ZGF0YXBsZXgudjEuTWV0YWRhdGFKb2IuSW1wb3J0Sm9iU3BlY0gAEkoKC2V4",
+            "cG9ydF9zcGVjGGUgASgLMjMuZ29vZ2xlLmNsb3VkLmRhdGFwbGV4LnYxLk1l",
+            "dGFkYXRhSm9iLkV4cG9ydEpvYlNwZWNIABJUCg1pbXBvcnRfcmVzdWx0GMgB",
+            "IAEoCzI1Lmdvb2dsZS5jbG91ZC5kYXRhcGxleC52MS5NZXRhZGF0YUpvYi5J",
+            "bXBvcnRKb2JSZXN1bHRCA+BBA0gBElQKDWV4cG9ydF9yZXN1bHQYyQEgASgL",
+            "MjUuZ29vZ2xlLmNsb3VkLmRhdGFwbGV4LnYxLk1ldGFkYXRhSm9iLkV4cG9y",
+            "dEpvYlJlc3VsdEID4EEDSAESQQoGc3RhdHVzGAcgASgLMiwuZ29vZ2xlLmNs",
+            "b3VkLmRhdGFwbGV4LnYxLk1ldGFkYXRhSm9iLlN0YXR1c0ID4EEDGskCCg9J",
+            "bXBvcnRKb2JSZXN1bHQSHAoPZGVsZXRlZF9lbnRyaWVzGAEgASgDQgPgQQMS",
+            "HAoPdXBkYXRlZF9lbnRyaWVzGAIgASgDQgPgQQMSHAoPY3JlYXRlZF9lbnRy",
+            "aWVzGAMgASgDQgPgQQMSHgoRdW5jaGFuZ2VkX2VudHJpZXMYBCABKANCA+BB",
+            "AxIeChFyZWNyZWF0ZWRfZW50cmllcxgGIAEoA0ID4EEDEjQKC3VwZGF0ZV90",
+            "aW1lGAUgASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcEID4EEDEiAK",
+            "E2RlbGV0ZWRfZW50cnlfbGlua3MYByABKANCA+BBAxIgChNjcmVhdGVkX2Vu",
+            "dHJ5X2xpbmtzGAggASgDQgPgQQMSIgoVdW5jaGFuZ2VkX2VudHJ5X2xpbmtz",
+            "GAkgASgDQgPgQQMaTAoPRXhwb3J0Sm9iUmVzdWx0Eh0KEGV4cG9ydGVkX2Vu",
+            "dHJpZXMYASABKANCA+BBAxIaCg1lcnJvcl9tZXNzYWdlGAIgASgJQgPgQQMa",
+            "tgcKDUltcG9ydEpvYlNwZWMSHwoSc291cmNlX3N0b3JhZ2VfdXJpGAEgASgJ",
+            "QgPgQQESOwoSc291cmNlX2NyZWF0ZV90aW1lGAUgASgLMhouZ29vZ2xlLnBy",
+            "b3RvYnVmLlRpbWVzdGFtcEID4EEBElYKBXNjb3BlGAIgASgLMkIuZ29vZ2xl",
+            "LmNsb3VkLmRhdGFwbGV4LnYxLk1ldGFkYXRhSm9iLkltcG9ydEpvYlNwZWMu",
+            "SW1wb3J0Sm9iU2NvcGVCA+BBAhJaCg9lbnRyeV9zeW5jX21vZGUYAyABKA4y",
+            "PC5nb29nbGUuY2xvdWQuZGF0YXBsZXgudjEuTWV0YWRhdGFKb2IuSW1wb3J0",
+            "Sm9iU3BlYy5TeW5jTW9kZUID4EECElsKEGFzcGVjdF9zeW5jX21vZGUYBCAB",
+            "KA4yPC5nb29nbGUuY2xvdWQuZGF0YXBsZXgudjEuTWV0YWRhdGFKb2IuSW1w",
+            "b3J0Sm9iU3BlYy5TeW5jTW9kZUID4EECElQKCWxvZ19sZXZlbBgGIAEoDjI8",
+            "Lmdvb2dsZS5jbG91ZC5kYXRhcGxleC52MS5NZXRhZGF0YUpvYi5JbXBvcnRK",
+            "b2JTcGVjLkxvZ0xldmVsQgPgQQEa1wIKDkltcG9ydEpvYlNjb3BlEkAKDGVu",
+            "dHJ5X2dyb3VwcxgBIAMoCUIq4EEC+kEkCiJkYXRhcGxleC5nb29nbGVhcGlz",
+            "LmNvbS9FbnRyeUdyb3VwEj4KC2VudHJ5X3R5cGVzGAIgAygJQingQQL6QSMK",
+            "IWRhdGFwbGV4Lmdvb2dsZWFwaXMuY29tL0VudHJ5VHlwZRJACgxhc3BlY3Rf",
+            "dHlwZXMYAyADKAlCKuBBAfpBJAoiZGF0YXBsZXguZ29vZ2xlYXBpcy5jb20v",
+            "QXNwZWN0VHlwZRI8CgpnbG9zc2FyaWVzGAQgAygJQijgQQH6QSIKIGRhdGFw",
+            "bGV4Lmdvb2dsZWFwaXMuY29tL0dsb3NzYXJ5Eh0KEGVudHJ5X2xpbmtfdHlw",
+            "ZXMYBSADKAlCA+BBARIkChdyZWZlcmVuY2VkX2VudHJ5X3Njb3BlcxgGIAMo",
+            "CUID4EEBIkoKCFN5bmNNb2RlEhkKFVNZTkNfTU9ERV9VTlNQRUNJRklFRBAA",
+            "EggKBEZVTEwQARIPCgtJTkNSRU1FTlRBTBACEggKBE5PTkUQAyI6CghMb2dM",
+            "ZXZlbBIZChVMT0dfTEVWRUxfVU5TUEVDSUZJRUQQABIJCgVERUJVRxABEggK",
+            "BElORk8QAhqvAwoNRXhwb3J0Sm9iU3BlYxJWCgVzY29wZRgCIAEoCzJCLmdv",
+            "b2dsZS5jbG91ZC5kYXRhcGxleC52MS5NZXRhZGF0YUpvYi5FeHBvcnRKb2JT",
+            "cGVjLkV4cG9ydEpvYlNjb3BlQgPgQQISGAoLb3V0cHV0X3BhdGgYAyABKAlC",
+            "A+BBAhqrAgoORXhwb3J0Sm9iU2NvcGUSGgoSb3JnYW5pemF0aW9uX2xldmVs",
+            "GAEgASgIEkIKCHByb2plY3RzGAIgAygJQjD6QS0KK2Nsb3VkcmVzb3VyY2Vt",
+            "YW5hZ2VyLmdvb2dsZWFwaXMuY29tL1Byb2plY3QSPQoMZW50cnlfZ3JvdXBz",
+            "GAMgAygJQif6QSQKImRhdGFwbGV4Lmdvb2dsZWFwaXMuY29tL0VudHJ5R3Jv",
+            "dXASOwoLZW50cnlfdHlwZXMYBCADKAlCJvpBIwohZGF0YXBsZXguZ29vZ2xl",
+            "YXBpcy5jb20vRW50cnlUeXBlEj0KDGFzcGVjdF90eXBlcxgFIAMoCUIn+kEk",
+            "CiJkYXRhcGxleC5nb29nbGVhcGlzLmNvbS9Bc3BlY3RUeXBlGsoCCgZTdGF0",
+            "dXMSRgoFc3RhdGUYASABKA4yMi5nb29nbGUuY2xvdWQuZGF0YXBsZXgudjEu",
+            "TWV0YWRhdGFKb2IuU3RhdHVzLlN0YXRlQgPgQQMSFAoHbWVzc2FnZRgCIAEo",
+            "CUID4EEDEh8KEmNvbXBsZXRpb25fcGVyY2VudBgDIAEoBUID4EEDEjQKC3Vw",
+            "ZGF0ZV90aW1lGAQgASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcEID",
+            "4EEDIooBCgVTdGF0ZRIVChFTVEFURV9VTlNQRUNJRklFRBAAEgoKBlFVRVVF",
+            "RBABEgsKB1JVTk5JTkcQAhINCglDQU5DRUxJTkcQAxIMCghDQU5DRUxFRBAE",
+            "Eg0KCVNVQ0NFRURFRBAFEgoKBkZBSUxFRBAGEhkKFVNVQ0NFRURFRF9XSVRI",
+            "X0VSUk9SUxAHGi0KC0xhYmVsc0VudHJ5EgsKA2tleRgBIAEoCRINCgV2YWx1",
+            "ZRgCIAEoCToCOAEiNAoEVHlwZRIUChBUWVBFX1VOU1BFQ0lGSUVEEAASCgoG",
+            "SU1QT1JUEAESCgoGRVhQT1JUEAI6bOpBaQojZGF0YXBsZXguZ29vZ2xlYXBp",
+            "cy5jb20vTWV0YWRhdGFKb2ISQnByb2plY3RzL3twcm9qZWN0fS9sb2NhdGlv",
+            "bnMve2xvY2F0aW9ufS9tZXRhZGF0YUpvYnMve21ldGFkYXRhSm9ifUIGCgRz",
+            "cGVjQggKBnJlc3VsdCKCBQoJRW50cnlMaW5rEj0KBG5hbWUYASABKAlCL+BB",
+            "A+BBBeBBCPpBIwohZGF0YXBsZXguZ29vZ2xlYXBpcy5jb20vRW50cnlMaW5r",
+            "Eh8KD2VudHJ5X2xpbmtfdHlwZRgCIAEoCUIG4EEC4EEFEjQKC2NyZWF0ZV90",
+            "aW1lGAMgASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcEID4EEDEjQK",
+            "C3VwZGF0ZV90aW1lGAQgASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFt",
+            "cEID4EEDElEKEGVudHJ5X3JlZmVyZW5jZXMYCiADKAsyMi5nb29nbGUuY2xv",
+            "dWQuZGF0YXBsZXgudjEuRW50cnlMaW5rLkVudHJ5UmVmZXJlbmNlQgPgQQIa",
+            "uQEKDkVudHJ5UmVmZXJlbmNlEhQKBG5hbWUYASABKAlCBuBBAuBBBRIRCgRw",
+            "YXRoGAIgASgJQgPgQQUSTQoEdHlwZRgDIAEoDjI3Lmdvb2dsZS5jbG91ZC5k",
+            "YXRhcGxleC52MS5FbnRyeUxpbmsuRW50cnlSZWZlcmVuY2UuVHlwZUIG4EEC",
+            "4EEFIi8KBFR5cGUSDwoLVU5TUEVDSUZJRUQQABIKCgZTT1VSQ0UQAhIKCgZU",
+            "QVJHRVQQAzqZAepBlQEKIWRhdGFwbGV4Lmdvb2dsZWFwaXMuY29tL0VudHJ5",
+            "TGluaxJZcHJvamVjdHMve3Byb2plY3R9L2xvY2F0aW9ucy97bG9jYXRpb259",
+            "L2VudHJ5R3JvdXBzL3tlbnRyeV9ncm91cH0vZW50cnlMaW5rcy97ZW50cnlf",
+            "bGlua30qCmVudHJ5TGlua3MyCWVudHJ5TGluayKuAQoWQ3JlYXRlRW50cnlM",
+            "aW5rUmVxdWVzdBI6CgZwYXJlbnQYASABKAlCKuBBAvpBJAoiZGF0YXBsZXgu",
+            "Z29vZ2xlYXBpcy5jb20vRW50cnlHcm91cBIaCg1lbnRyeV9saW5rX2lkGAIg",
+            "ASgJQgPgQQISPAoKZW50cnlfbGluaxgDIAEoCzIjLmdvb2dsZS5jbG91ZC5k",
+            "YXRhcGxleC52MS5FbnRyeUxpbmtCA+BBAiJRChZEZWxldGVFbnRyeUxpbmtS",
+            "ZXF1ZXN0EjcKBG5hbWUYASABKAlCKeBBAvpBIwohZGF0YXBsZXguZ29vZ2xl",
+            "YXBpcy5jb20vRW50cnlMaW5rIk4KE0dldEVudHJ5TGlua1JlcXVlc3QSNwoE",
+            "bmFtZRgBIAEoCUIp4EEC+kEjCiFkYXRhcGxleC5nb29nbGVhcGlzLmNvbS9F",
+            "bnRyeUxpbmsqUQoJRW50cnlWaWV3EhoKFkVOVFJZX1ZJRVdfVU5TUEVDSUZJ",
+            "RUQQABIJCgVCQVNJQxABEggKBEZVTEwQAhIKCgZDVVNUT00QAxIHCgNBTEwQ",
+            "BCpwCg5UcmFuc2ZlclN0YXR1cxIfChtUUkFOU0ZFUl9TVEFUVVNfVU5TUEVD",
+            "SUZJRUQQABIcChhUUkFOU0ZFUl9TVEFUVVNfTUlHUkFURUQQARIfChtUUkFO",
+            "U0ZFUl9TVEFUVVNfVFJBTlNGRVJSRUQQAjLeLQoOQ2F0YWxvZ1NlcnZpY2US",
+            "6gEKD0NyZWF0ZUVudHJ5VHlwZRIwLmdvb2dsZS5jbG91ZC5kYXRhcGxleC52",
+            "MS5DcmVhdGVFbnRyeVR5cGVSZXF1ZXN0Gh0uZ29vZ2xlLmxvbmdydW5uaW5n",
+            "Lk9wZXJhdGlvbiKFAcpBHgoJRW50cnlUeXBlEhFPcGVyYXRpb25NZXRhZGF0",
+            "YdpBH3BhcmVudCxlbnRyeV90eXBlLGVudHJ5X3R5cGVfaWSC0+STAjwiLi92",
+            "MS97cGFyZW50PXByb2plY3RzLyovbG9jYXRpb25zLyp9L2VudHJ5VHlwZXM6",
+            "CmVudHJ5X3R5cGUS7AEKD1VwZGF0ZUVudHJ5VHlwZRIwLmdvb2dsZS5jbG91",
+            "ZC5kYXRhcGxleC52MS5VcGRhdGVFbnRyeVR5cGVSZXF1ZXN0Gh0uZ29vZ2xl",
+            "LmxvbmdydW5uaW5nLk9wZXJhdGlvbiKHAcpBHgoJRW50cnlUeXBlEhFPcGVy",
+            "YXRpb25NZXRhZGF0YdpBFmVudHJ5X3R5cGUsdXBkYXRlX21hc2uC0+STAkcy",
+            "OS92MS97ZW50cnlfdHlwZS5uYW1lPXByb2plY3RzLyovbG9jYXRpb25zLyov",
+            "ZW50cnlUeXBlcy8qfToKZW50cnlfdHlwZRLOAQoPRGVsZXRlRW50cnlUeXBl",
+            "EjAuZ29vZ2xlLmNsb3VkLmRhdGFwbGV4LnYxLkRlbGV0ZUVudHJ5VHlwZVJl",
+            "cXVlc3QaHS5nb29nbGUubG9uZ3J1bm5pbmcuT3BlcmF0aW9uImrKQSoKFWdv",
+            "b2dsZS5wcm90b2J1Zi5FbXB0eRIRT3BlcmF0aW9uTWV0YWRhdGHaQQRuYW1l",
+            "gtPkkwIwKi4vdjEve25hbWU9cHJvamVjdHMvKi9sb2NhdGlvbnMvKi9lbnRy",
+            "eVR5cGVzLyp9ErQBCg5MaXN0RW50cnlUeXBlcxIvLmdvb2dsZS5jbG91ZC5k",
+            "YXRhcGxleC52MS5MaXN0RW50cnlUeXBlc1JlcXVlc3QaMC5nb29nbGUuY2xv",
+            "dWQuZGF0YXBsZXgudjEuTGlzdEVudHJ5VHlwZXNSZXNwb25zZSI/2kEGcGFy",
+            "ZW50gtPkkwIwEi4vdjEve3BhcmVudD1wcm9qZWN0cy8qL2xvY2F0aW9ucy8q",
+            "fS9lbnRyeVR5cGVzEqEBCgxHZXRFbnRyeVR5cGUSLS5nb29nbGUuY2xvdWQu",
+            "ZGF0YXBsZXgudjEuR2V0RW50cnlUeXBlUmVxdWVzdBojLmdvb2dsZS5jbG91",
+            "ZC5kYXRhcGxleC52MS5FbnRyeVR5cGUiPdpBBG5hbWWC0+STAjASLi92MS97",
+            "bmFtZT1wcm9qZWN0cy8qL2xvY2F0aW9ucy8qL2VudHJ5VHlwZXMvKn0S8QEK",
+            "EENyZWF0ZUFzcGVjdFR5cGUSMS5nb29nbGUuY2xvdWQuZGF0YXBsZXgudjEu",
+            "Q3JlYXRlQXNwZWN0VHlwZVJlcXVlc3QaHS5nb29nbGUubG9uZ3J1bm5pbmcu",
+            "T3BlcmF0aW9uIooBykEfCgpBc3BlY3RUeXBlEhFPcGVyYXRpb25NZXRhZGF0",
+            "YdpBIXBhcmVudCxhc3BlY3RfdHlwZSxhc3BlY3RfdHlwZV9pZILT5JMCPiIv",
+            "L3YxL3twYXJlbnQ9cHJvamVjdHMvKi9sb2NhdGlvbnMvKn0vYXNwZWN0VHlw",
+            "ZXM6C2FzcGVjdF90eXBlEvMBChBVcGRhdGVBc3BlY3RUeXBlEjEuZ29vZ2xl",
+            "LmNsb3VkLmRhdGFwbGV4LnYxLlVwZGF0ZUFzcGVjdFR5cGVSZXF1ZXN0Gh0u",
+            "Z29vZ2xlLmxvbmdydW5uaW5nLk9wZXJhdGlvbiKMAcpBHwoKQXNwZWN0VHlw",
+            "ZRIRT3BlcmF0aW9uTWV0YWRhdGHaQRdhc3BlY3RfdHlwZSx1cGRhdGVfbWFz",
+            "a4LT5JMCSjI7L3YxL3thc3BlY3RfdHlwZS5uYW1lPXByb2plY3RzLyovbG9j",
+            "YXRpb25zLyovYXNwZWN0VHlwZXMvKn06C2FzcGVjdF90eXBlEtEBChBEZWxl",
+            "dGVBc3BlY3RUeXBlEjEuZ29vZ2xlLmNsb3VkLmRhdGFwbGV4LnYxLkRlbGV0",
+            "ZUFzcGVjdFR5cGVSZXF1ZXN0Gh0uZ29vZ2xlLmxvbmdydW5uaW5nLk9wZXJh",
+            "dGlvbiJrykEqChVnb29nbGUucHJvdG9idWYuRW1wdHkSEU9wZXJhdGlvbk1l",
+            "dGFkYXRh2kEEbmFtZYLT5JMCMSovL3YxL3tuYW1lPXByb2plY3RzLyovbG9j",
+            "YXRpb25zLyovYXNwZWN0VHlwZXMvKn0SuAEKD0xpc3RBc3BlY3RUeXBlcxIw",
+            "Lmdvb2dsZS5jbG91ZC5kYXRhcGxleC52MS5MaXN0QXNwZWN0VHlwZXNSZXF1",
+            "ZXN0GjEuZ29vZ2xlLmNsb3VkLmRhdGFwbGV4LnYxLkxpc3RBc3BlY3RUeXBl",
+            "c1Jlc3BvbnNlIkDaQQZwYXJlbnSC0+STAjESLy92MS97cGFyZW50PXByb2pl",
+            "Y3RzLyovbG9jYXRpb25zLyp9L2FzcGVjdFR5cGVzEqUBCg1HZXRBc3BlY3RU",
+            "eXBlEi4uZ29vZ2xlLmNsb3VkLmRhdGFwbGV4LnYxLkdldEFzcGVjdFR5cGVS",
+            "ZXF1ZXN0GiQuZ29vZ2xlLmNsb3VkLmRhdGFwbGV4LnYxLkFzcGVjdFR5cGUi",
+            "PtpBBG5hbWWC0+STAjESLy92MS97bmFtZT1wcm9qZWN0cy8qL2xvY2F0aW9u",
+            "cy8qL2FzcGVjdFR5cGVzLyp9EvEBChBDcmVhdGVFbnRyeUdyb3VwEjEuZ29v",
+            "Z2xlLmNsb3VkLmRhdGFwbGV4LnYxLkNyZWF0ZUVudHJ5R3JvdXBSZXF1ZXN0",
+            "Gh0uZ29vZ2xlLmxvbmdydW5uaW5nLk9wZXJhdGlvbiKKAcpBHwoKRW50cnlH",
+            "cm91cBIRT3BlcmF0aW9uTWV0YWRhdGHaQSFwYXJlbnQsZW50cnlfZ3JvdXAs",
+            "ZW50cnlfZ3JvdXBfaWSC0+STAj4iLy92MS97cGFyZW50PXByb2plY3RzLyov",
+            "bG9jYXRpb25zLyp9L2VudHJ5R3JvdXBzOgtlbnRyeV9ncm91cBLzAQoQVXBk",
+            "YXRlRW50cnlHcm91cBIxLmdvb2dsZS5jbG91ZC5kYXRhcGxleC52MS5VcGRh",
+            "dGVFbnRyeUdyb3VwUmVxdWVzdBodLmdvb2dsZS5sb25ncnVubmluZy5PcGVy",
+            "YXRpb24ijAHKQR8KCkVudHJ5R3JvdXASEU9wZXJhdGlvbk1ldGFkYXRh2kEX",
+            "ZW50cnlfZ3JvdXAsdXBkYXRlX21hc2uC0+STAkoyOy92MS97ZW50cnlfZ3Jv",
+            "dXAubmFtZT1wcm9qZWN0cy8qL2xvY2F0aW9ucy8qL2VudHJ5R3JvdXBzLyp9",
+            "OgtlbnRyeV9ncm91cBLRAQoQRGVsZXRlRW50cnlHcm91cBIxLmdvb2dsZS5j",
+            "bG91ZC5kYXRhcGxleC52MS5EZWxldGVFbnRyeUdyb3VwUmVxdWVzdBodLmdv",
+            "b2dsZS5sb25ncnVubmluZy5PcGVyYXRpb24ia8pBKgoVZ29vZ2xlLnByb3Rv",
+            "YnVmLkVtcHR5EhFPcGVyYXRpb25NZXRhZGF0YdpBBG5hbWWC0+STAjEqLy92",
+            "MS97bmFtZT1wcm9qZWN0cy8qL2xvY2F0aW9ucy8qL2VudHJ5R3JvdXBzLyp9",
+            "ErgBCg9MaXN0RW50cnlHcm91cHMSMC5nb29nbGUuY2xvdWQuZGF0YXBsZXgu",
+            "djEuTGlzdEVudHJ5R3JvdXBzUmVxdWVzdBoxLmdvb2dsZS5jbG91ZC5kYXRh",
+            "cGxleC52MS5MaXN0RW50cnlHcm91cHNSZXNwb25zZSJA2kEGcGFyZW50gtPk",
+            "kwIxEi8vdjEve3BhcmVudD1wcm9qZWN0cy8qL2xvY2F0aW9ucy8qfS9lbnRy",
+            "eUdyb3VwcxKlAQoNR2V0RW50cnlHcm91cBIuLmdvb2dsZS5jbG91ZC5kYXRh",
+            "cGxleC52MS5HZXRFbnRyeUdyb3VwUmVxdWVzdBokLmdvb2dsZS5jbG91ZC5k",
+            "YXRhcGxleC52MS5FbnRyeUdyb3VwIj7aQQRuYW1lgtPkkwIxEi8vdjEve25h",
+            "bWU9cHJvamVjdHMvKi9sb2NhdGlvbnMvKi9lbnRyeUdyb3Vwcy8qfRK+AQoL",
+            "Q3JlYXRlRW50cnkSLC5nb29nbGUuY2xvdWQuZGF0YXBsZXgudjEuQ3JlYXRl",
+            "RW50cnlSZXF1ZXN0Gh8uZ29vZ2xlLmNsb3VkLmRhdGFwbGV4LnYxLkVudHJ5",
+            "ImDaQRVwYXJlbnQsZW50cnksZW50cnlfaWSC0+STAkIiOS92MS97cGFyZW50",
+            "PXByb2plY3RzLyovbG9jYXRpb25zLyovZW50cnlHcm91cHMvKn0vZW50cmll",
+            "czoFZW50cnkSwQEKC1VwZGF0ZUVudHJ5EiwuZ29vZ2xlLmNsb3VkLmRhdGFw",
+            "bGV4LnYxLlVwZGF0ZUVudHJ5UmVxdWVzdBofLmdvb2dsZS5jbG91ZC5kYXRh",
+            "cGxleC52MS5FbnRyeSJj2kERZW50cnksdXBkYXRlX21hc2uC0+STAkkyQC92",
+            "MS97ZW50cnkubmFtZT1wcm9qZWN0cy8qL2xvY2F0aW9ucy8qL2VudHJ5R3Jv",
+            "dXBzLyovZW50cmllcy8qKn06BWVudHJ5EqcBCgtEZWxldGVFbnRyeRIsLmdv",
+            "b2dsZS5jbG91ZC5kYXRhcGxleC52MS5EZWxldGVFbnRyeVJlcXVlc3QaHy5n",
+            "b29nbGUuY2xvdWQuZGF0YXBsZXgudjEuRW50cnkiSdpBBG5hbWWC0+STAjwq",
+            "Oi92MS97bmFtZT1wcm9qZWN0cy8qL2xvY2F0aW9ucy8qL2VudHJ5R3JvdXBz",
+            "LyovZW50cmllcy8qKn0StgEKC0xpc3RFbnRyaWVzEiwuZ29vZ2xlLmNsb3Vk",
+            "LmRhdGFwbGV4LnYxLkxpc3RFbnRyaWVzUmVxdWVzdBotLmdvb2dsZS5jbG91",
+            "ZC5kYXRhcGxleC52MS5MaXN0RW50cmllc1Jlc3BvbnNlIkraQQZwYXJlbnSC",
+            "0+STAjsSOS92MS97cGFyZW50PXByb2plY3RzLyovbG9jYXRpb25zLyovZW50",
+            "cnlHcm91cHMvKn0vZW50cmllcxKhAQoIR2V0RW50cnkSKS5nb29nbGUuY2xv",
+            "dWQuZGF0YXBsZXgudjEuR2V0RW50cnlSZXF1ZXN0Gh8uZ29vZ2xlLmNsb3Vk",
+            "LmRhdGFwbGV4LnYxLkVudHJ5IknaQQRuYW1lgtPkkwI8EjovdjEve25hbWU9",
+            "cHJvamVjdHMvKi9sb2NhdGlvbnMvKi9lbnRyeUdyb3Vwcy8qL2VudHJpZXMv",
+            "Kip9EpMBCgtMb29rdXBFbnRyeRIsLmdvb2dsZS5jbG91ZC5kYXRhcGxleC52",
+            "MS5Mb29rdXBFbnRyeVJlcXVlc3QaHy5nb29nbGUuY2xvdWQuZGF0YXBsZXgu",
+            "djEuRW50cnkiNYLT5JMCLxItL3YxL3tuYW1lPXByb2plY3RzLyovbG9jYXRp",
+            "b25zLyp9Omxvb2t1cEVudHJ5ErYBCg1TZWFyY2hFbnRyaWVzEi4uZ29vZ2xl",
+            "LmNsb3VkLmRhdGFwbGV4LnYxLlNlYXJjaEVudHJpZXNSZXF1ZXN0Gi8uZ29v",
+            "Z2xlLmNsb3VkLmRhdGFwbGV4LnYxLlNlYXJjaEVudHJpZXNSZXNwb25zZSJE",
+            "2kEKbmFtZSxxdWVyeYLT5JMCMSIvL3YxL3tuYW1lPXByb2plY3RzLyovbG9j",
+            "YXRpb25zLyp9OnNlYXJjaEVudHJpZXMS+AEKEUNyZWF0ZU1ldGFkYXRhSm9i",
+            "EjIuZ29vZ2xlLmNsb3VkLmRhdGFwbGV4LnYxLkNyZWF0ZU1ldGFkYXRhSm9i",
+            "UmVxdWVzdBodLmdvb2dsZS5sb25ncnVubmluZy5PcGVyYXRpb24ijwHKQSAK",
+            "C01ldGFkYXRhSm9iEhFPcGVyYXRpb25NZXRhZGF0YdpBI3BhcmVudCxtZXRh",
+            "ZGF0YV9qb2IsbWV0YWRhdGFfam9iX2lkgtPkkwJAIjAvdjEve3BhcmVudD1w",
+            "cm9qZWN0cy8qL2xvY2F0aW9ucy8qfS9tZXRhZGF0YUpvYnM6DG1ldGFkYXRh",
+            "X2pvYhKpAQoOR2V0TWV0YWRhdGFKb2ISLy5nb29nbGUuY2xvdWQuZGF0YXBs",
+            "ZXgudjEuR2V0TWV0YWRhdGFKb2JSZXF1ZXN0GiUuZ29vZ2xlLmNsb3VkLmRh",
+            "dGFwbGV4LnYxLk1ldGFkYXRhSm9iIj/aQQRuYW1lgtPkkwIyEjAvdjEve25h",
+            "bWU9cHJvamVjdHMvKi9sb2NhdGlvbnMvKi9tZXRhZGF0YUpvYnMvKn0SvAEK",
+            "EExpc3RNZXRhZGF0YUpvYnMSMS5nb29nbGUuY2xvdWQuZGF0YXBsZXgudjEu",
+            "TGlzdE1ldGFkYXRhSm9ic1JlcXVlc3QaMi5nb29nbGUuY2xvdWQuZGF0YXBs",
+            "ZXgudjEuTGlzdE1ldGFkYXRhSm9ic1Jlc3BvbnNlIkHaQQZwYXJlbnSC0+ST",
+            "AjISMC92MS97cGFyZW50PXByb2plY3RzLyovbG9jYXRpb25zLyp9L21ldGFk",
+            "YXRhSm9icxKqAQoRQ2FuY2VsTWV0YWRhdGFKb2ISMi5nb29nbGUuY2xvdWQu",
+            "ZGF0YXBsZXgudjEuQ2FuY2VsTWV0YWRhdGFKb2JSZXF1ZXN0GhYuZ29vZ2xl",
+            "LnByb3RvYnVmLkVtcHR5IknaQQRuYW1lgtPkkwI8IjcvdjEve25hbWU9cHJv",
+            "amVjdHMvKi9sb2NhdGlvbnMvKi9tZXRhZGF0YUpvYnMvKn06Y2FuY2VsOgEq",
+            "EtwBCg9DcmVhdGVFbnRyeUxpbmsSMC5nb29nbGUuY2xvdWQuZGF0YXBsZXgu",
+            "djEuQ3JlYXRlRW50cnlMaW5rUmVxdWVzdBojLmdvb2dsZS5jbG91ZC5kYXRh",
+            "cGxleC52MS5FbnRyeUxpbmsictpBH3BhcmVudCxlbnRyeV9saW5rLGVudHJ5",
+            "X2xpbmtfaWSC0+STAkoiPC92MS97cGFyZW50PXByb2plY3RzLyovbG9jYXRp",
+            "b25zLyovZW50cnlHcm91cHMvKn0vZW50cnlMaW5rczoKZW50cnlfbGluaxK1",
+            "AQoPRGVsZXRlRW50cnlMaW5rEjAuZ29vZ2xlLmNsb3VkLmRhdGFwbGV4LnYx",
+            "LkRlbGV0ZUVudHJ5TGlua1JlcXVlc3QaIy5nb29nbGUuY2xvdWQuZGF0YXBs",
+            "ZXgudjEuRW50cnlMaW5rIkvaQQRuYW1lgtPkkwI+KjwvdjEve25hbWU9cHJv",
+            "amVjdHMvKi9sb2NhdGlvbnMvKi9lbnRyeUdyb3Vwcy8qL2VudHJ5TGlua3Mv",
+            "Kn0SrwEKDEdldEVudHJ5TGluaxItLmdvb2dsZS5jbG91ZC5kYXRhcGxleC52",
+            "MS5HZXRFbnRyeUxpbmtSZXF1ZXN0GiMuZ29vZ2xlLmNsb3VkLmRhdGFwbGV4",
+            "LnYxLkVudHJ5TGluayJL2kEEbmFtZYLT5JMCPhI8L3YxL3tuYW1lPXByb2pl",
+            "Y3RzLyovbG9jYXRpb25zLyovZW50cnlHcm91cHMvKi9lbnRyeUxpbmtzLyp9",
+            "GkvKQRdkYXRhcGxleC5nb29nbGVhcGlzLmNvbdJBLmh0dHBzOi8vd3d3Lmdv",
+            "b2dsZWFwaXMuY29tL2F1dGgvY2xvdWQtcGxhdGZvcm1CvAEKHGNvbS5nb29n",
+            "bGUuY2xvdWQuZGF0YXBsZXgudjFCDENhdGFsb2dQcm90b1ABWjhjbG91ZC5n",
+            "b29nbGUuY29tL2dvL2RhdGFwbGV4L2FwaXYxL2RhdGFwbGV4cGI7ZGF0YXBs",
+            "ZXhwYqoCGEdvb2dsZS5DbG91ZC5EYXRhcGxleC5WMcoCGEdvb2dsZVxDbG91",
+            "ZFxEYXRhcGxleFxWMeoCG0dvb2dsZTo6Q2xvdWQ6OkRhdGFwbGV4OjpWMWIG",
+            "cHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Api.ClientReflection.Descriptor, global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.FieldInfoReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Cloud.Dataplex.V1.ServiceReflection.Descriptor, global::Google.LongRunning.OperationsReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.EmptyReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.FieldMaskReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.StructReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(new[] {typeof(global::Google.Cloud.Dataplex.V1.EntryView), typeof(global::Google.Cloud.Dataplex.V1.TransferStatus), }, null, new pbr::GeneratedClrTypeInfo[] {
@@ -487,18 +529,22 @@ namespace Google.Cloud.Dataplex.V1 {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dataplex.V1.SearchEntriesRequest), global::Google.Cloud.Dataplex.V1.SearchEntriesRequest.Parser, new[]{ "Name", "Query", "PageSize", "PageToken", "OrderBy", "Scope", "SemanticSearch" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dataplex.V1.SearchEntriesResult), global::Google.Cloud.Dataplex.V1.SearchEntriesResult.Parser, new[]{ "LinkedResource", "DataplexEntry", "Snippets" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dataplex.V1.SearchEntriesResult.Types.Snippets), global::Google.Cloud.Dataplex.V1.SearchEntriesResult.Types.Snippets.Parser, new[]{ "DataplexEntry" }, null, null, null, null)}),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dataplex.V1.SearchEntriesResponse), global::Google.Cloud.Dataplex.V1.SearchEntriesResponse.Parser, new[]{ "Results", "TotalSize", "NextPageToken", "Unreachable" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dataplex.V1.ImportItem), global::Google.Cloud.Dataplex.V1.ImportItem.Parser, new[]{ "Entry", "UpdateMask", "AspectKeys" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dataplex.V1.ImportItem), global::Google.Cloud.Dataplex.V1.ImportItem.Parser, new[]{ "Entry", "EntryLink", "UpdateMask", "AspectKeys" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dataplex.V1.CreateMetadataJobRequest), global::Google.Cloud.Dataplex.V1.CreateMetadataJobRequest.Parser, new[]{ "Parent", "MetadataJob", "MetadataJobId", "ValidateOnly" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dataplex.V1.GetMetadataJobRequest), global::Google.Cloud.Dataplex.V1.GetMetadataJobRequest.Parser, new[]{ "Name" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dataplex.V1.ListMetadataJobsRequest), global::Google.Cloud.Dataplex.V1.ListMetadataJobsRequest.Parser, new[]{ "Parent", "PageSize", "PageToken", "Filter", "OrderBy" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dataplex.V1.ListMetadataJobsResponse), global::Google.Cloud.Dataplex.V1.ListMetadataJobsResponse.Parser, new[]{ "MetadataJobs", "NextPageToken", "UnreachableLocations" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dataplex.V1.CancelMetadataJobRequest), global::Google.Cloud.Dataplex.V1.CancelMetadataJobRequest.Parser, new[]{ "Name" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dataplex.V1.MetadataJob), global::Google.Cloud.Dataplex.V1.MetadataJob.Parser, new[]{ "Name", "Uid", "CreateTime", "UpdateTime", "Labels", "Type", "ImportSpec", "ExportSpec", "ImportResult", "ExportResult", "Status" }, new[]{ "Spec", "Result" }, new[]{ typeof(global::Google.Cloud.Dataplex.V1.MetadataJob.Types.Type) }, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dataplex.V1.MetadataJob.Types.ImportJobResult), global::Google.Cloud.Dataplex.V1.MetadataJob.Types.ImportJobResult.Parser, new[]{ "DeletedEntries", "UpdatedEntries", "CreatedEntries", "UnchangedEntries", "RecreatedEntries", "UpdateTime" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dataplex.V1.MetadataJob), global::Google.Cloud.Dataplex.V1.MetadataJob.Parser, new[]{ "Name", "Uid", "CreateTime", "UpdateTime", "Labels", "Type", "ImportSpec", "ExportSpec", "ImportResult", "ExportResult", "Status" }, new[]{ "Spec", "Result" }, new[]{ typeof(global::Google.Cloud.Dataplex.V1.MetadataJob.Types.Type) }, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dataplex.V1.MetadataJob.Types.ImportJobResult), global::Google.Cloud.Dataplex.V1.MetadataJob.Types.ImportJobResult.Parser, new[]{ "DeletedEntries", "UpdatedEntries", "CreatedEntries", "UnchangedEntries", "RecreatedEntries", "UpdateTime", "DeletedEntryLinks", "CreatedEntryLinks", "UnchangedEntryLinks" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dataplex.V1.MetadataJob.Types.ExportJobResult), global::Google.Cloud.Dataplex.V1.MetadataJob.Types.ExportJobResult.Parser, new[]{ "ExportedEntries", "ErrorMessage" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dataplex.V1.MetadataJob.Types.ImportJobSpec), global::Google.Cloud.Dataplex.V1.MetadataJob.Types.ImportJobSpec.Parser, new[]{ "SourceStorageUri", "SourceCreateTime", "Scope", "EntrySyncMode", "AspectSyncMode", "LogLevel" }, null, new[]{ typeof(global::Google.Cloud.Dataplex.V1.MetadataJob.Types.ImportJobSpec.Types.SyncMode), typeof(global::Google.Cloud.Dataplex.V1.MetadataJob.Types.ImportJobSpec.Types.LogLevel) }, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dataplex.V1.MetadataJob.Types.ImportJobSpec.Types.ImportJobScope), global::Google.Cloud.Dataplex.V1.MetadataJob.Types.ImportJobSpec.Types.ImportJobScope.Parser, new[]{ "EntryGroups", "EntryTypes", "AspectTypes" }, null, null, null, null)}),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dataplex.V1.MetadataJob.Types.ImportJobSpec), global::Google.Cloud.Dataplex.V1.MetadataJob.Types.ImportJobSpec.Parser, new[]{ "SourceStorageUri", "SourceCreateTime", "Scope", "EntrySyncMode", "AspectSyncMode", "LogLevel" }, null, new[]{ typeof(global::Google.Cloud.Dataplex.V1.MetadataJob.Types.ImportJobSpec.Types.SyncMode), typeof(global::Google.Cloud.Dataplex.V1.MetadataJob.Types.ImportJobSpec.Types.LogLevel) }, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dataplex.V1.MetadataJob.Types.ImportJobSpec.Types.ImportJobScope), global::Google.Cloud.Dataplex.V1.MetadataJob.Types.ImportJobSpec.Types.ImportJobScope.Parser, new[]{ "EntryGroups", "EntryTypes", "AspectTypes", "Glossaries", "EntryLinkTypes", "ReferencedEntryScopes" }, null, null, null, null)}),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dataplex.V1.MetadataJob.Types.ExportJobSpec), global::Google.Cloud.Dataplex.V1.MetadataJob.Types.ExportJobSpec.Parser, new[]{ "Scope", "OutputPath" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dataplex.V1.MetadataJob.Types.ExportJobSpec.Types.ExportJobScope), global::Google.Cloud.Dataplex.V1.MetadataJob.Types.ExportJobSpec.Types.ExportJobScope.Parser, new[]{ "OrganizationLevel", "Projects", "EntryGroups", "EntryTypes", "AspectTypes" }, null, null, null, null)}),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dataplex.V1.MetadataJob.Types.Status), global::Google.Cloud.Dataplex.V1.MetadataJob.Types.Status.Parser, new[]{ "State", "Message", "CompletionPercent", "UpdateTime" }, null, new[]{ typeof(global::Google.Cloud.Dataplex.V1.MetadataJob.Types.Status.Types.State) }, null, null),
-            null, })
+            null, }),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dataplex.V1.EntryLink), global::Google.Cloud.Dataplex.V1.EntryLink.Parser, new[]{ "Name", "EntryLinkType", "CreateTime", "UpdateTime", "EntryReferences" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dataplex.V1.EntryLink.Types.EntryReference), global::Google.Cloud.Dataplex.V1.EntryLink.Types.EntryReference.Parser, new[]{ "Name", "Path", "Type" }, null, new[]{ typeof(global::Google.Cloud.Dataplex.V1.EntryLink.Types.EntryReference.Types.Type) }, null, null)}),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dataplex.V1.CreateEntryLinkRequest), global::Google.Cloud.Dataplex.V1.CreateEntryLinkRequest.Parser, new[]{ "Parent", "EntryLinkId", "EntryLink" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dataplex.V1.DeleteEntryLinkRequest), global::Google.Cloud.Dataplex.V1.DeleteEntryLinkRequest.Parser, new[]{ "Name" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dataplex.V1.GetEntryLinkRequest), global::Google.Cloud.Dataplex.V1.GetEntryLinkRequest.Parser, new[]{ "Name" }, null, null, null, null)
           }));
     }
     #endregion
@@ -1191,7 +1237,7 @@ namespace Google.Cloud.Dataplex.V1 {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static partial class Types {
       /// <summary>
-      /// Autorization for an AspectType.
+      /// Authorization for an AspectType.
       /// </summary>
       [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
       public sealed partial class Authorization : pb::IMessage<Authorization>
@@ -1243,8 +1289,8 @@ namespace Google.Cloud.Dataplex.V1 {
         private string alternateUsePermission_ = "";
         /// <summary>
         /// Immutable. The IAM permission grantable on the EntryGroup to allow access
-        /// to instantiate Aspects of Dataplex owned AspectTypes, only settable for
-        /// Dataplex owned Types.
+        /// to instantiate Aspects of Dataplex Universal Catalog owned AspectTypes,
+        /// only settable for Dataplex Universal Catalog owned Types.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -1490,8 +1536,8 @@ namespace Google.Cloud.Dataplex.V1 {
         /// Primitive types:
         ///
         /// * string
-        /// * integer
-        /// * boolean
+        /// * int
+        /// * bool
         /// * double
         /// * datetime. Must be of the format RFC3339 UTC "Zulu" (Examples:
         /// "2014-10-02T15:01:23Z" and "2014-10-02T15:01:23.045123456Z").
@@ -4369,8 +4415,8 @@ namespace Google.Cloud.Dataplex.V1 {
         private string alternateUsePermission_ = "";
         /// <summary>
         /// Immutable. The IAM permission grantable on the Entry Group to allow
-        /// access to instantiate Entries of Dataplex owned Entry Types, only
-        /// settable for Dataplex owned Types.
+        /// access to instantiate Entries of Dataplex Universal Catalog owned Entry
+        /// Types, only settable for Dataplex Universal Catalog owned Types.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -5341,7 +5387,8 @@ namespace Google.Cloud.Dataplex.V1 {
     public const int CreateTimeFieldNumber = 5;
     private global::Google.Protobuf.WellKnownTypes.Timestamp createTime_;
     /// <summary>
-    /// Output only. The time when the entry was created in Dataplex.
+    /// Output only. The time when the entry was created in Dataplex Universal
+    /// Catalog.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -5356,7 +5403,8 @@ namespace Google.Cloud.Dataplex.V1 {
     public const int UpdateTimeFieldNumber = 6;
     private global::Google.Protobuf.WellKnownTypes.Timestamp updateTime_;
     /// <summary>
-    /// Output only. The time when the entry was last updated in Dataplex.
+    /// Output only. The time when the entry was last updated in Dataplex Universal
+    /// Catalog.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -6624,7 +6672,7 @@ namespace Google.Cloud.Dataplex.V1 {
     /// <summary>
     /// Required. The resource name of the entryGroup, of the form:
     /// projects/{project_number}/locations/{location_id}
-    /// where `location_id` refers to a GCP region.
+    /// where `location_id` refers to a Google Cloud region.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -8869,7 +8917,7 @@ namespace Google.Cloud.Dataplex.V1 {
   }
 
   /// <summary>
-  /// Delele EntryType Request.
+  /// Delete EntryType Request.
   /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class DeleteEntryTypeRequest : pb::IMessage<DeleteEntryTypeRequest>
@@ -10554,7 +10602,7 @@ namespace Google.Cloud.Dataplex.V1 {
   }
 
   /// <summary>
-  /// Delele AspectType Request.
+  /// Delete AspectType Request.
   /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class DeleteAspectTypeRequest : pb::IMessage<DeleteAspectTypeRequest>
@@ -13765,7 +13813,7 @@ namespace Google.Cloud.Dataplex.V1 {
     private string name_ = "";
     /// <summary>
     /// Required. The project to which the request should be attributed in the
-    /// following form: `projects/{project}/locations/{location}`.
+    /// following form: `projects/{project}/locations/global`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -13781,7 +13829,7 @@ namespace Google.Cloud.Dataplex.V1 {
     private string query_ = "";
     /// <summary>
     /// Required. The query against which entries in scope should be matched.
-    /// The query syntax is defined in [Search syntax for Dataplex
+    /// The query syntax is defined in [Search syntax for Dataplex Universal
     /// Catalog](https://cloud.google.com/dataplex/docs/search-syntax).
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -13833,7 +13881,7 @@ namespace Google.Cloud.Dataplex.V1 {
     /// Optional. Specifies the ordering of results.
     /// Supported values are:
     ///
-    /// * `relevance` (default)
+    /// * `relevance`
     /// * `last_modified_timestamp`
     /// * `last_modified_timestamp asc`
     /// </summary>
@@ -15006,6 +15054,7 @@ namespace Google.Cloud.Dataplex.V1 {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public ImportItem(ImportItem other) : this() {
       entry_ = other.entry_ != null ? other.entry_.Clone() : null;
+      entryLink_ = other.entryLink_ != null ? other.entryLink_.Clone() : null;
       updateMask_ = other.updateMask_ != null ? other.updateMask_.Clone() : null;
       aspectKeys_ = other.aspectKeys_.Clone();
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
@@ -15032,6 +15081,23 @@ namespace Google.Cloud.Dataplex.V1 {
       }
     }
 
+    /// <summary>Field number for the "entry_link" field.</summary>
+    public const int EntryLinkFieldNumber = 4;
+    private global::Google.Cloud.Dataplex.V1.EntryLink entryLink_;
+    /// <summary>
+    /// Information about the entry link. User should provide either one of the
+    /// entry or entry_link. While providing entry_link, user should not
+    /// provide update_mask and aspect_keys.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Cloud.Dataplex.V1.EntryLink EntryLink {
+      get { return entryLink_; }
+      set {
+        entryLink_ = value;
+      }
+    }
+
     /// <summary>Field number for the "update_mask" field.</summary>
     public const int UpdateMaskFieldNumber = 2;
     private global::Google.Protobuf.WellKnownTypes.FieldMask updateMask_;
@@ -15039,22 +15105,22 @@ namespace Google.Cloud.Dataplex.V1 {
     /// The fields to update, in paths that are relative to the `Entry` resource.
     /// Separate each field with a comma.
     ///
-    /// In `FULL` entry sync mode, Dataplex includes the paths of all of the fields
-    /// for an entry that can be modified, including aspects. This means that
-    /// Dataplex replaces the existing entry with the entry in the metadata import
-    /// file. All modifiable fields are updated, regardless of the fields that are
-    /// listed in the update mask, and regardless of whether a field is present
-    /// in the `entry` object.
+    /// In `FULL` entry sync mode, Dataplex Universal Catalog includes the paths of
+    /// all of the fields for an entry that can be modified, including aspects.
+    /// This means that Dataplex Universal Catalog replaces the existing entry with
+    /// the entry in the metadata import file. All modifiable fields are updated,
+    /// regardless of the fields that are listed in the update mask, and regardless
+    /// of whether a field is present in the `entry` object.
     ///
     /// The `update_mask` field is ignored when an entry is created or re-created.
     ///
     /// In an aspect-only metadata job (when entry sync mode is `NONE`), set this
     /// value to `aspects`.
     ///
-    /// Dataplex also determines which entries and aspects to modify by comparing
-    /// the values and timestamps that you provide in the metadata import file with
-    /// the values and timestamps that exist in your project. For more information,
-    /// see [Comparison
+    /// Dataplex Universal Catalog also determines which entries and aspects to
+    /// modify by comparing the values and timestamps that you provide in the
+    /// metadata import file with the values and timestamps that exist in your
+    /// project. For more information, see [Comparison
     /// logic](https://cloud.google.com/dataplex/docs/import-metadata#data-modification-logic).
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -15088,8 +15154,8 @@ namespace Google.Cloud.Dataplex.V1 {
     ///
     /// In `FULL` entry sync mode, if you leave this field empty, it is treated as
     /// specifying exactly those aspects that are present within the specified
-    /// entry. Dataplex implicitly adds the keys for all of the required aspects of
-    /// an entry.
+    /// entry. Dataplex Universal Catalog implicitly adds the keys for all of the
+    /// required aspects of an entry.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -15113,6 +15179,7 @@ namespace Google.Cloud.Dataplex.V1 {
         return true;
       }
       if (!object.Equals(Entry, other.Entry)) return false;
+      if (!object.Equals(EntryLink, other.EntryLink)) return false;
       if (!object.Equals(UpdateMask, other.UpdateMask)) return false;
       if(!aspectKeys_.Equals(other.aspectKeys_)) return false;
       return Equals(_unknownFields, other._unknownFields);
@@ -15123,6 +15190,7 @@ namespace Google.Cloud.Dataplex.V1 {
     public override int GetHashCode() {
       int hash = 1;
       if (entry_ != null) hash ^= Entry.GetHashCode();
+      if (entryLink_ != null) hash ^= EntryLink.GetHashCode();
       if (updateMask_ != null) hash ^= UpdateMask.GetHashCode();
       hash ^= aspectKeys_.GetHashCode();
       if (_unknownFields != null) {
@@ -15152,6 +15220,10 @@ namespace Google.Cloud.Dataplex.V1 {
         output.WriteMessage(UpdateMask);
       }
       aspectKeys_.WriteTo(output, _repeated_aspectKeys_codec);
+      if (entryLink_ != null) {
+        output.WriteRawTag(34);
+        output.WriteMessage(EntryLink);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -15171,6 +15243,10 @@ namespace Google.Cloud.Dataplex.V1 {
         output.WriteMessage(UpdateMask);
       }
       aspectKeys_.WriteTo(ref output, _repeated_aspectKeys_codec);
+      if (entryLink_ != null) {
+        output.WriteRawTag(34);
+        output.WriteMessage(EntryLink);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -15183,6 +15259,9 @@ namespace Google.Cloud.Dataplex.V1 {
       int size = 0;
       if (entry_ != null) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(Entry);
+      }
+      if (entryLink_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(EntryLink);
       }
       if (updateMask_ != null) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(UpdateMask);
@@ -15205,6 +15284,12 @@ namespace Google.Cloud.Dataplex.V1 {
           Entry = new global::Google.Cloud.Dataplex.V1.Entry();
         }
         Entry.MergeFrom(other.Entry);
+      }
+      if (other.entryLink_ != null) {
+        if (entryLink_ == null) {
+          EntryLink = new global::Google.Cloud.Dataplex.V1.EntryLink();
+        }
+        EntryLink.MergeFrom(other.EntryLink);
       }
       if (other.updateMask_ != null) {
         if (updateMask_ == null) {
@@ -15246,6 +15331,13 @@ namespace Google.Cloud.Dataplex.V1 {
             aspectKeys_.AddEntriesFrom(input, _repeated_aspectKeys_codec);
             break;
           }
+          case 34: {
+            if (entryLink_ == null) {
+              EntryLink = new global::Google.Cloud.Dataplex.V1.EntryLink();
+            }
+            input.ReadMessage(EntryLink);
+            break;
+          }
         }
       }
     #endif
@@ -15277,6 +15369,13 @@ namespace Google.Cloud.Dataplex.V1 {
           }
           case 26: {
             aspectKeys_.AddEntriesFrom(ref input, _repeated_aspectKeys_codec);
+            break;
+          }
+          case 34: {
+            if (entryLink_ == null) {
+              EntryLink = new global::Google.Cloud.Dataplex.V1.EntryLink();
+            }
+            input.ReadMessage(EntryLink);
             break;
           }
         }
@@ -17433,6 +17532,9 @@ namespace Google.Cloud.Dataplex.V1 {
           unchangedEntries_ = other.unchangedEntries_;
           recreatedEntries_ = other.recreatedEntries_;
           updateTime_ = other.updateTime_ != null ? other.updateTime_.Clone() : null;
+          deletedEntryLinks_ = other.deletedEntryLinks_;
+          createdEntryLinks_ = other.createdEntryLinks_;
+          unchangedEntryLinks_ = other.unchangedEntryLinks_;
           _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
         }
 
@@ -17532,6 +17634,53 @@ namespace Google.Cloud.Dataplex.V1 {
           }
         }
 
+        /// <summary>Field number for the "deleted_entry_links" field.</summary>
+        public const int DeletedEntryLinksFieldNumber = 7;
+        private long deletedEntryLinks_;
+        /// <summary>
+        /// Output only. The total number of entry links that were successfully
+        /// deleted.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public long DeletedEntryLinks {
+          get { return deletedEntryLinks_; }
+          set {
+            deletedEntryLinks_ = value;
+          }
+        }
+
+        /// <summary>Field number for the "created_entry_links" field.</summary>
+        public const int CreatedEntryLinksFieldNumber = 8;
+        private long createdEntryLinks_;
+        /// <summary>
+        /// Output only. The total number of entry links that were successfully
+        /// created.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public long CreatedEntryLinks {
+          get { return createdEntryLinks_; }
+          set {
+            createdEntryLinks_ = value;
+          }
+        }
+
+        /// <summary>Field number for the "unchanged_entry_links" field.</summary>
+        public const int UnchangedEntryLinksFieldNumber = 9;
+        private long unchangedEntryLinks_;
+        /// <summary>
+        /// Output only. The total number of entry links that were left unchanged.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public long UnchangedEntryLinks {
+          get { return unchangedEntryLinks_; }
+          set {
+            unchangedEntryLinks_ = value;
+          }
+        }
+
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public override bool Equals(object other) {
@@ -17553,6 +17702,9 @@ namespace Google.Cloud.Dataplex.V1 {
           if (UnchangedEntries != other.UnchangedEntries) return false;
           if (RecreatedEntries != other.RecreatedEntries) return false;
           if (!object.Equals(UpdateTime, other.UpdateTime)) return false;
+          if (DeletedEntryLinks != other.DeletedEntryLinks) return false;
+          if (CreatedEntryLinks != other.CreatedEntryLinks) return false;
+          if (UnchangedEntryLinks != other.UnchangedEntryLinks) return false;
           return Equals(_unknownFields, other._unknownFields);
         }
 
@@ -17566,6 +17718,9 @@ namespace Google.Cloud.Dataplex.V1 {
           if (UnchangedEntries != 0L) hash ^= UnchangedEntries.GetHashCode();
           if (RecreatedEntries != 0L) hash ^= RecreatedEntries.GetHashCode();
           if (updateTime_ != null) hash ^= UpdateTime.GetHashCode();
+          if (DeletedEntryLinks != 0L) hash ^= DeletedEntryLinks.GetHashCode();
+          if (CreatedEntryLinks != 0L) hash ^= CreatedEntryLinks.GetHashCode();
+          if (UnchangedEntryLinks != 0L) hash ^= UnchangedEntryLinks.GetHashCode();
           if (_unknownFields != null) {
             hash ^= _unknownFields.GetHashCode();
           }
@@ -17608,6 +17763,18 @@ namespace Google.Cloud.Dataplex.V1 {
             output.WriteRawTag(48);
             output.WriteInt64(RecreatedEntries);
           }
+          if (DeletedEntryLinks != 0L) {
+            output.WriteRawTag(56);
+            output.WriteInt64(DeletedEntryLinks);
+          }
+          if (CreatedEntryLinks != 0L) {
+            output.WriteRawTag(64);
+            output.WriteInt64(CreatedEntryLinks);
+          }
+          if (UnchangedEntryLinks != 0L) {
+            output.WriteRawTag(72);
+            output.WriteInt64(UnchangedEntryLinks);
+          }
           if (_unknownFields != null) {
             _unknownFields.WriteTo(output);
           }
@@ -17642,6 +17809,18 @@ namespace Google.Cloud.Dataplex.V1 {
             output.WriteRawTag(48);
             output.WriteInt64(RecreatedEntries);
           }
+          if (DeletedEntryLinks != 0L) {
+            output.WriteRawTag(56);
+            output.WriteInt64(DeletedEntryLinks);
+          }
+          if (CreatedEntryLinks != 0L) {
+            output.WriteRawTag(64);
+            output.WriteInt64(CreatedEntryLinks);
+          }
+          if (UnchangedEntryLinks != 0L) {
+            output.WriteRawTag(72);
+            output.WriteInt64(UnchangedEntryLinks);
+          }
           if (_unknownFields != null) {
             _unknownFields.WriteTo(ref output);
           }
@@ -17669,6 +17848,15 @@ namespace Google.Cloud.Dataplex.V1 {
           }
           if (updateTime_ != null) {
             size += 1 + pb::CodedOutputStream.ComputeMessageSize(UpdateTime);
+          }
+          if (DeletedEntryLinks != 0L) {
+            size += 1 + pb::CodedOutputStream.ComputeInt64Size(DeletedEntryLinks);
+          }
+          if (CreatedEntryLinks != 0L) {
+            size += 1 + pb::CodedOutputStream.ComputeInt64Size(CreatedEntryLinks);
+          }
+          if (UnchangedEntryLinks != 0L) {
+            size += 1 + pb::CodedOutputStream.ComputeInt64Size(UnchangedEntryLinks);
           }
           if (_unknownFields != null) {
             size += _unknownFields.CalculateSize();
@@ -17702,6 +17890,15 @@ namespace Google.Cloud.Dataplex.V1 {
               UpdateTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
             }
             UpdateTime.MergeFrom(other.UpdateTime);
+          }
+          if (other.DeletedEntryLinks != 0L) {
+            DeletedEntryLinks = other.DeletedEntryLinks;
+          }
+          if (other.CreatedEntryLinks != 0L) {
+            CreatedEntryLinks = other.CreatedEntryLinks;
+          }
+          if (other.UnchangedEntryLinks != 0L) {
+            UnchangedEntryLinks = other.UnchangedEntryLinks;
           }
           _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
         }
@@ -17745,6 +17942,18 @@ namespace Google.Cloud.Dataplex.V1 {
                 RecreatedEntries = input.ReadInt64();
                 break;
               }
+              case 56: {
+                DeletedEntryLinks = input.ReadInt64();
+                break;
+              }
+              case 64: {
+                CreatedEntryLinks = input.ReadInt64();
+                break;
+              }
+              case 72: {
+                UnchangedEntryLinks = input.ReadInt64();
+                break;
+              }
             }
           }
         #endif
@@ -17785,6 +17994,18 @@ namespace Google.Cloud.Dataplex.V1 {
               }
               case 48: {
                 RecreatedEntries = input.ReadInt64();
+                break;
+              }
+              case 56: {
+                DeletedEntryLinks = input.ReadInt64();
+                break;
+              }
+              case 64: {
+                CreatedEntryLinks = input.ReadInt64();
+                break;
+              }
+              case 72: {
+                UnchangedEntryLinks = input.ReadInt64();
                 break;
               }
             }
@@ -18497,9 +18718,9 @@ namespace Google.Cloud.Dataplex.V1 {
             [pbr::OriginalName("SYNC_MODE_UNSPECIFIED")] Unspecified = 0,
             /// <summary>
             /// All resources in the job's scope are modified. If a resource exists in
-            /// Dataplex but isn't included in the metadata import file, the resource
-            /// is deleted when you run the metadata job. Use this mode to perform a
-            /// full sync of the set of entries in the job scope.
+            /// Dataplex Universal Catalog but isn't included in the metadata import
+            /// file, the resource is deleted when you run the metadata job. Use this
+            /// mode to perform a full sync of the set of entries in the job scope.
             ///
             /// This sync mode is supported for entries.
             /// </summary>
@@ -18592,6 +18813,9 @@ namespace Google.Cloud.Dataplex.V1 {
               entryGroups_ = other.entryGroups_.Clone();
               entryTypes_ = other.entryTypes_.Clone();
               aspectTypes_ = other.aspectTypes_.Clone();
+              glossaries_ = other.glossaries_.Clone();
+              entryLinkTypes_ = other.entryLinkTypes_.Clone();
+              referencedEntryScopes_ = other.referencedEntryScopes_.Clone();
               _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
             }
 
@@ -18673,6 +18897,75 @@ namespace Google.Cloud.Dataplex.V1 {
               get { return aspectTypes_; }
             }
 
+            /// <summary>Field number for the "glossaries" field.</summary>
+            public const int GlossariesFieldNumber = 4;
+            private static readonly pb::FieldCodec<string> _repeated_glossaries_codec
+                = pb::FieldCodec.ForString(34);
+            private readonly pbc::RepeatedField<string> glossaries_ = new pbc::RepeatedField<string>();
+            /// <summary>
+            /// Optional. The glossaries that are in scope for the import job,
+            /// specified as relative resource names in the format
+            /// `projects/{project_number_or_id}/locations/{location_id}/glossaries/{glossary_id}`.
+            ///
+            /// While importing Business Glossary entries, the user must
+            /// provide glossaries. While importing entries, the user does not have to
+            /// provide glossaries. If the metadata import file attempts to modify
+            /// Business Glossary entries whose glossary isn't included in this list,
+            /// the import job will skip those entries.
+            ///
+            /// The location of a glossary must either match the location of the
+            /// job, or the glossary must be global.
+            /// </summary>
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public pbc::RepeatedField<string> Glossaries {
+              get { return glossaries_; }
+            }
+
+            /// <summary>Field number for the "entry_link_types" field.</summary>
+            public const int EntryLinkTypesFieldNumber = 5;
+            private static readonly pb::FieldCodec<string> _repeated_entryLinkTypes_codec
+                = pb::FieldCodec.ForString(42);
+            private readonly pbc::RepeatedField<string> entryLinkTypes_ = new pbc::RepeatedField<string>();
+            /// <summary>
+            /// Optional. The entry link types that are in scope for the import job,
+            /// specified as relative resource names in the format
+            /// `projects/{project_number_or_id}/locations/{location_id}/entryLinkTypes/{entry_link_type_id}`.
+            /// The job modifies only the entryLinks that belong to these entry link
+            /// types.
+            ///
+            /// If the metadata import file attempts to create or delete an entry link
+            /// whose entry link type isn't included in this list, the import job will
+            /// skip those entry links.
+            /// </summary>
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public pbc::RepeatedField<string> EntryLinkTypes {
+              get { return entryLinkTypes_; }
+            }
+
+            /// <summary>Field number for the "referenced_entry_scopes" field.</summary>
+            public const int ReferencedEntryScopesFieldNumber = 6;
+            private static readonly pb::FieldCodec<string> _repeated_referencedEntryScopes_codec
+                = pb::FieldCodec.ForString(50);
+            private readonly pbc::RepeatedField<string> referencedEntryScopes_ = new pbc::RepeatedField<string>();
+            /// <summary>
+            /// Optional. Defines the scope of entries that can be referenced in the
+            /// entry links.
+            ///
+            /// Currently, projects are supported as valid scopes.
+            /// Format: `projects/{project_number_or_id}`
+            ///
+            /// If the metadata import file attempts to create an entry link
+            /// which references an entry that is not in the scope, the import job will
+            /// skip that entry link.
+            /// </summary>
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public pbc::RepeatedField<string> ReferencedEntryScopes {
+              get { return referencedEntryScopes_; }
+            }
+
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
             [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
             public override bool Equals(object other) {
@@ -18691,6 +18984,9 @@ namespace Google.Cloud.Dataplex.V1 {
               if(!entryGroups_.Equals(other.entryGroups_)) return false;
               if(!entryTypes_.Equals(other.entryTypes_)) return false;
               if(!aspectTypes_.Equals(other.aspectTypes_)) return false;
+              if(!glossaries_.Equals(other.glossaries_)) return false;
+              if(!entryLinkTypes_.Equals(other.entryLinkTypes_)) return false;
+              if(!referencedEntryScopes_.Equals(other.referencedEntryScopes_)) return false;
               return Equals(_unknownFields, other._unknownFields);
             }
 
@@ -18701,6 +18997,9 @@ namespace Google.Cloud.Dataplex.V1 {
               hash ^= entryGroups_.GetHashCode();
               hash ^= entryTypes_.GetHashCode();
               hash ^= aspectTypes_.GetHashCode();
+              hash ^= glossaries_.GetHashCode();
+              hash ^= entryLinkTypes_.GetHashCode();
+              hash ^= referencedEntryScopes_.GetHashCode();
               if (_unknownFields != null) {
                 hash ^= _unknownFields.GetHashCode();
               }
@@ -18722,6 +19021,9 @@ namespace Google.Cloud.Dataplex.V1 {
               entryGroups_.WriteTo(output, _repeated_entryGroups_codec);
               entryTypes_.WriteTo(output, _repeated_entryTypes_codec);
               aspectTypes_.WriteTo(output, _repeated_aspectTypes_codec);
+              glossaries_.WriteTo(output, _repeated_glossaries_codec);
+              entryLinkTypes_.WriteTo(output, _repeated_entryLinkTypes_codec);
+              referencedEntryScopes_.WriteTo(output, _repeated_referencedEntryScopes_codec);
               if (_unknownFields != null) {
                 _unknownFields.WriteTo(output);
               }
@@ -18735,6 +19037,9 @@ namespace Google.Cloud.Dataplex.V1 {
               entryGroups_.WriteTo(ref output, _repeated_entryGroups_codec);
               entryTypes_.WriteTo(ref output, _repeated_entryTypes_codec);
               aspectTypes_.WriteTo(ref output, _repeated_aspectTypes_codec);
+              glossaries_.WriteTo(ref output, _repeated_glossaries_codec);
+              entryLinkTypes_.WriteTo(ref output, _repeated_entryLinkTypes_codec);
+              referencedEntryScopes_.WriteTo(ref output, _repeated_referencedEntryScopes_codec);
               if (_unknownFields != null) {
                 _unknownFields.WriteTo(ref output);
               }
@@ -18748,6 +19053,9 @@ namespace Google.Cloud.Dataplex.V1 {
               size += entryGroups_.CalculateSize(_repeated_entryGroups_codec);
               size += entryTypes_.CalculateSize(_repeated_entryTypes_codec);
               size += aspectTypes_.CalculateSize(_repeated_aspectTypes_codec);
+              size += glossaries_.CalculateSize(_repeated_glossaries_codec);
+              size += entryLinkTypes_.CalculateSize(_repeated_entryLinkTypes_codec);
+              size += referencedEntryScopes_.CalculateSize(_repeated_referencedEntryScopes_codec);
               if (_unknownFields != null) {
                 size += _unknownFields.CalculateSize();
               }
@@ -18763,6 +19071,9 @@ namespace Google.Cloud.Dataplex.V1 {
               entryGroups_.Add(other.entryGroups_);
               entryTypes_.Add(other.entryTypes_);
               aspectTypes_.Add(other.aspectTypes_);
+              glossaries_.Add(other.glossaries_);
+              entryLinkTypes_.Add(other.entryLinkTypes_);
+              referencedEntryScopes_.Add(other.referencedEntryScopes_);
               _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
             }
 
@@ -18790,6 +19101,18 @@ namespace Google.Cloud.Dataplex.V1 {
                     aspectTypes_.AddEntriesFrom(input, _repeated_aspectTypes_codec);
                     break;
                   }
+                  case 34: {
+                    glossaries_.AddEntriesFrom(input, _repeated_glossaries_codec);
+                    break;
+                  }
+                  case 42: {
+                    entryLinkTypes_.AddEntriesFrom(input, _repeated_entryLinkTypes_codec);
+                    break;
+                  }
+                  case 50: {
+                    referencedEntryScopes_.AddEntriesFrom(input, _repeated_referencedEntryScopes_codec);
+                    break;
+                  }
                 }
               }
             #endif
@@ -18815,6 +19138,18 @@ namespace Google.Cloud.Dataplex.V1 {
                   }
                   case 26: {
                     aspectTypes_.AddEntriesFrom(ref input, _repeated_aspectTypes_codec);
+                    break;
+                  }
+                  case 34: {
+                    glossaries_.AddEntriesFrom(ref input, _repeated_glossaries_codec);
+                    break;
+                  }
+                  case 42: {
+                    entryLinkTypes_.AddEntriesFrom(ref input, _repeated_entryLinkTypes_codec);
+                    break;
+                  }
+                  case 50: {
+                    referencedEntryScopes_.AddEntriesFrom(ref input, _repeated_referencedEntryScopes_codec);
                     break;
                   }
                 }
@@ -18901,9 +19236,9 @@ namespace Google.Cloud.Dataplex.V1 {
         /// metadata to, in the format `gs://{bucket}/`. You can optionally specify a
         /// custom prefix after the bucket name, in the format
         /// `gs://{bucket}/{prefix}/`. The maximum length of the custom prefix is 128
-        /// characters. Dataplex constructs the object path for the exported files by
-        /// using the bucket name and prefix that you provide, followed by a
-        /// system-generated path.
+        /// characters. Dataplex Universal Catalog constructs the object path for the
+        /// exported files by using the bucket name and prefix that you provide,
+        /// followed by a system-generated path.
         ///
         /// The bucket must be in the same VPC Service Controls perimeter as the job.
         /// </summary>
@@ -19811,6 +20146,1380 @@ namespace Google.Cloud.Dataplex.V1 {
 
     }
     #endregion
+
+  }
+
+  /// <summary>
+  /// EntryLink represents a link between two Entries.
+  /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+  public sealed partial class EntryLink : pb::IMessage<EntryLink>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<EntryLink> _parser = new pb::MessageParser<EntryLink>(() => new EntryLink());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<EntryLink> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Cloud.Dataplex.V1.CatalogReflection.Descriptor.MessageTypes[42]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public EntryLink() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public EntryLink(EntryLink other) : this() {
+      name_ = other.name_;
+      entryLinkType_ = other.entryLinkType_;
+      createTime_ = other.createTime_ != null ? other.createTime_.Clone() : null;
+      updateTime_ = other.updateTime_ != null ? other.updateTime_.Clone() : null;
+      entryReferences_ = other.entryReferences_.Clone();
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public EntryLink Clone() {
+      return new EntryLink(this);
+    }
+
+    /// <summary>Field number for the "name" field.</summary>
+    public const int NameFieldNumber = 1;
+    private string name_ = "";
+    /// <summary>
+    /// Output only. Immutable. Identifier. The relative resource name of the Entry
+    /// Link, of the form:
+    /// `projects/{project_id_or_number}/locations/{location_id}/entryGroups/{entry_group_id}/entryLinks/{entry_link_id}`
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string Name {
+      get { return name_; }
+      set {
+        name_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "entry_link_type" field.</summary>
+    public const int EntryLinkTypeFieldNumber = 2;
+    private string entryLinkType_ = "";
+    /// <summary>
+    /// Required. Immutable. Relative resource name of the Entry Link Type used to
+    /// create this Entry Link. For example:
+    ///
+    /// - Entry link between synonym terms in a glossary:
+    /// `projects/dataplex-types/locations/global/entryLinkTypes/synonym`
+    /// - Entry link between related terms in a glossary:
+    /// `projects/dataplex-types/locations/global/entryLinkTypes/related`
+    /// - Entry link between glossary terms and data assets:
+    /// `projects/dataplex-types/locations/global/entryLinkTypes/definition`
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string EntryLinkType {
+      get { return entryLinkType_; }
+      set {
+        entryLinkType_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "create_time" field.</summary>
+    public const int CreateTimeFieldNumber = 3;
+    private global::Google.Protobuf.WellKnownTypes.Timestamp createTime_;
+    /// <summary>
+    /// Output only. The time when the Entry Link was created.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Protobuf.WellKnownTypes.Timestamp CreateTime {
+      get { return createTime_; }
+      set {
+        createTime_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "update_time" field.</summary>
+    public const int UpdateTimeFieldNumber = 4;
+    private global::Google.Protobuf.WellKnownTypes.Timestamp updateTime_;
+    /// <summary>
+    /// Output only. The time when the Entry Link was last updated.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Protobuf.WellKnownTypes.Timestamp UpdateTime {
+      get { return updateTime_; }
+      set {
+        updateTime_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "entry_references" field.</summary>
+    public const int EntryReferencesFieldNumber = 10;
+    private static readonly pb::FieldCodec<global::Google.Cloud.Dataplex.V1.EntryLink.Types.EntryReference> _repeated_entryReferences_codec
+        = pb::FieldCodec.ForMessage(82, global::Google.Cloud.Dataplex.V1.EntryLink.Types.EntryReference.Parser);
+    private readonly pbc::RepeatedField<global::Google.Cloud.Dataplex.V1.EntryLink.Types.EntryReference> entryReferences_ = new pbc::RepeatedField<global::Google.Cloud.Dataplex.V1.EntryLink.Types.EntryReference>();
+    /// <summary>
+    /// Required. Specifies the Entries referenced in the Entry Link. There should
+    /// be exactly two entry references.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pbc::RepeatedField<global::Google.Cloud.Dataplex.V1.EntryLink.Types.EntryReference> EntryReferences {
+      get { return entryReferences_; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as EntryLink);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(EntryLink other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (Name != other.Name) return false;
+      if (EntryLinkType != other.EntryLinkType) return false;
+      if (!object.Equals(CreateTime, other.CreateTime)) return false;
+      if (!object.Equals(UpdateTime, other.UpdateTime)) return false;
+      if(!entryReferences_.Equals(other.entryReferences_)) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (Name.Length != 0) hash ^= Name.GetHashCode();
+      if (EntryLinkType.Length != 0) hash ^= EntryLinkType.GetHashCode();
+      if (createTime_ != null) hash ^= CreateTime.GetHashCode();
+      if (updateTime_ != null) hash ^= UpdateTime.GetHashCode();
+      hash ^= entryReferences_.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (Name.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(Name);
+      }
+      if (EntryLinkType.Length != 0) {
+        output.WriteRawTag(18);
+        output.WriteString(EntryLinkType);
+      }
+      if (createTime_ != null) {
+        output.WriteRawTag(26);
+        output.WriteMessage(CreateTime);
+      }
+      if (updateTime_ != null) {
+        output.WriteRawTag(34);
+        output.WriteMessage(UpdateTime);
+      }
+      entryReferences_.WriteTo(output, _repeated_entryReferences_codec);
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (Name.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(Name);
+      }
+      if (EntryLinkType.Length != 0) {
+        output.WriteRawTag(18);
+        output.WriteString(EntryLinkType);
+      }
+      if (createTime_ != null) {
+        output.WriteRawTag(26);
+        output.WriteMessage(CreateTime);
+      }
+      if (updateTime_ != null) {
+        output.WriteRawTag(34);
+        output.WriteMessage(UpdateTime);
+      }
+      entryReferences_.WriteTo(ref output, _repeated_entryReferences_codec);
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      if (Name.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Name);
+      }
+      if (EntryLinkType.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(EntryLinkType);
+      }
+      if (createTime_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(CreateTime);
+      }
+      if (updateTime_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(UpdateTime);
+      }
+      size += entryReferences_.CalculateSize(_repeated_entryReferences_codec);
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(EntryLink other) {
+      if (other == null) {
+        return;
+      }
+      if (other.Name.Length != 0) {
+        Name = other.Name;
+      }
+      if (other.EntryLinkType.Length != 0) {
+        EntryLinkType = other.EntryLinkType;
+      }
+      if (other.createTime_ != null) {
+        if (createTime_ == null) {
+          CreateTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+        }
+        CreateTime.MergeFrom(other.CreateTime);
+      }
+      if (other.updateTime_ != null) {
+        if (updateTime_ == null) {
+          UpdateTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+        }
+        UpdateTime.MergeFrom(other.UpdateTime);
+      }
+      entryReferences_.Add(other.entryReferences_);
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            Name = input.ReadString();
+            break;
+          }
+          case 18: {
+            EntryLinkType = input.ReadString();
+            break;
+          }
+          case 26: {
+            if (createTime_ == null) {
+              CreateTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+            }
+            input.ReadMessage(CreateTime);
+            break;
+          }
+          case 34: {
+            if (updateTime_ == null) {
+              UpdateTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+            }
+            input.ReadMessage(UpdateTime);
+            break;
+          }
+          case 82: {
+            entryReferences_.AddEntriesFrom(input, _repeated_entryReferences_codec);
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            Name = input.ReadString();
+            break;
+          }
+          case 18: {
+            EntryLinkType = input.ReadString();
+            break;
+          }
+          case 26: {
+            if (createTime_ == null) {
+              CreateTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+            }
+            input.ReadMessage(CreateTime);
+            break;
+          }
+          case 34: {
+            if (updateTime_ == null) {
+              UpdateTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+            }
+            input.ReadMessage(UpdateTime);
+            break;
+          }
+          case 82: {
+            entryReferences_.AddEntriesFrom(ref input, _repeated_entryReferences_codec);
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+    #region Nested types
+    /// <summary>Container for nested types declared in the EntryLink message type.</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static partial class Types {
+      /// <summary>
+      /// Reference to the Entry that is linked through the Entry Link.
+      /// </summary>
+      [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+      public sealed partial class EntryReference : pb::IMessage<EntryReference>
+      #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          , pb::IBufferMessage
+      #endif
+      {
+        private static readonly pb::MessageParser<EntryReference> _parser = new pb::MessageParser<EntryReference>(() => new EntryReference());
+        private pb::UnknownFieldSet _unknownFields;
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public static pb::MessageParser<EntryReference> Parser { get { return _parser; } }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public static pbr::MessageDescriptor Descriptor {
+          get { return global::Google.Cloud.Dataplex.V1.EntryLink.Descriptor.NestedTypes[0]; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        pbr::MessageDescriptor pb::IMessage.Descriptor {
+          get { return Descriptor; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public EntryReference() {
+          OnConstruction();
+        }
+
+        partial void OnConstruction();
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public EntryReference(EntryReference other) : this() {
+          name_ = other.name_;
+          path_ = other.path_;
+          type_ = other.type_;
+          _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public EntryReference Clone() {
+          return new EntryReference(this);
+        }
+
+        /// <summary>Field number for the "name" field.</summary>
+        public const int NameFieldNumber = 1;
+        private string name_ = "";
+        /// <summary>
+        /// Required. Immutable. The relative resource name of the referenced Entry,
+        /// of the form:
+        /// `projects/{project_id_or_number}/locations/{location_id}/entryGroups/{entry_group_id}/entries/{entry_id}`
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public string Name {
+          get { return name_; }
+          set {
+            name_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+          }
+        }
+
+        /// <summary>Field number for the "path" field.</summary>
+        public const int PathFieldNumber = 2;
+        private string path_ = "";
+        /// <summary>
+        /// Immutable. The path in the Entry that is referenced in the Entry Link.
+        /// Empty path denotes that the Entry itself is referenced in the Entry
+        /// Link.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public string Path {
+          get { return path_; }
+          set {
+            path_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+          }
+        }
+
+        /// <summary>Field number for the "type" field.</summary>
+        public const int TypeFieldNumber = 3;
+        private global::Google.Cloud.Dataplex.V1.EntryLink.Types.EntryReference.Types.Type type_ = global::Google.Cloud.Dataplex.V1.EntryLink.Types.EntryReference.Types.Type.Unspecified;
+        /// <summary>
+        /// Required. Immutable. The reference type of the Entry.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public global::Google.Cloud.Dataplex.V1.EntryLink.Types.EntryReference.Types.Type Type {
+          get { return type_; }
+          set {
+            type_ = value;
+          }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override bool Equals(object other) {
+          return Equals(other as EntryReference);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public bool Equals(EntryReference other) {
+          if (ReferenceEquals(other, null)) {
+            return false;
+          }
+          if (ReferenceEquals(other, this)) {
+            return true;
+          }
+          if (Name != other.Name) return false;
+          if (Path != other.Path) return false;
+          if (Type != other.Type) return false;
+          return Equals(_unknownFields, other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override int GetHashCode() {
+          int hash = 1;
+          if (Name.Length != 0) hash ^= Name.GetHashCode();
+          if (Path.Length != 0) hash ^= Path.GetHashCode();
+          if (Type != global::Google.Cloud.Dataplex.V1.EntryLink.Types.EntryReference.Types.Type.Unspecified) hash ^= Type.GetHashCode();
+          if (_unknownFields != null) {
+            hash ^= _unknownFields.GetHashCode();
+          }
+          return hash;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override string ToString() {
+          return pb::JsonFormatter.ToDiagnosticString(this);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void WriteTo(pb::CodedOutputStream output) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          output.WriteRawMessage(this);
+        #else
+          if (Name.Length != 0) {
+            output.WriteRawTag(10);
+            output.WriteString(Name);
+          }
+          if (Path.Length != 0) {
+            output.WriteRawTag(18);
+            output.WriteString(Path);
+          }
+          if (Type != global::Google.Cloud.Dataplex.V1.EntryLink.Types.EntryReference.Types.Type.Unspecified) {
+            output.WriteRawTag(24);
+            output.WriteEnum((int) Type);
+          }
+          if (_unknownFields != null) {
+            _unknownFields.WriteTo(output);
+          }
+        #endif
+        }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+          if (Name.Length != 0) {
+            output.WriteRawTag(10);
+            output.WriteString(Name);
+          }
+          if (Path.Length != 0) {
+            output.WriteRawTag(18);
+            output.WriteString(Path);
+          }
+          if (Type != global::Google.Cloud.Dataplex.V1.EntryLink.Types.EntryReference.Types.Type.Unspecified) {
+            output.WriteRawTag(24);
+            output.WriteEnum((int) Type);
+          }
+          if (_unknownFields != null) {
+            _unknownFields.WriteTo(ref output);
+          }
+        }
+        #endif
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public int CalculateSize() {
+          int size = 0;
+          if (Name.Length != 0) {
+            size += 1 + pb::CodedOutputStream.ComputeStringSize(Name);
+          }
+          if (Path.Length != 0) {
+            size += 1 + pb::CodedOutputStream.ComputeStringSize(Path);
+          }
+          if (Type != global::Google.Cloud.Dataplex.V1.EntryLink.Types.EntryReference.Types.Type.Unspecified) {
+            size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) Type);
+          }
+          if (_unknownFields != null) {
+            size += _unknownFields.CalculateSize();
+          }
+          return size;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void MergeFrom(EntryReference other) {
+          if (other == null) {
+            return;
+          }
+          if (other.Name.Length != 0) {
+            Name = other.Name;
+          }
+          if (other.Path.Length != 0) {
+            Path = other.Path;
+          }
+          if (other.Type != global::Google.Cloud.Dataplex.V1.EntryLink.Types.EntryReference.Types.Type.Unspecified) {
+            Type = other.Type;
+          }
+          _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void MergeFrom(pb::CodedInputStream input) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          input.ReadRawMessage(this);
+        #else
+          uint tag;
+          while ((tag = input.ReadTag()) != 0) {
+            switch(tag) {
+              default:
+                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+                break;
+              case 10: {
+                Name = input.ReadString();
+                break;
+              }
+              case 18: {
+                Path = input.ReadString();
+                break;
+              }
+              case 24: {
+                Type = (global::Google.Cloud.Dataplex.V1.EntryLink.Types.EntryReference.Types.Type) input.ReadEnum();
+                break;
+              }
+            }
+          }
+        #endif
+        }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+          uint tag;
+          while ((tag = input.ReadTag()) != 0) {
+            switch(tag) {
+              default:
+                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+                break;
+              case 10: {
+                Name = input.ReadString();
+                break;
+              }
+              case 18: {
+                Path = input.ReadString();
+                break;
+              }
+              case 24: {
+                Type = (global::Google.Cloud.Dataplex.V1.EntryLink.Types.EntryReference.Types.Type) input.ReadEnum();
+                break;
+              }
+            }
+          }
+        }
+        #endif
+
+        #region Nested types
+        /// <summary>Container for nested types declared in the EntryReference message type.</summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public static partial class Types {
+          /// <summary>
+          /// Reference type of the Entry.
+          /// </summary>
+          public enum Type {
+            /// <summary>
+            /// Unspecified reference type. Implies that the Entry is referenced
+            /// in a non-directional Entry Link.
+            /// </summary>
+            [pbr::OriginalName("UNSPECIFIED")] Unspecified = 0,
+            /// <summary>
+            /// The Entry is referenced as the source of the directional Entry Link.
+            /// </summary>
+            [pbr::OriginalName("SOURCE")] Source = 2,
+            /// <summary>
+            /// The Entry is referenced as the target of the directional Entry Link.
+            /// </summary>
+            [pbr::OriginalName("TARGET")] Target = 3,
+          }
+
+        }
+        #endregion
+
+      }
+
+    }
+    #endregion
+
+  }
+
+  /// <summary>
+  /// Request message for CreateEntryLink.
+  /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+  public sealed partial class CreateEntryLinkRequest : pb::IMessage<CreateEntryLinkRequest>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<CreateEntryLinkRequest> _parser = new pb::MessageParser<CreateEntryLinkRequest>(() => new CreateEntryLinkRequest());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<CreateEntryLinkRequest> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Cloud.Dataplex.V1.CatalogReflection.Descriptor.MessageTypes[43]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public CreateEntryLinkRequest() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public CreateEntryLinkRequest(CreateEntryLinkRequest other) : this() {
+      parent_ = other.parent_;
+      entryLinkId_ = other.entryLinkId_;
+      entryLink_ = other.entryLink_ != null ? other.entryLink_.Clone() : null;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public CreateEntryLinkRequest Clone() {
+      return new CreateEntryLinkRequest(this);
+    }
+
+    /// <summary>Field number for the "parent" field.</summary>
+    public const int ParentFieldNumber = 1;
+    private string parent_ = "";
+    /// <summary>
+    /// Required. The resource name of the parent Entry Group:
+    /// `projects/{project_id_or_number}/locations/{location_id}/entryGroups/{entry_group_id}`.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string Parent {
+      get { return parent_; }
+      set {
+        parent_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "entry_link_id" field.</summary>
+    public const int EntryLinkIdFieldNumber = 2;
+    private string entryLinkId_ = "";
+    /// <summary>
+    /// Required. Entry Link identifier
+    /// * Must contain only lowercase letters, numbers and hyphens.
+    /// * Must start with a letter.
+    /// * Must be between 1-63 characters.
+    /// * Must end with a number or a letter.
+    /// * Must be unique within the EntryGroup.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string EntryLinkId {
+      get { return entryLinkId_; }
+      set {
+        entryLinkId_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "entry_link" field.</summary>
+    public const int EntryLinkFieldNumber = 3;
+    private global::Google.Cloud.Dataplex.V1.EntryLink entryLink_;
+    /// <summary>
+    /// Required. Entry Link resource.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Cloud.Dataplex.V1.EntryLink EntryLink {
+      get { return entryLink_; }
+      set {
+        entryLink_ = value;
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as CreateEntryLinkRequest);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(CreateEntryLinkRequest other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (Parent != other.Parent) return false;
+      if (EntryLinkId != other.EntryLinkId) return false;
+      if (!object.Equals(EntryLink, other.EntryLink)) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (Parent.Length != 0) hash ^= Parent.GetHashCode();
+      if (EntryLinkId.Length != 0) hash ^= EntryLinkId.GetHashCode();
+      if (entryLink_ != null) hash ^= EntryLink.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (Parent.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(Parent);
+      }
+      if (EntryLinkId.Length != 0) {
+        output.WriteRawTag(18);
+        output.WriteString(EntryLinkId);
+      }
+      if (entryLink_ != null) {
+        output.WriteRawTag(26);
+        output.WriteMessage(EntryLink);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (Parent.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(Parent);
+      }
+      if (EntryLinkId.Length != 0) {
+        output.WriteRawTag(18);
+        output.WriteString(EntryLinkId);
+      }
+      if (entryLink_ != null) {
+        output.WriteRawTag(26);
+        output.WriteMessage(EntryLink);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      if (Parent.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Parent);
+      }
+      if (EntryLinkId.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(EntryLinkId);
+      }
+      if (entryLink_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(EntryLink);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(CreateEntryLinkRequest other) {
+      if (other == null) {
+        return;
+      }
+      if (other.Parent.Length != 0) {
+        Parent = other.Parent;
+      }
+      if (other.EntryLinkId.Length != 0) {
+        EntryLinkId = other.EntryLinkId;
+      }
+      if (other.entryLink_ != null) {
+        if (entryLink_ == null) {
+          EntryLink = new global::Google.Cloud.Dataplex.V1.EntryLink();
+        }
+        EntryLink.MergeFrom(other.EntryLink);
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            Parent = input.ReadString();
+            break;
+          }
+          case 18: {
+            EntryLinkId = input.ReadString();
+            break;
+          }
+          case 26: {
+            if (entryLink_ == null) {
+              EntryLink = new global::Google.Cloud.Dataplex.V1.EntryLink();
+            }
+            input.ReadMessage(EntryLink);
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            Parent = input.ReadString();
+            break;
+          }
+          case 18: {
+            EntryLinkId = input.ReadString();
+            break;
+          }
+          case 26: {
+            if (entryLink_ == null) {
+              EntryLink = new global::Google.Cloud.Dataplex.V1.EntryLink();
+            }
+            input.ReadMessage(EntryLink);
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+  }
+
+  /// <summary>
+  /// Request message for DeleteEntryLink.
+  /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+  public sealed partial class DeleteEntryLinkRequest : pb::IMessage<DeleteEntryLinkRequest>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<DeleteEntryLinkRequest> _parser = new pb::MessageParser<DeleteEntryLinkRequest>(() => new DeleteEntryLinkRequest());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<DeleteEntryLinkRequest> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Cloud.Dataplex.V1.CatalogReflection.Descriptor.MessageTypes[44]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public DeleteEntryLinkRequest() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public DeleteEntryLinkRequest(DeleteEntryLinkRequest other) : this() {
+      name_ = other.name_;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public DeleteEntryLinkRequest Clone() {
+      return new DeleteEntryLinkRequest(this);
+    }
+
+    /// <summary>Field number for the "name" field.</summary>
+    public const int NameFieldNumber = 1;
+    private string name_ = "";
+    /// <summary>
+    /// Required. The resource name of the Entry Link:
+    /// `projects/{project_id_or_number}/locations/{location_id}/entryGroups/{entry_group_id}/entryLinks/{entry_link_id}`.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string Name {
+      get { return name_; }
+      set {
+        name_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as DeleteEntryLinkRequest);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(DeleteEntryLinkRequest other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (Name != other.Name) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (Name.Length != 0) hash ^= Name.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (Name.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(Name);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (Name.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(Name);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      if (Name.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Name);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(DeleteEntryLinkRequest other) {
+      if (other == null) {
+        return;
+      }
+      if (other.Name.Length != 0) {
+        Name = other.Name;
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            Name = input.ReadString();
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            Name = input.ReadString();
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+  }
+
+  /// <summary>
+  /// Request message for GetEntryLink.
+  /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+  public sealed partial class GetEntryLinkRequest : pb::IMessage<GetEntryLinkRequest>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<GetEntryLinkRequest> _parser = new pb::MessageParser<GetEntryLinkRequest>(() => new GetEntryLinkRequest());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<GetEntryLinkRequest> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Cloud.Dataplex.V1.CatalogReflection.Descriptor.MessageTypes[45]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public GetEntryLinkRequest() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public GetEntryLinkRequest(GetEntryLinkRequest other) : this() {
+      name_ = other.name_;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public GetEntryLinkRequest Clone() {
+      return new GetEntryLinkRequest(this);
+    }
+
+    /// <summary>Field number for the "name" field.</summary>
+    public const int NameFieldNumber = 1;
+    private string name_ = "";
+    /// <summary>
+    /// Required. The resource name of the Entry Link:
+    /// `projects/{project_id_or_number}/locations/{location_id}/entryGroups/{entry_group_id}/entryLinks/{entry_link_id}`.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string Name {
+      get { return name_; }
+      set {
+        name_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as GetEntryLinkRequest);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(GetEntryLinkRequest other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (Name != other.Name) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (Name.Length != 0) hash ^= Name.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (Name.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(Name);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (Name.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(Name);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      if (Name.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Name);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(GetEntryLinkRequest other) {
+      if (other == null) {
+        return;
+      }
+      if (other.Name.Length != 0) {
+        Name = other.Name;
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            Name = input.ReadString();
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            Name = input.ReadString();
+            break;
+          }
+        }
+      }
+    }
+    #endif
 
   }
 

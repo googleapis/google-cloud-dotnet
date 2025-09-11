@@ -11,6 +11,4236 @@
   },
   "snippets": [
     {
+      "regionTag": "dataplex_v1_generated_BusinessGlossaryService_CreateGlossary_sync",
+      "title": "CreateGlossaryRequestObject",
+      "description": "Snippet for CreateGlossary",
+      "file": "BusinessGlossaryServiceClient.CreateGlossaryRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateGlossary",
+        "fullName": "Google.Cloud.Dataplex.V1.BusinessGlossaryServiceClient.CreateGlossary",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Dataplex.V1.CreateGlossaryRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.Dataplex.V1.Glossary, Google.Cloud.Dataplex.V1.OperationMetadata>",
+        "client": {
+          "shortName": "BusinessGlossaryServiceClient",
+          "fullName": "Google.Cloud.Dataplex.V1.BusinessGlossaryServiceClient"
+        },
+        "method": {
+          "shortName": "CreateGlossary",
+          "fullName": "google.cloud.dataplex.v1.BusinessGlossaryService.CreateGlossary",
+          "service": {
+            "shortName": "BusinessGlossaryService",
+            "fullName": "google.cloud.dataplex.v1.BusinessGlossaryService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 65,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 63,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "dataplex_v1_generated_BusinessGlossaryService_CreateGlossary_async",
+      "title": "CreateGlossaryRequestObjectAsync",
+      "description": "Snippet for CreateGlossaryAsync",
+      "file": "BusinessGlossaryServiceClient.CreateGlossaryRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateGlossaryAsync",
+        "fullName": "Google.Cloud.Dataplex.V1.BusinessGlossaryServiceClient.CreateGlossaryAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Dataplex.V1.CreateGlossaryRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.Dataplex.V1.Glossary, Google.Cloud.Dataplex.V1.OperationMetadata>>",
+        "client": {
+          "shortName": "BusinessGlossaryServiceClient",
+          "fullName": "Google.Cloud.Dataplex.V1.BusinessGlossaryServiceClient"
+        },
+        "method": {
+          "shortName": "CreateGlossary",
+          "fullName": "google.cloud.dataplex.v1.BusinessGlossaryService.CreateGlossary",
+          "service": {
+            "shortName": "BusinessGlossaryService",
+            "fullName": "google.cloud.dataplex.v1.BusinessGlossaryService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 22,
+          "end": 68,
+          "type": "FULL"
+        },
+        {
+          "start": 39,
+          "end": 66,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "dataplex_v1_generated_BusinessGlossaryService_CreateGlossary_sync_flattened",
+      "title": "CreateGlossary",
+      "description": "Snippet for CreateGlossary",
+      "file": "BusinessGlossaryServiceClient.CreateGlossarySnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateGlossary",
+        "fullName": "Google.Cloud.Dataplex.V1.BusinessGlossaryServiceClient.CreateGlossary",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.Dataplex.V1.Glossary",
+            "name": "glossary"
+          },
+          {
+            "type": "System.String",
+            "name": "glossaryId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.Dataplex.V1.Glossary, Google.Cloud.Dataplex.V1.OperationMetadata>",
+        "client": {
+          "shortName": "BusinessGlossaryServiceClient",
+          "fullName": "Google.Cloud.Dataplex.V1.BusinessGlossaryServiceClient"
+        },
+        "method": {
+          "shortName": "CreateGlossary",
+          "fullName": "google.cloud.dataplex.v1.BusinessGlossaryService.CreateGlossary",
+          "service": {
+            "shortName": "BusinessGlossaryService",
+            "fullName": "google.cloud.dataplex.v1.BusinessGlossaryService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 60,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 58,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "dataplex_v1_generated_BusinessGlossaryService_CreateGlossary_async_flattened",
+      "title": "CreateGlossaryAsync",
+      "description": "Snippet for CreateGlossaryAsync",
+      "file": "BusinessGlossaryServiceClient.CreateGlossaryAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateGlossaryAsync",
+        "fullName": "Google.Cloud.Dataplex.V1.BusinessGlossaryServiceClient.CreateGlossaryAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.Dataplex.V1.Glossary",
+            "name": "glossary"
+          },
+          {
+            "type": "System.String",
+            "name": "glossaryId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.Dataplex.V1.Glossary, Google.Cloud.Dataplex.V1.OperationMetadata>>",
+        "client": {
+          "shortName": "BusinessGlossaryServiceClient",
+          "fullName": "Google.Cloud.Dataplex.V1.BusinessGlossaryServiceClient"
+        },
+        "method": {
+          "shortName": "CreateGlossary",
+          "fullName": "google.cloud.dataplex.v1.BusinessGlossaryService.CreateGlossary",
+          "service": {
+            "shortName": "BusinessGlossaryService",
+            "fullName": "google.cloud.dataplex.v1.BusinessGlossaryService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 22,
+          "end": 63,
+          "type": "FULL"
+        },
+        {
+          "start": 38,
+          "end": 61,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "dataplex_v1_generated_BusinessGlossaryService_CreateGlossary_sync_flattened_resourceNames",
+      "title": "CreateGlossaryResourceNames",
+      "description": "Snippet for CreateGlossary",
+      "file": "BusinessGlossaryServiceClient.CreateGlossaryResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateGlossary",
+        "fullName": "Google.Cloud.Dataplex.V1.BusinessGlossaryServiceClient.CreateGlossary",
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.LocationName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.Dataplex.V1.Glossary",
+            "name": "glossary"
+          },
+          {
+            "type": "System.String",
+            "name": "glossaryId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.Dataplex.V1.Glossary, Google.Cloud.Dataplex.V1.OperationMetadata>",
+        "client": {
+          "shortName": "BusinessGlossaryServiceClient",
+          "fullName": "Google.Cloud.Dataplex.V1.BusinessGlossaryServiceClient"
+        },
+        "method": {
+          "shortName": "CreateGlossary",
+          "fullName": "google.cloud.dataplex.v1.BusinessGlossaryService.CreateGlossary",
+          "service": {
+            "shortName": "BusinessGlossaryService",
+            "fullName": "google.cloud.dataplex.v1.BusinessGlossaryService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 61,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 59,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "dataplex_v1_generated_BusinessGlossaryService_CreateGlossary_async_flattened_resourceNames",
+      "title": "CreateGlossaryResourceNamesAsync",
+      "description": "Snippet for CreateGlossaryAsync",
+      "file": "BusinessGlossaryServiceClient.CreateGlossaryResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateGlossaryAsync",
+        "fullName": "Google.Cloud.Dataplex.V1.BusinessGlossaryServiceClient.CreateGlossaryAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.LocationName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.Dataplex.V1.Glossary",
+            "name": "glossary"
+          },
+          {
+            "type": "System.String",
+            "name": "glossaryId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.Dataplex.V1.Glossary, Google.Cloud.Dataplex.V1.OperationMetadata>>",
+        "client": {
+          "shortName": "BusinessGlossaryServiceClient",
+          "fullName": "Google.Cloud.Dataplex.V1.BusinessGlossaryServiceClient"
+        },
+        "method": {
+          "shortName": "CreateGlossary",
+          "fullName": "google.cloud.dataplex.v1.BusinessGlossaryService.CreateGlossary",
+          "service": {
+            "shortName": "BusinessGlossaryService",
+            "fullName": "google.cloud.dataplex.v1.BusinessGlossaryService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 22,
+          "end": 64,
+          "type": "FULL"
+        },
+        {
+          "start": 39,
+          "end": 62,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "dataplex_v1_generated_BusinessGlossaryService_UpdateGlossary_sync",
+      "title": "UpdateGlossaryRequestObject",
+      "description": "Snippet for UpdateGlossary",
+      "file": "BusinessGlossaryServiceClient.UpdateGlossaryRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateGlossary",
+        "fullName": "Google.Cloud.Dataplex.V1.BusinessGlossaryServiceClient.UpdateGlossary",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Dataplex.V1.UpdateGlossaryRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.Dataplex.V1.Glossary, Google.Cloud.Dataplex.V1.OperationMetadata>",
+        "client": {
+          "shortName": "BusinessGlossaryServiceClient",
+          "fullName": "Google.Cloud.Dataplex.V1.BusinessGlossaryServiceClient"
+        },
+        "method": {
+          "shortName": "UpdateGlossary",
+          "fullName": "google.cloud.dataplex.v1.BusinessGlossaryService.UpdateGlossary",
+          "service": {
+            "shortName": "BusinessGlossaryService",
+            "fullName": "google.cloud.dataplex.v1.BusinessGlossaryService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 64,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 62,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "dataplex_v1_generated_BusinessGlossaryService_UpdateGlossary_async",
+      "title": "UpdateGlossaryRequestObjectAsync",
+      "description": "Snippet for UpdateGlossaryAsync",
+      "file": "BusinessGlossaryServiceClient.UpdateGlossaryRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateGlossaryAsync",
+        "fullName": "Google.Cloud.Dataplex.V1.BusinessGlossaryServiceClient.UpdateGlossaryAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Dataplex.V1.UpdateGlossaryRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.Dataplex.V1.Glossary, Google.Cloud.Dataplex.V1.OperationMetadata>>",
+        "client": {
+          "shortName": "BusinessGlossaryServiceClient",
+          "fullName": "Google.Cloud.Dataplex.V1.BusinessGlossaryServiceClient"
+        },
+        "method": {
+          "shortName": "UpdateGlossary",
+          "fullName": "google.cloud.dataplex.v1.BusinessGlossaryService.UpdateGlossary",
+          "service": {
+            "shortName": "BusinessGlossaryService",
+            "fullName": "google.cloud.dataplex.v1.BusinessGlossaryService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 22,
+          "end": 67,
+          "type": "FULL"
+        },
+        {
+          "start": 39,
+          "end": 65,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "dataplex_v1_generated_BusinessGlossaryService_UpdateGlossary_sync_flattened",
+      "title": "UpdateGlossary",
+      "description": "Snippet for UpdateGlossary",
+      "file": "BusinessGlossaryServiceClient.UpdateGlossarySnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateGlossary",
+        "fullName": "Google.Cloud.Dataplex.V1.BusinessGlossaryServiceClient.UpdateGlossary",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Dataplex.V1.Glossary",
+            "name": "glossary"
+          },
+          {
+            "type": "Google.Protobuf.WellKnownTypes.FieldMask",
+            "name": "updateMask"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.Dataplex.V1.Glossary, Google.Cloud.Dataplex.V1.OperationMetadata>",
+        "client": {
+          "shortName": "BusinessGlossaryServiceClient",
+          "fullName": "Google.Cloud.Dataplex.V1.BusinessGlossaryServiceClient"
+        },
+        "method": {
+          "shortName": "UpdateGlossary",
+          "fullName": "google.cloud.dataplex.v1.BusinessGlossaryService.UpdateGlossary",
+          "service": {
+            "shortName": "BusinessGlossaryService",
+            "fullName": "google.cloud.dataplex.v1.BusinessGlossaryService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 60,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 58,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "dataplex_v1_generated_BusinessGlossaryService_UpdateGlossary_async_flattened",
+      "title": "UpdateGlossaryAsync",
+      "description": "Snippet for UpdateGlossaryAsync",
+      "file": "BusinessGlossaryServiceClient.UpdateGlossaryAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateGlossaryAsync",
+        "fullName": "Google.Cloud.Dataplex.V1.BusinessGlossaryServiceClient.UpdateGlossaryAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Dataplex.V1.Glossary",
+            "name": "glossary"
+          },
+          {
+            "type": "Google.Protobuf.WellKnownTypes.FieldMask",
+            "name": "updateMask"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.Dataplex.V1.Glossary, Google.Cloud.Dataplex.V1.OperationMetadata>>",
+        "client": {
+          "shortName": "BusinessGlossaryServiceClient",
+          "fullName": "Google.Cloud.Dataplex.V1.BusinessGlossaryServiceClient"
+        },
+        "method": {
+          "shortName": "UpdateGlossary",
+          "fullName": "google.cloud.dataplex.v1.BusinessGlossaryService.UpdateGlossary",
+          "service": {
+            "shortName": "BusinessGlossaryService",
+            "fullName": "google.cloud.dataplex.v1.BusinessGlossaryService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 22,
+          "end": 63,
+          "type": "FULL"
+        },
+        {
+          "start": 39,
+          "end": 61,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "dataplex_v1_generated_BusinessGlossaryService_DeleteGlossary_sync",
+      "title": "DeleteGlossaryRequestObject",
+      "description": "Snippet for DeleteGlossary",
+      "file": "BusinessGlossaryServiceClient.DeleteGlossaryRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteGlossary",
+        "fullName": "Google.Cloud.Dataplex.V1.BusinessGlossaryServiceClient.DeleteGlossary",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Dataplex.V1.DeleteGlossaryRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.Dataplex.V1.OperationMetadata>",
+        "client": {
+          "shortName": "BusinessGlossaryServiceClient",
+          "fullName": "Google.Cloud.Dataplex.V1.BusinessGlossaryServiceClient"
+        },
+        "method": {
+          "shortName": "DeleteGlossary",
+          "fullName": "google.cloud.dataplex.v1.BusinessGlossaryService.DeleteGlossary",
+          "service": {
+            "shortName": "BusinessGlossaryService",
+            "fullName": "google.cloud.dataplex.v1.BusinessGlossaryService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 63,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 61,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "dataplex_v1_generated_BusinessGlossaryService_DeleteGlossary_async",
+      "title": "DeleteGlossaryRequestObjectAsync",
+      "description": "Snippet for DeleteGlossaryAsync",
+      "file": "BusinessGlossaryServiceClient.DeleteGlossaryRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteGlossaryAsync",
+        "fullName": "Google.Cloud.Dataplex.V1.BusinessGlossaryServiceClient.DeleteGlossaryAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Dataplex.V1.DeleteGlossaryRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.Dataplex.V1.OperationMetadata>>",
+        "client": {
+          "shortName": "BusinessGlossaryServiceClient",
+          "fullName": "Google.Cloud.Dataplex.V1.BusinessGlossaryServiceClient"
+        },
+        "method": {
+          "shortName": "DeleteGlossary",
+          "fullName": "google.cloud.dataplex.v1.BusinessGlossaryService.DeleteGlossary",
+          "service": {
+            "shortName": "BusinessGlossaryService",
+            "fullName": "google.cloud.dataplex.v1.BusinessGlossaryService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 22,
+          "end": 66,
+          "type": "FULL"
+        },
+        {
+          "start": 39,
+          "end": 64,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "dataplex_v1_generated_BusinessGlossaryService_DeleteGlossary_sync_flattened",
+      "title": "DeleteGlossary",
+      "description": "Snippet for DeleteGlossary",
+      "file": "BusinessGlossaryServiceClient.DeleteGlossarySnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteGlossary",
+        "fullName": "Google.Cloud.Dataplex.V1.BusinessGlossaryServiceClient.DeleteGlossary",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.Dataplex.V1.OperationMetadata>",
+        "client": {
+          "shortName": "BusinessGlossaryServiceClient",
+          "fullName": "Google.Cloud.Dataplex.V1.BusinessGlossaryServiceClient"
+        },
+        "method": {
+          "shortName": "DeleteGlossary",
+          "fullName": "google.cloud.dataplex.v1.BusinessGlossaryService.DeleteGlossary",
+          "service": {
+            "shortName": "BusinessGlossaryService",
+            "fullName": "google.cloud.dataplex.v1.BusinessGlossaryService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 59,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 57,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "dataplex_v1_generated_BusinessGlossaryService_DeleteGlossary_async_flattened",
+      "title": "DeleteGlossaryAsync",
+      "description": "Snippet for DeleteGlossaryAsync",
+      "file": "BusinessGlossaryServiceClient.DeleteGlossaryAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteGlossaryAsync",
+        "fullName": "Google.Cloud.Dataplex.V1.BusinessGlossaryServiceClient.DeleteGlossaryAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.Dataplex.V1.OperationMetadata>>",
+        "client": {
+          "shortName": "BusinessGlossaryServiceClient",
+          "fullName": "Google.Cloud.Dataplex.V1.BusinessGlossaryServiceClient"
+        },
+        "method": {
+          "shortName": "DeleteGlossary",
+          "fullName": "google.cloud.dataplex.v1.BusinessGlossaryService.DeleteGlossary",
+          "service": {
+            "shortName": "BusinessGlossaryService",
+            "fullName": "google.cloud.dataplex.v1.BusinessGlossaryService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 22,
+          "end": 62,
+          "type": "FULL"
+        },
+        {
+          "start": 39,
+          "end": 60,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "dataplex_v1_generated_BusinessGlossaryService_DeleteGlossary_sync_flattened_resourceNames",
+      "title": "DeleteGlossaryResourceNames",
+      "description": "Snippet for DeleteGlossary",
+      "file": "BusinessGlossaryServiceClient.DeleteGlossaryResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteGlossary",
+        "fullName": "Google.Cloud.Dataplex.V1.BusinessGlossaryServiceClient.DeleteGlossary",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Dataplex.V1.GlossaryName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.Dataplex.V1.OperationMetadata>",
+        "client": {
+          "shortName": "BusinessGlossaryServiceClient",
+          "fullName": "Google.Cloud.Dataplex.V1.BusinessGlossaryServiceClient"
+        },
+        "method": {
+          "shortName": "DeleteGlossary",
+          "fullName": "google.cloud.dataplex.v1.BusinessGlossaryService.DeleteGlossary",
+          "service": {
+            "shortName": "BusinessGlossaryService",
+            "fullName": "google.cloud.dataplex.v1.BusinessGlossaryService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 59,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 57,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "dataplex_v1_generated_BusinessGlossaryService_DeleteGlossary_async_flattened_resourceNames",
+      "title": "DeleteGlossaryResourceNamesAsync",
+      "description": "Snippet for DeleteGlossaryAsync",
+      "file": "BusinessGlossaryServiceClient.DeleteGlossaryResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteGlossaryAsync",
+        "fullName": "Google.Cloud.Dataplex.V1.BusinessGlossaryServiceClient.DeleteGlossaryAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Dataplex.V1.GlossaryName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.Dataplex.V1.OperationMetadata>>",
+        "client": {
+          "shortName": "BusinessGlossaryServiceClient",
+          "fullName": "Google.Cloud.Dataplex.V1.BusinessGlossaryServiceClient"
+        },
+        "method": {
+          "shortName": "DeleteGlossary",
+          "fullName": "google.cloud.dataplex.v1.BusinessGlossaryService.DeleteGlossary",
+          "service": {
+            "shortName": "BusinessGlossaryService",
+            "fullName": "google.cloud.dataplex.v1.BusinessGlossaryService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 22,
+          "end": 62,
+          "type": "FULL"
+        },
+        {
+          "start": 39,
+          "end": 60,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "dataplex_v1_generated_BusinessGlossaryService_GetGlossary_sync",
+      "title": "GetGlossaryRequestObject",
+      "description": "Snippet for GetGlossary",
+      "file": "BusinessGlossaryServiceClient.GetGlossaryRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetGlossary",
+        "fullName": "Google.Cloud.Dataplex.V1.BusinessGlossaryServiceClient.GetGlossary",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Dataplex.V1.GetGlossaryRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.Dataplex.V1.Glossary",
+        "client": {
+          "shortName": "BusinessGlossaryServiceClient",
+          "fullName": "Google.Cloud.Dataplex.V1.BusinessGlossaryServiceClient"
+        },
+        "method": {
+          "shortName": "GetGlossary",
+          "fullName": "google.cloud.dataplex.v1.BusinessGlossaryService.GetGlossary",
+          "service": {
+            "shortName": "BusinessGlossaryService",
+            "fullName": "google.cloud.dataplex.v1.BusinessGlossaryService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 44,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 42,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "dataplex_v1_generated_BusinessGlossaryService_GetGlossary_async",
+      "title": "GetGlossaryRequestObjectAsync",
+      "description": "Snippet for GetGlossaryAsync",
+      "file": "BusinessGlossaryServiceClient.GetGlossaryRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetGlossaryAsync",
+        "fullName": "Google.Cloud.Dataplex.V1.BusinessGlossaryServiceClient.GetGlossaryAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Dataplex.V1.GetGlossaryRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Dataplex.V1.Glossary>",
+        "client": {
+          "shortName": "BusinessGlossaryServiceClient",
+          "fullName": "Google.Cloud.Dataplex.V1.BusinessGlossaryServiceClient"
+        },
+        "method": {
+          "shortName": "GetGlossary",
+          "fullName": "google.cloud.dataplex.v1.BusinessGlossaryService.GetGlossary",
+          "service": {
+            "shortName": "BusinessGlossaryService",
+            "fullName": "google.cloud.dataplex.v1.BusinessGlossaryService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 22,
+          "end": 47,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 45,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "dataplex_v1_generated_BusinessGlossaryService_GetGlossary_sync_flattened",
+      "title": "GetGlossary",
+      "description": "Snippet for GetGlossary",
+      "file": "BusinessGlossaryServiceClient.GetGlossarySnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetGlossary",
+        "fullName": "Google.Cloud.Dataplex.V1.BusinessGlossaryServiceClient.GetGlossary",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.Dataplex.V1.Glossary",
+        "client": {
+          "shortName": "BusinessGlossaryServiceClient",
+          "fullName": "Google.Cloud.Dataplex.V1.BusinessGlossaryServiceClient"
+        },
+        "method": {
+          "shortName": "GetGlossary",
+          "fullName": "google.cloud.dataplex.v1.BusinessGlossaryService.GetGlossary",
+          "service": {
+            "shortName": "BusinessGlossaryService",
+            "fullName": "google.cloud.dataplex.v1.BusinessGlossaryService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "dataplex_v1_generated_BusinessGlossaryService_GetGlossary_async_flattened",
+      "title": "GetGlossaryAsync",
+      "description": "Snippet for GetGlossaryAsync",
+      "file": "BusinessGlossaryServiceClient.GetGlossaryAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetGlossaryAsync",
+        "fullName": "Google.Cloud.Dataplex.V1.BusinessGlossaryServiceClient.GetGlossaryAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Dataplex.V1.Glossary>",
+        "client": {
+          "shortName": "BusinessGlossaryServiceClient",
+          "fullName": "Google.Cloud.Dataplex.V1.BusinessGlossaryServiceClient"
+        },
+        "method": {
+          "shortName": "GetGlossary",
+          "fullName": "google.cloud.dataplex.v1.BusinessGlossaryService.GetGlossary",
+          "service": {
+            "shortName": "BusinessGlossaryService",
+            "fullName": "google.cloud.dataplex.v1.BusinessGlossaryService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 22,
+          "end": 44,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 42,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "dataplex_v1_generated_BusinessGlossaryService_GetGlossary_sync_flattened_resourceNames",
+      "title": "GetGlossaryResourceNames",
+      "description": "Snippet for GetGlossary",
+      "file": "BusinessGlossaryServiceClient.GetGlossaryResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetGlossary",
+        "fullName": "Google.Cloud.Dataplex.V1.BusinessGlossaryServiceClient.GetGlossary",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Dataplex.V1.GlossaryName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.Dataplex.V1.Glossary",
+        "client": {
+          "shortName": "BusinessGlossaryServiceClient",
+          "fullName": "Google.Cloud.Dataplex.V1.BusinessGlossaryServiceClient"
+        },
+        "method": {
+          "shortName": "GetGlossary",
+          "fullName": "google.cloud.dataplex.v1.BusinessGlossaryService.GetGlossary",
+          "service": {
+            "shortName": "BusinessGlossaryService",
+            "fullName": "google.cloud.dataplex.v1.BusinessGlossaryService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "dataplex_v1_generated_BusinessGlossaryService_GetGlossary_async_flattened_resourceNames",
+      "title": "GetGlossaryResourceNamesAsync",
+      "description": "Snippet for GetGlossaryAsync",
+      "file": "BusinessGlossaryServiceClient.GetGlossaryResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetGlossaryAsync",
+        "fullName": "Google.Cloud.Dataplex.V1.BusinessGlossaryServiceClient.GetGlossaryAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Dataplex.V1.GlossaryName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Dataplex.V1.Glossary>",
+        "client": {
+          "shortName": "BusinessGlossaryServiceClient",
+          "fullName": "Google.Cloud.Dataplex.V1.BusinessGlossaryServiceClient"
+        },
+        "method": {
+          "shortName": "GetGlossary",
+          "fullName": "google.cloud.dataplex.v1.BusinessGlossaryService.GetGlossary",
+          "service": {
+            "shortName": "BusinessGlossaryService",
+            "fullName": "google.cloud.dataplex.v1.BusinessGlossaryService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 22,
+          "end": 44,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 42,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "dataplex_v1_generated_BusinessGlossaryService_ListGlossaries_sync",
+      "title": "ListGlossariesRequestObject",
+      "description": "Snippet for ListGlossaries",
+      "file": "BusinessGlossaryServiceClient.ListGlossariesRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListGlossaries",
+        "fullName": "Google.Cloud.Dataplex.V1.BusinessGlossaryServiceClient.ListGlossaries",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Dataplex.V1.ListGlossariesRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.Dataplex.V1.ListGlossariesResponse, Google.Cloud.Dataplex.V1.Glossary>",
+        "client": {
+          "shortName": "BusinessGlossaryServiceClient",
+          "fullName": "Google.Cloud.Dataplex.V1.BusinessGlossaryServiceClient"
+        },
+        "method": {
+          "shortName": "ListGlossaries",
+          "fullName": "google.cloud.dataplex.v1.BusinessGlossaryService.ListGlossaries",
+          "service": {
+            "shortName": "BusinessGlossaryService",
+            "fullName": "google.cloud.dataplex.v1.BusinessGlossaryService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 81,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 79,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "dataplex_v1_generated_BusinessGlossaryService_ListGlossaries_async",
+      "title": "ListGlossariesRequestObjectAsync",
+      "description": "Snippet for ListGlossariesAsync",
+      "file": "BusinessGlossaryServiceClient.ListGlossariesRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListGlossariesAsync",
+        "fullName": "Google.Cloud.Dataplex.V1.BusinessGlossaryServiceClient.ListGlossariesAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Dataplex.V1.ListGlossariesRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.Dataplex.V1.ListGlossariesResponse, Google.Cloud.Dataplex.V1.Glossary>",
+        "client": {
+          "shortName": "BusinessGlossaryServiceClient",
+          "fullName": "Google.Cloud.Dataplex.V1.BusinessGlossaryServiceClient"
+        },
+        "method": {
+          "shortName": "ListGlossaries",
+          "fullName": "google.cloud.dataplex.v1.BusinessGlossaryService.ListGlossaries",
+          "service": {
+            "shortName": "BusinessGlossaryService",
+            "fullName": "google.cloud.dataplex.v1.BusinessGlossaryService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 22,
+          "end": 85,
+          "type": "FULL"
+        },
+        {
+          "start": 41,
+          "end": 83,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "dataplex_v1_generated_BusinessGlossaryService_ListGlossaries_sync_flattened",
+      "title": "ListGlossaries",
+      "description": "Snippet for ListGlossaries",
+      "file": "BusinessGlossaryServiceClient.ListGlossariesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListGlossaries",
+        "fullName": "Google.Cloud.Dataplex.V1.BusinessGlossaryServiceClient.ListGlossaries",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.Dataplex.V1.ListGlossariesResponse, Google.Cloud.Dataplex.V1.Glossary>",
+        "client": {
+          "shortName": "BusinessGlossaryServiceClient",
+          "fullName": "Google.Cloud.Dataplex.V1.BusinessGlossaryServiceClient"
+        },
+        "method": {
+          "shortName": "ListGlossaries",
+          "fullName": "google.cloud.dataplex.v1.BusinessGlossaryService.ListGlossaries",
+          "service": {
+            "shortName": "BusinessGlossaryService",
+            "fullName": "google.cloud.dataplex.v1.BusinessGlossaryService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 75,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 73,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "dataplex_v1_generated_BusinessGlossaryService_ListGlossaries_async_flattened",
+      "title": "ListGlossariesAsync",
+      "description": "Snippet for ListGlossariesAsync",
+      "file": "BusinessGlossaryServiceClient.ListGlossariesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListGlossariesAsync",
+        "fullName": "Google.Cloud.Dataplex.V1.BusinessGlossaryServiceClient.ListGlossariesAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.Dataplex.V1.ListGlossariesResponse, Google.Cloud.Dataplex.V1.Glossary>",
+        "client": {
+          "shortName": "BusinessGlossaryServiceClient",
+          "fullName": "Google.Cloud.Dataplex.V1.BusinessGlossaryServiceClient"
+        },
+        "method": {
+          "shortName": "ListGlossaries",
+          "fullName": "google.cloud.dataplex.v1.BusinessGlossaryService.ListGlossaries",
+          "service": {
+            "shortName": "BusinessGlossaryService",
+            "fullName": "google.cloud.dataplex.v1.BusinessGlossaryService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 22,
+          "end": 79,
+          "type": "FULL"
+        },
+        {
+          "start": 40,
+          "end": 77,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "dataplex_v1_generated_BusinessGlossaryService_ListGlossaries_sync_flattened_resourceNames",
+      "title": "ListGlossariesResourceNames",
+      "description": "Snippet for ListGlossaries",
+      "file": "BusinessGlossaryServiceClient.ListGlossariesResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListGlossaries",
+        "fullName": "Google.Cloud.Dataplex.V1.BusinessGlossaryServiceClient.ListGlossaries",
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.LocationName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.Dataplex.V1.ListGlossariesResponse, Google.Cloud.Dataplex.V1.Glossary>",
+        "client": {
+          "shortName": "BusinessGlossaryServiceClient",
+          "fullName": "Google.Cloud.Dataplex.V1.BusinessGlossaryServiceClient"
+        },
+        "method": {
+          "shortName": "ListGlossaries",
+          "fullName": "google.cloud.dataplex.v1.BusinessGlossaryService.ListGlossaries",
+          "service": {
+            "shortName": "BusinessGlossaryService",
+            "fullName": "google.cloud.dataplex.v1.BusinessGlossaryService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 76,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 74,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "dataplex_v1_generated_BusinessGlossaryService_ListGlossaries_async_flattened_resourceNames",
+      "title": "ListGlossariesResourceNamesAsync",
+      "description": "Snippet for ListGlossariesAsync",
+      "file": "BusinessGlossaryServiceClient.ListGlossariesResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListGlossariesAsync",
+        "fullName": "Google.Cloud.Dataplex.V1.BusinessGlossaryServiceClient.ListGlossariesAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.LocationName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.Dataplex.V1.ListGlossariesResponse, Google.Cloud.Dataplex.V1.Glossary>",
+        "client": {
+          "shortName": "BusinessGlossaryServiceClient",
+          "fullName": "Google.Cloud.Dataplex.V1.BusinessGlossaryServiceClient"
+        },
+        "method": {
+          "shortName": "ListGlossaries",
+          "fullName": "google.cloud.dataplex.v1.BusinessGlossaryService.ListGlossaries",
+          "service": {
+            "shortName": "BusinessGlossaryService",
+            "fullName": "google.cloud.dataplex.v1.BusinessGlossaryService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 22,
+          "end": 80,
+          "type": "FULL"
+        },
+        {
+          "start": 41,
+          "end": 78,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "dataplex_v1_generated_BusinessGlossaryService_CreateGlossaryCategory_sync",
+      "title": "CreateGlossaryCategoryRequestObject",
+      "description": "Snippet for CreateGlossaryCategory",
+      "file": "BusinessGlossaryServiceClient.CreateGlossaryCategoryRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateGlossaryCategory",
+        "fullName": "Google.Cloud.Dataplex.V1.BusinessGlossaryServiceClient.CreateGlossaryCategory",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Dataplex.V1.CreateGlossaryCategoryRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.Dataplex.V1.GlossaryCategory",
+        "client": {
+          "shortName": "BusinessGlossaryServiceClient",
+          "fullName": "Google.Cloud.Dataplex.V1.BusinessGlossaryServiceClient"
+        },
+        "method": {
+          "shortName": "CreateGlossaryCategory",
+          "fullName": "google.cloud.dataplex.v1.BusinessGlossaryService.CreateGlossaryCategory",
+          "service": {
+            "shortName": "BusinessGlossaryService",
+            "fullName": "google.cloud.dataplex.v1.BusinessGlossaryService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 46,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 44,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "dataplex_v1_generated_BusinessGlossaryService_CreateGlossaryCategory_async",
+      "title": "CreateGlossaryCategoryRequestObjectAsync",
+      "description": "Snippet for CreateGlossaryCategoryAsync",
+      "file": "BusinessGlossaryServiceClient.CreateGlossaryCategoryRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateGlossaryCategoryAsync",
+        "fullName": "Google.Cloud.Dataplex.V1.BusinessGlossaryServiceClient.CreateGlossaryCategoryAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Dataplex.V1.CreateGlossaryCategoryRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Dataplex.V1.GlossaryCategory>",
+        "client": {
+          "shortName": "BusinessGlossaryServiceClient",
+          "fullName": "Google.Cloud.Dataplex.V1.BusinessGlossaryServiceClient"
+        },
+        "method": {
+          "shortName": "CreateGlossaryCategory",
+          "fullName": "google.cloud.dataplex.v1.BusinessGlossaryService.CreateGlossaryCategory",
+          "service": {
+            "shortName": "BusinessGlossaryService",
+            "fullName": "google.cloud.dataplex.v1.BusinessGlossaryService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 22,
+          "end": 49,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 47,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "dataplex_v1_generated_BusinessGlossaryService_CreateGlossaryCategory_sync_flattened",
+      "title": "CreateGlossaryCategory",
+      "description": "Snippet for CreateGlossaryCategory",
+      "file": "BusinessGlossaryServiceClient.CreateGlossaryCategorySnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateGlossaryCategory",
+        "fullName": "Google.Cloud.Dataplex.V1.BusinessGlossaryServiceClient.CreateGlossaryCategory",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.Dataplex.V1.GlossaryCategory",
+            "name": "category"
+          },
+          {
+            "type": "System.String",
+            "name": "categoryId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.Dataplex.V1.GlossaryCategory",
+        "client": {
+          "shortName": "BusinessGlossaryServiceClient",
+          "fullName": "Google.Cloud.Dataplex.V1.BusinessGlossaryServiceClient"
+        },
+        "method": {
+          "shortName": "CreateGlossaryCategory",
+          "fullName": "google.cloud.dataplex.v1.BusinessGlossaryService.CreateGlossaryCategory",
+          "service": {
+            "shortName": "BusinessGlossaryService",
+            "fullName": "google.cloud.dataplex.v1.BusinessGlossaryService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 43,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 41,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "dataplex_v1_generated_BusinessGlossaryService_CreateGlossaryCategory_async_flattened",
+      "title": "CreateGlossaryCategoryAsync",
+      "description": "Snippet for CreateGlossaryCategoryAsync",
+      "file": "BusinessGlossaryServiceClient.CreateGlossaryCategoryAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateGlossaryCategoryAsync",
+        "fullName": "Google.Cloud.Dataplex.V1.BusinessGlossaryServiceClient.CreateGlossaryCategoryAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.Dataplex.V1.GlossaryCategory",
+            "name": "category"
+          },
+          {
+            "type": "System.String",
+            "name": "categoryId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Dataplex.V1.GlossaryCategory>",
+        "client": {
+          "shortName": "BusinessGlossaryServiceClient",
+          "fullName": "Google.Cloud.Dataplex.V1.BusinessGlossaryServiceClient"
+        },
+        "method": {
+          "shortName": "CreateGlossaryCategory",
+          "fullName": "google.cloud.dataplex.v1.BusinessGlossaryService.CreateGlossaryCategory",
+          "service": {
+            "shortName": "BusinessGlossaryService",
+            "fullName": "google.cloud.dataplex.v1.BusinessGlossaryService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 22,
+          "end": 46,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 44,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "dataplex_v1_generated_BusinessGlossaryService_CreateGlossaryCategory_sync_flattened_resourceNames",
+      "title": "CreateGlossaryCategoryResourceNames",
+      "description": "Snippet for CreateGlossaryCategory",
+      "file": "BusinessGlossaryServiceClient.CreateGlossaryCategoryResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateGlossaryCategory",
+        "fullName": "Google.Cloud.Dataplex.V1.BusinessGlossaryServiceClient.CreateGlossaryCategory",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Dataplex.V1.GlossaryName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.Dataplex.V1.GlossaryCategory",
+            "name": "category"
+          },
+          {
+            "type": "System.String",
+            "name": "categoryId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.Dataplex.V1.GlossaryCategory",
+        "client": {
+          "shortName": "BusinessGlossaryServiceClient",
+          "fullName": "Google.Cloud.Dataplex.V1.BusinessGlossaryServiceClient"
+        },
+        "method": {
+          "shortName": "CreateGlossaryCategory",
+          "fullName": "google.cloud.dataplex.v1.BusinessGlossaryService.CreateGlossaryCategory",
+          "service": {
+            "shortName": "BusinessGlossaryService",
+            "fullName": "google.cloud.dataplex.v1.BusinessGlossaryService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 43,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 41,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "dataplex_v1_generated_BusinessGlossaryService_CreateGlossaryCategory_async_flattened_resourceNames",
+      "title": "CreateGlossaryCategoryResourceNamesAsync",
+      "description": "Snippet for CreateGlossaryCategoryAsync",
+      "file": "BusinessGlossaryServiceClient.CreateGlossaryCategoryResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateGlossaryCategoryAsync",
+        "fullName": "Google.Cloud.Dataplex.V1.BusinessGlossaryServiceClient.CreateGlossaryCategoryAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Dataplex.V1.GlossaryName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.Dataplex.V1.GlossaryCategory",
+            "name": "category"
+          },
+          {
+            "type": "System.String",
+            "name": "categoryId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Dataplex.V1.GlossaryCategory>",
+        "client": {
+          "shortName": "BusinessGlossaryServiceClient",
+          "fullName": "Google.Cloud.Dataplex.V1.BusinessGlossaryServiceClient"
+        },
+        "method": {
+          "shortName": "CreateGlossaryCategory",
+          "fullName": "google.cloud.dataplex.v1.BusinessGlossaryService.CreateGlossaryCategory",
+          "service": {
+            "shortName": "BusinessGlossaryService",
+            "fullName": "google.cloud.dataplex.v1.BusinessGlossaryService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 22,
+          "end": 46,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 44,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "dataplex_v1_generated_BusinessGlossaryService_UpdateGlossaryCategory_sync",
+      "title": "UpdateGlossaryCategoryRequestObject",
+      "description": "Snippet for UpdateGlossaryCategory",
+      "file": "BusinessGlossaryServiceClient.UpdateGlossaryCategoryRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateGlossaryCategory",
+        "fullName": "Google.Cloud.Dataplex.V1.BusinessGlossaryServiceClient.UpdateGlossaryCategory",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Dataplex.V1.UpdateGlossaryCategoryRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.Dataplex.V1.GlossaryCategory",
+        "client": {
+          "shortName": "BusinessGlossaryServiceClient",
+          "fullName": "Google.Cloud.Dataplex.V1.BusinessGlossaryServiceClient"
+        },
+        "method": {
+          "shortName": "UpdateGlossaryCategory",
+          "fullName": "google.cloud.dataplex.v1.BusinessGlossaryService.UpdateGlossaryCategory",
+          "service": {
+            "shortName": "BusinessGlossaryService",
+            "fullName": "google.cloud.dataplex.v1.BusinessGlossaryService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 46,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 44,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "dataplex_v1_generated_BusinessGlossaryService_UpdateGlossaryCategory_async",
+      "title": "UpdateGlossaryCategoryRequestObjectAsync",
+      "description": "Snippet for UpdateGlossaryCategoryAsync",
+      "file": "BusinessGlossaryServiceClient.UpdateGlossaryCategoryRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateGlossaryCategoryAsync",
+        "fullName": "Google.Cloud.Dataplex.V1.BusinessGlossaryServiceClient.UpdateGlossaryCategoryAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Dataplex.V1.UpdateGlossaryCategoryRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Dataplex.V1.GlossaryCategory>",
+        "client": {
+          "shortName": "BusinessGlossaryServiceClient",
+          "fullName": "Google.Cloud.Dataplex.V1.BusinessGlossaryServiceClient"
+        },
+        "method": {
+          "shortName": "UpdateGlossaryCategory",
+          "fullName": "google.cloud.dataplex.v1.BusinessGlossaryService.UpdateGlossaryCategory",
+          "service": {
+            "shortName": "BusinessGlossaryService",
+            "fullName": "google.cloud.dataplex.v1.BusinessGlossaryService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 22,
+          "end": 49,
+          "type": "FULL"
+        },
+        {
+          "start": 38,
+          "end": 47,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "dataplex_v1_generated_BusinessGlossaryService_UpdateGlossaryCategory_sync_flattened",
+      "title": "UpdateGlossaryCategory",
+      "description": "Snippet for UpdateGlossaryCategory",
+      "file": "BusinessGlossaryServiceClient.UpdateGlossaryCategorySnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateGlossaryCategory",
+        "fullName": "Google.Cloud.Dataplex.V1.BusinessGlossaryServiceClient.UpdateGlossaryCategory",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Dataplex.V1.GlossaryCategory",
+            "name": "category"
+          },
+          {
+            "type": "Google.Protobuf.WellKnownTypes.FieldMask",
+            "name": "updateMask"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.Dataplex.V1.GlossaryCategory",
+        "client": {
+          "shortName": "BusinessGlossaryServiceClient",
+          "fullName": "Google.Cloud.Dataplex.V1.BusinessGlossaryServiceClient"
+        },
+        "method": {
+          "shortName": "UpdateGlossaryCategory",
+          "fullName": "google.cloud.dataplex.v1.BusinessGlossaryService.UpdateGlossaryCategory",
+          "service": {
+            "shortName": "BusinessGlossaryService",
+            "fullName": "google.cloud.dataplex.v1.BusinessGlossaryService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 43,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 41,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "dataplex_v1_generated_BusinessGlossaryService_UpdateGlossaryCategory_async_flattened",
+      "title": "UpdateGlossaryCategoryAsync",
+      "description": "Snippet for UpdateGlossaryCategoryAsync",
+      "file": "BusinessGlossaryServiceClient.UpdateGlossaryCategoryAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateGlossaryCategoryAsync",
+        "fullName": "Google.Cloud.Dataplex.V1.BusinessGlossaryServiceClient.UpdateGlossaryCategoryAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Dataplex.V1.GlossaryCategory",
+            "name": "category"
+          },
+          {
+            "type": "Google.Protobuf.WellKnownTypes.FieldMask",
+            "name": "updateMask"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Dataplex.V1.GlossaryCategory>",
+        "client": {
+          "shortName": "BusinessGlossaryServiceClient",
+          "fullName": "Google.Cloud.Dataplex.V1.BusinessGlossaryServiceClient"
+        },
+        "method": {
+          "shortName": "UpdateGlossaryCategory",
+          "fullName": "google.cloud.dataplex.v1.BusinessGlossaryService.UpdateGlossaryCategory",
+          "service": {
+            "shortName": "BusinessGlossaryService",
+            "fullName": "google.cloud.dataplex.v1.BusinessGlossaryService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 22,
+          "end": 46,
+          "type": "FULL"
+        },
+        {
+          "start": 38,
+          "end": 44,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "dataplex_v1_generated_BusinessGlossaryService_DeleteGlossaryCategory_sync",
+      "title": "DeleteGlossaryCategoryRequestObject",
+      "description": "Snippet for DeleteGlossaryCategory",
+      "file": "BusinessGlossaryServiceClient.DeleteGlossaryCategoryRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteGlossaryCategory",
+        "fullName": "Google.Cloud.Dataplex.V1.BusinessGlossaryServiceClient.DeleteGlossaryCategory",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Dataplex.V1.DeleteGlossaryCategoryRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "client": {
+          "shortName": "BusinessGlossaryServiceClient",
+          "fullName": "Google.Cloud.Dataplex.V1.BusinessGlossaryServiceClient"
+        },
+        "method": {
+          "shortName": "DeleteGlossaryCategory",
+          "fullName": "google.cloud.dataplex.v1.BusinessGlossaryService.DeleteGlossaryCategory",
+          "service": {
+            "shortName": "BusinessGlossaryService",
+            "fullName": "google.cloud.dataplex.v1.BusinessGlossaryService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 44,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 42,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "dataplex_v1_generated_BusinessGlossaryService_DeleteGlossaryCategory_async",
+      "title": "DeleteGlossaryCategoryRequestObjectAsync",
+      "description": "Snippet for DeleteGlossaryCategoryAsync",
+      "file": "BusinessGlossaryServiceClient.DeleteGlossaryCategoryRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteGlossaryCategoryAsync",
+        "fullName": "Google.Cloud.Dataplex.V1.BusinessGlossaryServiceClient.DeleteGlossaryCategoryAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Dataplex.V1.DeleteGlossaryCategoryRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task",
+        "client": {
+          "shortName": "BusinessGlossaryServiceClient",
+          "fullName": "Google.Cloud.Dataplex.V1.BusinessGlossaryServiceClient"
+        },
+        "method": {
+          "shortName": "DeleteGlossaryCategory",
+          "fullName": "google.cloud.dataplex.v1.BusinessGlossaryService.DeleteGlossaryCategory",
+          "service": {
+            "shortName": "BusinessGlossaryService",
+            "fullName": "google.cloud.dataplex.v1.BusinessGlossaryService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 22,
+          "end": 47,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 45,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "dataplex_v1_generated_BusinessGlossaryService_DeleteGlossaryCategory_sync_flattened",
+      "title": "DeleteGlossaryCategory",
+      "description": "Snippet for DeleteGlossaryCategory",
+      "file": "BusinessGlossaryServiceClient.DeleteGlossaryCategorySnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteGlossaryCategory",
+        "fullName": "Google.Cloud.Dataplex.V1.BusinessGlossaryServiceClient.DeleteGlossaryCategory",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "client": {
+          "shortName": "BusinessGlossaryServiceClient",
+          "fullName": "Google.Cloud.Dataplex.V1.BusinessGlossaryServiceClient"
+        },
+        "method": {
+          "shortName": "DeleteGlossaryCategory",
+          "fullName": "google.cloud.dataplex.v1.BusinessGlossaryService.DeleteGlossaryCategory",
+          "service": {
+            "shortName": "BusinessGlossaryService",
+            "fullName": "google.cloud.dataplex.v1.BusinessGlossaryService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "dataplex_v1_generated_BusinessGlossaryService_DeleteGlossaryCategory_async_flattened",
+      "title": "DeleteGlossaryCategoryAsync",
+      "description": "Snippet for DeleteGlossaryCategoryAsync",
+      "file": "BusinessGlossaryServiceClient.DeleteGlossaryCategoryAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteGlossaryCategoryAsync",
+        "fullName": "Google.Cloud.Dataplex.V1.BusinessGlossaryServiceClient.DeleteGlossaryCategoryAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task",
+        "client": {
+          "shortName": "BusinessGlossaryServiceClient",
+          "fullName": "Google.Cloud.Dataplex.V1.BusinessGlossaryServiceClient"
+        },
+        "method": {
+          "shortName": "DeleteGlossaryCategory",
+          "fullName": "google.cloud.dataplex.v1.BusinessGlossaryService.DeleteGlossaryCategory",
+          "service": {
+            "shortName": "BusinessGlossaryService",
+            "fullName": "google.cloud.dataplex.v1.BusinessGlossaryService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 22,
+          "end": 44,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 42,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "dataplex_v1_generated_BusinessGlossaryService_DeleteGlossaryCategory_sync_flattened_resourceNames",
+      "title": "DeleteGlossaryCategoryResourceNames",
+      "description": "Snippet for DeleteGlossaryCategory",
+      "file": "BusinessGlossaryServiceClient.DeleteGlossaryCategoryResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteGlossaryCategory",
+        "fullName": "Google.Cloud.Dataplex.V1.BusinessGlossaryServiceClient.DeleteGlossaryCategory",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Dataplex.V1.GlossaryCategoryName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "client": {
+          "shortName": "BusinessGlossaryServiceClient",
+          "fullName": "Google.Cloud.Dataplex.V1.BusinessGlossaryServiceClient"
+        },
+        "method": {
+          "shortName": "DeleteGlossaryCategory",
+          "fullName": "google.cloud.dataplex.v1.BusinessGlossaryService.DeleteGlossaryCategory",
+          "service": {
+            "shortName": "BusinessGlossaryService",
+            "fullName": "google.cloud.dataplex.v1.BusinessGlossaryService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "dataplex_v1_generated_BusinessGlossaryService_DeleteGlossaryCategory_async_flattened_resourceNames",
+      "title": "DeleteGlossaryCategoryResourceNamesAsync",
+      "description": "Snippet for DeleteGlossaryCategoryAsync",
+      "file": "BusinessGlossaryServiceClient.DeleteGlossaryCategoryResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteGlossaryCategoryAsync",
+        "fullName": "Google.Cloud.Dataplex.V1.BusinessGlossaryServiceClient.DeleteGlossaryCategoryAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Dataplex.V1.GlossaryCategoryName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task",
+        "client": {
+          "shortName": "BusinessGlossaryServiceClient",
+          "fullName": "Google.Cloud.Dataplex.V1.BusinessGlossaryServiceClient"
+        },
+        "method": {
+          "shortName": "DeleteGlossaryCategory",
+          "fullName": "google.cloud.dataplex.v1.BusinessGlossaryService.DeleteGlossaryCategory",
+          "service": {
+            "shortName": "BusinessGlossaryService",
+            "fullName": "google.cloud.dataplex.v1.BusinessGlossaryService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 22,
+          "end": 44,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 42,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "dataplex_v1_generated_BusinessGlossaryService_GetGlossaryCategory_sync",
+      "title": "GetGlossaryCategoryRequestObject",
+      "description": "Snippet for GetGlossaryCategory",
+      "file": "BusinessGlossaryServiceClient.GetGlossaryCategoryRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetGlossaryCategory",
+        "fullName": "Google.Cloud.Dataplex.V1.BusinessGlossaryServiceClient.GetGlossaryCategory",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Dataplex.V1.GetGlossaryCategoryRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.Dataplex.V1.GlossaryCategory",
+        "client": {
+          "shortName": "BusinessGlossaryServiceClient",
+          "fullName": "Google.Cloud.Dataplex.V1.BusinessGlossaryServiceClient"
+        },
+        "method": {
+          "shortName": "GetGlossaryCategory",
+          "fullName": "google.cloud.dataplex.v1.BusinessGlossaryService.GetGlossaryCategory",
+          "service": {
+            "shortName": "BusinessGlossaryService",
+            "fullName": "google.cloud.dataplex.v1.BusinessGlossaryService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 44,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 42,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "dataplex_v1_generated_BusinessGlossaryService_GetGlossaryCategory_async",
+      "title": "GetGlossaryCategoryRequestObjectAsync",
+      "description": "Snippet for GetGlossaryCategoryAsync",
+      "file": "BusinessGlossaryServiceClient.GetGlossaryCategoryRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetGlossaryCategoryAsync",
+        "fullName": "Google.Cloud.Dataplex.V1.BusinessGlossaryServiceClient.GetGlossaryCategoryAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Dataplex.V1.GetGlossaryCategoryRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Dataplex.V1.GlossaryCategory>",
+        "client": {
+          "shortName": "BusinessGlossaryServiceClient",
+          "fullName": "Google.Cloud.Dataplex.V1.BusinessGlossaryServiceClient"
+        },
+        "method": {
+          "shortName": "GetGlossaryCategory",
+          "fullName": "google.cloud.dataplex.v1.BusinessGlossaryService.GetGlossaryCategory",
+          "service": {
+            "shortName": "BusinessGlossaryService",
+            "fullName": "google.cloud.dataplex.v1.BusinessGlossaryService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 22,
+          "end": 47,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 45,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "dataplex_v1_generated_BusinessGlossaryService_GetGlossaryCategory_sync_flattened",
+      "title": "GetGlossaryCategory",
+      "description": "Snippet for GetGlossaryCategory",
+      "file": "BusinessGlossaryServiceClient.GetGlossaryCategorySnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetGlossaryCategory",
+        "fullName": "Google.Cloud.Dataplex.V1.BusinessGlossaryServiceClient.GetGlossaryCategory",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.Dataplex.V1.GlossaryCategory",
+        "client": {
+          "shortName": "BusinessGlossaryServiceClient",
+          "fullName": "Google.Cloud.Dataplex.V1.BusinessGlossaryServiceClient"
+        },
+        "method": {
+          "shortName": "GetGlossaryCategory",
+          "fullName": "google.cloud.dataplex.v1.BusinessGlossaryService.GetGlossaryCategory",
+          "service": {
+            "shortName": "BusinessGlossaryService",
+            "fullName": "google.cloud.dataplex.v1.BusinessGlossaryService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "dataplex_v1_generated_BusinessGlossaryService_GetGlossaryCategory_async_flattened",
+      "title": "GetGlossaryCategoryAsync",
+      "description": "Snippet for GetGlossaryCategoryAsync",
+      "file": "BusinessGlossaryServiceClient.GetGlossaryCategoryAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetGlossaryCategoryAsync",
+        "fullName": "Google.Cloud.Dataplex.V1.BusinessGlossaryServiceClient.GetGlossaryCategoryAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Dataplex.V1.GlossaryCategory>",
+        "client": {
+          "shortName": "BusinessGlossaryServiceClient",
+          "fullName": "Google.Cloud.Dataplex.V1.BusinessGlossaryServiceClient"
+        },
+        "method": {
+          "shortName": "GetGlossaryCategory",
+          "fullName": "google.cloud.dataplex.v1.BusinessGlossaryService.GetGlossaryCategory",
+          "service": {
+            "shortName": "BusinessGlossaryService",
+            "fullName": "google.cloud.dataplex.v1.BusinessGlossaryService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 22,
+          "end": 44,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 42,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "dataplex_v1_generated_BusinessGlossaryService_GetGlossaryCategory_sync_flattened_resourceNames",
+      "title": "GetGlossaryCategoryResourceNames",
+      "description": "Snippet for GetGlossaryCategory",
+      "file": "BusinessGlossaryServiceClient.GetGlossaryCategoryResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetGlossaryCategory",
+        "fullName": "Google.Cloud.Dataplex.V1.BusinessGlossaryServiceClient.GetGlossaryCategory",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Dataplex.V1.GlossaryCategoryName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.Dataplex.V1.GlossaryCategory",
+        "client": {
+          "shortName": "BusinessGlossaryServiceClient",
+          "fullName": "Google.Cloud.Dataplex.V1.BusinessGlossaryServiceClient"
+        },
+        "method": {
+          "shortName": "GetGlossaryCategory",
+          "fullName": "google.cloud.dataplex.v1.BusinessGlossaryService.GetGlossaryCategory",
+          "service": {
+            "shortName": "BusinessGlossaryService",
+            "fullName": "google.cloud.dataplex.v1.BusinessGlossaryService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "dataplex_v1_generated_BusinessGlossaryService_GetGlossaryCategory_async_flattened_resourceNames",
+      "title": "GetGlossaryCategoryResourceNamesAsync",
+      "description": "Snippet for GetGlossaryCategoryAsync",
+      "file": "BusinessGlossaryServiceClient.GetGlossaryCategoryResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetGlossaryCategoryAsync",
+        "fullName": "Google.Cloud.Dataplex.V1.BusinessGlossaryServiceClient.GetGlossaryCategoryAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Dataplex.V1.GlossaryCategoryName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Dataplex.V1.GlossaryCategory>",
+        "client": {
+          "shortName": "BusinessGlossaryServiceClient",
+          "fullName": "Google.Cloud.Dataplex.V1.BusinessGlossaryServiceClient"
+        },
+        "method": {
+          "shortName": "GetGlossaryCategory",
+          "fullName": "google.cloud.dataplex.v1.BusinessGlossaryService.GetGlossaryCategory",
+          "service": {
+            "shortName": "BusinessGlossaryService",
+            "fullName": "google.cloud.dataplex.v1.BusinessGlossaryService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 22,
+          "end": 44,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 42,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "dataplex_v1_generated_BusinessGlossaryService_ListGlossaryCategories_sync",
+      "title": "ListGlossaryCategoriesRequestObject",
+      "description": "Snippet for ListGlossaryCategories",
+      "file": "BusinessGlossaryServiceClient.ListGlossaryCategoriesRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListGlossaryCategories",
+        "fullName": "Google.Cloud.Dataplex.V1.BusinessGlossaryServiceClient.ListGlossaryCategories",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Dataplex.V1.ListGlossaryCategoriesRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.Dataplex.V1.ListGlossaryCategoriesResponse, Google.Cloud.Dataplex.V1.GlossaryCategory>",
+        "client": {
+          "shortName": "BusinessGlossaryServiceClient",
+          "fullName": "Google.Cloud.Dataplex.V1.BusinessGlossaryServiceClient"
+        },
+        "method": {
+          "shortName": "ListGlossaryCategories",
+          "fullName": "google.cloud.dataplex.v1.BusinessGlossaryService.ListGlossaryCategories",
+          "service": {
+            "shortName": "BusinessGlossaryService",
+            "fullName": "google.cloud.dataplex.v1.BusinessGlossaryService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 80,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 78,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "dataplex_v1_generated_BusinessGlossaryService_ListGlossaryCategories_async",
+      "title": "ListGlossaryCategoriesRequestObjectAsync",
+      "description": "Snippet for ListGlossaryCategoriesAsync",
+      "file": "BusinessGlossaryServiceClient.ListGlossaryCategoriesRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListGlossaryCategoriesAsync",
+        "fullName": "Google.Cloud.Dataplex.V1.BusinessGlossaryServiceClient.ListGlossaryCategoriesAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Dataplex.V1.ListGlossaryCategoriesRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.Dataplex.V1.ListGlossaryCategoriesResponse, Google.Cloud.Dataplex.V1.GlossaryCategory>",
+        "client": {
+          "shortName": "BusinessGlossaryServiceClient",
+          "fullName": "Google.Cloud.Dataplex.V1.BusinessGlossaryServiceClient"
+        },
+        "method": {
+          "shortName": "ListGlossaryCategories",
+          "fullName": "google.cloud.dataplex.v1.BusinessGlossaryService.ListGlossaryCategories",
+          "service": {
+            "shortName": "BusinessGlossaryService",
+            "fullName": "google.cloud.dataplex.v1.BusinessGlossaryService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 22,
+          "end": 84,
+          "type": "FULL"
+        },
+        {
+          "start": 40,
+          "end": 82,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "dataplex_v1_generated_BusinessGlossaryService_ListGlossaryCategories_sync_flattened",
+      "title": "ListGlossaryCategories",
+      "description": "Snippet for ListGlossaryCategories",
+      "file": "BusinessGlossaryServiceClient.ListGlossaryCategoriesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListGlossaryCategories",
+        "fullName": "Google.Cloud.Dataplex.V1.BusinessGlossaryServiceClient.ListGlossaryCategories",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.Dataplex.V1.ListGlossaryCategoriesResponse, Google.Cloud.Dataplex.V1.GlossaryCategory>",
+        "client": {
+          "shortName": "BusinessGlossaryServiceClient",
+          "fullName": "Google.Cloud.Dataplex.V1.BusinessGlossaryServiceClient"
+        },
+        "method": {
+          "shortName": "ListGlossaryCategories",
+          "fullName": "google.cloud.dataplex.v1.BusinessGlossaryService.ListGlossaryCategories",
+          "service": {
+            "shortName": "BusinessGlossaryService",
+            "fullName": "google.cloud.dataplex.v1.BusinessGlossaryService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 75,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 73,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "dataplex_v1_generated_BusinessGlossaryService_ListGlossaryCategories_async_flattened",
+      "title": "ListGlossaryCategoriesAsync",
+      "description": "Snippet for ListGlossaryCategoriesAsync",
+      "file": "BusinessGlossaryServiceClient.ListGlossaryCategoriesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListGlossaryCategoriesAsync",
+        "fullName": "Google.Cloud.Dataplex.V1.BusinessGlossaryServiceClient.ListGlossaryCategoriesAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.Dataplex.V1.ListGlossaryCategoriesResponse, Google.Cloud.Dataplex.V1.GlossaryCategory>",
+        "client": {
+          "shortName": "BusinessGlossaryServiceClient",
+          "fullName": "Google.Cloud.Dataplex.V1.BusinessGlossaryServiceClient"
+        },
+        "method": {
+          "shortName": "ListGlossaryCategories",
+          "fullName": "google.cloud.dataplex.v1.BusinessGlossaryService.ListGlossaryCategories",
+          "service": {
+            "shortName": "BusinessGlossaryService",
+            "fullName": "google.cloud.dataplex.v1.BusinessGlossaryService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 22,
+          "end": 79,
+          "type": "FULL"
+        },
+        {
+          "start": 40,
+          "end": 77,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "dataplex_v1_generated_BusinessGlossaryService_ListGlossaryCategories_sync_flattened_resourceNames",
+      "title": "ListGlossaryCategoriesResourceNames",
+      "description": "Snippet for ListGlossaryCategories",
+      "file": "BusinessGlossaryServiceClient.ListGlossaryCategoriesResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListGlossaryCategories",
+        "fullName": "Google.Cloud.Dataplex.V1.BusinessGlossaryServiceClient.ListGlossaryCategories",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Dataplex.V1.GlossaryName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.Dataplex.V1.ListGlossaryCategoriesResponse, Google.Cloud.Dataplex.V1.GlossaryCategory>",
+        "client": {
+          "shortName": "BusinessGlossaryServiceClient",
+          "fullName": "Google.Cloud.Dataplex.V1.BusinessGlossaryServiceClient"
+        },
+        "method": {
+          "shortName": "ListGlossaryCategories",
+          "fullName": "google.cloud.dataplex.v1.BusinessGlossaryService.ListGlossaryCategories",
+          "service": {
+            "shortName": "BusinessGlossaryService",
+            "fullName": "google.cloud.dataplex.v1.BusinessGlossaryService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 75,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 73,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "dataplex_v1_generated_BusinessGlossaryService_ListGlossaryCategories_async_flattened_resourceNames",
+      "title": "ListGlossaryCategoriesResourceNamesAsync",
+      "description": "Snippet for ListGlossaryCategoriesAsync",
+      "file": "BusinessGlossaryServiceClient.ListGlossaryCategoriesResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListGlossaryCategoriesAsync",
+        "fullName": "Google.Cloud.Dataplex.V1.BusinessGlossaryServiceClient.ListGlossaryCategoriesAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Dataplex.V1.GlossaryName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.Dataplex.V1.ListGlossaryCategoriesResponse, Google.Cloud.Dataplex.V1.GlossaryCategory>",
+        "client": {
+          "shortName": "BusinessGlossaryServiceClient",
+          "fullName": "Google.Cloud.Dataplex.V1.BusinessGlossaryServiceClient"
+        },
+        "method": {
+          "shortName": "ListGlossaryCategories",
+          "fullName": "google.cloud.dataplex.v1.BusinessGlossaryService.ListGlossaryCategories",
+          "service": {
+            "shortName": "BusinessGlossaryService",
+            "fullName": "google.cloud.dataplex.v1.BusinessGlossaryService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 22,
+          "end": 79,
+          "type": "FULL"
+        },
+        {
+          "start": 40,
+          "end": 77,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "dataplex_v1_generated_BusinessGlossaryService_CreateGlossaryTerm_sync",
+      "title": "CreateGlossaryTermRequestObject",
+      "description": "Snippet for CreateGlossaryTerm",
+      "file": "BusinessGlossaryServiceClient.CreateGlossaryTermRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateGlossaryTerm",
+        "fullName": "Google.Cloud.Dataplex.V1.BusinessGlossaryServiceClient.CreateGlossaryTerm",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Dataplex.V1.CreateGlossaryTermRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.Dataplex.V1.GlossaryTerm",
+        "client": {
+          "shortName": "BusinessGlossaryServiceClient",
+          "fullName": "Google.Cloud.Dataplex.V1.BusinessGlossaryServiceClient"
+        },
+        "method": {
+          "shortName": "CreateGlossaryTerm",
+          "fullName": "google.cloud.dataplex.v1.BusinessGlossaryService.CreateGlossaryTerm",
+          "service": {
+            "shortName": "BusinessGlossaryService",
+            "fullName": "google.cloud.dataplex.v1.BusinessGlossaryService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 46,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 44,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "dataplex_v1_generated_BusinessGlossaryService_CreateGlossaryTerm_async",
+      "title": "CreateGlossaryTermRequestObjectAsync",
+      "description": "Snippet for CreateGlossaryTermAsync",
+      "file": "BusinessGlossaryServiceClient.CreateGlossaryTermRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateGlossaryTermAsync",
+        "fullName": "Google.Cloud.Dataplex.V1.BusinessGlossaryServiceClient.CreateGlossaryTermAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Dataplex.V1.CreateGlossaryTermRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Dataplex.V1.GlossaryTerm>",
+        "client": {
+          "shortName": "BusinessGlossaryServiceClient",
+          "fullName": "Google.Cloud.Dataplex.V1.BusinessGlossaryServiceClient"
+        },
+        "method": {
+          "shortName": "CreateGlossaryTerm",
+          "fullName": "google.cloud.dataplex.v1.BusinessGlossaryService.CreateGlossaryTerm",
+          "service": {
+            "shortName": "BusinessGlossaryService",
+            "fullName": "google.cloud.dataplex.v1.BusinessGlossaryService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 22,
+          "end": 49,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 47,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "dataplex_v1_generated_BusinessGlossaryService_CreateGlossaryTerm_sync_flattened",
+      "title": "CreateGlossaryTerm",
+      "description": "Snippet for CreateGlossaryTerm",
+      "file": "BusinessGlossaryServiceClient.CreateGlossaryTermSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateGlossaryTerm",
+        "fullName": "Google.Cloud.Dataplex.V1.BusinessGlossaryServiceClient.CreateGlossaryTerm",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.Dataplex.V1.GlossaryTerm",
+            "name": "term"
+          },
+          {
+            "type": "System.String",
+            "name": "termId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.Dataplex.V1.GlossaryTerm",
+        "client": {
+          "shortName": "BusinessGlossaryServiceClient",
+          "fullName": "Google.Cloud.Dataplex.V1.BusinessGlossaryServiceClient"
+        },
+        "method": {
+          "shortName": "CreateGlossaryTerm",
+          "fullName": "google.cloud.dataplex.v1.BusinessGlossaryService.CreateGlossaryTerm",
+          "service": {
+            "shortName": "BusinessGlossaryService",
+            "fullName": "google.cloud.dataplex.v1.BusinessGlossaryService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 43,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 41,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "dataplex_v1_generated_BusinessGlossaryService_CreateGlossaryTerm_async_flattened",
+      "title": "CreateGlossaryTermAsync",
+      "description": "Snippet for CreateGlossaryTermAsync",
+      "file": "BusinessGlossaryServiceClient.CreateGlossaryTermAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateGlossaryTermAsync",
+        "fullName": "Google.Cloud.Dataplex.V1.BusinessGlossaryServiceClient.CreateGlossaryTermAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.Dataplex.V1.GlossaryTerm",
+            "name": "term"
+          },
+          {
+            "type": "System.String",
+            "name": "termId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Dataplex.V1.GlossaryTerm>",
+        "client": {
+          "shortName": "BusinessGlossaryServiceClient",
+          "fullName": "Google.Cloud.Dataplex.V1.BusinessGlossaryServiceClient"
+        },
+        "method": {
+          "shortName": "CreateGlossaryTerm",
+          "fullName": "google.cloud.dataplex.v1.BusinessGlossaryService.CreateGlossaryTerm",
+          "service": {
+            "shortName": "BusinessGlossaryService",
+            "fullName": "google.cloud.dataplex.v1.BusinessGlossaryService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 22,
+          "end": 46,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 44,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "dataplex_v1_generated_BusinessGlossaryService_CreateGlossaryTerm_sync_flattened_resourceNames",
+      "title": "CreateGlossaryTermResourceNames",
+      "description": "Snippet for CreateGlossaryTerm",
+      "file": "BusinessGlossaryServiceClient.CreateGlossaryTermResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateGlossaryTerm",
+        "fullName": "Google.Cloud.Dataplex.V1.BusinessGlossaryServiceClient.CreateGlossaryTerm",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Dataplex.V1.GlossaryName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.Dataplex.V1.GlossaryTerm",
+            "name": "term"
+          },
+          {
+            "type": "System.String",
+            "name": "termId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.Dataplex.V1.GlossaryTerm",
+        "client": {
+          "shortName": "BusinessGlossaryServiceClient",
+          "fullName": "Google.Cloud.Dataplex.V1.BusinessGlossaryServiceClient"
+        },
+        "method": {
+          "shortName": "CreateGlossaryTerm",
+          "fullName": "google.cloud.dataplex.v1.BusinessGlossaryService.CreateGlossaryTerm",
+          "service": {
+            "shortName": "BusinessGlossaryService",
+            "fullName": "google.cloud.dataplex.v1.BusinessGlossaryService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 43,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 41,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "dataplex_v1_generated_BusinessGlossaryService_CreateGlossaryTerm_async_flattened_resourceNames",
+      "title": "CreateGlossaryTermResourceNamesAsync",
+      "description": "Snippet for CreateGlossaryTermAsync",
+      "file": "BusinessGlossaryServiceClient.CreateGlossaryTermResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateGlossaryTermAsync",
+        "fullName": "Google.Cloud.Dataplex.V1.BusinessGlossaryServiceClient.CreateGlossaryTermAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Dataplex.V1.GlossaryName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.Dataplex.V1.GlossaryTerm",
+            "name": "term"
+          },
+          {
+            "type": "System.String",
+            "name": "termId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Dataplex.V1.GlossaryTerm>",
+        "client": {
+          "shortName": "BusinessGlossaryServiceClient",
+          "fullName": "Google.Cloud.Dataplex.V1.BusinessGlossaryServiceClient"
+        },
+        "method": {
+          "shortName": "CreateGlossaryTerm",
+          "fullName": "google.cloud.dataplex.v1.BusinessGlossaryService.CreateGlossaryTerm",
+          "service": {
+            "shortName": "BusinessGlossaryService",
+            "fullName": "google.cloud.dataplex.v1.BusinessGlossaryService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 22,
+          "end": 46,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 44,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "dataplex_v1_generated_BusinessGlossaryService_UpdateGlossaryTerm_sync",
+      "title": "UpdateGlossaryTermRequestObject",
+      "description": "Snippet for UpdateGlossaryTerm",
+      "file": "BusinessGlossaryServiceClient.UpdateGlossaryTermRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateGlossaryTerm",
+        "fullName": "Google.Cloud.Dataplex.V1.BusinessGlossaryServiceClient.UpdateGlossaryTerm",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Dataplex.V1.UpdateGlossaryTermRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.Dataplex.V1.GlossaryTerm",
+        "client": {
+          "shortName": "BusinessGlossaryServiceClient",
+          "fullName": "Google.Cloud.Dataplex.V1.BusinessGlossaryServiceClient"
+        },
+        "method": {
+          "shortName": "UpdateGlossaryTerm",
+          "fullName": "google.cloud.dataplex.v1.BusinessGlossaryService.UpdateGlossaryTerm",
+          "service": {
+            "shortName": "BusinessGlossaryService",
+            "fullName": "google.cloud.dataplex.v1.BusinessGlossaryService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 46,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 44,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "dataplex_v1_generated_BusinessGlossaryService_UpdateGlossaryTerm_async",
+      "title": "UpdateGlossaryTermRequestObjectAsync",
+      "description": "Snippet for UpdateGlossaryTermAsync",
+      "file": "BusinessGlossaryServiceClient.UpdateGlossaryTermRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateGlossaryTermAsync",
+        "fullName": "Google.Cloud.Dataplex.V1.BusinessGlossaryServiceClient.UpdateGlossaryTermAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Dataplex.V1.UpdateGlossaryTermRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Dataplex.V1.GlossaryTerm>",
+        "client": {
+          "shortName": "BusinessGlossaryServiceClient",
+          "fullName": "Google.Cloud.Dataplex.V1.BusinessGlossaryServiceClient"
+        },
+        "method": {
+          "shortName": "UpdateGlossaryTerm",
+          "fullName": "google.cloud.dataplex.v1.BusinessGlossaryService.UpdateGlossaryTerm",
+          "service": {
+            "shortName": "BusinessGlossaryService",
+            "fullName": "google.cloud.dataplex.v1.BusinessGlossaryService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 22,
+          "end": 49,
+          "type": "FULL"
+        },
+        {
+          "start": 38,
+          "end": 47,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "dataplex_v1_generated_BusinessGlossaryService_UpdateGlossaryTerm_sync_flattened",
+      "title": "UpdateGlossaryTerm",
+      "description": "Snippet for UpdateGlossaryTerm",
+      "file": "BusinessGlossaryServiceClient.UpdateGlossaryTermSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateGlossaryTerm",
+        "fullName": "Google.Cloud.Dataplex.V1.BusinessGlossaryServiceClient.UpdateGlossaryTerm",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Dataplex.V1.GlossaryTerm",
+            "name": "term"
+          },
+          {
+            "type": "Google.Protobuf.WellKnownTypes.FieldMask",
+            "name": "updateMask"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.Dataplex.V1.GlossaryTerm",
+        "client": {
+          "shortName": "BusinessGlossaryServiceClient",
+          "fullName": "Google.Cloud.Dataplex.V1.BusinessGlossaryServiceClient"
+        },
+        "method": {
+          "shortName": "UpdateGlossaryTerm",
+          "fullName": "google.cloud.dataplex.v1.BusinessGlossaryService.UpdateGlossaryTerm",
+          "service": {
+            "shortName": "BusinessGlossaryService",
+            "fullName": "google.cloud.dataplex.v1.BusinessGlossaryService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 43,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 41,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "dataplex_v1_generated_BusinessGlossaryService_UpdateGlossaryTerm_async_flattened",
+      "title": "UpdateGlossaryTermAsync",
+      "description": "Snippet for UpdateGlossaryTermAsync",
+      "file": "BusinessGlossaryServiceClient.UpdateGlossaryTermAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateGlossaryTermAsync",
+        "fullName": "Google.Cloud.Dataplex.V1.BusinessGlossaryServiceClient.UpdateGlossaryTermAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Dataplex.V1.GlossaryTerm",
+            "name": "term"
+          },
+          {
+            "type": "Google.Protobuf.WellKnownTypes.FieldMask",
+            "name": "updateMask"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Dataplex.V1.GlossaryTerm>",
+        "client": {
+          "shortName": "BusinessGlossaryServiceClient",
+          "fullName": "Google.Cloud.Dataplex.V1.BusinessGlossaryServiceClient"
+        },
+        "method": {
+          "shortName": "UpdateGlossaryTerm",
+          "fullName": "google.cloud.dataplex.v1.BusinessGlossaryService.UpdateGlossaryTerm",
+          "service": {
+            "shortName": "BusinessGlossaryService",
+            "fullName": "google.cloud.dataplex.v1.BusinessGlossaryService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 22,
+          "end": 46,
+          "type": "FULL"
+        },
+        {
+          "start": 38,
+          "end": 44,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "dataplex_v1_generated_BusinessGlossaryService_DeleteGlossaryTerm_sync",
+      "title": "DeleteGlossaryTermRequestObject",
+      "description": "Snippet for DeleteGlossaryTerm",
+      "file": "BusinessGlossaryServiceClient.DeleteGlossaryTermRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteGlossaryTerm",
+        "fullName": "Google.Cloud.Dataplex.V1.BusinessGlossaryServiceClient.DeleteGlossaryTerm",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Dataplex.V1.DeleteGlossaryTermRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "client": {
+          "shortName": "BusinessGlossaryServiceClient",
+          "fullName": "Google.Cloud.Dataplex.V1.BusinessGlossaryServiceClient"
+        },
+        "method": {
+          "shortName": "DeleteGlossaryTerm",
+          "fullName": "google.cloud.dataplex.v1.BusinessGlossaryService.DeleteGlossaryTerm",
+          "service": {
+            "shortName": "BusinessGlossaryService",
+            "fullName": "google.cloud.dataplex.v1.BusinessGlossaryService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 44,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 42,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "dataplex_v1_generated_BusinessGlossaryService_DeleteGlossaryTerm_async",
+      "title": "DeleteGlossaryTermRequestObjectAsync",
+      "description": "Snippet for DeleteGlossaryTermAsync",
+      "file": "BusinessGlossaryServiceClient.DeleteGlossaryTermRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteGlossaryTermAsync",
+        "fullName": "Google.Cloud.Dataplex.V1.BusinessGlossaryServiceClient.DeleteGlossaryTermAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Dataplex.V1.DeleteGlossaryTermRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task",
+        "client": {
+          "shortName": "BusinessGlossaryServiceClient",
+          "fullName": "Google.Cloud.Dataplex.V1.BusinessGlossaryServiceClient"
+        },
+        "method": {
+          "shortName": "DeleteGlossaryTerm",
+          "fullName": "google.cloud.dataplex.v1.BusinessGlossaryService.DeleteGlossaryTerm",
+          "service": {
+            "shortName": "BusinessGlossaryService",
+            "fullName": "google.cloud.dataplex.v1.BusinessGlossaryService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 22,
+          "end": 47,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 45,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "dataplex_v1_generated_BusinessGlossaryService_DeleteGlossaryTerm_sync_flattened",
+      "title": "DeleteGlossaryTerm",
+      "description": "Snippet for DeleteGlossaryTerm",
+      "file": "BusinessGlossaryServiceClient.DeleteGlossaryTermSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteGlossaryTerm",
+        "fullName": "Google.Cloud.Dataplex.V1.BusinessGlossaryServiceClient.DeleteGlossaryTerm",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "client": {
+          "shortName": "BusinessGlossaryServiceClient",
+          "fullName": "Google.Cloud.Dataplex.V1.BusinessGlossaryServiceClient"
+        },
+        "method": {
+          "shortName": "DeleteGlossaryTerm",
+          "fullName": "google.cloud.dataplex.v1.BusinessGlossaryService.DeleteGlossaryTerm",
+          "service": {
+            "shortName": "BusinessGlossaryService",
+            "fullName": "google.cloud.dataplex.v1.BusinessGlossaryService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "dataplex_v1_generated_BusinessGlossaryService_DeleteGlossaryTerm_async_flattened",
+      "title": "DeleteGlossaryTermAsync",
+      "description": "Snippet for DeleteGlossaryTermAsync",
+      "file": "BusinessGlossaryServiceClient.DeleteGlossaryTermAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteGlossaryTermAsync",
+        "fullName": "Google.Cloud.Dataplex.V1.BusinessGlossaryServiceClient.DeleteGlossaryTermAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task",
+        "client": {
+          "shortName": "BusinessGlossaryServiceClient",
+          "fullName": "Google.Cloud.Dataplex.V1.BusinessGlossaryServiceClient"
+        },
+        "method": {
+          "shortName": "DeleteGlossaryTerm",
+          "fullName": "google.cloud.dataplex.v1.BusinessGlossaryService.DeleteGlossaryTerm",
+          "service": {
+            "shortName": "BusinessGlossaryService",
+            "fullName": "google.cloud.dataplex.v1.BusinessGlossaryService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 22,
+          "end": 44,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 42,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "dataplex_v1_generated_BusinessGlossaryService_DeleteGlossaryTerm_sync_flattened_resourceNames",
+      "title": "DeleteGlossaryTermResourceNames",
+      "description": "Snippet for DeleteGlossaryTerm",
+      "file": "BusinessGlossaryServiceClient.DeleteGlossaryTermResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteGlossaryTerm",
+        "fullName": "Google.Cloud.Dataplex.V1.BusinessGlossaryServiceClient.DeleteGlossaryTerm",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Dataplex.V1.GlossaryTermName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "client": {
+          "shortName": "BusinessGlossaryServiceClient",
+          "fullName": "Google.Cloud.Dataplex.V1.BusinessGlossaryServiceClient"
+        },
+        "method": {
+          "shortName": "DeleteGlossaryTerm",
+          "fullName": "google.cloud.dataplex.v1.BusinessGlossaryService.DeleteGlossaryTerm",
+          "service": {
+            "shortName": "BusinessGlossaryService",
+            "fullName": "google.cloud.dataplex.v1.BusinessGlossaryService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "dataplex_v1_generated_BusinessGlossaryService_DeleteGlossaryTerm_async_flattened_resourceNames",
+      "title": "DeleteGlossaryTermResourceNamesAsync",
+      "description": "Snippet for DeleteGlossaryTermAsync",
+      "file": "BusinessGlossaryServiceClient.DeleteGlossaryTermResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteGlossaryTermAsync",
+        "fullName": "Google.Cloud.Dataplex.V1.BusinessGlossaryServiceClient.DeleteGlossaryTermAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Dataplex.V1.GlossaryTermName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task",
+        "client": {
+          "shortName": "BusinessGlossaryServiceClient",
+          "fullName": "Google.Cloud.Dataplex.V1.BusinessGlossaryServiceClient"
+        },
+        "method": {
+          "shortName": "DeleteGlossaryTerm",
+          "fullName": "google.cloud.dataplex.v1.BusinessGlossaryService.DeleteGlossaryTerm",
+          "service": {
+            "shortName": "BusinessGlossaryService",
+            "fullName": "google.cloud.dataplex.v1.BusinessGlossaryService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 22,
+          "end": 44,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 42,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "dataplex_v1_generated_BusinessGlossaryService_GetGlossaryTerm_sync",
+      "title": "GetGlossaryTermRequestObject",
+      "description": "Snippet for GetGlossaryTerm",
+      "file": "BusinessGlossaryServiceClient.GetGlossaryTermRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetGlossaryTerm",
+        "fullName": "Google.Cloud.Dataplex.V1.BusinessGlossaryServiceClient.GetGlossaryTerm",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Dataplex.V1.GetGlossaryTermRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.Dataplex.V1.GlossaryTerm",
+        "client": {
+          "shortName": "BusinessGlossaryServiceClient",
+          "fullName": "Google.Cloud.Dataplex.V1.BusinessGlossaryServiceClient"
+        },
+        "method": {
+          "shortName": "GetGlossaryTerm",
+          "fullName": "google.cloud.dataplex.v1.BusinessGlossaryService.GetGlossaryTerm",
+          "service": {
+            "shortName": "BusinessGlossaryService",
+            "fullName": "google.cloud.dataplex.v1.BusinessGlossaryService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 44,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 42,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "dataplex_v1_generated_BusinessGlossaryService_GetGlossaryTerm_async",
+      "title": "GetGlossaryTermRequestObjectAsync",
+      "description": "Snippet for GetGlossaryTermAsync",
+      "file": "BusinessGlossaryServiceClient.GetGlossaryTermRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetGlossaryTermAsync",
+        "fullName": "Google.Cloud.Dataplex.V1.BusinessGlossaryServiceClient.GetGlossaryTermAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Dataplex.V1.GetGlossaryTermRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Dataplex.V1.GlossaryTerm>",
+        "client": {
+          "shortName": "BusinessGlossaryServiceClient",
+          "fullName": "Google.Cloud.Dataplex.V1.BusinessGlossaryServiceClient"
+        },
+        "method": {
+          "shortName": "GetGlossaryTerm",
+          "fullName": "google.cloud.dataplex.v1.BusinessGlossaryService.GetGlossaryTerm",
+          "service": {
+            "shortName": "BusinessGlossaryService",
+            "fullName": "google.cloud.dataplex.v1.BusinessGlossaryService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 22,
+          "end": 47,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 45,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "dataplex_v1_generated_BusinessGlossaryService_GetGlossaryTerm_sync_flattened",
+      "title": "GetGlossaryTerm",
+      "description": "Snippet for GetGlossaryTerm",
+      "file": "BusinessGlossaryServiceClient.GetGlossaryTermSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetGlossaryTerm",
+        "fullName": "Google.Cloud.Dataplex.V1.BusinessGlossaryServiceClient.GetGlossaryTerm",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.Dataplex.V1.GlossaryTerm",
+        "client": {
+          "shortName": "BusinessGlossaryServiceClient",
+          "fullName": "Google.Cloud.Dataplex.V1.BusinessGlossaryServiceClient"
+        },
+        "method": {
+          "shortName": "GetGlossaryTerm",
+          "fullName": "google.cloud.dataplex.v1.BusinessGlossaryService.GetGlossaryTerm",
+          "service": {
+            "shortName": "BusinessGlossaryService",
+            "fullName": "google.cloud.dataplex.v1.BusinessGlossaryService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "dataplex_v1_generated_BusinessGlossaryService_GetGlossaryTerm_async_flattened",
+      "title": "GetGlossaryTermAsync",
+      "description": "Snippet for GetGlossaryTermAsync",
+      "file": "BusinessGlossaryServiceClient.GetGlossaryTermAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetGlossaryTermAsync",
+        "fullName": "Google.Cloud.Dataplex.V1.BusinessGlossaryServiceClient.GetGlossaryTermAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Dataplex.V1.GlossaryTerm>",
+        "client": {
+          "shortName": "BusinessGlossaryServiceClient",
+          "fullName": "Google.Cloud.Dataplex.V1.BusinessGlossaryServiceClient"
+        },
+        "method": {
+          "shortName": "GetGlossaryTerm",
+          "fullName": "google.cloud.dataplex.v1.BusinessGlossaryService.GetGlossaryTerm",
+          "service": {
+            "shortName": "BusinessGlossaryService",
+            "fullName": "google.cloud.dataplex.v1.BusinessGlossaryService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 22,
+          "end": 44,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 42,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "dataplex_v1_generated_BusinessGlossaryService_GetGlossaryTerm_sync_flattened_resourceNames",
+      "title": "GetGlossaryTermResourceNames",
+      "description": "Snippet for GetGlossaryTerm",
+      "file": "BusinessGlossaryServiceClient.GetGlossaryTermResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetGlossaryTerm",
+        "fullName": "Google.Cloud.Dataplex.V1.BusinessGlossaryServiceClient.GetGlossaryTerm",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Dataplex.V1.GlossaryTermName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.Dataplex.V1.GlossaryTerm",
+        "client": {
+          "shortName": "BusinessGlossaryServiceClient",
+          "fullName": "Google.Cloud.Dataplex.V1.BusinessGlossaryServiceClient"
+        },
+        "method": {
+          "shortName": "GetGlossaryTerm",
+          "fullName": "google.cloud.dataplex.v1.BusinessGlossaryService.GetGlossaryTerm",
+          "service": {
+            "shortName": "BusinessGlossaryService",
+            "fullName": "google.cloud.dataplex.v1.BusinessGlossaryService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "dataplex_v1_generated_BusinessGlossaryService_GetGlossaryTerm_async_flattened_resourceNames",
+      "title": "GetGlossaryTermResourceNamesAsync",
+      "description": "Snippet for GetGlossaryTermAsync",
+      "file": "BusinessGlossaryServiceClient.GetGlossaryTermResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetGlossaryTermAsync",
+        "fullName": "Google.Cloud.Dataplex.V1.BusinessGlossaryServiceClient.GetGlossaryTermAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Dataplex.V1.GlossaryTermName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Dataplex.V1.GlossaryTerm>",
+        "client": {
+          "shortName": "BusinessGlossaryServiceClient",
+          "fullName": "Google.Cloud.Dataplex.V1.BusinessGlossaryServiceClient"
+        },
+        "method": {
+          "shortName": "GetGlossaryTerm",
+          "fullName": "google.cloud.dataplex.v1.BusinessGlossaryService.GetGlossaryTerm",
+          "service": {
+            "shortName": "BusinessGlossaryService",
+            "fullName": "google.cloud.dataplex.v1.BusinessGlossaryService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 22,
+          "end": 44,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 42,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "dataplex_v1_generated_BusinessGlossaryService_ListGlossaryTerms_sync",
+      "title": "ListGlossaryTermsRequestObject",
+      "description": "Snippet for ListGlossaryTerms",
+      "file": "BusinessGlossaryServiceClient.ListGlossaryTermsRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListGlossaryTerms",
+        "fullName": "Google.Cloud.Dataplex.V1.BusinessGlossaryServiceClient.ListGlossaryTerms",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Dataplex.V1.ListGlossaryTermsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.Dataplex.V1.ListGlossaryTermsResponse, Google.Cloud.Dataplex.V1.GlossaryTerm>",
+        "client": {
+          "shortName": "BusinessGlossaryServiceClient",
+          "fullName": "Google.Cloud.Dataplex.V1.BusinessGlossaryServiceClient"
+        },
+        "method": {
+          "shortName": "ListGlossaryTerms",
+          "fullName": "google.cloud.dataplex.v1.BusinessGlossaryService.ListGlossaryTerms",
+          "service": {
+            "shortName": "BusinessGlossaryService",
+            "fullName": "google.cloud.dataplex.v1.BusinessGlossaryService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 80,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 78,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "dataplex_v1_generated_BusinessGlossaryService_ListGlossaryTerms_async",
+      "title": "ListGlossaryTermsRequestObjectAsync",
+      "description": "Snippet for ListGlossaryTermsAsync",
+      "file": "BusinessGlossaryServiceClient.ListGlossaryTermsRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListGlossaryTermsAsync",
+        "fullName": "Google.Cloud.Dataplex.V1.BusinessGlossaryServiceClient.ListGlossaryTermsAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Dataplex.V1.ListGlossaryTermsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.Dataplex.V1.ListGlossaryTermsResponse, Google.Cloud.Dataplex.V1.GlossaryTerm>",
+        "client": {
+          "shortName": "BusinessGlossaryServiceClient",
+          "fullName": "Google.Cloud.Dataplex.V1.BusinessGlossaryServiceClient"
+        },
+        "method": {
+          "shortName": "ListGlossaryTerms",
+          "fullName": "google.cloud.dataplex.v1.BusinessGlossaryService.ListGlossaryTerms",
+          "service": {
+            "shortName": "BusinessGlossaryService",
+            "fullName": "google.cloud.dataplex.v1.BusinessGlossaryService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 22,
+          "end": 84,
+          "type": "FULL"
+        },
+        {
+          "start": 40,
+          "end": 82,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "dataplex_v1_generated_BusinessGlossaryService_ListGlossaryTerms_sync_flattened",
+      "title": "ListGlossaryTerms",
+      "description": "Snippet for ListGlossaryTerms",
+      "file": "BusinessGlossaryServiceClient.ListGlossaryTermsSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListGlossaryTerms",
+        "fullName": "Google.Cloud.Dataplex.V1.BusinessGlossaryServiceClient.ListGlossaryTerms",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.Dataplex.V1.ListGlossaryTermsResponse, Google.Cloud.Dataplex.V1.GlossaryTerm>",
+        "client": {
+          "shortName": "BusinessGlossaryServiceClient",
+          "fullName": "Google.Cloud.Dataplex.V1.BusinessGlossaryServiceClient"
+        },
+        "method": {
+          "shortName": "ListGlossaryTerms",
+          "fullName": "google.cloud.dataplex.v1.BusinessGlossaryService.ListGlossaryTerms",
+          "service": {
+            "shortName": "BusinessGlossaryService",
+            "fullName": "google.cloud.dataplex.v1.BusinessGlossaryService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 75,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 73,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "dataplex_v1_generated_BusinessGlossaryService_ListGlossaryTerms_async_flattened",
+      "title": "ListGlossaryTermsAsync",
+      "description": "Snippet for ListGlossaryTermsAsync",
+      "file": "BusinessGlossaryServiceClient.ListGlossaryTermsAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListGlossaryTermsAsync",
+        "fullName": "Google.Cloud.Dataplex.V1.BusinessGlossaryServiceClient.ListGlossaryTermsAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.Dataplex.V1.ListGlossaryTermsResponse, Google.Cloud.Dataplex.V1.GlossaryTerm>",
+        "client": {
+          "shortName": "BusinessGlossaryServiceClient",
+          "fullName": "Google.Cloud.Dataplex.V1.BusinessGlossaryServiceClient"
+        },
+        "method": {
+          "shortName": "ListGlossaryTerms",
+          "fullName": "google.cloud.dataplex.v1.BusinessGlossaryService.ListGlossaryTerms",
+          "service": {
+            "shortName": "BusinessGlossaryService",
+            "fullName": "google.cloud.dataplex.v1.BusinessGlossaryService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 22,
+          "end": 79,
+          "type": "FULL"
+        },
+        {
+          "start": 40,
+          "end": 77,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "dataplex_v1_generated_BusinessGlossaryService_ListGlossaryTerms_sync_flattened_resourceNames",
+      "title": "ListGlossaryTermsResourceNames",
+      "description": "Snippet for ListGlossaryTerms",
+      "file": "BusinessGlossaryServiceClient.ListGlossaryTermsResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListGlossaryTerms",
+        "fullName": "Google.Cloud.Dataplex.V1.BusinessGlossaryServiceClient.ListGlossaryTerms",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Dataplex.V1.GlossaryName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.Dataplex.V1.ListGlossaryTermsResponse, Google.Cloud.Dataplex.V1.GlossaryTerm>",
+        "client": {
+          "shortName": "BusinessGlossaryServiceClient",
+          "fullName": "Google.Cloud.Dataplex.V1.BusinessGlossaryServiceClient"
+        },
+        "method": {
+          "shortName": "ListGlossaryTerms",
+          "fullName": "google.cloud.dataplex.v1.BusinessGlossaryService.ListGlossaryTerms",
+          "service": {
+            "shortName": "BusinessGlossaryService",
+            "fullName": "google.cloud.dataplex.v1.BusinessGlossaryService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 75,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 73,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "dataplex_v1_generated_BusinessGlossaryService_ListGlossaryTerms_async_flattened_resourceNames",
+      "title": "ListGlossaryTermsResourceNamesAsync",
+      "description": "Snippet for ListGlossaryTermsAsync",
+      "file": "BusinessGlossaryServiceClient.ListGlossaryTermsResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListGlossaryTermsAsync",
+        "fullName": "Google.Cloud.Dataplex.V1.BusinessGlossaryServiceClient.ListGlossaryTermsAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Dataplex.V1.GlossaryName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.Dataplex.V1.ListGlossaryTermsResponse, Google.Cloud.Dataplex.V1.GlossaryTerm>",
+        "client": {
+          "shortName": "BusinessGlossaryServiceClient",
+          "fullName": "Google.Cloud.Dataplex.V1.BusinessGlossaryServiceClient"
+        },
+        "method": {
+          "shortName": "ListGlossaryTerms",
+          "fullName": "google.cloud.dataplex.v1.BusinessGlossaryService.ListGlossaryTerms",
+          "service": {
+            "shortName": "BusinessGlossaryService",
+            "fullName": "google.cloud.dataplex.v1.BusinessGlossaryService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 22,
+          "end": 79,
+          "type": "FULL"
+        },
+        {
+          "start": 40,
+          "end": 77,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
       "regionTag": "dataplex_v1_generated_CatalogService_CreateEntryType_sync",
       "title": "CreateEntryTypeRequestObject",
       "description": "Snippet for CreateEntryType",
@@ -7279,6 +11509,899 @@
         "method": {
           "shortName": "CancelMetadataJob",
           "fullName": "google.cloud.dataplex.v1.CatalogService.CancelMetadataJob",
+          "service": {
+            "shortName": "CatalogService",
+            "fullName": "google.cloud.dataplex.v1.CatalogService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 22,
+          "end": 44,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 42,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "dataplex_v1_generated_CatalogService_CreateEntryLink_sync",
+      "title": "CreateEntryLinkRequestObject",
+      "description": "Snippet for CreateEntryLink",
+      "file": "CatalogServiceClient.CreateEntryLinkRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateEntryLink",
+        "fullName": "Google.Cloud.Dataplex.V1.CatalogServiceClient.CreateEntryLink",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Dataplex.V1.CreateEntryLinkRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.Dataplex.V1.EntryLink",
+        "client": {
+          "shortName": "CatalogServiceClient",
+          "fullName": "Google.Cloud.Dataplex.V1.CatalogServiceClient"
+        },
+        "method": {
+          "shortName": "CreateEntryLink",
+          "fullName": "google.cloud.dataplex.v1.CatalogService.CreateEntryLink",
+          "service": {
+            "shortName": "CatalogService",
+            "fullName": "google.cloud.dataplex.v1.CatalogService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 46,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 44,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "dataplex_v1_generated_CatalogService_CreateEntryLink_async",
+      "title": "CreateEntryLinkRequestObjectAsync",
+      "description": "Snippet for CreateEntryLinkAsync",
+      "file": "CatalogServiceClient.CreateEntryLinkRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateEntryLinkAsync",
+        "fullName": "Google.Cloud.Dataplex.V1.CatalogServiceClient.CreateEntryLinkAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Dataplex.V1.CreateEntryLinkRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Dataplex.V1.EntryLink>",
+        "client": {
+          "shortName": "CatalogServiceClient",
+          "fullName": "Google.Cloud.Dataplex.V1.CatalogServiceClient"
+        },
+        "method": {
+          "shortName": "CreateEntryLink",
+          "fullName": "google.cloud.dataplex.v1.CatalogService.CreateEntryLink",
+          "service": {
+            "shortName": "CatalogService",
+            "fullName": "google.cloud.dataplex.v1.CatalogService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 22,
+          "end": 49,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 47,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "dataplex_v1_generated_CatalogService_CreateEntryLink_sync_flattened",
+      "title": "CreateEntryLink",
+      "description": "Snippet for CreateEntryLink",
+      "file": "CatalogServiceClient.CreateEntryLinkSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateEntryLink",
+        "fullName": "Google.Cloud.Dataplex.V1.CatalogServiceClient.CreateEntryLink",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.Dataplex.V1.EntryLink",
+            "name": "entryLink"
+          },
+          {
+            "type": "System.String",
+            "name": "entryLinkId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.Dataplex.V1.EntryLink",
+        "client": {
+          "shortName": "CatalogServiceClient",
+          "fullName": "Google.Cloud.Dataplex.V1.CatalogServiceClient"
+        },
+        "method": {
+          "shortName": "CreateEntryLink",
+          "fullName": "google.cloud.dataplex.v1.CatalogService.CreateEntryLink",
+          "service": {
+            "shortName": "CatalogService",
+            "fullName": "google.cloud.dataplex.v1.CatalogService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 43,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 41,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "dataplex_v1_generated_CatalogService_CreateEntryLink_async_flattened",
+      "title": "CreateEntryLinkAsync",
+      "description": "Snippet for CreateEntryLinkAsync",
+      "file": "CatalogServiceClient.CreateEntryLinkAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateEntryLinkAsync",
+        "fullName": "Google.Cloud.Dataplex.V1.CatalogServiceClient.CreateEntryLinkAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.Dataplex.V1.EntryLink",
+            "name": "entryLink"
+          },
+          {
+            "type": "System.String",
+            "name": "entryLinkId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Dataplex.V1.EntryLink>",
+        "client": {
+          "shortName": "CatalogServiceClient",
+          "fullName": "Google.Cloud.Dataplex.V1.CatalogServiceClient"
+        },
+        "method": {
+          "shortName": "CreateEntryLink",
+          "fullName": "google.cloud.dataplex.v1.CatalogService.CreateEntryLink",
+          "service": {
+            "shortName": "CatalogService",
+            "fullName": "google.cloud.dataplex.v1.CatalogService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 22,
+          "end": 46,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 44,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "dataplex_v1_generated_CatalogService_CreateEntryLink_sync_flattened_resourceNames",
+      "title": "CreateEntryLinkResourceNames",
+      "description": "Snippet for CreateEntryLink",
+      "file": "CatalogServiceClient.CreateEntryLinkResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateEntryLink",
+        "fullName": "Google.Cloud.Dataplex.V1.CatalogServiceClient.CreateEntryLink",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Dataplex.V1.EntryGroupName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.Dataplex.V1.EntryLink",
+            "name": "entryLink"
+          },
+          {
+            "type": "System.String",
+            "name": "entryLinkId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.Dataplex.V1.EntryLink",
+        "client": {
+          "shortName": "CatalogServiceClient",
+          "fullName": "Google.Cloud.Dataplex.V1.CatalogServiceClient"
+        },
+        "method": {
+          "shortName": "CreateEntryLink",
+          "fullName": "google.cloud.dataplex.v1.CatalogService.CreateEntryLink",
+          "service": {
+            "shortName": "CatalogService",
+            "fullName": "google.cloud.dataplex.v1.CatalogService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 43,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 41,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "dataplex_v1_generated_CatalogService_CreateEntryLink_async_flattened_resourceNames",
+      "title": "CreateEntryLinkResourceNamesAsync",
+      "description": "Snippet for CreateEntryLinkAsync",
+      "file": "CatalogServiceClient.CreateEntryLinkResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateEntryLinkAsync",
+        "fullName": "Google.Cloud.Dataplex.V1.CatalogServiceClient.CreateEntryLinkAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Dataplex.V1.EntryGroupName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.Dataplex.V1.EntryLink",
+            "name": "entryLink"
+          },
+          {
+            "type": "System.String",
+            "name": "entryLinkId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Dataplex.V1.EntryLink>",
+        "client": {
+          "shortName": "CatalogServiceClient",
+          "fullName": "Google.Cloud.Dataplex.V1.CatalogServiceClient"
+        },
+        "method": {
+          "shortName": "CreateEntryLink",
+          "fullName": "google.cloud.dataplex.v1.CatalogService.CreateEntryLink",
+          "service": {
+            "shortName": "CatalogService",
+            "fullName": "google.cloud.dataplex.v1.CatalogService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 22,
+          "end": 46,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 44,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "dataplex_v1_generated_CatalogService_DeleteEntryLink_sync",
+      "title": "DeleteEntryLinkRequestObject",
+      "description": "Snippet for DeleteEntryLink",
+      "file": "CatalogServiceClient.DeleteEntryLinkRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteEntryLink",
+        "fullName": "Google.Cloud.Dataplex.V1.CatalogServiceClient.DeleteEntryLink",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Dataplex.V1.DeleteEntryLinkRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.Dataplex.V1.EntryLink",
+        "client": {
+          "shortName": "CatalogServiceClient",
+          "fullName": "Google.Cloud.Dataplex.V1.CatalogServiceClient"
+        },
+        "method": {
+          "shortName": "DeleteEntryLink",
+          "fullName": "google.cloud.dataplex.v1.CatalogService.DeleteEntryLink",
+          "service": {
+            "shortName": "CatalogService",
+            "fullName": "google.cloud.dataplex.v1.CatalogService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 44,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 42,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "dataplex_v1_generated_CatalogService_DeleteEntryLink_async",
+      "title": "DeleteEntryLinkRequestObjectAsync",
+      "description": "Snippet for DeleteEntryLinkAsync",
+      "file": "CatalogServiceClient.DeleteEntryLinkRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteEntryLinkAsync",
+        "fullName": "Google.Cloud.Dataplex.V1.CatalogServiceClient.DeleteEntryLinkAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Dataplex.V1.DeleteEntryLinkRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Dataplex.V1.EntryLink>",
+        "client": {
+          "shortName": "CatalogServiceClient",
+          "fullName": "Google.Cloud.Dataplex.V1.CatalogServiceClient"
+        },
+        "method": {
+          "shortName": "DeleteEntryLink",
+          "fullName": "google.cloud.dataplex.v1.CatalogService.DeleteEntryLink",
+          "service": {
+            "shortName": "CatalogService",
+            "fullName": "google.cloud.dataplex.v1.CatalogService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 22,
+          "end": 47,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 45,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "dataplex_v1_generated_CatalogService_DeleteEntryLink_sync_flattened",
+      "title": "DeleteEntryLink",
+      "description": "Snippet for DeleteEntryLink",
+      "file": "CatalogServiceClient.DeleteEntryLinkSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteEntryLink",
+        "fullName": "Google.Cloud.Dataplex.V1.CatalogServiceClient.DeleteEntryLink",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.Dataplex.V1.EntryLink",
+        "client": {
+          "shortName": "CatalogServiceClient",
+          "fullName": "Google.Cloud.Dataplex.V1.CatalogServiceClient"
+        },
+        "method": {
+          "shortName": "DeleteEntryLink",
+          "fullName": "google.cloud.dataplex.v1.CatalogService.DeleteEntryLink",
+          "service": {
+            "shortName": "CatalogService",
+            "fullName": "google.cloud.dataplex.v1.CatalogService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "dataplex_v1_generated_CatalogService_DeleteEntryLink_async_flattened",
+      "title": "DeleteEntryLinkAsync",
+      "description": "Snippet for DeleteEntryLinkAsync",
+      "file": "CatalogServiceClient.DeleteEntryLinkAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteEntryLinkAsync",
+        "fullName": "Google.Cloud.Dataplex.V1.CatalogServiceClient.DeleteEntryLinkAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Dataplex.V1.EntryLink>",
+        "client": {
+          "shortName": "CatalogServiceClient",
+          "fullName": "Google.Cloud.Dataplex.V1.CatalogServiceClient"
+        },
+        "method": {
+          "shortName": "DeleteEntryLink",
+          "fullName": "google.cloud.dataplex.v1.CatalogService.DeleteEntryLink",
+          "service": {
+            "shortName": "CatalogService",
+            "fullName": "google.cloud.dataplex.v1.CatalogService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 22,
+          "end": 44,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 42,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "dataplex_v1_generated_CatalogService_DeleteEntryLink_sync_flattened_resourceNames",
+      "title": "DeleteEntryLinkResourceNames",
+      "description": "Snippet for DeleteEntryLink",
+      "file": "CatalogServiceClient.DeleteEntryLinkResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteEntryLink",
+        "fullName": "Google.Cloud.Dataplex.V1.CatalogServiceClient.DeleteEntryLink",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Dataplex.V1.EntryLinkName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.Dataplex.V1.EntryLink",
+        "client": {
+          "shortName": "CatalogServiceClient",
+          "fullName": "Google.Cloud.Dataplex.V1.CatalogServiceClient"
+        },
+        "method": {
+          "shortName": "DeleteEntryLink",
+          "fullName": "google.cloud.dataplex.v1.CatalogService.DeleteEntryLink",
+          "service": {
+            "shortName": "CatalogService",
+            "fullName": "google.cloud.dataplex.v1.CatalogService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "dataplex_v1_generated_CatalogService_DeleteEntryLink_async_flattened_resourceNames",
+      "title": "DeleteEntryLinkResourceNamesAsync",
+      "description": "Snippet for DeleteEntryLinkAsync",
+      "file": "CatalogServiceClient.DeleteEntryLinkResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteEntryLinkAsync",
+        "fullName": "Google.Cloud.Dataplex.V1.CatalogServiceClient.DeleteEntryLinkAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Dataplex.V1.EntryLinkName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Dataplex.V1.EntryLink>",
+        "client": {
+          "shortName": "CatalogServiceClient",
+          "fullName": "Google.Cloud.Dataplex.V1.CatalogServiceClient"
+        },
+        "method": {
+          "shortName": "DeleteEntryLink",
+          "fullName": "google.cloud.dataplex.v1.CatalogService.DeleteEntryLink",
+          "service": {
+            "shortName": "CatalogService",
+            "fullName": "google.cloud.dataplex.v1.CatalogService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 22,
+          "end": 44,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 42,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "dataplex_v1_generated_CatalogService_GetEntryLink_sync",
+      "title": "GetEntryLinkRequestObject",
+      "description": "Snippet for GetEntryLink",
+      "file": "CatalogServiceClient.GetEntryLinkRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetEntryLink",
+        "fullName": "Google.Cloud.Dataplex.V1.CatalogServiceClient.GetEntryLink",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Dataplex.V1.GetEntryLinkRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.Dataplex.V1.EntryLink",
+        "client": {
+          "shortName": "CatalogServiceClient",
+          "fullName": "Google.Cloud.Dataplex.V1.CatalogServiceClient"
+        },
+        "method": {
+          "shortName": "GetEntryLink",
+          "fullName": "google.cloud.dataplex.v1.CatalogService.GetEntryLink",
+          "service": {
+            "shortName": "CatalogService",
+            "fullName": "google.cloud.dataplex.v1.CatalogService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 44,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 42,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "dataplex_v1_generated_CatalogService_GetEntryLink_async",
+      "title": "GetEntryLinkRequestObjectAsync",
+      "description": "Snippet for GetEntryLinkAsync",
+      "file": "CatalogServiceClient.GetEntryLinkRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetEntryLinkAsync",
+        "fullName": "Google.Cloud.Dataplex.V1.CatalogServiceClient.GetEntryLinkAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Dataplex.V1.GetEntryLinkRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Dataplex.V1.EntryLink>",
+        "client": {
+          "shortName": "CatalogServiceClient",
+          "fullName": "Google.Cloud.Dataplex.V1.CatalogServiceClient"
+        },
+        "method": {
+          "shortName": "GetEntryLink",
+          "fullName": "google.cloud.dataplex.v1.CatalogService.GetEntryLink",
+          "service": {
+            "shortName": "CatalogService",
+            "fullName": "google.cloud.dataplex.v1.CatalogService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 22,
+          "end": 47,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 45,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "dataplex_v1_generated_CatalogService_GetEntryLink_sync_flattened",
+      "title": "GetEntryLink",
+      "description": "Snippet for GetEntryLink",
+      "file": "CatalogServiceClient.GetEntryLinkSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetEntryLink",
+        "fullName": "Google.Cloud.Dataplex.V1.CatalogServiceClient.GetEntryLink",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.Dataplex.V1.EntryLink",
+        "client": {
+          "shortName": "CatalogServiceClient",
+          "fullName": "Google.Cloud.Dataplex.V1.CatalogServiceClient"
+        },
+        "method": {
+          "shortName": "GetEntryLink",
+          "fullName": "google.cloud.dataplex.v1.CatalogService.GetEntryLink",
+          "service": {
+            "shortName": "CatalogService",
+            "fullName": "google.cloud.dataplex.v1.CatalogService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "dataplex_v1_generated_CatalogService_GetEntryLink_async_flattened",
+      "title": "GetEntryLinkAsync",
+      "description": "Snippet for GetEntryLinkAsync",
+      "file": "CatalogServiceClient.GetEntryLinkAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetEntryLinkAsync",
+        "fullName": "Google.Cloud.Dataplex.V1.CatalogServiceClient.GetEntryLinkAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Dataplex.V1.EntryLink>",
+        "client": {
+          "shortName": "CatalogServiceClient",
+          "fullName": "Google.Cloud.Dataplex.V1.CatalogServiceClient"
+        },
+        "method": {
+          "shortName": "GetEntryLink",
+          "fullName": "google.cloud.dataplex.v1.CatalogService.GetEntryLink",
+          "service": {
+            "shortName": "CatalogService",
+            "fullName": "google.cloud.dataplex.v1.CatalogService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 22,
+          "end": 44,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 42,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "dataplex_v1_generated_CatalogService_GetEntryLink_sync_flattened_resourceNames",
+      "title": "GetEntryLinkResourceNames",
+      "description": "Snippet for GetEntryLink",
+      "file": "CatalogServiceClient.GetEntryLinkResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetEntryLink",
+        "fullName": "Google.Cloud.Dataplex.V1.CatalogServiceClient.GetEntryLink",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Dataplex.V1.EntryLinkName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.Dataplex.V1.EntryLink",
+        "client": {
+          "shortName": "CatalogServiceClient",
+          "fullName": "Google.Cloud.Dataplex.V1.CatalogServiceClient"
+        },
+        "method": {
+          "shortName": "GetEntryLink",
+          "fullName": "google.cloud.dataplex.v1.CatalogService.GetEntryLink",
+          "service": {
+            "shortName": "CatalogService",
+            "fullName": "google.cloud.dataplex.v1.CatalogService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "dataplex_v1_generated_CatalogService_GetEntryLink_async_flattened_resourceNames",
+      "title": "GetEntryLinkResourceNamesAsync",
+      "description": "Snippet for GetEntryLinkAsync",
+      "file": "CatalogServiceClient.GetEntryLinkResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetEntryLinkAsync",
+        "fullName": "Google.Cloud.Dataplex.V1.CatalogServiceClient.GetEntryLinkAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Dataplex.V1.EntryLinkName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Dataplex.V1.EntryLink>",
+        "client": {
+          "shortName": "CatalogServiceClient",
+          "fullName": "Google.Cloud.Dataplex.V1.CatalogServiceClient"
+        },
+        "method": {
+          "shortName": "GetEntryLink",
+          "fullName": "google.cloud.dataplex.v1.CatalogService.GetEntryLink",
           "service": {
             "shortName": "CatalogService",
             "fullName": "google.cloud.dataplex.v1.CatalogService"

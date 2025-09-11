@@ -4273,5 +4273,278 @@ namespace GoogleCSharpSnippets
             await catalogServiceClient.CancelMetadataJobAsync(name);
             // End snippet
         }
+
+        /// <summary>Snippet for CreateEntryLink</summary>
+        public void CreateEntryLinkRequestObject()
+        {
+            // Snippet: CreateEntryLink(CreateEntryLinkRequest, CallSettings)
+            // Create client
+            gcdv::CatalogServiceClient catalogServiceClient = gcdv::CatalogServiceClient.Create();
+            // Initialize request argument(s)
+            gcdv::CreateEntryLinkRequest request = new gcdv::CreateEntryLinkRequest
+            {
+                ParentAsEntryGroupName = gcdv::EntryGroupName.FromProjectLocationEntryGroup("[PROJECT]", "[LOCATION]", "[ENTRY_GROUP]"),
+                EntryLinkId = "",
+                EntryLink = new gcdv::EntryLink(),
+            };
+            // Make the request
+            gcdv::EntryLink response = catalogServiceClient.CreateEntryLink(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateEntryLinkAsync</summary>
+        public async Task CreateEntryLinkRequestObjectAsync()
+        {
+            // Snippet: CreateEntryLinkAsync(CreateEntryLinkRequest, CallSettings)
+            // Additional: CreateEntryLinkAsync(CreateEntryLinkRequest, CancellationToken)
+            // Create client
+            gcdv::CatalogServiceClient catalogServiceClient = await gcdv::CatalogServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            gcdv::CreateEntryLinkRequest request = new gcdv::CreateEntryLinkRequest
+            {
+                ParentAsEntryGroupName = gcdv::EntryGroupName.FromProjectLocationEntryGroup("[PROJECT]", "[LOCATION]", "[ENTRY_GROUP]"),
+                EntryLinkId = "",
+                EntryLink = new gcdv::EntryLink(),
+            };
+            // Make the request
+            gcdv::EntryLink response = await catalogServiceClient.CreateEntryLinkAsync(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateEntryLink</summary>
+        public void CreateEntryLink()
+        {
+            // Snippet: CreateEntryLink(string, EntryLink, string, CallSettings)
+            // Create client
+            gcdv::CatalogServiceClient catalogServiceClient = gcdv::CatalogServiceClient.Create();
+            // Initialize request argument(s)
+            string parent = "projects/[PROJECT]/locations/[LOCATION]/entryGroups/[ENTRY_GROUP]";
+            gcdv::EntryLink entryLink = new gcdv::EntryLink();
+            string entryLinkId = "";
+            // Make the request
+            gcdv::EntryLink response = catalogServiceClient.CreateEntryLink(parent, entryLink, entryLinkId);
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateEntryLinkAsync</summary>
+        public async Task CreateEntryLinkAsync()
+        {
+            // Snippet: CreateEntryLinkAsync(string, EntryLink, string, CallSettings)
+            // Additional: CreateEntryLinkAsync(string, EntryLink, string, CancellationToken)
+            // Create client
+            gcdv::CatalogServiceClient catalogServiceClient = await gcdv::CatalogServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            string parent = "projects/[PROJECT]/locations/[LOCATION]/entryGroups/[ENTRY_GROUP]";
+            gcdv::EntryLink entryLink = new gcdv::EntryLink();
+            string entryLinkId = "";
+            // Make the request
+            gcdv::EntryLink response = await catalogServiceClient.CreateEntryLinkAsync(parent, entryLink, entryLinkId);
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateEntryLink</summary>
+        public void CreateEntryLinkResourceNames()
+        {
+            // Snippet: CreateEntryLink(EntryGroupName, EntryLink, string, CallSettings)
+            // Create client
+            gcdv::CatalogServiceClient catalogServiceClient = gcdv::CatalogServiceClient.Create();
+            // Initialize request argument(s)
+            gcdv::EntryGroupName parent = gcdv::EntryGroupName.FromProjectLocationEntryGroup("[PROJECT]", "[LOCATION]", "[ENTRY_GROUP]");
+            gcdv::EntryLink entryLink = new gcdv::EntryLink();
+            string entryLinkId = "";
+            // Make the request
+            gcdv::EntryLink response = catalogServiceClient.CreateEntryLink(parent, entryLink, entryLinkId);
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateEntryLinkAsync</summary>
+        public async Task CreateEntryLinkResourceNamesAsync()
+        {
+            // Snippet: CreateEntryLinkAsync(EntryGroupName, EntryLink, string, CallSettings)
+            // Additional: CreateEntryLinkAsync(EntryGroupName, EntryLink, string, CancellationToken)
+            // Create client
+            gcdv::CatalogServiceClient catalogServiceClient = await gcdv::CatalogServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            gcdv::EntryGroupName parent = gcdv::EntryGroupName.FromProjectLocationEntryGroup("[PROJECT]", "[LOCATION]", "[ENTRY_GROUP]");
+            gcdv::EntryLink entryLink = new gcdv::EntryLink();
+            string entryLinkId = "";
+            // Make the request
+            gcdv::EntryLink response = await catalogServiceClient.CreateEntryLinkAsync(parent, entryLink, entryLinkId);
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteEntryLink</summary>
+        public void DeleteEntryLinkRequestObject()
+        {
+            // Snippet: DeleteEntryLink(DeleteEntryLinkRequest, CallSettings)
+            // Create client
+            gcdv::CatalogServiceClient catalogServiceClient = gcdv::CatalogServiceClient.Create();
+            // Initialize request argument(s)
+            gcdv::DeleteEntryLinkRequest request = new gcdv::DeleteEntryLinkRequest
+            {
+                EntryLinkName = gcdv::EntryLinkName.FromProjectLocationEntryGroupEntryLink("[PROJECT]", "[LOCATION]", "[ENTRY_GROUP]", "[ENTRY_LINK]"),
+            };
+            // Make the request
+            gcdv::EntryLink response = catalogServiceClient.DeleteEntryLink(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteEntryLinkAsync</summary>
+        public async Task DeleteEntryLinkRequestObjectAsync()
+        {
+            // Snippet: DeleteEntryLinkAsync(DeleteEntryLinkRequest, CallSettings)
+            // Additional: DeleteEntryLinkAsync(DeleteEntryLinkRequest, CancellationToken)
+            // Create client
+            gcdv::CatalogServiceClient catalogServiceClient = await gcdv::CatalogServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            gcdv::DeleteEntryLinkRequest request = new gcdv::DeleteEntryLinkRequest
+            {
+                EntryLinkName = gcdv::EntryLinkName.FromProjectLocationEntryGroupEntryLink("[PROJECT]", "[LOCATION]", "[ENTRY_GROUP]", "[ENTRY_LINK]"),
+            };
+            // Make the request
+            gcdv::EntryLink response = await catalogServiceClient.DeleteEntryLinkAsync(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteEntryLink</summary>
+        public void DeleteEntryLink()
+        {
+            // Snippet: DeleteEntryLink(string, CallSettings)
+            // Create client
+            gcdv::CatalogServiceClient catalogServiceClient = gcdv::CatalogServiceClient.Create();
+            // Initialize request argument(s)
+            string name = "projects/[PROJECT]/locations/[LOCATION]/entryGroups/[ENTRY_GROUP]/entryLinks/[ENTRY_LINK]";
+            // Make the request
+            gcdv::EntryLink response = catalogServiceClient.DeleteEntryLink(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteEntryLinkAsync</summary>
+        public async Task DeleteEntryLinkAsync()
+        {
+            // Snippet: DeleteEntryLinkAsync(string, CallSettings)
+            // Additional: DeleteEntryLinkAsync(string, CancellationToken)
+            // Create client
+            gcdv::CatalogServiceClient catalogServiceClient = await gcdv::CatalogServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            string name = "projects/[PROJECT]/locations/[LOCATION]/entryGroups/[ENTRY_GROUP]/entryLinks/[ENTRY_LINK]";
+            // Make the request
+            gcdv::EntryLink response = await catalogServiceClient.DeleteEntryLinkAsync(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteEntryLink</summary>
+        public void DeleteEntryLinkResourceNames()
+        {
+            // Snippet: DeleteEntryLink(EntryLinkName, CallSettings)
+            // Create client
+            gcdv::CatalogServiceClient catalogServiceClient = gcdv::CatalogServiceClient.Create();
+            // Initialize request argument(s)
+            gcdv::EntryLinkName name = gcdv::EntryLinkName.FromProjectLocationEntryGroupEntryLink("[PROJECT]", "[LOCATION]", "[ENTRY_GROUP]", "[ENTRY_LINK]");
+            // Make the request
+            gcdv::EntryLink response = catalogServiceClient.DeleteEntryLink(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteEntryLinkAsync</summary>
+        public async Task DeleteEntryLinkResourceNamesAsync()
+        {
+            // Snippet: DeleteEntryLinkAsync(EntryLinkName, CallSettings)
+            // Additional: DeleteEntryLinkAsync(EntryLinkName, CancellationToken)
+            // Create client
+            gcdv::CatalogServiceClient catalogServiceClient = await gcdv::CatalogServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            gcdv::EntryLinkName name = gcdv::EntryLinkName.FromProjectLocationEntryGroupEntryLink("[PROJECT]", "[LOCATION]", "[ENTRY_GROUP]", "[ENTRY_LINK]");
+            // Make the request
+            gcdv::EntryLink response = await catalogServiceClient.DeleteEntryLinkAsync(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetEntryLink</summary>
+        public void GetEntryLinkRequestObject()
+        {
+            // Snippet: GetEntryLink(GetEntryLinkRequest, CallSettings)
+            // Create client
+            gcdv::CatalogServiceClient catalogServiceClient = gcdv::CatalogServiceClient.Create();
+            // Initialize request argument(s)
+            gcdv::GetEntryLinkRequest request = new gcdv::GetEntryLinkRequest
+            {
+                EntryLinkName = gcdv::EntryLinkName.FromProjectLocationEntryGroupEntryLink("[PROJECT]", "[LOCATION]", "[ENTRY_GROUP]", "[ENTRY_LINK]"),
+            };
+            // Make the request
+            gcdv::EntryLink response = catalogServiceClient.GetEntryLink(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetEntryLinkAsync</summary>
+        public async Task GetEntryLinkRequestObjectAsync()
+        {
+            // Snippet: GetEntryLinkAsync(GetEntryLinkRequest, CallSettings)
+            // Additional: GetEntryLinkAsync(GetEntryLinkRequest, CancellationToken)
+            // Create client
+            gcdv::CatalogServiceClient catalogServiceClient = await gcdv::CatalogServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            gcdv::GetEntryLinkRequest request = new gcdv::GetEntryLinkRequest
+            {
+                EntryLinkName = gcdv::EntryLinkName.FromProjectLocationEntryGroupEntryLink("[PROJECT]", "[LOCATION]", "[ENTRY_GROUP]", "[ENTRY_LINK]"),
+            };
+            // Make the request
+            gcdv::EntryLink response = await catalogServiceClient.GetEntryLinkAsync(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetEntryLink</summary>
+        public void GetEntryLink()
+        {
+            // Snippet: GetEntryLink(string, CallSettings)
+            // Create client
+            gcdv::CatalogServiceClient catalogServiceClient = gcdv::CatalogServiceClient.Create();
+            // Initialize request argument(s)
+            string name = "projects/[PROJECT]/locations/[LOCATION]/entryGroups/[ENTRY_GROUP]/entryLinks/[ENTRY_LINK]";
+            // Make the request
+            gcdv::EntryLink response = catalogServiceClient.GetEntryLink(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetEntryLinkAsync</summary>
+        public async Task GetEntryLinkAsync()
+        {
+            // Snippet: GetEntryLinkAsync(string, CallSettings)
+            // Additional: GetEntryLinkAsync(string, CancellationToken)
+            // Create client
+            gcdv::CatalogServiceClient catalogServiceClient = await gcdv::CatalogServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            string name = "projects/[PROJECT]/locations/[LOCATION]/entryGroups/[ENTRY_GROUP]/entryLinks/[ENTRY_LINK]";
+            // Make the request
+            gcdv::EntryLink response = await catalogServiceClient.GetEntryLinkAsync(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetEntryLink</summary>
+        public void GetEntryLinkResourceNames()
+        {
+            // Snippet: GetEntryLink(EntryLinkName, CallSettings)
+            // Create client
+            gcdv::CatalogServiceClient catalogServiceClient = gcdv::CatalogServiceClient.Create();
+            // Initialize request argument(s)
+            gcdv::EntryLinkName name = gcdv::EntryLinkName.FromProjectLocationEntryGroupEntryLink("[PROJECT]", "[LOCATION]", "[ENTRY_GROUP]", "[ENTRY_LINK]");
+            // Make the request
+            gcdv::EntryLink response = catalogServiceClient.GetEntryLink(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetEntryLinkAsync</summary>
+        public async Task GetEntryLinkResourceNamesAsync()
+        {
+            // Snippet: GetEntryLinkAsync(EntryLinkName, CallSettings)
+            // Additional: GetEntryLinkAsync(EntryLinkName, CancellationToken)
+            // Create client
+            gcdv::CatalogServiceClient catalogServiceClient = await gcdv::CatalogServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            gcdv::EntryLinkName name = gcdv::EntryLinkName.FromProjectLocationEntryGroupEntryLink("[PROJECT]", "[LOCATION]", "[ENTRY_GROUP]", "[ENTRY_LINK]");
+            // Make the request
+            gcdv::EntryLink response = await catalogServiceClient.GetEntryLinkAsync(name);
+            // End snippet
+        }
     }
 }

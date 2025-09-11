@@ -1463,7 +1463,7 @@ namespace Google.Cloud.Dataplex.V1 {
             public const int ImageVersionFieldNumber = 1;
             private string imageVersion_ = "";
             /// <summary>
-            /// Required. Dataplex Image version.
+            /// Required. Dataplex Universal Catalog Image version.
             /// </summary>
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
             [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]

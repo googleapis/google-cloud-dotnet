@@ -1293,6 +1293,275 @@ namespace Google.Cloud.Dataplex.V1
         public static bool operator !=(MetadataJobName a, MetadataJobName b) => !(a == b);
     }
 
+    /// <summary>Resource name for the <c>EntryLink</c> resource.</summary>
+    public sealed partial class EntryLinkName : gax::IResourceName, sys::IEquatable<EntryLinkName>
+    {
+        /// <summary>The possible contents of <see cref="EntryLinkName"/>.</summary>
+        public enum ResourceNameType
+        {
+            /// <summary>An unparsed resource name.</summary>
+            Unparsed = 0,
+
+            /// <summary>
+            /// A resource name with pattern
+            /// <c>projects/{project}/locations/{location}/entryGroups/{entry_group}/entryLinks/{entry_link}</c>.
+            /// </summary>
+            ProjectLocationEntryGroupEntryLink = 1,
+        }
+
+        private static gax::PathTemplate s_projectLocationEntryGroupEntryLink = new gax::PathTemplate("projects/{project}/locations/{location}/entryGroups/{entry_group}/entryLinks/{entry_link}");
+
+        /// <summary>Creates a <see cref="EntryLinkName"/> containing an unparsed resource name.</summary>
+        /// <param name="unparsedResourceName">The unparsed resource name. Must not be <c>null</c>.</param>
+        /// <returns>
+        /// A new instance of <see cref="EntryLinkName"/> containing the provided
+        /// <paramref name="unparsedResourceName"/>.
+        /// </returns>
+        public static EntryLinkName FromUnparsed(gax::UnparsedResourceName unparsedResourceName) =>
+            new EntryLinkName(ResourceNameType.Unparsed, gax::GaxPreconditions.CheckNotNull(unparsedResourceName, nameof(unparsedResourceName)));
+
+        /// <summary>
+        /// Creates a <see cref="EntryLinkName"/> with the pattern
+        /// <c>projects/{project}/locations/{location}/entryGroups/{entry_group}/entryLinks/{entry_link}</c>.
+        /// </summary>
+        /// <param name="projectId">The <c>Project</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="locationId">The <c>Location</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="entryGroupId">The <c>EntryGroup</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="entryLinkId">The <c>EntryLink</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <returns>A new instance of <see cref="EntryLinkName"/> constructed from the provided ids.</returns>
+        public static EntryLinkName FromProjectLocationEntryGroupEntryLink(string projectId, string locationId, string entryGroupId, string entryLinkId) =>
+            new EntryLinkName(ResourceNameType.ProjectLocationEntryGroupEntryLink, projectId: gax::GaxPreconditions.CheckNotNullOrEmpty(projectId, nameof(projectId)), locationId: gax::GaxPreconditions.CheckNotNullOrEmpty(locationId, nameof(locationId)), entryGroupId: gax::GaxPreconditions.CheckNotNullOrEmpty(entryGroupId, nameof(entryGroupId)), entryLinkId: gax::GaxPreconditions.CheckNotNullOrEmpty(entryLinkId, nameof(entryLinkId)));
+
+        /// <summary>
+        /// Formats the IDs into the string representation of this <see cref="EntryLinkName"/> with pattern
+        /// <c>projects/{project}/locations/{location}/entryGroups/{entry_group}/entryLinks/{entry_link}</c>.
+        /// </summary>
+        /// <param name="projectId">The <c>Project</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="locationId">The <c>Location</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="entryGroupId">The <c>EntryGroup</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="entryLinkId">The <c>EntryLink</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <returns>
+        /// The string representation of this <see cref="EntryLinkName"/> with pattern
+        /// <c>projects/{project}/locations/{location}/entryGroups/{entry_group}/entryLinks/{entry_link}</c>.
+        /// </returns>
+        public static string Format(string projectId, string locationId, string entryGroupId, string entryLinkId) =>
+            FormatProjectLocationEntryGroupEntryLink(projectId, locationId, entryGroupId, entryLinkId);
+
+        /// <summary>
+        /// Formats the IDs into the string representation of this <see cref="EntryLinkName"/> with pattern
+        /// <c>projects/{project}/locations/{location}/entryGroups/{entry_group}/entryLinks/{entry_link}</c>.
+        /// </summary>
+        /// <param name="projectId">The <c>Project</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="locationId">The <c>Location</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="entryGroupId">The <c>EntryGroup</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="entryLinkId">The <c>EntryLink</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <returns>
+        /// The string representation of this <see cref="EntryLinkName"/> with pattern
+        /// <c>projects/{project}/locations/{location}/entryGroups/{entry_group}/entryLinks/{entry_link}</c>.
+        /// </returns>
+        public static string FormatProjectLocationEntryGroupEntryLink(string projectId, string locationId, string entryGroupId, string entryLinkId) =>
+            s_projectLocationEntryGroupEntryLink.Expand(gax::GaxPreconditions.CheckNotNullOrEmpty(projectId, nameof(projectId)), gax::GaxPreconditions.CheckNotNullOrEmpty(locationId, nameof(locationId)), gax::GaxPreconditions.CheckNotNullOrEmpty(entryGroupId, nameof(entryGroupId)), gax::GaxPreconditions.CheckNotNullOrEmpty(entryLinkId, nameof(entryLinkId)));
+
+        /// <summary>Parses the given resource name string into a new <see cref="EntryLinkName"/> instance.</summary>
+        /// <remarks>
+        /// To parse successfully, the resource name must be formatted as one of the following:
+        /// <list type="bullet">
+        /// <item>
+        /// <description>
+        /// <c>projects/{project}/locations/{location}/entryGroups/{entry_group}/entryLinks/{entry_link}</c>
+        /// </description>
+        /// </item>
+        /// </list>
+        /// </remarks>
+        /// <param name="entryLinkName">The resource name in string form. Must not be <c>null</c>.</param>
+        /// <returns>The parsed <see cref="EntryLinkName"/> if successful.</returns>
+        public static EntryLinkName Parse(string entryLinkName) => Parse(entryLinkName, false);
+
+        /// <summary>
+        /// Parses the given resource name string into a new <see cref="EntryLinkName"/> instance; optionally allowing
+        /// an unparseable resource name.
+        /// </summary>
+        /// <remarks>
+        /// To parse successfully, the resource name must be formatted as one of the following:
+        /// <list type="bullet">
+        /// <item>
+        /// <description>
+        /// <c>projects/{project}/locations/{location}/entryGroups/{entry_group}/entryLinks/{entry_link}</c>
+        /// </description>
+        /// </item>
+        /// </list>
+        /// Or may be in any format if <paramref name="allowUnparsed"/> is <c>true</c>.
+        /// </remarks>
+        /// <param name="entryLinkName">The resource name in string form. Must not be <c>null</c>.</param>
+        /// <param name="allowUnparsed">
+        /// If <c>true</c> will successfully store an unparseable resource name into the <see cref="UnparsedResource"/>
+        /// property; otherwise will throw an <see cref="sys::ArgumentException"/> if an unparseable resource name is
+        /// specified.
+        /// </param>
+        /// <returns>The parsed <see cref="EntryLinkName"/> if successful.</returns>
+        public static EntryLinkName Parse(string entryLinkName, bool allowUnparsed) =>
+            TryParse(entryLinkName, allowUnparsed, out EntryLinkName result) ? result : throw new sys::ArgumentException("The given resource-name matches no pattern.");
+
+        /// <summary>
+        /// Tries to parse the given resource name string into a new <see cref="EntryLinkName"/> instance.
+        /// </summary>
+        /// <remarks>
+        /// To parse successfully, the resource name must be formatted as one of the following:
+        /// <list type="bullet">
+        /// <item>
+        /// <description>
+        /// <c>projects/{project}/locations/{location}/entryGroups/{entry_group}/entryLinks/{entry_link}</c>
+        /// </description>
+        /// </item>
+        /// </list>
+        /// </remarks>
+        /// <param name="entryLinkName">The resource name in string form. Must not be <c>null</c>.</param>
+        /// <param name="result">
+        /// When this method returns, the parsed <see cref="EntryLinkName"/>, or <c>null</c> if parsing failed.
+        /// </param>
+        /// <returns><c>true</c> if the name was parsed successfully; <c>false</c> otherwise.</returns>
+        public static bool TryParse(string entryLinkName, out EntryLinkName result) => TryParse(entryLinkName, false, out result);
+
+        /// <summary>
+        /// Tries to parse the given resource name string into a new <see cref="EntryLinkName"/> instance; optionally
+        /// allowing an unparseable resource name.
+        /// </summary>
+        /// <remarks>
+        /// To parse successfully, the resource name must be formatted as one of the following:
+        /// <list type="bullet">
+        /// <item>
+        /// <description>
+        /// <c>projects/{project}/locations/{location}/entryGroups/{entry_group}/entryLinks/{entry_link}</c>
+        /// </description>
+        /// </item>
+        /// </list>
+        /// Or may be in any format if <paramref name="allowUnparsed"/> is <c>true</c>.
+        /// </remarks>
+        /// <param name="entryLinkName">The resource name in string form. Must not be <c>null</c>.</param>
+        /// <param name="allowUnparsed">
+        /// If <c>true</c> will successfully store an unparseable resource name into the <see cref="UnparsedResource"/>
+        /// property; otherwise will throw an <see cref="sys::ArgumentException"/> if an unparseable resource name is
+        /// specified.
+        /// </param>
+        /// <param name="result">
+        /// When this method returns, the parsed <see cref="EntryLinkName"/>, or <c>null</c> if parsing failed.
+        /// </param>
+        /// <returns><c>true</c> if the name was parsed successfully; <c>false</c> otherwise.</returns>
+        public static bool TryParse(string entryLinkName, bool allowUnparsed, out EntryLinkName result)
+        {
+            gax::GaxPreconditions.CheckNotNull(entryLinkName, nameof(entryLinkName));
+            gax::TemplatedResourceName resourceName;
+            if (s_projectLocationEntryGroupEntryLink.TryParseName(entryLinkName, out resourceName))
+            {
+                result = FromProjectLocationEntryGroupEntryLink(resourceName[0], resourceName[1], resourceName[2], resourceName[3]);
+                return true;
+            }
+            if (allowUnparsed)
+            {
+                if (gax::UnparsedResourceName.TryParse(entryLinkName, out gax::UnparsedResourceName unparsedResourceName))
+                {
+                    result = FromUnparsed(unparsedResourceName);
+                    return true;
+                }
+            }
+            result = null;
+            return false;
+        }
+
+        private EntryLinkName(ResourceNameType type, gax::UnparsedResourceName unparsedResourceName = null, string entryGroupId = null, string entryLinkId = null, string locationId = null, string projectId = null)
+        {
+            Type = type;
+            UnparsedResource = unparsedResourceName;
+            EntryGroupId = entryGroupId;
+            EntryLinkId = entryLinkId;
+            LocationId = locationId;
+            ProjectId = projectId;
+        }
+
+        /// <summary>
+        /// Constructs a new instance of a <see cref="EntryLinkName"/> class from the component parts of pattern
+        /// <c>projects/{project}/locations/{location}/entryGroups/{entry_group}/entryLinks/{entry_link}</c>
+        /// </summary>
+        /// <param name="projectId">The <c>Project</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="locationId">The <c>Location</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="entryGroupId">The <c>EntryGroup</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="entryLinkId">The <c>EntryLink</c> ID. Must not be <c>null</c> or empty.</param>
+        public EntryLinkName(string projectId, string locationId, string entryGroupId, string entryLinkId) : this(ResourceNameType.ProjectLocationEntryGroupEntryLink, projectId: gax::GaxPreconditions.CheckNotNullOrEmpty(projectId, nameof(projectId)), locationId: gax::GaxPreconditions.CheckNotNullOrEmpty(locationId, nameof(locationId)), entryGroupId: gax::GaxPreconditions.CheckNotNullOrEmpty(entryGroupId, nameof(entryGroupId)), entryLinkId: gax::GaxPreconditions.CheckNotNullOrEmpty(entryLinkId, nameof(entryLinkId)))
+        {
+        }
+
+        /// <summary>The <see cref="ResourceNameType"/> of the contained resource name.</summary>
+        public ResourceNameType Type { get; }
+
+        /// <summary>
+        /// The contained <see cref="gax::UnparsedResourceName"/>. Only non-<c>null</c> if this instance contains an
+        /// unparsed resource name.
+        /// </summary>
+        public gax::UnparsedResourceName UnparsedResource { get; }
+
+        /// <summary>
+        /// The <c>EntryGroup</c> ID. Will not be <c>null</c>, unless this instance contains an unparsed resource name.
+        /// </summary>
+        public string EntryGroupId { get; }
+
+        /// <summary>
+        /// The <c>EntryLink</c> ID. Will not be <c>null</c>, unless this instance contains an unparsed resource name.
+        /// </summary>
+        public string EntryLinkId { get; }
+
+        /// <summary>
+        /// The <c>Location</c> ID. Will not be <c>null</c>, unless this instance contains an unparsed resource name.
+        /// </summary>
+        public string LocationId { get; }
+
+        /// <summary>
+        /// The <c>Project</c> ID. Will not be <c>null</c>, unless this instance contains an unparsed resource name.
+        /// </summary>
+        public string ProjectId { get; }
+
+        /// <summary>Whether this instance contains a resource name with a known pattern.</summary>
+        public bool IsKnownPattern => Type != ResourceNameType.Unparsed;
+
+        /// <summary>The string representation of the resource name.</summary>
+        /// <returns>The string representation of the resource name.</returns>
+        public override string ToString()
+        {
+            switch (Type)
+            {
+                case ResourceNameType.Unparsed: return UnparsedResource.ToString();
+                case ResourceNameType.ProjectLocationEntryGroupEntryLink: return s_projectLocationEntryGroupEntryLink.Expand(ProjectId, LocationId, EntryGroupId, EntryLinkId);
+                default: throw new sys::InvalidOperationException("Unrecognized resource-type.");
+            }
+        }
+
+        /// <summary>Returns a hash code for this resource name.</summary>
+        public override int GetHashCode() => ToString().GetHashCode();
+
+        /// <inheritdoc/>
+        public override bool Equals(object obj) => Equals(obj as EntryLinkName);
+
+        /// <inheritdoc/>
+        public bool Equals(EntryLinkName other) => ToString() == other?.ToString();
+
+        /// <summary>Determines whether two specified resource names have the same value.</summary>
+        /// <param name="a">The first resource name to compare, or null.</param>
+        /// <param name="b">The second resource name to compare, or null.</param>
+        /// <returns>
+        /// true if the value of <paramref name="a"/> is the same as the value of <paramref name="b"/>; otherwise,
+        /// false.
+        /// </returns>
+        public static bool operator ==(EntryLinkName a, EntryLinkName b) => ReferenceEquals(a, b) || (a?.Equals(b) ?? false);
+
+        /// <summary>Determines whether two specified resource names have different values.</summary>
+        /// <param name="a">The first resource name to compare, or null.</param>
+        /// <param name="b">The second resource name to compare, or null.</param>
+        /// <returns>
+        /// true if the value of <paramref name="a"/> is different from the value of <paramref name="b"/>; otherwise,
+        /// false.
+        /// </returns>
+        public static bool operator !=(EntryLinkName a, EntryLinkName b) => !(a == b);
+    }
+
     public partial class AspectType
     {
         /// <summary>
@@ -1663,6 +1932,15 @@ namespace Google.Cloud.Dataplex.V1
                         {
                             get => new gax::ResourceNameList<AspectTypeName>(AspectTypes, s => string.IsNullOrEmpty(s) ? null : AspectTypeName.Parse(s, allowUnparsed: true));
                         }
+
+                        /// <summary>
+                        /// <see cref="GlossaryName"/>-typed view over the <see cref="Glossaries"/> resource name
+                        /// property.
+                        /// </summary>
+                        public gax::ResourceNameList<GlossaryName> GlossariesAsGlossaryNames
+                        {
+                            get => new gax::ResourceNameList<GlossaryName>(Glossaries, s => string.IsNullOrEmpty(s) ? null : GlossaryName.Parse(s, allowUnparsed: true));
+                        }
                     }
                 }
             }
@@ -1711,6 +1989,54 @@ namespace Google.Cloud.Dataplex.V1
                     }
                 }
             }
+        }
+    }
+
+    public partial class EntryLink
+    {
+        /// <summary>
+        /// <see cref="gcdv::EntryLinkName"/>-typed view over the <see cref="Name"/> resource name property.
+        /// </summary>
+        public gcdv::EntryLinkName EntryLinkName
+        {
+            get => string.IsNullOrEmpty(Name) ? null : gcdv::EntryLinkName.Parse(Name, allowUnparsed: true);
+            set => Name = value?.ToString() ?? "";
+        }
+    }
+
+    public partial class CreateEntryLinkRequest
+    {
+        /// <summary>
+        /// <see cref="EntryGroupName"/>-typed view over the <see cref="Parent"/> resource name property.
+        /// </summary>
+        public EntryGroupName ParentAsEntryGroupName
+        {
+            get => string.IsNullOrEmpty(Parent) ? null : EntryGroupName.Parse(Parent, allowUnparsed: true);
+            set => Parent = value?.ToString() ?? "";
+        }
+    }
+
+    public partial class DeleteEntryLinkRequest
+    {
+        /// <summary>
+        /// <see cref="gcdv::EntryLinkName"/>-typed view over the <see cref="Name"/> resource name property.
+        /// </summary>
+        public gcdv::EntryLinkName EntryLinkName
+        {
+            get => string.IsNullOrEmpty(Name) ? null : gcdv::EntryLinkName.Parse(Name, allowUnparsed: true);
+            set => Name = value?.ToString() ?? "";
+        }
+    }
+
+    public partial class GetEntryLinkRequest
+    {
+        /// <summary>
+        /// <see cref="gcdv::EntryLinkName"/>-typed view over the <see cref="Name"/> resource name property.
+        /// </summary>
+        public gcdv::EntryLinkName EntryLinkName
+        {
+            get => string.IsNullOrEmpty(Name) ? null : gcdv::EntryLinkName.Parse(Name, allowUnparsed: true);
+            set => Name = value?.ToString() ?? "";
         }
     }
 }

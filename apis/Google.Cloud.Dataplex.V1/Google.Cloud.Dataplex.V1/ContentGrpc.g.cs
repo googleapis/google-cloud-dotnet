@@ -24,7 +24,8 @@ using grpc = global::Grpc.Core;
 
 namespace Google.Cloud.Dataplex.V1 {
   /// <summary>
-  /// ContentService manages Notebook and SQL Scripts for Dataplex.
+  /// ContentService manages Notebook and SQL Scripts for Dataplex Universal
+  /// Catalog.
   /// </summary>
   public static partial class ContentService
   {
