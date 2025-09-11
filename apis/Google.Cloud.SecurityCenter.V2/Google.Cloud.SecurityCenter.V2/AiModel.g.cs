@@ -25,19 +25,20 @@ namespace Google.Cloud.SecurityCenter.V2 {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "Ci1nb29nbGUvY2xvdWQvc2VjdXJpdHljZW50ZXIvdjIvYWlfbW9kZWwucHJv",
-            "dG8SHmdvb2dsZS5jbG91ZC5zZWN1cml0eWNlbnRlci52MiKfAgoHQWlNb2Rl",
+            "dG8SHmdvb2dsZS5jbG91ZC5zZWN1cml0eWNlbnRlci52MiK+AgoHQWlNb2Rl",
             "bBIMCgRuYW1lGAEgASgJEg4KBmRvbWFpbhgCIAEoCRIPCgdsaWJyYXJ5GAMg",
             "ASgJEhAKCGxvY2F0aW9uGAQgASgJEhEKCXB1Ymxpc2hlchgFIAEoCRJXChNk",
             "ZXBsb3ltZW50X3BsYXRmb3JtGAYgASgOMjouZ29vZ2xlLmNsb3VkLnNlY3Vy",
             "aXR5Y2VudGVyLnYyLkFpTW9kZWwuRGVwbG95bWVudFBsYXRmb3JtEhQKDGRp",
-            "c3BsYXlfbmFtZRgHIAEoCSJRChJEZXBsb3ltZW50UGxhdGZvcm0SIwofREVQ",
+            "c3BsYXlfbmFtZRgHIAEoCSJwChJEZXBsb3ltZW50UGxhdGZvcm0SIwofREVQ",
             "TE9ZTUVOVF9QTEFURk9STV9VTlNQRUNJRklFRBAAEg0KCVZFUlRFWF9BSRAB",
-            "EgcKA0dLRRACQuYBCiJjb20uZ29vZ2xlLmNsb3VkLnNlY3VyaXR5Y2VudGVy",
-            "LnYyQgxBaU1vZGVsUHJvdG9QAVpKY2xvdWQuZ29vZ2xlLmNvbS9nby9zZWN1",
-            "cml0eWNlbnRlci9hcGl2Mi9zZWN1cml0eWNlbnRlcnBiO3NlY3VyaXR5Y2Vu",
-            "dGVycGKqAh5Hb29nbGUuQ2xvdWQuU2VjdXJpdHlDZW50ZXIuVjLKAh5Hb29n",
-            "bGVcQ2xvdWRcU2VjdXJpdHlDZW50ZXJcVjLqAiFHb29nbGU6OkNsb3VkOjpT",
-            "ZWN1cml0eUNlbnRlcjo6VjJiBnByb3RvMw=="));
+            "EgcKA0dLRRACEgcKA0dDRRADEhQKEEZJTkVfVFVORURfTU9ERUwQBELmAQoi",
+            "Y29tLmdvb2dsZS5jbG91ZC5zZWN1cml0eWNlbnRlci52MkIMQWlNb2RlbFBy",
+            "b3RvUAFaSmNsb3VkLmdvb2dsZS5jb20vZ28vc2VjdXJpdHljZW50ZXIvYXBp",
+            "djIvc2VjdXJpdHljZW50ZXJwYjtzZWN1cml0eWNlbnRlcnBiqgIeR29vZ2xl",
+            "LkNsb3VkLlNlY3VyaXR5Q2VudGVyLlYyygIeR29vZ2xlXENsb3VkXFNlY3Vy",
+            "aXR5Q2VudGVyXFYy6gIhR29vZ2xlOjpDbG91ZDo6U2VjdXJpdHlDZW50ZXI6",
+            "OlYyYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
@@ -503,6 +504,14 @@ namespace Google.Cloud.SecurityCenter.V2 {
         /// Google Kubernetes Engine.
         /// </summary>
         [pbr::OriginalName("GKE")] Gke = 2,
+        /// <summary>
+        /// Google Compute Engine.
+        /// </summary>
+        [pbr::OriginalName("GCE")] Gce = 3,
+        /// <summary>
+        /// Fine tuned model.
+        /// </summary>
+        [pbr::OriginalName("FINE_TUNED_MODEL")] FineTunedModel = 4,
       }
 
     }
