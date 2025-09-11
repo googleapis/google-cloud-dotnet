@@ -76,6 +76,7 @@ namespace Google.Cloud.Kms.V1
             AsymmetricDecryptSettings = existing.AsymmetricDecryptSettings;
             MacSignSettings = existing.MacSignSettings;
             MacVerifySettings = existing.MacVerifySettings;
+            DecapsulateSettings = existing.DecapsulateSettings;
             GenerateRandomBytesSettings = existing.GenerateRandomBytesSettings;
             LocationsSettings = existing.LocationsSettings;
             IAMPolicySettings = existing.IAMPolicySettings;
@@ -626,6 +627,18 @@ namespace Google.Cloud.Kms.V1
         /// </list>
         /// </remarks>
         public gaxgrpc::CallSettings MacVerifySettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 5, initialBackoff: sys::TimeSpan.FromMilliseconds(100), maxBackoff: sys::TimeSpan.FromMilliseconds(60000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Unavailable, grpccore::StatusCode.DeadlineExceeded)));
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>KeyManagementServiceClient.Decapsulate</c> and <c>KeyManagementServiceClient.DecapsulateAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>No timeout is applied.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings DecapsulateSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
 
         /// <summary>
         /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
@@ -5057,6 +5070,45 @@ namespace Google.Cloud.Kms.V1
             MacVerifyAsync(name, data, mac, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
+        /// Decapsulates data that was encapsulated with a public key retrieved from
+        /// [GetPublicKey][google.cloud.kms.v1.KeyManagementService.GetPublicKey]
+        /// corresponding to a [CryptoKeyVersion][google.cloud.kms.v1.CryptoKeyVersion]
+        /// with [CryptoKey.purpose][google.cloud.kms.v1.CryptoKey.purpose]
+        /// KEY_ENCAPSULATION.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual DecapsulateResponse Decapsulate(DecapsulateRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Decapsulates data that was encapsulated with a public key retrieved from
+        /// [GetPublicKey][google.cloud.kms.v1.KeyManagementService.GetPublicKey]
+        /// corresponding to a [CryptoKeyVersion][google.cloud.kms.v1.CryptoKeyVersion]
+        /// with [CryptoKey.purpose][google.cloud.kms.v1.CryptoKey.purpose]
+        /// KEY_ENCAPSULATION.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<DecapsulateResponse> DecapsulateAsync(DecapsulateRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Decapsulates data that was encapsulated with a public key retrieved from
+        /// [GetPublicKey][google.cloud.kms.v1.KeyManagementService.GetPublicKey]
+        /// corresponding to a [CryptoKeyVersion][google.cloud.kms.v1.CryptoKeyVersion]
+        /// with [CryptoKey.purpose][google.cloud.kms.v1.CryptoKey.purpose]
+        /// KEY_ENCAPSULATION.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<DecapsulateResponse> DecapsulateAsync(DecapsulateRequest request, st::CancellationToken cancellationToken) =>
+            DecapsulateAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
         /// Generate random bytes using the Cloud KMS randomness source in the provided
         /// location.
         /// </summary>
@@ -5237,6 +5289,8 @@ namespace Google.Cloud.Kms.V1
 
         private readonly gaxgrpc::ApiCall<MacVerifyRequest, MacVerifyResponse> _callMacVerify;
 
+        private readonly gaxgrpc::ApiCall<DecapsulateRequest, DecapsulateResponse> _callDecapsulate;
+
         private readonly gaxgrpc::ApiCall<GenerateRandomBytesRequest, GenerateRandomBytesResponse> _callGenerateRandomBytes;
 
         /// <summary>
@@ -5338,6 +5392,9 @@ namespace Google.Cloud.Kms.V1
             _callMacVerify = clientHelper.BuildApiCall<MacVerifyRequest, MacVerifyResponse>("MacVerify", grpcClient.MacVerifyAsync, grpcClient.MacVerify, effectiveSettings.MacVerifySettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callMacVerify);
             Modify_MacVerifyApiCall(ref _callMacVerify);
+            _callDecapsulate = clientHelper.BuildApiCall<DecapsulateRequest, DecapsulateResponse>("Decapsulate", grpcClient.DecapsulateAsync, grpcClient.Decapsulate, effectiveSettings.DecapsulateSettings).WithGoogleRequestParam("name", request => request.Name);
+            Modify_ApiCall(ref _callDecapsulate);
+            Modify_DecapsulateApiCall(ref _callDecapsulate);
             _callGenerateRandomBytes = clientHelper.BuildApiCall<GenerateRandomBytesRequest, GenerateRandomBytesResponse>("GenerateRandomBytes", grpcClient.GenerateRandomBytesAsync, grpcClient.GenerateRandomBytes, effectiveSettings.GenerateRandomBytesSettings).WithGoogleRequestParam("location", request => request.Location);
             Modify_ApiCall(ref _callGenerateRandomBytes);
             Modify_GenerateRandomBytesApiCall(ref _callGenerateRandomBytes);
@@ -5399,6 +5456,8 @@ namespace Google.Cloud.Kms.V1
         partial void Modify_MacSignApiCall(ref gaxgrpc::ApiCall<MacSignRequest, MacSignResponse> call);
 
         partial void Modify_MacVerifyApiCall(ref gaxgrpc::ApiCall<MacVerifyRequest, MacVerifyResponse> call);
+
+        partial void Modify_DecapsulateApiCall(ref gaxgrpc::ApiCall<DecapsulateRequest, DecapsulateResponse> call);
 
         partial void Modify_GenerateRandomBytesApiCall(ref gaxgrpc::ApiCall<GenerateRandomBytesRequest, GenerateRandomBytesResponse> call);
 
@@ -5466,6 +5525,8 @@ namespace Google.Cloud.Kms.V1
         partial void Modify_MacSignRequest(ref MacSignRequest request, ref gaxgrpc::CallSettings settings);
 
         partial void Modify_MacVerifyRequest(ref MacVerifyRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_DecapsulateRequest(ref DecapsulateRequest request, ref gaxgrpc::CallSettings settings);
 
         partial void Modify_GenerateRandomBytesRequest(ref GenerateRandomBytesRequest request, ref gaxgrpc::CallSettings settings);
 
@@ -6317,6 +6378,38 @@ namespace Google.Cloud.Kms.V1
         {
             Modify_MacVerifyRequest(ref request, ref callSettings);
             return _callMacVerify.Async(request, callSettings);
+        }
+
+        /// <summary>
+        /// Decapsulates data that was encapsulated with a public key retrieved from
+        /// [GetPublicKey][google.cloud.kms.v1.KeyManagementService.GetPublicKey]
+        /// corresponding to a [CryptoKeyVersion][google.cloud.kms.v1.CryptoKeyVersion]
+        /// with [CryptoKey.purpose][google.cloud.kms.v1.CryptoKey.purpose]
+        /// KEY_ENCAPSULATION.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override DecapsulateResponse Decapsulate(DecapsulateRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_DecapsulateRequest(ref request, ref callSettings);
+            return _callDecapsulate.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Decapsulates data that was encapsulated with a public key retrieved from
+        /// [GetPublicKey][google.cloud.kms.v1.KeyManagementService.GetPublicKey]
+        /// corresponding to a [CryptoKeyVersion][google.cloud.kms.v1.CryptoKeyVersion]
+        /// with [CryptoKey.purpose][google.cloud.kms.v1.CryptoKey.purpose]
+        /// KEY_ENCAPSULATION.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override stt::Task<DecapsulateResponse> DecapsulateAsync(DecapsulateRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_DecapsulateRequest(ref request, ref callSettings);
+            return _callDecapsulate.Async(request, callSettings);
         }
 
         /// <summary>

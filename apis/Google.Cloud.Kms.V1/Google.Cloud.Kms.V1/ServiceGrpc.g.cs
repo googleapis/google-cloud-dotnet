@@ -163,6 +163,10 @@ namespace Google.Cloud.Kms.V1 {
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Kms.V1.MacVerifyResponse> __Marshaller_google_cloud_kms_v1_MacVerifyResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Kms.V1.MacVerifyResponse.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.Kms.V1.DecapsulateRequest> __Marshaller_google_cloud_kms_v1_DecapsulateRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Kms.V1.DecapsulateRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.Kms.V1.DecapsulateResponse> __Marshaller_google_cloud_kms_v1_DecapsulateResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Kms.V1.DecapsulateResponse.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Kms.V1.GenerateRandomBytesRequest> __Marshaller_google_cloud_kms_v1_GenerateRandomBytesRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Kms.V1.GenerateRandomBytesRequest.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Kms.V1.GenerateRandomBytesResponse> __Marshaller_google_cloud_kms_v1_GenerateRandomBytesResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Kms.V1.GenerateRandomBytesResponse.Parser));
@@ -382,6 +386,14 @@ namespace Google.Cloud.Kms.V1 {
         "MacVerify",
         __Marshaller_google_cloud_kms_v1_MacVerifyRequest,
         __Marshaller_google_cloud_kms_v1_MacVerifyResponse);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.Kms.V1.DecapsulateRequest, global::Google.Cloud.Kms.V1.DecapsulateResponse> __Method_Decapsulate = new grpc::Method<global::Google.Cloud.Kms.V1.DecapsulateRequest, global::Google.Cloud.Kms.V1.DecapsulateResponse>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "Decapsulate",
+        __Marshaller_google_cloud_kms_v1_DecapsulateRequest,
+        __Marshaller_google_cloud_kms_v1_DecapsulateResponse);
 
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.Kms.V1.GenerateRandomBytesRequest, global::Google.Cloud.Kms.V1.GenerateRandomBytesResponse> __Method_GenerateRandomBytes = new grpc::Method<global::Google.Cloud.Kms.V1.GenerateRandomBytesRequest, global::Google.Cloud.Kms.V1.GenerateRandomBytesResponse>(
@@ -822,6 +834,22 @@ namespace Google.Cloud.Kms.V1 {
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.Kms.V1.MacVerifyResponse> MacVerify(global::Google.Cloud.Kms.V1.MacVerifyRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Decapsulates data that was encapsulated with a public key retrieved from
+      /// [GetPublicKey][google.cloud.kms.v1.KeyManagementService.GetPublicKey]
+      /// corresponding to a [CryptoKeyVersion][google.cloud.kms.v1.CryptoKeyVersion]
+      /// with [CryptoKey.purpose][google.cloud.kms.v1.CryptoKey.purpose]
+      /// KEY_ENCAPSULATION.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.Kms.V1.DecapsulateResponse> Decapsulate(global::Google.Cloud.Kms.V1.DecapsulateRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
       }
@@ -2569,6 +2597,70 @@ namespace Google.Cloud.Kms.V1 {
         return CallInvoker.AsyncUnaryCall(__Method_MacVerify, null, options, request);
       }
       /// <summary>
+      /// Decapsulates data that was encapsulated with a public key retrieved from
+      /// [GetPublicKey][google.cloud.kms.v1.KeyManagementService.GetPublicKey]
+      /// corresponding to a [CryptoKeyVersion][google.cloud.kms.v1.CryptoKeyVersion]
+      /// with [CryptoKey.purpose][google.cloud.kms.v1.CryptoKey.purpose]
+      /// KEY_ENCAPSULATION.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.Kms.V1.DecapsulateResponse Decapsulate(global::Google.Cloud.Kms.V1.DecapsulateRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return Decapsulate(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Decapsulates data that was encapsulated with a public key retrieved from
+      /// [GetPublicKey][google.cloud.kms.v1.KeyManagementService.GetPublicKey]
+      /// corresponding to a [CryptoKeyVersion][google.cloud.kms.v1.CryptoKeyVersion]
+      /// with [CryptoKey.purpose][google.cloud.kms.v1.CryptoKey.purpose]
+      /// KEY_ENCAPSULATION.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.Kms.V1.DecapsulateResponse Decapsulate(global::Google.Cloud.Kms.V1.DecapsulateRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_Decapsulate, null, options, request);
+      }
+      /// <summary>
+      /// Decapsulates data that was encapsulated with a public key retrieved from
+      /// [GetPublicKey][google.cloud.kms.v1.KeyManagementService.GetPublicKey]
+      /// corresponding to a [CryptoKeyVersion][google.cloud.kms.v1.CryptoKeyVersion]
+      /// with [CryptoKey.purpose][google.cloud.kms.v1.CryptoKey.purpose]
+      /// KEY_ENCAPSULATION.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Kms.V1.DecapsulateResponse> DecapsulateAsync(global::Google.Cloud.Kms.V1.DecapsulateRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return DecapsulateAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Decapsulates data that was encapsulated with a public key retrieved from
+      /// [GetPublicKey][google.cloud.kms.v1.KeyManagementService.GetPublicKey]
+      /// corresponding to a [CryptoKeyVersion][google.cloud.kms.v1.CryptoKeyVersion]
+      /// with [CryptoKey.purpose][google.cloud.kms.v1.CryptoKey.purpose]
+      /// KEY_ENCAPSULATION.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Kms.V1.DecapsulateResponse> DecapsulateAsync(global::Google.Cloud.Kms.V1.DecapsulateRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_Decapsulate, null, options, request);
+      }
+      /// <summary>
       /// Generate random bytes using the Cloud KMS randomness source in the provided
       /// location.
       /// </summary>
@@ -2661,6 +2753,7 @@ namespace Google.Cloud.Kms.V1 {
           .AddMethod(__Method_AsymmetricDecrypt, serviceImpl.AsymmetricDecrypt)
           .AddMethod(__Method_MacSign, serviceImpl.MacSign)
           .AddMethod(__Method_MacVerify, serviceImpl.MacVerify)
+          .AddMethod(__Method_Decapsulate, serviceImpl.Decapsulate)
           .AddMethod(__Method_GenerateRandomBytes, serviceImpl.GenerateRandomBytes).Build();
     }
 
@@ -2698,6 +2791,7 @@ namespace Google.Cloud.Kms.V1 {
       serviceBinder.AddMethod(__Method_AsymmetricDecrypt, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Kms.V1.AsymmetricDecryptRequest, global::Google.Cloud.Kms.V1.AsymmetricDecryptResponse>(serviceImpl.AsymmetricDecrypt));
       serviceBinder.AddMethod(__Method_MacSign, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Kms.V1.MacSignRequest, global::Google.Cloud.Kms.V1.MacSignResponse>(serviceImpl.MacSign));
       serviceBinder.AddMethod(__Method_MacVerify, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Kms.V1.MacVerifyRequest, global::Google.Cloud.Kms.V1.MacVerifyResponse>(serviceImpl.MacVerify));
+      serviceBinder.AddMethod(__Method_Decapsulate, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Kms.V1.DecapsulateRequest, global::Google.Cloud.Kms.V1.DecapsulateResponse>(serviceImpl.Decapsulate));
       serviceBinder.AddMethod(__Method_GenerateRandomBytes, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Kms.V1.GenerateRandomBytesRequest, global::Google.Cloud.Kms.V1.GenerateRandomBytesResponse>(serviceImpl.GenerateRandomBytes));
     }
 
