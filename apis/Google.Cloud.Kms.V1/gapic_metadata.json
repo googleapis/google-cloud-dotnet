@@ -151,6 +151,12 @@
                 "CreateKeyRingAsync"
               ]
             },
+            "Decapsulate": {
+              "methods": [
+                "Decapsulate",
+                "DecapsulateAsync"
+              ]
+            },
             "Decrypt": {
               "methods": [
                 "Decrypt",

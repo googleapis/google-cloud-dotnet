@@ -3101,6 +3101,43 @@ namespace GoogleCSharpSnippets
             // End snippet
         }
 
+        /// <summary>Snippet for Decapsulate</summary>
+        public void DecapsulateRequestObject()
+        {
+            // Snippet: Decapsulate(DecapsulateRequest, CallSettings)
+            // Create client
+            KeyManagementServiceClient keyManagementServiceClient = KeyManagementServiceClient.Create();
+            // Initialize request argument(s)
+            DecapsulateRequest request = new DecapsulateRequest
+            {
+                CryptoKeyVersionName = CryptoKeyVersionName.FromProjectLocationKeyRingCryptoKeyCryptoKeyVersion("[PROJECT]", "[LOCATION]", "[KEY_RING]", "[CRYPTO_KEY]", "[CRYPTO_KEY_VERSION]"),
+                Ciphertext = ByteString.Empty,
+                CiphertextCrc32C = 0L,
+            };
+            // Make the request
+            DecapsulateResponse response = keyManagementServiceClient.Decapsulate(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for DecapsulateAsync</summary>
+        public async Task DecapsulateRequestObjectAsync()
+        {
+            // Snippet: DecapsulateAsync(DecapsulateRequest, CallSettings)
+            // Additional: DecapsulateAsync(DecapsulateRequest, CancellationToken)
+            // Create client
+            KeyManagementServiceClient keyManagementServiceClient = await KeyManagementServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            DecapsulateRequest request = new DecapsulateRequest
+            {
+                CryptoKeyVersionName = CryptoKeyVersionName.FromProjectLocationKeyRingCryptoKeyCryptoKeyVersion("[PROJECT]", "[LOCATION]", "[KEY_RING]", "[CRYPTO_KEY]", "[CRYPTO_KEY_VERSION]"),
+                Ciphertext = ByteString.Empty,
+                CiphertextCrc32C = 0L,
+            };
+            // Make the request
+            DecapsulateResponse response = await keyManagementServiceClient.DecapsulateAsync(request);
+            // End snippet
+        }
+
         /// <summary>Snippet for GenerateRandomBytes</summary>
         public void GenerateRandomBytesRequestObject()
         {
