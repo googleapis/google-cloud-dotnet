@@ -1965,6 +1965,105 @@ namespace GoogleCSharpSnippets
             // End snippet
         }
 
+        /// <summary>Snippet for CreateApiOperation</summary>
+        public void CreateApiOperationRequestObject()
+        {
+            // Snippet: CreateApiOperation(CreateApiOperationRequest, CallSettings)
+            // Create client
+            gcav::ApiHubClient apiHubClient = gcav::ApiHubClient.Create();
+            // Initialize request argument(s)
+            gcav::CreateApiOperationRequest request = new gcav::CreateApiOperationRequest
+            {
+                ParentAsVersionName = gcav::VersionName.FromProjectLocationApiVersion("[PROJECT]", "[LOCATION]", "[API]", "[VERSION]"),
+                ApiOperationId = "",
+                ApiOperation = new gcav::ApiOperation(),
+            };
+            // Make the request
+            gcav::ApiOperation response = apiHubClient.CreateApiOperation(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateApiOperationAsync</summary>
+        public async Task CreateApiOperationRequestObjectAsync()
+        {
+            // Snippet: CreateApiOperationAsync(CreateApiOperationRequest, CallSettings)
+            // Additional: CreateApiOperationAsync(CreateApiOperationRequest, CancellationToken)
+            // Create client
+            gcav::ApiHubClient apiHubClient = await gcav::ApiHubClient.CreateAsync();
+            // Initialize request argument(s)
+            gcav::CreateApiOperationRequest request = new gcav::CreateApiOperationRequest
+            {
+                ParentAsVersionName = gcav::VersionName.FromProjectLocationApiVersion("[PROJECT]", "[LOCATION]", "[API]", "[VERSION]"),
+                ApiOperationId = "",
+                ApiOperation = new gcav::ApiOperation(),
+            };
+            // Make the request
+            gcav::ApiOperation response = await apiHubClient.CreateApiOperationAsync(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateApiOperation</summary>
+        public void CreateApiOperation()
+        {
+            // Snippet: CreateApiOperation(string, ApiOperation, string, CallSettings)
+            // Create client
+            gcav::ApiHubClient apiHubClient = gcav::ApiHubClient.Create();
+            // Initialize request argument(s)
+            string parent = "projects/[PROJECT]/locations/[LOCATION]/apis/[API]/versions/[VERSION]";
+            gcav::ApiOperation apiOperation = new gcav::ApiOperation();
+            string apiOperationId = "";
+            // Make the request
+            gcav::ApiOperation response = apiHubClient.CreateApiOperation(parent, apiOperation, apiOperationId);
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateApiOperationAsync</summary>
+        public async Task CreateApiOperationAsync()
+        {
+            // Snippet: CreateApiOperationAsync(string, ApiOperation, string, CallSettings)
+            // Additional: CreateApiOperationAsync(string, ApiOperation, string, CancellationToken)
+            // Create client
+            gcav::ApiHubClient apiHubClient = await gcav::ApiHubClient.CreateAsync();
+            // Initialize request argument(s)
+            string parent = "projects/[PROJECT]/locations/[LOCATION]/apis/[API]/versions/[VERSION]";
+            gcav::ApiOperation apiOperation = new gcav::ApiOperation();
+            string apiOperationId = "";
+            // Make the request
+            gcav::ApiOperation response = await apiHubClient.CreateApiOperationAsync(parent, apiOperation, apiOperationId);
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateApiOperation</summary>
+        public void CreateApiOperationResourceNames()
+        {
+            // Snippet: CreateApiOperation(VersionName, ApiOperation, string, CallSettings)
+            // Create client
+            gcav::ApiHubClient apiHubClient = gcav::ApiHubClient.Create();
+            // Initialize request argument(s)
+            gcav::VersionName parent = gcav::VersionName.FromProjectLocationApiVersion("[PROJECT]", "[LOCATION]", "[API]", "[VERSION]");
+            gcav::ApiOperation apiOperation = new gcav::ApiOperation();
+            string apiOperationId = "";
+            // Make the request
+            gcav::ApiOperation response = apiHubClient.CreateApiOperation(parent, apiOperation, apiOperationId);
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateApiOperationAsync</summary>
+        public async Task CreateApiOperationResourceNamesAsync()
+        {
+            // Snippet: CreateApiOperationAsync(VersionName, ApiOperation, string, CallSettings)
+            // Additional: CreateApiOperationAsync(VersionName, ApiOperation, string, CancellationToken)
+            // Create client
+            gcav::ApiHubClient apiHubClient = await gcav::ApiHubClient.CreateAsync();
+            // Initialize request argument(s)
+            gcav::VersionName parent = gcav::VersionName.FromProjectLocationApiVersion("[PROJECT]", "[LOCATION]", "[API]", "[VERSION]");
+            gcav::ApiOperation apiOperation = new gcav::ApiOperation();
+            string apiOperationId = "";
+            // Make the request
+            gcav::ApiOperation response = await apiHubClient.CreateApiOperationAsync(parent, apiOperation, apiOperationId);
+            // End snippet
+        }
+
         /// <summary>Snippet for GetApiOperation</summary>
         public void GetApiOperationRequestObject()
         {
@@ -2327,6 +2426,157 @@ namespace GoogleCSharpSnippets
             }
             // Store the pageToken, for when the next page is required.
             string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for UpdateApiOperation</summary>
+        public void UpdateApiOperationRequestObject()
+        {
+            // Snippet: UpdateApiOperation(UpdateApiOperationRequest, CallSettings)
+            // Create client
+            gcav::ApiHubClient apiHubClient = gcav::ApiHubClient.Create();
+            // Initialize request argument(s)
+            gcav::UpdateApiOperationRequest request = new gcav::UpdateApiOperationRequest
+            {
+                ApiOperation = new gcav::ApiOperation(),
+                UpdateMask = new FieldMask(),
+            };
+            // Make the request
+            gcav::ApiOperation response = apiHubClient.UpdateApiOperation(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for UpdateApiOperationAsync</summary>
+        public async Task UpdateApiOperationRequestObjectAsync()
+        {
+            // Snippet: UpdateApiOperationAsync(UpdateApiOperationRequest, CallSettings)
+            // Additional: UpdateApiOperationAsync(UpdateApiOperationRequest, CancellationToken)
+            // Create client
+            gcav::ApiHubClient apiHubClient = await gcav::ApiHubClient.CreateAsync();
+            // Initialize request argument(s)
+            gcav::UpdateApiOperationRequest request = new gcav::UpdateApiOperationRequest
+            {
+                ApiOperation = new gcav::ApiOperation(),
+                UpdateMask = new FieldMask(),
+            };
+            // Make the request
+            gcav::ApiOperation response = await apiHubClient.UpdateApiOperationAsync(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for UpdateApiOperation</summary>
+        public void UpdateApiOperation()
+        {
+            // Snippet: UpdateApiOperation(ApiOperation, FieldMask, CallSettings)
+            // Create client
+            gcav::ApiHubClient apiHubClient = gcav::ApiHubClient.Create();
+            // Initialize request argument(s)
+            gcav::ApiOperation apiOperation = new gcav::ApiOperation();
+            FieldMask updateMask = new FieldMask();
+            // Make the request
+            gcav::ApiOperation response = apiHubClient.UpdateApiOperation(apiOperation, updateMask);
+            // End snippet
+        }
+
+        /// <summary>Snippet for UpdateApiOperationAsync</summary>
+        public async Task UpdateApiOperationAsync()
+        {
+            // Snippet: UpdateApiOperationAsync(ApiOperation, FieldMask, CallSettings)
+            // Additional: UpdateApiOperationAsync(ApiOperation, FieldMask, CancellationToken)
+            // Create client
+            gcav::ApiHubClient apiHubClient = await gcav::ApiHubClient.CreateAsync();
+            // Initialize request argument(s)
+            gcav::ApiOperation apiOperation = new gcav::ApiOperation();
+            FieldMask updateMask = new FieldMask();
+            // Make the request
+            gcav::ApiOperation response = await apiHubClient.UpdateApiOperationAsync(apiOperation, updateMask);
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteApiOperation</summary>
+        public void DeleteApiOperationRequestObject()
+        {
+            // Snippet: DeleteApiOperation(DeleteApiOperationRequest, CallSettings)
+            // Create client
+            gcav::ApiHubClient apiHubClient = gcav::ApiHubClient.Create();
+            // Initialize request argument(s)
+            gcav::DeleteApiOperationRequest request = new gcav::DeleteApiOperationRequest
+            {
+                ApiOperationName = gcav::ApiOperationName.FromProjectLocationApiVersionOperation("[PROJECT]", "[LOCATION]", "[API]", "[VERSION]", "[OPERATION]"),
+            };
+            // Make the request
+            apiHubClient.DeleteApiOperation(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteApiOperationAsync</summary>
+        public async Task DeleteApiOperationRequestObjectAsync()
+        {
+            // Snippet: DeleteApiOperationAsync(DeleteApiOperationRequest, CallSettings)
+            // Additional: DeleteApiOperationAsync(DeleteApiOperationRequest, CancellationToken)
+            // Create client
+            gcav::ApiHubClient apiHubClient = await gcav::ApiHubClient.CreateAsync();
+            // Initialize request argument(s)
+            gcav::DeleteApiOperationRequest request = new gcav::DeleteApiOperationRequest
+            {
+                ApiOperationName = gcav::ApiOperationName.FromProjectLocationApiVersionOperation("[PROJECT]", "[LOCATION]", "[API]", "[VERSION]", "[OPERATION]"),
+            };
+            // Make the request
+            await apiHubClient.DeleteApiOperationAsync(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteApiOperation</summary>
+        public void DeleteApiOperation()
+        {
+            // Snippet: DeleteApiOperation(string, CallSettings)
+            // Create client
+            gcav::ApiHubClient apiHubClient = gcav::ApiHubClient.Create();
+            // Initialize request argument(s)
+            string name = "projects/[PROJECT]/locations/[LOCATION]/apis/[API]/versions/[VERSION]/operations/[OPERATION]";
+            // Make the request
+            apiHubClient.DeleteApiOperation(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteApiOperationAsync</summary>
+        public async Task DeleteApiOperationAsync()
+        {
+            // Snippet: DeleteApiOperationAsync(string, CallSettings)
+            // Additional: DeleteApiOperationAsync(string, CancellationToken)
+            // Create client
+            gcav::ApiHubClient apiHubClient = await gcav::ApiHubClient.CreateAsync();
+            // Initialize request argument(s)
+            string name = "projects/[PROJECT]/locations/[LOCATION]/apis/[API]/versions/[VERSION]/operations/[OPERATION]";
+            // Make the request
+            await apiHubClient.DeleteApiOperationAsync(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteApiOperation</summary>
+        public void DeleteApiOperationResourceNames()
+        {
+            // Snippet: DeleteApiOperation(ApiOperationName, CallSettings)
+            // Create client
+            gcav::ApiHubClient apiHubClient = gcav::ApiHubClient.Create();
+            // Initialize request argument(s)
+            gcav::ApiOperationName name = gcav::ApiOperationName.FromProjectLocationApiVersionOperation("[PROJECT]", "[LOCATION]", "[API]", "[VERSION]", "[OPERATION]");
+            // Make the request
+            apiHubClient.DeleteApiOperation(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteApiOperationAsync</summary>
+        public async Task DeleteApiOperationResourceNamesAsync()
+        {
+            // Snippet: DeleteApiOperationAsync(ApiOperationName, CallSettings)
+            // Additional: DeleteApiOperationAsync(ApiOperationName, CancellationToken)
+            // Create client
+            gcav::ApiHubClient apiHubClient = await gcav::ApiHubClient.CreateAsync();
+            // Initialize request argument(s)
+            gcav::ApiOperationName name = gcav::ApiOperationName.FromProjectLocationApiVersionOperation("[PROJECT]", "[LOCATION]", "[API]", "[VERSION]", "[OPERATION]");
+            // Make the request
+            await apiHubClient.DeleteApiOperationAsync(name);
             // End snippet
         }
 

@@ -30,42 +30,51 @@ namespace Google.Cloud.ApiHub.V1 {
             "Z2xlL2FwaS9maWVsZF9iZWhhdmlvci5wcm90bxoZZ29vZ2xlL2FwaS9yZXNv",
             "dXJjZS5wcm90bxoqZ29vZ2xlL2Nsb3VkL2FwaWh1Yi92MS9jb21tb25fZmll",
             "bGRzLnByb3RvGiNnb29nbGUvbG9uZ3J1bm5pbmcvb3BlcmF0aW9ucy5wcm90",
-            "byLBAQobQ3JlYXRlQXBpSHViSW5zdGFuY2VSZXF1ZXN0EjkKBnBhcmVudBgB",
-            "IAEoCUIp4EEC+kEjCiFsb2NhdGlvbnMuZ29vZ2xlYXBpcy5jb20vTG9jYXRp",
-            "b24SIAoTYXBpX2h1Yl9pbnN0YW5jZV9pZBgCIAEoCUID4EEBEkUKEGFwaV9o",
-            "dWJfaW5zdGFuY2UYAyABKAsyJi5nb29nbGUuY2xvdWQuYXBpaHViLnYxLkFw",
-            "aUh1Ykluc3RhbmNlQgPgQQIiVgoYR2V0QXBpSHViSW5zdGFuY2VSZXF1ZXN0",
-            "EjoKBG5hbWUYASABKAlCLOBBAvpBJgokYXBpaHViLmdvb2dsZWFwaXMuY29t",
-            "L0FwaUh1Ykluc3RhbmNlIlsKG0xvb2t1cEFwaUh1Ykluc3RhbmNlUmVxdWVz",
-            "dBI8CgZwYXJlbnQYASABKAlCLOBBAvpBJhIkYXBpaHViLmdvb2dsZWFwaXMu",
-            "Y29tL0FwaUh1Ykluc3RhbmNlImAKHExvb2t1cEFwaUh1Ykluc3RhbmNlUmVz",
-            "cG9uc2USQAoQYXBpX2h1Yl9pbnN0YW5jZRgBIAEoCzImLmdvb2dsZS5jbG91",
-            "ZC5hcGlodWIudjEuQXBpSHViSW5zdGFuY2Uy7wUKDFByb3Zpc2lvbmluZxKO",
-            "AgoUQ3JlYXRlQXBpSHViSW5zdGFuY2USMy5nb29nbGUuY2xvdWQuYXBpaHVi",
-            "LnYxLkNyZWF0ZUFwaUh1Ykluc3RhbmNlUmVxdWVzdBodLmdvb2dsZS5sb25n",
-            "cnVubmluZy5PcGVyYXRpb24ioQHKQSMKDkFwaUh1Ykluc3RhbmNlEhFPcGVy",
-            "YXRpb25NZXRhZGF0YdpBK3BhcmVudCxhcGlfaHViX2luc3RhbmNlLGFwaV9o",
-            "dWJfaW5zdGFuY2VfaWSC0+STAkciMy92MS97cGFyZW50PXByb2plY3RzLyov",
-            "bG9jYXRpb25zLyp9L2FwaUh1Ykluc3RhbmNlczoQYXBpX2h1Yl9pbnN0YW5j",
-            "ZRKxAQoRR2V0QXBpSHViSW5zdGFuY2USMC5nb29nbGUuY2xvdWQuYXBpaHVi",
-            "LnYxLkdldEFwaUh1Ykluc3RhbmNlUmVxdWVzdBomLmdvb2dsZS5jbG91ZC5h",
-            "cGlodWIudjEuQXBpSHViSW5zdGFuY2UiQtpBBG5hbWWC0+STAjUSMy92MS97",
-            "bmFtZT1wcm9qZWN0cy8qL2xvY2F0aW9ucy8qL2FwaUh1Ykluc3RhbmNlcy8q",
-            "fRLOAQoUTG9va3VwQXBpSHViSW5zdGFuY2USMy5nb29nbGUuY2xvdWQuYXBp",
-            "aHViLnYxLkxvb2t1cEFwaUh1Ykluc3RhbmNlUmVxdWVzdBo0Lmdvb2dsZS5j",
-            "bG91ZC5hcGlodWIudjEuTG9va3VwQXBpSHViSW5zdGFuY2VSZXNwb25zZSJL",
-            "2kEGcGFyZW50gtPkkwI8EjovdjEve3BhcmVudD1wcm9qZWN0cy8qL2xvY2F0",
-            "aW9ucy8qfS9hcGlIdWJJbnN0YW5jZXM6bG9va3VwGknKQRVhcGlodWIuZ29v",
-            "Z2xlYXBpcy5jb23SQS5odHRwczovL3d3dy5nb29nbGVhcGlzLmNvbS9hdXRo",
-            "L2Nsb3VkLXBsYXRmb3JtQroBChpjb20uZ29vZ2xlLmNsb3VkLmFwaWh1Yi52",
-            "MUIYUHJvdmlzaW9uaW5nU2VydmljZVByb3RvUAFaMmNsb3VkLmdvb2dsZS5j",
-            "b20vZ28vYXBpaHViL2FwaXYxL2FwaWh1YnBiO2FwaWh1YnBiqgIWR29vZ2xl",
-            "LkNsb3VkLkFwaUh1Yi5WMcoCFkdvb2dsZVxDbG91ZFxBcGlIdWJcVjHqAhlH",
-            "b29nbGU6OkNsb3VkOjpBcGlIdWI6OlYxYgZwcm90bzM="));
+            "bxobZ29vZ2xlL3Byb3RvYnVmL2VtcHR5LnByb3RvIsEBChtDcmVhdGVBcGlI",
+            "dWJJbnN0YW5jZVJlcXVlc3QSOQoGcGFyZW50GAEgASgJQingQQL6QSMKIWxv",
+            "Y2F0aW9ucy5nb29nbGVhcGlzLmNvbS9Mb2NhdGlvbhIgChNhcGlfaHViX2lu",
+            "c3RhbmNlX2lkGAIgASgJQgPgQQESRQoQYXBpX2h1Yl9pbnN0YW5jZRgDIAEo",
+            "CzImLmdvb2dsZS5jbG91ZC5hcGlodWIudjEuQXBpSHViSW5zdGFuY2VCA+BB",
+            "AiJZChtEZWxldGVBcGlIdWJJbnN0YW5jZVJlcXVlc3QSOgoEbmFtZRgBIAEo",
+            "CUIs4EEC+kEmCiRhcGlodWIuZ29vZ2xlYXBpcy5jb20vQXBpSHViSW5zdGFu",
+            "Y2UiVgoYR2V0QXBpSHViSW5zdGFuY2VSZXF1ZXN0EjoKBG5hbWUYASABKAlC",
+            "LOBBAvpBJgokYXBpaHViLmdvb2dsZWFwaXMuY29tL0FwaUh1Ykluc3RhbmNl",
+            "IlsKG0xvb2t1cEFwaUh1Ykluc3RhbmNlUmVxdWVzdBI8CgZwYXJlbnQYASAB",
+            "KAlCLOBBAvpBJhIkYXBpaHViLmdvb2dsZWFwaXMuY29tL0FwaUh1Ykluc3Rh",
+            "bmNlImAKHExvb2t1cEFwaUh1Ykluc3RhbmNlUmVzcG9uc2USQAoQYXBpX2h1",
+            "Yl9pbnN0YW5jZRgBIAEoCzImLmdvb2dsZS5jbG91ZC5hcGlodWIudjEuQXBp",
+            "SHViSW5zdGFuY2UyzQcKDFByb3Zpc2lvbmluZxKOAgoUQ3JlYXRlQXBpSHVi",
+            "SW5zdGFuY2USMy5nb29nbGUuY2xvdWQuYXBpaHViLnYxLkNyZWF0ZUFwaUh1",
+            "Ykluc3RhbmNlUmVxdWVzdBodLmdvb2dsZS5sb25ncnVubmluZy5PcGVyYXRp",
+            "b24ioQHKQSMKDkFwaUh1Ykluc3RhbmNlEhFPcGVyYXRpb25NZXRhZGF0YdpB",
+            "K3BhcmVudCxhcGlfaHViX2luc3RhbmNlLGFwaV9odWJfaW5zdGFuY2VfaWSC",
+            "0+STAkciMy92MS97cGFyZW50PXByb2plY3RzLyovbG9jYXRpb25zLyp9L2Fw",
+            "aUh1Ykluc3RhbmNlczoQYXBpX2h1Yl9pbnN0YW5jZRLbAQoURGVsZXRlQXBp",
+            "SHViSW5zdGFuY2USMy5nb29nbGUuY2xvdWQuYXBpaHViLnYxLkRlbGV0ZUFw",
+            "aUh1Ykluc3RhbmNlUmVxdWVzdBodLmdvb2dsZS5sb25ncnVubmluZy5PcGVy",
+            "YXRpb24ib8pBKgoVZ29vZ2xlLnByb3RvYnVmLkVtcHR5EhFPcGVyYXRpb25N",
+            "ZXRhZGF0YdpBBG5hbWWC0+STAjUqMy92MS97bmFtZT1wcm9qZWN0cy8qL2xv",
+            "Y2F0aW9ucy8qL2FwaUh1Ykluc3RhbmNlcy8qfRKxAQoRR2V0QXBpSHViSW5z",
+            "dGFuY2USMC5nb29nbGUuY2xvdWQuYXBpaHViLnYxLkdldEFwaUh1Ykluc3Rh",
+            "bmNlUmVxdWVzdBomLmdvb2dsZS5jbG91ZC5hcGlodWIudjEuQXBpSHViSW5z",
+            "dGFuY2UiQtpBBG5hbWWC0+STAjUSMy92MS97bmFtZT1wcm9qZWN0cy8qL2xv",
+            "Y2F0aW9ucy8qL2FwaUh1Ykluc3RhbmNlcy8qfRLOAQoUTG9va3VwQXBpSHVi",
+            "SW5zdGFuY2USMy5nb29nbGUuY2xvdWQuYXBpaHViLnYxLkxvb2t1cEFwaUh1",
+            "Ykluc3RhbmNlUmVxdWVzdBo0Lmdvb2dsZS5jbG91ZC5hcGlodWIudjEuTG9v",
+            "a3VwQXBpSHViSW5zdGFuY2VSZXNwb25zZSJL2kEGcGFyZW50gtPkkwI8Ejov",
+            "djEve3BhcmVudD1wcm9qZWN0cy8qL2xvY2F0aW9ucy8qfS9hcGlIdWJJbnN0",
+            "YW5jZXM6bG9va3VwGknKQRVhcGlodWIuZ29vZ2xlYXBpcy5jb23SQS5odHRw",
+            "czovL3d3dy5nb29nbGVhcGlzLmNvbS9hdXRoL2Nsb3VkLXBsYXRmb3JtQroB",
+            "Chpjb20uZ29vZ2xlLmNsb3VkLmFwaWh1Yi52MUIYUHJvdmlzaW9uaW5nU2Vy",
+            "dmljZVByb3RvUAFaMmNsb3VkLmdvb2dsZS5jb20vZ28vYXBpaHViL2FwaXYx",
+            "L2FwaWh1YnBiO2FwaWh1YnBiqgIWR29vZ2xlLkNsb3VkLkFwaUh1Yi5WMcoC",
+            "Fkdvb2dsZVxDbG91ZFxBcGlIdWJcVjHqAhlHb29nbGU6OkNsb3VkOjpBcGlI",
+            "dWI6OlYxYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Api.ClientReflection.Descriptor, global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Cloud.ApiHub.V1.CommonFieldsReflection.Descriptor, global::Google.LongRunning.OperationsReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Api.ClientReflection.Descriptor, global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Cloud.ApiHub.V1.CommonFieldsReflection.Descriptor, global::Google.LongRunning.OperationsReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.EmptyReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.ApiHub.V1.CreateApiHubInstanceRequest), global::Google.Cloud.ApiHub.V1.CreateApiHubInstanceRequest.Parser, new[]{ "Parent", "ApiHubInstanceId", "ApiHubInstance" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.ApiHub.V1.DeleteApiHubInstanceRequest), global::Google.Cloud.ApiHub.V1.DeleteApiHubInstanceRequest.Parser, new[]{ "Name" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.ApiHub.V1.GetApiHubInstanceRequest), global::Google.Cloud.ApiHub.V1.GetApiHubInstanceRequest.Parser, new[]{ "Name" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.ApiHub.V1.LookupApiHubInstanceRequest), global::Google.Cloud.ApiHub.V1.LookupApiHubInstanceRequest.Parser, new[]{ "Parent" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.ApiHub.V1.LookupApiHubInstanceResponse), global::Google.Cloud.ApiHub.V1.LookupApiHubInstanceResponse.Parser, new[]{ "ApiHubInstance" }, null, null, null, null)
@@ -370,6 +379,206 @@ namespace Google.Cloud.ApiHub.V1 {
 
   /// <summary>
   /// The
+  /// [DeleteApiHubInstance][google.cloud.apihub.v1.Provisioning.DeleteApiHubInstance]
+  /// method's request.
+  /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+  public sealed partial class DeleteApiHubInstanceRequest : pb::IMessage<DeleteApiHubInstanceRequest>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<DeleteApiHubInstanceRequest> _parser = new pb::MessageParser<DeleteApiHubInstanceRequest>(() => new DeleteApiHubInstanceRequest());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<DeleteApiHubInstanceRequest> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Cloud.ApiHub.V1.ProvisioningServiceReflection.Descriptor.MessageTypes[1]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public DeleteApiHubInstanceRequest() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public DeleteApiHubInstanceRequest(DeleteApiHubInstanceRequest other) : this() {
+      name_ = other.name_;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public DeleteApiHubInstanceRequest Clone() {
+      return new DeleteApiHubInstanceRequest(this);
+    }
+
+    /// <summary>Field number for the "name" field.</summary>
+    public const int NameFieldNumber = 1;
+    private string name_ = "";
+    /// <summary>
+    /// Required. The name of the Api Hub instance to delete.
+    /// Format:
+    /// `projects/{project}/locations/{location}/apiHubInstances/{apiHubInstance}`.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string Name {
+      get { return name_; }
+      set {
+        name_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as DeleteApiHubInstanceRequest);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(DeleteApiHubInstanceRequest other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (Name != other.Name) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (Name.Length != 0) hash ^= Name.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (Name.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(Name);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (Name.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(Name);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      if (Name.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Name);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(DeleteApiHubInstanceRequest other) {
+      if (other == null) {
+        return;
+      }
+      if (other.Name.Length != 0) {
+        Name = other.Name;
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            Name = input.ReadString();
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            Name = input.ReadString();
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+  }
+
+  /// <summary>
+  /// The
   /// [GetApiHubInstance][google.cloud.apihub.v1.Provisioning.GetApiHubInstance]
   /// method's request.
   /// </summary>
@@ -388,7 +597,7 @@ namespace Google.Cloud.ApiHub.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.ApiHub.V1.ProvisioningServiceReflection.Descriptor.MessageTypes[1]; }
+      get { return global::Google.Cloud.ApiHub.V1.ProvisioningServiceReflection.Descriptor.MessageTypes[2]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -588,7 +797,7 @@ namespace Google.Cloud.ApiHub.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.ApiHub.V1.ProvisioningServiceReflection.Descriptor.MessageTypes[2]; }
+      get { return global::Google.Cloud.ApiHub.V1.ProvisioningServiceReflection.Descriptor.MessageTypes[3]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -789,7 +998,7 @@ namespace Google.Cloud.ApiHub.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.ApiHub.V1.ProvisioningServiceReflection.Descriptor.MessageTypes[3]; }
+      get { return global::Google.Cloud.ApiHub.V1.ProvisioningServiceReflection.Descriptor.MessageTypes[4]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]

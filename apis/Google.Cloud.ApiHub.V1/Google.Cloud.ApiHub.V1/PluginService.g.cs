@@ -29,49 +29,344 @@ namespace Google.Cloud.ApiHub.V1 {
             "b25zLnByb3RvGhdnb29nbGUvYXBpL2NsaWVudC5wcm90bxofZ29vZ2xlL2Fw",
             "aS9maWVsZF9iZWhhdmlvci5wcm90bxoZZ29vZ2xlL2FwaS9yZXNvdXJjZS5w",
             "cm90bxoqZ29vZ2xlL2Nsb3VkL2FwaWh1Yi92MS9jb21tb25fZmllbGRzLnBy",
-            "b3RvIu8CCgZQbHVnaW4SEQoEbmFtZRgBIAEoCUID4EEIEhkKDGRpc3BsYXlf",
-            "bmFtZRgCIAEoCUID4EECEjoKBHR5cGUYAyABKAsyJy5nb29nbGUuY2xvdWQu",
-            "YXBpaHViLnYxLkF0dHJpYnV0ZVZhbHVlc0ID4EECEhgKC2Rlc2NyaXB0aW9u",
-            "GAQgASgJQgPgQQESOAoFc3RhdGUYBSABKA4yJC5nb29nbGUuY2xvdWQuYXBp",
-            "aHViLnYxLlBsdWdpbi5TdGF0ZUID4EEDIjkKBVN0YXRlEhUKEVNUQVRFX1VO",
-            "U1BFQ0lGSUVEEAASCwoHRU5BQkxFRBABEgwKCERJU0FCTEVEEAI6bOpBaQoc",
-            "YXBpaHViLmdvb2dsZWFwaXMuY29tL1BsdWdpbhI4cHJvamVjdHMve3Byb2pl",
-            "Y3R9L2xvY2F0aW9ucy97bG9jYXRpb259L3BsdWdpbnMve3BsdWdpbn0qB3Bs",
-            "dWdpbnMyBnBsdWdpbiJGChBHZXRQbHVnaW5SZXF1ZXN0EjIKBG5hbWUYASAB",
-            "KAlCJOBBAvpBHgocYXBpaHViLmdvb2dsZWFwaXMuY29tL1BsdWdpbiJJChNF",
-            "bmFibGVQbHVnaW5SZXF1ZXN0EjIKBG5hbWUYASABKAlCJOBBAvpBHgocYXBp",
-            "aHViLmdvb2dsZWFwaXMuY29tL1BsdWdpbiJKChREaXNhYmxlUGx1Z2luUmVx",
-            "dWVzdBIyCgRuYW1lGAEgASgJQiTgQQL6QR4KHGFwaWh1Yi5nb29nbGVhcGlz",
-            "LmNvbS9QbHVnaW4yuAQKDEFwaUh1YlBsdWdpbhKRAQoJR2V0UGx1Z2luEigu",
-            "Z29vZ2xlLmNsb3VkLmFwaWh1Yi52MS5HZXRQbHVnaW5SZXF1ZXN0Gh4uZ29v",
-            "Z2xlLmNsb3VkLmFwaWh1Yi52MS5QbHVnaW4iOtpBBG5hbWWC0+STAi0SKy92",
-            "MS97bmFtZT1wcm9qZWN0cy8qL2xvY2F0aW9ucy8qL3BsdWdpbnMvKn0SoQEK",
-            "DEVuYWJsZVBsdWdpbhIrLmdvb2dsZS5jbG91ZC5hcGlodWIudjEuRW5hYmxl",
-            "UGx1Z2luUmVxdWVzdBoeLmdvb2dsZS5jbG91ZC5hcGlodWIudjEuUGx1Z2lu",
-            "IkTaQQRuYW1lgtPkkwI3IjIvdjEve25hbWU9cHJvamVjdHMvKi9sb2NhdGlv",
-            "bnMvKi9wbHVnaW5zLyp9OmVuYWJsZToBKhKkAQoNRGlzYWJsZVBsdWdpbhIs",
-            "Lmdvb2dsZS5jbG91ZC5hcGlodWIudjEuRGlzYWJsZVBsdWdpblJlcXVlc3Qa",
-            "Hi5nb29nbGUuY2xvdWQuYXBpaHViLnYxLlBsdWdpbiJF2kEEbmFtZYLT5JMC",
-            "OCIzL3YxL3tuYW1lPXByb2plY3RzLyovbG9jYXRpb25zLyovcGx1Z2lucy8q",
-            "fTpkaXNhYmxlOgEqGknKQRVhcGlodWIuZ29vZ2xlYXBpcy5jb23SQS5odHRw",
-            "czovL3d3dy5nb29nbGVhcGlzLmNvbS9hdXRoL2Nsb3VkLXBsYXRmb3JtQrQB",
-            "Chpjb20uZ29vZ2xlLmNsb3VkLmFwaWh1Yi52MUISUGx1Z2luU2VydmljZVBy",
-            "b3RvUAFaMmNsb3VkLmdvb2dsZS5jb20vZ28vYXBpaHViL2FwaXYxL2FwaWh1",
-            "YnBiO2FwaWh1YnBiqgIWR29vZ2xlLkNsb3VkLkFwaUh1Yi5WMcoCFkdvb2ds",
-            "ZVxDbG91ZFxBcGlIdWJcVjHqAhlHb29nbGU6OkNsb3VkOjpBcGlIdWI6OlYx",
-            "YgZwcm90bzM="));
+            "b3RvGiNnb29nbGUvbG9uZ3J1bm5pbmcvb3BlcmF0aW9ucy5wcm90bxobZ29v",
+            "Z2xlL3Byb3RvYnVmL2VtcHR5LnByb3RvGiBnb29nbGUvcHJvdG9idWYvZmll",
+            "bGRfbWFzay5wcm90bxofZ29vZ2xlL3Byb3RvYnVmL3RpbWVzdGFtcC5wcm90",
+            "byLQCwoGUGx1Z2luEhEKBG5hbWUYASABKAlCA+BBCBIZCgxkaXNwbGF5X25h",
+            "bWUYAiABKAlCA+BBAhI6CgR0eXBlGAMgASgLMicuZ29vZ2xlLmNsb3VkLmFw",
+            "aWh1Yi52MS5BdHRyaWJ1dGVWYWx1ZXNCA+BBARIYCgtkZXNjcmlwdGlvbhgE",
+            "IAEoCUID4EEBEjgKBXN0YXRlGAUgASgOMiQuZ29vZ2xlLmNsb3VkLmFwaWh1",
+            "Yi52MS5QbHVnaW4uU3RhdGVCA+BBAxJJCg5vd25lcnNoaXBfdHlwZRgGIAEo",
+            "DjIsLmdvb2dsZS5jbG91ZC5hcGlodWIudjEuUGx1Z2luLk93bmVyc2hpcFR5",
+            "cGVCA+BBAxJLCg9ob3N0aW5nX3NlcnZpY2UYByABKAsyLS5nb29nbGUuY2xv",
+            "dWQuYXBpaHViLnYxLlBsdWdpbi5Ib3N0aW5nU2VydmljZUID4EEBEkcKDmFj",
+            "dGlvbnNfY29uZmlnGAggAygLMiouZ29vZ2xlLmNsb3VkLmFwaWh1Yi52MS5Q",
+            "bHVnaW5BY3Rpb25Db25maWdCA+BBARJBCg1kb2N1bWVudGF0aW9uGAkgASgL",
+            "MiUuZ29vZ2xlLmNsb3VkLmFwaWh1Yi52MS5Eb2N1bWVudGF0aW9uQgPgQQES",
+            "RAoPcGx1Z2luX2NhdGVnb3J5GAsgASgOMiYuZ29vZ2xlLmNsb3VkLmFwaWh1",
+            "Yi52MS5QbHVnaW5DYXRlZ29yeUID4EEBEksKD2NvbmZpZ190ZW1wbGF0ZRgM",
+            "IAEoCzItLmdvb2dsZS5jbG91ZC5hcGlodWIudjEuUGx1Z2luLkNvbmZpZ1Rl",
+            "bXBsYXRlQgPgQQESNAoLY3JlYXRlX3RpbWUYDSABKAsyGi5nb29nbGUucHJv",
+            "dG9idWYuVGltZXN0YW1wQgPgQQMSNAoLdXBkYXRlX3RpbWUYDiABKAsyGi5n",
+            "b29nbGUucHJvdG9idWYuVGltZXN0YW1wQgPgQQMSPgoMZ2F0ZXdheV90eXBl",
+            "GA8gASgOMiMuZ29vZ2xlLmNsb3VkLmFwaWh1Yi52MS5HYXRld2F5VHlwZUID",
+            "4EEBGioKDkhvc3RpbmdTZXJ2aWNlEhgKC3NlcnZpY2VfdXJpGAEgASgJQgPg",
+            "QQEa/AIKDkNvbmZpZ1RlbXBsYXRlEmMKFGF1dGhfY29uZmlnX3RlbXBsYXRl",
+            "GAEgASgLMkAuZ29vZ2xlLmNsb3VkLmFwaWh1Yi52MS5QbHVnaW4uQ29uZmln",
+            "VGVtcGxhdGUuQXV0aENvbmZpZ1RlbXBsYXRlQgPgQQESVwoaYWRkaXRpb25h",
+            "bF9jb25maWdfdGVtcGxhdGUYAiADKAsyLi5nb29nbGUuY2xvdWQuYXBpaHVi",
+            "LnYxLkNvbmZpZ1ZhcmlhYmxlVGVtcGxhdGVCA+BBARqrAQoSQXV0aENvbmZp",
+            "Z1RlbXBsYXRlEkMKFHN1cHBvcnRlZF9hdXRoX3R5cGVzGAEgAygOMiAuZ29v",
+            "Z2xlLmNsb3VkLmFwaWh1Yi52MS5BdXRoVHlwZUID4EECElAKD3NlcnZpY2Vf",
+            "YWNjb3VudBgCIAEoCzIyLmdvb2dsZS5jbG91ZC5hcGlodWIudjEuR29vZ2xl",
+            "U2VydmljZUFjY291bnRDb25maWdCA+BBASI5CgVTdGF0ZRIVChFTVEFURV9V",
+            "TlNQRUNJRklFRBAAEgsKB0VOQUJMRUQQARIMCghESVNBQkxFRBACIlEKDU93",
+            "bmVyc2hpcFR5cGUSHgoaT1dORVJTSElQX1RZUEVfVU5TUEVDSUZJRUQQABIQ",
+            "CgxTWVNURU1fT1dORUQQARIOCgpVU0VSX09XTkVEEAI6bOpBaQocYXBpaHVi",
+            "Lmdvb2dsZWFwaXMuY29tL1BsdWdpbhI4cHJvamVjdHMve3Byb2plY3R9L2xv",
+            "Y2F0aW9ucy97bG9jYXRpb259L3BsdWdpbnMve3BsdWdpbn0qB3BsdWdpbnMy",
+            "BnBsdWdpbiKxAgoSUGx1Z2luQWN0aW9uQ29uZmlnEg8KAmlkGAEgASgJQgPg",
+            "QQISGQoMZGlzcGxheV9uYW1lGAIgASgJQgPgQQISGAoLZGVzY3JpcHRpb24Y",
+            "AyABKAlCA+BBAhJRCgx0cmlnZ2VyX21vZGUYBCABKA4yNi5nb29nbGUuY2xv",
+            "dWQuYXBpaHViLnYxLlBsdWdpbkFjdGlvbkNvbmZpZy5UcmlnZ2VyTW9kZUID",
+            "4EECIoEBCgtUcmlnZ2VyTW9kZRIcChhUUklHR0VSX01PREVfVU5TUEVDSUZJ",
+            "RUQQABIdChlBUElfSFVCX09OX0RFTUFORF9UUklHR0VSEAESHAoYQVBJX0hV",
+            "Ql9TQ0hFRFVMRV9UUklHR0VSEAISFwoTTk9OX0FQSV9IVUJfTUFOQUdFRBAD",
+            "IkYKEEdldFBsdWdpblJlcXVlc3QSMgoEbmFtZRgBIAEoCUIk4EEC+kEeChxh",
+            "cGlodWIuZ29vZ2xlYXBpcy5jb20vUGx1Z2luIkkKE0VuYWJsZVBsdWdpblJl",
+            "cXVlc3QSMgoEbmFtZRgBIAEoCUIk4EEC+kEeChxhcGlodWIuZ29vZ2xlYXBp",
+            "cy5jb20vUGx1Z2luIkoKFERpc2FibGVQbHVnaW5SZXF1ZXN0EjIKBG5hbWUY",
+            "ASABKAlCJOBBAvpBHgocYXBpaHViLmdvb2dsZWFwaXMuY29tL1BsdWdpbiKp",
+            "BQoUUGx1Z2luSW5zdGFuY2VBY3Rpb24SSwoTaHViX2luc3RhbmNlX2FjdGlv",
+            "bhgGIAEoCzInLmdvb2dsZS5jbG91ZC5hcGlodWIudjEuRXhlY3V0aW9uU3Rh",
+            "dHVzQgPgQQFIABIWCglhY3Rpb25faWQYASABKAlCA+BBAhJGCgVzdGF0ZRgC",
+            "IAEoDjIyLmdvb2dsZS5jbG91ZC5hcGlodWIudjEuUGx1Z2luSW5zdGFuY2VB",
+            "Y3Rpb24uU3RhdGVCA+BBAxIlChhzY2hlZHVsZV9jcm9uX2V4cHJlc3Npb24Y",
+            "BCABKAlCA+BBARJECg9jdXJhdGlvbl9jb25maWcYBSABKAsyJi5nb29nbGUu",
+            "Y2xvdWQuYXBpaHViLnYxLkN1cmF0aW9uQ29uZmlnQgPgQQESHwoSc2NoZWR1",
+            "bGVfdGltZV96b25lGAcgASgJQgPgQQESHAoPc2VydmljZV9hY2NvdW50GAgg",
+            "ASgJQgPgQQESWQoPcmVzb3VyY2VfY29uZmlnGAkgASgLMjsuZ29vZ2xlLmNs",
+            "b3VkLmFwaWh1Yi52MS5QbHVnaW5JbnN0YW5jZUFjdGlvbi5SZXNvdXJjZUNv",
+            "bmZpZ0ID4EEDGmkKDlJlc291cmNlQ29uZmlnEjwKC2FjdGlvbl90eXBlGAEg",
+            "ASgOMiIuZ29vZ2xlLmNsb3VkLmFwaWh1Yi52MS5BY3Rpb25UeXBlQgPgQQMS",
+            "GQoMcHVic3ViX3RvcGljGAIgASgJQgPgQQMiYQoFU3RhdGUSFQoRU1RBVEVf",
+            "VU5TUEVDSUZJRUQQABILCgdFTkFCTEVEEAESDAoIRElTQUJMRUQQAhIMCghF",
+            "TkFCTElORxADEg0KCURJU0FCTElORxAEEgkKBUVSUk9SEAVCDwoNYWN0aW9u",
+            "X3N0YXR1cyL6BgoOUGx1Z2luSW5zdGFuY2USEQoEbmFtZRgBIAEoCUID4EEI",
+            "EhkKDGRpc3BsYXlfbmFtZRgCIAEoCUID4EECEjwKC2F1dGhfY29uZmlnGAMg",
+            "ASgLMiIuZ29vZ2xlLmNsb3VkLmFwaWh1Yi52MS5BdXRoQ29uZmlnQgPgQQES",
+            "XAoRYWRkaXRpb25hbF9jb25maWcYBCADKAsyPC5nb29nbGUuY2xvdWQuYXBp",
+            "aHViLnYxLlBsdWdpbkluc3RhbmNlLkFkZGl0aW9uYWxDb25maWdFbnRyeUID",
+            "4EEBEkAKBXN0YXRlGAUgASgOMiwuZ29vZ2xlLmNsb3VkLmFwaWh1Yi52MS5Q",
+            "bHVnaW5JbnN0YW5jZS5TdGF0ZUID4EEDEhoKDWVycm9yX21lc3NhZ2UYBiAB",
+            "KAlCA+BBAxJCCgdhY3Rpb25zGAcgAygLMiwuZ29vZ2xlLmNsb3VkLmFwaWh1",
+            "Yi52MS5QbHVnaW5JbnN0YW5jZUFjdGlvbkID4EECEjQKC2NyZWF0ZV90aW1l",
+            "GAkgASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcEID4EEDEjQKC3Vw",
+            "ZGF0ZV90aW1lGAogASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcEID",
+            "4EEDEh4KEXNvdXJjZV9wcm9qZWN0X2lkGAsgASgJQgPgQQEaXwoVQWRkaXRp",
+            "b25hbENvbmZpZ0VudHJ5EgsKA2tleRgBIAEoCRI1CgV2YWx1ZRgCIAEoCzIm",
+            "Lmdvb2dsZS5jbG91ZC5hcGlodWIudjEuQ29uZmlnVmFyaWFibGU6AjgBInIK",
+            "BVN0YXRlEhUKEVNUQVRFX1VOU1BFQ0lGSUVEEAASDAoIQ1JFQVRJTkcQARIK",
+            "CgZBQ1RJVkUQAhITCg9BUFBMWUlOR19DT05GSUcQAxIJCgVFUlJPUhAEEgoK",
+            "BkZBSUxFRBAFEgwKCERFTEVUSU5HEAY6mgHqQZYBCiRhcGlodWIuZ29vZ2xl",
+            "YXBpcy5jb20vUGx1Z2luSW5zdGFuY2USTXByb2plY3RzL3twcm9qZWN0fS9s",
+            "b2NhdGlvbnMve2xvY2F0aW9ufS9wbHVnaW5zL3twbHVnaW59L2luc3RhbmNl",
+            "cy97aW5zdGFuY2V9Kg9wbHVnaW5JbnN0YW5jZXMyDnBsdWdpbkluc3RhbmNl",
+            "IuUBCg5DdXJhdGlvbkNvbmZpZxJVCg9jdXN0b21fY3VyYXRpb24YAiABKAsy",
+            "NS5nb29nbGUuY2xvdWQuYXBpaHViLnYxLkN1cmF0aW9uQ29uZmlnLkN1c3Rv",
+            "bUN1cmF0aW9uQgPgQQFIABJACg1jdXJhdGlvbl90eXBlGAEgASgOMiQuZ29v",
+            "Z2xlLmNsb3VkLmFwaWh1Yi52MS5DdXJhdGlvblR5cGVCA+BBAhonCg5DdXN0",
+            "b21DdXJhdGlvbhIVCghjdXJhdGlvbhgBIAEoCUID4EECQhEKD2N1cmF0aW9u",
+            "X2NvbmZpZyLQBAoPRXhlY3V0aW9uU3RhdHVzEmMKF2N1cnJlbnRfZXhlY3V0",
+            "aW9uX3N0YXRlGAEgASgOMj0uZ29vZ2xlLmNsb3VkLmFwaWh1Yi52MS5FeGVj",
+            "dXRpb25TdGF0dXMuQ3VycmVudEV4ZWN1dGlvblN0YXRlQgPgQQMSUgoObGFz",
+            "dF9leGVjdXRpb24YAiABKAsyNS5nb29nbGUuY2xvdWQuYXBpaHViLnYxLkV4",
+            "ZWN1dGlvblN0YXR1cy5MYXN0RXhlY3V0aW9uQgPgQQMaowIKDUxhc3RFeGVj",
+            "dXRpb24SUQoGcmVzdWx0GAEgASgOMjwuZ29vZ2xlLmNsb3VkLmFwaWh1Yi52",
+            "MS5FeGVjdXRpb25TdGF0dXMuTGFzdEV4ZWN1dGlvbi5SZXN1bHRCA+BBAxIa",
+            "Cg1lcnJvcl9tZXNzYWdlGAIgASgJQgPgQQMSMwoKc3RhcnRfdGltZRgDIAEo",
+            "CzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXBCA+BBAxIxCghlbmRfdGlt",
+            "ZRgEIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXBCA+BBAyI7CgZS",
+            "ZXN1bHQSFgoSUkVTVUxUX1VOU1BFQ0lGSUVEEAASDQoJU1VDQ0VFREVEEAES",
+            "CgoGRkFJTEVEEAIiXgoVQ3VycmVudEV4ZWN1dGlvblN0YXRlEicKI0NVUlJF",
+            "TlRfRVhFQ1VUSU9OX1NUQVRFX1VOU1BFQ0lGSUVEEAASCwoHUlVOTklORxAB",
+            "Eg8KC05PVF9SVU5OSU5HEAIimAEKE0NyZWF0ZVBsdWdpblJlcXVlc3QSNAoG",
+            "cGFyZW50GAEgASgJQiTgQQL6QR4SHGFwaWh1Yi5nb29nbGVhcGlzLmNvbS9Q",
+            "bHVnaW4SFgoJcGx1Z2luX2lkGAIgASgJQgPgQQESMwoGcGx1Z2luGAMgASgL",
+            "Mh4uZ29vZ2xlLmNsb3VkLmFwaWh1Yi52MS5QbHVnaW5CA+BBAiJJChNEZWxl",
+            "dGVQbHVnaW5SZXF1ZXN0EjIKBG5hbWUYASABKAlCJOBBAvpBHgocYXBpaHVi",
+            "Lmdvb2dsZWFwaXMuY29tL1BsdWdpbiKQAQoSTGlzdFBsdWdpbnNSZXF1ZXN0",
+            "EjQKBnBhcmVudBgBIAEoCUIk4EEC+kEeEhxhcGlodWIuZ29vZ2xlYXBpcy5j",
+            "b20vUGx1Z2luEhMKBmZpbHRlchgCIAEoCUID4EEBEhYKCXBhZ2Vfc2l6ZRgD",
+            "IAEoBUID4EEBEhcKCnBhZ2VfdG9rZW4YBCABKAlCA+BBASJfChNMaXN0UGx1",
+            "Z2luc1Jlc3BvbnNlEi8KB3BsdWdpbnMYASADKAsyHi5nb29nbGUuY2xvdWQu",
+            "YXBpaHViLnYxLlBsdWdpbhIXCg9uZXh0X3BhZ2VfdG9rZW4YAiABKAkiugEK",
+            "G0NyZWF0ZVBsdWdpbkluc3RhbmNlUmVxdWVzdBI0CgZwYXJlbnQYASABKAlC",
+            "JOBBAvpBHgocYXBpaHViLmdvb2dsZWFwaXMuY29tL1BsdWdpbhIfChJwbHVn",
+            "aW5faW5zdGFuY2VfaWQYAiABKAlCA+BBARJECg9wbHVnaW5faW5zdGFuY2UY",
+            "AyABKAsyJi5nb29nbGUuY2xvdWQuYXBpaHViLnYxLlBsdWdpbkluc3RhbmNl",
+            "QgPgQQIitQEKIkV4ZWN1dGVQbHVnaW5JbnN0YW5jZUFjdGlvblJlcXVlc3QS",
+            "OgoEbmFtZRgBIAEoCUIs4EEC+kEmCiRhcGlodWIuZ29vZ2xlYXBpcy5jb20v",
+            "UGx1Z2luSW5zdGFuY2USUwoXYWN0aW9uX2V4ZWN1dGlvbl9kZXRhaWwYAiAB",
+            "KAsyLS5nb29nbGUuY2xvdWQuYXBpaHViLnYxLkFjdGlvbkV4ZWN1dGlvbkRl",
+            "dGFpbEID4EECIi8KFUFjdGlvbkV4ZWN1dGlvbkRldGFpbBIWCglhY3Rpb25f",
+            "aWQYASABKAlCA+BBAiIlCiNFeGVjdXRlUGx1Z2luSW5zdGFuY2VBY3Rpb25S",
+            "ZXNwb25zZSJWChhHZXRQbHVnaW5JbnN0YW5jZVJlcXVlc3QSOgoEbmFtZRgB",
+            "IAEoCUIs4EEC+kEmCiRhcGlodWIuZ29vZ2xlYXBpcy5jb20vUGx1Z2luSW5z",
+            "dGFuY2UioAEKGkxpc3RQbHVnaW5JbnN0YW5jZXNSZXF1ZXN0EjwKBnBhcmVu",
+            "dBgBIAEoCUIs4EEC+kEmEiRhcGlodWIuZ29vZ2xlYXBpcy5jb20vUGx1Z2lu",
+            "SW5zdGFuY2USEwoGZmlsdGVyGAIgASgJQgPgQQESFgoJcGFnZV9zaXplGAMg",
+            "ASgFQgPgQQESFwoKcGFnZV90b2tlbhgEIAEoCUID4EEBIngKG0xpc3RQbHVn",
+            "aW5JbnN0YW5jZXNSZXNwb25zZRJAChBwbHVnaW5faW5zdGFuY2VzGAEgAygL",
+            "MiYuZ29vZ2xlLmNsb3VkLmFwaWh1Yi52MS5QbHVnaW5JbnN0YW5jZRIXCg9u",
+            "ZXh0X3BhZ2VfdG9rZW4YAiABKAkidwohRW5hYmxlUGx1Z2luSW5zdGFuY2VB",
+            "Y3Rpb25SZXF1ZXN0EjoKBG5hbWUYASABKAlCLOBBAvpBJgokYXBpaHViLmdv",
+            "b2dsZWFwaXMuY29tL1BsdWdpbkluc3RhbmNlEhYKCWFjdGlvbl9pZBgCIAEo",
+            "CUID4EECIiQKIkVuYWJsZVBsdWdpbkluc3RhbmNlQWN0aW9uUmVzcG9uc2Ui",
+            "eAoiRGlzYWJsZVBsdWdpbkluc3RhbmNlQWN0aW9uUmVxdWVzdBI6CgRuYW1l",
+            "GAEgASgJQizgQQL6QSYKJGFwaWh1Yi5nb29nbGVhcGlzLmNvbS9QbHVnaW5J",
+            "bnN0YW5jZRIWCglhY3Rpb25faWQYAiABKAlCA+BBAiIlCiNEaXNhYmxlUGx1",
+            "Z2luSW5zdGFuY2VBY3Rpb25SZXNwb25zZSKZAQobVXBkYXRlUGx1Z2luSW5z",
+            "dGFuY2VSZXF1ZXN0EkQKD3BsdWdpbl9pbnN0YW5jZRgBIAEoCzImLmdvb2ds",
+            "ZS5jbG91ZC5hcGlodWIudjEuUGx1Z2luSW5zdGFuY2VCA+BBAhI0Cgt1cGRh",
+            "dGVfbWFzaxgCIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5GaWVsZE1hc2tCA+BB",
+            "ASJZChtEZWxldGVQbHVnaW5JbnN0YW5jZVJlcXVlc3QSOgoEbmFtZRgBIAEo",
+            "CUIs4EEC+kEmCiRhcGlodWIuZ29vZ2xlYXBpcy5jb20vUGx1Z2luSW5zdGFu",
+            "Y2UqUwoKQWN0aW9uVHlwZRIbChdBQ1RJT05fVFlQRV9VTlNQRUNJRklFRBAA",
+            "EhEKDVNZTkNfTUVUQURBVEEQARIVChFTWU5DX1JVTlRJTUVfREFUQRACKswB",
+            "CgtHYXRld2F5VHlwZRIcChhHQVRFV0FZX1RZUEVfVU5TUEVDSUZJRUQQABIX",
+            "ChNBUElHRUVfWF9BTkRfSFlCUklEEAESHAoYQVBJR0VFX0VER0VfUFVCTElD",
+            "X0NMT1VEEAISHQoZQVBJR0VFX0VER0VfUFJJVkFURV9DTE9VRBADEhUKEUNM",
+            "T1VEX0FQSV9HQVRFV0FZEAQSEwoPQ0xPVURfRU5EUE9JTlRTEAUSEQoNQVBJ",
+            "X0RJU0NPVkVSWRAGEgoKBk9USEVSUxAHKnoKDEN1cmF0aW9uVHlwZRIdChlD",
+            "VVJBVElPTl9UWVBFX1VOU1BFQ0lGSUVEEAASJQohREVGQVVMVF9DVVJBVElP",
+            "Tl9GT1JfQVBJX01FVEFEQVRBEAESJAogQ1VTVE9NX0NVUkFUSU9OX0ZPUl9B",
+            "UElfTUVUQURBVEEQAjKfGAoMQXBpSHViUGx1Z2luEpEBCglHZXRQbHVnaW4S",
+            "KC5nb29nbGUuY2xvdWQuYXBpaHViLnYxLkdldFBsdWdpblJlcXVlc3QaHi5n",
+            "b29nbGUuY2xvdWQuYXBpaHViLnYxLlBsdWdpbiI62kEEbmFtZYLT5JMCLRIr",
+            "L3YxL3tuYW1lPXByb2plY3RzLyovbG9jYXRpb25zLyovcGx1Z2lucy8qfRKh",
+            "AQoMRW5hYmxlUGx1Z2luEisuZ29vZ2xlLmNsb3VkLmFwaWh1Yi52MS5FbmFi",
+            "bGVQbHVnaW5SZXF1ZXN0Gh4uZ29vZ2xlLmNsb3VkLmFwaWh1Yi52MS5QbHVn",
+            "aW4iRNpBBG5hbWWC0+STAjciMi92MS97bmFtZT1wcm9qZWN0cy8qL2xvY2F0",
+            "aW9ucy8qL3BsdWdpbnMvKn06ZW5hYmxlOgEqEqQBCg1EaXNhYmxlUGx1Z2lu",
+            "EiwuZ29vZ2xlLmNsb3VkLmFwaWh1Yi52MS5EaXNhYmxlUGx1Z2luUmVxdWVz",
+            "dBoeLmdvb2dsZS5jbG91ZC5hcGlodWIudjEuUGx1Z2luIkXaQQRuYW1lgtPk",
+            "kwI4IjMvdjEve25hbWU9cHJvamVjdHMvKi9sb2NhdGlvbnMvKi9wbHVnaW5z",
+            "Lyp9OmRpc2FibGU6ASoSsgEKDENyZWF0ZVBsdWdpbhIrLmdvb2dsZS5jbG91",
+            "ZC5hcGlodWIudjEuQ3JlYXRlUGx1Z2luUmVxdWVzdBoeLmdvb2dsZS5jbG91",
+            "ZC5hcGlodWIudjEuUGx1Z2luIlXaQRdwYXJlbnQscGx1Z2luLHBsdWdpbl9p",
+            "ZILT5JMCNSIrL3YxL3twYXJlbnQ9cHJvamVjdHMvKi9sb2NhdGlvbnMvKn0v",
+            "cGx1Z2luczoGcGx1Z2luEqQBCgtMaXN0UGx1Z2lucxIqLmdvb2dsZS5jbG91",
+            "ZC5hcGlodWIudjEuTGlzdFBsdWdpbnNSZXF1ZXN0GisuZ29vZ2xlLmNsb3Vk",
+            "LmFwaWh1Yi52MS5MaXN0UGx1Z2luc1Jlc3BvbnNlIjzaQQZwYXJlbnSC0+ST",
+            "Ai0SKy92MS97cGFyZW50PXByb2plY3RzLyovbG9jYXRpb25zLyp9L3BsdWdp",
+            "bnMSwwEKDERlbGV0ZVBsdWdpbhIrLmdvb2dsZS5jbG91ZC5hcGlodWIudjEu",
+            "RGVsZXRlUGx1Z2luUmVxdWVzdBodLmdvb2dsZS5sb25ncnVubmluZy5PcGVy",
+            "YXRpb24iZ8pBKgoVZ29vZ2xlLnByb3RvYnVmLkVtcHR5EhFPcGVyYXRpb25N",
+            "ZXRhZGF0YdpBBG5hbWWC0+STAi0qKy92MS97bmFtZT1wcm9qZWN0cy8qL2xv",
+            "Y2F0aW9ucy8qL3BsdWdpbnMvKn0SjwIKFENyZWF0ZVBsdWdpbkluc3RhbmNl",
+            "EjMuZ29vZ2xlLmNsb3VkLmFwaWh1Yi52MS5DcmVhdGVQbHVnaW5JbnN0YW5j",
+            "ZVJlcXVlc3QaHS5nb29nbGUubG9uZ3J1bm5pbmcuT3BlcmF0aW9uIqIBykEj",
+            "Cg5QbHVnaW5JbnN0YW5jZRIRT3BlcmF0aW9uTWV0YWRhdGHaQSlwYXJlbnQs",
+            "cGx1Z2luX2luc3RhbmNlLHBsdWdpbl9pbnN0YW5jZV9pZILT5JMCSiI3L3Yx",
+            "L3twYXJlbnQ9cHJvamVjdHMvKi9sb2NhdGlvbnMvKi9wbHVnaW5zLyp9L2lu",
+            "c3RhbmNlczoPcGx1Z2luX2luc3RhbmNlEqUCChtFeGVjdXRlUGx1Z2luSW5z",
+            "dGFuY2VBY3Rpb24SOi5nb29nbGUuY2xvdWQuYXBpaHViLnYxLkV4ZWN1dGVQ",
+            "bHVnaW5JbnN0YW5jZUFjdGlvblJlcXVlc3QaHS5nb29nbGUubG9uZ3J1bm5p",
+            "bmcuT3BlcmF0aW9uIqoBykE4CiNFeGVjdXRlUGx1Z2luSW5zdGFuY2VBY3Rp",
+            "b25SZXNwb25zZRIRT3BlcmF0aW9uTWV0YWRhdGHaQRxuYW1lLGFjdGlvbl9l",
+            "eGVjdXRpb25fZGV0YWlsgtPkkwJKIkUvdjEve25hbWU9cHJvamVjdHMvKi9s",
+            "b2NhdGlvbnMvKi9wbHVnaW5zLyovaW5zdGFuY2VzLyp9OmV4ZWN1dGVBY3Rp",
+            "b246ASoStQEKEUdldFBsdWdpbkluc3RhbmNlEjAuZ29vZ2xlLmNsb3VkLmFw",
+            "aWh1Yi52MS5HZXRQbHVnaW5JbnN0YW5jZVJlcXVlc3QaJi5nb29nbGUuY2xv",
+            "dWQuYXBpaHViLnYxLlBsdWdpbkluc3RhbmNlIkbaQQRuYW1lgtPkkwI5Ejcv",
+            "djEve25hbWU9cHJvamVjdHMvKi9sb2NhdGlvbnMvKi9wbHVnaW5zLyovaW5z",
+            "dGFuY2VzLyp9EsgBChNMaXN0UGx1Z2luSW5zdGFuY2VzEjIuZ29vZ2xlLmNs",
+            "b3VkLmFwaWh1Yi52MS5MaXN0UGx1Z2luSW5zdGFuY2VzUmVxdWVzdBozLmdv",
+            "b2dsZS5jbG91ZC5hcGlodWIudjEuTGlzdFBsdWdpbkluc3RhbmNlc1Jlc3Bv",
+            "bnNlIkjaQQZwYXJlbnSC0+STAjkSNy92MS97cGFyZW50PXByb2plY3RzLyov",
+            "bG9jYXRpb25zLyovcGx1Z2lucy8qfS9pbnN0YW5jZXMSkwIKGkVuYWJsZVBs",
+            "dWdpbkluc3RhbmNlQWN0aW9uEjkuZ29vZ2xlLmNsb3VkLmFwaWh1Yi52MS5F",
+            "bmFibGVQbHVnaW5JbnN0YW5jZUFjdGlvblJlcXVlc3QaHS5nb29nbGUubG9u",
+            "Z3J1bm5pbmcuT3BlcmF0aW9uIpoBykE3CiJFbmFibGVQbHVnaW5JbnN0YW5j",
+            "ZUFjdGlvblJlc3BvbnNlEhFPcGVyYXRpb25NZXRhZGF0YdpBDm5hbWUsYWN0",
+            "aW9uX2lkgtPkkwJJIkQvdjEve25hbWU9cHJvamVjdHMvKi9sb2NhdGlvbnMv",
+            "Ki9wbHVnaW5zLyovaW5zdGFuY2VzLyp9OmVuYWJsZUFjdGlvbjoBKhKXAgob",
+            "RGlzYWJsZVBsdWdpbkluc3RhbmNlQWN0aW9uEjouZ29vZ2xlLmNsb3VkLmFw",
+            "aWh1Yi52MS5EaXNhYmxlUGx1Z2luSW5zdGFuY2VBY3Rpb25SZXF1ZXN0Gh0u",
+            "Z29vZ2xlLmxvbmdydW5uaW5nLk9wZXJhdGlvbiKcAcpBOAojRGlzYWJsZVBs",
+            "dWdpbkluc3RhbmNlQWN0aW9uUmVzcG9uc2USEU9wZXJhdGlvbk1ldGFkYXRh",
+            "2kEObmFtZSxhY3Rpb25faWSC0+STAkoiRS92MS97bmFtZT1wcm9qZWN0cy8q",
+            "L2xvY2F0aW9ucy8qL3BsdWdpbnMvKi9pbnN0YW5jZXMvKn06ZGlzYWJsZUFj",
+            "dGlvbjoBKhLzAQoUVXBkYXRlUGx1Z2luSW5zdGFuY2USMy5nb29nbGUuY2xv",
+            "dWQuYXBpaHViLnYxLlVwZGF0ZVBsdWdpbkluc3RhbmNlUmVxdWVzdBomLmdv",
+            "b2dsZS5jbG91ZC5hcGlodWIudjEuUGx1Z2luSW5zdGFuY2UiftpBG3BsdWdp",
+            "bl9pbnN0YW5jZSx1cGRhdGVfbWFza4LT5JMCWjJHL3YxL3twbHVnaW5faW5z",
+            "dGFuY2UubmFtZT1wcm9qZWN0cy8qL2xvY2F0aW9ucy8qL3BsdWdpbnMvKi9p",
+            "bnN0YW5jZXMvKn06D3BsdWdpbl9pbnN0YW5jZRLfAQoURGVsZXRlUGx1Z2lu",
+            "SW5zdGFuY2USMy5nb29nbGUuY2xvdWQuYXBpaHViLnYxLkRlbGV0ZVBsdWdp",
+            "bkluc3RhbmNlUmVxdWVzdBodLmdvb2dsZS5sb25ncnVubmluZy5PcGVyYXRp",
+            "b24ic8pBKgoVZ29vZ2xlLnByb3RvYnVmLkVtcHR5EhFPcGVyYXRpb25NZXRh",
+            "ZGF0YdpBBG5hbWWC0+STAjkqNy92MS97bmFtZT1wcm9qZWN0cy8qL2xvY2F0",
+            "aW9ucy8qL3BsdWdpbnMvKi9pbnN0YW5jZXMvKn0aScpBFWFwaWh1Yi5nb29n",
+            "bGVhcGlzLmNvbdJBLmh0dHBzOi8vd3d3Lmdvb2dsZWFwaXMuY29tL2F1dGgv",
+            "Y2xvdWQtcGxhdGZvcm1CtAEKGmNvbS5nb29nbGUuY2xvdWQuYXBpaHViLnYx",
+            "QhJQbHVnaW5TZXJ2aWNlUHJvdG9QAVoyY2xvdWQuZ29vZ2xlLmNvbS9nby9h",
+            "cGlodWIvYXBpdjEvYXBpaHVicGI7YXBpaHVicGKqAhZHb29nbGUuQ2xvdWQu",
+            "QXBpSHViLlYxygIWR29vZ2xlXENsb3VkXEFwaUh1YlxWMeoCGUdvb2dsZTo6",
+            "Q2xvdWQ6OkFwaUh1Yjo6VjFiBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Api.ClientReflection.Descriptor, global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Cloud.ApiHub.V1.CommonFieldsReflection.Descriptor, },
-          new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.ApiHub.V1.Plugin), global::Google.Cloud.ApiHub.V1.Plugin.Parser, new[]{ "Name", "DisplayName", "Type", "Description", "State" }, null, new[]{ typeof(global::Google.Cloud.ApiHub.V1.Plugin.Types.State) }, null, null),
+          new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Api.ClientReflection.Descriptor, global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Cloud.ApiHub.V1.CommonFieldsReflection.Descriptor, global::Google.LongRunning.OperationsReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.EmptyReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.FieldMaskReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
+          new pbr::GeneratedClrTypeInfo(new[] {typeof(global::Google.Cloud.ApiHub.V1.ActionType), typeof(global::Google.Cloud.ApiHub.V1.GatewayType), typeof(global::Google.Cloud.ApiHub.V1.CurationType), }, null, new pbr::GeneratedClrTypeInfo[] {
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.ApiHub.V1.Plugin), global::Google.Cloud.ApiHub.V1.Plugin.Parser, new[]{ "Name", "DisplayName", "Type", "Description", "State", "OwnershipType", "HostingService", "ActionsConfig", "Documentation", "PluginCategory", "ConfigTemplate", "CreateTime", "UpdateTime", "GatewayType" }, null, new[]{ typeof(global::Google.Cloud.ApiHub.V1.Plugin.Types.State), typeof(global::Google.Cloud.ApiHub.V1.Plugin.Types.OwnershipType) }, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.ApiHub.V1.Plugin.Types.HostingService), global::Google.Cloud.ApiHub.V1.Plugin.Types.HostingService.Parser, new[]{ "ServiceUri" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.ApiHub.V1.Plugin.Types.ConfigTemplate), global::Google.Cloud.ApiHub.V1.Plugin.Types.ConfigTemplate.Parser, new[]{ "AuthConfigTemplate", "AdditionalConfigTemplate" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.ApiHub.V1.Plugin.Types.ConfigTemplate.Types.AuthConfigTemplate), global::Google.Cloud.ApiHub.V1.Plugin.Types.ConfigTemplate.Types.AuthConfigTemplate.Parser, new[]{ "SupportedAuthTypes", "ServiceAccount" }, null, null, null, null)})}),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.ApiHub.V1.PluginActionConfig), global::Google.Cloud.ApiHub.V1.PluginActionConfig.Parser, new[]{ "Id", "DisplayName", "Description", "TriggerMode" }, null, new[]{ typeof(global::Google.Cloud.ApiHub.V1.PluginActionConfig.Types.TriggerMode) }, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.ApiHub.V1.GetPluginRequest), global::Google.Cloud.ApiHub.V1.GetPluginRequest.Parser, new[]{ "Name" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.ApiHub.V1.EnablePluginRequest), global::Google.Cloud.ApiHub.V1.EnablePluginRequest.Parser, new[]{ "Name" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.ApiHub.V1.DisablePluginRequest), global::Google.Cloud.ApiHub.V1.DisablePluginRequest.Parser, new[]{ "Name" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.ApiHub.V1.DisablePluginRequest), global::Google.Cloud.ApiHub.V1.DisablePluginRequest.Parser, new[]{ "Name" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.ApiHub.V1.PluginInstanceAction), global::Google.Cloud.ApiHub.V1.PluginInstanceAction.Parser, new[]{ "HubInstanceAction", "ActionId", "State", "ScheduleCronExpression", "CurationConfig", "ScheduleTimeZone", "ServiceAccount", "ResourceConfig" }, new[]{ "ActionStatus" }, new[]{ typeof(global::Google.Cloud.ApiHub.V1.PluginInstanceAction.Types.State) }, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.ApiHub.V1.PluginInstanceAction.Types.ResourceConfig), global::Google.Cloud.ApiHub.V1.PluginInstanceAction.Types.ResourceConfig.Parser, new[]{ "ActionType", "PubsubTopic" }, null, null, null, null)}),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.ApiHub.V1.PluginInstance), global::Google.Cloud.ApiHub.V1.PluginInstance.Parser, new[]{ "Name", "DisplayName", "AuthConfig", "AdditionalConfig", "State", "ErrorMessage", "Actions", "CreateTime", "UpdateTime", "SourceProjectId" }, null, new[]{ typeof(global::Google.Cloud.ApiHub.V1.PluginInstance.Types.State) }, null, new pbr::GeneratedClrTypeInfo[] { null, }),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.ApiHub.V1.CurationConfig), global::Google.Cloud.ApiHub.V1.CurationConfig.Parser, new[]{ "CustomCuration", "CurationType" }, new[]{ "CurationConfig" }, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.ApiHub.V1.CurationConfig.Types.CustomCuration), global::Google.Cloud.ApiHub.V1.CurationConfig.Types.CustomCuration.Parser, new[]{ "Curation" }, null, null, null, null)}),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.ApiHub.V1.ExecutionStatus), global::Google.Cloud.ApiHub.V1.ExecutionStatus.Parser, new[]{ "CurrentExecutionState", "LastExecution" }, null, new[]{ typeof(global::Google.Cloud.ApiHub.V1.ExecutionStatus.Types.CurrentExecutionState) }, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.ApiHub.V1.ExecutionStatus.Types.LastExecution), global::Google.Cloud.ApiHub.V1.ExecutionStatus.Types.LastExecution.Parser, new[]{ "Result", "ErrorMessage", "StartTime", "EndTime" }, null, new[]{ typeof(global::Google.Cloud.ApiHub.V1.ExecutionStatus.Types.LastExecution.Types.Result) }, null, null)}),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.ApiHub.V1.CreatePluginRequest), global::Google.Cloud.ApiHub.V1.CreatePluginRequest.Parser, new[]{ "Parent", "PluginId", "Plugin" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.ApiHub.V1.DeletePluginRequest), global::Google.Cloud.ApiHub.V1.DeletePluginRequest.Parser, new[]{ "Name" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.ApiHub.V1.ListPluginsRequest), global::Google.Cloud.ApiHub.V1.ListPluginsRequest.Parser, new[]{ "Parent", "Filter", "PageSize", "PageToken" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.ApiHub.V1.ListPluginsResponse), global::Google.Cloud.ApiHub.V1.ListPluginsResponse.Parser, new[]{ "Plugins", "NextPageToken" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.ApiHub.V1.CreatePluginInstanceRequest), global::Google.Cloud.ApiHub.V1.CreatePluginInstanceRequest.Parser, new[]{ "Parent", "PluginInstanceId", "PluginInstance" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.ApiHub.V1.ExecutePluginInstanceActionRequest), global::Google.Cloud.ApiHub.V1.ExecutePluginInstanceActionRequest.Parser, new[]{ "Name", "ActionExecutionDetail" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.ApiHub.V1.ActionExecutionDetail), global::Google.Cloud.ApiHub.V1.ActionExecutionDetail.Parser, new[]{ "ActionId" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.ApiHub.V1.ExecutePluginInstanceActionResponse), global::Google.Cloud.ApiHub.V1.ExecutePluginInstanceActionResponse.Parser, null, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.ApiHub.V1.GetPluginInstanceRequest), global::Google.Cloud.ApiHub.V1.GetPluginInstanceRequest.Parser, new[]{ "Name" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.ApiHub.V1.ListPluginInstancesRequest), global::Google.Cloud.ApiHub.V1.ListPluginInstancesRequest.Parser, new[]{ "Parent", "Filter", "PageSize", "PageToken" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.ApiHub.V1.ListPluginInstancesResponse), global::Google.Cloud.ApiHub.V1.ListPluginInstancesResponse.Parser, new[]{ "PluginInstances", "NextPageToken" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.ApiHub.V1.EnablePluginInstanceActionRequest), global::Google.Cloud.ApiHub.V1.EnablePluginInstanceActionRequest.Parser, new[]{ "Name", "ActionId" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.ApiHub.V1.EnablePluginInstanceActionResponse), global::Google.Cloud.ApiHub.V1.EnablePluginInstanceActionResponse.Parser, null, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.ApiHub.V1.DisablePluginInstanceActionRequest), global::Google.Cloud.ApiHub.V1.DisablePluginInstanceActionRequest.Parser, new[]{ "Name", "ActionId" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.ApiHub.V1.DisablePluginInstanceActionResponse), global::Google.Cloud.ApiHub.V1.DisablePluginInstanceActionResponse.Parser, null, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.ApiHub.V1.UpdatePluginInstanceRequest), global::Google.Cloud.ApiHub.V1.UpdatePluginInstanceRequest.Parser, new[]{ "PluginInstance", "UpdateMask" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.ApiHub.V1.DeletePluginInstanceRequest), global::Google.Cloud.ApiHub.V1.DeletePluginInstanceRequest.Parser, new[]{ "Name" }, null, null, null, null)
           }));
     }
     #endregion
 
   }
+  #region Enums
+  /// <summary>
+  /// Enum for the action type.
+  /// </summary>
+  public enum ActionType {
+    /// <summary>
+    /// Default unspecified action type.
+    /// </summary>
+    [pbr::OriginalName("ACTION_TYPE_UNSPECIFIED")] Unspecified = 0,
+    /// <summary>
+    /// Action type for sync metadata.
+    /// </summary>
+    [pbr::OriginalName("SYNC_METADATA")] SyncMetadata = 1,
+    /// <summary>
+    /// Action type for sync runtime data.
+    /// </summary>
+    [pbr::OriginalName("SYNC_RUNTIME_DATA")] SyncRuntimeData = 2,
+  }
+
+  /// <summary>
+  /// Enum for the gateway type.
+  /// </summary>
+  public enum GatewayType {
+    /// <summary>
+    /// The gateway type is not specified.
+    /// </summary>
+    [pbr::OriginalName("GATEWAY_TYPE_UNSPECIFIED")] Unspecified = 0,
+    /// <summary>
+    /// The gateway type is Apigee X and Hybrid.
+    /// </summary>
+    [pbr::OriginalName("APIGEE_X_AND_HYBRID")] ApigeeXAndHybrid = 1,
+    /// <summary>
+    /// The gateway type is Apigee Edge Public Cloud.
+    /// </summary>
+    [pbr::OriginalName("APIGEE_EDGE_PUBLIC_CLOUD")] ApigeeEdgePublicCloud = 2,
+    /// <summary>
+    /// The gateway type is Apigee Edge Private Cloud.
+    /// </summary>
+    [pbr::OriginalName("APIGEE_EDGE_PRIVATE_CLOUD")] ApigeeEdgePrivateCloud = 3,
+    /// <summary>
+    /// The gateway type is Cloud API Gateway.
+    /// </summary>
+    [pbr::OriginalName("CLOUD_API_GATEWAY")] CloudApiGateway = 4,
+    /// <summary>
+    /// The gateway type is Cloud Endpoints.
+    /// </summary>
+    [pbr::OriginalName("CLOUD_ENDPOINTS")] CloudEndpoints = 5,
+    /// <summary>
+    /// The gateway type is API Discovery.
+    /// </summary>
+    [pbr::OriginalName("API_DISCOVERY")] ApiDiscovery = 6,
+    /// <summary>
+    /// The gateway type for any other types of gateways.
+    /// </summary>
+    [pbr::OriginalName("OTHERS")] Others = 7,
+  }
+
+  /// <summary>
+  /// Enum for the curation type.
+  /// </summary>
+  public enum CurationType {
+    /// <summary>
+    /// Default unspecified curation type.
+    /// </summary>
+    [pbr::OriginalName("CURATION_TYPE_UNSPECIFIED")] Unspecified = 0,
+    /// <summary>
+    /// Default curation for API metadata will be used.
+    /// </summary>
+    [pbr::OriginalName("DEFAULT_CURATION_FOR_API_METADATA")] DefaultCurationForApiMetadata = 1,
+    /// <summary>
+    /// Custom curation for API metadata will be used.
+    /// </summary>
+    [pbr::OriginalName("CUSTOM_CURATION_FOR_API_METADATA")] CustomCurationForApiMetadata = 2,
+  }
+
+  #endregion
+
   #region Messages
   /// <summary>
   /// A plugin resource in the API Hub.
@@ -116,6 +411,15 @@ namespace Google.Cloud.ApiHub.V1 {
       type_ = other.type_ != null ? other.type_.Clone() : null;
       description_ = other.description_;
       state_ = other.state_;
+      ownershipType_ = other.ownershipType_;
+      hostingService_ = other.hostingService_ != null ? other.hostingService_.Clone() : null;
+      actionsConfig_ = other.actionsConfig_.Clone();
+      documentation_ = other.documentation_ != null ? other.documentation_.Clone() : null;
+      pluginCategory_ = other.pluginCategory_;
+      configTemplate_ = other.configTemplate_ != null ? other.configTemplate_.Clone() : null;
+      createTime_ = other.createTime_ != null ? other.createTime_.Clone() : null;
+      updateTime_ = other.updateTime_ != null ? other.updateTime_.Clone() : null;
+      gatewayType_ = other.gatewayType_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -161,7 +465,7 @@ namespace Google.Cloud.ApiHub.V1 {
     public const int TypeFieldNumber = 3;
     private global::Google.Cloud.ApiHub.V1.AttributeValues type_;
     /// <summary>
-    /// Required. The type of the API.
+    /// Optional. The type of the API.
     /// This maps to the following system defined attribute:
     /// `projects/{project}/locations/{location}/attributes/system-plugin-type`
     /// attribute.
@@ -169,6 +473,7 @@ namespace Google.Cloud.ApiHub.V1 {
     /// cardinality of the attribute. The same can be retrieved via GetAttribute
     /// API. All values should be from the list of allowed values defined for the
     /// attribute.
+    /// Note this field is not required for plugins developed via plugin framework.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -200,6 +505,8 @@ namespace Google.Cloud.ApiHub.V1 {
     private global::Google.Cloud.ApiHub.V1.Plugin.Types.State state_ = global::Google.Cloud.ApiHub.V1.Plugin.Types.State.Unspecified;
     /// <summary>
     /// Output only. Represents the state of the plugin.
+    /// Note this field will not be set for plugins developed via plugin
+    /// framework as the state will be managed at plugin instance level.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -207,6 +514,158 @@ namespace Google.Cloud.ApiHub.V1 {
       get { return state_; }
       set {
         state_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "ownership_type" field.</summary>
+    public const int OwnershipTypeFieldNumber = 6;
+    private global::Google.Cloud.ApiHub.V1.Plugin.Types.OwnershipType ownershipType_ = global::Google.Cloud.ApiHub.V1.Plugin.Types.OwnershipType.Unspecified;
+    /// <summary>
+    /// Output only. The type of the plugin, indicating whether it is
+    /// 'SYSTEM_OWNED' or 'USER_OWNED'.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Cloud.ApiHub.V1.Plugin.Types.OwnershipType OwnershipType {
+      get { return ownershipType_; }
+      set {
+        ownershipType_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "hosting_service" field.</summary>
+    public const int HostingServiceFieldNumber = 7;
+    private global::Google.Cloud.ApiHub.V1.Plugin.Types.HostingService hostingService_;
+    /// <summary>
+    /// Optional. This field is optional. It is used to notify the plugin hosting
+    /// service for any lifecycle changes of the plugin instance and trigger
+    /// execution of plugin instance actions in case of API hub managed actions.
+    ///
+    /// This field should be provided if the plugin instance lifecycle of the
+    /// developed plugin needs to be managed from API hub. Also, in this case the
+    /// plugin hosting service interface needs to be implemented.
+    ///
+    /// This field should not be provided if the plugin wants to manage plugin
+    /// instance lifecycle events outside of hub interface and use plugin framework
+    /// for only registering of plugin and plugin instances to capture the source
+    /// of data into hub. Note, in this case the plugin hosting service interface
+    /// is not required to be implemented. Also, the plugin instance lifecycle
+    /// actions will be disabled from API hub's UI.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Cloud.ApiHub.V1.Plugin.Types.HostingService HostingService {
+      get { return hostingService_; }
+      set {
+        hostingService_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "actions_config" field.</summary>
+    public const int ActionsConfigFieldNumber = 8;
+    private static readonly pb::FieldCodec<global::Google.Cloud.ApiHub.V1.PluginActionConfig> _repeated_actionsConfig_codec
+        = pb::FieldCodec.ForMessage(66, global::Google.Cloud.ApiHub.V1.PluginActionConfig.Parser);
+    private readonly pbc::RepeatedField<global::Google.Cloud.ApiHub.V1.PluginActionConfig> actionsConfig_ = new pbc::RepeatedField<global::Google.Cloud.ApiHub.V1.PluginActionConfig>();
+    /// <summary>
+    /// Optional. The configuration of actions supported by the plugin.
+    /// **REQUIRED**: This field must be provided when creating or updating a
+    /// Plugin. The server will reject requests if this field is missing.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pbc::RepeatedField<global::Google.Cloud.ApiHub.V1.PluginActionConfig> ActionsConfig {
+      get { return actionsConfig_; }
+    }
+
+    /// <summary>Field number for the "documentation" field.</summary>
+    public const int DocumentationFieldNumber = 9;
+    private global::Google.Cloud.ApiHub.V1.Documentation documentation_;
+    /// <summary>
+    /// Optional. The documentation of the plugin, that explains how to set up and
+    /// use the plugin.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Cloud.ApiHub.V1.Documentation Documentation {
+      get { return documentation_; }
+      set {
+        documentation_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "plugin_category" field.</summary>
+    public const int PluginCategoryFieldNumber = 11;
+    private global::Google.Cloud.ApiHub.V1.PluginCategory pluginCategory_ = global::Google.Cloud.ApiHub.V1.PluginCategory.Unspecified;
+    /// <summary>
+    /// Optional. The category of the plugin, identifying its primary category or
+    /// purpose. This field is required for all plugins.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Cloud.ApiHub.V1.PluginCategory PluginCategory {
+      get { return pluginCategory_; }
+      set {
+        pluginCategory_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "config_template" field.</summary>
+    public const int ConfigTemplateFieldNumber = 12;
+    private global::Google.Cloud.ApiHub.V1.Plugin.Types.ConfigTemplate configTemplate_;
+    /// <summary>
+    /// Optional. The configuration template for the plugin.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Cloud.ApiHub.V1.Plugin.Types.ConfigTemplate ConfigTemplate {
+      get { return configTemplate_; }
+      set {
+        configTemplate_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "create_time" field.</summary>
+    public const int CreateTimeFieldNumber = 13;
+    private global::Google.Protobuf.WellKnownTypes.Timestamp createTime_;
+    /// <summary>
+    /// Output only. Timestamp indicating when the plugin was created.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Protobuf.WellKnownTypes.Timestamp CreateTime {
+      get { return createTime_; }
+      set {
+        createTime_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "update_time" field.</summary>
+    public const int UpdateTimeFieldNumber = 14;
+    private global::Google.Protobuf.WellKnownTypes.Timestamp updateTime_;
+    /// <summary>
+    /// Output only. Timestamp indicating when the plugin was last updated.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Protobuf.WellKnownTypes.Timestamp UpdateTime {
+      get { return updateTime_; }
+      set {
+        updateTime_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "gateway_type" field.</summary>
+    public const int GatewayTypeFieldNumber = 15;
+    private global::Google.Cloud.ApiHub.V1.GatewayType gatewayType_ = global::Google.Cloud.ApiHub.V1.GatewayType.Unspecified;
+    /// <summary>
+    /// Optional. The type of the gateway.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Cloud.ApiHub.V1.GatewayType GatewayType {
+      get { return gatewayType_; }
+      set {
+        gatewayType_ = value;
       }
     }
 
@@ -230,6 +689,15 @@ namespace Google.Cloud.ApiHub.V1 {
       if (!object.Equals(Type, other.Type)) return false;
       if (Description != other.Description) return false;
       if (State != other.State) return false;
+      if (OwnershipType != other.OwnershipType) return false;
+      if (!object.Equals(HostingService, other.HostingService)) return false;
+      if(!actionsConfig_.Equals(other.actionsConfig_)) return false;
+      if (!object.Equals(Documentation, other.Documentation)) return false;
+      if (PluginCategory != other.PluginCategory) return false;
+      if (!object.Equals(ConfigTemplate, other.ConfigTemplate)) return false;
+      if (!object.Equals(CreateTime, other.CreateTime)) return false;
+      if (!object.Equals(UpdateTime, other.UpdateTime)) return false;
+      if (GatewayType != other.GatewayType) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -242,6 +710,15 @@ namespace Google.Cloud.ApiHub.V1 {
       if (type_ != null) hash ^= Type.GetHashCode();
       if (Description.Length != 0) hash ^= Description.GetHashCode();
       if (State != global::Google.Cloud.ApiHub.V1.Plugin.Types.State.Unspecified) hash ^= State.GetHashCode();
+      if (OwnershipType != global::Google.Cloud.ApiHub.V1.Plugin.Types.OwnershipType.Unspecified) hash ^= OwnershipType.GetHashCode();
+      if (hostingService_ != null) hash ^= HostingService.GetHashCode();
+      hash ^= actionsConfig_.GetHashCode();
+      if (documentation_ != null) hash ^= Documentation.GetHashCode();
+      if (PluginCategory != global::Google.Cloud.ApiHub.V1.PluginCategory.Unspecified) hash ^= PluginCategory.GetHashCode();
+      if (configTemplate_ != null) hash ^= ConfigTemplate.GetHashCode();
+      if (createTime_ != null) hash ^= CreateTime.GetHashCode();
+      if (updateTime_ != null) hash ^= UpdateTime.GetHashCode();
+      if (GatewayType != global::Google.Cloud.ApiHub.V1.GatewayType.Unspecified) hash ^= GatewayType.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -280,6 +757,39 @@ namespace Google.Cloud.ApiHub.V1 {
         output.WriteRawTag(40);
         output.WriteEnum((int) State);
       }
+      if (OwnershipType != global::Google.Cloud.ApiHub.V1.Plugin.Types.OwnershipType.Unspecified) {
+        output.WriteRawTag(48);
+        output.WriteEnum((int) OwnershipType);
+      }
+      if (hostingService_ != null) {
+        output.WriteRawTag(58);
+        output.WriteMessage(HostingService);
+      }
+      actionsConfig_.WriteTo(output, _repeated_actionsConfig_codec);
+      if (documentation_ != null) {
+        output.WriteRawTag(74);
+        output.WriteMessage(Documentation);
+      }
+      if (PluginCategory != global::Google.Cloud.ApiHub.V1.PluginCategory.Unspecified) {
+        output.WriteRawTag(88);
+        output.WriteEnum((int) PluginCategory);
+      }
+      if (configTemplate_ != null) {
+        output.WriteRawTag(98);
+        output.WriteMessage(ConfigTemplate);
+      }
+      if (createTime_ != null) {
+        output.WriteRawTag(106);
+        output.WriteMessage(CreateTime);
+      }
+      if (updateTime_ != null) {
+        output.WriteRawTag(114);
+        output.WriteMessage(UpdateTime);
+      }
+      if (GatewayType != global::Google.Cloud.ApiHub.V1.GatewayType.Unspecified) {
+        output.WriteRawTag(120);
+        output.WriteEnum((int) GatewayType);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -310,6 +820,39 @@ namespace Google.Cloud.ApiHub.V1 {
         output.WriteRawTag(40);
         output.WriteEnum((int) State);
       }
+      if (OwnershipType != global::Google.Cloud.ApiHub.V1.Plugin.Types.OwnershipType.Unspecified) {
+        output.WriteRawTag(48);
+        output.WriteEnum((int) OwnershipType);
+      }
+      if (hostingService_ != null) {
+        output.WriteRawTag(58);
+        output.WriteMessage(HostingService);
+      }
+      actionsConfig_.WriteTo(ref output, _repeated_actionsConfig_codec);
+      if (documentation_ != null) {
+        output.WriteRawTag(74);
+        output.WriteMessage(Documentation);
+      }
+      if (PluginCategory != global::Google.Cloud.ApiHub.V1.PluginCategory.Unspecified) {
+        output.WriteRawTag(88);
+        output.WriteEnum((int) PluginCategory);
+      }
+      if (configTemplate_ != null) {
+        output.WriteRawTag(98);
+        output.WriteMessage(ConfigTemplate);
+      }
+      if (createTime_ != null) {
+        output.WriteRawTag(106);
+        output.WriteMessage(CreateTime);
+      }
+      if (updateTime_ != null) {
+        output.WriteRawTag(114);
+        output.WriteMessage(UpdateTime);
+      }
+      if (GatewayType != global::Google.Cloud.ApiHub.V1.GatewayType.Unspecified) {
+        output.WriteRawTag(120);
+        output.WriteEnum((int) GatewayType);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -334,6 +877,31 @@ namespace Google.Cloud.ApiHub.V1 {
       }
       if (State != global::Google.Cloud.ApiHub.V1.Plugin.Types.State.Unspecified) {
         size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) State);
+      }
+      if (OwnershipType != global::Google.Cloud.ApiHub.V1.Plugin.Types.OwnershipType.Unspecified) {
+        size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) OwnershipType);
+      }
+      if (hostingService_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(HostingService);
+      }
+      size += actionsConfig_.CalculateSize(_repeated_actionsConfig_codec);
+      if (documentation_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(Documentation);
+      }
+      if (PluginCategory != global::Google.Cloud.ApiHub.V1.PluginCategory.Unspecified) {
+        size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) PluginCategory);
+      }
+      if (configTemplate_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(ConfigTemplate);
+      }
+      if (createTime_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(CreateTime);
+      }
+      if (updateTime_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(UpdateTime);
+      }
+      if (GatewayType != global::Google.Cloud.ApiHub.V1.GatewayType.Unspecified) {
+        size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) GatewayType);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -364,6 +932,46 @@ namespace Google.Cloud.ApiHub.V1 {
       }
       if (other.State != global::Google.Cloud.ApiHub.V1.Plugin.Types.State.Unspecified) {
         State = other.State;
+      }
+      if (other.OwnershipType != global::Google.Cloud.ApiHub.V1.Plugin.Types.OwnershipType.Unspecified) {
+        OwnershipType = other.OwnershipType;
+      }
+      if (other.hostingService_ != null) {
+        if (hostingService_ == null) {
+          HostingService = new global::Google.Cloud.ApiHub.V1.Plugin.Types.HostingService();
+        }
+        HostingService.MergeFrom(other.HostingService);
+      }
+      actionsConfig_.Add(other.actionsConfig_);
+      if (other.documentation_ != null) {
+        if (documentation_ == null) {
+          Documentation = new global::Google.Cloud.ApiHub.V1.Documentation();
+        }
+        Documentation.MergeFrom(other.Documentation);
+      }
+      if (other.PluginCategory != global::Google.Cloud.ApiHub.V1.PluginCategory.Unspecified) {
+        PluginCategory = other.PluginCategory;
+      }
+      if (other.configTemplate_ != null) {
+        if (configTemplate_ == null) {
+          ConfigTemplate = new global::Google.Cloud.ApiHub.V1.Plugin.Types.ConfigTemplate();
+        }
+        ConfigTemplate.MergeFrom(other.ConfigTemplate);
+      }
+      if (other.createTime_ != null) {
+        if (createTime_ == null) {
+          CreateTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+        }
+        CreateTime.MergeFrom(other.CreateTime);
+      }
+      if (other.updateTime_ != null) {
+        if (updateTime_ == null) {
+          UpdateTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+        }
+        UpdateTime.MergeFrom(other.UpdateTime);
+      }
+      if (other.GatewayType != global::Google.Cloud.ApiHub.V1.GatewayType.Unspecified) {
+        GatewayType = other.GatewayType;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -401,6 +1009,57 @@ namespace Google.Cloud.ApiHub.V1 {
           }
           case 40: {
             State = (global::Google.Cloud.ApiHub.V1.Plugin.Types.State) input.ReadEnum();
+            break;
+          }
+          case 48: {
+            OwnershipType = (global::Google.Cloud.ApiHub.V1.Plugin.Types.OwnershipType) input.ReadEnum();
+            break;
+          }
+          case 58: {
+            if (hostingService_ == null) {
+              HostingService = new global::Google.Cloud.ApiHub.V1.Plugin.Types.HostingService();
+            }
+            input.ReadMessage(HostingService);
+            break;
+          }
+          case 66: {
+            actionsConfig_.AddEntriesFrom(input, _repeated_actionsConfig_codec);
+            break;
+          }
+          case 74: {
+            if (documentation_ == null) {
+              Documentation = new global::Google.Cloud.ApiHub.V1.Documentation();
+            }
+            input.ReadMessage(Documentation);
+            break;
+          }
+          case 88: {
+            PluginCategory = (global::Google.Cloud.ApiHub.V1.PluginCategory) input.ReadEnum();
+            break;
+          }
+          case 98: {
+            if (configTemplate_ == null) {
+              ConfigTemplate = new global::Google.Cloud.ApiHub.V1.Plugin.Types.ConfigTemplate();
+            }
+            input.ReadMessage(ConfigTemplate);
+            break;
+          }
+          case 106: {
+            if (createTime_ == null) {
+              CreateTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+            }
+            input.ReadMessage(CreateTime);
+            break;
+          }
+          case 114: {
+            if (updateTime_ == null) {
+              UpdateTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+            }
+            input.ReadMessage(UpdateTime);
+            break;
+          }
+          case 120: {
+            GatewayType = (global::Google.Cloud.ApiHub.V1.GatewayType) input.ReadEnum();
             break;
           }
         }
@@ -441,6 +1100,57 @@ namespace Google.Cloud.ApiHub.V1 {
             State = (global::Google.Cloud.ApiHub.V1.Plugin.Types.State) input.ReadEnum();
             break;
           }
+          case 48: {
+            OwnershipType = (global::Google.Cloud.ApiHub.V1.Plugin.Types.OwnershipType) input.ReadEnum();
+            break;
+          }
+          case 58: {
+            if (hostingService_ == null) {
+              HostingService = new global::Google.Cloud.ApiHub.V1.Plugin.Types.HostingService();
+            }
+            input.ReadMessage(HostingService);
+            break;
+          }
+          case 66: {
+            actionsConfig_.AddEntriesFrom(ref input, _repeated_actionsConfig_codec);
+            break;
+          }
+          case 74: {
+            if (documentation_ == null) {
+              Documentation = new global::Google.Cloud.ApiHub.V1.Documentation();
+            }
+            input.ReadMessage(Documentation);
+            break;
+          }
+          case 88: {
+            PluginCategory = (global::Google.Cloud.ApiHub.V1.PluginCategory) input.ReadEnum();
+            break;
+          }
+          case 98: {
+            if (configTemplate_ == null) {
+              ConfigTemplate = new global::Google.Cloud.ApiHub.V1.Plugin.Types.ConfigTemplate();
+            }
+            input.ReadMessage(ConfigTemplate);
+            break;
+          }
+          case 106: {
+            if (createTime_ == null) {
+              CreateTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+            }
+            input.ReadMessage(CreateTime);
+            break;
+          }
+          case 114: {
+            if (updateTime_ == null) {
+              UpdateTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+            }
+            input.ReadMessage(UpdateTime);
+            break;
+          }
+          case 120: {
+            GatewayType = (global::Google.Cloud.ApiHub.V1.GatewayType) input.ReadEnum();
+            break;
+          }
         }
       }
     }
@@ -471,6 +1181,1076 @@ namespace Google.Cloud.ApiHub.V1 {
         [pbr::OriginalName("DISABLED")] Disabled = 2,
       }
 
+      /// <summary>
+      /// Ownership type of the plugin.
+      /// </summary>
+      public enum OwnershipType {
+        /// <summary>
+        /// Default unspecified type.
+        /// </summary>
+        [pbr::OriginalName("OWNERSHIP_TYPE_UNSPECIFIED")] Unspecified = 0,
+        /// <summary>
+        /// System owned plugins are defined by API hub and are available out of the
+        /// box in API hub.
+        /// </summary>
+        [pbr::OriginalName("SYSTEM_OWNED")] SystemOwned = 1,
+        /// <summary>
+        /// User owned plugins are defined by the user and need to be explicitly
+        /// added to API hub via
+        /// [CreatePlugin][google.cloud.apihub.v1.ApiHubPlugin.CreatePlugin] method.
+        /// </summary>
+        [pbr::OriginalName("USER_OWNED")] UserOwned = 2,
+      }
+
+      /// <summary>
+      /// The information related to the service implemented by the plugin
+      /// developer, used to invoke the plugin's functionality.
+      /// </summary>
+      [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+      public sealed partial class HostingService : pb::IMessage<HostingService>
+      #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          , pb::IBufferMessage
+      #endif
+      {
+        private static readonly pb::MessageParser<HostingService> _parser = new pb::MessageParser<HostingService>(() => new HostingService());
+        private pb::UnknownFieldSet _unknownFields;
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public static pb::MessageParser<HostingService> Parser { get { return _parser; } }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public static pbr::MessageDescriptor Descriptor {
+          get { return global::Google.Cloud.ApiHub.V1.Plugin.Descriptor.NestedTypes[0]; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        pbr::MessageDescriptor pb::IMessage.Descriptor {
+          get { return Descriptor; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public HostingService() {
+          OnConstruction();
+        }
+
+        partial void OnConstruction();
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public HostingService(HostingService other) : this() {
+          serviceUri_ = other.serviceUri_;
+          _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public HostingService Clone() {
+          return new HostingService(this);
+        }
+
+        /// <summary>Field number for the "service_uri" field.</summary>
+        public const int ServiceUriFieldNumber = 1;
+        private string serviceUri_ = "";
+        /// <summary>
+        /// Optional. The URI of the service implemented by the plugin developer,
+        /// used to invoke the plugin's functionality. This information is only
+        /// required for user defined plugins.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public string ServiceUri {
+          get { return serviceUri_; }
+          set {
+            serviceUri_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+          }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override bool Equals(object other) {
+          return Equals(other as HostingService);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public bool Equals(HostingService other) {
+          if (ReferenceEquals(other, null)) {
+            return false;
+          }
+          if (ReferenceEquals(other, this)) {
+            return true;
+          }
+          if (ServiceUri != other.ServiceUri) return false;
+          return Equals(_unknownFields, other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override int GetHashCode() {
+          int hash = 1;
+          if (ServiceUri.Length != 0) hash ^= ServiceUri.GetHashCode();
+          if (_unknownFields != null) {
+            hash ^= _unknownFields.GetHashCode();
+          }
+          return hash;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override string ToString() {
+          return pb::JsonFormatter.ToDiagnosticString(this);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void WriteTo(pb::CodedOutputStream output) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          output.WriteRawMessage(this);
+        #else
+          if (ServiceUri.Length != 0) {
+            output.WriteRawTag(10);
+            output.WriteString(ServiceUri);
+          }
+          if (_unknownFields != null) {
+            _unknownFields.WriteTo(output);
+          }
+        #endif
+        }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+          if (ServiceUri.Length != 0) {
+            output.WriteRawTag(10);
+            output.WriteString(ServiceUri);
+          }
+          if (_unknownFields != null) {
+            _unknownFields.WriteTo(ref output);
+          }
+        }
+        #endif
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public int CalculateSize() {
+          int size = 0;
+          if (ServiceUri.Length != 0) {
+            size += 1 + pb::CodedOutputStream.ComputeStringSize(ServiceUri);
+          }
+          if (_unknownFields != null) {
+            size += _unknownFields.CalculateSize();
+          }
+          return size;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void MergeFrom(HostingService other) {
+          if (other == null) {
+            return;
+          }
+          if (other.ServiceUri.Length != 0) {
+            ServiceUri = other.ServiceUri;
+          }
+          _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void MergeFrom(pb::CodedInputStream input) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          input.ReadRawMessage(this);
+        #else
+          uint tag;
+          while ((tag = input.ReadTag()) != 0) {
+            switch(tag) {
+              default:
+                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+                break;
+              case 10: {
+                ServiceUri = input.ReadString();
+                break;
+              }
+            }
+          }
+        #endif
+        }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+          uint tag;
+          while ((tag = input.ReadTag()) != 0) {
+            switch(tag) {
+              default:
+                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+                break;
+              case 10: {
+                ServiceUri = input.ReadString();
+                break;
+              }
+            }
+          }
+        }
+        #endif
+
+      }
+
+      /// <summary>
+      /// ConfigTemplate represents the configuration template for a plugin.
+      /// </summary>
+      [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+      public sealed partial class ConfigTemplate : pb::IMessage<ConfigTemplate>
+      #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          , pb::IBufferMessage
+      #endif
+      {
+        private static readonly pb::MessageParser<ConfigTemplate> _parser = new pb::MessageParser<ConfigTemplate>(() => new ConfigTemplate());
+        private pb::UnknownFieldSet _unknownFields;
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public static pb::MessageParser<ConfigTemplate> Parser { get { return _parser; } }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public static pbr::MessageDescriptor Descriptor {
+          get { return global::Google.Cloud.ApiHub.V1.Plugin.Descriptor.NestedTypes[1]; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        pbr::MessageDescriptor pb::IMessage.Descriptor {
+          get { return Descriptor; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public ConfigTemplate() {
+          OnConstruction();
+        }
+
+        partial void OnConstruction();
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public ConfigTemplate(ConfigTemplate other) : this() {
+          authConfigTemplate_ = other.authConfigTemplate_ != null ? other.authConfigTemplate_.Clone() : null;
+          additionalConfigTemplate_ = other.additionalConfigTemplate_.Clone();
+          _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public ConfigTemplate Clone() {
+          return new ConfigTemplate(this);
+        }
+
+        /// <summary>Field number for the "auth_config_template" field.</summary>
+        public const int AuthConfigTemplateFieldNumber = 1;
+        private global::Google.Cloud.ApiHub.V1.Plugin.Types.ConfigTemplate.Types.AuthConfigTemplate authConfigTemplate_;
+        /// <summary>
+        /// Optional. The authentication template for the plugin.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public global::Google.Cloud.ApiHub.V1.Plugin.Types.ConfigTemplate.Types.AuthConfigTemplate AuthConfigTemplate {
+          get { return authConfigTemplate_; }
+          set {
+            authConfigTemplate_ = value;
+          }
+        }
+
+        /// <summary>Field number for the "additional_config_template" field.</summary>
+        public const int AdditionalConfigTemplateFieldNumber = 2;
+        private static readonly pb::FieldCodec<global::Google.Cloud.ApiHub.V1.ConfigVariableTemplate> _repeated_additionalConfigTemplate_codec
+            = pb::FieldCodec.ForMessage(18, global::Google.Cloud.ApiHub.V1.ConfigVariableTemplate.Parser);
+        private readonly pbc::RepeatedField<global::Google.Cloud.ApiHub.V1.ConfigVariableTemplate> additionalConfigTemplate_ = new pbc::RepeatedField<global::Google.Cloud.ApiHub.V1.ConfigVariableTemplate>();
+        /// <summary>
+        /// Optional. The list of additional configuration variables for the plugin's
+        /// configuration.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public pbc::RepeatedField<global::Google.Cloud.ApiHub.V1.ConfigVariableTemplate> AdditionalConfigTemplate {
+          get { return additionalConfigTemplate_; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override bool Equals(object other) {
+          return Equals(other as ConfigTemplate);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public bool Equals(ConfigTemplate other) {
+          if (ReferenceEquals(other, null)) {
+            return false;
+          }
+          if (ReferenceEquals(other, this)) {
+            return true;
+          }
+          if (!object.Equals(AuthConfigTemplate, other.AuthConfigTemplate)) return false;
+          if(!additionalConfigTemplate_.Equals(other.additionalConfigTemplate_)) return false;
+          return Equals(_unknownFields, other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override int GetHashCode() {
+          int hash = 1;
+          if (authConfigTemplate_ != null) hash ^= AuthConfigTemplate.GetHashCode();
+          hash ^= additionalConfigTemplate_.GetHashCode();
+          if (_unknownFields != null) {
+            hash ^= _unknownFields.GetHashCode();
+          }
+          return hash;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override string ToString() {
+          return pb::JsonFormatter.ToDiagnosticString(this);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void WriteTo(pb::CodedOutputStream output) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          output.WriteRawMessage(this);
+        #else
+          if (authConfigTemplate_ != null) {
+            output.WriteRawTag(10);
+            output.WriteMessage(AuthConfigTemplate);
+          }
+          additionalConfigTemplate_.WriteTo(output, _repeated_additionalConfigTemplate_codec);
+          if (_unknownFields != null) {
+            _unknownFields.WriteTo(output);
+          }
+        #endif
+        }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+          if (authConfigTemplate_ != null) {
+            output.WriteRawTag(10);
+            output.WriteMessage(AuthConfigTemplate);
+          }
+          additionalConfigTemplate_.WriteTo(ref output, _repeated_additionalConfigTemplate_codec);
+          if (_unknownFields != null) {
+            _unknownFields.WriteTo(ref output);
+          }
+        }
+        #endif
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public int CalculateSize() {
+          int size = 0;
+          if (authConfigTemplate_ != null) {
+            size += 1 + pb::CodedOutputStream.ComputeMessageSize(AuthConfigTemplate);
+          }
+          size += additionalConfigTemplate_.CalculateSize(_repeated_additionalConfigTemplate_codec);
+          if (_unknownFields != null) {
+            size += _unknownFields.CalculateSize();
+          }
+          return size;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void MergeFrom(ConfigTemplate other) {
+          if (other == null) {
+            return;
+          }
+          if (other.authConfigTemplate_ != null) {
+            if (authConfigTemplate_ == null) {
+              AuthConfigTemplate = new global::Google.Cloud.ApiHub.V1.Plugin.Types.ConfigTemplate.Types.AuthConfigTemplate();
+            }
+            AuthConfigTemplate.MergeFrom(other.AuthConfigTemplate);
+          }
+          additionalConfigTemplate_.Add(other.additionalConfigTemplate_);
+          _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void MergeFrom(pb::CodedInputStream input) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          input.ReadRawMessage(this);
+        #else
+          uint tag;
+          while ((tag = input.ReadTag()) != 0) {
+            switch(tag) {
+              default:
+                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+                break;
+              case 10: {
+                if (authConfigTemplate_ == null) {
+                  AuthConfigTemplate = new global::Google.Cloud.ApiHub.V1.Plugin.Types.ConfigTemplate.Types.AuthConfigTemplate();
+                }
+                input.ReadMessage(AuthConfigTemplate);
+                break;
+              }
+              case 18: {
+                additionalConfigTemplate_.AddEntriesFrom(input, _repeated_additionalConfigTemplate_codec);
+                break;
+              }
+            }
+          }
+        #endif
+        }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+          uint tag;
+          while ((tag = input.ReadTag()) != 0) {
+            switch(tag) {
+              default:
+                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+                break;
+              case 10: {
+                if (authConfigTemplate_ == null) {
+                  AuthConfigTemplate = new global::Google.Cloud.ApiHub.V1.Plugin.Types.ConfigTemplate.Types.AuthConfigTemplate();
+                }
+                input.ReadMessage(AuthConfigTemplate);
+                break;
+              }
+              case 18: {
+                additionalConfigTemplate_.AddEntriesFrom(ref input, _repeated_additionalConfigTemplate_codec);
+                break;
+              }
+            }
+          }
+        }
+        #endif
+
+        #region Nested types
+        /// <summary>Container for nested types declared in the ConfigTemplate message type.</summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public static partial class Types {
+          /// <summary>
+          /// AuthConfigTemplate represents the authentication template for a plugin.
+          /// </summary>
+          [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+          public sealed partial class AuthConfigTemplate : pb::IMessage<AuthConfigTemplate>
+          #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+              , pb::IBufferMessage
+          #endif
+          {
+            private static readonly pb::MessageParser<AuthConfigTemplate> _parser = new pb::MessageParser<AuthConfigTemplate>(() => new AuthConfigTemplate());
+            private pb::UnknownFieldSet _unknownFields;
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public static pb::MessageParser<AuthConfigTemplate> Parser { get { return _parser; } }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public static pbr::MessageDescriptor Descriptor {
+              get { return global::Google.Cloud.ApiHub.V1.Plugin.Types.ConfigTemplate.Descriptor.NestedTypes[0]; }
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            pbr::MessageDescriptor pb::IMessage.Descriptor {
+              get { return Descriptor; }
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public AuthConfigTemplate() {
+              OnConstruction();
+            }
+
+            partial void OnConstruction();
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public AuthConfigTemplate(AuthConfigTemplate other) : this() {
+              supportedAuthTypes_ = other.supportedAuthTypes_.Clone();
+              serviceAccount_ = other.serviceAccount_ != null ? other.serviceAccount_.Clone() : null;
+              _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public AuthConfigTemplate Clone() {
+              return new AuthConfigTemplate(this);
+            }
+
+            /// <summary>Field number for the "supported_auth_types" field.</summary>
+            public const int SupportedAuthTypesFieldNumber = 1;
+            private static readonly pb::FieldCodec<global::Google.Cloud.ApiHub.V1.AuthType> _repeated_supportedAuthTypes_codec
+                = pb::FieldCodec.ForEnum(10, x => (int) x, x => (global::Google.Cloud.ApiHub.V1.AuthType) x);
+            private readonly pbc::RepeatedField<global::Google.Cloud.ApiHub.V1.AuthType> supportedAuthTypes_ = new pbc::RepeatedField<global::Google.Cloud.ApiHub.V1.AuthType>();
+            /// <summary>
+            /// Required. The list of authentication types supported by the plugin.
+            /// </summary>
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public pbc::RepeatedField<global::Google.Cloud.ApiHub.V1.AuthType> SupportedAuthTypes {
+              get { return supportedAuthTypes_; }
+            }
+
+            /// <summary>Field number for the "service_account" field.</summary>
+            public const int ServiceAccountFieldNumber = 2;
+            private global::Google.Cloud.ApiHub.V1.GoogleServiceAccountConfig serviceAccount_;
+            /// <summary>
+            /// Optional. The service account of the plugin hosting service.
+            /// This service account should be granted the required permissions on the
+            /// Auth Config parameters provided while creating the plugin instances
+            /// corresponding to this plugin.
+            ///
+            /// For example, if the plugin instance auth config requires a secret
+            /// manager secret, the service account should be granted the
+            /// secretmanager.versions.access permission on the corresponding secret,
+            /// if the plugin instance auth config contains a service account, the
+            /// service account should be granted the
+            /// iam.serviceAccounts.getAccessToken permission on the corresponding
+            /// service account.
+            /// </summary>
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public global::Google.Cloud.ApiHub.V1.GoogleServiceAccountConfig ServiceAccount {
+              get { return serviceAccount_; }
+              set {
+                serviceAccount_ = value;
+              }
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public override bool Equals(object other) {
+              return Equals(other as AuthConfigTemplate);
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public bool Equals(AuthConfigTemplate other) {
+              if (ReferenceEquals(other, null)) {
+                return false;
+              }
+              if (ReferenceEquals(other, this)) {
+                return true;
+              }
+              if(!supportedAuthTypes_.Equals(other.supportedAuthTypes_)) return false;
+              if (!object.Equals(ServiceAccount, other.ServiceAccount)) return false;
+              return Equals(_unknownFields, other._unknownFields);
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public override int GetHashCode() {
+              int hash = 1;
+              hash ^= supportedAuthTypes_.GetHashCode();
+              if (serviceAccount_ != null) hash ^= ServiceAccount.GetHashCode();
+              if (_unknownFields != null) {
+                hash ^= _unknownFields.GetHashCode();
+              }
+              return hash;
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public override string ToString() {
+              return pb::JsonFormatter.ToDiagnosticString(this);
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public void WriteTo(pb::CodedOutputStream output) {
+            #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+              output.WriteRawMessage(this);
+            #else
+              supportedAuthTypes_.WriteTo(output, _repeated_supportedAuthTypes_codec);
+              if (serviceAccount_ != null) {
+                output.WriteRawTag(18);
+                output.WriteMessage(ServiceAccount);
+              }
+              if (_unknownFields != null) {
+                _unknownFields.WriteTo(output);
+              }
+            #endif
+            }
+
+            #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+              supportedAuthTypes_.WriteTo(ref output, _repeated_supportedAuthTypes_codec);
+              if (serviceAccount_ != null) {
+                output.WriteRawTag(18);
+                output.WriteMessage(ServiceAccount);
+              }
+              if (_unknownFields != null) {
+                _unknownFields.WriteTo(ref output);
+              }
+            }
+            #endif
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public int CalculateSize() {
+              int size = 0;
+              size += supportedAuthTypes_.CalculateSize(_repeated_supportedAuthTypes_codec);
+              if (serviceAccount_ != null) {
+                size += 1 + pb::CodedOutputStream.ComputeMessageSize(ServiceAccount);
+              }
+              if (_unknownFields != null) {
+                size += _unknownFields.CalculateSize();
+              }
+              return size;
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public void MergeFrom(AuthConfigTemplate other) {
+              if (other == null) {
+                return;
+              }
+              supportedAuthTypes_.Add(other.supportedAuthTypes_);
+              if (other.serviceAccount_ != null) {
+                if (serviceAccount_ == null) {
+                  ServiceAccount = new global::Google.Cloud.ApiHub.V1.GoogleServiceAccountConfig();
+                }
+                ServiceAccount.MergeFrom(other.ServiceAccount);
+              }
+              _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public void MergeFrom(pb::CodedInputStream input) {
+            #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+              input.ReadRawMessage(this);
+            #else
+              uint tag;
+              while ((tag = input.ReadTag()) != 0) {
+                switch(tag) {
+                  default:
+                    _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+                    break;
+                  case 10:
+                  case 8: {
+                    supportedAuthTypes_.AddEntriesFrom(input, _repeated_supportedAuthTypes_codec);
+                    break;
+                  }
+                  case 18: {
+                    if (serviceAccount_ == null) {
+                      ServiceAccount = new global::Google.Cloud.ApiHub.V1.GoogleServiceAccountConfig();
+                    }
+                    input.ReadMessage(ServiceAccount);
+                    break;
+                  }
+                }
+              }
+            #endif
+            }
+
+            #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+              uint tag;
+              while ((tag = input.ReadTag()) != 0) {
+                switch(tag) {
+                  default:
+                    _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+                    break;
+                  case 10:
+                  case 8: {
+                    supportedAuthTypes_.AddEntriesFrom(ref input, _repeated_supportedAuthTypes_codec);
+                    break;
+                  }
+                  case 18: {
+                    if (serviceAccount_ == null) {
+                      ServiceAccount = new global::Google.Cloud.ApiHub.V1.GoogleServiceAccountConfig();
+                    }
+                    input.ReadMessage(ServiceAccount);
+                    break;
+                  }
+                }
+              }
+            }
+            #endif
+
+          }
+
+        }
+        #endregion
+
+      }
+
+    }
+    #endregion
+
+  }
+
+  /// <summary>
+  /// PluginActionConfig represents the configuration of an action supported by a
+  /// plugin.
+  /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+  public sealed partial class PluginActionConfig : pb::IMessage<PluginActionConfig>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<PluginActionConfig> _parser = new pb::MessageParser<PluginActionConfig>(() => new PluginActionConfig());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<PluginActionConfig> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Cloud.ApiHub.V1.PluginServiceReflection.Descriptor.MessageTypes[1]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public PluginActionConfig() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public PluginActionConfig(PluginActionConfig other) : this() {
+      id_ = other.id_;
+      displayName_ = other.displayName_;
+      description_ = other.description_;
+      triggerMode_ = other.triggerMode_;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public PluginActionConfig Clone() {
+      return new PluginActionConfig(this);
+    }
+
+    /// <summary>Field number for the "id" field.</summary>
+    public const int IdFieldNumber = 1;
+    private string id_ = "";
+    /// <summary>
+    /// Required. The id of the action.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string Id {
+      get { return id_; }
+      set {
+        id_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "display_name" field.</summary>
+    public const int DisplayNameFieldNumber = 2;
+    private string displayName_ = "";
+    /// <summary>
+    /// Required. The display name of the action.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string DisplayName {
+      get { return displayName_; }
+      set {
+        displayName_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "description" field.</summary>
+    public const int DescriptionFieldNumber = 3;
+    private string description_ = "";
+    /// <summary>
+    /// Required. The description of the operation performed by the action.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string Description {
+      get { return description_; }
+      set {
+        description_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "trigger_mode" field.</summary>
+    public const int TriggerModeFieldNumber = 4;
+    private global::Google.Cloud.ApiHub.V1.PluginActionConfig.Types.TriggerMode triggerMode_ = global::Google.Cloud.ApiHub.V1.PluginActionConfig.Types.TriggerMode.Unspecified;
+    /// <summary>
+    /// Required. The trigger mode supported by the action.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Cloud.ApiHub.V1.PluginActionConfig.Types.TriggerMode TriggerMode {
+      get { return triggerMode_; }
+      set {
+        triggerMode_ = value;
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as PluginActionConfig);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(PluginActionConfig other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (Id != other.Id) return false;
+      if (DisplayName != other.DisplayName) return false;
+      if (Description != other.Description) return false;
+      if (TriggerMode != other.TriggerMode) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (Id.Length != 0) hash ^= Id.GetHashCode();
+      if (DisplayName.Length != 0) hash ^= DisplayName.GetHashCode();
+      if (Description.Length != 0) hash ^= Description.GetHashCode();
+      if (TriggerMode != global::Google.Cloud.ApiHub.V1.PluginActionConfig.Types.TriggerMode.Unspecified) hash ^= TriggerMode.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (Id.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(Id);
+      }
+      if (DisplayName.Length != 0) {
+        output.WriteRawTag(18);
+        output.WriteString(DisplayName);
+      }
+      if (Description.Length != 0) {
+        output.WriteRawTag(26);
+        output.WriteString(Description);
+      }
+      if (TriggerMode != global::Google.Cloud.ApiHub.V1.PluginActionConfig.Types.TriggerMode.Unspecified) {
+        output.WriteRawTag(32);
+        output.WriteEnum((int) TriggerMode);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (Id.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(Id);
+      }
+      if (DisplayName.Length != 0) {
+        output.WriteRawTag(18);
+        output.WriteString(DisplayName);
+      }
+      if (Description.Length != 0) {
+        output.WriteRawTag(26);
+        output.WriteString(Description);
+      }
+      if (TriggerMode != global::Google.Cloud.ApiHub.V1.PluginActionConfig.Types.TriggerMode.Unspecified) {
+        output.WriteRawTag(32);
+        output.WriteEnum((int) TriggerMode);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      if (Id.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Id);
+      }
+      if (DisplayName.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(DisplayName);
+      }
+      if (Description.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Description);
+      }
+      if (TriggerMode != global::Google.Cloud.ApiHub.V1.PluginActionConfig.Types.TriggerMode.Unspecified) {
+        size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) TriggerMode);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(PluginActionConfig other) {
+      if (other == null) {
+        return;
+      }
+      if (other.Id.Length != 0) {
+        Id = other.Id;
+      }
+      if (other.DisplayName.Length != 0) {
+        DisplayName = other.DisplayName;
+      }
+      if (other.Description.Length != 0) {
+        Description = other.Description;
+      }
+      if (other.TriggerMode != global::Google.Cloud.ApiHub.V1.PluginActionConfig.Types.TriggerMode.Unspecified) {
+        TriggerMode = other.TriggerMode;
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            Id = input.ReadString();
+            break;
+          }
+          case 18: {
+            DisplayName = input.ReadString();
+            break;
+          }
+          case 26: {
+            Description = input.ReadString();
+            break;
+          }
+          case 32: {
+            TriggerMode = (global::Google.Cloud.ApiHub.V1.PluginActionConfig.Types.TriggerMode) input.ReadEnum();
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            Id = input.ReadString();
+            break;
+          }
+          case 18: {
+            DisplayName = input.ReadString();
+            break;
+          }
+          case 26: {
+            Description = input.ReadString();
+            break;
+          }
+          case 32: {
+            TriggerMode = (global::Google.Cloud.ApiHub.V1.PluginActionConfig.Types.TriggerMode) input.ReadEnum();
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+    #region Nested types
+    /// <summary>Container for nested types declared in the PluginActionConfig message type.</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static partial class Types {
+      /// <summary>
+      /// Execution mode of the action.
+      /// </summary>
+      public enum TriggerMode {
+        /// <summary>
+        /// Default unspecified mode.
+        /// </summary>
+        [pbr::OriginalName("TRIGGER_MODE_UNSPECIFIED")] Unspecified = 0,
+        /// <summary>
+        /// This action can be executed by invoking
+        /// [ExecutePluginInstanceAction][google.cloud.apihub.v1.ApiHubPlugin.ExecutePluginInstanceAction]
+        /// API with the given action id. To support this, the plugin hosting service
+        /// should handle this action id as part of execute call.
+        /// </summary>
+        [pbr::OriginalName("API_HUB_ON_DEMAND_TRIGGER")] ApiHubOnDemandTrigger = 1,
+        /// <summary>
+        /// This action will be executed on schedule by invoking
+        /// [ExecutePluginInstanceAction][google.cloud.apihub.v1.ApiHubPlugin.ExecutePluginInstanceAction]
+        /// API with the given action id. To set the schedule, the user can provide
+        /// the cron expression in the
+        /// [PluginAction][PluginAction.schedule_cron_expression] field for a given
+        /// plugin instance. To support this, the plugin hosting service should
+        /// handle this action id as part of execute call.
+        /// Note, on demand execution will be supported by default in this trigger
+        /// mode.
+        /// </summary>
+        [pbr::OriginalName("API_HUB_SCHEDULE_TRIGGER")] ApiHubScheduleTrigger = 2,
+        /// <summary>
+        /// The execution of this plugin is not handled by API hub. In this case,
+        /// the plugin hosting service need not handle this action id as part of
+        /// the execute call.
+        /// </summary>
+        [pbr::OriginalName("NON_API_HUB_MANAGED")] NonApiHubManaged = 3,
+      }
+
     }
     #endregion
 
@@ -495,7 +2275,7 @@ namespace Google.Cloud.ApiHub.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.ApiHub.V1.PluginServiceReflection.Descriptor.MessageTypes[1]; }
+      get { return global::Google.Cloud.ApiHub.V1.PluginServiceReflection.Descriptor.MessageTypes[2]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -693,7 +2473,7 @@ namespace Google.Cloud.ApiHub.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.ApiHub.V1.PluginServiceReflection.Descriptor.MessageTypes[2]; }
+      get { return global::Google.Cloud.ApiHub.V1.PluginServiceReflection.Descriptor.MessageTypes[3]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -891,7 +2671,7 @@ namespace Google.Cloud.ApiHub.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.ApiHub.V1.PluginServiceReflection.Descriptor.MessageTypes[3]; }
+      get { return global::Google.Cloud.ApiHub.V1.PluginServiceReflection.Descriptor.MessageTypes[4]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1019,6 +2799,6599 @@ namespace Google.Cloud.ApiHub.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(DisablePluginRequest other) {
+      if (other == null) {
+        return;
+      }
+      if (other.Name.Length != 0) {
+        Name = other.Name;
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            Name = input.ReadString();
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            Name = input.ReadString();
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+  }
+
+  /// <summary>
+  /// PluginInstanceAction represents an action which can be executed in the plugin
+  /// instance.
+  /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+  public sealed partial class PluginInstanceAction : pb::IMessage<PluginInstanceAction>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<PluginInstanceAction> _parser = new pb::MessageParser<PluginInstanceAction>(() => new PluginInstanceAction());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<PluginInstanceAction> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Cloud.ApiHub.V1.PluginServiceReflection.Descriptor.MessageTypes[5]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public PluginInstanceAction() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public PluginInstanceAction(PluginInstanceAction other) : this() {
+      actionId_ = other.actionId_;
+      state_ = other.state_;
+      scheduleCronExpression_ = other.scheduleCronExpression_;
+      curationConfig_ = other.curationConfig_ != null ? other.curationConfig_.Clone() : null;
+      scheduleTimeZone_ = other.scheduleTimeZone_;
+      serviceAccount_ = other.serviceAccount_;
+      resourceConfig_ = other.resourceConfig_ != null ? other.resourceConfig_.Clone() : null;
+      switch (other.ActionStatusCase) {
+        case ActionStatusOneofCase.HubInstanceAction:
+          HubInstanceAction = other.HubInstanceAction.Clone();
+          break;
+      }
+
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public PluginInstanceAction Clone() {
+      return new PluginInstanceAction(this);
+    }
+
+    /// <summary>Field number for the "hub_instance_action" field.</summary>
+    public const int HubInstanceActionFieldNumber = 6;
+    /// <summary>
+    /// Optional. The execution information for the plugin instance action done
+    /// corresponding to an API hub instance.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Cloud.ApiHub.V1.ExecutionStatus HubInstanceAction {
+      get { return actionStatusCase_ == ActionStatusOneofCase.HubInstanceAction ? (global::Google.Cloud.ApiHub.V1.ExecutionStatus) actionStatus_ : null; }
+      set {
+        actionStatus_ = value;
+        actionStatusCase_ = value == null ? ActionStatusOneofCase.None : ActionStatusOneofCase.HubInstanceAction;
+      }
+    }
+
+    /// <summary>Field number for the "action_id" field.</summary>
+    public const int ActionIdFieldNumber = 1;
+    private string actionId_ = "";
+    /// <summary>
+    /// Required. This should map to one of the [action
+    /// id][google.cloud.apihub.v1.PluginActionConfig.id] specified in
+    /// [actions_config][google.cloud.apihub.v1.Plugin.actions_config] in the
+    /// plugin.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string ActionId {
+      get { return actionId_; }
+      set {
+        actionId_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "state" field.</summary>
+    public const int StateFieldNumber = 2;
+    private global::Google.Cloud.ApiHub.V1.PluginInstanceAction.Types.State state_ = global::Google.Cloud.ApiHub.V1.PluginInstanceAction.Types.State.Unspecified;
+    /// <summary>
+    /// Output only. The current state of the plugin action in the plugin instance.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Cloud.ApiHub.V1.PluginInstanceAction.Types.State State {
+      get { return state_; }
+      set {
+        state_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "schedule_cron_expression" field.</summary>
+    public const int ScheduleCronExpressionFieldNumber = 4;
+    private string scheduleCronExpression_ = "";
+    /// <summary>
+    /// Optional. The schedule for this plugin instance action. This can only be
+    /// set if the plugin supports API_HUB_SCHEDULE_TRIGGER mode for this action.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string ScheduleCronExpression {
+      get { return scheduleCronExpression_; }
+      set {
+        scheduleCronExpression_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "curation_config" field.</summary>
+    public const int CurationConfigFieldNumber = 5;
+    private global::Google.Cloud.ApiHub.V1.CurationConfig curationConfig_;
+    /// <summary>
+    /// Optional. This configuration should be provided if the plugin action is
+    /// publishing data to API hub curate layer.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Cloud.ApiHub.V1.CurationConfig CurationConfig {
+      get { return curationConfig_; }
+      set {
+        curationConfig_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "schedule_time_zone" field.</summary>
+    public const int ScheduleTimeZoneFieldNumber = 7;
+    private string scheduleTimeZone_ = "";
+    /// <summary>
+    /// Optional. The time zone for the schedule cron expression. If not provided,
+    /// UTC will be used.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string ScheduleTimeZone {
+      get { return scheduleTimeZone_; }
+      set {
+        scheduleTimeZone_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "service_account" field.</summary>
+    public const int ServiceAccountFieldNumber = 8;
+    private string serviceAccount_ = "";
+    /// <summary>
+    /// Optional. The service account used to publish data. Note, the service
+    /// account will only be accepted for non GCP plugins like OPDK.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string ServiceAccount {
+      get { return serviceAccount_; }
+      set {
+        serviceAccount_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "resource_config" field.</summary>
+    public const int ResourceConfigFieldNumber = 9;
+    private global::Google.Cloud.ApiHub.V1.PluginInstanceAction.Types.ResourceConfig resourceConfig_;
+    /// <summary>
+    /// Output only. The configuration of resources created for a given plugin
+    /// instance action. Note these will be returned only in case of Non-GCP
+    /// plugins like OPDK.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Cloud.ApiHub.V1.PluginInstanceAction.Types.ResourceConfig ResourceConfig {
+      get { return resourceConfig_; }
+      set {
+        resourceConfig_ = value;
+      }
+    }
+
+    private object actionStatus_;
+    /// <summary>Enum of possible cases for the "action_status" oneof.</summary>
+    public enum ActionStatusOneofCase {
+      None = 0,
+      HubInstanceAction = 6,
+    }
+    private ActionStatusOneofCase actionStatusCase_ = ActionStatusOneofCase.None;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public ActionStatusOneofCase ActionStatusCase {
+      get { return actionStatusCase_; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearActionStatus() {
+      actionStatusCase_ = ActionStatusOneofCase.None;
+      actionStatus_ = null;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as PluginInstanceAction);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(PluginInstanceAction other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (!object.Equals(HubInstanceAction, other.HubInstanceAction)) return false;
+      if (ActionId != other.ActionId) return false;
+      if (State != other.State) return false;
+      if (ScheduleCronExpression != other.ScheduleCronExpression) return false;
+      if (!object.Equals(CurationConfig, other.CurationConfig)) return false;
+      if (ScheduleTimeZone != other.ScheduleTimeZone) return false;
+      if (ServiceAccount != other.ServiceAccount) return false;
+      if (!object.Equals(ResourceConfig, other.ResourceConfig)) return false;
+      if (ActionStatusCase != other.ActionStatusCase) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (actionStatusCase_ == ActionStatusOneofCase.HubInstanceAction) hash ^= HubInstanceAction.GetHashCode();
+      if (ActionId.Length != 0) hash ^= ActionId.GetHashCode();
+      if (State != global::Google.Cloud.ApiHub.V1.PluginInstanceAction.Types.State.Unspecified) hash ^= State.GetHashCode();
+      if (ScheduleCronExpression.Length != 0) hash ^= ScheduleCronExpression.GetHashCode();
+      if (curationConfig_ != null) hash ^= CurationConfig.GetHashCode();
+      if (ScheduleTimeZone.Length != 0) hash ^= ScheduleTimeZone.GetHashCode();
+      if (ServiceAccount.Length != 0) hash ^= ServiceAccount.GetHashCode();
+      if (resourceConfig_ != null) hash ^= ResourceConfig.GetHashCode();
+      hash ^= (int) actionStatusCase_;
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (ActionId.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(ActionId);
+      }
+      if (State != global::Google.Cloud.ApiHub.V1.PluginInstanceAction.Types.State.Unspecified) {
+        output.WriteRawTag(16);
+        output.WriteEnum((int) State);
+      }
+      if (ScheduleCronExpression.Length != 0) {
+        output.WriteRawTag(34);
+        output.WriteString(ScheduleCronExpression);
+      }
+      if (curationConfig_ != null) {
+        output.WriteRawTag(42);
+        output.WriteMessage(CurationConfig);
+      }
+      if (actionStatusCase_ == ActionStatusOneofCase.HubInstanceAction) {
+        output.WriteRawTag(50);
+        output.WriteMessage(HubInstanceAction);
+      }
+      if (ScheduleTimeZone.Length != 0) {
+        output.WriteRawTag(58);
+        output.WriteString(ScheduleTimeZone);
+      }
+      if (ServiceAccount.Length != 0) {
+        output.WriteRawTag(66);
+        output.WriteString(ServiceAccount);
+      }
+      if (resourceConfig_ != null) {
+        output.WriteRawTag(74);
+        output.WriteMessage(ResourceConfig);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (ActionId.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(ActionId);
+      }
+      if (State != global::Google.Cloud.ApiHub.V1.PluginInstanceAction.Types.State.Unspecified) {
+        output.WriteRawTag(16);
+        output.WriteEnum((int) State);
+      }
+      if (ScheduleCronExpression.Length != 0) {
+        output.WriteRawTag(34);
+        output.WriteString(ScheduleCronExpression);
+      }
+      if (curationConfig_ != null) {
+        output.WriteRawTag(42);
+        output.WriteMessage(CurationConfig);
+      }
+      if (actionStatusCase_ == ActionStatusOneofCase.HubInstanceAction) {
+        output.WriteRawTag(50);
+        output.WriteMessage(HubInstanceAction);
+      }
+      if (ScheduleTimeZone.Length != 0) {
+        output.WriteRawTag(58);
+        output.WriteString(ScheduleTimeZone);
+      }
+      if (ServiceAccount.Length != 0) {
+        output.WriteRawTag(66);
+        output.WriteString(ServiceAccount);
+      }
+      if (resourceConfig_ != null) {
+        output.WriteRawTag(74);
+        output.WriteMessage(ResourceConfig);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      if (actionStatusCase_ == ActionStatusOneofCase.HubInstanceAction) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(HubInstanceAction);
+      }
+      if (ActionId.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(ActionId);
+      }
+      if (State != global::Google.Cloud.ApiHub.V1.PluginInstanceAction.Types.State.Unspecified) {
+        size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) State);
+      }
+      if (ScheduleCronExpression.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(ScheduleCronExpression);
+      }
+      if (curationConfig_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(CurationConfig);
+      }
+      if (ScheduleTimeZone.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(ScheduleTimeZone);
+      }
+      if (ServiceAccount.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(ServiceAccount);
+      }
+      if (resourceConfig_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(ResourceConfig);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(PluginInstanceAction other) {
+      if (other == null) {
+        return;
+      }
+      if (other.ActionId.Length != 0) {
+        ActionId = other.ActionId;
+      }
+      if (other.State != global::Google.Cloud.ApiHub.V1.PluginInstanceAction.Types.State.Unspecified) {
+        State = other.State;
+      }
+      if (other.ScheduleCronExpression.Length != 0) {
+        ScheduleCronExpression = other.ScheduleCronExpression;
+      }
+      if (other.curationConfig_ != null) {
+        if (curationConfig_ == null) {
+          CurationConfig = new global::Google.Cloud.ApiHub.V1.CurationConfig();
+        }
+        CurationConfig.MergeFrom(other.CurationConfig);
+      }
+      if (other.ScheduleTimeZone.Length != 0) {
+        ScheduleTimeZone = other.ScheduleTimeZone;
+      }
+      if (other.ServiceAccount.Length != 0) {
+        ServiceAccount = other.ServiceAccount;
+      }
+      if (other.resourceConfig_ != null) {
+        if (resourceConfig_ == null) {
+          ResourceConfig = new global::Google.Cloud.ApiHub.V1.PluginInstanceAction.Types.ResourceConfig();
+        }
+        ResourceConfig.MergeFrom(other.ResourceConfig);
+      }
+      switch (other.ActionStatusCase) {
+        case ActionStatusOneofCase.HubInstanceAction:
+          if (HubInstanceAction == null) {
+            HubInstanceAction = new global::Google.Cloud.ApiHub.V1.ExecutionStatus();
+          }
+          HubInstanceAction.MergeFrom(other.HubInstanceAction);
+          break;
+      }
+
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            ActionId = input.ReadString();
+            break;
+          }
+          case 16: {
+            State = (global::Google.Cloud.ApiHub.V1.PluginInstanceAction.Types.State) input.ReadEnum();
+            break;
+          }
+          case 34: {
+            ScheduleCronExpression = input.ReadString();
+            break;
+          }
+          case 42: {
+            if (curationConfig_ == null) {
+              CurationConfig = new global::Google.Cloud.ApiHub.V1.CurationConfig();
+            }
+            input.ReadMessage(CurationConfig);
+            break;
+          }
+          case 50: {
+            global::Google.Cloud.ApiHub.V1.ExecutionStatus subBuilder = new global::Google.Cloud.ApiHub.V1.ExecutionStatus();
+            if (actionStatusCase_ == ActionStatusOneofCase.HubInstanceAction) {
+              subBuilder.MergeFrom(HubInstanceAction);
+            }
+            input.ReadMessage(subBuilder);
+            HubInstanceAction = subBuilder;
+            break;
+          }
+          case 58: {
+            ScheduleTimeZone = input.ReadString();
+            break;
+          }
+          case 66: {
+            ServiceAccount = input.ReadString();
+            break;
+          }
+          case 74: {
+            if (resourceConfig_ == null) {
+              ResourceConfig = new global::Google.Cloud.ApiHub.V1.PluginInstanceAction.Types.ResourceConfig();
+            }
+            input.ReadMessage(ResourceConfig);
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            ActionId = input.ReadString();
+            break;
+          }
+          case 16: {
+            State = (global::Google.Cloud.ApiHub.V1.PluginInstanceAction.Types.State) input.ReadEnum();
+            break;
+          }
+          case 34: {
+            ScheduleCronExpression = input.ReadString();
+            break;
+          }
+          case 42: {
+            if (curationConfig_ == null) {
+              CurationConfig = new global::Google.Cloud.ApiHub.V1.CurationConfig();
+            }
+            input.ReadMessage(CurationConfig);
+            break;
+          }
+          case 50: {
+            global::Google.Cloud.ApiHub.V1.ExecutionStatus subBuilder = new global::Google.Cloud.ApiHub.V1.ExecutionStatus();
+            if (actionStatusCase_ == ActionStatusOneofCase.HubInstanceAction) {
+              subBuilder.MergeFrom(HubInstanceAction);
+            }
+            input.ReadMessage(subBuilder);
+            HubInstanceAction = subBuilder;
+            break;
+          }
+          case 58: {
+            ScheduleTimeZone = input.ReadString();
+            break;
+          }
+          case 66: {
+            ServiceAccount = input.ReadString();
+            break;
+          }
+          case 74: {
+            if (resourceConfig_ == null) {
+              ResourceConfig = new global::Google.Cloud.ApiHub.V1.PluginInstanceAction.Types.ResourceConfig();
+            }
+            input.ReadMessage(ResourceConfig);
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+    #region Nested types
+    /// <summary>Container for nested types declared in the PluginInstanceAction message type.</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static partial class Types {
+      /// <summary>
+      /// State represents the state of the plugin instance action.
+      /// </summary>
+      public enum State {
+        /// <summary>
+        /// Default unspecified state.
+        /// </summary>
+        [pbr::OriginalName("STATE_UNSPECIFIED")] Unspecified = 0,
+        /// <summary>
+        /// The action is enabled in the plugin instance i.e., executions can
+        /// be triggered for this action.
+        /// </summary>
+        [pbr::OriginalName("ENABLED")] Enabled = 1,
+        /// <summary>
+        /// The action is disabled in the plugin instance i.e., no executions
+        /// can be triggered for this action. This state indicates that the user
+        /// explicitly disabled the instance, and no further action is needed unless
+        /// the user wants to re-enable it.
+        /// </summary>
+        [pbr::OriginalName("DISABLED")] Disabled = 2,
+        /// <summary>
+        /// The action in the plugin instance is being enabled.
+        /// </summary>
+        [pbr::OriginalName("ENABLING")] Enabling = 3,
+        /// <summary>
+        /// The action in the plugin instance is being disabled.
+        /// </summary>
+        [pbr::OriginalName("DISABLING")] Disabling = 4,
+        /// <summary>
+        /// The ERROR state can come while enabling/disabling plugin instance action.
+        /// Users can retrigger enable, disable via
+        /// [EnablePluginInstanceAction][google.cloud.apihub.v1.ApiHubPlugin.EnablePluginInstanceAction]
+        /// and
+        /// [DisablePluginInstanceAction][google.cloud.apihub.v1.ApiHubPlugin.DisablePluginInstanceAction]
+        /// to restore the action back to enabled/disabled state. Note enable/disable
+        /// on actions can only be triggered if plugin instance is in Active state.
+        /// </summary>
+        [pbr::OriginalName("ERROR")] Error = 5,
+      }
+
+      /// <summary>
+      /// The configuration of resources created for a given plugin instance action.
+      /// </summary>
+      [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+      public sealed partial class ResourceConfig : pb::IMessage<ResourceConfig>
+      #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          , pb::IBufferMessage
+      #endif
+      {
+        private static readonly pb::MessageParser<ResourceConfig> _parser = new pb::MessageParser<ResourceConfig>(() => new ResourceConfig());
+        private pb::UnknownFieldSet _unknownFields;
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public static pb::MessageParser<ResourceConfig> Parser { get { return _parser; } }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public static pbr::MessageDescriptor Descriptor {
+          get { return global::Google.Cloud.ApiHub.V1.PluginInstanceAction.Descriptor.NestedTypes[0]; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        pbr::MessageDescriptor pb::IMessage.Descriptor {
+          get { return Descriptor; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public ResourceConfig() {
+          OnConstruction();
+        }
+
+        partial void OnConstruction();
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public ResourceConfig(ResourceConfig other) : this() {
+          actionType_ = other.actionType_;
+          pubsubTopic_ = other.pubsubTopic_;
+          _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public ResourceConfig Clone() {
+          return new ResourceConfig(this);
+        }
+
+        /// <summary>Field number for the "action_type" field.</summary>
+        public const int ActionTypeFieldNumber = 1;
+        private global::Google.Cloud.ApiHub.V1.ActionType actionType_ = global::Google.Cloud.ApiHub.V1.ActionType.Unspecified;
+        /// <summary>
+        /// Output only. The type of the action.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public global::Google.Cloud.ApiHub.V1.ActionType ActionType {
+          get { return actionType_; }
+          set {
+            actionType_ = value;
+          }
+        }
+
+        /// <summary>Field number for the "pubsub_topic" field.</summary>
+        public const int PubsubTopicFieldNumber = 2;
+        private string pubsubTopic_ = "";
+        /// <summary>
+        /// Output only. The pubsub topic to publish the data to. Format is
+        /// projects/{project}/topics/{topic}
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public string PubsubTopic {
+          get { return pubsubTopic_; }
+          set {
+            pubsubTopic_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+          }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override bool Equals(object other) {
+          return Equals(other as ResourceConfig);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public bool Equals(ResourceConfig other) {
+          if (ReferenceEquals(other, null)) {
+            return false;
+          }
+          if (ReferenceEquals(other, this)) {
+            return true;
+          }
+          if (ActionType != other.ActionType) return false;
+          if (PubsubTopic != other.PubsubTopic) return false;
+          return Equals(_unknownFields, other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override int GetHashCode() {
+          int hash = 1;
+          if (ActionType != global::Google.Cloud.ApiHub.V1.ActionType.Unspecified) hash ^= ActionType.GetHashCode();
+          if (PubsubTopic.Length != 0) hash ^= PubsubTopic.GetHashCode();
+          if (_unknownFields != null) {
+            hash ^= _unknownFields.GetHashCode();
+          }
+          return hash;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override string ToString() {
+          return pb::JsonFormatter.ToDiagnosticString(this);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void WriteTo(pb::CodedOutputStream output) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          output.WriteRawMessage(this);
+        #else
+          if (ActionType != global::Google.Cloud.ApiHub.V1.ActionType.Unspecified) {
+            output.WriteRawTag(8);
+            output.WriteEnum((int) ActionType);
+          }
+          if (PubsubTopic.Length != 0) {
+            output.WriteRawTag(18);
+            output.WriteString(PubsubTopic);
+          }
+          if (_unknownFields != null) {
+            _unknownFields.WriteTo(output);
+          }
+        #endif
+        }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+          if (ActionType != global::Google.Cloud.ApiHub.V1.ActionType.Unspecified) {
+            output.WriteRawTag(8);
+            output.WriteEnum((int) ActionType);
+          }
+          if (PubsubTopic.Length != 0) {
+            output.WriteRawTag(18);
+            output.WriteString(PubsubTopic);
+          }
+          if (_unknownFields != null) {
+            _unknownFields.WriteTo(ref output);
+          }
+        }
+        #endif
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public int CalculateSize() {
+          int size = 0;
+          if (ActionType != global::Google.Cloud.ApiHub.V1.ActionType.Unspecified) {
+            size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) ActionType);
+          }
+          if (PubsubTopic.Length != 0) {
+            size += 1 + pb::CodedOutputStream.ComputeStringSize(PubsubTopic);
+          }
+          if (_unknownFields != null) {
+            size += _unknownFields.CalculateSize();
+          }
+          return size;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void MergeFrom(ResourceConfig other) {
+          if (other == null) {
+            return;
+          }
+          if (other.ActionType != global::Google.Cloud.ApiHub.V1.ActionType.Unspecified) {
+            ActionType = other.ActionType;
+          }
+          if (other.PubsubTopic.Length != 0) {
+            PubsubTopic = other.PubsubTopic;
+          }
+          _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void MergeFrom(pb::CodedInputStream input) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          input.ReadRawMessage(this);
+        #else
+          uint tag;
+          while ((tag = input.ReadTag()) != 0) {
+            switch(tag) {
+              default:
+                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+                break;
+              case 8: {
+                ActionType = (global::Google.Cloud.ApiHub.V1.ActionType) input.ReadEnum();
+                break;
+              }
+              case 18: {
+                PubsubTopic = input.ReadString();
+                break;
+              }
+            }
+          }
+        #endif
+        }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+          uint tag;
+          while ((tag = input.ReadTag()) != 0) {
+            switch(tag) {
+              default:
+                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+                break;
+              case 8: {
+                ActionType = (global::Google.Cloud.ApiHub.V1.ActionType) input.ReadEnum();
+                break;
+              }
+              case 18: {
+                PubsubTopic = input.ReadString();
+                break;
+              }
+            }
+          }
+        }
+        #endif
+
+      }
+
+    }
+    #endregion
+
+  }
+
+  /// <summary>
+  /// Represents a plugin instance resource in the API Hub.
+  /// A PluginInstance is a specific instance of a hub plugin with its own
+  /// configuration, state, and execution details.
+  /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+  public sealed partial class PluginInstance : pb::IMessage<PluginInstance>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<PluginInstance> _parser = new pb::MessageParser<PluginInstance>(() => new PluginInstance());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<PluginInstance> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Cloud.ApiHub.V1.PluginServiceReflection.Descriptor.MessageTypes[6]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public PluginInstance() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public PluginInstance(PluginInstance other) : this() {
+      name_ = other.name_;
+      displayName_ = other.displayName_;
+      authConfig_ = other.authConfig_ != null ? other.authConfig_.Clone() : null;
+      additionalConfig_ = other.additionalConfig_.Clone();
+      state_ = other.state_;
+      errorMessage_ = other.errorMessage_;
+      actions_ = other.actions_.Clone();
+      createTime_ = other.createTime_ != null ? other.createTime_.Clone() : null;
+      updateTime_ = other.updateTime_ != null ? other.updateTime_.Clone() : null;
+      sourceProjectId_ = other.sourceProjectId_;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public PluginInstance Clone() {
+      return new PluginInstance(this);
+    }
+
+    /// <summary>Field number for the "name" field.</summary>
+    public const int NameFieldNumber = 1;
+    private string name_ = "";
+    /// <summary>
+    /// Identifier. The unique name of the plugin instance resource.
+    /// Format:
+    /// `projects/{project}/locations/{location}/plugins/{plugin}/instances/{instance}`
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string Name {
+      get { return name_; }
+      set {
+        name_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "display_name" field.</summary>
+    public const int DisplayNameFieldNumber = 2;
+    private string displayName_ = "";
+    /// <summary>
+    /// Required. The display name for this plugin instance. Max length is 255
+    /// characters.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string DisplayName {
+      get { return displayName_; }
+      set {
+        displayName_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "auth_config" field.</summary>
+    public const int AuthConfigFieldNumber = 3;
+    private global::Google.Cloud.ApiHub.V1.AuthConfig authConfig_;
+    /// <summary>
+    /// Optional. The authentication information for this plugin instance.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Cloud.ApiHub.V1.AuthConfig AuthConfig {
+      get { return authConfig_; }
+      set {
+        authConfig_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "additional_config" field.</summary>
+    public const int AdditionalConfigFieldNumber = 4;
+    private static readonly pbc::MapField<string, global::Google.Cloud.ApiHub.V1.ConfigVariable>.Codec _map_additionalConfig_codec
+        = new pbc::MapField<string, global::Google.Cloud.ApiHub.V1.ConfigVariable>.Codec(pb::FieldCodec.ForString(10, ""), pb::FieldCodec.ForMessage(18, global::Google.Cloud.ApiHub.V1.ConfigVariable.Parser), 34);
+    private readonly pbc::MapField<string, global::Google.Cloud.ApiHub.V1.ConfigVariable> additionalConfig_ = new pbc::MapField<string, global::Google.Cloud.ApiHub.V1.ConfigVariable>();
+    /// <summary>
+    /// Optional. The additional information for this plugin instance corresponding
+    /// to the additional config template of the plugin. This information will be
+    /// sent to plugin hosting service on each call to plugin hosted service. The
+    /// key will be the config_variable_template.display_name to uniquely identify
+    /// the config variable.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pbc::MapField<string, global::Google.Cloud.ApiHub.V1.ConfigVariable> AdditionalConfig {
+      get { return additionalConfig_; }
+    }
+
+    /// <summary>Field number for the "state" field.</summary>
+    public const int StateFieldNumber = 5;
+    private global::Google.Cloud.ApiHub.V1.PluginInstance.Types.State state_ = global::Google.Cloud.ApiHub.V1.PluginInstance.Types.State.Unspecified;
+    /// <summary>
+    /// Output only. The current state of the plugin instance (e.g., enabled,
+    /// disabled, provisioning).
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Cloud.ApiHub.V1.PluginInstance.Types.State State {
+      get { return state_; }
+      set {
+        state_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "error_message" field.</summary>
+    public const int ErrorMessageFieldNumber = 6;
+    private string errorMessage_ = "";
+    /// <summary>
+    /// Output only. Error message describing the failure, if any, during Create,
+    /// Delete or ApplyConfig operation corresponding to the plugin instance.This
+    /// field will only be populated if the plugin instance is in the ERROR or
+    /// FAILED state.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string ErrorMessage {
+      get { return errorMessage_; }
+      set {
+        errorMessage_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "actions" field.</summary>
+    public const int ActionsFieldNumber = 7;
+    private static readonly pb::FieldCodec<global::Google.Cloud.ApiHub.V1.PluginInstanceAction> _repeated_actions_codec
+        = pb::FieldCodec.ForMessage(58, global::Google.Cloud.ApiHub.V1.PluginInstanceAction.Parser);
+    private readonly pbc::RepeatedField<global::Google.Cloud.ApiHub.V1.PluginInstanceAction> actions_ = new pbc::RepeatedField<global::Google.Cloud.ApiHub.V1.PluginInstanceAction>();
+    /// <summary>
+    /// Required. The action status for the plugin instance.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pbc::RepeatedField<global::Google.Cloud.ApiHub.V1.PluginInstanceAction> Actions {
+      get { return actions_; }
+    }
+
+    /// <summary>Field number for the "create_time" field.</summary>
+    public const int CreateTimeFieldNumber = 9;
+    private global::Google.Protobuf.WellKnownTypes.Timestamp createTime_;
+    /// <summary>
+    /// Output only. Timestamp indicating when the plugin instance was created.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Protobuf.WellKnownTypes.Timestamp CreateTime {
+      get { return createTime_; }
+      set {
+        createTime_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "update_time" field.</summary>
+    public const int UpdateTimeFieldNumber = 10;
+    private global::Google.Protobuf.WellKnownTypes.Timestamp updateTime_;
+    /// <summary>
+    /// Output only. Timestamp indicating when the plugin instance was last
+    /// updated.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Protobuf.WellKnownTypes.Timestamp UpdateTime {
+      get { return updateTime_; }
+      set {
+        updateTime_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "source_project_id" field.</summary>
+    public const int SourceProjectIdFieldNumber = 11;
+    private string sourceProjectId_ = "";
+    /// <summary>
+    /// Optional. The source project id of the plugin instance. This will be the id
+    /// of runtime project in case of gcp based plugins and org id in case of non
+    /// gcp based plugins. This field will be a required field for Google provided
+    /// on-ramp plugins.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string SourceProjectId {
+      get { return sourceProjectId_; }
+      set {
+        sourceProjectId_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as PluginInstance);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(PluginInstance other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (Name != other.Name) return false;
+      if (DisplayName != other.DisplayName) return false;
+      if (!object.Equals(AuthConfig, other.AuthConfig)) return false;
+      if (!AdditionalConfig.Equals(other.AdditionalConfig)) return false;
+      if (State != other.State) return false;
+      if (ErrorMessage != other.ErrorMessage) return false;
+      if(!actions_.Equals(other.actions_)) return false;
+      if (!object.Equals(CreateTime, other.CreateTime)) return false;
+      if (!object.Equals(UpdateTime, other.UpdateTime)) return false;
+      if (SourceProjectId != other.SourceProjectId) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (Name.Length != 0) hash ^= Name.GetHashCode();
+      if (DisplayName.Length != 0) hash ^= DisplayName.GetHashCode();
+      if (authConfig_ != null) hash ^= AuthConfig.GetHashCode();
+      hash ^= AdditionalConfig.GetHashCode();
+      if (State != global::Google.Cloud.ApiHub.V1.PluginInstance.Types.State.Unspecified) hash ^= State.GetHashCode();
+      if (ErrorMessage.Length != 0) hash ^= ErrorMessage.GetHashCode();
+      hash ^= actions_.GetHashCode();
+      if (createTime_ != null) hash ^= CreateTime.GetHashCode();
+      if (updateTime_ != null) hash ^= UpdateTime.GetHashCode();
+      if (SourceProjectId.Length != 0) hash ^= SourceProjectId.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (Name.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(Name);
+      }
+      if (DisplayName.Length != 0) {
+        output.WriteRawTag(18);
+        output.WriteString(DisplayName);
+      }
+      if (authConfig_ != null) {
+        output.WriteRawTag(26);
+        output.WriteMessage(AuthConfig);
+      }
+      additionalConfig_.WriteTo(output, _map_additionalConfig_codec);
+      if (State != global::Google.Cloud.ApiHub.V1.PluginInstance.Types.State.Unspecified) {
+        output.WriteRawTag(40);
+        output.WriteEnum((int) State);
+      }
+      if (ErrorMessage.Length != 0) {
+        output.WriteRawTag(50);
+        output.WriteString(ErrorMessage);
+      }
+      actions_.WriteTo(output, _repeated_actions_codec);
+      if (createTime_ != null) {
+        output.WriteRawTag(74);
+        output.WriteMessage(CreateTime);
+      }
+      if (updateTime_ != null) {
+        output.WriteRawTag(82);
+        output.WriteMessage(UpdateTime);
+      }
+      if (SourceProjectId.Length != 0) {
+        output.WriteRawTag(90);
+        output.WriteString(SourceProjectId);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (Name.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(Name);
+      }
+      if (DisplayName.Length != 0) {
+        output.WriteRawTag(18);
+        output.WriteString(DisplayName);
+      }
+      if (authConfig_ != null) {
+        output.WriteRawTag(26);
+        output.WriteMessage(AuthConfig);
+      }
+      additionalConfig_.WriteTo(ref output, _map_additionalConfig_codec);
+      if (State != global::Google.Cloud.ApiHub.V1.PluginInstance.Types.State.Unspecified) {
+        output.WriteRawTag(40);
+        output.WriteEnum((int) State);
+      }
+      if (ErrorMessage.Length != 0) {
+        output.WriteRawTag(50);
+        output.WriteString(ErrorMessage);
+      }
+      actions_.WriteTo(ref output, _repeated_actions_codec);
+      if (createTime_ != null) {
+        output.WriteRawTag(74);
+        output.WriteMessage(CreateTime);
+      }
+      if (updateTime_ != null) {
+        output.WriteRawTag(82);
+        output.WriteMessage(UpdateTime);
+      }
+      if (SourceProjectId.Length != 0) {
+        output.WriteRawTag(90);
+        output.WriteString(SourceProjectId);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      if (Name.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Name);
+      }
+      if (DisplayName.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(DisplayName);
+      }
+      if (authConfig_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(AuthConfig);
+      }
+      size += additionalConfig_.CalculateSize(_map_additionalConfig_codec);
+      if (State != global::Google.Cloud.ApiHub.V1.PluginInstance.Types.State.Unspecified) {
+        size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) State);
+      }
+      if (ErrorMessage.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(ErrorMessage);
+      }
+      size += actions_.CalculateSize(_repeated_actions_codec);
+      if (createTime_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(CreateTime);
+      }
+      if (updateTime_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(UpdateTime);
+      }
+      if (SourceProjectId.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(SourceProjectId);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(PluginInstance other) {
+      if (other == null) {
+        return;
+      }
+      if (other.Name.Length != 0) {
+        Name = other.Name;
+      }
+      if (other.DisplayName.Length != 0) {
+        DisplayName = other.DisplayName;
+      }
+      if (other.authConfig_ != null) {
+        if (authConfig_ == null) {
+          AuthConfig = new global::Google.Cloud.ApiHub.V1.AuthConfig();
+        }
+        AuthConfig.MergeFrom(other.AuthConfig);
+      }
+      additionalConfig_.MergeFrom(other.additionalConfig_);
+      if (other.State != global::Google.Cloud.ApiHub.V1.PluginInstance.Types.State.Unspecified) {
+        State = other.State;
+      }
+      if (other.ErrorMessage.Length != 0) {
+        ErrorMessage = other.ErrorMessage;
+      }
+      actions_.Add(other.actions_);
+      if (other.createTime_ != null) {
+        if (createTime_ == null) {
+          CreateTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+        }
+        CreateTime.MergeFrom(other.CreateTime);
+      }
+      if (other.updateTime_ != null) {
+        if (updateTime_ == null) {
+          UpdateTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+        }
+        UpdateTime.MergeFrom(other.UpdateTime);
+      }
+      if (other.SourceProjectId.Length != 0) {
+        SourceProjectId = other.SourceProjectId;
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            Name = input.ReadString();
+            break;
+          }
+          case 18: {
+            DisplayName = input.ReadString();
+            break;
+          }
+          case 26: {
+            if (authConfig_ == null) {
+              AuthConfig = new global::Google.Cloud.ApiHub.V1.AuthConfig();
+            }
+            input.ReadMessage(AuthConfig);
+            break;
+          }
+          case 34: {
+            additionalConfig_.AddEntriesFrom(input, _map_additionalConfig_codec);
+            break;
+          }
+          case 40: {
+            State = (global::Google.Cloud.ApiHub.V1.PluginInstance.Types.State) input.ReadEnum();
+            break;
+          }
+          case 50: {
+            ErrorMessage = input.ReadString();
+            break;
+          }
+          case 58: {
+            actions_.AddEntriesFrom(input, _repeated_actions_codec);
+            break;
+          }
+          case 74: {
+            if (createTime_ == null) {
+              CreateTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+            }
+            input.ReadMessage(CreateTime);
+            break;
+          }
+          case 82: {
+            if (updateTime_ == null) {
+              UpdateTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+            }
+            input.ReadMessage(UpdateTime);
+            break;
+          }
+          case 90: {
+            SourceProjectId = input.ReadString();
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            Name = input.ReadString();
+            break;
+          }
+          case 18: {
+            DisplayName = input.ReadString();
+            break;
+          }
+          case 26: {
+            if (authConfig_ == null) {
+              AuthConfig = new global::Google.Cloud.ApiHub.V1.AuthConfig();
+            }
+            input.ReadMessage(AuthConfig);
+            break;
+          }
+          case 34: {
+            additionalConfig_.AddEntriesFrom(ref input, _map_additionalConfig_codec);
+            break;
+          }
+          case 40: {
+            State = (global::Google.Cloud.ApiHub.V1.PluginInstance.Types.State) input.ReadEnum();
+            break;
+          }
+          case 50: {
+            ErrorMessage = input.ReadString();
+            break;
+          }
+          case 58: {
+            actions_.AddEntriesFrom(ref input, _repeated_actions_codec);
+            break;
+          }
+          case 74: {
+            if (createTime_ == null) {
+              CreateTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+            }
+            input.ReadMessage(CreateTime);
+            break;
+          }
+          case 82: {
+            if (updateTime_ == null) {
+              UpdateTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+            }
+            input.ReadMessage(UpdateTime);
+            break;
+          }
+          case 90: {
+            SourceProjectId = input.ReadString();
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+    #region Nested types
+    /// <summary>Container for nested types declared in the PluginInstance message type.</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static partial class Types {
+      /// <summary>
+      /// State represents the state of the plugin instance.
+      /// </summary>
+      public enum State {
+        /// <summary>
+        /// Default unspecified state.
+        /// </summary>
+        [pbr::OriginalName("STATE_UNSPECIFIED")] Unspecified = 0,
+        /// <summary>
+        /// The plugin instance is being created.
+        /// </summary>
+        [pbr::OriginalName("CREATING")] Creating = 1,
+        /// <summary>
+        /// The plugin instance is active and ready for executions. This is the only
+        /// state where executions can run on the plugin instance.
+        /// </summary>
+        [pbr::OriginalName("ACTIVE")] Active = 2,
+        /// <summary>
+        /// The updated config that contains
+        /// [additional_config][google.cloud.apihub.v1.PluginInstance.additional_config]
+        /// and [auth_config][google.cloud.apihub.v1.PluginInstance.auth_config] is
+        /// being applied.
+        /// </summary>
+        [pbr::OriginalName("APPLYING_CONFIG")] ApplyingConfig = 3,
+        /// <summary>
+        /// The ERROR state can come while applying config. Users
+        /// can retrigger
+        /// [ApplyPluginInstanceConfig][google.cloud.apihub.v1.ApiHubPlugin.ApplyPluginInstanceConfig]
+        /// to restore the plugin instance back to active state. Note, In case the
+        /// ERROR state happens while applying config (auth_config,
+        /// additional_config), the plugin instance will reflect the config which was
+        /// trying to be applied while error happened. In order to overwrite, trigger
+        /// ApplyConfig with a new config.
+        /// </summary>
+        [pbr::OriginalName("ERROR")] Error = 4,
+        /// <summary>
+        /// The plugin instance is in a failed state. This indicates that an
+        /// unrecoverable error occurred during a previous operation (Create,
+        /// Delete).
+        /// </summary>
+        [pbr::OriginalName("FAILED")] Failed = 5,
+        /// <summary>
+        /// The plugin instance is being deleted. Delete is only possible if there is
+        /// no other operation running on the plugin instance and plugin instance
+        /// action.
+        /// </summary>
+        [pbr::OriginalName("DELETING")] Deleting = 6,
+      }
+
+    }
+    #endregion
+
+  }
+
+  /// <summary>
+  /// The curation information for this plugin instance.
+  /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+  public sealed partial class CurationConfig : pb::IMessage<CurationConfig>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<CurationConfig> _parser = new pb::MessageParser<CurationConfig>(() => new CurationConfig());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<CurationConfig> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Cloud.ApiHub.V1.PluginServiceReflection.Descriptor.MessageTypes[7]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public CurationConfig() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public CurationConfig(CurationConfig other) : this() {
+      curationType_ = other.curationType_;
+      switch (other.CurationConfigCase) {
+        case CurationConfigOneofCase.CustomCuration:
+          CustomCuration = other.CustomCuration.Clone();
+          break;
+      }
+
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public CurationConfig Clone() {
+      return new CurationConfig(this);
+    }
+
+    /// <summary>Field number for the "custom_curation" field.</summary>
+    public const int CustomCurationFieldNumber = 2;
+    /// <summary>
+    /// Optional. Custom curation information for this plugin instance.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Cloud.ApiHub.V1.CurationConfig.Types.CustomCuration CustomCuration {
+      get { return curationConfigCase_ == CurationConfigOneofCase.CustomCuration ? (global::Google.Cloud.ApiHub.V1.CurationConfig.Types.CustomCuration) curationConfig_ : null; }
+      set {
+        curationConfig_ = value;
+        curationConfigCase_ = value == null ? CurationConfigOneofCase.None : CurationConfigOneofCase.CustomCuration;
+      }
+    }
+
+    /// <summary>Field number for the "curation_type" field.</summary>
+    public const int CurationTypeFieldNumber = 1;
+    private global::Google.Cloud.ApiHub.V1.CurationType curationType_ = global::Google.Cloud.ApiHub.V1.CurationType.Unspecified;
+    /// <summary>
+    /// Required. The curation type for this plugin instance.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Cloud.ApiHub.V1.CurationType CurationType {
+      get { return curationType_; }
+      set {
+        curationType_ = value;
+      }
+    }
+
+    private object curationConfig_;
+    /// <summary>Enum of possible cases for the "curation_config" oneof.</summary>
+    public enum CurationConfigOneofCase {
+      None = 0,
+      CustomCuration = 2,
+    }
+    private CurationConfigOneofCase curationConfigCase_ = CurationConfigOneofCase.None;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public CurationConfigOneofCase CurationConfigCase {
+      get { return curationConfigCase_; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearCurationConfig() {
+      curationConfigCase_ = CurationConfigOneofCase.None;
+      curationConfig_ = null;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as CurationConfig);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(CurationConfig other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (!object.Equals(CustomCuration, other.CustomCuration)) return false;
+      if (CurationType != other.CurationType) return false;
+      if (CurationConfigCase != other.CurationConfigCase) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (curationConfigCase_ == CurationConfigOneofCase.CustomCuration) hash ^= CustomCuration.GetHashCode();
+      if (CurationType != global::Google.Cloud.ApiHub.V1.CurationType.Unspecified) hash ^= CurationType.GetHashCode();
+      hash ^= (int) curationConfigCase_;
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (CurationType != global::Google.Cloud.ApiHub.V1.CurationType.Unspecified) {
+        output.WriteRawTag(8);
+        output.WriteEnum((int) CurationType);
+      }
+      if (curationConfigCase_ == CurationConfigOneofCase.CustomCuration) {
+        output.WriteRawTag(18);
+        output.WriteMessage(CustomCuration);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (CurationType != global::Google.Cloud.ApiHub.V1.CurationType.Unspecified) {
+        output.WriteRawTag(8);
+        output.WriteEnum((int) CurationType);
+      }
+      if (curationConfigCase_ == CurationConfigOneofCase.CustomCuration) {
+        output.WriteRawTag(18);
+        output.WriteMessage(CustomCuration);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      if (curationConfigCase_ == CurationConfigOneofCase.CustomCuration) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(CustomCuration);
+      }
+      if (CurationType != global::Google.Cloud.ApiHub.V1.CurationType.Unspecified) {
+        size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) CurationType);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(CurationConfig other) {
+      if (other == null) {
+        return;
+      }
+      if (other.CurationType != global::Google.Cloud.ApiHub.V1.CurationType.Unspecified) {
+        CurationType = other.CurationType;
+      }
+      switch (other.CurationConfigCase) {
+        case CurationConfigOneofCase.CustomCuration:
+          if (CustomCuration == null) {
+            CustomCuration = new global::Google.Cloud.ApiHub.V1.CurationConfig.Types.CustomCuration();
+          }
+          CustomCuration.MergeFrom(other.CustomCuration);
+          break;
+      }
+
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 8: {
+            CurationType = (global::Google.Cloud.ApiHub.V1.CurationType) input.ReadEnum();
+            break;
+          }
+          case 18: {
+            global::Google.Cloud.ApiHub.V1.CurationConfig.Types.CustomCuration subBuilder = new global::Google.Cloud.ApiHub.V1.CurationConfig.Types.CustomCuration();
+            if (curationConfigCase_ == CurationConfigOneofCase.CustomCuration) {
+              subBuilder.MergeFrom(CustomCuration);
+            }
+            input.ReadMessage(subBuilder);
+            CustomCuration = subBuilder;
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 8: {
+            CurationType = (global::Google.Cloud.ApiHub.V1.CurationType) input.ReadEnum();
+            break;
+          }
+          case 18: {
+            global::Google.Cloud.ApiHub.V1.CurationConfig.Types.CustomCuration subBuilder = new global::Google.Cloud.ApiHub.V1.CurationConfig.Types.CustomCuration();
+            if (curationConfigCase_ == CurationConfigOneofCase.CustomCuration) {
+              subBuilder.MergeFrom(CustomCuration);
+            }
+            input.ReadMessage(subBuilder);
+            CustomCuration = subBuilder;
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+    #region Nested types
+    /// <summary>Container for nested types declared in the CurationConfig message type.</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static partial class Types {
+      /// <summary>
+      /// Custom curation information for this plugin instance.
+      /// </summary>
+      [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+      public sealed partial class CustomCuration : pb::IMessage<CustomCuration>
+      #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          , pb::IBufferMessage
+      #endif
+      {
+        private static readonly pb::MessageParser<CustomCuration> _parser = new pb::MessageParser<CustomCuration>(() => new CustomCuration());
+        private pb::UnknownFieldSet _unknownFields;
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public static pb::MessageParser<CustomCuration> Parser { get { return _parser; } }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public static pbr::MessageDescriptor Descriptor {
+          get { return global::Google.Cloud.ApiHub.V1.CurationConfig.Descriptor.NestedTypes[0]; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        pbr::MessageDescriptor pb::IMessage.Descriptor {
+          get { return Descriptor; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public CustomCuration() {
+          OnConstruction();
+        }
+
+        partial void OnConstruction();
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public CustomCuration(CustomCuration other) : this() {
+          curation_ = other.curation_;
+          _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public CustomCuration Clone() {
+          return new CustomCuration(this);
+        }
+
+        /// <summary>Field number for the "curation" field.</summary>
+        public const int CurationFieldNumber = 1;
+        private string curation_ = "";
+        /// <summary>
+        /// Required. The unique name of the curation resource. This will be the name
+        /// of the curation resource in the format:
+        /// `projects/{project}/locations/{location}/curations/{curation}`
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public string Curation {
+          get { return curation_; }
+          set {
+            curation_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+          }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override bool Equals(object other) {
+          return Equals(other as CustomCuration);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public bool Equals(CustomCuration other) {
+          if (ReferenceEquals(other, null)) {
+            return false;
+          }
+          if (ReferenceEquals(other, this)) {
+            return true;
+          }
+          if (Curation != other.Curation) return false;
+          return Equals(_unknownFields, other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override int GetHashCode() {
+          int hash = 1;
+          if (Curation.Length != 0) hash ^= Curation.GetHashCode();
+          if (_unknownFields != null) {
+            hash ^= _unknownFields.GetHashCode();
+          }
+          return hash;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override string ToString() {
+          return pb::JsonFormatter.ToDiagnosticString(this);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void WriteTo(pb::CodedOutputStream output) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          output.WriteRawMessage(this);
+        #else
+          if (Curation.Length != 0) {
+            output.WriteRawTag(10);
+            output.WriteString(Curation);
+          }
+          if (_unknownFields != null) {
+            _unknownFields.WriteTo(output);
+          }
+        #endif
+        }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+          if (Curation.Length != 0) {
+            output.WriteRawTag(10);
+            output.WriteString(Curation);
+          }
+          if (_unknownFields != null) {
+            _unknownFields.WriteTo(ref output);
+          }
+        }
+        #endif
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public int CalculateSize() {
+          int size = 0;
+          if (Curation.Length != 0) {
+            size += 1 + pb::CodedOutputStream.ComputeStringSize(Curation);
+          }
+          if (_unknownFields != null) {
+            size += _unknownFields.CalculateSize();
+          }
+          return size;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void MergeFrom(CustomCuration other) {
+          if (other == null) {
+            return;
+          }
+          if (other.Curation.Length != 0) {
+            Curation = other.Curation;
+          }
+          _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void MergeFrom(pb::CodedInputStream input) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          input.ReadRawMessage(this);
+        #else
+          uint tag;
+          while ((tag = input.ReadTag()) != 0) {
+            switch(tag) {
+              default:
+                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+                break;
+              case 10: {
+                Curation = input.ReadString();
+                break;
+              }
+            }
+          }
+        #endif
+        }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+          uint tag;
+          while ((tag = input.ReadTag()) != 0) {
+            switch(tag) {
+              default:
+                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+                break;
+              case 10: {
+                Curation = input.ReadString();
+                break;
+              }
+            }
+          }
+        }
+        #endif
+
+      }
+
+    }
+    #endregion
+
+  }
+
+  /// <summary>
+  /// The execution status for the plugin instance.
+  /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+  public sealed partial class ExecutionStatus : pb::IMessage<ExecutionStatus>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<ExecutionStatus> _parser = new pb::MessageParser<ExecutionStatus>(() => new ExecutionStatus());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<ExecutionStatus> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Cloud.ApiHub.V1.PluginServiceReflection.Descriptor.MessageTypes[8]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public ExecutionStatus() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public ExecutionStatus(ExecutionStatus other) : this() {
+      currentExecutionState_ = other.currentExecutionState_;
+      lastExecution_ = other.lastExecution_ != null ? other.lastExecution_.Clone() : null;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public ExecutionStatus Clone() {
+      return new ExecutionStatus(this);
+    }
+
+    /// <summary>Field number for the "current_execution_state" field.</summary>
+    public const int CurrentExecutionStateFieldNumber = 1;
+    private global::Google.Cloud.ApiHub.V1.ExecutionStatus.Types.CurrentExecutionState currentExecutionState_ = global::Google.Cloud.ApiHub.V1.ExecutionStatus.Types.CurrentExecutionState.Unspecified;
+    /// <summary>
+    /// Output only. The current state of the execution.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Cloud.ApiHub.V1.ExecutionStatus.Types.CurrentExecutionState CurrentExecutionState {
+      get { return currentExecutionState_; }
+      set {
+        currentExecutionState_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "last_execution" field.</summary>
+    public const int LastExecutionFieldNumber = 2;
+    private global::Google.Cloud.ApiHub.V1.ExecutionStatus.Types.LastExecution lastExecution_;
+    /// <summary>
+    /// Output only. The last execution of the plugin instance.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Cloud.ApiHub.V1.ExecutionStatus.Types.LastExecution LastExecution {
+      get { return lastExecution_; }
+      set {
+        lastExecution_ = value;
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as ExecutionStatus);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(ExecutionStatus other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (CurrentExecutionState != other.CurrentExecutionState) return false;
+      if (!object.Equals(LastExecution, other.LastExecution)) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (CurrentExecutionState != global::Google.Cloud.ApiHub.V1.ExecutionStatus.Types.CurrentExecutionState.Unspecified) hash ^= CurrentExecutionState.GetHashCode();
+      if (lastExecution_ != null) hash ^= LastExecution.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (CurrentExecutionState != global::Google.Cloud.ApiHub.V1.ExecutionStatus.Types.CurrentExecutionState.Unspecified) {
+        output.WriteRawTag(8);
+        output.WriteEnum((int) CurrentExecutionState);
+      }
+      if (lastExecution_ != null) {
+        output.WriteRawTag(18);
+        output.WriteMessage(LastExecution);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (CurrentExecutionState != global::Google.Cloud.ApiHub.V1.ExecutionStatus.Types.CurrentExecutionState.Unspecified) {
+        output.WriteRawTag(8);
+        output.WriteEnum((int) CurrentExecutionState);
+      }
+      if (lastExecution_ != null) {
+        output.WriteRawTag(18);
+        output.WriteMessage(LastExecution);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      if (CurrentExecutionState != global::Google.Cloud.ApiHub.V1.ExecutionStatus.Types.CurrentExecutionState.Unspecified) {
+        size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) CurrentExecutionState);
+      }
+      if (lastExecution_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(LastExecution);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(ExecutionStatus other) {
+      if (other == null) {
+        return;
+      }
+      if (other.CurrentExecutionState != global::Google.Cloud.ApiHub.V1.ExecutionStatus.Types.CurrentExecutionState.Unspecified) {
+        CurrentExecutionState = other.CurrentExecutionState;
+      }
+      if (other.lastExecution_ != null) {
+        if (lastExecution_ == null) {
+          LastExecution = new global::Google.Cloud.ApiHub.V1.ExecutionStatus.Types.LastExecution();
+        }
+        LastExecution.MergeFrom(other.LastExecution);
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 8: {
+            CurrentExecutionState = (global::Google.Cloud.ApiHub.V1.ExecutionStatus.Types.CurrentExecutionState) input.ReadEnum();
+            break;
+          }
+          case 18: {
+            if (lastExecution_ == null) {
+              LastExecution = new global::Google.Cloud.ApiHub.V1.ExecutionStatus.Types.LastExecution();
+            }
+            input.ReadMessage(LastExecution);
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 8: {
+            CurrentExecutionState = (global::Google.Cloud.ApiHub.V1.ExecutionStatus.Types.CurrentExecutionState) input.ReadEnum();
+            break;
+          }
+          case 18: {
+            if (lastExecution_ == null) {
+              LastExecution = new global::Google.Cloud.ApiHub.V1.ExecutionStatus.Types.LastExecution();
+            }
+            input.ReadMessage(LastExecution);
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+    #region Nested types
+    /// <summary>Container for nested types declared in the ExecutionStatus message type.</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static partial class Types {
+      /// <summary>
+      /// Enum for the current state of the execution.
+      /// </summary>
+      public enum CurrentExecutionState {
+        /// <summary>
+        /// Default unspecified execution state.
+        /// </summary>
+        [pbr::OriginalName("CURRENT_EXECUTION_STATE_UNSPECIFIED")] Unspecified = 0,
+        /// <summary>
+        /// The plugin instance is executing.
+        /// </summary>
+        [pbr::OriginalName("RUNNING")] Running = 1,
+        /// <summary>
+        /// The plugin instance is not running an execution.
+        /// </summary>
+        [pbr::OriginalName("NOT_RUNNING")] NotRunning = 2,
+      }
+
+      /// <summary>
+      /// The result of the last execution of the plugin instance.
+      /// </summary>
+      [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+      public sealed partial class LastExecution : pb::IMessage<LastExecution>
+      #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          , pb::IBufferMessage
+      #endif
+      {
+        private static readonly pb::MessageParser<LastExecution> _parser = new pb::MessageParser<LastExecution>(() => new LastExecution());
+        private pb::UnknownFieldSet _unknownFields;
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public static pb::MessageParser<LastExecution> Parser { get { return _parser; } }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public static pbr::MessageDescriptor Descriptor {
+          get { return global::Google.Cloud.ApiHub.V1.ExecutionStatus.Descriptor.NestedTypes[0]; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        pbr::MessageDescriptor pb::IMessage.Descriptor {
+          get { return Descriptor; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public LastExecution() {
+          OnConstruction();
+        }
+
+        partial void OnConstruction();
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public LastExecution(LastExecution other) : this() {
+          result_ = other.result_;
+          errorMessage_ = other.errorMessage_;
+          startTime_ = other.startTime_ != null ? other.startTime_.Clone() : null;
+          endTime_ = other.endTime_ != null ? other.endTime_.Clone() : null;
+          _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public LastExecution Clone() {
+          return new LastExecution(this);
+        }
+
+        /// <summary>Field number for the "result" field.</summary>
+        public const int ResultFieldNumber = 1;
+        private global::Google.Cloud.ApiHub.V1.ExecutionStatus.Types.LastExecution.Types.Result result_ = global::Google.Cloud.ApiHub.V1.ExecutionStatus.Types.LastExecution.Types.Result.Unspecified;
+        /// <summary>
+        /// Output only. The result of the last execution of the plugin instance.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public global::Google.Cloud.ApiHub.V1.ExecutionStatus.Types.LastExecution.Types.Result Result {
+          get { return result_; }
+          set {
+            result_ = value;
+          }
+        }
+
+        /// <summary>Field number for the "error_message" field.</summary>
+        public const int ErrorMessageFieldNumber = 2;
+        private string errorMessage_ = "";
+        /// <summary>
+        /// Output only. Error message describing the failure, if any, during the
+        /// last execution.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public string ErrorMessage {
+          get { return errorMessage_; }
+          set {
+            errorMessage_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+          }
+        }
+
+        /// <summary>Field number for the "start_time" field.</summary>
+        public const int StartTimeFieldNumber = 3;
+        private global::Google.Protobuf.WellKnownTypes.Timestamp startTime_;
+        /// <summary>
+        /// Output only. The last execution start time of the plugin instance.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public global::Google.Protobuf.WellKnownTypes.Timestamp StartTime {
+          get { return startTime_; }
+          set {
+            startTime_ = value;
+          }
+        }
+
+        /// <summary>Field number for the "end_time" field.</summary>
+        public const int EndTimeFieldNumber = 4;
+        private global::Google.Protobuf.WellKnownTypes.Timestamp endTime_;
+        /// <summary>
+        /// Output only. The last execution end time of the plugin instance.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public global::Google.Protobuf.WellKnownTypes.Timestamp EndTime {
+          get { return endTime_; }
+          set {
+            endTime_ = value;
+          }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override bool Equals(object other) {
+          return Equals(other as LastExecution);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public bool Equals(LastExecution other) {
+          if (ReferenceEquals(other, null)) {
+            return false;
+          }
+          if (ReferenceEquals(other, this)) {
+            return true;
+          }
+          if (Result != other.Result) return false;
+          if (ErrorMessage != other.ErrorMessage) return false;
+          if (!object.Equals(StartTime, other.StartTime)) return false;
+          if (!object.Equals(EndTime, other.EndTime)) return false;
+          return Equals(_unknownFields, other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override int GetHashCode() {
+          int hash = 1;
+          if (Result != global::Google.Cloud.ApiHub.V1.ExecutionStatus.Types.LastExecution.Types.Result.Unspecified) hash ^= Result.GetHashCode();
+          if (ErrorMessage.Length != 0) hash ^= ErrorMessage.GetHashCode();
+          if (startTime_ != null) hash ^= StartTime.GetHashCode();
+          if (endTime_ != null) hash ^= EndTime.GetHashCode();
+          if (_unknownFields != null) {
+            hash ^= _unknownFields.GetHashCode();
+          }
+          return hash;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override string ToString() {
+          return pb::JsonFormatter.ToDiagnosticString(this);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void WriteTo(pb::CodedOutputStream output) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          output.WriteRawMessage(this);
+        #else
+          if (Result != global::Google.Cloud.ApiHub.V1.ExecutionStatus.Types.LastExecution.Types.Result.Unspecified) {
+            output.WriteRawTag(8);
+            output.WriteEnum((int) Result);
+          }
+          if (ErrorMessage.Length != 0) {
+            output.WriteRawTag(18);
+            output.WriteString(ErrorMessage);
+          }
+          if (startTime_ != null) {
+            output.WriteRawTag(26);
+            output.WriteMessage(StartTime);
+          }
+          if (endTime_ != null) {
+            output.WriteRawTag(34);
+            output.WriteMessage(EndTime);
+          }
+          if (_unknownFields != null) {
+            _unknownFields.WriteTo(output);
+          }
+        #endif
+        }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+          if (Result != global::Google.Cloud.ApiHub.V1.ExecutionStatus.Types.LastExecution.Types.Result.Unspecified) {
+            output.WriteRawTag(8);
+            output.WriteEnum((int) Result);
+          }
+          if (ErrorMessage.Length != 0) {
+            output.WriteRawTag(18);
+            output.WriteString(ErrorMessage);
+          }
+          if (startTime_ != null) {
+            output.WriteRawTag(26);
+            output.WriteMessage(StartTime);
+          }
+          if (endTime_ != null) {
+            output.WriteRawTag(34);
+            output.WriteMessage(EndTime);
+          }
+          if (_unknownFields != null) {
+            _unknownFields.WriteTo(ref output);
+          }
+        }
+        #endif
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public int CalculateSize() {
+          int size = 0;
+          if (Result != global::Google.Cloud.ApiHub.V1.ExecutionStatus.Types.LastExecution.Types.Result.Unspecified) {
+            size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) Result);
+          }
+          if (ErrorMessage.Length != 0) {
+            size += 1 + pb::CodedOutputStream.ComputeStringSize(ErrorMessage);
+          }
+          if (startTime_ != null) {
+            size += 1 + pb::CodedOutputStream.ComputeMessageSize(StartTime);
+          }
+          if (endTime_ != null) {
+            size += 1 + pb::CodedOutputStream.ComputeMessageSize(EndTime);
+          }
+          if (_unknownFields != null) {
+            size += _unknownFields.CalculateSize();
+          }
+          return size;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void MergeFrom(LastExecution other) {
+          if (other == null) {
+            return;
+          }
+          if (other.Result != global::Google.Cloud.ApiHub.V1.ExecutionStatus.Types.LastExecution.Types.Result.Unspecified) {
+            Result = other.Result;
+          }
+          if (other.ErrorMessage.Length != 0) {
+            ErrorMessage = other.ErrorMessage;
+          }
+          if (other.startTime_ != null) {
+            if (startTime_ == null) {
+              StartTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+            }
+            StartTime.MergeFrom(other.StartTime);
+          }
+          if (other.endTime_ != null) {
+            if (endTime_ == null) {
+              EndTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+            }
+            EndTime.MergeFrom(other.EndTime);
+          }
+          _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void MergeFrom(pb::CodedInputStream input) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          input.ReadRawMessage(this);
+        #else
+          uint tag;
+          while ((tag = input.ReadTag()) != 0) {
+            switch(tag) {
+              default:
+                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+                break;
+              case 8: {
+                Result = (global::Google.Cloud.ApiHub.V1.ExecutionStatus.Types.LastExecution.Types.Result) input.ReadEnum();
+                break;
+              }
+              case 18: {
+                ErrorMessage = input.ReadString();
+                break;
+              }
+              case 26: {
+                if (startTime_ == null) {
+                  StartTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+                }
+                input.ReadMessage(StartTime);
+                break;
+              }
+              case 34: {
+                if (endTime_ == null) {
+                  EndTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+                }
+                input.ReadMessage(EndTime);
+                break;
+              }
+            }
+          }
+        #endif
+        }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+          uint tag;
+          while ((tag = input.ReadTag()) != 0) {
+            switch(tag) {
+              default:
+                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+                break;
+              case 8: {
+                Result = (global::Google.Cloud.ApiHub.V1.ExecutionStatus.Types.LastExecution.Types.Result) input.ReadEnum();
+                break;
+              }
+              case 18: {
+                ErrorMessage = input.ReadString();
+                break;
+              }
+              case 26: {
+                if (startTime_ == null) {
+                  StartTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+                }
+                input.ReadMessage(StartTime);
+                break;
+              }
+              case 34: {
+                if (endTime_ == null) {
+                  EndTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+                }
+                input.ReadMessage(EndTime);
+                break;
+              }
+            }
+          }
+        }
+        #endif
+
+        #region Nested types
+        /// <summary>Container for nested types declared in the LastExecution message type.</summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public static partial class Types {
+          /// <summary>
+          /// Enum for the result of the last execution of the plugin instance.
+          /// </summary>
+          public enum Result {
+            /// <summary>
+            /// Default unspecified execution result.
+            /// </summary>
+            [pbr::OriginalName("RESULT_UNSPECIFIED")] Unspecified = 0,
+            /// <summary>
+            /// The plugin instance executed successfully.
+            /// </summary>
+            [pbr::OriginalName("SUCCEEDED")] Succeeded = 1,
+            /// <summary>
+            /// The plugin instance execution failed.
+            /// </summary>
+            [pbr::OriginalName("FAILED")] Failed = 2,
+          }
+
+        }
+        #endregion
+
+      }
+
+    }
+    #endregion
+
+  }
+
+  /// <summary>
+  /// The [CreatePlugin][google.cloud.apihub.v1.ApiHubPlugin.CreatePlugin] method's
+  /// request.
+  /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+  public sealed partial class CreatePluginRequest : pb::IMessage<CreatePluginRequest>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<CreatePluginRequest> _parser = new pb::MessageParser<CreatePluginRequest>(() => new CreatePluginRequest());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<CreatePluginRequest> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Cloud.ApiHub.V1.PluginServiceReflection.Descriptor.MessageTypes[9]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public CreatePluginRequest() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public CreatePluginRequest(CreatePluginRequest other) : this() {
+      parent_ = other.parent_;
+      pluginId_ = other.pluginId_;
+      plugin_ = other.plugin_ != null ? other.plugin_.Clone() : null;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public CreatePluginRequest Clone() {
+      return new CreatePluginRequest(this);
+    }
+
+    /// <summary>Field number for the "parent" field.</summary>
+    public const int ParentFieldNumber = 1;
+    private string parent_ = "";
+    /// <summary>
+    /// Required. The parent resource where this plugin will be created.
+    /// Format: `projects/{project}/locations/{location}`.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string Parent {
+      get { return parent_; }
+      set {
+        parent_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "plugin_id" field.</summary>
+    public const int PluginIdFieldNumber = 2;
+    private string pluginId_ = "";
+    /// <summary>
+    /// Optional. The ID to use for the Plugin resource, which will become the
+    /// final component of the Plugin's resource name. This field is optional.
+    ///
+    /// * If provided, the same will be used. The service will throw an error if
+    /// the specified id is already used by another Plugin resource in the API hub
+    /// instance.
+    /// * If not provided, a system generated id will be used.
+    ///
+    /// This value should be 4-63 characters, overall resource name which will be
+    /// of format
+    /// `projects/{project}/locations/{location}/plugins/{plugin}`,
+    /// its length is limited to 1000 characters and valid characters are
+    /// /[a-z][A-Z][0-9]-_/.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string PluginId {
+      get { return pluginId_; }
+      set {
+        pluginId_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "plugin" field.</summary>
+    public const int PluginFieldNumber = 3;
+    private global::Google.Cloud.ApiHub.V1.Plugin plugin_;
+    /// <summary>
+    /// Required. The plugin to create.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Cloud.ApiHub.V1.Plugin Plugin {
+      get { return plugin_; }
+      set {
+        plugin_ = value;
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as CreatePluginRequest);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(CreatePluginRequest other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (Parent != other.Parent) return false;
+      if (PluginId != other.PluginId) return false;
+      if (!object.Equals(Plugin, other.Plugin)) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (Parent.Length != 0) hash ^= Parent.GetHashCode();
+      if (PluginId.Length != 0) hash ^= PluginId.GetHashCode();
+      if (plugin_ != null) hash ^= Plugin.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (Parent.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(Parent);
+      }
+      if (PluginId.Length != 0) {
+        output.WriteRawTag(18);
+        output.WriteString(PluginId);
+      }
+      if (plugin_ != null) {
+        output.WriteRawTag(26);
+        output.WriteMessage(Plugin);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (Parent.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(Parent);
+      }
+      if (PluginId.Length != 0) {
+        output.WriteRawTag(18);
+        output.WriteString(PluginId);
+      }
+      if (plugin_ != null) {
+        output.WriteRawTag(26);
+        output.WriteMessage(Plugin);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      if (Parent.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Parent);
+      }
+      if (PluginId.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(PluginId);
+      }
+      if (plugin_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(Plugin);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(CreatePluginRequest other) {
+      if (other == null) {
+        return;
+      }
+      if (other.Parent.Length != 0) {
+        Parent = other.Parent;
+      }
+      if (other.PluginId.Length != 0) {
+        PluginId = other.PluginId;
+      }
+      if (other.plugin_ != null) {
+        if (plugin_ == null) {
+          Plugin = new global::Google.Cloud.ApiHub.V1.Plugin();
+        }
+        Plugin.MergeFrom(other.Plugin);
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            Parent = input.ReadString();
+            break;
+          }
+          case 18: {
+            PluginId = input.ReadString();
+            break;
+          }
+          case 26: {
+            if (plugin_ == null) {
+              Plugin = new global::Google.Cloud.ApiHub.V1.Plugin();
+            }
+            input.ReadMessage(Plugin);
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            Parent = input.ReadString();
+            break;
+          }
+          case 18: {
+            PluginId = input.ReadString();
+            break;
+          }
+          case 26: {
+            if (plugin_ == null) {
+              Plugin = new global::Google.Cloud.ApiHub.V1.Plugin();
+            }
+            input.ReadMessage(Plugin);
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+  }
+
+  /// <summary>
+  /// The [DeletePlugin][ApiHub.DeletePlugin] method's request.
+  /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+  public sealed partial class DeletePluginRequest : pb::IMessage<DeletePluginRequest>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<DeletePluginRequest> _parser = new pb::MessageParser<DeletePluginRequest>(() => new DeletePluginRequest());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<DeletePluginRequest> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Cloud.ApiHub.V1.PluginServiceReflection.Descriptor.MessageTypes[10]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public DeletePluginRequest() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public DeletePluginRequest(DeletePluginRequest other) : this() {
+      name_ = other.name_;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public DeletePluginRequest Clone() {
+      return new DeletePluginRequest(this);
+    }
+
+    /// <summary>Field number for the "name" field.</summary>
+    public const int NameFieldNumber = 1;
+    private string name_ = "";
+    /// <summary>
+    /// Required. The name of the Plugin resource to delete.
+    /// Format: `projects/{project}/locations/{location}/plugins/{plugin}`
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string Name {
+      get { return name_; }
+      set {
+        name_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as DeletePluginRequest);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(DeletePluginRequest other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (Name != other.Name) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (Name.Length != 0) hash ^= Name.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (Name.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(Name);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (Name.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(Name);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      if (Name.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Name);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(DeletePluginRequest other) {
+      if (other == null) {
+        return;
+      }
+      if (other.Name.Length != 0) {
+        Name = other.Name;
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            Name = input.ReadString();
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            Name = input.ReadString();
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+  }
+
+  /// <summary>
+  /// The [ListPlugins][google.cloud.apihub.v1.ApiHubPlugin.ListPlugins] method's
+  /// request.
+  /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+  public sealed partial class ListPluginsRequest : pb::IMessage<ListPluginsRequest>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<ListPluginsRequest> _parser = new pb::MessageParser<ListPluginsRequest>(() => new ListPluginsRequest());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<ListPluginsRequest> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Cloud.ApiHub.V1.PluginServiceReflection.Descriptor.MessageTypes[11]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public ListPluginsRequest() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public ListPluginsRequest(ListPluginsRequest other) : this() {
+      parent_ = other.parent_;
+      filter_ = other.filter_;
+      pageSize_ = other.pageSize_;
+      pageToken_ = other.pageToken_;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public ListPluginsRequest Clone() {
+      return new ListPluginsRequest(this);
+    }
+
+    /// <summary>Field number for the "parent" field.</summary>
+    public const int ParentFieldNumber = 1;
+    private string parent_ = "";
+    /// <summary>
+    /// Required. The parent resource where this plugin will be created.
+    /// Format: `projects/{project}/locations/{location}`.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string Parent {
+      get { return parent_; }
+      set {
+        parent_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "filter" field.</summary>
+    public const int FilterFieldNumber = 2;
+    private string filter_ = "";
+    /// <summary>
+    /// Optional. An expression that filters the list of plugins.
+    ///
+    /// A filter expression consists of a field name, a comparison
+    /// operator, and a value for filtering. The value must be a string. The
+    /// comparison operator must be one of: `&lt;`, `>` or
+    /// `=`. Filters are not case sensitive.
+    ///
+    /// The following fields in the `Plugins` are eligible for filtering:
+    ///
+    ///   * `plugin_category` - The category of the Plugin. Allowed
+    ///   comparison operators: `=`.
+    ///
+    /// Expressions are combined with either `AND` logic operator or `OR` logical
+    /// operator but not both of them together i.e. only one of the `AND` or `OR`
+    /// operator can be used throughout the filter string and both the operators
+    /// cannot be used together. No other logical operators are
+    /// supported. At most three filter fields are allowed in the filter
+    /// string and if provided more than that then `INVALID_ARGUMENT` error is
+    /// returned by the API.
+    /// Here are a few examples:
+    ///
+    ///   * `plugin_category = ON_RAMP` - The plugin is of category
+    ///   on ramp.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string Filter {
+      get { return filter_; }
+      set {
+        filter_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "page_size" field.</summary>
+    public const int PageSizeFieldNumber = 3;
+    private int pageSize_;
+    /// <summary>
+    /// Optional. The maximum number of hub plugins to return. The service may
+    /// return fewer than this value. If unspecified, at most 50 hub plugins will
+    /// be returned. The maximum value is 1000; values above 1000 will be coerced
+    /// to 1000.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int PageSize {
+      get { return pageSize_; }
+      set {
+        pageSize_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "page_token" field.</summary>
+    public const int PageTokenFieldNumber = 4;
+    private string pageToken_ = "";
+    /// <summary>
+    /// Optional. A page token, received from a previous `ListPlugins` call.
+    /// Provide this to retrieve the subsequent page.
+    ///
+    /// When paginating, all other parameters (except page_size) provided to
+    /// `ListPlugins` must match the call that provided the page token.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string PageToken {
+      get { return pageToken_; }
+      set {
+        pageToken_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as ListPluginsRequest);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(ListPluginsRequest other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (Parent != other.Parent) return false;
+      if (Filter != other.Filter) return false;
+      if (PageSize != other.PageSize) return false;
+      if (PageToken != other.PageToken) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (Parent.Length != 0) hash ^= Parent.GetHashCode();
+      if (Filter.Length != 0) hash ^= Filter.GetHashCode();
+      if (PageSize != 0) hash ^= PageSize.GetHashCode();
+      if (PageToken.Length != 0) hash ^= PageToken.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (Parent.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(Parent);
+      }
+      if (Filter.Length != 0) {
+        output.WriteRawTag(18);
+        output.WriteString(Filter);
+      }
+      if (PageSize != 0) {
+        output.WriteRawTag(24);
+        output.WriteInt32(PageSize);
+      }
+      if (PageToken.Length != 0) {
+        output.WriteRawTag(34);
+        output.WriteString(PageToken);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (Parent.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(Parent);
+      }
+      if (Filter.Length != 0) {
+        output.WriteRawTag(18);
+        output.WriteString(Filter);
+      }
+      if (PageSize != 0) {
+        output.WriteRawTag(24);
+        output.WriteInt32(PageSize);
+      }
+      if (PageToken.Length != 0) {
+        output.WriteRawTag(34);
+        output.WriteString(PageToken);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      if (Parent.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Parent);
+      }
+      if (Filter.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Filter);
+      }
+      if (PageSize != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeInt32Size(PageSize);
+      }
+      if (PageToken.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(PageToken);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(ListPluginsRequest other) {
+      if (other == null) {
+        return;
+      }
+      if (other.Parent.Length != 0) {
+        Parent = other.Parent;
+      }
+      if (other.Filter.Length != 0) {
+        Filter = other.Filter;
+      }
+      if (other.PageSize != 0) {
+        PageSize = other.PageSize;
+      }
+      if (other.PageToken.Length != 0) {
+        PageToken = other.PageToken;
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            Parent = input.ReadString();
+            break;
+          }
+          case 18: {
+            Filter = input.ReadString();
+            break;
+          }
+          case 24: {
+            PageSize = input.ReadInt32();
+            break;
+          }
+          case 34: {
+            PageToken = input.ReadString();
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            Parent = input.ReadString();
+            break;
+          }
+          case 18: {
+            Filter = input.ReadString();
+            break;
+          }
+          case 24: {
+            PageSize = input.ReadInt32();
+            break;
+          }
+          case 34: {
+            PageToken = input.ReadString();
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+  }
+
+  /// <summary>
+  /// The [ListPlugins][google.cloud.apihub.v1.ApiHubPlugin.ListPlugins] method's
+  /// response.
+  /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+  public sealed partial class ListPluginsResponse : pb::IMessage<ListPluginsResponse>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<ListPluginsResponse> _parser = new pb::MessageParser<ListPluginsResponse>(() => new ListPluginsResponse());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<ListPluginsResponse> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Cloud.ApiHub.V1.PluginServiceReflection.Descriptor.MessageTypes[12]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public ListPluginsResponse() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public ListPluginsResponse(ListPluginsResponse other) : this() {
+      plugins_ = other.plugins_.Clone();
+      nextPageToken_ = other.nextPageToken_;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public ListPluginsResponse Clone() {
+      return new ListPluginsResponse(this);
+    }
+
+    /// <summary>Field number for the "plugins" field.</summary>
+    public const int PluginsFieldNumber = 1;
+    private static readonly pb::FieldCodec<global::Google.Cloud.ApiHub.V1.Plugin> _repeated_plugins_codec
+        = pb::FieldCodec.ForMessage(10, global::Google.Cloud.ApiHub.V1.Plugin.Parser);
+    private readonly pbc::RepeatedField<global::Google.Cloud.ApiHub.V1.Plugin> plugins_ = new pbc::RepeatedField<global::Google.Cloud.ApiHub.V1.Plugin>();
+    /// <summary>
+    /// The plugins from the specified parent resource.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pbc::RepeatedField<global::Google.Cloud.ApiHub.V1.Plugin> Plugins {
+      get { return plugins_; }
+    }
+
+    /// <summary>Field number for the "next_page_token" field.</summary>
+    public const int NextPageTokenFieldNumber = 2;
+    private string nextPageToken_ = "";
+    /// <summary>
+    /// A token, which can be sent as `page_token` to retrieve the next page.
+    /// If this field is omitted, there are no subsequent pages.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string NextPageToken {
+      get { return nextPageToken_; }
+      set {
+        nextPageToken_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as ListPluginsResponse);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(ListPluginsResponse other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if(!plugins_.Equals(other.plugins_)) return false;
+      if (NextPageToken != other.NextPageToken) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      hash ^= plugins_.GetHashCode();
+      if (NextPageToken.Length != 0) hash ^= NextPageToken.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      plugins_.WriteTo(output, _repeated_plugins_codec);
+      if (NextPageToken.Length != 0) {
+        output.WriteRawTag(18);
+        output.WriteString(NextPageToken);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      plugins_.WriteTo(ref output, _repeated_plugins_codec);
+      if (NextPageToken.Length != 0) {
+        output.WriteRawTag(18);
+        output.WriteString(NextPageToken);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      size += plugins_.CalculateSize(_repeated_plugins_codec);
+      if (NextPageToken.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(NextPageToken);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(ListPluginsResponse other) {
+      if (other == null) {
+        return;
+      }
+      plugins_.Add(other.plugins_);
+      if (other.NextPageToken.Length != 0) {
+        NextPageToken = other.NextPageToken;
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            plugins_.AddEntriesFrom(input, _repeated_plugins_codec);
+            break;
+          }
+          case 18: {
+            NextPageToken = input.ReadString();
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            plugins_.AddEntriesFrom(ref input, _repeated_plugins_codec);
+            break;
+          }
+          case 18: {
+            NextPageToken = input.ReadString();
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+  }
+
+  /// <summary>
+  /// The
+  /// [CreatePluginInstance][google.cloud.apihub.v1.ApiHubPlugin.CreatePluginInstance]
+  /// method's request.
+  /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+  public sealed partial class CreatePluginInstanceRequest : pb::IMessage<CreatePluginInstanceRequest>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<CreatePluginInstanceRequest> _parser = new pb::MessageParser<CreatePluginInstanceRequest>(() => new CreatePluginInstanceRequest());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<CreatePluginInstanceRequest> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Cloud.ApiHub.V1.PluginServiceReflection.Descriptor.MessageTypes[13]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public CreatePluginInstanceRequest() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public CreatePluginInstanceRequest(CreatePluginInstanceRequest other) : this() {
+      parent_ = other.parent_;
+      pluginInstanceId_ = other.pluginInstanceId_;
+      pluginInstance_ = other.pluginInstance_ != null ? other.pluginInstance_.Clone() : null;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public CreatePluginInstanceRequest Clone() {
+      return new CreatePluginInstanceRequest(this);
+    }
+
+    /// <summary>Field number for the "parent" field.</summary>
+    public const int ParentFieldNumber = 1;
+    private string parent_ = "";
+    /// <summary>
+    /// Required. The parent of the plugin instance resource.
+    /// Format: `projects/{project}/locations/{location}/plugins/{plugin}`
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string Parent {
+      get { return parent_; }
+      set {
+        parent_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "plugin_instance_id" field.</summary>
+    public const int PluginInstanceIdFieldNumber = 2;
+    private string pluginInstanceId_ = "";
+    /// <summary>
+    /// Optional. The ID to use for the plugin instance, which will become the
+    /// final component of the plugin instance's resource name. This field is
+    /// optional.
+    ///
+    /// * If provided, the same will be used. The service will throw an error if
+    /// the specified id is already used by another plugin instance in the plugin
+    /// resource.
+    /// * If not provided, a system generated id will be used.
+    ///
+    /// This value should be 4-63 characters, and valid characters
+    /// are /[a-z][A-Z][0-9]-_/.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string PluginInstanceId {
+      get { return pluginInstanceId_; }
+      set {
+        pluginInstanceId_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "plugin_instance" field.</summary>
+    public const int PluginInstanceFieldNumber = 3;
+    private global::Google.Cloud.ApiHub.V1.PluginInstance pluginInstance_;
+    /// <summary>
+    /// Required. The plugin instance to create.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Cloud.ApiHub.V1.PluginInstance PluginInstance {
+      get { return pluginInstance_; }
+      set {
+        pluginInstance_ = value;
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as CreatePluginInstanceRequest);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(CreatePluginInstanceRequest other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (Parent != other.Parent) return false;
+      if (PluginInstanceId != other.PluginInstanceId) return false;
+      if (!object.Equals(PluginInstance, other.PluginInstance)) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (Parent.Length != 0) hash ^= Parent.GetHashCode();
+      if (PluginInstanceId.Length != 0) hash ^= PluginInstanceId.GetHashCode();
+      if (pluginInstance_ != null) hash ^= PluginInstance.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (Parent.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(Parent);
+      }
+      if (PluginInstanceId.Length != 0) {
+        output.WriteRawTag(18);
+        output.WriteString(PluginInstanceId);
+      }
+      if (pluginInstance_ != null) {
+        output.WriteRawTag(26);
+        output.WriteMessage(PluginInstance);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (Parent.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(Parent);
+      }
+      if (PluginInstanceId.Length != 0) {
+        output.WriteRawTag(18);
+        output.WriteString(PluginInstanceId);
+      }
+      if (pluginInstance_ != null) {
+        output.WriteRawTag(26);
+        output.WriteMessage(PluginInstance);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      if (Parent.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Parent);
+      }
+      if (PluginInstanceId.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(PluginInstanceId);
+      }
+      if (pluginInstance_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(PluginInstance);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(CreatePluginInstanceRequest other) {
+      if (other == null) {
+        return;
+      }
+      if (other.Parent.Length != 0) {
+        Parent = other.Parent;
+      }
+      if (other.PluginInstanceId.Length != 0) {
+        PluginInstanceId = other.PluginInstanceId;
+      }
+      if (other.pluginInstance_ != null) {
+        if (pluginInstance_ == null) {
+          PluginInstance = new global::Google.Cloud.ApiHub.V1.PluginInstance();
+        }
+        PluginInstance.MergeFrom(other.PluginInstance);
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            Parent = input.ReadString();
+            break;
+          }
+          case 18: {
+            PluginInstanceId = input.ReadString();
+            break;
+          }
+          case 26: {
+            if (pluginInstance_ == null) {
+              PluginInstance = new global::Google.Cloud.ApiHub.V1.PluginInstance();
+            }
+            input.ReadMessage(PluginInstance);
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            Parent = input.ReadString();
+            break;
+          }
+          case 18: {
+            PluginInstanceId = input.ReadString();
+            break;
+          }
+          case 26: {
+            if (pluginInstance_ == null) {
+              PluginInstance = new global::Google.Cloud.ApiHub.V1.PluginInstance();
+            }
+            input.ReadMessage(PluginInstance);
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+  }
+
+  /// <summary>
+  /// The
+  /// [ExecutePluginInstanceAction][google.cloud.apihub.v1.ApiHubPlugin.ExecutePluginInstanceAction]
+  /// method's request.
+  /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+  public sealed partial class ExecutePluginInstanceActionRequest : pb::IMessage<ExecutePluginInstanceActionRequest>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<ExecutePluginInstanceActionRequest> _parser = new pb::MessageParser<ExecutePluginInstanceActionRequest>(() => new ExecutePluginInstanceActionRequest());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<ExecutePluginInstanceActionRequest> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Cloud.ApiHub.V1.PluginServiceReflection.Descriptor.MessageTypes[14]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public ExecutePluginInstanceActionRequest() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public ExecutePluginInstanceActionRequest(ExecutePluginInstanceActionRequest other) : this() {
+      name_ = other.name_;
+      actionExecutionDetail_ = other.actionExecutionDetail_ != null ? other.actionExecutionDetail_.Clone() : null;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public ExecutePluginInstanceActionRequest Clone() {
+      return new ExecutePluginInstanceActionRequest(this);
+    }
+
+    /// <summary>Field number for the "name" field.</summary>
+    public const int NameFieldNumber = 1;
+    private string name_ = "";
+    /// <summary>
+    /// Required. The name of the plugin instance to execute.
+    /// Format:
+    /// `projects/{project}/locations/{location}/plugins/{plugin}/instances/{instance}`
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string Name {
+      get { return name_; }
+      set {
+        name_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "action_execution_detail" field.</summary>
+    public const int ActionExecutionDetailFieldNumber = 2;
+    private global::Google.Cloud.ApiHub.V1.ActionExecutionDetail actionExecutionDetail_;
+    /// <summary>
+    /// Required. The execution details for the action to execute.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Cloud.ApiHub.V1.ActionExecutionDetail ActionExecutionDetail {
+      get { return actionExecutionDetail_; }
+      set {
+        actionExecutionDetail_ = value;
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as ExecutePluginInstanceActionRequest);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(ExecutePluginInstanceActionRequest other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (Name != other.Name) return false;
+      if (!object.Equals(ActionExecutionDetail, other.ActionExecutionDetail)) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (Name.Length != 0) hash ^= Name.GetHashCode();
+      if (actionExecutionDetail_ != null) hash ^= ActionExecutionDetail.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (Name.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(Name);
+      }
+      if (actionExecutionDetail_ != null) {
+        output.WriteRawTag(18);
+        output.WriteMessage(ActionExecutionDetail);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (Name.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(Name);
+      }
+      if (actionExecutionDetail_ != null) {
+        output.WriteRawTag(18);
+        output.WriteMessage(ActionExecutionDetail);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      if (Name.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Name);
+      }
+      if (actionExecutionDetail_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(ActionExecutionDetail);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(ExecutePluginInstanceActionRequest other) {
+      if (other == null) {
+        return;
+      }
+      if (other.Name.Length != 0) {
+        Name = other.Name;
+      }
+      if (other.actionExecutionDetail_ != null) {
+        if (actionExecutionDetail_ == null) {
+          ActionExecutionDetail = new global::Google.Cloud.ApiHub.V1.ActionExecutionDetail();
+        }
+        ActionExecutionDetail.MergeFrom(other.ActionExecutionDetail);
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            Name = input.ReadString();
+            break;
+          }
+          case 18: {
+            if (actionExecutionDetail_ == null) {
+              ActionExecutionDetail = new global::Google.Cloud.ApiHub.V1.ActionExecutionDetail();
+            }
+            input.ReadMessage(ActionExecutionDetail);
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            Name = input.ReadString();
+            break;
+          }
+          case 18: {
+            if (actionExecutionDetail_ == null) {
+              ActionExecutionDetail = new global::Google.Cloud.ApiHub.V1.ActionExecutionDetail();
+            }
+            input.ReadMessage(ActionExecutionDetail);
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+  }
+
+  /// <summary>
+  /// The details for the action to execute.
+  /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+  public sealed partial class ActionExecutionDetail : pb::IMessage<ActionExecutionDetail>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<ActionExecutionDetail> _parser = new pb::MessageParser<ActionExecutionDetail>(() => new ActionExecutionDetail());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<ActionExecutionDetail> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Cloud.ApiHub.V1.PluginServiceReflection.Descriptor.MessageTypes[15]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public ActionExecutionDetail() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public ActionExecutionDetail(ActionExecutionDetail other) : this() {
+      actionId_ = other.actionId_;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public ActionExecutionDetail Clone() {
+      return new ActionExecutionDetail(this);
+    }
+
+    /// <summary>Field number for the "action_id" field.</summary>
+    public const int ActionIdFieldNumber = 1;
+    private string actionId_ = "";
+    /// <summary>
+    /// Required. The action id of the plugin to execute.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string ActionId {
+      get { return actionId_; }
+      set {
+        actionId_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as ActionExecutionDetail);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(ActionExecutionDetail other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (ActionId != other.ActionId) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (ActionId.Length != 0) hash ^= ActionId.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (ActionId.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(ActionId);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (ActionId.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(ActionId);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      if (ActionId.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(ActionId);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(ActionExecutionDetail other) {
+      if (other == null) {
+        return;
+      }
+      if (other.ActionId.Length != 0) {
+        ActionId = other.ActionId;
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            ActionId = input.ReadString();
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            ActionId = input.ReadString();
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+  }
+
+  /// <summary>
+  /// The
+  /// [ExecutePluginInstanceAction][google.cloud.apihub.v1.ApiHubPlugin.ExecutePluginInstanceAction]
+  /// method's response.
+  /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+  public sealed partial class ExecutePluginInstanceActionResponse : pb::IMessage<ExecutePluginInstanceActionResponse>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<ExecutePluginInstanceActionResponse> _parser = new pb::MessageParser<ExecutePluginInstanceActionResponse>(() => new ExecutePluginInstanceActionResponse());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<ExecutePluginInstanceActionResponse> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Cloud.ApiHub.V1.PluginServiceReflection.Descriptor.MessageTypes[16]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public ExecutePluginInstanceActionResponse() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public ExecutePluginInstanceActionResponse(ExecutePluginInstanceActionResponse other) : this() {
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public ExecutePluginInstanceActionResponse Clone() {
+      return new ExecutePluginInstanceActionResponse(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as ExecutePluginInstanceActionResponse);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(ExecutePluginInstanceActionResponse other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(ExecutePluginInstanceActionResponse other) {
+      if (other == null) {
+        return;
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+        }
+      }
+    }
+    #endif
+
+  }
+
+  /// <summary>
+  /// The
+  /// [GetPluginInstance][google.cloud.apihub.v1.ApiHubPlugin.GetPluginInstance]
+  /// method's request.
+  /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+  public sealed partial class GetPluginInstanceRequest : pb::IMessage<GetPluginInstanceRequest>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<GetPluginInstanceRequest> _parser = new pb::MessageParser<GetPluginInstanceRequest>(() => new GetPluginInstanceRequest());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<GetPluginInstanceRequest> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Cloud.ApiHub.V1.PluginServiceReflection.Descriptor.MessageTypes[17]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public GetPluginInstanceRequest() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public GetPluginInstanceRequest(GetPluginInstanceRequest other) : this() {
+      name_ = other.name_;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public GetPluginInstanceRequest Clone() {
+      return new GetPluginInstanceRequest(this);
+    }
+
+    /// <summary>Field number for the "name" field.</summary>
+    public const int NameFieldNumber = 1;
+    private string name_ = "";
+    /// <summary>
+    /// Required. The name of the plugin instance to retrieve.
+    /// Format:
+    /// `projects/{project}/locations/{location}/plugins/{plugin}/instances/{instance}`
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string Name {
+      get { return name_; }
+      set {
+        name_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as GetPluginInstanceRequest);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(GetPluginInstanceRequest other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (Name != other.Name) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (Name.Length != 0) hash ^= Name.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (Name.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(Name);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (Name.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(Name);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      if (Name.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Name);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(GetPluginInstanceRequest other) {
+      if (other == null) {
+        return;
+      }
+      if (other.Name.Length != 0) {
+        Name = other.Name;
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            Name = input.ReadString();
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            Name = input.ReadString();
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+  }
+
+  /// <summary>
+  /// The
+  /// [ListPluginInstances][google.cloud.apihub.v1.ApiHubPlugin.ListPluginInstances]
+  /// method's request.
+  /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+  public sealed partial class ListPluginInstancesRequest : pb::IMessage<ListPluginInstancesRequest>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<ListPluginInstancesRequest> _parser = new pb::MessageParser<ListPluginInstancesRequest>(() => new ListPluginInstancesRequest());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<ListPluginInstancesRequest> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Cloud.ApiHub.V1.PluginServiceReflection.Descriptor.MessageTypes[18]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public ListPluginInstancesRequest() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public ListPluginInstancesRequest(ListPluginInstancesRequest other) : this() {
+      parent_ = other.parent_;
+      filter_ = other.filter_;
+      pageSize_ = other.pageSize_;
+      pageToken_ = other.pageToken_;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public ListPluginInstancesRequest Clone() {
+      return new ListPluginInstancesRequest(this);
+    }
+
+    /// <summary>Field number for the "parent" field.</summary>
+    public const int ParentFieldNumber = 1;
+    private string parent_ = "";
+    /// <summary>
+    /// Required. The parent resource where this plugin will be created.
+    /// Format: `projects/{project}/locations/{location}/plugins/{plugin}`.
+    /// To list plugin instances for multiple plugins,
+    /// use the - character instead of the plugin ID.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string Parent {
+      get { return parent_; }
+      set {
+        parent_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "filter" field.</summary>
+    public const int FilterFieldNumber = 2;
+    private string filter_ = "";
+    /// <summary>
+    /// Optional. An expression that filters the list of plugin instances.
+    ///
+    /// A filter expression consists of a field name, a comparison
+    /// operator, and a value for filtering. The value must be a string. The
+    /// comparison operator must be one of: `&lt;`, `>` or
+    /// `=`. Filters are not case sensitive.
+    ///
+    /// The following fields in the `PluginInstances` are eligible for filtering:
+    ///
+    ///   * `state` - The state of the Plugin Instance. Allowed
+    ///   comparison operators: `=`.
+    ///
+    /// A filter function is also supported in the filter string. The filter
+    /// function is `id(name)`. The `id(name)` function returns the id of the
+    /// resource name. For example, `id(name) = \"plugin-instance-1\"` is
+    /// equivalent to `name =
+    /// \"projects/test-project-id/locations/test-location-id/plugins/plugin-1/instances/plugin-instance-1\"`
+    /// provided the parent is
+    /// `projects/test-project-id/locations/test-location-id/plugins/plugin-1`.
+    ///
+    /// Expressions are combined with either `AND` logic operator or `OR` logical
+    /// operator but not both of them together i.e. only one of the `AND` or `OR`
+    /// operator can be used throughout the filter string and both the operators
+    /// cannot be used together. No other logical operators are
+    /// supported. At most three filter fields are allowed in the filter
+    /// string and if provided more than that then `INVALID_ARGUMENT` error is
+    /// returned by the API.
+    /// Here are a few examples:
+    ///
+    ///   * `state = ENABLED` - The plugin instance is in enabled state.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string Filter {
+      get { return filter_; }
+      set {
+        filter_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "page_size" field.</summary>
+    public const int PageSizeFieldNumber = 3;
+    private int pageSize_;
+    /// <summary>
+    /// Optional. The maximum number of hub plugins to return. The service may
+    /// return fewer than this value. If unspecified, at most 50 hub plugins will
+    /// be returned. The maximum value is 1000; values above 1000 will be coerced
+    /// to 1000.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int PageSize {
+      get { return pageSize_; }
+      set {
+        pageSize_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "page_token" field.</summary>
+    public const int PageTokenFieldNumber = 4;
+    private string pageToken_ = "";
+    /// <summary>
+    /// Optional. A page token, received from a previous `ListPluginInstances`
+    /// call. Provide this to retrieve the subsequent page.
+    ///
+    /// When paginating, all other parameters provided to `ListPluginInstances`
+    /// must match the call that provided the page token.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string PageToken {
+      get { return pageToken_; }
+      set {
+        pageToken_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as ListPluginInstancesRequest);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(ListPluginInstancesRequest other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (Parent != other.Parent) return false;
+      if (Filter != other.Filter) return false;
+      if (PageSize != other.PageSize) return false;
+      if (PageToken != other.PageToken) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (Parent.Length != 0) hash ^= Parent.GetHashCode();
+      if (Filter.Length != 0) hash ^= Filter.GetHashCode();
+      if (PageSize != 0) hash ^= PageSize.GetHashCode();
+      if (PageToken.Length != 0) hash ^= PageToken.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (Parent.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(Parent);
+      }
+      if (Filter.Length != 0) {
+        output.WriteRawTag(18);
+        output.WriteString(Filter);
+      }
+      if (PageSize != 0) {
+        output.WriteRawTag(24);
+        output.WriteInt32(PageSize);
+      }
+      if (PageToken.Length != 0) {
+        output.WriteRawTag(34);
+        output.WriteString(PageToken);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (Parent.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(Parent);
+      }
+      if (Filter.Length != 0) {
+        output.WriteRawTag(18);
+        output.WriteString(Filter);
+      }
+      if (PageSize != 0) {
+        output.WriteRawTag(24);
+        output.WriteInt32(PageSize);
+      }
+      if (PageToken.Length != 0) {
+        output.WriteRawTag(34);
+        output.WriteString(PageToken);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      if (Parent.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Parent);
+      }
+      if (Filter.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Filter);
+      }
+      if (PageSize != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeInt32Size(PageSize);
+      }
+      if (PageToken.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(PageToken);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(ListPluginInstancesRequest other) {
+      if (other == null) {
+        return;
+      }
+      if (other.Parent.Length != 0) {
+        Parent = other.Parent;
+      }
+      if (other.Filter.Length != 0) {
+        Filter = other.Filter;
+      }
+      if (other.PageSize != 0) {
+        PageSize = other.PageSize;
+      }
+      if (other.PageToken.Length != 0) {
+        PageToken = other.PageToken;
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            Parent = input.ReadString();
+            break;
+          }
+          case 18: {
+            Filter = input.ReadString();
+            break;
+          }
+          case 24: {
+            PageSize = input.ReadInt32();
+            break;
+          }
+          case 34: {
+            PageToken = input.ReadString();
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            Parent = input.ReadString();
+            break;
+          }
+          case 18: {
+            Filter = input.ReadString();
+            break;
+          }
+          case 24: {
+            PageSize = input.ReadInt32();
+            break;
+          }
+          case 34: {
+            PageToken = input.ReadString();
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+  }
+
+  /// <summary>
+  /// The
+  /// [ListPluginInstances][google.cloud.apihub.v1.ApiHubPlugin.ListPluginInstances]
+  /// method's response.
+  /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+  public sealed partial class ListPluginInstancesResponse : pb::IMessage<ListPluginInstancesResponse>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<ListPluginInstancesResponse> _parser = new pb::MessageParser<ListPluginInstancesResponse>(() => new ListPluginInstancesResponse());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<ListPluginInstancesResponse> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Cloud.ApiHub.V1.PluginServiceReflection.Descriptor.MessageTypes[19]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public ListPluginInstancesResponse() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public ListPluginInstancesResponse(ListPluginInstancesResponse other) : this() {
+      pluginInstances_ = other.pluginInstances_.Clone();
+      nextPageToken_ = other.nextPageToken_;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public ListPluginInstancesResponse Clone() {
+      return new ListPluginInstancesResponse(this);
+    }
+
+    /// <summary>Field number for the "plugin_instances" field.</summary>
+    public const int PluginInstancesFieldNumber = 1;
+    private static readonly pb::FieldCodec<global::Google.Cloud.ApiHub.V1.PluginInstance> _repeated_pluginInstances_codec
+        = pb::FieldCodec.ForMessage(10, global::Google.Cloud.ApiHub.V1.PluginInstance.Parser);
+    private readonly pbc::RepeatedField<global::Google.Cloud.ApiHub.V1.PluginInstance> pluginInstances_ = new pbc::RepeatedField<global::Google.Cloud.ApiHub.V1.PluginInstance>();
+    /// <summary>
+    /// The plugin instances from the specified parent resource.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pbc::RepeatedField<global::Google.Cloud.ApiHub.V1.PluginInstance> PluginInstances {
+      get { return pluginInstances_; }
+    }
+
+    /// <summary>Field number for the "next_page_token" field.</summary>
+    public const int NextPageTokenFieldNumber = 2;
+    private string nextPageToken_ = "";
+    /// <summary>
+    /// A token, which can be sent as `page_token` to retrieve the next page.
+    /// If this field is omitted, there are no subsequent pages.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string NextPageToken {
+      get { return nextPageToken_; }
+      set {
+        nextPageToken_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as ListPluginInstancesResponse);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(ListPluginInstancesResponse other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if(!pluginInstances_.Equals(other.pluginInstances_)) return false;
+      if (NextPageToken != other.NextPageToken) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      hash ^= pluginInstances_.GetHashCode();
+      if (NextPageToken.Length != 0) hash ^= NextPageToken.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      pluginInstances_.WriteTo(output, _repeated_pluginInstances_codec);
+      if (NextPageToken.Length != 0) {
+        output.WriteRawTag(18);
+        output.WriteString(NextPageToken);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      pluginInstances_.WriteTo(ref output, _repeated_pluginInstances_codec);
+      if (NextPageToken.Length != 0) {
+        output.WriteRawTag(18);
+        output.WriteString(NextPageToken);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      size += pluginInstances_.CalculateSize(_repeated_pluginInstances_codec);
+      if (NextPageToken.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(NextPageToken);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(ListPluginInstancesResponse other) {
+      if (other == null) {
+        return;
+      }
+      pluginInstances_.Add(other.pluginInstances_);
+      if (other.NextPageToken.Length != 0) {
+        NextPageToken = other.NextPageToken;
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            pluginInstances_.AddEntriesFrom(input, _repeated_pluginInstances_codec);
+            break;
+          }
+          case 18: {
+            NextPageToken = input.ReadString();
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            pluginInstances_.AddEntriesFrom(ref input, _repeated_pluginInstances_codec);
+            break;
+          }
+          case 18: {
+            NextPageToken = input.ReadString();
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+  }
+
+  /// <summary>
+  /// The
+  /// [EnablePluginInstanceAction][google.cloud.apihub.v1.ApiHubPlugin.EnablePluginInstanceAction]
+  /// method's request.
+  /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+  public sealed partial class EnablePluginInstanceActionRequest : pb::IMessage<EnablePluginInstanceActionRequest>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<EnablePluginInstanceActionRequest> _parser = new pb::MessageParser<EnablePluginInstanceActionRequest>(() => new EnablePluginInstanceActionRequest());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<EnablePluginInstanceActionRequest> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Cloud.ApiHub.V1.PluginServiceReflection.Descriptor.MessageTypes[20]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public EnablePluginInstanceActionRequest() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public EnablePluginInstanceActionRequest(EnablePluginInstanceActionRequest other) : this() {
+      name_ = other.name_;
+      actionId_ = other.actionId_;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public EnablePluginInstanceActionRequest Clone() {
+      return new EnablePluginInstanceActionRequest(this);
+    }
+
+    /// <summary>Field number for the "name" field.</summary>
+    public const int NameFieldNumber = 1;
+    private string name_ = "";
+    /// <summary>
+    /// Required. The name of the plugin instance to enable.
+    /// Format:
+    /// `projects/{project}/locations/{location}/plugins/{plugin}/instances/{instance}`
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string Name {
+      get { return name_; }
+      set {
+        name_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "action_id" field.</summary>
+    public const int ActionIdFieldNumber = 2;
+    private string actionId_ = "";
+    /// <summary>
+    /// Required. The action id to enable.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string ActionId {
+      get { return actionId_; }
+      set {
+        actionId_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as EnablePluginInstanceActionRequest);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(EnablePluginInstanceActionRequest other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (Name != other.Name) return false;
+      if (ActionId != other.ActionId) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (Name.Length != 0) hash ^= Name.GetHashCode();
+      if (ActionId.Length != 0) hash ^= ActionId.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (Name.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(Name);
+      }
+      if (ActionId.Length != 0) {
+        output.WriteRawTag(18);
+        output.WriteString(ActionId);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (Name.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(Name);
+      }
+      if (ActionId.Length != 0) {
+        output.WriteRawTag(18);
+        output.WriteString(ActionId);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      if (Name.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Name);
+      }
+      if (ActionId.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(ActionId);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(EnablePluginInstanceActionRequest other) {
+      if (other == null) {
+        return;
+      }
+      if (other.Name.Length != 0) {
+        Name = other.Name;
+      }
+      if (other.ActionId.Length != 0) {
+        ActionId = other.ActionId;
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            Name = input.ReadString();
+            break;
+          }
+          case 18: {
+            ActionId = input.ReadString();
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            Name = input.ReadString();
+            break;
+          }
+          case 18: {
+            ActionId = input.ReadString();
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+  }
+
+  /// <summary>
+  /// The
+  /// [EnablePluginInstanceAction][google.cloud.apihub.v1.ApiHubPlugin.EnablePluginInstanceAction]
+  /// method's response.
+  /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+  public sealed partial class EnablePluginInstanceActionResponse : pb::IMessage<EnablePluginInstanceActionResponse>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<EnablePluginInstanceActionResponse> _parser = new pb::MessageParser<EnablePluginInstanceActionResponse>(() => new EnablePluginInstanceActionResponse());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<EnablePluginInstanceActionResponse> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Cloud.ApiHub.V1.PluginServiceReflection.Descriptor.MessageTypes[21]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public EnablePluginInstanceActionResponse() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public EnablePluginInstanceActionResponse(EnablePluginInstanceActionResponse other) : this() {
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public EnablePluginInstanceActionResponse Clone() {
+      return new EnablePluginInstanceActionResponse(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as EnablePluginInstanceActionResponse);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(EnablePluginInstanceActionResponse other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(EnablePluginInstanceActionResponse other) {
+      if (other == null) {
+        return;
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+        }
+      }
+    }
+    #endif
+
+  }
+
+  /// <summary>
+  /// The
+  /// [DisablePluginInstanceAction][google.cloud.apihub.v1.ApiHubPlugin.DisablePluginInstanceAction]
+  /// method's request.
+  /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+  public sealed partial class DisablePluginInstanceActionRequest : pb::IMessage<DisablePluginInstanceActionRequest>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<DisablePluginInstanceActionRequest> _parser = new pb::MessageParser<DisablePluginInstanceActionRequest>(() => new DisablePluginInstanceActionRequest());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<DisablePluginInstanceActionRequest> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Cloud.ApiHub.V1.PluginServiceReflection.Descriptor.MessageTypes[22]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public DisablePluginInstanceActionRequest() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public DisablePluginInstanceActionRequest(DisablePluginInstanceActionRequest other) : this() {
+      name_ = other.name_;
+      actionId_ = other.actionId_;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public DisablePluginInstanceActionRequest Clone() {
+      return new DisablePluginInstanceActionRequest(this);
+    }
+
+    /// <summary>Field number for the "name" field.</summary>
+    public const int NameFieldNumber = 1;
+    private string name_ = "";
+    /// <summary>
+    /// Required. The name of the plugin instance to disable.
+    /// Format:
+    /// `projects/{project}/locations/{location}/plugins/{plugin}/instances/{instance}`
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string Name {
+      get { return name_; }
+      set {
+        name_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "action_id" field.</summary>
+    public const int ActionIdFieldNumber = 2;
+    private string actionId_ = "";
+    /// <summary>
+    /// Required. The action id to disable.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string ActionId {
+      get { return actionId_; }
+      set {
+        actionId_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as DisablePluginInstanceActionRequest);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(DisablePluginInstanceActionRequest other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (Name != other.Name) return false;
+      if (ActionId != other.ActionId) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (Name.Length != 0) hash ^= Name.GetHashCode();
+      if (ActionId.Length != 0) hash ^= ActionId.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (Name.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(Name);
+      }
+      if (ActionId.Length != 0) {
+        output.WriteRawTag(18);
+        output.WriteString(ActionId);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (Name.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(Name);
+      }
+      if (ActionId.Length != 0) {
+        output.WriteRawTag(18);
+        output.WriteString(ActionId);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      if (Name.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Name);
+      }
+      if (ActionId.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(ActionId);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(DisablePluginInstanceActionRequest other) {
+      if (other == null) {
+        return;
+      }
+      if (other.Name.Length != 0) {
+        Name = other.Name;
+      }
+      if (other.ActionId.Length != 0) {
+        ActionId = other.ActionId;
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            Name = input.ReadString();
+            break;
+          }
+          case 18: {
+            ActionId = input.ReadString();
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            Name = input.ReadString();
+            break;
+          }
+          case 18: {
+            ActionId = input.ReadString();
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+  }
+
+  /// <summary>
+  /// The
+  /// [DisablePluginInstanceAction][google.cloud.apihub.v1.ApiHubPlugin.DisablePluginInstanceAction]
+  /// method's response.
+  /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+  public sealed partial class DisablePluginInstanceActionResponse : pb::IMessage<DisablePluginInstanceActionResponse>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<DisablePluginInstanceActionResponse> _parser = new pb::MessageParser<DisablePluginInstanceActionResponse>(() => new DisablePluginInstanceActionResponse());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<DisablePluginInstanceActionResponse> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Cloud.ApiHub.V1.PluginServiceReflection.Descriptor.MessageTypes[23]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public DisablePluginInstanceActionResponse() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public DisablePluginInstanceActionResponse(DisablePluginInstanceActionResponse other) : this() {
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public DisablePluginInstanceActionResponse Clone() {
+      return new DisablePluginInstanceActionResponse(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as DisablePluginInstanceActionResponse);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(DisablePluginInstanceActionResponse other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(DisablePluginInstanceActionResponse other) {
+      if (other == null) {
+        return;
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+        }
+      }
+    }
+    #endif
+
+  }
+
+  /// <summary>
+  /// The
+  /// [UpdatePluginInstance][google.cloud.apihub.v1.ApiHubPlugin.UpdatePluginInstance]
+  /// method's request.
+  /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+  public sealed partial class UpdatePluginInstanceRequest : pb::IMessage<UpdatePluginInstanceRequest>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<UpdatePluginInstanceRequest> _parser = new pb::MessageParser<UpdatePluginInstanceRequest>(() => new UpdatePluginInstanceRequest());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<UpdatePluginInstanceRequest> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Cloud.ApiHub.V1.PluginServiceReflection.Descriptor.MessageTypes[24]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public UpdatePluginInstanceRequest() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public UpdatePluginInstanceRequest(UpdatePluginInstanceRequest other) : this() {
+      pluginInstance_ = other.pluginInstance_ != null ? other.pluginInstance_.Clone() : null;
+      updateMask_ = other.updateMask_ != null ? other.updateMask_.Clone() : null;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public UpdatePluginInstanceRequest Clone() {
+      return new UpdatePluginInstanceRequest(this);
+    }
+
+    /// <summary>Field number for the "plugin_instance" field.</summary>
+    public const int PluginInstanceFieldNumber = 1;
+    private global::Google.Cloud.ApiHub.V1.PluginInstance pluginInstance_;
+    /// <summary>
+    /// Required. The plugin instance to update.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Cloud.ApiHub.V1.PluginInstance PluginInstance {
+      get { return pluginInstance_; }
+      set {
+        pluginInstance_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "update_mask" field.</summary>
+    public const int UpdateMaskFieldNumber = 2;
+    private global::Google.Protobuf.WellKnownTypes.FieldMask updateMask_;
+    /// <summary>
+    /// Optional. The list of fields to update.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Protobuf.WellKnownTypes.FieldMask UpdateMask {
+      get { return updateMask_; }
+      set {
+        updateMask_ = value;
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as UpdatePluginInstanceRequest);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(UpdatePluginInstanceRequest other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (!object.Equals(PluginInstance, other.PluginInstance)) return false;
+      if (!object.Equals(UpdateMask, other.UpdateMask)) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (pluginInstance_ != null) hash ^= PluginInstance.GetHashCode();
+      if (updateMask_ != null) hash ^= UpdateMask.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (pluginInstance_ != null) {
+        output.WriteRawTag(10);
+        output.WriteMessage(PluginInstance);
+      }
+      if (updateMask_ != null) {
+        output.WriteRawTag(18);
+        output.WriteMessage(UpdateMask);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (pluginInstance_ != null) {
+        output.WriteRawTag(10);
+        output.WriteMessage(PluginInstance);
+      }
+      if (updateMask_ != null) {
+        output.WriteRawTag(18);
+        output.WriteMessage(UpdateMask);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      if (pluginInstance_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(PluginInstance);
+      }
+      if (updateMask_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(UpdateMask);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(UpdatePluginInstanceRequest other) {
+      if (other == null) {
+        return;
+      }
+      if (other.pluginInstance_ != null) {
+        if (pluginInstance_ == null) {
+          PluginInstance = new global::Google.Cloud.ApiHub.V1.PluginInstance();
+        }
+        PluginInstance.MergeFrom(other.PluginInstance);
+      }
+      if (other.updateMask_ != null) {
+        if (updateMask_ == null) {
+          UpdateMask = new global::Google.Protobuf.WellKnownTypes.FieldMask();
+        }
+        UpdateMask.MergeFrom(other.UpdateMask);
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            if (pluginInstance_ == null) {
+              PluginInstance = new global::Google.Cloud.ApiHub.V1.PluginInstance();
+            }
+            input.ReadMessage(PluginInstance);
+            break;
+          }
+          case 18: {
+            if (updateMask_ == null) {
+              UpdateMask = new global::Google.Protobuf.WellKnownTypes.FieldMask();
+            }
+            input.ReadMessage(UpdateMask);
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            if (pluginInstance_ == null) {
+              PluginInstance = new global::Google.Cloud.ApiHub.V1.PluginInstance();
+            }
+            input.ReadMessage(PluginInstance);
+            break;
+          }
+          case 18: {
+            if (updateMask_ == null) {
+              UpdateMask = new global::Google.Protobuf.WellKnownTypes.FieldMask();
+            }
+            input.ReadMessage(UpdateMask);
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+  }
+
+  /// <summary>
+  /// The
+  /// [DeletePluginInstance][google.cloud.apihub.v1.ApiHubPlugin.DeletePluginInstance]
+  /// method's request.
+  /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+  public sealed partial class DeletePluginInstanceRequest : pb::IMessage<DeletePluginInstanceRequest>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<DeletePluginInstanceRequest> _parser = new pb::MessageParser<DeletePluginInstanceRequest>(() => new DeletePluginInstanceRequest());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<DeletePluginInstanceRequest> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Cloud.ApiHub.V1.PluginServiceReflection.Descriptor.MessageTypes[25]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public DeletePluginInstanceRequest() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public DeletePluginInstanceRequest(DeletePluginInstanceRequest other) : this() {
+      name_ = other.name_;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public DeletePluginInstanceRequest Clone() {
+      return new DeletePluginInstanceRequest(this);
+    }
+
+    /// <summary>Field number for the "name" field.</summary>
+    public const int NameFieldNumber = 1;
+    private string name_ = "";
+    /// <summary>
+    /// Required. The name of the plugin instance to delete.
+    /// Format:
+    /// `projects/{project}/locations/{location}/plugins/{plugin}/instances/{instance}`.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string Name {
+      get { return name_; }
+      set {
+        name_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as DeletePluginInstanceRequest);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(DeletePluginInstanceRequest other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (Name != other.Name) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (Name.Length != 0) hash ^= Name.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (Name.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(Name);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (Name.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(Name);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      if (Name.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Name);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(DeletePluginInstanceRequest other) {
       if (other == null) {
         return;
       }

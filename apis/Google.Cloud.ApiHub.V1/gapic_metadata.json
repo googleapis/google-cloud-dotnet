@@ -16,6 +16,12 @@
                 "CreateApiAsync"
               ]
             },
+            "CreateApiOperation": {
+              "methods": [
+                "CreateApiOperation",
+                "CreateApiOperationAsync"
+              ]
+            },
             "CreateAttribute": {
               "methods": [
                 "CreateAttribute",
@@ -50,6 +56,12 @@
               "methods": [
                 "DeleteApi",
                 "DeleteApiAsync"
+              ]
+            },
+            "DeleteApiOperation": {
+              "methods": [
+                "DeleteApiOperation",
+                "DeleteApiOperationAsync"
               ]
             },
             "DeleteAttribute": {
@@ -190,6 +202,12 @@
                 "UpdateApiAsync"
               ]
             },
+            "UpdateApiOperation": {
+              "methods": [
+                "UpdateApiOperation",
+                "UpdateApiOperationAsync"
+              ]
+            },
             "UpdateAttribute": {
               "methods": [
                 "UpdateAttribute",
@@ -218,6 +236,60 @@
               "methods": [
                 "UpdateVersion",
                 "UpdateVersionAsync"
+              ]
+            }
+          }
+        }
+      }
+    },
+    "ApiHubCollect": {
+      "clients": {
+        "grpc": {
+          "libraryClient": "ApiHubCollectClient",
+          "rpcs": {
+            "CollectApiData": {
+              "methods": [
+                "CollectApiData",
+                "CollectApiDataAsync"
+              ]
+            }
+          }
+        }
+      }
+    },
+    "ApiHubCurate": {
+      "clients": {
+        "grpc": {
+          "libraryClient": "ApiHubCurateClient",
+          "rpcs": {
+            "CreateCuration": {
+              "methods": [
+                "CreateCuration",
+                "CreateCurationAsync"
+              ]
+            },
+            "DeleteCuration": {
+              "methods": [
+                "DeleteCuration",
+                "DeleteCurationAsync"
+              ]
+            },
+            "GetCuration": {
+              "methods": [
+                "GetCuration",
+                "GetCurationAsync"
+              ]
+            },
+            "ListCurations": {
+              "methods": [
+                "ListCurations",
+                "ListCurationsAsync"
+              ]
+            },
+            "UpdateCuration": {
+              "methods": [
+                "UpdateCuration",
+                "UpdateCurationAsync"
               ]
             }
           }
@@ -263,15 +335,78 @@
         }
       }
     },
+    "ApiHubDiscovery": {
+      "clients": {
+        "grpc": {
+          "libraryClient": "ApiHubDiscoveryClient",
+          "rpcs": {
+            "GetDiscoveredApiObservation": {
+              "methods": [
+                "GetDiscoveredApiObservation",
+                "GetDiscoveredApiObservationAsync"
+              ]
+            },
+            "GetDiscoveredApiOperation": {
+              "methods": [
+                "GetDiscoveredApiOperation",
+                "GetDiscoveredApiOperationAsync"
+              ]
+            },
+            "ListDiscoveredApiObservations": {
+              "methods": [
+                "ListDiscoveredApiObservations",
+                "ListDiscoveredApiObservationsAsync"
+              ]
+            },
+            "ListDiscoveredApiOperations": {
+              "methods": [
+                "ListDiscoveredApiOperations",
+                "ListDiscoveredApiOperationsAsync"
+              ]
+            }
+          }
+        }
+      }
+    },
     "ApiHubPlugin": {
       "clients": {
         "grpc": {
           "libraryClient": "ApiHubPluginClient",
           "rpcs": {
+            "CreatePlugin": {
+              "methods": [
+                "CreatePlugin",
+                "CreatePluginAsync"
+              ]
+            },
+            "CreatePluginInstance": {
+              "methods": [
+                "CreatePluginInstance",
+                "CreatePluginInstanceAsync"
+              ]
+            },
+            "DeletePlugin": {
+              "methods": [
+                "DeletePlugin",
+                "DeletePluginAsync"
+              ]
+            },
+            "DeletePluginInstance": {
+              "methods": [
+                "DeletePluginInstance",
+                "DeletePluginInstanceAsync"
+              ]
+            },
             "DisablePlugin": {
               "methods": [
                 "DisablePlugin",
                 "DisablePluginAsync"
+              ]
+            },
+            "DisablePluginInstanceAction": {
+              "methods": [
+                "DisablePluginInstanceAction",
+                "DisablePluginInstanceActionAsync"
               ]
             },
             "EnablePlugin": {
@@ -280,10 +415,46 @@
                 "EnablePluginAsync"
               ]
             },
+            "EnablePluginInstanceAction": {
+              "methods": [
+                "EnablePluginInstanceAction",
+                "EnablePluginInstanceActionAsync"
+              ]
+            },
+            "ExecutePluginInstanceAction": {
+              "methods": [
+                "ExecutePluginInstanceAction",
+                "ExecutePluginInstanceActionAsync"
+              ]
+            },
             "GetPlugin": {
               "methods": [
                 "GetPlugin",
                 "GetPluginAsync"
+              ]
+            },
+            "GetPluginInstance": {
+              "methods": [
+                "GetPluginInstance",
+                "GetPluginInstanceAsync"
+              ]
+            },
+            "ListPluginInstances": {
+              "methods": [
+                "ListPluginInstances",
+                "ListPluginInstancesAsync"
+              ]
+            },
+            "ListPlugins": {
+              "methods": [
+                "ListPlugins",
+                "ListPluginsAsync"
+              ]
+            },
+            "UpdatePluginInstance": {
+              "methods": [
+                "UpdatePluginInstance",
+                "UpdatePluginInstanceAsync"
               ]
             }
           }
@@ -359,6 +530,12 @@
               "methods": [
                 "CreateApiHubInstance",
                 "CreateApiHubInstanceAsync"
+              ]
+            },
+            "DeleteApiHubInstance": {
+              "methods": [
+                "DeleteApiHubInstance",
+                "DeleteApiHubInstanceAsync"
               ]
             },
             "GetApiHubInstance": {

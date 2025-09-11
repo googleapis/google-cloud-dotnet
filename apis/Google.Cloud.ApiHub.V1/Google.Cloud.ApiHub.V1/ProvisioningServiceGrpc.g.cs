@@ -68,6 +68,8 @@ namespace Google.Cloud.ApiHub.V1 {
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.LongRunning.Operation> __Marshaller_google_longrunning_Operation = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.LongRunning.Operation.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.ApiHub.V1.DeleteApiHubInstanceRequest> __Marshaller_google_cloud_apihub_v1_DeleteApiHubInstanceRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.ApiHub.V1.DeleteApiHubInstanceRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.ApiHub.V1.GetApiHubInstanceRequest> __Marshaller_google_cloud_apihub_v1_GetApiHubInstanceRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.ApiHub.V1.GetApiHubInstanceRequest.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.ApiHub.V1.ApiHubInstance> __Marshaller_google_cloud_apihub_v1_ApiHubInstance = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.ApiHub.V1.ApiHubInstance.Parser));
@@ -82,6 +84,14 @@ namespace Google.Cloud.ApiHub.V1 {
         __ServiceName,
         "CreateApiHubInstance",
         __Marshaller_google_cloud_apihub_v1_CreateApiHubInstanceRequest,
+        __Marshaller_google_longrunning_Operation);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.ApiHub.V1.DeleteApiHubInstanceRequest, global::Google.LongRunning.Operation> __Method_DeleteApiHubInstance = new grpc::Method<global::Google.Cloud.ApiHub.V1.DeleteApiHubInstanceRequest, global::Google.LongRunning.Operation>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "DeleteApiHubInstance",
+        __Marshaller_google_cloud_apihub_v1_DeleteApiHubInstanceRequest,
         __Marshaller_google_longrunning_Operation);
 
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
@@ -118,6 +128,18 @@ namespace Google.Cloud.ApiHub.V1 {
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.LongRunning.Operation> CreateApiHubInstance(global::Google.Cloud.ApiHub.V1.CreateApiHubInstanceRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Deletes the API hub instance.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.LongRunning.Operation> DeleteApiHubInstance(global::Google.Cloud.ApiHub.V1.DeleteApiHubInstanceRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
       }
@@ -223,6 +245,54 @@ namespace Google.Cloud.ApiHub.V1 {
       public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> CreateApiHubInstanceAsync(global::Google.Cloud.ApiHub.V1.CreateApiHubInstanceRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_CreateApiHubInstance, null, options, request);
+      }
+      /// <summary>
+      /// Deletes the API hub instance.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.LongRunning.Operation DeleteApiHubInstance(global::Google.Cloud.ApiHub.V1.DeleteApiHubInstanceRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return DeleteApiHubInstance(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Deletes the API hub instance.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.LongRunning.Operation DeleteApiHubInstance(global::Google.Cloud.ApiHub.V1.DeleteApiHubInstanceRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_DeleteApiHubInstance, null, options, request);
+      }
+      /// <summary>
+      /// Deletes the API hub instance.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> DeleteApiHubInstanceAsync(global::Google.Cloud.ApiHub.V1.DeleteApiHubInstanceRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return DeleteApiHubInstanceAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Deletes the API hub instance.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> DeleteApiHubInstanceAsync(global::Google.Cloud.ApiHub.V1.DeleteApiHubInstanceRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_DeleteApiHubInstance, null, options, request);
       }
       /// <summary>
       /// Gets details of a single API Hub instance.
@@ -339,6 +409,7 @@ namespace Google.Cloud.ApiHub.V1 {
     {
       return grpc::ServerServiceDefinition.CreateBuilder()
           .AddMethod(__Method_CreateApiHubInstance, serviceImpl.CreateApiHubInstance)
+          .AddMethod(__Method_DeleteApiHubInstance, serviceImpl.DeleteApiHubInstance)
           .AddMethod(__Method_GetApiHubInstance, serviceImpl.GetApiHubInstance)
           .AddMethod(__Method_LookupApiHubInstance, serviceImpl.LookupApiHubInstance).Build();
     }
@@ -351,6 +422,7 @@ namespace Google.Cloud.ApiHub.V1 {
     public static void BindService(grpc::ServiceBinderBase serviceBinder, ProvisioningBase serviceImpl)
     {
       serviceBinder.AddMethod(__Method_CreateApiHubInstance, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.ApiHub.V1.CreateApiHubInstanceRequest, global::Google.LongRunning.Operation>(serviceImpl.CreateApiHubInstance));
+      serviceBinder.AddMethod(__Method_DeleteApiHubInstance, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.ApiHub.V1.DeleteApiHubInstanceRequest, global::Google.LongRunning.Operation>(serviceImpl.DeleteApiHubInstance));
       serviceBinder.AddMethod(__Method_GetApiHubInstance, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.ApiHub.V1.GetApiHubInstanceRequest, global::Google.Cloud.ApiHub.V1.ApiHubInstance>(serviceImpl.GetApiHubInstance));
       serviceBinder.AddMethod(__Method_LookupApiHubInstance, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.ApiHub.V1.LookupApiHubInstanceRequest, global::Google.Cloud.ApiHub.V1.LookupApiHubInstanceResponse>(serviceImpl.LookupApiHubInstance));
     }

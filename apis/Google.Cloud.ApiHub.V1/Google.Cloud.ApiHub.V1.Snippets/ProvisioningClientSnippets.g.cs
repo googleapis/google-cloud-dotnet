@@ -19,6 +19,7 @@ namespace GoogleCSharpSnippets
     using Google.Api.Gax.ResourceNames;
     using Google.Cloud.ApiHub.V1;
     using Google.LongRunning;
+    using Google.Protobuf.WellKnownTypes;
     using System.Threading.Tasks;
 
     /// <summary>Generated snippets.</summary>
@@ -215,6 +216,189 @@ namespace GoogleCSharpSnippets
             {
                 // If it has completed, then access the result
                 ApiHubInstance retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteApiHubInstance</summary>
+        public void DeleteApiHubInstanceRequestObject()
+        {
+            // Snippet: DeleteApiHubInstance(DeleteApiHubInstanceRequest, CallSettings)
+            // Create client
+            ProvisioningClient provisioningClient = ProvisioningClient.Create();
+            // Initialize request argument(s)
+            DeleteApiHubInstanceRequest request = new DeleteApiHubInstanceRequest
+            {
+                ApiHubInstanceName = ApiHubInstanceName.FromProjectLocationApiHubInstance("[PROJECT]", "[LOCATION]", "[API_HUB_INSTANCE]"),
+            };
+            // Make the request
+            Operation<Empty, OperationMetadata> response = provisioningClient.DeleteApiHubInstance(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Empty, OperationMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            Empty result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Empty, OperationMetadata> retrievedResponse = provisioningClient.PollOnceDeleteApiHubInstance(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Empty retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteApiHubInstanceAsync</summary>
+        public async Task DeleteApiHubInstanceRequestObjectAsync()
+        {
+            // Snippet: DeleteApiHubInstanceAsync(DeleteApiHubInstanceRequest, CallSettings)
+            // Additional: DeleteApiHubInstanceAsync(DeleteApiHubInstanceRequest, CancellationToken)
+            // Create client
+            ProvisioningClient provisioningClient = await ProvisioningClient.CreateAsync();
+            // Initialize request argument(s)
+            DeleteApiHubInstanceRequest request = new DeleteApiHubInstanceRequest
+            {
+                ApiHubInstanceName = ApiHubInstanceName.FromProjectLocationApiHubInstance("[PROJECT]", "[LOCATION]", "[API_HUB_INSTANCE]"),
+            };
+            // Make the request
+            Operation<Empty, OperationMetadata> response = await provisioningClient.DeleteApiHubInstanceAsync(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Empty, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            Empty result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Empty, OperationMetadata> retrievedResponse = await provisioningClient.PollOnceDeleteApiHubInstanceAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Empty retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteApiHubInstance</summary>
+        public void DeleteApiHubInstance()
+        {
+            // Snippet: DeleteApiHubInstance(string, CallSettings)
+            // Create client
+            ProvisioningClient provisioningClient = ProvisioningClient.Create();
+            // Initialize request argument(s)
+            string name = "projects/[PROJECT]/locations/[LOCATION]/apiHubInstances/[API_HUB_INSTANCE]";
+            // Make the request
+            Operation<Empty, OperationMetadata> response = provisioningClient.DeleteApiHubInstance(name);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Empty, OperationMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            Empty result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Empty, OperationMetadata> retrievedResponse = provisioningClient.PollOnceDeleteApiHubInstance(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Empty retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteApiHubInstanceAsync</summary>
+        public async Task DeleteApiHubInstanceAsync()
+        {
+            // Snippet: DeleteApiHubInstanceAsync(string, CallSettings)
+            // Additional: DeleteApiHubInstanceAsync(string, CancellationToken)
+            // Create client
+            ProvisioningClient provisioningClient = await ProvisioningClient.CreateAsync();
+            // Initialize request argument(s)
+            string name = "projects/[PROJECT]/locations/[LOCATION]/apiHubInstances/[API_HUB_INSTANCE]";
+            // Make the request
+            Operation<Empty, OperationMetadata> response = await provisioningClient.DeleteApiHubInstanceAsync(name);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Empty, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            Empty result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Empty, OperationMetadata> retrievedResponse = await provisioningClient.PollOnceDeleteApiHubInstanceAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Empty retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteApiHubInstance</summary>
+        public void DeleteApiHubInstanceResourceNames()
+        {
+            // Snippet: DeleteApiHubInstance(ApiHubInstanceName, CallSettings)
+            // Create client
+            ProvisioningClient provisioningClient = ProvisioningClient.Create();
+            // Initialize request argument(s)
+            ApiHubInstanceName name = ApiHubInstanceName.FromProjectLocationApiHubInstance("[PROJECT]", "[LOCATION]", "[API_HUB_INSTANCE]");
+            // Make the request
+            Operation<Empty, OperationMetadata> response = provisioningClient.DeleteApiHubInstance(name);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Empty, OperationMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            Empty result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Empty, OperationMetadata> retrievedResponse = provisioningClient.PollOnceDeleteApiHubInstance(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Empty retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteApiHubInstanceAsync</summary>
+        public async Task DeleteApiHubInstanceResourceNamesAsync()
+        {
+            // Snippet: DeleteApiHubInstanceAsync(ApiHubInstanceName, CallSettings)
+            // Additional: DeleteApiHubInstanceAsync(ApiHubInstanceName, CancellationToken)
+            // Create client
+            ProvisioningClient provisioningClient = await ProvisioningClient.CreateAsync();
+            // Initialize request argument(s)
+            ApiHubInstanceName name = ApiHubInstanceName.FromProjectLocationApiHubInstance("[PROJECT]", "[LOCATION]", "[API_HUB_INSTANCE]");
+            // Make the request
+            Operation<Empty, OperationMetadata> response = await provisioningClient.DeleteApiHubInstanceAsync(name);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Empty, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            Empty result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Empty, OperationMetadata> retrievedResponse = await provisioningClient.PollOnceDeleteApiHubInstanceAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Empty retrievedResult = retrievedResponse.Result;
             }
             // End snippet
         }

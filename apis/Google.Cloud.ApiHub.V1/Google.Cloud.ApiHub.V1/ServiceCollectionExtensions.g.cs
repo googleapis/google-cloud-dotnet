@@ -61,6 +61,70 @@ namespace Microsoft.Extensions.DependencyInjection
                 return builder.Build(provider);
             });
 
+        /// <summary>Adds a singleton <see cref="gcav::ApiHubCollectClient"/> to <paramref name="services"/>.</summary>
+        /// <param name="services">
+        /// The service collection to add the client to. The services are used to configure the client when requested.
+        /// </param>
+        /// <param name="action">
+        /// An optional action to invoke on the client builder. This is invoked before services from
+        /// <paramref name="services"/> are used.
+        /// </param>
+        public static IServiceCollection AddApiHubCollectClient(this IServiceCollection services, sys::Action<gcav::ApiHubCollectClientBuilder> action = null) =>
+            services.AddSingleton(provider =>
+            {
+                gcav::ApiHubCollectClientBuilder builder = new gcav::ApiHubCollectClientBuilder();
+                action?.Invoke(builder);
+                return builder.Build(provider);
+            });
+
+        /// <summary>Adds a singleton <see cref="gcav::ApiHubCollectClient"/> to <paramref name="services"/>.</summary>
+        /// <param name="services">
+        /// The service collection to add the client to. The services are used to configure the client when requested.
+        /// </param>
+        /// <param name="action">
+        /// An optional action to invoke on the client builder. This is invoked before services from
+        /// <paramref name="services"/> are used.
+        /// </param>
+        public static IServiceCollection AddApiHubCollectClient(this IServiceCollection services, sys::Action<sys::IServiceProvider, gcav::ApiHubCollectClientBuilder> action) =>
+            services.AddSingleton(provider =>
+            {
+                gcav::ApiHubCollectClientBuilder builder = new gcav::ApiHubCollectClientBuilder();
+                action?.Invoke(provider, builder);
+                return builder.Build(provider);
+            });
+
+        /// <summary>Adds a singleton <see cref="gcav::ApiHubCurateClient"/> to <paramref name="services"/>.</summary>
+        /// <param name="services">
+        /// The service collection to add the client to. The services are used to configure the client when requested.
+        /// </param>
+        /// <param name="action">
+        /// An optional action to invoke on the client builder. This is invoked before services from
+        /// <paramref name="services"/> are used.
+        /// </param>
+        public static IServiceCollection AddApiHubCurateClient(this IServiceCollection services, sys::Action<gcav::ApiHubCurateClientBuilder> action = null) =>
+            services.AddSingleton(provider =>
+            {
+                gcav::ApiHubCurateClientBuilder builder = new gcav::ApiHubCurateClientBuilder();
+                action?.Invoke(builder);
+                return builder.Build(provider);
+            });
+
+        /// <summary>Adds a singleton <see cref="gcav::ApiHubCurateClient"/> to <paramref name="services"/>.</summary>
+        /// <param name="services">
+        /// The service collection to add the client to. The services are used to configure the client when requested.
+        /// </param>
+        /// <param name="action">
+        /// An optional action to invoke on the client builder. This is invoked before services from
+        /// <paramref name="services"/> are used.
+        /// </param>
+        public static IServiceCollection AddApiHubCurateClient(this IServiceCollection services, sys::Action<sys::IServiceProvider, gcav::ApiHubCurateClientBuilder> action) =>
+            services.AddSingleton(provider =>
+            {
+                gcav::ApiHubCurateClientBuilder builder = new gcav::ApiHubCurateClientBuilder();
+                action?.Invoke(provider, builder);
+                return builder.Build(provider);
+            });
+
         /// <summary>
         /// Adds a singleton <see cref="gcav::ApiHubDependenciesClient"/> to <paramref name="services"/>.
         /// </summary>
@@ -93,6 +157,42 @@ namespace Microsoft.Extensions.DependencyInjection
             services.AddSingleton(provider =>
             {
                 gcav::ApiHubDependenciesClientBuilder builder = new gcav::ApiHubDependenciesClientBuilder();
+                action?.Invoke(provider, builder);
+                return builder.Build(provider);
+            });
+
+        /// <summary>
+        /// Adds a singleton <see cref="gcav::ApiHubDiscoveryClient"/> to <paramref name="services"/>.
+        /// </summary>
+        /// <param name="services">
+        /// The service collection to add the client to. The services are used to configure the client when requested.
+        /// </param>
+        /// <param name="action">
+        /// An optional action to invoke on the client builder. This is invoked before services from
+        /// <paramref name="services"/> are used.
+        /// </param>
+        public static IServiceCollection AddApiHubDiscoveryClient(this IServiceCollection services, sys::Action<gcav::ApiHubDiscoveryClientBuilder> action = null) =>
+            services.AddSingleton(provider =>
+            {
+                gcav::ApiHubDiscoveryClientBuilder builder = new gcav::ApiHubDiscoveryClientBuilder();
+                action?.Invoke(builder);
+                return builder.Build(provider);
+            });
+
+        /// <summary>
+        /// Adds a singleton <see cref="gcav::ApiHubDiscoveryClient"/> to <paramref name="services"/>.
+        /// </summary>
+        /// <param name="services">
+        /// The service collection to add the client to. The services are used to configure the client when requested.
+        /// </param>
+        /// <param name="action">
+        /// An optional action to invoke on the client builder. This is invoked before services from
+        /// <paramref name="services"/> are used.
+        /// </param>
+        public static IServiceCollection AddApiHubDiscoveryClient(this IServiceCollection services, sys::Action<sys::IServiceProvider, gcav::ApiHubDiscoveryClientBuilder> action) =>
+            services.AddSingleton(provider =>
+            {
+                gcav::ApiHubDiscoveryClientBuilder builder = new gcav::ApiHubDiscoveryClientBuilder();
                 action?.Invoke(provider, builder);
                 return builder.Build(provider);
             });
