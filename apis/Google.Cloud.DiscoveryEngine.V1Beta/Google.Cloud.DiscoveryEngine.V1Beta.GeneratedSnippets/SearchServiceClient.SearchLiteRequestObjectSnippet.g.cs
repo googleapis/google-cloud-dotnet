@@ -75,6 +75,7 @@ namespace GoogleCSharpSnippets
                 RelevanceThreshold = SearchRequest.Types.RelevanceThreshold.Unspecified,
                 PersonalizationSpec = new SearchRequest.Types.PersonalizationSpec(),
                 OneBoxPageSize = 0,
+                RankingExpressionBackend = SearchRequest.Types.RankingExpressionBackend.Unspecified,
             };
             // Make the request
             PagedEnumerable<SearchResponse, SearchResponse.Types.SearchResult> response = searchServiceClient.SearchLite(request);
