@@ -4548,6 +4548,18 @@
             "sourcePaths": [
                 "apis/Google.Cloud.LocationFinder.V1/Google.Cloud.LocationFinder.V1"
             ]
+        },
+        {
+            "id": "Google.Cloud.GkeRecommender.V1",
+            "nextVersion": "1.0.0-beta01",
+            "generationAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
+            "releaseAutomationLevel": "AUTOMATION_LEVEL_BLOCKED",
+            "apiPaths": [
+                "google/cloud/gkerecommender/v1"
+            ],
+            "sourcePaths": [
+                "apis/Google.Cloud.GkeRecommender.V1/Google.Cloud.GkeRecommender.V1"
+            ]
         }
     ],
     "commonLibrarySourcePaths": [
