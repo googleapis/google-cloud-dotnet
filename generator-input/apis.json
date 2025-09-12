@@ -3079,6 +3079,23 @@
       "includeCommonResourcesProto": true
     },
     {
+      "id": "Google.Cloud.GkeRecommender.V1",
+      "version": "1.0.0-beta00",
+      "type": "grpc",
+      "productName": "GKE Recommender",
+      "productUrl": "https://cloud.google.com/kubernetes-engine/docs/how-to/machine-learning/inference-quickstart",
+      "description": "GKE Recommender API",
+      "tags": [],
+      "dependencies": {},
+      "generator": "micro",
+      "protoPath": "google/cloud/gkerecommender/v1",
+      "includeCommonResourcesProto": true,
+      "shortName": "gkerecommender",
+      "serviceConfigFile": "gkerecommender_v1.yaml",
+      "transport": "grpc+rest",
+      "restNumericEnums": true
+    },
+    {
       "id": "Google.Cloud.Iam.Admin.V1",
       "version": "2.4.0",
       "type": "grpc",
