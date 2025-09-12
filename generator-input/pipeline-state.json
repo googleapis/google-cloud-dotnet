@@ -4364,7 +4364,7 @@
             "generationAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
             "releaseAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
             "releaseTimestamp": "2025-08-04T18:59:54.710158535Z",
-            "lastGeneratedCommit": "885e1cbba130a838183febdfa02d5a48fce17273",
+            "lastGeneratedCommit": "30b8ea1ee6f18e5d2feb3767ba833a40ddf1b3d6",
             "lastReleasedCommit": "cc9fc0f686d4a64838acfe27f195d917634bb09f",
             "apiPaths": [
                 "google/shopping/merchant/notifications/v1"
