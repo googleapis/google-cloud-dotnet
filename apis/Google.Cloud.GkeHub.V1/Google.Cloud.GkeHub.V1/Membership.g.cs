@@ -58,39 +58,39 @@ namespace Google.Cloud.GkeHub.V1 {
             "EWNvbm5lY3RfcmVzb3VyY2VzGAMgAygLMiguZ29vZ2xlLmNsb3VkLmdrZWh1",
             "Yi52MS5SZXNvdXJjZU1hbmlmZXN0QgPgQQMSRgoQcmVzb3VyY2Vfb3B0aW9u",
             "cxgEIAEoCzInLmdvb2dsZS5jbG91ZC5na2VodWIudjEuUmVzb3VyY2VPcHRp",
-            "b25zQgPgQQEiYwoPUmVzb3VyY2VPcHRpb25zEhwKD2Nvbm5lY3RfdmVyc2lv",
-            "bhgBIAEoCUID4EEBEhgKC3YxYmV0YTFfY3JkGAIgASgIQgPgQQESGAoLazhz",
-            "X3ZlcnNpb24YAyABKAlCA+BBASI8ChBSZXNvdXJjZU1hbmlmZXN0EhAKCG1h",
-            "bmlmZXN0GAEgASgJEhYKDmNsdXN0ZXJfc2NvcGVkGAIgASgIIkYKCkdrZUNs",
-            "dXN0ZXISGgoNcmVzb3VyY2VfbGluaxgBIAEoCUID4EEFEhwKD2NsdXN0ZXJf",
-            "bWlzc2luZxgCIAEoCEID4EEDIt8BChJLdWJlcm5ldGVzTWV0YWRhdGESKgod",
-            "a3ViZXJuZXRlc19hcGlfc2VydmVyX3ZlcnNpb24YASABKAlCA+BBAxIdChBu",
-            "b2RlX3Byb3ZpZGVyX2lkGAIgASgJQgPgQQMSFwoKbm9kZV9jb3VudBgDIAEo",
-            "BUID4EEDEhcKCnZjcHVfY291bnQYBCABKAVCA+BBAxIWCgltZW1vcnlfbWIY",
-            "BSABKAVCA+BBAxI0Cgt1cGRhdGVfdGltZRhkIAEoCzIaLmdvb2dsZS5wcm90",
-            "b2J1Zi5UaW1lc3RhbXBCA+BBAyKWAQoQTW9uaXRvcmluZ0NvbmZpZxIXCgpw",
-            "cm9qZWN0X2lkGAEgASgJQgPgQQUSFQoIbG9jYXRpb24YAiABKAlCA+BBBRIU",
-            "CgdjbHVzdGVyGAMgASgJQgPgQQUSIQoZa3ViZXJuZXRlc19tZXRyaWNzX3By",
-            "ZWZpeBgEIAEoCRIZCgxjbHVzdGVyX2hhc2gYBSABKAlCA+BBBSK7AQoPTWVt",
-            "YmVyc2hpcFN0YXRlEj8KBGNvZGUYASABKA4yLC5nb29nbGUuY2xvdWQuZ2tl",
-            "aHViLnYxLk1lbWJlcnNoaXBTdGF0ZS5Db2RlQgPgQQMiZwoEQ29kZRIUChBD",
-            "T0RFX1VOU1BFQ0lGSUVEEAASDAoIQ1JFQVRJTkcQARIJCgVSRUFEWRACEgwK",
-            "CERFTEVUSU5HEAMSDAoIVVBEQVRJTkcQBBIUChBTRVJWSUNFX1VQREFUSU5H",
-            "EAUifQoJQXV0aG9yaXR5EhMKBmlzc3VlchgBIAEoCUID4EEBEiMKFndvcmts",
-            "b2FkX2lkZW50aXR5X3Bvb2wYAiABKAlCA+BBAxIeChFpZGVudGl0eV9wcm92",
-            "aWRlchgDIAEoCUID4EEDEhYKCW9pZGNfandrcxgEIAEoDEID4EEBQrEBChpj",
-            "b20uZ29vZ2xlLmNsb3VkLmdrZWh1Yi52MUIPTWVtYmVyc2hpcFByb3RvUAFa",
-            "MmNsb3VkLmdvb2dsZS5jb20vZ28vZ2tlaHViL2FwaXYxL2drZWh1YnBiO2dr",
-            "ZWh1YnBiqgIWR29vZ2xlLkNsb3VkLkdrZUh1Yi5WMcoCFkdvb2dsZVxDbG91",
-            "ZFxHa2VIdWJcVjHqAhlHb29nbGU6OkNsb3VkOjpHa2VIdWI6OlYxYgZwcm90",
-            "bzM="));
+            "b25zQgPgQQEigQEKD1Jlc291cmNlT3B0aW9ucxIcCg9jb25uZWN0X3ZlcnNp",
+            "b24YASABKAlCA+BBARIYCgt2MWJldGExX2NyZBgCIAEoCEID4EEBEhgKC2s4",
+            "c192ZXJzaW9uGAMgASgJQgPgQQESHAoPazhzX2dpdF92ZXJzaW9uGAQgASgJ",
+            "QgPgQQEiPAoQUmVzb3VyY2VNYW5pZmVzdBIQCghtYW5pZmVzdBgBIAEoCRIW",
+            "Cg5jbHVzdGVyX3Njb3BlZBgCIAEoCCJGCgpHa2VDbHVzdGVyEhoKDXJlc291",
+            "cmNlX2xpbmsYASABKAlCA+BBBRIcCg9jbHVzdGVyX21pc3NpbmcYAiABKAhC",
+            "A+BBAyLfAQoSS3ViZXJuZXRlc01ldGFkYXRhEioKHWt1YmVybmV0ZXNfYXBp",
+            "X3NlcnZlcl92ZXJzaW9uGAEgASgJQgPgQQMSHQoQbm9kZV9wcm92aWRlcl9p",
+            "ZBgCIAEoCUID4EEDEhcKCm5vZGVfY291bnQYAyABKAVCA+BBAxIXCgp2Y3B1",
+            "X2NvdW50GAQgASgFQgPgQQMSFgoJbWVtb3J5X21iGAUgASgFQgPgQQMSNAoL",
+            "dXBkYXRlX3RpbWUYZCABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1w",
+            "QgPgQQMilgEKEE1vbml0b3JpbmdDb25maWcSFwoKcHJvamVjdF9pZBgBIAEo",
+            "CUID4EEFEhUKCGxvY2F0aW9uGAIgASgJQgPgQQUSFAoHY2x1c3RlchgDIAEo",
+            "CUID4EEFEiEKGWt1YmVybmV0ZXNfbWV0cmljc19wcmVmaXgYBCABKAkSGQoM",
+            "Y2x1c3Rlcl9oYXNoGAUgASgJQgPgQQUiuwEKD01lbWJlcnNoaXBTdGF0ZRI/",
+            "CgRjb2RlGAEgASgOMiwuZ29vZ2xlLmNsb3VkLmdrZWh1Yi52MS5NZW1iZXJz",
+            "aGlwU3RhdGUuQ29kZUID4EEDImcKBENvZGUSFAoQQ09ERV9VTlNQRUNJRklF",
+            "RBAAEgwKCENSRUFUSU5HEAESCQoFUkVBRFkQAhIMCghERUxFVElORxADEgwK",
+            "CFVQREFUSU5HEAQSFAoQU0VSVklDRV9VUERBVElORxAFIn0KCUF1dGhvcml0",
+            "eRITCgZpc3N1ZXIYASABKAlCA+BBARIjChZ3b3JrbG9hZF9pZGVudGl0eV9w",
+            "b29sGAIgASgJQgPgQQMSHgoRaWRlbnRpdHlfcHJvdmlkZXIYAyABKAlCA+BB",
+            "AxIWCglvaWRjX2p3a3MYBCABKAxCA+BBAUKxAQoaY29tLmdvb2dsZS5jbG91",
+            "ZC5na2VodWIudjFCD01lbWJlcnNoaXBQcm90b1ABWjJjbG91ZC5nb29nbGUu",
+            "Y29tL2dvL2drZWh1Yi9hcGl2MS9na2VodWJwYjtna2VodWJwYqoCFkdvb2ds",
+            "ZS5DbG91ZC5Ha2VIdWIuVjHKAhZHb29nbGVcQ2xvdWRcR2tlSHViXFYx6gIZ",
+            "R29vZ2xlOjpDbG91ZDo6R2tlSHViOjpWMWIGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.GkeHub.V1.Membership), global::Google.Cloud.GkeHub.V1.Membership.Parser, new[]{ "Endpoint", "Name", "Labels", "Description", "State", "CreateTime", "UpdateTime", "DeleteTime", "ExternalId", "LastConnectionTime", "UniqueId", "Authority", "MonitoringConfig" }, new[]{ "Type" }, null, null, new pbr::GeneratedClrTypeInfo[] { null, }),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.GkeHub.V1.MembershipEndpoint), global::Google.Cloud.GkeHub.V1.MembershipEndpoint.Parser, new[]{ "GkeCluster", "KubernetesMetadata", "KubernetesResource", "GoogleManaged" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.GkeHub.V1.KubernetesResource), global::Google.Cloud.GkeHub.V1.KubernetesResource.Parser, new[]{ "MembershipCrManifest", "MembershipResources", "ConnectResources", "ResourceOptions" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.GkeHub.V1.ResourceOptions), global::Google.Cloud.GkeHub.V1.ResourceOptions.Parser, new[]{ "ConnectVersion", "V1Beta1Crd", "K8SVersion" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.GkeHub.V1.ResourceOptions), global::Google.Cloud.GkeHub.V1.ResourceOptions.Parser, new[]{ "ConnectVersion", "V1Beta1Crd", "K8SVersion", "K8SGitVersion" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.GkeHub.V1.ResourceManifest), global::Google.Cloud.GkeHub.V1.ResourceManifest.Parser, new[]{ "Manifest", "ClusterScoped" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.GkeHub.V1.GkeCluster), global::Google.Cloud.GkeHub.V1.GkeCluster.Parser, new[]{ "ResourceLink", "ClusterMissing" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.GkeHub.V1.KubernetesMetadata), global::Google.Cloud.GkeHub.V1.KubernetesMetadata.Parser, new[]{ "KubernetesApiServerVersion", "NodeProviderId", "NodeCount", "VcpuCount", "MemoryMb", "UpdateTime" }, null, null, null, null),
@@ -1619,6 +1619,7 @@ namespace Google.Cloud.GkeHub.V1 {
       connectVersion_ = other.connectVersion_;
       v1Beta1Crd_ = other.v1Beta1Crd_;
       k8SVersion_ = other.k8SVersion_;
+      k8SGitVersion_ = other.k8SGitVersion_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -1667,9 +1668,9 @@ namespace Google.Cloud.GkeHub.V1 {
     public const int K8SVersionFieldNumber = 3;
     private string k8SVersion_ = "";
     /// <summary>
-    /// Optional. Major version of the Kubernetes cluster. This is only used to
-    /// determine which version to use for the CustomResourceDefinition resources,
-    /// `apiextensions/v1beta1` or`apiextensions/v1`.
+    /// Optional. Major and minor version of the Kubernetes cluster. This is only
+    /// used to determine which version to use for the CustomResourceDefinition
+    /// resources, `apiextensions/v1beta1` or`apiextensions/v1`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -1677,6 +1678,23 @@ namespace Google.Cloud.GkeHub.V1 {
       get { return k8SVersion_; }
       set {
         k8SVersion_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "k8s_git_version" field.</summary>
+    public const int K8SGitVersionFieldNumber = 4;
+    private string k8SGitVersion_ = "";
+    /// <summary>
+    /// Optional. Git version of the Kubernetes cluster. This is only used to gate
+    /// the Connect Agent migration to svc.id.goog on GDC-SO 1.33.100 patch and
+    /// above.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string K8SGitVersion {
+      get { return k8SGitVersion_; }
+      set {
+        k8SGitVersion_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
       }
     }
 
@@ -1698,6 +1716,7 @@ namespace Google.Cloud.GkeHub.V1 {
       if (ConnectVersion != other.ConnectVersion) return false;
       if (V1Beta1Crd != other.V1Beta1Crd) return false;
       if (K8SVersion != other.K8SVersion) return false;
+      if (K8SGitVersion != other.K8SGitVersion) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -1708,6 +1727,7 @@ namespace Google.Cloud.GkeHub.V1 {
       if (ConnectVersion.Length != 0) hash ^= ConnectVersion.GetHashCode();
       if (V1Beta1Crd != false) hash ^= V1Beta1Crd.GetHashCode();
       if (K8SVersion.Length != 0) hash ^= K8SVersion.GetHashCode();
+      if (K8SGitVersion.Length != 0) hash ^= K8SGitVersion.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -1738,6 +1758,10 @@ namespace Google.Cloud.GkeHub.V1 {
         output.WriteRawTag(26);
         output.WriteString(K8SVersion);
       }
+      if (K8SGitVersion.Length != 0) {
+        output.WriteRawTag(34);
+        output.WriteString(K8SGitVersion);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -1760,6 +1784,10 @@ namespace Google.Cloud.GkeHub.V1 {
         output.WriteRawTag(26);
         output.WriteString(K8SVersion);
       }
+      if (K8SGitVersion.Length != 0) {
+        output.WriteRawTag(34);
+        output.WriteString(K8SGitVersion);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -1778,6 +1806,9 @@ namespace Google.Cloud.GkeHub.V1 {
       }
       if (K8SVersion.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(K8SVersion);
+      }
+      if (K8SGitVersion.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(K8SGitVersion);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -1799,6 +1830,9 @@ namespace Google.Cloud.GkeHub.V1 {
       }
       if (other.K8SVersion.Length != 0) {
         K8SVersion = other.K8SVersion;
+      }
+      if (other.K8SGitVersion.Length != 0) {
+        K8SGitVersion = other.K8SGitVersion;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -1827,6 +1861,10 @@ namespace Google.Cloud.GkeHub.V1 {
             K8SVersion = input.ReadString();
             break;
           }
+          case 34: {
+            K8SGitVersion = input.ReadString();
+            break;
+          }
         }
       }
     #endif
@@ -1852,6 +1890,10 @@ namespace Google.Cloud.GkeHub.V1 {
           }
           case 26: {
             K8SVersion = input.ReadString();
+            break;
+          }
+          case 34: {
+            K8SGitVersion = input.ReadString();
             break;
           }
         }
