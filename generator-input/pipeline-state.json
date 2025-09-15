@@ -4514,7 +4514,7 @@
             "generationAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
             "releaseAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
             "releaseTimestamp": "2025-09-03T09:06:22.898002342Z",
-            "lastGeneratedCommit": "1765b559c42386788ff0c6412491277b4791107a",
+            "lastGeneratedCommit": "fbd8031224408a418bdda4413b5b435e1677d1df",
             "lastReleasedCommit": "1765b559c42386788ff0c6412491277b4791107a",
             "apiPaths": [
                 "google/cloud/cloudsecuritycompliance/v1"
