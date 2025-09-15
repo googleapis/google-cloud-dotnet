@@ -4439,7 +4439,7 @@
             "generationAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
             "releaseAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
             "releaseTimestamp": "2025-08-05T17:05:14.238664508Z",
-            "lastGeneratedCommit": "e64f292bd17863a1ffa003a241213e07968bd447",
+            "lastGeneratedCommit": "5dac8e9108bbd658e0ed4402c40d79e60f78a1f5",
             "lastReleasedCommit": "438200a688c81b759c38747423079c2e1fab9dd9",
             "apiPaths": [
                 "google/shopping/merchant/ordertracking/v1"
