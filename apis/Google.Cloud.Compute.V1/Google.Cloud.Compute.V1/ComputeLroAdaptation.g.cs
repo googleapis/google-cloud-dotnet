@@ -819,6 +819,15 @@ namespace Google.Cloud.Compute.V1
         }
     }
 
+    public partial class AddNetworkInterfaceInstanceRequest
+    {
+        internal void PopulatePollRequestFields(GetZoneOperationRequest pollRequest)
+        {
+            pollRequest.Zone = Zone;
+            pollRequest.Project = Project;
+        }
+    }
+
     public partial class AddResourcePoliciesInstanceRequest
     {
         internal void PopulatePollRequestFields(GetZoneOperationRequest pollRequest)
@@ -856,6 +865,15 @@ namespace Google.Cloud.Compute.V1
     }
 
     public partial class DeleteAccessConfigInstanceRequest
+    {
+        internal void PopulatePollRequestFields(GetZoneOperationRequest pollRequest)
+        {
+            pollRequest.Zone = Zone;
+            pollRequest.Project = Project;
+        }
+    }
+
+    public partial class DeleteNetworkInterfaceInstanceRequest
     {
         internal void PopulatePollRequestFields(GetZoneOperationRequest pollRequest)
         {

@@ -4520,6 +4520,11 @@ namespace Google.Cloud.Compute.V1
                 public const string Deprovisioning = "DEPROVISIONING";
 
                 /// <summary>
+                /// Wire representation of <see cref="global::Google.Cloud.Compute.V1.Instance.Types.Status.Pending"/>.
+                /// </summary>
+                public const string Pending = "PENDING";
+
+                /// <summary>
                 /// Wire representation of
                 /// <see cref="global::Google.Cloud.Compute.V1.Instance.Types.Status.Provisioning"/>.
                 /// </summary>
@@ -5153,6 +5158,12 @@ namespace Google.Cloud.Compute.V1
                 /// <see cref="global::Google.Cloud.Compute.V1.InstanceWithNamedPorts.Types.Status.Deprovisioning"/>.
                 /// </summary>
                 public const string Deprovisioning = "DEPROVISIONING";
+
+                /// <summary>
+                /// Wire representation of
+                /// <see cref="global::Google.Cloud.Compute.V1.InstanceWithNamedPorts.Types.Status.Pending"/>.
+                /// </summary>
+                public const string Pending = "PENDING";
 
                 /// <summary>
                 /// Wire representation of
@@ -7910,6 +7921,12 @@ namespace Google.Cloud.Compute.V1
 
                 /// <summary>
                 /// Wire representation of
+                /// <see cref="global::Google.Cloud.Compute.V1.ManagedInstance.Types.InstanceStatus.Pending"/>.
+                /// </summary>
+                public const string Pending = "PENDING";
+
+                /// <summary>
+                /// Wire representation of
                 /// <see cref="global::Google.Cloud.Compute.V1.ManagedInstance.Types.InstanceStatus.Provisioning"/>.
                 /// </summary>
                 public const string Provisioning = "PROVISIONING";
@@ -9805,6 +9822,118 @@ namespace Google.Cloud.Compute.V1
                 /// <see cref="global::Google.Cloud.Compute.V1.NetworkProfileNetworkFeatures.Types.Unicast.Ull"/>.
                 /// </summary>
                 public const string Ull = "UNICAST_ULL";
+            }
+        }
+
+        /// <summary>
+        /// Container class for enums within the <see cref="global::Google.Cloud.Compute.V1.NetworkProfileProfileType"/>
+        /// message.
+        /// </summary>
+        public static class NetworkProfileProfileType
+        {
+            /// <summary>
+            /// Constants for wire representations of the
+            /// <see cref="global::Google.Cloud.Compute.V1.NetworkProfileProfileType.Types.NetworkType"/> enum.
+            /// </summary>
+            public static class NetworkType
+            {
+                /// <summary>
+                /// Wire representation of
+                /// <see cref="global::Google.Cloud.Compute.V1.NetworkProfileProfileType.Types.NetworkType.UndefinedNetworkType"/>
+                /// .
+                /// </summary>
+                public const string UndefinedNetworkType = "UNDEFINED_NETWORK_TYPE";
+
+                /// <summary>
+                /// Wire representation of
+                /// <see cref="global::Google.Cloud.Compute.V1.NetworkProfileProfileType.Types.NetworkType.Rdma"/>.
+                /// </summary>
+                public const string Rdma = "RDMA";
+
+                /// <summary>
+                /// Wire representation of
+                /// <see cref="global::Google.Cloud.Compute.V1.NetworkProfileProfileType.Types.NetworkType.Ull"/>.
+                /// </summary>
+                public const string Ull = "ULL";
+
+                /// <summary>
+                /// Wire representation of
+                /// <see cref="global::Google.Cloud.Compute.V1.NetworkProfileProfileType.Types.NetworkType.Vpc"/>.
+                /// </summary>
+                public const string Vpc = "VPC";
+            }
+
+            /// <summary>
+            /// Constants for wire representations of the
+            /// <see cref="global::Google.Cloud.Compute.V1.NetworkProfileProfileType.Types.RdmaSubtype"/> enum.
+            /// </summary>
+            public static class RdmaSubtype
+            {
+                /// <summary>
+                /// Wire representation of
+                /// <see cref="global::Google.Cloud.Compute.V1.NetworkProfileProfileType.Types.RdmaSubtype.UndefinedRdmaSubtype"/>
+                /// .
+                /// </summary>
+                public const string UndefinedRdmaSubtype = "UNDEFINED_RDMA_SUBTYPE";
+
+                /// <summary>
+                /// Wire representation of
+                /// <see cref="global::Google.Cloud.Compute.V1.NetworkProfileProfileType.Types.RdmaSubtype.Falcon"/>.
+                /// </summary>
+                public const string Falcon = "FALCON";
+
+                /// <summary>
+                /// Wire representation of
+                /// <see cref="global::Google.Cloud.Compute.V1.NetworkProfileProfileType.Types.RdmaSubtype.Roce"/>.
+                /// </summary>
+                public const string Roce = "ROCE";
+            }
+
+            /// <summary>
+            /// Constants for wire representations of the
+            /// <see cref="global::Google.Cloud.Compute.V1.NetworkProfileProfileType.Types.UllSubtype"/> enum.
+            /// </summary>
+            public static class UllSubtype
+            {
+                /// <summary>
+                /// Wire representation of
+                /// <see cref="global::Google.Cloud.Compute.V1.NetworkProfileProfileType.Types.UllSubtype.UndefinedUllSubtype"/>
+                /// .
+                /// </summary>
+                public const string UndefinedUllSubtype = "UNDEFINED_ULL_SUBTYPE";
+
+                /// <summary>
+                /// Wire representation of
+                /// <see cref="global::Google.Cloud.Compute.V1.NetworkProfileProfileType.Types.UllSubtype.Operator"/>.
+                /// </summary>
+                public const string Operator = "OPERATOR";
+
+                /// <summary>
+                /// Wire representation of
+                /// <see cref="global::Google.Cloud.Compute.V1.NetworkProfileProfileType.Types.UllSubtype.Participant"/>
+                /// .
+                /// </summary>
+                public const string Participant = "PARTICIPANT";
+            }
+
+            /// <summary>
+            /// Constants for wire representations of the
+            /// <see cref="global::Google.Cloud.Compute.V1.NetworkProfileProfileType.Types.VpcSubtype"/> enum.
+            /// </summary>
+            public static class VpcSubtype
+            {
+                /// <summary>
+                /// Wire representation of
+                /// <see cref="global::Google.Cloud.Compute.V1.NetworkProfileProfileType.Types.VpcSubtype.UndefinedVpcSubtype"/>
+                /// .
+                /// </summary>
+                public const string UndefinedVpcSubtype = "UNDEFINED_VPC_SUBTYPE";
+
+                /// <summary>
+                /// Wire representation of
+                /// <see cref="global::Google.Cloud.Compute.V1.NetworkProfileProfileType.Types.VpcSubtype.Regional"/>.
+                /// </summary>
+                public const string Regional = "REGIONAL";
             }
         }
 
@@ -14499,6 +14628,12 @@ namespace Google.Cloud.Compute.V1
 
                 /// <summary>
                 /// Wire representation of
+                /// <see cref="global::Google.Cloud.Compute.V1.Scheduling.Types.ProvisioningModel.FlexStart"/>.
+                /// </summary>
+                public const string FlexStart = "FLEX_START";
+
+                /// <summary>
+                /// Wire representation of
                 /// <see cref="global::Google.Cloud.Compute.V1.Scheduling.Types.ProvisioningModel.ReservationBound"/>.
                 /// </summary>
                 public const string ReservationBound = "RESERVATION_BOUND";
@@ -16849,6 +16984,20 @@ namespace Google.Cloud.Compute.V1
                 /// .
                 /// </summary>
                 public const string FailureGpu = "FAILURE_GPU";
+
+                /// <summary>
+                /// Wire representation of
+                /// <see cref="global::Google.Cloud.Compute.V1.UpcomingMaintenance.Types.MaintenanceReasons.FailureGpuMultipleFaultyHostsCustomerReported"/>
+                /// .
+                /// </summary>
+                public const string FailureGpuMultipleFaultyHostsCustomerReported = "FAILURE_GPU_MULTIPLE_FAULTY_HOSTS_CUSTOMER_REPORTED";
+
+                /// <summary>
+                /// Wire representation of
+                /// <see cref="global::Google.Cloud.Compute.V1.UpcomingMaintenance.Types.MaintenanceReasons.FailureGpuNvlinkSwitchCustomerReported"/>
+                /// .
+                /// </summary>
+                public const string FailureGpuNvlinkSwitchCustomerReported = "FAILURE_GPU_NVLINK_SWITCH_CUSTOMER_REPORTED";
 
                 /// <summary>
                 /// Wire representation of

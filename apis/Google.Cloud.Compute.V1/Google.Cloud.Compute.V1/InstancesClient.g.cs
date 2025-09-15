@@ -48,6 +48,8 @@ namespace Google.Cloud.Compute.V1
             gax::GaxPreconditions.CheckNotNull(existing, nameof(existing));
             AddAccessConfigSettings = existing.AddAccessConfigSettings;
             AddAccessConfigOperationsSettings = existing.AddAccessConfigOperationsSettings.Clone();
+            AddNetworkInterfaceSettings = existing.AddNetworkInterfaceSettings;
+            AddNetworkInterfaceOperationsSettings = existing.AddNetworkInterfaceOperationsSettings.Clone();
             AddResourcePoliciesSettings = existing.AddResourcePoliciesSettings;
             AddResourcePoliciesOperationsSettings = existing.AddResourcePoliciesOperationsSettings.Clone();
             AggregatedListSettings = existing.AggregatedListSettings;
@@ -59,6 +61,8 @@ namespace Google.Cloud.Compute.V1
             DeleteOperationsSettings = existing.DeleteOperationsSettings.Clone();
             DeleteAccessConfigSettings = existing.DeleteAccessConfigSettings;
             DeleteAccessConfigOperationsSettings = existing.DeleteAccessConfigOperationsSettings.Clone();
+            DeleteNetworkInterfaceSettings = existing.DeleteNetworkInterfaceSettings;
+            DeleteNetworkInterfaceOperationsSettings = existing.DeleteNetworkInterfaceOperationsSettings.Clone();
             DetachDiskSettings = existing.DetachDiskSettings;
             DetachDiskOperationsSettings = existing.DetachDiskOperationsSettings.Clone();
             GetSettings = existing.GetSettings;
@@ -162,6 +166,36 @@ namespace Google.Cloud.Compute.V1
         /// </list>
         /// </remarks>
         public lro::OperationsSettings AddAccessConfigOperationsSettings { get; set; } = new lro::OperationsSettings
+        {
+            DefaultPollSettings = new gax::PollSettings(gax::Expiration.FromTimeout(sys::TimeSpan.FromHours(24)), sys::TimeSpan.FromSeconds(20), 1.5, sys::TimeSpan.FromSeconds(45)),
+        };
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>InstancesClient.AddNetworkInterface</c> and <c>InstancesClient.AddNetworkInterfaceAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>Timeout: 600 seconds.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings AddNetworkInterfaceSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(600000)));
+
+        /// <summary>
+        /// Long Running Operation settings for calls to <c>InstancesClient.AddNetworkInterface</c> and
+        /// <c>InstancesClient.AddNetworkInterfaceAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// Uses default <see cref="gax::PollSettings"/> of:
+        /// <list type="bullet">
+        /// <item><description>Initial delay: 20 seconds.</description></item>
+        /// <item><description>Delay multiplier: 1.5</description></item>
+        /// <item><description>Maximum delay: 45 seconds.</description></item>
+        /// <item><description>Total timeout: 24 hours.</description></item>
+        /// </list>
+        /// </remarks>
+        public lro::OperationsSettings AddNetworkInterfaceOperationsSettings { get; set; } = new lro::OperationsSettings
         {
             DefaultPollSettings = new gax::PollSettings(gax::Expiration.FromTimeout(sys::TimeSpan.FromHours(24)), sys::TimeSpan.FromSeconds(20), 1.5, sys::TimeSpan.FromSeconds(45)),
         };
@@ -333,6 +367,36 @@ namespace Google.Cloud.Compute.V1
         /// </list>
         /// </remarks>
         public lro::OperationsSettings DeleteAccessConfigOperationsSettings { get; set; } = new lro::OperationsSettings
+        {
+            DefaultPollSettings = new gax::PollSettings(gax::Expiration.FromTimeout(sys::TimeSpan.FromHours(24)), sys::TimeSpan.FromSeconds(20), 1.5, sys::TimeSpan.FromSeconds(45)),
+        };
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>InstancesClient.DeleteNetworkInterface</c> and <c>InstancesClient.DeleteNetworkInterfaceAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>Timeout: 600 seconds.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings DeleteNetworkInterfaceSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(600000)));
+
+        /// <summary>
+        /// Long Running Operation settings for calls to <c>InstancesClient.DeleteNetworkInterface</c> and
+        /// <c>InstancesClient.DeleteNetworkInterfaceAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// Uses default <see cref="gax::PollSettings"/> of:
+        /// <list type="bullet">
+        /// <item><description>Initial delay: 20 seconds.</description></item>
+        /// <item><description>Delay multiplier: 1.5</description></item>
+        /// <item><description>Maximum delay: 45 seconds.</description></item>
+        /// <item><description>Total timeout: 24 hours.</description></item>
+        /// </list>
+        /// </remarks>
+        public lro::OperationsSettings DeleteNetworkInterfaceOperationsSettings { get; set; } = new lro::OperationsSettings
         {
             DefaultPollSettings = new gax::PollSettings(gax::Expiration.FromTimeout(sys::TimeSpan.FromHours(24)), sys::TimeSpan.FromSeconds(20), 1.5, sys::TimeSpan.FromSeconds(45)),
         };
@@ -1744,6 +1808,132 @@ namespace Google.Cloud.Compute.V1
             AddAccessConfigAsync(project, zone, instance, networkInterface, accessConfigResource, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
+        /// Adds one dynamic network interface to an active instance.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<Operation, Operation> AddNetworkInterface(AddNetworkInterfaceInstanceRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Adds one dynamic network interface to an active instance.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<Operation, Operation>> AddNetworkInterfaceAsync(AddNetworkInterfaceInstanceRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Adds one dynamic network interface to an active instance.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<Operation, Operation>> AddNetworkInterfaceAsync(AddNetworkInterfaceInstanceRequest request, st::CancellationToken cancellationToken) =>
+            AddNetworkInterfaceAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>The long-running operations client for <c>AddNetworkInterface</c>.</summary>
+        public virtual lro::OperationsClient AddNetworkInterfaceOperationsClient => throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Poll an operation once, using an <c>operationName</c> from a previous invocation of <c>AddNetworkInterface</c>
+        /// .
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The result of polling the operation.</returns>
+        public virtual lro::Operation<Operation, Operation> PollOnceAddNetworkInterface(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<Operation, Operation>.PollOnceFromName(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), AddNetworkInterfaceOperationsClient, callSettings);
+
+        /// <summary>
+        /// Asynchronously poll an operation once, using an <c>operationName</c> from a previous invocation of
+        /// <c>AddNetworkInterface</c>.
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A task representing the result of polling the operation.</returns>
+        public virtual stt::Task<lro::Operation<Operation, Operation>> PollOnceAddNetworkInterfaceAsync(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<Operation, Operation>.PollOnceFromNameAsync(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), AddNetworkInterfaceOperationsClient, callSettings);
+
+        /// <summary>
+        /// Adds one dynamic network interface to an active instance.
+        /// </summary>
+        /// <param name="project">
+        /// Project ID for this request.
+        /// </param>
+        /// <param name="zone">
+        /// The name of the zone for this request.
+        /// </param>
+        /// <param name="instance">
+        /// The instance name for this request stored as resource_id. Name should conform to RFC1035 or be an unsigned long integer.
+        /// </param>
+        /// <param name="networkInterfaceResource">
+        /// The body resource for this request
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<Operation, Operation> AddNetworkInterface(string project, string zone, string instance, NetworkInterface networkInterfaceResource, gaxgrpc::CallSettings callSettings = null) =>
+            AddNetworkInterface(new AddNetworkInterfaceInstanceRequest
+            {
+                Instance = gax::GaxPreconditions.CheckNotNullOrEmpty(instance, nameof(instance)),
+                NetworkInterfaceResource = gax::GaxPreconditions.CheckNotNull(networkInterfaceResource, nameof(networkInterfaceResource)),
+                Project = gax::GaxPreconditions.CheckNotNullOrEmpty(project, nameof(project)),
+                Zone = gax::GaxPreconditions.CheckNotNullOrEmpty(zone, nameof(zone)),
+            }, callSettings);
+
+        /// <summary>
+        /// Adds one dynamic network interface to an active instance.
+        /// </summary>
+        /// <param name="project">
+        /// Project ID for this request.
+        /// </param>
+        /// <param name="zone">
+        /// The name of the zone for this request.
+        /// </param>
+        /// <param name="instance">
+        /// The instance name for this request stored as resource_id. Name should conform to RFC1035 or be an unsigned long integer.
+        /// </param>
+        /// <param name="networkInterfaceResource">
+        /// The body resource for this request
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<Operation, Operation>> AddNetworkInterfaceAsync(string project, string zone, string instance, NetworkInterface networkInterfaceResource, gaxgrpc::CallSettings callSettings = null) =>
+            AddNetworkInterfaceAsync(new AddNetworkInterfaceInstanceRequest
+            {
+                Instance = gax::GaxPreconditions.CheckNotNullOrEmpty(instance, nameof(instance)),
+                NetworkInterfaceResource = gax::GaxPreconditions.CheckNotNull(networkInterfaceResource, nameof(networkInterfaceResource)),
+                Project = gax::GaxPreconditions.CheckNotNullOrEmpty(project, nameof(project)),
+                Zone = gax::GaxPreconditions.CheckNotNullOrEmpty(zone, nameof(zone)),
+            }, callSettings);
+
+        /// <summary>
+        /// Adds one dynamic network interface to an active instance.
+        /// </summary>
+        /// <param name="project">
+        /// Project ID for this request.
+        /// </param>
+        /// <param name="zone">
+        /// The name of the zone for this request.
+        /// </param>
+        /// <param name="instance">
+        /// The instance name for this request stored as resource_id. Name should conform to RFC1035 or be an unsigned long integer.
+        /// </param>
+        /// <param name="networkInterfaceResource">
+        /// The body resource for this request
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<Operation, Operation>> AddNetworkInterfaceAsync(string project, string zone, string instance, NetworkInterface networkInterfaceResource, st::CancellationToken cancellationToken) =>
+            AddNetworkInterfaceAsync(project, zone, instance, networkInterfaceResource, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
         /// Adds existing resource policies to an instance. You can only add one policy right now which will be applied to this instance for scheduling live migrations.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
@@ -2446,6 +2636,132 @@ namespace Google.Cloud.Compute.V1
         /// <returns>A Task containing the RPC response.</returns>
         public virtual stt::Task<lro::Operation<Operation, Operation>> DeleteAccessConfigAsync(string project, string zone, string instance, string accessConfig, string networkInterface, st::CancellationToken cancellationToken) =>
             DeleteAccessConfigAsync(project, zone, instance, accessConfig, networkInterface, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Deletes one dynamic network interface from an active instance. InstancesDeleteNetworkInterfaceRequest indicates: - instance from which to delete, using project+zone+resource_id fields; - dynamic network interface to be deleted, using network_interface_name field;
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<Operation, Operation> DeleteNetworkInterface(DeleteNetworkInterfaceInstanceRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Deletes one dynamic network interface from an active instance. InstancesDeleteNetworkInterfaceRequest indicates: - instance from which to delete, using project+zone+resource_id fields; - dynamic network interface to be deleted, using network_interface_name field;
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<Operation, Operation>> DeleteNetworkInterfaceAsync(DeleteNetworkInterfaceInstanceRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Deletes one dynamic network interface from an active instance. InstancesDeleteNetworkInterfaceRequest indicates: - instance from which to delete, using project+zone+resource_id fields; - dynamic network interface to be deleted, using network_interface_name field;
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<Operation, Operation>> DeleteNetworkInterfaceAsync(DeleteNetworkInterfaceInstanceRequest request, st::CancellationToken cancellationToken) =>
+            DeleteNetworkInterfaceAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>The long-running operations client for <c>DeleteNetworkInterface</c>.</summary>
+        public virtual lro::OperationsClient DeleteNetworkInterfaceOperationsClient => throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Poll an operation once, using an <c>operationName</c> from a previous invocation of
+        /// <c>DeleteNetworkInterface</c>.
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The result of polling the operation.</returns>
+        public virtual lro::Operation<Operation, Operation> PollOnceDeleteNetworkInterface(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<Operation, Operation>.PollOnceFromName(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), DeleteNetworkInterfaceOperationsClient, callSettings);
+
+        /// <summary>
+        /// Asynchronously poll an operation once, using an <c>operationName</c> from a previous invocation of
+        /// <c>DeleteNetworkInterface</c>.
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A task representing the result of polling the operation.</returns>
+        public virtual stt::Task<lro::Operation<Operation, Operation>> PollOnceDeleteNetworkInterfaceAsync(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<Operation, Operation>.PollOnceFromNameAsync(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), DeleteNetworkInterfaceOperationsClient, callSettings);
+
+        /// <summary>
+        /// Deletes one dynamic network interface from an active instance. InstancesDeleteNetworkInterfaceRequest indicates: - instance from which to delete, using project+zone+resource_id fields; - dynamic network interface to be deleted, using network_interface_name field;
+        /// </summary>
+        /// <param name="project">
+        /// Project ID for this request.
+        /// </param>
+        /// <param name="zone">
+        /// The name of the zone for this request.
+        /// </param>
+        /// <param name="instance">
+        /// The instance name for this request stored as resource_id. Name should conform to RFC1035 or be an unsigned long integer.
+        /// </param>
+        /// <param name="networkInterfaceName">
+        /// The name of the dynamic network interface to be deleted from the instance.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<Operation, Operation> DeleteNetworkInterface(string project, string zone, string instance, string networkInterfaceName, gaxgrpc::CallSettings callSettings = null) =>
+            DeleteNetworkInterface(new DeleteNetworkInterfaceInstanceRequest
+            {
+                Instance = gax::GaxPreconditions.CheckNotNullOrEmpty(instance, nameof(instance)),
+                NetworkInterfaceName = gax::GaxPreconditions.CheckNotNullOrEmpty(networkInterfaceName, nameof(networkInterfaceName)),
+                Project = gax::GaxPreconditions.CheckNotNullOrEmpty(project, nameof(project)),
+                Zone = gax::GaxPreconditions.CheckNotNullOrEmpty(zone, nameof(zone)),
+            }, callSettings);
+
+        /// <summary>
+        /// Deletes one dynamic network interface from an active instance. InstancesDeleteNetworkInterfaceRequest indicates: - instance from which to delete, using project+zone+resource_id fields; - dynamic network interface to be deleted, using network_interface_name field;
+        /// </summary>
+        /// <param name="project">
+        /// Project ID for this request.
+        /// </param>
+        /// <param name="zone">
+        /// The name of the zone for this request.
+        /// </param>
+        /// <param name="instance">
+        /// The instance name for this request stored as resource_id. Name should conform to RFC1035 or be an unsigned long integer.
+        /// </param>
+        /// <param name="networkInterfaceName">
+        /// The name of the dynamic network interface to be deleted from the instance.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<Operation, Operation>> DeleteNetworkInterfaceAsync(string project, string zone, string instance, string networkInterfaceName, gaxgrpc::CallSettings callSettings = null) =>
+            DeleteNetworkInterfaceAsync(new DeleteNetworkInterfaceInstanceRequest
+            {
+                Instance = gax::GaxPreconditions.CheckNotNullOrEmpty(instance, nameof(instance)),
+                NetworkInterfaceName = gax::GaxPreconditions.CheckNotNullOrEmpty(networkInterfaceName, nameof(networkInterfaceName)),
+                Project = gax::GaxPreconditions.CheckNotNullOrEmpty(project, nameof(project)),
+                Zone = gax::GaxPreconditions.CheckNotNullOrEmpty(zone, nameof(zone)),
+            }, callSettings);
+
+        /// <summary>
+        /// Deletes one dynamic network interface from an active instance. InstancesDeleteNetworkInterfaceRequest indicates: - instance from which to delete, using project+zone+resource_id fields; - dynamic network interface to be deleted, using network_interface_name field;
+        /// </summary>
+        /// <param name="project">
+        /// Project ID for this request.
+        /// </param>
+        /// <param name="zone">
+        /// The name of the zone for this request.
+        /// </param>
+        /// <param name="instance">
+        /// The instance name for this request stored as resource_id. Name should conform to RFC1035 or be an unsigned long integer.
+        /// </param>
+        /// <param name="networkInterfaceName">
+        /// The name of the dynamic network interface to be deleted from the instance.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<Operation, Operation>> DeleteNetworkInterfaceAsync(string project, string zone, string instance, string networkInterfaceName, st::CancellationToken cancellationToken) =>
+            DeleteNetworkInterfaceAsync(project, zone, instance, networkInterfaceName, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
         /// Detaches a disk from an instance.
@@ -7261,6 +7577,8 @@ namespace Google.Cloud.Compute.V1
     {
         private readonly gaxgrpc::ApiCall<AddAccessConfigInstanceRequest, Operation> _callAddAccessConfig;
 
+        private readonly gaxgrpc::ApiCall<AddNetworkInterfaceInstanceRequest, Operation> _callAddNetworkInterface;
+
         private readonly gaxgrpc::ApiCall<AddResourcePoliciesInstanceRequest, Operation> _callAddResourcePolicies;
 
         private readonly gaxgrpc::ApiCall<AggregatedListInstancesRequest, InstanceAggregatedList> _callAggregatedList;
@@ -7272,6 +7590,8 @@ namespace Google.Cloud.Compute.V1
         private readonly gaxgrpc::ApiCall<DeleteInstanceRequest, Operation> _callDelete;
 
         private readonly gaxgrpc::ApiCall<DeleteAccessConfigInstanceRequest, Operation> _callDeleteAccessConfig;
+
+        private readonly gaxgrpc::ApiCall<DeleteNetworkInterfaceInstanceRequest, Operation> _callDeleteNetworkInterface;
 
         private readonly gaxgrpc::ApiCall<DetachDiskInstanceRequest, Operation> _callDetachDisk;
 
@@ -7373,11 +7693,13 @@ namespace Google.Cloud.Compute.V1
                 Logger = logger,
             });
             AddAccessConfigOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClientForZoneOperations(), effectiveSettings.AddAccessConfigOperationsSettings, logger);
+            AddNetworkInterfaceOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClientForZoneOperations(), effectiveSettings.AddNetworkInterfaceOperationsSettings, logger);
             AddResourcePoliciesOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClientForZoneOperations(), effectiveSettings.AddResourcePoliciesOperationsSettings, logger);
             AttachDiskOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClientForZoneOperations(), effectiveSettings.AttachDiskOperationsSettings, logger);
             BulkInsertOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClientForZoneOperations(), effectiveSettings.BulkInsertOperationsSettings, logger);
             DeleteOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClientForZoneOperations(), effectiveSettings.DeleteOperationsSettings, logger);
             DeleteAccessConfigOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClientForZoneOperations(), effectiveSettings.DeleteAccessConfigOperationsSettings, logger);
+            DeleteNetworkInterfaceOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClientForZoneOperations(), effectiveSettings.DeleteNetworkInterfaceOperationsSettings, logger);
             DetachDiskOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClientForZoneOperations(), effectiveSettings.DetachDiskOperationsSettings, logger);
             InsertOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClientForZoneOperations(), effectiveSettings.InsertOperationsSettings, logger);
             PerformMaintenanceOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClientForZoneOperations(), effectiveSettings.PerformMaintenanceOperationsSettings, logger);
@@ -7411,6 +7733,9 @@ namespace Google.Cloud.Compute.V1
             _callAddAccessConfig = clientHelper.BuildApiCall<AddAccessConfigInstanceRequest, Operation>("AddAccessConfig", grpcClient.AddAccessConfigAsync, grpcClient.AddAccessConfig, effectiveSettings.AddAccessConfigSettings).WithGoogleRequestParam("project", request => request.Project).WithGoogleRequestParam("zone", request => request.Zone).WithGoogleRequestParam("instance", request => request.Instance);
             Modify_ApiCall(ref _callAddAccessConfig);
             Modify_AddAccessConfigApiCall(ref _callAddAccessConfig);
+            _callAddNetworkInterface = clientHelper.BuildApiCall<AddNetworkInterfaceInstanceRequest, Operation>("AddNetworkInterface", grpcClient.AddNetworkInterfaceAsync, grpcClient.AddNetworkInterface, effectiveSettings.AddNetworkInterfaceSettings).WithGoogleRequestParam("project", request => request.Project).WithGoogleRequestParam("zone", request => request.Zone).WithGoogleRequestParam("instance", request => request.Instance);
+            Modify_ApiCall(ref _callAddNetworkInterface);
+            Modify_AddNetworkInterfaceApiCall(ref _callAddNetworkInterface);
             _callAddResourcePolicies = clientHelper.BuildApiCall<AddResourcePoliciesInstanceRequest, Operation>("AddResourcePolicies", grpcClient.AddResourcePoliciesAsync, grpcClient.AddResourcePolicies, effectiveSettings.AddResourcePoliciesSettings).WithGoogleRequestParam("project", request => request.Project).WithGoogleRequestParam("zone", request => request.Zone).WithGoogleRequestParam("instance", request => request.Instance);
             Modify_ApiCall(ref _callAddResourcePolicies);
             Modify_AddResourcePoliciesApiCall(ref _callAddResourcePolicies);
@@ -7429,6 +7754,9 @@ namespace Google.Cloud.Compute.V1
             _callDeleteAccessConfig = clientHelper.BuildApiCall<DeleteAccessConfigInstanceRequest, Operation>("DeleteAccessConfig", grpcClient.DeleteAccessConfigAsync, grpcClient.DeleteAccessConfig, effectiveSettings.DeleteAccessConfigSettings).WithGoogleRequestParam("project", request => request.Project).WithGoogleRequestParam("zone", request => request.Zone).WithGoogleRequestParam("instance", request => request.Instance);
             Modify_ApiCall(ref _callDeleteAccessConfig);
             Modify_DeleteAccessConfigApiCall(ref _callDeleteAccessConfig);
+            _callDeleteNetworkInterface = clientHelper.BuildApiCall<DeleteNetworkInterfaceInstanceRequest, Operation>("DeleteNetworkInterface", grpcClient.DeleteNetworkInterfaceAsync, grpcClient.DeleteNetworkInterface, effectiveSettings.DeleteNetworkInterfaceSettings).WithGoogleRequestParam("project", request => request.Project).WithGoogleRequestParam("zone", request => request.Zone).WithGoogleRequestParam("instance", request => request.Instance);
+            Modify_ApiCall(ref _callDeleteNetworkInterface);
+            Modify_DeleteNetworkInterfaceApiCall(ref _callDeleteNetworkInterface);
             _callDetachDisk = clientHelper.BuildApiCall<DetachDiskInstanceRequest, Operation>("DetachDisk", grpcClient.DetachDiskAsync, grpcClient.DetachDisk, effectiveSettings.DetachDiskSettings).WithGoogleRequestParam("project", request => request.Project).WithGoogleRequestParam("zone", request => request.Zone).WithGoogleRequestParam("instance", request => request.Instance);
             Modify_ApiCall(ref _callDetachDisk);
             Modify_DetachDiskApiCall(ref _callDetachDisk);
@@ -7562,6 +7890,8 @@ namespace Google.Cloud.Compute.V1
 
         partial void Modify_AddAccessConfigApiCall(ref gaxgrpc::ApiCall<AddAccessConfigInstanceRequest, Operation> call);
 
+        partial void Modify_AddNetworkInterfaceApiCall(ref gaxgrpc::ApiCall<AddNetworkInterfaceInstanceRequest, Operation> call);
+
         partial void Modify_AddResourcePoliciesApiCall(ref gaxgrpc::ApiCall<AddResourcePoliciesInstanceRequest, Operation> call);
 
         partial void Modify_AggregatedListApiCall(ref gaxgrpc::ApiCall<AggregatedListInstancesRequest, InstanceAggregatedList> call);
@@ -7573,6 +7903,8 @@ namespace Google.Cloud.Compute.V1
         partial void Modify_DeleteApiCall(ref gaxgrpc::ApiCall<DeleteInstanceRequest, Operation> call);
 
         partial void Modify_DeleteAccessConfigApiCall(ref gaxgrpc::ApiCall<DeleteAccessConfigInstanceRequest, Operation> call);
+
+        partial void Modify_DeleteNetworkInterfaceApiCall(ref gaxgrpc::ApiCall<DeleteNetworkInterfaceInstanceRequest, Operation> call);
 
         partial void Modify_DetachDiskApiCall(ref gaxgrpc::ApiCall<DetachDiskInstanceRequest, Operation> call);
 
@@ -7665,6 +7997,8 @@ namespace Google.Cloud.Compute.V1
 
         partial void Modify_AddAccessConfigInstanceRequest(ref AddAccessConfigInstanceRequest request, ref gaxgrpc::CallSettings settings);
 
+        partial void Modify_AddNetworkInterfaceInstanceRequest(ref AddNetworkInterfaceInstanceRequest request, ref gaxgrpc::CallSettings settings);
+
         partial void Modify_AddResourcePoliciesInstanceRequest(ref AddResourcePoliciesInstanceRequest request, ref gaxgrpc::CallSettings settings);
 
         partial void Modify_AggregatedListInstancesRequest(ref AggregatedListInstancesRequest request, ref gaxgrpc::CallSettings settings);
@@ -7676,6 +8010,8 @@ namespace Google.Cloud.Compute.V1
         partial void Modify_DeleteInstanceRequest(ref DeleteInstanceRequest request, ref gaxgrpc::CallSettings settings);
 
         partial void Modify_DeleteAccessConfigInstanceRequest(ref DeleteAccessConfigInstanceRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_DeleteNetworkInterfaceInstanceRequest(ref DeleteNetworkInterfaceInstanceRequest request, ref gaxgrpc::CallSettings settings);
 
         partial void Modify_DetachDiskInstanceRequest(ref DetachDiskInstanceRequest request, ref gaxgrpc::CallSettings settings);
 
@@ -7792,6 +8128,39 @@ namespace Google.Cloud.Compute.V1
             GetZoneOperationRequest pollRequest = GetZoneOperationRequest.FromInitialResponse(response);
             request.PopulatePollRequestFields(pollRequest);
             return new lro::Operation<Operation, Operation>(response.ToLroResponse(pollRequest.ToLroOperationName()), AddAccessConfigOperationsClient);
+        }
+
+        /// <summary>The long-running operations client for <c>AddNetworkInterface</c>.</summary>
+        public override lro::OperationsClient AddNetworkInterfaceOperationsClient { get; }
+
+        /// <summary>
+        /// Adds one dynamic network interface to an active instance.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override lro::Operation<Operation, Operation> AddNetworkInterface(AddNetworkInterfaceInstanceRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_AddNetworkInterfaceInstanceRequest(ref request, ref callSettings);
+            Operation response = _callAddNetworkInterface.Sync(request, callSettings);
+            GetZoneOperationRequest pollRequest = GetZoneOperationRequest.FromInitialResponse(response);
+            request.PopulatePollRequestFields(pollRequest);
+            return new lro::Operation<Operation, Operation>(response.ToLroResponse(pollRequest.ToLroOperationName()), AddNetworkInterfaceOperationsClient);
+        }
+
+        /// <summary>
+        /// Adds one dynamic network interface to an active instance.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override async stt::Task<lro::Operation<Operation, Operation>> AddNetworkInterfaceAsync(AddNetworkInterfaceInstanceRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_AddNetworkInterfaceInstanceRequest(ref request, ref callSettings);
+            Operation response = await _callAddNetworkInterface.Async(request, callSettings).ConfigureAwait(false);
+            GetZoneOperationRequest pollRequest = GetZoneOperationRequest.FromInitialResponse(response);
+            request.PopulatePollRequestFields(pollRequest);
+            return new lro::Operation<Operation, Operation>(response.ToLroResponse(pollRequest.ToLroOperationName()), AddNetworkInterfaceOperationsClient);
         }
 
         /// <summary>The long-running operations client for <c>AddResourcePolicies</c>.</summary>
@@ -7983,6 +8352,39 @@ namespace Google.Cloud.Compute.V1
             GetZoneOperationRequest pollRequest = GetZoneOperationRequest.FromInitialResponse(response);
             request.PopulatePollRequestFields(pollRequest);
             return new lro::Operation<Operation, Operation>(response.ToLroResponse(pollRequest.ToLroOperationName()), DeleteAccessConfigOperationsClient);
+        }
+
+        /// <summary>The long-running operations client for <c>DeleteNetworkInterface</c>.</summary>
+        public override lro::OperationsClient DeleteNetworkInterfaceOperationsClient { get; }
+
+        /// <summary>
+        /// Deletes one dynamic network interface from an active instance. InstancesDeleteNetworkInterfaceRequest indicates: - instance from which to delete, using project+zone+resource_id fields; - dynamic network interface to be deleted, using network_interface_name field;
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override lro::Operation<Operation, Operation> DeleteNetworkInterface(DeleteNetworkInterfaceInstanceRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_DeleteNetworkInterfaceInstanceRequest(ref request, ref callSettings);
+            Operation response = _callDeleteNetworkInterface.Sync(request, callSettings);
+            GetZoneOperationRequest pollRequest = GetZoneOperationRequest.FromInitialResponse(response);
+            request.PopulatePollRequestFields(pollRequest);
+            return new lro::Operation<Operation, Operation>(response.ToLroResponse(pollRequest.ToLroOperationName()), DeleteNetworkInterfaceOperationsClient);
+        }
+
+        /// <summary>
+        /// Deletes one dynamic network interface from an active instance. InstancesDeleteNetworkInterfaceRequest indicates: - instance from which to delete, using project+zone+resource_id fields; - dynamic network interface to be deleted, using network_interface_name field;
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override async stt::Task<lro::Operation<Operation, Operation>> DeleteNetworkInterfaceAsync(DeleteNetworkInterfaceInstanceRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_DeleteNetworkInterfaceInstanceRequest(ref request, ref callSettings);
+            Operation response = await _callDeleteNetworkInterface.Async(request, callSettings).ConfigureAwait(false);
+            GetZoneOperationRequest pollRequest = GetZoneOperationRequest.FromInitialResponse(response);
+            request.PopulatePollRequestFields(pollRequest);
+            return new lro::Operation<Operation, Operation>(response.ToLroResponse(pollRequest.ToLroOperationName()), DeleteNetworkInterfaceOperationsClient);
         }
 
         /// <summary>The long-running operations client for <c>DetachDisk</c>.</summary>

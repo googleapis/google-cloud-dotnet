@@ -78,6 +78,12 @@
                 "SetLabels",
                 "SetLabelsAsync"
               ]
+            },
+            "TestIamPermissions": {
+              "methods": [
+                "TestIamPermissions",
+                "TestIamPermissionsAsync"
+              ]
             }
           }
         }
@@ -774,6 +780,12 @@
                 "SetLabels",
                 "SetLabelsAsync"
               ]
+            },
+            "TestIamPermissions": {
+              "methods": [
+                "TestIamPermissions",
+                "TestIamPermissionsAsync"
+              ]
             }
           }
         }
@@ -1377,6 +1389,12 @@
                 "SetNamedPorts",
                 "SetNamedPortsAsync"
               ]
+            },
+            "TestIamPermissions": {
+              "methods": [
+                "TestIamPermissions",
+                "TestIamPermissionsAsync"
+              ]
             }
           }
         }
@@ -1471,6 +1489,12 @@
                 "AddAccessConfigAsync"
               ]
             },
+            "AddNetworkInterface": {
+              "methods": [
+                "AddNetworkInterface",
+                "AddNetworkInterfaceAsync"
+              ]
+            },
             "AddResourcePolicies": {
               "methods": [
                 "AddResourcePolicies",
@@ -1505,6 +1529,12 @@
               "methods": [
                 "DeleteAccessConfig",
                 "DeleteAccessConfigAsync"
+              ]
+            },
+            "DeleteNetworkInterface": {
+              "methods": [
+                "DeleteNetworkInterface",
+                "DeleteNetworkInterfaceAsync"
               ]
             },
             "DetachDisk": {
@@ -3663,6 +3693,12 @@
                 "SetNamedPorts",
                 "SetNamedPortsAsync"
               ]
+            },
+            "TestIamPermissions": {
+              "methods": [
+                "TestIamPermissions",
+                "TestIamPermissionsAsync"
+              ]
             }
           }
         }
@@ -5388,6 +5424,12 @@
                 "SetSecurityPolicy",
                 "SetSecurityPolicyAsync"
               ]
+            },
+            "TestIamPermissions": {
+              "methods": [
+                "TestIamPermissions",
+                "TestIamPermissionsAsync"
+              ]
             }
           }
         }
@@ -5468,6 +5510,12 @@
               "methods": [
                 "SetSecurityPolicy",
                 "SetSecurityPolicyAsync"
+              ]
+            },
+            "TestIamPermissions": {
+              "methods": [
+                "TestIamPermissions",
+                "TestIamPermissionsAsync"
               ]
             }
           }

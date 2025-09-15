@@ -171,6 +171,144 @@ namespace GoogleCSharpSnippets
             // End snippet
         }
 
+        /// <summary>Snippet for AddNetworkInterface</summary>
+        public void AddNetworkInterfaceRequestObject()
+        {
+            // Snippet: AddNetworkInterface(AddNetworkInterfaceInstanceRequest, CallSettings)
+            // Create client
+            InstancesClient instancesClient = InstancesClient.Create();
+            // Initialize request argument(s)
+            AddNetworkInterfaceInstanceRequest request = new AddNetworkInterfaceInstanceRequest
+            {
+                Zone = "",
+                Instance = "",
+                RequestId = "",
+                Project = "",
+                NetworkInterfaceResource = new NetworkInterface(),
+            };
+            // Make the request
+            lro::Operation<Operation, Operation> response = instancesClient.AddNetworkInterface(request);
+
+            // Poll until the returned long-running operation is complete
+            lro::Operation<Operation, Operation> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            Operation result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            lro::Operation<Operation, Operation> retrievedResponse = instancesClient.PollOnceAddNetworkInterface(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Operation retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for AddNetworkInterfaceAsync</summary>
+        public async Task AddNetworkInterfaceRequestObjectAsync()
+        {
+            // Snippet: AddNetworkInterfaceAsync(AddNetworkInterfaceInstanceRequest, CallSettings)
+            // Additional: AddNetworkInterfaceAsync(AddNetworkInterfaceInstanceRequest, CancellationToken)
+            // Create client
+            InstancesClient instancesClient = await InstancesClient.CreateAsync();
+            // Initialize request argument(s)
+            AddNetworkInterfaceInstanceRequest request = new AddNetworkInterfaceInstanceRequest
+            {
+                Zone = "",
+                Instance = "",
+                RequestId = "",
+                Project = "",
+                NetworkInterfaceResource = new NetworkInterface(),
+            };
+            // Make the request
+            lro::Operation<Operation, Operation> response = await instancesClient.AddNetworkInterfaceAsync(request);
+
+            // Poll until the returned long-running operation is complete
+            lro::Operation<Operation, Operation> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            Operation result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            lro::Operation<Operation, Operation> retrievedResponse = await instancesClient.PollOnceAddNetworkInterfaceAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Operation retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for AddNetworkInterface</summary>
+        public void AddNetworkInterface()
+        {
+            // Snippet: AddNetworkInterface(string, string, string, NetworkInterface, CallSettings)
+            // Create client
+            InstancesClient instancesClient = InstancesClient.Create();
+            // Initialize request argument(s)
+            string project = "";
+            string zone = "";
+            string instance = "";
+            NetworkInterface networkInterfaceResource = new NetworkInterface();
+            // Make the request
+            lro::Operation<Operation, Operation> response = instancesClient.AddNetworkInterface(project, zone, instance, networkInterfaceResource);
+
+            // Poll until the returned long-running operation is complete
+            lro::Operation<Operation, Operation> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            Operation result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            lro::Operation<Operation, Operation> retrievedResponse = instancesClient.PollOnceAddNetworkInterface(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Operation retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for AddNetworkInterfaceAsync</summary>
+        public async Task AddNetworkInterfaceAsync()
+        {
+            // Snippet: AddNetworkInterfaceAsync(string, string, string, NetworkInterface, CallSettings)
+            // Additional: AddNetworkInterfaceAsync(string, string, string, NetworkInterface, CancellationToken)
+            // Create client
+            InstancesClient instancesClient = await InstancesClient.CreateAsync();
+            // Initialize request argument(s)
+            string project = "";
+            string zone = "";
+            string instance = "";
+            NetworkInterface networkInterfaceResource = new NetworkInterface();
+            // Make the request
+            lro::Operation<Operation, Operation> response = await instancesClient.AddNetworkInterfaceAsync(project, zone, instance, networkInterfaceResource);
+
+            // Poll until the returned long-running operation is complete
+            lro::Operation<Operation, Operation> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            Operation result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            lro::Operation<Operation, Operation> retrievedResponse = await instancesClient.PollOnceAddNetworkInterfaceAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Operation retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
         /// <summary>Snippet for AddResourcePolicies</summary>
         public void AddResourcePoliciesRequestObject()
         {
@@ -1046,6 +1184,144 @@ namespace GoogleCSharpSnippets
             string operationName = response.Name;
             // This name can be stored, then the long-running operation retrieved later by name
             lro::Operation<Operation, Operation> retrievedResponse = await instancesClient.PollOnceDeleteAccessConfigAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Operation retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteNetworkInterface</summary>
+        public void DeleteNetworkInterfaceRequestObject()
+        {
+            // Snippet: DeleteNetworkInterface(DeleteNetworkInterfaceInstanceRequest, CallSettings)
+            // Create client
+            InstancesClient instancesClient = InstancesClient.Create();
+            // Initialize request argument(s)
+            DeleteNetworkInterfaceInstanceRequest request = new DeleteNetworkInterfaceInstanceRequest
+            {
+                Zone = "",
+                Instance = "",
+                RequestId = "",
+                Project = "",
+                NetworkInterfaceName = "",
+            };
+            // Make the request
+            lro::Operation<Operation, Operation> response = instancesClient.DeleteNetworkInterface(request);
+
+            // Poll until the returned long-running operation is complete
+            lro::Operation<Operation, Operation> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            Operation result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            lro::Operation<Operation, Operation> retrievedResponse = instancesClient.PollOnceDeleteNetworkInterface(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Operation retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteNetworkInterfaceAsync</summary>
+        public async Task DeleteNetworkInterfaceRequestObjectAsync()
+        {
+            // Snippet: DeleteNetworkInterfaceAsync(DeleteNetworkInterfaceInstanceRequest, CallSettings)
+            // Additional: DeleteNetworkInterfaceAsync(DeleteNetworkInterfaceInstanceRequest, CancellationToken)
+            // Create client
+            InstancesClient instancesClient = await InstancesClient.CreateAsync();
+            // Initialize request argument(s)
+            DeleteNetworkInterfaceInstanceRequest request = new DeleteNetworkInterfaceInstanceRequest
+            {
+                Zone = "",
+                Instance = "",
+                RequestId = "",
+                Project = "",
+                NetworkInterfaceName = "",
+            };
+            // Make the request
+            lro::Operation<Operation, Operation> response = await instancesClient.DeleteNetworkInterfaceAsync(request);
+
+            // Poll until the returned long-running operation is complete
+            lro::Operation<Operation, Operation> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            Operation result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            lro::Operation<Operation, Operation> retrievedResponse = await instancesClient.PollOnceDeleteNetworkInterfaceAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Operation retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteNetworkInterface</summary>
+        public void DeleteNetworkInterface()
+        {
+            // Snippet: DeleteNetworkInterface(string, string, string, string, CallSettings)
+            // Create client
+            InstancesClient instancesClient = InstancesClient.Create();
+            // Initialize request argument(s)
+            string project = "";
+            string zone = "";
+            string instance = "";
+            string networkInterfaceName = "";
+            // Make the request
+            lro::Operation<Operation, Operation> response = instancesClient.DeleteNetworkInterface(project, zone, instance, networkInterfaceName);
+
+            // Poll until the returned long-running operation is complete
+            lro::Operation<Operation, Operation> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            Operation result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            lro::Operation<Operation, Operation> retrievedResponse = instancesClient.PollOnceDeleteNetworkInterface(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Operation retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteNetworkInterfaceAsync</summary>
+        public async Task DeleteNetworkInterfaceAsync()
+        {
+            // Snippet: DeleteNetworkInterfaceAsync(string, string, string, string, CallSettings)
+            // Additional: DeleteNetworkInterfaceAsync(string, string, string, string, CancellationToken)
+            // Create client
+            InstancesClient instancesClient = await InstancesClient.CreateAsync();
+            // Initialize request argument(s)
+            string project = "";
+            string zone = "";
+            string instance = "";
+            string networkInterfaceName = "";
+            // Make the request
+            lro::Operation<Operation, Operation> response = await instancesClient.DeleteNetworkInterfaceAsync(project, zone, instance, networkInterfaceName);
+
+            // Poll until the returned long-running operation is complete
+            lro::Operation<Operation, Operation> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            Operation result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            lro::Operation<Operation, Operation> retrievedResponse = await instancesClient.PollOnceDeleteNetworkInterfaceAsync(operationName);
             // Check if the retrieved long-running operation has completed
             if (retrievedResponse.IsCompleted)
             {
