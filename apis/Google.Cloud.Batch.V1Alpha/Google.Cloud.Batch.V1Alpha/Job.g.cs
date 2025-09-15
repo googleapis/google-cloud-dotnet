@@ -97,7 +97,7 @@ namespace Google.Cloud.Batch.V1Alpha {
             "U3RhdGUSRAoObmV3X3Rhc2tfc3RhdGUYAyABKA4yLC5nb29nbGUuY2xvdWQu",
             "YmF0Y2gudjFhbHBoYS5UYXNrU3RhdHVzLlN0YXRlIksKBFR5cGUSFAoQVFlQ",
             "RV9VTlNQRUNJRklFRBAAEhUKEUpPQl9TVEFURV9DSEFOR0VEEAESFgoSVEFT",
-            "S19TVEFURV9DSEFOR0VEEAIi9hEKEEFsbG9jYXRpb25Qb2xpY3kSTQoIbG9j",
+            "S19TVEFURV9DSEFOR0VEEAIiohIKEEFsbG9jYXRpb25Qb2xpY3kSTQoIbG9j",
             "YXRpb24YASABKAsyOy5nb29nbGUuY2xvdWQuYmF0Y2gudjFhbHBoYS5BbGxv",
             "Y2F0aW9uUG9saWN5LkxvY2F0aW9uUG9saWN5ElEKCGluc3RhbmNlGAIgASgL",
             "MjsuZ29vZ2xlLmNsb3VkLmJhdGNoLnYxYWxwaGEuQWxsb2NhdGlvblBvbGlj",
@@ -146,34 +146,35 @@ namespace Google.Cloud.Batch.V1Alpha {
             "cGhhLkFsbG9jYXRpb25Qb2xpY3kuTmV0d29ya0ludGVyZmFjZRo8Cg9QbGFj",
             "ZW1lbnRQb2xpY3kSEwoLY29sbG9jYXRpb24YASABKAkSFAoMbWF4X2Rpc3Rh",
             "bmNlGAIgASgDGi0KC0xhYmVsc0VudHJ5EgsKA2tleRgBIAEoCRINCgV2YWx1",
-            "ZRgCIAEoCToCOAEiYAoRUHJvdmlzaW9uaW5nTW9kZWwSIgoeUFJPVklTSU9O",
-            "SU5HX01PREVMX1VOU1BFQ0lGSUVEEAASDAoIU1RBTkRBUkQQARIICgRTUE9U",
-            "EAISDwoLUFJFRU1QVElCTEUQAyLfBgoJVGFza0dyb3VwEhEKBG5hbWUYASAB",
-            "KAlCA+BBAxI8Cgl0YXNrX3NwZWMYAyABKAsyJC5nb29nbGUuY2xvdWQuYmF0",
-            "Y2gudjFhbHBoYS5UYXNrU3BlY0ID4EECEhIKCnRhc2tfY291bnQYBCABKAMS",
-            "EwoLcGFyYWxsZWxpc20YBSABKAMSUQoRc2NoZWR1bGluZ19wb2xpY3kYBiAB",
-            "KA4yNi5nb29nbGUuY2xvdWQuYmF0Y2gudjFhbHBoYS5UYXNrR3JvdXAuU2No",
-            "ZWR1bGluZ1BvbGljeRJHChFhbGxvY2F0aW9uX3BvbGljeRgHIAEoCzIsLmdv",
-            "b2dsZS5jbG91ZC5iYXRjaC52MWFscGhhLkFsbG9jYXRpb25Qb2xpY3kSQQoG",
-            "bGFiZWxzGAggAygLMjEuZ29vZ2xlLmNsb3VkLmJhdGNoLnYxYWxwaGEuVGFz",
-            "a0dyb3VwLkxhYmVsc0VudHJ5EkIKEXRhc2tfZW52aXJvbm1lbnRzGAkgAygL",
-            "MicuZ29vZ2xlLmNsb3VkLmJhdGNoLnYxYWxwaGEuRW52aXJvbm1lbnQSGwoT",
-            "dGFza19jb3VudF9wZXJfbm9kZRgKIAEoAxIaChJyZXF1aXJlX2hvc3RzX2Zp",
-            "bGUYCyABKAgSFgoOcGVybWlzc2l2ZV9zc2gYDCABKAgSHAoPcnVuX2FzX25v",
-            "bl9yb290GA4gASgIQgPgQQESSAoPc2VydmljZV9hY2NvdW50GA8gASgLMiou",
-            "Z29vZ2xlLmNsb3VkLmJhdGNoLnYxYWxwaGEuU2VydmljZUFjY291bnRCA+BB",
-            "ARotCgtMYWJlbHNFbnRyeRILCgNrZXkYASABKAkSDQoFdmFsdWUYAiABKAk6",
-            "AjgBIlwKEFNjaGVkdWxpbmdQb2xpY3kSIQodU0NIRURVTElOR19QT0xJQ1lf",
-            "VU5TUEVDSUZJRUQQABIXChNBU19TT09OX0FTX1BPU1NJQkxFEAESDAoISU5f",
-            "T1JERVIQAjpv6kFsCh5iYXRjaC5nb29nbGVhcGlzLmNvbS9UYXNrR3JvdXAS",
-            "SnByb2plY3RzL3twcm9qZWN0fS9sb2NhdGlvbnMve2xvY2F0aW9ufS9qb2Jz",
-            "L3tqb2J9L3Rhc2tHcm91cHMve3Rhc2tfZ3JvdXB9Ii8KDlNlcnZpY2VBY2Nv",
-            "dW50Eg0KBWVtYWlsGAEgASgJEg4KBnNjb3BlcxgCIAMoCULCAQoeY29tLmdv",
-            "b2dsZS5jbG91ZC5iYXRjaC52MWFscGhhQghKb2JQcm90b1ABWjRjbG91ZC5n",
-            "b29nbGUuY29tL2dvL2JhdGNoL2FwaXYxYWxwaGEvYmF0Y2hwYjtiYXRjaHBi",
-            "ogIDR0NCqgIaR29vZ2xlLkNsb3VkLkJhdGNoLlYxQWxwaGHKAhpHb29nbGVc",
-            "Q2xvdWRcQmF0Y2hcVjFhbHBoYeoCHUdvb2dsZTo6Q2xvdWQ6OkJhdGNoOjpW",
-            "MWFscGhhYgZwcm90bzM="));
+            "ZRgCIAEoCToCOAEiiwEKEVByb3Zpc2lvbmluZ01vZGVsEiIKHlBST1ZJU0lP",
+            "TklOR19NT0RFTF9VTlNQRUNJRklFRBAAEgwKCFNUQU5EQVJEEAESCAoEU1BP",
+            "VBACEhMKC1BSRUVNUFRJQkxFEAMaAggBEhUKEVJFU0VSVkFUSU9OX0JPVU5E",
+            "EAQSDgoKRkxFWF9TVEFSVBAFIt8GCglUYXNrR3JvdXASEQoEbmFtZRgBIAEo",
+            "CUID4EEDEjwKCXRhc2tfc3BlYxgDIAEoCzIkLmdvb2dsZS5jbG91ZC5iYXRj",
+            "aC52MWFscGhhLlRhc2tTcGVjQgPgQQISEgoKdGFza19jb3VudBgEIAEoAxIT",
+            "CgtwYXJhbGxlbGlzbRgFIAEoAxJRChFzY2hlZHVsaW5nX3BvbGljeRgGIAEo",
+            "DjI2Lmdvb2dsZS5jbG91ZC5iYXRjaC52MWFscGhhLlRhc2tHcm91cC5TY2hl",
+            "ZHVsaW5nUG9saWN5EkcKEWFsbG9jYXRpb25fcG9saWN5GAcgASgLMiwuZ29v",
+            "Z2xlLmNsb3VkLmJhdGNoLnYxYWxwaGEuQWxsb2NhdGlvblBvbGljeRJBCgZs",
+            "YWJlbHMYCCADKAsyMS5nb29nbGUuY2xvdWQuYmF0Y2gudjFhbHBoYS5UYXNr",
+            "R3JvdXAuTGFiZWxzRW50cnkSQgoRdGFza19lbnZpcm9ubWVudHMYCSADKAsy",
+            "Jy5nb29nbGUuY2xvdWQuYmF0Y2gudjFhbHBoYS5FbnZpcm9ubWVudBIbChN0",
+            "YXNrX2NvdW50X3Blcl9ub2RlGAogASgDEhoKEnJlcXVpcmVfaG9zdHNfZmls",
+            "ZRgLIAEoCBIWCg5wZXJtaXNzaXZlX3NzaBgMIAEoCBIcCg9ydW5fYXNfbm9u",
+            "X3Jvb3QYDiABKAhCA+BBARJICg9zZXJ2aWNlX2FjY291bnQYDyABKAsyKi5n",
+            "b29nbGUuY2xvdWQuYmF0Y2gudjFhbHBoYS5TZXJ2aWNlQWNjb3VudEID4EEB",
+            "Gi0KC0xhYmVsc0VudHJ5EgsKA2tleRgBIAEoCRINCgV2YWx1ZRgCIAEoCToC",
+            "OAEiXAoQU2NoZWR1bGluZ1BvbGljeRIhCh1TQ0hFRFVMSU5HX1BPTElDWV9V",
+            "TlNQRUNJRklFRBAAEhcKE0FTX1NPT05fQVNfUE9TU0lCTEUQARIMCghJTl9P",
+            "UkRFUhACOm/qQWwKHmJhdGNoLmdvb2dsZWFwaXMuY29tL1Rhc2tHcm91cBJK",
+            "cHJvamVjdHMve3Byb2plY3R9L2xvY2F0aW9ucy97bG9jYXRpb259L2pvYnMv",
+            "e2pvYn0vdGFza0dyb3Vwcy97dGFza19ncm91cH0iLwoOU2VydmljZUFjY291",
+            "bnQSDQoFZW1haWwYASABKAkSDgoGc2NvcGVzGAIgAygJQsIBCh5jb20uZ29v",
+            "Z2xlLmNsb3VkLmJhdGNoLnYxYWxwaGFCCEpvYlByb3RvUAFaNGNsb3VkLmdv",
+            "b2dsZS5jb20vZ28vYmF0Y2gvYXBpdjFhbHBoYS9iYXRjaHBiO2JhdGNocGKi",
+            "AgNHQ0KqAhpHb29nbGUuQ2xvdWQuQmF0Y2guVjFBbHBoYcoCGkdvb2dsZVxD",
+            "bG91ZFxCYXRjaFxWMWFscGhh6gIdR29vZ2xlOjpDbG91ZDo6QmF0Y2g6OlYx",
+            "YWxwaGFiBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Cloud.Batch.V1Alpha.TaskReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.DurationReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
@@ -4081,7 +4082,17 @@ namespace Google.Cloud.Batch.V1Alpha {
         /// and has been migrated to use the SPOT model as the underlying technology.
         /// This old model will still be supported.
         /// </summary>
+        [global::System.ObsoleteAttribute]
         [pbr::OriginalName("PREEMPTIBLE")] Preemptible = 3,
+        /// <summary>
+        /// Bound to the lifecycle of the reservation in which it is provisioned.
+        /// </summary>
+        [pbr::OriginalName("RESERVATION_BOUND")] ReservationBound = 4,
+        /// <summary>
+        /// Instance is provisioned with DWS Flex Start and has limited max run
+        /// duration.
+        /// </summary>
+        [pbr::OriginalName("FLEX_START")] FlexStart = 5,
       }
 
       [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
