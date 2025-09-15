@@ -1,0 +1,54 @@
+{
+  "schema": "1.0",
+  "comment": "This file maps proto services/RPCs to the corresponding library clients/methods",
+  "language": "csharp",
+  "protoPackage": "google.cloud.gkerecommender.v1",
+  "libraryPackage": "Google.Cloud.GkeRecommender.V1",
+  "services": {
+    "GkeInferenceQuickstart": {
+      "clients": {
+        "grpc": {
+          "libraryClient": "GkeInferenceQuickstartClient",
+          "rpcs": {
+            "FetchBenchmarkingData": {
+              "methods": [
+                "FetchBenchmarkingData",
+                "FetchBenchmarkingDataAsync"
+              ]
+            },
+            "FetchModelServerVersions": {
+              "methods": [
+                "FetchModelServerVersions",
+                "FetchModelServerVersionsAsync"
+              ]
+            },
+            "FetchModelServers": {
+              "methods": [
+                "FetchModelServers",
+                "FetchModelServersAsync"
+              ]
+            },
+            "FetchModels": {
+              "methods": [
+                "FetchModels",
+                "FetchModelsAsync"
+              ]
+            },
+            "FetchProfiles": {
+              "methods": [
+                "FetchProfiles",
+                "FetchProfilesAsync"
+              ]
+            },
+            "GenerateOptimizedManifest": {
+              "methods": [
+                "GenerateOptimizedManifest",
+                "GenerateOptimizedManifestAsync"
+              ]
+            }
+          }
+        }
+      }
+    }
+  }
+}

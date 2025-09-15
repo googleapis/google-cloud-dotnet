@@ -1,0 +1,596 @@
+{
+  "clientLibrary": {
+    "name": "Google.Cloud.GkeRecommender.V1",
+    "language": "C_SHARP",
+    "apis": [
+      {
+        "id": "google.cloud.gkerecommender.v1",
+        "version": "v1"
+      }
+    ]
+  },
+  "snippets": [
+    {
+      "regionTag": "gkerecommender_v1_generated_GkeInferenceQuickstart_FetchModels_sync",
+      "title": "FetchModelsRequestObject",
+      "description": "Snippet for FetchModels",
+      "file": "GkeInferenceQuickstartClient.FetchModelsRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "FetchModels",
+        "fullName": "Google.Cloud.GkeRecommender.V1.GkeInferenceQuickstartClient.FetchModels",
+        "parameters": [
+          {
+            "type": "Google.Cloud.GkeRecommender.V1.FetchModelsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.GkeRecommender.V1.FetchModelsResponse, System.String>",
+        "client": {
+          "shortName": "GkeInferenceQuickstartClient",
+          "fullName": "Google.Cloud.GkeRecommender.V1.GkeInferenceQuickstartClient"
+        },
+        "method": {
+          "shortName": "FetchModels",
+          "fullName": "google.cloud.gkerecommender.v1.GkeInferenceQuickstart.FetchModels",
+          "service": {
+            "shortName": "GkeInferenceQuickstart",
+            "fullName": "google.cloud.gkerecommender.v1.GkeInferenceQuickstart"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 75,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 73,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "gkerecommender_v1_generated_GkeInferenceQuickstart_FetchModels_async",
+      "title": "FetchModelsRequestObjectAsync",
+      "description": "Snippet for FetchModelsAsync",
+      "file": "GkeInferenceQuickstartClient.FetchModelsRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "FetchModelsAsync",
+        "fullName": "Google.Cloud.GkeRecommender.V1.GkeInferenceQuickstartClient.FetchModelsAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.GkeRecommender.V1.FetchModelsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.GkeRecommender.V1.FetchModelsResponse, System.String>",
+        "client": {
+          "shortName": "GkeInferenceQuickstartClient",
+          "fullName": "Google.Cloud.GkeRecommender.V1.GkeInferenceQuickstartClient"
+        },
+        "method": {
+          "shortName": "FetchModels",
+          "fullName": "google.cloud.gkerecommender.v1.GkeInferenceQuickstart.FetchModels",
+          "service": {
+            "shortName": "GkeInferenceQuickstart",
+            "fullName": "google.cloud.gkerecommender.v1.GkeInferenceQuickstart"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 77,
+          "type": "FULL"
+        },
+        {
+          "start": 38,
+          "end": 75,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "gkerecommender_v1_generated_GkeInferenceQuickstart_FetchModelServers_sync",
+      "title": "FetchModelServersRequestObject",
+      "description": "Snippet for FetchModelServers",
+      "file": "GkeInferenceQuickstartClient.FetchModelServersRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "FetchModelServers",
+        "fullName": "Google.Cloud.GkeRecommender.V1.GkeInferenceQuickstartClient.FetchModelServers",
+        "parameters": [
+          {
+            "type": "Google.Cloud.GkeRecommender.V1.FetchModelServersRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.GkeRecommender.V1.FetchModelServersResponse, System.String>",
+        "client": {
+          "shortName": "GkeInferenceQuickstartClient",
+          "fullName": "Google.Cloud.GkeRecommender.V1.GkeInferenceQuickstartClient"
+        },
+        "method": {
+          "shortName": "FetchModelServers",
+          "fullName": "google.cloud.gkerecommender.v1.GkeInferenceQuickstart.FetchModelServers",
+          "service": {
+            "shortName": "GkeInferenceQuickstart",
+            "fullName": "google.cloud.gkerecommender.v1.GkeInferenceQuickstart"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 75,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 73,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "gkerecommender_v1_generated_GkeInferenceQuickstart_FetchModelServers_async",
+      "title": "FetchModelServersRequestObjectAsync",
+      "description": "Snippet for FetchModelServersAsync",
+      "file": "GkeInferenceQuickstartClient.FetchModelServersRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "FetchModelServersAsync",
+        "fullName": "Google.Cloud.GkeRecommender.V1.GkeInferenceQuickstartClient.FetchModelServersAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.GkeRecommender.V1.FetchModelServersRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.GkeRecommender.V1.FetchModelServersResponse, System.String>",
+        "client": {
+          "shortName": "GkeInferenceQuickstartClient",
+          "fullName": "Google.Cloud.GkeRecommender.V1.GkeInferenceQuickstartClient"
+        },
+        "method": {
+          "shortName": "FetchModelServers",
+          "fullName": "google.cloud.gkerecommender.v1.GkeInferenceQuickstart.FetchModelServers",
+          "service": {
+            "shortName": "GkeInferenceQuickstart",
+            "fullName": "google.cloud.gkerecommender.v1.GkeInferenceQuickstart"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 77,
+          "type": "FULL"
+        },
+        {
+          "start": 38,
+          "end": 75,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "gkerecommender_v1_generated_GkeInferenceQuickstart_FetchModelServerVersions_sync",
+      "title": "FetchModelServerVersionsRequestObject",
+      "description": "Snippet for FetchModelServerVersions",
+      "file": "GkeInferenceQuickstartClient.FetchModelServerVersionsRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "FetchModelServerVersions",
+        "fullName": "Google.Cloud.GkeRecommender.V1.GkeInferenceQuickstartClient.FetchModelServerVersions",
+        "parameters": [
+          {
+            "type": "Google.Cloud.GkeRecommender.V1.FetchModelServerVersionsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.GkeRecommender.V1.FetchModelServerVersionsResponse, System.String>",
+        "client": {
+          "shortName": "GkeInferenceQuickstartClient",
+          "fullName": "Google.Cloud.GkeRecommender.V1.GkeInferenceQuickstartClient"
+        },
+        "method": {
+          "shortName": "FetchModelServerVersions",
+          "fullName": "google.cloud.gkerecommender.v1.GkeInferenceQuickstart.FetchModelServerVersions",
+          "service": {
+            "shortName": "GkeInferenceQuickstart",
+            "fullName": "google.cloud.gkerecommender.v1.GkeInferenceQuickstart"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 79,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 77,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "gkerecommender_v1_generated_GkeInferenceQuickstart_FetchModelServerVersions_async",
+      "title": "FetchModelServerVersionsRequestObjectAsync",
+      "description": "Snippet for FetchModelServerVersionsAsync",
+      "file": "GkeInferenceQuickstartClient.FetchModelServerVersionsRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "FetchModelServerVersionsAsync",
+        "fullName": "Google.Cloud.GkeRecommender.V1.GkeInferenceQuickstartClient.FetchModelServerVersionsAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.GkeRecommender.V1.FetchModelServerVersionsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.GkeRecommender.V1.FetchModelServerVersionsResponse, System.String>",
+        "client": {
+          "shortName": "GkeInferenceQuickstartClient",
+          "fullName": "Google.Cloud.GkeRecommender.V1.GkeInferenceQuickstartClient"
+        },
+        "method": {
+          "shortName": "FetchModelServerVersions",
+          "fullName": "google.cloud.gkerecommender.v1.GkeInferenceQuickstart.FetchModelServerVersions",
+          "service": {
+            "shortName": "GkeInferenceQuickstart",
+            "fullName": "google.cloud.gkerecommender.v1.GkeInferenceQuickstart"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 81,
+          "type": "FULL"
+        },
+        {
+          "start": 38,
+          "end": 79,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "gkerecommender_v1_generated_GkeInferenceQuickstart_FetchProfiles_sync",
+      "title": "FetchProfilesRequestObject",
+      "description": "Snippet for FetchProfiles",
+      "file": "GkeInferenceQuickstartClient.FetchProfilesRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "FetchProfiles",
+        "fullName": "Google.Cloud.GkeRecommender.V1.GkeInferenceQuickstartClient.FetchProfiles",
+        "parameters": [
+          {
+            "type": "Google.Cloud.GkeRecommender.V1.FetchProfilesRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.GkeRecommender.V1.FetchProfilesResponse, Google.Cloud.GkeRecommender.V1.Profile>",
+        "client": {
+          "shortName": "GkeInferenceQuickstartClient",
+          "fullName": "Google.Cloud.GkeRecommender.V1.GkeInferenceQuickstartClient"
+        },
+        "method": {
+          "shortName": "FetchProfiles",
+          "fullName": "google.cloud.gkerecommender.v1.GkeInferenceQuickstart.FetchProfiles",
+          "service": {
+            "shortName": "GkeInferenceQuickstart",
+            "fullName": "google.cloud.gkerecommender.v1.GkeInferenceQuickstart"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 81,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 79,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "gkerecommender_v1_generated_GkeInferenceQuickstart_FetchProfiles_async",
+      "title": "FetchProfilesRequestObjectAsync",
+      "description": "Snippet for FetchProfilesAsync",
+      "file": "GkeInferenceQuickstartClient.FetchProfilesRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "FetchProfilesAsync",
+        "fullName": "Google.Cloud.GkeRecommender.V1.GkeInferenceQuickstartClient.FetchProfilesAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.GkeRecommender.V1.FetchProfilesRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.GkeRecommender.V1.FetchProfilesResponse, Google.Cloud.GkeRecommender.V1.Profile>",
+        "client": {
+          "shortName": "GkeInferenceQuickstartClient",
+          "fullName": "Google.Cloud.GkeRecommender.V1.GkeInferenceQuickstartClient"
+        },
+        "method": {
+          "shortName": "FetchProfiles",
+          "fullName": "google.cloud.gkerecommender.v1.GkeInferenceQuickstart.FetchProfiles",
+          "service": {
+            "shortName": "GkeInferenceQuickstart",
+            "fullName": "google.cloud.gkerecommender.v1.GkeInferenceQuickstart"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 83,
+          "type": "FULL"
+        },
+        {
+          "start": 38,
+          "end": 81,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "gkerecommender_v1_generated_GkeInferenceQuickstart_GenerateOptimizedManifest_sync",
+      "title": "GenerateOptimizedManifestRequestObject",
+      "description": "Snippet for GenerateOptimizedManifest",
+      "file": "GkeInferenceQuickstartClient.GenerateOptimizedManifestRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GenerateOptimizedManifest",
+        "fullName": "Google.Cloud.GkeRecommender.V1.GkeInferenceQuickstartClient.GenerateOptimizedManifest",
+        "parameters": [
+          {
+            "type": "Google.Cloud.GkeRecommender.V1.GenerateOptimizedManifestRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.GkeRecommender.V1.GenerateOptimizedManifestResponse",
+        "client": {
+          "shortName": "GkeInferenceQuickstartClient",
+          "fullName": "Google.Cloud.GkeRecommender.V1.GkeInferenceQuickstartClient"
+        },
+        "method": {
+          "shortName": "GenerateOptimizedManifest",
+          "fullName": "google.cloud.gkerecommender.v1.GkeInferenceQuickstart.GenerateOptimizedManifest",
+          "service": {
+            "shortName": "GkeInferenceQuickstart",
+            "fullName": "google.cloud.gkerecommender.v1.GkeInferenceQuickstart"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 48,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 46,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "gkerecommender_v1_generated_GkeInferenceQuickstart_GenerateOptimizedManifest_async",
+      "title": "GenerateOptimizedManifestRequestObjectAsync",
+      "description": "Snippet for GenerateOptimizedManifestAsync",
+      "file": "GkeInferenceQuickstartClient.GenerateOptimizedManifestRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GenerateOptimizedManifestAsync",
+        "fullName": "Google.Cloud.GkeRecommender.V1.GkeInferenceQuickstartClient.GenerateOptimizedManifestAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.GkeRecommender.V1.GenerateOptimizedManifestRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.GkeRecommender.V1.GenerateOptimizedManifestResponse>",
+        "client": {
+          "shortName": "GkeInferenceQuickstartClient",
+          "fullName": "Google.Cloud.GkeRecommender.V1.GkeInferenceQuickstartClient"
+        },
+        "method": {
+          "shortName": "GenerateOptimizedManifest",
+          "fullName": "google.cloud.gkerecommender.v1.GkeInferenceQuickstart.GenerateOptimizedManifest",
+          "service": {
+            "shortName": "GkeInferenceQuickstart",
+            "fullName": "google.cloud.gkerecommender.v1.GkeInferenceQuickstart"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 49,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 47,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "gkerecommender_v1_generated_GkeInferenceQuickstart_FetchBenchmarkingData_sync",
+      "title": "FetchBenchmarkingDataRequestObject",
+      "description": "Snippet for FetchBenchmarkingData",
+      "file": "GkeInferenceQuickstartClient.FetchBenchmarkingDataRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "FetchBenchmarkingData",
+        "fullName": "Google.Cloud.GkeRecommender.V1.GkeInferenceQuickstartClient.FetchBenchmarkingData",
+        "parameters": [
+          {
+            "type": "Google.Cloud.GkeRecommender.V1.FetchBenchmarkingDataRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.GkeRecommender.V1.FetchBenchmarkingDataResponse",
+        "client": {
+          "shortName": "GkeInferenceQuickstartClient",
+          "fullName": "Google.Cloud.GkeRecommender.V1.GkeInferenceQuickstartClient"
+        },
+        "method": {
+          "shortName": "FetchBenchmarkingData",
+          "fullName": "google.cloud.gkerecommender.v1.GkeInferenceQuickstart.FetchBenchmarkingData",
+          "service": {
+            "shortName": "GkeInferenceQuickstart",
+            "fullName": "google.cloud.gkerecommender.v1.GkeInferenceQuickstart"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 46,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 44,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "gkerecommender_v1_generated_GkeInferenceQuickstart_FetchBenchmarkingData_async",
+      "title": "FetchBenchmarkingDataRequestObjectAsync",
+      "description": "Snippet for FetchBenchmarkingDataAsync",
+      "file": "GkeInferenceQuickstartClient.FetchBenchmarkingDataRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "FetchBenchmarkingDataAsync",
+        "fullName": "Google.Cloud.GkeRecommender.V1.GkeInferenceQuickstartClient.FetchBenchmarkingDataAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.GkeRecommender.V1.FetchBenchmarkingDataRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.GkeRecommender.V1.FetchBenchmarkingDataResponse>",
+        "client": {
+          "shortName": "GkeInferenceQuickstartClient",
+          "fullName": "Google.Cloud.GkeRecommender.V1.GkeInferenceQuickstartClient"
+        },
+        "method": {
+          "shortName": "FetchBenchmarkingData",
+          "fullName": "google.cloud.gkerecommender.v1.GkeInferenceQuickstart.FetchBenchmarkingData",
+          "service": {
+            "shortName": "GkeInferenceQuickstart",
+            "fullName": "google.cloud.gkerecommender.v1.GkeInferenceQuickstart"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 47,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 45,
+          "type": "SHORT"
+        }
+      ]
+    }
+  ]
+}
