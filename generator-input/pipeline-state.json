@@ -533,11 +533,12 @@
         },
         {
             "id": "Google.Cloud.Batch.V1Alpha",
-            "currentVersion": "1.0.0-alpha31",
+            "currentVersion": "1.0.0-alpha32",
             "generationAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
             "releaseAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
-            "releaseTimestamp": "2024-09-16T16:36:25Z",
+            "releaseTimestamp": "2025-09-16T07:59:18.829829848Z",
             "lastGeneratedCommit": "9d640a8a24199038731692658936c57e6d898562",
+            "lastReleasedCommit": "9d640a8a24199038731692658936c57e6d898562",
             "apiPaths": [
                 "google/cloud/batch/v1alpha"
             ],
