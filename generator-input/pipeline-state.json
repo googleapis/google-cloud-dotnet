@@ -1157,7 +1157,7 @@
             "generationAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
             "releaseAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
             "releaseTimestamp": "2024-05-13T17:54:24Z",
-            "lastGeneratedCommit": "9415ba048aa587b1b2df2b96fc00aa009c831597",
+            "lastGeneratedCommit": "888ae95dd6125f754650d55410b8c117b618a268",
             "apiPaths": [
                 "google/cloud/datafusion/v1"
             ],
