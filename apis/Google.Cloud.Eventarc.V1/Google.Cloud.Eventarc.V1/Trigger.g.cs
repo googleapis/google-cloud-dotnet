@@ -70,7 +70,7 @@ namespace Google.Cloud.Eventarc.V1 {
             "aW9uGAIgASgJQgPgQQISFgoJbmFtZXNwYWNlGAMgASgJQgPgQQISFAoHc2Vy",
             "dmljZRgEIAEoCUID4EECEhEKBHBhdGgYBSABKAlCA+BBASI3CgZQdWJzdWIS",
             "EgoFdG9waWMYASABKAlCA+BBARIZCgxzdWJzY3JpcHRpb24YAiABKAlCA+BB",
-            "AyIgCgxIdHRwRW5kcG9pbnQSEAoDdXJpGAEgASgJQgPgQQJCsQQKHGNvbS5n",
+            "AyIgCgxIdHRwRW5kcG9pbnQSEAoDdXJpGAEgASgJQgPgQQJCoQUKHGNvbS5n",
             "b29nbGUuY2xvdWQuZXZlbnRhcmMudjFCDFRyaWdnZXJQcm90b1ABWjhjbG91",
             "ZC5nb29nbGUuY29tL2dvL2V2ZW50YXJjL2FwaXYxL2V2ZW50YXJjcGI7ZXZl",
             "bnRhcmNwYupBaworY2xvdWRmdW5jdGlvbnMuZ29vZ2xlYXBpcy5jb20vQ2xv",
@@ -83,7 +83,9 @@ namespace Google.Cloud.Eventarc.V1 {
             "Y2F0aW9ufS93b3JrZmxvd3Mve3dvcmtmbG93fepBdgooY29tcHV0ZS5nb29n",
             "bGVhcGlzLmNvbS9OZXR3b3JrQXR0YWNobWVudBJKcHJvamVjdHMve3Byb2pl",
             "Y3R9L3JlZ2lvbnMve3JlZ2lvbn0vbmV0d29ya0F0dGFjaG1lbnRzL3tuZXR3",
-            "b3JrYXR0YWNobWVudH1iBnByb3RvMw=="));
+            "b3JrYXR0YWNobWVudH3qQW0KJ2ludGVncmF0aW9ucy5nb29nbGVhcGlzLmNv",
+            "bS9JbnRlZ3JhdGlvbhJCcHJvamVjdHMve3Byb2plY3R9L2xvY2F0aW9ucy97",
+            "bG9jYXRpb259L2ludGVncmF0aW9ucy97aW50ZWdyYXRpb259YgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Cloud.Eventarc.V1.NetworkConfigReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, global::Google.Rpc.CodeReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
@@ -3078,7 +3080,7 @@ namespace Google.Cloud.Eventarc.V1 {
     public const int UriFieldNumber = 1;
     private string uri_ = "";
     /// <summary>
-    /// Required. The URI of the HTTP enpdoint.
+    /// Required. The URI of the HTTP endpoint.
     ///
     /// The value must be a RFC2396 URI string.
     /// Examples: `http://10.10.10.8:80/route`,

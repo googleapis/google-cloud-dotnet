@@ -29,8 +29,8 @@ namespace Google.Cloud.Eventarc.V1 {
             "dmlvci5wcm90bxobZ29vZ2xlL2FwaS9maWVsZF9pbmZvLnByb3RvGhlnb29n",
             "bGUvYXBpL3Jlc291cmNlLnByb3RvGi1nb29nbGUvY2xvdWQvZXZlbnRhcmMv",
             "djEvbG9nZ2luZ19jb25maWcucHJvdG8aHmdvb2dsZS9wcm90b2J1Zi9kdXJh",
-            "dGlvbi5wcm90bxofZ29vZ2xlL3Byb3RvYnVmL3RpbWVzdGFtcC5wcm90byLh",
-            "FwoIUGlwZWxpbmUSEQoEbmFtZRgBIAEoCUID4EEIEjQKC2NyZWF0ZV90aW1l",
+            "dGlvbi5wcm90bxofZ29vZ2xlL3Byb3RvYnVmL3RpbWVzdGFtcC5wcm90byKC",
+            "GAoIUGlwZWxpbmUSEQoEbmFtZRgBIAEoCUID4EEIEjQKC2NyZWF0ZV90aW1l",
             "GAIgASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcEID4EEDEjQKC3Vw",
             "ZGF0ZV90aW1lGAMgASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcEID",
             "4EEDEkMKBmxhYmVscxgEIAMoCzIuLmdvb2dsZS5jbG91ZC5ldmVudGFyYy52",
@@ -47,67 +47,68 @@ namespace Google.Cloud.Eventarc.V1 {
             "bG9hZEZvcm1hdEID4EEBEkQKDmxvZ2dpbmdfY29uZmlnGAwgASgLMicuZ29v",
             "Z2xlLmNsb3VkLmV2ZW50YXJjLnYxLkxvZ2dpbmdDb25maWdCA+BBARJJCgxy",
             "ZXRyeV9wb2xpY3kYDSABKAsyLi5nb29nbGUuY2xvdWQuZXZlbnRhcmMudjEu",
-            "UGlwZWxpbmUuUmV0cnlQb2xpY3lCA+BBARIMCgRldGFnGGMgASgJGp8DChRN",
-            "ZXNzYWdlUGF5bG9hZEZvcm1hdBJfCghwcm90b2J1ZhgBIAEoCzJGLmdvb2ds",
-            "ZS5jbG91ZC5ldmVudGFyYy52MS5QaXBlbGluZS5NZXNzYWdlUGF5bG9hZEZv",
-            "cm1hdC5Qcm90b2J1ZkZvcm1hdEID4EEBSAASVwoEYXZybxgCIAEoCzJCLmdv",
-            "b2dsZS5jbG91ZC5ldmVudGFyYy52MS5QaXBlbGluZS5NZXNzYWdlUGF5bG9h",
-            "ZEZvcm1hdC5BdnJvRm9ybWF0QgPgQQFIABJXCgRqc29uGAMgASgLMkIuZ29v",
-            "Z2xlLmNsb3VkLmV2ZW50YXJjLnYxLlBpcGVsaW5lLk1lc3NhZ2VQYXlsb2Fk",
-            "Rm9ybWF0Lkpzb25Gb3JtYXRCA+BBAUgAGgwKCkpzb25Gb3JtYXQaMAoOUHJv",
-            "dG9idWZGb3JtYXQSHgoRc2NoZW1hX2RlZmluaXRpb24YASABKAlCA+BBARos",
-            "CgpBdnJvRm9ybWF0Eh4KEXNjaGVtYV9kZWZpbml0aW9uGAEgASgJQgPgQQFC",
-            "BgoEa2luZBrlCQoLRGVzdGluYXRpb24SWQoObmV0d29ya19jb25maWcYASAB",
-            "KAsyPC5nb29nbGUuY2xvdWQuZXZlbnRhcmMudjEuUGlwZWxpbmUuRGVzdGlu",
-            "YXRpb24uTmV0d29ya0NvbmZpZ0ID4EEBElkKDWh0dHBfZW5kcG9pbnQYAiAB",
-            "KAsyOy5nb29nbGUuY2xvdWQuZXZlbnRhcmMudjEuUGlwZWxpbmUuRGVzdGlu",
-            "YXRpb24uSHR0cEVuZHBvaW50QgPgQQFIABI9Cgh3b3JrZmxvdxgDIAEoCUIp",
-            "4EEB+kEjCiF3b3JrZmxvd3MuZ29vZ2xlYXBpcy5jb20vV29ya2Zsb3dIABJB",
-            "CgttZXNzYWdlX2J1cxgEIAEoCUIq4EEB+kEkCiJldmVudGFyYy5nb29nbGVh",
-            "cGlzLmNvbS9NZXNzYWdlQnVzSAASNAoFdG9waWMYCCABKAlCI+BBAfpBHQob",
-            "cHVic3ViLmdvb2dsZWFwaXMuY29tL1RvcGljSAASZwoVYXV0aGVudGljYXRp",
-            "b25fY29uZmlnGAUgASgLMkMuZ29vZ2xlLmNsb3VkLmV2ZW50YXJjLnYxLlBp",
-            "cGVsaW5lLkRlc3RpbmF0aW9uLkF1dGhlbnRpY2F0aW9uQ29uZmlnQgPgQQES",
-            "WwoVb3V0cHV0X3BheWxvYWRfZm9ybWF0GAYgASgLMjcuZ29vZ2xlLmNsb3Vk",
-            "LmV2ZW50YXJjLnYxLlBpcGVsaW5lLk1lc3NhZ2VQYXlsb2FkRm9ybWF0QgPg",
-            "QQEaXQoNTmV0d29ya0NvbmZpZxJMChJuZXR3b3JrX2F0dGFjaG1lbnQYASAB",
-            "KAlCMOBBAvpBKgooY29tcHV0ZS5nb29nbGVhcGlzLmNvbS9OZXR3b3JrQXR0",
-            "YWNobWVudBpHCgxIdHRwRW5kcG9pbnQSEAoDdXJpGAEgASgJQgPgQQISJQoY",
-            "bWVzc2FnZV9iaW5kaW5nX3RlbXBsYXRlGAMgASgJQgPgQQEa3wMKFEF1dGhl",
-            "bnRpY2F0aW9uQ29uZmlnEmkKC2dvb2dsZV9vaWRjGAEgASgLMk0uZ29vZ2xl",
-            "LmNsb3VkLmV2ZW50YXJjLnYxLlBpcGVsaW5lLkRlc3RpbmF0aW9uLkF1dGhl",
-            "bnRpY2F0aW9uQ29uZmlnLk9pZGNUb2tlbkID4EEBSAASagoLb2F1dGhfdG9r",
-            "ZW4YAiABKAsyTi5nb29nbGUuY2xvdWQuZXZlbnRhcmMudjEuUGlwZWxpbmUu",
-            "RGVzdGluYXRpb24uQXV0aGVudGljYXRpb25Db25maWcuT0F1dGhUb2tlbkID",
-            "4EEBSAAaZgoJT2lkY1Rva2VuEkIKD3NlcnZpY2VfYWNjb3VudBgBIAEoCUIp",
-            "4EEC+kEjCiFpYW0uZ29vZ2xlYXBpcy5jb20vU2VydmljZUFjY291bnQSFQoI",
-            "YXVkaWVuY2UYAiABKAlCA+BBARpkCgpPQXV0aFRva2VuEkIKD3NlcnZpY2Vf",
-            "YWNjb3VudBgBIAEoCUIp4EEC+kEjCiFpYW0uZ29vZ2xlYXBpcy5jb20vU2Vy",
-            "dmljZUFjY291bnQSEgoFc2NvcGUYAiABKAlCA+BBAUIiCiBhdXRoZW50aWNh",
-            "dGlvbl9tZXRob2RfZGVzY3JpcHRvckIYChZkZXN0aW5hdGlvbl9kZXNjcmlw",
-            "dG9yGrcBCglNZWRpYXRpb24SWgoOdHJhbnNmb3JtYXRpb24YASABKAsyOy5n",
-            "b29nbGUuY2xvdWQuZXZlbnRhcmMudjEuUGlwZWxpbmUuTWVkaWF0aW9uLlRy",
-            "YW5zZm9ybWF0aW9uQgPgQQFIABo2Cg5UcmFuc2Zvcm1hdGlvbhIkChd0cmFu",
-            "c2Zvcm1hdGlvbl90ZW1wbGF0ZRgBIAEoCUID4EEBQhYKFG1lZGlhdGlvbl9k",
-            "ZXNjcmlwdG9yGpoBCgtSZXRyeVBvbGljeRIZCgxtYXhfYXR0ZW1wdHMYASAB",
-            "KAVCA+BBARI3Cg9taW5fcmV0cnlfZGVsYXkYAiABKAsyGS5nb29nbGUucHJv",
-            "dG9idWYuRHVyYXRpb25CA+BBARI3Cg9tYXhfcmV0cnlfZGVsYXkYAyABKAsy",
-            "GS5nb29nbGUucHJvdG9idWYuRHVyYXRpb25CA+BBARotCgtMYWJlbHNFbnRy",
-            "eRILCgNrZXkYASABKAkSDQoFdmFsdWUYAiABKAk6AjgBGjIKEEFubm90YXRp",
-            "b25zRW50cnkSCwoDa2V5GAEgASgJEg0KBXZhbHVlGAIgASgJOgI4ATp46kF1",
-            "CiBldmVudGFyYy5nb29nbGVhcGlzLmNvbS9QaXBlbGluZRI8cHJvamVjdHMv",
-            "e3Byb2plY3R9L2xvY2F0aW9ucy97bG9jYXRpb259L3BpcGVsaW5lcy97cGlw",
-            "ZWxpbmV9KglwaXBlbGluZXMyCHBpcGVsaW5lQoACChxjb20uZ29vZ2xlLmNs",
-            "b3VkLmV2ZW50YXJjLnYxQg1QaXBlbGluZVByb3RvUAFaOGNsb3VkLmdvb2ds",
-            "ZS5jb20vZ28vZXZlbnRhcmMvYXBpdjEvZXZlbnRhcmNwYjtldmVudGFyY3Bi",
-            "qgIYR29vZ2xlLkNsb3VkLkV2ZW50YXJjLlYxygIYR29vZ2xlXENsb3VkXEV2",
-            "ZW50YXJjXFYx6gIbR29vZ2xlOjpDbG91ZDo6RXZlbnRhcmM6OlYx6kFAChtw",
-            "dWJzdWIuZ29vZ2xlYXBpcy5jb20vVG9waWMSIXByb2plY3RzL3twcm9qZWN0",
-            "fS90b3BpY3Mve3RvcGljfWIGcHJvdG8z"));
+            "UGlwZWxpbmUuUmV0cnlQb2xpY3lCA+BBARIRCgRldGFnGGMgASgJQgPgQQMS",
+            "GgoNc2F0aXNmaWVzX3B6cxgOIAEoCEID4EEDGp8DChRNZXNzYWdlUGF5bG9h",
+            "ZEZvcm1hdBJfCghwcm90b2J1ZhgBIAEoCzJGLmdvb2dsZS5jbG91ZC5ldmVu",
+            "dGFyYy52MS5QaXBlbGluZS5NZXNzYWdlUGF5bG9hZEZvcm1hdC5Qcm90b2J1",
+            "ZkZvcm1hdEID4EEBSAASVwoEYXZybxgCIAEoCzJCLmdvb2dsZS5jbG91ZC5l",
+            "dmVudGFyYy52MS5QaXBlbGluZS5NZXNzYWdlUGF5bG9hZEZvcm1hdC5BdnJv",
+            "Rm9ybWF0QgPgQQFIABJXCgRqc29uGAMgASgLMkIuZ29vZ2xlLmNsb3VkLmV2",
+            "ZW50YXJjLnYxLlBpcGVsaW5lLk1lc3NhZ2VQYXlsb2FkRm9ybWF0Lkpzb25G",
+            "b3JtYXRCA+BBAUgAGgwKCkpzb25Gb3JtYXQaMAoOUHJvdG9idWZGb3JtYXQS",
+            "HgoRc2NoZW1hX2RlZmluaXRpb24YASABKAlCA+BBARosCgpBdnJvRm9ybWF0",
+            "Eh4KEXNjaGVtYV9kZWZpbml0aW9uGAEgASgJQgPgQQFCBgoEa2luZBrlCQoL",
+            "RGVzdGluYXRpb24SWQoObmV0d29ya19jb25maWcYASABKAsyPC5nb29nbGUu",
+            "Y2xvdWQuZXZlbnRhcmMudjEuUGlwZWxpbmUuRGVzdGluYXRpb24uTmV0d29y",
+            "a0NvbmZpZ0ID4EEBElkKDWh0dHBfZW5kcG9pbnQYAiABKAsyOy5nb29nbGUu",
+            "Y2xvdWQuZXZlbnRhcmMudjEuUGlwZWxpbmUuRGVzdGluYXRpb24uSHR0cEVu",
+            "ZHBvaW50QgPgQQFIABI9Cgh3b3JrZmxvdxgDIAEoCUIp4EEB+kEjCiF3b3Jr",
+            "Zmxvd3MuZ29vZ2xlYXBpcy5jb20vV29ya2Zsb3dIABJBCgttZXNzYWdlX2J1",
+            "cxgEIAEoCUIq4EEB+kEkCiJldmVudGFyYy5nb29nbGVhcGlzLmNvbS9NZXNz",
+            "YWdlQnVzSAASNAoFdG9waWMYCCABKAlCI+BBAfpBHQobcHVic3ViLmdvb2ds",
+            "ZWFwaXMuY29tL1RvcGljSAASZwoVYXV0aGVudGljYXRpb25fY29uZmlnGAUg",
+            "ASgLMkMuZ29vZ2xlLmNsb3VkLmV2ZW50YXJjLnYxLlBpcGVsaW5lLkRlc3Rp",
+            "bmF0aW9uLkF1dGhlbnRpY2F0aW9uQ29uZmlnQgPgQQESWwoVb3V0cHV0X3Bh",
+            "eWxvYWRfZm9ybWF0GAYgASgLMjcuZ29vZ2xlLmNsb3VkLmV2ZW50YXJjLnYx",
+            "LlBpcGVsaW5lLk1lc3NhZ2VQYXlsb2FkRm9ybWF0QgPgQQEaXQoNTmV0d29y",
+            "a0NvbmZpZxJMChJuZXR3b3JrX2F0dGFjaG1lbnQYASABKAlCMOBBAvpBKgoo",
+            "Y29tcHV0ZS5nb29nbGVhcGlzLmNvbS9OZXR3b3JrQXR0YWNobWVudBpHCgxI",
+            "dHRwRW5kcG9pbnQSEAoDdXJpGAEgASgJQgPgQQISJQoYbWVzc2FnZV9iaW5k",
+            "aW5nX3RlbXBsYXRlGAMgASgJQgPgQQEa3wMKFEF1dGhlbnRpY2F0aW9uQ29u",
+            "ZmlnEmkKC2dvb2dsZV9vaWRjGAEgASgLMk0uZ29vZ2xlLmNsb3VkLmV2ZW50",
+            "YXJjLnYxLlBpcGVsaW5lLkRlc3RpbmF0aW9uLkF1dGhlbnRpY2F0aW9uQ29u",
+            "ZmlnLk9pZGNUb2tlbkID4EEBSAASagoLb2F1dGhfdG9rZW4YAiABKAsyTi5n",
+            "b29nbGUuY2xvdWQuZXZlbnRhcmMudjEuUGlwZWxpbmUuRGVzdGluYXRpb24u",
+            "QXV0aGVudGljYXRpb25Db25maWcuT0F1dGhUb2tlbkID4EEBSAAaZgoJT2lk",
+            "Y1Rva2VuEkIKD3NlcnZpY2VfYWNjb3VudBgBIAEoCUIp4EEC+kEjCiFpYW0u",
+            "Z29vZ2xlYXBpcy5jb20vU2VydmljZUFjY291bnQSFQoIYXVkaWVuY2UYAiAB",
+            "KAlCA+BBARpkCgpPQXV0aFRva2VuEkIKD3NlcnZpY2VfYWNjb3VudBgBIAEo",
+            "CUIp4EEC+kEjCiFpYW0uZ29vZ2xlYXBpcy5jb20vU2VydmljZUFjY291bnQS",
+            "EgoFc2NvcGUYAiABKAlCA+BBAUIiCiBhdXRoZW50aWNhdGlvbl9tZXRob2Rf",
+            "ZGVzY3JpcHRvckIYChZkZXN0aW5hdGlvbl9kZXNjcmlwdG9yGrcBCglNZWRp",
+            "YXRpb24SWgoOdHJhbnNmb3JtYXRpb24YASABKAsyOy5nb29nbGUuY2xvdWQu",
+            "ZXZlbnRhcmMudjEuUGlwZWxpbmUuTWVkaWF0aW9uLlRyYW5zZm9ybWF0aW9u",
+            "QgPgQQFIABo2Cg5UcmFuc2Zvcm1hdGlvbhIkChd0cmFuc2Zvcm1hdGlvbl90",
+            "ZW1wbGF0ZRgBIAEoCUID4EEBQhYKFG1lZGlhdGlvbl9kZXNjcmlwdG9yGpoB",
+            "CgtSZXRyeVBvbGljeRIZCgxtYXhfYXR0ZW1wdHMYASABKAVCA+BBARI3Cg9t",
+            "aW5fcmV0cnlfZGVsYXkYAiABKAsyGS5nb29nbGUucHJvdG9idWYuRHVyYXRp",
+            "b25CA+BBARI3Cg9tYXhfcmV0cnlfZGVsYXkYAyABKAsyGS5nb29nbGUucHJv",
+            "dG9idWYuRHVyYXRpb25CA+BBARotCgtMYWJlbHNFbnRyeRILCgNrZXkYASAB",
+            "KAkSDQoFdmFsdWUYAiABKAk6AjgBGjIKEEFubm90YXRpb25zRW50cnkSCwoD",
+            "a2V5GAEgASgJEg0KBXZhbHVlGAIgASgJOgI4ATp46kF1CiBldmVudGFyYy5n",
+            "b29nbGVhcGlzLmNvbS9QaXBlbGluZRI8cHJvamVjdHMve3Byb2plY3R9L2xv",
+            "Y2F0aW9ucy97bG9jYXRpb259L3BpcGVsaW5lcy97cGlwZWxpbmV9KglwaXBl",
+            "bGluZXMyCHBpcGVsaW5lQoACChxjb20uZ29vZ2xlLmNsb3VkLmV2ZW50YXJj",
+            "LnYxQg1QaXBlbGluZVByb3RvUAFaOGNsb3VkLmdvb2dsZS5jb20vZ28vZXZl",
+            "bnRhcmMvYXBpdjEvZXZlbnRhcmNwYjtldmVudGFyY3BiqgIYR29vZ2xlLkNs",
+            "b3VkLkV2ZW50YXJjLlYxygIYR29vZ2xlXENsb3VkXEV2ZW50YXJjXFYx6gIb",
+            "R29vZ2xlOjpDbG91ZDo6RXZlbnRhcmM6OlYx6kFAChtwdWJzdWIuZ29vZ2xl",
+            "YXBpcy5jb20vVG9waWMSIXByb2plY3RzL3twcm9qZWN0fS90b3BpY3Mve3Rv",
+            "cGljfWIGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.FieldInfoReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Cloud.Eventarc.V1.LoggingConfigReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.DurationReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Eventarc.V1.Pipeline), global::Google.Cloud.Eventarc.V1.Pipeline.Parser, new[]{ "Name", "CreateTime", "UpdateTime", "Labels", "Uid", "Annotations", "DisplayName", "Destinations", "Mediations", "CryptoKeyName", "InputPayloadFormat", "LoggingConfig", "RetryPolicy", "Etag" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Eventarc.V1.Pipeline.Types.MessagePayloadFormat), global::Google.Cloud.Eventarc.V1.Pipeline.Types.MessagePayloadFormat.Parser, new[]{ "Protobuf", "Avro", "Json" }, new[]{ "Kind" }, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Eventarc.V1.Pipeline.Types.MessagePayloadFormat.Types.JsonFormat), global::Google.Cloud.Eventarc.V1.Pipeline.Types.MessagePayloadFormat.Types.JsonFormat.Parser, null, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Eventarc.V1.Pipeline), global::Google.Cloud.Eventarc.V1.Pipeline.Parser, new[]{ "Name", "CreateTime", "UpdateTime", "Labels", "Uid", "Annotations", "DisplayName", "Destinations", "Mediations", "CryptoKeyName", "InputPayloadFormat", "LoggingConfig", "RetryPolicy", "Etag", "SatisfiesPzs" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Eventarc.V1.Pipeline.Types.MessagePayloadFormat), global::Google.Cloud.Eventarc.V1.Pipeline.Types.MessagePayloadFormat.Parser, new[]{ "Protobuf", "Avro", "Json" }, new[]{ "Kind" }, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Eventarc.V1.Pipeline.Types.MessagePayloadFormat.Types.JsonFormat), global::Google.Cloud.Eventarc.V1.Pipeline.Types.MessagePayloadFormat.Types.JsonFormat.Parser, null, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Eventarc.V1.Pipeline.Types.MessagePayloadFormat.Types.ProtobufFormat), global::Google.Cloud.Eventarc.V1.Pipeline.Types.MessagePayloadFormat.Types.ProtobufFormat.Parser, new[]{ "SchemaDefinition" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Eventarc.V1.Pipeline.Types.MessagePayloadFormat.Types.AvroFormat), global::Google.Cloud.Eventarc.V1.Pipeline.Types.MessagePayloadFormat.Types.AvroFormat.Parser, new[]{ "SchemaDefinition" }, null, null, null, null)}),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Eventarc.V1.Pipeline.Types.Destination), global::Google.Cloud.Eventarc.V1.Pipeline.Types.Destination.Parser, new[]{ "NetworkConfig", "HttpEndpoint", "Workflow", "MessageBus", "Topic", "AuthenticationConfig", "OutputPayloadFormat" }, new[]{ "DestinationDescriptor" }, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Eventarc.V1.Pipeline.Types.Destination.Types.NetworkConfig), global::Google.Cloud.Eventarc.V1.Pipeline.Types.Destination.Types.NetworkConfig.Parser, new[]{ "NetworkAttachment" }, null, null, null, null),
@@ -175,6 +176,7 @@ namespace Google.Cloud.Eventarc.V1 {
       loggingConfig_ = other.loggingConfig_ != null ? other.loggingConfig_.Clone() : null;
       retryPolicy_ = other.retryPolicy_ != null ? other.retryPolicy_.Clone() : null;
       etag_ = other.etag_;
+      satisfiesPzs_ = other.satisfiesPzs_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -417,6 +419,22 @@ namespace Google.Cloud.Eventarc.V1 {
       }
     }
 
+    /// <summary>Field number for the "satisfies_pzs" field.</summary>
+    public const int SatisfiesPzsFieldNumber = 14;
+    private bool satisfiesPzs_;
+    /// <summary>
+    /// Output only. Whether or not this Pipeline satisfies the requirements of
+    /// physical zone separation
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool SatisfiesPzs {
+      get { return satisfiesPzs_; }
+      set {
+        satisfiesPzs_ = value;
+      }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
@@ -446,6 +464,7 @@ namespace Google.Cloud.Eventarc.V1 {
       if (!object.Equals(LoggingConfig, other.LoggingConfig)) return false;
       if (!object.Equals(RetryPolicy, other.RetryPolicy)) return false;
       if (Etag != other.Etag) return false;
+      if (SatisfiesPzs != other.SatisfiesPzs) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -467,6 +486,7 @@ namespace Google.Cloud.Eventarc.V1 {
       if (loggingConfig_ != null) hash ^= LoggingConfig.GetHashCode();
       if (retryPolicy_ != null) hash ^= RetryPolicy.GetHashCode();
       if (Etag.Length != 0) hash ^= Etag.GetHashCode();
+      if (SatisfiesPzs != false) hash ^= SatisfiesPzs.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -525,6 +545,10 @@ namespace Google.Cloud.Eventarc.V1 {
         output.WriteRawTag(106);
         output.WriteMessage(RetryPolicy);
       }
+      if (SatisfiesPzs != false) {
+        output.WriteRawTag(112);
+        output.WriteBool(SatisfiesPzs);
+      }
       if (Etag.Length != 0) {
         output.WriteRawTag(154, 6);
         output.WriteString(Etag);
@@ -579,6 +603,10 @@ namespace Google.Cloud.Eventarc.V1 {
         output.WriteRawTag(106);
         output.WriteMessage(RetryPolicy);
       }
+      if (SatisfiesPzs != false) {
+        output.WriteRawTag(112);
+        output.WriteBool(SatisfiesPzs);
+      }
       if (Etag.Length != 0) {
         output.WriteRawTag(154, 6);
         output.WriteString(Etag);
@@ -626,6 +654,9 @@ namespace Google.Cloud.Eventarc.V1 {
       }
       if (Etag.Length != 0) {
         size += 2 + pb::CodedOutputStream.ComputeStringSize(Etag);
+      }
+      if (SatisfiesPzs != false) {
+        size += 1 + 1;
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -687,6 +718,9 @@ namespace Google.Cloud.Eventarc.V1 {
       }
       if (other.Etag.Length != 0) {
         Etag = other.Etag;
+      }
+      if (other.SatisfiesPzs != false) {
+        SatisfiesPzs = other.SatisfiesPzs;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -768,6 +802,10 @@ namespace Google.Cloud.Eventarc.V1 {
               RetryPolicy = new global::Google.Cloud.Eventarc.V1.Pipeline.Types.RetryPolicy();
             }
             input.ReadMessage(RetryPolicy);
+            break;
+          }
+          case 112: {
+            SatisfiesPzs = input.ReadBool();
             break;
           }
           case 794: {
@@ -854,6 +892,10 @@ namespace Google.Cloud.Eventarc.V1 {
               RetryPolicy = new global::Google.Cloud.Eventarc.V1.Pipeline.Types.RetryPolicy();
             }
             input.ReadMessage(RetryPolicy);
+            break;
+          }
+          case 112: {
+            SatisfiesPzs = input.ReadBool();
             break;
           }
           case 794: {
@@ -1978,9 +2020,9 @@ namespace Google.Cloud.Eventarc.V1 {
         /// <summary>
         /// Optional. An authentication config used to authenticate message requests,
         /// such that destinations can verify the source. For example, this can be
-        /// used with private GCP destinations that require GCP credentials to access
-        /// like Cloud Run. This field is optional and should be set only by users
-        /// interested in authenticated push
+        /// used with private Google Cloud destinations that require Google Cloud
+        /// credentials for access like Cloud Run. This field is optional and should
+        /// be set only by users interested in authenticated push.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -2609,7 +2651,7 @@ namespace Google.Cloud.Eventarc.V1 {
             public const int UriFieldNumber = 1;
             private string uri_ = "";
             /// <summary>
-            /// Required. The URI of the HTTP enpdoint.
+            /// Required. The URI of the HTTP endpoint.
             ///
             /// The value must be a RFC2396 URI string.
             /// Examples: `https://svc.us-central1.p.local:8080/route`.
@@ -2633,10 +2675,11 @@ namespace Google.Cloud.Eventarc.V1 {
             ///
             /// If a binding expression is not specified here, the message
             /// is treated as a CloudEvent and is mapped to the HTTP request according
-            /// to the CloudEvent HTTP Protocol Binding Binary Content Mode. In this
-            /// representation, all fields except the `data` and `datacontenttype`
-            /// field on the message are mapped to HTTP request headers with a prefix
-            /// of `ce-`.
+            /// to the CloudEvent HTTP Protocol Binding Binary Content Mode
+            /// (https://github.com/cloudevents/spec/blob/main/cloudevents/bindings/http-protocol-binding.md#31-binary-content-mode).
+            /// In this representation, all fields except the `data` and
+            /// `datacontenttype` field on the message are mapped to HTTP request
+            /// headers with a prefix of `ce-`.
             ///
             /// To construct the HTTP request payload and the value of the content-type
             /// HTTP header, the payload format is defined as follows:
@@ -2666,7 +2709,7 @@ namespace Google.Cloud.Eventarc.V1 {
             /// - If a map named `headers` exists on the result of the expression,
             /// then its key/value pairs are directly mapped to the HTTP request
             /// headers. The headers values are constructed from the corresponding
-            /// value type’s canonical representation. If the `headers` field doesn’t
+            /// value type's canonical representation. If the `headers` field doesn't
             /// exist then the resulting HTTP request will be the headers of the
             /// CloudEvent HTTP Binding Binary Content Mode representation of the final
             /// message. Note: If the specified binding expression, has updated the
@@ -2708,6 +2751,11 @@ namespace Google.Cloud.Eventarc.V1 {
             ///   "body": "new-body"
             /// }
             /// ```
+            /// - The default binding for the message payload can be accessed using the
+            /// `body` variable. It conatins a string representation of the message
+            /// payload in the format specified by the `output_payload_format` field.
+            /// If the `input_payload_format` field is not set, the `body`
+            /// variable contains the same message payload bytes that were published.
             ///
             /// Additionally, the following CEL extension functions are provided for
             /// use in this CEL expression:
@@ -2765,33 +2813,28 @@ namespace Google.Cloud.Eventarc.V1 {
             /// - toMap:
             ///   [map1, map2, ...].toMap() -> map
             ///     - Converts a CEL list of CEL maps to a single CEL map
-            /// - toDestinationPayloadFormat():
-            ///   message.data.toDestinationPayloadFormat() -> string or bytes
-            ///     - Converts the message data to the destination payload format
-            ///     specified in Pipeline.Destination.output_payload_format
-            ///     - This function is meant to be applied to the message.data field.
-            ///     - If the destination payload format is not set, the function will
-            ///     return the message data unchanged.
             /// - toCloudEventJsonWithPayloadFormat:
             ///   message.toCloudEventJsonWithPayloadFormat() -> map
             ///     - Converts a message to the corresponding structure of JSON
-            ///     format for CloudEvents
-            ///     - This function applies toDestinationPayloadFormat() to the
-            ///     message data. It also sets the corresponding datacontenttype of
+            ///     format for CloudEvents.
+            ///     - It converts `data` to destination payload format
+            ///     specified in `output_payload_format`. If `output_payload_format` is
+            ///     not set, the data will remain unchanged.
+            ///     - It also sets the corresponding datacontenttype of
             ///     the CloudEvent, as indicated by
-            ///     Pipeline.Destination.output_payload_format. If no
-            ///     output_payload_format is set it will use the existing
-            ///     datacontenttype on the CloudEvent if present, else leave
-            ///     datacontenttype absent.
+            ///     `output_payload_format`. If no
+            ///     `output_payload_format` is set it will use the value of the
+            ///     "datacontenttype" attribute on the CloudEvent if present, else
+            ///     remove "datacontenttype" attribute.
             ///     - This function expects that the content of the message will
-            ///     adhere to the standard CloudEvent format. If it doesn’t then this
+            ///     adhere to the standard CloudEvent format. If it doesn't then this
             ///     function will fail.
             ///     - The result is a CEL map that corresponds to the JSON
             ///     representation of the CloudEvent. To convert that data to a JSON
             ///     string it can be chained with the toJsonString function.
             ///
             /// The Pipeline expects that the message it receives adheres to the
-            /// standard CloudEvent format. If it doesn’t then the outgoing message
+            /// standard CloudEvent format. If it doesn't then the outgoing message
             /// request may fail with a persistent error.
             /// </summary>
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -3020,7 +3063,7 @@ namespace Google.Cloud.Eventarc.V1 {
             public const int GoogleOidcFieldNumber = 1;
             /// <summary>
             /// Optional. This authenticate method will apply Google OIDC tokens
-            /// signed by a GCP service account to the requests.
+            /// signed by a Google Cloud service account to the requests.
             /// </summary>
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
             [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -3267,9 +3310,9 @@ namespace Google.Cloud.Eventarc.V1 {
             public static partial class Types {
               /// <summary>
               /// Represents a config used to authenticate with a Google OIDC token using
-              /// a GCP service account. Use this authentication method to invoke your
-              /// Cloud Run and Cloud Functions destinations or HTTP endpoints that
-              /// support Google OIDC.
+              /// a Google Cloud service account. Use this authentication method to
+              /// invoke your Cloud Run and Cloud Functions destinations or HTTP
+              /// endpoints that support Google OIDC.
               /// </summary>
               [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
               public sealed partial class OidcToken : pb::IMessage<OidcToken>
@@ -3324,7 +3367,7 @@ namespace Google.Cloud.Eventarc.V1 {
                 /// Required. Service account email used to generate the OIDC Token.
                 /// The principal who calls this API must have
                 /// iam.serviceAccounts.actAs permission in the service account. See
-                /// https://cloud.google.com/iam/docs/understanding-service-accounts?hl=en#sa_common
+                /// https://cloud.google.com/iam/docs/understanding-service-accounts
                 /// for more information. Eventarc service agents must have
                 /// roles/roles/iam.serviceAccountTokenCreator role to allow the
                 /// Pipeline to create OpenID tokens for authenticated requests.
@@ -3572,7 +3615,7 @@ namespace Google.Cloud.Eventarc.V1 {
                 /// token](https://developers.google.com/identity/protocols/OAuth2).
                 /// The principal who calls this API must have
                 /// iam.serviceAccounts.actAs permission in the service account. See
-                /// https://cloud.google.com/iam/docs/understanding-service-accounts?hl=en#sa_common
+                /// https://cloud.google.com/iam/docs/understanding-service-accounts
                 /// for more information. Eventarc service agents must have
                 /// roles/roles/iam.serviceAccountTokenCreator role to allow Pipeline
                 /// to create OAuth2 tokens for authenticated requests.
@@ -4135,7 +4178,7 @@ namespace Google.Cloud.Eventarc.V1 {
             ///     datacontenttype on the CloudEvent if present, else leave
             ///     datacontenttype absent.
             ///     - This function expects that the content of the message will
-            ///     adhere to the standard CloudEvent format. If it doesn’t then this
+            ///     adhere to the standard CloudEvent format. If it doesn't then this
             ///     function will fail.
             ///     - The result is a CEL map that corresponds to the JSON
             ///     representation of the CloudEvent. To convert that data to a JSON

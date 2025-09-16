@@ -6623,7 +6623,7 @@ namespace Google.Cloud.Eventarc.V1 {
     public const int ParentFieldNumber = 1;
     private string parent_ = "";
     /// <summary>
-    /// Required. The parent collection to list triggers on.
+    /// Required. The parent collection to list message buses on.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -7811,7 +7811,7 @@ namespace Google.Cloud.Eventarc.V1 {
     private string messageBusId_ = "";
     /// <summary>
     /// Required. The user-provided ID to be assigned to the MessageBus. It should
-    /// match the format (^[a-z]([a-z0-9-]{0,61}[a-z0-9])?$)
+    /// match the format `^[a-z]([a-z0-9-]{0,61}[a-z0-9])?$`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -9612,7 +9612,7 @@ namespace Google.Cloud.Eventarc.V1 {
     private string enrollmentId_ = "";
     /// <summary>
     /// Required. The user-provided ID to be assigned to the Enrollment. It should
-    /// match the format (^[a-z]([a-z0-9-]{0,61}[a-z0-9])?$).
+    /// match the format `^[a-z]([a-z0-9-]{0,61}[a-z0-9])?$`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -11412,7 +11412,8 @@ namespace Google.Cloud.Eventarc.V1 {
     public const int PipelineIdFieldNumber = 3;
     private string pipelineId_ = "";
     /// <summary>
-    /// Required. The user-provided ID to be assigned to the Pipeline.
+    /// Required. The user-provided ID to be assigned to the Pipeline. It should
+    /// match the format `^[a-z]([a-z0-9-]{0,61}[a-z0-9])?$`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -13213,7 +13214,7 @@ namespace Google.Cloud.Eventarc.V1 {
     private string googleApiSourceId_ = "";
     /// <summary>
     /// Required. The user-provided ID to be assigned to the GoogleApiSource. It
-    /// should match the format (^[a-z]([a-z0-9-]{0,61}[a-z0-9])?$).
+    /// should match the format `^[a-z]([a-z0-9-]{0,61}[a-z0-9])?$`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
