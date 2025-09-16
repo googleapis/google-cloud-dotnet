@@ -1,0 +1,26 @@
+syntax = "proto3";
+
+import "google/protobuf/wrappers.proto";
+
+package Google.Cloud.BigQuery.Storage.V1.IntegrationTests;
+
+message BusinessChangedEvent {
+    Business business = 1;
+}
+
+message Business {
+    string id = 1;
+    google.protobuf.StringValue finance_email = 9;
+    bool disabled = 19;
+    bool active = 24;
+    BusinessStatus status = 18;
+    repeated string tags = 27;
+    string meta_ts = 11;
+    int64 meta_op = 12;
+}
+
+enum BusinessStatus {
+    BUSINESS_STATUS_UNDEFINED = 0;
+    BUSINESS_STATUS_IN_REVIEW = 1;
+    BUSINESS_STATUS_APPROVED = 2;
+}

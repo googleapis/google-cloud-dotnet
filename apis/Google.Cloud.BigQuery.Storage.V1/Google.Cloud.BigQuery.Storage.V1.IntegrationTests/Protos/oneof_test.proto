@@ -1,0 +1,12 @@
+syntax = "proto3";
+
+package Google.Cloud.BigQuery.Storage.V1.IntegrationTests;
+
+message OneOfTestMessage {
+  optional string optional_field = 1;
+  
+  oneof my_oneof {
+    string oneof_string = 2;
+    int32 oneof_int32 = 3;
+  }
+}

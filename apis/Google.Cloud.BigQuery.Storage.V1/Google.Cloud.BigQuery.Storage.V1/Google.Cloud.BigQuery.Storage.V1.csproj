@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
     <Version>3.17.0</Version>
@@ -11,5 +11,6 @@
     <PackageReference Include="ConfigureAwaitChecker.Analyzer" PrivateAssets="All" />
     <PackageReference Include="Google.Api.Gax.Grpc" />
     <PackageReference Include="Grpc.Core" PrivateAssets="None" Condition="'$(TargetFramework)'=='net462'" />
+    <PackageReference Include="Google.Apis.Bigquery.v2" VersionOverride="[1.69.0.3783, 2.0.0.0)" />
   </ItemGroup>
 </Project>
