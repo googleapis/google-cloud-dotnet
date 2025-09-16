@@ -1,5 +1,11 @@
 # Version history
 
+## Version 1.0.0-beta51, released 2025-09-16
+
+### New features
+
+- Add private_model_server_enabled to in Endpoint.proto
+
 ## Version 1.0.0-beta50, released 2025-09-08
 
 ### New features
