@@ -11,6 +11,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Google.Cloud.BigQuery.Stora
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Google.Cloud.ClientTesting", "..\..\tools\Google.Cloud.ClientTesting\Google.Cloud.ClientTesting.csproj", "{29974B0C-A7B0-8CA8-AE32-99F622C89044}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Google.Cloud.BigQuery.Storage.V1.IntegrationTests", "Google.Cloud.BigQuery.Storage.V1.IntegrationTests\Google.Cloud.BigQuery.Storage.V1.IntegrationTests.csproj", "{65F41A52-C4ED-4191-9749-AF84920E4614}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -33,6 +35,10 @@ Global
 		{29974B0C-A7B0-8CA8-AE32-99F622C89044}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{29974B0C-A7B0-8CA8-AE32-99F622C89044}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{29974B0C-A7B0-8CA8-AE32-99F622C89044}.Release|Any CPU.Build.0 = Release|Any CPU
+		{65F41A52-C4ED-4191-9749-AF84920E4614}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{65F41A52-C4ED-4191-9749-AF84920E4614}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{65F41A52-C4ED-4191-9749-AF84920E4614}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{65F41A52-C4ED-4191-9749-AF84920E4614}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
