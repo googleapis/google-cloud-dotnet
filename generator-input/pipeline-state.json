@@ -4050,7 +4050,7 @@
             "generationAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
             "releaseAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
             "releaseTimestamp": "2025-04-24T07:40:56Z",
-            "lastGeneratedCommit": "90926b6dcbc8511fb4c075732f08e9e6c9a17437",
+            "lastGeneratedCommit": "888ae95dd6125f754650d55410b8c117b618a268",
             "apiPaths": [
                 "google/cloud/devicestreaming/v1"
             ],
