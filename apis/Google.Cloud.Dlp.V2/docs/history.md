@@ -1,5 +1,15 @@
 # Version history
 
+## Version 4.20.0, released 2025-09-16
+
+### New features
+
+- Add LocationSupport,Domain,DocumentFallbackLocation
+
+### Documentation improvements
+
+- Minor doc revision
+
 ## Version 4.19.0, released 2025-06-25
 
 ### New features
