@@ -1100,7 +1100,7 @@
             "generationAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
             "releaseAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
             "releaseTimestamp": "2025-01-06T17:50:26Z",
-            "lastGeneratedCommit": "12fc2f929e39688aa24ae6fc5e18db3315975a6e",
+            "lastGeneratedCommit": "888ae95dd6125f754650d55410b8c117b618a268",
             "apiPaths": [
                 "google/cloud/contactcenterinsights/v1"
             ],
