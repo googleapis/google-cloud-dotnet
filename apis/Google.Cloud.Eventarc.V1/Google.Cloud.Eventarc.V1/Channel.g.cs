@@ -27,29 +27,31 @@ namespace Google.Cloud.Eventarc.V1 {
             "CiZnb29nbGUvY2xvdWQvZXZlbnRhcmMvdjEvY2hhbm5lbC5wcm90bxIYZ29v",
             "Z2xlLmNsb3VkLmV2ZW50YXJjLnYxGh9nb29nbGUvYXBpL2ZpZWxkX2JlaGF2",
             "aW9yLnByb3RvGhlnb29nbGUvYXBpL3Jlc291cmNlLnByb3RvGh9nb29nbGUv",
-            "cHJvdG9idWYvdGltZXN0YW1wLnByb3RvIssECgdDaGFubmVsEhEKBG5hbWUY",
+            "cHJvdG9idWYvdGltZXN0YW1wLnByb3RvIsEFCgdDaGFubmVsEhEKBG5hbWUY",
             "ASABKAlCA+BBAhIQCgN1aWQYAiABKAlCA+BBAxI0CgtjcmVhdGVfdGltZRgF",
             "IAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXBCA+BBAxI0Cgt1cGRh",
             "dGVfdGltZRgGIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXBCA+BB",
             "AxIQCghwcm92aWRlchgHIAEoCRIbCgxwdWJzdWJfdG9waWMYCCABKAlCA+BB",
             "A0gAEjsKBXN0YXRlGAkgASgOMicuZ29vZ2xlLmNsb3VkLmV2ZW50YXJjLnYx",
             "LkNoYW5uZWwuU3RhdGVCA+BBAxIdChBhY3RpdmF0aW9uX3Rva2VuGAogASgJ",
-            "QgPgQQMSPwoPY3J5cHRvX2tleV9uYW1lGAsgASgJQib6QSMKIWNsb3Vka21z",
-            "Lmdvb2dsZWFwaXMuY29tL0NyeXB0b0tleRIaCg1zYXRpc2ZpZXNfcHpzGAwg",
-            "ASgIQgPgQQMiRQoFU3RhdGUSFQoRU1RBVEVfVU5TUEVDSUZJRUQQABILCgdQ",
-            "RU5ESU5HEAESCgoGQUNUSVZFEAISDAoISU5BQ1RJVkUQAzpz6kFwCh9ldmVu",
-            "dGFyYy5nb29nbGVhcGlzLmNvbS9DaGFubmVsEjpwcm9qZWN0cy97cHJvamVj",
-            "dH0vbG9jYXRpb25zL3tsb2NhdGlvbn0vY2hhbm5lbHMve2NoYW5uZWx9Kghj",
-            "aGFubmVsczIHY2hhbm5lbEILCgl0cmFuc3BvcnRCvAEKHGNvbS5nb29nbGUu",
-            "Y2xvdWQuZXZlbnRhcmMudjFCDENoYW5uZWxQcm90b1ABWjhjbG91ZC5nb29n",
-            "bGUuY29tL2dvL2V2ZW50YXJjL2FwaXYxL2V2ZW50YXJjcGI7ZXZlbnRhcmNw",
-            "YqoCGEdvb2dsZS5DbG91ZC5FdmVudGFyYy5WMcoCGEdvb2dsZVxDbG91ZFxF",
-            "dmVudGFyY1xWMeoCG0dvb2dsZTo6Q2xvdWQ6OkV2ZW50YXJjOjpWMWIGcHJv",
-            "dG8z"));
+            "QgPgQQMSQgoPY3J5cHRvX2tleV9uYW1lGAsgASgJQingQQH6QSMKIWNsb3Vk",
+            "a21zLmdvb2dsZWFwaXMuY29tL0NyeXB0b0tleRIaCg1zYXRpc2ZpZXNfcHpz",
+            "GAwgASgIQgPgQQMSQgoGbGFiZWxzGA0gAygLMi0uZ29vZ2xlLmNsb3VkLmV2",
+            "ZW50YXJjLnYxLkNoYW5uZWwuTGFiZWxzRW50cnlCA+BBARotCgtMYWJlbHNF",
+            "bnRyeRILCgNrZXkYASABKAkSDQoFdmFsdWUYAiABKAk6AjgBIkUKBVN0YXRl",
+            "EhUKEVNUQVRFX1VOU1BFQ0lGSUVEEAASCwoHUEVORElORxABEgoKBkFDVElW",
+            "RRACEgwKCElOQUNUSVZFEAM6c+pBcAofZXZlbnRhcmMuZ29vZ2xlYXBpcy5j",
+            "b20vQ2hhbm5lbBI6cHJvamVjdHMve3Byb2plY3R9L2xvY2F0aW9ucy97bG9j",
+            "YXRpb259L2NoYW5uZWxzL3tjaGFubmVsfSoIY2hhbm5lbHMyB2NoYW5uZWxC",
+            "CwoJdHJhbnNwb3J0QrwBChxjb20uZ29vZ2xlLmNsb3VkLmV2ZW50YXJjLnYx",
+            "QgxDaGFubmVsUHJvdG9QAVo4Y2xvdWQuZ29vZ2xlLmNvbS9nby9ldmVudGFy",
+            "Yy9hcGl2MS9ldmVudGFyY3BiO2V2ZW50YXJjcGKqAhhHb29nbGUuQ2xvdWQu",
+            "RXZlbnRhcmMuVjHKAhhHb29nbGVcQ2xvdWRcRXZlbnRhcmNcVjHqAhtHb29n",
+            "bGU6OkNsb3VkOjpFdmVudGFyYzo6VjFiBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Eventarc.V1.Channel), global::Google.Cloud.Eventarc.V1.Channel.Parser, new[]{ "Name", "Uid", "CreateTime", "UpdateTime", "Provider", "PubsubTopic", "State", "ActivationToken", "CryptoKeyName", "SatisfiesPzs" }, new[]{ "Transport" }, new[]{ typeof(global::Google.Cloud.Eventarc.V1.Channel.Types.State) }, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Eventarc.V1.Channel), global::Google.Cloud.Eventarc.V1.Channel.Parser, new[]{ "Name", "Uid", "CreateTime", "UpdateTime", "Provider", "PubsubTopic", "State", "ActivationToken", "CryptoKeyName", "SatisfiesPzs", "Labels" }, new[]{ "Transport" }, new[]{ typeof(global::Google.Cloud.Eventarc.V1.Channel.Types.State) }, null, new pbr::GeneratedClrTypeInfo[] { null, })
           }));
     }
     #endregion
@@ -106,6 +108,7 @@ namespace Google.Cloud.Eventarc.V1 {
       activationToken_ = other.activationToken_;
       cryptoKeyName_ = other.cryptoKeyName_;
       satisfiesPzs_ = other.satisfiesPzs_;
+      labels_ = other.labels_.Clone();
       switch (other.TransportCase) {
         case TransportOneofCase.PubsubTopic:
           PubsubTopic = other.PubsubTopic;
@@ -269,7 +272,7 @@ namespace Google.Cloud.Eventarc.V1 {
     public const int CryptoKeyNameFieldNumber = 11;
     private string cryptoKeyName_ = "";
     /// <summary>
-    /// Resource name of a KMS crypto key (managed by the user) used to
+    /// Optional. Resource name of a KMS crypto key (managed by the user) used to
     /// encrypt/decrypt their event data.
     ///
     /// It must match the pattern
@@ -298,6 +301,20 @@ namespace Google.Cloud.Eventarc.V1 {
       set {
         satisfiesPzs_ = value;
       }
+    }
+
+    /// <summary>Field number for the "labels" field.</summary>
+    public const int LabelsFieldNumber = 13;
+    private static readonly pbc::MapField<string, string>.Codec _map_labels_codec
+        = new pbc::MapField<string, string>.Codec(pb::FieldCodec.ForString(10, ""), pb::FieldCodec.ForString(18, ""), 106);
+    private readonly pbc::MapField<string, string> labels_ = new pbc::MapField<string, string>();
+    /// <summary>
+    /// Optional. Resource labels.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pbc::MapField<string, string> Labels {
+      get { return labels_; }
     }
 
     private object transport_;
@@ -345,6 +362,7 @@ namespace Google.Cloud.Eventarc.V1 {
       if (ActivationToken != other.ActivationToken) return false;
       if (CryptoKeyName != other.CryptoKeyName) return false;
       if (SatisfiesPzs != other.SatisfiesPzs) return false;
+      if (!Labels.Equals(other.Labels)) return false;
       if (TransportCase != other.TransportCase) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
@@ -363,6 +381,7 @@ namespace Google.Cloud.Eventarc.V1 {
       if (ActivationToken.Length != 0) hash ^= ActivationToken.GetHashCode();
       if (CryptoKeyName.Length != 0) hash ^= CryptoKeyName.GetHashCode();
       if (SatisfiesPzs != false) hash ^= SatisfiesPzs.GetHashCode();
+      hash ^= Labels.GetHashCode();
       hash ^= (int) transportCase_;
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
@@ -422,6 +441,7 @@ namespace Google.Cloud.Eventarc.V1 {
         output.WriteRawTag(96);
         output.WriteBool(SatisfiesPzs);
       }
+      labels_.WriteTo(output, _map_labels_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -472,6 +492,7 @@ namespace Google.Cloud.Eventarc.V1 {
         output.WriteRawTag(96);
         output.WriteBool(SatisfiesPzs);
       }
+      labels_.WriteTo(ref output, _map_labels_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -512,6 +533,7 @@ namespace Google.Cloud.Eventarc.V1 {
       if (SatisfiesPzs != false) {
         size += 1 + 1;
       }
+      size += labels_.CalculateSize(_map_labels_codec);
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
       }
@@ -557,6 +579,7 @@ namespace Google.Cloud.Eventarc.V1 {
       if (other.SatisfiesPzs != false) {
         SatisfiesPzs = other.SatisfiesPzs;
       }
+      labels_.MergeFrom(other.labels_);
       switch (other.TransportCase) {
         case TransportOneofCase.PubsubTopic:
           PubsubTopic = other.PubsubTopic;
@@ -624,6 +647,10 @@ namespace Google.Cloud.Eventarc.V1 {
             SatisfiesPzs = input.ReadBool();
             break;
           }
+          case 106: {
+            labels_.AddEntriesFrom(input, _map_labels_codec);
+            break;
+          }
         }
       }
     #endif
@@ -683,6 +710,10 @@ namespace Google.Cloud.Eventarc.V1 {
           }
           case 96: {
             SatisfiesPzs = input.ReadBool();
+            break;
+          }
+          case 106: {
+            labels_.AddEntriesFrom(ref input, _map_labels_codec);
             break;
           }
         }

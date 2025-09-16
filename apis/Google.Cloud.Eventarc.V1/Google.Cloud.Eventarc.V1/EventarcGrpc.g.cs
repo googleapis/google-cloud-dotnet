@@ -696,7 +696,9 @@ namespace Google.Cloud.Eventarc.V1 {
       }
 
       /// <summary>
-      /// Get a GoogleChannelConfig
+      /// Get a GoogleChannelConfig.
+      /// The name of the GoogleChannelConfig in the response is ALWAYS coded with
+      /// projectID.
       /// </summary>
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
@@ -1769,7 +1771,9 @@ namespace Google.Cloud.Eventarc.V1 {
         return CallInvoker.AsyncUnaryCall(__Method_DeleteChannelConnection, null, options, request);
       }
       /// <summary>
-      /// Get a GoogleChannelConfig
+      /// Get a GoogleChannelConfig.
+      /// The name of the GoogleChannelConfig in the response is ALWAYS coded with
+      /// projectID.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -1782,7 +1786,9 @@ namespace Google.Cloud.Eventarc.V1 {
         return GetGoogleChannelConfig(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Get a GoogleChannelConfig
+      /// Get a GoogleChannelConfig.
+      /// The name of the GoogleChannelConfig in the response is ALWAYS coded with
+      /// projectID.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -1793,7 +1799,9 @@ namespace Google.Cloud.Eventarc.V1 {
         return CallInvoker.BlockingUnaryCall(__Method_GetGoogleChannelConfig, null, options, request);
       }
       /// <summary>
-      /// Get a GoogleChannelConfig
+      /// Get a GoogleChannelConfig.
+      /// The name of the GoogleChannelConfig in the response is ALWAYS coded with
+      /// projectID.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -1806,7 +1814,9 @@ namespace Google.Cloud.Eventarc.V1 {
         return GetGoogleChannelConfigAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Get a GoogleChannelConfig
+      /// Get a GoogleChannelConfig.
+      /// The name of the GoogleChannelConfig in the response is ALWAYS coded with
+      /// projectID.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>

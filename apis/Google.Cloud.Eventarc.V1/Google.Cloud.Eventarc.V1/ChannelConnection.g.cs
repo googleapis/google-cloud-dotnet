@@ -27,25 +27,28 @@ namespace Google.Cloud.Eventarc.V1 {
             "CjFnb29nbGUvY2xvdWQvZXZlbnRhcmMvdjEvY2hhbm5lbF9jb25uZWN0aW9u",
             "LnByb3RvEhhnb29nbGUuY2xvdWQuZXZlbnRhcmMudjEaH2dvb2dsZS9hcGkv",
             "ZmllbGRfYmVoYXZpb3IucHJvdG8aGWdvb2dsZS9hcGkvcmVzb3VyY2UucHJv",
-            "dG8aH2dvb2dsZS9wcm90b2J1Zi90aW1lc3RhbXAucHJvdG8ipwMKEUNoYW5u",
+            "dG8aH2dvb2dsZS9wcm90b2J1Zi90aW1lc3RhbXAucHJvdG8ipAQKEUNoYW5u",
             "ZWxDb25uZWN0aW9uEhEKBG5hbWUYASABKAlCA+BBAhIQCgN1aWQYAiABKAlC",
             "A+BBAxI4CgdjaGFubmVsGAUgASgJQifgQQL6QSEKH2V2ZW50YXJjLmdvb2ds",
             "ZWFwaXMuY29tL0NoYW5uZWwSNAoLY3JlYXRlX3RpbWUYBiABKAsyGi5nb29n",
             "bGUucHJvdG9idWYuVGltZXN0YW1wQgPgQQMSNAoLdXBkYXRlX3RpbWUYByAB",
             "KAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wQgPgQQMSHQoQYWN0aXZh",
-            "dGlvbl90b2tlbhgIIAEoCUID4EEEOqcB6kGjAQopZXZlbnRhcmMuZ29vZ2xl",
-            "YXBpcy5jb20vQ2hhbm5lbENvbm5lY3Rpb24ST3Byb2plY3RzL3twcm9qZWN0",
-            "fS9sb2NhdGlvbnMve2xvY2F0aW9ufS9jaGFubmVsQ29ubmVjdGlvbnMve2No",
-            "YW5uZWxfY29ubmVjdGlvbn0qEmNoYW5uZWxDb25uZWN0aW9uczIRY2hhbm5l",
-            "bENvbm5lY3Rpb25CxgEKHGNvbS5nb29nbGUuY2xvdWQuZXZlbnRhcmMudjFC",
-            "FkNoYW5uZWxDb25uZWN0aW9uUHJvdG9QAVo4Y2xvdWQuZ29vZ2xlLmNvbS9n",
-            "by9ldmVudGFyYy9hcGl2MS9ldmVudGFyY3BiO2V2ZW50YXJjcGKqAhhHb29n",
-            "bGUuQ2xvdWQuRXZlbnRhcmMuVjHKAhhHb29nbGVcQ2xvdWRcRXZlbnRhcmNc",
-            "VjHqAhtHb29nbGU6OkNsb3VkOjpFdmVudGFyYzo6VjFiBnByb3RvMw=="));
+            "dGlvbl90b2tlbhgIIAEoCUID4EEEEkwKBmxhYmVscxgJIAMoCzI3Lmdvb2ds",
+            "ZS5jbG91ZC5ldmVudGFyYy52MS5DaGFubmVsQ29ubmVjdGlvbi5MYWJlbHNF",
+            "bnRyeUID4EEBGi0KC0xhYmVsc0VudHJ5EgsKA2tleRgBIAEoCRINCgV2YWx1",
+            "ZRgCIAEoCToCOAE6pwHqQaMBCilldmVudGFyYy5nb29nbGVhcGlzLmNvbS9D",
+            "aGFubmVsQ29ubmVjdGlvbhJPcHJvamVjdHMve3Byb2plY3R9L2xvY2F0aW9u",
+            "cy97bG9jYXRpb259L2NoYW5uZWxDb25uZWN0aW9ucy97Y2hhbm5lbF9jb25u",
+            "ZWN0aW9ufSoSY2hhbm5lbENvbm5lY3Rpb25zMhFjaGFubmVsQ29ubmVjdGlv",
+            "bkLGAQocY29tLmdvb2dsZS5jbG91ZC5ldmVudGFyYy52MUIWQ2hhbm5lbENv",
+            "bm5lY3Rpb25Qcm90b1ABWjhjbG91ZC5nb29nbGUuY29tL2dvL2V2ZW50YXJj",
+            "L2FwaXYxL2V2ZW50YXJjcGI7ZXZlbnRhcmNwYqoCGEdvb2dsZS5DbG91ZC5F",
+            "dmVudGFyYy5WMcoCGEdvb2dsZVxDbG91ZFxFdmVudGFyY1xWMeoCG0dvb2ds",
+            "ZTo6Q2xvdWQ6OkV2ZW50YXJjOjpWMWIGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Eventarc.V1.ChannelConnection), global::Google.Cloud.Eventarc.V1.ChannelConnection.Parser, new[]{ "Name", "Uid", "Channel", "CreateTime", "UpdateTime", "ActivationToken" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Eventarc.V1.ChannelConnection), global::Google.Cloud.Eventarc.V1.ChannelConnection.Parser, new[]{ "Name", "Uid", "Channel", "CreateTime", "UpdateTime", "ActivationToken", "Labels" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { null, })
           }));
     }
     #endregion
@@ -99,6 +102,7 @@ namespace Google.Cloud.Eventarc.V1 {
       createTime_ = other.createTime_ != null ? other.createTime_.Clone() : null;
       updateTime_ = other.updateTime_ != null ? other.updateTime_.Clone() : null;
       activationToken_ = other.activationToken_;
+      labels_ = other.labels_.Clone();
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -204,6 +208,20 @@ namespace Google.Cloud.Eventarc.V1 {
       }
     }
 
+    /// <summary>Field number for the "labels" field.</summary>
+    public const int LabelsFieldNumber = 9;
+    private static readonly pbc::MapField<string, string>.Codec _map_labels_codec
+        = new pbc::MapField<string, string>.Codec(pb::FieldCodec.ForString(10, ""), pb::FieldCodec.ForString(18, ""), 74);
+    private readonly pbc::MapField<string, string> labels_ = new pbc::MapField<string, string>();
+    /// <summary>
+    /// Optional. Resource labels.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pbc::MapField<string, string> Labels {
+      get { return labels_; }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
@@ -225,6 +243,7 @@ namespace Google.Cloud.Eventarc.V1 {
       if (!object.Equals(CreateTime, other.CreateTime)) return false;
       if (!object.Equals(UpdateTime, other.UpdateTime)) return false;
       if (ActivationToken != other.ActivationToken) return false;
+      if (!Labels.Equals(other.Labels)) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -238,6 +257,7 @@ namespace Google.Cloud.Eventarc.V1 {
       if (createTime_ != null) hash ^= CreateTime.GetHashCode();
       if (updateTime_ != null) hash ^= UpdateTime.GetHashCode();
       if (ActivationToken.Length != 0) hash ^= ActivationToken.GetHashCode();
+      hash ^= Labels.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -280,6 +300,7 @@ namespace Google.Cloud.Eventarc.V1 {
         output.WriteRawTag(66);
         output.WriteString(ActivationToken);
       }
+      labels_.WriteTo(output, _map_labels_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -314,6 +335,7 @@ namespace Google.Cloud.Eventarc.V1 {
         output.WriteRawTag(66);
         output.WriteString(ActivationToken);
       }
+      labels_.WriteTo(ref output, _map_labels_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -342,6 +364,7 @@ namespace Google.Cloud.Eventarc.V1 {
       if (ActivationToken.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(ActivationToken);
       }
+      size += labels_.CalculateSize(_map_labels_codec);
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
       }
@@ -378,6 +401,7 @@ namespace Google.Cloud.Eventarc.V1 {
       if (other.ActivationToken.Length != 0) {
         ActivationToken = other.ActivationToken;
       }
+      labels_.MergeFrom(other.labels_);
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 
@@ -423,6 +447,10 @@ namespace Google.Cloud.Eventarc.V1 {
             ActivationToken = input.ReadString();
             break;
           }
+          case 74: {
+            labels_.AddEntriesFrom(input, _map_labels_codec);
+            break;
+          }
         }
       }
     #endif
@@ -466,6 +494,10 @@ namespace Google.Cloud.Eventarc.V1 {
           }
           case 66: {
             ActivationToken = input.ReadString();
+            break;
+          }
+          case 74: {
+            labels_.AddEntriesFrom(ref input, _map_labels_codec);
             break;
           }
         }
