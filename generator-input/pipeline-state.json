@@ -1143,7 +1143,7 @@
             "generationAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
             "releaseAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
             "releaseTimestamp": "2025-04-23T17:02:25Z",
-            "lastGeneratedCommit": "180250ccb48a7bbd984b5e755bfacb0a11cacb88",
+            "lastGeneratedCommit": "888ae95dd6125f754650d55410b8c117b618a268",
             "apiPaths": [
                 "google/cloud/datacatalog/v1"
             ],
