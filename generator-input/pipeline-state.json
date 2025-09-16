@@ -1430,7 +1430,7 @@
             "currentVersion": "2.0.0-beta26",
             "generationAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
             "releaseAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
-            "lastGeneratedCommit": "8dab79f366047de6a32cfc45f80123089138554e",
+            "lastGeneratedCommit": "888ae95dd6125f754650d55410b8c117b618a268",
             "apiPaths": [
                 "google/cloud/documentai/v1beta3"
             ],
