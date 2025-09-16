@@ -1,5 +1,12 @@
 # Version history
 
+## Version 3.19.0, released 2025-09-16
+
+### New features
+
+- Support KEY_ENCAPSULATION purpose and quantum-safe algorithms ML_KEM_768, ML_KEM_1024 and KEM_XWING
+- Add PublicKeyFormat enums XWING_RAW_BYTES (used for KEM_XWING) and DER
+
 ## Version 3.18.0, released 2025-05-16
 
 ### Documentation improvements
