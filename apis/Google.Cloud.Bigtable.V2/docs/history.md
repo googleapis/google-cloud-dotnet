@@ -1,5 +1,12 @@
 # Version history
 
+## Version 3.24.0, released 2025-09-16
+
+### New features
+
+- Add Type API updates needed to support structured keys in materialized views
+- Add encodings for STRUCT and the Timestamp type
+
 ## Version 3.23.0, released 2025-08-12
 
 ### Bug fixes
