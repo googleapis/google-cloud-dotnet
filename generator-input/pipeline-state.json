@@ -1086,7 +1086,7 @@
             "generationAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
             "releaseAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
             "releaseTimestamp": "2024-05-13T17:48:18Z",
-            "lastGeneratedCommit": "6caf69b6f1d3f80255fa46e504acf96e38ef34c0",
+            "lastGeneratedCommit": "888ae95dd6125f754650d55410b8c117b618a268",
             "apiPaths": [
                 "google/cloud/connectors/v1"
             ],
