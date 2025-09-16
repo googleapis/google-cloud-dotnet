@@ -293,11 +293,12 @@
         },
         {
             "id": "Google.Cloud.ApiHub.V1",
-            "currentVersion": "1.0.0",
+            "currentVersion": "1.1.0",
             "generationAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
             "releaseAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
-            "releaseTimestamp": "2024-12-05T19:04:25Z",
+            "releaseTimestamp": "2025-09-16T07:57:06.918863261Z",
             "lastGeneratedCommit": "748ffeec58bab5d70a4dbc89e1b34702c97d12ef",
+            "lastReleasedCommit": "748ffeec58bab5d70a4dbc89e1b34702c97d12ef",
             "apiPaths": [
                 "google/cloud/apihub/v1"
             ],
