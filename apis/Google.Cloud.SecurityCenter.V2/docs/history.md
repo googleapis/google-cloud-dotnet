@@ -1,5 +1,11 @@
 # Version history
 
+## Version 1.3.0, released 2025-09-16
+
+### New features
+
+- Add GCE to DeploymentPlatform enum
+
 ## Version 1.2.0, released 2025-07-07
 
 ### New features
