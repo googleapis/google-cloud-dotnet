@@ -1,5 +1,15 @@
 # Version history
 
+## Version 1.10.0, released 2025-09-16
+
+### New features
+
+- Added `ranking_expression_backed` and `rank_signals` fields related to the Custom Ranking feature
+
+### Documentation improvements
+
+- A comment for field `ranking_expression` in messages `.google.cloud.discoveryengine.v1alpha.SearchRequest` and `.google.cloud.discoveryengine.v1beta.SearchRequest` is changed to support the Custom Ranking use case
+
 ## Version 1.9.0, released 2025-07-28
 
 ### New features
