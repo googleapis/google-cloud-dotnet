@@ -2865,12 +2865,12 @@
         },
         {
             "id": "Google.Cloud.SecurityCenter.V2",
-            "currentVersion": "1.2.0",
+            "currentVersion": "1.3.0",
             "generationAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
             "releaseAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
-            "releaseTimestamp": "2025-07-07T14:49:26.701697443Z",
+            "releaseTimestamp": "2025-09-16T08:23:24.171657270Z",
             "lastGeneratedCommit": "260e50c36f4532f7956f742b9eecc221e4eafb1b",
-            "lastReleasedCommit": "6e014b5581675cd43f37918550f9145df0c703dd",
+            "lastReleasedCommit": "260e50c36f4532f7956f742b9eecc221e4eafb1b",
             "apiPaths": [
                 "google/cloud/securitycenter/v2"
             ],
