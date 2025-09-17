@@ -732,10 +732,10 @@
         },
         {
             "id": "Google.Cloud.BigQuery.V2",
-            "currentVersion": "3.12.0",
+            "currentVersion": "3.11.0",
             "generationAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
-            "releaseAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
-            "releaseTimestamp": "2025-09-17T16:46:06.791363890Z",
+            "releaseAutomationLevel": "AUTOMATION_LEVEL_BLOCKED",
+            "releaseTimestamp": "2025-02-03T17:58:23Z",
             "sourcePaths": [
                 "apis/Google.Cloud.BigQuery.V2/Google.Cloud.BigQuery.V2"
             ]
