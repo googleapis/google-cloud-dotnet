@@ -4561,7 +4561,7 @@
             "nextVersion": "1.0.0-beta01",
             "generationAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
             "releaseAutomationLevel": "AUTOMATION_LEVEL_BLOCKED",
-            "lastGeneratedCommit": "772e8db637a999e5e57c970f704898c5aaef27e4",
+            "lastGeneratedCommit": "9f0cd3d817cac49dce85e353be70fd8dea1f8889",
             "apiPaths": [
                 "google/cloud/gkerecommender/v1"
             ],
