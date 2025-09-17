@@ -1,5 +1,112 @@
 # Version history
 
+## Version 5.2.0, released 2025-09-17
+
+### New features
+
+- Spanner IsolationLevel (#14987)
+- Support UniverseDomain (#14998)
+- Support channel affinity from Spanner.V1
+- Proto changes for an internal api
+- A new field `snapshot_timestamp` is added to message `.google.spanner.v1.CommitResponse`
+
+### Bug fixes
+
+- Add UniverseDomain to admin client builder as well
+- Emulator builder respects custom settings.
+
+### Documentation improvements
+
+- A comment for field `ranges` in message `.google.spanner.v1.KeySet` is changed
+- A comment for message `Mutation` is changed
+- A comment for field `columns` in message `.google.spanner.v1.Mutation` is changed
+- A comment for field `values` in message `.google.spanner.v1.Mutation` is changed
+- A comment for field `key_set` in message `.google.spanner.v1.Mutation` is changed
+- A comment for field `insert_or_update` in message `.google.spanner.v1.Mutation` is changed
+- A comment for field `replace` in message `.google.spanner.v1.Mutation` is changed
+- A comment for message `PlanNode` is changed
+- A comment for enum `Kind` is changed
+- A comment for field `variable` in message `.google.spanner.v1.PlanNode` is changed
+- A comment for field `index` in message `.google.spanner.v1.PlanNode` is changed
+- A comment for field `kind` in message `.google.spanner.v1.PlanNode` is changed
+- A comment for field `short_representation` in message `.google.spanner.v1.PlanNode` is changed
+- A comment for field `plan_nodes` in message `.google.spanner.v1.QueryPlan` is changed
+- A comment for method `CreateSession` in service `Spanner` is changed
+- A comment for method `GetSession` in service `Spanner` is changed
+- A comment for method `DeleteSession` in service `Spanner` is changed
+- A comment for method `ExecuteSql` in service `Spanner` is changed
+- A comment for method `ExecuteStreamingSql` in service `Spanner` is changed
+- A comment for method `Read` in service `Spanner` is changed
+- A comment for method `Commit` in service `Spanner` is changed
+- A comment for method `Rollback` in service `Spanner` is changed
+- A comment for method `PartitionQuery` in service `Spanner` is changed
+- A comment for method `PartitionRead` in service `Spanner` is changed
+- A comment for method `BatchWrite` in service `Spanner` is changed
+- A comment for field `session_template` in message `.google.spanner.v1.BatchCreateSessionsRequest` is changed
+- A comment for field `session_count` in message `.google.spanner.v1.BatchCreateSessionsRequest` is changed
+- A comment for field `approximate_last_use_time` in message `.google.spanner.v1.Session` is changed
+- A comment for field `multiplexed` in message `.google.spanner.v1.Session` is changed
+- A comment for enum `Priority` is changed
+- A comment for field `request_tag` in message `.google.spanner.v1.RequestOptions` is changed
+- A comment for field `transaction_tag` in message `.google.spanner.v1.RequestOptions` is changed
+- A comment for message `DirectedReadOptions` is changed
+- A comment for message `DirectedReadOptions` is changed
+- A comment for message `DirectedReadOptions` is changed
+- A comment for field `location` in message `.google.spanner.v1.DirectedReadOptions` is changed
+- A comment for field `auto_failover_disabled` in message `.google.spanner.v1.DirectedReadOptions` is changed
+- A comment for field `include_replicas` in message `.google.spanner.v1.DirectedReadOptions` is changed
+- A comment for field `exclude_replicas` in message `.google.spanner.v1.DirectedReadOptions` is changed
+- A comment for enum value `PROFILE` in enum `QueryMode` is changed
+- A comment for field `optimizer_version` in message `.google.spanner.v1.ExecuteSqlRequest` is changed
+- A comment for field `optimizer_statistics_package` in message `.google.spanner.v1.ExecuteSqlRequest` is changed
+- A comment for field `transaction` in message `.google.spanner.v1.ExecuteSqlRequest` is changed
+- A comment for field `params` in message `.google.spanner.v1.ExecuteSqlRequest` is changed
+- A comment for field `param_types` in message `.google.spanner.v1.ExecuteSqlRequest` is changed
+- A comment for field `partition_token` in message `.google.spanner.v1.ExecuteSqlRequest` is changed
+- A comment for field `seqno` in message `.google.spanner.v1.ExecuteSqlRequest` is changed
+- A comment for field `data_boost_enabled` in message `.google.spanner.v1.ExecuteSqlRequest` is changed
+- A comment for field `last_statement` in message `.google.spanner.v1.ExecuteSqlRequest` is changed
+- A comment for field `params` in message `.google.spanner.v1.ExecuteBatchDmlRequest` is changed
+- A comment for field `param_types` in message `.google.spanner.v1.ExecuteBatchDmlRequest` is changed
+- A comment for field `seqno` in message `.google.spanner.v1.ExecuteBatchDmlRequest` is changed
+- A comment for field `last_statements` in message `.google.spanner.v1.ExecuteBatchDmlRequest` is changed
+- A comment for field `precommit_token` in message `.google.spanner.v1.ExecuteBatchDmlResponse` is changed
+- A comment for message `PartitionOptions` is changed
+- A comment for field `partition_size_bytes` in message `.google.spanner.v1.PartitionOptions` is changed
+- A comment for field `max_partitions` in message `.google.spanner.v1.PartitionOptions` is changed
+- A comment for field `transaction` in message `.google.spanner.v1.PartitionQueryRequest` is changed
+- A comment for field `sql` in message `.google.spanner.v1.PartitionQueryRequest` is changed
+- A comment for field `params` in message `.google.spanner.v1.PartitionQueryRequest` is changed
+- A comment for field `param_types` in message `.google.spanner.v1.PartitionQueryRequest` is changed
+- A comment for field `key_set` in message `.google.spanner.v1.PartitionReadRequest` is changed
+- A comment for field `partition_token` in message `.google.spanner.v1.Partition` is changed
+- A comment for enum value `ORDER_BY_UNSPECIFIED` in enum `OrderBy` is changed
+- A comment for enum value `ORDER_BY_PRIMARY_KEY` in enum `OrderBy` is changed
+- A comment for enum value `LOCK_HINT_UNSPECIFIED` in enum `LockHint` is changed
+- A comment for enum value `LOCK_HINT_EXCLUSIVE` in enum `LockHint` is changed
+- A comment for field `key_set` in message `.google.spanner.v1.ReadRequest` is changed
+- A comment for field `limit` in message `.google.spanner.v1.ReadRequest` is changed
+- A comment for field `partition_token` in message `.google.spanner.v1.ReadRequest` is changed
+- A comment for field `data_boost_enabled` in message `.google.spanner.v1.ReadRequest` is changed
+- A comment for field `order_by` in message `.google.spanner.v1.ReadRequest` is changed
+- A comment for field `request_options` in message `.google.spanner.v1.BeginTransactionRequest` is changed
+- A comment for field `mutation_key` in message `.google.spanner.v1.BeginTransactionRequest` is changed
+- A comment for field `single_use_transaction` in message `.google.spanner.v1.CommitRequest` is changed
+- A comment for field `return_commit_stats` in message `.google.spanner.v1.CommitRequest` is changed
+- A comment for field `max_commit_delay` in message `.google.spanner.v1.CommitRequest` is changed
+- A comment for field `precommit_token` in message `.google.spanner.v1.CommitRequest` is changed
+- A comment for field `exclude_txn_from_change_streams` in message `.google.spanner.v1.BatchWriteRequest` is changed
+- A comment for enum value `SERIALIZABLE` in enum `IsolationLevel` is changed
+- A comment for field `commit_stats` in message `.google.spanner.v1.CommitResponse` is changed
+- A comment for field `precommit_token` in message `.google.spanner.v1.CommitResponse` is changed
+- A comment for message `.google.spanner.v1.TransactionOptions` is changed
+- A comment for enum value `READ_LOCK_MODE_UNSPECIFIED` in enum `ReadLockMode` is changed
+- A comment for enum value `PESSIMISTIC` in enum `ReadLockMode` is changed
+- A comment for enum value `OPTIMISTIC` in enum `ReadLockMode` is changed
+- A comment for field `multiplexed_session_previous_transaction_id` in message `.google.spanner.v1.TransactionOptions` is changed
+- A comment for field `exclude_txn_from_change_streams` in message `.google.spanner.v1.TransactionOptions` is changed
+- A comment for message `.google.spanner.v1.MultiplexedSessionPrecommitToken` is changed
+
 ## Version 5.1.0, released 2025-06-17
 
 ### New features
