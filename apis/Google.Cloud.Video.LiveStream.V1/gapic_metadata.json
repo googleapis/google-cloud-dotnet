@@ -160,16 +160,34 @@
                 "ListInputsAsync"
               ]
             },
+            "PreviewInput": {
+              "methods": [
+                "PreviewInput",
+                "PreviewInputAsync"
+              ]
+            },
             "StartChannel": {
               "methods": [
                 "StartChannel",
                 "StartChannelAsync"
               ]
             },
+            "StartDistribution": {
+              "methods": [
+                "StartDistribution",
+                "StartDistributionAsync"
+              ]
+            },
             "StopChannel": {
               "methods": [
                 "StopChannel",
                 "StopChannelAsync"
+              ]
+            },
+            "StopDistribution": {
+              "methods": [
+                "StopDistribution",
+                "StopDistributionAsync"
               ]
             },
             "UpdateChannel": {

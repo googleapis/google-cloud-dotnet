@@ -30,7 +30,7 @@ namespace Google.Cloud.Video.LiveStream.V1 {
             "cmNlLnByb3RvGi5nb29nbGUvY2xvdWQvdmlkZW8vbGl2ZXN0cmVhbS92MS9v",
             "dXRwdXRzLnByb3RvGh5nb29nbGUvcHJvdG9idWYvZHVyYXRpb24ucHJvdG8a",
             "H2dvb2dsZS9wcm90b2J1Zi90aW1lc3RhbXAucHJvdG8aF2dvb2dsZS9ycGMv",
-            "c3RhdHVzLnByb3RvIvAGCgVJbnB1dBIMCgRuYW1lGAEgASgJEjQKC2NyZWF0",
+            "c3RhdHVzLnByb3RvIpgHCgVJbnB1dBIMCgRuYW1lGAEgASgJEjQKC2NyZWF0",
             "ZV90aW1lGAIgASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcEID4EED",
             "EjQKC3VwZGF0ZV90aW1lGAMgASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVz",
             "dGFtcEID4EEDEkMKBmxhYmVscxgEIAMoCzIzLmdvb2dsZS5jbG91ZC52aWRl",
@@ -46,229 +46,253 @@ namespace Google.Cloud.Video.LiveStream.V1 {
             "dFN0cmVhbVByb3BlcnR5QgPgQQMaIQoMU2VjdXJpdHlSdWxlEhEKCWlwX3Jh",
             "bmdlcxgBIAMoCRotCgtMYWJlbHNFbnRyeRILCgNrZXkYASABKAkSDQoFdmFs",
             "dWUYAiABKAk6AjgBIjkKBFR5cGUSFAoQVFlQRV9VTlNQRUNJRklFRBAAEg0K",
-            "CVJUTVBfUFVTSBABEgwKCFNSVF9QVVNIEAIiNQoEVGllchIUChBUSUVSX1VO",
-            "U1BFQ0lGSUVEEAASBgoCU0QQARIGCgJIRBACEgcKA1VIRBADOlzqQVkKH2xp",
-            "dmVzdHJlYW0uZ29vZ2xlYXBpcy5jb20vSW5wdXQSNnByb2plY3RzL3twcm9q",
-            "ZWN0fS9sb2NhdGlvbnMve2xvY2F0aW9ufS9pbnB1dHMve2lucHV0fSKnDAoH",
-            "Q2hhbm5lbBIMCgRuYW1lGAEgASgJEjQKC2NyZWF0ZV90aW1lGAIgASgLMhou",
-            "Z29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcEID4EEDEjQKC3VwZGF0ZV90aW1l",
-            "GAMgASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcEID4EEDEkUKBmxh",
-            "YmVscxgEIAMoCzI1Lmdvb2dsZS5jbG91ZC52aWRlby5saXZlc3RyZWFtLnYx",
-            "LkNoYW5uZWwuTGFiZWxzRW50cnkSTAoRaW5wdXRfYXR0YWNobWVudHMYECAD",
-            "KAsyMS5nb29nbGUuY2xvdWQudmlkZW8ubGl2ZXN0cmVhbS52MS5JbnB1dEF0",
-            "dGFjaG1lbnQSGQoMYWN0aXZlX2lucHV0GAYgASgJQgPgQQMSRQoGb3V0cHV0",
-            "GAkgASgLMjAuZ29vZ2xlLmNsb3VkLnZpZGVvLmxpdmVzdHJlYW0udjEuQ2hh",
-            "bm5lbC5PdXRwdXRCA+BBAhJOChJlbGVtZW50YXJ5X3N0cmVhbXMYCiADKAsy",
-            "Mi5nb29nbGUuY2xvdWQudmlkZW8ubGl2ZXN0cmVhbS52MS5FbGVtZW50YXJ5",
-            "U3RyZWFtEkAKC211eF9zdHJlYW1zGAsgAygLMisuZ29vZ2xlLmNsb3VkLnZp",
-            "ZGVvLmxpdmVzdHJlYW0udjEuTXV4U3RyZWFtEj0KCW1hbmlmZXN0cxgMIAMo",
-            "CzIqLmdvb2dsZS5jbG91ZC52aWRlby5saXZlc3RyZWFtLnYxLk1hbmlmZXN0",
-            "EkQKDXNwcml0ZV9zaGVldHMYDSADKAsyLS5nb29nbGUuY2xvdWQudmlkZW8u",
-            "bGl2ZXN0cmVhbS52MS5TcHJpdGVTaGVldBJWCg9zdHJlYW1pbmdfc3RhdGUY",
-            "DiABKA4yOC5nb29nbGUuY2xvdWQudmlkZW8ubGl2ZXN0cmVhbS52MS5DaGFu",
-            "bmVsLlN0cmVhbWluZ1N0YXRlQgPgQQMSMAoPc3RyZWFtaW5nX2Vycm9yGBIg",
-            "ASgLMhIuZ29vZ2xlLnJwYy5TdGF0dXNCA+BBAxI/Cgpsb2dfY29uZmlnGBMg",
-            "ASgLMisuZ29vZ2xlLmNsb3VkLnZpZGVvLmxpdmVzdHJlYW0udjEuTG9nQ29u",
-            "ZmlnEkkKD3RpbWVjb2RlX2NvbmZpZxgVIAEoCzIwLmdvb2dsZS5jbG91ZC52",
-            "aWRlby5saXZlc3RyZWFtLnYxLlRpbWVjb2RlQ29uZmlnEkEKC2VuY3J5cHRp",
-            "b25zGBggAygLMiwuZ29vZ2xlLmNsb3VkLnZpZGVvLmxpdmVzdHJlYW0udjEu",
-            "RW5jcnlwdGlvbhJDCgxpbnB1dF9jb25maWcYGSABKAsyLS5nb29nbGUuY2xv",
-            "dWQudmlkZW8ubGl2ZXN0cmVhbS52MS5JbnB1dENvbmZpZxJQChByZXRlbnRp",
-            "b25fY29uZmlnGBogASgLMjEuZ29vZ2xlLmNsb3VkLnZpZGVvLmxpdmVzdHJl",
-            "YW0udjEuUmV0ZW50aW9uQ29uZmlnQgPgQQESTQoPc3RhdGljX292ZXJsYXlz",
-            "GBsgAygLMi8uZ29vZ2xlLmNsb3VkLnZpZGVvLmxpdmVzdHJlYW0udjEuU3Rh",
-            "dGljT3ZlcmxheUID4EEBGhUKBk91dHB1dBILCgN1cmkYASABKAkaLQoLTGFi",
-            "ZWxzRW50cnkSCwoDa2V5GAEgASgJEg0KBXZhbHVlGAIgASgJOgI4ASKqAQoO",
-            "U3RyZWFtaW5nU3RhdGUSHwobU1RSRUFNSU5HX1NUQVRFX1VOU1BFQ0lGSUVE",
-            "EAASDQoJU1RSRUFNSU5HEAESEgoOQVdBSVRJTkdfSU5QVVQQAhITCg9TVFJF",
-            "QU1JTkdfRVJST1IQBBIWChJTVFJFQU1JTkdfTk9fSU5QVVQQBRILCgdTVE9Q",
-            "UEVEEAYSDAoIU1RBUlRJTkcQBxIMCghTVE9QUElORxAIOmLqQV8KIWxpdmVz",
-            "dHJlYW0uZ29vZ2xlYXBpcy5jb20vQ2hhbm5lbBI6cHJvamVjdHMve3Byb2pl",
-            "Y3R9L2xvY2F0aW9ucy97bG9jYXRpb259L2NoYW5uZWxzL3tjaGFubmVsfSI2",
-            "ChROb3JtYWxpemVkQ29vcmRpbmF0ZRIOCgF4GAEgASgBQgPgQQESDgoBeRgC",
-            "IAEoAUID4EEBIjYKFE5vcm1hbGl6ZWRSZXNvbHV0aW9uEg4KAXcYASABKAFC",
-            "A+BBARIOCgFoGAIgASgBQgPgQQEi/QEKDVN0YXRpY092ZXJsYXkSNgoFYXNz",
-            "ZXQYASABKAlCJ+BBAvpBIQofbGl2ZXN0cmVhbS5nb29nbGVhcGlzLmNvbS9B",
-            "c3NldBJPCgpyZXNvbHV0aW9uGAIgASgLMjYuZ29vZ2xlLmNsb3VkLnZpZGVv",
-            "LmxpdmVzdHJlYW0udjEuTm9ybWFsaXplZFJlc29sdXRpb25CA+BBARJNCghw",
-            "b3NpdGlvbhgDIAEoCzI2Lmdvb2dsZS5jbG91ZC52aWRlby5saXZlc3RyZWFt",
-            "LnYxLk5vcm1hbGl6ZWRDb29yZGluYXRlQgPgQQESFAoHb3BhY2l0eRgEIAEo",
-            "AUID4EEBIsYBCgtJbnB1dENvbmZpZxJYChFpbnB1dF9zd2l0Y2hfbW9kZRgB",
-            "IAEoDjI9Lmdvb2dsZS5jbG91ZC52aWRlby5saXZlc3RyZWFtLnYxLklucHV0",
-            "Q29uZmlnLklucHV0U3dpdGNoTW9kZSJdCg9JbnB1dFN3aXRjaE1vZGUSIQod",
-            "SU5QVVRfU1dJVENIX01PREVfVU5TUEVDSUZJRUQQABIbChdGQUlMT1ZFUl9Q",
-            "UkVGRVJfUFJJTUFSWRABEgoKBk1BTlVBTBADIsABCglMb2dDb25maWcSTQoM",
-            "bG9nX3NldmVyaXR5GAEgASgOMjcuZ29vZ2xlLmNsb3VkLnZpZGVvLmxpdmVz",
-            "dHJlYW0udjEuTG9nQ29uZmlnLkxvZ1NldmVyaXR5ImQKC0xvZ1NldmVyaXR5",
-            "EhwKGExPR19TRVZFUklUWV9VTlNQRUNJRklFRBAAEgcKA09GRhABEgkKBURF",
-            "QlVHEGQSCQoESU5GTxDIARIMCgdXQVJOSU5HEJADEgoKBUVSUk9SEPQDIk8K",
-            "D1JldGVudGlvbkNvbmZpZxI8ChlyZXRlbnRpb25fd2luZG93X2R1cmF0aW9u",
-            "GAEgASgLMhkuZ29vZ2xlLnByb3RvYnVmLkR1cmF0aW9uIuoBChNJbnB1dFN0",
-            "cmVhbVByb3BlcnR5EjcKE2xhc3RfZXN0YWJsaXNoX3RpbWUYASABKAsyGi5n",
-            "b29nbGUucHJvdG9idWYuVGltZXN0YW1wEkwKDXZpZGVvX3N0cmVhbXMYAiAD",
-            "KAsyNS5nb29nbGUuY2xvdWQudmlkZW8ubGl2ZXN0cmVhbS52MS5WaWRlb1N0",
-            "cmVhbVByb3BlcnR5EkwKDWF1ZGlvX3N0cmVhbXMYAyADKAsyNS5nb29nbGUu",
-            "Y2xvdWQudmlkZW8ubGl2ZXN0cmVhbS52MS5BdWRpb1N0cmVhbVByb3BlcnR5",
-            "ImkKE1ZpZGVvU3RyZWFtUHJvcGVydHkSDQoFaW5kZXgYASABKAUSQwoMdmlk",
-            "ZW9fZm9ybWF0GAIgASgLMi0uZ29vZ2xlLmNsb3VkLnZpZGVvLmxpdmVzdHJl",
-            "YW0udjEuVmlkZW9Gb3JtYXQiXQoLVmlkZW9Gb3JtYXQSDQoFY29kZWMYASAB",
-            "KAkSFAoMd2lkdGhfcGl4ZWxzGAIgASgFEhUKDWhlaWdodF9waXhlbHMYAyAB",
-            "KAUSEgoKZnJhbWVfcmF0ZRgEIAEoASJpChNBdWRpb1N0cmVhbVByb3BlcnR5",
-            "Eg0KBWluZGV4GAEgASgFEkMKDGF1ZGlvX2Zvcm1hdBgCIAEoCzItLmdvb2ds",
-            "ZS5jbG91ZC52aWRlby5saXZlc3RyZWFtLnYxLkF1ZGlvRm9ybWF0IksKC0F1",
-            "ZGlvRm9ybWF0Eg0KBWNvZGVjGAEgASgJEhUKDWNoYW5uZWxfY291bnQYAiAB",
-            "KAUSFgoOY2hhbm5lbF9sYXlvdXQYAyADKAki3QEKD0lucHV0QXR0YWNobWVu",
-            "dBILCgNrZXkYASABKAkSMwoFaW5wdXQYAiABKAlCJPpBIQofbGl2ZXN0cmVh",
-            "bS5nb29nbGVhcGlzLmNvbS9JbnB1dBJfChJhdXRvbWF0aWNfZmFpbG92ZXIY",
-            "AyABKAsyQy5nb29nbGUuY2xvdWQudmlkZW8ubGl2ZXN0cmVhbS52MS5JbnB1",
-            "dEF0dGFjaG1lbnQuQXV0b21hdGljRmFpbG92ZXIaJwoRQXV0b21hdGljRmFp",
-            "bG92ZXISEgoKaW5wdXRfa2V5cxgBIAMoCSKCCwoFRXZlbnQSDAoEbmFtZRgB",
-            "IAEoCRI0CgtjcmVhdGVfdGltZRgCIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5U",
-            "aW1lc3RhbXBCA+BBAxI0Cgt1cGRhdGVfdGltZRgDIAEoCzIaLmdvb2dsZS5w",
-            "cm90b2J1Zi5UaW1lc3RhbXBCA+BBAxJDCgZsYWJlbHMYBCADKAsyMy5nb29n",
-            "bGUuY2xvdWQudmlkZW8ubGl2ZXN0cmVhbS52MS5FdmVudC5MYWJlbHNFbnRy",
-            "eRJPCgxpbnB1dF9zd2l0Y2gYBSABKAsyNy5nb29nbGUuY2xvdWQudmlkZW8u",
-            "bGl2ZXN0cmVhbS52MS5FdmVudC5JbnB1dFN3aXRjaFRhc2tIABJHCghhZF9i",
-            "cmVhaxgGIAEoCzIzLmdvb2dsZS5jbG91ZC52aWRlby5saXZlc3RyZWFtLnYx",
-            "LkV2ZW50LkFkQnJlYWtUYXNrSAASWAoRcmV0dXJuX3RvX3Byb2dyYW0YDSAB",
-            "KAsyOy5nb29nbGUuY2xvdWQudmlkZW8ubGl2ZXN0cmVhbS52MS5FdmVudC5S",
-            "ZXR1cm5Ub1Byb2dyYW1UYXNrSAASQgoFc2xhdGUYDiABKAsyMS5nb29nbGUu",
-            "Y2xvdWQudmlkZW8ubGl2ZXN0cmVhbS52MS5FdmVudC5TbGF0ZVRhc2tIABJA",
-            "CgRtdXRlGA8gASgLMjAuZ29vZ2xlLmNsb3VkLnZpZGVvLmxpdmVzdHJlYW0u",
-            "djEuRXZlbnQuTXV0ZVRhc2tIABJECgZ1bm11dGUYECABKAsyMi5nb29nbGUu",
-            "Y2xvdWQudmlkZW8ubGl2ZXN0cmVhbS52MS5FdmVudC5Vbm11dGVUYXNrSAAS",
-            "EwoLZXhlY3V0ZV9ub3cYCSABKAgSMgoOZXhlY3V0aW9uX3RpbWUYCiABKAsy",
-            "Gi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wEkEKBXN0YXRlGAsgASgOMi0u",
-            "Z29vZ2xlLmNsb3VkLnZpZGVvLmxpdmVzdHJlYW0udjEuRXZlbnQuU3RhdGVC",
-            "A+BBAxImCgVlcnJvchgMIAEoCzISLmdvb2dsZS5ycGMuU3RhdHVzQgPgQQMa",
-            "JAoPSW5wdXRTd2l0Y2hUYXNrEhEKCWlucHV0X2tleRgBIAEoCRo6CgtBZEJy",
-            "ZWFrVGFzaxIrCghkdXJhdGlvbhgBIAEoCzIZLmdvb2dsZS5wcm90b2J1Zi5E",
-            "dXJhdGlvbhptCglTbGF0ZVRhc2sSKwoIZHVyYXRpb24YASABKAsyGS5nb29n",
-            "bGUucHJvdG9idWYuRHVyYXRpb24SMwoFYXNzZXQYAiABKAlCJPpBIQofbGl2",
-            "ZXN0cmVhbS5nb29nbGVhcGlzLmNvbS9Bc3NldBoVChNSZXR1cm5Ub1Byb2dy",
-            "YW1UYXNrGjcKCE11dGVUYXNrEisKCGR1cmF0aW9uGAEgASgLMhkuZ29vZ2xl",
-            "LnByb3RvYnVmLkR1cmF0aW9uGgwKClVubXV0ZVRhc2saLQoLTGFiZWxzRW50",
-            "cnkSCwoDa2V5GAEgASgJEg0KBXZhbHVlGAIgASgJOgI4ASJvCgVTdGF0ZRIV",
-            "ChFTVEFURV9VTlNQRUNJRklFRBAAEg0KCVNDSEVEVUxFRBABEgsKB1JVTk5J",
-            "TkcQAhINCglTVUNDRUVERUQQAxIKCgZGQUlMRUQQBBILCgdQRU5ESU5HEAUS",
-            "CwoHU1RPUFBFRBAGOm/qQWwKH2xpdmVzdHJlYW0uZ29vZ2xlYXBpcy5jb20v",
-            "RXZlbnQSSXByb2plY3RzL3twcm9qZWN0fS9sb2NhdGlvbnMve2xvY2F0aW9u",
-            "fS9jaGFubmVscy97Y2hhbm5lbH0vZXZlbnRzL3tldmVudH1CBgoEdGFzayKW",
-            "CQoEQ2xpcBIMCgRuYW1lGAEgASgJEjQKC2NyZWF0ZV90aW1lGAIgASgLMhou",
-            "Z29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcEID4EEDEjMKCnN0YXJ0X3RpbWUY",
-            "AyABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wQgPgQQMSNAoLdXBk",
-            "YXRlX3RpbWUYBCABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wQgPg",
-            "QQMSQgoGbGFiZWxzGAUgAygLMjIuZ29vZ2xlLmNsb3VkLnZpZGVvLmxpdmVz",
-            "dHJlYW0udjEuQ2xpcC5MYWJlbHNFbnRyeRJACgVzdGF0ZRgGIAEoDjIsLmdv",
-            "b2dsZS5jbG91ZC52aWRlby5saXZlc3RyZWFtLnYxLkNsaXAuU3RhdGVCA+BB",
-            "AxISCgpvdXRwdXRfdXJpGAcgASgJEiYKBWVycm9yGAkgASgLMhIuZ29vZ2xl",
-            "LnJwYy5TdGF0dXNCA+BBAxI8CgZzbGljZXMYCiADKAsyLC5nb29nbGUuY2xv",
-            "dWQudmlkZW8ubGl2ZXN0cmVhbS52MS5DbGlwLlNsaWNlElAKDmNsaXBfbWFu",
-            "aWZlc3RzGAwgAygLMjMuZ29vZ2xlLmNsb3VkLnZpZGVvLmxpdmVzdHJlYW0u",
-            "djEuQ2xpcC5DbGlwTWFuaWZlc3RCA+BBAhJLCgtvdXRwdXRfdHlwZRgNIAEo",
-            "DjIxLmdvb2dsZS5jbG91ZC52aWRlby5saXZlc3RyZWFtLnYxLkNsaXAuT3V0",
-            "cHV0VHlwZUID4EEBGm4KCVRpbWVTbGljZRIvCgttYXJraW5fdGltZRgBIAEo",
-            "CzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXASMAoMbWFya291dF90aW1l",
-            "GAIgASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcBpXCgVTbGljZRJG",
-            "Cgp0aW1lX3NsaWNlGAEgASgLMjAuZ29vZ2xlLmNsb3VkLnZpZGVvLmxpdmVz",
-            "dHJlYW0udjEuQ2xpcC5UaW1lU2xpY2VIAEIGCgRraW5kGkIKDENsaXBNYW5p",
-            "ZmVzdBIZCgxtYW5pZmVzdF9rZXkYASABKAlCA+BBAhIXCgpvdXRwdXRfdXJp",
-            "GAIgASgJQgPgQQMaLQoLTGFiZWxzRW50cnkSCwoDa2V5GAEgASgJEg0KBXZh",
-            "bHVlGAIgASgJOgI4ASJUCgVTdGF0ZRIVChFTVEFURV9VTlNQRUNJRklFRBAA",
-            "EgsKB1BFTkRJTkcQARIMCghDUkVBVElORxACEg0KCVNVQ0NFRURFRBADEgoK",
-            "BkZBSUxFRBAEIkAKCk91dHB1dFR5cGUSGwoXT1VUUFVUX1RZUEVfVU5TUEVD",
-            "SUZJRUQQABIMCghNQU5JRkVTVBABEgcKA01QNBACOmzqQWkKHmxpdmVzdHJl",
-            "YW0uZ29vZ2xlYXBpcy5jb20vQ2xpcBJHcHJvamVjdHMve3Byb2plY3R9L2xv",
-            "Y2F0aW9ucy97bG9jYXRpb259L2NoYW5uZWxzL3tjaGFubmVsfS9jbGlwcy97",
-            "Y2xpcH0idgoMVGltZUludGVydmFsEjMKCnN0YXJ0X3RpbWUYASABKAsyGi5n",
-            "b29nbGUucHJvdG9idWYuVGltZXN0YW1wQgPgQQESMQoIZW5kX3RpbWUYAiAB",
-            "KAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wQgPgQQEijAgKCkR2clNl",
-            "c3Npb24SEQoEbmFtZRgBIAEoCUID4EEIEjQKC2NyZWF0ZV90aW1lGAIgASgL",
-            "MhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcEID4EEDEjQKC3VwZGF0ZV90",
-            "aW1lGAMgASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcEID4EEDEk0K",
-            "BmxhYmVscxgEIAMoCzI4Lmdvb2dsZS5jbG91ZC52aWRlby5saXZlc3RyZWFt",
-            "LnYxLkR2clNlc3Npb24uTGFiZWxzRW50cnlCA+BBARJGCgVzdGF0ZRgFIAEo",
-            "DjIyLmdvb2dsZS5jbG91ZC52aWRlby5saXZlc3RyZWFtLnYxLkR2clNlc3Np",
-            "b24uU3RhdGVCA+BBAxImCgVlcnJvchgGIAEoCzISLmdvb2dsZS5ycGMuU3Rh",
-            "dHVzQgPgQQMSVAoNZHZyX21hbmlmZXN0cxgHIAMoCzI4Lmdvb2dsZS5jbG91",
-            "ZC52aWRlby5saXZlc3RyZWFtLnYxLkR2clNlc3Npb24uRHZyTWFuaWZlc3RC",
-            "A+BBAhJQCgtkdnJfd2luZG93cxgIIAMoCzI2Lmdvb2dsZS5jbG91ZC52aWRl",
-            "by5saXZlc3RyZWFtLnYxLkR2clNlc3Npb24uRHZyV2luZG93QgPgQQIaQQoL",
-            "RHZyTWFuaWZlc3QSGQoMbWFuaWZlc3Rfa2V5GAEgASgJQgPgQQISFwoKb3V0",
-            "cHV0X3VyaRgCIAEoCUID4EEDGlwKCUR2cldpbmRvdxJHCg10aW1lX2ludGVy",
-            "dmFsGAEgASgLMi4uZ29vZ2xlLmNsb3VkLnZpZGVvLmxpdmVzdHJlYW0udjEu",
-            "VGltZUludGVydmFsSABCBgoEa2luZBotCgtMYWJlbHNFbnRyeRILCgNrZXkY",
-            "ASABKAkSDQoFdmFsdWUYAiABKAk6AjgBIqsBCgVTdGF0ZRIVChFTVEFURV9V",
-            "TlNQRUNJRklFRBAAEgsKB1BFTkRJTkcQARIMCghVUERBVElORxACEg0KCVND",
-            "SEVEVUxFRBADEggKBExJVkUQBBIMCghGSU5JU0hFRBAFEgoKBkZBSUxFRBAG",
-            "EgwKCERFTEVUSU5HEAcSEwoPUE9TVF9QUk9DRVNTSU5HEAgSDAoIQ09PTERP",
-            "V04QCRIMCghTVE9QUElORxAKOpkB6kGVAQokbGl2ZXN0cmVhbS5nb29nbGVh",
-            "cGlzLmNvbS9EdnJTZXNzaW9uElRwcm9qZWN0cy97cHJvamVjdH0vbG9jYXRp",
-            "b25zL3tsb2NhdGlvbn0vY2hhbm5lbHMve2NoYW5uZWx9L2R2clNlc3Npb25z",
-            "L3tkdnJfc2Vzc2lvbn0qC2R2clNlc3Npb25zMgpkdnJTZXNzaW9uIu0FCgVB",
-            "c3NldBIMCgRuYW1lGAEgASgJEjQKC2NyZWF0ZV90aW1lGAIgASgLMhouZ29v",
-            "Z2xlLnByb3RvYnVmLlRpbWVzdGFtcEID4EEDEjQKC3VwZGF0ZV90aW1lGAMg",
-            "ASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcEID4EEDEkMKBmxhYmVs",
-            "cxgEIAMoCzIzLmdvb2dsZS5jbG91ZC52aWRlby5saXZlc3RyZWFtLnYxLkFz",
-            "c2V0LkxhYmVsc0VudHJ5EkMKBXZpZGVvGAUgASgLMjIuZ29vZ2xlLmNsb3Vk",
-            "LnZpZGVvLmxpdmVzdHJlYW0udjEuQXNzZXQuVmlkZW9Bc3NldEgAEkMKBWlt",
-            "YWdlGAYgASgLMjIuZ29vZ2xlLmNsb3VkLnZpZGVvLmxpdmVzdHJlYW0udjEu",
-            "QXNzZXQuSW1hZ2VBc3NldEgAEg4KBmNyYzMyYxgHIAEoCRJBCgVzdGF0ZRgI",
-            "IAEoDjItLmdvb2dsZS5jbG91ZC52aWRlby5saXZlc3RyZWFtLnYxLkFzc2V0",
-            "LlN0YXRlQgPgQQMSJgoFZXJyb3IYCSABKAsyEi5nb29nbGUucnBjLlN0YXR1",
-            "c0ID4EEDGhkKClZpZGVvQXNzZXQSCwoDdXJpGAEgASgJGhkKCkltYWdlQXNz",
-            "ZXQSCwoDdXJpGAEgASgJGi0KC0xhYmVsc0VudHJ5EgsKA2tleRgBIAEoCRIN",
-            "CgV2YWx1ZRgCIAEoCToCOAEiUQoFU3RhdGUSFQoRU1RBVEVfVU5TUEVDSUZJ",
-            "RUQQABIMCghDUkVBVElORxABEgoKBkFDVElWRRACEgwKCERFTEVUSU5HEAMS",
-            "CQoFRVJST1IQBDpc6kFZCh9saXZlc3RyZWFtLmdvb2dsZWFwaXMuY29tL0Fz",
-            "c2V0EjZwcm9qZWN0cy97cHJvamVjdH0vbG9jYXRpb25zL3tsb2NhdGlvbn0v",
-            "YXNzZXRzL3thc3NldH1CCgoIcmVzb3VyY2UinQgKCkVuY3J5cHRpb24SDwoC",
-            "aWQYASABKAlCA+BBAhJlChlzZWNyZXRfbWFuYWdlcl9rZXlfc291cmNlGAcg",
-            "ASgLMkAuZ29vZ2xlLmNsb3VkLnZpZGVvLmxpdmVzdHJlYW0udjEuRW5jcnlw",
-            "dGlvbi5TZWNyZXRNYW5hZ2VyU291cmNlSAASUQoLZHJtX3N5c3RlbXMYAyAB",
-            "KAsyNy5nb29nbGUuY2xvdWQudmlkZW8ubGl2ZXN0cmVhbS52MS5FbmNyeXB0",
-            "aW9uLkRybVN5c3RlbXNCA+BBAhJPCgZhZXMxMjgYBCABKAsyPS5nb29nbGUu",
-            "Y2xvdWQudmlkZW8ubGl2ZXN0cmVhbS52MS5FbmNyeXB0aW9uLkFlczEyOEVu",
-            "Y3J5cHRpb25IARJWCgpzYW1wbGVfYWVzGAUgASgLMkAuZ29vZ2xlLmNsb3Vk",
-            "LnZpZGVvLmxpdmVzdHJlYW0udjEuRW5jcnlwdGlvbi5TYW1wbGVBZXNFbmNy",
-            "eXB0aW9uSAESVgoJbXBlZ19jZW5jGAYgASgLMkEuZ29vZ2xlLmNsb3VkLnZp",
-            "ZGVvLmxpdmVzdHJlYW0udjEuRW5jcnlwdGlvbi5NcGVnQ29tbW9uRW5jcnlw",
-            "dGlvbkgBGmEKE1NlY3JldE1hbmFnZXJTb3VyY2USSgoOc2VjcmV0X3ZlcnNp",
-            "b24YASABKAlCMuBBAvpBLAoqc2VjcmV0bWFuYWdlci5nb29nbGVhcGlzLmNv",
-            "bS9TZWNyZXRWZXJzaW9uGgoKCFdpZGV2aW5lGgoKCEZhaXJwbGF5GgsKCVBs",
-            "YXlyZWFkeRoKCghDbGVhcmtleRqyAgoKRHJtU3lzdGVtcxJHCgh3aWRldmlu",
-            "ZRgBIAEoCzI1Lmdvb2dsZS5jbG91ZC52aWRlby5saXZlc3RyZWFtLnYxLkVu",
-            "Y3J5cHRpb24uV2lkZXZpbmUSRwoIZmFpcnBsYXkYAiABKAsyNS5nb29nbGUu",
-            "Y2xvdWQudmlkZW8ubGl2ZXN0cmVhbS52MS5FbmNyeXB0aW9uLkZhaXJwbGF5",
-            "EkkKCXBsYXlyZWFkeRgDIAEoCzI2Lmdvb2dsZS5jbG91ZC52aWRlby5saXZl",
-            "c3RyZWFtLnYxLkVuY3J5cHRpb24uUGxheXJlYWR5EkcKCGNsZWFya2V5GAQg",
-            "ASgLMjUuZ29vZ2xlLmNsb3VkLnZpZGVvLmxpdmVzdHJlYW0udjEuRW5jcnlw",
-            "dGlvbi5DbGVhcmtleRoSChBBZXMxMjhFbmNyeXB0aW9uGhUKE1NhbXBsZUFl",
-            "c0VuY3J5cHRpb24aKwoUTXBlZ0NvbW1vbkVuY3J5cHRpb24SEwoGc2NoZW1l",
-            "GAEgASgJQgPgQQJCDwoNc2VjcmV0X3NvdXJjZUIRCg9lbmNyeXB0aW9uX21v",
-            "ZGUi6gMKBFBvb2wSDAoEbmFtZRgBIAEoCRI0CgtjcmVhdGVfdGltZRgCIAEo",
-            "CzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXBCA+BBAxI0Cgt1cGRhdGVf",
-            "dGltZRgDIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXBCA+BBAxJC",
-            "CgZsYWJlbHMYBCADKAsyMi5nb29nbGUuY2xvdWQudmlkZW8ubGl2ZXN0cmVh",
-            "bS52MS5Qb29sLkxhYmVsc0VudHJ5EkwKDm5ldHdvcmtfY29uZmlnGAUgASgL",
-            "MjQuZ29vZ2xlLmNsb3VkLnZpZGVvLmxpdmVzdHJlYW0udjEuUG9vbC5OZXR3",
-            "b3JrQ29uZmlnGkwKDU5ldHdvcmtDb25maWcSOwoOcGVlcmVkX25ldHdvcmsY",
-            "ASABKAlCI/pBIAoeY29tcHV0ZS5nb29nbGVhcGlzLmNvbS9OZXR3b3JrGi0K",
-            "C0xhYmVsc0VudHJ5EgsKA2tleRgBIAEoCRINCgV2YWx1ZRgCIAEoCToCOAE6",
-            "WepBVgoebGl2ZXN0cmVhbS5nb29nbGVhcGlzLmNvbS9Qb29sEjRwcm9qZWN0",
-            "cy97cHJvamVjdH0vbG9jYXRpb25zL3tsb2NhdGlvbn0vcG9vbHMve3Bvb2x9",
-            "QusBCiRjb20uZ29vZ2xlLmNsb3VkLnZpZGVvLmxpdmVzdHJlYW0udjFCDlJl",
-            "c291cmNlc1Byb3RvUAFaRGNsb3VkLmdvb2dsZS5jb20vZ28vdmlkZW8vbGl2",
-            "ZXN0cmVhbS9hcGl2MS9saXZlc3RyZWFtcGI7bGl2ZXN0cmVhbXBiqgIgR29v",
-            "Z2xlLkNsb3VkLlZpZGVvLkxpdmVTdHJlYW0uVjHKAiBHb29nbGVcQ2xvdWRc",
-            "VmlkZW9cTGl2ZVN0cmVhbVxWMeoCJEdvb2dsZTo6Q2xvdWQ6OlZpZGVvOjpM",
-            "aXZlU3RyZWFtOjpWMWIGcHJvdG8z"));
+            "CVJUTVBfUFVTSBABEgwKCFNSVF9QVVNIEAIiXQoEVGllchIUChBUSUVSX1VO",
+            "U1BFQ0lGSUVEEAASBgoCU0QQARIGCgJIRBACEgcKA1VIRBADEgsKB1NEX0gy",
+            "NjUQBBILCgdIRF9IMjY1EAUSDAoIVUhEX0gyNjUQBjpc6kFZCh9saXZlc3Ry",
+            "ZWFtLmdvb2dsZWFwaXMuY29tL0lucHV0EjZwcm9qZWN0cy97cHJvamVjdH0v",
+            "bG9jYXRpb25zL3tsb2NhdGlvbn0vaW5wdXRzL3tpbnB1dH0itA4KB0NoYW5u",
+            "ZWwSDAoEbmFtZRgBIAEoCRI0CgtjcmVhdGVfdGltZRgCIAEoCzIaLmdvb2ds",
+            "ZS5wcm90b2J1Zi5UaW1lc3RhbXBCA+BBAxI0Cgt1cGRhdGVfdGltZRgDIAEo",
+            "CzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXBCA+BBAxJFCgZsYWJlbHMY",
+            "BCADKAsyNS5nb29nbGUuY2xvdWQudmlkZW8ubGl2ZXN0cmVhbS52MS5DaGFu",
+            "bmVsLkxhYmVsc0VudHJ5EkwKEWlucHV0X2F0dGFjaG1lbnRzGBAgAygLMjEu",
+            "Z29vZ2xlLmNsb3VkLnZpZGVvLmxpdmVzdHJlYW0udjEuSW5wdXRBdHRhY2ht",
+            "ZW50EhkKDGFjdGl2ZV9pbnB1dBgGIAEoCUID4EEDEkUKBm91dHB1dBgJIAEo",
+            "CzIwLmdvb2dsZS5jbG91ZC52aWRlby5saXZlc3RyZWFtLnYxLkNoYW5uZWwu",
+            "T3V0cHV0QgPgQQISTgoSZWxlbWVudGFyeV9zdHJlYW1zGAogAygLMjIuZ29v",
+            "Z2xlLmNsb3VkLnZpZGVvLmxpdmVzdHJlYW0udjEuRWxlbWVudGFyeVN0cmVh",
+            "bRJACgttdXhfc3RyZWFtcxgLIAMoCzIrLmdvb2dsZS5jbG91ZC52aWRlby5s",
+            "aXZlc3RyZWFtLnYxLk11eFN0cmVhbRI9CgltYW5pZmVzdHMYDCADKAsyKi5n",
+            "b29nbGUuY2xvdWQudmlkZW8ubGl2ZXN0cmVhbS52MS5NYW5pZmVzdBJXChRk",
+            "aXN0cmlidXRpb25fc3RyZWFtcxgcIAMoCzI0Lmdvb2dsZS5jbG91ZC52aWRl",
+            "by5saXZlc3RyZWFtLnYxLkRpc3RyaWJ1dGlvblN0cmVhbUID4EEBEkoKDWRp",
+            "c3RyaWJ1dGlvbnMYHSADKAsyLi5nb29nbGUuY2xvdWQudmlkZW8ubGl2ZXN0",
+            "cmVhbS52MS5EaXN0cmlidXRpb25CA+BBARJECg1zcHJpdGVfc2hlZXRzGA0g",
+            "AygLMi0uZ29vZ2xlLmNsb3VkLnZpZGVvLmxpdmVzdHJlYW0udjEuU3ByaXRl",
+            "U2hlZXQSVgoPc3RyZWFtaW5nX3N0YXRlGA4gASgOMjguZ29vZ2xlLmNsb3Vk",
+            "LnZpZGVvLmxpdmVzdHJlYW0udjEuQ2hhbm5lbC5TdHJlYW1pbmdTdGF0ZUID",
+            "4EEDEjAKD3N0cmVhbWluZ19lcnJvchgSIAEoCzISLmdvb2dsZS5ycGMuU3Rh",
+            "dHVzQgPgQQMSPwoKbG9nX2NvbmZpZxgTIAEoCzIrLmdvb2dsZS5jbG91ZC52",
+            "aWRlby5saXZlc3RyZWFtLnYxLkxvZ0NvbmZpZxJJCg90aW1lY29kZV9jb25m",
+            "aWcYFSABKAsyMC5nb29nbGUuY2xvdWQudmlkZW8ubGl2ZXN0cmVhbS52MS5U",
+            "aW1lY29kZUNvbmZpZxJGCgtlbmNyeXB0aW9ucxgYIAMoCzIsLmdvb2dsZS5j",
+            "bG91ZC52aWRlby5saXZlc3RyZWFtLnYxLkVuY3J5cHRpb25CA+BBARJDCgxp",
+            "bnB1dF9jb25maWcYGSABKAsyLS5nb29nbGUuY2xvdWQudmlkZW8ubGl2ZXN0",
+            "cmVhbS52MS5JbnB1dENvbmZpZxJQChByZXRlbnRpb25fY29uZmlnGBogASgL",
+            "MjEuZ29vZ2xlLmNsb3VkLnZpZGVvLmxpdmVzdHJlYW0udjEuUmV0ZW50aW9u",
+            "Q29uZmlnQgPgQQESTQoPc3RhdGljX292ZXJsYXlzGBsgAygLMi8uZ29vZ2xl",
+            "LmNsb3VkLnZpZGVvLmxpdmVzdHJlYW0udjEuU3RhdGljT3ZlcmxheUID4EEB",
+            "EmEKGWF1dG9fdHJhbnNjcmlwdGlvbl9jb25maWcYHiABKAsyOS5nb29nbGUu",
+            "Y2xvdWQudmlkZW8ubGl2ZXN0cmVhbS52MS5BdXRvVHJhbnNjcmlwdGlvbkNv",
+            "bmZpZ0ID4EEBGhUKBk91dHB1dBILCgN1cmkYASABKAkaLQoLTGFiZWxzRW50",
+            "cnkSCwoDa2V5GAEgASgJEg0KBXZhbHVlGAIgASgJOgI4ASKqAQoOU3RyZWFt",
+            "aW5nU3RhdGUSHwobU1RSRUFNSU5HX1NUQVRFX1VOU1BFQ0lGSUVEEAASDQoJ",
+            "U1RSRUFNSU5HEAESEgoOQVdBSVRJTkdfSU5QVVQQAhITCg9TVFJFQU1JTkdf",
+            "RVJST1IQBBIWChJTVFJFQU1JTkdfTk9fSU5QVVQQBRILCgdTVE9QUEVEEAYS",
+            "DAoIU1RBUlRJTkcQBxIMCghTVE9QUElORxAIOmLqQV8KIWxpdmVzdHJlYW0u",
+            "Z29vZ2xlYXBpcy5jb20vQ2hhbm5lbBI6cHJvamVjdHMve3Byb2plY3R9L2xv",
+            "Y2F0aW9ucy97bG9jYXRpb259L2NoYW5uZWxzL3tjaGFubmVsfSI2ChROb3Jt",
+            "YWxpemVkQ29vcmRpbmF0ZRIOCgF4GAEgASgBQgPgQQESDgoBeRgCIAEoAUID",
+            "4EEBIjYKFE5vcm1hbGl6ZWRSZXNvbHV0aW9uEg4KAXcYASABKAFCA+BBARIO",
+            "CgFoGAIgASgBQgPgQQEi/QEKDVN0YXRpY092ZXJsYXkSNgoFYXNzZXQYASAB",
+            "KAlCJ+BBAvpBIQofbGl2ZXN0cmVhbS5nb29nbGVhcGlzLmNvbS9Bc3NldBJP",
+            "CgpyZXNvbHV0aW9uGAIgASgLMjYuZ29vZ2xlLmNsb3VkLnZpZGVvLmxpdmVz",
+            "dHJlYW0udjEuTm9ybWFsaXplZFJlc29sdXRpb25CA+BBARJNCghwb3NpdGlv",
+            "bhgDIAEoCzI2Lmdvb2dsZS5jbG91ZC52aWRlby5saXZlc3RyZWFtLnYxLk5v",
+            "cm1hbGl6ZWRDb29yZGluYXRlQgPgQQESFAoHb3BhY2l0eRgEIAEoAUID4EEB",
+            "IsYBCgtJbnB1dENvbmZpZxJYChFpbnB1dF9zd2l0Y2hfbW9kZRgBIAEoDjI9",
+            "Lmdvb2dsZS5jbG91ZC52aWRlby5saXZlc3RyZWFtLnYxLklucHV0Q29uZmln",
+            "LklucHV0U3dpdGNoTW9kZSJdCg9JbnB1dFN3aXRjaE1vZGUSIQodSU5QVVRf",
+            "U1dJVENIX01PREVfVU5TUEVDSUZJRUQQABIbChdGQUlMT1ZFUl9QUkVGRVJf",
+            "UFJJTUFSWRABEgoKBk1BTlVBTBADIsABCglMb2dDb25maWcSTQoMbG9nX3Nl",
+            "dmVyaXR5GAEgASgOMjcuZ29vZ2xlLmNsb3VkLnZpZGVvLmxpdmVzdHJlYW0u",
+            "djEuTG9nQ29uZmlnLkxvZ1NldmVyaXR5ImQKC0xvZ1NldmVyaXR5EhwKGExP",
+            "R19TRVZFUklUWV9VTlNQRUNJRklFRBAAEgcKA09GRhABEgkKBURFQlVHEGQS",
+            "CQoESU5GTxDIARIMCgdXQVJOSU5HEJADEgoKBUVSUk9SEPQDIk8KD1JldGVu",
+            "dGlvbkNvbmZpZxI8ChlyZXRlbnRpb25fd2luZG93X2R1cmF0aW9uGAEgASgL",
+            "MhkuZ29vZ2xlLnByb3RvYnVmLkR1cmF0aW9uIuoBChNJbnB1dFN0cmVhbVBy",
+            "b3BlcnR5EjcKE2xhc3RfZXN0YWJsaXNoX3RpbWUYASABKAsyGi5nb29nbGUu",
+            "cHJvdG9idWYuVGltZXN0YW1wEkwKDXZpZGVvX3N0cmVhbXMYAiADKAsyNS5n",
+            "b29nbGUuY2xvdWQudmlkZW8ubGl2ZXN0cmVhbS52MS5WaWRlb1N0cmVhbVBy",
+            "b3BlcnR5EkwKDWF1ZGlvX3N0cmVhbXMYAyADKAsyNS5nb29nbGUuY2xvdWQu",
+            "dmlkZW8ubGl2ZXN0cmVhbS52MS5BdWRpb1N0cmVhbVByb3BlcnR5ImkKE1Zp",
+            "ZGVvU3RyZWFtUHJvcGVydHkSDQoFaW5kZXgYASABKAUSQwoMdmlkZW9fZm9y",
+            "bWF0GAIgASgLMi0uZ29vZ2xlLmNsb3VkLnZpZGVvLmxpdmVzdHJlYW0udjEu",
+            "VmlkZW9Gb3JtYXQiXQoLVmlkZW9Gb3JtYXQSDQoFY29kZWMYASABKAkSFAoM",
+            "d2lkdGhfcGl4ZWxzGAIgASgFEhUKDWhlaWdodF9waXhlbHMYAyABKAUSEgoK",
+            "ZnJhbWVfcmF0ZRgEIAEoASJpChNBdWRpb1N0cmVhbVByb3BlcnR5Eg0KBWlu",
+            "ZGV4GAEgASgFEkMKDGF1ZGlvX2Zvcm1hdBgCIAEoCzItLmdvb2dsZS5jbG91",
+            "ZC52aWRlby5saXZlc3RyZWFtLnYxLkF1ZGlvRm9ybWF0IksKC0F1ZGlvRm9y",
+            "bWF0Eg0KBWNvZGVjGAEgASgJEhUKDWNoYW5uZWxfY291bnQYAiABKAUSFgoO",
+            "Y2hhbm5lbF9sYXlvdXQYAyADKAki3QEKD0lucHV0QXR0YWNobWVudBILCgNr",
+            "ZXkYASABKAkSMwoFaW5wdXQYAiABKAlCJPpBIQofbGl2ZXN0cmVhbS5nb29n",
+            "bGVhcGlzLmNvbS9JbnB1dBJfChJhdXRvbWF0aWNfZmFpbG92ZXIYAyABKAsy",
+            "Qy5nb29nbGUuY2xvdWQudmlkZW8ubGl2ZXN0cmVhbS52MS5JbnB1dEF0dGFj",
+            "aG1lbnQuQXV0b21hdGljRmFpbG92ZXIaJwoRQXV0b21hdGljRmFpbG92ZXIS",
+            "EgoKaW5wdXRfa2V5cxgBIAMoCSKZAwoXQXV0b1RyYW5zY3JpcHRpb25Db25m",
+            "aWcSZAoOZGlzcGxheV90aW1pbmcYASABKA4yRy5nb29nbGUuY2xvdWQudmlk",
+            "ZW8ubGl2ZXN0cmVhbS52MS5BdXRvVHJhbnNjcmlwdGlvbkNvbmZpZy5EaXNw",
+            "bGF5VGltaW5nQgPgQQESZAoOcXVhbGl0eV9wcmVzZXQYAiABKA4yRy5nb29n",
+            "bGUuY2xvdWQudmlkZW8ubGl2ZXN0cmVhbS52MS5BdXRvVHJhbnNjcmlwdGlv",
+            "bkNvbmZpZy5RdWFsaXR5UHJlc2V0QgPgQQEiRAoNRGlzcGxheVRpbWluZxIe",
+            "ChpESVNQTEFZX1RJTUlOR19VTlNQRUNJRklFRBAAEgkKBUFTWU5DEAESCAoE",
+            "U1lOQxACImwKDVF1YWxpdHlQcmVzZXQSHgoaUVVBTElUWV9QUkVTRVRfVU5T",
+            "UEVDSUZJRUQQABIPCgtMT1dfTEFURU5DWRABEhQKEEJBTEFOQ0VEX1FVQUxJ",
+            "VFkQAhIUChBJTVBST1ZFRF9RVUFMSVRZEAMixgwKBUV2ZW50EgwKBG5hbWUY",
+            "ASABKAkSNAoLY3JlYXRlX3RpbWUYAiABKAsyGi5nb29nbGUucHJvdG9idWYu",
+            "VGltZXN0YW1wQgPgQQMSNAoLdXBkYXRlX3RpbWUYAyABKAsyGi5nb29nbGUu",
+            "cHJvdG9idWYuVGltZXN0YW1wQgPgQQMSQwoGbGFiZWxzGAQgAygLMjMuZ29v",
+            "Z2xlLmNsb3VkLnZpZGVvLmxpdmVzdHJlYW0udjEuRXZlbnQuTGFiZWxzRW50",
+            "cnkSTwoMaW5wdXRfc3dpdGNoGAUgASgLMjcuZ29vZ2xlLmNsb3VkLnZpZGVv",
+            "LmxpdmVzdHJlYW0udjEuRXZlbnQuSW5wdXRTd2l0Y2hUYXNrSAASRwoIYWRf",
+            "YnJlYWsYBiABKAsyMy5nb29nbGUuY2xvdWQudmlkZW8ubGl2ZXN0cmVhbS52",
+            "MS5FdmVudC5BZEJyZWFrVGFza0gAElgKEXJldHVybl90b19wcm9ncmFtGA0g",
+            "ASgLMjsuZ29vZ2xlLmNsb3VkLnZpZGVvLmxpdmVzdHJlYW0udjEuRXZlbnQu",
+            "UmV0dXJuVG9Qcm9ncmFtVGFza0gAEkIKBXNsYXRlGA4gASgLMjEuZ29vZ2xl",
+            "LmNsb3VkLnZpZGVvLmxpdmVzdHJlYW0udjEuRXZlbnQuU2xhdGVUYXNrSAAS",
+            "QAoEbXV0ZRgPIAEoCzIwLmdvb2dsZS5jbG91ZC52aWRlby5saXZlc3RyZWFt",
+            "LnYxLkV2ZW50Lk11dGVUYXNrSAASRAoGdW5tdXRlGBAgASgLMjIuZ29vZ2xl",
+            "LmNsb3VkLnZpZGVvLmxpdmVzdHJlYW0udjEuRXZlbnQuVW5tdXRlVGFza0gA",
+            "ElsKEnVwZGF0ZV9lbmNyeXB0aW9ucxgRIAEoCzI9Lmdvb2dsZS5jbG91ZC52",
+            "aWRlby5saXZlc3RyZWFtLnYxLkV2ZW50LlVwZGF0ZUVuY3J5cHRpb25zVGFz",
+            "a0gAEhMKC2V4ZWN1dGVfbm93GAkgASgIEjIKDmV4ZWN1dGlvbl90aW1lGAog",
+            "ASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcBJBCgVzdGF0ZRgLIAEo",
+            "DjItLmdvb2dsZS5jbG91ZC52aWRlby5saXZlc3RyZWFtLnYxLkV2ZW50LlN0",
+            "YXRlQgPgQQMSJgoFZXJyb3IYDCABKAsyEi5nb29nbGUucnBjLlN0YXR1c0ID",
+            "4EEDGiQKD0lucHV0U3dpdGNoVGFzaxIRCglpbnB1dF9rZXkYASABKAkaOgoL",
+            "QWRCcmVha1Rhc2sSKwoIZHVyYXRpb24YASABKAsyGS5nb29nbGUucHJvdG9i",
+            "dWYuRHVyYXRpb24abQoJU2xhdGVUYXNrEisKCGR1cmF0aW9uGAEgASgLMhku",
+            "Z29vZ2xlLnByb3RvYnVmLkR1cmF0aW9uEjMKBWFzc2V0GAIgASgJQiT6QSEK",
+            "H2xpdmVzdHJlYW0uZ29vZ2xlYXBpcy5jb20vQXNzZXQaFQoTUmV0dXJuVG9Q",
+            "cm9ncmFtVGFzaxo3CghNdXRlVGFzaxIrCghkdXJhdGlvbhgBIAEoCzIZLmdv",
+            "b2dsZS5wcm90b2J1Zi5EdXJhdGlvbhoMCgpVbm11dGVUYXNrGmUKFVVwZGF0",
+            "ZUVuY3J5cHRpb25zVGFzaxJMCgtlbmNyeXB0aW9ucxgBIAMoCzIyLmdvb2ds",
+            "ZS5jbG91ZC52aWRlby5saXZlc3RyZWFtLnYxLkVuY3J5cHRpb25VcGRhdGVC",
+            "A+BBAhotCgtMYWJlbHNFbnRyeRILCgNrZXkYASABKAkSDQoFdmFsdWUYAiAB",
+            "KAk6AjgBIm8KBVN0YXRlEhUKEVNUQVRFX1VOU1BFQ0lGSUVEEAASDQoJU0NI",
+            "RURVTEVEEAESCwoHUlVOTklORxACEg0KCVNVQ0NFRURFRBADEgoKBkZBSUxF",
+            "RBAEEgsKB1BFTkRJTkcQBRILCgdTVE9QUEVEEAY6b+pBbAofbGl2ZXN0cmVh",
+            "bS5nb29nbGVhcGlzLmNvbS9FdmVudBJJcHJvamVjdHMve3Byb2plY3R9L2xv",
+            "Y2F0aW9ucy97bG9jYXRpb259L2NoYW5uZWxzL3tjaGFubmVsfS9ldmVudHMv",
+            "e2V2ZW50fUIGCgR0YXNrIpYJCgRDbGlwEgwKBG5hbWUYASABKAkSNAoLY3Jl",
+            "YXRlX3RpbWUYAiABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wQgPg",
+            "QQMSMwoKc3RhcnRfdGltZRgDIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1l",
+            "c3RhbXBCA+BBAxI0Cgt1cGRhdGVfdGltZRgEIAEoCzIaLmdvb2dsZS5wcm90",
+            "b2J1Zi5UaW1lc3RhbXBCA+BBAxJCCgZsYWJlbHMYBSADKAsyMi5nb29nbGUu",
+            "Y2xvdWQudmlkZW8ubGl2ZXN0cmVhbS52MS5DbGlwLkxhYmVsc0VudHJ5EkAK",
+            "BXN0YXRlGAYgASgOMiwuZ29vZ2xlLmNsb3VkLnZpZGVvLmxpdmVzdHJlYW0u",
+            "djEuQ2xpcC5TdGF0ZUID4EEDEhIKCm91dHB1dF91cmkYByABKAkSJgoFZXJy",
+            "b3IYCSABKAsyEi5nb29nbGUucnBjLlN0YXR1c0ID4EEDEjwKBnNsaWNlcxgK",
+            "IAMoCzIsLmdvb2dsZS5jbG91ZC52aWRlby5saXZlc3RyZWFtLnYxLkNsaXAu",
+            "U2xpY2USUAoOY2xpcF9tYW5pZmVzdHMYDCADKAsyMy5nb29nbGUuY2xvdWQu",
+            "dmlkZW8ubGl2ZXN0cmVhbS52MS5DbGlwLkNsaXBNYW5pZmVzdEID4EECEksK",
+            "C291dHB1dF90eXBlGA0gASgOMjEuZ29vZ2xlLmNsb3VkLnZpZGVvLmxpdmVz",
+            "dHJlYW0udjEuQ2xpcC5PdXRwdXRUeXBlQgPgQQEabgoJVGltZVNsaWNlEi8K",
+            "C21hcmtpbl90aW1lGAEgASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFt",
+            "cBIwCgxtYXJrb3V0X3RpbWUYAiABKAsyGi5nb29nbGUucHJvdG9idWYuVGlt",
+            "ZXN0YW1wGlcKBVNsaWNlEkYKCnRpbWVfc2xpY2UYASABKAsyMC5nb29nbGUu",
+            "Y2xvdWQudmlkZW8ubGl2ZXN0cmVhbS52MS5DbGlwLlRpbWVTbGljZUgAQgYK",
+            "BGtpbmQaQgoMQ2xpcE1hbmlmZXN0EhkKDG1hbmlmZXN0X2tleRgBIAEoCUID",
+            "4EECEhcKCm91dHB1dF91cmkYAiABKAlCA+BBAxotCgtMYWJlbHNFbnRyeRIL",
+            "CgNrZXkYASABKAkSDQoFdmFsdWUYAiABKAk6AjgBIlQKBVN0YXRlEhUKEVNU",
+            "QVRFX1VOU1BFQ0lGSUVEEAASCwoHUEVORElORxABEgwKCENSRUFUSU5HEAIS",
+            "DQoJU1VDQ0VFREVEEAMSCgoGRkFJTEVEEAQiQAoKT3V0cHV0VHlwZRIbChdP",
+            "VVRQVVRfVFlQRV9VTlNQRUNJRklFRBAAEgwKCE1BTklGRVNUEAESBwoDTVA0",
+            "EAI6bOpBaQoebGl2ZXN0cmVhbS5nb29nbGVhcGlzLmNvbS9DbGlwEkdwcm9q",
+            "ZWN0cy97cHJvamVjdH0vbG9jYXRpb25zL3tsb2NhdGlvbn0vY2hhbm5lbHMv",
+            "e2NoYW5uZWx9L2NsaXBzL3tjbGlwfSJ2CgxUaW1lSW50ZXJ2YWwSMwoKc3Rh",
+            "cnRfdGltZRgBIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXBCA+BB",
+            "ARIxCghlbmRfdGltZRgCIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3Rh",
+            "bXBCA+BBASKMCAoKRHZyU2Vzc2lvbhIRCgRuYW1lGAEgASgJQgPgQQgSNAoL",
+            "Y3JlYXRlX3RpbWUYAiABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1w",
+            "QgPgQQMSNAoLdXBkYXRlX3RpbWUYAyABKAsyGi5nb29nbGUucHJvdG9idWYu",
+            "VGltZXN0YW1wQgPgQQMSTQoGbGFiZWxzGAQgAygLMjguZ29vZ2xlLmNsb3Vk",
+            "LnZpZGVvLmxpdmVzdHJlYW0udjEuRHZyU2Vzc2lvbi5MYWJlbHNFbnRyeUID",
+            "4EEBEkYKBXN0YXRlGAUgASgOMjIuZ29vZ2xlLmNsb3VkLnZpZGVvLmxpdmVz",
+            "dHJlYW0udjEuRHZyU2Vzc2lvbi5TdGF0ZUID4EEDEiYKBWVycm9yGAYgASgL",
+            "MhIuZ29vZ2xlLnJwYy5TdGF0dXNCA+BBAxJUCg1kdnJfbWFuaWZlc3RzGAcg",
+            "AygLMjguZ29vZ2xlLmNsb3VkLnZpZGVvLmxpdmVzdHJlYW0udjEuRHZyU2Vz",
+            "c2lvbi5EdnJNYW5pZmVzdEID4EECElAKC2R2cl93aW5kb3dzGAggAygLMjYu",
+            "Z29vZ2xlLmNsb3VkLnZpZGVvLmxpdmVzdHJlYW0udjEuRHZyU2Vzc2lvbi5E",
+            "dnJXaW5kb3dCA+BBAhpBCgtEdnJNYW5pZmVzdBIZCgxtYW5pZmVzdF9rZXkY",
+            "ASABKAlCA+BBAhIXCgpvdXRwdXRfdXJpGAIgASgJQgPgQQMaXAoJRHZyV2lu",
+            "ZG93EkcKDXRpbWVfaW50ZXJ2YWwYASABKAsyLi5nb29nbGUuY2xvdWQudmlk",
+            "ZW8ubGl2ZXN0cmVhbS52MS5UaW1lSW50ZXJ2YWxIAEIGCgRraW5kGi0KC0xh",
+            "YmVsc0VudHJ5EgsKA2tleRgBIAEoCRINCgV2YWx1ZRgCIAEoCToCOAEiqwEK",
+            "BVN0YXRlEhUKEVNUQVRFX1VOU1BFQ0lGSUVEEAASCwoHUEVORElORxABEgwK",
+            "CFVQREFUSU5HEAISDQoJU0NIRURVTEVEEAMSCAoETElWRRAEEgwKCEZJTklT",
+            "SEVEEAUSCgoGRkFJTEVEEAYSDAoIREVMRVRJTkcQBxITCg9QT1NUX1BST0NF",
+            "U1NJTkcQCBIMCghDT09MRE9XThAJEgwKCFNUT1BQSU5HEAo6mQHqQZUBCiRs",
+            "aXZlc3RyZWFtLmdvb2dsZWFwaXMuY29tL0R2clNlc3Npb24SVHByb2plY3Rz",
+            "L3twcm9qZWN0fS9sb2NhdGlvbnMve2xvY2F0aW9ufS9jaGFubmVscy97Y2hh",
+            "bm5lbH0vZHZyU2Vzc2lvbnMve2R2cl9zZXNzaW9ufSoLZHZyU2Vzc2lvbnMy",
+            "CmR2clNlc3Npb24i7QUKBUFzc2V0EgwKBG5hbWUYASABKAkSNAoLY3JlYXRl",
+            "X3RpbWUYAiABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wQgPgQQMS",
+            "NAoLdXBkYXRlX3RpbWUYAyABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0",
+            "YW1wQgPgQQMSQwoGbGFiZWxzGAQgAygLMjMuZ29vZ2xlLmNsb3VkLnZpZGVv",
+            "LmxpdmVzdHJlYW0udjEuQXNzZXQuTGFiZWxzRW50cnkSQwoFdmlkZW8YBSAB",
+            "KAsyMi5nb29nbGUuY2xvdWQudmlkZW8ubGl2ZXN0cmVhbS52MS5Bc3NldC5W",
+            "aWRlb0Fzc2V0SAASQwoFaW1hZ2UYBiABKAsyMi5nb29nbGUuY2xvdWQudmlk",
+            "ZW8ubGl2ZXN0cmVhbS52MS5Bc3NldC5JbWFnZUFzc2V0SAASDgoGY3JjMzJj",
+            "GAcgASgJEkEKBXN0YXRlGAggASgOMi0uZ29vZ2xlLmNsb3VkLnZpZGVvLmxp",
+            "dmVzdHJlYW0udjEuQXNzZXQuU3RhdGVCA+BBAxImCgVlcnJvchgJIAEoCzIS",
+            "Lmdvb2dsZS5ycGMuU3RhdHVzQgPgQQMaGQoKVmlkZW9Bc3NldBILCgN1cmkY",
+            "ASABKAkaGQoKSW1hZ2VBc3NldBILCgN1cmkYASABKAkaLQoLTGFiZWxzRW50",
+            "cnkSCwoDa2V5GAEgASgJEg0KBXZhbHVlGAIgASgJOgI4ASJRCgVTdGF0ZRIV",
+            "ChFTVEFURV9VTlNQRUNJRklFRBAAEgwKCENSRUFUSU5HEAESCgoGQUNUSVZF",
+            "EAISDAoIREVMRVRJTkcQAxIJCgVFUlJPUhAEOlzqQVkKH2xpdmVzdHJlYW0u",
+            "Z29vZ2xlYXBpcy5jb20vQXNzZXQSNnByb2plY3RzL3twcm9qZWN0fS9sb2Nh",
+            "dGlvbnMve2xvY2F0aW9ufS9hc3NldHMve2Fzc2V0fUIKCghyZXNvdXJjZSKx",
+            "CAoKRW5jcnlwdGlvbhIPCgJpZBgBIAEoCUID4EECEmUKGXNlY3JldF9tYW5h",
+            "Z2VyX2tleV9zb3VyY2UYByABKAsyQC5nb29nbGUuY2xvdWQudmlkZW8ubGl2",
+            "ZXN0cmVhbS52MS5FbmNyeXB0aW9uLlNlY3JldE1hbmFnZXJTb3VyY2VIABJR",
+            "Cgtkcm1fc3lzdGVtcxgDIAEoCzI3Lmdvb2dsZS5jbG91ZC52aWRlby5saXZl",
+            "c3RyZWFtLnYxLkVuY3J5cHRpb24uRHJtU3lzdGVtc0ID4EECEk8KBmFlczEy",
+            "OBgEIAEoCzI9Lmdvb2dsZS5jbG91ZC52aWRlby5saXZlc3RyZWFtLnYxLkVu",
+            "Y3J5cHRpb24uQWVzMTI4RW5jcnlwdGlvbkgBElYKCnNhbXBsZV9hZXMYBSAB",
+            "KAsyQC5nb29nbGUuY2xvdWQudmlkZW8ubGl2ZXN0cmVhbS52MS5FbmNyeXB0",
+            "aW9uLlNhbXBsZUFlc0VuY3J5cHRpb25IARJWCgltcGVnX2NlbmMYBiABKAsy",
+            "QS5nb29nbGUuY2xvdWQudmlkZW8ubGl2ZXN0cmVhbS52MS5FbmNyeXB0aW9u",
+            "Lk1wZWdDb21tb25FbmNyeXB0aW9uSAEaYQoTU2VjcmV0TWFuYWdlclNvdXJj",
+            "ZRJKCg5zZWNyZXRfdmVyc2lvbhgBIAEoCUIy4EEC+kEsCipzZWNyZXRtYW5h",
+            "Z2VyLmdvb2dsZWFwaXMuY29tL1NlY3JldFZlcnNpb24aCgoIV2lkZXZpbmUa",
+            "CgoIRmFpcnBsYXkaCwoJUGxheXJlYWR5GgoKCENsZWFya2V5GsYCCgpEcm1T",
+            "eXN0ZW1zEkwKCHdpZGV2aW5lGAEgASgLMjUuZ29vZ2xlLmNsb3VkLnZpZGVv",
+            "LmxpdmVzdHJlYW0udjEuRW5jcnlwdGlvbi5XaWRldmluZUID4EEBEkwKCGZh",
+            "aXJwbGF5GAIgASgLMjUuZ29vZ2xlLmNsb3VkLnZpZGVvLmxpdmVzdHJlYW0u",
+            "djEuRW5jcnlwdGlvbi5GYWlycGxheUID4EEBEk4KCXBsYXlyZWFkeRgDIAEo",
+            "CzI2Lmdvb2dsZS5jbG91ZC52aWRlby5saXZlc3RyZWFtLnYxLkVuY3J5cHRp",
+            "b24uUGxheXJlYWR5QgPgQQESTAoIY2xlYXJrZXkYBCABKAsyNS5nb29nbGUu",
+            "Y2xvdWQudmlkZW8ubGl2ZXN0cmVhbS52MS5FbmNyeXB0aW9uLkNsZWFya2V5",
+            "QgPgQQEaEgoQQWVzMTI4RW5jcnlwdGlvbhoVChNTYW1wbGVBZXNFbmNyeXB0",
+            "aW9uGisKFE1wZWdDb21tb25FbmNyeXB0aW9uEhMKBnNjaGVtZRgBIAEoCUID",
+            "4EECQg8KDXNlY3JldF9zb3VyY2VCEQoPZW5jcnlwdGlvbl9tb2RlIpsBChBF",
+            "bmNyeXB0aW9uVXBkYXRlEg8KAmlkGAEgASgJQgPgQQISZQoZc2VjcmV0X21h",
+            "bmFnZXJfa2V5X3NvdXJjZRgCIAEoCzJALmdvb2dsZS5jbG91ZC52aWRlby5s",
+            "aXZlc3RyZWFtLnYxLkVuY3J5cHRpb24uU2VjcmV0TWFuYWdlclNvdXJjZUgA",
+            "Qg8KDXNlY3JldF9zb3VyY2Ui6gMKBFBvb2wSDAoEbmFtZRgBIAEoCRI0Cgtj",
+            "cmVhdGVfdGltZRgCIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXBC",
+            "A+BBAxI0Cgt1cGRhdGVfdGltZRgDIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5U",
+            "aW1lc3RhbXBCA+BBAxJCCgZsYWJlbHMYBCADKAsyMi5nb29nbGUuY2xvdWQu",
+            "dmlkZW8ubGl2ZXN0cmVhbS52MS5Qb29sLkxhYmVsc0VudHJ5EkwKDm5ldHdv",
+            "cmtfY29uZmlnGAUgASgLMjQuZ29vZ2xlLmNsb3VkLnZpZGVvLmxpdmVzdHJl",
+            "YW0udjEuUG9vbC5OZXR3b3JrQ29uZmlnGkwKDU5ldHdvcmtDb25maWcSOwoO",
+            "cGVlcmVkX25ldHdvcmsYASABKAlCI/pBIAoeY29tcHV0ZS5nb29nbGVhcGlz",
+            "LmNvbS9OZXR3b3JrGi0KC0xhYmVsc0VudHJ5EgsKA2tleRgBIAEoCRINCgV2",
+            "YWx1ZRgCIAEoCToCOAE6WepBVgoebGl2ZXN0cmVhbS5nb29nbGVhcGlzLmNv",
+            "bS9Qb29sEjRwcm9qZWN0cy97cHJvamVjdH0vbG9jYXRpb25zL3tsb2NhdGlv",
+            "bn0vcG9vbHMve3Bvb2x9QusBCiRjb20uZ29vZ2xlLmNsb3VkLnZpZGVvLmxp",
+            "dmVzdHJlYW0udjFCDlJlc291cmNlc1Byb3RvUAFaRGNsb3VkLmdvb2dsZS5j",
+            "b20vZ28vdmlkZW8vbGl2ZXN0cmVhbS9hcGl2MS9saXZlc3RyZWFtcGI7bGl2",
+            "ZXN0cmVhbXBiqgIgR29vZ2xlLkNsb3VkLlZpZGVvLkxpdmVTdHJlYW0uVjHK",
+            "AiBHb29nbGVcQ2xvdWRcVmlkZW9cTGl2ZVN0cmVhbVxWMeoCJEdvb2dsZTo6",
+            "Q2xvdWQ6OlZpZGVvOjpMaXZlU3RyZWFtOjpWMWIGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Cloud.Video.LiveStream.V1.OutputsReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.DurationReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, global::Google.Rpc.StatusReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Video.LiveStream.V1.Input), global::Google.Cloud.Video.LiveStream.V1.Input.Parser, new[]{ "Name", "CreateTime", "UpdateTime", "Labels", "Type", "Tier", "Uri", "PreprocessingConfig", "SecurityRules", "InputStreamProperty" }, null, new[]{ typeof(global::Google.Cloud.Video.LiveStream.V1.Input.Types.Type), typeof(global::Google.Cloud.Video.LiveStream.V1.Input.Types.Tier) }, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Video.LiveStream.V1.Input.Types.SecurityRule), global::Google.Cloud.Video.LiveStream.V1.Input.Types.SecurityRule.Parser, new[]{ "IpRanges" }, null, null, null, null),
             null, }),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Video.LiveStream.V1.Channel), global::Google.Cloud.Video.LiveStream.V1.Channel.Parser, new[]{ "Name", "CreateTime", "UpdateTime", "Labels", "InputAttachments", "ActiveInput", "Output", "ElementaryStreams", "MuxStreams", "Manifests", "SpriteSheets", "StreamingState", "StreamingError", "LogConfig", "TimecodeConfig", "Encryptions", "InputConfig", "RetentionConfig", "StaticOverlays" }, null, new[]{ typeof(global::Google.Cloud.Video.LiveStream.V1.Channel.Types.StreamingState) }, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Video.LiveStream.V1.Channel.Types.Output), global::Google.Cloud.Video.LiveStream.V1.Channel.Types.Output.Parser, new[]{ "Uri" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Video.LiveStream.V1.Channel), global::Google.Cloud.Video.LiveStream.V1.Channel.Parser, new[]{ "Name", "CreateTime", "UpdateTime", "Labels", "InputAttachments", "ActiveInput", "Output", "ElementaryStreams", "MuxStreams", "Manifests", "DistributionStreams", "Distributions", "SpriteSheets", "StreamingState", "StreamingError", "LogConfig", "TimecodeConfig", "Encryptions", "InputConfig", "RetentionConfig", "StaticOverlays", "AutoTranscriptionConfig" }, null, new[]{ typeof(global::Google.Cloud.Video.LiveStream.V1.Channel.Types.StreamingState) }, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Video.LiveStream.V1.Channel.Types.Output), global::Google.Cloud.Video.LiveStream.V1.Channel.Types.Output.Parser, new[]{ "Uri" }, null, null, null, null),
             null, }),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Video.LiveStream.V1.NormalizedCoordinate), global::Google.Cloud.Video.LiveStream.V1.NormalizedCoordinate.Parser, new[]{ "X", "Y" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Video.LiveStream.V1.NormalizedResolution), global::Google.Cloud.Video.LiveStream.V1.NormalizedResolution.Parser, new[]{ "W", "H" }, null, null, null, null),
@@ -282,12 +306,14 @@ namespace Google.Cloud.Video.LiveStream.V1 {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Video.LiveStream.V1.AudioStreamProperty), global::Google.Cloud.Video.LiveStream.V1.AudioStreamProperty.Parser, new[]{ "Index", "AudioFormat" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Video.LiveStream.V1.AudioFormat), global::Google.Cloud.Video.LiveStream.V1.AudioFormat.Parser, new[]{ "Codec", "ChannelCount", "ChannelLayout" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Video.LiveStream.V1.InputAttachment), global::Google.Cloud.Video.LiveStream.V1.InputAttachment.Parser, new[]{ "Key", "Input", "AutomaticFailover" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Video.LiveStream.V1.InputAttachment.Types.AutomaticFailover), global::Google.Cloud.Video.LiveStream.V1.InputAttachment.Types.AutomaticFailover.Parser, new[]{ "InputKeys" }, null, null, null, null)}),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Video.LiveStream.V1.Event), global::Google.Cloud.Video.LiveStream.V1.Event.Parser, new[]{ "Name", "CreateTime", "UpdateTime", "Labels", "InputSwitch", "AdBreak", "ReturnToProgram", "Slate", "Mute", "Unmute", "ExecuteNow", "ExecutionTime", "State", "Error" }, new[]{ "Task" }, new[]{ typeof(global::Google.Cloud.Video.LiveStream.V1.Event.Types.State) }, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Video.LiveStream.V1.Event.Types.InputSwitchTask), global::Google.Cloud.Video.LiveStream.V1.Event.Types.InputSwitchTask.Parser, new[]{ "InputKey" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Video.LiveStream.V1.AutoTranscriptionConfig), global::Google.Cloud.Video.LiveStream.V1.AutoTranscriptionConfig.Parser, new[]{ "DisplayTiming", "QualityPreset" }, null, new[]{ typeof(global::Google.Cloud.Video.LiveStream.V1.AutoTranscriptionConfig.Types.DisplayTiming), typeof(global::Google.Cloud.Video.LiveStream.V1.AutoTranscriptionConfig.Types.QualityPreset) }, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Video.LiveStream.V1.Event), global::Google.Cloud.Video.LiveStream.V1.Event.Parser, new[]{ "Name", "CreateTime", "UpdateTime", "Labels", "InputSwitch", "AdBreak", "ReturnToProgram", "Slate", "Mute", "Unmute", "UpdateEncryptions", "ExecuteNow", "ExecutionTime", "State", "Error" }, new[]{ "Task" }, new[]{ typeof(global::Google.Cloud.Video.LiveStream.V1.Event.Types.State) }, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Video.LiveStream.V1.Event.Types.InputSwitchTask), global::Google.Cloud.Video.LiveStream.V1.Event.Types.InputSwitchTask.Parser, new[]{ "InputKey" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Video.LiveStream.V1.Event.Types.AdBreakTask), global::Google.Cloud.Video.LiveStream.V1.Event.Types.AdBreakTask.Parser, new[]{ "Duration" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Video.LiveStream.V1.Event.Types.SlateTask), global::Google.Cloud.Video.LiveStream.V1.Event.Types.SlateTask.Parser, new[]{ "Duration", "Asset" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Video.LiveStream.V1.Event.Types.ReturnToProgramTask), global::Google.Cloud.Video.LiveStream.V1.Event.Types.ReturnToProgramTask.Parser, null, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Video.LiveStream.V1.Event.Types.MuteTask), global::Google.Cloud.Video.LiveStream.V1.Event.Types.MuteTask.Parser, new[]{ "Duration" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Video.LiveStream.V1.Event.Types.UnmuteTask), global::Google.Cloud.Video.LiveStream.V1.Event.Types.UnmuteTask.Parser, null, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Video.LiveStream.V1.Event.Types.UpdateEncryptionsTask), global::Google.Cloud.Video.LiveStream.V1.Event.Types.UpdateEncryptionsTask.Parser, new[]{ "Encryptions" }, null, null, null, null),
             null, }),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Video.LiveStream.V1.Clip), global::Google.Cloud.Video.LiveStream.V1.Clip.Parser, new[]{ "Name", "CreateTime", "StartTime", "UpdateTime", "Labels", "State", "OutputUri", "Error", "Slices", "ClipManifests", "OutputType" }, null, new[]{ typeof(global::Google.Cloud.Video.LiveStream.V1.Clip.Types.State), typeof(global::Google.Cloud.Video.LiveStream.V1.Clip.Types.OutputType) }, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Video.LiveStream.V1.Clip.Types.TimeSlice), global::Google.Cloud.Video.LiveStream.V1.Clip.Types.TimeSlice.Parser, new[]{ "MarkinTime", "MarkoutTime" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Video.LiveStream.V1.Clip.Types.Slice), global::Google.Cloud.Video.LiveStream.V1.Clip.Types.Slice.Parser, new[]{ "TimeSlice" }, new[]{ "Kind" }, null, null, null),
@@ -309,6 +335,7 @@ namespace Google.Cloud.Video.LiveStream.V1 {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Video.LiveStream.V1.Encryption.Types.Aes128Encryption), global::Google.Cloud.Video.LiveStream.V1.Encryption.Types.Aes128Encryption.Parser, null, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Video.LiveStream.V1.Encryption.Types.SampleAesEncryption), global::Google.Cloud.Video.LiveStream.V1.Encryption.Types.SampleAesEncryption.Parser, null, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Video.LiveStream.V1.Encryption.Types.MpegCommonEncryption), global::Google.Cloud.Video.LiveStream.V1.Encryption.Types.MpegCommonEncryption.Parser, new[]{ "Scheme" }, null, null, null, null)}),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Video.LiveStream.V1.EncryptionUpdate), global::Google.Cloud.Video.LiveStream.V1.EncryptionUpdate.Parser, new[]{ "Id", "SecretManagerKeySource" }, new[]{ "SecretSource" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Video.LiveStream.V1.Pool), global::Google.Cloud.Video.LiveStream.V1.Pool.Parser, new[]{ "Name", "CreateTime", "UpdateTime", "Labels", "NetworkConfig" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Video.LiveStream.V1.Pool.Types.NetworkConfig), global::Google.Cloud.Video.LiveStream.V1.Pool.Types.NetworkConfig.Parser, new[]{ "PeeredNetwork" }, null, null, null, null),
             null, })
           }));
@@ -956,9 +983,21 @@ namespace Google.Cloud.Video.LiveStream.V1 {
         /// </summary>
         [pbr::OriginalName("HD")] Hd = 2,
         /// <summary>
-        /// Resolution &lt;= 4096x2160. Not supported yet.
+        /// Resolution &lt;= 4096x2160. Bitrate &lt;= 50 Mbps. FPS &lt;= 60.
         /// </summary>
         [pbr::OriginalName("UHD")] Uhd = 3,
+        /// <summary>
+        /// Resolution &lt;= 1280x720. Bitrate &lt;= 6 Mbps. FPS &lt;= 60. H265 codec.
+        /// </summary>
+        [pbr::OriginalName("SD_H265")] SdH265 = 4,
+        /// <summary>
+        /// Resolution &lt;= 1920x1080. Bitrate &lt;= 25 Mbps. FPS &lt;= 60. H265 codec.
+        /// </summary>
+        [pbr::OriginalName("HD_H265")] HdH265 = 5,
+        /// <summary>
+        /// Resolution &lt;= 4096x2160. Bitrate &lt;= 50 Mbps. FPS &lt;= 60. H265 codec.
+        /// </summary>
+        [pbr::OriginalName("UHD_H265")] UhdH265 = 6,
       }
 
       /// <summary>
@@ -1207,6 +1246,8 @@ namespace Google.Cloud.Video.LiveStream.V1 {
       elementaryStreams_ = other.elementaryStreams_.Clone();
       muxStreams_ = other.muxStreams_.Clone();
       manifests_ = other.manifests_.Clone();
+      distributionStreams_ = other.distributionStreams_.Clone();
+      distributions_ = other.distributions_.Clone();
       spriteSheets_ = other.spriteSheets_.Clone();
       streamingState_ = other.streamingState_;
       streamingError_ = other.streamingError_ != null ? other.streamingError_.Clone() : null;
@@ -1216,6 +1257,7 @@ namespace Google.Cloud.Video.LiveStream.V1 {
       inputConfig_ = other.inputConfig_ != null ? other.inputConfig_.Clone() : null;
       retentionConfig_ = other.retentionConfig_ != null ? other.retentionConfig_.Clone() : null;
       staticOverlays_ = other.staticOverlays_.Clone();
+      autoTranscriptionConfig_ = other.autoTranscriptionConfig_ != null ? other.autoTranscriptionConfig_.Clone() : null;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -1378,6 +1420,34 @@ namespace Google.Cloud.Video.LiveStream.V1 {
       get { return manifests_; }
     }
 
+    /// <summary>Field number for the "distribution_streams" field.</summary>
+    public const int DistributionStreamsFieldNumber = 28;
+    private static readonly pb::FieldCodec<global::Google.Cloud.Video.LiveStream.V1.DistributionStream> _repeated_distributionStreams_codec
+        = pb::FieldCodec.ForMessage(226, global::Google.Cloud.Video.LiveStream.V1.DistributionStream.Parser);
+    private readonly pbc::RepeatedField<global::Google.Cloud.Video.LiveStream.V1.DistributionStream> distributionStreams_ = new pbc::RepeatedField<global::Google.Cloud.Video.LiveStream.V1.DistributionStream>();
+    /// <summary>
+    /// Optional. List of multiplexing settings of streams for distributions.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pbc::RepeatedField<global::Google.Cloud.Video.LiveStream.V1.DistributionStream> DistributionStreams {
+      get { return distributionStreams_; }
+    }
+
+    /// <summary>Field number for the "distributions" field.</summary>
+    public const int DistributionsFieldNumber = 29;
+    private static readonly pb::FieldCodec<global::Google.Cloud.Video.LiveStream.V1.Distribution> _repeated_distributions_codec
+        = pb::FieldCodec.ForMessage(234, global::Google.Cloud.Video.LiveStream.V1.Distribution.Parser);
+    private readonly pbc::RepeatedField<global::Google.Cloud.Video.LiveStream.V1.Distribution> distributions_ = new pbc::RepeatedField<global::Google.Cloud.Video.LiveStream.V1.Distribution>();
+    /// <summary>
+    /// Optional. List of distributions.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pbc::RepeatedField<global::Google.Cloud.Video.LiveStream.V1.Distribution> Distributions {
+      get { return distributions_; }
+    }
+
     /// <summary>Field number for the "sprite_sheets" field.</summary>
     public const int SpriteSheetsFieldNumber = 13;
     private static readonly pb::FieldCodec<global::Google.Cloud.Video.LiveStream.V1.SpriteSheet> _repeated_spriteSheets_codec
@@ -1462,9 +1532,9 @@ namespace Google.Cloud.Video.LiveStream.V1 {
         = pb::FieldCodec.ForMessage(194, global::Google.Cloud.Video.LiveStream.V1.Encryption.Parser);
     private readonly pbc::RepeatedField<global::Google.Cloud.Video.LiveStream.V1.Encryption> encryptions_ = new pbc::RepeatedField<global::Google.Cloud.Video.LiveStream.V1.Encryption>();
     /// <summary>
-    /// Encryption configurations for this channel. Each configuration has an ID
-    /// which is referred to by each MuxStream to indicate which configuration is
-    /// used for that output.
+    /// Optional. Encryption configurations for this channel. Each configuration
+    /// has an ID which is referred to by each MuxStream to indicate which
+    /// configuration is used for that output.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -1518,6 +1588,21 @@ namespace Google.Cloud.Video.LiveStream.V1 {
       get { return staticOverlays_; }
     }
 
+    /// <summary>Field number for the "auto_transcription_config" field.</summary>
+    public const int AutoTranscriptionConfigFieldNumber = 30;
+    private global::Google.Cloud.Video.LiveStream.V1.AutoTranscriptionConfig autoTranscriptionConfig_;
+    /// <summary>
+    /// Optional. Advanced configurations for auto-generated text streams.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Cloud.Video.LiveStream.V1.AutoTranscriptionConfig AutoTranscriptionConfig {
+      get { return autoTranscriptionConfig_; }
+      set {
+        autoTranscriptionConfig_ = value;
+      }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
@@ -1543,6 +1628,8 @@ namespace Google.Cloud.Video.LiveStream.V1 {
       if(!elementaryStreams_.Equals(other.elementaryStreams_)) return false;
       if(!muxStreams_.Equals(other.muxStreams_)) return false;
       if(!manifests_.Equals(other.manifests_)) return false;
+      if(!distributionStreams_.Equals(other.distributionStreams_)) return false;
+      if(!distributions_.Equals(other.distributions_)) return false;
       if(!spriteSheets_.Equals(other.spriteSheets_)) return false;
       if (StreamingState != other.StreamingState) return false;
       if (!object.Equals(StreamingError, other.StreamingError)) return false;
@@ -1552,6 +1639,7 @@ namespace Google.Cloud.Video.LiveStream.V1 {
       if (!object.Equals(InputConfig, other.InputConfig)) return false;
       if (!object.Equals(RetentionConfig, other.RetentionConfig)) return false;
       if(!staticOverlays_.Equals(other.staticOverlays_)) return false;
+      if (!object.Equals(AutoTranscriptionConfig, other.AutoTranscriptionConfig)) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -1569,6 +1657,8 @@ namespace Google.Cloud.Video.LiveStream.V1 {
       hash ^= elementaryStreams_.GetHashCode();
       hash ^= muxStreams_.GetHashCode();
       hash ^= manifests_.GetHashCode();
+      hash ^= distributionStreams_.GetHashCode();
+      hash ^= distributions_.GetHashCode();
       hash ^= spriteSheets_.GetHashCode();
       if (StreamingState != global::Google.Cloud.Video.LiveStream.V1.Channel.Types.StreamingState.Unspecified) hash ^= StreamingState.GetHashCode();
       if (streamingError_ != null) hash ^= StreamingError.GetHashCode();
@@ -1578,6 +1668,7 @@ namespace Google.Cloud.Video.LiveStream.V1 {
       if (inputConfig_ != null) hash ^= InputConfig.GetHashCode();
       if (retentionConfig_ != null) hash ^= RetentionConfig.GetHashCode();
       hash ^= staticOverlays_.GetHashCode();
+      if (autoTranscriptionConfig_ != null) hash ^= AutoTranscriptionConfig.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -1648,6 +1739,12 @@ namespace Google.Cloud.Video.LiveStream.V1 {
         output.WriteMessage(RetentionConfig);
       }
       staticOverlays_.WriteTo(output, _repeated_staticOverlays_codec);
+      distributionStreams_.WriteTo(output, _repeated_distributionStreams_codec);
+      distributions_.WriteTo(output, _repeated_distributions_codec);
+      if (autoTranscriptionConfig_ != null) {
+        output.WriteRawTag(242, 1);
+        output.WriteMessage(AutoTranscriptionConfig);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -1710,6 +1807,12 @@ namespace Google.Cloud.Video.LiveStream.V1 {
         output.WriteMessage(RetentionConfig);
       }
       staticOverlays_.WriteTo(ref output, _repeated_staticOverlays_codec);
+      distributionStreams_.WriteTo(ref output, _repeated_distributionStreams_codec);
+      distributions_.WriteTo(ref output, _repeated_distributions_codec);
+      if (autoTranscriptionConfig_ != null) {
+        output.WriteRawTag(242, 1);
+        output.WriteMessage(AutoTranscriptionConfig);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -1740,6 +1843,8 @@ namespace Google.Cloud.Video.LiveStream.V1 {
       size += elementaryStreams_.CalculateSize(_repeated_elementaryStreams_codec);
       size += muxStreams_.CalculateSize(_repeated_muxStreams_codec);
       size += manifests_.CalculateSize(_repeated_manifests_codec);
+      size += distributionStreams_.CalculateSize(_repeated_distributionStreams_codec);
+      size += distributions_.CalculateSize(_repeated_distributions_codec);
       size += spriteSheets_.CalculateSize(_repeated_spriteSheets_codec);
       if (StreamingState != global::Google.Cloud.Video.LiveStream.V1.Channel.Types.StreamingState.Unspecified) {
         size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) StreamingState);
@@ -1761,6 +1866,9 @@ namespace Google.Cloud.Video.LiveStream.V1 {
         size += 2 + pb::CodedOutputStream.ComputeMessageSize(RetentionConfig);
       }
       size += staticOverlays_.CalculateSize(_repeated_staticOverlays_codec);
+      if (autoTranscriptionConfig_ != null) {
+        size += 2 + pb::CodedOutputStream.ComputeMessageSize(AutoTranscriptionConfig);
+      }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
       }
@@ -1802,6 +1910,8 @@ namespace Google.Cloud.Video.LiveStream.V1 {
       elementaryStreams_.Add(other.elementaryStreams_);
       muxStreams_.Add(other.muxStreams_);
       manifests_.Add(other.manifests_);
+      distributionStreams_.Add(other.distributionStreams_);
+      distributions_.Add(other.distributions_);
       spriteSheets_.Add(other.spriteSheets_);
       if (other.StreamingState != global::Google.Cloud.Video.LiveStream.V1.Channel.Types.StreamingState.Unspecified) {
         StreamingState = other.StreamingState;
@@ -1838,6 +1948,12 @@ namespace Google.Cloud.Video.LiveStream.V1 {
         RetentionConfig.MergeFrom(other.RetentionConfig);
       }
       staticOverlays_.Add(other.staticOverlays_);
+      if (other.autoTranscriptionConfig_ != null) {
+        if (autoTranscriptionConfig_ == null) {
+          AutoTranscriptionConfig = new global::Google.Cloud.Video.LiveStream.V1.AutoTranscriptionConfig();
+        }
+        AutoTranscriptionConfig.MergeFrom(other.AutoTranscriptionConfig);
+      }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 
@@ -1953,6 +2069,21 @@ namespace Google.Cloud.Video.LiveStream.V1 {
             staticOverlays_.AddEntriesFrom(input, _repeated_staticOverlays_codec);
             break;
           }
+          case 226: {
+            distributionStreams_.AddEntriesFrom(input, _repeated_distributionStreams_codec);
+            break;
+          }
+          case 234: {
+            distributions_.AddEntriesFrom(input, _repeated_distributions_codec);
+            break;
+          }
+          case 242: {
+            if (autoTranscriptionConfig_ == null) {
+              AutoTranscriptionConfig = new global::Google.Cloud.Video.LiveStream.V1.AutoTranscriptionConfig();
+            }
+            input.ReadMessage(AutoTranscriptionConfig);
+            break;
+          }
         }
       }
     #endif
@@ -2066,6 +2197,21 @@ namespace Google.Cloud.Video.LiveStream.V1 {
           }
           case 218: {
             staticOverlays_.AddEntriesFrom(ref input, _repeated_staticOverlays_codec);
+            break;
+          }
+          case 226: {
+            distributionStreams_.AddEntriesFrom(ref input, _repeated_distributionStreams_codec);
+            break;
+          }
+          case 234: {
+            distributions_.AddEntriesFrom(ref input, _repeated_distributions_codec);
+            break;
+          }
+          case 242: {
+            if (autoTranscriptionConfig_ == null) {
+              AutoTranscriptionConfig = new global::Google.Cloud.Video.LiveStream.V1.AutoTranscriptionConfig();
+            }
+            input.ReadMessage(AutoTranscriptionConfig);
             break;
           }
         }
@@ -5654,6 +5800,298 @@ namespace Google.Cloud.Video.LiveStream.V1 {
   }
 
   /// <summary>
+  /// Advanced configurations for auto-generated text streams.
+  /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+  public sealed partial class AutoTranscriptionConfig : pb::IMessage<AutoTranscriptionConfig>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<AutoTranscriptionConfig> _parser = new pb::MessageParser<AutoTranscriptionConfig>(() => new AutoTranscriptionConfig());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<AutoTranscriptionConfig> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Cloud.Video.LiveStream.V1.ResourcesReflection.Descriptor.MessageTypes[14]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public AutoTranscriptionConfig() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public AutoTranscriptionConfig(AutoTranscriptionConfig other) : this() {
+      displayTiming_ = other.displayTiming_;
+      qualityPreset_ = other.qualityPreset_;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public AutoTranscriptionConfig Clone() {
+      return new AutoTranscriptionConfig(this);
+    }
+
+    /// <summary>Field number for the "display_timing" field.</summary>
+    public const int DisplayTimingFieldNumber = 1;
+    private global::Google.Cloud.Video.LiveStream.V1.AutoTranscriptionConfig.Types.DisplayTiming displayTiming_ = global::Google.Cloud.Video.LiveStream.V1.AutoTranscriptionConfig.Types.DisplayTiming.Unspecified;
+    /// <summary>
+    /// Optional. Whether auto-generated text streams are displayed synchronously
+    /// or asynchronously with the original audio.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Cloud.Video.LiveStream.V1.AutoTranscriptionConfig.Types.DisplayTiming DisplayTiming {
+      get { return displayTiming_; }
+      set {
+        displayTiming_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "quality_preset" field.</summary>
+    public const int QualityPresetFieldNumber = 2;
+    private global::Google.Cloud.Video.LiveStream.V1.AutoTranscriptionConfig.Types.QualityPreset qualityPreset_ = global::Google.Cloud.Video.LiveStream.V1.AutoTranscriptionConfig.Types.QualityPreset.Unspecified;
+    /// <summary>
+    /// Optional. Tunes the latency and quality of auto-generated captions.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Cloud.Video.LiveStream.V1.AutoTranscriptionConfig.Types.QualityPreset QualityPreset {
+      get { return qualityPreset_; }
+      set {
+        qualityPreset_ = value;
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as AutoTranscriptionConfig);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(AutoTranscriptionConfig other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (DisplayTiming != other.DisplayTiming) return false;
+      if (QualityPreset != other.QualityPreset) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (DisplayTiming != global::Google.Cloud.Video.LiveStream.V1.AutoTranscriptionConfig.Types.DisplayTiming.Unspecified) hash ^= DisplayTiming.GetHashCode();
+      if (QualityPreset != global::Google.Cloud.Video.LiveStream.V1.AutoTranscriptionConfig.Types.QualityPreset.Unspecified) hash ^= QualityPreset.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (DisplayTiming != global::Google.Cloud.Video.LiveStream.V1.AutoTranscriptionConfig.Types.DisplayTiming.Unspecified) {
+        output.WriteRawTag(8);
+        output.WriteEnum((int) DisplayTiming);
+      }
+      if (QualityPreset != global::Google.Cloud.Video.LiveStream.V1.AutoTranscriptionConfig.Types.QualityPreset.Unspecified) {
+        output.WriteRawTag(16);
+        output.WriteEnum((int) QualityPreset);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (DisplayTiming != global::Google.Cloud.Video.LiveStream.V1.AutoTranscriptionConfig.Types.DisplayTiming.Unspecified) {
+        output.WriteRawTag(8);
+        output.WriteEnum((int) DisplayTiming);
+      }
+      if (QualityPreset != global::Google.Cloud.Video.LiveStream.V1.AutoTranscriptionConfig.Types.QualityPreset.Unspecified) {
+        output.WriteRawTag(16);
+        output.WriteEnum((int) QualityPreset);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      if (DisplayTiming != global::Google.Cloud.Video.LiveStream.V1.AutoTranscriptionConfig.Types.DisplayTiming.Unspecified) {
+        size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) DisplayTiming);
+      }
+      if (QualityPreset != global::Google.Cloud.Video.LiveStream.V1.AutoTranscriptionConfig.Types.QualityPreset.Unspecified) {
+        size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) QualityPreset);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(AutoTranscriptionConfig other) {
+      if (other == null) {
+        return;
+      }
+      if (other.DisplayTiming != global::Google.Cloud.Video.LiveStream.V1.AutoTranscriptionConfig.Types.DisplayTiming.Unspecified) {
+        DisplayTiming = other.DisplayTiming;
+      }
+      if (other.QualityPreset != global::Google.Cloud.Video.LiveStream.V1.AutoTranscriptionConfig.Types.QualityPreset.Unspecified) {
+        QualityPreset = other.QualityPreset;
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 8: {
+            DisplayTiming = (global::Google.Cloud.Video.LiveStream.V1.AutoTranscriptionConfig.Types.DisplayTiming) input.ReadEnum();
+            break;
+          }
+          case 16: {
+            QualityPreset = (global::Google.Cloud.Video.LiveStream.V1.AutoTranscriptionConfig.Types.QualityPreset) input.ReadEnum();
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 8: {
+            DisplayTiming = (global::Google.Cloud.Video.LiveStream.V1.AutoTranscriptionConfig.Types.DisplayTiming) input.ReadEnum();
+            break;
+          }
+          case 16: {
+            QualityPreset = (global::Google.Cloud.Video.LiveStream.V1.AutoTranscriptionConfig.Types.QualityPreset) input.ReadEnum();
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+    #region Nested types
+    /// <summary>Container for nested types declared in the AutoTranscriptionConfig message type.</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static partial class Types {
+      /// <summary>
+      /// Whether auto-generated text streams are displayed synchronously or
+      /// asynchronously with the original audio.
+      /// </summary>
+      public enum DisplayTiming {
+        /// <summary>
+        /// Display timing is not specified. Caption display will be asynchronous by
+        /// default.
+        /// </summary>
+        [pbr::OriginalName("DISPLAY_TIMING_UNSPECIFIED")] Unspecified = 0,
+        /// <summary>
+        /// Caption will be displayed asynchronous with audio.
+        /// </summary>
+        [pbr::OriginalName("ASYNC")] Async = 1,
+        /// <summary>
+        /// Caption will be displayed synchronous with audio. This option increases
+        /// overall media output latency, and reduces viewing latency between audio
+        /// and auto-generated captions.
+        /// </summary>
+        [pbr::OriginalName("SYNC")] Sync = 2,
+      }
+
+      /// <summary>
+      /// Presets to tune the latency and quality of auto-generated captions.
+      /// </summary>
+      public enum QualityPreset {
+        /// <summary>
+        /// Quality Preset is not specified. By default, BALANCED_QUALITY will be
+        /// used.
+        /// </summary>
+        [pbr::OriginalName("QUALITY_PRESET_UNSPECIFIED")] Unspecified = 0,
+        /// <summary>
+        /// Reduce the latency of auto-generated captions. This may reduce the
+        /// quality of the captions.
+        /// </summary>
+        [pbr::OriginalName("LOW_LATENCY")] LowLatency = 1,
+        /// <summary>
+        /// Default behavior when QualityPreset is not specified.
+        /// </summary>
+        [pbr::OriginalName("BALANCED_QUALITY")] BalancedQuality = 2,
+        /// <summary>
+        /// Increases the quality of the auto-generated captions at the cost of
+        /// higher latency.
+        /// </summary>
+        [pbr::OriginalName("IMPROVED_QUALITY")] ImprovedQuality = 3,
+      }
+
+    }
+    #endregion
+
+  }
+
+  /// <summary>
   /// Event is a sub-resource of a channel, which can be scheduled by the user to
   /// execute operations on a channel resource without having to stop the channel.
   /// </summary>
@@ -5672,7 +6110,7 @@ namespace Google.Cloud.Video.LiveStream.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.Video.LiveStream.V1.ResourcesReflection.Descriptor.MessageTypes[14]; }
+      get { return global::Google.Cloud.Video.LiveStream.V1.ResourcesReflection.Descriptor.MessageTypes[15]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -5718,6 +6156,9 @@ namespace Google.Cloud.Video.LiveStream.V1 {
           break;
         case TaskOneofCase.Unmute:
           Unmute = other.Unmute.Clone();
+          break;
+        case TaskOneofCase.UpdateEncryptions:
+          UpdateEncryptions = other.UpdateEncryptions.Clone();
           break;
       }
 
@@ -5880,6 +6321,21 @@ namespace Google.Cloud.Video.LiveStream.V1 {
       }
     }
 
+    /// <summary>Field number for the "update_encryptions" field.</summary>
+    public const int UpdateEncryptionsFieldNumber = 17;
+    /// <summary>
+    /// Updates encryption settings.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Cloud.Video.LiveStream.V1.Event.Types.UpdateEncryptionsTask UpdateEncryptions {
+      get { return taskCase_ == TaskOneofCase.UpdateEncryptions ? (global::Google.Cloud.Video.LiveStream.V1.Event.Types.UpdateEncryptionsTask) task_ : null; }
+      set {
+        task_ = value;
+        taskCase_ = value == null ? TaskOneofCase.None : TaskOneofCase.UpdateEncryptions;
+      }
+    }
+
     /// <summary>Field number for the "execute_now" field.</summary>
     public const int ExecuteNowFieldNumber = 9;
     private bool executeNow_;
@@ -5961,6 +6417,7 @@ namespace Google.Cloud.Video.LiveStream.V1 {
       Slate = 14,
       Mute = 15,
       Unmute = 16,
+      UpdateEncryptions = 17,
     }
     private TaskOneofCase taskCase_ = TaskOneofCase.None;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -6001,6 +6458,7 @@ namespace Google.Cloud.Video.LiveStream.V1 {
       if (!object.Equals(Slate, other.Slate)) return false;
       if (!object.Equals(Mute, other.Mute)) return false;
       if (!object.Equals(Unmute, other.Unmute)) return false;
+      if (!object.Equals(UpdateEncryptions, other.UpdateEncryptions)) return false;
       if (ExecuteNow != other.ExecuteNow) return false;
       if (!object.Equals(ExecutionTime, other.ExecutionTime)) return false;
       if (State != other.State) return false;
@@ -6023,6 +6481,7 @@ namespace Google.Cloud.Video.LiveStream.V1 {
       if (taskCase_ == TaskOneofCase.Slate) hash ^= Slate.GetHashCode();
       if (taskCase_ == TaskOneofCase.Mute) hash ^= Mute.GetHashCode();
       if (taskCase_ == TaskOneofCase.Unmute) hash ^= Unmute.GetHashCode();
+      if (taskCase_ == TaskOneofCase.UpdateEncryptions) hash ^= UpdateEncryptions.GetHashCode();
       if (ExecuteNow != false) hash ^= ExecuteNow.GetHashCode();
       if (executionTime_ != null) hash ^= ExecutionTime.GetHashCode();
       if (State != global::Google.Cloud.Video.LiveStream.V1.Event.Types.State.Unspecified) hash ^= State.GetHashCode();
@@ -6099,6 +6558,10 @@ namespace Google.Cloud.Video.LiveStream.V1 {
         output.WriteRawTag(130, 1);
         output.WriteMessage(Unmute);
       }
+      if (taskCase_ == TaskOneofCase.UpdateEncryptions) {
+        output.WriteRawTag(138, 1);
+        output.WriteMessage(UpdateEncryptions);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -6162,6 +6625,10 @@ namespace Google.Cloud.Video.LiveStream.V1 {
         output.WriteRawTag(130, 1);
         output.WriteMessage(Unmute);
       }
+      if (taskCase_ == TaskOneofCase.UpdateEncryptions) {
+        output.WriteRawTag(138, 1);
+        output.WriteMessage(UpdateEncryptions);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -6199,6 +6666,9 @@ namespace Google.Cloud.Video.LiveStream.V1 {
       }
       if (taskCase_ == TaskOneofCase.Unmute) {
         size += 2 + pb::CodedOutputStream.ComputeMessageSize(Unmute);
+      }
+      if (taskCase_ == TaskOneofCase.UpdateEncryptions) {
+        size += 2 + pb::CodedOutputStream.ComputeMessageSize(UpdateEncryptions);
       }
       if (ExecuteNow != false) {
         size += 1 + 1;
@@ -6294,6 +6764,12 @@ namespace Google.Cloud.Video.LiveStream.V1 {
             Unmute = new global::Google.Cloud.Video.LiveStream.V1.Event.Types.UnmuteTask();
           }
           Unmute.MergeFrom(other.Unmute);
+          break;
+        case TaskOneofCase.UpdateEncryptions:
+          if (UpdateEncryptions == null) {
+            UpdateEncryptions = new global::Google.Cloud.Video.LiveStream.V1.Event.Types.UpdateEncryptionsTask();
+          }
+          UpdateEncryptions.MergeFrom(other.UpdateEncryptions);
           break;
       }
 
@@ -6410,6 +6886,15 @@ namespace Google.Cloud.Video.LiveStream.V1 {
             Unmute = subBuilder;
             break;
           }
+          case 138: {
+            global::Google.Cloud.Video.LiveStream.V1.Event.Types.UpdateEncryptionsTask subBuilder = new global::Google.Cloud.Video.LiveStream.V1.Event.Types.UpdateEncryptionsTask();
+            if (taskCase_ == TaskOneofCase.UpdateEncryptions) {
+              subBuilder.MergeFrom(UpdateEncryptions);
+            }
+            input.ReadMessage(subBuilder);
+            UpdateEncryptions = subBuilder;
+            break;
+          }
         }
       }
     #endif
@@ -6521,6 +7006,15 @@ namespace Google.Cloud.Video.LiveStream.V1 {
             }
             input.ReadMessage(subBuilder);
             Unmute = subBuilder;
+            break;
+          }
+          case 138: {
+            global::Google.Cloud.Video.LiveStream.V1.Event.Types.UpdateEncryptionsTask subBuilder = new global::Google.Cloud.Video.LiveStream.V1.Event.Types.UpdateEncryptionsTask();
+            if (taskCase_ == TaskOneofCase.UpdateEncryptions) {
+              subBuilder.MergeFrom(UpdateEncryptions);
+            }
+            input.ReadMessage(subBuilder);
+            UpdateEncryptions = subBuilder;
             break;
           }
         }
@@ -7738,6 +8232,193 @@ namespace Google.Cloud.Video.LiveStream.V1 {
 
       }
 
+      /// <summary>
+      /// Update encryption settings.
+      /// </summary>
+      [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+      public sealed partial class UpdateEncryptionsTask : pb::IMessage<UpdateEncryptionsTask>
+      #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          , pb::IBufferMessage
+      #endif
+      {
+        private static readonly pb::MessageParser<UpdateEncryptionsTask> _parser = new pb::MessageParser<UpdateEncryptionsTask>(() => new UpdateEncryptionsTask());
+        private pb::UnknownFieldSet _unknownFields;
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public static pb::MessageParser<UpdateEncryptionsTask> Parser { get { return _parser; } }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public static pbr::MessageDescriptor Descriptor {
+          get { return global::Google.Cloud.Video.LiveStream.V1.Event.Descriptor.NestedTypes[6]; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        pbr::MessageDescriptor pb::IMessage.Descriptor {
+          get { return Descriptor; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public UpdateEncryptionsTask() {
+          OnConstruction();
+        }
+
+        partial void OnConstruction();
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public UpdateEncryptionsTask(UpdateEncryptionsTask other) : this() {
+          encryptions_ = other.encryptions_.Clone();
+          _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public UpdateEncryptionsTask Clone() {
+          return new UpdateEncryptionsTask(this);
+        }
+
+        /// <summary>Field number for the "encryptions" field.</summary>
+        public const int EncryptionsFieldNumber = 1;
+        private static readonly pb::FieldCodec<global::Google.Cloud.Video.LiveStream.V1.EncryptionUpdate> _repeated_encryptions_codec
+            = pb::FieldCodec.ForMessage(10, global::Google.Cloud.Video.LiveStream.V1.EncryptionUpdate.Parser);
+        private readonly pbc::RepeatedField<global::Google.Cloud.Video.LiveStream.V1.EncryptionUpdate> encryptions_ = new pbc::RepeatedField<global::Google.Cloud.Video.LiveStream.V1.EncryptionUpdate>();
+        /// <summary>
+        /// Required. A list of
+        /// [EncryptionUpdate][google.cloud.video.livestream.v1.EncryptionUpdate]s
+        /// that updates the existing encryption settings.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public pbc::RepeatedField<global::Google.Cloud.Video.LiveStream.V1.EncryptionUpdate> Encryptions {
+          get { return encryptions_; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override bool Equals(object other) {
+          return Equals(other as UpdateEncryptionsTask);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public bool Equals(UpdateEncryptionsTask other) {
+          if (ReferenceEquals(other, null)) {
+            return false;
+          }
+          if (ReferenceEquals(other, this)) {
+            return true;
+          }
+          if(!encryptions_.Equals(other.encryptions_)) return false;
+          return Equals(_unknownFields, other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override int GetHashCode() {
+          int hash = 1;
+          hash ^= encryptions_.GetHashCode();
+          if (_unknownFields != null) {
+            hash ^= _unknownFields.GetHashCode();
+          }
+          return hash;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override string ToString() {
+          return pb::JsonFormatter.ToDiagnosticString(this);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void WriteTo(pb::CodedOutputStream output) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          output.WriteRawMessage(this);
+        #else
+          encryptions_.WriteTo(output, _repeated_encryptions_codec);
+          if (_unknownFields != null) {
+            _unknownFields.WriteTo(output);
+          }
+        #endif
+        }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+          encryptions_.WriteTo(ref output, _repeated_encryptions_codec);
+          if (_unknownFields != null) {
+            _unknownFields.WriteTo(ref output);
+          }
+        }
+        #endif
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public int CalculateSize() {
+          int size = 0;
+          size += encryptions_.CalculateSize(_repeated_encryptions_codec);
+          if (_unknownFields != null) {
+            size += _unknownFields.CalculateSize();
+          }
+          return size;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void MergeFrom(UpdateEncryptionsTask other) {
+          if (other == null) {
+            return;
+          }
+          encryptions_.Add(other.encryptions_);
+          _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void MergeFrom(pb::CodedInputStream input) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          input.ReadRawMessage(this);
+        #else
+          uint tag;
+          while ((tag = input.ReadTag()) != 0) {
+            switch(tag) {
+              default:
+                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+                break;
+              case 10: {
+                encryptions_.AddEntriesFrom(input, _repeated_encryptions_codec);
+                break;
+              }
+            }
+          }
+        #endif
+        }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+          uint tag;
+          while ((tag = input.ReadTag()) != 0) {
+            switch(tag) {
+              default:
+                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+                break;
+              case 10: {
+                encryptions_.AddEntriesFrom(ref input, _repeated_encryptions_codec);
+                break;
+              }
+            }
+          }
+        }
+        #endif
+
+      }
+
     }
     #endregion
 
@@ -7763,7 +8444,7 @@ namespace Google.Cloud.Video.LiveStream.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.Video.LiveStream.V1.ResourcesReflection.Descriptor.MessageTypes[15]; }
+      get { return global::Google.Cloud.Video.LiveStream.V1.ResourcesReflection.Descriptor.MessageTypes[16]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -9170,7 +9851,7 @@ namespace Google.Cloud.Video.LiveStream.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.Video.LiveStream.V1.ResourcesReflection.Descriptor.MessageTypes[16]; }
+      get { return global::Google.Cloud.Video.LiveStream.V1.ResourcesReflection.Descriptor.MessageTypes[17]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -9425,7 +10106,7 @@ namespace Google.Cloud.Video.LiveStream.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.Video.LiveStream.V1.ResourcesReflection.Descriptor.MessageTypes[17]; }
+      get { return global::Google.Cloud.Video.LiveStream.V1.ResourcesReflection.Descriptor.MessageTypes[18]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -10454,7 +11135,7 @@ namespace Google.Cloud.Video.LiveStream.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.Video.LiveStream.V1.ResourcesReflection.Descriptor.MessageTypes[18]; }
+      get { return global::Google.Cloud.Video.LiveStream.V1.ResourcesReflection.Descriptor.MessageTypes[19]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -11485,7 +12166,7 @@ namespace Google.Cloud.Video.LiveStream.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.Video.LiveStream.V1.ResourcesReflection.Descriptor.MessageTypes[19]; }
+      get { return global::Google.Cloud.Video.LiveStream.V1.ResourcesReflection.Descriptor.MessageTypes[20]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -12873,7 +13554,7 @@ namespace Google.Cloud.Video.LiveStream.V1 {
         public const int WidevineFieldNumber = 1;
         private global::Google.Cloud.Video.LiveStream.V1.Encryption.Types.Widevine widevine_;
         /// <summary>
-        /// Widevine configuration.
+        /// Optional. Widevine configuration.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -12888,7 +13569,7 @@ namespace Google.Cloud.Video.LiveStream.V1 {
         public const int FairplayFieldNumber = 2;
         private global::Google.Cloud.Video.LiveStream.V1.Encryption.Types.Fairplay fairplay_;
         /// <summary>
-        /// Fairplay configuration.
+        /// Optional. Fairplay configuration.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -12903,7 +13584,7 @@ namespace Google.Cloud.Video.LiveStream.V1 {
         public const int PlayreadyFieldNumber = 3;
         private global::Google.Cloud.Video.LiveStream.V1.Encryption.Types.Playready playready_;
         /// <summary>
-        /// Playready configuration.
+        /// Optional. Playready configuration.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -12918,7 +13599,7 @@ namespace Google.Cloud.Video.LiveStream.V1 {
         public const int ClearkeyFieldNumber = 4;
         private global::Google.Cloud.Video.LiveStream.V1.Encryption.Types.Clearkey clearkey_;
         /// <summary>
-        /// Clearkey configuration.
+        /// Optional. Clearkey configuration.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -13686,6 +14367,285 @@ namespace Google.Cloud.Video.LiveStream.V1 {
   }
 
   /// <summary>
+  /// Encryption setting when updating encryption.
+  /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+  public sealed partial class EncryptionUpdate : pb::IMessage<EncryptionUpdate>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<EncryptionUpdate> _parser = new pb::MessageParser<EncryptionUpdate>(() => new EncryptionUpdate());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<EncryptionUpdate> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Cloud.Video.LiveStream.V1.ResourcesReflection.Descriptor.MessageTypes[21]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public EncryptionUpdate() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public EncryptionUpdate(EncryptionUpdate other) : this() {
+      id_ = other.id_;
+      switch (other.SecretSourceCase) {
+        case SecretSourceOneofCase.SecretManagerKeySource:
+          SecretManagerKeySource = other.SecretManagerKeySource.Clone();
+          break;
+      }
+
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public EncryptionUpdate Clone() {
+      return new EncryptionUpdate(this);
+    }
+
+    /// <summary>Field number for the "id" field.</summary>
+    public const int IdFieldNumber = 1;
+    private string id_ = "";
+    /// <summary>
+    /// Required. Identifier for the encryption option to be updated.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string Id {
+      get { return id_; }
+      set {
+        id_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "secret_manager_key_source" field.</summary>
+    public const int SecretManagerKeySourceFieldNumber = 2;
+    /// <summary>
+    /// For keys stored in Google Secret Manager.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Cloud.Video.LiveStream.V1.Encryption.Types.SecretManagerSource SecretManagerKeySource {
+      get { return secretSourceCase_ == SecretSourceOneofCase.SecretManagerKeySource ? (global::Google.Cloud.Video.LiveStream.V1.Encryption.Types.SecretManagerSource) secretSource_ : null; }
+      set {
+        secretSource_ = value;
+        secretSourceCase_ = value == null ? SecretSourceOneofCase.None : SecretSourceOneofCase.SecretManagerKeySource;
+      }
+    }
+
+    private object secretSource_;
+    /// <summary>Enum of possible cases for the "secret_source" oneof.</summary>
+    public enum SecretSourceOneofCase {
+      None = 0,
+      SecretManagerKeySource = 2,
+    }
+    private SecretSourceOneofCase secretSourceCase_ = SecretSourceOneofCase.None;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public SecretSourceOneofCase SecretSourceCase {
+      get { return secretSourceCase_; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearSecretSource() {
+      secretSourceCase_ = SecretSourceOneofCase.None;
+      secretSource_ = null;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as EncryptionUpdate);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(EncryptionUpdate other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (Id != other.Id) return false;
+      if (!object.Equals(SecretManagerKeySource, other.SecretManagerKeySource)) return false;
+      if (SecretSourceCase != other.SecretSourceCase) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (Id.Length != 0) hash ^= Id.GetHashCode();
+      if (secretSourceCase_ == SecretSourceOneofCase.SecretManagerKeySource) hash ^= SecretManagerKeySource.GetHashCode();
+      hash ^= (int) secretSourceCase_;
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (Id.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(Id);
+      }
+      if (secretSourceCase_ == SecretSourceOneofCase.SecretManagerKeySource) {
+        output.WriteRawTag(18);
+        output.WriteMessage(SecretManagerKeySource);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (Id.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(Id);
+      }
+      if (secretSourceCase_ == SecretSourceOneofCase.SecretManagerKeySource) {
+        output.WriteRawTag(18);
+        output.WriteMessage(SecretManagerKeySource);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      if (Id.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Id);
+      }
+      if (secretSourceCase_ == SecretSourceOneofCase.SecretManagerKeySource) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(SecretManagerKeySource);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(EncryptionUpdate other) {
+      if (other == null) {
+        return;
+      }
+      if (other.Id.Length != 0) {
+        Id = other.Id;
+      }
+      switch (other.SecretSourceCase) {
+        case SecretSourceOneofCase.SecretManagerKeySource:
+          if (SecretManagerKeySource == null) {
+            SecretManagerKeySource = new global::Google.Cloud.Video.LiveStream.V1.Encryption.Types.SecretManagerSource();
+          }
+          SecretManagerKeySource.MergeFrom(other.SecretManagerKeySource);
+          break;
+      }
+
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            Id = input.ReadString();
+            break;
+          }
+          case 18: {
+            global::Google.Cloud.Video.LiveStream.V1.Encryption.Types.SecretManagerSource subBuilder = new global::Google.Cloud.Video.LiveStream.V1.Encryption.Types.SecretManagerSource();
+            if (secretSourceCase_ == SecretSourceOneofCase.SecretManagerKeySource) {
+              subBuilder.MergeFrom(SecretManagerKeySource);
+            }
+            input.ReadMessage(subBuilder);
+            SecretManagerKeySource = subBuilder;
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            Id = input.ReadString();
+            break;
+          }
+          case 18: {
+            global::Google.Cloud.Video.LiveStream.V1.Encryption.Types.SecretManagerSource subBuilder = new global::Google.Cloud.Video.LiveStream.V1.Encryption.Types.SecretManagerSource();
+            if (secretSourceCase_ == SecretSourceOneofCase.SecretManagerKeySource) {
+              subBuilder.MergeFrom(SecretManagerKeySource);
+            }
+            input.ReadMessage(subBuilder);
+            SecretManagerKeySource = subBuilder;
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+  }
+
+  /// <summary>
   /// Pool resource defines the configuration of Live Stream pools for a specific
   /// location. Currently we support only one pool resource per project per
   /// location. After the creation of the first input, a default pool is created
@@ -13706,7 +14666,7 @@ namespace Google.Cloud.Video.LiveStream.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.Video.LiveStream.V1.ResourcesReflection.Descriptor.MessageTypes[20]; }
+      get { return global::Google.Cloud.Video.LiveStream.V1.ResourcesReflection.Descriptor.MessageTypes[22]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]

@@ -22,6 +22,7 @@ namespace GoogleCSharpSnippets
     using Google.LongRunning;
     using Google.Protobuf.WellKnownTypes;
     using System;
+    using System.Collections.Generic;
     using System.Linq;
     using System.Threading.Tasks;
 
@@ -1279,6 +1280,388 @@ namespace GoogleCSharpSnippets
             // End snippet
         }
 
+        /// <summary>Snippet for StartDistribution</summary>
+        public void StartDistributionRequestObject()
+        {
+            // Snippet: StartDistribution(StartDistributionRequest, CallSettings)
+            // Create client
+            LivestreamServiceClient livestreamServiceClient = LivestreamServiceClient.Create();
+            // Initialize request argument(s)
+            StartDistributionRequest request = new StartDistributionRequest
+            {
+                ChannelName = ChannelName.FromProjectLocationChannel("[PROJECT]", "[LOCATION]", "[CHANNEL]"),
+                DistributionKeys = { "", },
+                RequestId = "",
+            };
+            // Make the request
+            Operation<ChannelOperationResponse, OperationMetadata> response = livestreamServiceClient.StartDistribution(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<ChannelOperationResponse, OperationMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            ChannelOperationResponse result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<ChannelOperationResponse, OperationMetadata> retrievedResponse = livestreamServiceClient.PollOnceStartDistribution(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                ChannelOperationResponse retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for StartDistributionAsync</summary>
+        public async Task StartDistributionRequestObjectAsync()
+        {
+            // Snippet: StartDistributionAsync(StartDistributionRequest, CallSettings)
+            // Additional: StartDistributionAsync(StartDistributionRequest, CancellationToken)
+            // Create client
+            LivestreamServiceClient livestreamServiceClient = await LivestreamServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            StartDistributionRequest request = new StartDistributionRequest
+            {
+                ChannelName = ChannelName.FromProjectLocationChannel("[PROJECT]", "[LOCATION]", "[CHANNEL]"),
+                DistributionKeys = { "", },
+                RequestId = "",
+            };
+            // Make the request
+            Operation<ChannelOperationResponse, OperationMetadata> response = await livestreamServiceClient.StartDistributionAsync(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<ChannelOperationResponse, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            ChannelOperationResponse result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<ChannelOperationResponse, OperationMetadata> retrievedResponse = await livestreamServiceClient.PollOnceStartDistributionAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                ChannelOperationResponse retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for StartDistribution</summary>
+        public void StartDistribution()
+        {
+            // Snippet: StartDistribution(string, IEnumerable<string>, CallSettings)
+            // Create client
+            LivestreamServiceClient livestreamServiceClient = LivestreamServiceClient.Create();
+            // Initialize request argument(s)
+            string name = "projects/[PROJECT]/locations/[LOCATION]/channels/[CHANNEL]";
+            IEnumerable<string> distributionKeys = new string[] { "", };
+            // Make the request
+            Operation<ChannelOperationResponse, OperationMetadata> response = livestreamServiceClient.StartDistribution(name, distributionKeys);
+
+            // Poll until the returned long-running operation is complete
+            Operation<ChannelOperationResponse, OperationMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            ChannelOperationResponse result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<ChannelOperationResponse, OperationMetadata> retrievedResponse = livestreamServiceClient.PollOnceStartDistribution(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                ChannelOperationResponse retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for StartDistributionAsync</summary>
+        public async Task StartDistributionAsync()
+        {
+            // Snippet: StartDistributionAsync(string, IEnumerable<string>, CallSettings)
+            // Additional: StartDistributionAsync(string, IEnumerable<string>, CancellationToken)
+            // Create client
+            LivestreamServiceClient livestreamServiceClient = await LivestreamServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            string name = "projects/[PROJECT]/locations/[LOCATION]/channels/[CHANNEL]";
+            IEnumerable<string> distributionKeys = new string[] { "", };
+            // Make the request
+            Operation<ChannelOperationResponse, OperationMetadata> response = await livestreamServiceClient.StartDistributionAsync(name, distributionKeys);
+
+            // Poll until the returned long-running operation is complete
+            Operation<ChannelOperationResponse, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            ChannelOperationResponse result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<ChannelOperationResponse, OperationMetadata> retrievedResponse = await livestreamServiceClient.PollOnceStartDistributionAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                ChannelOperationResponse retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for StartDistribution</summary>
+        public void StartDistributionResourceNames()
+        {
+            // Snippet: StartDistribution(ChannelName, IEnumerable<string>, CallSettings)
+            // Create client
+            LivestreamServiceClient livestreamServiceClient = LivestreamServiceClient.Create();
+            // Initialize request argument(s)
+            ChannelName name = ChannelName.FromProjectLocationChannel("[PROJECT]", "[LOCATION]", "[CHANNEL]");
+            IEnumerable<string> distributionKeys = new string[] { "", };
+            // Make the request
+            Operation<ChannelOperationResponse, OperationMetadata> response = livestreamServiceClient.StartDistribution(name, distributionKeys);
+
+            // Poll until the returned long-running operation is complete
+            Operation<ChannelOperationResponse, OperationMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            ChannelOperationResponse result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<ChannelOperationResponse, OperationMetadata> retrievedResponse = livestreamServiceClient.PollOnceStartDistribution(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                ChannelOperationResponse retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for StartDistributionAsync</summary>
+        public async Task StartDistributionResourceNamesAsync()
+        {
+            // Snippet: StartDistributionAsync(ChannelName, IEnumerable<string>, CallSettings)
+            // Additional: StartDistributionAsync(ChannelName, IEnumerable<string>, CancellationToken)
+            // Create client
+            LivestreamServiceClient livestreamServiceClient = await LivestreamServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            ChannelName name = ChannelName.FromProjectLocationChannel("[PROJECT]", "[LOCATION]", "[CHANNEL]");
+            IEnumerable<string> distributionKeys = new string[] { "", };
+            // Make the request
+            Operation<ChannelOperationResponse, OperationMetadata> response = await livestreamServiceClient.StartDistributionAsync(name, distributionKeys);
+
+            // Poll until the returned long-running operation is complete
+            Operation<ChannelOperationResponse, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            ChannelOperationResponse result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<ChannelOperationResponse, OperationMetadata> retrievedResponse = await livestreamServiceClient.PollOnceStartDistributionAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                ChannelOperationResponse retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for StopDistribution</summary>
+        public void StopDistributionRequestObject()
+        {
+            // Snippet: StopDistribution(StopDistributionRequest, CallSettings)
+            // Create client
+            LivestreamServiceClient livestreamServiceClient = LivestreamServiceClient.Create();
+            // Initialize request argument(s)
+            StopDistributionRequest request = new StopDistributionRequest
+            {
+                ChannelName = ChannelName.FromProjectLocationChannel("[PROJECT]", "[LOCATION]", "[CHANNEL]"),
+                DistributionKeys = { "", },
+                RequestId = "",
+            };
+            // Make the request
+            Operation<ChannelOperationResponse, OperationMetadata> response = livestreamServiceClient.StopDistribution(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<ChannelOperationResponse, OperationMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            ChannelOperationResponse result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<ChannelOperationResponse, OperationMetadata> retrievedResponse = livestreamServiceClient.PollOnceStopDistribution(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                ChannelOperationResponse retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for StopDistributionAsync</summary>
+        public async Task StopDistributionRequestObjectAsync()
+        {
+            // Snippet: StopDistributionAsync(StopDistributionRequest, CallSettings)
+            // Additional: StopDistributionAsync(StopDistributionRequest, CancellationToken)
+            // Create client
+            LivestreamServiceClient livestreamServiceClient = await LivestreamServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            StopDistributionRequest request = new StopDistributionRequest
+            {
+                ChannelName = ChannelName.FromProjectLocationChannel("[PROJECT]", "[LOCATION]", "[CHANNEL]"),
+                DistributionKeys = { "", },
+                RequestId = "",
+            };
+            // Make the request
+            Operation<ChannelOperationResponse, OperationMetadata> response = await livestreamServiceClient.StopDistributionAsync(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<ChannelOperationResponse, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            ChannelOperationResponse result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<ChannelOperationResponse, OperationMetadata> retrievedResponse = await livestreamServiceClient.PollOnceStopDistributionAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                ChannelOperationResponse retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for StopDistribution</summary>
+        public void StopDistribution()
+        {
+            // Snippet: StopDistribution(string, IEnumerable<string>, CallSettings)
+            // Create client
+            LivestreamServiceClient livestreamServiceClient = LivestreamServiceClient.Create();
+            // Initialize request argument(s)
+            string name = "projects/[PROJECT]/locations/[LOCATION]/channels/[CHANNEL]";
+            IEnumerable<string> distributionKeys = new string[] { "", };
+            // Make the request
+            Operation<ChannelOperationResponse, OperationMetadata> response = livestreamServiceClient.StopDistribution(name, distributionKeys);
+
+            // Poll until the returned long-running operation is complete
+            Operation<ChannelOperationResponse, OperationMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            ChannelOperationResponse result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<ChannelOperationResponse, OperationMetadata> retrievedResponse = livestreamServiceClient.PollOnceStopDistribution(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                ChannelOperationResponse retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for StopDistributionAsync</summary>
+        public async Task StopDistributionAsync()
+        {
+            // Snippet: StopDistributionAsync(string, IEnumerable<string>, CallSettings)
+            // Additional: StopDistributionAsync(string, IEnumerable<string>, CancellationToken)
+            // Create client
+            LivestreamServiceClient livestreamServiceClient = await LivestreamServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            string name = "projects/[PROJECT]/locations/[LOCATION]/channels/[CHANNEL]";
+            IEnumerable<string> distributionKeys = new string[] { "", };
+            // Make the request
+            Operation<ChannelOperationResponse, OperationMetadata> response = await livestreamServiceClient.StopDistributionAsync(name, distributionKeys);
+
+            // Poll until the returned long-running operation is complete
+            Operation<ChannelOperationResponse, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            ChannelOperationResponse result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<ChannelOperationResponse, OperationMetadata> retrievedResponse = await livestreamServiceClient.PollOnceStopDistributionAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                ChannelOperationResponse retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for StopDistribution</summary>
+        public void StopDistributionResourceNames()
+        {
+            // Snippet: StopDistribution(ChannelName, IEnumerable<string>, CallSettings)
+            // Create client
+            LivestreamServiceClient livestreamServiceClient = LivestreamServiceClient.Create();
+            // Initialize request argument(s)
+            ChannelName name = ChannelName.FromProjectLocationChannel("[PROJECT]", "[LOCATION]", "[CHANNEL]");
+            IEnumerable<string> distributionKeys = new string[] { "", };
+            // Make the request
+            Operation<ChannelOperationResponse, OperationMetadata> response = livestreamServiceClient.StopDistribution(name, distributionKeys);
+
+            // Poll until the returned long-running operation is complete
+            Operation<ChannelOperationResponse, OperationMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            ChannelOperationResponse result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<ChannelOperationResponse, OperationMetadata> retrievedResponse = livestreamServiceClient.PollOnceStopDistribution(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                ChannelOperationResponse retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for StopDistributionAsync</summary>
+        public async Task StopDistributionResourceNamesAsync()
+        {
+            // Snippet: StopDistributionAsync(ChannelName, IEnumerable<string>, CallSettings)
+            // Additional: StopDistributionAsync(ChannelName, IEnumerable<string>, CancellationToken)
+            // Create client
+            LivestreamServiceClient livestreamServiceClient = await LivestreamServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            ChannelName name = ChannelName.FromProjectLocationChannel("[PROJECT]", "[LOCATION]", "[CHANNEL]");
+            IEnumerable<string> distributionKeys = new string[] { "", };
+            // Make the request
+            Operation<ChannelOperationResponse, OperationMetadata> response = await livestreamServiceClient.StopDistributionAsync(name, distributionKeys);
+
+            // Poll until the returned long-running operation is complete
+            Operation<ChannelOperationResponse, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            ChannelOperationResponse result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<ChannelOperationResponse, OperationMetadata> retrievedResponse = await livestreamServiceClient.PollOnceStopDistributionAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                ChannelOperationResponse retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
         /// <summary>Snippet for CreateInput</summary>
         public void CreateInputRequestObject()
         {
@@ -2155,6 +2538,93 @@ namespace GoogleCSharpSnippets
                 // If it has completed, then access the result
                 Input retrievedResult = retrievedResponse.Result;
             }
+            // End snippet
+        }
+
+        /// <summary>Snippet for PreviewInput</summary>
+        public void PreviewInputRequestObject()
+        {
+            // Snippet: PreviewInput(PreviewInputRequest, CallSettings)
+            // Create client
+            LivestreamServiceClient livestreamServiceClient = LivestreamServiceClient.Create();
+            // Initialize request argument(s)
+            PreviewInputRequest request = new PreviewInputRequest
+            {
+                InputName = InputName.FromProjectLocationInput("[PROJECT]", "[LOCATION]", "[INPUT]"),
+            };
+            // Make the request
+            PreviewInputResponse response = livestreamServiceClient.PreviewInput(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for PreviewInputAsync</summary>
+        public async Task PreviewInputRequestObjectAsync()
+        {
+            // Snippet: PreviewInputAsync(PreviewInputRequest, CallSettings)
+            // Additional: PreviewInputAsync(PreviewInputRequest, CancellationToken)
+            // Create client
+            LivestreamServiceClient livestreamServiceClient = await LivestreamServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            PreviewInputRequest request = new PreviewInputRequest
+            {
+                InputName = InputName.FromProjectLocationInput("[PROJECT]", "[LOCATION]", "[INPUT]"),
+            };
+            // Make the request
+            PreviewInputResponse response = await livestreamServiceClient.PreviewInputAsync(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for PreviewInput</summary>
+        public void PreviewInput()
+        {
+            // Snippet: PreviewInput(string, CallSettings)
+            // Create client
+            LivestreamServiceClient livestreamServiceClient = LivestreamServiceClient.Create();
+            // Initialize request argument(s)
+            string name = "projects/[PROJECT]/locations/[LOCATION]/inputs/[INPUT]";
+            // Make the request
+            PreviewInputResponse response = livestreamServiceClient.PreviewInput(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for PreviewInputAsync</summary>
+        public async Task PreviewInputAsync()
+        {
+            // Snippet: PreviewInputAsync(string, CallSettings)
+            // Additional: PreviewInputAsync(string, CancellationToken)
+            // Create client
+            LivestreamServiceClient livestreamServiceClient = await LivestreamServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            string name = "projects/[PROJECT]/locations/[LOCATION]/inputs/[INPUT]";
+            // Make the request
+            PreviewInputResponse response = await livestreamServiceClient.PreviewInputAsync(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for PreviewInput</summary>
+        public void PreviewInputResourceNames()
+        {
+            // Snippet: PreviewInput(InputName, CallSettings)
+            // Create client
+            LivestreamServiceClient livestreamServiceClient = LivestreamServiceClient.Create();
+            // Initialize request argument(s)
+            InputName name = InputName.FromProjectLocationInput("[PROJECT]", "[LOCATION]", "[INPUT]");
+            // Make the request
+            PreviewInputResponse response = livestreamServiceClient.PreviewInput(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for PreviewInputAsync</summary>
+        public async Task PreviewInputResourceNamesAsync()
+        {
+            // Snippet: PreviewInputAsync(InputName, CallSettings)
+            // Additional: PreviewInputAsync(InputName, CancellationToken)
+            // Create client
+            LivestreamServiceClient livestreamServiceClient = await LivestreamServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            InputName name = InputName.FromProjectLocationInput("[PROJECT]", "[LOCATION]", "[INPUT]");
+            // Make the request
+            PreviewInputResponse response = await livestreamServiceClient.PreviewInputAsync(name);
             // End snippet
         }
 
