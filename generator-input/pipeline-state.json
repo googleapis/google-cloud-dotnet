@@ -2287,7 +2287,7 @@
             "generationAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
             "releaseAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
             "releaseTimestamp": "2024-09-16T16:34:31Z",
-            "lastGeneratedCommit": "61ae8702c665036c3c49cb99dd538ee76beadc9f",
+            "lastGeneratedCommit": "36533b09a6b383f3c30d13c3c26092154ecf5388",
             "apiPaths": [
                 "google/cloud/orchestration/airflow/service/v1"
             ],
