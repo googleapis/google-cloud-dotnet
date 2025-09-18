@@ -1988,7 +1988,7 @@
             "generationAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
             "releaseAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
             "releaseTimestamp": "2024-05-09T05:00:36Z",
-            "lastGeneratedCommit": "dfe85eea9a7a14e220563ecbeef0517d592883ac",
+            "lastGeneratedCommit": "36533b09a6b383f3c30d13c3c26092154ecf5388",
             "apiPaths": [
                 "google/cloud/mediatranslation/v1beta1"
             ],
