@@ -2259,7 +2259,7 @@
             "generationAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
             "releaseAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
             "releaseTimestamp": "2024-05-14T07:14:26Z",
-            "lastGeneratedCommit": "f410c8cf3741a4358c2061774dd18f11e10b4326",
+            "lastGeneratedCommit": "36533b09a6b383f3c30d13c3c26092154ecf5388",
             "apiPaths": [
                 "google/cloud/optimization/v1"
             ],
