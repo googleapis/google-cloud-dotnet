@@ -261,7 +261,8 @@ namespace Google.Cloud.CloudSecurityCompliance.V1
 
     /// <summary>Deployment client wrapper, for convenient use.</summary>
     /// <remarks>
-    /// Service describing handlers for resources
+    /// Deployment service allows users to manage deployments of Frameworks and
+    /// Cloud Controls on a target resource.
     /// </remarks>
     public abstract partial class DeploymentClient
     {
@@ -347,7 +348,7 @@ namespace Google.Cloud.CloudSecurityCompliance.V1
         public virtual gcl::LocationsClient LocationsClient => throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Creates a new FrameworkDeployment in a given project and location.
+        /// Creates a new FrameworkDeployment in a given parent resource.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -356,7 +357,7 @@ namespace Google.Cloud.CloudSecurityCompliance.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Creates a new FrameworkDeployment in a given project and location.
+        /// Creates a new FrameworkDeployment in a given parent resource.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -365,7 +366,7 @@ namespace Google.Cloud.CloudSecurityCompliance.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Creates a new FrameworkDeployment in a given project and location.
+        /// Creates a new FrameworkDeployment in a given parent resource.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -401,20 +402,20 @@ namespace Google.Cloud.CloudSecurityCompliance.V1
             lro::Operation<FrameworkDeployment, OperationMetadata>.PollOnceFromNameAsync(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), CreateFrameworkDeploymentOperationsClient, callSettings);
 
         /// <summary>
-        /// Creates a new FrameworkDeployment in a given project and location.
+        /// Creates a new FrameworkDeployment in a given parent resource.
         /// </summary>
         /// <param name="parent">
-        /// Required. Value for parent. Supported formats:
+        /// Required. The parent resource of the FrameworkDeployment in the format:
         /// organizations/{organization}/locations/{location}
         /// Only global location is supported.
         /// </param>
         /// <param name="frameworkDeployment">
-        /// Required. The resource being created.
+        /// Required. The FrameworkDeployment to be created.
         /// </param>
         /// <param name="frameworkDeploymentId">
         /// Optional. User provided identifier. It should be unique in scope of a
-        /// parent Please note that this is optional and if not provided, a random UUID
-        /// will be generated.
+        /// parent. This is optional and if not provided, a random UUID will be
+        /// generated.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -427,20 +428,20 @@ namespace Google.Cloud.CloudSecurityCompliance.V1
             }, callSettings);
 
         /// <summary>
-        /// Creates a new FrameworkDeployment in a given project and location.
+        /// Creates a new FrameworkDeployment in a given parent resource.
         /// </summary>
         /// <param name="parent">
-        /// Required. Value for parent. Supported formats:
+        /// Required. The parent resource of the FrameworkDeployment in the format:
         /// organizations/{organization}/locations/{location}
         /// Only global location is supported.
         /// </param>
         /// <param name="frameworkDeployment">
-        /// Required. The resource being created.
+        /// Required. The FrameworkDeployment to be created.
         /// </param>
         /// <param name="frameworkDeploymentId">
         /// Optional. User provided identifier. It should be unique in scope of a
-        /// parent Please note that this is optional and if not provided, a random UUID
-        /// will be generated.
+        /// parent. This is optional and if not provided, a random UUID will be
+        /// generated.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -453,20 +454,20 @@ namespace Google.Cloud.CloudSecurityCompliance.V1
             }, callSettings);
 
         /// <summary>
-        /// Creates a new FrameworkDeployment in a given project and location.
+        /// Creates a new FrameworkDeployment in a given parent resource.
         /// </summary>
         /// <param name="parent">
-        /// Required. Value for parent. Supported formats:
+        /// Required. The parent resource of the FrameworkDeployment in the format:
         /// organizations/{organization}/locations/{location}
         /// Only global location is supported.
         /// </param>
         /// <param name="frameworkDeployment">
-        /// Required. The resource being created.
+        /// Required. The FrameworkDeployment to be created.
         /// </param>
         /// <param name="frameworkDeploymentId">
         /// Optional. User provided identifier. It should be unique in scope of a
-        /// parent Please note that this is optional and if not provided, a random UUID
-        /// will be generated.
+        /// parent. This is optional and if not provided, a random UUID will be
+        /// generated.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -474,20 +475,20 @@ namespace Google.Cloud.CloudSecurityCompliance.V1
             CreateFrameworkDeploymentAsync(parent, frameworkDeployment, frameworkDeploymentId, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Creates a new FrameworkDeployment in a given project and location.
+        /// Creates a new FrameworkDeployment in a given parent resource.
         /// </summary>
         /// <param name="parent">
-        /// Required. Value for parent. Supported formats:
+        /// Required. The parent resource of the FrameworkDeployment in the format:
         /// organizations/{organization}/locations/{location}
         /// Only global location is supported.
         /// </param>
         /// <param name="frameworkDeployment">
-        /// Required. The resource being created.
+        /// Required. The FrameworkDeployment to be created.
         /// </param>
         /// <param name="frameworkDeploymentId">
         /// Optional. User provided identifier. It should be unique in scope of a
-        /// parent Please note that this is optional and if not provided, a random UUID
-        /// will be generated.
+        /// parent. This is optional and if not provided, a random UUID will be
+        /// generated.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -500,20 +501,20 @@ namespace Google.Cloud.CloudSecurityCompliance.V1
             }, callSettings);
 
         /// <summary>
-        /// Creates a new FrameworkDeployment in a given project and location.
+        /// Creates a new FrameworkDeployment in a given parent resource.
         /// </summary>
         /// <param name="parent">
-        /// Required. Value for parent. Supported formats:
+        /// Required. The parent resource of the FrameworkDeployment in the format:
         /// organizations/{organization}/locations/{location}
         /// Only global location is supported.
         /// </param>
         /// <param name="frameworkDeployment">
-        /// Required. The resource being created.
+        /// Required. The FrameworkDeployment to be created.
         /// </param>
         /// <param name="frameworkDeploymentId">
         /// Optional. User provided identifier. It should be unique in scope of a
-        /// parent Please note that this is optional and if not provided, a random UUID
-        /// will be generated.
+        /// parent. This is optional and if not provided, a random UUID will be
+        /// generated.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -526,20 +527,20 @@ namespace Google.Cloud.CloudSecurityCompliance.V1
             }, callSettings);
 
         /// <summary>
-        /// Creates a new FrameworkDeployment in a given project and location.
+        /// Creates a new FrameworkDeployment in a given parent resource.
         /// </summary>
         /// <param name="parent">
-        /// Required. Value for parent. Supported formats:
+        /// Required. The parent resource of the FrameworkDeployment in the format:
         /// organizations/{organization}/locations/{location}
         /// Only global location is supported.
         /// </param>
         /// <param name="frameworkDeployment">
-        /// Required. The resource being created.
+        /// Required. The FrameworkDeployment to be created.
         /// </param>
         /// <param name="frameworkDeploymentId">
         /// Optional. User provided identifier. It should be unique in scope of a
-        /// parent Please note that this is optional and if not provided, a random UUID
-        /// will be generated.
+        /// parent. This is optional and if not provided, a random UUID will be
+        /// generated.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -604,8 +605,8 @@ namespace Google.Cloud.CloudSecurityCompliance.V1
         /// Deletes a single FrameworkDeployment.
         /// </summary>
         /// <param name="name">
-        /// Required. Name of the framework deployment to be deleted
-        /// FrameworkDeployment name in either of the following formats:
+        /// Required. name of the FrameworkDeployment to be deleted in the following
+        /// format:
         /// organizations/{organization}/locations/{location}/frameworkDeployments/{framework_deployment_id}
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -620,8 +621,8 @@ namespace Google.Cloud.CloudSecurityCompliance.V1
         /// Deletes a single FrameworkDeployment.
         /// </summary>
         /// <param name="name">
-        /// Required. Name of the framework deployment to be deleted
-        /// FrameworkDeployment name in either of the following formats:
+        /// Required. name of the FrameworkDeployment to be deleted in the following
+        /// format:
         /// organizations/{organization}/locations/{location}/frameworkDeployments/{framework_deployment_id}
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -636,8 +637,8 @@ namespace Google.Cloud.CloudSecurityCompliance.V1
         /// Deletes a single FrameworkDeployment.
         /// </summary>
         /// <param name="name">
-        /// Required. Name of the framework deployment to be deleted
-        /// FrameworkDeployment name in either of the following formats:
+        /// Required. name of the FrameworkDeployment to be deleted in the following
+        /// format:
         /// organizations/{organization}/locations/{location}/frameworkDeployments/{framework_deployment_id}
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -649,8 +650,8 @@ namespace Google.Cloud.CloudSecurityCompliance.V1
         /// Deletes a single FrameworkDeployment.
         /// </summary>
         /// <param name="name">
-        /// Required. Name of the framework deployment to be deleted
-        /// FrameworkDeployment name in either of the following formats:
+        /// Required. name of the FrameworkDeployment to be deleted in the following
+        /// format:
         /// organizations/{organization}/locations/{location}/frameworkDeployments/{framework_deployment_id}
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -665,8 +666,8 @@ namespace Google.Cloud.CloudSecurityCompliance.V1
         /// Deletes a single FrameworkDeployment.
         /// </summary>
         /// <param name="name">
-        /// Required. Name of the framework deployment to be deleted
-        /// FrameworkDeployment name in either of the following formats:
+        /// Required. name of the FrameworkDeployment to be deleted in the following
+        /// format:
         /// organizations/{organization}/locations/{location}/frameworkDeployments/{framework_deployment_id}
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -681,8 +682,8 @@ namespace Google.Cloud.CloudSecurityCompliance.V1
         /// Deletes a single FrameworkDeployment.
         /// </summary>
         /// <param name="name">
-        /// Required. Name of the framework deployment to be deleted
-        /// FrameworkDeployment name in either of the following formats:
+        /// Required. name of the FrameworkDeployment to be deleted in the following
+        /// format:
         /// organizations/{organization}/locations/{location}/frameworkDeployments/{framework_deployment_id}
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -721,7 +722,7 @@ namespace Google.Cloud.CloudSecurityCompliance.V1
         /// Gets details of a single FrameworkDeployment.
         /// </summary>
         /// <param name="name">
-        /// Required. FrameworkDeployment name in either of the following formats:
+        /// Required. FrameworkDeployment name in the following format:
         /// organizations/{organization}/locations/{location}/frameworkDeployments/{framework_deployment_id}
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -736,7 +737,7 @@ namespace Google.Cloud.CloudSecurityCompliance.V1
         /// Gets details of a single FrameworkDeployment.
         /// </summary>
         /// <param name="name">
-        /// Required. FrameworkDeployment name in either of the following formats:
+        /// Required. FrameworkDeployment name in the following format:
         /// organizations/{organization}/locations/{location}/frameworkDeployments/{framework_deployment_id}
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -751,7 +752,7 @@ namespace Google.Cloud.CloudSecurityCompliance.V1
         /// Gets details of a single FrameworkDeployment.
         /// </summary>
         /// <param name="name">
-        /// Required. FrameworkDeployment name in either of the following formats:
+        /// Required. FrameworkDeployment name in the following format:
         /// organizations/{organization}/locations/{location}/frameworkDeployments/{framework_deployment_id}
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -763,7 +764,7 @@ namespace Google.Cloud.CloudSecurityCompliance.V1
         /// Gets details of a single FrameworkDeployment.
         /// </summary>
         /// <param name="name">
-        /// Required. FrameworkDeployment name in either of the following formats:
+        /// Required. FrameworkDeployment name in the following format:
         /// organizations/{organization}/locations/{location}/frameworkDeployments/{framework_deployment_id}
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -778,7 +779,7 @@ namespace Google.Cloud.CloudSecurityCompliance.V1
         /// Gets details of a single FrameworkDeployment.
         /// </summary>
         /// <param name="name">
-        /// Required. FrameworkDeployment name in either of the following formats:
+        /// Required. FrameworkDeployment name in the following format:
         /// organizations/{organization}/locations/{location}/frameworkDeployments/{framework_deployment_id}
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -793,7 +794,7 @@ namespace Google.Cloud.CloudSecurityCompliance.V1
         /// Gets details of a single FrameworkDeployment.
         /// </summary>
         /// <param name="name">
-        /// Required. FrameworkDeployment name in either of the following formats:
+        /// Required. FrameworkDeployment name in the following format:
         /// organizations/{organization}/locations/{location}/frameworkDeployments/{framework_deployment_id}
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -802,7 +803,7 @@ namespace Google.Cloud.CloudSecurityCompliance.V1
             GetFrameworkDeploymentAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Lists FrameworkDeployments in a given parent and location.
+        /// Lists FrameworkDeployments in a given parent resource.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -811,7 +812,7 @@ namespace Google.Cloud.CloudSecurityCompliance.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Lists FrameworkDeployments in a given parent and location.
+        /// Lists FrameworkDeployments in a given parent resource.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -820,10 +821,12 @@ namespace Google.Cloud.CloudSecurityCompliance.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Lists FrameworkDeployments in a given parent and location.
+        /// Lists FrameworkDeployments in a given parent resource.
         /// </summary>
         /// <param name="parent">
-        /// Required. Parent value for ListFrameworkDeploymentsRequest.
+        /// Required. parent resource of the FrameworkDeployment in the format:
+        /// organizations/{organization}/locations/{location}
+        /// Only global location is supported.
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -853,10 +856,12 @@ namespace Google.Cloud.CloudSecurityCompliance.V1
         }
 
         /// <summary>
-        /// Lists FrameworkDeployments in a given parent and location.
+        /// Lists FrameworkDeployments in a given parent resource.
         /// </summary>
         /// <param name="parent">
-        /// Required. Parent value for ListFrameworkDeploymentsRequest.
+        /// Required. parent resource of the FrameworkDeployment in the format:
+        /// organizations/{organization}/locations/{location}
+        /// Only global location is supported.
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -886,10 +891,12 @@ namespace Google.Cloud.CloudSecurityCompliance.V1
         }
 
         /// <summary>
-        /// Lists FrameworkDeployments in a given parent and location.
+        /// Lists FrameworkDeployments in a given parent resource.
         /// </summary>
         /// <param name="parent">
-        /// Required. Parent value for ListFrameworkDeploymentsRequest.
+        /// Required. parent resource of the FrameworkDeployment in the format:
+        /// organizations/{organization}/locations/{location}
+        /// Only global location is supported.
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -919,10 +926,12 @@ namespace Google.Cloud.CloudSecurityCompliance.V1
         }
 
         /// <summary>
-        /// Lists FrameworkDeployments in a given parent and location.
+        /// Lists FrameworkDeployments in a given parent resource.
         /// </summary>
         /// <param name="parent">
-        /// Required. Parent value for ListFrameworkDeploymentsRequest.
+        /// Required. parent resource of the FrameworkDeployment in the format:
+        /// organizations/{organization}/locations/{location}
+        /// Only global location is supported.
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -982,7 +991,7 @@ namespace Google.Cloud.CloudSecurityCompliance.V1
         /// Gets details of a single CloudControlDeployment.
         /// </summary>
         /// <param name="name">
-        /// Required. CloudControlDeployment name in either of the following formats:
+        /// Required. CloudControlDeployment name in the following format:
         /// organizations/{organization}/locations/{location}/cloudControlDeployments/{cloud_control_deployment_id}
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -997,7 +1006,7 @@ namespace Google.Cloud.CloudSecurityCompliance.V1
         /// Gets details of a single CloudControlDeployment.
         /// </summary>
         /// <param name="name">
-        /// Required. CloudControlDeployment name in either of the following formats:
+        /// Required. CloudControlDeployment name in the following format:
         /// organizations/{organization}/locations/{location}/cloudControlDeployments/{cloud_control_deployment_id}
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1012,7 +1021,7 @@ namespace Google.Cloud.CloudSecurityCompliance.V1
         /// Gets details of a single CloudControlDeployment.
         /// </summary>
         /// <param name="name">
-        /// Required. CloudControlDeployment name in either of the following formats:
+        /// Required. CloudControlDeployment name in the following format:
         /// organizations/{organization}/locations/{location}/cloudControlDeployments/{cloud_control_deployment_id}
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -1024,7 +1033,7 @@ namespace Google.Cloud.CloudSecurityCompliance.V1
         /// Gets details of a single CloudControlDeployment.
         /// </summary>
         /// <param name="name">
-        /// Required. CloudControlDeployment name in either of the following formats:
+        /// Required. CloudControlDeployment name in the following format:
         /// organizations/{organization}/locations/{location}/cloudControlDeployments/{cloud_control_deployment_id}
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1039,7 +1048,7 @@ namespace Google.Cloud.CloudSecurityCompliance.V1
         /// Gets details of a single CloudControlDeployment.
         /// </summary>
         /// <param name="name">
-        /// Required. CloudControlDeployment name in either of the following formats:
+        /// Required. CloudControlDeployment name in the following format:
         /// organizations/{organization}/locations/{location}/cloudControlDeployments/{cloud_control_deployment_id}
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1054,7 +1063,7 @@ namespace Google.Cloud.CloudSecurityCompliance.V1
         /// Gets details of a single CloudControlDeployment.
         /// </summary>
         /// <param name="name">
-        /// Required. CloudControlDeployment name in either of the following formats:
+        /// Required. CloudControlDeployment name in the following format:
         /// organizations/{organization}/locations/{location}/cloudControlDeployments/{cloud_control_deployment_id}
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -1063,7 +1072,7 @@ namespace Google.Cloud.CloudSecurityCompliance.V1
             GetCloudControlDeploymentAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Lists CloudControlDeployments under a given parent.
+        /// Lists CloudControlDeployments in a given parent resource.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1072,7 +1081,7 @@ namespace Google.Cloud.CloudSecurityCompliance.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Lists CloudControlDeployments under a given parent.
+        /// Lists CloudControlDeployments in a given parent resource.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1081,10 +1090,12 @@ namespace Google.Cloud.CloudSecurityCompliance.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Lists CloudControlDeployments under a given parent.
+        /// Lists CloudControlDeployments in a given parent resource.
         /// </summary>
         /// <param name="parent">
-        /// Required. Parent value for ListCloudControlDeploymentsRequest.
+        /// Required. parent resource of the CloudControlDeployment in the format:
+        /// organizations/{organization}/locations/{location}
+        /// Only global location is supported.
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -1114,10 +1125,12 @@ namespace Google.Cloud.CloudSecurityCompliance.V1
         }
 
         /// <summary>
-        /// Lists CloudControlDeployments under a given parent.
+        /// Lists CloudControlDeployments in a given parent resource.
         /// </summary>
         /// <param name="parent">
-        /// Required. Parent value for ListCloudControlDeploymentsRequest.
+        /// Required. parent resource of the CloudControlDeployment in the format:
+        /// organizations/{organization}/locations/{location}
+        /// Only global location is supported.
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -1147,10 +1160,12 @@ namespace Google.Cloud.CloudSecurityCompliance.V1
         }
 
         /// <summary>
-        /// Lists CloudControlDeployments under a given parent.
+        /// Lists CloudControlDeployments in a given parent resource.
         /// </summary>
         /// <param name="parent">
-        /// Required. Parent value for ListCloudControlDeploymentsRequest.
+        /// Required. parent resource of the CloudControlDeployment in the format:
+        /// organizations/{organization}/locations/{location}
+        /// Only global location is supported.
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -1180,10 +1195,12 @@ namespace Google.Cloud.CloudSecurityCompliance.V1
         }
 
         /// <summary>
-        /// Lists CloudControlDeployments under a given parent.
+        /// Lists CloudControlDeployments in a given parent resource.
         /// </summary>
         /// <param name="parent">
-        /// Required. Parent value for ListCloudControlDeploymentsRequest.
+        /// Required. parent resource of the CloudControlDeployment in the format:
+        /// organizations/{organization}/locations/{location}
+        /// Only global location is supported.
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -1215,7 +1232,8 @@ namespace Google.Cloud.CloudSecurityCompliance.V1
 
     /// <summary>Deployment client wrapper implementation, for convenient use.</summary>
     /// <remarks>
-    /// Service describing handlers for resources
+    /// Deployment service allows users to manage deployments of Frameworks and
+    /// Cloud Controls on a target resource.
     /// </remarks>
     public sealed partial class DeploymentClientImpl : DeploymentClient
     {
@@ -1308,7 +1326,7 @@ namespace Google.Cloud.CloudSecurityCompliance.V1
         public override lro::OperationsClient CreateFrameworkDeploymentOperationsClient { get; }
 
         /// <summary>
-        /// Creates a new FrameworkDeployment in a given project and location.
+        /// Creates a new FrameworkDeployment in a given parent resource.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1320,7 +1338,7 @@ namespace Google.Cloud.CloudSecurityCompliance.V1
         }
 
         /// <summary>
-        /// Creates a new FrameworkDeployment in a given project and location.
+        /// Creates a new FrameworkDeployment in a given parent resource.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1383,7 +1401,7 @@ namespace Google.Cloud.CloudSecurityCompliance.V1
         }
 
         /// <summary>
-        /// Lists FrameworkDeployments in a given parent and location.
+        /// Lists FrameworkDeployments in a given parent resource.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1395,7 +1413,7 @@ namespace Google.Cloud.CloudSecurityCompliance.V1
         }
 
         /// <summary>
-        /// Lists FrameworkDeployments in a given parent and location.
+        /// Lists FrameworkDeployments in a given parent resource.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1431,7 +1449,7 @@ namespace Google.Cloud.CloudSecurityCompliance.V1
         }
 
         /// <summary>
-        /// Lists CloudControlDeployments under a given parent.
+        /// Lists CloudControlDeployments in a given parent resource.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1443,7 +1461,7 @@ namespace Google.Cloud.CloudSecurityCompliance.V1
         }
 
         /// <summary>
-        /// Lists CloudControlDeployments under a given parent.
+        /// Lists CloudControlDeployments in a given parent resource.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>

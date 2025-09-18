@@ -32,7 +32,7 @@ namespace Google.Cloud.CloudSecurityCompliance.V1 {
             "b3VkL2Nsb3Vkc2VjdXJpdHljb21wbGlhbmNlL3YxL2NvbW1vbi5wcm90bxoj",
             "Z29vZ2xlL2xvbmdydW5uaW5nL29wZXJhdGlvbnMucHJvdG8aG2dvb2dsZS9w",
             "cm90b2J1Zi9lbXB0eS5wcm90bxofZ29vZ2xlL3Byb3RvYnVmL3RpbWVzdGFt",
-            "cC5wcm90byKbCQoTRnJhbWV3b3JrRGVwbG95bWVudBIRCgRuYW1lGAEgASgJ",
+            "cC5wcm90byLSBwoTRnJhbWV3b3JrRGVwbG95bWVudBIRCgRuYW1lGAEgASgJ",
             "QgPgQQgSYgoWdGFyZ2V0X3Jlc291cmNlX2NvbmZpZxgCIAEoCzI9Lmdvb2ds",
             "ZS5jbG91ZC5jbG91ZHNlY3VyaXR5Y29tcGxpYW5jZS52MS5UYXJnZXRSZXNv",
             "dXJjZUNvbmZpZ0ID4EECEiUKGGNvbXB1dGVkX3RhcmdldF9yZXNvdXJjZRgD",
@@ -42,176 +42,163 @@ namespace Google.Cloud.CloudSecurityCompliance.V1 {
             "b2xfbWV0YWRhdGEYBiADKAsyPS5nb29nbGUuY2xvdWQuY2xvdWRzZWN1cml0",
             "eWNvbXBsaWFuY2UudjEuQ2xvdWRDb250cm9sTWV0YWRhdGFCA+BBAhJXChBk",
             "ZXBsb3ltZW50X3N0YXRlGAcgASgOMjguZ29vZ2xlLmNsb3VkLmNsb3Vkc2Vj",
-            "dXJpdHljb21wbGlhbmNlLnYxLkRlcGxveW1lbnRTdGF0ZUID4EEDEl4KDmNj",
-            "X2RlcGxveW1lbnRzGAggAygLMj8uZ29vZ2xlLmNsb3VkLmNsb3Vkc2VjdXJp",
-            "dHljb21wbGlhbmNlLnYxLkNsb3VkQ29udHJvbERlcGxveW1lbnRCBRgB4EED",
-            "EjQKC2NyZWF0ZV90aW1lGAkgASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVz",
-            "dGFtcEID4EEDEjQKC3VwZGF0ZV90aW1lGAogASgLMhouZ29vZ2xlLnByb3Rv",
-            "YnVmLlRpbWVzdGFtcEID4EEDEhEKBGV0YWcYCyABKAlCA+BBARJnChRjY19n",
-            "cm91cF9kZXBsb3ltZW50cxgMIAMoCzJELmdvb2dsZS5jbG91ZC5jbG91ZHNl",
-            "Y3VyaXR5Y29tcGxpYW5jZS52MS5DbG91ZENvbnRyb2xHcm91cERlcGxveW1l",
-            "bnRCA+BBAxIpChx0YXJnZXRfcmVzb3VyY2VfZGlzcGxheV9uYW1lGA0gASgJ",
-            "QgPgQQMSegojY2xvdWRfY29udHJvbF9kZXBsb3ltZW50X3JlZmVyZW5jZXMY",
-            "DiADKAsySC5nb29nbGUuY2xvdWQuY2xvdWRzZWN1cml0eWNvbXBsaWFuY2Uu",
-            "djEuQ2xvdWRDb250cm9sRGVwbG95bWVudFJlZmVyZW5jZUID4EEDOsoB6kHG",
-            "AQo6Y2xvdWRzZWN1cml0eWNvbXBsaWFuY2UuZ29vZ2xlYXBpcy5jb20vRnJh",
-            "bWV3b3JrRGVwbG95bWVudBJdb3JnYW5pemF0aW9ucy97b3JnYW5pemF0aW9u",
-            "fS9sb2NhdGlvbnMve2xvY2F0aW9ufS9mcmFtZXdvcmtEZXBsb3ltZW50cy97",
-            "ZnJhbWV3b3JrX2RlcGxveW1lbnR9KhRmcmFtZXdvcmtEZXBsb3ltZW50czIT",
-            "ZnJhbWV3b3JrRGVwbG95bWVudCLpBwoWQ2xvdWRDb250cm9sRGVwbG95bWVu",
-            "dBIRCgRuYW1lGAEgASgJQgPgQQgSYgoWdGFyZ2V0X3Jlc291cmNlX2NvbmZp",
-            "ZxgCIAEoCzI9Lmdvb2dsZS5jbG91ZC5jbG91ZHNlY3VyaXR5Y29tcGxpYW5j",
-            "ZS52MS5UYXJnZXRSZXNvdXJjZUNvbmZpZ0ID4EECEhwKD3RhcmdldF9yZXNv",
-            "dXJjZRgDIAEoCUID4EEDEmIKFmNsb3VkX2NvbnRyb2xfbWV0YWRhdGEYBCAB",
-            "KAsyPS5nb29nbGUuY2xvdWQuY2xvdWRzZWN1cml0eWNvbXBsaWFuY2UudjEu",
-            "Q2xvdWRDb250cm9sTWV0YWRhdGFCA+BBAhIYCgtkZXNjcmlwdGlvbhgFIAEo",
-            "CUID4EEBElcKEGRlcGxveW1lbnRfc3RhdGUYBiABKA4yOC5nb29nbGUuY2xv",
-            "dWQuY2xvdWRzZWN1cml0eWNvbXBsaWFuY2UudjEuRGVwbG95bWVudFN0YXRl",
-            "QgPgQQMSNAoLY3JlYXRlX3RpbWUYByABKAsyGi5nb29nbGUucHJvdG9idWYu",
-            "VGltZXN0YW1wQgPgQQMSNAoLdXBkYXRlX3RpbWUYCCABKAsyGi5nb29nbGUu",
-            "cHJvdG9idWYuVGltZXN0YW1wQgPgQQMSEQoEZXRhZxgJIAEoCUID4EEBEmcK",
-            "I3BhcmFtZXRlcl9zdWJzdGl0dXRlZF9jbG91ZF9jb250cm9sGAogASgLMjUu",
-            "Z29vZ2xlLmNsb3VkLmNsb3Vkc2VjdXJpdHljb21wbGlhbmNlLnYxLkNsb3Vk",
-            "Q29udHJvbEID4EEDEnMKH2ZyYW1ld29ya19kZXBsb3ltZW50X3JlZmVyZW5j",
-            "ZXMYCyADKAsyRS5nb29nbGUuY2xvdWQuY2xvdWRzZWN1cml0eWNvbXBsaWFu",
-            "Y2UudjEuRnJhbWV3b3JrRGVwbG95bWVudFJlZmVyZW5jZUID4EEDEikKHHRh",
-            "cmdldF9yZXNvdXJjZV9kaXNwbGF5X25hbWUYDCABKAlCA+BBAzraAepB1gEK",
-            "PWNsb3Vkc2VjdXJpdHljb21wbGlhbmNlLmdvb2dsZWFwaXMuY29tL0Nsb3Vk",
-            "Q29udHJvbERlcGxveW1lbnQSZG9yZ2FuaXphdGlvbnMve29yZ2FuaXphdGlv",
-            "bn0vbG9jYXRpb25zL3tsb2NhdGlvbn0vY2xvdWRDb250cm9sRGVwbG95bWVu",
-            "dHMve2Nsb3VkX2NvbnRyb2xfZGVwbG95bWVudH0qF2Nsb3VkQ29udHJvbERl",
-            "cGxveW1lbnRzMhZjbG91ZENvbnRyb2xEZXBsb3ltZW50IskBChRUYXJnZXRS",
-            "ZXNvdXJjZUNvbmZpZxInChhleGlzdGluZ190YXJnZXRfcmVzb3VyY2UYASAB",
-            "KAlCA+BBAUgAEnUKH3RhcmdldF9yZXNvdXJjZV9jcmVhdGlvbl9jb25maWcY",
-            "AiABKAsyRS5nb29nbGUuY2xvdWQuY2xvdWRzZWN1cml0eWNvbXBsaWFuY2Uu",
-            "djEuVGFyZ2V0UmVzb3VyY2VDcmVhdGlvbkNvbmZpZ0ID4EEBSABCEQoPcmVz",
-            "b3VyY2VfY29uZmlnIogCChxUYXJnZXRSZXNvdXJjZUNyZWF0aW9uQ29uZmln",
-            "EmQKFmZvbGRlcl9jcmVhdGlvbl9jb25maWcYASABKAsyPS5nb29nbGUuY2xv",
-            "dWQuY2xvdWRzZWN1cml0eWNvbXBsaWFuY2UudjEuRm9sZGVyQ3JlYXRpb25D",
-            "b25maWdCA+BBAUgAEmYKF3Byb2plY3RfY3JlYXRpb25fY29uZmlnGAIgASgL",
-            "Mj4uZ29vZ2xlLmNsb3VkLmNsb3Vkc2VjdXJpdHljb21wbGlhbmNlLnYxLlBy",
-            "b2plY3RDcmVhdGlvbkNvbmZpZ0ID4EEBSABCGgoYcmVzb3VyY2VfY3JlYXRp",
-            "b25fY29uZmlnIk0KFEZvbGRlckNyZWF0aW9uQ29uZmlnEhMKBnBhcmVudBgB",
-            "IAEoCUID4EECEiAKE2ZvbGRlcl9kaXNwbGF5X25hbWUYAiABKAlCA+BBAiJw",
-            "ChVQcm9qZWN0Q3JlYXRpb25Db25maWcSEwoGcGFyZW50GAEgASgJQgPgQQIS",
-            "IQoUcHJvamVjdF9kaXNwbGF5X25hbWUYAiABKAlCA+BBAhIfChJiaWxsaW5n",
-            "X2FjY291bnRfaWQYAyABKAlCA+BBAiLRAQoUQ2xvdWRDb250cm9sTWV0YWRh",
-            "dGESYAoVY2xvdWRfY29udHJvbF9kZXRhaWxzGAEgASgLMjwuZ29vZ2xlLmNs",
-            "b3VkLmNsb3Vkc2VjdXJpdHljb21wbGlhbmNlLnYxLkNsb3VkQ29udHJvbERl",
-            "dGFpbHNCA+BBAhJXChBlbmZvcmNlbWVudF9tb2RlGAIgASgOMjguZ29vZ2xl",
-            "LmNsb3VkLmNsb3Vkc2VjdXJpdHljb21wbGlhbmNlLnYxLkVuZm9yY2VtZW50",
-            "TW9kZUID4EECIswCChtDbG91ZENvbnRyb2xHcm91cERlcGxveW1lbnQSXAoT",
-            "Y2xvdWRfY29udHJvbF9ncm91cBgBIAEoCzI6Lmdvb2dsZS5jbG91ZC5jbG91",
-            "ZHNlY3VyaXR5Y29tcGxpYW5jZS52MS5DbG91ZENvbnRyb2xHcm91cEID4EEC",
-            "El4KDmNjX2RlcGxveW1lbnRzGAIgAygLMj8uZ29vZ2xlLmNsb3VkLmNsb3Vk",
-            "c2VjdXJpdHljb21wbGlhbmNlLnYxLkNsb3VkQ29udHJvbERlcGxveW1lbnRC",
-            "BRgB4EECEm8KGGNjX2RlcGxveW1lbnRfcmVmZXJlbmNlcxgDIAMoCzJILmdv",
-            "b2dsZS5jbG91ZC5jbG91ZHNlY3VyaXR5Y29tcGxpYW5jZS52MS5DbG91ZENv",
-            "bnRyb2xEZXBsb3ltZW50UmVmZXJlbmNlQgPgQQMi/QEKIENyZWF0ZUZyYW1l",
-            "d29ya0RlcGxveW1lbnRSZXF1ZXN0ElIKBnBhcmVudBgBIAEoCUJC4EEC+kE8",
-            "EjpjbG91ZHNlY3VyaXR5Y29tcGxpYW5jZS5nb29nbGVhcGlzLmNvbS9GcmFt",
-            "ZXdvcmtEZXBsb3ltZW50EiQKF2ZyYW1ld29ya19kZXBsb3ltZW50X2lkGAIg",
-            "ASgJQgPgQQESXwoUZnJhbWV3b3JrX2RlcGxveW1lbnQYAyABKAsyPC5nb29n",
-            "bGUuY2xvdWQuY2xvdWRzZWN1cml0eWNvbXBsaWFuY2UudjEuRnJhbWV3b3Jr",
-            "RGVwbG95bWVudEID4EECIocBCiBEZWxldGVGcmFtZXdvcmtEZXBsb3ltZW50",
-            "UmVxdWVzdBJQCgRuYW1lGAEgASgJQkLgQQL6QTwKOmNsb3Vkc2VjdXJpdHlj",
-            "b21wbGlhbmNlLmdvb2dsZWFwaXMuY29tL0ZyYW1ld29ya0RlcGxveW1lbnQS",
-            "EQoEZXRhZxgCIAEoCUID4EEBInEKHUdldEZyYW1ld29ya0RlcGxveW1lbnRS",
-            "ZXF1ZXN0ElAKBG5hbWUYASABKAlCQuBBAvpBPAo6Y2xvdWRzZWN1cml0eWNv",
-            "bXBsaWFuY2UuZ29vZ2xlYXBpcy5jb20vRnJhbWV3b3JrRGVwbG95bWVudCLS",
-            "AQofTGlzdEZyYW1ld29ya0RlcGxveW1lbnRzUmVxdWVzdBJSCgZwYXJlbnQY",
-            "ASABKAlCQuBBAvpBPBI6Y2xvdWRzZWN1cml0eWNvbXBsaWFuY2UuZ29vZ2xl",
-            "YXBpcy5jb20vRnJhbWV3b3JrRGVwbG95bWVudBIWCglwYWdlX3NpemUYAiAB",
-            "KAVCA+BBARIXCgpwYWdlX3Rva2VuGAMgASgJQgPgQQESEwoGZmlsdGVyGAQg",
-            "ASgJQgPgQQESFQoIb3JkZXJfYnkYBSABKAlCA+BBASKYAQogTGlzdEZyYW1l",
-            "d29ya0RlcGxveW1lbnRzUmVzcG9uc2USWwoVZnJhbWV3b3JrX2RlcGxveW1l",
-            "bnRzGAEgAygLMjwuZ29vZ2xlLmNsb3VkLmNsb3Vkc2VjdXJpdHljb21wbGlh",
-            "bmNlLnYxLkZyYW1ld29ya0RlcGxveW1lbnQSFwoPbmV4dF9wYWdlX3Rva2Vu",
-            "GAIgASgJIncKIEdldENsb3VkQ29udHJvbERlcGxveW1lbnRSZXF1ZXN0ElMK",
-            "BG5hbWUYASABKAlCReBBAvpBPwo9Y2xvdWRzZWN1cml0eWNvbXBsaWFuY2Uu",
-            "Z29vZ2xlYXBpcy5jb20vQ2xvdWRDb250cm9sRGVwbG95bWVudCLYAQoiTGlz",
-            "dENsb3VkQ29udHJvbERlcGxveW1lbnRzUmVxdWVzdBJVCgZwYXJlbnQYASAB",
-            "KAlCReBBAvpBPxI9Y2xvdWRzZWN1cml0eWNvbXBsaWFuY2UuZ29vZ2xlYXBp",
-            "cy5jb20vQ2xvdWRDb250cm9sRGVwbG95bWVudBIWCglwYWdlX3NpemUYAiAB",
-            "KAVCA+BBARIXCgpwYWdlX3Rva2VuGAMgASgJQgPgQQESEwoGZmlsdGVyGAQg",
-            "ASgJQgPgQQESFQoIb3JkZXJfYnkYBSABKAlCA+BBASKiAQojTGlzdENsb3Vk",
-            "Q29udHJvbERlcGxveW1lbnRzUmVzcG9uc2USYgoZY2xvdWRfY29udHJvbF9k",
-            "ZXBsb3ltZW50cxgBIAMoCzI/Lmdvb2dsZS5jbG91ZC5jbG91ZHNlY3VyaXR5",
-            "Y29tcGxpYW5jZS52MS5DbG91ZENvbnRyb2xEZXBsb3ltZW50EhcKD25leHRf",
-            "cGFnZV90b2tlbhgCIAEoCSKKAQofQ2xvdWRDb250cm9sRGVwbG95bWVudFJl",
-            "ZmVyZW5jZRJnChhjbG91ZF9jb250cm9sX2RlcGxveW1lbnQYASABKAlCReBB",
-            "A/pBPwo9Y2xvdWRzZWN1cml0eWNvbXBsaWFuY2UuZ29vZ2xlYXBpcy5jb20v",
-            "Q2xvdWRDb250cm9sRGVwbG95bWVudCKEAgocRnJhbWV3b3JrRGVwbG95bWVu",
-            "dFJlZmVyZW5jZRJgChRmcmFtZXdvcmtfZGVwbG95bWVudBgBIAEoCUJC4EED",
-            "+kE8CjpjbG91ZHNlY3VyaXR5Y29tcGxpYW5jZS5nb29nbGVhcGlzLmNvbS9G",
-            "cmFtZXdvcmtEZXBsb3ltZW50El0KE2ZyYW1ld29ya19yZWZlcmVuY2UYAiAB",
-            "KAsyOy5nb29nbGUuY2xvdWQuY2xvdWRzZWN1cml0eWNvbXBsaWFuY2UudjEu",
-            "RnJhbWV3b3JrUmVmZXJlbmNlQgPgQQESIwoWZnJhbWV3b3JrX2Rpc3BsYXlf",
-            "bmFtZRgDIAEoCUID4EEBKpwCCg9EZXBsb3ltZW50U3RhdGUSIAocREVQTE9Z",
-            "TUVOVF9TVEFURV9VTlNQRUNJRklFRBAAEh8KG0RFUExPWU1FTlRfU1RBVEVf",
-            "VkFMSURBVElORxABEh0KGURFUExPWU1FTlRfU1RBVEVfQ1JFQVRJTkcQAhId",
-            "ChlERVBMT1lNRU5UX1NUQVRFX0RFTEVUSU5HEAMSGwoXREVQTE9ZTUVOVF9T",
-            "VEFURV9GQUlMRUQQBBIaChZERVBMT1lNRU5UX1NUQVRFX1JFQURZEAUSJwoj",
-            "REVQTE9ZTUVOVF9TVEFURV9QQVJUSUFMTFlfREVQTE9ZRUQQBhImCiJERVBM",
-            "T1lNRU5UX1NUQVRFX1BBUlRJQUxMWV9ERUxFVEVEEAcy/Q0KCkRlcGxveW1l",
-            "bnQS7AIKGUNyZWF0ZUZyYW1ld29ya0RlcGxveW1lbnQSSS5nb29nbGUuY2xv",
-            "dWQuY2xvdWRzZWN1cml0eWNvbXBsaWFuY2UudjEuQ3JlYXRlRnJhbWV3b3Jr",
-            "RGVwbG95bWVudFJlcXVlc3QaHS5nb29nbGUubG9uZ3J1bm5pbmcuT3BlcmF0",
-            "aW9uIuQBykFQChNGcmFtZXdvcmtEZXBsb3ltZW50Ejlnb29nbGUuY2xvdWQu",
-            "Y2xvdWRzZWN1cml0eWNvbXBsaWFuY2UudjEuT3BlcmF0aW9uTWV0YWRhdGHa",
-            "QTNwYXJlbnQsZnJhbWV3b3JrX2RlcGxveW1lbnQsZnJhbWV3b3JrX2RlcGxv",
-            "eW1lbnRfaWSC0+STAlUiPS92MS97cGFyZW50PW9yZ2FuaXphdGlvbnMvKi9s",
-            "b2NhdGlvbnMvKn0vZnJhbWV3b3JrRGVwbG95bWVudHM6FGZyYW1ld29ya19k",
-            "ZXBsb3ltZW50EqkCChlEZWxldGVGcmFtZXdvcmtEZXBsb3ltZW50EkkuZ29v",
-            "Z2xlLmNsb3VkLmNsb3Vkc2VjdXJpdHljb21wbGlhbmNlLnYxLkRlbGV0ZUZy",
-            "YW1ld29ya0RlcGxveW1lbnRSZXF1ZXN0Gh0uZ29vZ2xlLmxvbmdydW5uaW5n",
-            "Lk9wZXJhdGlvbiKhAcpBUgoVZ29vZ2xlLnByb3RvYnVmLkVtcHR5Ejlnb29n",
-            "bGUuY2xvdWQuY2xvdWRzZWN1cml0eWNvbXBsaWFuY2UudjEuT3BlcmF0aW9u",
-            "TWV0YWRhdGHaQQRuYW1lgtPkkwI/Kj0vdjEve25hbWU9b3JnYW5pemF0aW9u",
-            "cy8qL2xvY2F0aW9ucy8qL2ZyYW1ld29ya0RlcGxveW1lbnRzLyp9EuwBChZH",
-            "ZXRGcmFtZXdvcmtEZXBsb3ltZW50EkYuZ29vZ2xlLmNsb3VkLmNsb3Vkc2Vj",
-            "dXJpdHljb21wbGlhbmNlLnYxLkdldEZyYW1ld29ya0RlcGxveW1lbnRSZXF1",
-            "ZXN0GjwuZ29vZ2xlLmNsb3VkLmNsb3Vkc2VjdXJpdHljb21wbGlhbmNlLnYx",
-            "LkZyYW1ld29ya0RlcGxveW1lbnQiTNpBBG5hbWWC0+STAj8SPS92MS97bmFt",
-            "ZT1vcmdhbml6YXRpb25zLyovbG9jYXRpb25zLyovZnJhbWV3b3JrRGVwbG95",
-            "bWVudHMvKn0S/wEKGExpc3RGcmFtZXdvcmtEZXBsb3ltZW50cxJILmdvb2ds",
-            "ZS5jbG91ZC5jbG91ZHNlY3VyaXR5Y29tcGxpYW5jZS52MS5MaXN0RnJhbWV3",
-            "b3JrRGVwbG95bWVudHNSZXF1ZXN0GkkuZ29vZ2xlLmNsb3VkLmNsb3Vkc2Vj",
-            "dXJpdHljb21wbGlhbmNlLnYxLkxpc3RGcmFtZXdvcmtEZXBsb3ltZW50c1Jl",
-            "c3BvbnNlIk7aQQZwYXJlbnSC0+STAj8SPS92MS97cGFyZW50PW9yZ2FuaXph",
-            "dGlvbnMvKi9sb2NhdGlvbnMvKn0vZnJhbWV3b3JrRGVwbG95bWVudHMS+AEK",
-            "GUdldENsb3VkQ29udHJvbERlcGxveW1lbnQSSS5nb29nbGUuY2xvdWQuY2xv",
-            "dWRzZWN1cml0eWNvbXBsaWFuY2UudjEuR2V0Q2xvdWRDb250cm9sRGVwbG95",
-            "bWVudFJlcXVlc3QaPy5nb29nbGUuY2xvdWQuY2xvdWRzZWN1cml0eWNvbXBs",
-            "aWFuY2UudjEuQ2xvdWRDb250cm9sRGVwbG95bWVudCJP2kEEbmFtZYLT5JMC",
-            "QhJAL3YxL3tuYW1lPW9yZ2FuaXphdGlvbnMvKi9sb2NhdGlvbnMvKi9jbG91",
-            "ZENvbnRyb2xEZXBsb3ltZW50cy8qfRKLAgobTGlzdENsb3VkQ29udHJvbERl",
-            "cGxveW1lbnRzEksuZ29vZ2xlLmNsb3VkLmNsb3Vkc2VjdXJpdHljb21wbGlh",
-            "bmNlLnYxLkxpc3RDbG91ZENvbnRyb2xEZXBsb3ltZW50c1JlcXVlc3QaTC5n",
-            "b29nbGUuY2xvdWQuY2xvdWRzZWN1cml0eWNvbXBsaWFuY2UudjEuTGlzdENs",
-            "b3VkQ29udHJvbERlcGxveW1lbnRzUmVzcG9uc2UiUdpBBnBhcmVudILT5JMC",
-            "QhJAL3YxL3twYXJlbnQ9b3JnYW5pemF0aW9ucy8qL2xvY2F0aW9ucy8qfS9j",
-            "bG91ZENvbnRyb2xEZXBsb3ltZW50cxpaykEmY2xvdWRzZWN1cml0eWNvbXBs",
-            "aWFuY2UuZ29vZ2xlYXBpcy5jb23SQS5odHRwczovL3d3dy5nb29nbGVhcGlz",
-            "LmNvbS9hdXRoL2Nsb3VkLXBsYXRmb3JtQqgCCitjb20uZ29vZ2xlLmNsb3Vk",
-            "LmNsb3Vkc2VjdXJpdHljb21wbGlhbmNlLnYxQg9EZXBsb3ltZW50UHJvdG9Q",
-            "AVplY2xvdWQuZ29vZ2xlLmNvbS9nby9jbG91ZHNlY3VyaXR5Y29tcGxpYW5j",
-            "ZS9hcGl2MS9jbG91ZHNlY3VyaXR5Y29tcGxpYW5jZXBiO2Nsb3Vkc2VjdXJp",
-            "dHljb21wbGlhbmNlcGKqAidHb29nbGUuQ2xvdWQuQ2xvdWRTZWN1cml0eUNv",
-            "bXBsaWFuY2UuVjHKAidHb29nbGVcQ2xvdWRcQ2xvdWRTZWN1cml0eUNvbXBs",
-            "aWFuY2VcVjHqAipHb29nbGU6OkNsb3VkOjpDbG91ZFNlY3VyaXR5Q29tcGxp",
-            "YW5jZTo6VjFiBnByb3RvMw=="));
+            "dXJpdHljb21wbGlhbmNlLnYxLkRlcGxveW1lbnRTdGF0ZUID4EEDEjQKC2Ny",
+            "ZWF0ZV90aW1lGAkgASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcEID",
+            "4EEDEjQKC3VwZGF0ZV90aW1lGAogASgLMhouZ29vZ2xlLnByb3RvYnVmLlRp",
+            "bWVzdGFtcEID4EEDEhEKBGV0YWcYCyABKAlCA+BBARIpChx0YXJnZXRfcmVz",
+            "b3VyY2VfZGlzcGxheV9uYW1lGA0gASgJQgPgQQMSegojY2xvdWRfY29udHJv",
+            "bF9kZXBsb3ltZW50X3JlZmVyZW5jZXMYDiADKAsySC5nb29nbGUuY2xvdWQu",
+            "Y2xvdWRzZWN1cml0eWNvbXBsaWFuY2UudjEuQ2xvdWRDb250cm9sRGVwbG95",
+            "bWVudFJlZmVyZW5jZUID4EEDOsoB6kHGAQo6Y2xvdWRzZWN1cml0eWNvbXBs",
+            "aWFuY2UuZ29vZ2xlYXBpcy5jb20vRnJhbWV3b3JrRGVwbG95bWVudBJdb3Jn",
+            "YW5pemF0aW9ucy97b3JnYW5pemF0aW9ufS9sb2NhdGlvbnMve2xvY2F0aW9u",
+            "fS9mcmFtZXdvcmtEZXBsb3ltZW50cy97ZnJhbWV3b3JrX2RlcGxveW1lbnR9",
+            "KhRmcmFtZXdvcmtEZXBsb3ltZW50czITZnJhbWV3b3JrRGVwbG95bWVudCLp",
+            "BwoWQ2xvdWRDb250cm9sRGVwbG95bWVudBIRCgRuYW1lGAEgASgJQgPgQQgS",
+            "YgoWdGFyZ2V0X3Jlc291cmNlX2NvbmZpZxgCIAEoCzI9Lmdvb2dsZS5jbG91",
+            "ZC5jbG91ZHNlY3VyaXR5Y29tcGxpYW5jZS52MS5UYXJnZXRSZXNvdXJjZUNv",
+            "bmZpZ0ID4EECEhwKD3RhcmdldF9yZXNvdXJjZRgDIAEoCUID4EEDEmIKFmNs",
+            "b3VkX2NvbnRyb2xfbWV0YWRhdGEYBCABKAsyPS5nb29nbGUuY2xvdWQuY2xv",
+            "dWRzZWN1cml0eWNvbXBsaWFuY2UudjEuQ2xvdWRDb250cm9sTWV0YWRhdGFC",
+            "A+BBAhIYCgtkZXNjcmlwdGlvbhgFIAEoCUID4EEBElcKEGRlcGxveW1lbnRf",
+            "c3RhdGUYBiABKA4yOC5nb29nbGUuY2xvdWQuY2xvdWRzZWN1cml0eWNvbXBs",
+            "aWFuY2UudjEuRGVwbG95bWVudFN0YXRlQgPgQQMSNAoLY3JlYXRlX3RpbWUY",
+            "ByABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wQgPgQQMSNAoLdXBk",
+            "YXRlX3RpbWUYCCABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wQgPg",
+            "QQMSEQoEZXRhZxgJIAEoCUID4EEBEmcKI3BhcmFtZXRlcl9zdWJzdGl0dXRl",
+            "ZF9jbG91ZF9jb250cm9sGAogASgLMjUuZ29vZ2xlLmNsb3VkLmNsb3Vkc2Vj",
+            "dXJpdHljb21wbGlhbmNlLnYxLkNsb3VkQ29udHJvbEID4EEDEnMKH2ZyYW1l",
+            "d29ya19kZXBsb3ltZW50X3JlZmVyZW5jZXMYCyADKAsyRS5nb29nbGUuY2xv",
+            "dWQuY2xvdWRzZWN1cml0eWNvbXBsaWFuY2UudjEuRnJhbWV3b3JrRGVwbG95",
+            "bWVudFJlZmVyZW5jZUID4EEDEikKHHRhcmdldF9yZXNvdXJjZV9kaXNwbGF5",
+            "X25hbWUYDCABKAlCA+BBAzraAepB1gEKPWNsb3Vkc2VjdXJpdHljb21wbGlh",
+            "bmNlLmdvb2dsZWFwaXMuY29tL0Nsb3VkQ29udHJvbERlcGxveW1lbnQSZG9y",
+            "Z2FuaXphdGlvbnMve29yZ2FuaXphdGlvbn0vbG9jYXRpb25zL3tsb2NhdGlv",
+            "bn0vY2xvdWRDb250cm9sRGVwbG95bWVudHMve2Nsb3VkX2NvbnRyb2xfZGVw",
+            "bG95bWVudH0qF2Nsb3VkQ29udHJvbERlcGxveW1lbnRzMhZjbG91ZENvbnRy",
+            "b2xEZXBsb3ltZW50IskBChRUYXJnZXRSZXNvdXJjZUNvbmZpZxInChhleGlz",
+            "dGluZ190YXJnZXRfcmVzb3VyY2UYASABKAlCA+BBAUgAEnUKH3RhcmdldF9y",
+            "ZXNvdXJjZV9jcmVhdGlvbl9jb25maWcYAiABKAsyRS5nb29nbGUuY2xvdWQu",
+            "Y2xvdWRzZWN1cml0eWNvbXBsaWFuY2UudjEuVGFyZ2V0UmVzb3VyY2VDcmVh",
+            "dGlvbkNvbmZpZ0ID4EEBSABCEQoPcmVzb3VyY2VfY29uZmlnIogCChxUYXJn",
+            "ZXRSZXNvdXJjZUNyZWF0aW9uQ29uZmlnEmQKFmZvbGRlcl9jcmVhdGlvbl9j",
+            "b25maWcYASABKAsyPS5nb29nbGUuY2xvdWQuY2xvdWRzZWN1cml0eWNvbXBs",
+            "aWFuY2UudjEuRm9sZGVyQ3JlYXRpb25Db25maWdCA+BBAUgAEmYKF3Byb2pl",
+            "Y3RfY3JlYXRpb25fY29uZmlnGAIgASgLMj4uZ29vZ2xlLmNsb3VkLmNsb3Vk",
+            "c2VjdXJpdHljb21wbGlhbmNlLnYxLlByb2plY3RDcmVhdGlvbkNvbmZpZ0ID",
+            "4EEBSABCGgoYcmVzb3VyY2VfY3JlYXRpb25fY29uZmlnIk0KFEZvbGRlckNy",
+            "ZWF0aW9uQ29uZmlnEhMKBnBhcmVudBgBIAEoCUID4EECEiAKE2ZvbGRlcl9k",
+            "aXNwbGF5X25hbWUYAiABKAlCA+BBAiJwChVQcm9qZWN0Q3JlYXRpb25Db25m",
+            "aWcSEwoGcGFyZW50GAEgASgJQgPgQQISIQoUcHJvamVjdF9kaXNwbGF5X25h",
+            "bWUYAiABKAlCA+BBAhIfChJiaWxsaW5nX2FjY291bnRfaWQYAyABKAlCA+BB",
+            "AiLRAQoUQ2xvdWRDb250cm9sTWV0YWRhdGESYAoVY2xvdWRfY29udHJvbF9k",
+            "ZXRhaWxzGAEgASgLMjwuZ29vZ2xlLmNsb3VkLmNsb3Vkc2VjdXJpdHljb21w",
+            "bGlhbmNlLnYxLkNsb3VkQ29udHJvbERldGFpbHNCA+BBAhJXChBlbmZvcmNl",
+            "bWVudF9tb2RlGAIgASgOMjguZ29vZ2xlLmNsb3VkLmNsb3Vkc2VjdXJpdHlj",
+            "b21wbGlhbmNlLnYxLkVuZm9yY2VtZW50TW9kZUID4EECIv0BCiBDcmVhdGVG",
+            "cmFtZXdvcmtEZXBsb3ltZW50UmVxdWVzdBJSCgZwYXJlbnQYASABKAlCQuBB",
+            "AvpBPBI6Y2xvdWRzZWN1cml0eWNvbXBsaWFuY2UuZ29vZ2xlYXBpcy5jb20v",
+            "RnJhbWV3b3JrRGVwbG95bWVudBIkChdmcmFtZXdvcmtfZGVwbG95bWVudF9p",
+            "ZBgCIAEoCUID4EEBEl8KFGZyYW1ld29ya19kZXBsb3ltZW50GAMgASgLMjwu",
+            "Z29vZ2xlLmNsb3VkLmNsb3Vkc2VjdXJpdHljb21wbGlhbmNlLnYxLkZyYW1l",
+            "d29ya0RlcGxveW1lbnRCA+BBAiKHAQogRGVsZXRlRnJhbWV3b3JrRGVwbG95",
+            "bWVudFJlcXVlc3QSUAoEbmFtZRgBIAEoCUJC4EEC+kE8CjpjbG91ZHNlY3Vy",
+            "aXR5Y29tcGxpYW5jZS5nb29nbGVhcGlzLmNvbS9GcmFtZXdvcmtEZXBsb3lt",
+            "ZW50EhEKBGV0YWcYAiABKAlCA+BBASJxCh1HZXRGcmFtZXdvcmtEZXBsb3lt",
+            "ZW50UmVxdWVzdBJQCgRuYW1lGAEgASgJQkLgQQL6QTwKOmNsb3Vkc2VjdXJp",
+            "dHljb21wbGlhbmNlLmdvb2dsZWFwaXMuY29tL0ZyYW1ld29ya0RlcGxveW1l",
+            "bnQi0gEKH0xpc3RGcmFtZXdvcmtEZXBsb3ltZW50c1JlcXVlc3QSUgoGcGFy",
+            "ZW50GAEgASgJQkLgQQL6QTwSOmNsb3Vkc2VjdXJpdHljb21wbGlhbmNlLmdv",
+            "b2dsZWFwaXMuY29tL0ZyYW1ld29ya0RlcGxveW1lbnQSFgoJcGFnZV9zaXpl",
+            "GAIgASgFQgPgQQESFwoKcGFnZV90b2tlbhgDIAEoCUID4EEBEhMKBmZpbHRl",
+            "chgEIAEoCUID4EEBEhUKCG9yZGVyX2J5GAUgASgJQgPgQQEimAEKIExpc3RG",
+            "cmFtZXdvcmtEZXBsb3ltZW50c1Jlc3BvbnNlElsKFWZyYW1ld29ya19kZXBs",
+            "b3ltZW50cxgBIAMoCzI8Lmdvb2dsZS5jbG91ZC5jbG91ZHNlY3VyaXR5Y29t",
+            "cGxpYW5jZS52MS5GcmFtZXdvcmtEZXBsb3ltZW50EhcKD25leHRfcGFnZV90",
+            "b2tlbhgCIAEoCSJ3CiBHZXRDbG91ZENvbnRyb2xEZXBsb3ltZW50UmVxdWVz",
+            "dBJTCgRuYW1lGAEgASgJQkXgQQL6QT8KPWNsb3Vkc2VjdXJpdHljb21wbGlh",
+            "bmNlLmdvb2dsZWFwaXMuY29tL0Nsb3VkQ29udHJvbERlcGxveW1lbnQi2AEK",
+            "Ikxpc3RDbG91ZENvbnRyb2xEZXBsb3ltZW50c1JlcXVlc3QSVQoGcGFyZW50",
+            "GAEgASgJQkXgQQL6QT8SPWNsb3Vkc2VjdXJpdHljb21wbGlhbmNlLmdvb2ds",
+            "ZWFwaXMuY29tL0Nsb3VkQ29udHJvbERlcGxveW1lbnQSFgoJcGFnZV9zaXpl",
+            "GAIgASgFQgPgQQESFwoKcGFnZV90b2tlbhgDIAEoCUID4EEBEhMKBmZpbHRl",
+            "chgEIAEoCUID4EEBEhUKCG9yZGVyX2J5GAUgASgJQgPgQQEiogEKI0xpc3RD",
+            "bG91ZENvbnRyb2xEZXBsb3ltZW50c1Jlc3BvbnNlEmIKGWNsb3VkX2NvbnRy",
+            "b2xfZGVwbG95bWVudHMYASADKAsyPy5nb29nbGUuY2xvdWQuY2xvdWRzZWN1",
+            "cml0eWNvbXBsaWFuY2UudjEuQ2xvdWRDb250cm9sRGVwbG95bWVudBIXCg9u",
+            "ZXh0X3BhZ2VfdG9rZW4YAiABKAkiigEKH0Nsb3VkQ29udHJvbERlcGxveW1l",
+            "bnRSZWZlcmVuY2USZwoYY2xvdWRfY29udHJvbF9kZXBsb3ltZW50GAEgASgJ",
+            "QkXgQQP6QT8KPWNsb3Vkc2VjdXJpdHljb21wbGlhbmNlLmdvb2dsZWFwaXMu",
+            "Y29tL0Nsb3VkQ29udHJvbERlcGxveW1lbnQihAIKHEZyYW1ld29ya0RlcGxv",
+            "eW1lbnRSZWZlcmVuY2USYAoUZnJhbWV3b3JrX2RlcGxveW1lbnQYASABKAlC",
+            "QuBBA/pBPAo6Y2xvdWRzZWN1cml0eWNvbXBsaWFuY2UuZ29vZ2xlYXBpcy5j",
+            "b20vRnJhbWV3b3JrRGVwbG95bWVudBJdChNmcmFtZXdvcmtfcmVmZXJlbmNl",
+            "GAIgASgLMjsuZ29vZ2xlLmNsb3VkLmNsb3Vkc2VjdXJpdHljb21wbGlhbmNl",
+            "LnYxLkZyYW1ld29ya1JlZmVyZW5jZUID4EEBEiMKFmZyYW1ld29ya19kaXNw",
+            "bGF5X25hbWUYAyABKAlCA+BBASqcAgoPRGVwbG95bWVudFN0YXRlEiAKHERF",
+            "UExPWU1FTlRfU1RBVEVfVU5TUEVDSUZJRUQQABIfChtERVBMT1lNRU5UX1NU",
+            "QVRFX1ZBTElEQVRJTkcQARIdChlERVBMT1lNRU5UX1NUQVRFX0NSRUFUSU5H",
+            "EAISHQoZREVQTE9ZTUVOVF9TVEFURV9ERUxFVElORxADEhsKF0RFUExPWU1F",
+            "TlRfU1RBVEVfRkFJTEVEEAQSGgoWREVQTE9ZTUVOVF9TVEFURV9SRUFEWRAF",
+            "EicKI0RFUExPWU1FTlRfU1RBVEVfUEFSVElBTExZX0RFUExPWUVEEAYSJgoi",
+            "REVQTE9ZTUVOVF9TVEFURV9QQVJUSUFMTFlfREVMRVRFRBAHMv0NCgpEZXBs",
+            "b3ltZW50EuwCChlDcmVhdGVGcmFtZXdvcmtEZXBsb3ltZW50EkkuZ29vZ2xl",
+            "LmNsb3VkLmNsb3Vkc2VjdXJpdHljb21wbGlhbmNlLnYxLkNyZWF0ZUZyYW1l",
+            "d29ya0RlcGxveW1lbnRSZXF1ZXN0Gh0uZ29vZ2xlLmxvbmdydW5uaW5nLk9w",
+            "ZXJhdGlvbiLkAcpBUAoTRnJhbWV3b3JrRGVwbG95bWVudBI5Z29vZ2xlLmNs",
+            "b3VkLmNsb3Vkc2VjdXJpdHljb21wbGlhbmNlLnYxLk9wZXJhdGlvbk1ldGFk",
+            "YXRh2kEzcGFyZW50LGZyYW1ld29ya19kZXBsb3ltZW50LGZyYW1ld29ya19k",
+            "ZXBsb3ltZW50X2lkgtPkkwJVIj0vdjEve3BhcmVudD1vcmdhbml6YXRpb25z",
+            "LyovbG9jYXRpb25zLyp9L2ZyYW1ld29ya0RlcGxveW1lbnRzOhRmcmFtZXdv",
+            "cmtfZGVwbG95bWVudBKpAgoZRGVsZXRlRnJhbWV3b3JrRGVwbG95bWVudBJJ",
+            "Lmdvb2dsZS5jbG91ZC5jbG91ZHNlY3VyaXR5Y29tcGxpYW5jZS52MS5EZWxl",
+            "dGVGcmFtZXdvcmtEZXBsb3ltZW50UmVxdWVzdBodLmdvb2dsZS5sb25ncnVu",
+            "bmluZy5PcGVyYXRpb24ioQHKQVIKFWdvb2dsZS5wcm90b2J1Zi5FbXB0eRI5",
+            "Z29vZ2xlLmNsb3VkLmNsb3Vkc2VjdXJpdHljb21wbGlhbmNlLnYxLk9wZXJh",
+            "dGlvbk1ldGFkYXRh2kEEbmFtZYLT5JMCPyo9L3YxL3tuYW1lPW9yZ2FuaXph",
+            "dGlvbnMvKi9sb2NhdGlvbnMvKi9mcmFtZXdvcmtEZXBsb3ltZW50cy8qfRLs",
+            "AQoWR2V0RnJhbWV3b3JrRGVwbG95bWVudBJGLmdvb2dsZS5jbG91ZC5jbG91",
+            "ZHNlY3VyaXR5Y29tcGxpYW5jZS52MS5HZXRGcmFtZXdvcmtEZXBsb3ltZW50",
+            "UmVxdWVzdBo8Lmdvb2dsZS5jbG91ZC5jbG91ZHNlY3VyaXR5Y29tcGxpYW5j",
+            "ZS52MS5GcmFtZXdvcmtEZXBsb3ltZW50IkzaQQRuYW1lgtPkkwI/Ej0vdjEv",
+            "e25hbWU9b3JnYW5pemF0aW9ucy8qL2xvY2F0aW9ucy8qL2ZyYW1ld29ya0Rl",
+            "cGxveW1lbnRzLyp9Ev8BChhMaXN0RnJhbWV3b3JrRGVwbG95bWVudHMSSC5n",
+            "b29nbGUuY2xvdWQuY2xvdWRzZWN1cml0eWNvbXBsaWFuY2UudjEuTGlzdEZy",
+            "YW1ld29ya0RlcGxveW1lbnRzUmVxdWVzdBpJLmdvb2dsZS5jbG91ZC5jbG91",
+            "ZHNlY3VyaXR5Y29tcGxpYW5jZS52MS5MaXN0RnJhbWV3b3JrRGVwbG95bWVu",
+            "dHNSZXNwb25zZSJO2kEGcGFyZW50gtPkkwI/Ej0vdjEve3BhcmVudD1vcmdh",
+            "bml6YXRpb25zLyovbG9jYXRpb25zLyp9L2ZyYW1ld29ya0RlcGxveW1lbnRz",
+            "EvgBChlHZXRDbG91ZENvbnRyb2xEZXBsb3ltZW50EkkuZ29vZ2xlLmNsb3Vk",
+            "LmNsb3Vkc2VjdXJpdHljb21wbGlhbmNlLnYxLkdldENsb3VkQ29udHJvbERl",
+            "cGxveW1lbnRSZXF1ZXN0Gj8uZ29vZ2xlLmNsb3VkLmNsb3Vkc2VjdXJpdHlj",
+            "b21wbGlhbmNlLnYxLkNsb3VkQ29udHJvbERlcGxveW1lbnQiT9pBBG5hbWWC",
+            "0+STAkISQC92MS97bmFtZT1vcmdhbml6YXRpb25zLyovbG9jYXRpb25zLyov",
+            "Y2xvdWRDb250cm9sRGVwbG95bWVudHMvKn0SiwIKG0xpc3RDbG91ZENvbnRy",
+            "b2xEZXBsb3ltZW50cxJLLmdvb2dsZS5jbG91ZC5jbG91ZHNlY3VyaXR5Y29t",
+            "cGxpYW5jZS52MS5MaXN0Q2xvdWRDb250cm9sRGVwbG95bWVudHNSZXF1ZXN0",
+            "GkwuZ29vZ2xlLmNsb3VkLmNsb3Vkc2VjdXJpdHljb21wbGlhbmNlLnYxLkxp",
+            "c3RDbG91ZENvbnRyb2xEZXBsb3ltZW50c1Jlc3BvbnNlIlHaQQZwYXJlbnSC",
+            "0+STAkISQC92MS97cGFyZW50PW9yZ2FuaXphdGlvbnMvKi9sb2NhdGlvbnMv",
+            "Kn0vY2xvdWRDb250cm9sRGVwbG95bWVudHMaWspBJmNsb3Vkc2VjdXJpdHlj",
+            "b21wbGlhbmNlLmdvb2dsZWFwaXMuY29t0kEuaHR0cHM6Ly93d3cuZ29vZ2xl",
+            "YXBpcy5jb20vYXV0aC9jbG91ZC1wbGF0Zm9ybUKoAgorY29tLmdvb2dsZS5j",
+            "bG91ZC5jbG91ZHNlY3VyaXR5Y29tcGxpYW5jZS52MUIPRGVwbG95bWVudFBy",
+            "b3RvUAFaZWNsb3VkLmdvb2dsZS5jb20vZ28vY2xvdWRzZWN1cml0eWNvbXBs",
+            "aWFuY2UvYXBpdjEvY2xvdWRzZWN1cml0eWNvbXBsaWFuY2VwYjtjbG91ZHNl",
+            "Y3VyaXR5Y29tcGxpYW5jZXBiqgInR29vZ2xlLkNsb3VkLkNsb3VkU2VjdXJp",
+            "dHlDb21wbGlhbmNlLlYxygInR29vZ2xlXENsb3VkXENsb3VkU2VjdXJpdHlD",
+            "b21wbGlhbmNlXFYx6gIqR29vZ2xlOjpDbG91ZDo6Q2xvdWRTZWN1cml0eUNv",
+            "bXBsaWFuY2U6OlYxYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Api.ClientReflection.Descriptor, global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Cloud.CloudSecurityCompliance.V1.CommonReflection.Descriptor, global::Google.LongRunning.OperationsReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.EmptyReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(new[] {typeof(global::Google.Cloud.CloudSecurityCompliance.V1.DeploymentState), }, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.CloudSecurityCompliance.V1.FrameworkDeployment), global::Google.Cloud.CloudSecurityCompliance.V1.FrameworkDeployment.Parser, new[]{ "Name", "TargetResourceConfig", "ComputedTargetResource", "Framework", "Description", "CloudControlMetadata", "DeploymentState", "CcDeployments", "CreateTime", "UpdateTime", "Etag", "CcGroupDeployments", "TargetResourceDisplayName", "CloudControlDeploymentReferences" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.CloudSecurityCompliance.V1.FrameworkDeployment), global::Google.Cloud.CloudSecurityCompliance.V1.FrameworkDeployment.Parser, new[]{ "Name", "TargetResourceConfig", "ComputedTargetResource", "Framework", "Description", "CloudControlMetadata", "DeploymentState", "CreateTime", "UpdateTime", "Etag", "TargetResourceDisplayName", "CloudControlDeploymentReferences" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.CloudSecurityCompliance.V1.CloudControlDeployment), global::Google.Cloud.CloudSecurityCompliance.V1.CloudControlDeployment.Parser, new[]{ "Name", "TargetResourceConfig", "TargetResource", "CloudControlMetadata", "Description", "DeploymentState", "CreateTime", "UpdateTime", "Etag", "ParameterSubstitutedCloudControl", "FrameworkDeploymentReferences", "TargetResourceDisplayName" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.CloudSecurityCompliance.V1.TargetResourceConfig), global::Google.Cloud.CloudSecurityCompliance.V1.TargetResourceConfig.Parser, new[]{ "ExistingTargetResource", "TargetResourceCreationConfig" }, new[]{ "ResourceConfig" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.CloudSecurityCompliance.V1.TargetResourceCreationConfig), global::Google.Cloud.CloudSecurityCompliance.V1.TargetResourceCreationConfig.Parser, new[]{ "FolderCreationConfig", "ProjectCreationConfig" }, new[]{ "ResourceCreationConfig" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.CloudSecurityCompliance.V1.FolderCreationConfig), global::Google.Cloud.CloudSecurityCompliance.V1.FolderCreationConfig.Parser, new[]{ "Parent", "FolderDisplayName" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.CloudSecurityCompliance.V1.ProjectCreationConfig), global::Google.Cloud.CloudSecurityCompliance.V1.ProjectCreationConfig.Parser, new[]{ "Parent", "ProjectDisplayName", "BillingAccountId" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.CloudSecurityCompliance.V1.CloudControlMetadata), global::Google.Cloud.CloudSecurityCompliance.V1.CloudControlMetadata.Parser, new[]{ "CloudControlDetails", "EnforcementMode" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.CloudSecurityCompliance.V1.CloudControlGroupDeployment), global::Google.Cloud.CloudSecurityCompliance.V1.CloudControlGroupDeployment.Parser, new[]{ "CloudControlGroup", "CcDeployments", "CcDeploymentReferences" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.CloudSecurityCompliance.V1.CreateFrameworkDeploymentRequest), global::Google.Cloud.CloudSecurityCompliance.V1.CreateFrameworkDeploymentRequest.Parser, new[]{ "Parent", "FrameworkDeploymentId", "FrameworkDeployment" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.CloudSecurityCompliance.V1.DeleteFrameworkDeploymentRequest), global::Google.Cloud.CloudSecurityCompliance.V1.DeleteFrameworkDeploymentRequest.Parser, new[]{ "Name", "Etag" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.CloudSecurityCompliance.V1.GetFrameworkDeploymentRequest), global::Google.Cloud.CloudSecurityCompliance.V1.GetFrameworkDeploymentRequest.Parser, new[]{ "Name" }, null, null, null, null),
@@ -228,6 +215,9 @@ namespace Google.Cloud.CloudSecurityCompliance.V1 {
 
   }
   #region Enums
+  /// <summary>
+  /// DeploymentState represents the state of the Deployment resource.
+  /// </summary>
   public enum DeploymentState {
     /// <summary>
     /// Unspecified. Invalid state.
@@ -246,19 +236,25 @@ namespace Google.Cloud.CloudSecurityCompliance.V1 {
     /// </summary>
     [pbr::OriginalName("DEPLOYMENT_STATE_DELETING")] Deleting = 3,
     /// <summary>
-    /// Deployment has failed.
+    /// Deployment has failed. All the changes made by the deployment have been
+    /// successfully rolled back. A deployment in the FAILED state can be retried
+    /// or deleted.
     /// </summary>
     [pbr::OriginalName("DEPLOYMENT_STATE_FAILED")] Failed = 4,
     /// <summary>
-    /// Deployment is ready.
+    /// Deployment is successful and ready to use.
     /// </summary>
     [pbr::OriginalName("DEPLOYMENT_STATE_READY")] Ready = 5,
     /// <summary>
-    /// Deployment is partially deployed.
+    /// Deployment is partially deployed. All the Cloud Controls were not deployed
+    /// successfully. Retrying the operation will resume from the first failed
+    /// step.
     /// </summary>
     [pbr::OriginalName("DEPLOYMENT_STATE_PARTIALLY_DEPLOYED")] PartiallyDeployed = 6,
     /// <summary>
-    /// Deployment is partially deleted.
+    /// Deployment is partially deleted. All the Cloud Control Deployments were not
+    /// deleted successfully. Retrying the operation will resume from the first
+    /// failed step.
     /// </summary>
     [pbr::OriginalName("DEPLOYMENT_STATE_PARTIALLY_DELETED")] PartiallyDeleted = 7,
   }
@@ -267,8 +263,9 @@ namespace Google.Cloud.CloudSecurityCompliance.V1 {
 
   #region Messages
   /// <summary>
-  /// FrameworkDeployment is a resource that represents a deployment using a
-  /// framework.
+  /// FrameworkDeployment represents deployment of a Framework on a target
+  /// resource. Supported target resources are organizations/{organization},
+  /// folders/{folder}, and projects/{project}.
   /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class FrameworkDeployment : pb::IMessage<FrameworkDeployment>
@@ -312,11 +309,9 @@ namespace Google.Cloud.CloudSecurityCompliance.V1 {
       description_ = other.description_;
       cloudControlMetadata_ = other.cloudControlMetadata_.Clone();
       deploymentState_ = other.deploymentState_;
-      ccDeployments_ = other.ccDeployments_.Clone();
       createTime_ = other.createTime_ != null ? other.createTime_.Clone() : null;
       updateTime_ = other.updateTime_ != null ? other.updateTime_.Clone() : null;
       etag_ = other.etag_;
-      ccGroupDeployments_ = other.ccGroupDeployments_.Clone();
       targetResourceDisplayName_ = other.targetResourceDisplayName_;
       cloudControlDeploymentReferences_ = other.cloudControlDeploymentReferences_.Clone();
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
@@ -332,7 +327,7 @@ namespace Google.Cloud.CloudSecurityCompliance.V1 {
     public const int NameFieldNumber = 1;
     private string name_ = "";
     /// <summary>
-    /// Identifier. FrameworkDeployment name in either of the following formats:
+    /// Identifier. FrameworkDeployment name in the following format:
     /// organizations/{organization}/locations/{location}/frameworkDeployments/{framework_deployment_id}
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -348,8 +343,9 @@ namespace Google.Cloud.CloudSecurityCompliance.V1 {
     public const int TargetResourceConfigFieldNumber = 2;
     private global::Google.Cloud.CloudSecurityCompliance.V1.TargetResourceConfig targetResourceConfig_;
     /// <summary>
-    /// Required. target_resource_config referencing either an already existing
-    /// target_resource or contains config for a target_resource to be created
+    /// Required. The details of the target resource on which the Framework is to
+    /// be deployed. It can either be an existing target resource or a new target
+    /// resource to be created.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -365,9 +361,8 @@ namespace Google.Cloud.CloudSecurityCompliance.V1 {
     private string computedTargetResource_ = "";
     /// <summary>
     /// Output only. The resource on which the Framework is deployed based on the
-    /// provided TargetResourceConfig. In format organizations/{organization},
-    /// folders/{folder}, projects/{project} or
-    /// projects/{project}/locations/{location}/applications/{application}.
+    /// provided TargetResourceConfig in the following format:
+    /// organizations/{organization}, folders/{folder} or projects/{project}
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -382,7 +377,7 @@ namespace Google.Cloud.CloudSecurityCompliance.V1 {
     public const int FrameworkFieldNumber = 4;
     private global::Google.Cloud.CloudSecurityCompliance.V1.FrameworkReference framework_;
     /// <summary>
-    /// Required. Framework resource reference
+    /// Required. Reference to the framework to be deployed.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -397,7 +392,7 @@ namespace Google.Cloud.CloudSecurityCompliance.V1 {
     public const int DescriptionFieldNumber = 5;
     private string description_ = "";
     /// <summary>
-    /// Optional. User provided description of the deployment
+    /// Optional. User provided description of the Framework deployment
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -414,8 +409,9 @@ namespace Google.Cloud.CloudSecurityCompliance.V1 {
         = pb::FieldCodec.ForMessage(50, global::Google.Cloud.CloudSecurityCompliance.V1.CloudControlMetadata.Parser);
     private readonly pbc::RepeatedField<global::Google.Cloud.CloudSecurityCompliance.V1.CloudControlMetadata> cloudControlMetadata_ = new pbc::RepeatedField<global::Google.Cloud.CloudSecurityCompliance.V1.CloudControlMetadata>();
     /// <summary>
-    /// Required. Deployment mode and parameters for each of the cloud_controls
-    /// part of the framework.
+    /// Required. Deployment mode and parameters for each of the Cloud Controls in
+    /// the framework. Every Cloud Control in the framework must have a
+    /// CloudControlMetadata.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -427,7 +423,7 @@ namespace Google.Cloud.CloudSecurityCompliance.V1 {
     public const int DeploymentStateFieldNumber = 7;
     private global::Google.Cloud.CloudSecurityCompliance.V1.DeploymentState deploymentState_ = global::Google.Cloud.CloudSecurityCompliance.V1.DeploymentState.Unspecified;
     /// <summary>
-    /// Output only. State of the deployment
+    /// Output only. State of the Framework Deployment
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -436,24 +432,6 @@ namespace Google.Cloud.CloudSecurityCompliance.V1 {
       set {
         deploymentState_ = value;
       }
-    }
-
-    /// <summary>Field number for the "cc_deployments" field.</summary>
-    public const int CcDeploymentsFieldNumber = 8;
-    private static readonly pb::FieldCodec<global::Google.Cloud.CloudSecurityCompliance.V1.CloudControlDeployment> _repeated_ccDeployments_codec
-        = pb::FieldCodec.ForMessage(66, global::Google.Cloud.CloudSecurityCompliance.V1.CloudControlDeployment.Parser);
-    private readonly pbc::RepeatedField<global::Google.Cloud.CloudSecurityCompliance.V1.CloudControlDeployment> ccDeployments_ = new pbc::RepeatedField<global::Google.Cloud.CloudSecurityCompliance.V1.CloudControlDeployment>();
-    /// <summary>
-    /// Output only. This field is inlined just for cloudNext because the one
-    /// platform apis of CCDeployment does not exist. Beyond cloud
-    /// next it will be replaced with the field below which is the
-    /// references of cloud control deployment
-    /// </summary>
-    [global::System.ObsoleteAttribute]
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public pbc::RepeatedField<global::Google.Cloud.CloudSecurityCompliance.V1.CloudControlDeployment> CcDeployments {
-      get { return ccDeployments_; }
     }
 
     /// <summary>Field number for the "create_time" field.</summary>
@@ -491,10 +469,10 @@ namespace Google.Cloud.CloudSecurityCompliance.V1 {
     private string etag_ = "";
     /// <summary>
     /// Optional. To prevent concurrent updates from overwriting each other, always
-    /// provide the `etag` when you update a CustomComplianceFramework. You can
-    /// also provide the `etag` when you delete a CustomComplianceFramework, to
-    /// help ensure that you're deleting the intended version of the
-    /// CustomComplianceFramework.
+    /// provide the `etag` when you update a FrameworkDeployment. You can also
+    /// provide the `etag` when you delete a FrameworkDeployment, to help
+    /// ensure that you're deleting the intended version of the
+    /// FrameworkDeployment.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -503,20 +481,6 @@ namespace Google.Cloud.CloudSecurityCompliance.V1 {
       set {
         etag_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
       }
-    }
-
-    /// <summary>Field number for the "cc_group_deployments" field.</summary>
-    public const int CcGroupDeploymentsFieldNumber = 12;
-    private static readonly pb::FieldCodec<global::Google.Cloud.CloudSecurityCompliance.V1.CloudControlGroupDeployment> _repeated_ccGroupDeployments_codec
-        = pb::FieldCodec.ForMessage(98, global::Google.Cloud.CloudSecurityCompliance.V1.CloudControlGroupDeployment.Parser);
-    private readonly pbc::RepeatedField<global::Google.Cloud.CloudSecurityCompliance.V1.CloudControlGroupDeployment> ccGroupDeployments_ = new pbc::RepeatedField<global::Google.Cloud.CloudSecurityCompliance.V1.CloudControlGroupDeployment>();
-    /// <summary>
-    /// Output only. Similarly we'll also have a field for CloudControlGroups
-    /// </summary>
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public pbc::RepeatedField<global::Google.Cloud.CloudSecurityCompliance.V1.CloudControlGroupDeployment> CcGroupDeployments {
-      get { return ccGroupDeployments_; }
     }
 
     /// <summary>Field number for the "target_resource_display_name" field.</summary>
@@ -540,10 +504,11 @@ namespace Google.Cloud.CloudSecurityCompliance.V1 {
         = pb::FieldCodec.ForMessage(114, global::Google.Cloud.CloudSecurityCompliance.V1.CloudControlDeploymentReference.Parser);
     private readonly pbc::RepeatedField<global::Google.Cloud.CloudSecurityCompliance.V1.CloudControlDeploymentReference> cloudControlDeploymentReferences_ = new pbc::RepeatedField<global::Google.Cloud.CloudSecurityCompliance.V1.CloudControlDeploymentReference>();
     /// <summary>
-    /// Output only. The references to the cloud control deployments.
-    /// Example: If a framework deployment deploys two cloud controls,
-    /// cc-deployment-1 and cc-deployment-2, then the
-    /// cloud_control_deployment_references will be:
+    /// Output only. The references to the cloud control deployments. It has all
+    /// the CloudControlDeployments which are either directly added in the
+    /// framework or through a CloudControlGroup. Example: If a framework
+    /// deployment deploys two cloud controls, cc-deployment-1 and cc-deployment-2,
+    /// then the cloud_control_deployment_references will be:
     /// {
     ///  cloud_control_deployment_reference: {
     ///    cloud_control_deployment:
@@ -582,11 +547,9 @@ namespace Google.Cloud.CloudSecurityCompliance.V1 {
       if (Description != other.Description) return false;
       if(!cloudControlMetadata_.Equals(other.cloudControlMetadata_)) return false;
       if (DeploymentState != other.DeploymentState) return false;
-      if(!ccDeployments_.Equals(other.ccDeployments_)) return false;
       if (!object.Equals(CreateTime, other.CreateTime)) return false;
       if (!object.Equals(UpdateTime, other.UpdateTime)) return false;
       if (Etag != other.Etag) return false;
-      if(!ccGroupDeployments_.Equals(other.ccGroupDeployments_)) return false;
       if (TargetResourceDisplayName != other.TargetResourceDisplayName) return false;
       if(!cloudControlDeploymentReferences_.Equals(other.cloudControlDeploymentReferences_)) return false;
       return Equals(_unknownFields, other._unknownFields);
@@ -603,11 +566,9 @@ namespace Google.Cloud.CloudSecurityCompliance.V1 {
       if (Description.Length != 0) hash ^= Description.GetHashCode();
       hash ^= cloudControlMetadata_.GetHashCode();
       if (DeploymentState != global::Google.Cloud.CloudSecurityCompliance.V1.DeploymentState.Unspecified) hash ^= DeploymentState.GetHashCode();
-      hash ^= ccDeployments_.GetHashCode();
       if (createTime_ != null) hash ^= CreateTime.GetHashCode();
       if (updateTime_ != null) hash ^= UpdateTime.GetHashCode();
       if (Etag.Length != 0) hash ^= Etag.GetHashCode();
-      hash ^= ccGroupDeployments_.GetHashCode();
       if (TargetResourceDisplayName.Length != 0) hash ^= TargetResourceDisplayName.GetHashCode();
       hash ^= cloudControlDeploymentReferences_.GetHashCode();
       if (_unknownFields != null) {
@@ -653,7 +614,6 @@ namespace Google.Cloud.CloudSecurityCompliance.V1 {
         output.WriteRawTag(56);
         output.WriteEnum((int) DeploymentState);
       }
-      ccDeployments_.WriteTo(output, _repeated_ccDeployments_codec);
       if (createTime_ != null) {
         output.WriteRawTag(74);
         output.WriteMessage(CreateTime);
@@ -666,7 +626,6 @@ namespace Google.Cloud.CloudSecurityCompliance.V1 {
         output.WriteRawTag(90);
         output.WriteString(Etag);
       }
-      ccGroupDeployments_.WriteTo(output, _repeated_ccGroupDeployments_codec);
       if (TargetResourceDisplayName.Length != 0) {
         output.WriteRawTag(106);
         output.WriteString(TargetResourceDisplayName);
@@ -707,7 +666,6 @@ namespace Google.Cloud.CloudSecurityCompliance.V1 {
         output.WriteRawTag(56);
         output.WriteEnum((int) DeploymentState);
       }
-      ccDeployments_.WriteTo(ref output, _repeated_ccDeployments_codec);
       if (createTime_ != null) {
         output.WriteRawTag(74);
         output.WriteMessage(CreateTime);
@@ -720,7 +678,6 @@ namespace Google.Cloud.CloudSecurityCompliance.V1 {
         output.WriteRawTag(90);
         output.WriteString(Etag);
       }
-      ccGroupDeployments_.WriteTo(ref output, _repeated_ccGroupDeployments_codec);
       if (TargetResourceDisplayName.Length != 0) {
         output.WriteRawTag(106);
         output.WriteString(TargetResourceDisplayName);
@@ -755,7 +712,6 @@ namespace Google.Cloud.CloudSecurityCompliance.V1 {
       if (DeploymentState != global::Google.Cloud.CloudSecurityCompliance.V1.DeploymentState.Unspecified) {
         size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) DeploymentState);
       }
-      size += ccDeployments_.CalculateSize(_repeated_ccDeployments_codec);
       if (createTime_ != null) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(CreateTime);
       }
@@ -765,7 +721,6 @@ namespace Google.Cloud.CloudSecurityCompliance.V1 {
       if (Etag.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(Etag);
       }
-      size += ccGroupDeployments_.CalculateSize(_repeated_ccGroupDeployments_codec);
       if (TargetResourceDisplayName.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(TargetResourceDisplayName);
       }
@@ -807,7 +762,6 @@ namespace Google.Cloud.CloudSecurityCompliance.V1 {
       if (other.DeploymentState != global::Google.Cloud.CloudSecurityCompliance.V1.DeploymentState.Unspecified) {
         DeploymentState = other.DeploymentState;
       }
-      ccDeployments_.Add(other.ccDeployments_);
       if (other.createTime_ != null) {
         if (createTime_ == null) {
           CreateTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
@@ -823,7 +777,6 @@ namespace Google.Cloud.CloudSecurityCompliance.V1 {
       if (other.Etag.Length != 0) {
         Etag = other.Etag;
       }
-      ccGroupDeployments_.Add(other.ccGroupDeployments_);
       if (other.TargetResourceDisplayName.Length != 0) {
         TargetResourceDisplayName = other.TargetResourceDisplayName;
       }
@@ -877,10 +830,6 @@ namespace Google.Cloud.CloudSecurityCompliance.V1 {
             DeploymentState = (global::Google.Cloud.CloudSecurityCompliance.V1.DeploymentState) input.ReadEnum();
             break;
           }
-          case 66: {
-            ccDeployments_.AddEntriesFrom(input, _repeated_ccDeployments_codec);
-            break;
-          }
           case 74: {
             if (createTime_ == null) {
               CreateTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
@@ -897,10 +846,6 @@ namespace Google.Cloud.CloudSecurityCompliance.V1 {
           }
           case 90: {
             Etag = input.ReadString();
-            break;
-          }
-          case 98: {
-            ccGroupDeployments_.AddEntriesFrom(input, _repeated_ccGroupDeployments_codec);
             break;
           }
           case 106: {
@@ -960,10 +905,6 @@ namespace Google.Cloud.CloudSecurityCompliance.V1 {
             DeploymentState = (global::Google.Cloud.CloudSecurityCompliance.V1.DeploymentState) input.ReadEnum();
             break;
           }
-          case 66: {
-            ccDeployments_.AddEntriesFrom(ref input, _repeated_ccDeployments_codec);
-            break;
-          }
           case 74: {
             if (createTime_ == null) {
               CreateTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
@@ -982,10 +923,6 @@ namespace Google.Cloud.CloudSecurityCompliance.V1 {
             Etag = input.ReadString();
             break;
           }
-          case 98: {
-            ccGroupDeployments_.AddEntriesFrom(ref input, _repeated_ccGroupDeployments_codec);
-            break;
-          }
           case 106: {
             TargetResourceDisplayName = input.ReadString();
             break;
@@ -1002,8 +939,9 @@ namespace Google.Cloud.CloudSecurityCompliance.V1 {
   }
 
   /// <summary>
-  /// CloudControlDeployment is a resource that represents a deployment using a
-  /// cloud control.
+  /// CloudControlDeployment represents deployment of a CloudControl on a target
+  /// resource. Supported target resources are organizations/{organization},
+  /// folders/{folder}, and projects/{project}.
   /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class CloudControlDeployment : pb::IMessage<CloudControlDeployment>
@@ -1065,7 +1003,7 @@ namespace Google.Cloud.CloudSecurityCompliance.V1 {
     public const int NameFieldNumber = 1;
     private string name_ = "";
     /// <summary>
-    /// Identifier. CloudControlDeployment name in either of the following formats:
+    /// Identifier. CloudControlDeployment name in the following format:
     /// organizations/{organization}/locations/{location}/cloudControlDeployments/{cloud_control_deployment_id}
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1081,8 +1019,9 @@ namespace Google.Cloud.CloudSecurityCompliance.V1 {
     public const int TargetResourceConfigFieldNumber = 2;
     private global::Google.Cloud.CloudSecurityCompliance.V1.TargetResourceConfig targetResourceConfig_;
     /// <summary>
-    /// Required. target_resource_config referencing either an already existing
-    /// target_resource or contains config for a target_resource to be created
+    /// Required. The details of the target resource on which the CloudControl is
+    /// to be deployed. It can either be an existing target resource or a new
+    /// target resource to be created.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -1098,8 +1037,8 @@ namespace Google.Cloud.CloudSecurityCompliance.V1 {
     private string targetResource_ = "";
     /// <summary>
     /// Output only. The resource on which the CloudControl is deployed based on
-    /// the provided TargetResourceConfig. In format organizations/{organization},
-    /// folders/{folder} or projects/{project}.
+    /// the provided TargetResourceConfig in the following format:
+    /// organizations/{organization}, folders/{folder} or projects/{project}.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -1114,8 +1053,7 @@ namespace Google.Cloud.CloudSecurityCompliance.V1 {
     public const int CloudControlMetadataFieldNumber = 4;
     private global::Google.Cloud.CloudSecurityCompliance.V1.CloudControlMetadata cloudControlMetadata_;
     /// <summary>
-    /// Required. CloudControlReference, Deployment mode and parameters for the
-    /// cloud_control
+    /// Required. Deployment mode and parameters for the Cloud Control.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -1130,7 +1068,7 @@ namespace Google.Cloud.CloudSecurityCompliance.V1 {
     public const int DescriptionFieldNumber = 5;
     private string description_ = "";
     /// <summary>
-    /// Optional. User provided description of the deployment
+    /// Optional. User provided description of the CloudControl deployment
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -1145,7 +1083,7 @@ namespace Google.Cloud.CloudSecurityCompliance.V1 {
     public const int DeploymentStateFieldNumber = 6;
     private global::Google.Cloud.CloudSecurityCompliance.V1.DeploymentState deploymentState_ = global::Google.Cloud.CloudSecurityCompliance.V1.DeploymentState.Unspecified;
     /// <summary>
-    /// Output only. State of the deployment
+    /// Output only. State of the CloudControl deployment
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -1191,10 +1129,10 @@ namespace Google.Cloud.CloudSecurityCompliance.V1 {
     private string etag_ = "";
     /// <summary>
     /// Optional. To prevent concurrent updates from overwriting each other, always
-    /// provide the `etag` when you update a CustomComplianceCloudControl. You can
-    /// also provide the `etag` when you delete a CustomComplianceCloudControl, to
-    /// help ensure that you're deleting the intended version of the
-    /// CustomComplianceCloudControl.
+    /// provide the `etag` when you update a CloudControlDeployment. You can also
+    /// provide the `etag` when you delete a CloudControlDeployment, to help
+    /// ensure that you're deleting the intended version of the
+    /// CloudControlDeployment.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -1209,7 +1147,7 @@ namespace Google.Cloud.CloudSecurityCompliance.V1 {
     public const int ParameterSubstitutedCloudControlFieldNumber = 10;
     private global::Google.Cloud.CloudSecurityCompliance.V1.CloudControl parameterSubstitutedCloudControl_;
     /// <summary>
-    /// Output only. The cloud control after parameter substitution.
+    /// Output only. The CloudControl after substitution of given parameters.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -1226,8 +1164,9 @@ namespace Google.Cloud.CloudSecurityCompliance.V1 {
         = pb::FieldCodec.ForMessage(90, global::Google.Cloud.CloudSecurityCompliance.V1.FrameworkDeploymentReference.Parser);
     private readonly pbc::RepeatedField<global::Google.Cloud.CloudSecurityCompliance.V1.FrameworkDeploymentReference> frameworkDeploymentReferences_ = new pbc::RepeatedField<global::Google.Cloud.CloudSecurityCompliance.V1.FrameworkDeploymentReference>();
     /// <summary>
-    /// Output only. The references to the framework deployments that this cloud
-    /// control deployment is part of.
+    /// Output only. The references to the Framework deployments that this Cloud
+    /// Control deployment is part of. A Cloud Control deployment can be part of
+    /// multiple Framework deployments.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -1239,8 +1178,7 @@ namespace Google.Cloud.CloudSecurityCompliance.V1 {
     public const int TargetResourceDisplayNameFieldNumber = 12;
     private string targetResourceDisplayName_ = "";
     /// <summary>
-    /// Output only. The name of the application, project, folder, or organization
-    /// that the cloud control is deployed on.
+    /// Output only. The display name of the target resource.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -1744,8 +1682,7 @@ namespace Google.Cloud.CloudSecurityCompliance.V1 {
     public const int ExistingTargetResourceFieldNumber = 1;
     /// <summary>
     /// Optional. CRM node in format organizations/{organization},
-    /// folders/{folder}, projects/{project} or
-    /// projects/{project}/locations/{location}/applications/{application}.
+    /// folders/{folder}, or projects/{project}
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -1775,7 +1712,7 @@ namespace Google.Cloud.CloudSecurityCompliance.V1 {
     public const int TargetResourceCreationConfigFieldNumber = 2;
     /// <summary>
     /// Optional. Config to create a new resource and use that as the
-    /// target_resource for deployment
+    /// target_resource for deployment.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -1984,8 +1921,8 @@ namespace Google.Cloud.CloudSecurityCompliance.V1 {
   }
 
   /// <summary>
-  /// TargetResourceCreationConfig contains the config to create a new resource
-  /// and use that as the target_resource for deployment.
+  /// TargetResourceCreationConfig contains the config to create a new resource to
+  /// be used as the target_resource of a deployment.
   /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class TargetResourceCreationConfig : pb::IMessage<TargetResourceCreationConfig>
@@ -2043,7 +1980,8 @@ namespace Google.Cloud.CloudSecurityCompliance.V1 {
     /// <summary>Field number for the "folder_creation_config" field.</summary>
     public const int FolderCreationConfigFieldNumber = 1;
     /// <summary>
-    /// Optional. Config to create a new folder
+    /// Optional. Config to create a new folder to be used as the target_resource
+    /// of a deployment.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -2058,7 +1996,8 @@ namespace Google.Cloud.CloudSecurityCompliance.V1 {
     /// <summary>Field number for the "project_creation_config" field.</summary>
     public const int ProjectCreationConfigFieldNumber = 2;
     /// <summary>
-    /// Optional. Config to create a new project
+    /// Optional. Config to create a new project to be used as the
+    /// target_resource of a deployment.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -2280,7 +2219,8 @@ namespace Google.Cloud.CloudSecurityCompliance.V1 {
   }
 
   /// <summary>
-  /// FolderCreationConfig contains the config to create a new folder.
+  /// FolderCreationConfig contains the config to create a new folder to be used
+  /// as the target_resource of a deployment.
   /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class FolderCreationConfig : pb::IMessage<FolderCreationConfig>
@@ -2332,7 +2272,8 @@ namespace Google.Cloud.CloudSecurityCompliance.V1 {
     public const int ParentFieldNumber = 1;
     private string parent_ = "";
     /// <summary>
-    /// Required. organizations/{org} or folders/{folder}
+    /// Required. The parent of the folder to be created. It can be an
+    /// organizations/{org} or folders/{folder}
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -2516,7 +2457,8 @@ namespace Google.Cloud.CloudSecurityCompliance.V1 {
   }
 
   /// <summary>
-  /// ProjectCreationConfig contains the config to create a new project.
+  /// ProjectCreationConfig contains the config to create a new project to be used
+  /// as the target_resource of a deployment.
   /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class ProjectCreationConfig : pb::IMessage<ProjectCreationConfig>
@@ -2584,7 +2526,7 @@ namespace Google.Cloud.CloudSecurityCompliance.V1 {
     public const int ProjectDisplayNameFieldNumber = 2;
     private string projectDisplayName_ = "";
     /// <summary>
-    /// Required. Display name of the project to be created
+    /// Required. Display name of the project to be created.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -2599,7 +2541,7 @@ namespace Google.Cloud.CloudSecurityCompliance.V1 {
     public const int BillingAccountIdFieldNumber = 3;
     private string billingAccountId_ = "";
     /// <summary>
-    /// Required. Billing account id to be used for the project
+    /// Required. Billing account id to be used for the project.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -2792,8 +2734,8 @@ namespace Google.Cloud.CloudSecurityCompliance.V1 {
   }
 
   /// <summary>
-  /// CloudControlMetadata contains the metadata for each of the cloud controls
-  /// part of the framework.
+  /// CloudControlMetadata contains the enforcement mode and parameters of a Cloud
+  /// Control Deployment.
   /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class CloudControlMetadata : pb::IMessage<CloudControlMetadata>
@@ -2845,7 +2787,7 @@ namespace Google.Cloud.CloudSecurityCompliance.V1 {
     public const int CloudControlDetailsFieldNumber = 1;
     private global::Google.Cloud.CloudSecurityCompliance.V1.CloudControlDetails cloudControlDetails_;
     /// <summary>
-    /// Required. Cloud control details
+    /// Required. Cloud control name and parameters.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -3038,287 +2980,7 @@ namespace Google.Cloud.CloudSecurityCompliance.V1 {
   }
 
   /// <summary>
-  /// CloudControlGroupDeployment contains the cloud control group and the cloud
-  /// control deployments in the group.
-  /// </summary>
-  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
-  public sealed partial class CloudControlGroupDeployment : pb::IMessage<CloudControlGroupDeployment>
-  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
-      , pb::IBufferMessage
-  #endif
-  {
-    private static readonly pb::MessageParser<CloudControlGroupDeployment> _parser = new pb::MessageParser<CloudControlGroupDeployment>(() => new CloudControlGroupDeployment());
-    private pb::UnknownFieldSet _unknownFields;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public static pb::MessageParser<CloudControlGroupDeployment> Parser { get { return _parser; } }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.CloudSecurityCompliance.V1.DeploymentReflection.Descriptor.MessageTypes[7]; }
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    pbr::MessageDescriptor pb::IMessage.Descriptor {
-      get { return Descriptor; }
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public CloudControlGroupDeployment() {
-      OnConstruction();
-    }
-
-    partial void OnConstruction();
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public CloudControlGroupDeployment(CloudControlGroupDeployment other) : this() {
-      cloudControlGroup_ = other.cloudControlGroup_ != null ? other.cloudControlGroup_.Clone() : null;
-      ccDeployments_ = other.ccDeployments_.Clone();
-      ccDeploymentReferences_ = other.ccDeploymentReferences_.Clone();
-      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public CloudControlGroupDeployment Clone() {
-      return new CloudControlGroupDeployment(this);
-    }
-
-    /// <summary>Field number for the "cloud_control_group" field.</summary>
-    public const int CloudControlGroupFieldNumber = 1;
-    private global::Google.Cloud.CloudSecurityCompliance.V1.CloudControlGroup cloudControlGroup_;
-    /// <summary>
-    /// Required. Cloud control group
-    /// </summary>
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public global::Google.Cloud.CloudSecurityCompliance.V1.CloudControlGroup CloudControlGroup {
-      get { return cloudControlGroup_; }
-      set {
-        cloudControlGroup_ = value;
-      }
-    }
-
-    /// <summary>Field number for the "cc_deployments" field.</summary>
-    public const int CcDeploymentsFieldNumber = 2;
-    private static readonly pb::FieldCodec<global::Google.Cloud.CloudSecurityCompliance.V1.CloudControlDeployment> _repeated_ccDeployments_codec
-        = pb::FieldCodec.ForMessage(18, global::Google.Cloud.CloudSecurityCompliance.V1.CloudControlDeployment.Parser);
-    private readonly pbc::RepeatedField<global::Google.Cloud.CloudSecurityCompliance.V1.CloudControlDeployment> ccDeployments_ = new pbc::RepeatedField<global::Google.Cloud.CloudSecurityCompliance.V1.CloudControlDeployment>();
-    /// <summary>
-    /// Required. Cloud control deployments in the group
-    /// </summary>
-    [global::System.ObsoleteAttribute]
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public pbc::RepeatedField<global::Google.Cloud.CloudSecurityCompliance.V1.CloudControlDeployment> CcDeployments {
-      get { return ccDeployments_; }
-    }
-
-    /// <summary>Field number for the "cc_deployment_references" field.</summary>
-    public const int CcDeploymentReferencesFieldNumber = 3;
-    private static readonly pb::FieldCodec<global::Google.Cloud.CloudSecurityCompliance.V1.CloudControlDeploymentReference> _repeated_ccDeploymentReferences_codec
-        = pb::FieldCodec.ForMessage(26, global::Google.Cloud.CloudSecurityCompliance.V1.CloudControlDeploymentReference.Parser);
-    private readonly pbc::RepeatedField<global::Google.Cloud.CloudSecurityCompliance.V1.CloudControlDeploymentReference> ccDeploymentReferences_ = new pbc::RepeatedField<global::Google.Cloud.CloudSecurityCompliance.V1.CloudControlDeploymentReference>();
-    /// <summary>
-    /// Output only. The references to the cloud control deployments in the cloud
-    /// control group. For example, if a cloud control group has two cloud
-    /// controls, `cloud-control-1` and `cloud-control-2`, and the cloud control
-    /// deployments for these cloud controls are `cloud-control-deployment-1` and
-    /// `cloud-control-deployment-2` respectively, then the
-    /// references are:
-    /// ```
-    ///  cloud_control_deployment_reference: {
-    ///    cloud_control_deployment:
-    ///    "organizations/{organization}/locations/{location}/cloudControlDeployments/cloud-control-deployment-1"
-    ///  },
-    ///  cloud_control_deployment_reference: {
-    ///   cloud_control_deployment:
-    ///   "organizations/{organization}/locations/{location}/cloudControlDeployments/cloud-control-deployment-2"
-    ///  }
-    /// ```
-    /// </summary>
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public pbc::RepeatedField<global::Google.Cloud.CloudSecurityCompliance.V1.CloudControlDeploymentReference> CcDeploymentReferences {
-      get { return ccDeploymentReferences_; }
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public override bool Equals(object other) {
-      return Equals(other as CloudControlGroupDeployment);
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public bool Equals(CloudControlGroupDeployment other) {
-      if (ReferenceEquals(other, null)) {
-        return false;
-      }
-      if (ReferenceEquals(other, this)) {
-        return true;
-      }
-      if (!object.Equals(CloudControlGroup, other.CloudControlGroup)) return false;
-      if(!ccDeployments_.Equals(other.ccDeployments_)) return false;
-      if(!ccDeploymentReferences_.Equals(other.ccDeploymentReferences_)) return false;
-      return Equals(_unknownFields, other._unknownFields);
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public override int GetHashCode() {
-      int hash = 1;
-      if (cloudControlGroup_ != null) hash ^= CloudControlGroup.GetHashCode();
-      hash ^= ccDeployments_.GetHashCode();
-      hash ^= ccDeploymentReferences_.GetHashCode();
-      if (_unknownFields != null) {
-        hash ^= _unknownFields.GetHashCode();
-      }
-      return hash;
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public override string ToString() {
-      return pb::JsonFormatter.ToDiagnosticString(this);
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public void WriteTo(pb::CodedOutputStream output) {
-    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
-      output.WriteRawMessage(this);
-    #else
-      if (cloudControlGroup_ != null) {
-        output.WriteRawTag(10);
-        output.WriteMessage(CloudControlGroup);
-      }
-      ccDeployments_.WriteTo(output, _repeated_ccDeployments_codec);
-      ccDeploymentReferences_.WriteTo(output, _repeated_ccDeploymentReferences_codec);
-      if (_unknownFields != null) {
-        _unknownFields.WriteTo(output);
-      }
-    #endif
-    }
-
-    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      if (cloudControlGroup_ != null) {
-        output.WriteRawTag(10);
-        output.WriteMessage(CloudControlGroup);
-      }
-      ccDeployments_.WriteTo(ref output, _repeated_ccDeployments_codec);
-      ccDeploymentReferences_.WriteTo(ref output, _repeated_ccDeploymentReferences_codec);
-      if (_unknownFields != null) {
-        _unknownFields.WriteTo(ref output);
-      }
-    }
-    #endif
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public int CalculateSize() {
-      int size = 0;
-      if (cloudControlGroup_ != null) {
-        size += 1 + pb::CodedOutputStream.ComputeMessageSize(CloudControlGroup);
-      }
-      size += ccDeployments_.CalculateSize(_repeated_ccDeployments_codec);
-      size += ccDeploymentReferences_.CalculateSize(_repeated_ccDeploymentReferences_codec);
-      if (_unknownFields != null) {
-        size += _unknownFields.CalculateSize();
-      }
-      return size;
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public void MergeFrom(CloudControlGroupDeployment other) {
-      if (other == null) {
-        return;
-      }
-      if (other.cloudControlGroup_ != null) {
-        if (cloudControlGroup_ == null) {
-          CloudControlGroup = new global::Google.Cloud.CloudSecurityCompliance.V1.CloudControlGroup();
-        }
-        CloudControlGroup.MergeFrom(other.CloudControlGroup);
-      }
-      ccDeployments_.Add(other.ccDeployments_);
-      ccDeploymentReferences_.Add(other.ccDeploymentReferences_);
-      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public void MergeFrom(pb::CodedInputStream input) {
-    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
-      input.ReadRawMessage(this);
-    #else
-      uint tag;
-      while ((tag = input.ReadTag()) != 0) {
-        switch(tag) {
-          default:
-            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
-            break;
-          case 10: {
-            if (cloudControlGroup_ == null) {
-              CloudControlGroup = new global::Google.Cloud.CloudSecurityCompliance.V1.CloudControlGroup();
-            }
-            input.ReadMessage(CloudControlGroup);
-            break;
-          }
-          case 18: {
-            ccDeployments_.AddEntriesFrom(input, _repeated_ccDeployments_codec);
-            break;
-          }
-          case 26: {
-            ccDeploymentReferences_.AddEntriesFrom(input, _repeated_ccDeploymentReferences_codec);
-            break;
-          }
-        }
-      }
-    #endif
-    }
-
-    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
-      uint tag;
-      while ((tag = input.ReadTag()) != 0) {
-        switch(tag) {
-          default:
-            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
-            break;
-          case 10: {
-            if (cloudControlGroup_ == null) {
-              CloudControlGroup = new global::Google.Cloud.CloudSecurityCompliance.V1.CloudControlGroup();
-            }
-            input.ReadMessage(CloudControlGroup);
-            break;
-          }
-          case 18: {
-            ccDeployments_.AddEntriesFrom(ref input, _repeated_ccDeployments_codec);
-            break;
-          }
-          case 26: {
-            ccDeploymentReferences_.AddEntriesFrom(ref input, _repeated_ccDeploymentReferences_codec);
-            break;
-          }
-        }
-      }
-    }
-    #endif
-
-  }
-
-  /// <summary>
-  /// Request message for CreateFrameworkDeployment.
+  /// Request message for CreateFrameworkDeployment API.
   /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class CreateFrameworkDeploymentRequest : pb::IMessage<CreateFrameworkDeploymentRequest>
@@ -3335,7 +2997,7 @@ namespace Google.Cloud.CloudSecurityCompliance.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.CloudSecurityCompliance.V1.DeploymentReflection.Descriptor.MessageTypes[8]; }
+      get { return global::Google.Cloud.CloudSecurityCompliance.V1.DeploymentReflection.Descriptor.MessageTypes[7]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -3371,7 +3033,7 @@ namespace Google.Cloud.CloudSecurityCompliance.V1 {
     public const int ParentFieldNumber = 1;
     private string parent_ = "";
     /// <summary>
-    /// Required. Value for parent. Supported formats:
+    /// Required. The parent resource of the FrameworkDeployment in the format:
     /// organizations/{organization}/locations/{location}
     /// Only global location is supported.
     /// </summary>
@@ -3389,8 +3051,8 @@ namespace Google.Cloud.CloudSecurityCompliance.V1 {
     private string frameworkDeploymentId_ = "";
     /// <summary>
     /// Optional. User provided identifier. It should be unique in scope of a
-    /// parent Please note that this is optional and if not provided, a random UUID
-    /// will be generated.
+    /// parent. This is optional and if not provided, a random UUID will be
+    /// generated.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -3405,7 +3067,7 @@ namespace Google.Cloud.CloudSecurityCompliance.V1 {
     public const int FrameworkDeploymentFieldNumber = 3;
     private global::Google.Cloud.CloudSecurityCompliance.V1.FrameworkDeployment frameworkDeployment_;
     /// <summary>
-    /// Required. The resource being created.
+    /// Required. The FrameworkDeployment to be created.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -3624,7 +3286,7 @@ namespace Google.Cloud.CloudSecurityCompliance.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.CloudSecurityCompliance.V1.DeploymentReflection.Descriptor.MessageTypes[9]; }
+      get { return global::Google.Cloud.CloudSecurityCompliance.V1.DeploymentReflection.Descriptor.MessageTypes[8]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -3659,8 +3321,8 @@ namespace Google.Cloud.CloudSecurityCompliance.V1 {
     public const int NameFieldNumber = 1;
     private string name_ = "";
     /// <summary>
-    /// Required. Name of the framework deployment to be deleted
-    /// FrameworkDeployment name in either of the following formats:
+    /// Required. name of the FrameworkDeployment to be deleted in the following
+    /// format:
     /// organizations/{organization}/locations/{location}/frameworkDeployments/{framework_deployment_id}
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -3869,7 +3531,7 @@ namespace Google.Cloud.CloudSecurityCompliance.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.CloudSecurityCompliance.V1.DeploymentReflection.Descriptor.MessageTypes[10]; }
+      get { return global::Google.Cloud.CloudSecurityCompliance.V1.DeploymentReflection.Descriptor.MessageTypes[9]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -3903,7 +3565,7 @@ namespace Google.Cloud.CloudSecurityCompliance.V1 {
     public const int NameFieldNumber = 1;
     private string name_ = "";
     /// <summary>
-    /// Required. FrameworkDeployment name in either of the following formats:
+    /// Required. FrameworkDeployment name in the following format:
     /// organizations/{organization}/locations/{location}/frameworkDeployments/{framework_deployment_id}
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -4066,7 +3728,7 @@ namespace Google.Cloud.CloudSecurityCompliance.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.CloudSecurityCompliance.V1.DeploymentReflection.Descriptor.MessageTypes[11]; }
+      get { return global::Google.Cloud.CloudSecurityCompliance.V1.DeploymentReflection.Descriptor.MessageTypes[10]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -4104,7 +3766,9 @@ namespace Google.Cloud.CloudSecurityCompliance.V1 {
     public const int ParentFieldNumber = 1;
     private string parent_ = "";
     /// <summary>
-    /// Required. Parent value for ListFrameworkDeploymentsRequest.
+    /// Required. parent resource of the FrameworkDeployment in the format:
+    /// organizations/{organization}/locations/{location}
+    /// Only global location is supported.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -4407,7 +4071,7 @@ namespace Google.Cloud.CloudSecurityCompliance.V1 {
   }
 
   /// <summary>
-  /// Message for response to listing FrameworkDeployments.
+  /// Response message for ListFrameworkDeployments.
   /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class ListFrameworkDeploymentsResponse : pb::IMessage<ListFrameworkDeploymentsResponse>
@@ -4424,7 +4088,7 @@ namespace Google.Cloud.CloudSecurityCompliance.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.CloudSecurityCompliance.V1.DeploymentReflection.Descriptor.MessageTypes[12]; }
+      get { return global::Google.Cloud.CloudSecurityCompliance.V1.DeploymentReflection.Descriptor.MessageTypes[11]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -4649,7 +4313,7 @@ namespace Google.Cloud.CloudSecurityCompliance.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.CloudSecurityCompliance.V1.DeploymentReflection.Descriptor.MessageTypes[13]; }
+      get { return global::Google.Cloud.CloudSecurityCompliance.V1.DeploymentReflection.Descriptor.MessageTypes[12]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -4683,7 +4347,7 @@ namespace Google.Cloud.CloudSecurityCompliance.V1 {
     public const int NameFieldNumber = 1;
     private string name_ = "";
     /// <summary>
-    /// Required. CloudControlDeployment name in either of the following formats:
+    /// Required. CloudControlDeployment name in the following format:
     /// organizations/{organization}/locations/{location}/cloudControlDeployments/{cloud_control_deployment_id}
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -4846,7 +4510,7 @@ namespace Google.Cloud.CloudSecurityCompliance.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.CloudSecurityCompliance.V1.DeploymentReflection.Descriptor.MessageTypes[14]; }
+      get { return global::Google.Cloud.CloudSecurityCompliance.V1.DeploymentReflection.Descriptor.MessageTypes[13]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -4884,7 +4548,9 @@ namespace Google.Cloud.CloudSecurityCompliance.V1 {
     public const int ParentFieldNumber = 1;
     private string parent_ = "";
     /// <summary>
-    /// Required. Parent value for ListCloudControlDeploymentsRequest.
+    /// Required. parent resource of the CloudControlDeployment in the format:
+    /// organizations/{organization}/locations/{location}
+    /// Only global location is supported.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -5187,7 +4853,7 @@ namespace Google.Cloud.CloudSecurityCompliance.V1 {
   }
 
   /// <summary>
-  /// Message for response to listing CloudControlDeployments.
+  /// Response message for ListCloudControlDeployments.
   /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class ListCloudControlDeploymentsResponse : pb::IMessage<ListCloudControlDeploymentsResponse>
@@ -5204,7 +4870,7 @@ namespace Google.Cloud.CloudSecurityCompliance.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.CloudSecurityCompliance.V1.DeploymentReflection.Descriptor.MessageTypes[15]; }
+      get { return global::Google.Cloud.CloudSecurityCompliance.V1.DeploymentReflection.Descriptor.MessageTypes[14]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -5412,7 +5078,7 @@ namespace Google.Cloud.CloudSecurityCompliance.V1 {
   }
 
   /// <summary>
-  /// The reference to the cloud control deployment.
+  /// The reference to a CloudControlDeployment.
   /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class CloudControlDeploymentReference : pb::IMessage<CloudControlDeploymentReference>
@@ -5429,7 +5095,7 @@ namespace Google.Cloud.CloudSecurityCompliance.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.CloudSecurityCompliance.V1.DeploymentReflection.Descriptor.MessageTypes[16]; }
+      get { return global::Google.Cloud.CloudSecurityCompliance.V1.DeploymentReflection.Descriptor.MessageTypes[15]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -5463,7 +5129,7 @@ namespace Google.Cloud.CloudSecurityCompliance.V1 {
     public const int CloudControlDeploymentFieldNumber = 1;
     private string cloudControlDeployment_ = "";
     /// <summary>
-    /// Output only. The name of the cloud control deployment. The format is:
+    /// Output only. The name of the CloudControlDeployment. The format is:
     /// organizations/{org}/locations/{location}/cloudControlDeployments/{cloud_control_deployment_id}
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -5609,7 +5275,7 @@ namespace Google.Cloud.CloudSecurityCompliance.V1 {
   }
 
   /// <summary>
-  /// The reference to the framework deployment.
+  /// The reference to a FrameworkDeployment.
   /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class FrameworkDeploymentReference : pb::IMessage<FrameworkDeploymentReference>
@@ -5626,7 +5292,7 @@ namespace Google.Cloud.CloudSecurityCompliance.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.CloudSecurityCompliance.V1.DeploymentReflection.Descriptor.MessageTypes[17]; }
+      get { return global::Google.Cloud.CloudSecurityCompliance.V1.DeploymentReflection.Descriptor.MessageTypes[16]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -5662,7 +5328,7 @@ namespace Google.Cloud.CloudSecurityCompliance.V1 {
     public const int FrameworkDeploymentFieldNumber = 1;
     private string frameworkDeployment_ = "";
     /// <summary>
-    /// Output only. The name of the framework. The format is:
+    /// Output only. The name of the FrameworkDeployment. The format is:
     /// organizations/{org}/locations/{location}/frameworkDeployments/{framework_deployment_id}
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -5678,7 +5344,7 @@ namespace Google.Cloud.CloudSecurityCompliance.V1 {
     public const int FrameworkReferenceFieldNumber = 2;
     private global::Google.Cloud.CloudSecurityCompliance.V1.FrameworkReference frameworkReference_;
     /// <summary>
-    /// Optional. The reference to the framework that this deployment is for.
+    /// Optional. The reference to the Framework that this deployment is for.
     /// Example: {
     ///   framework:
     ///   "organizations/{org}/locations/{location}/frameworks/{framework}",
@@ -5698,7 +5364,8 @@ namespace Google.Cloud.CloudSecurityCompliance.V1 {
     public const int FrameworkDisplayNameFieldNumber = 3;
     private string frameworkDisplayName_ = "";
     /// <summary>
-    /// Optional. The display name of the framework.
+    /// Optional. The display name of the Framework that this FrameworkDeployment
+    /// is for.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
