@@ -152,7 +152,7 @@ namespace Google.Cloud.CloudSecurityCompliance.V1 {
   }
   #region Messages
   /// <summary>
-  /// Request message for [ListFrameworks][].
+  /// Request message for listing Frameworks.
   /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class ListFrameworksRequest : pb::IMessage<ListFrameworksRequest>
@@ -207,6 +207,7 @@ namespace Google.Cloud.CloudSecurityCompliance.V1 {
     /// <summary>
     /// Required. The parent resource name, in the format
     /// `organizations/{organization}/locations/{location}`.
+    /// Only global location is supported.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -434,7 +435,8 @@ namespace Google.Cloud.CloudSecurityCompliance.V1 {
   }
 
   /// <summary>
-  /// Response message for [ListFrameworks][].
+  /// Response message for listing Frameworks.
+  /// Contains a paginated list of Framework resources.
   /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class ListFrameworksResponse : pb::IMessage<ListFrameworksResponse>
@@ -488,8 +490,7 @@ namespace Google.Cloud.CloudSecurityCompliance.V1 {
         = pb::FieldCodec.ForMessage(10, global::Google.Cloud.CloudSecurityCompliance.V1.Framework.Parser);
     private readonly pbc::RepeatedField<global::Google.Cloud.CloudSecurityCompliance.V1.Framework> frameworks_ = new pbc::RepeatedField<global::Google.Cloud.CloudSecurityCompliance.V1.Framework>();
     /// <summary>
-    /// The list of [Framework][google.cloud.cloudsecuritycompliance.v1.Framework]
-    /// resources.
+    /// The list of Framework resources.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -661,7 +662,7 @@ namespace Google.Cloud.CloudSecurityCompliance.V1 {
   }
 
   /// <summary>
-  /// Message for getting a Framework.
+  /// Request message for getting a Framework.
   /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class GetFrameworkRequest : pb::IMessage<GetFrameworkRequest>
@@ -730,7 +731,7 @@ namespace Google.Cloud.CloudSecurityCompliance.V1 {
     public const int MajorRevisionIdFieldNumber = 2;
     private long majorRevisionId_;
     /// <summary>
-    /// Optional. The Framework major revision to retrieve. If not specified, the
+    /// Optional. The Framework major version to retrieve. If not specified, the
     /// most recently updated revision_id is retrieved.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -900,7 +901,7 @@ namespace Google.Cloud.CloudSecurityCompliance.V1 {
   }
 
   /// <summary>
-  /// Message for creating a Framework
+  /// Request message for creating a Framework
   /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class CreateFrameworkRequest : pb::IMessage<CreateFrameworkRequest>
@@ -1188,7 +1189,7 @@ namespace Google.Cloud.CloudSecurityCompliance.V1 {
   }
 
   /// <summary>
-  /// Message for updating a Framework
+  /// Request message for updating a Framework.
   /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class UpdateFrameworkRequest : pb::IMessage<UpdateFrameworkRequest>
@@ -1276,7 +1277,7 @@ namespace Google.Cloud.CloudSecurityCompliance.V1 {
     public const int MajorRevisionIdFieldNumber = 3;
     private long majorRevisionId_;
     /// <summary>
-    /// Optional. The major revision ID of the framework to update.
+    /// Optional. The major version ID of the framework to update.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -1487,7 +1488,7 @@ namespace Google.Cloud.CloudSecurityCompliance.V1 {
   }
 
   /// <summary>
-  /// Message for deleting a Framework
+  /// Request message for deleting a Framework.
   /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class DeleteFrameworkRequest : pb::IMessage<DeleteFrameworkRequest>
@@ -1684,7 +1685,7 @@ namespace Google.Cloud.CloudSecurityCompliance.V1 {
   }
 
   /// <summary>
-  /// Request message for [ListCloudControls][].
+  /// Request message for listing CloudControls.
   /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class ListCloudControlsRequest : pb::IMessage<ListCloudControlsRequest>
@@ -2196,7 +2197,7 @@ namespace Google.Cloud.CloudSecurityCompliance.V1 {
   }
 
   /// <summary>
-  /// Message for getting a CloudControl.
+  /// Request message for getting a CloudControl.
   /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class GetCloudControlRequest : pb::IMessage<GetCloudControlRequest>
@@ -2393,7 +2394,7 @@ namespace Google.Cloud.CloudSecurityCompliance.V1 {
   }
 
   /// <summary>
-  /// Message for creating a CloudControl
+  /// Request message for creating a CloudControl
   /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class CreateCloudControlRequest : pb::IMessage<CreateCloudControlRequest>
@@ -2681,7 +2682,7 @@ namespace Google.Cloud.CloudSecurityCompliance.V1 {
   }
 
   /// <summary>
-  /// Message for updating a CloudControl.
+  /// Request message for UpdateCloudControl.
   /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class UpdateCloudControlRequest : pb::IMessage<UpdateCloudControlRequest>
@@ -2945,7 +2946,7 @@ namespace Google.Cloud.CloudSecurityCompliance.V1 {
   }
 
   /// <summary>
-  /// Message for deleting a CloudControl.
+  /// Request message for deleting a CloudControl.
   /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class DeleteCloudControlRequest : pb::IMessage<DeleteCloudControlRequest>

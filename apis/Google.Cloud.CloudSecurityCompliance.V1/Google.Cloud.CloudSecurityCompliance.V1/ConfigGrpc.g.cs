@@ -24,7 +24,8 @@ using grpc = global::Grpc.Core;
 
 namespace Google.Cloud.CloudSecurityCompliance.V1 {
   /// <summary>
-  /// Service describing handlers for config resources
+  /// Config Service manages compliance frameworks, cloud controls, and their
+  /// configurations.
   /// </summary>
   public static partial class Config
   {
@@ -185,7 +186,9 @@ namespace Google.Cloud.CloudSecurityCompliance.V1 {
     public abstract partial class ConfigBase
     {
       /// <summary>
-      /// Lists Frameworks in a given organization.
+      /// Lists all Frameworks (both Built-in and Custom) available within a given
+      /// parent resource. This method supports pagination.
+      /// The latest major version of each Framework is returned.
       /// </summary>
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
@@ -198,6 +201,12 @@ namespace Google.Cloud.CloudSecurityCompliance.V1 {
 
       /// <summary>
       /// Gets details of a single Framework.
+      /// This method retrieves a Framework resource, which can be either Built-in or
+      /// Custom, identified by its name.
+      ///
+      /// By default, the latest major version of the Framework is returned.
+      /// A specific major version can be retrieved by specifying the
+      /// `major_revision_id` in the request.
       /// </summary>
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
@@ -209,7 +218,9 @@ namespace Google.Cloud.CloudSecurityCompliance.V1 {
       }
 
       /// <summary>
-      /// Creates a single framework for a given resource.
+      /// Creates a new Framework with type `Custom` under a given parent resource.
+      /// Frameworks with type `Built-in` are managed by Google and cannot be created
+      /// through this API.
       /// </summary>
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
@@ -222,6 +233,16 @@ namespace Google.Cloud.CloudSecurityCompliance.V1 {
 
       /// <summary>
       /// Updates a single Framework.
+      /// This method allows for partial updates of a Framework resource. The fields
+      /// to be updated are specified using the `update_mask`.
+      ///
+      /// - If an `update_mask` is provided, only the fields specified in the mask
+      /// will be updated.
+      /// - If no `update_mask` is provided, all fields present in the request's
+      /// `framework` body will be used to overwrite the existing resource.
+      ///
+      /// This operation can only be performed on Frameworks with type `CUSTOM`.
+      /// A successful update will result in a new version of the Framework.
       /// </summary>
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
@@ -233,7 +254,14 @@ namespace Google.Cloud.CloudSecurityCompliance.V1 {
       }
 
       /// <summary>
-      /// Deletes a single Framework.
+      /// Deletes a single Custom Framework, including all its minor and
+      /// minor revisions.
+      ///
+      /// - This operation can only be performed on Frameworks with type `CUSTOM`.
+      ///   Built-in Frameworks cannot be deleted.
+      /// - The Framework cannot be deleted if it is currently deployed on any
+      ///   resource.
+      /// - This action is permanent and cannot be undone.
       /// </summary>
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
@@ -245,7 +273,9 @@ namespace Google.Cloud.CloudSecurityCompliance.V1 {
       }
 
       /// <summary>
-      /// Lists CloudControls in a given organization.
+      /// Lists all CloudControls (both Built-in and Custom) available within a given
+      /// parent resource. This method supports pagination.
+      /// The latest major version of each CloudControl is returned.
       /// </summary>
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
@@ -258,6 +288,12 @@ namespace Google.Cloud.CloudSecurityCompliance.V1 {
 
       /// <summary>
       /// Gets details of a single CloudControl.
+      /// This method retrieves a CloudControl resource, which can be either Built-in
+      /// or Custom, identified by its name.
+      ///
+      /// By default, the latest major version of the CloudControl is returned.
+      /// A specific major version can be retrieved by specifying the
+      /// `major_revision_id` in the request.
       /// </summary>
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
@@ -269,7 +305,9 @@ namespace Google.Cloud.CloudSecurityCompliance.V1 {
       }
 
       /// <summary>
-      /// Creates a single CloudControl for a given resource.
+      /// Creates a new CloudControl with type `Custom` under a given parent
+      /// resource. `Built-in` CloudControls are managed by Google and cannot be
+      /// created through this API.
       /// </summary>
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
@@ -282,6 +320,15 @@ namespace Google.Cloud.CloudSecurityCompliance.V1 {
 
       /// <summary>
       /// Updates a single CloudControl.
+      /// This method allows for partial updates of a Custom CloudControl resource.
+      /// Built-in CloudControls cannot be updated.
+      ///
+      /// - If an `update_mask` is provided, only the fields specified in the mask
+      /// will be updated.
+      /// - If no `update_mask` is provided, all fields present in the request's
+      /// `cloud_control` body will be used to overwrite the existing resource.
+      ///
+      /// A successful update will result in a new version of the CloudControl.
       /// </summary>
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
@@ -293,7 +340,14 @@ namespace Google.Cloud.CloudSecurityCompliance.V1 {
       }
 
       /// <summary>
-      /// Deletes a single CloudControl.
+      /// Deletes a single Custom CloudControl, including all its
+      /// major and minor revisions.
+      ///
+      /// - This operation can only be performed on CloudControls with type `CUSTOM`.
+      ///   Built-in CloudControls cannot be deleted.
+      /// - The CloudControl cannot be deleted if any of its revisions are currently
+      ///   referenced by any Framework.
+      /// - This action is permanent and cannot be undone.
       /// </summary>
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
@@ -334,7 +388,9 @@ namespace Google.Cloud.CloudSecurityCompliance.V1 {
       }
 
       /// <summary>
-      /// Lists Frameworks in a given organization.
+      /// Lists all Frameworks (both Built-in and Custom) available within a given
+      /// parent resource. This method supports pagination.
+      /// The latest major version of each Framework is returned.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -347,7 +403,9 @@ namespace Google.Cloud.CloudSecurityCompliance.V1 {
         return ListFrameworks(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Lists Frameworks in a given organization.
+      /// Lists all Frameworks (both Built-in and Custom) available within a given
+      /// parent resource. This method supports pagination.
+      /// The latest major version of each Framework is returned.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -358,7 +416,9 @@ namespace Google.Cloud.CloudSecurityCompliance.V1 {
         return CallInvoker.BlockingUnaryCall(__Method_ListFrameworks, null, options, request);
       }
       /// <summary>
-      /// Lists Frameworks in a given organization.
+      /// Lists all Frameworks (both Built-in and Custom) available within a given
+      /// parent resource. This method supports pagination.
+      /// The latest major version of each Framework is returned.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -371,7 +431,9 @@ namespace Google.Cloud.CloudSecurityCompliance.V1 {
         return ListFrameworksAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Lists Frameworks in a given organization.
+      /// Lists all Frameworks (both Built-in and Custom) available within a given
+      /// parent resource. This method supports pagination.
+      /// The latest major version of each Framework is returned.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -383,6 +445,12 @@ namespace Google.Cloud.CloudSecurityCompliance.V1 {
       }
       /// <summary>
       /// Gets details of a single Framework.
+      /// This method retrieves a Framework resource, which can be either Built-in or
+      /// Custom, identified by its name.
+      ///
+      /// By default, the latest major version of the Framework is returned.
+      /// A specific major version can be retrieved by specifying the
+      /// `major_revision_id` in the request.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -396,6 +464,12 @@ namespace Google.Cloud.CloudSecurityCompliance.V1 {
       }
       /// <summary>
       /// Gets details of a single Framework.
+      /// This method retrieves a Framework resource, which can be either Built-in or
+      /// Custom, identified by its name.
+      ///
+      /// By default, the latest major version of the Framework is returned.
+      /// A specific major version can be retrieved by specifying the
+      /// `major_revision_id` in the request.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -407,6 +481,12 @@ namespace Google.Cloud.CloudSecurityCompliance.V1 {
       }
       /// <summary>
       /// Gets details of a single Framework.
+      /// This method retrieves a Framework resource, which can be either Built-in or
+      /// Custom, identified by its name.
+      ///
+      /// By default, the latest major version of the Framework is returned.
+      /// A specific major version can be retrieved by specifying the
+      /// `major_revision_id` in the request.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -420,6 +500,12 @@ namespace Google.Cloud.CloudSecurityCompliance.V1 {
       }
       /// <summary>
       /// Gets details of a single Framework.
+      /// This method retrieves a Framework resource, which can be either Built-in or
+      /// Custom, identified by its name.
+      ///
+      /// By default, the latest major version of the Framework is returned.
+      /// A specific major version can be retrieved by specifying the
+      /// `major_revision_id` in the request.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -430,7 +516,9 @@ namespace Google.Cloud.CloudSecurityCompliance.V1 {
         return CallInvoker.AsyncUnaryCall(__Method_GetFramework, null, options, request);
       }
       /// <summary>
-      /// Creates a single framework for a given resource.
+      /// Creates a new Framework with type `Custom` under a given parent resource.
+      /// Frameworks with type `Built-in` are managed by Google and cannot be created
+      /// through this API.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -443,7 +531,9 @@ namespace Google.Cloud.CloudSecurityCompliance.V1 {
         return CreateFramework(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Creates a single framework for a given resource.
+      /// Creates a new Framework with type `Custom` under a given parent resource.
+      /// Frameworks with type `Built-in` are managed by Google and cannot be created
+      /// through this API.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -454,7 +544,9 @@ namespace Google.Cloud.CloudSecurityCompliance.V1 {
         return CallInvoker.BlockingUnaryCall(__Method_CreateFramework, null, options, request);
       }
       /// <summary>
-      /// Creates a single framework for a given resource.
+      /// Creates a new Framework with type `Custom` under a given parent resource.
+      /// Frameworks with type `Built-in` are managed by Google and cannot be created
+      /// through this API.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -467,7 +559,9 @@ namespace Google.Cloud.CloudSecurityCompliance.V1 {
         return CreateFrameworkAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Creates a single framework for a given resource.
+      /// Creates a new Framework with type `Custom` under a given parent resource.
+      /// Frameworks with type `Built-in` are managed by Google and cannot be created
+      /// through this API.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -479,6 +573,16 @@ namespace Google.Cloud.CloudSecurityCompliance.V1 {
       }
       /// <summary>
       /// Updates a single Framework.
+      /// This method allows for partial updates of a Framework resource. The fields
+      /// to be updated are specified using the `update_mask`.
+      ///
+      /// - If an `update_mask` is provided, only the fields specified in the mask
+      /// will be updated.
+      /// - If no `update_mask` is provided, all fields present in the request's
+      /// `framework` body will be used to overwrite the existing resource.
+      ///
+      /// This operation can only be performed on Frameworks with type `CUSTOM`.
+      /// A successful update will result in a new version of the Framework.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -492,6 +596,16 @@ namespace Google.Cloud.CloudSecurityCompliance.V1 {
       }
       /// <summary>
       /// Updates a single Framework.
+      /// This method allows for partial updates of a Framework resource. The fields
+      /// to be updated are specified using the `update_mask`.
+      ///
+      /// - If an `update_mask` is provided, only the fields specified in the mask
+      /// will be updated.
+      /// - If no `update_mask` is provided, all fields present in the request's
+      /// `framework` body will be used to overwrite the existing resource.
+      ///
+      /// This operation can only be performed on Frameworks with type `CUSTOM`.
+      /// A successful update will result in a new version of the Framework.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -503,6 +617,16 @@ namespace Google.Cloud.CloudSecurityCompliance.V1 {
       }
       /// <summary>
       /// Updates a single Framework.
+      /// This method allows for partial updates of a Framework resource. The fields
+      /// to be updated are specified using the `update_mask`.
+      ///
+      /// - If an `update_mask` is provided, only the fields specified in the mask
+      /// will be updated.
+      /// - If no `update_mask` is provided, all fields present in the request's
+      /// `framework` body will be used to overwrite the existing resource.
+      ///
+      /// This operation can only be performed on Frameworks with type `CUSTOM`.
+      /// A successful update will result in a new version of the Framework.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -516,6 +640,16 @@ namespace Google.Cloud.CloudSecurityCompliance.V1 {
       }
       /// <summary>
       /// Updates a single Framework.
+      /// This method allows for partial updates of a Framework resource. The fields
+      /// to be updated are specified using the `update_mask`.
+      ///
+      /// - If an `update_mask` is provided, only the fields specified in the mask
+      /// will be updated.
+      /// - If no `update_mask` is provided, all fields present in the request's
+      /// `framework` body will be used to overwrite the existing resource.
+      ///
+      /// This operation can only be performed on Frameworks with type `CUSTOM`.
+      /// A successful update will result in a new version of the Framework.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -526,7 +660,14 @@ namespace Google.Cloud.CloudSecurityCompliance.V1 {
         return CallInvoker.AsyncUnaryCall(__Method_UpdateFramework, null, options, request);
       }
       /// <summary>
-      /// Deletes a single Framework.
+      /// Deletes a single Custom Framework, including all its minor and
+      /// minor revisions.
+      ///
+      /// - This operation can only be performed on Frameworks with type `CUSTOM`.
+      ///   Built-in Frameworks cannot be deleted.
+      /// - The Framework cannot be deleted if it is currently deployed on any
+      ///   resource.
+      /// - This action is permanent and cannot be undone.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -539,7 +680,14 @@ namespace Google.Cloud.CloudSecurityCompliance.V1 {
         return DeleteFramework(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Deletes a single Framework.
+      /// Deletes a single Custom Framework, including all its minor and
+      /// minor revisions.
+      ///
+      /// - This operation can only be performed on Frameworks with type `CUSTOM`.
+      ///   Built-in Frameworks cannot be deleted.
+      /// - The Framework cannot be deleted if it is currently deployed on any
+      ///   resource.
+      /// - This action is permanent and cannot be undone.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -550,7 +698,14 @@ namespace Google.Cloud.CloudSecurityCompliance.V1 {
         return CallInvoker.BlockingUnaryCall(__Method_DeleteFramework, null, options, request);
       }
       /// <summary>
-      /// Deletes a single Framework.
+      /// Deletes a single Custom Framework, including all its minor and
+      /// minor revisions.
+      ///
+      /// - This operation can only be performed on Frameworks with type `CUSTOM`.
+      ///   Built-in Frameworks cannot be deleted.
+      /// - The Framework cannot be deleted if it is currently deployed on any
+      ///   resource.
+      /// - This action is permanent and cannot be undone.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -563,7 +718,14 @@ namespace Google.Cloud.CloudSecurityCompliance.V1 {
         return DeleteFrameworkAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Deletes a single Framework.
+      /// Deletes a single Custom Framework, including all its minor and
+      /// minor revisions.
+      ///
+      /// - This operation can only be performed on Frameworks with type `CUSTOM`.
+      ///   Built-in Frameworks cannot be deleted.
+      /// - The Framework cannot be deleted if it is currently deployed on any
+      ///   resource.
+      /// - This action is permanent and cannot be undone.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -574,7 +736,9 @@ namespace Google.Cloud.CloudSecurityCompliance.V1 {
         return CallInvoker.AsyncUnaryCall(__Method_DeleteFramework, null, options, request);
       }
       /// <summary>
-      /// Lists CloudControls in a given organization.
+      /// Lists all CloudControls (both Built-in and Custom) available within a given
+      /// parent resource. This method supports pagination.
+      /// The latest major version of each CloudControl is returned.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -587,7 +751,9 @@ namespace Google.Cloud.CloudSecurityCompliance.V1 {
         return ListCloudControls(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Lists CloudControls in a given organization.
+      /// Lists all CloudControls (both Built-in and Custom) available within a given
+      /// parent resource. This method supports pagination.
+      /// The latest major version of each CloudControl is returned.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -598,7 +764,9 @@ namespace Google.Cloud.CloudSecurityCompliance.V1 {
         return CallInvoker.BlockingUnaryCall(__Method_ListCloudControls, null, options, request);
       }
       /// <summary>
-      /// Lists CloudControls in a given organization.
+      /// Lists all CloudControls (both Built-in and Custom) available within a given
+      /// parent resource. This method supports pagination.
+      /// The latest major version of each CloudControl is returned.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -611,7 +779,9 @@ namespace Google.Cloud.CloudSecurityCompliance.V1 {
         return ListCloudControlsAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Lists CloudControls in a given organization.
+      /// Lists all CloudControls (both Built-in and Custom) available within a given
+      /// parent resource. This method supports pagination.
+      /// The latest major version of each CloudControl is returned.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -623,6 +793,12 @@ namespace Google.Cloud.CloudSecurityCompliance.V1 {
       }
       /// <summary>
       /// Gets details of a single CloudControl.
+      /// This method retrieves a CloudControl resource, which can be either Built-in
+      /// or Custom, identified by its name.
+      ///
+      /// By default, the latest major version of the CloudControl is returned.
+      /// A specific major version can be retrieved by specifying the
+      /// `major_revision_id` in the request.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -636,6 +812,12 @@ namespace Google.Cloud.CloudSecurityCompliance.V1 {
       }
       /// <summary>
       /// Gets details of a single CloudControl.
+      /// This method retrieves a CloudControl resource, which can be either Built-in
+      /// or Custom, identified by its name.
+      ///
+      /// By default, the latest major version of the CloudControl is returned.
+      /// A specific major version can be retrieved by specifying the
+      /// `major_revision_id` in the request.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -647,6 +829,12 @@ namespace Google.Cloud.CloudSecurityCompliance.V1 {
       }
       /// <summary>
       /// Gets details of a single CloudControl.
+      /// This method retrieves a CloudControl resource, which can be either Built-in
+      /// or Custom, identified by its name.
+      ///
+      /// By default, the latest major version of the CloudControl is returned.
+      /// A specific major version can be retrieved by specifying the
+      /// `major_revision_id` in the request.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -660,6 +848,12 @@ namespace Google.Cloud.CloudSecurityCompliance.V1 {
       }
       /// <summary>
       /// Gets details of a single CloudControl.
+      /// This method retrieves a CloudControl resource, which can be either Built-in
+      /// or Custom, identified by its name.
+      ///
+      /// By default, the latest major version of the CloudControl is returned.
+      /// A specific major version can be retrieved by specifying the
+      /// `major_revision_id` in the request.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -670,7 +864,9 @@ namespace Google.Cloud.CloudSecurityCompliance.V1 {
         return CallInvoker.AsyncUnaryCall(__Method_GetCloudControl, null, options, request);
       }
       /// <summary>
-      /// Creates a single CloudControl for a given resource.
+      /// Creates a new CloudControl with type `Custom` under a given parent
+      /// resource. `Built-in` CloudControls are managed by Google and cannot be
+      /// created through this API.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -683,7 +879,9 @@ namespace Google.Cloud.CloudSecurityCompliance.V1 {
         return CreateCloudControl(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Creates a single CloudControl for a given resource.
+      /// Creates a new CloudControl with type `Custom` under a given parent
+      /// resource. `Built-in` CloudControls are managed by Google and cannot be
+      /// created through this API.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -694,7 +892,9 @@ namespace Google.Cloud.CloudSecurityCompliance.V1 {
         return CallInvoker.BlockingUnaryCall(__Method_CreateCloudControl, null, options, request);
       }
       /// <summary>
-      /// Creates a single CloudControl for a given resource.
+      /// Creates a new CloudControl with type `Custom` under a given parent
+      /// resource. `Built-in` CloudControls are managed by Google and cannot be
+      /// created through this API.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -707,7 +907,9 @@ namespace Google.Cloud.CloudSecurityCompliance.V1 {
         return CreateCloudControlAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Creates a single CloudControl for a given resource.
+      /// Creates a new CloudControl with type `Custom` under a given parent
+      /// resource. `Built-in` CloudControls are managed by Google and cannot be
+      /// created through this API.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -719,6 +921,15 @@ namespace Google.Cloud.CloudSecurityCompliance.V1 {
       }
       /// <summary>
       /// Updates a single CloudControl.
+      /// This method allows for partial updates of a Custom CloudControl resource.
+      /// Built-in CloudControls cannot be updated.
+      ///
+      /// - If an `update_mask` is provided, only the fields specified in the mask
+      /// will be updated.
+      /// - If no `update_mask` is provided, all fields present in the request's
+      /// `cloud_control` body will be used to overwrite the existing resource.
+      ///
+      /// A successful update will result in a new version of the CloudControl.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -732,6 +943,15 @@ namespace Google.Cloud.CloudSecurityCompliance.V1 {
       }
       /// <summary>
       /// Updates a single CloudControl.
+      /// This method allows for partial updates of a Custom CloudControl resource.
+      /// Built-in CloudControls cannot be updated.
+      ///
+      /// - If an `update_mask` is provided, only the fields specified in the mask
+      /// will be updated.
+      /// - If no `update_mask` is provided, all fields present in the request's
+      /// `cloud_control` body will be used to overwrite the existing resource.
+      ///
+      /// A successful update will result in a new version of the CloudControl.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -743,6 +963,15 @@ namespace Google.Cloud.CloudSecurityCompliance.V1 {
       }
       /// <summary>
       /// Updates a single CloudControl.
+      /// This method allows for partial updates of a Custom CloudControl resource.
+      /// Built-in CloudControls cannot be updated.
+      ///
+      /// - If an `update_mask` is provided, only the fields specified in the mask
+      /// will be updated.
+      /// - If no `update_mask` is provided, all fields present in the request's
+      /// `cloud_control` body will be used to overwrite the existing resource.
+      ///
+      /// A successful update will result in a new version of the CloudControl.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -756,6 +985,15 @@ namespace Google.Cloud.CloudSecurityCompliance.V1 {
       }
       /// <summary>
       /// Updates a single CloudControl.
+      /// This method allows for partial updates of a Custom CloudControl resource.
+      /// Built-in CloudControls cannot be updated.
+      ///
+      /// - If an `update_mask` is provided, only the fields specified in the mask
+      /// will be updated.
+      /// - If no `update_mask` is provided, all fields present in the request's
+      /// `cloud_control` body will be used to overwrite the existing resource.
+      ///
+      /// A successful update will result in a new version of the CloudControl.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -766,7 +1004,14 @@ namespace Google.Cloud.CloudSecurityCompliance.V1 {
         return CallInvoker.AsyncUnaryCall(__Method_UpdateCloudControl, null, options, request);
       }
       /// <summary>
-      /// Deletes a single CloudControl.
+      /// Deletes a single Custom CloudControl, including all its
+      /// major and minor revisions.
+      ///
+      /// - This operation can only be performed on CloudControls with type `CUSTOM`.
+      ///   Built-in CloudControls cannot be deleted.
+      /// - The CloudControl cannot be deleted if any of its revisions are currently
+      ///   referenced by any Framework.
+      /// - This action is permanent and cannot be undone.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -779,7 +1024,14 @@ namespace Google.Cloud.CloudSecurityCompliance.V1 {
         return DeleteCloudControl(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Deletes a single CloudControl.
+      /// Deletes a single Custom CloudControl, including all its
+      /// major and minor revisions.
+      ///
+      /// - This operation can only be performed on CloudControls with type `CUSTOM`.
+      ///   Built-in CloudControls cannot be deleted.
+      /// - The CloudControl cannot be deleted if any of its revisions are currently
+      ///   referenced by any Framework.
+      /// - This action is permanent and cannot be undone.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -790,7 +1042,14 @@ namespace Google.Cloud.CloudSecurityCompliance.V1 {
         return CallInvoker.BlockingUnaryCall(__Method_DeleteCloudControl, null, options, request);
       }
       /// <summary>
-      /// Deletes a single CloudControl.
+      /// Deletes a single Custom CloudControl, including all its
+      /// major and minor revisions.
+      ///
+      /// - This operation can only be performed on CloudControls with type `CUSTOM`.
+      ///   Built-in CloudControls cannot be deleted.
+      /// - The CloudControl cannot be deleted if any of its revisions are currently
+      ///   referenced by any Framework.
+      /// - This action is permanent and cannot be undone.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -803,7 +1062,14 @@ namespace Google.Cloud.CloudSecurityCompliance.V1 {
         return DeleteCloudControlAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Deletes a single CloudControl.
+      /// Deletes a single Custom CloudControl, including all its
+      /// major and minor revisions.
+      ///
+      /// - This operation can only be performed on CloudControls with type `CUSTOM`.
+      ///   Built-in CloudControls cannot be deleted.
+      /// - The CloudControl cannot be deleted if any of its revisions are currently
+      ///   referenced by any Framework.
+      /// - This action is permanent and cannot be undone.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
