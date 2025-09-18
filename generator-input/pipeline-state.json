@@ -1659,7 +1659,7 @@
             "generationAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
             "releaseAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
             "releaseTimestamp": "2025-05-15T20:23:10.174484021Z",
-            "lastGeneratedCommit": "8a3ddf03e414a88ce9f23e3edeca825e1c63fa2d",
+            "lastGeneratedCommit": "36533b09a6b383f3c30d13c3c26092154ecf5388",
             "lastReleasedCommit": "8a3ddf03e414a88ce9f23e3edeca825e1c63fa2d",
             "apiPaths": [
                 "google/cloud/gkebackup/v1"
