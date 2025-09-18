@@ -124,6 +124,7 @@ namespace Google.Cloud.Spanner.Data
         /// </summary>
         /// <param name="orderBy">
         /// The value to use for the orderBy mechanism for the ReadOptions.
+        /// Only available for read-write transactions
         /// Refer to the <see cref="Spanner.Data.OrderBy"/> enum to see the available value options.
         /// </param>
         /// <returns>A clone of this ReadOptions with the given ReadOptions value.</returns>
