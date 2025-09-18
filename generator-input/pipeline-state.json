@@ -1588,7 +1588,7 @@
             "generationAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
             "releaseAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
             "releaseTimestamp": "2024-08-13T16:06:20Z",
-            "lastGeneratedCommit": "c98457cd51f80e56daf7de102ed8d4c347ada663",
+            "lastGeneratedCommit": "36533b09a6b383f3c30d13c3c26092154ecf5388",
             "apiPaths": [
                 "google/cloud/functions/v1"
             ],
