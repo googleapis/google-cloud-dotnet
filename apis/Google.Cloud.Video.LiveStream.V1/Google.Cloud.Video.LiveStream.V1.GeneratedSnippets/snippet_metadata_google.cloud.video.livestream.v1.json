@@ -1997,6 +1997,612 @@
       ]
     },
     {
+      "regionTag": "livestream_v1_generated_LivestreamService_StartDistribution_sync",
+      "title": "StartDistributionRequestObject",
+      "description": "Snippet for StartDistribution",
+      "file": "LivestreamServiceClient.StartDistributionRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "StartDistribution",
+        "fullName": "Google.Cloud.Video.LiveStream.V1.LivestreamServiceClient.StartDistribution",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Video.LiveStream.V1.StartDistributionRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.Video.LiveStream.V1.ChannelOperationResponse, Google.Cloud.Video.LiveStream.V1.OperationMetadata>",
+        "client": {
+          "shortName": "LivestreamServiceClient",
+          "fullName": "Google.Cloud.Video.LiveStream.V1.LivestreamServiceClient"
+        },
+        "method": {
+          "shortName": "StartDistribution",
+          "fullName": "google.cloud.video.livestream.v1.LivestreamService.StartDistribution",
+          "service": {
+            "shortName": "LivestreamService",
+            "fullName": "google.cloud.video.livestream.v1.LivestreamService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 63,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 61,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "livestream_v1_generated_LivestreamService_StartDistribution_async",
+      "title": "StartDistributionRequestObjectAsync",
+      "description": "Snippet for StartDistributionAsync",
+      "file": "LivestreamServiceClient.StartDistributionRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "StartDistributionAsync",
+        "fullName": "Google.Cloud.Video.LiveStream.V1.LivestreamServiceClient.StartDistributionAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Video.LiveStream.V1.StartDistributionRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.Video.LiveStream.V1.ChannelOperationResponse, Google.Cloud.Video.LiveStream.V1.OperationMetadata>>",
+        "client": {
+          "shortName": "LivestreamServiceClient",
+          "fullName": "Google.Cloud.Video.LiveStream.V1.LivestreamServiceClient"
+        },
+        "method": {
+          "shortName": "StartDistribution",
+          "fullName": "google.cloud.video.livestream.v1.LivestreamService.StartDistribution",
+          "service": {
+            "shortName": "LivestreamService",
+            "fullName": "google.cloud.video.livestream.v1.LivestreamService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 64,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 62,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "livestream_v1_generated_LivestreamService_StartDistribution_sync_flattened",
+      "title": "StartDistribution",
+      "description": "Snippet for StartDistribution",
+      "file": "LivestreamServiceClient.StartDistributionSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "StartDistribution",
+        "fullName": "Google.Cloud.Video.LiveStream.V1.LivestreamServiceClient.StartDistribution",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "System.Collections.Generic.IEnumerable",
+            "name": "distributionKeys"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.Video.LiveStream.V1.ChannelOperationResponse, Google.Cloud.Video.LiveStream.V1.OperationMetadata>",
+        "client": {
+          "shortName": "LivestreamServiceClient",
+          "fullName": "Google.Cloud.Video.LiveStream.V1.LivestreamServiceClient"
+        },
+        "method": {
+          "shortName": "StartDistribution",
+          "fullName": "google.cloud.video.livestream.v1.LivestreamService.StartDistribution",
+          "service": {
+            "shortName": "LivestreamService",
+            "fullName": "google.cloud.video.livestream.v1.LivestreamService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 60,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 58,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "livestream_v1_generated_LivestreamService_StartDistribution_async_flattened",
+      "title": "StartDistributionAsync",
+      "description": "Snippet for StartDistributionAsync",
+      "file": "LivestreamServiceClient.StartDistributionAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "StartDistributionAsync",
+        "fullName": "Google.Cloud.Video.LiveStream.V1.LivestreamServiceClient.StartDistributionAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "System.Collections.Generic.IEnumerable",
+            "name": "distributionKeys"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.Video.LiveStream.V1.ChannelOperationResponse, Google.Cloud.Video.LiveStream.V1.OperationMetadata>>",
+        "client": {
+          "shortName": "LivestreamServiceClient",
+          "fullName": "Google.Cloud.Video.LiveStream.V1.LivestreamServiceClient"
+        },
+        "method": {
+          "shortName": "StartDistribution",
+          "fullName": "google.cloud.video.livestream.v1.LivestreamService.StartDistribution",
+          "service": {
+            "shortName": "LivestreamService",
+            "fullName": "google.cloud.video.livestream.v1.LivestreamService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 61,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 59,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "livestream_v1_generated_LivestreamService_StartDistribution_sync_flattened_resourceNames",
+      "title": "StartDistributionResourceNames",
+      "description": "Snippet for StartDistribution",
+      "file": "LivestreamServiceClient.StartDistributionResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "StartDistribution",
+        "fullName": "Google.Cloud.Video.LiveStream.V1.LivestreamServiceClient.StartDistribution",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Video.LiveStream.V1.ChannelName",
+            "name": "name"
+          },
+          {
+            "type": "System.Collections.Generic.IEnumerable",
+            "name": "distributionKeys"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.Video.LiveStream.V1.ChannelOperationResponse, Google.Cloud.Video.LiveStream.V1.OperationMetadata>",
+        "client": {
+          "shortName": "LivestreamServiceClient",
+          "fullName": "Google.Cloud.Video.LiveStream.V1.LivestreamServiceClient"
+        },
+        "method": {
+          "shortName": "StartDistribution",
+          "fullName": "google.cloud.video.livestream.v1.LivestreamService.StartDistribution",
+          "service": {
+            "shortName": "LivestreamService",
+            "fullName": "google.cloud.video.livestream.v1.LivestreamService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 60,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 58,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "livestream_v1_generated_LivestreamService_StartDistribution_async_flattened_resourceNames",
+      "title": "StartDistributionResourceNamesAsync",
+      "description": "Snippet for StartDistributionAsync",
+      "file": "LivestreamServiceClient.StartDistributionResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "StartDistributionAsync",
+        "fullName": "Google.Cloud.Video.LiveStream.V1.LivestreamServiceClient.StartDistributionAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Video.LiveStream.V1.ChannelName",
+            "name": "name"
+          },
+          {
+            "type": "System.Collections.Generic.IEnumerable",
+            "name": "distributionKeys"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.Video.LiveStream.V1.ChannelOperationResponse, Google.Cloud.Video.LiveStream.V1.OperationMetadata>>",
+        "client": {
+          "shortName": "LivestreamServiceClient",
+          "fullName": "Google.Cloud.Video.LiveStream.V1.LivestreamServiceClient"
+        },
+        "method": {
+          "shortName": "StartDistribution",
+          "fullName": "google.cloud.video.livestream.v1.LivestreamService.StartDistribution",
+          "service": {
+            "shortName": "LivestreamService",
+            "fullName": "google.cloud.video.livestream.v1.LivestreamService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 61,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 59,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "livestream_v1_generated_LivestreamService_StopDistribution_sync",
+      "title": "StopDistributionRequestObject",
+      "description": "Snippet for StopDistribution",
+      "file": "LivestreamServiceClient.StopDistributionRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "StopDistribution",
+        "fullName": "Google.Cloud.Video.LiveStream.V1.LivestreamServiceClient.StopDistribution",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Video.LiveStream.V1.StopDistributionRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.Video.LiveStream.V1.ChannelOperationResponse, Google.Cloud.Video.LiveStream.V1.OperationMetadata>",
+        "client": {
+          "shortName": "LivestreamServiceClient",
+          "fullName": "Google.Cloud.Video.LiveStream.V1.LivestreamServiceClient"
+        },
+        "method": {
+          "shortName": "StopDistribution",
+          "fullName": "google.cloud.video.livestream.v1.LivestreamService.StopDistribution",
+          "service": {
+            "shortName": "LivestreamService",
+            "fullName": "google.cloud.video.livestream.v1.LivestreamService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 63,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 61,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "livestream_v1_generated_LivestreamService_StopDistribution_async",
+      "title": "StopDistributionRequestObjectAsync",
+      "description": "Snippet for StopDistributionAsync",
+      "file": "LivestreamServiceClient.StopDistributionRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "StopDistributionAsync",
+        "fullName": "Google.Cloud.Video.LiveStream.V1.LivestreamServiceClient.StopDistributionAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Video.LiveStream.V1.StopDistributionRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.Video.LiveStream.V1.ChannelOperationResponse, Google.Cloud.Video.LiveStream.V1.OperationMetadata>>",
+        "client": {
+          "shortName": "LivestreamServiceClient",
+          "fullName": "Google.Cloud.Video.LiveStream.V1.LivestreamServiceClient"
+        },
+        "method": {
+          "shortName": "StopDistribution",
+          "fullName": "google.cloud.video.livestream.v1.LivestreamService.StopDistribution",
+          "service": {
+            "shortName": "LivestreamService",
+            "fullName": "google.cloud.video.livestream.v1.LivestreamService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 64,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 62,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "livestream_v1_generated_LivestreamService_StopDistribution_sync_flattened",
+      "title": "StopDistribution",
+      "description": "Snippet for StopDistribution",
+      "file": "LivestreamServiceClient.StopDistributionSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "StopDistribution",
+        "fullName": "Google.Cloud.Video.LiveStream.V1.LivestreamServiceClient.StopDistribution",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "System.Collections.Generic.IEnumerable",
+            "name": "distributionKeys"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.Video.LiveStream.V1.ChannelOperationResponse, Google.Cloud.Video.LiveStream.V1.OperationMetadata>",
+        "client": {
+          "shortName": "LivestreamServiceClient",
+          "fullName": "Google.Cloud.Video.LiveStream.V1.LivestreamServiceClient"
+        },
+        "method": {
+          "shortName": "StopDistribution",
+          "fullName": "google.cloud.video.livestream.v1.LivestreamService.StopDistribution",
+          "service": {
+            "shortName": "LivestreamService",
+            "fullName": "google.cloud.video.livestream.v1.LivestreamService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 60,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 58,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "livestream_v1_generated_LivestreamService_StopDistribution_async_flattened",
+      "title": "StopDistributionAsync",
+      "description": "Snippet for StopDistributionAsync",
+      "file": "LivestreamServiceClient.StopDistributionAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "StopDistributionAsync",
+        "fullName": "Google.Cloud.Video.LiveStream.V1.LivestreamServiceClient.StopDistributionAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "System.Collections.Generic.IEnumerable",
+            "name": "distributionKeys"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.Video.LiveStream.V1.ChannelOperationResponse, Google.Cloud.Video.LiveStream.V1.OperationMetadata>>",
+        "client": {
+          "shortName": "LivestreamServiceClient",
+          "fullName": "Google.Cloud.Video.LiveStream.V1.LivestreamServiceClient"
+        },
+        "method": {
+          "shortName": "StopDistribution",
+          "fullName": "google.cloud.video.livestream.v1.LivestreamService.StopDistribution",
+          "service": {
+            "shortName": "LivestreamService",
+            "fullName": "google.cloud.video.livestream.v1.LivestreamService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 61,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 59,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "livestream_v1_generated_LivestreamService_StopDistribution_sync_flattened_resourceNames",
+      "title": "StopDistributionResourceNames",
+      "description": "Snippet for StopDistribution",
+      "file": "LivestreamServiceClient.StopDistributionResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "StopDistribution",
+        "fullName": "Google.Cloud.Video.LiveStream.V1.LivestreamServiceClient.StopDistribution",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Video.LiveStream.V1.ChannelName",
+            "name": "name"
+          },
+          {
+            "type": "System.Collections.Generic.IEnumerable",
+            "name": "distributionKeys"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.Video.LiveStream.V1.ChannelOperationResponse, Google.Cloud.Video.LiveStream.V1.OperationMetadata>",
+        "client": {
+          "shortName": "LivestreamServiceClient",
+          "fullName": "Google.Cloud.Video.LiveStream.V1.LivestreamServiceClient"
+        },
+        "method": {
+          "shortName": "StopDistribution",
+          "fullName": "google.cloud.video.livestream.v1.LivestreamService.StopDistribution",
+          "service": {
+            "shortName": "LivestreamService",
+            "fullName": "google.cloud.video.livestream.v1.LivestreamService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 60,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 58,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "livestream_v1_generated_LivestreamService_StopDistribution_async_flattened_resourceNames",
+      "title": "StopDistributionResourceNamesAsync",
+      "description": "Snippet for StopDistributionAsync",
+      "file": "LivestreamServiceClient.StopDistributionResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "StopDistributionAsync",
+        "fullName": "Google.Cloud.Video.LiveStream.V1.LivestreamServiceClient.StopDistributionAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Video.LiveStream.V1.ChannelName",
+            "name": "name"
+          },
+          {
+            "type": "System.Collections.Generic.IEnumerable",
+            "name": "distributionKeys"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.Video.LiveStream.V1.ChannelOperationResponse, Google.Cloud.Video.LiveStream.V1.OperationMetadata>>",
+        "client": {
+          "shortName": "LivestreamServiceClient",
+          "fullName": "Google.Cloud.Video.LiveStream.V1.LivestreamServiceClient"
+        },
+        "method": {
+          "shortName": "StopDistribution",
+          "fullName": "google.cloud.video.livestream.v1.LivestreamService.StopDistribution",
+          "service": {
+            "shortName": "LivestreamService",
+            "fullName": "google.cloud.video.livestream.v1.LivestreamService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 61,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 59,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
       "regionTag": "livestream_v1_generated_LivestreamService_CreateInput_sync",
       "title": "CreateInputRequestObject",
       "description": "Snippet for CreateInput",
@@ -3404,6 +4010,293 @@
         {
           "start": 37,
           "end": 59,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "livestream_v1_generated_LivestreamService_PreviewInput_sync",
+      "title": "PreviewInputRequestObject",
+      "description": "Snippet for PreviewInput",
+      "file": "LivestreamServiceClient.PreviewInputRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "PreviewInput",
+        "fullName": "Google.Cloud.Video.LiveStream.V1.LivestreamServiceClient.PreviewInput",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Video.LiveStream.V1.PreviewInputRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.Video.LiveStream.V1.PreviewInputResponse",
+        "client": {
+          "shortName": "LivestreamServiceClient",
+          "fullName": "Google.Cloud.Video.LiveStream.V1.LivestreamServiceClient"
+        },
+        "method": {
+          "shortName": "PreviewInput",
+          "fullName": "google.cloud.video.livestream.v1.LivestreamService.PreviewInput",
+          "service": {
+            "shortName": "LivestreamService",
+            "fullName": "google.cloud.video.livestream.v1.LivestreamService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 44,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 42,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "livestream_v1_generated_LivestreamService_PreviewInput_async",
+      "title": "PreviewInputRequestObjectAsync",
+      "description": "Snippet for PreviewInputAsync",
+      "file": "LivestreamServiceClient.PreviewInputRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "PreviewInputAsync",
+        "fullName": "Google.Cloud.Video.LiveStream.V1.LivestreamServiceClient.PreviewInputAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Video.LiveStream.V1.PreviewInputRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Video.LiveStream.V1.PreviewInputResponse>",
+        "client": {
+          "shortName": "LivestreamServiceClient",
+          "fullName": "Google.Cloud.Video.LiveStream.V1.LivestreamServiceClient"
+        },
+        "method": {
+          "shortName": "PreviewInput",
+          "fullName": "google.cloud.video.livestream.v1.LivestreamService.PreviewInput",
+          "service": {
+            "shortName": "LivestreamService",
+            "fullName": "google.cloud.video.livestream.v1.LivestreamService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 45,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 43,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "livestream_v1_generated_LivestreamService_PreviewInput_sync_flattened",
+      "title": "PreviewInput",
+      "description": "Snippet for PreviewInput",
+      "file": "LivestreamServiceClient.PreviewInputSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "PreviewInput",
+        "fullName": "Google.Cloud.Video.LiveStream.V1.LivestreamServiceClient.PreviewInput",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.Video.LiveStream.V1.PreviewInputResponse",
+        "client": {
+          "shortName": "LivestreamServiceClient",
+          "fullName": "Google.Cloud.Video.LiveStream.V1.LivestreamServiceClient"
+        },
+        "method": {
+          "shortName": "PreviewInput",
+          "fullName": "google.cloud.video.livestream.v1.LivestreamService.PreviewInput",
+          "service": {
+            "shortName": "LivestreamService",
+            "fullName": "google.cloud.video.livestream.v1.LivestreamService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "livestream_v1_generated_LivestreamService_PreviewInput_async_flattened",
+      "title": "PreviewInputAsync",
+      "description": "Snippet for PreviewInputAsync",
+      "file": "LivestreamServiceClient.PreviewInputAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "PreviewInputAsync",
+        "fullName": "Google.Cloud.Video.LiveStream.V1.LivestreamServiceClient.PreviewInputAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Video.LiveStream.V1.PreviewInputResponse>",
+        "client": {
+          "shortName": "LivestreamServiceClient",
+          "fullName": "Google.Cloud.Video.LiveStream.V1.LivestreamServiceClient"
+        },
+        "method": {
+          "shortName": "PreviewInput",
+          "fullName": "google.cloud.video.livestream.v1.LivestreamService.PreviewInput",
+          "service": {
+            "shortName": "LivestreamService",
+            "fullName": "google.cloud.video.livestream.v1.LivestreamService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "livestream_v1_generated_LivestreamService_PreviewInput_sync_flattened_resourceNames",
+      "title": "PreviewInputResourceNames",
+      "description": "Snippet for PreviewInput",
+      "file": "LivestreamServiceClient.PreviewInputResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "PreviewInput",
+        "fullName": "Google.Cloud.Video.LiveStream.V1.LivestreamServiceClient.PreviewInput",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Video.LiveStream.V1.InputName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.Video.LiveStream.V1.PreviewInputResponse",
+        "client": {
+          "shortName": "LivestreamServiceClient",
+          "fullName": "Google.Cloud.Video.LiveStream.V1.LivestreamServiceClient"
+        },
+        "method": {
+          "shortName": "PreviewInput",
+          "fullName": "google.cloud.video.livestream.v1.LivestreamService.PreviewInput",
+          "service": {
+            "shortName": "LivestreamService",
+            "fullName": "google.cloud.video.livestream.v1.LivestreamService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "livestream_v1_generated_LivestreamService_PreviewInput_async_flattened_resourceNames",
+      "title": "PreviewInputResourceNamesAsync",
+      "description": "Snippet for PreviewInputAsync",
+      "file": "LivestreamServiceClient.PreviewInputResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "PreviewInputAsync",
+        "fullName": "Google.Cloud.Video.LiveStream.V1.LivestreamServiceClient.PreviewInputAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Video.LiveStream.V1.InputName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Video.LiveStream.V1.PreviewInputResponse>",
+        "client": {
+          "shortName": "LivestreamServiceClient",
+          "fullName": "Google.Cloud.Video.LiveStream.V1.LivestreamServiceClient"
+        },
+        "method": {
+          "shortName": "PreviewInput",
+          "fullName": "google.cloud.video.livestream.v1.LivestreamService.PreviewInput",
+          "service": {
+            "shortName": "LivestreamService",
+            "fullName": "google.cloud.video.livestream.v1.LivestreamService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
           "type": "SHORT"
         }
       ]

@@ -27,88 +27,127 @@ namespace Google.Cloud.Video.LiveStream.V1 {
             "Ci5nb29nbGUvY2xvdWQvdmlkZW8vbGl2ZXN0cmVhbS92MS9vdXRwdXRzLnBy",
             "b3RvEiBnb29nbGUuY2xvdWQudmlkZW8ubGl2ZXN0cmVhbS52MRofZ29vZ2xl",
             "L2FwaS9maWVsZF9iZWhhdmlvci5wcm90bxoZZ29vZ2xlL2FwaS9yZXNvdXJj",
-            "ZS5wcm90bxoeZ29vZ2xlL3Byb3RvYnVmL2R1cmF0aW9uLnByb3RvGhpnb29n",
-            "bGUvdHlwZS9kYXRldGltZS5wcm90byKHAgoQRWxlbWVudGFyeVN0cmVhbRIL",
-            "CgNrZXkYBCABKAkSRQoMdmlkZW9fc3RyZWFtGAEgASgLMi0uZ29vZ2xlLmNs",
-            "b3VkLnZpZGVvLmxpdmVzdHJlYW0udjEuVmlkZW9TdHJlYW1IABJFCgxhdWRp",
-            "b19zdHJlYW0YAiABKAsyLS5nb29nbGUuY2xvdWQudmlkZW8ubGl2ZXN0cmVh",
-            "bS52MS5BdWRpb1N0cmVhbUgAEkMKC3RleHRfc3RyZWFtGAMgASgLMiwuZ29v",
-            "Z2xlLmNsb3VkLnZpZGVvLmxpdmVzdHJlYW0udjEuVGV4dFN0cmVhbUgAQhMK",
-            "EWVsZW1lbnRhcnlfc3RyZWFtIqsBCglNdXhTdHJlYW0SCwoDa2V5GAEgASgJ",
-            "EhEKCWNvbnRhaW5lchgDIAEoCRIaChJlbGVtZW50YXJ5X3N0cmVhbXMYBCAD",
-            "KAkSSwoQc2VnbWVudF9zZXR0aW5ncxgFIAEoCzIxLmdvb2dsZS5jbG91ZC52",
-            "aWRlby5saXZlc3RyZWFtLnYxLlNlZ21lbnRTZXR0aW5ncxIVCg1lbmNyeXB0",
-            "aW9uX2lkGAYgASgJIs4CCghNYW5pZmVzdBIRCglmaWxlX25hbWUYASABKAkS",
-            "SgoEdHlwZRgCIAEoDjI3Lmdvb2dsZS5jbG91ZC52aWRlby5saXZlc3RyZWFt",
-            "LnYxLk1hbmlmZXN0Lk1hbmlmZXN0VHlwZUID4EECEhgKC211eF9zdHJlYW1z",
-            "GAMgAygJQgPgQQISGQoRbWF4X3NlZ21lbnRfY291bnQYBCABKAUSOAoVc2Vn",
-            "bWVudF9rZWVwX2R1cmF0aW9uGAUgASgLMhkuZ29vZ2xlLnByb3RvYnVmLkR1",
-            "cmF0aW9uEiAKGHVzZV90aW1lY29kZV9hc190aW1lbGluZRgGIAEoCBIQCgNr",
-            "ZXkYByABKAlCA+BBASJACgxNYW5pZmVzdFR5cGUSHQoZTUFOSUZFU1RfVFlQ",
-            "RV9VTlNQRUNJRklFRBAAEgcKA0hMUxABEggKBERBU0gQAiLjAQoLU3ByaXRl",
-            "U2hlZXQSDgoGZm9ybWF0GAEgASgJEhgKC2ZpbGVfcHJlZml4GAIgASgJQgPg",
-            "QQISIAoTc3ByaXRlX3dpZHRoX3BpeGVscxgDIAEoBUID4EECEiEKFHNwcml0",
-            "ZV9oZWlnaHRfcGl4ZWxzGAQgASgFQgPgQQISFAoMY29sdW1uX2NvdW50GAUg",
-            "ASgFEhEKCXJvd19jb3VudBgGIAEoBRIrCghpbnRlcnZhbBgHIAEoCzIZLmdv",
-            "b2dsZS5wcm90b2J1Zi5EdXJhdGlvbhIPCgdxdWFsaXR5GAggASgFIsUDChNQ",
-            "cmVwcm9jZXNzaW5nQ29uZmlnEkoKBWF1ZGlvGAEgASgLMjsuZ29vZ2xlLmNs",
-            "b3VkLnZpZGVvLmxpdmVzdHJlYW0udjEuUHJlcHJvY2Vzc2luZ0NvbmZpZy5B",
-            "dWRpbxJICgRjcm9wGAIgASgLMjouZ29vZ2xlLmNsb3VkLnZpZGVvLmxpdmVz",
-            "dHJlYW0udjEuUHJlcHJvY2Vzc2luZ0NvbmZpZy5Dcm9wEkYKA3BhZBgDIAEo",
-            "CzI5Lmdvb2dsZS5jbG91ZC52aWRlby5saXZlc3RyZWFtLnYxLlByZXByb2Nl",
-            "c3NpbmdDb25maWcuUGFkGhUKBUF1ZGlvEgwKBGx1ZnMYASABKAEaXAoEQ3Jv",
-            "cBISCgp0b3BfcGl4ZWxzGAEgASgFEhUKDWJvdHRvbV9waXhlbHMYAiABKAUS",
-            "EwoLbGVmdF9waXhlbHMYAyABKAUSFAoMcmlnaHRfcGl4ZWxzGAQgASgFGlsK",
-            "A1BhZBISCgp0b3BfcGl4ZWxzGAEgASgFEhUKDWJvdHRvbV9waXhlbHMYAiAB",
-            "KAUSEwoLbGVmdF9waXhlbHMYAyABKAUSFAoMcmlnaHRfcGl4ZWxzGAQgASgF",
-            "Iv8DCgtWaWRlb1N0cmVhbRJPCgRoMjY0GBQgASgLMj8uZ29vZ2xlLmNsb3Vk",
-            "LnZpZGVvLmxpdmVzdHJlYW0udjEuVmlkZW9TdHJlYW0uSDI2NENvZGVjU2V0",
-            "dGluZ3NIABqMAwoRSDI2NENvZGVjU2V0dGluZ3MSFAoMd2lkdGhfcGl4ZWxz",
-            "GAEgASgFEhUKDWhlaWdodF9waXhlbHMYAiABKAUSFwoKZnJhbWVfcmF0ZRgD",
-            "IAEoAUID4EECEhgKC2JpdHJhdGVfYnBzGAQgASgFQgPgQQISFgoOYWxsb3df",
-            "b3Blbl9nb3AYBiABKAgSGQoPZ29wX2ZyYW1lX2NvdW50GAcgASgFSAASMQoM",
-            "Z29wX2R1cmF0aW9uGAggASgLMhkuZ29vZ2xlLnByb3RvYnVmLkR1cmF0aW9u",
-            "SAASFQoNdmJ2X3NpemVfYml0cxgJIAEoBRIZChF2YnZfZnVsbG5lc3NfYml0",
-            "cxgKIAEoBRIVCg1lbnRyb3B5X2NvZGVyGAsgASgJEhEKCWJfcHlyYW1pZBgM",
-            "IAEoCBIVCg1iX2ZyYW1lX2NvdW50GA0gASgFEhMKC2FxX3N0cmVuZ3RoGA4g",
-            "ASgBEg8KB3Byb2ZpbGUYDyABKAkSDAoEdHVuZRgQIAEoCUIKCghnb3BfbW9k",
-            "ZUIQCg5jb2RlY19zZXR0aW5ncyLsAgoLQXVkaW9TdHJlYW0SEAoIdHJhbnNt",
-            "dXgYCCABKAgSDQoFY29kZWMYASABKAkSGAoLYml0cmF0ZV9icHMYAiABKAVC",
-            "A+BBAhIVCg1jaGFubmVsX2NvdW50GAMgASgFEhYKDmNoYW5uZWxfbGF5b3V0",
-            "GAQgAygJEksKB21hcHBpbmcYBSADKAsyOi5nb29nbGUuY2xvdWQudmlkZW8u",
-            "bGl2ZXN0cmVhbS52MS5BdWRpb1N0cmVhbS5BdWRpb01hcHBpbmcSGQoRc2Ft",
-            "cGxlX3JhdGVfaGVydHoYBiABKAUaigEKDEF1ZGlvTWFwcGluZxIWCglpbnB1",
-            "dF9rZXkYBiABKAlCA+BBAhIYCgtpbnB1dF90cmFjaxgCIAEoBUID4EECEhoK",
-            "DWlucHV0X2NoYW5uZWwYAyABKAVCA+BBAhIbCg5vdXRwdXRfY2hhbm5lbBgE",
-            "IAEoBUID4EECEg8KB2dhaW5fZGIYBSABKAEiIAoKVGV4dFN0cmVhbRISCgVj",
-            "b2RlYxgBIAEoCUID4EECIkYKD1NlZ21lbnRTZXR0aW5ncxIzChBzZWdtZW50",
-            "X2R1cmF0aW9uGAEgASgLMhkuZ29vZ2xlLnByb3RvYnVmLkR1cmF0aW9uIqwC",
-            "Cg5UaW1lY29kZUNvbmZpZxJPCgZzb3VyY2UYASABKA4yPy5nb29nbGUuY2xv",
-            "dWQudmlkZW8ubGl2ZXN0cmVhbS52MS5UaW1lY29kZUNvbmZpZy5UaW1lY29k",
-            "ZVNvdXJjZRIvCgp1dGNfb2Zmc2V0GAIgASgLMhkuZ29vZ2xlLnByb3RvYnVm",
-            "LkR1cmF0aW9uSAASKgoJdGltZV96b25lGAMgASgLMhUuZ29vZ2xlLnR5cGUu",
-            "VGltZVpvbmVIACJdCg5UaW1lY29kZVNvdXJjZRIfChtUSU1FQ09ERV9TT1VS",
-            "Q0VfVU5TUEVDSUZJRUQQABITCg9NRURJQV9USU1FU1RBTVAQARIVChFFTUJF",
-            "RERFRF9USU1FQ09ERRACQg0KC3RpbWVfb2Zmc2V0QukBCiRjb20uZ29vZ2xl",
-            "LmNsb3VkLnZpZGVvLmxpdmVzdHJlYW0udjFCDE91dHB1dHNQcm90b1ABWkRj",
-            "bG91ZC5nb29nbGUuY29tL2dvL3ZpZGVvL2xpdmVzdHJlYW0vYXBpdjEvbGl2",
-            "ZXN0cmVhbXBiO2xpdmVzdHJlYW1wYqoCIEdvb2dsZS5DbG91ZC5WaWRlby5M",
-            "aXZlU3RyZWFtLlYxygIgR29vZ2xlXENsb3VkXFZpZGVvXExpdmVTdHJlYW1c",
-            "VjHqAiRHb29nbGU6OkNsb3VkOjpWaWRlbzo6TGl2ZVN0cmVhbTo6VjFiBnBy",
-            "b3RvMw=="));
+            "ZS5wcm90bxoeZ29vZ2xlL3Byb3RvYnVmL2R1cmF0aW9uLnByb3RvGhdnb29n",
+            "bGUvcnBjL3N0YXR1cy5wcm90bxoaZ29vZ2xlL3R5cGUvZGF0ZXRpbWUucHJv",
+            "dG8ihwIKEEVsZW1lbnRhcnlTdHJlYW0SCwoDa2V5GAQgASgJEkUKDHZpZGVv",
+            "X3N0cmVhbRgBIAEoCzItLmdvb2dsZS5jbG91ZC52aWRlby5saXZlc3RyZWFt",
+            "LnYxLlZpZGVvU3RyZWFtSAASRQoMYXVkaW9fc3RyZWFtGAIgASgLMi0uZ29v",
+            "Z2xlLmNsb3VkLnZpZGVvLmxpdmVzdHJlYW0udjEuQXVkaW9TdHJlYW1IABJD",
+            "Cgt0ZXh0X3N0cmVhbRgDIAEoCzIsLmdvb2dsZS5jbG91ZC52aWRlby5saXZl",
+            "c3RyZWFtLnYxLlRleHRTdHJlYW1IAEITChFlbGVtZW50YXJ5X3N0cmVhbSKr",
+            "AQoJTXV4U3RyZWFtEgsKA2tleRgBIAEoCRIRCgljb250YWluZXIYAyABKAkS",
+            "GgoSZWxlbWVudGFyeV9zdHJlYW1zGAQgAygJEksKEHNlZ21lbnRfc2V0dGlu",
+            "Z3MYBSABKAsyMS5nb29nbGUuY2xvdWQudmlkZW8ubGl2ZXN0cmVhbS52MS5T",
+            "ZWdtZW50U2V0dGluZ3MSFQoNZW5jcnlwdGlvbl9pZBgGIAEoCSLOAgoITWFu",
+            "aWZlc3QSEQoJZmlsZV9uYW1lGAEgASgJEkoKBHR5cGUYAiABKA4yNy5nb29n",
+            "bGUuY2xvdWQudmlkZW8ubGl2ZXN0cmVhbS52MS5NYW5pZmVzdC5NYW5pZmVz",
+            "dFR5cGVCA+BBAhIYCgttdXhfc3RyZWFtcxgDIAMoCUID4EECEhkKEW1heF9z",
+            "ZWdtZW50X2NvdW50GAQgASgFEjgKFXNlZ21lbnRfa2VlcF9kdXJhdGlvbhgF",
+            "IAEoCzIZLmdvb2dsZS5wcm90b2J1Zi5EdXJhdGlvbhIgChh1c2VfdGltZWNv",
+            "ZGVfYXNfdGltZWxpbmUYBiABKAgSEAoDa2V5GAcgASgJQgPgQQEiQAoMTWFu",
+            "aWZlc3RUeXBlEh0KGU1BTklGRVNUX1RZUEVfVU5TUEVDSUZJRUQQABIHCgNI",
+            "TFMQARIICgREQVNIEAIiXwoSRGlzdHJpYnV0aW9uU3RyZWFtEhAKA2tleRgB",
+            "IAEoCUID4EECEhYKCWNvbnRhaW5lchgCIAEoCUID4EECEh8KEmVsZW1lbnRh",
+            "cnlfc3RyZWFtcxgDIAMoCUID4EECIscDCgxEaXN0cmlidXRpb24SEAoDa2V5",
+            "GAEgASgJQgPgQQISIAoTZGlzdHJpYnV0aW9uX3N0cmVhbRgCIAEoCUID4EEC",
+            "EkgKBXN0YXRlGAMgASgOMjQuZ29vZ2xlLmNsb3VkLnZpZGVvLmxpdmVzdHJl",
+            "YW0udjEuRGlzdHJpYnV0aW9uLlN0YXRlQgPgQQMSJgoFZXJyb3IYBCABKAsy",
+            "Ei5nb29nbGUucnBjLlN0YXR1c0ID4EEDEksKCHNydF9wdXNoGAUgASgLMjcu",
+            "Z29vZ2xlLmNsb3VkLnZpZGVvLmxpdmVzdHJlYW0udjEuU3J0UHVzaE91dHB1",
+            "dEVuZHBvaW50SAASTQoJcnRtcF9wdXNoGAYgASgLMjguZ29vZ2xlLmNsb3Vk",
+            "LnZpZGVvLmxpdmVzdHJlYW0udjEuUnRtcFB1c2hPdXRwdXRFbmRwb2ludEgA",
+            "ImkKBVN0YXRlEhUKEVNUQVRFX1VOU1BFQ0lGSUVEEAASCQoFRVJST1IQBRIN",
+            "CglOT1RfUkVBRFkQBhIJCgVSRUFEWRAHEhIKDkFXQUlUSU5HX0lOUFVUEAgS",
+            "EAoMRElTVFJJQlVUSU5HEAlCCgoIZW5kcG9pbnQilAEKFVNydFB1c2hPdXRw",
+            "dXRFbmRwb2ludBIQCgN1cmkYASABKAlCA+BBAhJUChlwYXNzcGhyYXNlX3Nl",
+            "Y3JldF92ZXJzaW9uGAIgASgJQi/6QSwKKnNlY3JldG1hbmFnZXIuZ29vZ2xl",
+            "YXBpcy5jb20vU2VjcmV0VmVyc2lvbkgAQhMKEXBhc3NwaHJhc2Vfc291cmNl",
+            "IkMKFlJ0bXBQdXNoT3V0cHV0RW5kcG9pbnQSEAoDdXJpGAEgASgJQgPgQQIS",
+            "FwoKc3RyZWFtX2tleRgCIAEoCUID4EECIuMBCgtTcHJpdGVTaGVldBIOCgZm",
+            "b3JtYXQYASABKAkSGAoLZmlsZV9wcmVmaXgYAiABKAlCA+BBAhIgChNzcHJp",
+            "dGVfd2lkdGhfcGl4ZWxzGAMgASgFQgPgQQISIQoUc3ByaXRlX2hlaWdodF9w",
+            "aXhlbHMYBCABKAVCA+BBAhIUCgxjb2x1bW5fY291bnQYBSABKAUSEQoJcm93",
+            "X2NvdW50GAYgASgFEisKCGludGVydmFsGAcgASgLMhkuZ29vZ2xlLnByb3Rv",
+            "YnVmLkR1cmF0aW9uEg8KB3F1YWxpdHkYCCABKAUixQMKE1ByZXByb2Nlc3Np",
+            "bmdDb25maWcSSgoFYXVkaW8YASABKAsyOy5nb29nbGUuY2xvdWQudmlkZW8u",
+            "bGl2ZXN0cmVhbS52MS5QcmVwcm9jZXNzaW5nQ29uZmlnLkF1ZGlvEkgKBGNy",
+            "b3AYAiABKAsyOi5nb29nbGUuY2xvdWQudmlkZW8ubGl2ZXN0cmVhbS52MS5Q",
+            "cmVwcm9jZXNzaW5nQ29uZmlnLkNyb3ASRgoDcGFkGAMgASgLMjkuZ29vZ2xl",
+            "LmNsb3VkLnZpZGVvLmxpdmVzdHJlYW0udjEuUHJlcHJvY2Vzc2luZ0NvbmZp",
+            "Zy5QYWQaFQoFQXVkaW8SDAoEbHVmcxgBIAEoARpcCgRDcm9wEhIKCnRvcF9w",
+            "aXhlbHMYASABKAUSFQoNYm90dG9tX3BpeGVscxgCIAEoBRITCgtsZWZ0X3Bp",
+            "eGVscxgDIAEoBRIUCgxyaWdodF9waXhlbHMYBCABKAUaWwoDUGFkEhIKCnRv",
+            "cF9waXhlbHMYASABKAUSFQoNYm90dG9tX3BpeGVscxgCIAEoBRITCgtsZWZ0",
+            "X3BpeGVscxgDIAEoBRIUCgxyaWdodF9waXhlbHMYBCABKAUivgcKC1ZpZGVv",
+            "U3RyZWFtEk8KBGgyNjQYFCABKAsyPy5nb29nbGUuY2xvdWQudmlkZW8ubGl2",
+            "ZXN0cmVhbS52MS5WaWRlb1N0cmVhbS5IMjY0Q29kZWNTZXR0aW5nc0gAEk8K",
+            "BGgyNjUYFSABKAsyPy5nb29nbGUuY2xvdWQudmlkZW8ubGl2ZXN0cmVhbS52",
+            "MS5WaWRlb1N0cmVhbS5IMjY1Q29kZWNTZXR0aW5nc0gAGowDChFIMjY0Q29k",
+            "ZWNTZXR0aW5ncxIUCgx3aWR0aF9waXhlbHMYASABKAUSFQoNaGVpZ2h0X3Bp",
+            "eGVscxgCIAEoBRIXCgpmcmFtZV9yYXRlGAMgASgBQgPgQQISGAoLYml0cmF0",
+            "ZV9icHMYBCABKAVCA+BBAhIWCg5hbGxvd19vcGVuX2dvcBgGIAEoCBIZCg9n",
+            "b3BfZnJhbWVfY291bnQYByABKAVIABIxCgxnb3BfZHVyYXRpb24YCCABKAsy",
+            "GS5nb29nbGUucHJvdG9idWYuRHVyYXRpb25IABIVCg12YnZfc2l6ZV9iaXRz",
+            "GAkgASgFEhkKEXZidl9mdWxsbmVzc19iaXRzGAogASgFEhUKDWVudHJvcHlf",
+            "Y29kZXIYCyABKAkSEQoJYl9weXJhbWlkGAwgASgIEhUKDWJfZnJhbWVfY291",
+            "bnQYDSABKAUSEwoLYXFfc3RyZW5ndGgYDiABKAESDwoHcHJvZmlsZRgPIAEo",
+            "CRIMCgR0dW5lGBAgASgJQgoKCGdvcF9tb2RlGusCChFIMjY1Q29kZWNTZXR0",
+            "aW5ncxIZCgx3aWR0aF9waXhlbHMYASABKAVCA+BBARIaCg1oZWlnaHRfcGl4",
+            "ZWxzGAIgASgFQgPgQQESFwoKZnJhbWVfcmF0ZRgDIAEoAUID4EECEhgKC2Jp",
+            "dHJhdGVfYnBzGAQgASgFQgPgQQISHgoPZ29wX2ZyYW1lX2NvdW50GAcgASgF",
+            "QgPgQQFIABI2Cgxnb3BfZHVyYXRpb24YCCABKAsyGS5nb29nbGUucHJvdG9i",
+            "dWYuRHVyYXRpb25CA+BBAUgAEhoKDXZidl9zaXplX2JpdHMYCSABKAVCA+BB",
+            "ARIeChF2YnZfZnVsbG5lc3NfYml0cxgKIAEoBUID4EEBEhYKCWJfcHlyYW1p",
+            "ZBgLIAEoCEID4EEBEhoKDWJfZnJhbWVfY291bnQYDCABKAVCA+BBARIYCgth",
+            "cV9zdHJlbmd0aBgNIAEoAUID4EEBQgoKCGdvcF9tb2RlQhAKDmNvZGVjX3Nl",
+            "dHRpbmdzIuwCCgtBdWRpb1N0cmVhbRIQCgh0cmFuc211eBgIIAEoCBINCgVj",
+            "b2RlYxgBIAEoCRIYCgtiaXRyYXRlX2JwcxgCIAEoBUID4EECEhUKDWNoYW5u",
+            "ZWxfY291bnQYAyABKAUSFgoOY2hhbm5lbF9sYXlvdXQYBCADKAkSSwoHbWFw",
+            "cGluZxgFIAMoCzI6Lmdvb2dsZS5jbG91ZC52aWRlby5saXZlc3RyZWFtLnYx",
+            "LkF1ZGlvU3RyZWFtLkF1ZGlvTWFwcGluZxIZChFzYW1wbGVfcmF0ZV9oZXJ0",
+            "ehgGIAEoBRqKAQoMQXVkaW9NYXBwaW5nEhYKCWlucHV0X2tleRgGIAEoCUID",
+            "4EECEhgKC2lucHV0X3RyYWNrGAIgASgFQgPgQQISGgoNaW5wdXRfY2hhbm5l",
+            "bBgDIAEoBUID4EECEhsKDm91dHB1dF9jaGFubmVsGAQgASgFQgPgQQISDwoH",
+            "Z2Fpbl9kYhgFIAEoASLLAgoKVGV4dFN0cmVhbRISCgVjb2RlYxgBIAEoCUID",
+            "4EECEhoKDWxhbmd1YWdlX2NvZGUYAiABKAlCA+BBARIZCgxkaXNwbGF5X25h",
+            "bWUYBCABKAlCA+BBARIfChJvdXRwdXRfY2VhX2NoYW5uZWwYBSABKAlCA+BB",
+            "ARJOCgdtYXBwaW5nGAMgAygLMjguZ29vZ2xlLmNsb3VkLnZpZGVvLmxpdmVz",
+            "dHJlYW0udjEuVGV4dFN0cmVhbS5UZXh0TWFwcGluZ0ID4EEBGoABCgtUZXh0",
+            "TWFwcGluZxIWCglpbnB1dF9rZXkYBCABKAlCA+BBARIYCgtpbnB1dF90cmFj",
+            "axgCIAEoBUID4EEBEh4KEWlucHV0X2NlYV9jaGFubmVsGAUgASgJQgPgQQES",
+            "HwoSZnJvbV9sYW5ndWFnZV9jb2RlGAYgASgJQgPgQQEiRgoPU2VnbWVudFNl",
+            "dHRpbmdzEjMKEHNlZ21lbnRfZHVyYXRpb24YASABKAsyGS5nb29nbGUucHJv",
+            "dG9idWYuRHVyYXRpb24irAIKDlRpbWVjb2RlQ29uZmlnEk8KBnNvdXJjZRgB",
+            "IAEoDjI/Lmdvb2dsZS5jbG91ZC52aWRlby5saXZlc3RyZWFtLnYxLlRpbWVj",
+            "b2RlQ29uZmlnLlRpbWVjb2RlU291cmNlEi8KCnV0Y19vZmZzZXQYAiABKAsy",
+            "GS5nb29nbGUucHJvdG9idWYuRHVyYXRpb25IABIqCgl0aW1lX3pvbmUYAyAB",
+            "KAsyFS5nb29nbGUudHlwZS5UaW1lWm9uZUgAIl0KDlRpbWVjb2RlU291cmNl",
+            "Eh8KG1RJTUVDT0RFX1NPVVJDRV9VTlNQRUNJRklFRBAAEhMKD01FRElBX1RJ",
+            "TUVTVEFNUBABEhUKEUVNQkVEREVEX1RJTUVDT0RFEAJCDQoLdGltZV9vZmZz",
+            "ZXRC6QEKJGNvbS5nb29nbGUuY2xvdWQudmlkZW8ubGl2ZXN0cmVhbS52MUIM",
+            "T3V0cHV0c1Byb3RvUAFaRGNsb3VkLmdvb2dsZS5jb20vZ28vdmlkZW8vbGl2",
+            "ZXN0cmVhbS9hcGl2MS9saXZlc3RyZWFtcGI7bGl2ZXN0cmVhbXBiqgIgR29v",
+            "Z2xlLkNsb3VkLlZpZGVvLkxpdmVTdHJlYW0uVjHKAiBHb29nbGVcQ2xvdWRc",
+            "VmlkZW9cTGl2ZVN0cmVhbVxWMeoCJEdvb2dsZTo6Q2xvdWQ6OlZpZGVvOjpM",
+            "aXZlU3RyZWFtOjpWMWIGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.DurationReflection.Descriptor, global::Google.Type.DatetimeReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.DurationReflection.Descriptor, global::Google.Rpc.StatusReflection.Descriptor, global::Google.Type.DatetimeReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Video.LiveStream.V1.ElementaryStream), global::Google.Cloud.Video.LiveStream.V1.ElementaryStream.Parser, new[]{ "Key", "VideoStream", "AudioStream", "TextStream" }, new[]{ "ElementaryStream" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Video.LiveStream.V1.MuxStream), global::Google.Cloud.Video.LiveStream.V1.MuxStream.Parser, new[]{ "Key", "Container", "ElementaryStreams", "SegmentSettings", "EncryptionId" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Video.LiveStream.V1.Manifest), global::Google.Cloud.Video.LiveStream.V1.Manifest.Parser, new[]{ "FileName", "Type", "MuxStreams", "MaxSegmentCount", "SegmentKeepDuration", "UseTimecodeAsTimeline", "Key" }, null, new[]{ typeof(global::Google.Cloud.Video.LiveStream.V1.Manifest.Types.ManifestType) }, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Video.LiveStream.V1.DistributionStream), global::Google.Cloud.Video.LiveStream.V1.DistributionStream.Parser, new[]{ "Key", "Container", "ElementaryStreams" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Video.LiveStream.V1.Distribution), global::Google.Cloud.Video.LiveStream.V1.Distribution.Parser, new[]{ "Key", "DistributionStream", "State", "Error", "SrtPush", "RtmpPush" }, new[]{ "Endpoint" }, new[]{ typeof(global::Google.Cloud.Video.LiveStream.V1.Distribution.Types.State) }, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Video.LiveStream.V1.SrtPushOutputEndpoint), global::Google.Cloud.Video.LiveStream.V1.SrtPushOutputEndpoint.Parser, new[]{ "Uri", "PassphraseSecretVersion" }, new[]{ "PassphraseSource" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Video.LiveStream.V1.RtmpPushOutputEndpoint), global::Google.Cloud.Video.LiveStream.V1.RtmpPushOutputEndpoint.Parser, new[]{ "Uri", "StreamKey" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Video.LiveStream.V1.SpriteSheet), global::Google.Cloud.Video.LiveStream.V1.SpriteSheet.Parser, new[]{ "Format", "FilePrefix", "SpriteWidthPixels", "SpriteHeightPixels", "ColumnCount", "RowCount", "Interval", "Quality" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Video.LiveStream.V1.PreprocessingConfig), global::Google.Cloud.Video.LiveStream.V1.PreprocessingConfig.Parser, new[]{ "Audio", "Crop", "Pad" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Video.LiveStream.V1.PreprocessingConfig.Types.Audio), global::Google.Cloud.Video.LiveStream.V1.PreprocessingConfig.Types.Audio.Parser, new[]{ "Lufs" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Video.LiveStream.V1.PreprocessingConfig.Types.Crop), global::Google.Cloud.Video.LiveStream.V1.PreprocessingConfig.Types.Crop.Parser, new[]{ "TopPixels", "BottomPixels", "LeftPixels", "RightPixels" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Video.LiveStream.V1.PreprocessingConfig.Types.Pad), global::Google.Cloud.Video.LiveStream.V1.PreprocessingConfig.Types.Pad.Parser, new[]{ "TopPixels", "BottomPixels", "LeftPixels", "RightPixels" }, null, null, null, null)}),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Video.LiveStream.V1.VideoStream), global::Google.Cloud.Video.LiveStream.V1.VideoStream.Parser, new[]{ "H264" }, new[]{ "CodecSettings" }, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Video.LiveStream.V1.VideoStream.Types.H264CodecSettings), global::Google.Cloud.Video.LiveStream.V1.VideoStream.Types.H264CodecSettings.Parser, new[]{ "WidthPixels", "HeightPixels", "FrameRate", "BitrateBps", "AllowOpenGop", "GopFrameCount", "GopDuration", "VbvSizeBits", "VbvFullnessBits", "EntropyCoder", "BPyramid", "BFrameCount", "AqStrength", "Profile", "Tune" }, new[]{ "GopMode" }, null, null, null)}),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Video.LiveStream.V1.VideoStream), global::Google.Cloud.Video.LiveStream.V1.VideoStream.Parser, new[]{ "H264", "H265" }, new[]{ "CodecSettings" }, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Video.LiveStream.V1.VideoStream.Types.H264CodecSettings), global::Google.Cloud.Video.LiveStream.V1.VideoStream.Types.H264CodecSettings.Parser, new[]{ "WidthPixels", "HeightPixels", "FrameRate", "BitrateBps", "AllowOpenGop", "GopFrameCount", "GopDuration", "VbvSizeBits", "VbvFullnessBits", "EntropyCoder", "BPyramid", "BFrameCount", "AqStrength", "Profile", "Tune" }, new[]{ "GopMode" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Video.LiveStream.V1.VideoStream.Types.H265CodecSettings), global::Google.Cloud.Video.LiveStream.V1.VideoStream.Types.H265CodecSettings.Parser, new[]{ "WidthPixels", "HeightPixels", "FrameRate", "BitrateBps", "GopFrameCount", "GopDuration", "VbvSizeBits", "VbvFullnessBits", "BPyramid", "BFrameCount", "AqStrength" }, new[]{ "GopMode" }, null, null, null)}),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Video.LiveStream.V1.AudioStream), global::Google.Cloud.Video.LiveStream.V1.AudioStream.Parser, new[]{ "Transmux", "Codec", "BitrateBps", "ChannelCount", "ChannelLayout", "Mapping", "SampleRateHertz" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Video.LiveStream.V1.AudioStream.Types.AudioMapping), global::Google.Cloud.Video.LiveStream.V1.AudioStream.Types.AudioMapping.Parser, new[]{ "InputKey", "InputTrack", "InputChannel", "OutputChannel", "GainDb" }, null, null, null, null)}),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Video.LiveStream.V1.TextStream), global::Google.Cloud.Video.LiveStream.V1.TextStream.Parser, new[]{ "Codec" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Video.LiveStream.V1.TextStream), global::Google.Cloud.Video.LiveStream.V1.TextStream.Parser, new[]{ "Codec", "LanguageCode", "DisplayName", "OutputCeaChannel", "Mapping" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Video.LiveStream.V1.TextStream.Types.TextMapping), global::Google.Cloud.Video.LiveStream.V1.TextStream.Types.TextMapping.Parser, new[]{ "InputKey", "InputTrack", "InputCeaChannel", "FromLanguageCode" }, null, null, null, null)}),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Video.LiveStream.V1.SegmentSettings), global::Google.Cloud.Video.LiveStream.V1.SegmentSettings.Parser, new[]{ "SegmentDuration" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Video.LiveStream.V1.TimecodeConfig), global::Google.Cloud.Video.LiveStream.V1.TimecodeConfig.Parser, new[]{ "Source", "UtcOffset", "TimeZone" }, new[]{ "TimeOffset" }, new[]{ typeof(global::Google.Cloud.Video.LiveStream.V1.TimecodeConfig.Types.TimecodeSource) }, null, null)
           }));
@@ -1370,6 +1409,1314 @@ namespace Google.Cloud.Video.LiveStream.V1 {
   }
 
   /// <summary>
+  /// Multiplexing settings for output streams used in
+  /// [Distribution][google.cloud.video.livestream.v1.Distribution].
+  /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+  public sealed partial class DistributionStream : pb::IMessage<DistributionStream>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<DistributionStream> _parser = new pb::MessageParser<DistributionStream>(() => new DistributionStream());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<DistributionStream> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Cloud.Video.LiveStream.V1.OutputsReflection.Descriptor.MessageTypes[3]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public DistributionStream() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public DistributionStream(DistributionStream other) : this() {
+      key_ = other.key_;
+      container_ = other.container_;
+      elementaryStreams_ = other.elementaryStreams_.Clone();
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public DistributionStream Clone() {
+      return new DistributionStream(this);
+    }
+
+    /// <summary>Field number for the "key" field.</summary>
+    public const int KeyFieldNumber = 1;
+    private string key_ = "";
+    /// <summary>
+    /// Required. A unique key for this distribution stream. The key must be 1-63
+    /// characters in length. The key must begin and end with a letter (regardless
+    /// of case) or a number, but can contain dashes or underscores in between.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string Key {
+      get { return key_; }
+      set {
+        key_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "container" field.</summary>
+    public const int ContainerFieldNumber = 2;
+    private string container_ = "";
+    /// <summary>
+    /// Required. The container format.
+    ///
+    /// Supported container formats:
+    ///
+    /// - `ts`, must contain exactly one audio stream and up to one video stream.
+    /// - `flv`, must contain at most one audio stream and at most one video
+    /// stream.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string Container {
+      get { return container_; }
+      set {
+        container_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "elementary_streams" field.</summary>
+    public const int ElementaryStreamsFieldNumber = 3;
+    private static readonly pb::FieldCodec<string> _repeated_elementaryStreams_codec
+        = pb::FieldCodec.ForString(26);
+    private readonly pbc::RepeatedField<string> elementaryStreams_ = new pbc::RepeatedField<string>();
+    /// <summary>
+    /// Required. List of `ElementaryStream`
+    /// [key][google.cloud.video.livestream.v1.ElementaryStream.key]s multiplexed
+    /// in this stream. Must contain at least one audio stream and up to one video
+    /// stream.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pbc::RepeatedField<string> ElementaryStreams {
+      get { return elementaryStreams_; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as DistributionStream);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(DistributionStream other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (Key != other.Key) return false;
+      if (Container != other.Container) return false;
+      if(!elementaryStreams_.Equals(other.elementaryStreams_)) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (Key.Length != 0) hash ^= Key.GetHashCode();
+      if (Container.Length != 0) hash ^= Container.GetHashCode();
+      hash ^= elementaryStreams_.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (Key.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(Key);
+      }
+      if (Container.Length != 0) {
+        output.WriteRawTag(18);
+        output.WriteString(Container);
+      }
+      elementaryStreams_.WriteTo(output, _repeated_elementaryStreams_codec);
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (Key.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(Key);
+      }
+      if (Container.Length != 0) {
+        output.WriteRawTag(18);
+        output.WriteString(Container);
+      }
+      elementaryStreams_.WriteTo(ref output, _repeated_elementaryStreams_codec);
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      if (Key.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Key);
+      }
+      if (Container.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Container);
+      }
+      size += elementaryStreams_.CalculateSize(_repeated_elementaryStreams_codec);
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(DistributionStream other) {
+      if (other == null) {
+        return;
+      }
+      if (other.Key.Length != 0) {
+        Key = other.Key;
+      }
+      if (other.Container.Length != 0) {
+        Container = other.Container;
+      }
+      elementaryStreams_.Add(other.elementaryStreams_);
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            Key = input.ReadString();
+            break;
+          }
+          case 18: {
+            Container = input.ReadString();
+            break;
+          }
+          case 26: {
+            elementaryStreams_.AddEntriesFrom(input, _repeated_elementaryStreams_codec);
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            Key = input.ReadString();
+            break;
+          }
+          case 18: {
+            Container = input.ReadString();
+            break;
+          }
+          case 26: {
+            elementaryStreams_.AddEntriesFrom(ref input, _repeated_elementaryStreams_codec);
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+  }
+
+  /// <summary>
+  /// Distribution configuration.
+  /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+  public sealed partial class Distribution : pb::IMessage<Distribution>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<Distribution> _parser = new pb::MessageParser<Distribution>(() => new Distribution());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<Distribution> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Cloud.Video.LiveStream.V1.OutputsReflection.Descriptor.MessageTypes[4]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public Distribution() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public Distribution(Distribution other) : this() {
+      key_ = other.key_;
+      distributionStream_ = other.distributionStream_;
+      state_ = other.state_;
+      error_ = other.error_ != null ? other.error_.Clone() : null;
+      switch (other.EndpointCase) {
+        case EndpointOneofCase.SrtPush:
+          SrtPush = other.SrtPush.Clone();
+          break;
+        case EndpointOneofCase.RtmpPush:
+          RtmpPush = other.RtmpPush.Clone();
+          break;
+      }
+
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public Distribution Clone() {
+      return new Distribution(this);
+    }
+
+    /// <summary>Field number for the "key" field.</summary>
+    public const int KeyFieldNumber = 1;
+    private string key_ = "";
+    /// <summary>
+    /// Required. A unique key for this distribution. The key must be 1-63
+    /// characters in length. The key must begin and end with a letter (regardless
+    /// of case) or a number, but can contain dashes or underscores in between.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string Key {
+      get { return key_; }
+      set {
+        key_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "distribution_stream" field.</summary>
+    public const int DistributionStreamFieldNumber = 2;
+    private string distributionStream_ = "";
+    /// <summary>
+    /// Required. `DistributionStream`
+    /// [key][google.cloud.video.livestream.v1.DistributionStream.key]s that should
+    /// appear in this distribution output.
+    ///
+    /// - For SRT protocol, only `ts` distribution streams can be specified.
+    /// - For RTMP protocol, only `flv` distribution streams can be specified.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string DistributionStream {
+      get { return distributionStream_; }
+      set {
+        distributionStream_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "state" field.</summary>
+    public const int StateFieldNumber = 3;
+    private global::Google.Cloud.Video.LiveStream.V1.Distribution.Types.State state_ = global::Google.Cloud.Video.LiveStream.V1.Distribution.Types.State.Unspecified;
+    /// <summary>
+    /// Output only. State of the distribution.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Cloud.Video.LiveStream.V1.Distribution.Types.State State {
+      get { return state_; }
+      set {
+        state_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "error" field.</summary>
+    public const int ErrorFieldNumber = 4;
+    private global::Google.Rpc.Status error_;
+    /// <summary>
+    /// Output only. Only present when the `state` is `ERROR`. The reason for the
+    /// error state of the distribution.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Rpc.Status Error {
+      get { return error_; }
+      set {
+        error_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "srt_push" field.</summary>
+    public const int SrtPushFieldNumber = 5;
+    /// <summary>
+    /// Output endpoint using SRT_PUSH.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Cloud.Video.LiveStream.V1.SrtPushOutputEndpoint SrtPush {
+      get { return endpointCase_ == EndpointOneofCase.SrtPush ? (global::Google.Cloud.Video.LiveStream.V1.SrtPushOutputEndpoint) endpoint_ : null; }
+      set {
+        endpoint_ = value;
+        endpointCase_ = value == null ? EndpointOneofCase.None : EndpointOneofCase.SrtPush;
+      }
+    }
+
+    /// <summary>Field number for the "rtmp_push" field.</summary>
+    public const int RtmpPushFieldNumber = 6;
+    /// <summary>
+    /// Output endpoint using RTMP_PUSH.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Cloud.Video.LiveStream.V1.RtmpPushOutputEndpoint RtmpPush {
+      get { return endpointCase_ == EndpointOneofCase.RtmpPush ? (global::Google.Cloud.Video.LiveStream.V1.RtmpPushOutputEndpoint) endpoint_ : null; }
+      set {
+        endpoint_ = value;
+        endpointCase_ = value == null ? EndpointOneofCase.None : EndpointOneofCase.RtmpPush;
+      }
+    }
+
+    private object endpoint_;
+    /// <summary>Enum of possible cases for the "endpoint" oneof.</summary>
+    public enum EndpointOneofCase {
+      None = 0,
+      SrtPush = 5,
+      RtmpPush = 6,
+    }
+    private EndpointOneofCase endpointCase_ = EndpointOneofCase.None;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public EndpointOneofCase EndpointCase {
+      get { return endpointCase_; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearEndpoint() {
+      endpointCase_ = EndpointOneofCase.None;
+      endpoint_ = null;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as Distribution);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(Distribution other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (Key != other.Key) return false;
+      if (DistributionStream != other.DistributionStream) return false;
+      if (State != other.State) return false;
+      if (!object.Equals(Error, other.Error)) return false;
+      if (!object.Equals(SrtPush, other.SrtPush)) return false;
+      if (!object.Equals(RtmpPush, other.RtmpPush)) return false;
+      if (EndpointCase != other.EndpointCase) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (Key.Length != 0) hash ^= Key.GetHashCode();
+      if (DistributionStream.Length != 0) hash ^= DistributionStream.GetHashCode();
+      if (State != global::Google.Cloud.Video.LiveStream.V1.Distribution.Types.State.Unspecified) hash ^= State.GetHashCode();
+      if (error_ != null) hash ^= Error.GetHashCode();
+      if (endpointCase_ == EndpointOneofCase.SrtPush) hash ^= SrtPush.GetHashCode();
+      if (endpointCase_ == EndpointOneofCase.RtmpPush) hash ^= RtmpPush.GetHashCode();
+      hash ^= (int) endpointCase_;
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (Key.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(Key);
+      }
+      if (DistributionStream.Length != 0) {
+        output.WriteRawTag(18);
+        output.WriteString(DistributionStream);
+      }
+      if (State != global::Google.Cloud.Video.LiveStream.V1.Distribution.Types.State.Unspecified) {
+        output.WriteRawTag(24);
+        output.WriteEnum((int) State);
+      }
+      if (error_ != null) {
+        output.WriteRawTag(34);
+        output.WriteMessage(Error);
+      }
+      if (endpointCase_ == EndpointOneofCase.SrtPush) {
+        output.WriteRawTag(42);
+        output.WriteMessage(SrtPush);
+      }
+      if (endpointCase_ == EndpointOneofCase.RtmpPush) {
+        output.WriteRawTag(50);
+        output.WriteMessage(RtmpPush);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (Key.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(Key);
+      }
+      if (DistributionStream.Length != 0) {
+        output.WriteRawTag(18);
+        output.WriteString(DistributionStream);
+      }
+      if (State != global::Google.Cloud.Video.LiveStream.V1.Distribution.Types.State.Unspecified) {
+        output.WriteRawTag(24);
+        output.WriteEnum((int) State);
+      }
+      if (error_ != null) {
+        output.WriteRawTag(34);
+        output.WriteMessage(Error);
+      }
+      if (endpointCase_ == EndpointOneofCase.SrtPush) {
+        output.WriteRawTag(42);
+        output.WriteMessage(SrtPush);
+      }
+      if (endpointCase_ == EndpointOneofCase.RtmpPush) {
+        output.WriteRawTag(50);
+        output.WriteMessage(RtmpPush);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      if (Key.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Key);
+      }
+      if (DistributionStream.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(DistributionStream);
+      }
+      if (State != global::Google.Cloud.Video.LiveStream.V1.Distribution.Types.State.Unspecified) {
+        size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) State);
+      }
+      if (error_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(Error);
+      }
+      if (endpointCase_ == EndpointOneofCase.SrtPush) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(SrtPush);
+      }
+      if (endpointCase_ == EndpointOneofCase.RtmpPush) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(RtmpPush);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(Distribution other) {
+      if (other == null) {
+        return;
+      }
+      if (other.Key.Length != 0) {
+        Key = other.Key;
+      }
+      if (other.DistributionStream.Length != 0) {
+        DistributionStream = other.DistributionStream;
+      }
+      if (other.State != global::Google.Cloud.Video.LiveStream.V1.Distribution.Types.State.Unspecified) {
+        State = other.State;
+      }
+      if (other.error_ != null) {
+        if (error_ == null) {
+          Error = new global::Google.Rpc.Status();
+        }
+        Error.MergeFrom(other.Error);
+      }
+      switch (other.EndpointCase) {
+        case EndpointOneofCase.SrtPush:
+          if (SrtPush == null) {
+            SrtPush = new global::Google.Cloud.Video.LiveStream.V1.SrtPushOutputEndpoint();
+          }
+          SrtPush.MergeFrom(other.SrtPush);
+          break;
+        case EndpointOneofCase.RtmpPush:
+          if (RtmpPush == null) {
+            RtmpPush = new global::Google.Cloud.Video.LiveStream.V1.RtmpPushOutputEndpoint();
+          }
+          RtmpPush.MergeFrom(other.RtmpPush);
+          break;
+      }
+
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            Key = input.ReadString();
+            break;
+          }
+          case 18: {
+            DistributionStream = input.ReadString();
+            break;
+          }
+          case 24: {
+            State = (global::Google.Cloud.Video.LiveStream.V1.Distribution.Types.State) input.ReadEnum();
+            break;
+          }
+          case 34: {
+            if (error_ == null) {
+              Error = new global::Google.Rpc.Status();
+            }
+            input.ReadMessage(Error);
+            break;
+          }
+          case 42: {
+            global::Google.Cloud.Video.LiveStream.V1.SrtPushOutputEndpoint subBuilder = new global::Google.Cloud.Video.LiveStream.V1.SrtPushOutputEndpoint();
+            if (endpointCase_ == EndpointOneofCase.SrtPush) {
+              subBuilder.MergeFrom(SrtPush);
+            }
+            input.ReadMessage(subBuilder);
+            SrtPush = subBuilder;
+            break;
+          }
+          case 50: {
+            global::Google.Cloud.Video.LiveStream.V1.RtmpPushOutputEndpoint subBuilder = new global::Google.Cloud.Video.LiveStream.V1.RtmpPushOutputEndpoint();
+            if (endpointCase_ == EndpointOneofCase.RtmpPush) {
+              subBuilder.MergeFrom(RtmpPush);
+            }
+            input.ReadMessage(subBuilder);
+            RtmpPush = subBuilder;
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            Key = input.ReadString();
+            break;
+          }
+          case 18: {
+            DistributionStream = input.ReadString();
+            break;
+          }
+          case 24: {
+            State = (global::Google.Cloud.Video.LiveStream.V1.Distribution.Types.State) input.ReadEnum();
+            break;
+          }
+          case 34: {
+            if (error_ == null) {
+              Error = new global::Google.Rpc.Status();
+            }
+            input.ReadMessage(Error);
+            break;
+          }
+          case 42: {
+            global::Google.Cloud.Video.LiveStream.V1.SrtPushOutputEndpoint subBuilder = new global::Google.Cloud.Video.LiveStream.V1.SrtPushOutputEndpoint();
+            if (endpointCase_ == EndpointOneofCase.SrtPush) {
+              subBuilder.MergeFrom(SrtPush);
+            }
+            input.ReadMessage(subBuilder);
+            SrtPush = subBuilder;
+            break;
+          }
+          case 50: {
+            global::Google.Cloud.Video.LiveStream.V1.RtmpPushOutputEndpoint subBuilder = new global::Google.Cloud.Video.LiveStream.V1.RtmpPushOutputEndpoint();
+            if (endpointCase_ == EndpointOneofCase.RtmpPush) {
+              subBuilder.MergeFrom(RtmpPush);
+            }
+            input.ReadMessage(subBuilder);
+            RtmpPush = subBuilder;
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+    #region Nested types
+    /// <summary>Container for nested types declared in the Distribution message type.</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static partial class Types {
+      /// <summary>
+      /// State of this distribution.
+      /// </summary>
+      public enum State {
+        /// <summary>
+        /// State is not specified.
+        /// </summary>
+        [pbr::OriginalName("STATE_UNSPECIFIED")] Unspecified = 0,
+        /// <summary>
+        /// Distribution has trouble to produce or deliver the output.
+        /// </summary>
+        [pbr::OriginalName("ERROR")] Error = 5,
+        /// <summary>
+        /// Distribution is not ready to be started.
+        /// </summary>
+        [pbr::OriginalName("NOT_READY")] NotReady = 6,
+        /// <summary>
+        /// Distribution is ready to be started.
+        /// </summary>
+        [pbr::OriginalName("READY")] Ready = 7,
+        /// <summary>
+        /// Distribution is already started and is waiting for input.
+        /// </summary>
+        [pbr::OriginalName("AWAITING_INPUT")] AwaitingInput = 8,
+        /// <summary>
+        /// Distribution is already started and is generating output.
+        /// </summary>
+        [pbr::OriginalName("DISTRIBUTING")] Distributing = 9,
+      }
+
+    }
+    #endregion
+
+  }
+
+  /// <summary>
+  /// Configurations for an output endpoint using SRT_PUSH as the streaming
+  /// protocol.
+  /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+  public sealed partial class SrtPushOutputEndpoint : pb::IMessage<SrtPushOutputEndpoint>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<SrtPushOutputEndpoint> _parser = new pb::MessageParser<SrtPushOutputEndpoint>(() => new SrtPushOutputEndpoint());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<SrtPushOutputEndpoint> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Cloud.Video.LiveStream.V1.OutputsReflection.Descriptor.MessageTypes[5]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public SrtPushOutputEndpoint() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public SrtPushOutputEndpoint(SrtPushOutputEndpoint other) : this() {
+      uri_ = other.uri_;
+      switch (other.PassphraseSourceCase) {
+        case PassphraseSourceOneofCase.PassphraseSecretVersion:
+          PassphraseSecretVersion = other.PassphraseSecretVersion;
+          break;
+      }
+
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public SrtPushOutputEndpoint Clone() {
+      return new SrtPushOutputEndpoint(this);
+    }
+
+    /// <summary>Field number for the "uri" field.</summary>
+    public const int UriFieldNumber = 1;
+    private string uri_ = "";
+    /// <summary>
+    /// Required. The full URI of the remote SRT server.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string Uri {
+      get { return uri_; }
+      set {
+        uri_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "passphrase_secret_version" field.</summary>
+    public const int PassphraseSecretVersionFieldNumber = 2;
+    /// <summary>
+    /// The name of the Secret Version containing the SRT encryption passphrase,
+    /// which is stored in Google Secret Manager. It should be in the format of
+    /// `projects/{project}/secrets/{secret_id}/versions/{version_number}`.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string PassphraseSecretVersion {
+      get { return HasPassphraseSecretVersion ? (string) passphraseSource_ : ""; }
+      set {
+        passphraseSource_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+        passphraseSourceCase_ = PassphraseSourceOneofCase.PassphraseSecretVersion;
+      }
+    }
+    /// <summary>Gets whether the "passphrase_secret_version" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasPassphraseSecretVersion {
+      get { return passphraseSourceCase_ == PassphraseSourceOneofCase.PassphraseSecretVersion; }
+    }
+    /// <summary> Clears the value of the oneof if it's currently set to "passphrase_secret_version" </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearPassphraseSecretVersion() {
+      if (HasPassphraseSecretVersion) {
+        ClearPassphraseSource();
+      }
+    }
+
+    private object passphraseSource_;
+    /// <summary>Enum of possible cases for the "passphrase_source" oneof.</summary>
+    public enum PassphraseSourceOneofCase {
+      None = 0,
+      PassphraseSecretVersion = 2,
+    }
+    private PassphraseSourceOneofCase passphraseSourceCase_ = PassphraseSourceOneofCase.None;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public PassphraseSourceOneofCase PassphraseSourceCase {
+      get { return passphraseSourceCase_; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearPassphraseSource() {
+      passphraseSourceCase_ = PassphraseSourceOneofCase.None;
+      passphraseSource_ = null;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as SrtPushOutputEndpoint);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(SrtPushOutputEndpoint other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (Uri != other.Uri) return false;
+      if (PassphraseSecretVersion != other.PassphraseSecretVersion) return false;
+      if (PassphraseSourceCase != other.PassphraseSourceCase) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (Uri.Length != 0) hash ^= Uri.GetHashCode();
+      if (HasPassphraseSecretVersion) hash ^= PassphraseSecretVersion.GetHashCode();
+      hash ^= (int) passphraseSourceCase_;
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (Uri.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(Uri);
+      }
+      if (HasPassphraseSecretVersion) {
+        output.WriteRawTag(18);
+        output.WriteString(PassphraseSecretVersion);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (Uri.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(Uri);
+      }
+      if (HasPassphraseSecretVersion) {
+        output.WriteRawTag(18);
+        output.WriteString(PassphraseSecretVersion);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      if (Uri.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Uri);
+      }
+      if (HasPassphraseSecretVersion) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(PassphraseSecretVersion);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(SrtPushOutputEndpoint other) {
+      if (other == null) {
+        return;
+      }
+      if (other.Uri.Length != 0) {
+        Uri = other.Uri;
+      }
+      switch (other.PassphraseSourceCase) {
+        case PassphraseSourceOneofCase.PassphraseSecretVersion:
+          PassphraseSecretVersion = other.PassphraseSecretVersion;
+          break;
+      }
+
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            Uri = input.ReadString();
+            break;
+          }
+          case 18: {
+            PassphraseSecretVersion = input.ReadString();
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            Uri = input.ReadString();
+            break;
+          }
+          case 18: {
+            PassphraseSecretVersion = input.ReadString();
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+  }
+
+  /// <summary>
+  /// Configurations for an output endpoint using RTMP_PUSH as the streaming
+  /// protocol.
+  /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+  public sealed partial class RtmpPushOutputEndpoint : pb::IMessage<RtmpPushOutputEndpoint>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<RtmpPushOutputEndpoint> _parser = new pb::MessageParser<RtmpPushOutputEndpoint>(() => new RtmpPushOutputEndpoint());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<RtmpPushOutputEndpoint> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Cloud.Video.LiveStream.V1.OutputsReflection.Descriptor.MessageTypes[6]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public RtmpPushOutputEndpoint() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public RtmpPushOutputEndpoint(RtmpPushOutputEndpoint other) : this() {
+      uri_ = other.uri_;
+      streamKey_ = other.streamKey_;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public RtmpPushOutputEndpoint Clone() {
+      return new RtmpPushOutputEndpoint(this);
+    }
+
+    /// <summary>Field number for the "uri" field.</summary>
+    public const int UriFieldNumber = 1;
+    private string uri_ = "";
+    /// <summary>
+    /// Required. The full URI of the remote RTMP server. For example:
+    /// `rtmp://192.168.123.321/live/my-stream` or `rtmp://somedomain.com/someapp`.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string Uri {
+      get { return uri_; }
+      set {
+        uri_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "stream_key" field.</summary>
+    public const int StreamKeyFieldNumber = 2;
+    private string streamKey_ = "";
+    /// <summary>
+    /// Required. Stream key for RTMP protocol.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string StreamKey {
+      get { return streamKey_; }
+      set {
+        streamKey_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as RtmpPushOutputEndpoint);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(RtmpPushOutputEndpoint other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (Uri != other.Uri) return false;
+      if (StreamKey != other.StreamKey) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (Uri.Length != 0) hash ^= Uri.GetHashCode();
+      if (StreamKey.Length != 0) hash ^= StreamKey.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (Uri.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(Uri);
+      }
+      if (StreamKey.Length != 0) {
+        output.WriteRawTag(18);
+        output.WriteString(StreamKey);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (Uri.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(Uri);
+      }
+      if (StreamKey.Length != 0) {
+        output.WriteRawTag(18);
+        output.WriteString(StreamKey);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      if (Uri.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Uri);
+      }
+      if (StreamKey.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(StreamKey);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(RtmpPushOutputEndpoint other) {
+      if (other == null) {
+        return;
+      }
+      if (other.Uri.Length != 0) {
+        Uri = other.Uri;
+      }
+      if (other.StreamKey.Length != 0) {
+        StreamKey = other.StreamKey;
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            Uri = input.ReadString();
+            break;
+          }
+          case 18: {
+            StreamKey = input.ReadString();
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            Uri = input.ReadString();
+            break;
+          }
+          case 18: {
+            StreamKey = input.ReadString();
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+  }
+
+  /// <summary>
   /// Sprite sheet configuration.
   /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
@@ -1387,7 +2734,7 @@ namespace Google.Cloud.Video.LiveStream.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.Video.LiveStream.V1.OutputsReflection.Descriptor.MessageTypes[3]; }
+      get { return global::Google.Cloud.Video.LiveStream.V1.OutputsReflection.Descriptor.MessageTypes[7]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1887,7 +3234,7 @@ namespace Google.Cloud.Video.LiveStream.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.Video.LiveStream.V1.OutputsReflection.Descriptor.MessageTypes[4]; }
+      get { return global::Google.Cloud.Video.LiveStream.V1.OutputsReflection.Descriptor.MessageTypes[8]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -3038,7 +4385,7 @@ namespace Google.Cloud.Video.LiveStream.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.Video.LiveStream.V1.OutputsReflection.Descriptor.MessageTypes[5]; }
+      get { return global::Google.Cloud.Video.LiveStream.V1.OutputsReflection.Descriptor.MessageTypes[9]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -3061,6 +4408,9 @@ namespace Google.Cloud.Video.LiveStream.V1 {
       switch (other.CodecSettingsCase) {
         case CodecSettingsOneofCase.H264:
           H264 = other.H264.Clone();
+          break;
+        case CodecSettingsOneofCase.H265:
+          H265 = other.H265.Clone();
           break;
       }
 
@@ -3088,11 +4438,27 @@ namespace Google.Cloud.Video.LiveStream.V1 {
       }
     }
 
+    /// <summary>Field number for the "h265" field.</summary>
+    public const int H265FieldNumber = 21;
+    /// <summary>
+    /// H265 codec settings.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Cloud.Video.LiveStream.V1.VideoStream.Types.H265CodecSettings H265 {
+      get { return codecSettingsCase_ == CodecSettingsOneofCase.H265 ? (global::Google.Cloud.Video.LiveStream.V1.VideoStream.Types.H265CodecSettings) codecSettings_ : null; }
+      set {
+        codecSettings_ = value;
+        codecSettingsCase_ = value == null ? CodecSettingsOneofCase.None : CodecSettingsOneofCase.H265;
+      }
+    }
+
     private object codecSettings_;
     /// <summary>Enum of possible cases for the "codec_settings" oneof.</summary>
     public enum CodecSettingsOneofCase {
       None = 0,
       H264 = 20,
+      H265 = 21,
     }
     private CodecSettingsOneofCase codecSettingsCase_ = CodecSettingsOneofCase.None;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -3124,6 +4490,7 @@ namespace Google.Cloud.Video.LiveStream.V1 {
         return true;
       }
       if (!object.Equals(H264, other.H264)) return false;
+      if (!object.Equals(H265, other.H265)) return false;
       if (CodecSettingsCase != other.CodecSettingsCase) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
@@ -3133,6 +4500,7 @@ namespace Google.Cloud.Video.LiveStream.V1 {
     public override int GetHashCode() {
       int hash = 1;
       if (codecSettingsCase_ == CodecSettingsOneofCase.H264) hash ^= H264.GetHashCode();
+      if (codecSettingsCase_ == CodecSettingsOneofCase.H265) hash ^= H265.GetHashCode();
       hash ^= (int) codecSettingsCase_;
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
@@ -3156,6 +4524,10 @@ namespace Google.Cloud.Video.LiveStream.V1 {
         output.WriteRawTag(162, 1);
         output.WriteMessage(H264);
       }
+      if (codecSettingsCase_ == CodecSettingsOneofCase.H265) {
+        output.WriteRawTag(170, 1);
+        output.WriteMessage(H265);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -3170,6 +4542,10 @@ namespace Google.Cloud.Video.LiveStream.V1 {
         output.WriteRawTag(162, 1);
         output.WriteMessage(H264);
       }
+      if (codecSettingsCase_ == CodecSettingsOneofCase.H265) {
+        output.WriteRawTag(170, 1);
+        output.WriteMessage(H265);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -3182,6 +4558,9 @@ namespace Google.Cloud.Video.LiveStream.V1 {
       int size = 0;
       if (codecSettingsCase_ == CodecSettingsOneofCase.H264) {
         size += 2 + pb::CodedOutputStream.ComputeMessageSize(H264);
+      }
+      if (codecSettingsCase_ == CodecSettingsOneofCase.H265) {
+        size += 2 + pb::CodedOutputStream.ComputeMessageSize(H265);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -3201,6 +4580,12 @@ namespace Google.Cloud.Video.LiveStream.V1 {
             H264 = new global::Google.Cloud.Video.LiveStream.V1.VideoStream.Types.H264CodecSettings();
           }
           H264.MergeFrom(other.H264);
+          break;
+        case CodecSettingsOneofCase.H265:
+          if (H265 == null) {
+            H265 = new global::Google.Cloud.Video.LiveStream.V1.VideoStream.Types.H265CodecSettings();
+          }
+          H265.MergeFrom(other.H265);
           break;
       }
 
@@ -3228,6 +4613,15 @@ namespace Google.Cloud.Video.LiveStream.V1 {
             H264 = subBuilder;
             break;
           }
+          case 170: {
+            global::Google.Cloud.Video.LiveStream.V1.VideoStream.Types.H265CodecSettings subBuilder = new global::Google.Cloud.Video.LiveStream.V1.VideoStream.Types.H265CodecSettings();
+            if (codecSettingsCase_ == CodecSettingsOneofCase.H265) {
+              subBuilder.MergeFrom(H265);
+            }
+            input.ReadMessage(subBuilder);
+            H265 = subBuilder;
+            break;
+          }
         }
       }
     #endif
@@ -3250,6 +4644,15 @@ namespace Google.Cloud.Video.LiveStream.V1 {
             }
             input.ReadMessage(subBuilder);
             H264 = subBuilder;
+            break;
+          }
+          case 170: {
+            global::Google.Cloud.Video.LiveStream.V1.VideoStream.Types.H265CodecSettings subBuilder = new global::Google.Cloud.Video.LiveStream.V1.VideoStream.Types.H265CodecSettings();
+            if (codecSettingsCase_ == CodecSettingsOneofCase.H265) {
+              subBuilder.MergeFrom(H265);
+            }
+            input.ReadMessage(subBuilder);
+            H265 = subBuilder;
             break;
           }
         }
@@ -3336,7 +4739,7 @@ namespace Google.Cloud.Video.LiveStream.V1 {
         private int widthPixels_;
         /// <summary>
         /// Required. The width of the video in pixels. Must be an even integer.
-        /// Valid range is [320, 1920].
+        /// Valid range is [320, 4096].
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -3352,7 +4755,7 @@ namespace Google.Cloud.Video.LiveStream.V1 {
         private int heightPixels_;
         /// <summary>
         /// Required. The height of the video in pixels. Must be an even integer.
-        /// Valid range is [180, 1080].
+        /// Valid range is [180, 2160].
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -3392,6 +4795,7 @@ namespace Google.Cloud.Video.LiveStream.V1 {
         ///
         /// - For SD resolution (&lt; 720p), must be &lt;= 3,000,000 (3 Mbps).
         /// - For HD resolution (&lt;= 1080p), must be &lt;= 15,000,000 (15 Mbps).
+        /// - For UHD resolution (&lt;= 2160p), must be &lt;= 25,000,000 (25 Mbps).
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -4134,6 +5538,700 @@ namespace Google.Cloud.Video.LiveStream.V1 {
 
       }
 
+      /// <summary>
+      /// H265 codec settings.
+      /// </summary>
+      [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+      public sealed partial class H265CodecSettings : pb::IMessage<H265CodecSettings>
+      #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          , pb::IBufferMessage
+      #endif
+      {
+        private static readonly pb::MessageParser<H265CodecSettings> _parser = new pb::MessageParser<H265CodecSettings>(() => new H265CodecSettings());
+        private pb::UnknownFieldSet _unknownFields;
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public static pb::MessageParser<H265CodecSettings> Parser { get { return _parser; } }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public static pbr::MessageDescriptor Descriptor {
+          get { return global::Google.Cloud.Video.LiveStream.V1.VideoStream.Descriptor.NestedTypes[1]; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        pbr::MessageDescriptor pb::IMessage.Descriptor {
+          get { return Descriptor; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public H265CodecSettings() {
+          OnConstruction();
+        }
+
+        partial void OnConstruction();
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public H265CodecSettings(H265CodecSettings other) : this() {
+          widthPixels_ = other.widthPixels_;
+          heightPixels_ = other.heightPixels_;
+          frameRate_ = other.frameRate_;
+          bitrateBps_ = other.bitrateBps_;
+          vbvSizeBits_ = other.vbvSizeBits_;
+          vbvFullnessBits_ = other.vbvFullnessBits_;
+          bPyramid_ = other.bPyramid_;
+          bFrameCount_ = other.bFrameCount_;
+          aqStrength_ = other.aqStrength_;
+          switch (other.GopModeCase) {
+            case GopModeOneofCase.GopFrameCount:
+              GopFrameCount = other.GopFrameCount;
+              break;
+            case GopModeOneofCase.GopDuration:
+              GopDuration = other.GopDuration.Clone();
+              break;
+          }
+
+          _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public H265CodecSettings Clone() {
+          return new H265CodecSettings(this);
+        }
+
+        /// <summary>Field number for the "width_pixels" field.</summary>
+        public const int WidthPixelsFieldNumber = 1;
+        private int widthPixels_;
+        /// <summary>
+        /// Optional. The width of the video in pixels. Must be an even integer.
+        /// When not specified, the width is adjusted to match the specified height
+        /// and input aspect ratio. If both are omitted, the input width is used.
+        /// Valid range is [320, 4096].
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public int WidthPixels {
+          get { return widthPixels_; }
+          set {
+            widthPixels_ = value;
+          }
+        }
+
+        /// <summary>Field number for the "height_pixels" field.</summary>
+        public const int HeightPixelsFieldNumber = 2;
+        private int heightPixels_;
+        /// <summary>
+        /// Optional. The height of the video in pixels. Must be an even integer.
+        /// When not specified, the height is adjusted to match the specified width
+        /// and input aspect ratio. If both are omitted, the input height is used.
+        /// Valid range is [180, 2160].
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public int HeightPixels {
+          get { return heightPixels_; }
+          set {
+            heightPixels_ = value;
+          }
+        }
+
+        /// <summary>Field number for the "frame_rate" field.</summary>
+        public const int FrameRateFieldNumber = 3;
+        private double frameRate_;
+        /// <summary>
+        /// Required. The target video frame rate in frames per second (FPS). Must be
+        /// less than or equal to 120. Will default to the input frame rate if larger
+        /// than the input frame rate. The API will generate an output FPS that is
+        /// divisible by the input FPS, and smaller or equal to the target FPS. See
+        /// [Calculating frame
+        /// rate](https://cloud.google.com/transcoder/docs/concepts/frame-rate) for
+        /// more information.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public double FrameRate {
+          get { return frameRate_; }
+          set {
+            frameRate_ = value;
+          }
+        }
+
+        /// <summary>Field number for the "bitrate_bps" field.</summary>
+        public const int BitrateBpsFieldNumber = 4;
+        private int bitrateBps_;
+        /// <summary>
+        /// Required. The video bitrate in bits per second. Minimum value is 10,000.
+        ///
+        /// - For SD resolution (&lt; 720p), must be &lt;= 3,000,000 (3 Mbps).
+        /// - For HD resolution (&lt;= 1080p), must be &lt;= 15,000,000 (15 Mbps).
+        /// - For UHD resolution (&lt;= 2160p), must be &lt;= 25,000,000 (25 Mbps).
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public int BitrateBps {
+          get { return bitrateBps_; }
+          set {
+            bitrateBps_ = value;
+          }
+        }
+
+        /// <summary>Field number for the "gop_frame_count" field.</summary>
+        public const int GopFrameCountFieldNumber = 7;
+        /// <summary>
+        /// Optional. Select the GOP size based on the specified frame count.
+        /// If GOP frame count is set instead of GOP duration, GOP duration will be
+        /// calculated by `gopFrameCount`/`frameRate`. The calculated GOP duration
+        /// must satisfy the limitations on `gopDuration` as well.
+        /// Valid range is [60, 600].
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public int GopFrameCount {
+          get { return HasGopFrameCount ? (int) gopMode_ : 0; }
+          set {
+            gopMode_ = value;
+            gopModeCase_ = GopModeOneofCase.GopFrameCount;
+          }
+        }
+        /// <summary>Gets whether the "gop_frame_count" field is set</summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public bool HasGopFrameCount {
+          get { return gopModeCase_ == GopModeOneofCase.GopFrameCount; }
+        }
+        /// <summary> Clears the value of the oneof if it's currently set to "gop_frame_count" </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void ClearGopFrameCount() {
+          if (HasGopFrameCount) {
+            ClearGopMode();
+          }
+        }
+
+        /// <summary>Field number for the "gop_duration" field.</summary>
+        public const int GopDurationFieldNumber = 8;
+        /// <summary>
+        /// Optional. Select the GOP size based on the specified duration. The
+        /// default is `2s`. Note that `gopDuration` must be less than or equal to
+        /// [segment_duration][google.cloud.video.livestream.v1.SegmentSettings.segment_duration],
+        /// and
+        /// [segment_duration][google.cloud.video.livestream.v1.SegmentSettings.segment_duration]
+        /// must be divisible by `gopDuration`. Valid range is [2s, 20s].
+        ///
+        /// All video streams in the same channel must have the same GOP size.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public global::Google.Protobuf.WellKnownTypes.Duration GopDuration {
+          get { return gopModeCase_ == GopModeOneofCase.GopDuration ? (global::Google.Protobuf.WellKnownTypes.Duration) gopMode_ : null; }
+          set {
+            gopMode_ = value;
+            gopModeCase_ = value == null ? GopModeOneofCase.None : GopModeOneofCase.GopDuration;
+          }
+        }
+
+        /// <summary>Field number for the "vbv_size_bits" field.</summary>
+        public const int VbvSizeBitsFieldNumber = 9;
+        private int vbvSizeBits_;
+        /// <summary>
+        /// Optional. Size of the Video Buffering Verifier (VBV) buffer in bits. Must
+        /// be greater than zero. The default is equal to
+        /// [bitrate_bps][google.cloud.video.livestream.v1.VideoStream.H265CodecSettings.bitrate_bps].
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public int VbvSizeBits {
+          get { return vbvSizeBits_; }
+          set {
+            vbvSizeBits_ = value;
+          }
+        }
+
+        /// <summary>Field number for the "vbv_fullness_bits" field.</summary>
+        public const int VbvFullnessBitsFieldNumber = 10;
+        private int vbvFullnessBits_;
+        /// <summary>
+        /// Optional. Initial fullness of the Video Buffering Verifier (VBV) buffer
+        /// in bits. Must be greater than zero. The default is equal to 90% of
+        /// [vbv_size_bits][google.cloud.video.livestream.v1.VideoStream.H265CodecSettings.vbv_size_bits].
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public int VbvFullnessBits {
+          get { return vbvFullnessBits_; }
+          set {
+            vbvFullnessBits_ = value;
+          }
+        }
+
+        /// <summary>Field number for the "b_pyramid" field.</summary>
+        public const int BPyramidFieldNumber = 11;
+        private bool bPyramid_;
+        /// <summary>
+        /// Optional. Allow B-pyramid for reference frame selection. This may not be
+        /// supported on all decoders. The default is `false`.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public bool BPyramid {
+          get { return bPyramid_; }
+          set {
+            bPyramid_ = value;
+          }
+        }
+
+        /// <summary>Field number for the "b_frame_count" field.</summary>
+        public const int BFrameCountFieldNumber = 12;
+        private int bFrameCount_;
+        /// <summary>
+        /// Optional. The number of consecutive B-frames. Must be greater than or
+        /// equal to zero. Must be less than
+        /// [gop_frame_count][google.cloud.video.livestream.v1.VideoStream.H265CodecSettings.gop_frame_count]
+        /// if set. The default is 0.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public int BFrameCount {
+          get { return bFrameCount_; }
+          set {
+            bFrameCount_ = value;
+          }
+        }
+
+        /// <summary>Field number for the "aq_strength" field.</summary>
+        public const int AqStrengthFieldNumber = 13;
+        private double aqStrength_;
+        /// <summary>
+        /// Optional. Specify the intensity of the adaptive quantizer (AQ). Must be
+        /// between 0 and 1, where 0 disables the quantizer and 1 maximizes the
+        /// quantizer. A higher value equals a lower bitrate but smoother image. The
+        /// default is 0.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public double AqStrength {
+          get { return aqStrength_; }
+          set {
+            aqStrength_ = value;
+          }
+        }
+
+        private object gopMode_;
+        /// <summary>Enum of possible cases for the "gop_mode" oneof.</summary>
+        public enum GopModeOneofCase {
+          None = 0,
+          GopFrameCount = 7,
+          GopDuration = 8,
+        }
+        private GopModeOneofCase gopModeCase_ = GopModeOneofCase.None;
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public GopModeOneofCase GopModeCase {
+          get { return gopModeCase_; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void ClearGopMode() {
+          gopModeCase_ = GopModeOneofCase.None;
+          gopMode_ = null;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override bool Equals(object other) {
+          return Equals(other as H265CodecSettings);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public bool Equals(H265CodecSettings other) {
+          if (ReferenceEquals(other, null)) {
+            return false;
+          }
+          if (ReferenceEquals(other, this)) {
+            return true;
+          }
+          if (WidthPixels != other.WidthPixels) return false;
+          if (HeightPixels != other.HeightPixels) return false;
+          if (!pbc::ProtobufEqualityComparers.BitwiseDoubleEqualityComparer.Equals(FrameRate, other.FrameRate)) return false;
+          if (BitrateBps != other.BitrateBps) return false;
+          if (GopFrameCount != other.GopFrameCount) return false;
+          if (!object.Equals(GopDuration, other.GopDuration)) return false;
+          if (VbvSizeBits != other.VbvSizeBits) return false;
+          if (VbvFullnessBits != other.VbvFullnessBits) return false;
+          if (BPyramid != other.BPyramid) return false;
+          if (BFrameCount != other.BFrameCount) return false;
+          if (!pbc::ProtobufEqualityComparers.BitwiseDoubleEqualityComparer.Equals(AqStrength, other.AqStrength)) return false;
+          if (GopModeCase != other.GopModeCase) return false;
+          return Equals(_unknownFields, other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override int GetHashCode() {
+          int hash = 1;
+          if (WidthPixels != 0) hash ^= WidthPixels.GetHashCode();
+          if (HeightPixels != 0) hash ^= HeightPixels.GetHashCode();
+          if (FrameRate != 0D) hash ^= pbc::ProtobufEqualityComparers.BitwiseDoubleEqualityComparer.GetHashCode(FrameRate);
+          if (BitrateBps != 0) hash ^= BitrateBps.GetHashCode();
+          if (HasGopFrameCount) hash ^= GopFrameCount.GetHashCode();
+          if (gopModeCase_ == GopModeOneofCase.GopDuration) hash ^= GopDuration.GetHashCode();
+          if (VbvSizeBits != 0) hash ^= VbvSizeBits.GetHashCode();
+          if (VbvFullnessBits != 0) hash ^= VbvFullnessBits.GetHashCode();
+          if (BPyramid != false) hash ^= BPyramid.GetHashCode();
+          if (BFrameCount != 0) hash ^= BFrameCount.GetHashCode();
+          if (AqStrength != 0D) hash ^= pbc::ProtobufEqualityComparers.BitwiseDoubleEqualityComparer.GetHashCode(AqStrength);
+          hash ^= (int) gopModeCase_;
+          if (_unknownFields != null) {
+            hash ^= _unknownFields.GetHashCode();
+          }
+          return hash;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override string ToString() {
+          return pb::JsonFormatter.ToDiagnosticString(this);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void WriteTo(pb::CodedOutputStream output) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          output.WriteRawMessage(this);
+        #else
+          if (WidthPixels != 0) {
+            output.WriteRawTag(8);
+            output.WriteInt32(WidthPixels);
+          }
+          if (HeightPixels != 0) {
+            output.WriteRawTag(16);
+            output.WriteInt32(HeightPixels);
+          }
+          if (FrameRate != 0D) {
+            output.WriteRawTag(25);
+            output.WriteDouble(FrameRate);
+          }
+          if (BitrateBps != 0) {
+            output.WriteRawTag(32);
+            output.WriteInt32(BitrateBps);
+          }
+          if (HasGopFrameCount) {
+            output.WriteRawTag(56);
+            output.WriteInt32(GopFrameCount);
+          }
+          if (gopModeCase_ == GopModeOneofCase.GopDuration) {
+            output.WriteRawTag(66);
+            output.WriteMessage(GopDuration);
+          }
+          if (VbvSizeBits != 0) {
+            output.WriteRawTag(72);
+            output.WriteInt32(VbvSizeBits);
+          }
+          if (VbvFullnessBits != 0) {
+            output.WriteRawTag(80);
+            output.WriteInt32(VbvFullnessBits);
+          }
+          if (BPyramid != false) {
+            output.WriteRawTag(88);
+            output.WriteBool(BPyramid);
+          }
+          if (BFrameCount != 0) {
+            output.WriteRawTag(96);
+            output.WriteInt32(BFrameCount);
+          }
+          if (AqStrength != 0D) {
+            output.WriteRawTag(105);
+            output.WriteDouble(AqStrength);
+          }
+          if (_unknownFields != null) {
+            _unknownFields.WriteTo(output);
+          }
+        #endif
+        }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+          if (WidthPixels != 0) {
+            output.WriteRawTag(8);
+            output.WriteInt32(WidthPixels);
+          }
+          if (HeightPixels != 0) {
+            output.WriteRawTag(16);
+            output.WriteInt32(HeightPixels);
+          }
+          if (FrameRate != 0D) {
+            output.WriteRawTag(25);
+            output.WriteDouble(FrameRate);
+          }
+          if (BitrateBps != 0) {
+            output.WriteRawTag(32);
+            output.WriteInt32(BitrateBps);
+          }
+          if (HasGopFrameCount) {
+            output.WriteRawTag(56);
+            output.WriteInt32(GopFrameCount);
+          }
+          if (gopModeCase_ == GopModeOneofCase.GopDuration) {
+            output.WriteRawTag(66);
+            output.WriteMessage(GopDuration);
+          }
+          if (VbvSizeBits != 0) {
+            output.WriteRawTag(72);
+            output.WriteInt32(VbvSizeBits);
+          }
+          if (VbvFullnessBits != 0) {
+            output.WriteRawTag(80);
+            output.WriteInt32(VbvFullnessBits);
+          }
+          if (BPyramid != false) {
+            output.WriteRawTag(88);
+            output.WriteBool(BPyramid);
+          }
+          if (BFrameCount != 0) {
+            output.WriteRawTag(96);
+            output.WriteInt32(BFrameCount);
+          }
+          if (AqStrength != 0D) {
+            output.WriteRawTag(105);
+            output.WriteDouble(AqStrength);
+          }
+          if (_unknownFields != null) {
+            _unknownFields.WriteTo(ref output);
+          }
+        }
+        #endif
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public int CalculateSize() {
+          int size = 0;
+          if (WidthPixels != 0) {
+            size += 1 + pb::CodedOutputStream.ComputeInt32Size(WidthPixels);
+          }
+          if (HeightPixels != 0) {
+            size += 1 + pb::CodedOutputStream.ComputeInt32Size(HeightPixels);
+          }
+          if (FrameRate != 0D) {
+            size += 1 + 8;
+          }
+          if (BitrateBps != 0) {
+            size += 1 + pb::CodedOutputStream.ComputeInt32Size(BitrateBps);
+          }
+          if (HasGopFrameCount) {
+            size += 1 + pb::CodedOutputStream.ComputeInt32Size(GopFrameCount);
+          }
+          if (gopModeCase_ == GopModeOneofCase.GopDuration) {
+            size += 1 + pb::CodedOutputStream.ComputeMessageSize(GopDuration);
+          }
+          if (VbvSizeBits != 0) {
+            size += 1 + pb::CodedOutputStream.ComputeInt32Size(VbvSizeBits);
+          }
+          if (VbvFullnessBits != 0) {
+            size += 1 + pb::CodedOutputStream.ComputeInt32Size(VbvFullnessBits);
+          }
+          if (BPyramid != false) {
+            size += 1 + 1;
+          }
+          if (BFrameCount != 0) {
+            size += 1 + pb::CodedOutputStream.ComputeInt32Size(BFrameCount);
+          }
+          if (AqStrength != 0D) {
+            size += 1 + 8;
+          }
+          if (_unknownFields != null) {
+            size += _unknownFields.CalculateSize();
+          }
+          return size;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void MergeFrom(H265CodecSettings other) {
+          if (other == null) {
+            return;
+          }
+          if (other.WidthPixels != 0) {
+            WidthPixels = other.WidthPixels;
+          }
+          if (other.HeightPixels != 0) {
+            HeightPixels = other.HeightPixels;
+          }
+          if (other.FrameRate != 0D) {
+            FrameRate = other.FrameRate;
+          }
+          if (other.BitrateBps != 0) {
+            BitrateBps = other.BitrateBps;
+          }
+          if (other.VbvSizeBits != 0) {
+            VbvSizeBits = other.VbvSizeBits;
+          }
+          if (other.VbvFullnessBits != 0) {
+            VbvFullnessBits = other.VbvFullnessBits;
+          }
+          if (other.BPyramid != false) {
+            BPyramid = other.BPyramid;
+          }
+          if (other.BFrameCount != 0) {
+            BFrameCount = other.BFrameCount;
+          }
+          if (other.AqStrength != 0D) {
+            AqStrength = other.AqStrength;
+          }
+          switch (other.GopModeCase) {
+            case GopModeOneofCase.GopFrameCount:
+              GopFrameCount = other.GopFrameCount;
+              break;
+            case GopModeOneofCase.GopDuration:
+              if (GopDuration == null) {
+                GopDuration = new global::Google.Protobuf.WellKnownTypes.Duration();
+              }
+              GopDuration.MergeFrom(other.GopDuration);
+              break;
+          }
+
+          _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void MergeFrom(pb::CodedInputStream input) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          input.ReadRawMessage(this);
+        #else
+          uint tag;
+          while ((tag = input.ReadTag()) != 0) {
+            switch(tag) {
+              default:
+                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+                break;
+              case 8: {
+                WidthPixels = input.ReadInt32();
+                break;
+              }
+              case 16: {
+                HeightPixels = input.ReadInt32();
+                break;
+              }
+              case 25: {
+                FrameRate = input.ReadDouble();
+                break;
+              }
+              case 32: {
+                BitrateBps = input.ReadInt32();
+                break;
+              }
+              case 56: {
+                GopFrameCount = input.ReadInt32();
+                break;
+              }
+              case 66: {
+                global::Google.Protobuf.WellKnownTypes.Duration subBuilder = new global::Google.Protobuf.WellKnownTypes.Duration();
+                if (gopModeCase_ == GopModeOneofCase.GopDuration) {
+                  subBuilder.MergeFrom(GopDuration);
+                }
+                input.ReadMessage(subBuilder);
+                GopDuration = subBuilder;
+                break;
+              }
+              case 72: {
+                VbvSizeBits = input.ReadInt32();
+                break;
+              }
+              case 80: {
+                VbvFullnessBits = input.ReadInt32();
+                break;
+              }
+              case 88: {
+                BPyramid = input.ReadBool();
+                break;
+              }
+              case 96: {
+                BFrameCount = input.ReadInt32();
+                break;
+              }
+              case 105: {
+                AqStrength = input.ReadDouble();
+                break;
+              }
+            }
+          }
+        #endif
+        }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+          uint tag;
+          while ((tag = input.ReadTag()) != 0) {
+            switch(tag) {
+              default:
+                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+                break;
+              case 8: {
+                WidthPixels = input.ReadInt32();
+                break;
+              }
+              case 16: {
+                HeightPixels = input.ReadInt32();
+                break;
+              }
+              case 25: {
+                FrameRate = input.ReadDouble();
+                break;
+              }
+              case 32: {
+                BitrateBps = input.ReadInt32();
+                break;
+              }
+              case 56: {
+                GopFrameCount = input.ReadInt32();
+                break;
+              }
+              case 66: {
+                global::Google.Protobuf.WellKnownTypes.Duration subBuilder = new global::Google.Protobuf.WellKnownTypes.Duration();
+                if (gopModeCase_ == GopModeOneofCase.GopDuration) {
+                  subBuilder.MergeFrom(GopDuration);
+                }
+                input.ReadMessage(subBuilder);
+                GopDuration = subBuilder;
+                break;
+              }
+              case 72: {
+                VbvSizeBits = input.ReadInt32();
+                break;
+              }
+              case 80: {
+                VbvFullnessBits = input.ReadInt32();
+                break;
+              }
+              case 88: {
+                BPyramid = input.ReadBool();
+                break;
+              }
+              case 96: {
+                BFrameCount = input.ReadInt32();
+                break;
+              }
+              case 105: {
+                AqStrength = input.ReadDouble();
+                break;
+              }
+            }
+          }
+        }
+        #endif
+
+      }
+
     }
     #endregion
 
@@ -4157,7 +6255,7 @@ namespace Google.Cloud.Video.LiveStream.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.Video.LiveStream.V1.OutputsReflection.Descriptor.MessageTypes[6]; }
+      get { return global::Google.Cloud.Video.LiveStream.V1.OutputsReflection.Descriptor.MessageTypes[10]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -4963,7 +7061,7 @@ namespace Google.Cloud.Video.LiveStream.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.Video.LiveStream.V1.OutputsReflection.Descriptor.MessageTypes[7]; }
+      get { return global::Google.Cloud.Video.LiveStream.V1.OutputsReflection.Descriptor.MessageTypes[11]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -4984,6 +7082,10 @@ namespace Google.Cloud.Video.LiveStream.V1 {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public TextStream(TextStream other) : this() {
       codec_ = other.codec_;
+      languageCode_ = other.languageCode_;
+      displayName_ = other.displayName_;
+      outputCeaChannel_ = other.outputCeaChannel_;
+      mapping_ = other.mapping_.Clone();
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -5003,6 +7105,7 @@ namespace Google.Cloud.Video.LiveStream.V1 {
     ///
     /// - `cea608`
     /// - `cea708`
+    /// - `webvtt`
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -5011,6 +7114,74 @@ namespace Google.Cloud.Video.LiveStream.V1 {
       set {
         codec_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
       }
+    }
+
+    /// <summary>Field number for the "language_code" field.</summary>
+    public const int LanguageCodeFieldNumber = 2;
+    private string languageCode_ = "";
+    /// <summary>
+    /// Optional. The BCP-47 language code, such as `en-US` or `sr-Latn`. For more
+    /// information, see
+    /// https://www.unicode.org/reports/tr35/#Unicode_locale_identifier.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string LanguageCode {
+      get { return languageCode_; }
+      set {
+        languageCode_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "display_name" field.</summary>
+    public const int DisplayNameFieldNumber = 4;
+    private string displayName_ = "";
+    /// <summary>
+    /// Optional. The name for this particular text stream that will be added to
+    /// the HLS/DASH manifest.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string DisplayName {
+      get { return displayName_; }
+      set {
+        displayName_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "output_cea_channel" field.</summary>
+    public const int OutputCeaChannelFieldNumber = 5;
+    private string outputCeaChannel_ = "";
+    /// <summary>
+    /// Optional. The channel of the closed caption in the output stream.
+    /// This field should only be set when textstream is used for partner
+    /// distribution.
+    /// Must be one of `CC1`, `CC2`, `CC3`, and `CC4`, if the
+    /// [codec][google.cloud.video.livestream.v1.TextStream.codec] is `cea608`;
+    /// Must be one between `SERVICE1` and `SERVICE63`, if the
+    /// [codec][google.cloud.video.livestream.v1.TextStream.codec] is `cea708`.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string OutputCeaChannel {
+      get { return outputCeaChannel_; }
+      set {
+        outputCeaChannel_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "mapping" field.</summary>
+    public const int MappingFieldNumber = 3;
+    private static readonly pb::FieldCodec<global::Google.Cloud.Video.LiveStream.V1.TextStream.Types.TextMapping> _repeated_mapping_codec
+        = pb::FieldCodec.ForMessage(26, global::Google.Cloud.Video.LiveStream.V1.TextStream.Types.TextMapping.Parser);
+    private readonly pbc::RepeatedField<global::Google.Cloud.Video.LiveStream.V1.TextStream.Types.TextMapping> mapping_ = new pbc::RepeatedField<global::Google.Cloud.Video.LiveStream.V1.TextStream.Types.TextMapping>();
+    /// <summary>
+    /// Optional. The mapping for the input streams and text tracks.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pbc::RepeatedField<global::Google.Cloud.Video.LiveStream.V1.TextStream.Types.TextMapping> Mapping {
+      get { return mapping_; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -5029,6 +7200,10 @@ namespace Google.Cloud.Video.LiveStream.V1 {
         return true;
       }
       if (Codec != other.Codec) return false;
+      if (LanguageCode != other.LanguageCode) return false;
+      if (DisplayName != other.DisplayName) return false;
+      if (OutputCeaChannel != other.OutputCeaChannel) return false;
+      if(!mapping_.Equals(other.mapping_)) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -5037,6 +7212,10 @@ namespace Google.Cloud.Video.LiveStream.V1 {
     public override int GetHashCode() {
       int hash = 1;
       if (Codec.Length != 0) hash ^= Codec.GetHashCode();
+      if (LanguageCode.Length != 0) hash ^= LanguageCode.GetHashCode();
+      if (DisplayName.Length != 0) hash ^= DisplayName.GetHashCode();
+      if (OutputCeaChannel.Length != 0) hash ^= OutputCeaChannel.GetHashCode();
+      hash ^= mapping_.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -5059,6 +7238,19 @@ namespace Google.Cloud.Video.LiveStream.V1 {
         output.WriteRawTag(10);
         output.WriteString(Codec);
       }
+      if (LanguageCode.Length != 0) {
+        output.WriteRawTag(18);
+        output.WriteString(LanguageCode);
+      }
+      mapping_.WriteTo(output, _repeated_mapping_codec);
+      if (DisplayName.Length != 0) {
+        output.WriteRawTag(34);
+        output.WriteString(DisplayName);
+      }
+      if (OutputCeaChannel.Length != 0) {
+        output.WriteRawTag(42);
+        output.WriteString(OutputCeaChannel);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -5073,6 +7265,19 @@ namespace Google.Cloud.Video.LiveStream.V1 {
         output.WriteRawTag(10);
         output.WriteString(Codec);
       }
+      if (LanguageCode.Length != 0) {
+        output.WriteRawTag(18);
+        output.WriteString(LanguageCode);
+      }
+      mapping_.WriteTo(ref output, _repeated_mapping_codec);
+      if (DisplayName.Length != 0) {
+        output.WriteRawTag(34);
+        output.WriteString(DisplayName);
+      }
+      if (OutputCeaChannel.Length != 0) {
+        output.WriteRawTag(42);
+        output.WriteString(OutputCeaChannel);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -5086,6 +7291,16 @@ namespace Google.Cloud.Video.LiveStream.V1 {
       if (Codec.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(Codec);
       }
+      if (LanguageCode.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(LanguageCode);
+      }
+      if (DisplayName.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(DisplayName);
+      }
+      if (OutputCeaChannel.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(OutputCeaChannel);
+      }
+      size += mapping_.CalculateSize(_repeated_mapping_codec);
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
       }
@@ -5101,6 +7316,16 @@ namespace Google.Cloud.Video.LiveStream.V1 {
       if (other.Codec.Length != 0) {
         Codec = other.Codec;
       }
+      if (other.LanguageCode.Length != 0) {
+        LanguageCode = other.LanguageCode;
+      }
+      if (other.DisplayName.Length != 0) {
+        DisplayName = other.DisplayName;
+      }
+      if (other.OutputCeaChannel.Length != 0) {
+        OutputCeaChannel = other.OutputCeaChannel;
+      }
+      mapping_.Add(other.mapping_);
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 
@@ -5118,6 +7343,22 @@ namespace Google.Cloud.Video.LiveStream.V1 {
             break;
           case 10: {
             Codec = input.ReadString();
+            break;
+          }
+          case 18: {
+            LanguageCode = input.ReadString();
+            break;
+          }
+          case 26: {
+            mapping_.AddEntriesFrom(input, _repeated_mapping_codec);
+            break;
+          }
+          case 34: {
+            DisplayName = input.ReadString();
+            break;
+          }
+          case 42: {
+            OutputCeaChannel = input.ReadString();
             break;
           }
         }
@@ -5139,10 +7380,360 @@ namespace Google.Cloud.Video.LiveStream.V1 {
             Codec = input.ReadString();
             break;
           }
+          case 18: {
+            LanguageCode = input.ReadString();
+            break;
+          }
+          case 26: {
+            mapping_.AddEntriesFrom(ref input, _repeated_mapping_codec);
+            break;
+          }
+          case 34: {
+            DisplayName = input.ReadString();
+            break;
+          }
+          case 42: {
+            OutputCeaChannel = input.ReadString();
+            break;
+          }
         }
       }
     }
     #endif
+
+    #region Nested types
+    /// <summary>Container for nested types declared in the TextStream message type.</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static partial class Types {
+      /// <summary>
+      /// The mapping for the input streams and text tracks.
+      /// </summary>
+      [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+      public sealed partial class TextMapping : pb::IMessage<TextMapping>
+      #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          , pb::IBufferMessage
+      #endif
+      {
+        private static readonly pb::MessageParser<TextMapping> _parser = new pb::MessageParser<TextMapping>(() => new TextMapping());
+        private pb::UnknownFieldSet _unknownFields;
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public static pb::MessageParser<TextMapping> Parser { get { return _parser; } }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public static pbr::MessageDescriptor Descriptor {
+          get { return global::Google.Cloud.Video.LiveStream.V1.TextStream.Descriptor.NestedTypes[0]; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        pbr::MessageDescriptor pb::IMessage.Descriptor {
+          get { return Descriptor; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public TextMapping() {
+          OnConstruction();
+        }
+
+        partial void OnConstruction();
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public TextMapping(TextMapping other) : this() {
+          inputKey_ = other.inputKey_;
+          inputTrack_ = other.inputTrack_;
+          inputCeaChannel_ = other.inputCeaChannel_;
+          fromLanguageCode_ = other.fromLanguageCode_;
+          _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public TextMapping Clone() {
+          return new TextMapping(this);
+        }
+
+        /// <summary>Field number for the "input_key" field.</summary>
+        public const int InputKeyFieldNumber = 4;
+        private string inputKey_ = "";
+        /// <summary>
+        /// Optional. The `Channel`
+        /// [InputAttachment.key][google.cloud.video.livestream.v1.InputAttachment.key]
+        /// that identifies the input that this text mapping applies to.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public string InputKey {
+          get { return inputKey_; }
+          set {
+            inputKey_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+          }
+        }
+
+        /// <summary>Field number for the "input_track" field.</summary>
+        public const int InputTrackFieldNumber = 2;
+        private int inputTrack_;
+        /// <summary>
+        /// Optional. The zero-based index of the track in the input stream.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public int InputTrack {
+          get { return inputTrack_; }
+          set {
+            inputTrack_ = value;
+          }
+        }
+
+        /// <summary>Field number for the "input_cea_channel" field.</summary>
+        public const int InputCeaChannelFieldNumber = 5;
+        private string inputCeaChannel_ = "";
+        /// <summary>
+        /// Optional. The channel of the closed caption in the input stream.
+        /// If this field is set, the output
+        /// [codec][google.cloud.video.livestream.v1.TextStream.codec] must be
+        /// `webvtt`. Must be one of `CC1`, `CC2`, `CC3`, and `CC4`, if the codec of
+        /// the input closed caption is `cea608`; Must be one between `SERVICE1` and
+        /// `SERVICE64`, if the codec of the input closed caption is `cea708`.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public string InputCeaChannel {
+          get { return inputCeaChannel_; }
+          set {
+            inputCeaChannel_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+          }
+        }
+
+        /// <summary>Field number for the "from_language_code" field.</summary>
+        public const int FromLanguageCodeFieldNumber = 6;
+        private string fromLanguageCode_ = "";
+        /// <summary>
+        /// Optional. The BCP-47 source language code, such as `en-US` or `sr-Latn`.
+        /// If differ from the textStream's language code, enable translation. For
+        /// more information on BCP-47 language codes, see
+        /// https://www.unicode.org/reports/tr35/#Unicode_locale_identifier.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public string FromLanguageCode {
+          get { return fromLanguageCode_; }
+          set {
+            fromLanguageCode_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+          }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override bool Equals(object other) {
+          return Equals(other as TextMapping);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public bool Equals(TextMapping other) {
+          if (ReferenceEquals(other, null)) {
+            return false;
+          }
+          if (ReferenceEquals(other, this)) {
+            return true;
+          }
+          if (InputKey != other.InputKey) return false;
+          if (InputTrack != other.InputTrack) return false;
+          if (InputCeaChannel != other.InputCeaChannel) return false;
+          if (FromLanguageCode != other.FromLanguageCode) return false;
+          return Equals(_unknownFields, other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override int GetHashCode() {
+          int hash = 1;
+          if (InputKey.Length != 0) hash ^= InputKey.GetHashCode();
+          if (InputTrack != 0) hash ^= InputTrack.GetHashCode();
+          if (InputCeaChannel.Length != 0) hash ^= InputCeaChannel.GetHashCode();
+          if (FromLanguageCode.Length != 0) hash ^= FromLanguageCode.GetHashCode();
+          if (_unknownFields != null) {
+            hash ^= _unknownFields.GetHashCode();
+          }
+          return hash;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override string ToString() {
+          return pb::JsonFormatter.ToDiagnosticString(this);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void WriteTo(pb::CodedOutputStream output) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          output.WriteRawMessage(this);
+        #else
+          if (InputTrack != 0) {
+            output.WriteRawTag(16);
+            output.WriteInt32(InputTrack);
+          }
+          if (InputKey.Length != 0) {
+            output.WriteRawTag(34);
+            output.WriteString(InputKey);
+          }
+          if (InputCeaChannel.Length != 0) {
+            output.WriteRawTag(42);
+            output.WriteString(InputCeaChannel);
+          }
+          if (FromLanguageCode.Length != 0) {
+            output.WriteRawTag(50);
+            output.WriteString(FromLanguageCode);
+          }
+          if (_unknownFields != null) {
+            _unknownFields.WriteTo(output);
+          }
+        #endif
+        }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+          if (InputTrack != 0) {
+            output.WriteRawTag(16);
+            output.WriteInt32(InputTrack);
+          }
+          if (InputKey.Length != 0) {
+            output.WriteRawTag(34);
+            output.WriteString(InputKey);
+          }
+          if (InputCeaChannel.Length != 0) {
+            output.WriteRawTag(42);
+            output.WriteString(InputCeaChannel);
+          }
+          if (FromLanguageCode.Length != 0) {
+            output.WriteRawTag(50);
+            output.WriteString(FromLanguageCode);
+          }
+          if (_unknownFields != null) {
+            _unknownFields.WriteTo(ref output);
+          }
+        }
+        #endif
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public int CalculateSize() {
+          int size = 0;
+          if (InputKey.Length != 0) {
+            size += 1 + pb::CodedOutputStream.ComputeStringSize(InputKey);
+          }
+          if (InputTrack != 0) {
+            size += 1 + pb::CodedOutputStream.ComputeInt32Size(InputTrack);
+          }
+          if (InputCeaChannel.Length != 0) {
+            size += 1 + pb::CodedOutputStream.ComputeStringSize(InputCeaChannel);
+          }
+          if (FromLanguageCode.Length != 0) {
+            size += 1 + pb::CodedOutputStream.ComputeStringSize(FromLanguageCode);
+          }
+          if (_unknownFields != null) {
+            size += _unknownFields.CalculateSize();
+          }
+          return size;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void MergeFrom(TextMapping other) {
+          if (other == null) {
+            return;
+          }
+          if (other.InputKey.Length != 0) {
+            InputKey = other.InputKey;
+          }
+          if (other.InputTrack != 0) {
+            InputTrack = other.InputTrack;
+          }
+          if (other.InputCeaChannel.Length != 0) {
+            InputCeaChannel = other.InputCeaChannel;
+          }
+          if (other.FromLanguageCode.Length != 0) {
+            FromLanguageCode = other.FromLanguageCode;
+          }
+          _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void MergeFrom(pb::CodedInputStream input) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          input.ReadRawMessage(this);
+        #else
+          uint tag;
+          while ((tag = input.ReadTag()) != 0) {
+            switch(tag) {
+              default:
+                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+                break;
+              case 16: {
+                InputTrack = input.ReadInt32();
+                break;
+              }
+              case 34: {
+                InputKey = input.ReadString();
+                break;
+              }
+              case 42: {
+                InputCeaChannel = input.ReadString();
+                break;
+              }
+              case 50: {
+                FromLanguageCode = input.ReadString();
+                break;
+              }
+            }
+          }
+        #endif
+        }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+          uint tag;
+          while ((tag = input.ReadTag()) != 0) {
+            switch(tag) {
+              default:
+                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+                break;
+              case 16: {
+                InputTrack = input.ReadInt32();
+                break;
+              }
+              case 34: {
+                InputKey = input.ReadString();
+                break;
+              }
+              case 42: {
+                InputCeaChannel = input.ReadString();
+                break;
+              }
+              case 50: {
+                FromLanguageCode = input.ReadString();
+                break;
+              }
+            }
+          }
+        }
+        #endif
+
+      }
+
+    }
+    #endregion
 
   }
 
@@ -5164,7 +7755,7 @@ namespace Google.Cloud.Video.LiveStream.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.Video.LiveStream.V1.OutputsReflection.Descriptor.MessageTypes[8]; }
+      get { return global::Google.Cloud.Video.LiveStream.V1.OutputsReflection.Descriptor.MessageTypes[12]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -5377,7 +7968,7 @@ namespace Google.Cloud.Video.LiveStream.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.Video.LiveStream.V1.OutputsReflection.Descriptor.MessageTypes[9]; }
+      get { return global::Google.Cloud.Video.LiveStream.V1.OutputsReflection.Descriptor.MessageTypes[13]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
