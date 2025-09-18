@@ -2457,7 +2457,7 @@
             "generationAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
             "releaseAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
             "releaseTimestamp": "2025-07-22T08:03:49.413659164Z",
-            "lastGeneratedCommit": "c83041768ca4d9a37bb894800b0c4b7db8dc2186",
+            "lastGeneratedCommit": "36533b09a6b383f3c30d13c3c26092154ecf5388",
             "lastReleasedCommit": "29c240bcc463751f6224deb048f3332bddf4c3ef",
             "apiPaths": [
                 "google/cloud/policysimulator/v1"
