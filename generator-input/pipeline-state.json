@@ -4069,7 +4069,7 @@
             "generationAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
             "releaseAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
             "releaseTimestamp": "2025-04-24T07:40:52Z",
-            "lastGeneratedCommit": "e3d58220eff89c7f52ade4828a6854a1f8366e1e",
+            "lastGeneratedCommit": "36533b09a6b383f3c30d13c3c26092154ecf5388",
             "apiPaths": [
                 "google/cloud/financialservices/v1"
             ],
