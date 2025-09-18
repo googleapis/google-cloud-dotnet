@@ -2245,7 +2245,7 @@
             "generationAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
             "releaseAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
             "releaseTimestamp": "2024-05-14T07:08:20Z",
-            "lastGeneratedCommit": "d41317895717b9ebc3b04d42cafbb0eaef080329",
+            "lastGeneratedCommit": "36533b09a6b383f3c30d13c3c26092154ecf5388",
             "apiPaths": [
                 "google/cloud/notebooks/v2"
             ],
