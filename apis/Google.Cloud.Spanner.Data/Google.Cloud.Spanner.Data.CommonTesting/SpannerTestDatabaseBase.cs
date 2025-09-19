@@ -16,9 +16,11 @@ using Google.Api.Gax;
 using Google.Api.Gax.ResourceNames;
 using Google.Cloud.Spanner.Admin.Instance.V1;
 using Google.Cloud.Spanner.Common.V1;
+using Google.Cloud.Spanner.V1;
 using Google.Cloud.Spanner.V1.Internal.Logging;
 using Grpc.Core;
 using System;
+using System.Threading.Tasks;
 
 namespace Google.Cloud.Spanner.Data.CommonTesting;
 
@@ -27,6 +29,8 @@ namespace Google.Cloud.Spanner.Data.CommonTesting;
 /// </summary>
 public abstract class SpannerTestDatabaseBase
 {
+    private MultiplexSession _multiplexSession;
+
     /// <summary>
     /// The Spanner Host name to connect to. It is read from the environment variable "TEST_SPANNER_HOST".
     /// </summary>
@@ -178,4 +182,26 @@ public abstract class SpannerTestDatabaseBase
             SessionPoolManager = SessionPoolManager.Create(new V1.SessionPoolOptions(), logger),
             LogCommitStats = logCommitStats
         });
+
+    public async Task<MultiplexSession> GetMultiplexSession()
+    {
+        if (_multiplexSession != null)
+        {
+            return _multiplexSession;
+        }
+
+        var options = new MultiplexSessionOptions();
+
+        _multiplexSession = await CreateMultiplexSession(options).ConfigureAwait(false);
+
+        return _multiplexSession;
+    }
+
+    private async Task<MultiplexSession> CreateMultiplexSession(MultiplexSessionOptions options)
+    {
+        var poolManager = SessionPoolManager.Create(options);
+        var muxSession = await poolManager.AcquireMultiplexSessionAsync(SpannerClientCreationOptions, DatabaseName, null);
+
+        return muxSession;
+    }
 }
