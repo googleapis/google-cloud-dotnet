@@ -13,6 +13,7 @@
 // limitations under the License.
 
 using Google.Api.Gax;
+using Google.Cloud.Spanner.Common.V1;
 using Google.Cloud.Spanner.V1;
 using Google.Cloud.Spanner.V1.Internal.Logging;
 using System;
@@ -22,6 +23,7 @@ using System.Linq;
 using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
+using static Google.Cloud.Spanner.V1.MultiplexSession;
 using static Google.Cloud.Spanner.V1.SessionPool;
 
 namespace Google.Cloud.Spanner.Data
@@ -56,10 +58,18 @@ namespace Google.Cloud.Spanner.Data
         private readonly ConcurrentDictionary<SessionPool, TargetedPool> _poolReverseLookup =
             new ConcurrentDictionary<SessionPool, TargetedPool>();
 
+        private readonly ConcurrentDictionary<SpannerClientCreationOptions, MultiplexSession> _targetedMuxSessions =
+            new ConcurrentDictionary<SpannerClientCreationOptions, MultiplexSession>();
+
         /// <summary>
         /// The session pool options used for every <see cref="SessionPool"/> created by this session pool manager.
         /// </summary>
         public SessionPoolOptions SessionPoolOptions { get; }
+
+        /// <summary>
+        /// The options for every multiplex session created by this session pool manager.
+        /// </summary>
+        public MultiplexSessionOptions MultiplexSessionOptions { get; }
 
         /// <summary>
         /// The logger used by this SessionPoolManager and the session pools it creates.
@@ -100,6 +110,18 @@ namespace Google.Cloud.Spanner.Data
             _clientFactory = GaxPreconditions.CheckNotNull(clientFactory, nameof(clientFactory));
         }
 
+        internal SessionPoolManager(
+            MultiplexSessionOptions options,
+            SpannerSettings spannerSettings,
+            Logger logger,
+            Func<SpannerClientCreationOptions, SpannerSettings, Task<SpannerClient>> clientFactory)
+        {
+            MultiplexSessionOptions = GaxPreconditions.CheckNotNull(options, nameof(options));
+            SpannerSettings = AppendAssemblyVersionHeader(GaxPreconditions.CheckNotNull(spannerSettings, nameof(spannerSettings)));
+            Logger = GaxPreconditions.CheckNotNull(logger, nameof(logger));
+            _clientFactory = GaxPreconditions.CheckNotNull(clientFactory, nameof(clientFactory));
+        }
+
         /// <summary>
         /// Creates a <see cref="SessionPoolManager"/> with the specified options.
         /// </summary>
@@ -108,6 +130,15 @@ namespace Google.Cloud.Spanner.Data
         /// <returns>A <see cref="SessionPoolManager"/> with the given options.</returns>
         public static SessionPoolManager Create(SessionPoolOptions options, Logger logger = null) =>
             new SessionPoolManager(options, CreateDefaultSpannerSettings(), logger ?? Logger.DefaultLogger, CreateClientAsync);
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="options"></param>
+        /// <param name="logger"></param>
+        /// <returns></returns>
+        public static SessionPoolManager Create(MultiplexSessionOptions options, Logger logger = null) =>
+           new SessionPoolManager(options, CreateDefaultSpannerSettings(), logger ?? Logger.DefaultLogger, CreateClientAsync);
 
         /// <summary>
         /// Creates a <see cref="SessionPoolManager"/> with the specified SpannerSettings and options.
@@ -124,6 +155,25 @@ namespace Google.Cloud.Spanner.Data
             var targetedPool = _targetedPools.GetOrAdd(options, key => new TargetedPool(this, key));
             targetedPool.IncrementConnectionCount();
             return targetedPool.SessionPoolTask;
+        }
+
+        internal async Task<MultiplexSession> AcquireMultiplexSessionAsync(SpannerClientCreationOptions options, DatabaseName dbName, string dbRole)
+        {
+            GaxPreconditions.CheckNotNull(options, nameof(options));
+            var muxSession = _targetedMuxSessions.GetOrAdd(options, await CreateMultiplexSessionAsync().ConfigureAwait(false));
+            return muxSession;
+
+            async Task<MultiplexSession> CreateMultiplexSessionAsync()
+            {
+                var client = await _clientFactory.Invoke(options, SpannerSettings).ConfigureAwait(false);
+                var muxSessionBuilder = new MultiplexSessionBuilder(dbName, client)
+                {
+                    Options = MultiplexSessionOptions,
+                    DatabaseRole = dbRole,
+                };
+                var muxSession = await muxSessionBuilder.BuildAsync().ConfigureAwait(false);
+                return muxSession;
+            }
         }
 
         /// <summary>

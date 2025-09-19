@@ -19,6 +19,7 @@ using Google.Rpc;
 using Grpc.Core;
 using System;
 using System.Collections.Generic;
+using System.Data.Common;
 using System.Linq;
 using System.Threading;
 using System.Threading.Tasks;
@@ -51,6 +52,7 @@ namespace Google.Cloud.Spanner.V1
         private readonly SpannerClient _client;
         private readonly ReadOrQueryRequest _request;
         private readonly PooledSession _pooledSession;
+        private readonly Transaction _transaction;
         private readonly CallSettings _callSettings;
         private readonly RetrySettings _retrySettings;
         private readonly int _maxBufferSize;
@@ -69,6 +71,34 @@ namespace Google.Cloud.Spanner.V1
         internal ResultStream(SpannerClient client, ReadOrQueryRequest request, PooledSession pooledSession, CallSettings callSettings)
             : this(client, request, pooledSession, callSettings, DefaultMaxBufferSize, s_defaultRetrySettings)
         {
+        }
+
+        /// <summary>
+        /// Constructor for normal usage, taking in a transaction, with default buffer size, backoff settings and jitter.
+        /// </summary>
+        internal ResultStream(SpannerClient client, ReadOrQueryRequest request, Transaction transaction, CallSettings callSettings)
+            : this(client, request, transaction, callSettings, DefaultMaxBufferSize, s_defaultRetrySettings)
+        {
+        }
+
+        /// <summary>
+        /// Constructor with complete control that does not perform any validation.
+        /// </summary>
+        internal ResultStream(
+            SpannerClient client,
+            ReadOrQueryRequest request,
+            Transaction transaction,
+            CallSettings callSettings,
+            int maxBufferSize,
+            RetrySettings retrySettings)
+        {
+            _buffer = new LinkedList<PartialResultSet>();
+            _client = GaxPreconditions.CheckNotNull(client, nameof(client));
+            _request = GaxPreconditions.CheckNotNull(request, nameof(request));
+            _transaction = GaxPreconditions.CheckNotNull(_transaction, nameof(transaction));
+            _callSettings = callSettings;
+            _maxBufferSize = GaxPreconditions.CheckArgumentRange(maxBufferSize, nameof(maxBufferSize), 1, 10_000);
+            _retrySettings = GaxPreconditions.CheckNotNull(retrySettings, nameof(retrySettings));
         }
 
         /// <summary>
@@ -105,6 +135,7 @@ namespace Google.Cloud.Spanner.V1
         {
             var value = await ComputeNextAsync(cancellationToken).ConfigureAwait(false);
             Current = value;
+            _transaction?.UpdatePrecommitToken(value.PrecommitToken);
             return value != null;
         }
 
@@ -134,20 +165,33 @@ namespace Google.Cloud.Spanner.V1
                     bool hasNext = false;
                     if (_grpcCall is null)
                     {
-                        // Whenever we have to execute the gRPC streaming call we ask the pooled session
-                        // for the transaction. Only the first time the gRPC streaming call is executed
+                        // Only the first time the gRPC streaming call is executed
                         // the transaction will be inlined, if there's not a transaction already. Subsequent
                         // times will just get the same transacton ID. So in principle, we only need to ask
                         // for the transaction the first and second times the gRPC streaming call is executed,
                         // but doing it every time simplifies implementation and adds little overhead, because
                         // once there's a transaction ID, ExecuteMaybeWithTransactionSelectorAsync returns
-                        // inmediately.
-                        await _pooledSession.ExecuteMaybeWithTransactionSelectorAsync(
-                            transactionSelectorSetter: SetCommandTransaction,
-                            commandAsync: ExecuteStreamingAsync,
-                            inlinedTransactionExtractor: GetInlinedTransaction,
-                            skipTransactionCreation: false,
-                            cancellationToken).ConfigureAwait(false);
+                        // immediately.
+                        if(_transaction != null)
+                        {
+                            await _transaction.ExecuteMaybeWithTransactionSelectorAsync(
+                                    transactionSelectorSetter: SetCommandTransaction,
+                                    commandAsync: ExecuteStreamingAsync,
+                                    inlinedTransactionExtractor: GetInlinedTransaction,
+                                    skipTransactionCreation: false,
+                                    cancellationToken).ConfigureAwait(false);
+                        }
+                        else
+                        {
+                            // PooledSession will eventually be deprecated
+                            // We will get rid of this condition thendot
+                            await _pooledSession.ExecuteMaybeWithTransactionSelectorAsync(
+                                    transactionSelectorSetter: SetCommandTransaction,
+                                    commandAsync: ExecuteStreamingAsync,
+                                    inlinedTransactionExtractor: GetInlinedTransaction,
+                                    skipTransactionCreation: false,
+                                    cancellationToken).ConfigureAwait(false);
+                        }
 
                         void SetCommandTransaction(TransactionSelector transactionSelector) => _request.Transaction = transactionSelector;
 
@@ -173,7 +217,7 @@ namespace Google.Cloud.Spanner.V1
                         hasNext = await MoveNextAsync().ConfigureAwait(false);
                     }
 
-                    Task<bool> MoveNextAsync() => _grpcCall.ResponseStream.MoveNext(cancellationToken).WithSessionExpiryChecking(_pooledSession.Session);
+                    Task<bool> MoveNextAsync() => _grpcCall.ResponseStream.MoveNext(cancellationToken).WithSessionExpiryChecking(_transaction != null ?_transaction.Session : _pooledSession.Session);
 
                     retryState.Reset();
 
