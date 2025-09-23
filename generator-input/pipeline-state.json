@@ -3477,7 +3477,7 @@
             "generationAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
             "releaseAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
             "releaseTimestamp": "2024-05-14T15:42:17Z",
-            "lastGeneratedCommit": "dfe85eea9a7a14e220563ecbeef0517d592883ac",
+            "lastGeneratedCommit": "0a0dffc19bed400afdeec0f67b1726b6b23173fb",
             "apiPaths": [
                 "google/cloud/workflows/executions/v1"
             ],
