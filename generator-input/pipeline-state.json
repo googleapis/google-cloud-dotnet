@@ -3136,7 +3136,7 @@
             "generationAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
             "releaseAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
             "releaseTimestamp": "2025-01-06T18:04:33Z",
-            "lastGeneratedCommit": "acfcb5c24465dd88dd18767a9baa496a2c47fdb1",
+            "lastGeneratedCommit": "0a0dffc19bed400afdeec0f67b1726b6b23173fb",
             "apiPaths": [
                 "google/cloud/talent/v4beta1"
             ],
