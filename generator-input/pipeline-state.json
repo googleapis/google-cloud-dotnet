@@ -3505,7 +3505,7 @@
             "generationAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
             "releaseAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
             "releaseTimestamp": "2025-03-24T16:22:35Z",
-            "lastGeneratedCommit": "d7db9c6f0c5a52efda18e8cc3e3e8e6a67ee3b5c",
+            "lastGeneratedCommit": "0a0dffc19bed400afdeec0f67b1726b6b23173fb",
             "apiPaths": [
                 "google/cloud/workflows/v1"
             ],
