@@ -2572,7 +2572,7 @@
             "generationAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
             "releaseAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
             "releaseTimestamp": "2025-03-17T18:46:29Z",
-            "lastGeneratedCommit": "f861f3d59fa7041ec746fab084b8f221a9e924ca",
+            "lastGeneratedCommit": "0a0dffc19bed400afdeec0f67b1726b6b23173fb",
             "apiPaths": [
                 "google/cloud/recaptchaenterprise/v1"
             ],
