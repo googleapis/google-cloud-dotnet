@@ -3318,7 +3318,7 @@
             "generationAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
             "releaseAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
             "releaseTimestamp": "2024-06-05T07:30:17Z",
-            "lastGeneratedCommit": "696d1c237cabe450c4369e867d68c98e45aec4bf",
+            "lastGeneratedCommit": "0a0dffc19bed400afdeec0f67b1726b6b23173fb",
             "apiPaths": [
                 "google/cloud/video/stitcher/v1"
             ],
