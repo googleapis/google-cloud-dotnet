@@ -2558,7 +2558,7 @@
             "generationAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
             "releaseAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
             "releaseTimestamp": "2024-05-14T07:38:27Z",
-            "lastGeneratedCommit": "9053365138af569f86f6f42d0024b239f948319d",
+            "lastGeneratedCommit": "0a0dffc19bed400afdeec0f67b1726b6b23173fb",
             "apiPaths": [
                 "google/cloud/rapidmigrationassessment/v1"
             ],
