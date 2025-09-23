@@ -3429,7 +3429,7 @@
             "generationAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
             "releaseAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
             "releaseTimestamp": "2024-05-09T17:08:21Z",
-            "lastGeneratedCommit": "4fb8051d8ac2ed14d6f0766ec903b80cb706061d",
+            "lastGeneratedCommit": "0a0dffc19bed400afdeec0f67b1726b6b23173fb",
             "apiPaths": [
                 "google/cloud/webrisk/v1beta1"
             ],
