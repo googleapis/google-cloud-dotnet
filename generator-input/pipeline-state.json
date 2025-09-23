@@ -2615,7 +2615,7 @@
             "generationAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
             "releaseAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
             "releaseTimestamp": "2024-05-14T07:46:30Z",
-            "lastGeneratedCommit": "d41317895717b9ebc3b04d42cafbb0eaef080329",
+            "lastGeneratedCommit": "0a0dffc19bed400afdeec0f67b1726b6b23173fb",
             "apiPaths": [
                 "google/cloud/recommender/v1"
             ],
