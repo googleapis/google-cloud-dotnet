@@ -2784,7 +2784,7 @@
             "generationAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
             "releaseAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
             "releaseTimestamp": "2025-07-09T07:49:14.140661304Z",
-            "lastGeneratedCommit": "cd7fed30706c129f2bca11d5b2ef18f4ad18a7ac",
+            "lastGeneratedCommit": "0a0dffc19bed400afdeec0f67b1726b6b23173fb",
             "lastReleasedCommit": "cd7fed30706c129f2bca11d5b2ef18f4ad18a7ac",
             "apiPaths": [
                 "google/cloud/security/privateca/v1"
