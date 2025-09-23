@@ -123,24 +123,24 @@ namespace Google.Cloud.Dataproc.V1 {
             "EFJlcG9zaXRvcnlDb25maWcSUwoWcHlwaV9yZXBvc2l0b3J5X2NvbmZpZxgB",
             "IAEoCzIuLmdvb2dsZS5jbG91ZC5kYXRhcHJvYy52MS5QeVBpUmVwb3NpdG9y",
             "eUNvbmZpZ0ID4EEBIjQKFFB5UGlSZXBvc2l0b3J5Q29uZmlnEhwKD3B5cGlf",
-            "cmVwb3NpdG9yeRgBIAEoCUID4EEBKvUBCglDb21wb25lbnQSGQoVQ09NUE9O",
+            "cmVwb3NpdG9yeRgBIAEoCUID4EEBKpECCglDb21wb25lbnQSGQoVQ09NUE9O",
             "RU5UX1VOU1BFQ0lGSUVEEAASDAoIQU5BQ09OREEQBRIJCgVERUxUQRAUEgoK",
             "BkRPQ0tFUhANEgkKBURSVUlEEAkSCQoFRkxJTksQDhIJCgVIQkFTRRALEhAK",
             "DEhJVkVfV0VCSENBVBADEggKBEhVREkQEhILCgdJQ0VCRVJHEBMSCwoHSlVQ",
-            "WVRFUhABEgcKA1BJRxAVEgoKBlBSRVNUTxAGEgkKBVRSSU5PEBESCgoGUkFO",
-            "R0VSEAwSCAoEU09MUhAKEgwKCFpFUFBFTElOEAQSDQoJWk9PS0VFUEVSEAgq",
-            "SgoNRmFpbHVyZUFjdGlvbhIeChpGQUlMVVJFX0FDVElPTl9VTlNQRUNJRklF",
-            "RBAAEg0KCU5PX0FDVElPThABEgoKBkRFTEVURRACQqcDChxjb20uZ29vZ2xl",
-            "LmNsb3VkLmRhdGFwcm9jLnYxQgtTaGFyZWRQcm90b1ABWjtjbG91ZC5nb29n",
-            "bGUuY29tL2dvL2RhdGFwcm9jL3YyL2FwaXYxL2RhdGFwcm9jcGI7ZGF0YXBy",
-            "b2NwYupBXgogY29udGFpbmVyLmdvb2dsZWFwaXMuY29tL0NsdXN0ZXISOnBy",
-            "b2plY3RzL3twcm9qZWN0fS9sb2NhdGlvbnMve2xvY2F0aW9ufS9jbHVzdGVy",
-            "cy97Y2x1c3Rlcn3qQV4KIG1ldGFzdG9yZS5nb29nbGVhcGlzLmNvbS9TZXJ2",
-            "aWNlEjpwcm9qZWN0cy97cHJvamVjdH0vbG9jYXRpb25zL3tsb2NhdGlvbn0v",
-            "c2VydmljZXMve3NlcnZpY2V96kF4CiFjbG91ZGttcy5nb29nbGVhcGlzLmNv",
-            "bS9DcnlwdG9LZXkSU3Byb2plY3RzL3twcm9qZWN0fS9sb2NhdGlvbnMve2xv",
-            "Y2F0aW9ufS9rZXlSaW5ncy97a2V5X3Jpbmd9L2NyeXB0b0tleXMve2NyeXB0",
-            "b19rZXl9YgZwcm90bzM="));
+            "WVRFUhABEhoKFkpVUFlURVJfS0VSTkVMX0dBVEVXQVkQFhIHCgNQSUcQFRIK",
+            "CgZQUkVTVE8QBhIJCgVUUklOTxAREgoKBlJBTkdFUhAMEggKBFNPTFIQChIM",
+            "CghaRVBQRUxJThAEEg0KCVpPT0tFRVBFUhAIKkoKDUZhaWx1cmVBY3Rpb24S",
+            "HgoaRkFJTFVSRV9BQ1RJT05fVU5TUEVDSUZJRUQQABINCglOT19BQ1RJT04Q",
+            "ARIKCgZERUxFVEUQAkKnAwocY29tLmdvb2dsZS5jbG91ZC5kYXRhcHJvYy52",
+            "MUILU2hhcmVkUHJvdG9QAVo7Y2xvdWQuZ29vZ2xlLmNvbS9nby9kYXRhcHJv",
+            "Yy92Mi9hcGl2MS9kYXRhcHJvY3BiO2RhdGFwcm9jcGLqQV4KIGNvbnRhaW5l",
+            "ci5nb29nbGVhcGlzLmNvbS9DbHVzdGVyEjpwcm9qZWN0cy97cHJvamVjdH0v",
+            "bG9jYXRpb25zL3tsb2NhdGlvbn0vY2x1c3RlcnMve2NsdXN0ZXJ96kFeCiBt",
+            "ZXRhc3RvcmUuZ29vZ2xlYXBpcy5jb20vU2VydmljZRI6cHJvamVjdHMve3By",
+            "b2plY3R9L2xvY2F0aW9ucy97bG9jYXRpb259L3NlcnZpY2VzL3tzZXJ2aWNl",
+            "fepBeAohY2xvdWRrbXMuZ29vZ2xlYXBpcy5jb20vQ3J5cHRvS2V5ElNwcm9q",
+            "ZWN0cy97cHJvamVjdH0vbG9jYXRpb25zL3tsb2NhdGlvbn0va2V5UmluZ3Mv",
+            "e2tleV9yaW5nfS9jcnlwdG9LZXlzL3tjcnlwdG9fa2V5fWIGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.DurationReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(new[] {typeof(global::Google.Cloud.Dataproc.V1.Component), typeof(global::Google.Cloud.Dataproc.V1.FailureAction), }, null, new pbr::GeneratedClrTypeInfo[] {
@@ -221,6 +221,10 @@ namespace Google.Cloud.Dataproc.V1 {
     /// The Jupyter Notebook.
     /// </summary>
     [pbr::OriginalName("JUPYTER")] Jupyter = 1,
+    /// <summary>
+    /// The Jupyter Kernel Gateway.
+    /// </summary>
+    [pbr::OriginalName("JUPYTER_KERNEL_GATEWAY")] JupyterKernelGateway = 22,
     /// <summary>
     /// The Pig component.
     /// </summary>
