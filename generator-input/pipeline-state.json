@@ -4158,7 +4158,7 @@
             "generationAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
             "releaseAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
             "releaseTimestamp": "2025-08-12T08:30:36.257066840Z",
-            "lastGeneratedCommit": "1dfb2b3934226758e72104cba6f34413a91df8a8",
+            "lastGeneratedCommit": "0a0dffc19bed400afdeec0f67b1726b6b23173fb",
             "lastReleasedCommit": "1dfb2b3934226758e72104cba6f34413a91df8a8",
             "apiPaths": [
                 "google/cloud/support/v2beta"
