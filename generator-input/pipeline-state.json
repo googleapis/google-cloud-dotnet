@@ -2869,7 +2869,7 @@
             "generationAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
             "releaseAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
             "releaseTimestamp": "2025-09-16T08:23:24.171657270Z",
-            "lastGeneratedCommit": "260e50c36f4532f7956f742b9eecc221e4eafb1b",
+            "lastGeneratedCommit": "0a0dffc19bed400afdeec0f67b1726b6b23173fb",
             "lastReleasedCommit": "260e50c36f4532f7956f742b9eecc221e4eafb1b",
             "apiPaths": [
                 "google/cloud/securitycenter/v2"
