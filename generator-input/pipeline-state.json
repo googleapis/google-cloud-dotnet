@@ -3288,7 +3288,7 @@
             "generationAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
             "releaseAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
             "releaseTimestamp": "2025-09-08T07:57:58.995120236Z",
-            "lastGeneratedCommit": "b7cf972f4c4b531c613050b47bdc333199b9bf50",
+            "lastGeneratedCommit": "0a0dffc19bed400afdeec0f67b1726b6b23173fb",
             "lastReleasedCommit": "b7cf972f4c4b531c613050b47bdc333199b9bf50",
             "apiPaths": [
                 "google/cloud/vmmigration/v1"
