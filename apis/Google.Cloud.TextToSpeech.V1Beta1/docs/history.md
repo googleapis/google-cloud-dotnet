@@ -1,5 +1,11 @@
 # Version history
 
+## Version 2.0.0-beta15, released 2025-09-24
+
+### New features
+
+- Add Gemini TTS Multispeaker API fields
+
 ## Version 2.0.0-beta14, released 2025-09-08
 
 ### New features
