@@ -1,5 +1,11 @@
 # Version history
 
+## Version 5.21.0, released 2025-09-24
+
+### New features
+
+- Added support for JUPYTER_KERNEL_GATEWAY component
+
 ## Version 5.20.0, released 2025-07-07
 
 ### New features
