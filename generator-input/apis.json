@@ -1597,7 +1597,7 @@
     },
     {
       "id": "Google.Cloud.CloudSecurityCompliance.V1",
-      "version": "1.0.0-beta01",
+      "version": "1.0.0-beta02",
       "type": "grpc",
       "productName": "Cloud Security Compliance",
       "productUrl": "https://cloud.google.com/security-command-center/docs/compliance-manager-overview",
