@@ -4533,7 +4533,7 @@
             "nextVersion": "1.0.0-beta01",
             "generationAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
             "releaseAutomationLevel": "AUTOMATION_LEVEL_BLOCKED",
-            "lastGeneratedCommit": "74796639510582b7691162f54c346cb6ab815a07",
+            "lastGeneratedCommit": "d4a9eb5869a1698d8887a68dd17e5bda9ec802d3",
             "apiPaths": [
                 "google/cloud/capacityplanner/v1beta"
             ],
