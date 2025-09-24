@@ -50,7 +50,6 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
   }
   #region Enums
   /// <summary>
-  /// LINT: LEGACY_NAMES
   /// Represents a hardware accelerator type.
   /// </summary>
   public enum AcceleratorType {
