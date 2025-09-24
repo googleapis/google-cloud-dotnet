@@ -1214,12 +1214,12 @@
         },
         {
             "id": "Google.Cloud.Dataproc.V1",
-            "currentVersion": "5.20.0",
+            "currentVersion": "5.21.0",
             "generationAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
             "releaseAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
-            "releaseTimestamp": "2025-07-07T14:16:50.646787353Z",
+            "releaseTimestamp": "2025-09-24T07:53:17.409258058Z",
             "lastGeneratedCommit": "d89b4d093fa1526255dbc724495c3bdb0e5dd384",
-            "lastReleasedCommit": "ea37c68239166929165e5f038166ee633e110ad4",
+            "lastReleasedCommit": "d89b4d093fa1526255dbc724495c3bdb0e5dd384",
             "apiPaths": [
                 "google/cloud/dataproc/v1"
             ],
