@@ -1,5 +1,20 @@
 # Version history
 
+## Version 1.10.0, released 2025-09-24
+
+### New features
+
+- Added H.265 (HEVC) codec support
+- Added UHD (4k) resolution support
+- Added Auto Transcription support
+- Added StartDistribution/StopDistribution methods and Distribution/DistributionStream messages used for distributing live streams to external RTMP/SRT endpoints
+- Added PreviewInput method used for the low latency input monitoring
+- Added UpdateEncryptions event to perform key rotation without restarting a channel
+
+### Documentation improvements
+
+- Update requirements of resource ID fields to be more clear
+
 ## Version 1.9.0, released 2025-05-15
 
 ### New features

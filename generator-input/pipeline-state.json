@@ -3299,12 +3299,12 @@
         },
         {
             "id": "Google.Cloud.Video.LiveStream.V1",
-            "currentVersion": "1.9.0",
+            "currentVersion": "1.10.0",
             "generationAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
             "releaseAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
-            "releaseTimestamp": "2025-05-15T20:33:36.781880432Z",
+            "releaseTimestamp": "2025-09-24T07:59:02.416773154Z",
             "lastGeneratedCommit": "0a0dffc19bed400afdeec0f67b1726b6b23173fb",
-            "lastReleasedCommit": "c18013694a22d051c77be488454d3762765f5a5e",
+            "lastReleasedCommit": "0a0dffc19bed400afdeec0f67b1726b6b23173fb",
             "apiPaths": [
                 "google/cloud/video/livestream/v1"
             ],
