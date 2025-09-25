@@ -14,7 +14,6 @@
 
 using Google.Cloud.Spanner.Data.CommonTesting;
 using Google.Cloud.Spanner.V1;
-using Google.Rpc;
 using System;
 using System.Collections;
 using System.Collections.Generic;
@@ -721,7 +720,7 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
         }
 
         [Fact]
-        public async Task ReadTakesLockHintOption()
+        public async Task ReadWithLockHint()
         {
             using var connection = _fixture.GetConnection();
 
@@ -758,7 +757,7 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
         }
 
         [Fact]
-        public async Task ReadTakesOrderByOption()
+        public async Task ReadWithOrderBy()
         {
             using var connection = _fixture.GetConnection();
             var readOptions = ReadOptions.FromColumns("key", "StringValue")

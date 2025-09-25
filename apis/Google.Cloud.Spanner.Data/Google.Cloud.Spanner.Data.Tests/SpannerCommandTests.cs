@@ -76,7 +76,7 @@ namespace Google.Cloud.Spanner.Data.Tests
         {
             var connection = new SpannerConnection("Data Source=projects/p/instances/i/databases/d");
             var command = connection.CreateSelectCommand("SELECT * FROM FOO");
-            var command2 = (SpannerCommand) command.Clone();
+            var command2 = (SpannerCommand)command.Clone();
             Assert.Same(command.SpannerConnection, command2.SpannerConnection);
             Assert.Equal(command.CommandText, command2.CommandText);
         }
@@ -92,7 +92,7 @@ namespace Google.Cloud.Spanner.Data.Tests
                     {"P2", SpannerDbType.Float64}
                 });
 
-            var command2 = (SpannerCommand) command.Clone();
+            var command2 = (SpannerCommand)command.Clone();
             Assert.Same(command.SpannerConnection, command2.SpannerConnection);
             Assert.Equal(command.CommandText, command2.CommandText);
             Assert.Equal(command.Parameters.Count, command2.Parameters.Count);
@@ -108,7 +108,7 @@ namespace Google.Cloud.Spanner.Data.Tests
             command.QueryOptions = QueryOptions.Empty
                 .WithOptimizerVersion("1")
                 .WithOptimizerStatisticsPackage("auto_20191128_14_47_22UTC");
-            var command2 = (SpannerCommand) command.Clone();
+            var command2 = (SpannerCommand)command.Clone();
             Assert.Same(command.SpannerConnection, command2.SpannerConnection);
             Assert.Equal(command.CommandText, command2.CommandText);
             Assert.Equal(command.QueryOptions, command2.QueryOptions);
@@ -296,7 +296,7 @@ namespace Google.Cloud.Spanner.Data.Tests
             var connection = new SpannerConnection("Data Source=projects/p/instances/i/databases/d");
             var command = connection.CreateSelectCommand("SELECT * FROM FOO");
             command.Priority = Priority.Low;
-            var command2 = (SpannerCommand) command.Clone();
+            var command2 = (SpannerCommand)command.Clone();
             Assert.Same(command.SpannerConnection, command2.SpannerConnection);
             Assert.Equal(command.CommandText, command2.CommandText);
             Assert.Equal(command.Priority, command2.Priority);
@@ -539,7 +539,7 @@ namespace Google.Cloud.Spanner.Data.Tests
             var connection = new SpannerConnection("Data Source=projects/p/instances/i/databases/d");
             var command = connection.CreateSelectCommand("SELECT * FROM FOO");
             command.Tag = "tag-1";
-            var command2 = (SpannerCommand) command.Clone();
+            var command2 = (SpannerCommand)command.Clone();
             Assert.Same(command.SpannerConnection, command2.SpannerConnection);
             Assert.Equal(command.CommandText, command2.CommandText);
             Assert.Equal(command.Tag, command2.Tag);
@@ -1001,7 +1001,7 @@ namespace Google.Cloud.Spanner.Data.Tests
 
             using (TransactionScope scope = new TransactionScope(TransactionScopeAsyncFlowOption.Enabled))
             {
-                connection.Open(SpannerTransactionCreationOptions.ReadWrite, new SpannerTransactionOptions { MaxCommitDelay = maxCommitDelay });
+                connection.Open(SpannerTransactionCreationOptions.ReadWrite, new SpannerTransactionOptions { MaxCommitDelay = maxCommitDelay});
                 var command = connection.CreateInsertCommand("FOO");
                 command.ExecuteNonQuery();
 
@@ -1028,7 +1028,7 @@ namespace Google.Cloud.Spanner.Data.Tests
 
             using (TransactionScope scope = new TransactionScope(TransactionScopeAsyncFlowOption.Enabled))
             {
-                connection.Open(SpannerTransactionCreationOptions.ReadWrite, new SpannerTransactionOptions { MaxCommitDelay = transactionMaxCommitDelay });
+                connection.Open(SpannerTransactionCreationOptions.ReadWrite, new SpannerTransactionOptions { MaxCommitDelay = transactionMaxCommitDelay});
                 var command = connection.CreateInsertCommand("FOO");
                 command.EphemeralTransactionOptions.MaxCommitDelay = commandMaxCommitDelay;
                 command.ExecuteNonQuery();
@@ -1352,9 +1352,7 @@ namespace Google.Cloud.Spanner.Data.Tests
             spannerClientMock.Received().StreamingRead(
                 Arg.Is<ReadRequest>(request => request.Columns.Equals(new RepeatedField<string> { "Col1", "Col2" })), Arg.Any<CallSettings>());
             spannerClientMock.Received().StreamingRead(
-                Arg.Is<ReadRequest>(request => request.KeySet.Equals(new V1.KeySet
-                {
-                    Keys = {  new ListValue { Values =
+                Arg.Is<ReadRequest>(request => request.KeySet.Equals(new V1.KeySet { Keys = {  new ListValue { Values =
                 {
                     new Value { StringValue = "test"},
                     new Value { StringValue = Convert.ToBase64String(new byte[] {1, 2, 3})},
@@ -1367,8 +1365,7 @@ namespace Google.Cloud.Spanner.Data.Tests
                     new Value { StringValue = "2021-09-08T15:22:59Z" },
                     new Value { BoolValue = true },
                     new Value { StringValue = "P1Y2M3D" },
-                } } }
-                })),
+                } } } })),
                 Arg.Any<CallSettings>());
         }
 
@@ -1405,14 +1402,11 @@ namespace Google.Cloud.Spanner.Data.Tests
             using var reader = await command.ExecuteReaderAsync();
             Assert.True(reader.HasRows);
             spannerClientMock.Received(1).StreamingRead(
-                Arg.Is<ReadRequest>(request => request.KeySet.Equals(new V1.KeySet
-                {
-                    Ranges = { new [] { new V1.KeyRange
+                Arg.Is<ReadRequest>(request => request.KeySet.Equals(new V1.KeySet { Ranges = { new [] { new V1.KeyRange
                 {
                     StartClosed = new ListValue { Values = { new Value { StringValue = "test_begin" } } },
                     EndOpen = new ListValue { Values = { new Value { StringValue = "test_end" } } }
-                } } }
-                })),
+                } } } } )),
                 Arg.Any<CallSettings>());
         }
 
@@ -1431,15 +1425,12 @@ namespace Google.Cloud.Spanner.Data.Tests
             using var reader = await command.ExecuteReaderAsync();
             Assert.True(reader.HasRows);
             spannerClientMock.Received(1).StreamingRead(
-                Arg.Is<ReadRequest>(request => request.KeySet.Equals(new V1.KeySet
-                {
-                    Keys =
+                Arg.Is<ReadRequest>(request => request.KeySet.Equals(new V1.KeySet { Keys =
                 {
                     new ListValue { Values = { new Value { StringValue = "key1" } } },
                     new ListValue { Values = { new Value { StringValue = "key2" } } },
                     new ListValue { Values = { new Value { StringValue = "key3" } } },
-                }
-                })),
+                } } )),
                 Arg.Any<CallSettings>());
         }
 
@@ -1477,8 +1468,11 @@ namespace Google.Cloud.Spanner.Data.Tests
                 Arg.Any<CallSettings>());
         }
 
-        [Fact]
-        public async Task ExecuteReaderReadWithLockHint()
+        [Theory]
+        [InlineData(LockHint.Unspecified, ReadRequest.Types.LockHint.Unspecified)]
+        [InlineData(LockHint.Shared, ReadRequest.Types.LockHint.Shared)]
+        [InlineData(LockHint.Exclusive, ReadRequest.Types.LockHint.Exclusive)]
+        public async Task ExecuteReaderReadWithLockHint(LockHint lockHintValue, ReadRequest.Types.LockHint expectedProtoValue)
         {
             var spannerClientMock = SpannerClientHelpers.CreateMockClient(Logger.DefaultLogger);
             spannerClientMock.Received(1)
@@ -1489,20 +1483,23 @@ namespace Google.Cloud.Spanner.Data.Tests
             using var transaction = await connection.BeginTransactionAsync();
 
             var readOptions = ReadOptions.FromColumns("Col1", "Col2")
-                .WithLockHint(LockHint.Exclusive);
+                .WithLockHint(lockHintValue);
             var command = connection.CreateReadCommand("Foo", readOptions, KeySet.All);
             command.Transaction = transaction;
             using var reader = await command.ExecuteReaderAsync();
             Assert.True(reader.HasRows);
 
             spannerClientMock.Received(1).StreamingRead(
-                Arg.Is<ReadRequest>(request => request.LockHint == ReadRequest.Types.LockHint.Exclusive),
+                Arg.Is<ReadRequest>(request => request.LockHint == expectedProtoValue),
                 Arg.Any<CallSettings>()
             );
         }
 
-        [Fact]
-        public async Task ExecuteReaderReadWithOrderBy()
+        [Theory]
+        [InlineData(OrderBy.NoOrder, ReadRequest.Types.OrderBy.NoOrder)]
+        [InlineData(OrderBy.Unspecified, ReadRequest.Types.OrderBy.Unspecified)]
+        [InlineData(OrderBy.PrimaryKey, ReadRequest.Types.OrderBy.PrimaryKey)]
+        public async Task ExecuteReaderReadWithOrderBy(OrderBy orderByValue, ReadRequest.Types.OrderBy expectedProtoValue)
         {
             var spannerClientMock = SpannerClientHelpers.CreateMockClient(Logger.DefaultLogger);
             spannerClientMock.Received(1)
@@ -1511,14 +1508,14 @@ namespace Google.Cloud.Spanner.Data.Tests
 
             var connection = BuildSpannerConnection(spannerClientMock);
             var readOptions = ReadOptions.FromColumns("Col1", "Col2")
-                .WithOrderBy(OrderBy.NoOrder);
+                .WithOrderBy(orderByValue);
 
             var command = connection.CreateReadCommand("Foo", readOptions, KeySet.All);
             using var reader = await command.ExecuteReaderAsync();
             Assert.True(reader.HasRows);
 
             spannerClientMock.Received(1).StreamingRead(
-                Arg.Is<ReadRequest>(request => request.OrderBy == ReadRequest.Types.OrderBy.NoOrder),
+                Arg.Is<ReadRequest>(request => request.OrderBy == expectedProtoValue),
                 Arg.Any<CallSettings>()
             );
         }
@@ -1663,7 +1660,7 @@ namespace Google.Cloud.Spanner.Data.Tests
             using var reader = command.ExecuteReader();
             Assert.True(reader.HasRows);
             // Handle the cases of Float64 and Date for now.
-            Value val = dbType == SpannerDbType.Float64 ? Value.ForNumber((double) value) : Value.ForString((string) value);
+            Value val = dbType == SpannerDbType.Float64 ? Value.ForNumber((double)value) : Value.ForString((string)value);
             spannerClientMock.Received(1).StreamingRead(
                 Arg.Is<ReadRequest>(request => request.KeySet.Equals(new V1.KeySet
                 {

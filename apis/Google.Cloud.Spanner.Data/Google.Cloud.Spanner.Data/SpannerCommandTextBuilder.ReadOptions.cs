@@ -13,10 +13,8 @@
 // limitations under the License.
 
 using Google.Api.Gax;
-using Google.Apis.Util;
 using System;
 using System.Collections.Generic;
-using System.Resources;
 
 namespace Google.Cloud.Spanner.Data
 {
@@ -44,11 +42,13 @@ namespace Google.Cloud.Spanner.Data
 
         /// <summary>
         /// A lock hint mechanism for reads done within a transaction.
+        /// See <see cref="LockHint"/> for details.
         /// </summary>
         public LockHint? LockHint { get; }
 
         /// <summary>
         /// An option to control the order in which rows are returned from a read.
+        /// See <see cref="OrderBy"/> for details.
         /// </summary>
         public OrderBy? OrderBy { get; }
 
@@ -116,7 +116,7 @@ namespace Google.Cloud.Spanner.Data
         /// Refer to the <see cref="Spanner.Data.LockHint"/> enum to see the available value options.
         /// </param>
         /// <returns>A clone of this ReadOptions with the given lockHint value.</returns>
-        public ReadOptions WithLockHint(LockHint lockHint) =>
+        public ReadOptions WithLockHint(LockHint? lockHint) =>
             new ReadOptions(Columns, IndexName, Limit, lockHint, OrderBy);
 
         /// <summary>
@@ -128,7 +128,7 @@ namespace Google.Cloud.Spanner.Data
         /// Refer to the <see cref="Spanner.Data.OrderBy"/> enum to see the available value options.
         /// </param>
         /// <returns>A clone of this ReadOptions with the given ReadOptions value.</returns>
-        public ReadOptions WithOrderBy(OrderBy orderBy) =>
+        public ReadOptions WithOrderBy(OrderBy? orderBy) =>
             new ReadOptions(Columns, IndexName, Limit, LockHint, orderBy);
 
         private static List<T> CheckNotEmpty<T>(List<T> list, string paramName) where T : class =>
@@ -143,94 +143,75 @@ namespace Google.Cloud.Spanner.Data
     }
 
     /// <summary>
-    /// The options abailable for the LockHint mechanism on a ReadRequest.
+    /// The options available for the LockHint value on the ReadOptions.
     /// </summary>
     public enum LockHint
     {
         /// <summary>
         /// Default value.
         ///
-        /// `LOCK_HINT_UNSPECIFIED` is equivalent to `LOCK_HINT_SHARED`.
+        /// `Unspecified` is equivalent to `Shared`.
+        ///
+        /// See https://cloud.google.com/dotnet/docs/reference/Google.Cloud.Spanner.V1/latest/Google.Cloud.Spanner.V1.ReadRequest.Types.LockHint
+        /// for further details.
         /// </summary>
         Unspecified = 0,
 
         /// <summary>
         /// Acquire shared locks.
         ///
-        /// By default when you perform a read as part of a read-write transaction,
-        /// Spanner acquires shared read locks, which allows other reads to still
-        /// access the data until your transaction is ready to commit. When your
-        /// transaction is committing and writes are being applied, the transaction
-        /// attempts to upgrade to an exclusive lock for any data you are writing.
-        /// For more information about locks, see [Lock
-        /// modes](https://cloud.google.com/spanner/docs/introspection/lock-statistics#explain-lock-modes).
+        /// See https://cloud.google.com/dotnet/docs/reference/Google.Cloud.Spanner.V1/latest/Google.Cloud.Spanner.V1.ReadRequest.Types.LockHint
+        /// for further details.
         /// </summary>
         Shared = 1,
 
         /// <summary>
         /// Acquire exclusive locks.
         ///
-        /// Requesting exclusive locks is beneficial if you observe high write
-        /// contention, which means you notice that multiple transactions are
-        /// concurrently trying to read and write to the same data, resulting in a
-        /// large number of aborts. This problem occurs when two transactions
-        /// initially acquire shared locks and then both try to upgrade to exclusive
-        /// locks at the same time. In this situation both transactions are waiting
-        /// for the other to give up their lock, resulting in a deadlocked situation.
-        /// Spanner is able to detect this occurring and force one of the
-        /// transactions to abort. However, this is a slow and expensive operation
-        /// and results in lower performance. In this case it makes sense to acquire
-        /// exclusive locks at the start of the transaction because then when
-        /// multiple transactions try to act on the same data, they automatically get
-        /// serialized. Each transaction waits its turn to acquire the lock and
-        /// avoids getting into deadlock situations.
-        ///
-        /// Because the exclusive lock hint is just a hint, it shouldn't be
-        /// considered equivalent to a mutex. In other words, you shouldn't use
-        /// Spanner exclusive locks as a mutual exclusion mechanism for the execution
-        /// of code outside of Spanner.
-        ///
-        /// **Note:** Request exclusive locks judiciously because they block others
-        /// from reading that data for the entire transaction, rather than just when
-        /// the writes are being performed. Unless you observe high write contention,
-        /// you should use the default of shared read locks so you don't prematurely
-        /// block other clients from reading the data that you're writing to.
+        /// See https://cloud.google.com/dotnet/docs/reference/Google.Cloud.Spanner.V1/latest/Google.Cloud.Spanner.V1.ReadRequest.Types.LockHint
+        /// for further details.
         /// </summary>
         Exclusive = 2
     }
 
-    internal class LockHintConverter
+    internal static class LockHintConverter
     {
         internal static V1.ReadRequest.Types.LockHint ToProto(LockHint lockHint) => (V1.ReadRequest.Types.LockHint) (int) lockHint;
     }
 
     /// <summary>
-    /// The options available for the OrderBy option for a ReadRequest.
+    /// The options available for the OrderBy option for the ReadOptions.
     /// </summary>
     public enum OrderBy
     {
         /// <summary>
         /// Default value.
         ///
-        /// `ORDER_BY_UNSPECIFIED` is equivalent to `ORDER_BY_PRIMARY_KEY`.
+        /// `Unspecified` is equivalent to `PrimaryKey`.
+        ///
+        /// See https://cloud.google.com/dotnet/docs/reference/Google.Cloud.Spanner.V1/latest/Google.Cloud.Spanner.V1.ReadRequest.Types.OrderBy
+        /// for further details.
         /// </summary>
         Unspecified = 0,
 
         /// <summary>
         /// Read rows are returned in primary key order.
         ///
-        /// In the event that this option is used in conjunction with the
-        /// `partition_token` field, the API returns an `INVALID_ARGUMENT` error.
+        /// See https://cloud.google.com/dotnet/docs/reference/Google.Cloud.Spanner.V1/latest/Google.Cloud.Spanner.V1.ReadRequest.Types.OrderBy
+        /// for further details.
         /// </summary>
         PrimaryKey = 1,
 
         /// <summary>
         /// Read rows are returned in any order.
+        ///
+        /// See https://cloud.google.com/dotnet/docs/reference/Google.Cloud.Spanner.V1/latest/Google.Cloud.Spanner.V1.ReadRequest.Types.OrderBy
+        /// for further details.
         /// </summary>
         NoOrder = 2,
     }
 
-    internal class OrderByConverter
+    internal static class OrderByConverter
     {
         internal static V1.ReadRequest.Types.OrderBy ToProto(OrderBy orderBy) => (V1.ReadRequest.Types.OrderBy) (int) orderBy;
     }
