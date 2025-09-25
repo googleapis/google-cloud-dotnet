@@ -188,7 +188,7 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
             "LnYxYmV0YTEuTG9ncHJvYnNSZXN1bHQuQ2FuZGlkYXRlImcKB1NlZ21lbnQS",
             "FwoKcGFydF9pbmRleBgBIAEoBUID4EEDEhgKC3N0YXJ0X2luZGV4GAIgASgF",
             "QgPgQQMSFgoJZW5kX2luZGV4GAMgASgFQgPgQQMSEQoEdGV4dBgEIAEoCUID",
-            "4EEDIrUFCg5Hcm91bmRpbmdDaHVuaxJCCgN3ZWIYASABKAsyMy5nb29nbGUu",
+            "4EEDIvAHCg5Hcm91bmRpbmdDaHVuaxJCCgN3ZWIYASABKAsyMy5nb29nbGUu",
             "Y2xvdWQuYWlwbGF0Zm9ybS52MWJldGExLkdyb3VuZGluZ0NodW5rLldlYkgA",
             "El0KEXJldHJpZXZlZF9jb250ZXh0GAIgASgLMkAuZ29vZ2xlLmNsb3VkLmFp",
             "cGxhdGZvcm0udjFiZXRhMS5Hcm91bmRpbmdDaHVuay5SZXRyaWV2ZWRDb250",
@@ -200,14 +200,21 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
             "CgN1cmkYASABKAlIAYgBARISCgV0aXRsZRgCIAEoCUgCiAEBEhEKBHRleHQY",
             "AyABKAlIA4gBARIfCg1kb2N1bWVudF9uYW1lGAYgASgJQgPgQQNIBIgBAUIR",
             "Cg9jb250ZXh0X2RldGFpbHNCBgoEX3VyaUIICgZfdGl0bGVCBwoFX3RleHRC",
-            "EAoOX2RvY3VtZW50X25hbWUafgoETWFwcxIQCgN1cmkYASABKAlIAIgBARIS",
-            "CgV0aXRsZRgCIAEoCUgBiAEBEhEKBHRleHQYAyABKAlIAogBARIVCghwbGFj",
-            "ZV9pZBgEIAEoCUgDiAEBQgYKBF91cmlCCAoGX3RpdGxlQgcKBV90ZXh0QgsK",
+            "EAoOX2RvY3VtZW50X25hbWUauAMKBE1hcHMSEAoDdXJpGAEgASgJSACIAQES",
+            "EgoFdGl0bGUYAiABKAlIAYgBARIRCgR0ZXh0GAMgASgJSAKIAQESFQoIcGxh",
+            "Y2VfaWQYBCABKAlIA4gBARJlChRwbGFjZV9hbnN3ZXJfc291cmNlcxgFIAEo",
+            "CzJHLmdvb2dsZS5jbG91ZC5haXBsYXRmb3JtLnYxYmV0YTEuR3JvdW5kaW5n",
+            "Q2h1bmsuTWFwcy5QbGFjZUFuc3dlclNvdXJjZXMa0AEKElBsYWNlQW5zd2Vy",
+            "U291cmNlcxJuCg9yZXZpZXdfc25pcHBldHMYASADKAsyVS5nb29nbGUuY2xv",
+            "dWQuYWlwbGF0Zm9ybS52MWJldGExLkdyb3VuZGluZ0NodW5rLk1hcHMuUGxh",
+            "Y2VBbnN3ZXJTb3VyY2VzLlJldmlld1NuaXBwZXQaSgoNUmV2aWV3U25pcHBl",
+            "dBIRCglyZXZpZXdfaWQYASABKAkSFwoPZ29vZ2xlX21hcHNfdXJpGAIgASgJ",
+            "Eg0KBXRpdGxlGAMgASgJQgYKBF91cmlCCAoGX3RpdGxlQgcKBV90ZXh0QgsK",
             "CV9wbGFjZV9pZEIMCgpjaHVua190eXBlIpoBChBHcm91bmRpbmdTdXBwb3J0",
             "Ej4KB3NlZ21lbnQYASABKAsyKC5nb29nbGUuY2xvdWQuYWlwbGF0Zm9ybS52",
             "MWJldGExLlNlZ21lbnRIAIgBARIfChdncm91bmRpbmdfY2h1bmtfaW5kaWNl",
             "cxgCIAMoBRIZChFjb25maWRlbmNlX3Njb3JlcxgDIAMoAkIKCghfc2VnbWVu",
-            "dCKzBAoRR3JvdW5kaW5nTWV0YWRhdGESHwoSd2ViX3NlYXJjaF9xdWVyaWVz",
+            "dCLZBQoRR3JvdW5kaW5nTWV0YWRhdGESHwoSd2ViX3NlYXJjaF9xdWVyaWVz",
             "GAEgAygJQgPgQQESVwoSc2VhcmNoX2VudHJ5X3BvaW50GAQgASgLMjEuZ29v",
             "Z2xlLmNsb3VkLmFpcGxhdGZvcm0udjFiZXRhMS5TZWFyY2hFbnRyeVBvaW50",
             "QgPgQQFIAIgBARIeChFyZXRyaWV2YWxfcXVlcmllcxgDIAMoCUID4EEBEkkK",
@@ -217,33 +224,37 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
             "R3JvdW5kaW5nU3VwcG9ydEID4EEBElsKEnJldHJpZXZhbF9tZXRhZGF0YRgH",
             "IAEoCzIyLmdvb2dsZS5jbG91ZC5haXBsYXRmb3JtLnYxYmV0YTEuUmV0cmll",
             "dmFsTWV0YWRhdGFCBuBBAeBBA0gBiAEBEjUKIGdvb2dsZV9tYXBzX3dpZGdl",
-            "dF9jb250ZXh0X3Rva2VuGAggASgJQgbgQQHgQQNIAogBAUIVChNfc2VhcmNo",
-            "X2VudHJ5X3BvaW50QhUKE19yZXRyaWV2YWxfbWV0YWRhdGFCIwohX2dvb2ds",
-            "ZV9tYXBzX3dpZGdldF9jb250ZXh0X3Rva2VuIkgKEFNlYXJjaEVudHJ5UG9p",
-            "bnQSHQoQcmVuZGVyZWRfY29udGVudBgBIAEoCUID4EEBEhUKCHNka19ibG9i",
-            "GAIgASgMQgPgQQEiRwoRUmV0cmlldmFsTWV0YWRhdGESMgolZ29vZ2xlX3Nl",
-            "YXJjaF9keW5hbWljX3JldHJpZXZhbF9zY29yZRgCIAEoAkID4EEBIqgBChBN",
-            "b2RlbEFybW9yQ29uZmlnEkgKFHByb21wdF90ZW1wbGF0ZV9uYW1lGAEgASgJ",
-            "QirgQQH6QSQKIm1vZGVsYXJtb3IuZ29vZ2xlYXBpcy5jb20vVGVtcGxhdGUS",
-            "SgoWcmVzcG9uc2VfdGVtcGxhdGVfbmFtZRgCIAEoCUIq4EEB+kEkCiJtb2Rl",
-            "bGFybW9yLmdvb2dsZWFwaXMuY29tL1RlbXBsYXRlImYKEk1vZGFsaXR5VG9r",
-            "ZW5Db3VudBI7Cghtb2RhbGl0eRgBIAEoDjIpLmdvb2dsZS5jbG91ZC5haXBs",
-            "YXRmb3JtLnYxYmV0YTEuTW9kYWxpdHkSEwoLdG9rZW5fY291bnQYAiABKAUq",
-            "2wEKDEhhcm1DYXRlZ29yeRIdChlIQVJNX0NBVEVHT1JZX1VOU1BFQ0lGSUVE",
-            "EAASHQoZSEFSTV9DQVRFR09SWV9IQVRFX1NQRUVDSBABEiMKH0hBUk1fQ0FU",
-            "RUdPUllfREFOR0VST1VTX0NPTlRFTlQQAhIcChhIQVJNX0NBVEVHT1JZX0hB",
-            "UkFTU01FTlQQAxIjCh9IQVJNX0NBVEVHT1JZX1NFWFVBTExZX0VYUExJQ0lU",
-            "EAQSJQodSEFSTV9DQVRFR09SWV9DSVZJQ19JTlRFR1JJVFkQBRoCCAEqXQoI",
-            "TW9kYWxpdHkSGAoUTU9EQUxJVFlfVU5TUEVDSUZJRUQQABIICgRURVhUEAES",
-            "CQoFSU1BR0UQAhIJCgVWSURFTxADEgkKBUFVRElPEAQSDAoIRE9DVU1FTlQQ",
-            "BULIAgojY29tLmdvb2dsZS5jbG91ZC5haXBsYXRmb3JtLnYxYmV0YTFCDENv",
-            "bnRlbnRQcm90b1ABWkNjbG91ZC5nb29nbGUuY29tL2dvL2FpcGxhdGZvcm0v",
-            "YXBpdjFiZXRhMS9haXBsYXRmb3JtcGI7YWlwbGF0Zm9ybXBiqgIfR29vZ2xl",
-            "LkNsb3VkLkFJUGxhdGZvcm0uVjFCZXRhMcoCH0dvb2dsZVxDbG91ZFxBSVBs",
-            "YXRmb3JtXFYxYmV0YTHqAiJHb29nbGU6OkNsb3VkOjpBSVBsYXRmb3JtOjpW",
-            "MWJldGEx6kFiCiJtb2RlbGFybW9yLmdvb2dsZWFwaXMuY29tL1RlbXBsYXRl",
-            "Ejxwcm9qZWN0cy97cHJvamVjdH0vbG9jYXRpb25zL3tsb2NhdGlvbn0vdGVt",
-            "cGxhdGVzL3t0ZW1wbGF0ZX1iBnByb3RvMw=="));
+            "dF9jb250ZXh0X3Rva2VuGAggASgJQgbgQQHgQQNIAogBARJiChRzb3VyY2Vf",
+            "ZmxhZ2dpbmdfdXJpcxgJIAMoCzJELmdvb2dsZS5jbG91ZC5haXBsYXRmb3Jt",
+            "LnYxYmV0YTEuR3JvdW5kaW5nTWV0YWRhdGEuU291cmNlRmxhZ2dpbmdVcmka",
+            "QAoRU291cmNlRmxhZ2dpbmdVcmkSEQoJc291cmNlX2lkGAEgASgJEhgKEGZs",
+            "YWdfY29udGVudF91cmkYAiABKAlCFQoTX3NlYXJjaF9lbnRyeV9wb2ludEIV",
+            "ChNfcmV0cmlldmFsX21ldGFkYXRhQiMKIV9nb29nbGVfbWFwc193aWRnZXRf",
+            "Y29udGV4dF90b2tlbiJIChBTZWFyY2hFbnRyeVBvaW50Eh0KEHJlbmRlcmVk",
+            "X2NvbnRlbnQYASABKAlCA+BBARIVCghzZGtfYmxvYhgCIAEoDEID4EEBIkcK",
+            "EVJldHJpZXZhbE1ldGFkYXRhEjIKJWdvb2dsZV9zZWFyY2hfZHluYW1pY19y",
+            "ZXRyaWV2YWxfc2NvcmUYAiABKAJCA+BBASKoAQoQTW9kZWxBcm1vckNvbmZp",
+            "ZxJIChRwcm9tcHRfdGVtcGxhdGVfbmFtZRgBIAEoCUIq4EEB+kEkCiJtb2Rl",
+            "bGFybW9yLmdvb2dsZWFwaXMuY29tL1RlbXBsYXRlEkoKFnJlc3BvbnNlX3Rl",
+            "bXBsYXRlX25hbWUYAiABKAlCKuBBAfpBJAoibW9kZWxhcm1vci5nb29nbGVh",
+            "cGlzLmNvbS9UZW1wbGF0ZSJmChJNb2RhbGl0eVRva2VuQ291bnQSOwoIbW9k",
+            "YWxpdHkYASABKA4yKS5nb29nbGUuY2xvdWQuYWlwbGF0Zm9ybS52MWJldGEx",
+            "Lk1vZGFsaXR5EhMKC3Rva2VuX2NvdW50GAIgASgFKtsBCgxIYXJtQ2F0ZWdv",
+            "cnkSHQoZSEFSTV9DQVRFR09SWV9VTlNQRUNJRklFRBAAEh0KGUhBUk1fQ0FU",
+            "RUdPUllfSEFURV9TUEVFQ0gQARIjCh9IQVJNX0NBVEVHT1JZX0RBTkdFUk9V",
+            "U19DT05URU5UEAISHAoYSEFSTV9DQVRFR09SWV9IQVJBU1NNRU5UEAMSIwof",
+            "SEFSTV9DQVRFR09SWV9TRVhVQUxMWV9FWFBMSUNJVBAEEiUKHUhBUk1fQ0FU",
+            "RUdPUllfQ0lWSUNfSU5URUdSSVRZEAUaAggBKl0KCE1vZGFsaXR5EhgKFE1P",
+            "REFMSVRZX1VOU1BFQ0lGSUVEEAASCAoEVEVYVBABEgkKBUlNQUdFEAISCQoF",
+            "VklERU8QAxIJCgVBVURJTxAEEgwKCERPQ1VNRU5UEAVCyAIKI2NvbS5nb29n",
+            "bGUuY2xvdWQuYWlwbGF0Zm9ybS52MWJldGExQgxDb250ZW50UHJvdG9QAVpD",
+            "Y2xvdWQuZ29vZ2xlLmNvbS9nby9haXBsYXRmb3JtL2FwaXYxYmV0YTEvYWlw",
+            "bGF0Zm9ybXBiO2FpcGxhdGZvcm1wYqoCH0dvb2dsZS5DbG91ZC5BSVBsYXRm",
+            "b3JtLlYxQmV0YTHKAh9Hb29nbGVcQ2xvdWRcQUlQbGF0Zm9ybVxWMWJldGEx",
+            "6gIiR29vZ2xlOjpDbG91ZDo6QUlQbGF0Zm9ybTo6VjFiZXRhMepBYgoibW9k",
+            "ZWxhcm1vci5nb29nbGVhcGlzLmNvbS9UZW1wbGF0ZRI8cHJvamVjdHMve3By",
+            "b2plY3R9L2xvY2F0aW9ucy97bG9jYXRpb259L3RlbXBsYXRlcy97dGVtcGxh",
+            "dGV9YgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Cloud.AIPlatform.V1Beta1.OpenapiReflection.Descriptor, global::Google.Cloud.AIPlatform.V1Beta1.ToolReflection.Descriptor, global::Google.Cloud.AIPlatform.V1Beta1.VertexRagDataReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.DurationReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.StructReflection.Descriptor, global::Google.Type.DateReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(new[] {typeof(global::Google.Cloud.AIPlatform.V1Beta1.HarmCategory), typeof(global::Google.Cloud.AIPlatform.V1Beta1.Modality), }, null, new pbr::GeneratedClrTypeInfo[] {
@@ -271,9 +282,9 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1Beta1.Segment), global::Google.Cloud.AIPlatform.V1Beta1.Segment.Parser, new[]{ "PartIndex", "StartIndex", "EndIndex", "Text" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1Beta1.GroundingChunk), global::Google.Cloud.AIPlatform.V1Beta1.GroundingChunk.Parser, new[]{ "Web", "RetrievedContext", "Maps" }, new[]{ "ChunkType" }, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1Beta1.GroundingChunk.Types.Web), global::Google.Cloud.AIPlatform.V1Beta1.GroundingChunk.Types.Web.Parser, new[]{ "Uri", "Title" }, new[]{ "Uri", "Title" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1Beta1.GroundingChunk.Types.RetrievedContext), global::Google.Cloud.AIPlatform.V1Beta1.GroundingChunk.Types.RetrievedContext.Parser, new[]{ "RagChunk", "Uri", "Title", "Text", "DocumentName" }, new[]{ "ContextDetails", "Uri", "Title", "Text", "DocumentName" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1Beta1.GroundingChunk.Types.Maps), global::Google.Cloud.AIPlatform.V1Beta1.GroundingChunk.Types.Maps.Parser, new[]{ "Uri", "Title", "Text", "PlaceId" }, new[]{ "Uri", "Title", "Text", "PlaceId" }, null, null, null)}),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1Beta1.GroundingChunk.Types.Maps), global::Google.Cloud.AIPlatform.V1Beta1.GroundingChunk.Types.Maps.Parser, new[]{ "Uri", "Title", "Text", "PlaceId", "PlaceAnswerSources" }, new[]{ "Uri", "Title", "Text", "PlaceId" }, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1Beta1.GroundingChunk.Types.Maps.Types.PlaceAnswerSources), global::Google.Cloud.AIPlatform.V1Beta1.GroundingChunk.Types.Maps.Types.PlaceAnswerSources.Parser, new[]{ "ReviewSnippets" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1Beta1.GroundingChunk.Types.Maps.Types.PlaceAnswerSources.Types.ReviewSnippet), global::Google.Cloud.AIPlatform.V1Beta1.GroundingChunk.Types.Maps.Types.PlaceAnswerSources.Types.ReviewSnippet.Parser, new[]{ "ReviewId", "GoogleMapsUri", "Title" }, null, null, null, null)})})}),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1Beta1.GroundingSupport), global::Google.Cloud.AIPlatform.V1Beta1.GroundingSupport.Parser, new[]{ "Segment", "GroundingChunkIndices", "ConfidenceScores" }, new[]{ "Segment" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1Beta1.GroundingMetadata), global::Google.Cloud.AIPlatform.V1Beta1.GroundingMetadata.Parser, new[]{ "WebSearchQueries", "SearchEntryPoint", "RetrievalQueries", "GroundingChunks", "GroundingSupports", "RetrievalMetadata", "GoogleMapsWidgetContextToken" }, new[]{ "SearchEntryPoint", "RetrievalMetadata", "GoogleMapsWidgetContextToken" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1Beta1.GroundingMetadata), global::Google.Cloud.AIPlatform.V1Beta1.GroundingMetadata.Parser, new[]{ "WebSearchQueries", "SearchEntryPoint", "RetrievalQueries", "GroundingChunks", "GroundingSupports", "RetrievalMetadata", "GoogleMapsWidgetContextToken", "SourceFlaggingUris" }, new[]{ "SearchEntryPoint", "RetrievalMetadata", "GoogleMapsWidgetContextToken" }, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1Beta1.GroundingMetadata.Types.SourceFlaggingUri), global::Google.Cloud.AIPlatform.V1Beta1.GroundingMetadata.Types.SourceFlaggingUri.Parser, new[]{ "SourceId", "FlagContentUri" }, null, null, null, null)}),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1Beta1.SearchEntryPoint), global::Google.Cloud.AIPlatform.V1Beta1.SearchEntryPoint.Parser, new[]{ "RenderedContent", "SdkBlob" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1Beta1.RetrievalMetadata), global::Google.Cloud.AIPlatform.V1Beta1.RetrievalMetadata.Parser, new[]{ "GoogleSearchDynamicRetrievalScore" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1Beta1.ModelArmorConfig), global::Google.Cloud.AIPlatform.V1Beta1.ModelArmorConfig.Parser, new[]{ "PromptTemplateName", "ResponseTemplateName" }, null, null, null, null),
@@ -9951,6 +9962,7 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
           title_ = other.title_;
           text_ = other.text_;
           placeId_ = other.placeId_;
+          placeAnswerSources_ = other.placeAnswerSources_ != null ? other.placeAnswerSources_.Clone() : null;
           _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
         }
 
@@ -10077,6 +10089,23 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
           placeId_ = null;
         }
 
+        /// <summary>Field number for the "place_answer_sources" field.</summary>
+        public const int PlaceAnswerSourcesFieldNumber = 5;
+        private global::Google.Cloud.AIPlatform.V1Beta1.GroundingChunk.Types.Maps.Types.PlaceAnswerSources placeAnswerSources_;
+        /// <summary>
+        /// Sources used to generate the place answer.
+        /// This includes review snippets and photos that were used to generate the
+        /// answer, as well as uris to flag content.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public global::Google.Cloud.AIPlatform.V1Beta1.GroundingChunk.Types.Maps.Types.PlaceAnswerSources PlaceAnswerSources {
+          get { return placeAnswerSources_; }
+          set {
+            placeAnswerSources_ = value;
+          }
+        }
+
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public override bool Equals(object other) {
@@ -10096,6 +10125,7 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
           if (Title != other.Title) return false;
           if (Text != other.Text) return false;
           if (PlaceId != other.PlaceId) return false;
+          if (!object.Equals(PlaceAnswerSources, other.PlaceAnswerSources)) return false;
           return Equals(_unknownFields, other._unknownFields);
         }
 
@@ -10107,6 +10137,7 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
           if (HasTitle) hash ^= Title.GetHashCode();
           if (HasText) hash ^= Text.GetHashCode();
           if (HasPlaceId) hash ^= PlaceId.GetHashCode();
+          if (placeAnswerSources_ != null) hash ^= PlaceAnswerSources.GetHashCode();
           if (_unknownFields != null) {
             hash ^= _unknownFields.GetHashCode();
           }
@@ -10141,6 +10172,10 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
             output.WriteRawTag(34);
             output.WriteString(PlaceId);
           }
+          if (placeAnswerSources_ != null) {
+            output.WriteRawTag(42);
+            output.WriteMessage(PlaceAnswerSources);
+          }
           if (_unknownFields != null) {
             _unknownFields.WriteTo(output);
           }
@@ -10167,6 +10202,10 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
             output.WriteRawTag(34);
             output.WriteString(PlaceId);
           }
+          if (placeAnswerSources_ != null) {
+            output.WriteRawTag(42);
+            output.WriteMessage(PlaceAnswerSources);
+          }
           if (_unknownFields != null) {
             _unknownFields.WriteTo(ref output);
           }
@@ -10188,6 +10227,9 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
           }
           if (HasPlaceId) {
             size += 1 + pb::CodedOutputStream.ComputeStringSize(PlaceId);
+          }
+          if (placeAnswerSources_ != null) {
+            size += 1 + pb::CodedOutputStream.ComputeMessageSize(PlaceAnswerSources);
           }
           if (_unknownFields != null) {
             size += _unknownFields.CalculateSize();
@@ -10212,6 +10254,12 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
           }
           if (other.HasPlaceId) {
             PlaceId = other.PlaceId;
+          }
+          if (other.placeAnswerSources_ != null) {
+            if (placeAnswerSources_ == null) {
+              PlaceAnswerSources = new global::Google.Cloud.AIPlatform.V1Beta1.GroundingChunk.Types.Maps.Types.PlaceAnswerSources();
+            }
+            PlaceAnswerSources.MergeFrom(other.PlaceAnswerSources);
           }
           _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
         }
@@ -10242,6 +10290,13 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
               }
               case 34: {
                 PlaceId = input.ReadString();
+                break;
+              }
+              case 42: {
+                if (placeAnswerSources_ == null) {
+                  PlaceAnswerSources = new global::Google.Cloud.AIPlatform.V1Beta1.GroundingChunk.Types.Maps.Types.PlaceAnswerSources();
+                }
+                input.ReadMessage(PlaceAnswerSources);
                 break;
               }
             }
@@ -10275,10 +10330,491 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
                 PlaceId = input.ReadString();
                 break;
               }
+              case 42: {
+                if (placeAnswerSources_ == null) {
+                  PlaceAnswerSources = new global::Google.Cloud.AIPlatform.V1Beta1.GroundingChunk.Types.Maps.Types.PlaceAnswerSources();
+                }
+                input.ReadMessage(PlaceAnswerSources);
+                break;
+              }
             }
           }
         }
         #endif
+
+        #region Nested types
+        /// <summary>Container for nested types declared in the Maps message type.</summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public static partial class Types {
+          [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+          public sealed partial class PlaceAnswerSources : pb::IMessage<PlaceAnswerSources>
+          #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+              , pb::IBufferMessage
+          #endif
+          {
+            private static readonly pb::MessageParser<PlaceAnswerSources> _parser = new pb::MessageParser<PlaceAnswerSources>(() => new PlaceAnswerSources());
+            private pb::UnknownFieldSet _unknownFields;
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public static pb::MessageParser<PlaceAnswerSources> Parser { get { return _parser; } }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public static pbr::MessageDescriptor Descriptor {
+              get { return global::Google.Cloud.AIPlatform.V1Beta1.GroundingChunk.Types.Maps.Descriptor.NestedTypes[0]; }
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            pbr::MessageDescriptor pb::IMessage.Descriptor {
+              get { return Descriptor; }
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public PlaceAnswerSources() {
+              OnConstruction();
+            }
+
+            partial void OnConstruction();
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public PlaceAnswerSources(PlaceAnswerSources other) : this() {
+              reviewSnippets_ = other.reviewSnippets_.Clone();
+              _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public PlaceAnswerSources Clone() {
+              return new PlaceAnswerSources(this);
+            }
+
+            /// <summary>Field number for the "review_snippets" field.</summary>
+            public const int ReviewSnippetsFieldNumber = 1;
+            private static readonly pb::FieldCodec<global::Google.Cloud.AIPlatform.V1Beta1.GroundingChunk.Types.Maps.Types.PlaceAnswerSources.Types.ReviewSnippet> _repeated_reviewSnippets_codec
+                = pb::FieldCodec.ForMessage(10, global::Google.Cloud.AIPlatform.V1Beta1.GroundingChunk.Types.Maps.Types.PlaceAnswerSources.Types.ReviewSnippet.Parser);
+            private readonly pbc::RepeatedField<global::Google.Cloud.AIPlatform.V1Beta1.GroundingChunk.Types.Maps.Types.PlaceAnswerSources.Types.ReviewSnippet> reviewSnippets_ = new pbc::RepeatedField<global::Google.Cloud.AIPlatform.V1Beta1.GroundingChunk.Types.Maps.Types.PlaceAnswerSources.Types.ReviewSnippet>();
+            /// <summary>
+            /// Snippets of reviews that are used to generate the answer.
+            /// </summary>
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public pbc::RepeatedField<global::Google.Cloud.AIPlatform.V1Beta1.GroundingChunk.Types.Maps.Types.PlaceAnswerSources.Types.ReviewSnippet> ReviewSnippets {
+              get { return reviewSnippets_; }
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public override bool Equals(object other) {
+              return Equals(other as PlaceAnswerSources);
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public bool Equals(PlaceAnswerSources other) {
+              if (ReferenceEquals(other, null)) {
+                return false;
+              }
+              if (ReferenceEquals(other, this)) {
+                return true;
+              }
+              if(!reviewSnippets_.Equals(other.reviewSnippets_)) return false;
+              return Equals(_unknownFields, other._unknownFields);
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public override int GetHashCode() {
+              int hash = 1;
+              hash ^= reviewSnippets_.GetHashCode();
+              if (_unknownFields != null) {
+                hash ^= _unknownFields.GetHashCode();
+              }
+              return hash;
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public override string ToString() {
+              return pb::JsonFormatter.ToDiagnosticString(this);
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public void WriteTo(pb::CodedOutputStream output) {
+            #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+              output.WriteRawMessage(this);
+            #else
+              reviewSnippets_.WriteTo(output, _repeated_reviewSnippets_codec);
+              if (_unknownFields != null) {
+                _unknownFields.WriteTo(output);
+              }
+            #endif
+            }
+
+            #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+              reviewSnippets_.WriteTo(ref output, _repeated_reviewSnippets_codec);
+              if (_unknownFields != null) {
+                _unknownFields.WriteTo(ref output);
+              }
+            }
+            #endif
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public int CalculateSize() {
+              int size = 0;
+              size += reviewSnippets_.CalculateSize(_repeated_reviewSnippets_codec);
+              if (_unknownFields != null) {
+                size += _unknownFields.CalculateSize();
+              }
+              return size;
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public void MergeFrom(PlaceAnswerSources other) {
+              if (other == null) {
+                return;
+              }
+              reviewSnippets_.Add(other.reviewSnippets_);
+              _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public void MergeFrom(pb::CodedInputStream input) {
+            #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+              input.ReadRawMessage(this);
+            #else
+              uint tag;
+              while ((tag = input.ReadTag()) != 0) {
+                switch(tag) {
+                  default:
+                    _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+                    break;
+                  case 10: {
+                    reviewSnippets_.AddEntriesFrom(input, _repeated_reviewSnippets_codec);
+                    break;
+                  }
+                }
+              }
+            #endif
+            }
+
+            #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+              uint tag;
+              while ((tag = input.ReadTag()) != 0) {
+                switch(tag) {
+                  default:
+                    _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+                    break;
+                  case 10: {
+                    reviewSnippets_.AddEntriesFrom(ref input, _repeated_reviewSnippets_codec);
+                    break;
+                  }
+                }
+              }
+            }
+            #endif
+
+            #region Nested types
+            /// <summary>Container for nested types declared in the PlaceAnswerSources message type.</summary>
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public static partial class Types {
+              /// <summary>
+              /// Encapsulates a review snippet.
+              /// </summary>
+              [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+              public sealed partial class ReviewSnippet : pb::IMessage<ReviewSnippet>
+              #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+                  , pb::IBufferMessage
+              #endif
+              {
+                private static readonly pb::MessageParser<ReviewSnippet> _parser = new pb::MessageParser<ReviewSnippet>(() => new ReviewSnippet());
+                private pb::UnknownFieldSet _unknownFields;
+                [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+                public static pb::MessageParser<ReviewSnippet> Parser { get { return _parser; } }
+
+                [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+                public static pbr::MessageDescriptor Descriptor {
+                  get { return global::Google.Cloud.AIPlatform.V1Beta1.GroundingChunk.Types.Maps.Types.PlaceAnswerSources.Descriptor.NestedTypes[0]; }
+                }
+
+                [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+                pbr::MessageDescriptor pb::IMessage.Descriptor {
+                  get { return Descriptor; }
+                }
+
+                [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+                public ReviewSnippet() {
+                  OnConstruction();
+                }
+
+                partial void OnConstruction();
+
+                [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+                public ReviewSnippet(ReviewSnippet other) : this() {
+                  reviewId_ = other.reviewId_;
+                  googleMapsUri_ = other.googleMapsUri_;
+                  title_ = other.title_;
+                  _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+                }
+
+                [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+                public ReviewSnippet Clone() {
+                  return new ReviewSnippet(this);
+                }
+
+                /// <summary>Field number for the "review_id" field.</summary>
+                public const int ReviewIdFieldNumber = 1;
+                private string reviewId_ = "";
+                /// <summary>
+                /// Id of the review referencing the place.
+                /// </summary>
+                [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+                public string ReviewId {
+                  get { return reviewId_; }
+                  set {
+                    reviewId_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+                  }
+                }
+
+                /// <summary>Field number for the "google_maps_uri" field.</summary>
+                public const int GoogleMapsUriFieldNumber = 2;
+                private string googleMapsUri_ = "";
+                /// <summary>
+                /// A link to show the review on Google Maps.
+                /// </summary>
+                [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+                public string GoogleMapsUri {
+                  get { return googleMapsUri_; }
+                  set {
+                    googleMapsUri_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+                  }
+                }
+
+                /// <summary>Field number for the "title" field.</summary>
+                public const int TitleFieldNumber = 3;
+                private string title_ = "";
+                /// <summary>
+                /// Title of the review.
+                /// </summary>
+                [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+                public string Title {
+                  get { return title_; }
+                  set {
+                    title_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+                  }
+                }
+
+                [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+                public override bool Equals(object other) {
+                  return Equals(other as ReviewSnippet);
+                }
+
+                [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+                public bool Equals(ReviewSnippet other) {
+                  if (ReferenceEquals(other, null)) {
+                    return false;
+                  }
+                  if (ReferenceEquals(other, this)) {
+                    return true;
+                  }
+                  if (ReviewId != other.ReviewId) return false;
+                  if (GoogleMapsUri != other.GoogleMapsUri) return false;
+                  if (Title != other.Title) return false;
+                  return Equals(_unknownFields, other._unknownFields);
+                }
+
+                [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+                public override int GetHashCode() {
+                  int hash = 1;
+                  if (ReviewId.Length != 0) hash ^= ReviewId.GetHashCode();
+                  if (GoogleMapsUri.Length != 0) hash ^= GoogleMapsUri.GetHashCode();
+                  if (Title.Length != 0) hash ^= Title.GetHashCode();
+                  if (_unknownFields != null) {
+                    hash ^= _unknownFields.GetHashCode();
+                  }
+                  return hash;
+                }
+
+                [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+                public override string ToString() {
+                  return pb::JsonFormatter.ToDiagnosticString(this);
+                }
+
+                [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+                public void WriteTo(pb::CodedOutputStream output) {
+                #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+                  output.WriteRawMessage(this);
+                #else
+                  if (ReviewId.Length != 0) {
+                    output.WriteRawTag(10);
+                    output.WriteString(ReviewId);
+                  }
+                  if (GoogleMapsUri.Length != 0) {
+                    output.WriteRawTag(18);
+                    output.WriteString(GoogleMapsUri);
+                  }
+                  if (Title.Length != 0) {
+                    output.WriteRawTag(26);
+                    output.WriteString(Title);
+                  }
+                  if (_unknownFields != null) {
+                    _unknownFields.WriteTo(output);
+                  }
+                #endif
+                }
+
+                #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+                [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+                void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+                  if (ReviewId.Length != 0) {
+                    output.WriteRawTag(10);
+                    output.WriteString(ReviewId);
+                  }
+                  if (GoogleMapsUri.Length != 0) {
+                    output.WriteRawTag(18);
+                    output.WriteString(GoogleMapsUri);
+                  }
+                  if (Title.Length != 0) {
+                    output.WriteRawTag(26);
+                    output.WriteString(Title);
+                  }
+                  if (_unknownFields != null) {
+                    _unknownFields.WriteTo(ref output);
+                  }
+                }
+                #endif
+
+                [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+                public int CalculateSize() {
+                  int size = 0;
+                  if (ReviewId.Length != 0) {
+                    size += 1 + pb::CodedOutputStream.ComputeStringSize(ReviewId);
+                  }
+                  if (GoogleMapsUri.Length != 0) {
+                    size += 1 + pb::CodedOutputStream.ComputeStringSize(GoogleMapsUri);
+                  }
+                  if (Title.Length != 0) {
+                    size += 1 + pb::CodedOutputStream.ComputeStringSize(Title);
+                  }
+                  if (_unknownFields != null) {
+                    size += _unknownFields.CalculateSize();
+                  }
+                  return size;
+                }
+
+                [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+                public void MergeFrom(ReviewSnippet other) {
+                  if (other == null) {
+                    return;
+                  }
+                  if (other.ReviewId.Length != 0) {
+                    ReviewId = other.ReviewId;
+                  }
+                  if (other.GoogleMapsUri.Length != 0) {
+                    GoogleMapsUri = other.GoogleMapsUri;
+                  }
+                  if (other.Title.Length != 0) {
+                    Title = other.Title;
+                  }
+                  _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+                }
+
+                [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+                public void MergeFrom(pb::CodedInputStream input) {
+                #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+                  input.ReadRawMessage(this);
+                #else
+                  uint tag;
+                  while ((tag = input.ReadTag()) != 0) {
+                    switch(tag) {
+                      default:
+                        _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+                        break;
+                      case 10: {
+                        ReviewId = input.ReadString();
+                        break;
+                      }
+                      case 18: {
+                        GoogleMapsUri = input.ReadString();
+                        break;
+                      }
+                      case 26: {
+                        Title = input.ReadString();
+                        break;
+                      }
+                    }
+                  }
+                #endif
+                }
+
+                #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+                [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+                void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+                  uint tag;
+                  while ((tag = input.ReadTag()) != 0) {
+                    switch(tag) {
+                      default:
+                        _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+                        break;
+                      case 10: {
+                        ReviewId = input.ReadString();
+                        break;
+                      }
+                      case 18: {
+                        GoogleMapsUri = input.ReadString();
+                        break;
+                      }
+                      case 26: {
+                        Title = input.ReadString();
+                        break;
+                      }
+                    }
+                  }
+                }
+                #endif
+
+              }
+
+            }
+            #endregion
+
+          }
+
+        }
+        #endregion
 
       }
 
@@ -10604,6 +11140,7 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
       groundingSupports_ = other.groundingSupports_.Clone();
       retrievalMetadata_ = other.retrievalMetadata_ != null ? other.retrievalMetadata_.Clone() : null;
       googleMapsWidgetContextToken_ = other.googleMapsWidgetContextToken_;
+      sourceFlaggingUris_ = other.sourceFlaggingUris_.Clone();
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -10730,6 +11267,21 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
       googleMapsWidgetContextToken_ = null;
     }
 
+    /// <summary>Field number for the "source_flagging_uris" field.</summary>
+    public const int SourceFlaggingUrisFieldNumber = 9;
+    private static readonly pb::FieldCodec<global::Google.Cloud.AIPlatform.V1Beta1.GroundingMetadata.Types.SourceFlaggingUri> _repeated_sourceFlaggingUris_codec
+        = pb::FieldCodec.ForMessage(74, global::Google.Cloud.AIPlatform.V1Beta1.GroundingMetadata.Types.SourceFlaggingUri.Parser);
+    private readonly pbc::RepeatedField<global::Google.Cloud.AIPlatform.V1Beta1.GroundingMetadata.Types.SourceFlaggingUri> sourceFlaggingUris_ = new pbc::RepeatedField<global::Google.Cloud.AIPlatform.V1Beta1.GroundingMetadata.Types.SourceFlaggingUri>();
+    /// <summary>
+    /// List of source flagging uris. This is currently populated only for Google
+    /// Maps grounding.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pbc::RepeatedField<global::Google.Cloud.AIPlatform.V1Beta1.GroundingMetadata.Types.SourceFlaggingUri> SourceFlaggingUris {
+      get { return sourceFlaggingUris_; }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
@@ -10752,6 +11304,7 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
       if(!groundingSupports_.Equals(other.groundingSupports_)) return false;
       if (!object.Equals(RetrievalMetadata, other.RetrievalMetadata)) return false;
       if (GoogleMapsWidgetContextToken != other.GoogleMapsWidgetContextToken) return false;
+      if(!sourceFlaggingUris_.Equals(other.sourceFlaggingUris_)) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -10766,6 +11319,7 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
       hash ^= groundingSupports_.GetHashCode();
       if (retrievalMetadata_ != null) hash ^= RetrievalMetadata.GetHashCode();
       if (HasGoogleMapsWidgetContextToken) hash ^= GoogleMapsWidgetContextToken.GetHashCode();
+      hash ^= sourceFlaggingUris_.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -10800,6 +11354,7 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
         output.WriteRawTag(66);
         output.WriteString(GoogleMapsWidgetContextToken);
       }
+      sourceFlaggingUris_.WriteTo(output, _repeated_sourceFlaggingUris_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -10826,6 +11381,7 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
         output.WriteRawTag(66);
         output.WriteString(GoogleMapsWidgetContextToken);
       }
+      sourceFlaggingUris_.WriteTo(ref output, _repeated_sourceFlaggingUris_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -10849,6 +11405,7 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
       if (HasGoogleMapsWidgetContextToken) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(GoogleMapsWidgetContextToken);
       }
+      size += sourceFlaggingUris_.CalculateSize(_repeated_sourceFlaggingUris_codec);
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
       }
@@ -10880,6 +11437,7 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
       if (other.HasGoogleMapsWidgetContextToken) {
         GoogleMapsWidgetContextToken = other.GoogleMapsWidgetContextToken;
       }
+      sourceFlaggingUris_.Add(other.sourceFlaggingUris_);
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 
@@ -10927,6 +11485,10 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
           }
           case 66: {
             GoogleMapsWidgetContextToken = input.ReadString();
+            break;
+          }
+          case 74: {
+            sourceFlaggingUris_.AddEntriesFrom(input, _repeated_sourceFlaggingUris_codec);
             break;
           }
         }
@@ -10978,10 +11540,262 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
             GoogleMapsWidgetContextToken = input.ReadString();
             break;
           }
+          case 74: {
+            sourceFlaggingUris_.AddEntriesFrom(ref input, _repeated_sourceFlaggingUris_codec);
+            break;
+          }
         }
       }
     }
     #endif
+
+    #region Nested types
+    /// <summary>Container for nested types declared in the GroundingMetadata message type.</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static partial class Types {
+      /// <summary>
+      /// Source content flagging uri for a place or review. This is currently
+      /// populated only for Google Maps grounding.
+      /// </summary>
+      [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+      public sealed partial class SourceFlaggingUri : pb::IMessage<SourceFlaggingUri>
+      #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          , pb::IBufferMessage
+      #endif
+      {
+        private static readonly pb::MessageParser<SourceFlaggingUri> _parser = new pb::MessageParser<SourceFlaggingUri>(() => new SourceFlaggingUri());
+        private pb::UnknownFieldSet _unknownFields;
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public static pb::MessageParser<SourceFlaggingUri> Parser { get { return _parser; } }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public static pbr::MessageDescriptor Descriptor {
+          get { return global::Google.Cloud.AIPlatform.V1Beta1.GroundingMetadata.Descriptor.NestedTypes[0]; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        pbr::MessageDescriptor pb::IMessage.Descriptor {
+          get { return Descriptor; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public SourceFlaggingUri() {
+          OnConstruction();
+        }
+
+        partial void OnConstruction();
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public SourceFlaggingUri(SourceFlaggingUri other) : this() {
+          sourceId_ = other.sourceId_;
+          flagContentUri_ = other.flagContentUri_;
+          _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public SourceFlaggingUri Clone() {
+          return new SourceFlaggingUri(this);
+        }
+
+        /// <summary>Field number for the "source_id" field.</summary>
+        public const int SourceIdFieldNumber = 1;
+        private string sourceId_ = "";
+        /// <summary>
+        /// Id of the place or review.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public string SourceId {
+          get { return sourceId_; }
+          set {
+            sourceId_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+          }
+        }
+
+        /// <summary>Field number for the "flag_content_uri" field.</summary>
+        public const int FlagContentUriFieldNumber = 2;
+        private string flagContentUri_ = "";
+        /// <summary>
+        /// A link where users can flag a problem with the source (place or review).
+        /// (-- The link is generated by Google and it does not contain
+        /// information from the user query. It may contain information of the
+        /// content it is flagging, which can be used to identify places. --)
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public string FlagContentUri {
+          get { return flagContentUri_; }
+          set {
+            flagContentUri_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+          }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override bool Equals(object other) {
+          return Equals(other as SourceFlaggingUri);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public bool Equals(SourceFlaggingUri other) {
+          if (ReferenceEquals(other, null)) {
+            return false;
+          }
+          if (ReferenceEquals(other, this)) {
+            return true;
+          }
+          if (SourceId != other.SourceId) return false;
+          if (FlagContentUri != other.FlagContentUri) return false;
+          return Equals(_unknownFields, other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override int GetHashCode() {
+          int hash = 1;
+          if (SourceId.Length != 0) hash ^= SourceId.GetHashCode();
+          if (FlagContentUri.Length != 0) hash ^= FlagContentUri.GetHashCode();
+          if (_unknownFields != null) {
+            hash ^= _unknownFields.GetHashCode();
+          }
+          return hash;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override string ToString() {
+          return pb::JsonFormatter.ToDiagnosticString(this);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void WriteTo(pb::CodedOutputStream output) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          output.WriteRawMessage(this);
+        #else
+          if (SourceId.Length != 0) {
+            output.WriteRawTag(10);
+            output.WriteString(SourceId);
+          }
+          if (FlagContentUri.Length != 0) {
+            output.WriteRawTag(18);
+            output.WriteString(FlagContentUri);
+          }
+          if (_unknownFields != null) {
+            _unknownFields.WriteTo(output);
+          }
+        #endif
+        }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+          if (SourceId.Length != 0) {
+            output.WriteRawTag(10);
+            output.WriteString(SourceId);
+          }
+          if (FlagContentUri.Length != 0) {
+            output.WriteRawTag(18);
+            output.WriteString(FlagContentUri);
+          }
+          if (_unknownFields != null) {
+            _unknownFields.WriteTo(ref output);
+          }
+        }
+        #endif
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public int CalculateSize() {
+          int size = 0;
+          if (SourceId.Length != 0) {
+            size += 1 + pb::CodedOutputStream.ComputeStringSize(SourceId);
+          }
+          if (FlagContentUri.Length != 0) {
+            size += 1 + pb::CodedOutputStream.ComputeStringSize(FlagContentUri);
+          }
+          if (_unknownFields != null) {
+            size += _unknownFields.CalculateSize();
+          }
+          return size;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void MergeFrom(SourceFlaggingUri other) {
+          if (other == null) {
+            return;
+          }
+          if (other.SourceId.Length != 0) {
+            SourceId = other.SourceId;
+          }
+          if (other.FlagContentUri.Length != 0) {
+            FlagContentUri = other.FlagContentUri;
+          }
+          _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void MergeFrom(pb::CodedInputStream input) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          input.ReadRawMessage(this);
+        #else
+          uint tag;
+          while ((tag = input.ReadTag()) != 0) {
+            switch(tag) {
+              default:
+                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+                break;
+              case 10: {
+                SourceId = input.ReadString();
+                break;
+              }
+              case 18: {
+                FlagContentUri = input.ReadString();
+                break;
+              }
+            }
+          }
+        #endif
+        }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+          uint tag;
+          while ((tag = input.ReadTag()) != 0) {
+            switch(tag) {
+              default:
+                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+                break;
+              case 10: {
+                SourceId = input.ReadString();
+                break;
+              }
+              case 18: {
+                FlagContentUri = input.ReadString();
+                break;
+              }
+            }
+          }
+        }
+        #endif
+
+      }
+
+    }
+    #endregion
 
   }
 
