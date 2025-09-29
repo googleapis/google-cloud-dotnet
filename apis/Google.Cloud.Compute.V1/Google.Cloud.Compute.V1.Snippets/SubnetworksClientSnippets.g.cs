@@ -506,6 +506,7 @@ namespace GoogleCSharpSnippets
             // Initialize request argument(s)
             GetSubnetworkRequest request = new GetSubnetworkRequest
             {
+                Views = "",
                 Region = "",
                 Project = "",
                 Subnetwork = "",
@@ -525,6 +526,7 @@ namespace GoogleCSharpSnippets
             // Initialize request argument(s)
             GetSubnetworkRequest request = new GetSubnetworkRequest
             {
+                Views = "",
                 Region = "",
                 Project = "",
                 Subnetwork = "",
@@ -778,6 +780,7 @@ namespace GoogleCSharpSnippets
             // Initialize request argument(s)
             ListSubnetworksRequest request = new ListSubnetworksRequest
             {
+                Views = "",
                 Region = "",
                 OrderBy = "",
                 Project = "",
@@ -830,6 +833,7 @@ namespace GoogleCSharpSnippets
             // Initialize request argument(s)
             ListSubnetworksRequest request = new ListSubnetworksRequest
             {
+                Views = "",
                 Region = "",
                 OrderBy = "",
                 Project = "",
