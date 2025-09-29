@@ -1,5 +1,21 @@
 # Version history
 
+## Version 1.12.0, released 2025-09-29
+
+### New features
+
+- Add CRUD APIs on Databases
+- Add PG 17 as a Database version
+- Add configuration for Managed Connection Pool
+- Update `Database.charset` to be immutable
+- Add additional fields to Database object to specify the collation type, character type, if it is a template database, and the template to use for the database
+- Add field to ExecuteSQL request to just validate the sql statement
+- Add fields on the estimated/actual start/end times for an Upgrade Cluster operation
+
+### Documentation improvements
+
+- Specify that the STOPPED state is not used for clusters anymore
+
 ## Version 1.11.0, released 2025-06-25
 
 ### New features
