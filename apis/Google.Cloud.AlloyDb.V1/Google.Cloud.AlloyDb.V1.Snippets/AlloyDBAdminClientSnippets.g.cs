@@ -3916,6 +3916,7 @@ namespace GoogleCSharpSnippets
                 User = "",
                 SqlStatement = "",
                 Password = "",
+                ValidateOnly = false,
             };
             // Make the request
             ExecuteSqlResponse response = alloyDBAdminClient.ExecuteSql(request);
@@ -3937,6 +3938,7 @@ namespace GoogleCSharpSnippets
                 User = "",
                 SqlStatement = "",
                 Password = "",
+                ValidateOnly = false,
             };
             // Make the request
             ExecuteSqlResponse response = await alloyDBAdminClient.ExecuteSqlAsync(request);
