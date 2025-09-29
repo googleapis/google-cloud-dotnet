@@ -28,6 +28,12 @@
                 "CreateClusterAsync"
               ]
             },
+            "CreateDatabase": {
+              "methods": [
+                "CreateDatabase",
+                "CreateDatabaseAsync"
+              ]
+            },
             "CreateInstance": {
               "methods": [
                 "CreateInstance",

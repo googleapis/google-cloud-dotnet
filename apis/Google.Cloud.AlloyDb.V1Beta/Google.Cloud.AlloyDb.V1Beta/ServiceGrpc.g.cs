@@ -167,6 +167,10 @@ namespace Google.Cloud.AlloyDb.V1Beta {
     static readonly grpc::Marshaller<global::Google.Cloud.AlloyDb.V1Beta.ListDatabasesRequest> __Marshaller_google_cloud_alloydb_v1beta_ListDatabasesRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.AlloyDb.V1Beta.ListDatabasesRequest.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.AlloyDb.V1Beta.ListDatabasesResponse> __Marshaller_google_cloud_alloydb_v1beta_ListDatabasesResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.AlloyDb.V1Beta.ListDatabasesResponse.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.AlloyDb.V1Beta.CreateDatabaseRequest> __Marshaller_google_cloud_alloydb_v1beta_CreateDatabaseRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.AlloyDb.V1Beta.CreateDatabaseRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.AlloyDb.V1Beta.Database> __Marshaller_google_cloud_alloydb_v1beta_Database = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.AlloyDb.V1Beta.Database.Parser));
 
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.AlloyDb.V1Beta.ListClustersRequest, global::Google.Cloud.AlloyDb.V1Beta.ListClustersResponse> __Method_ListClusters = new grpc::Method<global::Google.Cloud.AlloyDb.V1Beta.ListClustersRequest, global::Google.Cloud.AlloyDb.V1Beta.ListClustersResponse>(
@@ -463,6 +467,14 @@ namespace Google.Cloud.AlloyDb.V1Beta {
         "ListDatabases",
         __Marshaller_google_cloud_alloydb_v1beta_ListDatabasesRequest,
         __Marshaller_google_cloud_alloydb_v1beta_ListDatabasesResponse);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.AlloyDb.V1Beta.CreateDatabaseRequest, global::Google.Cloud.AlloyDb.V1Beta.Database> __Method_CreateDatabase = new grpc::Method<global::Google.Cloud.AlloyDb.V1Beta.CreateDatabaseRequest, global::Google.Cloud.AlloyDb.V1Beta.Database>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "CreateDatabase",
+        __Marshaller_google_cloud_alloydb_v1beta_CreateDatabaseRequest,
+        __Marshaller_google_cloud_alloydb_v1beta_Database);
 
     /// <summary>Service descriptor</summary>
     public static global::Google.Protobuf.Reflection.ServiceDescriptor Descriptor
@@ -942,6 +954,18 @@ namespace Google.Cloud.AlloyDb.V1Beta {
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.AlloyDb.V1Beta.ListDatabasesResponse> ListDatabases(global::Google.Cloud.AlloyDb.V1Beta.ListDatabasesRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Creates a new Database in a given project, location, and cluster.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.AlloyDb.V1Beta.Database> CreateDatabase(global::Google.Cloud.AlloyDb.V1Beta.CreateDatabaseRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
       }
@@ -2863,6 +2887,54 @@ namespace Google.Cloud.AlloyDb.V1Beta {
       {
         return CallInvoker.AsyncUnaryCall(__Method_ListDatabases, null, options, request);
       }
+      /// <summary>
+      /// Creates a new Database in a given project, location, and cluster.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.AlloyDb.V1Beta.Database CreateDatabase(global::Google.Cloud.AlloyDb.V1Beta.CreateDatabaseRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return CreateDatabase(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Creates a new Database in a given project, location, and cluster.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.AlloyDb.V1Beta.Database CreateDatabase(global::Google.Cloud.AlloyDb.V1Beta.CreateDatabaseRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_CreateDatabase, null, options, request);
+      }
+      /// <summary>
+      /// Creates a new Database in a given project, location, and cluster.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.AlloyDb.V1Beta.Database> CreateDatabaseAsync(global::Google.Cloud.AlloyDb.V1Beta.CreateDatabaseRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return CreateDatabaseAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Creates a new Database in a given project, location, and cluster.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.AlloyDb.V1Beta.Database> CreateDatabaseAsync(global::Google.Cloud.AlloyDb.V1Beta.CreateDatabaseRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_CreateDatabase, null, options, request);
+      }
       /// <summary>Creates a new instance of client from given <c>ClientBaseConfiguration</c>.</summary>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       protected override AlloyDBAdminClient NewInstance(ClientBaseConfiguration configuration)
@@ -2913,7 +2985,8 @@ namespace Google.Cloud.AlloyDb.V1Beta {
           .AddMethod(__Method_CreateUser, serviceImpl.CreateUser)
           .AddMethod(__Method_UpdateUser, serviceImpl.UpdateUser)
           .AddMethod(__Method_DeleteUser, serviceImpl.DeleteUser)
-          .AddMethod(__Method_ListDatabases, serviceImpl.ListDatabases).Build();
+          .AddMethod(__Method_ListDatabases, serviceImpl.ListDatabases)
+          .AddMethod(__Method_CreateDatabase, serviceImpl.CreateDatabase).Build();
     }
 
     /// <summary>Register service method with a service binder with or without implementation. Useful when customizing the service binding logic.
@@ -2960,6 +3033,7 @@ namespace Google.Cloud.AlloyDb.V1Beta {
       serviceBinder.AddMethod(__Method_UpdateUser, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.AlloyDb.V1Beta.UpdateUserRequest, global::Google.Cloud.AlloyDb.V1Beta.User>(serviceImpl.UpdateUser));
       serviceBinder.AddMethod(__Method_DeleteUser, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.AlloyDb.V1Beta.DeleteUserRequest, global::Google.Protobuf.WellKnownTypes.Empty>(serviceImpl.DeleteUser));
       serviceBinder.AddMethod(__Method_ListDatabases, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.AlloyDb.V1Beta.ListDatabasesRequest, global::Google.Cloud.AlloyDb.V1Beta.ListDatabasesResponse>(serviceImpl.ListDatabases));
+      serviceBinder.AddMethod(__Method_CreateDatabase, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.AlloyDb.V1Beta.CreateDatabaseRequest, global::Google.Cloud.AlloyDb.V1Beta.Database>(serviceImpl.CreateDatabase));
     }
 
   }

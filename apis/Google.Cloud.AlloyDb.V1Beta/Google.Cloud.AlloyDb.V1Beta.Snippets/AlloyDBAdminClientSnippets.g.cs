@@ -3916,6 +3916,7 @@ namespace GoogleCSharpSnippets
                 User = "",
                 SqlStatement = "",
                 Password = "",
+                ValidateOnly = false,
             };
             // Make the request
             ExecuteSqlResponse response = alloyDBAdminClient.ExecuteSql(request);
@@ -3937,6 +3938,7 @@ namespace GoogleCSharpSnippets
                 User = "",
                 SqlStatement = "",
                 Password = "",
+                ValidateOnly = false,
             };
             // Make the request
             ExecuteSqlResponse response = await alloyDBAdminClient.ExecuteSqlAsync(request);
@@ -6270,6 +6272,105 @@ namespace GoogleCSharpSnippets
             }
             // Store the pageToken, for when the next page is required.
             string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateDatabase</summary>
+        public void CreateDatabaseRequestObject()
+        {
+            // Snippet: CreateDatabase(CreateDatabaseRequest, CallSettings)
+            // Create client
+            AlloyDBAdminClient alloyDBAdminClient = AlloyDBAdminClient.Create();
+            // Initialize request argument(s)
+            CreateDatabaseRequest request = new CreateDatabaseRequest
+            {
+                ParentAsClusterName = ClusterName.FromProjectLocationCluster("[PROJECT]", "[LOCATION]", "[CLUSTER]"),
+                DatabaseId = "",
+                Database = new Database(),
+            };
+            // Make the request
+            Database response = alloyDBAdminClient.CreateDatabase(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateDatabaseAsync</summary>
+        public async Task CreateDatabaseRequestObjectAsync()
+        {
+            // Snippet: CreateDatabaseAsync(CreateDatabaseRequest, CallSettings)
+            // Additional: CreateDatabaseAsync(CreateDatabaseRequest, CancellationToken)
+            // Create client
+            AlloyDBAdminClient alloyDBAdminClient = await AlloyDBAdminClient.CreateAsync();
+            // Initialize request argument(s)
+            CreateDatabaseRequest request = new CreateDatabaseRequest
+            {
+                ParentAsClusterName = ClusterName.FromProjectLocationCluster("[PROJECT]", "[LOCATION]", "[CLUSTER]"),
+                DatabaseId = "",
+                Database = new Database(),
+            };
+            // Make the request
+            Database response = await alloyDBAdminClient.CreateDatabaseAsync(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateDatabase</summary>
+        public void CreateDatabase()
+        {
+            // Snippet: CreateDatabase(string, Database, string, CallSettings)
+            // Create client
+            AlloyDBAdminClient alloyDBAdminClient = AlloyDBAdminClient.Create();
+            // Initialize request argument(s)
+            string parent = "projects/[PROJECT]/locations/[LOCATION]/clusters/[CLUSTER]";
+            Database database = new Database();
+            string databaseId = "";
+            // Make the request
+            Database response = alloyDBAdminClient.CreateDatabase(parent, database, databaseId);
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateDatabaseAsync</summary>
+        public async Task CreateDatabaseAsync()
+        {
+            // Snippet: CreateDatabaseAsync(string, Database, string, CallSettings)
+            // Additional: CreateDatabaseAsync(string, Database, string, CancellationToken)
+            // Create client
+            AlloyDBAdminClient alloyDBAdminClient = await AlloyDBAdminClient.CreateAsync();
+            // Initialize request argument(s)
+            string parent = "projects/[PROJECT]/locations/[LOCATION]/clusters/[CLUSTER]";
+            Database database = new Database();
+            string databaseId = "";
+            // Make the request
+            Database response = await alloyDBAdminClient.CreateDatabaseAsync(parent, database, databaseId);
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateDatabase</summary>
+        public void CreateDatabaseResourceNames()
+        {
+            // Snippet: CreateDatabase(ClusterName, Database, string, CallSettings)
+            // Create client
+            AlloyDBAdminClient alloyDBAdminClient = AlloyDBAdminClient.Create();
+            // Initialize request argument(s)
+            ClusterName parent = ClusterName.FromProjectLocationCluster("[PROJECT]", "[LOCATION]", "[CLUSTER]");
+            Database database = new Database();
+            string databaseId = "";
+            // Make the request
+            Database response = alloyDBAdminClient.CreateDatabase(parent, database, databaseId);
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateDatabaseAsync</summary>
+        public async Task CreateDatabaseResourceNamesAsync()
+        {
+            // Snippet: CreateDatabaseAsync(ClusterName, Database, string, CallSettings)
+            // Additional: CreateDatabaseAsync(ClusterName, Database, string, CancellationToken)
+            // Create client
+            AlloyDBAdminClient alloyDBAdminClient = await AlloyDBAdminClient.CreateAsync();
+            // Initialize request argument(s)
+            ClusterName parent = ClusterName.FromProjectLocationCluster("[PROJECT]", "[LOCATION]", "[CLUSTER]");
+            Database database = new Database();
+            string databaseId = "";
+            // Make the request
+            Database response = await alloyDBAdminClient.CreateDatabaseAsync(parent, database, databaseId);
             // End snippet
         }
     }
