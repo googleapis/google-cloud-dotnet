@@ -3711,6 +3711,38 @@ namespace Google.Cloud.Compute.V1
         }
 
         /// <summary>
+        /// Container class for enums within the <see cref="global::Google.Cloud.Compute.V1.GetSubnetworkRequest"/>
+        /// message.
+        /// </summary>
+        public static class GetSubnetworkRequest
+        {
+            /// <summary>
+            /// Constants for wire representations of the
+            /// <see cref="global::Google.Cloud.Compute.V1.GetSubnetworkRequest.Types.Views"/> enum.
+            /// </summary>
+            public static class Views
+            {
+                /// <summary>
+                /// Wire representation of
+                /// <see cref="global::Google.Cloud.Compute.V1.GetSubnetworkRequest.Types.Views.UndefinedViews"/>.
+                /// </summary>
+                public const string UndefinedViews = "UNDEFINED_VIEWS";
+
+                /// <summary>
+                /// Wire representation of
+                /// <see cref="global::Google.Cloud.Compute.V1.GetSubnetworkRequest.Types.Views.Default"/>.
+                /// </summary>
+                public const string Default = "DEFAULT";
+
+                /// <summary>
+                /// Wire representation of
+                /// <see cref="global::Google.Cloud.Compute.V1.GetSubnetworkRequest.Types.Views.WithUtilization"/>.
+                /// </summary>
+                public const string WithUtilization = "WITH_UTILIZATION";
+            }
+        }
+
+        /// <summary>
         /// Container class for enums within the <see cref="global::Google.Cloud.Compute.V1.GroupMaintenanceInfo"/>
         /// message.
         /// </summary>
@@ -7649,6 +7681,38 @@ namespace Google.Cloud.Compute.V1
                 /// .
                 /// </summary>
                 public const string Outgoing = "OUTGOING";
+            }
+        }
+
+        /// <summary>
+        /// Container class for enums within the <see cref="global::Google.Cloud.Compute.V1.ListSubnetworksRequest"/>
+        /// message.
+        /// </summary>
+        public static class ListSubnetworksRequest
+        {
+            /// <summary>
+            /// Constants for wire representations of the
+            /// <see cref="global::Google.Cloud.Compute.V1.ListSubnetworksRequest.Types.Views"/> enum.
+            /// </summary>
+            public static class Views
+            {
+                /// <summary>
+                /// Wire representation of
+                /// <see cref="global::Google.Cloud.Compute.V1.ListSubnetworksRequest.Types.Views.UndefinedViews"/>.
+                /// </summary>
+                public const string UndefinedViews = "UNDEFINED_VIEWS";
+
+                /// <summary>
+                /// Wire representation of
+                /// <see cref="global::Google.Cloud.Compute.V1.ListSubnetworksRequest.Types.Views.Default"/>.
+                /// </summary>
+                public const string Default = "DEFAULT";
+
+                /// <summary>
+                /// Wire representation of
+                /// <see cref="global::Google.Cloud.Compute.V1.ListSubnetworksRequest.Types.Views.WithUtilization"/>.
+                /// </summary>
+                public const string WithUtilization = "WITH_UTILIZATION";
             }
         }
 

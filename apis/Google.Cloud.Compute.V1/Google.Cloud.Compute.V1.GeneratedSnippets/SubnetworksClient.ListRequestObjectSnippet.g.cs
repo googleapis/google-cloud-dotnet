@@ -38,6 +38,7 @@ namespace GoogleCSharpSnippets
             // Initialize request argument(s)
             ListSubnetworksRequest request = new ListSubnetworksRequest
             {
+                Views = "",
                 Region = "",
                 OrderBy = "",
                 Project = "",
