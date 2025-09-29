@@ -26,21 +26,21 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
           string.Concat(
             "CjZnb29nbGUvY2xvdWQvYWlwbGF0Zm9ybS92MWJldGExL2FjY2VsZXJhdG9y",
             "X3R5cGUucHJvdG8SH2dvb2dsZS5jbG91ZC5haXBsYXRmb3JtLnYxYmV0YTEq",
-            "iAMKD0FjY2VsZXJhdG9yVHlwZRIgChxBQ0NFTEVSQVRPUl9UWVBFX1VOU1BF",
+            "oQMKD0FjY2VsZXJhdG9yVHlwZRIgChxBQ0NFTEVSQVRPUl9UWVBFX1VOU1BF",
             "Q0lGSUVEEAASGAoQTlZJRElBX1RFU0xBX0s4MBABGgIIARIVChFOVklESUFf",
             "VEVTTEFfUDEwMBACEhUKEU5WSURJQV9URVNMQV9WMTAwEAMSEwoPTlZJRElB",
             "X1RFU0xBX1A0EAQSEwoPTlZJRElBX1RFU0xBX1Q0EAUSFQoRTlZJRElBX1RF",
             "U0xBX0ExMDAQCBIUChBOVklESUFfQTEwMF84MEdCEAkSDQoJTlZJRElBX0w0",
             "EAsSFAoQTlZJRElBX0gxMDBfODBHQhANEhkKFU5WSURJQV9IMTAwX01FR0Ff",
             "ODBHQhAOEhUKEU5WSURJQV9IMjAwXzE0MUdCEA8SDwoLTlZJRElBX0IyMDAQ",
-            "EBIQCgxOVklESUFfR0IyMDAQERIKCgZUUFVfVjIQBhIKCgZUUFVfVjMQBxIO",
-            "CgpUUFVfVjRfUE9EEAoSEgoOVFBVX1Y1X0xJVEVQT0QQDELrAQojY29tLmdv",
-            "b2dsZS5jbG91ZC5haXBsYXRmb3JtLnYxYmV0YTFCFEFjY2VsZXJhdG9yVHlw",
-            "ZVByb3RvUAFaQ2Nsb3VkLmdvb2dsZS5jb20vZ28vYWlwbGF0Zm9ybS9hcGl2",
-            "MWJldGExL2FpcGxhdGZvcm1wYjthaXBsYXRmb3JtcGKqAh9Hb29nbGUuQ2xv",
-            "dWQuQUlQbGF0Zm9ybS5WMUJldGExygIfR29vZ2xlXENsb3VkXEFJUGxhdGZv",
-            "cm1cVjFiZXRhMeoCIkdvb2dsZTo6Q2xvdWQ6OkFJUGxhdGZvcm06OlYxYmV0",
-            "YTFiBnByb3RvMw=="));
+            "EBIQCgxOVklESUFfR0IyMDAQERIXChNOVklESUFfUlRYX1BST182MDAwEBIS",
+            "CgoGVFBVX1YyEAYSCgoGVFBVX1YzEAcSDgoKVFBVX1Y0X1BPRBAKEhIKDlRQ",
+            "VV9WNV9MSVRFUE9EEAxC6wEKI2NvbS5nb29nbGUuY2xvdWQuYWlwbGF0Zm9y",
+            "bS52MWJldGExQhRBY2NlbGVyYXRvclR5cGVQcm90b1ABWkNjbG91ZC5nb29n",
+            "bGUuY29tL2dvL2FpcGxhdGZvcm0vYXBpdjFiZXRhMS9haXBsYXRmb3JtcGI7",
+            "YWlwbGF0Zm9ybXBiqgIfR29vZ2xlLkNsb3VkLkFJUGxhdGZvcm0uVjFCZXRh",
+            "McoCH0dvb2dsZVxDbG91ZFxBSVBsYXRmb3JtXFYxYmV0YTHqAiJHb29nbGU6",
+            "OkNsb3VkOjpBSVBsYXRmb3JtOjpWMWJldGExYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(new[] {typeof(global::Google.Cloud.AIPlatform.V1Beta1.AcceleratorType), }, null, null));
@@ -111,6 +111,10 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
     /// Nvidia GB200 GPU.
     /// </summary>
     [pbr::OriginalName("NVIDIA_GB200")] NvidiaGb200 = 17,
+    /// <summary>
+    /// Nvidia RTX Pro 6000 GPU.
+    /// </summary>
+    [pbr::OriginalName("NVIDIA_RTX_PRO_6000")] NvidiaRtxPro6000 = 18,
     /// <summary>
     /// TPU v2.
     /// </summary>
