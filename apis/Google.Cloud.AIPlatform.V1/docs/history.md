@@ -1,5 +1,16 @@
 # Version history
 
+## Version 3.47.0, released 2025-09-29
+
+### New features
+
+- A new value `NVIDIA_RTX_PRO_6000` is added to enum `AcceleratorType`
+- Add enable_widget option in Google Maps and additional grounding information
+
+### Documentation improvements
+
+- Remove legacy internal lint directives
+
 ## Version 3.46.0, released 2025-09-16
 
 ### New features
