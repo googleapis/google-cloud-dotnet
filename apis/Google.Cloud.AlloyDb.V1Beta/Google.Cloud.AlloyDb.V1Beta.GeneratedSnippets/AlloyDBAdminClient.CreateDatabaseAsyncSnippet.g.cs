@@ -16,12 +16,13 @@
 
 namespace GoogleCSharpSnippets
 {
-    // [START alloydb_v1beta_generated_AlloyDBAdmin_ExecuteSql_sync]
+    // [START alloydb_v1beta_generated_AlloyDBAdmin_CreateDatabase_async_flattened]
     using Google.Cloud.AlloyDb.V1Beta;
+    using System.Threading.Tasks;
 
     public sealed partial class GeneratedAlloyDBAdminClientSnippets
     {
-        /// <summary>Snippet for ExecuteSql</summary>
+        /// <summary>Snippet for CreateDatabaseAsync</summary>
         /// <remarks>
         /// This snippet has been automatically generated and should be regarded as a code template only.
         /// It will require modifications to work:
@@ -29,23 +30,17 @@ namespace GoogleCSharpSnippets
         /// - It may require specifying regional endpoints when creating the service client as shown in
         ///   https://cloud.google.com/dotnet/docs/reference/help/client-configuration#endpoint.
         /// </remarks>
-        public void ExecuteSqlRequestObject()
+        public async Task CreateDatabaseAsync()
         {
             // Create client
-            AlloyDBAdminClient alloyDBAdminClient = AlloyDBAdminClient.Create();
+            AlloyDBAdminClient alloyDBAdminClient = await AlloyDBAdminClient.CreateAsync();
             // Initialize request argument(s)
-            ExecuteSqlRequest request = new ExecuteSqlRequest
-            {
-                InstanceAsInstanceName = InstanceName.FromProjectLocationClusterInstance("[PROJECT]", "[LOCATION]", "[CLUSTER]", "[INSTANCE]"),
-                Database = "",
-                User = "",
-                SqlStatement = "",
-                Password = "",
-                ValidateOnly = false,
-            };
+            string parent = "projects/[PROJECT]/locations/[LOCATION]/clusters/[CLUSTER]";
+            Database database = new Database();
+            string databaseId = "";
             // Make the request
-            ExecuteSqlResponse response = alloyDBAdminClient.ExecuteSql(request);
+            Database response = await alloyDBAdminClient.CreateDatabaseAsync(parent, database, databaseId);
         }
     }
-    // [END alloydb_v1beta_generated_AlloyDBAdmin_ExecuteSql_sync]
+    // [END alloydb_v1beta_generated_AlloyDBAdmin_CreateDatabase_async_flattened]
 }

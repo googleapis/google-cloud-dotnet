@@ -16,12 +16,12 @@
 
 namespace GoogleCSharpSnippets
 {
-    // [START alloydb_v1beta_generated_AlloyDBAdmin_ExecuteSql_sync]
+    // [START alloydb_v1beta_generated_AlloyDBAdmin_CreateDatabase_sync]
     using Google.Cloud.AlloyDb.V1Beta;
 
     public sealed partial class GeneratedAlloyDBAdminClientSnippets
     {
-        /// <summary>Snippet for ExecuteSql</summary>
+        /// <summary>Snippet for CreateDatabase</summary>
         /// <remarks>
         /// This snippet has been automatically generated and should be regarded as a code template only.
         /// It will require modifications to work:
@@ -29,23 +29,20 @@ namespace GoogleCSharpSnippets
         /// - It may require specifying regional endpoints when creating the service client as shown in
         ///   https://cloud.google.com/dotnet/docs/reference/help/client-configuration#endpoint.
         /// </remarks>
-        public void ExecuteSqlRequestObject()
+        public void CreateDatabaseRequestObject()
         {
             // Create client
             AlloyDBAdminClient alloyDBAdminClient = AlloyDBAdminClient.Create();
             // Initialize request argument(s)
-            ExecuteSqlRequest request = new ExecuteSqlRequest
+            CreateDatabaseRequest request = new CreateDatabaseRequest
             {
-                InstanceAsInstanceName = InstanceName.FromProjectLocationClusterInstance("[PROJECT]", "[LOCATION]", "[CLUSTER]", "[INSTANCE]"),
-                Database = "",
-                User = "",
-                SqlStatement = "",
-                Password = "",
-                ValidateOnly = false,
+                ParentAsClusterName = ClusterName.FromProjectLocationCluster("[PROJECT]", "[LOCATION]", "[CLUSTER]"),
+                DatabaseId = "",
+                Database = new Database(),
             };
             // Make the request
-            ExecuteSqlResponse response = alloyDBAdminClient.ExecuteSql(request);
+            Database response = alloyDBAdminClient.CreateDatabase(request);
         }
     }
-    // [END alloydb_v1beta_generated_AlloyDBAdmin_ExecuteSql_sync]
+    // [END alloydb_v1beta_generated_AlloyDBAdmin_CreateDatabase_sync]
 }
