@@ -1472,7 +1472,8 @@ namespace Google.Cloud.Spanner.Data.Tests
         [InlineData(LockHint.Unspecified, ReadRequest.Types.LockHint.Unspecified)]
         [InlineData(LockHint.Shared, ReadRequest.Types.LockHint.Shared)]
         [InlineData(LockHint.Exclusive, ReadRequest.Types.LockHint.Exclusive)]
-        public async Task ExecuteReaderReadWithLockHint(LockHint lockHintValue, ReadRequest.Types.LockHint expectedProtoValue)
+        [InlineData(null, ReadRequest.Types.LockHint.Unspecified)]
+        public async Task ExecuteReaderReadWithLockHint(LockHint? lockHintValue, ReadRequest.Types.LockHint expectedProtoValue)
         {
             var spannerClientMock = SpannerClientHelpers.CreateMockClient(Logger.DefaultLogger);
             spannerClientMock.Received(1)
@@ -1499,7 +1500,8 @@ namespace Google.Cloud.Spanner.Data.Tests
         [InlineData(OrderBy.NoOrder, ReadRequest.Types.OrderBy.NoOrder)]
         [InlineData(OrderBy.Unspecified, ReadRequest.Types.OrderBy.Unspecified)]
         [InlineData(OrderBy.PrimaryKey, ReadRequest.Types.OrderBy.PrimaryKey)]
-        public async Task ExecuteReaderReadWithOrderBy(OrderBy orderByValue, ReadRequest.Types.OrderBy expectedProtoValue)
+        [InlineData(null, ReadRequest.Types.OrderBy.Unspecified)]
+        public async Task ExecuteReaderReadWithOrderBy(OrderBy? orderByValue, ReadRequest.Types.OrderBy expectedProtoValue)
         {
             var spannerClientMock = SpannerClientHelpers.CreateMockClient(Logger.DefaultLogger);
             spannerClientMock.Received(1)

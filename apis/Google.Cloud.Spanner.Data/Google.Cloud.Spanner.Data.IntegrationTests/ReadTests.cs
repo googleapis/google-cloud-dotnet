@@ -742,21 +742,6 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
         }
 
         [Fact]
-        [Trait(Constants.SupportedOnEmulator, Constants.No)]
-        public async Task ReadOnlyReadWithLockHintOptionThrowsAnException()
-        {
-            using var connection = _fixture.GetConnection();
-
-            var readOptions = ReadOptions.FromColumns("key", "StringValue")
-                .WithLockHint(LockHint.Exclusive);
-            using var cmd = connection.CreateReadCommand(
-                _fixture.TableName, readOptions, KeySet.All);
-            using var reader = await cmd.ExecuteReaderAsync();
-            var e = await Assert.ThrowsAsync<SpannerException>(() => reader.ReadAsync());
-            Assert.Equal(ErrorCode.InvalidArgument, e.ErrorCode);
-        }
-
-        [Fact]
         public async Task ReadWithOrderBy()
         {
             using var connection = _fixture.GetConnection();

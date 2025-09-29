@@ -41,14 +41,16 @@ namespace Google.Cloud.Spanner.Data
         public long? Limit { get; }
 
         /// <summary>
-        /// A lock hint mechanism for reads done within a transaction.
-        /// See <see cref="LockHint"/> for details.
+        /// A lock hint for reads within a transaction.
+        /// May be null, in which case appropriate defaults will be used.
+        /// See <see cref="Spanner.Data.LockHint"/> for details.
         /// </summary>
         public LockHint? LockHint { get; }
 
         /// <summary>
-        /// An option to control the order in which rows are returned from a read.
-        /// See <see cref="OrderBy"/> for details.
+        /// The order in which rows are returned from a read.
+        /// May be null, in which case appropriate defaults will be used.
+        /// See <see cref="Spanner.Data.OrderBy"/> for details.
         /// </summary>
         public OrderBy? OrderBy { get; }
 
@@ -109,23 +111,24 @@ namespace Google.Cloud.Spanner.Data
             new ReadOptions(Columns, CheckNotEmpty(indexName, nameof(indexName)), Limit, LockHint, OrderBy);
 
         /// <summary>
-        /// Returns a clone of this ReadOptions with the given lockHint value.
+        /// Returns a clone of this ReadOptions with the given lock hint.
         /// </summary>
         /// <param name="lockHint">
         /// The value to use for the lockHint mechanism for the ReadOptions.
-        /// Refer to the <see cref="Spanner.Data.LockHint"/> enum to see the available value options.
+        /// The new lock hint value. May be null in which case appropriate defaults will be used.
+        /// See <see cref="Spanner.Data.LockHint"/> for available options.
         /// </param>
-        /// <returns>A clone of this ReadOptions with the given lockHint value.</returns>
+        /// <returns>A clone of this ReadOptions with the given lock hint.</returns>
         public ReadOptions WithLockHint(LockHint? lockHint) =>
             new ReadOptions(Columns, IndexName, Limit, lockHint, OrderBy);
 
         /// <summary>
-        /// Returns a clone of this ReadOptions with the given orderBy value.
+        /// Returns a clone of this ReadOptions with the given order by value.
         /// </summary>
         /// <param name="orderBy">
-        /// The value to use for the orderBy mechanism for the ReadOptions.
-        /// Only available for read-write transactions
-        /// Refer to the <see cref="Spanner.Data.OrderBy"/> enum to see the available value options.
+        /// The order on which rows are returned from a read. May be null, in which case appropriate defaults will be used.
+        /// Only read-write transactions accept non-null values.
+        /// See <see cref="Spanner.Data.OrderBy"/> for available options.
         /// </param>
         /// <returns>A clone of this ReadOptions with the given ReadOptions value.</returns>
         public ReadOptions WithOrderBy(OrderBy? orderBy) =>
@@ -143,33 +146,23 @@ namespace Google.Cloud.Spanner.Data
     }
 
     /// <summary>
-    /// The options available for the LockHint value on the ReadOptions.
+    /// Lock hint options for reads within a transaction.
+    /// See <see cref="Spanner.V1.ReadRequest.Types.LockHint"/> for details.
     /// </summary>
     public enum LockHint
     {
         /// <summary>
-        /// Default value.
-        ///
-        /// `Unspecified` is equivalent to `Shared`.
-        ///
-        /// See https://cloud.google.com/dotnet/docs/reference/Google.Cloud.Spanner.V1/latest/Google.Cloud.Spanner.V1.ReadRequest.Types.LockHint
-        /// for further details.
+        /// Default value. Equivalent to <see cref="Shared" />.
         /// </summary>
         Unspecified = 0,
 
         /// <summary>
         /// Acquire shared locks.
-        ///
-        /// See https://cloud.google.com/dotnet/docs/reference/Google.Cloud.Spanner.V1/latest/Google.Cloud.Spanner.V1.ReadRequest.Types.LockHint
-        /// for further details.
         /// </summary>
         Shared = 1,
 
         /// <summary>
         /// Acquire exclusive locks.
-        ///
-        /// See https://cloud.google.com/dotnet/docs/reference/Google.Cloud.Spanner.V1/latest/Google.Cloud.Spanner.V1.ReadRequest.Types.LockHint
-        /// for further details.
         /// </summary>
         Exclusive = 2
     }
@@ -180,33 +173,23 @@ namespace Google.Cloud.Spanner.Data
     }
 
     /// <summary>
-    /// The options available for the OrderBy option for the ReadOptions.
+    /// Options for the order in which rows are returned from a read.
+    /// See <see cref="Spanner.V1.ReadRequest.Types.OrderBy"/> for details.
     /// </summary>
     public enum OrderBy
     {
         /// <summary>
-        /// Default value.
-        ///
-        /// `Unspecified` is equivalent to `PrimaryKey`.
-        ///
-        /// See https://cloud.google.com/dotnet/docs/reference/Google.Cloud.Spanner.V1/latest/Google.Cloud.Spanner.V1.ReadRequest.Types.OrderBy
-        /// for further details.
+        /// Default value. Equivalent to <see cref="PrimaryKey" />.
         /// </summary>
         Unspecified = 0,
 
         /// <summary>
         /// Read rows are returned in primary key order.
-        ///
-        /// See https://cloud.google.com/dotnet/docs/reference/Google.Cloud.Spanner.V1/latest/Google.Cloud.Spanner.V1.ReadRequest.Types.OrderBy
-        /// for further details.
         /// </summary>
         PrimaryKey = 1,
 
         /// <summary>
         /// Read rows are returned in any order.
-        ///
-        /// See https://cloud.google.com/dotnet/docs/reference/Google.Cloud.Spanner.V1/latest/Google.Cloud.Spanner.V1.ReadRequest.Types.OrderBy
-        /// for further details.
         /// </summary>
         NoOrder = 2,
     }
