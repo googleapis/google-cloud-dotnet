@@ -19,14 +19,14 @@ namespace Google.Cloud.Spanner.V1;
 /// <summary>
 /// 
 /// </summary>
-public class MultiplexSessionOptions
+public class ManagedSessionOptions
 {
     private TimeSpan _timeout = TimeSpan.FromSeconds(60);
 
     /// <summary>
-    /// Constructs a new <see cref="MultiplexSessionOptions"/> with default values.
+    /// Constructs a new <see cref="ManagedSessionOptions"/> with default values.
     /// </summary>
-    public MultiplexSessionOptions()
+    public ManagedSessionOptions()
     {
     }
 

@@ -27,18 +27,18 @@ using Xunit;
 namespace Google.Cloud.Spanner.Data.IntegrationTests;
 [Collection(nameof(AllTypesTableFixture))]
 [CommonTestDiagnostics]
-public class MultiplexSessionTests
+public class ManagedSessionTests
 {
     private readonly AllTypesTableFixture _fixture;
 
-    public MultiplexSessionTests(AllTypesTableFixture fixture) =>
+    public ManagedSessionTests(AllTypesTableFixture fixture) =>
         _fixture = fixture;
 
     [Fact]
     [Trait(Constants.SupportedOnEmulator, Constants.No)]
     public async Task SessionCreationSucceeds()
     {
-        MultiplexSession muxSession = await _fixture.GetMultiplexSession();
+        ManagedSession muxSession = await _fixture.GetManagedSession();
 
         Assert.NotNull(muxSession.Session);
         Assert.NotNull(muxSession.SessionName);
@@ -59,8 +59,8 @@ public class MultiplexSessionTests
     [Trait(Constants.SupportedOnEmulator, Constants.No)]
     public async Task RunReadWriteTransactionWithMultipleQueries()
     {
-        MultiplexSession multiplexSession = await _fixture.GetMultiplexSession();
-        Transaction transaction = new Transaction(multiplexSession, null, new TransactionOptions { ReadWrite = new TransactionOptions.Types.ReadWrite() }, false, null);
+        ManagedSession multiplexSession = await _fixture.GetManagedSession();
+        ManagedTransaction transaction = new ManagedTransaction(multiplexSession, null, new TransactionOptions { ReadWrite = new TransactionOptions.Types.ReadWrite() }, false, null);
         String uniqueRowId = IdGenerator.FromGuid();
         // Query 1: Read some data before modification.
         var result = await ExecuteSelectQuery(transaction, uniqueRowId);
@@ -74,7 +74,7 @@ public class MultiplexSessionTests
         result = await ExecuteInsertInt64Value(transaction, uniqueRowId, 10);
         Assert.NotNull(result);
         Assert.NotNull(transaction.PrecommitToken);
-        Assert.NotNull(transaction.Id);
+        Assert.NotNull(transaction.TransactionId);
         Assert.True(transaction.PrecommitToken.SeqNum >= preCommitTokenSeqNumber);
 
         preCommitTokenSeqNumber = transaction.PrecommitToken.SeqNum;
@@ -82,23 +82,23 @@ public class MultiplexSessionTests
         // Commit the transaction
         var commitResponse = await transaction.CommitAsync(new CommitRequest(), null);
         Assert.NotNull(commitResponse);
-        Assert.NotNull(transaction.Id);
+        Assert.NotNull(transaction.TransactionId);
     }
 
     [Fact]
     [Trait(Constants.SupportedOnEmulator, Constants.No)]
     public async Task TestMultipleTransactionWritesOnSameSession()
     {
-        MultiplexSession multiplexSession = await _fixture.GetMultiplexSession();
+        ManagedSession multiplexSession = await _fixture.GetManagedSession();
         const int concurrentThreads = 5;
         String uniqueRowId = IdGenerator.FromGuid();
 
         try
         {
-            var transactions = new Transaction[concurrentThreads];
+            var transactions = new ManagedTransaction[concurrentThreads];
             for (var i = 0; i < concurrentThreads; i++)
             {
-                transactions[i] = new Transaction(multiplexSession, null, new TransactionOptions { ReadWrite = new TransactionOptions.Types.ReadWrite() }, false, null);
+                transactions[i] = new ManagedTransaction(multiplexSession, null, new TransactionOptions { ReadWrite = new TransactionOptions.Types.ReadWrite() }, false, null);
             }
 
             for (var i = 0; i < concurrentThreads; i++)
@@ -106,7 +106,7 @@ public class MultiplexSessionTests
                 await IncrementByOneAsync(transactions[i], uniqueRowId);
             }
 
-            Transaction fetchResultsTransaction = new Transaction(multiplexSession, null, new TransactionOptions { ReadWrite = new TransactionOptions.Types.ReadWrite() }, false, null);
+            ManagedTransaction fetchResultsTransaction = new ManagedTransaction(multiplexSession, null, new TransactionOptions { ReadWrite = new TransactionOptions.Types.ReadWrite() }, false, null);
             var fetched = await ExecuteSelectQuery(fetchResultsTransaction, uniqueRowId);
 
             var row = fetched.Rows.First();
@@ -121,7 +121,7 @@ public class MultiplexSessionTests
         }
     }
 
-    private async Task IncrementByOneAsync(Transaction transaction, string uniqueRowId, bool orphanTransaction = false)
+    private async Task IncrementByOneAsync(ManagedTransaction transaction, string uniqueRowId, bool orphanTransaction = false)
     {
         var retrySettings = RetrySettings.FromExponentialBackoff(
             maxAttempts: int.MaxValue,
@@ -177,7 +177,7 @@ public class MultiplexSessionTests
         }
     }
 
-    private async Task<ResultSet> ExecuteSelectQuery(Transaction transaction, String uniqueRowId)
+    private async Task<ResultSet> ExecuteSelectQuery(ManagedTransaction transaction, String uniqueRowId)
     {
         var selectParams = new Dictionary<string, SpannerParameter>
         {
@@ -193,7 +193,7 @@ public class MultiplexSessionTests
         return await transaction.ExecuteSqlAsync(request, null);
     }
 
-    private async Task<ResultSet> ExecuteInsertInt64Value(Transaction transaction, String uniqueRowId, long insertValue)
+    private async Task<ResultSet> ExecuteInsertInt64Value(ManagedTransaction transaction, String uniqueRowId, long insertValue)
     {
         var insertSql = $"INSERT {_fixture.TableName} (K, Int64Value) VALUES (@k, @int64Value)";
         var insertParams = new Dictionary<string, SpannerParameter>
@@ -210,7 +210,7 @@ public class MultiplexSessionTests
         return await transaction.ExecuteSqlAsync(request, null);
     }
 
-    private async Task<ResultSet> ExecuteUpdateInt64Value(Transaction transaction, String uniqueRowId, long updateValue)
+    private async Task<ResultSet> ExecuteUpdateInt64Value(ManagedTransaction transaction, String uniqueRowId, long updateValue)
     {
         var updateSql = $"UPDATE {_fixture.TableName} SET Int64Value = @newIntValue WHERE K = @id";
         var updateParams = new Dictionary<string, SpannerParameter>

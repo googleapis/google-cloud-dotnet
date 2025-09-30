@@ -29,7 +29,7 @@ namespace Google.Cloud.Spanner.Data.CommonTesting;
 /// </summary>
 public abstract class SpannerTestDatabaseBase
 {
-    private MultiplexSession _multiplexSession;
+    private ManagedSession _multiplexSession;
 
     /// <summary>
     /// The Spanner Host name to connect to. It is read from the environment variable "TEST_SPANNER_HOST".
@@ -183,21 +183,21 @@ public abstract class SpannerTestDatabaseBase
             LogCommitStats = logCommitStats
         });
 
-    public async Task<MultiplexSession> GetMultiplexSession()
+    public async Task<ManagedSession> GetManagedSession()
     {
         if (_multiplexSession != null)
         {
             return _multiplexSession;
         }
 
-        var options = new MultiplexSessionOptions();
+        var options = new ManagedSessionOptions();
 
         _multiplexSession = await CreateMultiplexSession(options).ConfigureAwait(false);
 
         return _multiplexSession;
     }
 
-    private async Task<MultiplexSession> CreateMultiplexSession(MultiplexSessionOptions options)
+    private async Task<ManagedSession> CreateMultiplexSession(ManagedSessionOptions options)
     {
         var poolManager = SessionPoolManager.Create(options);
         var muxSession = await poolManager.AcquireMultiplexSessionAsync(SpannerClientCreationOptions, DatabaseName, null);

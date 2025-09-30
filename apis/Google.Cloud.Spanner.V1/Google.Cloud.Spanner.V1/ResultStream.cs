@@ -52,7 +52,7 @@ namespace Google.Cloud.Spanner.V1
         private readonly SpannerClient _client;
         private readonly ReadOrQueryRequest _request;
         private readonly PooledSession _pooledSession;
-        private readonly Transaction _transaction;
+        private readonly ManagedTransaction _transaction;
         private readonly CallSettings _callSettings;
         private readonly RetrySettings _retrySettings;
         private readonly int _maxBufferSize;
@@ -76,7 +76,7 @@ namespace Google.Cloud.Spanner.V1
         /// <summary>
         /// Constructor for normal usage, taking in a transaction, with default buffer size, backoff settings and jitter.
         /// </summary>
-        internal ResultStream(SpannerClient client, ReadOrQueryRequest request, Transaction transaction, CallSettings callSettings)
+        internal ResultStream(SpannerClient client, ReadOrQueryRequest request, ManagedTransaction transaction, CallSettings callSettings)
             : this(client, request, transaction, callSettings, DefaultMaxBufferSize, s_defaultRetrySettings)
         {
         }
@@ -87,7 +87,7 @@ namespace Google.Cloud.Spanner.V1
         internal ResultStream(
             SpannerClient client,
             ReadOrQueryRequest request,
-            Transaction transaction,
+            ManagedTransaction transaction,
             CallSettings callSettings,
             int maxBufferSize,
             RetrySettings retrySettings)
