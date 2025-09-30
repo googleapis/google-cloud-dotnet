@@ -424,7 +424,7 @@ namespace Google.Cloud.Spanner.Data
             private ReadRequest GetReadRequest()
             {
                 GaxPreconditions.CheckState(CommandTextBuilder.ReadOptions != null, "Cannot create a ReadRequest without ReadOptions");
-                return new ReadRequest
+                var readRequest = new ReadRequest
                 {
                     Table = CommandTextBuilder.TargetTable,
                     Index = CommandTextBuilder.ReadOptions.IndexName ?? "",
@@ -433,6 +433,18 @@ namespace Google.Cloud.Spanner.Data
                     Columns = { CommandTextBuilder.ReadOptions.Columns },
                     RequestOptions = BuildRequestOptions()
                 };
+
+                if (CommandTextBuilder.ReadOptions.LockHint is not null)
+                {
+                    readRequest.LockHint = LockHintConverter.ToProto((LockHint) CommandTextBuilder.ReadOptions.LockHint);
+                }
+
+                if (CommandTextBuilder.ReadOptions.OrderBy is not null)
+                {
+                    readRequest.OrderBy = OrderByConverter.ToProto((OrderBy) CommandTextBuilder.ReadOptions.OrderBy);
+                }
+
+                return readRequest;
             }
 
             private ReadOrQueryRequest GetReadOrQueryRequest()

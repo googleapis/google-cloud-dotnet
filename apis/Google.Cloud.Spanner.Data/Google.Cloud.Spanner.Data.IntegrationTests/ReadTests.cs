@@ -718,5 +718,44 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
             var interval = Assert.Single(intervalList);
             Assert.Equal(expected, interval);
         }
+
+        [Fact]
+        public async Task ReadWithLockHint()
+        {
+            using var connection = _fixture.GetConnection();
+
+            // LockHint only works for read-write transactions.
+            using var transaction = await connection.BeginTransactionAsync();
+
+            var readOptions = ReadOptions.FromColumns("key", "StringValue")
+                .WithLockHint(LockHint.Exclusive);
+            using var cmd = connection.CreateReadCommand(
+                _fixture.TableName, readOptions, KeySet.All);
+            cmd.Transaction = transaction;
+            using var reader = await cmd.ExecuteReaderAsync();
+            var count = 0;
+            while (await reader.ReadAsync())
+            {
+                count++;
+            }
+            Assert.Equal(_fixture.RowCount, count);
+        }
+
+        [Fact]
+        public async Task ReadWithOrderBy()
+        {
+            using var connection = _fixture.GetConnection();
+            var readOptions = ReadOptions.FromColumns("key", "StringValue")
+                .WithOrderBy(OrderBy.PrimaryKey);
+            using var cmd = connection.CreateReadCommand(
+                _fixture.TableName, readOptions, KeySet.All);
+            using var reader = await cmd.ExecuteReaderAsync();
+            var count = 0;
+            while (await reader.ReadAsync())
+            {
+                count++;
+            }
+            Assert.Equal(_fixture.RowCount, count);
+        }
     }
 }

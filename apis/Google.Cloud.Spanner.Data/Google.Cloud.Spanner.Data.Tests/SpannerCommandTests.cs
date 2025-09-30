@@ -1468,6 +1468,60 @@ namespace Google.Cloud.Spanner.Data.Tests
                 Arg.Any<CallSettings>());
         }
 
+        [Theory]
+        [InlineData(LockHint.Unspecified, ReadRequest.Types.LockHint.Unspecified)]
+        [InlineData(LockHint.Shared, ReadRequest.Types.LockHint.Shared)]
+        [InlineData(LockHint.Exclusive, ReadRequest.Types.LockHint.Exclusive)]
+        [InlineData(null, ReadRequest.Types.LockHint.Unspecified)]
+        public async Task ExecuteReaderReadWithLockHint(LockHint? lockHintValue, ReadRequest.Types.LockHint expectedProtoValue)
+        {
+            var spannerClientMock = SpannerClientHelpers.CreateMockClient(Logger.DefaultLogger);
+            spannerClientMock.Received(1)
+                .SetupBatchCreateSessionsAsync()
+                .SetupStreamingRead();
+
+            var connection = BuildSpannerConnection(spannerClientMock);
+            using var transaction = await connection.BeginTransactionAsync();
+
+            var readOptions = ReadOptions.FromColumns("Col1", "Col2")
+                .WithLockHint(lockHintValue);
+            var command = connection.CreateReadCommand("Foo", readOptions, KeySet.All);
+            command.Transaction = transaction;
+            using var reader = await command.ExecuteReaderAsync();
+            Assert.True(reader.HasRows);
+
+            spannerClientMock.Received(1).StreamingRead(
+                Arg.Is<ReadRequest>(request => request.LockHint == expectedProtoValue),
+                Arg.Any<CallSettings>()
+            );
+        }
+
+        [Theory]
+        [InlineData(OrderBy.NoOrder, ReadRequest.Types.OrderBy.NoOrder)]
+        [InlineData(OrderBy.Unspecified, ReadRequest.Types.OrderBy.Unspecified)]
+        [InlineData(OrderBy.PrimaryKey, ReadRequest.Types.OrderBy.PrimaryKey)]
+        [InlineData(null, ReadRequest.Types.OrderBy.Unspecified)]
+        public async Task ExecuteReaderReadWithOrderBy(OrderBy? orderByValue, ReadRequest.Types.OrderBy expectedProtoValue)
+        {
+            var spannerClientMock = SpannerClientHelpers.CreateMockClient(Logger.DefaultLogger);
+            spannerClientMock.Received(1)
+                .SetupBatchCreateSessionsAsync()
+                .SetupStreamingRead();
+
+            var connection = BuildSpannerConnection(spannerClientMock);
+            var readOptions = ReadOptions.FromColumns("Col1", "Col2")
+                .WithOrderBy(orderByValue);
+
+            var command = connection.CreateReadCommand("Foo", readOptions, KeySet.All);
+            using var reader = await command.ExecuteReaderAsync();
+            Assert.True(reader.HasRows);
+
+            spannerClientMock.Received(1).StreamingRead(
+                Arg.Is<ReadRequest>(request => request.OrderBy == expectedProtoValue),
+                Arg.Any<CallSettings>()
+            );
+        }
+
         [Theory, CombinatorialData]
         public async Task CanExecuteReadPartitionedReadCommand(bool dataBoostEnabled)
         {
