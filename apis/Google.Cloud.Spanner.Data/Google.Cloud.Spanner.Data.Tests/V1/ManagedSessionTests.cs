@@ -18,17 +18,17 @@ using Google.Cloud.Spanner.V1.Internal.Logging;
 using System;
 using System.Threading.Tasks;
 using Xunit;
-using static Google.Cloud.Spanner.V1.MultiplexSession;
+using static Google.Cloud.Spanner.V1.ManagedSession;
 
 namespace Google.Cloud.Spanner.V1.Tests;
-public class MultiplexSessionTests
+public class ManagedSessionTests
 {
-    private const string testDatabase = "projects/testproject/instances/testinstance/databases/testdb";
+    private const string TestDatabase = "projects/testproject/instances/testinstance/databases/testdb";
 
     [Fact]
     public async Task TestBuilderCreation()
     {
-        MultiplexSession multiplexSession = await FetchTestMultiplexSession();
+        ManagedSession multiplexSession = await FetchTestMultiplexSession();
 
         Assert.NotNull(multiplexSession);
         Assert.NotNull(multiplexSession.Session);
@@ -41,7 +41,7 @@ public class MultiplexSessionTests
     public async Task TestSessionHasExpired()
     {
         SpannerClient fakeClient = CreateFakeClient();
-        MultiplexSession multiplexSession = await FetchTestMultiplexSession(fakeClient);
+        ManagedSession multiplexSession = await FetchTestMultiplexSession(fakeClient);
 
         DateTime sessionCreateTime = multiplexSession.Session.CreateTime.ToDateTime();
         FakeClock clock = (FakeClock) fakeClient.Settings.Clock;
@@ -61,11 +61,11 @@ public class MultiplexSessionTests
         return fakeClient;
     }
 
-    private async Task<MultiplexSession> FetchTestMultiplexSession(SpannerClient client = null)
+    private async Task<ManagedSession> FetchTestMultiplexSession(SpannerClient client = null)
     {
-        if (!DatabaseName.TryParse(testDatabase, out var databaseName))
+        if (!DatabaseName.TryParse(TestDatabase, out var databaseName))
         {
-            throw new Exception($"Unable to parse string to DatabaseName {testDatabase}");
+            throw new Exception($"Unable to parse string to DatabaseName {TestDatabase}");
         }
 
         if (client == null)
@@ -73,12 +73,12 @@ public class MultiplexSessionTests
             client = CreateFakeClient();
         }
 
-        MultiplexSessionBuilder builder = new MultiplexSessionBuilder(databaseName, client)
+        SessionBuilder builder = new SessionBuilder(databaseName, client)
         {
             DatabaseRole = "testRole",
         };
 
-        MultiplexSession multiplexSession = await builder.BuildAsync();
+        ManagedSession multiplexSession = await builder.BuildAsync();
 
         return multiplexSession;
     }

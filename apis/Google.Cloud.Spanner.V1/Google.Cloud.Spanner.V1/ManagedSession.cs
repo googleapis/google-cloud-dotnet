@@ -26,7 +26,7 @@ namespace Google.Cloud.Spanner.V1;
 /// <summary>
 /// TODO: Add summary for mux sessions
 /// </summary>
-public class MultiplexSession
+public class ManagedSession
 {
     private readonly SemaphoreSlim _sessionCreateSemaphore;
     private readonly Logger _logger;
@@ -67,7 +67,7 @@ public class MultiplexSession
     /// <summary>
     /// The options governing this multiplex session.
     /// </summary>
-    public MultiplexSessionOptions Options { get; }
+    public ManagedSessionOptions Options { get; }
 
     /// <summary>
     /// The database for this multiplex session
@@ -86,10 +86,10 @@ public class MultiplexSession
     /// <param name="dbName"></param>
     /// <param name="dbRole"></param>
     /// <param name="options"></param>
-    public MultiplexSession(SpannerClient client, DatabaseName dbName, string dbRole, MultiplexSessionOptions options)
+    public ManagedSession(SpannerClient client, DatabaseName dbName, string dbRole, ManagedSessionOptions options)
     {
         Client = GaxPreconditions.CheckNotNull(client, nameof(client));
-        Options = options ?? new MultiplexSessionOptions();
+        Options = options ?? new ManagedSessionOptions();
         _logger = client.Settings.Logger; // Just to avoid fetching it all the time
         _sessionCreateSemaphore = new SemaphoreSlim(1);
 
@@ -224,12 +224,12 @@ public class MultiplexSession
     /// <summary>
     /// 
     /// </summary>
-    public sealed partial class MultiplexSessionBuilder
+    public sealed partial class SessionBuilder
     {
         /// <summary>
         /// 
         /// </summary>
-        public MultiplexSessionBuilder(DatabaseName databaseName, SpannerClient client)
+        public SessionBuilder(DatabaseName databaseName, SpannerClient client)
         {
             DatabaseName = GaxPreconditions.CheckNotNull(databaseName, nameof(databaseName));
             Client = GaxPreconditions.CheckNotNull(client, nameof(client));
@@ -238,7 +238,7 @@ public class MultiplexSession
         /// <summary>
         /// The options governing this multiplex session.
         /// </summary>
-        public MultiplexSessionOptions Options { get; set; }
+        public ManagedSessionOptions Options { get; set; }
 
         /// <summary>
         /// The database for this multiplex session
@@ -260,9 +260,9 @@ public class MultiplexSession
         /// </summary>
         /// <param name="cancellationToken"></param>
         /// <returns></returns>
-        public async Task<MultiplexSession> BuildAsync(CancellationToken cancellationToken = default)
+        public async Task<ManagedSession> BuildAsync(CancellationToken cancellationToken = default)
         {
-            MultiplexSession multiplexSession = new MultiplexSession(Client, DatabaseName, DatabaseRole, Options);
+            ManagedSession multiplexSession = new ManagedSession(Client, DatabaseName, DatabaseRole, Options);
 
             await multiplexSession.CreateOrRefreshSessionsAsync(cancellationToken).ConfigureAwait(false);
 

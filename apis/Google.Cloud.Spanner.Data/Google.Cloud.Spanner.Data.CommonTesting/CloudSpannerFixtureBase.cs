@@ -42,5 +42,5 @@ public abstract class CloudSpannerFixtureBase<TDatabase> : CloudProjectFixtureBa
 
     public SpannerConnection GetConnection(Logger logger = null, bool logCommitStats = false) => Database.GetConnection(logger, logCommitStats);
 
-    public async Task<MultiplexSession> GetMultiplexSession() => await Database.GetMultiplexSession().ConfigureAwait(false);
+    public async Task<ManagedSession> GetManagedSession() => await Database.GetManagedSession().ConfigureAwait(false);
 }

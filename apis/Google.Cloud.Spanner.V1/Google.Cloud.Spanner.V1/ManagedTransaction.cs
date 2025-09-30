@@ -27,9 +27,12 @@ using static Google.Cloud.Spanner.V1.TransactionOptions;
 
 namespace Google.Cloud.Spanner.V1
 {
-    public partial class Transaction
+    /// <summary>
+    /// 
+    /// </summary>
+    public partial class ManagedTransaction
     {
-        private readonly MultiplexSession _multiplexSession;
+        private readonly ManagedSession _multiplexSession;
         private Transaction _transaction;
         private readonly object _transactionCreationTaskLock = new object();
         private Task _transactionCreationTask;
@@ -96,6 +99,9 @@ namespace Google.Cloud.Spanner.V1
         /// </remarks>
         public ByteString TransactionId => Interlocked.CompareExchange(ref _transaction, null, null)?.Id;
 
+        // internal for testing
+        internal MultiplexedSessionPrecommitToken PrecommitToken { get; set; }
+
         /// <summary>
         /// 
         /// </summary>
@@ -104,7 +110,7 @@ namespace Google.Cloud.Spanner.V1
         /// <param name="transactionOptions"></param>
         /// <param name="singleUseTransaction"></param>
         /// <param name="readTimestamp"></param>
-        public Transaction(MultiplexSession multiplexSession, ByteString transactionId, TransactionOptions transactionOptions, bool singleUseTransaction, Timestamp readTimestamp)
+        public ManagedTransaction(ManagedSession multiplexSession, ByteString transactionId, TransactionOptions transactionOptions, bool singleUseTransaction, Timestamp readTimestamp)
         {
             _multiplexSession = multiplexSession;
 

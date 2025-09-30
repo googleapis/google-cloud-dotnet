@@ -23,7 +23,7 @@ using System.Linq;
 using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
-using static Google.Cloud.Spanner.V1.MultiplexSession;
+using static Google.Cloud.Spanner.V1.ManagedSession;
 using static Google.Cloud.Spanner.V1.SessionPool;
 
 namespace Google.Cloud.Spanner.Data
@@ -58,8 +58,8 @@ namespace Google.Cloud.Spanner.Data
         private readonly ConcurrentDictionary<SessionPool, TargetedPool> _poolReverseLookup =
             new ConcurrentDictionary<SessionPool, TargetedPool>();
 
-        private readonly ConcurrentDictionary<SpannerClientCreationOptions, MultiplexSession> _targetedMuxSessions =
-            new ConcurrentDictionary<SpannerClientCreationOptions, MultiplexSession>();
+        private readonly ConcurrentDictionary<SpannerClientCreationOptions, ManagedSession> _targetedMuxSessions =
+            new ConcurrentDictionary<SpannerClientCreationOptions, ManagedSession>();
 
         /// <summary>
         /// The session pool options used for every <see cref="SessionPool"/> created by this session pool manager.
@@ -69,7 +69,7 @@ namespace Google.Cloud.Spanner.Data
         /// <summary>
         /// The options for every multiplex session created by this session pool manager.
         /// </summary>
-        public MultiplexSessionOptions MultiplexSessionOptions { get; }
+        public ManagedSessionOptions MultiplexSessionOptions { get; }
 
         /// <summary>
         /// The logger used by this SessionPoolManager and the session pools it creates.
@@ -111,7 +111,7 @@ namespace Google.Cloud.Spanner.Data
         }
 
         internal SessionPoolManager(
-            MultiplexSessionOptions options,
+            ManagedSessionOptions options,
             SpannerSettings spannerSettings,
             Logger logger,
             Func<SpannerClientCreationOptions, SpannerSettings, Task<SpannerClient>> clientFactory)
@@ -137,7 +137,7 @@ namespace Google.Cloud.Spanner.Data
         /// <param name="options"></param>
         /// <param name="logger"></param>
         /// <returns></returns>
-        public static SessionPoolManager Create(MultiplexSessionOptions options, Logger logger = null) =>
+        public static SessionPoolManager Create(ManagedSessionOptions options, Logger logger = null) =>
            new SessionPoolManager(options, CreateDefaultSpannerSettings(), logger ?? Logger.DefaultLogger, CreateClientAsync);
 
         /// <summary>
@@ -157,16 +157,16 @@ namespace Google.Cloud.Spanner.Data
             return targetedPool.SessionPoolTask;
         }
 
-        internal async Task<MultiplexSession> AcquireMultiplexSessionAsync(SpannerClientCreationOptions options, DatabaseName dbName, string dbRole)
+        internal async Task<ManagedSession> AcquireMultiplexSessionAsync(SpannerClientCreationOptions options, DatabaseName dbName, string dbRole)
         {
             GaxPreconditions.CheckNotNull(options, nameof(options));
             var muxSession = _targetedMuxSessions.GetOrAdd(options, await CreateMultiplexSessionAsync().ConfigureAwait(false));
             return muxSession;
 
-            async Task<MultiplexSession> CreateMultiplexSessionAsync()
+            async Task<ManagedSession> CreateMultiplexSessionAsync()
             {
                 var client = await _clientFactory.Invoke(options, SpannerSettings).ConfigureAwait(false);
-                var muxSessionBuilder = new MultiplexSessionBuilder(dbName, client)
+                var muxSessionBuilder = new SessionBuilder(dbName, client)
                 {
                     Options = MultiplexSessionOptions,
                     DatabaseRole = dbRole,
