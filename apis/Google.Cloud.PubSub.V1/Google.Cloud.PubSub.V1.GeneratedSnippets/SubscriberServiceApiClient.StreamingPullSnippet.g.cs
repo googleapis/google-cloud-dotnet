@@ -69,6 +69,7 @@ namespace GoogleCSharpSnippets
                     ClientId = "",
                     MaxOutstandingMessages = 0L,
                     MaxOutstandingBytes = 0L,
+                    ProtocolVersion = 0L,
                 };
                 // Stream a request to the server
                 await response.WriteAsync(request);
