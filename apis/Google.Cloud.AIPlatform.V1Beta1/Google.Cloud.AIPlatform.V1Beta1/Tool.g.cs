@@ -29,7 +29,7 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
             "ZmllbGRfYmVoYXZpb3IucHJvdG8aGWdvb2dsZS9hcGkvcmVzb3VyY2UucHJv",
             "dG8aLWdvb2dsZS9jbG91ZC9haXBsYXRmb3JtL3YxYmV0YTEvb3BlbmFwaS5w",
             "cm90bxocZ29vZ2xlL3Byb3RvYnVmL3N0cnVjdC5wcm90bxoYZ29vZ2xlL3R5",
-            "cGUvbGF0bG5nLnByb3RvIscHCgRUb29sElgKFWZ1bmN0aW9uX2RlY2xhcmF0",
+            "cGUvbGF0bG5nLnByb3RvIqoKCgRUb29sElgKFWZ1bmN0aW9uX2RlY2xhcmF0",
             "aW9ucxgBIAMoCzI0Lmdvb2dsZS5jbG91ZC5haXBsYXRmb3JtLnYxYmV0YTEu",
             "RnVuY3Rpb25EZWNsYXJhdGlvbkID4EEBEkIKCXJldHJpZXZhbBgCIAEoCzIq",
             "Lmdvb2dsZS5jbG91ZC5haXBsYXRmb3JtLnYxYmV0YTEuUmV0cmlldmFsQgPg",
@@ -45,115 +45,125 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
             "RXhlY3V0aW9uQgPgQQESRQoLdXJsX2NvbnRleHQYCCABKAsyKy5nb29nbGUu",
             "Y2xvdWQuYWlwbGF0Zm9ybS52MWJldGExLlVybENvbnRleHRCA+BBARJMCgxj",
             "b21wdXRlcl91c2UYCyABKAsyMS5nb29nbGUuY2xvdWQuYWlwbGF0Zm9ybS52",
-            "MWJldGExLlRvb2wuQ29tcHV0ZXJVc2VCA+BBARosCgxHb29nbGVTZWFyY2gS",
-            "HAoPZXhjbHVkZV9kb21haW5zGAMgAygJQgPgQQEaDwoNQ29kZUV4ZWN1dGlv",
-            "bhqrAQoLQ29tcHV0ZXJVc2USVwoLZW52aXJvbm1lbnQYASABKA4yPS5nb29n",
-            "bGUuY2xvdWQuYWlwbGF0Zm9ybS52MWJldGExLlRvb2wuQ29tcHV0ZXJVc2Uu",
-            "RW52aXJvbm1lbnRCA+BBAiJDCgtFbnZpcm9ubWVudBIbChdFTlZJUk9OTUVO",
-            "VF9VTlNQRUNJRklFRBAAEhcKE0VOVklST05NRU5UX0JST1dTRVIQASIMCgpV",
-            "cmxDb250ZXh0IrADCg5Ub29sVXNlRXhhbXBsZRJhChNleHRlbnNpb25fb3Bl",
-            "cmF0aW9uGAogASgLMkIuZ29vZ2xlLmNsb3VkLmFpcGxhdGZvcm0udjFiZXRh",
-            "MS5Ub29sVXNlRXhhbXBsZS5FeHRlbnNpb25PcGVyYXRpb25IABIXCg1mdW5j",
-            "dGlvbl9uYW1lGAsgASgJSAASGQoMZGlzcGxheV9uYW1lGAEgASgJQgPgQQIS",
-            "EgoFcXVlcnkYAiABKAlCA+BBAhIvCg5yZXF1ZXN0X3BhcmFtcxgDIAEoCzIX",
-            "Lmdvb2dsZS5wcm90b2J1Zi5TdHJ1Y3QSMAoPcmVzcG9uc2VfcGFyYW1zGAQg",
-            "ASgLMhcuZ29vZ2xlLnByb3RvYnVmLlN0cnVjdBIYChByZXNwb25zZV9zdW1t",
-            "YXJ5GAUgASgJGmwKEkV4dGVuc2lvbk9wZXJhdGlvbhI7CglleHRlbnNpb24Y",
-            "ASABKAlCKPpBJQojYWlwbGF0Zm9ybS5nb29nbGVhcGlzLmNvbS9FeHRlbnNp",
-            "b24SGQoMb3BlcmF0aW9uX2lkGAIgASgJQgPgQQJCCAoGVGFyZ2V0IsoCChNG",
-            "dW5jdGlvbkRlY2xhcmF0aW9uEhEKBG5hbWUYASABKAlCA+BBAhIYCgtkZXNj",
-            "cmlwdGlvbhgCIAEoCUID4EEBEkcKCnBhcmFtZXRlcnMYAyABKAsyLi5nb29n",
-            "bGUuY2xvdWQuYWlwbGF0Zm9ybS52MWJldGExLk9wZW5BcGlTY2hlbWFCA+BB",
-            "ARI7ChZwYXJhbWV0ZXJzX2pzb25fc2NoZW1hGAUgASgLMhYuZ29vZ2xlLnBy",
-            "b3RvYnVmLlZhbHVlQgPgQQESRQoIcmVzcG9uc2UYBCABKAsyLi5nb29nbGUu",
-            "Y2xvdWQuYWlwbGF0Zm9ybS52MWJldGExLk9wZW5BcGlTY2hlbWFCA+BBARI5",
-            "ChRyZXNwb25zZV9qc29uX3NjaGVtYRgGIAEoCzIWLmdvb2dsZS5wcm90b2J1",
-            "Zi5WYWx1ZUID4EEBIl4KDEZ1bmN0aW9uQ2FsbBIPCgJpZBgDIAEoCUID4EEB",
-            "EhEKBG5hbWUYASABKAlCA+BBAhIqCgRhcmdzGAIgASgLMhcuZ29vZ2xlLnBy",
-            "b3RvYnVmLlN0cnVjdEID4EEBImYKEEZ1bmN0aW9uUmVzcG9uc2USDwoCaWQY",
-            "AyABKAlCA+BBARIRCgRuYW1lGAEgASgJQgPgQQISLgoIcmVzcG9uc2UYAiAB",
-            "KAsyFy5nb29nbGUucHJvdG9idWYuU3RydWN0QgPgQQIipgEKDkV4ZWN1dGFi",
-            "bGVDb2RlEk8KCGxhbmd1YWdlGAEgASgOMjguZ29vZ2xlLmNsb3VkLmFpcGxh",
-            "dGZvcm0udjFiZXRhMS5FeGVjdXRhYmxlQ29kZS5MYW5ndWFnZUID4EECEhEK",
-            "BGNvZGUYAiABKAlCA+BBAiIwCghMYW5ndWFnZRIYChRMQU5HVUFHRV9VTlNQ",
-            "RUNJRklFRBAAEgoKBlBZVEhPThABIuUBChNDb2RlRXhlY3V0aW9uUmVzdWx0",
-            "ElIKB291dGNvbWUYASABKA4yPC5nb29nbGUuY2xvdWQuYWlwbGF0Zm9ybS52",
-            "MWJldGExLkNvZGVFeGVjdXRpb25SZXN1bHQuT3V0Y29tZUID4EECEhMKBm91",
-            "dHB1dBgCIAEoCUID4EEBImUKB091dGNvbWUSFwoTT1VUQ09NRV9VTlNQRUNJ",
-            "RklFRBAAEg4KCk9VVENPTUVfT0sQARISCg5PVVRDT01FX0ZBSUxFRBACEh0K",
-            "GU9VVENPTUVfREVBRExJTkVfRVhDRUVERUQQAyLTAQoJUmV0cmlldmFsEksK",
-            "EHZlcnRleF9haV9zZWFyY2gYAiABKAsyLy5nb29nbGUuY2xvdWQuYWlwbGF0",
-            "Zm9ybS52MWJldGExLlZlcnRleEFJU2VhcmNoSAASSwoQdmVydGV4X3JhZ19z",
-            "dG9yZRgEIAEoCzIvLmdvb2dsZS5jbG91ZC5haXBsYXRmb3JtLnYxYmV0YTEu",
-            "VmVydGV4UmFnU3RvcmVIABIiChNkaXNhYmxlX2F0dHJpYnV0aW9uGAMgASgI",
-            "QgUYAeBBAUIICgZzb3VyY2UilAQKDlZlcnRleFJhZ1N0b3JlEkIKC3JhZ19j",
-            "b3Jwb3JhGAEgAygJQi0YAeBBAfpBJQojYWlwbGF0Zm9ybS5nb29nbGVhcGlz",
-            "LmNvbS9SYWdDb3JwdXMSVwoNcmFnX3Jlc291cmNlcxgEIAMoCzI7Lmdvb2ds",
-            "ZS5jbG91ZC5haXBsYXRmb3JtLnYxYmV0YTEuVmVydGV4UmFnU3RvcmUuUmFn",
-            "UmVzb3VyY2VCA+BBARIkChBzaW1pbGFyaXR5X3RvcF9rGAIgASgFQgUYAeBB",
-            "AUgAiAEBEi0KGXZlY3Rvcl9kaXN0YW5jZV90aHJlc2hvbGQYAyABKAFCBRgB",
-            "4EEBSAGIAQESVgoUcmFnX3JldHJpZXZhbF9jb25maWcYBiABKAsyMy5nb29n",
-            "bGUuY2xvdWQuYWlwbGF0Zm9ybS52MWJldGExLlJhZ1JldHJpZXZhbENvbmZp",
-            "Z0ID4EEBEhoKDXN0b3JlX2NvbnRleHQYByABKAhCA+BBARppCgtSYWdSZXNv",
-            "dXJjZRI/CgpyYWdfY29ycHVzGAEgASgJQivgQQH6QSUKI2FpcGxhdGZvcm0u",
-            "Z29vZ2xlYXBpcy5jb20vUmFnQ29ycHVzEhkKDHJhZ19maWxlX2lkcxgCIAMo",
-            "CUID4EEBQhMKEV9zaW1pbGFyaXR5X3RvcF9rQhwKGl92ZWN0b3JfZGlzdGFu",
-            "Y2VfdGhyZXNob2xkIv8BCg5WZXJ0ZXhBSVNlYXJjaBIWCglkYXRhc3RvcmUY",
-            "ASABKAlCA+BBARITCgZlbmdpbmUYAiABKAlCA+BBARIYCgttYXhfcmVzdWx0",
-            "cxgDIAEoBUID4EEBEhMKBmZpbHRlchgEIAEoCUID4EEBElcKEGRhdGFfc3Rv",
-            "cmVfc3BlY3MYBSADKAsyPS5nb29nbGUuY2xvdWQuYWlwbGF0Zm9ybS52MWJl",
-            "dGExLlZlcnRleEFJU2VhcmNoLkRhdGFTdG9yZVNwZWMaOAoNRGF0YVN0b3Jl",
-            "U3BlYxISCgpkYXRhX3N0b3JlGAEgASgJEhMKBmZpbHRlchgCIAEoCUID4EEB",
-            "InIKFUdvb2dsZVNlYXJjaFJldHJpZXZhbBJZChhkeW5hbWljX3JldHJpZXZh",
-            "bF9jb25maWcYAiABKAsyNy5nb29nbGUuY2xvdWQuYWlwbGF0Zm9ybS52MWJl",
-            "dGExLkR5bmFtaWNSZXRyaWV2YWxDb25maWciKAoKR29vZ2xlTWFwcxIaCg1l",
-            "bmFibGVfd2lkZ2V0GAEgASgIQgPgQQEiMwoTRW50ZXJwcmlzZVdlYlNlYXJj",
-            "aBIcCg9leGNsdWRlX2RvbWFpbnMYASADKAlCA+BBASLPAQoWRHluYW1pY1Jl",
-            "dHJpZXZhbENvbmZpZxJKCgRtb2RlGAEgASgOMjwuZ29vZ2xlLmNsb3VkLmFp",
-            "cGxhdGZvcm0udjFiZXRhMS5EeW5hbWljUmV0cmlldmFsQ29uZmlnLk1vZGUS",
-            "IwoRZHluYW1pY190aHJlc2hvbGQYAiABKAJCA+BBAUgAiAEBIi4KBE1vZGUS",
-            "FAoQTU9ERV9VTlNQRUNJRklFRBAAEhAKDE1PREVfRFlOQU1JQxABQhQKEl9k",
-            "eW5hbWljX3RocmVzaG9sZCK7AQoKVG9vbENvbmZpZxJcChdmdW5jdGlvbl9j",
-            "YWxsaW5nX2NvbmZpZxgBIAEoCzI2Lmdvb2dsZS5jbG91ZC5haXBsYXRmb3Jt",
-            "LnYxYmV0YTEuRnVuY3Rpb25DYWxsaW5nQ29uZmlnQgPgQQESTwoQcmV0cmll",
-            "dmFsX2NvbmZpZxgCIAEoCzIwLmdvb2dsZS5jbG91ZC5haXBsYXRmb3JtLnYx",
-            "YmV0YTEuUmV0cmlldmFsQ29uZmlnQgPgQQEi3AEKFUZ1bmN0aW9uQ2FsbGlu",
-            "Z0NvbmZpZxJOCgRtb2RlGAEgASgOMjsuZ29vZ2xlLmNsb3VkLmFpcGxhdGZv",
-            "cm0udjFiZXRhMS5GdW5jdGlvbkNhbGxpbmdDb25maWcuTW9kZUID4EEBEiMK",
-            "FmFsbG93ZWRfZnVuY3Rpb25fbmFtZXMYAiADKAlCA+BBASJOCgRNb2RlEhQK",
-            "EE1PREVfVU5TUEVDSUZJRUQQABIICgRBVVRPEAESBwoDQU5ZEAISCAoETk9O",
-            "RRADEg0KCVZBTElEQVRFRBAFIgQIBBAEInYKD1JldHJpZXZhbENvbmZpZxIp",
-            "CgdsYXRfbG5nGAEgASgLMhMuZ29vZ2xlLnR5cGUuTGF0TG5nSACIAQESGgoN",
-            "bGFuZ3VhZ2VfY29kZRgCIAEoCUgBiAEBQgoKCF9sYXRfbG5nQhAKDl9sYW5n",
-            "dWFnZV9jb2RlIs8GChJSYWdSZXRyaWV2YWxDb25maWcSEgoFdG9wX2sYASAB",
-            "KAVCA+BBARJcCg1oeWJyaWRfc2VhcmNoGAIgASgLMkAuZ29vZ2xlLmNsb3Vk",
-            "LmFpcGxhdGZvcm0udjFiZXRhMS5SYWdSZXRyaWV2YWxDb25maWcuSHlicmlk",
-            "U2VhcmNoQgPgQQESTwoGZmlsdGVyGAMgASgLMjouZ29vZ2xlLmNsb3VkLmFp",
-            "cGxhdGZvcm0udjFiZXRhMS5SYWdSZXRyaWV2YWxDb25maWcuRmlsdGVyQgPg",
-            "QQESUQoHcmFua2luZxgEIAEoCzI7Lmdvb2dsZS5jbG91ZC5haXBsYXRmb3Jt",
-            "LnYxYmV0YTEuUmFnUmV0cmlldmFsQ29uZmlnLlJhbmtpbmdCA+BBARoxCgxI",
-            "eWJyaWRTZWFyY2gSFwoFYWxwaGEYASABKAJCA+BBAUgAiAEBQggKBl9hbHBo",
-            "YRqTAQoGRmlsdGVyEigKGXZlY3Rvcl9kaXN0YW5jZV90aHJlc2hvbGQYAyAB",
-            "KAFCA+BBAUgAEioKG3ZlY3Rvcl9zaW1pbGFyaXR5X3RocmVzaG9sZBgEIAEo",
-            "AUID4EEBSAASHAoPbWV0YWRhdGFfZmlsdGVyGAIgASgJQgPgQQFCFQoTdmVj",
-            "dG9yX2RiX3RocmVzaG9sZBrZAgoHUmFua2luZxJkCgxyYW5rX3NlcnZpY2UY",
-            "ASABKAsyRy5nb29nbGUuY2xvdWQuYWlwbGF0Zm9ybS52MWJldGExLlJhZ1Jl",
-            "dHJpZXZhbENvbmZpZy5SYW5raW5nLlJhbmtTZXJ2aWNlQgPgQQFIABJgCgps",
-            "bG1fcmFua2VyGAMgASgLMkUuZ29vZ2xlLmNsb3VkLmFpcGxhdGZvcm0udjFi",
-            "ZXRhMS5SYWdSZXRyaWV2YWxDb25maWcuUmFua2luZy5MbG1SYW5rZXJCA+BB",
-            "AUgAGjoKC1JhbmtTZXJ2aWNlEhwKCm1vZGVsX25hbWUYASABKAlCA+BBAUgA",
-            "iAEBQg0KC19tb2RlbF9uYW1lGjgKCUxsbVJhbmtlchIcCgptb2RlbF9uYW1l",
-            "GAEgASgJQgPgQQFIAIgBAUINCgtfbW9kZWxfbmFtZUIQCg5yYW5raW5nX2Nv",
-            "bmZpZ0LgAQojY29tLmdvb2dsZS5jbG91ZC5haXBsYXRmb3JtLnYxYmV0YTFC",
-            "CVRvb2xQcm90b1ABWkNjbG91ZC5nb29nbGUuY29tL2dvL2FpcGxhdGZvcm0v",
-            "YXBpdjFiZXRhMS9haXBsYXRmb3JtcGI7YWlwbGF0Zm9ybXBiqgIfR29vZ2xl",
-            "LkNsb3VkLkFJUGxhdGZvcm0uVjFCZXRhMcoCH0dvb2dsZVxDbG91ZFxBSVBs",
-            "YXRmb3JtXFYxYmV0YTHqAiJHb29nbGU6OkNsb3VkOjpBSVBsYXRmb3JtOjpW",
-            "MWJldGExYgZwcm90bzM="));
+            "MWJldGExLlRvb2wuQ29tcHV0ZXJVc2VCA+BBARqmAQoMR29vZ2xlU2VhcmNo",
+            "EhwKD2V4Y2x1ZGVfZG9tYWlucxgDIAMoCUID4EEBEmAKE2Jsb2NraW5nX2Nv",
+            "bmZpZGVuY2UYBCABKA4yOS5nb29nbGUuY2xvdWQuYWlwbGF0Zm9ybS52MWJl",
+            "dGExLlRvb2wuUGhpc2hCbG9ja1RocmVzaG9sZEID4EEBSACIAQFCFgoUX2Js",
+            "b2NraW5nX2NvbmZpZGVuY2UaDwoNQ29kZUV4ZWN1dGlvbhqrAQoLQ29tcHV0",
+            "ZXJVc2USVwoLZW52aXJvbm1lbnQYASABKA4yPS5nb29nbGUuY2xvdWQuYWlw",
+            "bGF0Zm9ybS52MWJldGExLlRvb2wuQ29tcHV0ZXJVc2UuRW52aXJvbm1lbnRC",
+            "A+BBAiJDCgtFbnZpcm9ubWVudBIbChdFTlZJUk9OTUVOVF9VTlNQRUNJRklF",
+            "RBAAEhcKE0VOVklST05NRU5UX0JST1dTRVIQASLlAQoTUGhpc2hCbG9ja1Ro",
+            "cmVzaG9sZBIlCiFQSElTSF9CTE9DS19USFJFU0hPTERfVU5TUEVDSUZJRUQQ",
+            "ABIXChNCTE9DS19MT1dfQU5EX0FCT1ZFEB4SGgoWQkxPQ0tfTUVESVVNX0FO",
+            "RF9BQk9WRRAoEhgKFEJMT0NLX0hJR0hfQU5EX0FCT1ZFEDISGgoWQkxPQ0tf",
+            "SElHSEVSX0FORF9BQk9WRRA3Eh0KGUJMT0NLX1ZFUllfSElHSF9BTkRfQUJP",
+            "VkUQPBIdChlCTE9DS19PTkxZX0VYVFJFTUVMWV9ISUdIEGQiDAoKVXJsQ29u",
+            "dGV4dCKwAwoOVG9vbFVzZUV4YW1wbGUSYQoTZXh0ZW5zaW9uX29wZXJhdGlv",
+            "bhgKIAEoCzJCLmdvb2dsZS5jbG91ZC5haXBsYXRmb3JtLnYxYmV0YTEuVG9v",
+            "bFVzZUV4YW1wbGUuRXh0ZW5zaW9uT3BlcmF0aW9uSAASFwoNZnVuY3Rpb25f",
+            "bmFtZRgLIAEoCUgAEhkKDGRpc3BsYXlfbmFtZRgBIAEoCUID4EECEhIKBXF1",
+            "ZXJ5GAIgASgJQgPgQQISLwoOcmVxdWVzdF9wYXJhbXMYAyABKAsyFy5nb29n",
+            "bGUucHJvdG9idWYuU3RydWN0EjAKD3Jlc3BvbnNlX3BhcmFtcxgEIAEoCzIX",
+            "Lmdvb2dsZS5wcm90b2J1Zi5TdHJ1Y3QSGAoQcmVzcG9uc2Vfc3VtbWFyeRgF",
+            "IAEoCRpsChJFeHRlbnNpb25PcGVyYXRpb24SOwoJZXh0ZW5zaW9uGAEgASgJ",
+            "Qij6QSUKI2FpcGxhdGZvcm0uZ29vZ2xlYXBpcy5jb20vRXh0ZW5zaW9uEhkK",
+            "DG9wZXJhdGlvbl9pZBgCIAEoCUID4EECQggKBlRhcmdldCLKAgoTRnVuY3Rp",
+            "b25EZWNsYXJhdGlvbhIRCgRuYW1lGAEgASgJQgPgQQISGAoLZGVzY3JpcHRp",
+            "b24YAiABKAlCA+BBARJHCgpwYXJhbWV0ZXJzGAMgASgLMi4uZ29vZ2xlLmNs",
+            "b3VkLmFpcGxhdGZvcm0udjFiZXRhMS5PcGVuQXBpU2NoZW1hQgPgQQESOwoW",
+            "cGFyYW1ldGVyc19qc29uX3NjaGVtYRgFIAEoCzIWLmdvb2dsZS5wcm90b2J1",
+            "Zi5WYWx1ZUID4EEBEkUKCHJlc3BvbnNlGAQgASgLMi4uZ29vZ2xlLmNsb3Vk",
+            "LmFpcGxhdGZvcm0udjFiZXRhMS5PcGVuQXBpU2NoZW1hQgPgQQESOQoUcmVz",
+            "cG9uc2VfanNvbl9zY2hlbWEYBiABKAsyFi5nb29nbGUucHJvdG9idWYuVmFs",
+            "dWVCA+BBASJeCgxGdW5jdGlvbkNhbGwSDwoCaWQYAyABKAlCA+BBARIRCgRu",
+            "YW1lGAEgASgJQgPgQQISKgoEYXJncxgCIAEoCzIXLmdvb2dsZS5wcm90b2J1",
+            "Zi5TdHJ1Y3RCA+BBASJmChBGdW5jdGlvblJlc3BvbnNlEg8KAmlkGAMgASgJ",
+            "QgPgQQESEQoEbmFtZRgBIAEoCUID4EECEi4KCHJlc3BvbnNlGAIgASgLMhcu",
+            "Z29vZ2xlLnByb3RvYnVmLlN0cnVjdEID4EECIqYBCg5FeGVjdXRhYmxlQ29k",
+            "ZRJPCghsYW5ndWFnZRgBIAEoDjI4Lmdvb2dsZS5jbG91ZC5haXBsYXRmb3Jt",
+            "LnYxYmV0YTEuRXhlY3V0YWJsZUNvZGUuTGFuZ3VhZ2VCA+BBAhIRCgRjb2Rl",
+            "GAIgASgJQgPgQQIiMAoITGFuZ3VhZ2USGAoUTEFOR1VBR0VfVU5TUEVDSUZJ",
+            "RUQQABIKCgZQWVRIT04QASLlAQoTQ29kZUV4ZWN1dGlvblJlc3VsdBJSCgdv",
+            "dXRjb21lGAEgASgOMjwuZ29vZ2xlLmNsb3VkLmFpcGxhdGZvcm0udjFiZXRh",
+            "MS5Db2RlRXhlY3V0aW9uUmVzdWx0Lk91dGNvbWVCA+BBAhITCgZvdXRwdXQY",
+            "AiABKAlCA+BBASJlCgdPdXRjb21lEhcKE09VVENPTUVfVU5TUEVDSUZJRUQQ",
+            "ABIOCgpPVVRDT01FX09LEAESEgoOT1VUQ09NRV9GQUlMRUQQAhIdChlPVVRD",
+            "T01FX0RFQURMSU5FX0VYQ0VFREVEEAMi0wEKCVJldHJpZXZhbBJLChB2ZXJ0",
+            "ZXhfYWlfc2VhcmNoGAIgASgLMi8uZ29vZ2xlLmNsb3VkLmFpcGxhdGZvcm0u",
+            "djFiZXRhMS5WZXJ0ZXhBSVNlYXJjaEgAEksKEHZlcnRleF9yYWdfc3RvcmUY",
+            "BCABKAsyLy5nb29nbGUuY2xvdWQuYWlwbGF0Zm9ybS52MWJldGExLlZlcnRl",
+            "eFJhZ1N0b3JlSAASIgoTZGlzYWJsZV9hdHRyaWJ1dGlvbhgDIAEoCEIFGAHg",
+            "QQFCCAoGc291cmNlIpQECg5WZXJ0ZXhSYWdTdG9yZRJCCgtyYWdfY29ycG9y",
+            "YRgBIAMoCUItGAHgQQH6QSUKI2FpcGxhdGZvcm0uZ29vZ2xlYXBpcy5jb20v",
+            "UmFnQ29ycHVzElcKDXJhZ19yZXNvdXJjZXMYBCADKAsyOy5nb29nbGUuY2xv",
+            "dWQuYWlwbGF0Zm9ybS52MWJldGExLlZlcnRleFJhZ1N0b3JlLlJhZ1Jlc291",
+            "cmNlQgPgQQESJAoQc2ltaWxhcml0eV90b3BfaxgCIAEoBUIFGAHgQQFIAIgB",
+            "ARItChl2ZWN0b3JfZGlzdGFuY2VfdGhyZXNob2xkGAMgASgBQgUYAeBBAUgB",
+            "iAEBElYKFHJhZ19yZXRyaWV2YWxfY29uZmlnGAYgASgLMjMuZ29vZ2xlLmNs",
+            "b3VkLmFpcGxhdGZvcm0udjFiZXRhMS5SYWdSZXRyaWV2YWxDb25maWdCA+BB",
+            "ARIaCg1zdG9yZV9jb250ZXh0GAcgASgIQgPgQQEaaQoLUmFnUmVzb3VyY2US",
+            "PwoKcmFnX2NvcnB1cxgBIAEoCUIr4EEB+kElCiNhaXBsYXRmb3JtLmdvb2ds",
+            "ZWFwaXMuY29tL1JhZ0NvcnB1cxIZCgxyYWdfZmlsZV9pZHMYAiADKAlCA+BB",
+            "AUITChFfc2ltaWxhcml0eV90b3Bfa0IcChpfdmVjdG9yX2Rpc3RhbmNlX3Ro",
+            "cmVzaG9sZCL/AQoOVmVydGV4QUlTZWFyY2gSFgoJZGF0YXN0b3JlGAEgASgJ",
+            "QgPgQQESEwoGZW5naW5lGAIgASgJQgPgQQESGAoLbWF4X3Jlc3VsdHMYAyAB",
+            "KAVCA+BBARITCgZmaWx0ZXIYBCABKAlCA+BBARJXChBkYXRhX3N0b3JlX3Nw",
+            "ZWNzGAUgAygLMj0uZ29vZ2xlLmNsb3VkLmFpcGxhdGZvcm0udjFiZXRhMS5W",
+            "ZXJ0ZXhBSVNlYXJjaC5EYXRhU3RvcmVTcGVjGjgKDURhdGFTdG9yZVNwZWMS",
+            "EgoKZGF0YV9zdG9yZRgBIAEoCRITCgZmaWx0ZXIYAiABKAlCA+BBASJyChVH",
+            "b29nbGVTZWFyY2hSZXRyaWV2YWwSWQoYZHluYW1pY19yZXRyaWV2YWxfY29u",
+            "ZmlnGAIgASgLMjcuZ29vZ2xlLmNsb3VkLmFpcGxhdGZvcm0udjFiZXRhMS5E",
+            "eW5hbWljUmV0cmlldmFsQ29uZmlnIigKCkdvb2dsZU1hcHMSGgoNZW5hYmxl",
+            "X3dpZGdldBgBIAEoCEID4EEBIq0BChNFbnRlcnByaXNlV2ViU2VhcmNoEhwK",
+            "D2V4Y2x1ZGVfZG9tYWlucxgBIAMoCUID4EEBEmAKE2Jsb2NraW5nX2NvbmZp",
+            "ZGVuY2UYBCABKA4yOS5nb29nbGUuY2xvdWQuYWlwbGF0Zm9ybS52MWJldGEx",
+            "LlRvb2wuUGhpc2hCbG9ja1RocmVzaG9sZEID4EEBSACIAQFCFgoUX2Jsb2Nr",
+            "aW5nX2NvbmZpZGVuY2UizwEKFkR5bmFtaWNSZXRyaWV2YWxDb25maWcSSgoE",
+            "bW9kZRgBIAEoDjI8Lmdvb2dsZS5jbG91ZC5haXBsYXRmb3JtLnYxYmV0YTEu",
+            "RHluYW1pY1JldHJpZXZhbENvbmZpZy5Nb2RlEiMKEWR5bmFtaWNfdGhyZXNo",
+            "b2xkGAIgASgCQgPgQQFIAIgBASIuCgRNb2RlEhQKEE1PREVfVU5TUEVDSUZJ",
+            "RUQQABIQCgxNT0RFX0RZTkFNSUMQAUIUChJfZHluYW1pY190aHJlc2hvbGQi",
+            "uwEKClRvb2xDb25maWcSXAoXZnVuY3Rpb25fY2FsbGluZ19jb25maWcYASAB",
+            "KAsyNi5nb29nbGUuY2xvdWQuYWlwbGF0Zm9ybS52MWJldGExLkZ1bmN0aW9u",
+            "Q2FsbGluZ0NvbmZpZ0ID4EEBEk8KEHJldHJpZXZhbF9jb25maWcYAiABKAsy",
+            "MC5nb29nbGUuY2xvdWQuYWlwbGF0Zm9ybS52MWJldGExLlJldHJpZXZhbENv",
+            "bmZpZ0ID4EEBItwBChVGdW5jdGlvbkNhbGxpbmdDb25maWcSTgoEbW9kZRgB",
+            "IAEoDjI7Lmdvb2dsZS5jbG91ZC5haXBsYXRmb3JtLnYxYmV0YTEuRnVuY3Rp",
+            "b25DYWxsaW5nQ29uZmlnLk1vZGVCA+BBARIjChZhbGxvd2VkX2Z1bmN0aW9u",
+            "X25hbWVzGAIgAygJQgPgQQEiTgoETW9kZRIUChBNT0RFX1VOU1BFQ0lGSUVE",
+            "EAASCAoEQVVUTxABEgcKA0FOWRACEggKBE5PTkUQAxINCglWQUxJREFURUQQ",
+            "BSIECAQQBCJ2Cg9SZXRyaWV2YWxDb25maWcSKQoHbGF0X2xuZxgBIAEoCzIT",
+            "Lmdvb2dsZS50eXBlLkxhdExuZ0gAiAEBEhoKDWxhbmd1YWdlX2NvZGUYAiAB",
+            "KAlIAYgBAUIKCghfbGF0X2xuZ0IQCg5fbGFuZ3VhZ2VfY29kZSLPBgoSUmFn",
+            "UmV0cmlldmFsQ29uZmlnEhIKBXRvcF9rGAEgASgFQgPgQQESXAoNaHlicmlk",
+            "X3NlYXJjaBgCIAEoCzJALmdvb2dsZS5jbG91ZC5haXBsYXRmb3JtLnYxYmV0",
+            "YTEuUmFnUmV0cmlldmFsQ29uZmlnLkh5YnJpZFNlYXJjaEID4EEBEk8KBmZp",
+            "bHRlchgDIAEoCzI6Lmdvb2dsZS5jbG91ZC5haXBsYXRmb3JtLnYxYmV0YTEu",
+            "UmFnUmV0cmlldmFsQ29uZmlnLkZpbHRlckID4EEBElEKB3JhbmtpbmcYBCAB",
+            "KAsyOy5nb29nbGUuY2xvdWQuYWlwbGF0Zm9ybS52MWJldGExLlJhZ1JldHJp",
+            "ZXZhbENvbmZpZy5SYW5raW5nQgPgQQEaMQoMSHlicmlkU2VhcmNoEhcKBWFs",
+            "cGhhGAEgASgCQgPgQQFIAIgBAUIICgZfYWxwaGEakwEKBkZpbHRlchIoChl2",
+            "ZWN0b3JfZGlzdGFuY2VfdGhyZXNob2xkGAMgASgBQgPgQQFIABIqCht2ZWN0",
+            "b3Jfc2ltaWxhcml0eV90aHJlc2hvbGQYBCABKAFCA+BBAUgAEhwKD21ldGFk",
+            "YXRhX2ZpbHRlchgCIAEoCUID4EEBQhUKE3ZlY3Rvcl9kYl90aHJlc2hvbGQa",
+            "2QIKB1JhbmtpbmcSZAoMcmFua19zZXJ2aWNlGAEgASgLMkcuZ29vZ2xlLmNs",
+            "b3VkLmFpcGxhdGZvcm0udjFiZXRhMS5SYWdSZXRyaWV2YWxDb25maWcuUmFu",
+            "a2luZy5SYW5rU2VydmljZUID4EEBSAASYAoKbGxtX3JhbmtlchgDIAEoCzJF",
+            "Lmdvb2dsZS5jbG91ZC5haXBsYXRmb3JtLnYxYmV0YTEuUmFnUmV0cmlldmFs",
+            "Q29uZmlnLlJhbmtpbmcuTGxtUmFua2VyQgPgQQFIABo6CgtSYW5rU2Vydmlj",
+            "ZRIcCgptb2RlbF9uYW1lGAEgASgJQgPgQQFIAIgBAUINCgtfbW9kZWxfbmFt",
+            "ZRo4CglMbG1SYW5rZXISHAoKbW9kZWxfbmFtZRgBIAEoCUID4EEBSACIAQFC",
+            "DQoLX21vZGVsX25hbWVCEAoOcmFua2luZ19jb25maWdC4AEKI2NvbS5nb29n",
+            "bGUuY2xvdWQuYWlwbGF0Zm9ybS52MWJldGExQglUb29sUHJvdG9QAVpDY2xv",
+            "dWQuZ29vZ2xlLmNvbS9nby9haXBsYXRmb3JtL2FwaXYxYmV0YTEvYWlwbGF0",
+            "Zm9ybXBiO2FpcGxhdGZvcm1wYqoCH0dvb2dsZS5DbG91ZC5BSVBsYXRmb3Jt",
+            "LlYxQmV0YTHKAh9Hb29nbGVcQ2xvdWRcQUlQbGF0Zm9ybVxWMWJldGEx6gIi",
+            "R29vZ2xlOjpDbG91ZDo6QUlQbGF0Zm9ybTo6VjFiZXRhMWIGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Cloud.AIPlatform.V1Beta1.OpenapiReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.StructReflection.Descriptor, global::Google.Type.LatlngReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1Beta1.Tool), global::Google.Cloud.AIPlatform.V1Beta1.Tool.Parser, new[]{ "FunctionDeclarations", "Retrieval", "GoogleSearch", "GoogleSearchRetrieval", "GoogleMaps", "EnterpriseWebSearch", "CodeExecution", "UrlContext", "ComputerUse" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1Beta1.Tool.Types.GoogleSearch), global::Google.Cloud.AIPlatform.V1Beta1.Tool.Types.GoogleSearch.Parser, new[]{ "ExcludeDomains" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1Beta1.Tool), global::Google.Cloud.AIPlatform.V1Beta1.Tool.Parser, new[]{ "FunctionDeclarations", "Retrieval", "GoogleSearch", "GoogleSearchRetrieval", "GoogleMaps", "EnterpriseWebSearch", "CodeExecution", "UrlContext", "ComputerUse" }, null, new[]{ typeof(global::Google.Cloud.AIPlatform.V1Beta1.Tool.Types.PhishBlockThreshold) }, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1Beta1.Tool.Types.GoogleSearch), global::Google.Cloud.AIPlatform.V1Beta1.Tool.Types.GoogleSearch.Parser, new[]{ "ExcludeDomains", "BlockingConfidence" }, new[]{ "BlockingConfidence" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1Beta1.Tool.Types.CodeExecution), global::Google.Cloud.AIPlatform.V1Beta1.Tool.Types.CodeExecution.Parser, null, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1Beta1.Tool.Types.ComputerUse), global::Google.Cloud.AIPlatform.V1Beta1.Tool.Types.ComputerUse.Parser, new[]{ "Environment" }, null, new[]{ typeof(global::Google.Cloud.AIPlatform.V1Beta1.Tool.Types.ComputerUse.Types.Environment) }, null, null)}),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1Beta1.UrlContext), global::Google.Cloud.AIPlatform.V1Beta1.UrlContext.Parser, null, null, null, null, null),
@@ -168,7 +178,7 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1Beta1.VertexAISearch), global::Google.Cloud.AIPlatform.V1Beta1.VertexAISearch.Parser, new[]{ "Datastore", "Engine", "MaxResults", "Filter", "DataStoreSpecs" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1Beta1.VertexAISearch.Types.DataStoreSpec), global::Google.Cloud.AIPlatform.V1Beta1.VertexAISearch.Types.DataStoreSpec.Parser, new[]{ "DataStore", "Filter" }, null, null, null, null)}),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1Beta1.GoogleSearchRetrieval), global::Google.Cloud.AIPlatform.V1Beta1.GoogleSearchRetrieval.Parser, new[]{ "DynamicRetrievalConfig" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1Beta1.GoogleMaps), global::Google.Cloud.AIPlatform.V1Beta1.GoogleMaps.Parser, new[]{ "EnableWidget" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1Beta1.EnterpriseWebSearch), global::Google.Cloud.AIPlatform.V1Beta1.EnterpriseWebSearch.Parser, new[]{ "ExcludeDomains" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1Beta1.EnterpriseWebSearch), global::Google.Cloud.AIPlatform.V1Beta1.EnterpriseWebSearch.Parser, new[]{ "ExcludeDomains", "BlockingConfidence" }, new[]{ "BlockingConfidence" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1Beta1.DynamicRetrievalConfig), global::Google.Cloud.AIPlatform.V1Beta1.DynamicRetrievalConfig.Parser, new[]{ "Mode", "DynamicThreshold" }, new[]{ "DynamicThreshold" }, new[]{ typeof(global::Google.Cloud.AIPlatform.V1Beta1.DynamicRetrievalConfig.Types.Mode) }, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1Beta1.ToolConfig), global::Google.Cloud.AIPlatform.V1Beta1.ToolConfig.Parser, new[]{ "FunctionCallingConfig", "RetrievalConfig" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1Beta1.FunctionCallingConfig), global::Google.Cloud.AIPlatform.V1Beta1.FunctionCallingConfig.Parser, new[]{ "Mode", "AllowedFunctionNames" }, null, new[]{ typeof(global::Google.Cloud.AIPlatform.V1Beta1.FunctionCallingConfig.Types.Mode) }, null, null),
@@ -789,6 +799,43 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static partial class Types {
       /// <summary>
+      /// These are available confidence level user can set to block malicious urls
+      /// with chosen confidence and above. For understanding different confidence of
+      /// webrisk, please refer to
+      /// https://cloud.google.com/web-risk/docs/reference/rpc/google.cloud.webrisk.v1eap1#confidencelevel
+      /// </summary>
+      public enum PhishBlockThreshold {
+        /// <summary>
+        /// Defaults to unspecified.
+        /// </summary>
+        [pbr::OriginalName("PHISH_BLOCK_THRESHOLD_UNSPECIFIED")] Unspecified = 0,
+        /// <summary>
+        /// Blocks Low and above confidence URL that is risky.
+        /// </summary>
+        [pbr::OriginalName("BLOCK_LOW_AND_ABOVE")] BlockLowAndAbove = 30,
+        /// <summary>
+        /// Blocks Medium and above confidence URL that is risky.
+        /// </summary>
+        [pbr::OriginalName("BLOCK_MEDIUM_AND_ABOVE")] BlockMediumAndAbove = 40,
+        /// <summary>
+        /// Blocks High and above confidence URL that is risky.
+        /// </summary>
+        [pbr::OriginalName("BLOCK_HIGH_AND_ABOVE")] BlockHighAndAbove = 50,
+        /// <summary>
+        /// Blocks Higher and above confidence URL that is risky.
+        /// </summary>
+        [pbr::OriginalName("BLOCK_HIGHER_AND_ABOVE")] BlockHigherAndAbove = 55,
+        /// <summary>
+        /// Blocks Very high and above confidence URL that is risky.
+        /// </summary>
+        [pbr::OriginalName("BLOCK_VERY_HIGH_AND_ABOVE")] BlockVeryHighAndAbove = 60,
+        /// <summary>
+        /// Blocks Extremely high confidence URL that is risky.
+        /// </summary>
+        [pbr::OriginalName("BLOCK_ONLY_EXTREMELY_HIGH")] BlockOnlyExtremelyHigh = 100,
+      }
+
+      /// <summary>
       /// GoogleSearch tool type.
       /// Tool to support Google Search in Model. Powered by Google.
       /// </summary>
@@ -800,6 +847,7 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
       {
         private static readonly pb::MessageParser<GoogleSearch> _parser = new pb::MessageParser<GoogleSearch>(() => new GoogleSearch());
         private pb::UnknownFieldSet _unknownFields;
+        private int _hasBits0;
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public static pb::MessageParser<GoogleSearch> Parser { get { return _parser; } }
@@ -827,7 +875,9 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public GoogleSearch(GoogleSearch other) : this() {
+          _hasBits0 = other._hasBits0;
           excludeDomains_ = other.excludeDomains_.Clone();
+          blockingConfidence_ = other.blockingConfidence_;
           _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
         }
 
@@ -853,6 +903,37 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
           get { return excludeDomains_; }
         }
 
+        /// <summary>Field number for the "blocking_confidence" field.</summary>
+        public const int BlockingConfidenceFieldNumber = 4;
+        private readonly static global::Google.Cloud.AIPlatform.V1Beta1.Tool.Types.PhishBlockThreshold BlockingConfidenceDefaultValue = global::Google.Cloud.AIPlatform.V1Beta1.Tool.Types.PhishBlockThreshold.Unspecified;
+
+        private global::Google.Cloud.AIPlatform.V1Beta1.Tool.Types.PhishBlockThreshold blockingConfidence_;
+        /// <summary>
+        /// Optional. Sites with confidence level chosen &amp; above this value will be
+        /// blocked from the search results.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public global::Google.Cloud.AIPlatform.V1Beta1.Tool.Types.PhishBlockThreshold BlockingConfidence {
+          get { if ((_hasBits0 & 1) != 0) { return blockingConfidence_; } else { return BlockingConfidenceDefaultValue; } }
+          set {
+            _hasBits0 |= 1;
+            blockingConfidence_ = value;
+          }
+        }
+        /// <summary>Gets whether the "blocking_confidence" field is set</summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public bool HasBlockingConfidence {
+          get { return (_hasBits0 & 1) != 0; }
+        }
+        /// <summary>Clears the value of the "blocking_confidence" field</summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void ClearBlockingConfidence() {
+          _hasBits0 &= ~1;
+        }
+
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public override bool Equals(object other) {
@@ -869,6 +950,7 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
             return true;
           }
           if(!excludeDomains_.Equals(other.excludeDomains_)) return false;
+          if (BlockingConfidence != other.BlockingConfidence) return false;
           return Equals(_unknownFields, other._unknownFields);
         }
 
@@ -877,6 +959,7 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
         public override int GetHashCode() {
           int hash = 1;
           hash ^= excludeDomains_.GetHashCode();
+          if (HasBlockingConfidence) hash ^= BlockingConfidence.GetHashCode();
           if (_unknownFields != null) {
             hash ^= _unknownFields.GetHashCode();
           }
@@ -896,6 +979,10 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
           output.WriteRawMessage(this);
         #else
           excludeDomains_.WriteTo(output, _repeated_excludeDomains_codec);
+          if (HasBlockingConfidence) {
+            output.WriteRawTag(32);
+            output.WriteEnum((int) BlockingConfidence);
+          }
           if (_unknownFields != null) {
             _unknownFields.WriteTo(output);
           }
@@ -907,6 +994,10 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
           excludeDomains_.WriteTo(ref output, _repeated_excludeDomains_codec);
+          if (HasBlockingConfidence) {
+            output.WriteRawTag(32);
+            output.WriteEnum((int) BlockingConfidence);
+          }
           if (_unknownFields != null) {
             _unknownFields.WriteTo(ref output);
           }
@@ -918,6 +1009,9 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
         public int CalculateSize() {
           int size = 0;
           size += excludeDomains_.CalculateSize(_repeated_excludeDomains_codec);
+          if (HasBlockingConfidence) {
+            size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) BlockingConfidence);
+          }
           if (_unknownFields != null) {
             size += _unknownFields.CalculateSize();
           }
@@ -931,6 +1025,9 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
             return;
           }
           excludeDomains_.Add(other.excludeDomains_);
+          if (other.HasBlockingConfidence) {
+            BlockingConfidence = other.BlockingConfidence;
+          }
           _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
         }
 
@@ -950,6 +1047,10 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
                 excludeDomains_.AddEntriesFrom(input, _repeated_excludeDomains_codec);
                 break;
               }
+              case 32: {
+                BlockingConfidence = (global::Google.Cloud.AIPlatform.V1Beta1.Tool.Types.PhishBlockThreshold) input.ReadEnum();
+                break;
+              }
             }
           }
         #endif
@@ -967,6 +1068,10 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
                 break;
               case 26: {
                 excludeDomains_.AddEntriesFrom(ref input, _repeated_excludeDomains_codec);
+                break;
+              }
+              case 32: {
+                BlockingConfidence = (global::Google.Cloud.AIPlatform.V1Beta1.Tool.Types.PhishBlockThreshold) input.ReadEnum();
                 break;
               }
             }
@@ -5888,6 +5993,7 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
   {
     private static readonly pb::MessageParser<EnterpriseWebSearch> _parser = new pb::MessageParser<EnterpriseWebSearch>(() => new EnterpriseWebSearch());
     private pb::UnknownFieldSet _unknownFields;
+    private int _hasBits0;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pb::MessageParser<EnterpriseWebSearch> Parser { get { return _parser; } }
@@ -5915,7 +6021,9 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public EnterpriseWebSearch(EnterpriseWebSearch other) : this() {
+      _hasBits0 = other._hasBits0;
       excludeDomains_ = other.excludeDomains_.Clone();
+      blockingConfidence_ = other.blockingConfidence_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -5940,6 +6048,37 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
       get { return excludeDomains_; }
     }
 
+    /// <summary>Field number for the "blocking_confidence" field.</summary>
+    public const int BlockingConfidenceFieldNumber = 4;
+    private readonly static global::Google.Cloud.AIPlatform.V1Beta1.Tool.Types.PhishBlockThreshold BlockingConfidenceDefaultValue = global::Google.Cloud.AIPlatform.V1Beta1.Tool.Types.PhishBlockThreshold.Unspecified;
+
+    private global::Google.Cloud.AIPlatform.V1Beta1.Tool.Types.PhishBlockThreshold blockingConfidence_;
+    /// <summary>
+    /// Optional. Sites with confidence level chosen &amp; above this value will be
+    /// blocked from the search results.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Cloud.AIPlatform.V1Beta1.Tool.Types.PhishBlockThreshold BlockingConfidence {
+      get { if ((_hasBits0 & 1) != 0) { return blockingConfidence_; } else { return BlockingConfidenceDefaultValue; } }
+      set {
+        _hasBits0 |= 1;
+        blockingConfidence_ = value;
+      }
+    }
+    /// <summary>Gets whether the "blocking_confidence" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasBlockingConfidence {
+      get { return (_hasBits0 & 1) != 0; }
+    }
+    /// <summary>Clears the value of the "blocking_confidence" field</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearBlockingConfidence() {
+      _hasBits0 &= ~1;
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
@@ -5956,6 +6095,7 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
         return true;
       }
       if(!excludeDomains_.Equals(other.excludeDomains_)) return false;
+      if (BlockingConfidence != other.BlockingConfidence) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -5964,6 +6104,7 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
     public override int GetHashCode() {
       int hash = 1;
       hash ^= excludeDomains_.GetHashCode();
+      if (HasBlockingConfidence) hash ^= BlockingConfidence.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -5983,6 +6124,10 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
       output.WriteRawMessage(this);
     #else
       excludeDomains_.WriteTo(output, _repeated_excludeDomains_codec);
+      if (HasBlockingConfidence) {
+        output.WriteRawTag(32);
+        output.WriteEnum((int) BlockingConfidence);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -5994,6 +6139,10 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       excludeDomains_.WriteTo(ref output, _repeated_excludeDomains_codec);
+      if (HasBlockingConfidence) {
+        output.WriteRawTag(32);
+        output.WriteEnum((int) BlockingConfidence);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -6005,6 +6154,9 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
     public int CalculateSize() {
       int size = 0;
       size += excludeDomains_.CalculateSize(_repeated_excludeDomains_codec);
+      if (HasBlockingConfidence) {
+        size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) BlockingConfidence);
+      }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
       }
@@ -6018,6 +6170,9 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
         return;
       }
       excludeDomains_.Add(other.excludeDomains_);
+      if (other.HasBlockingConfidence) {
+        BlockingConfidence = other.BlockingConfidence;
+      }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 
@@ -6037,6 +6192,10 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
             excludeDomains_.AddEntriesFrom(input, _repeated_excludeDomains_codec);
             break;
           }
+          case 32: {
+            BlockingConfidence = (global::Google.Cloud.AIPlatform.V1Beta1.Tool.Types.PhishBlockThreshold) input.ReadEnum();
+            break;
+          }
         }
       }
     #endif
@@ -6054,6 +6213,10 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
             break;
           case 10: {
             excludeDomains_.AddEntriesFrom(ref input, _repeated_excludeDomains_codec);
+            break;
+          }
+          case 32: {
+            BlockingConfidence = (global::Google.Cloud.AIPlatform.V1Beta1.Tool.Types.PhishBlockThreshold) input.ReadEnum();
             break;
           }
         }
