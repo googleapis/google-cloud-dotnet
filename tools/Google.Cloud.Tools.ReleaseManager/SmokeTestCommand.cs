@@ -12,7 +12,9 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
+using Google.Api.Gax.Grpc;
 using Google.Cloud.Tools.Common;
+using Grpc.Core;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
 using System;
@@ -100,6 +102,14 @@ namespace Google.Cloud.Tools.ReleaseManager
                     }
                     failed.Add($"{test.Client}.{test.Method}");
                     Console.WriteLine($"{test.Client}.{test.Method} failed: {e.GetType().Name} {e.Message} {e}");
+                    if (e is RpcException rpcException)
+                    {
+                        Console.WriteLine("RpcException status details:");
+                        foreach (var detail in rpcException.GetAllStatusDetails())
+                        {
+                            Console.WriteLine($"  {detail.GetType()}: {detail}");
+                        }
+                    }
                 }
             }
             Console.WriteLine($"Passed: {tests.Count - skipped.Count - failed.Count}");
