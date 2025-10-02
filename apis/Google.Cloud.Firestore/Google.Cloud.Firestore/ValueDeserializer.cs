@@ -67,7 +67,7 @@ namespace Google.Cloud.Firestore
             // We deserialize to T and Nullable<T> the same way for all non-null values. Use the converter
             // associated with the non-nullable version of the target type.
             BclType nonNullableTargetType = underlyingType ?? targetType;
-            return context.Database.SerializationContext.GetConverter(nonNullableTargetType).DeserializeValue(context, value);
+            return context.Database.SerializationContext.GetDeserializationConverter(nonNullableTargetType, value).DeserializeValue(context, value);
         }
 
         internal static object DeserializeMap(IDeserializationContext context, IDictionary<string, Value> values, BclType targetType)
@@ -76,7 +76,7 @@ namespace Google.Cloud.Firestore
             {
                 targetType = typeof(Dictionary<string, object>);
             }
-            return context.Database.SerializationContext.GetConverter(targetType).DeserializeMap(context, values);
+            return context.Database.SerializationContext.GetDeserializationConverter(targetType, values).DeserializeMap(context, values);
         }
 
         private static BclType GetTargetType(Value value)

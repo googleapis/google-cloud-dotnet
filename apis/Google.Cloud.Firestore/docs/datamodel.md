@@ -316,6 +316,51 @@ for a non-nullable value type, the converter will automatically be
 used for the corresponding nullable value type too, with null values
 being handled transparently.
 
+### Type discriminators
+
+If you have a data model with an abstract class or an interface,
+you may want to deserialize to that type rather than having to know
+at compile time which concrete class will be used. This can be
+done using a *type discriminator* which forms part of the data that
+is serialized, and an implementation of `IFirestoreTypeDiscriminator<T>`,
+which has a single method:
+
+```csharp
+public interface IFirestoreTypeDiscriminator<T>
+{
+    System.Type GetConcreteType(IDictionary<string, Value> map);
+}
+```
+
+Once the discriminator is added to the `ConverterRegistry`, its
+`GetConcreteType` method is invoked when an attempt is made to
+deserialize an object to the specified type `T`. The method can
+look at the data (in its raw Firestore format) and return the correct
+concrete type to deserialize. The rest of the machinery for deserialization
+then continues as normal.
+
+As an example, consider the following type hierarchy and type discriminator:
+
+{{sample:DataModel.DiscriminatedType}}
+
+We can now serialize instances of any `Shape` as document data, and
+deserialize to just `Shape`, with the correct type being determined
+by the type discriminator:
+
+{{sample:DataModel.DiscriminatedTypeUse}}
+
+Two points to note about this example:
+
+- For simplicity, this uses a string field with a value which is just the
+  short name of the class ("Circle" etc), but the discriminator can be
+  any type, and the logic within the implementation of
+  `IFirestoreTypeDiscriminator<T>` can use the value however it wants.
+- In this example, the object is the whole of the data for each document,
+  but type discriminators are automatically used throughout deserialization.
+  For example, you could have another annotated type with a property of type
+  `Shape`, and that would be handled automatically with no need for a custom
+  converter.
+
 ## Enum conversions
 
 By default, C# enum values are converted to their underlying integer
