@@ -17,8 +17,11 @@ using Google.Api.Gax.Grpc;
 using Google.Cloud.Spanner.V1.Internal;
 using Google.Protobuf;
 using Google.Protobuf.WellKnownTypes;
+using Grpc.Core;
 using System;
+using System.Collections.Generic;
 using System.Linq;
+using System.Runtime.CompilerServices;
 using System.Threading;
 using System.Threading.Tasks;
 using static Google.Cloud.Spanner.V1.TransactionOptions;
@@ -578,7 +581,7 @@ namespace Google.Cloud.Spanner.V1
                 skipTransactionCreation: request.Mutations.Count == 0, // If there are only mutations we won't have a transaction but we need one.
                 callSettings?.CancellationToken ?? default);
 
-            void SetCommandTransaction(TransactionSelector transactionSelector) 
+            void SetCommandTransaction(TransactionSelector transactionSelector)
             {
                 switch (transactionSelector.SelectorCase)
                 {
@@ -848,6 +851,37 @@ namespace Google.Cloud.Spanner.V1
             Task<ExecuteBatchDmlResponse> ExecuteBatchDmlAsync() => RecordSuccessAndExpiredSessions(Client.ExecuteBatchDmlAsync(request, callSettings));
 
             Transaction GetInlinedTransaction(ExecuteBatchDmlResponse response) => response?.ResultSets?.FirstOrDefault()?.Metadata?.Transaction;
+        }
+
+        /// <summary>
+        /// Executes a BatchWrite RPC asynchronously, returning a stream of responses.
+        /// </summary>
+        /// <remarks>
+        /// This operation does not participate in the session's active transaction.
+        /// </remarks>
+        /// <param name="request">The batch write request. Must not be null.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>An asynchronous stream of <see cref="BatchWriteResponse"/> messages.</returns>
+        public async IAsyncEnumerable<BatchWriteResponse> BatchWriteAsync(BatchWriteRequest request, CallSettings callSettings)
+        {
+            CheckNotDisposed();
+            GaxPreconditions.CheckNotNull(request, nameof(request));
+            request.SessionAsSessionName = SessionName;
+
+            SpannerClient.BatchWriteStream stream = Client.BatchWrite(request, callSettings);
+            AsyncResponseStream<BatchWriteResponse> responseStream = stream.GetResponseStream();
+
+            try
+            {
+                while (await responseStream.MoveNextAsync().ConfigureAwait(false))
+                {
+                    yield return responseStream.Current;
+                }
+            }
+            finally
+            {
+                await responseStream.DisposeAsync().ConfigureAwait(false);
+            }
         }
 
         private void MaybeApplyDirectedReadOptions(IReadOrQueryRequest request)
