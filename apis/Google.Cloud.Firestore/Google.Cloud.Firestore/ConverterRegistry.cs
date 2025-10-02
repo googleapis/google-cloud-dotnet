@@ -14,6 +14,7 @@
 
 using Google.Api.Gax;
 using Google.Cloud.Firestore.Converters;
+using Google.Cloud.Firestore.V1;
 using System;
 using System.Collections;
 using System.Collections.Generic;
@@ -34,6 +35,9 @@ namespace Google.Cloud.Firestore
         private readonly Dictionary<BclType, IFirestoreInternalConverter> _converters =
             new Dictionary<BclType, IFirestoreInternalConverter>();
 
+        private readonly Dictionary<BclType, Func<IDictionary<string, Value>, BclType>> _typeDiscriminators =
+            new Dictionary<BclType, Func<IDictionary<string, Value>, BclType>>();
+
         /// <summary>
         /// Adds the given converter to the registry.
         /// </summary>
@@ -47,6 +51,17 @@ namespace Google.Cloud.Firestore
             _converterList.Add(converter);
         }
 
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <typeparam name="T"></typeparam>
+        /// <param name="discriminator"></param>
+        public void Add<T>(IFirestoreTypeDiscriminator<T> discriminator)
+        {
+            GaxPreconditions.CheckNotNull(discriminator, nameof(discriminator));
+            _typeDiscriminators.Add(typeof(T), discriminator.GetConcreteType);
+        }
+
         // We only really implement IEnumerable for the sake of collection initializers, but we're at least
         // vaguely pleasant about it.
         /// <inheritdoc />
@@ -58,6 +73,14 @@ namespace Google.Cloud.Firestore
             // safety concerns. (We'll only be reading from the returned dictionary.)
             var clone = new Dictionary<BclType, IFirestoreInternalConverter>(_converters);
             return new ReadOnlyDictionary<BclType, IFirestoreInternalConverter>(clone);
+        }
+
+        internal IReadOnlyDictionary<BclType, Func<IDictionary<string, Value>, BclType>> ToTypeDiscriminatorDictionary()
+        {
+            // Clone the dictionary so that any further changes are ignored, and we don't have any thread
+            // safety concerns. (We'll only be reading from the returned dictionary.)
+            var clone = new Dictionary<BclType, Func<IDictionary<string, Value>, BclType>>(_typeDiscriminators);
+            return new ReadOnlyDictionary<BclType, Func<IDictionary<string, Value>, BclType>>(clone);
         }
     }
 }
