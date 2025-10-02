@@ -265,6 +265,12 @@ namespace Google.Cloud.Eventarc.Publishing.V1 {
     public const int ProtoDataFieldNumber = 8;
     /// <summary>
     /// Optional. Proto data.
+    ///
+    /// NOTE: The `protoData` field only functions as expected when the payload
+    /// is specifically a `CloudEvent` message type, and can't be used for
+    /// arbitrary protocol buffer messages. For any other protocol buffer type,
+    /// you must serialize your proto message into bytes, and use the
+    /// `binaryData` field instead.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
