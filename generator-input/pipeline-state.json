@@ -1830,7 +1830,7 @@
             "generationAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
             "releaseAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
             "releaseTimestamp": "2025-09-16T08:21:30.505366422Z",
-            "lastGeneratedCommit": "d4a9eb5869a1698d8887a68dd17e5bda9ec802d3",
+            "lastGeneratedCommit": "9070e63a1f574261c153ef6e94afc55677200337",
             "lastReleasedCommit": "f8146b4dbeb9588c84b15d656d4a8d212db41596",
             "apiPaths": [
                 "google/cloud/kms/v1"
