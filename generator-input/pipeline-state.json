@@ -4568,6 +4568,15 @@
             "sourcePaths": [
                 "apis/Google.Cloud.GkeRecommender.V1/Google.Cloud.GkeRecommender.V1"
             ]
+        },
+        {
+            "id": "Google.Cloud.VertexAI.Extensions",
+            "nextVersion": "1.0.0-beta01",
+            "generationAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
+            "releaseAutomationLevel": "AUTOMATION_LEVEL_BLOCKED",
+            "sourcePaths": [
+                "apis/Google.Cloud.VertexAI.Extensions/Google.Cloud.VertexAI.Extensions"
+            ]
         }
     ],
     "commonLibrarySourcePaths": [
