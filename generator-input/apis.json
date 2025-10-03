@@ -6008,6 +6008,26 @@
       ]
     },
     {
+      "id": "Google.Cloud.VertexAI.Extensions",
+      "version": "1.0.0-beta00",
+      "type": "other",
+      "metadataType": "INTEGRATION",
+      "description": "Vertex AI implementation of Microsoft.Extensions.AI.",
+      "tags": [
+        "Vertex AI",
+        "AI Extensions"
+      ],
+      "dependencies": {
+        "Microsoft.Extensions.AI": "default",
+        "Google.Cloud.AIPlatform.V1": "project"
+      },
+      "projects": [
+        "IntegrationTests",
+        "Snippets",
+        "Tests"
+      ]
+    },
+    {
       "id": "Google.Cloud.VMMigration.V1",
       "version": "2.7.0",
       "type": "grpc",
