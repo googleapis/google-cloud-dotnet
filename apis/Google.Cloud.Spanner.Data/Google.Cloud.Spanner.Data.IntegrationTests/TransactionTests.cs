@@ -607,6 +607,34 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
             }
         }
 
+        [Fact]
+        public async Task CustomTransactionOptions()
+        {
+            // This test currently tests ReadLockMode and IsolationLevel
+            // More options compatible with these options can be added to this same test
+            using (var connection = _fixture.GetConnection())
+            {
+                await connection.OpenAsync();
+                var options = SpannerTransactionCreationOptions.ReadWrite
+                    .WithReadLockMode(ReadLockMode.Pessimistic)
+                    .WithIsolationLevel(System.Data.IsolationLevel.Serializable);
+
+                using (var tx = await connection.BeginTransactionAsync(options, transactionOptions: null, cancellationToken: default))
+                {
+                    Assert.Equal(TransactionMode.ReadWrite, tx.Mode);
+
+                    var cmd = CreateSelectAllCommandForKey(connection);
+                    cmd.Transaction = tx;
+                    using (var reader = await cmd.ExecuteReaderAsync())
+                    {
+                        Assert.True(
+                            await reader.ReadAsync(),
+                            "no data should be here from yesterday!");
+                    }
+                }
+            }
+        }
+
         /// <summary>
         /// Simple extension of DefaultLogger that also keeps a reference to the last logged CommitResponse.
         /// </summary>
