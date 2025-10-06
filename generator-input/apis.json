@@ -1120,7 +1120,9 @@
         "BigQuery",
         "Reservation"
       ],
-      "dependencies": {},
+      "dependencies": {
+        "Google.Cloud.Iam.V1": "3.4.0"
+      },
       "generator": "micro",
       "protoPath": "google/cloud/bigquery/reservation/v1",
       "shortName": "bigqueryreservation",
