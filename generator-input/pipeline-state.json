@@ -4577,6 +4577,18 @@
             "sourcePaths": [
                 "apis/Google.Cloud.VertexAI.Extensions/Google.Cloud.VertexAI.Extensions"
             ]
+        },
+        {
+            "id": "Google.Cloud.HypercomputeCluster.V1Alpha",
+            "nextVersion": "1.0.0-alpha01",
+            "generationAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
+            "releaseAutomationLevel": "AUTOMATION_LEVEL_BLOCKED",
+            "apiPaths": [
+                "google/cloud/hypercomputecluster/v1alpha"
+            ],
+            "sourcePaths": [
+                "apis/Google.Cloud.HypercomputeCluster.V1Alpha/Google.Cloud.HypercomputeCluster.V1Alpha"
+            ]
         }
     ],
     "commonLibrarySourcePaths": [
