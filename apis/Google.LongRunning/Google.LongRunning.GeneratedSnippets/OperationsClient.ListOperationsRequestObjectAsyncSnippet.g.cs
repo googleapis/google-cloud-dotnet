@@ -38,7 +38,12 @@ namespace GoogleCSharpSnippets
             // Create client
             OperationsClient operationsClient = await OperationsClient.CreateAsync();
             // Initialize request argument(s)
-            ListOperationsRequest request = new ListOperationsRequest { Filter = "", Name = "", };
+            ListOperationsRequest request = new ListOperationsRequest
+            {
+                Filter = "",
+                Name = "",
+                ReturnPartialSuccess = false,
+            };
             // Make the request
             PagedAsyncEnumerable<ListOperationsResponse, Operation> response = operationsClient.ListOperationsAsync(request);
 
