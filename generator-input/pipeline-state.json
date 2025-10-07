@@ -914,7 +914,7 @@
             "generationAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
             "releaseAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
             "releaseTimestamp": "2024-05-13T17:50:25Z",
-            "lastGeneratedCommit": "6e6d389040b7322e1dd9b797d64073d5690f1f45",
+            "lastGeneratedCommit": "a53e1e09d16d311ff6064d237abed3ddd7a5d1fe",
             "apiPaths": [
                 "google/devtools/cloudbuild/v2"
             ],
