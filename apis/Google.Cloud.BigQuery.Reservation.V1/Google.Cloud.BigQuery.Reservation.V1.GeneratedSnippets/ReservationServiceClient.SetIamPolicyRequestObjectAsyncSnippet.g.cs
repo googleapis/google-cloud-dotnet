@@ -16,14 +16,16 @@
 
 namespace GoogleCSharpSnippets
 {
-    // [START bigqueryreservation_v1_generated_ReservationService_MergeCapacityCommitments_async]
-    using Google.Api.Gax.ResourceNames;
+    // [START bigqueryreservation_v1_generated_ReservationService_SetIamPolicy_async]
+    using Google.Api.Gax;
     using Google.Cloud.BigQuery.Reservation.V1;
+    using Google.Cloud.Iam.V1;
+    using Google.Protobuf.WellKnownTypes;
     using System.Threading.Tasks;
 
     public sealed partial class GeneratedReservationServiceClientSnippets
     {
-        /// <summary>Snippet for MergeCapacityCommitmentsAsync</summary>
+        /// <summary>Snippet for SetIamPolicyAsync</summary>
         /// <remarks>
         /// This snippet has been automatically generated and should be regarded as a code template only.
         /// It will require modifications to work:
@@ -31,20 +33,20 @@ namespace GoogleCSharpSnippets
         /// - It may require specifying regional endpoints when creating the service client as shown in
         ///   https://cloud.google.com/dotnet/docs/reference/help/client-configuration#endpoint.
         /// </remarks>
-        public async Task MergeCapacityCommitmentsRequestObjectAsync()
+        public async Task SetIamPolicyRequestObjectAsync()
         {
             // Create client
             ReservationServiceClient reservationServiceClient = await ReservationServiceClient.CreateAsync();
             // Initialize request argument(s)
-            MergeCapacityCommitmentsRequest request = new MergeCapacityCommitmentsRequest
+            SetIamPolicyRequest request = new SetIamPolicyRequest
             {
-                ParentAsLocationName = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
-                CapacityCommitmentIds = { "", },
-                CapacityCommitmentId = "",
+                ResourceAsResourceName = new UnparsedResourceName("a/wildcard/resource"),
+                Policy = new Policy(),
+                UpdateMask = new FieldMask(),
             };
             // Make the request
-            CapacityCommitment response = await reservationServiceClient.MergeCapacityCommitmentsAsync(request);
+            Policy response = await reservationServiceClient.SetIamPolicyAsync(request);
         }
     }
-    // [END bigqueryreservation_v1_generated_ReservationService_MergeCapacityCommitments_async]
+    // [END bigqueryreservation_v1_generated_ReservationService_SetIamPolicy_async]
 }

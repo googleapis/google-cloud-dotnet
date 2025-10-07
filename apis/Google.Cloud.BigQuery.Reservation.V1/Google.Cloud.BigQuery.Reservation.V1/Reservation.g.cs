@@ -28,307 +28,385 @@ namespace Google.Cloud.BigQuery.Reservation.V1 {
             "YXRpb24ucHJvdG8SJGdvb2dsZS5jbG91ZC5iaWdxdWVyeS5yZXNlcnZhdGlv",
             "bi52MRocZ29vZ2xlL2FwaS9hbm5vdGF0aW9ucy5wcm90bxoXZ29vZ2xlL2Fw",
             "aS9jbGllbnQucHJvdG8aH2dvb2dsZS9hcGkvZmllbGRfYmVoYXZpb3IucHJv",
-            "dG8aGWdvb2dsZS9hcGkvcmVzb3VyY2UucHJvdG8aG2dvb2dsZS9wcm90b2J1",
-            "Zi9lbXB0eS5wcm90bxogZ29vZ2xlL3Byb3RvYnVmL2ZpZWxkX21hc2sucHJv",
-            "dG8aH2dvb2dsZS9wcm90b2J1Zi90aW1lc3RhbXAucHJvdG8aF2dvb2dsZS9y",
-            "cGMvc3RhdHVzLnByb3RvItoKCgtSZXNlcnZhdGlvbhIMCgRuYW1lGAEgASgJ",
-            "EhUKDXNsb3RfY2FwYWNpdHkYAiABKAMSGQoRaWdub3JlX2lkbGVfc2xvdHMY",
-            "BCABKAgSTgoJYXV0b3NjYWxlGAcgASgLMjsuZ29vZ2xlLmNsb3VkLmJpZ3F1",
-            "ZXJ5LnJlc2VydmF0aW9uLnYxLlJlc2VydmF0aW9uLkF1dG9zY2FsZRITCgtj",
-            "b25jdXJyZW5jeRgQIAEoAxI2Cg1jcmVhdGlvbl90aW1lGAggASgLMhouZ29v",
-            "Z2xlLnByb3RvYnVmLlRpbWVzdGFtcEID4EEDEjQKC3VwZGF0ZV90aW1lGAkg",
-            "ASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcEID4EEDEh4KFm11bHRp",
-            "X3JlZ2lvbl9hdXhpbGlhcnkYDiABKAgSPgoHZWRpdGlvbhgRIAEoDjItLmdv",
-            "b2dsZS5jbG91ZC5iaWdxdWVyeS5yZXNlcnZhdGlvbi52MS5FZGl0aW9uEkMK",
-            "EHByaW1hcnlfbG9jYXRpb24YEiABKAlCKeBBA/pBIwohbG9jYXRpb25zLmdv",
-            "b2dsZWFwaXMuY29tL0xvY2F0aW9uEkUKEnNlY29uZGFyeV9sb2NhdGlvbhgT",
-            "IAEoCUIp4EEB+kEjCiFsb2NhdGlvbnMuZ29vZ2xlYXBpcy5jb20vTG9jYXRp",
-            "b24STAoZb3JpZ2luYWxfcHJpbWFyeV9sb2NhdGlvbhgUIAEoCUIp4EED+kEj",
-            "CiFsb2NhdGlvbnMuZ29vZ2xlYXBpcy5jb20vTG9jYXRpb24SGwoJbWF4X3Ns",
-            "b3RzGBUgASgDQgPgQQFIAIgBARJYCgxzY2FsaW5nX21vZGUYFiABKA4yPS5n",
-            "b29nbGUuY2xvdWQuYmlncXVlcnkucmVzZXJ2YXRpb24udjEuUmVzZXJ2YXRp",
-            "b24uU2NhbGluZ01vZGVCA+BBARJkChJyZXBsaWNhdGlvbl9zdGF0dXMYGCAB",
-            "KAsyQy5nb29nbGUuY2xvdWQuYmlncXVlcnkucmVzZXJ2YXRpb24udjEuUmVz",
-            "ZXJ2YXRpb24uUmVwbGljYXRpb25TdGF0dXNCA+BBAxo6CglBdXRvc2NhbGUS",
-            "GgoNY3VycmVudF9zbG90cxgBIAEoA0ID4EEDEhEKCW1heF9zbG90cxgCIAEo",
-            "Axr4AQoRUmVwbGljYXRpb25TdGF0dXMSJgoFZXJyb3IYASABKAsyEi5nb29n",
-            "bGUucnBjLlN0YXR1c0ID4EEDEjgKD2xhc3RfZXJyb3JfdGltZRgCIAEoCzIa",
-            "Lmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXBCA+BBAxI+ChVsYXN0X3JlcGxp",
-            "Y2F0aW9uX3RpbWUYAyABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1w",
-            "QgPgQQMSQQoYc29mdF9mYWlsb3Zlcl9zdGFydF90aW1lGAQgASgLMhouZ29v",
-            "Z2xlLnByb3RvYnVmLlRpbWVzdGFtcEID4EEDImMKC1NjYWxpbmdNb2RlEhwK",
-            "GFNDQUxJTkdfTU9ERV9VTlNQRUNJRklFRBAAEhIKDkFVVE9TQ0FMRV9PTkxZ",
-            "EAESEwoPSURMRV9TTE9UU19PTkxZEAISDQoJQUxMX1NMT1RTEAM6d+pBdAou",
-            "YmlncXVlcnlyZXNlcnZhdGlvbi5nb29nbGVhcGlzLmNvbS9SZXNlcnZhdGlv",
-            "bhJCcHJvamVjdHMve3Byb2plY3R9L2xvY2F0aW9ucy97bG9jYXRpb259L3Jl",
-            "c2VydmF0aW9ucy97cmVzZXJ2YXRpb259QgwKCl9tYXhfc2xvdHMikggKEkNh",
-            "cGFjaXR5Q29tbWl0bWVudBIRCgRuYW1lGAEgASgJQgPgQQMSEgoKc2xvdF9j",
-            "b3VudBgCIAEoAxJVCgRwbGFuGAMgASgOMkcuZ29vZ2xlLmNsb3VkLmJpZ3F1",
-            "ZXJ5LnJlc2VydmF0aW9uLnYxLkNhcGFjaXR5Q29tbWl0bWVudC5Db21taXRt",
-            "ZW50UGxhbhJSCgVzdGF0ZRgEIAEoDjI+Lmdvb2dsZS5jbG91ZC5iaWdxdWVy",
-            "eS5yZXNlcnZhdGlvbi52MS5DYXBhY2l0eUNvbW1pdG1lbnQuU3RhdGVCA+BB",
-            "AxI+ChVjb21taXRtZW50X3N0YXJ0X3RpbWUYCSABKAsyGi5nb29nbGUucHJv",
-            "dG9idWYuVGltZXN0YW1wQgPgQQMSPAoTY29tbWl0bWVudF9lbmRfdGltZRgF",
-            "IAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXBCA+BBAxIvCg5mYWls",
-            "dXJlX3N0YXR1cxgHIAEoCzISLmdvb2dsZS5ycGMuU3RhdHVzQgPgQQMSXQoM",
-            "cmVuZXdhbF9wbGFuGAggASgOMkcuZ29vZ2xlLmNsb3VkLmJpZ3F1ZXJ5LnJl",
-            "c2VydmF0aW9uLnYxLkNhcGFjaXR5Q29tbWl0bWVudC5Db21taXRtZW50UGxh",
-            "bhIeChZtdWx0aV9yZWdpb25fYXV4aWxpYXJ5GAogASgIEj4KB2VkaXRpb24Y",
-            "DCABKA4yLS5nb29nbGUuY2xvdWQuYmlncXVlcnkucmVzZXJ2YXRpb24udjEu",
-            "RWRpdGlvbhIZCgxpc19mbGF0X3JhdGUYDiABKAhCA+BBAyLKAQoOQ29tbWl0",
-            "bWVudFBsYW4SHwobQ09NTUlUTUVOVF9QTEFOX1VOU1BFQ0lGSUVEEAASCAoE",
-            "RkxFWBADEhYKDkZMRVhfRkxBVF9SQVRFEAcaAggBEg0KBVRSSUFMEAUaAggB",
-            "EgsKB01PTlRITFkQAhIZChFNT05USExZX0ZMQVRfUkFURRAIGgIIARIKCgZB",
-            "Tk5VQUwQBBIYChBBTk5VQUxfRkxBVF9SQVRFEAkaAggBEg4KClRIUkVFX1lF",
-            "QVIQChIICgROT05FEAYiQwoFU3RhdGUSFQoRU1RBVEVfVU5TUEVDSUZJRUQQ",
-            "ABILCgdQRU5ESU5HEAESCgoGQUNUSVZFEAISCgoGRkFJTEVEEAM6jgHqQYoB",
-            "CjViaWdxdWVyeXJlc2VydmF0aW9uLmdvb2dsZWFwaXMuY29tL0NhcGFjaXR5",
-            "Q29tbWl0bWVudBJRcHJvamVjdHMve3Byb2plY3R9L2xvY2F0aW9ucy97bG9j",
-            "YXRpb259L2NhcGFjaXR5Q29tbWl0bWVudHMve2NhcGFjaXR5X2NvbW1pdG1l",
-            "bnR9IsIBChhDcmVhdGVSZXNlcnZhdGlvblJlcXVlc3QSRgoGcGFyZW50GAEg",
-            "ASgJQjbgQQL6QTASLmJpZ3F1ZXJ5cmVzZXJ2YXRpb24uZ29vZ2xlYXBpcy5j",
-            "b20vUmVzZXJ2YXRpb24SFgoOcmVzZXJ2YXRpb25faWQYAiABKAkSRgoLcmVz",
-            "ZXJ2YXRpb24YAyABKAsyMS5nb29nbGUuY2xvdWQuYmlncXVlcnkucmVzZXJ2",
-            "YXRpb24udjEuUmVzZXJ2YXRpb24iiAEKF0xpc3RSZXNlcnZhdGlvbnNSZXF1",
-            "ZXN0EkYKBnBhcmVudBgBIAEoCUI24EEC+kEwEi5iaWdxdWVyeXJlc2VydmF0",
-            "aW9uLmdvb2dsZWFwaXMuY29tL1Jlc2VydmF0aW9uEhEKCXBhZ2Vfc2l6ZRgC",
-            "IAEoBRISCgpwYWdlX3Rva2VuGAMgASgJInwKGExpc3RSZXNlcnZhdGlvbnNS",
-            "ZXNwb25zZRJHCgxyZXNlcnZhdGlvbnMYASADKAsyMS5nb29nbGUuY2xvdWQu",
-            "YmlncXVlcnkucmVzZXJ2YXRpb24udjEuUmVzZXJ2YXRpb24SFwoPbmV4dF9w",
-            "YWdlX3Rva2VuGAIgASgJIl0KFUdldFJlc2VydmF0aW9uUmVxdWVzdBJECgRu",
-            "YW1lGAEgASgJQjbgQQL6QTAKLmJpZ3F1ZXJ5cmVzZXJ2YXRpb24uZ29vZ2xl",
-            "YXBpcy5jb20vUmVzZXJ2YXRpb24iYAoYRGVsZXRlUmVzZXJ2YXRpb25SZXF1",
-            "ZXN0EkQKBG5hbWUYASABKAlCNuBBAvpBMAouYmlncXVlcnlyZXNlcnZhdGlv",
-            "bi5nb29nbGVhcGlzLmNvbS9SZXNlcnZhdGlvbiKTAQoYVXBkYXRlUmVzZXJ2",
-            "YXRpb25SZXF1ZXN0EkYKC3Jlc2VydmF0aW9uGAEgASgLMjEuZ29vZ2xlLmNs",
-            "b3VkLmJpZ3F1ZXJ5LnJlc2VydmF0aW9uLnYxLlJlc2VydmF0aW9uEi8KC3Vw",
-            "ZGF0ZV9tYXNrGAIgASgLMhouZ29vZ2xlLnByb3RvYnVmLkZpZWxkTWFzayKy",
-            "AQoaRmFpbG92ZXJSZXNlcnZhdGlvblJlcXVlc3QSRAoEbmFtZRgBIAEoCUI2",
-            "4EEC+kEwCi5iaWdxdWVyeXJlc2VydmF0aW9uLmdvb2dsZWFwaXMuY29tL1Jl",
-            "c2VydmF0aW9uEk4KDWZhaWxvdmVyX21vZGUYAiABKA4yMi5nb29nbGUuY2xv",
-            "dWQuYmlncXVlcnkucmVzZXJ2YXRpb24udjEuRmFpbG92ZXJNb2RlQgPgQQEi",
-            "lQIKH0NyZWF0ZUNhcGFjaXR5Q29tbWl0bWVudFJlcXVlc3QSTQoGcGFyZW50",
-            "GAEgASgJQj3gQQL6QTcSNWJpZ3F1ZXJ5cmVzZXJ2YXRpb24uZ29vZ2xlYXBp",
-            "cy5jb20vQ2FwYWNpdHlDb21taXRtZW50ElUKE2NhcGFjaXR5X2NvbW1pdG1l",
-            "bnQYAiABKAsyOC5nb29nbGUuY2xvdWQuYmlncXVlcnkucmVzZXJ2YXRpb24u",
-            "djEuQ2FwYWNpdHlDb21taXRtZW50EiwKJGVuZm9yY2Vfc2luZ2xlX2FkbWlu",
-            "X3Byb2plY3RfcGVyX29yZxgEIAEoCBIeChZjYXBhY2l0eV9jb21taXRtZW50",
-            "X2lkGAUgASgJIpYBCh5MaXN0Q2FwYWNpdHlDb21taXRtZW50c1JlcXVlc3QS",
-            "TQoGcGFyZW50GAEgASgJQj3gQQL6QTcSNWJpZ3F1ZXJ5cmVzZXJ2YXRpb24u",
-            "Z29vZ2xlYXBpcy5jb20vQ2FwYWNpdHlDb21taXRtZW50EhEKCXBhZ2Vfc2l6",
-            "ZRgCIAEoBRISCgpwYWdlX3Rva2VuGAMgASgJIpIBCh9MaXN0Q2FwYWNpdHlD",
-            "b21taXRtZW50c1Jlc3BvbnNlElYKFGNhcGFjaXR5X2NvbW1pdG1lbnRzGAEg",
-            "AygLMjguZ29vZ2xlLmNsb3VkLmJpZ3F1ZXJ5LnJlc2VydmF0aW9uLnYxLkNh",
-            "cGFjaXR5Q29tbWl0bWVudBIXCg9uZXh0X3BhZ2VfdG9rZW4YAiABKAkiawoc",
-            "R2V0Q2FwYWNpdHlDb21taXRtZW50UmVxdWVzdBJLCgRuYW1lGAEgASgJQj3g",
-            "QQL6QTcKNWJpZ3F1ZXJ5cmVzZXJ2YXRpb24uZ29vZ2xlYXBpcy5jb20vQ2Fw",
-            "YWNpdHlDb21taXRtZW50In0KH0RlbGV0ZUNhcGFjaXR5Q29tbWl0bWVudFJl",
-            "cXVlc3QSSwoEbmFtZRgBIAEoCUI94EEC+kE3CjViaWdxdWVyeXJlc2VydmF0",
-            "aW9uLmdvb2dsZWFwaXMuY29tL0NhcGFjaXR5Q29tbWl0bWVudBINCgVmb3Jj",
-            "ZRgDIAEoCCKpAQofVXBkYXRlQ2FwYWNpdHlDb21taXRtZW50UmVxdWVzdBJV",
-            "ChNjYXBhY2l0eV9jb21taXRtZW50GAEgASgLMjguZ29vZ2xlLmNsb3VkLmJp",
-            "Z3F1ZXJ5LnJlc2VydmF0aW9uLnYxLkNhcGFjaXR5Q29tbWl0bWVudBIvCgt1",
-            "cGRhdGVfbWFzaxgCIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5GaWVsZE1hc2si",
-            "gQEKHlNwbGl0Q2FwYWNpdHlDb21taXRtZW50UmVxdWVzdBJLCgRuYW1lGAEg",
-            "ASgJQj3gQQL6QTcKNWJpZ3F1ZXJ5cmVzZXJ2YXRpb24uZ29vZ2xlYXBpcy5j",
-            "b20vQ2FwYWNpdHlDb21taXRtZW50EhIKCnNsb3RfY291bnQYAiABKAMitAEK",
-            "H1NwbGl0Q2FwYWNpdHlDb21taXRtZW50UmVzcG9uc2USRwoFZmlyc3QYASAB",
+            "dG8aGWdvb2dsZS9hcGkvcmVzb3VyY2UucHJvdG8aHmdvb2dsZS9pYW0vdjEv",
+            "aWFtX3BvbGljeS5wcm90bxoaZ29vZ2xlL2lhbS92MS9wb2xpY3kucHJvdG8a",
+            "G2dvb2dsZS9wcm90b2J1Zi9lbXB0eS5wcm90bxogZ29vZ2xlL3Byb3RvYnVm",
+            "L2ZpZWxkX21hc2sucHJvdG8aH2dvb2dsZS9wcm90b2J1Zi90aW1lc3RhbXAu",
+            "cHJvdG8aF2dvb2dsZS9ycGMvc3RhdHVzLnByb3RvIvwMCgtSZXNlcnZhdGlv",
+            "bhIRCgRuYW1lGAEgASgJQgPgQQgSGgoNc2xvdF9jYXBhY2l0eRgCIAEoA0ID",
+            "4EEBEh4KEWlnbm9yZV9pZGxlX3Nsb3RzGAQgASgIQgPgQQESUwoJYXV0b3Nj",
+            "YWxlGAcgASgLMjsuZ29vZ2xlLmNsb3VkLmJpZ3F1ZXJ5LnJlc2VydmF0aW9u",
+            "LnYxLlJlc2VydmF0aW9uLkF1dG9zY2FsZUID4EEBEhgKC2NvbmN1cnJlbmN5",
+            "GBAgASgDQgPgQQESNgoNY3JlYXRpb25fdGltZRgIIAEoCzIaLmdvb2dsZS5w",
+            "cm90b2J1Zi5UaW1lc3RhbXBCA+BBAxI0Cgt1cGRhdGVfdGltZRgJIAEoCzIa",
+            "Lmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXBCA+BBAxIiChZtdWx0aV9yZWdp",
+            "b25fYXV4aWxpYXJ5GA4gASgIQgIYARJDCgdlZGl0aW9uGBEgASgOMi0uZ29v",
+            "Z2xlLmNsb3VkLmJpZ3F1ZXJ5LnJlc2VydmF0aW9uLnYxLkVkaXRpb25CA+BB",
+            "ARJDChBwcmltYXJ5X2xvY2F0aW9uGBIgASgJQingQQP6QSMKIWxvY2F0aW9u",
+            "cy5nb29nbGVhcGlzLmNvbS9Mb2NhdGlvbhJFChJzZWNvbmRhcnlfbG9jYXRp",
+            "b24YEyABKAlCKeBBAfpBIwohbG9jYXRpb25zLmdvb2dsZWFwaXMuY29tL0xv",
+            "Y2F0aW9uEkwKGW9yaWdpbmFsX3ByaW1hcnlfbG9jYXRpb24YFCABKAlCKeBB",
+            "A/pBIwohbG9jYXRpb25zLmdvb2dsZWFwaXMuY29tL0xvY2F0aW9uEhsKCW1h",
+            "eF9zbG90cxgVIAEoA0ID4EEBSACIAQESWAoMc2NhbGluZ19tb2RlGBYgASgO",
+            "Mj0uZ29vZ2xlLmNsb3VkLmJpZ3F1ZXJ5LnJlc2VydmF0aW9uLnYxLlJlc2Vy",
+            "dmF0aW9uLlNjYWxpbmdNb2RlQgPgQQESUgoGbGFiZWxzGBcgAygLMj0uZ29v",
+            "Z2xlLmNsb3VkLmJpZ3F1ZXJ5LnJlc2VydmF0aW9uLnYxLlJlc2VydmF0aW9u",
+            "LkxhYmVsc0VudHJ5QgPgQQESHgoRcmVzZXJ2YXRpb25fZ3JvdXAYGSABKAlC",
+            "A+BBARJkChJyZXBsaWNhdGlvbl9zdGF0dXMYGCABKAsyQy5nb29nbGUuY2xv",
+            "dWQuYmlncXVlcnkucmVzZXJ2YXRpb24udjEuUmVzZXJ2YXRpb24uUmVwbGlj",
+            "YXRpb25TdGF0dXNCA+BBAxJWChFzY2hlZHVsaW5nX3BvbGljeRgbIAEoCzI2",
+            "Lmdvb2dsZS5jbG91ZC5iaWdxdWVyeS5yZXNlcnZhdGlvbi52MS5TY2hlZHVs",
+            "aW5nUG9saWN5QgPgQQEaPwoJQXV0b3NjYWxlEhoKDWN1cnJlbnRfc2xvdHMY",
+            "ASABKANCA+BBAxIWCgltYXhfc2xvdHMYAiABKANCA+BBARr4AQoRUmVwbGlj",
+            "YXRpb25TdGF0dXMSJgoFZXJyb3IYASABKAsyEi5nb29nbGUucnBjLlN0YXR1",
+            "c0ID4EEDEjgKD2xhc3RfZXJyb3JfdGltZRgCIAEoCzIaLmdvb2dsZS5wcm90",
+            "b2J1Zi5UaW1lc3RhbXBCA+BBAxI+ChVsYXN0X3JlcGxpY2F0aW9uX3RpbWUY",
+            "AyABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wQgPgQQMSQQoYc29m",
+            "dF9mYWlsb3Zlcl9zdGFydF90aW1lGAQgASgLMhouZ29vZ2xlLnByb3RvYnVm",
+            "LlRpbWVzdGFtcEID4EEDGi0KC0xhYmVsc0VudHJ5EgsKA2tleRgBIAEoCRIN",
+            "CgV2YWx1ZRgCIAEoCToCOAEiYwoLU2NhbGluZ01vZGUSHAoYU0NBTElOR19N",
+            "T0RFX1VOU1BFQ0lGSUVEEAASEgoOQVVUT1NDQUxFX09OTFkQARITCg9JRExF",
+            "X1NMT1RTX09OTFkQAhINCglBTExfU0xPVFMQAzp36kF0Ci5iaWdxdWVyeXJl",
+            "c2VydmF0aW9uLmdvb2dsZWFwaXMuY29tL1Jlc2VydmF0aW9uEkJwcm9qZWN0",
+            "cy97cHJvamVjdH0vbG9jYXRpb25zL3tsb2NhdGlvbn0vcmVzZXJ2YXRpb25z",
+            "L3tyZXNlcnZhdGlvbn1CDAoKX21heF9zbG90cyJsChBTY2hlZHVsaW5nUG9s",
+            "aWN5Eh0KC2NvbmN1cnJlbmN5GAEgASgDQgPgQQFIAIgBARIbCgltYXhfc2xv",
+            "dHMYAiABKANCA+BBAUgBiAEBQg4KDF9jb25jdXJyZW5jeUIMCgpfbWF4X3Ns",
+            "b3RzItUBChBSZXNlcnZhdGlvbkdyb3VwEhEKBG5hbWUYASABKAlCA+BBCDqt",
+            "AepBqQEKM2JpZ3F1ZXJ5cmVzZXJ2YXRpb24uZ29vZ2xlYXBpcy5jb20vUmVz",
+            "ZXJ2YXRpb25Hcm91cBJNcHJvamVjdHMve3Byb2plY3R9L2xvY2F0aW9ucy97",
+            "bG9jYXRpb259L3Jlc2VydmF0aW9uR3JvdXBzL3tyZXNlcnZhdGlvbl9ncm91",
+            "cH0qEXJlc2VydmF0aW9uR3JvdXBzMhByZXNlcnZhdGlvbkdyb3VwIqoIChJD",
+            "YXBhY2l0eUNvbW1pdG1lbnQSEQoEbmFtZRgBIAEoCUID4EEDEhcKCnNsb3Rf",
+            "Y291bnQYAiABKANCA+BBARJaCgRwbGFuGAMgASgOMkcuZ29vZ2xlLmNsb3Vk",
+            "LmJpZ3F1ZXJ5LnJlc2VydmF0aW9uLnYxLkNhcGFjaXR5Q29tbWl0bWVudC5D",
+            "b21taXRtZW50UGxhbkID4EEBElIKBXN0YXRlGAQgASgOMj4uZ29vZ2xlLmNs",
+            "b3VkLmJpZ3F1ZXJ5LnJlc2VydmF0aW9uLnYxLkNhcGFjaXR5Q29tbWl0bWVu",
+            "dC5TdGF0ZUID4EEDEj4KFWNvbW1pdG1lbnRfc3RhcnRfdGltZRgJIAEoCzIa",
+            "Lmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXBCA+BBAxI8ChNjb21taXRtZW50",
+            "X2VuZF90aW1lGAUgASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcEID",
+            "4EEDEi8KDmZhaWx1cmVfc3RhdHVzGAcgASgLMhIuZ29vZ2xlLnJwYy5TdGF0",
+            "dXNCA+BBAxJiCgxyZW5ld2FsX3BsYW4YCCABKA4yRy5nb29nbGUuY2xvdWQu",
+            "YmlncXVlcnkucmVzZXJ2YXRpb24udjEuQ2FwYWNpdHlDb21taXRtZW50LkNv",
+            "bW1pdG1lbnRQbGFuQgPgQQESIgoWbXVsdGlfcmVnaW9uX2F1eGlsaWFyeRgK",
+            "IAEoCEICGAESQwoHZWRpdGlvbhgMIAEoDjItLmdvb2dsZS5jbG91ZC5iaWdx",
+            "dWVyeS5yZXNlcnZhdGlvbi52MS5FZGl0aW9uQgPgQQESGQoMaXNfZmxhdF9y",
+            "YXRlGA4gASgIQgPgQQMiygEKDkNvbW1pdG1lbnRQbGFuEh8KG0NPTU1JVE1F",
+            "TlRfUExBTl9VTlNQRUNJRklFRBAAEggKBEZMRVgQAxIWCg5GTEVYX0ZMQVRf",
+            "UkFURRAHGgIIARINCgVUUklBTBAFGgIIARILCgdNT05USExZEAISGQoRTU9O",
+            "VEhMWV9GTEFUX1JBVEUQCBoCCAESCgoGQU5OVUFMEAQSGAoQQU5OVUFMX0ZM",
+            "QVRfUkFURRAJGgIIARIOCgpUSFJFRV9ZRUFSEAoSCAoETk9ORRAGIkMKBVN0",
+            "YXRlEhUKEVNUQVRFX1VOU1BFQ0lGSUVEEAASCwoHUEVORElORxABEgoKBkFD",
+            "VElWRRACEgoKBkZBSUxFRBADOo4B6kGKAQo1YmlncXVlcnlyZXNlcnZhdGlv",
+            "bi5nb29nbGVhcGlzLmNvbS9DYXBhY2l0eUNvbW1pdG1lbnQSUXByb2plY3Rz",
+            "L3twcm9qZWN0fS9sb2NhdGlvbnMve2xvY2F0aW9ufS9jYXBhY2l0eUNvbW1p",
+            "dG1lbnRzL3tjYXBhY2l0eV9jb21taXRtZW50fSLCAQoYQ3JlYXRlUmVzZXJ2",
+            "YXRpb25SZXF1ZXN0EkYKBnBhcmVudBgBIAEoCUI24EEC+kEwEi5iaWdxdWVy",
+            "eXJlc2VydmF0aW9uLmdvb2dsZWFwaXMuY29tL1Jlc2VydmF0aW9uEhYKDnJl",
+            "c2VydmF0aW9uX2lkGAIgASgJEkYKC3Jlc2VydmF0aW9uGAMgASgLMjEuZ29v",
+            "Z2xlLmNsb3VkLmJpZ3F1ZXJ5LnJlc2VydmF0aW9uLnYxLlJlc2VydmF0aW9u",
+            "IogBChdMaXN0UmVzZXJ2YXRpb25zUmVxdWVzdBJGCgZwYXJlbnQYASABKAlC",
+            "NuBBAvpBMBIuYmlncXVlcnlyZXNlcnZhdGlvbi5nb29nbGVhcGlzLmNvbS9S",
+            "ZXNlcnZhdGlvbhIRCglwYWdlX3NpemUYAiABKAUSEgoKcGFnZV90b2tlbhgD",
+            "IAEoCSJ8ChhMaXN0UmVzZXJ2YXRpb25zUmVzcG9uc2USRwoMcmVzZXJ2YXRp",
+            "b25zGAEgAygLMjEuZ29vZ2xlLmNsb3VkLmJpZ3F1ZXJ5LnJlc2VydmF0aW9u",
+            "LnYxLlJlc2VydmF0aW9uEhcKD25leHRfcGFnZV90b2tlbhgCIAEoCSJdChVH",
+            "ZXRSZXNlcnZhdGlvblJlcXVlc3QSRAoEbmFtZRgBIAEoCUI24EEC+kEwCi5i",
+            "aWdxdWVyeXJlc2VydmF0aW9uLmdvb2dsZWFwaXMuY29tL1Jlc2VydmF0aW9u",
+            "ImAKGERlbGV0ZVJlc2VydmF0aW9uUmVxdWVzdBJECgRuYW1lGAEgASgJQjbg",
+            "QQL6QTAKLmJpZ3F1ZXJ5cmVzZXJ2YXRpb24uZ29vZ2xlYXBpcy5jb20vUmVz",
+            "ZXJ2YXRpb24ikwEKGFVwZGF0ZVJlc2VydmF0aW9uUmVxdWVzdBJGCgtyZXNl",
+            "cnZhdGlvbhgBIAEoCzIxLmdvb2dsZS5jbG91ZC5iaWdxdWVyeS5yZXNlcnZh",
+            "dGlvbi52MS5SZXNlcnZhdGlvbhIvCgt1cGRhdGVfbWFzaxgCIAEoCzIaLmdv",
+            "b2dsZS5wcm90b2J1Zi5GaWVsZE1hc2sisgEKGkZhaWxvdmVyUmVzZXJ2YXRp",
+            "b25SZXF1ZXN0EkQKBG5hbWUYASABKAlCNuBBAvpBMAouYmlncXVlcnlyZXNl",
+            "cnZhdGlvbi5nb29nbGVhcGlzLmNvbS9SZXNlcnZhdGlvbhJOCg1mYWlsb3Zl",
+            "cl9tb2RlGAIgASgOMjIuZ29vZ2xlLmNsb3VkLmJpZ3F1ZXJ5LnJlc2VydmF0",
+            "aW9uLnYxLkZhaWxvdmVyTW9kZUID4EEBIucBCh1DcmVhdGVSZXNlcnZhdGlv",
+            "bkdyb3VwUmVxdWVzdBJLCgZwYXJlbnQYASABKAlCO+BBAvpBNRIzYmlncXVl",
+            "cnlyZXNlcnZhdGlvbi5nb29nbGVhcGlzLmNvbS9SZXNlcnZhdGlvbkdyb3Vw",
+            "EiEKFHJlc2VydmF0aW9uX2dyb3VwX2lkGAIgASgJQgPgQQISVgoRcmVzZXJ2",
+            "YXRpb25fZ3JvdXAYAyABKAsyNi5nb29nbGUuY2xvdWQuYmlncXVlcnkucmVz",
+            "ZXJ2YXRpb24udjEuUmVzZXJ2YXRpb25Hcm91cEID4EECImcKGkdldFJlc2Vy",
+            "dmF0aW9uR3JvdXBSZXF1ZXN0EkkKBG5hbWUYASABKAlCO+BBAvpBNQozYmln",
+            "cXVlcnlyZXNlcnZhdGlvbi5nb29nbGVhcGlzLmNvbS9SZXNlcnZhdGlvbkdy",
+            "b3VwIpIBChxMaXN0UmVzZXJ2YXRpb25Hcm91cHNSZXF1ZXN0EksKBnBhcmVu",
+            "dBgBIAEoCUI74EEC+kE1EjNiaWdxdWVyeXJlc2VydmF0aW9uLmdvb2dsZWFw",
+            "aXMuY29tL1Jlc2VydmF0aW9uR3JvdXASEQoJcGFnZV9zaXplGAIgASgFEhIK",
+            "CnBhZ2VfdG9rZW4YAyABKAkijAEKHUxpc3RSZXNlcnZhdGlvbkdyb3Vwc1Jl",
+            "c3BvbnNlElIKEnJlc2VydmF0aW9uX2dyb3VwcxgBIAMoCzI2Lmdvb2dsZS5j",
+            "bG91ZC5iaWdxdWVyeS5yZXNlcnZhdGlvbi52MS5SZXNlcnZhdGlvbkdyb3Vw",
+            "EhcKD25leHRfcGFnZV90b2tlbhgCIAEoCSJqCh1EZWxldGVSZXNlcnZhdGlv",
+            "bkdyb3VwUmVxdWVzdBJJCgRuYW1lGAEgASgJQjvgQQL6QTUKM2JpZ3F1ZXJ5",
+            "cmVzZXJ2YXRpb24uZ29vZ2xlYXBpcy5jb20vUmVzZXJ2YXRpb25Hcm91cCKV",
+            "AgofQ3JlYXRlQ2FwYWNpdHlDb21taXRtZW50UmVxdWVzdBJNCgZwYXJlbnQY",
+            "ASABKAlCPeBBAvpBNxI1YmlncXVlcnlyZXNlcnZhdGlvbi5nb29nbGVhcGlz",
+            "LmNvbS9DYXBhY2l0eUNvbW1pdG1lbnQSVQoTY2FwYWNpdHlfY29tbWl0bWVu",
+            "dBgCIAEoCzI4Lmdvb2dsZS5jbG91ZC5iaWdxdWVyeS5yZXNlcnZhdGlvbi52",
+            "MS5DYXBhY2l0eUNvbW1pdG1lbnQSLAokZW5mb3JjZV9zaW5nbGVfYWRtaW5f",
+            "cHJvamVjdF9wZXJfb3JnGAQgASgIEh4KFmNhcGFjaXR5X2NvbW1pdG1lbnRf",
+            "aWQYBSABKAkilgEKHkxpc3RDYXBhY2l0eUNvbW1pdG1lbnRzUmVxdWVzdBJN",
+            "CgZwYXJlbnQYASABKAlCPeBBAvpBNxI1YmlncXVlcnlyZXNlcnZhdGlvbi5n",
+            "b29nbGVhcGlzLmNvbS9DYXBhY2l0eUNvbW1pdG1lbnQSEQoJcGFnZV9zaXpl",
+            "GAIgASgFEhIKCnBhZ2VfdG9rZW4YAyABKAkikgEKH0xpc3RDYXBhY2l0eUNv",
+            "bW1pdG1lbnRzUmVzcG9uc2USVgoUY2FwYWNpdHlfY29tbWl0bWVudHMYASAD",
             "KAsyOC5nb29nbGUuY2xvdWQuYmlncXVlcnkucmVzZXJ2YXRpb24udjEuQ2Fw",
-            "YWNpdHlDb21taXRtZW50EkgKBnNlY29uZBgCIAEoCzI4Lmdvb2dsZS5jbG91",
-            "ZC5iaWdxdWVyeS5yZXNlcnZhdGlvbi52MS5DYXBhY2l0eUNvbW1pdG1lbnQi",
-            "jgEKH01lcmdlQ2FwYWNpdHlDb21taXRtZW50c1JlcXVlc3QSSgoGcGFyZW50",
-            "GAEgASgJQjr6QTcSNWJpZ3F1ZXJ5cmVzZXJ2YXRpb24uZ29vZ2xlYXBpcy5j",
-            "b20vQ2FwYWNpdHlDb21taXRtZW50Eh8KF2NhcGFjaXR5X2NvbW1pdG1lbnRf",
-            "aWRzGAIgAygJIsUECgpBc3NpZ25tZW50EhEKBG5hbWUYASABKAlCA+BBAxIQ",
-            "Cghhc3NpZ25lZRgEIAEoCRJKCghqb2JfdHlwZRgDIAEoDjI4Lmdvb2dsZS5j",
-            "bG91ZC5iaWdxdWVyeS5yZXNlcnZhdGlvbi52MS5Bc3NpZ25tZW50LkpvYlR5",
-            "cGUSSgoFc3RhdGUYBiABKA4yNi5nb29nbGUuY2xvdWQuYmlncXVlcnkucmVz",
-            "ZXJ2YXRpb24udjEuQXNzaWdubWVudC5TdGF0ZUID4EEDEiYKGWVuYWJsZV9n",
-            "ZW1pbmlfaW5fYmlncXVlcnkYCiABKAhCA+BBASJtCgdKb2JUeXBlEhgKFEpP",
+            "YWNpdHlDb21taXRtZW50EhcKD25leHRfcGFnZV90b2tlbhgCIAEoCSJrChxH",
+            "ZXRDYXBhY2l0eUNvbW1pdG1lbnRSZXF1ZXN0EksKBG5hbWUYASABKAlCPeBB",
+            "AvpBNwo1YmlncXVlcnlyZXNlcnZhdGlvbi5nb29nbGVhcGlzLmNvbS9DYXBh",
+            "Y2l0eUNvbW1pdG1lbnQifQofRGVsZXRlQ2FwYWNpdHlDb21taXRtZW50UmVx",
+            "dWVzdBJLCgRuYW1lGAEgASgJQj3gQQL6QTcKNWJpZ3F1ZXJ5cmVzZXJ2YXRp",
+            "b24uZ29vZ2xlYXBpcy5jb20vQ2FwYWNpdHlDb21taXRtZW50Eg0KBWZvcmNl",
+            "GAMgASgIIqkBCh9VcGRhdGVDYXBhY2l0eUNvbW1pdG1lbnRSZXF1ZXN0ElUK",
+            "E2NhcGFjaXR5X2NvbW1pdG1lbnQYASABKAsyOC5nb29nbGUuY2xvdWQuYmln",
+            "cXVlcnkucmVzZXJ2YXRpb24udjEuQ2FwYWNpdHlDb21taXRtZW50Ei8KC3Vw",
+            "ZGF0ZV9tYXNrGAIgASgLMhouZ29vZ2xlLnByb3RvYnVmLkZpZWxkTWFzayKB",
+            "AQoeU3BsaXRDYXBhY2l0eUNvbW1pdG1lbnRSZXF1ZXN0EksKBG5hbWUYASAB",
+            "KAlCPeBBAvpBNwo1YmlncXVlcnlyZXNlcnZhdGlvbi5nb29nbGVhcGlzLmNv",
+            "bS9DYXBhY2l0eUNvbW1pdG1lbnQSEgoKc2xvdF9jb3VudBgCIAEoAyK0AQof",
+            "U3BsaXRDYXBhY2l0eUNvbW1pdG1lbnRSZXNwb25zZRJHCgVmaXJzdBgBIAEo",
+            "CzI4Lmdvb2dsZS5jbG91ZC5iaWdxdWVyeS5yZXNlcnZhdGlvbi52MS5DYXBh",
+            "Y2l0eUNvbW1pdG1lbnQSSAoGc2Vjb25kGAIgASgLMjguZ29vZ2xlLmNsb3Vk",
+            "LmJpZ3F1ZXJ5LnJlc2VydmF0aW9uLnYxLkNhcGFjaXR5Q29tbWl0bWVudCKz",
+            "AQofTWVyZ2VDYXBhY2l0eUNvbW1pdG1lbnRzUmVxdWVzdBJKCgZwYXJlbnQY",
+            "ASABKAlCOvpBNxI1YmlncXVlcnlyZXNlcnZhdGlvbi5nb29nbGVhcGlzLmNv",
+            "bS9DYXBhY2l0eUNvbW1pdG1lbnQSHwoXY2FwYWNpdHlfY29tbWl0bWVudF9p",
+            "ZHMYAiADKAkSIwoWY2FwYWNpdHlfY29tbWl0bWVudF9pZBgDIAEoCUID4EEB",
+            "IpcGCgpBc3NpZ25tZW50EhEKBG5hbWUYASABKAlCA+BBAxIVCghhc3NpZ25l",
+            "ZRgEIAEoCUID4EEBEk8KCGpvYl90eXBlGAMgASgOMjguZ29vZ2xlLmNsb3Vk",
+            "LmJpZ3F1ZXJ5LnJlc2VydmF0aW9uLnYxLkFzc2lnbm1lbnQuSm9iVHlwZUID",
+            "4EEBEkoKBXN0YXRlGAYgASgOMjYuZ29vZ2xlLmNsb3VkLmJpZ3F1ZXJ5LnJl",
+            "c2VydmF0aW9uLnYxLkFzc2lnbm1lbnQuU3RhdGVCA+BBAxImChllbmFibGVf",
+            "Z2VtaW5pX2luX2JpZ3F1ZXJ5GAogASgIQgPgQQESVgoRc2NoZWR1bGluZ19w",
+            "b2xpY3kYCyABKAsyNi5nb29nbGUuY2xvdWQuYmlncXVlcnkucmVzZXJ2YXRp",
+            "b24udjEuU2NoZWR1bGluZ1BvbGljeUID4EEBItwBCgdKb2JUeXBlEhgKFEpP",
             "Ql9UWVBFX1VOU1BFQ0lGSUVEEAASDAoIUElQRUxJTkUQARIJCgVRVUVSWRAC",
             "Eg8KC01MX0VYVEVSTkFMEAMSDgoKQkFDS0dST1VORBAEEg4KCkNPTlRJTlVP",
-            "VVMQBiI3CgVTdGF0ZRIVChFTVEFURV9VTlNQRUNJRklFRBAAEgsKB1BFTkRJ",
-            "TkcQARIKCgZBQ1RJVkUQAjqpAepBpQEKLWJpZ3F1ZXJ5cmVzZXJ2YXRpb24u",
-            "Z29vZ2xlYXBpcy5jb20vQXNzaWdubWVudBJbcHJvamVjdHMve3Byb2plY3R9",
-            "L2xvY2F0aW9ucy97bG9jYXRpb259L3Jlc2VydmF0aW9ucy97cmVzZXJ2YXRp",
-            "b259L2Fzc2lnbm1lbnRzL3thc3NpZ25tZW50fSoLYXNzaWdubWVudHMyCmFz",
-            "c2lnbm1lbnQivQEKF0NyZWF0ZUFzc2lnbm1lbnRSZXF1ZXN0EkUKBnBhcmVu",
-            "dBgBIAEoCUI14EEC+kEvEi1iaWdxdWVyeXJlc2VydmF0aW9uLmdvb2dsZWFw",
-            "aXMuY29tL0Fzc2lnbm1lbnQSRAoKYXNzaWdubWVudBgCIAEoCzIwLmdvb2ds",
-            "ZS5jbG91ZC5iaWdxdWVyeS5yZXNlcnZhdGlvbi52MS5Bc3NpZ25tZW50EhUK",
-            "DWFzc2lnbm1lbnRfaWQYBCABKAkihgEKFkxpc3RBc3NpZ25tZW50c1JlcXVl",
-            "c3QSRQoGcGFyZW50GAEgASgJQjXgQQL6QS8SLWJpZ3F1ZXJ5cmVzZXJ2YXRp",
-            "b24uZ29vZ2xlYXBpcy5jb20vQXNzaWdubWVudBIRCglwYWdlX3NpemUYAiAB",
-            "KAUSEgoKcGFnZV90b2tlbhgDIAEoCSJ5ChdMaXN0QXNzaWdubWVudHNSZXNw",
-            "b25zZRJFCgthc3NpZ25tZW50cxgBIAMoCzIwLmdvb2dsZS5jbG91ZC5iaWdx",
-            "dWVyeS5yZXNlcnZhdGlvbi52MS5Bc3NpZ25tZW50EhcKD25leHRfcGFnZV90",
-            "b2tlbhgCIAEoCSJeChdEZWxldGVBc3NpZ25tZW50UmVxdWVzdBJDCgRuYW1l",
-            "GAEgASgJQjXgQQL6QS8KLWJpZ3F1ZXJ5cmVzZXJ2YXRpb24uZ29vZ2xlYXBp",
-            "cy5jb20vQXNzaWdubWVudCKLAQoYU2VhcmNoQXNzaWdubWVudHNSZXF1ZXN0",
-            "EjkKBnBhcmVudBgBIAEoCUIp4EEC+kEjCiFsb2NhdGlvbnMuZ29vZ2xlYXBp",
-            "cy5jb20vTG9jYXRpb24SDQoFcXVlcnkYAiABKAkSEQoJcGFnZV9zaXplGAMg",
-            "ASgFEhIKCnBhZ2VfdG9rZW4YBCABKAkijgEKG1NlYXJjaEFsbEFzc2lnbm1l",
-            "bnRzUmVxdWVzdBI5CgZwYXJlbnQYASABKAlCKeBBAvpBIwohbG9jYXRpb25z",
-            "Lmdvb2dsZWFwaXMuY29tL0xvY2F0aW9uEg0KBXF1ZXJ5GAIgASgJEhEKCXBh",
-            "Z2Vfc2l6ZRgDIAEoBRISCgpwYWdlX3Rva2VuGAQgASgJInsKGVNlYXJjaEFz",
-            "c2lnbm1lbnRzUmVzcG9uc2USRQoLYXNzaWdubWVudHMYASADKAsyMC5nb29n",
-            "bGUuY2xvdWQuYmlncXVlcnkucmVzZXJ2YXRpb24udjEuQXNzaWdubWVudBIX",
-            "Cg9uZXh0X3BhZ2VfdG9rZW4YAiABKAkifgocU2VhcmNoQWxsQXNzaWdubWVu",
-            "dHNSZXNwb25zZRJFCgthc3NpZ25tZW50cxgBIAMoCzIwLmdvb2dsZS5jbG91",
-            "ZC5iaWdxdWVyeS5yZXNlcnZhdGlvbi52MS5Bc3NpZ25tZW50EhcKD25leHRf",
-            "cGFnZV90b2tlbhgCIAEoCSK/AQoVTW92ZUFzc2lnbm1lbnRSZXF1ZXN0EkMK",
-            "BG5hbWUYASABKAlCNeBBAvpBLwotYmlncXVlcnlyZXNlcnZhdGlvbi5nb29n",
-            "bGVhcGlzLmNvbS9Bc3NpZ25tZW50EkoKDmRlc3RpbmF0aW9uX2lkGAMgASgJ",
-            "QjL6QS8SLWJpZ3F1ZXJ5cmVzZXJ2YXRpb24uZ29vZ2xlYXBpcy5jb20vQXNz",
-            "aWdubWVudBIVCg1hc3NpZ25tZW50X2lkGAUgASgJIpABChdVcGRhdGVBc3Np",
-            "Z25tZW50UmVxdWVzdBJECgphc3NpZ25tZW50GAEgASgLMjAuZ29vZ2xlLmNs",
-            "b3VkLmJpZ3F1ZXJ5LnJlc2VydmF0aW9uLnYxLkFzc2lnbm1lbnQSLwoLdXBk",
-            "YXRlX21hc2sYAiABKAsyGi5nb29nbGUucHJvdG9idWYuRmllbGRNYXNrIkoK",
-            "DlRhYmxlUmVmZXJlbmNlEhIKCnByb2plY3RfaWQYASABKAkSEgoKZGF0YXNl",
-            "dF9pZBgCIAEoCRIQCgh0YWJsZV9pZBgDIAEoCSKfAgoNQmlSZXNlcnZhdGlv",
-            "bhIMCgRuYW1lGAEgASgJEjQKC3VwZGF0ZV90aW1lGAMgASgLMhouZ29vZ2xl",
-            "LnByb3RvYnVmLlRpbWVzdGFtcEID4EEDEgwKBHNpemUYBCABKAMSTgoQcHJl",
-            "ZmVycmVkX3RhYmxlcxgFIAMoCzI0Lmdvb2dsZS5jbG91ZC5iaWdxdWVyeS5y",
-            "ZXNlcnZhdGlvbi52MS5UYWJsZVJlZmVyZW5jZTps6kFpCjBiaWdxdWVyeXJl",
-            "c2VydmF0aW9uLmdvb2dsZWFwaXMuY29tL0JpUmVzZXJ2YXRpb24SNXByb2pl",
-            "Y3RzL3twcm9qZWN0fS9sb2NhdGlvbnMve2xvY2F0aW9ufS9iaVJlc2VydmF0",
-            "aW9uImEKF0dldEJpUmVzZXJ2YXRpb25SZXF1ZXN0EkYKBG5hbWUYASABKAlC",
-            "OOBBAvpBMgowYmlncXVlcnlyZXNlcnZhdGlvbi5nb29nbGVhcGlzLmNvbS9C",
-            "aVJlc2VydmF0aW9uIpoBChpVcGRhdGVCaVJlc2VydmF0aW9uUmVxdWVzdBJL",
-            "Cg5iaV9yZXNlcnZhdGlvbhgBIAEoCzIzLmdvb2dsZS5jbG91ZC5iaWdxdWVy",
-            "eS5yZXNlcnZhdGlvbi52MS5CaVJlc2VydmF0aW9uEi8KC3VwZGF0ZV9tYXNr",
-            "GAIgASgLMhouZ29vZ2xlLnByb3RvYnVmLkZpZWxkTWFzaypVCgdFZGl0aW9u",
-            "EhcKE0VESVRJT05fVU5TUEVDSUZJRUQQABIMCghTVEFOREFSRBABEg4KCkVO",
-            "VEVSUFJJU0UQAhITCg9FTlRFUlBSSVNFX1BMVVMQAypBCgxGYWlsb3Zlck1v",
-            "ZGUSHQoZRkFJTE9WRVJfTU9ERV9VTlNQRUNJRklFRBAAEggKBFNPRlQQARII",
-            "CgRIQVJEEAIynykKElJlc2VydmF0aW9uU2VydmljZRLxAQoRQ3JlYXRlUmVz",
-            "ZXJ2YXRpb24SPi5nb29nbGUuY2xvdWQuYmlncXVlcnkucmVzZXJ2YXRpb24u",
-            "djEuQ3JlYXRlUmVzZXJ2YXRpb25SZXF1ZXN0GjEuZ29vZ2xlLmNsb3VkLmJp",
-            "Z3F1ZXJ5LnJlc2VydmF0aW9uLnYxLlJlc2VydmF0aW9uImnaQSFwYXJlbnQs",
-            "cmVzZXJ2YXRpb24scmVzZXJ2YXRpb25faWSC0+STAj8iMC92MS97cGFyZW50",
-            "PXByb2plY3RzLyovbG9jYXRpb25zLyp9L3Jlc2VydmF0aW9uczoLcmVzZXJ2",
-            "YXRpb24S1AEKEExpc3RSZXNlcnZhdGlvbnMSPS5nb29nbGUuY2xvdWQuYmln",
-            "cXVlcnkucmVzZXJ2YXRpb24udjEuTGlzdFJlc2VydmF0aW9uc1JlcXVlc3Qa",
-            "Pi5nb29nbGUuY2xvdWQuYmlncXVlcnkucmVzZXJ2YXRpb24udjEuTGlzdFJl",
-            "c2VydmF0aW9uc1Jlc3BvbnNlIkHaQQZwYXJlbnSC0+STAjISMC92MS97cGFy",
-            "ZW50PXByb2plY3RzLyovbG9jYXRpb25zLyp9L3Jlc2VydmF0aW9ucxLBAQoO",
-            "R2V0UmVzZXJ2YXRpb24SOy5nb29nbGUuY2xvdWQuYmlncXVlcnkucmVzZXJ2",
-            "YXRpb24udjEuR2V0UmVzZXJ2YXRpb25SZXF1ZXN0GjEuZ29vZ2xlLmNsb3Vk",
-            "LmJpZ3F1ZXJ5LnJlc2VydmF0aW9uLnYxLlJlc2VydmF0aW9uIj/aQQRuYW1l",
-            "gtPkkwIyEjAvdjEve25hbWU9cHJvamVjdHMvKi9sb2NhdGlvbnMvKi9yZXNl",
-            "cnZhdGlvbnMvKn0SrAEKEURlbGV0ZVJlc2VydmF0aW9uEj4uZ29vZ2xlLmNs",
-            "b3VkLmJpZ3F1ZXJ5LnJlc2VydmF0aW9uLnYxLkRlbGV0ZVJlc2VydmF0aW9u",
-            "UmVxdWVzdBoWLmdvb2dsZS5wcm90b2J1Zi5FbXB0eSI/2kEEbmFtZYLT5JMC",
-            "MiowL3YxL3tuYW1lPXByb2plY3RzLyovbG9jYXRpb25zLyovcmVzZXJ2YXRp",
-            "b25zLyp9EvMBChFVcGRhdGVSZXNlcnZhdGlvbhI+Lmdvb2dsZS5jbG91ZC5i",
-            "aWdxdWVyeS5yZXNlcnZhdGlvbi52MS5VcGRhdGVSZXNlcnZhdGlvblJlcXVl",
-            "c3QaMS5nb29nbGUuY2xvdWQuYmlncXVlcnkucmVzZXJ2YXRpb24udjEuUmVz",
-            "ZXJ2YXRpb24ia9pBF3Jlc2VydmF0aW9uLHVwZGF0ZV9tYXNrgtPkkwJLMjwv",
-            "djEve3Jlc2VydmF0aW9uLm5hbWU9cHJvamVjdHMvKi9sb2NhdGlvbnMvKi9y",
-            "ZXNlcnZhdGlvbnMvKn06C3Jlc2VydmF0aW9uEtsBChNGYWlsb3ZlclJlc2Vy",
-            "dmF0aW9uEkAuZ29vZ2xlLmNsb3VkLmJpZ3F1ZXJ5LnJlc2VydmF0aW9uLnYx",
-            "LkZhaWxvdmVyUmVzZXJ2YXRpb25SZXF1ZXN0GjEuZ29vZ2xlLmNsb3VkLmJp",
-            "Z3F1ZXJ5LnJlc2VydmF0aW9uLnYxLlJlc2VydmF0aW9uIk+C0+STAkkiRC92",
-            "MS97bmFtZT1wcm9qZWN0cy8qL2xvY2F0aW9ucy8qL3Jlc2VydmF0aW9ucy8q",
-            "fTpmYWlsb3ZlclJlc2VydmF0aW9uOgEqEo4CChhDcmVhdGVDYXBhY2l0eUNv",
-            "bW1pdG1lbnQSRS5nb29nbGUuY2xvdWQuYmlncXVlcnkucmVzZXJ2YXRpb24u",
-            "djEuQ3JlYXRlQ2FwYWNpdHlDb21taXRtZW50UmVxdWVzdBo4Lmdvb2dsZS5j",
-            "bG91ZC5iaWdxdWVyeS5yZXNlcnZhdGlvbi52MS5DYXBhY2l0eUNvbW1pdG1l",
-            "bnQicdpBGnBhcmVudCxjYXBhY2l0eV9jb21taXRtZW50gtPkkwJOIjcvdjEv",
+            "VVMQBhIiCh5CQUNLR1JPVU5EX0NIQU5HRV9EQVRBX0NBUFRVUkUQBxIkCiBC",
+            "QUNLR1JPVU5EX0NPTFVNTl9NRVRBREFUQV9JTkRFWBAIEiMKH0JBQ0tHUk9V",
+            "TkRfU0VBUkNIX0lOREVYX1JFRlJFU0gQCSI3CgVTdGF0ZRIVChFTVEFURV9V",
+            "TlNQRUNJRklFRBAAEgsKB1BFTkRJTkcQARIKCgZBQ1RJVkUQAjqpAepBpQEK",
+            "LWJpZ3F1ZXJ5cmVzZXJ2YXRpb24uZ29vZ2xlYXBpcy5jb20vQXNzaWdubWVu",
+            "dBJbcHJvamVjdHMve3Byb2plY3R9L2xvY2F0aW9ucy97bG9jYXRpb259L3Jl",
+            "c2VydmF0aW9ucy97cmVzZXJ2YXRpb259L2Fzc2lnbm1lbnRzL3thc3NpZ25t",
+            "ZW50fSoLYXNzaWdubWVudHMyCmFzc2lnbm1lbnQivQEKF0NyZWF0ZUFzc2ln",
+            "bm1lbnRSZXF1ZXN0EkUKBnBhcmVudBgBIAEoCUI14EEC+kEvEi1iaWdxdWVy",
+            "eXJlc2VydmF0aW9uLmdvb2dsZWFwaXMuY29tL0Fzc2lnbm1lbnQSRAoKYXNz",
+            "aWdubWVudBgCIAEoCzIwLmdvb2dsZS5jbG91ZC5iaWdxdWVyeS5yZXNlcnZh",
+            "dGlvbi52MS5Bc3NpZ25tZW50EhUKDWFzc2lnbm1lbnRfaWQYBCABKAkihgEK",
+            "Fkxpc3RBc3NpZ25tZW50c1JlcXVlc3QSRQoGcGFyZW50GAEgASgJQjXgQQL6",
+            "QS8SLWJpZ3F1ZXJ5cmVzZXJ2YXRpb24uZ29vZ2xlYXBpcy5jb20vQXNzaWdu",
+            "bWVudBIRCglwYWdlX3NpemUYAiABKAUSEgoKcGFnZV90b2tlbhgDIAEoCSJ5",
+            "ChdMaXN0QXNzaWdubWVudHNSZXNwb25zZRJFCgthc3NpZ25tZW50cxgBIAMo",
+            "CzIwLmdvb2dsZS5jbG91ZC5iaWdxdWVyeS5yZXNlcnZhdGlvbi52MS5Bc3Np",
+            "Z25tZW50EhcKD25leHRfcGFnZV90b2tlbhgCIAEoCSJeChdEZWxldGVBc3Np",
+            "Z25tZW50UmVxdWVzdBJDCgRuYW1lGAEgASgJQjXgQQL6QS8KLWJpZ3F1ZXJ5",
+            "cmVzZXJ2YXRpb24uZ29vZ2xlYXBpcy5jb20vQXNzaWdubWVudCKLAQoYU2Vh",
+            "cmNoQXNzaWdubWVudHNSZXF1ZXN0EjkKBnBhcmVudBgBIAEoCUIp4EEC+kEj",
+            "CiFsb2NhdGlvbnMuZ29vZ2xlYXBpcy5jb20vTG9jYXRpb24SDQoFcXVlcnkY",
+            "AiABKAkSEQoJcGFnZV9zaXplGAMgASgFEhIKCnBhZ2VfdG9rZW4YBCABKAki",
+            "jgEKG1NlYXJjaEFsbEFzc2lnbm1lbnRzUmVxdWVzdBI5CgZwYXJlbnQYASAB",
+            "KAlCKeBBAvpBIwohbG9jYXRpb25zLmdvb2dsZWFwaXMuY29tL0xvY2F0aW9u",
+            "Eg0KBXF1ZXJ5GAIgASgJEhEKCXBhZ2Vfc2l6ZRgDIAEoBRISCgpwYWdlX3Rv",
+            "a2VuGAQgASgJInsKGVNlYXJjaEFzc2lnbm1lbnRzUmVzcG9uc2USRQoLYXNz",
+            "aWdubWVudHMYASADKAsyMC5nb29nbGUuY2xvdWQuYmlncXVlcnkucmVzZXJ2",
+            "YXRpb24udjEuQXNzaWdubWVudBIXCg9uZXh0X3BhZ2VfdG9rZW4YAiABKAki",
+            "fgocU2VhcmNoQWxsQXNzaWdubWVudHNSZXNwb25zZRJFCgthc3NpZ25tZW50",
+            "cxgBIAMoCzIwLmdvb2dsZS5jbG91ZC5iaWdxdWVyeS5yZXNlcnZhdGlvbi52",
+            "MS5Bc3NpZ25tZW50EhcKD25leHRfcGFnZV90b2tlbhgCIAEoCSK/AQoVTW92",
+            "ZUFzc2lnbm1lbnRSZXF1ZXN0EkMKBG5hbWUYASABKAlCNeBBAvpBLwotYmln",
+            "cXVlcnlyZXNlcnZhdGlvbi5nb29nbGVhcGlzLmNvbS9Bc3NpZ25tZW50EkoK",
+            "DmRlc3RpbmF0aW9uX2lkGAMgASgJQjL6QS8SLWJpZ3F1ZXJ5cmVzZXJ2YXRp",
+            "b24uZ29vZ2xlYXBpcy5jb20vQXNzaWdubWVudBIVCg1hc3NpZ25tZW50X2lk",
+            "GAUgASgJIpABChdVcGRhdGVBc3NpZ25tZW50UmVxdWVzdBJECgphc3NpZ25t",
+            "ZW50GAEgASgLMjAuZ29vZ2xlLmNsb3VkLmJpZ3F1ZXJ5LnJlc2VydmF0aW9u",
+            "LnYxLkFzc2lnbm1lbnQSLwoLdXBkYXRlX21hc2sYAiABKAsyGi5nb29nbGUu",
+            "cHJvdG9idWYuRmllbGRNYXNrIlkKDlRhYmxlUmVmZXJlbmNlEhcKCnByb2pl",
+            "Y3RfaWQYASABKAlCA+BBARIXCgpkYXRhc2V0X2lkGAIgASgJQgPgQQESFQoI",
+            "dGFibGVfaWQYAyABKAlCA+BBASKuAgoNQmlSZXNlcnZhdGlvbhIRCgRuYW1l",
+            "GAEgASgJQgPgQQgSNAoLdXBkYXRlX3RpbWUYAyABKAsyGi5nb29nbGUucHJv",
+            "dG9idWYuVGltZXN0YW1wQgPgQQMSEQoEc2l6ZRgEIAEoA0ID4EEBElMKEHBy",
+            "ZWZlcnJlZF90YWJsZXMYBSADKAsyNC5nb29nbGUuY2xvdWQuYmlncXVlcnku",
+            "cmVzZXJ2YXRpb24udjEuVGFibGVSZWZlcmVuY2VCA+BBATps6kFpCjBiaWdx",
+            "dWVyeXJlc2VydmF0aW9uLmdvb2dsZWFwaXMuY29tL0JpUmVzZXJ2YXRpb24S",
+            "NXByb2plY3RzL3twcm9qZWN0fS9sb2NhdGlvbnMve2xvY2F0aW9ufS9iaVJl",
+            "c2VydmF0aW9uImEKF0dldEJpUmVzZXJ2YXRpb25SZXF1ZXN0EkYKBG5hbWUY",
+            "ASABKAlCOOBBAvpBMgowYmlncXVlcnlyZXNlcnZhdGlvbi5nb29nbGVhcGlz",
+            "LmNvbS9CaVJlc2VydmF0aW9uIpoBChpVcGRhdGVCaVJlc2VydmF0aW9uUmVx",
+            "dWVzdBJLCg5iaV9yZXNlcnZhdGlvbhgBIAEoCzIzLmdvb2dsZS5jbG91ZC5i",
+            "aWdxdWVyeS5yZXNlcnZhdGlvbi52MS5CaVJlc2VydmF0aW9uEi8KC3VwZGF0",
+            "ZV9tYXNrGAIgASgLMhouZ29vZ2xlLnByb3RvYnVmLkZpZWxkTWFzaypVCgdF",
+            "ZGl0aW9uEhcKE0VESVRJT05fVU5TUEVDSUZJRUQQABIMCghTVEFOREFSRBAB",
+            "Eg4KCkVOVEVSUFJJU0UQAhITCg9FTlRFUlBSSVNFX1BMVVMQAypBCgxGYWls",
+            "b3Zlck1vZGUSHQoZRkFJTE9WRVJfTU9ERV9VTlNQRUNJRklFRBAAEggKBFNP",
+            "RlQQARIICgRIQVJEEAIyozYKElJlc2VydmF0aW9uU2VydmljZRLxAQoRQ3Jl",
+            "YXRlUmVzZXJ2YXRpb24SPi5nb29nbGUuY2xvdWQuYmlncXVlcnkucmVzZXJ2",
+            "YXRpb24udjEuQ3JlYXRlUmVzZXJ2YXRpb25SZXF1ZXN0GjEuZ29vZ2xlLmNs",
+            "b3VkLmJpZ3F1ZXJ5LnJlc2VydmF0aW9uLnYxLlJlc2VydmF0aW9uImnaQSFw",
+            "YXJlbnQscmVzZXJ2YXRpb24scmVzZXJ2YXRpb25faWSC0+STAj8iMC92MS97",
+            "cGFyZW50PXByb2plY3RzLyovbG9jYXRpb25zLyp9L3Jlc2VydmF0aW9uczoL",
+            "cmVzZXJ2YXRpb24S1AEKEExpc3RSZXNlcnZhdGlvbnMSPS5nb29nbGUuY2xv",
+            "dWQuYmlncXVlcnkucmVzZXJ2YXRpb24udjEuTGlzdFJlc2VydmF0aW9uc1Jl",
+            "cXVlc3QaPi5nb29nbGUuY2xvdWQuYmlncXVlcnkucmVzZXJ2YXRpb24udjEu",
+            "TGlzdFJlc2VydmF0aW9uc1Jlc3BvbnNlIkHaQQZwYXJlbnSC0+STAjISMC92",
+            "MS97cGFyZW50PXByb2plY3RzLyovbG9jYXRpb25zLyp9L3Jlc2VydmF0aW9u",
+            "cxLBAQoOR2V0UmVzZXJ2YXRpb24SOy5nb29nbGUuY2xvdWQuYmlncXVlcnku",
+            "cmVzZXJ2YXRpb24udjEuR2V0UmVzZXJ2YXRpb25SZXF1ZXN0GjEuZ29vZ2xl",
+            "LmNsb3VkLmJpZ3F1ZXJ5LnJlc2VydmF0aW9uLnYxLlJlc2VydmF0aW9uIj/a",
+            "QQRuYW1lgtPkkwIyEjAvdjEve25hbWU9cHJvamVjdHMvKi9sb2NhdGlvbnMv",
+            "Ki9yZXNlcnZhdGlvbnMvKn0SrAEKEURlbGV0ZVJlc2VydmF0aW9uEj4uZ29v",
+            "Z2xlLmNsb3VkLmJpZ3F1ZXJ5LnJlc2VydmF0aW9uLnYxLkRlbGV0ZVJlc2Vy",
+            "dmF0aW9uUmVxdWVzdBoWLmdvb2dsZS5wcm90b2J1Zi5FbXB0eSI/2kEEbmFt",
+            "ZYLT5JMCMiowL3YxL3tuYW1lPXByb2plY3RzLyovbG9jYXRpb25zLyovcmVz",
+            "ZXJ2YXRpb25zLyp9EvMBChFVcGRhdGVSZXNlcnZhdGlvbhI+Lmdvb2dsZS5j",
+            "bG91ZC5iaWdxdWVyeS5yZXNlcnZhdGlvbi52MS5VcGRhdGVSZXNlcnZhdGlv",
+            "blJlcXVlc3QaMS5nb29nbGUuY2xvdWQuYmlncXVlcnkucmVzZXJ2YXRpb24u",
+            "djEuUmVzZXJ2YXRpb24ia9pBF3Jlc2VydmF0aW9uLHVwZGF0ZV9tYXNrgtPk",
+            "kwJLMjwvdjEve3Jlc2VydmF0aW9uLm5hbWU9cHJvamVjdHMvKi9sb2NhdGlv",
+            "bnMvKi9yZXNlcnZhdGlvbnMvKn06C3Jlc2VydmF0aW9uEtsBChNGYWlsb3Zl",
+            "clJlc2VydmF0aW9uEkAuZ29vZ2xlLmNsb3VkLmJpZ3F1ZXJ5LnJlc2VydmF0",
+            "aW9uLnYxLkZhaWxvdmVyUmVzZXJ2YXRpb25SZXF1ZXN0GjEuZ29vZ2xlLmNs",
+            "b3VkLmJpZ3F1ZXJ5LnJlc2VydmF0aW9uLnYxLlJlc2VydmF0aW9uIk+C0+ST",
+            "AkkiRC92MS97bmFtZT1wcm9qZWN0cy8qL2xvY2F0aW9ucy8qL3Jlc2VydmF0",
+            "aW9ucy8qfTpmYWlsb3ZlclJlc2VydmF0aW9uOgEqEo4CChhDcmVhdGVDYXBh",
+            "Y2l0eUNvbW1pdG1lbnQSRS5nb29nbGUuY2xvdWQuYmlncXVlcnkucmVzZXJ2",
+            "YXRpb24udjEuQ3JlYXRlQ2FwYWNpdHlDb21taXRtZW50UmVxdWVzdBo4Lmdv",
+            "b2dsZS5jbG91ZC5iaWdxdWVyeS5yZXNlcnZhdGlvbi52MS5DYXBhY2l0eUNv",
+            "bW1pdG1lbnQicdpBGnBhcmVudCxjYXBhY2l0eV9jb21taXRtZW50gtPkkwJO",
+            "IjcvdjEve3BhcmVudD1wcm9qZWN0cy8qL2xvY2F0aW9ucy8qfS9jYXBhY2l0",
+            "eUNvbW1pdG1lbnRzOhNjYXBhY2l0eV9jb21taXRtZW50EvABChdMaXN0Q2Fw",
+            "YWNpdHlDb21taXRtZW50cxJELmdvb2dsZS5jbG91ZC5iaWdxdWVyeS5yZXNl",
+            "cnZhdGlvbi52MS5MaXN0Q2FwYWNpdHlDb21taXRtZW50c1JlcXVlc3QaRS5n",
+            "b29nbGUuY2xvdWQuYmlncXVlcnkucmVzZXJ2YXRpb24udjEuTGlzdENhcGFj",
+            "aXR5Q29tbWl0bWVudHNSZXNwb25zZSJI2kEGcGFyZW50gtPkkwI5EjcvdjEv",
             "e3BhcmVudD1wcm9qZWN0cy8qL2xvY2F0aW9ucy8qfS9jYXBhY2l0eUNvbW1p",
-            "dG1lbnRzOhNjYXBhY2l0eV9jb21taXRtZW50EvABChdMaXN0Q2FwYWNpdHlD",
-            "b21taXRtZW50cxJELmdvb2dsZS5jbG91ZC5iaWdxdWVyeS5yZXNlcnZhdGlv",
-            "bi52MS5MaXN0Q2FwYWNpdHlDb21taXRtZW50c1JlcXVlc3QaRS5nb29nbGUu",
-            "Y2xvdWQuYmlncXVlcnkucmVzZXJ2YXRpb24udjEuTGlzdENhcGFjaXR5Q29t",
-            "bWl0bWVudHNSZXNwb25zZSJI2kEGcGFyZW50gtPkkwI5EjcvdjEve3BhcmVu",
-            "dD1wcm9qZWN0cy8qL2xvY2F0aW9ucy8qfS9jYXBhY2l0eUNvbW1pdG1lbnRz",
-            "Et0BChVHZXRDYXBhY2l0eUNvbW1pdG1lbnQSQi5nb29nbGUuY2xvdWQuYmln",
-            "cXVlcnkucmVzZXJ2YXRpb24udjEuR2V0Q2FwYWNpdHlDb21taXRtZW50UmVx",
-            "dWVzdBo4Lmdvb2dsZS5jbG91ZC5iaWdxdWVyeS5yZXNlcnZhdGlvbi52MS5D",
-            "YXBhY2l0eUNvbW1pdG1lbnQiRtpBBG5hbWWC0+STAjkSNy92MS97bmFtZT1w",
-            "cm9qZWN0cy8qL2xvY2F0aW9ucy8qL2NhcGFjaXR5Q29tbWl0bWVudHMvKn0S",
-            "wQEKGERlbGV0ZUNhcGFjaXR5Q29tbWl0bWVudBJFLmdvb2dsZS5jbG91ZC5i",
-            "aWdxdWVyeS5yZXNlcnZhdGlvbi52MS5EZWxldGVDYXBhY2l0eUNvbW1pdG1l",
-            "bnRSZXF1ZXN0GhYuZ29vZ2xlLnByb3RvYnVmLkVtcHR5IkbaQQRuYW1lgtPk",
-            "kwI5KjcvdjEve25hbWU9cHJvamVjdHMvKi9sb2NhdGlvbnMvKi9jYXBhY2l0",
-            "eUNvbW1pdG1lbnRzLyp9EqgCChhVcGRhdGVDYXBhY2l0eUNvbW1pdG1lbnQS",
-            "RS5nb29nbGUuY2xvdWQuYmlncXVlcnkucmVzZXJ2YXRpb24udjEuVXBkYXRl",
-            "Q2FwYWNpdHlDb21taXRtZW50UmVxdWVzdBo4Lmdvb2dsZS5jbG91ZC5iaWdx",
-            "dWVyeS5yZXNlcnZhdGlvbi52MS5DYXBhY2l0eUNvbW1pdG1lbnQiigHaQR9j",
-            "YXBhY2l0eV9jb21taXRtZW50LHVwZGF0ZV9tYXNrgtPkkwJiMksvdjEve2Nh",
-            "cGFjaXR5X2NvbW1pdG1lbnQubmFtZT1wcm9qZWN0cy8qL2xvY2F0aW9ucy8q",
-            "L2NhcGFjaXR5Q29tbWl0bWVudHMvKn06E2NhcGFjaXR5X2NvbW1pdG1lbnQS",
-            "ggIKF1NwbGl0Q2FwYWNpdHlDb21taXRtZW50EkQuZ29vZ2xlLmNsb3VkLmJp",
-            "Z3F1ZXJ5LnJlc2VydmF0aW9uLnYxLlNwbGl0Q2FwYWNpdHlDb21taXRtZW50",
-            "UmVxdWVzdBpFLmdvb2dsZS5jbG91ZC5iaWdxdWVyeS5yZXNlcnZhdGlvbi52",
-            "MS5TcGxpdENhcGFjaXR5Q29tbWl0bWVudFJlc3BvbnNlIlraQQ9uYW1lLHNs",
-            "b3RfY291bnSC0+STAkIiPS92MS97bmFtZT1wcm9qZWN0cy8qL2xvY2F0aW9u",
-            "cy8qL2NhcGFjaXR5Q29tbWl0bWVudHMvKn06c3BsaXQ6ASoShgIKGE1lcmdl",
-            "Q2FwYWNpdHlDb21taXRtZW50cxJFLmdvb2dsZS5jbG91ZC5iaWdxdWVyeS5y",
-            "ZXNlcnZhdGlvbi52MS5NZXJnZUNhcGFjaXR5Q29tbWl0bWVudHNSZXF1ZXN0",
-            "GjguZ29vZ2xlLmNsb3VkLmJpZ3F1ZXJ5LnJlc2VydmF0aW9uLnYxLkNhcGFj",
-            "aXR5Q29tbWl0bWVudCJp2kEecGFyZW50LGNhcGFjaXR5X2NvbW1pdG1lbnRf",
-            "aWRzgtPkkwJCIj0vdjEve3BhcmVudD1wcm9qZWN0cy8qL2xvY2F0aW9ucy8q",
-            "fS9jYXBhY2l0eUNvbW1pdG1lbnRzOm1lcmdlOgEqEusBChBDcmVhdGVBc3Np",
-            "Z25tZW50Ej0uZ29vZ2xlLmNsb3VkLmJpZ3F1ZXJ5LnJlc2VydmF0aW9uLnYx",
-            "LkNyZWF0ZUFzc2lnbm1lbnRSZXF1ZXN0GjAuZ29vZ2xlLmNsb3VkLmJpZ3F1",
-            "ZXJ5LnJlc2VydmF0aW9uLnYxLkFzc2lnbm1lbnQiZtpBEXBhcmVudCxhc3Np",
-            "Z25tZW50gtPkkwJMIj4vdjEve3BhcmVudD1wcm9qZWN0cy8qL2xvY2F0aW9u",
-            "cy8qL3Jlc2VydmF0aW9ucy8qfS9hc3NpZ25tZW50czoKYXNzaWdubWVudBLf",
-            "AQoPTGlzdEFzc2lnbm1lbnRzEjwuZ29vZ2xlLmNsb3VkLmJpZ3F1ZXJ5LnJl",
-            "c2VydmF0aW9uLnYxLkxpc3RBc3NpZ25tZW50c1JlcXVlc3QaPS5nb29nbGUu",
-            "Y2xvdWQuYmlncXVlcnkucmVzZXJ2YXRpb24udjEuTGlzdEFzc2lnbm1lbnRz",
-            "UmVzcG9uc2UiT9pBBnBhcmVudILT5JMCQBI+L3YxL3twYXJlbnQ9cHJvamVj",
-            "dHMvKi9sb2NhdGlvbnMvKi9yZXNlcnZhdGlvbnMvKn0vYXNzaWdubWVudHMS",
-            "uAEKEERlbGV0ZUFzc2lnbm1lbnQSPS5nb29nbGUuY2xvdWQuYmlncXVlcnku",
-            "cmVzZXJ2YXRpb24udjEuRGVsZXRlQXNzaWdubWVudFJlcXVlc3QaFi5nb29n",
-            "bGUucHJvdG9idWYuRW1wdHkiTdpBBG5hbWWC0+STAkAqPi92MS97bmFtZT1w",
-            "cm9qZWN0cy8qL2xvY2F0aW9ucy8qL3Jlc2VydmF0aW9ucy8qL2Fzc2lnbm1l",
-            "bnRzLyp9EuUBChFTZWFyY2hBc3NpZ25tZW50cxI+Lmdvb2dsZS5jbG91ZC5i",
-            "aWdxdWVyeS5yZXNlcnZhdGlvbi52MS5TZWFyY2hBc3NpZ25tZW50c1JlcXVl",
-            "c3QaPy5nb29nbGUuY2xvdWQuYmlncXVlcnkucmVzZXJ2YXRpb24udjEuU2Vh",
-            "cmNoQXNzaWdubWVudHNSZXNwb25zZSJPiAIB2kEMcGFyZW50LHF1ZXJ5gtPk",
-            "kwI3EjUvdjEve3BhcmVudD1wcm9qZWN0cy8qL2xvY2F0aW9ucy8qfTpzZWFy",
-            "Y2hBc3NpZ25tZW50cxLuAQoUU2VhcmNoQWxsQXNzaWdubWVudHMSQS5nb29n",
-            "bGUuY2xvdWQuYmlncXVlcnkucmVzZXJ2YXRpb24udjEuU2VhcmNoQWxsQXNz",
-            "aWdubWVudHNSZXF1ZXN0GkIuZ29vZ2xlLmNsb3VkLmJpZ3F1ZXJ5LnJlc2Vy",
-            "dmF0aW9uLnYxLlNlYXJjaEFsbEFzc2lnbm1lbnRzUmVzcG9uc2UiT9pBDHBh",
-            "cmVudCxxdWVyeYLT5JMCOhI4L3YxL3twYXJlbnQ9cHJvamVjdHMvKi9sb2Nh",
-            "dGlvbnMvKn06c2VhcmNoQWxsQXNzaWdubWVudHMS5QEKDk1vdmVBc3NpZ25t",
-            "ZW50EjsuZ29vZ2xlLmNsb3VkLmJpZ3F1ZXJ5LnJlc2VydmF0aW9uLnYxLk1v",
-            "dmVBc3NpZ25tZW50UmVxdWVzdBowLmdvb2dsZS5jbG91ZC5iaWdxdWVyeS5y",
-            "ZXNlcnZhdGlvbi52MS5Bc3NpZ25tZW50ImTaQRNuYW1lLGRlc3RpbmF0aW9u",
-            "X2lkgtPkkwJIIkMvdjEve25hbWU9cHJvamVjdHMvKi9sb2NhdGlvbnMvKi9y",
-            "ZXNlcnZhdGlvbnMvKi9hc3NpZ25tZW50cy8qfTptb3ZlOgEqEvsBChBVcGRh",
+            "dG1lbnRzEt0BChVHZXRDYXBhY2l0eUNvbW1pdG1lbnQSQi5nb29nbGUuY2xv",
+            "dWQuYmlncXVlcnkucmVzZXJ2YXRpb24udjEuR2V0Q2FwYWNpdHlDb21taXRt",
+            "ZW50UmVxdWVzdBo4Lmdvb2dsZS5jbG91ZC5iaWdxdWVyeS5yZXNlcnZhdGlv",
+            "bi52MS5DYXBhY2l0eUNvbW1pdG1lbnQiRtpBBG5hbWWC0+STAjkSNy92MS97",
+            "bmFtZT1wcm9qZWN0cy8qL2xvY2F0aW9ucy8qL2NhcGFjaXR5Q29tbWl0bWVu",
+            "dHMvKn0SwQEKGERlbGV0ZUNhcGFjaXR5Q29tbWl0bWVudBJFLmdvb2dsZS5j",
+            "bG91ZC5iaWdxdWVyeS5yZXNlcnZhdGlvbi52MS5EZWxldGVDYXBhY2l0eUNv",
+            "bW1pdG1lbnRSZXF1ZXN0GhYuZ29vZ2xlLnByb3RvYnVmLkVtcHR5IkbaQQRu",
+            "YW1lgtPkkwI5KjcvdjEve25hbWU9cHJvamVjdHMvKi9sb2NhdGlvbnMvKi9j",
+            "YXBhY2l0eUNvbW1pdG1lbnRzLyp9EqgCChhVcGRhdGVDYXBhY2l0eUNvbW1p",
+            "dG1lbnQSRS5nb29nbGUuY2xvdWQuYmlncXVlcnkucmVzZXJ2YXRpb24udjEu",
+            "VXBkYXRlQ2FwYWNpdHlDb21taXRtZW50UmVxdWVzdBo4Lmdvb2dsZS5jbG91",
+            "ZC5iaWdxdWVyeS5yZXNlcnZhdGlvbi52MS5DYXBhY2l0eUNvbW1pdG1lbnQi",
+            "igHaQR9jYXBhY2l0eV9jb21taXRtZW50LHVwZGF0ZV9tYXNrgtPkkwJiMksv",
+            "djEve2NhcGFjaXR5X2NvbW1pdG1lbnQubmFtZT1wcm9qZWN0cy8qL2xvY2F0",
+            "aW9ucy8qL2NhcGFjaXR5Q29tbWl0bWVudHMvKn06E2NhcGFjaXR5X2NvbW1p",
+            "dG1lbnQSggIKF1NwbGl0Q2FwYWNpdHlDb21taXRtZW50EkQuZ29vZ2xlLmNs",
+            "b3VkLmJpZ3F1ZXJ5LnJlc2VydmF0aW9uLnYxLlNwbGl0Q2FwYWNpdHlDb21t",
+            "aXRtZW50UmVxdWVzdBpFLmdvb2dsZS5jbG91ZC5iaWdxdWVyeS5yZXNlcnZh",
+            "dGlvbi52MS5TcGxpdENhcGFjaXR5Q29tbWl0bWVudFJlc3BvbnNlIlraQQ9u",
+            "YW1lLHNsb3RfY291bnSC0+STAkIiPS92MS97bmFtZT1wcm9qZWN0cy8qL2xv",
+            "Y2F0aW9ucy8qL2NhcGFjaXR5Q29tbWl0bWVudHMvKn06c3BsaXQ6ASoShgIK",
+            "GE1lcmdlQ2FwYWNpdHlDb21taXRtZW50cxJFLmdvb2dsZS5jbG91ZC5iaWdx",
+            "dWVyeS5yZXNlcnZhdGlvbi52MS5NZXJnZUNhcGFjaXR5Q29tbWl0bWVudHNS",
+            "ZXF1ZXN0GjguZ29vZ2xlLmNsb3VkLmJpZ3F1ZXJ5LnJlc2VydmF0aW9uLnYx",
+            "LkNhcGFjaXR5Q29tbWl0bWVudCJp2kEecGFyZW50LGNhcGFjaXR5X2NvbW1p",
+            "dG1lbnRfaWRzgtPkkwJCIj0vdjEve3BhcmVudD1wcm9qZWN0cy8qL2xvY2F0",
+            "aW9ucy8qfS9jYXBhY2l0eUNvbW1pdG1lbnRzOm1lcmdlOgEqEusBChBDcmVh",
             "dGVBc3NpZ25tZW50Ej0uZ29vZ2xlLmNsb3VkLmJpZ3F1ZXJ5LnJlc2VydmF0",
-            "aW9uLnYxLlVwZGF0ZUFzc2lnbm1lbnRSZXF1ZXN0GjAuZ29vZ2xlLmNsb3Vk",
-            "LmJpZ3F1ZXJ5LnJlc2VydmF0aW9uLnYxLkFzc2lnbm1lbnQidtpBFmFzc2ln",
-            "bm1lbnQsdXBkYXRlX21hc2uC0+STAlcySS92MS97YXNzaWdubWVudC5uYW1l",
-            "PXByb2plY3RzLyovbG9jYXRpb25zLyovcmVzZXJ2YXRpb25zLyovYXNzaWdu",
-            "bWVudHMvKn06CmFzc2lnbm1lbnQSxgEKEEdldEJpUmVzZXJ2YXRpb24SPS5n",
-            "b29nbGUuY2xvdWQuYmlncXVlcnkucmVzZXJ2YXRpb24udjEuR2V0QmlSZXNl",
-            "cnZhdGlvblJlcXVlc3QaMy5nb29nbGUuY2xvdWQuYmlncXVlcnkucmVzZXJ2",
-            "YXRpb24udjEuQmlSZXNlcnZhdGlvbiI+2kEEbmFtZYLT5JMCMRIvL3YxL3tu",
-            "YW1lPXByb2plY3RzLyovbG9jYXRpb25zLyovYmlSZXNlcnZhdGlvbn0SgQIK",
-            "E1VwZGF0ZUJpUmVzZXJ2YXRpb24SQC5nb29nbGUuY2xvdWQuYmlncXVlcnku",
-            "cmVzZXJ2YXRpb24udjEuVXBkYXRlQmlSZXNlcnZhdGlvblJlcXVlc3QaMy5n",
-            "b29nbGUuY2xvdWQuYmlncXVlcnkucmVzZXJ2YXRpb24udjEuQmlSZXNlcnZh",
-            "dGlvbiJz2kEaYmlfcmVzZXJ2YXRpb24sdXBkYXRlX21hc2uC0+STAlAyPi92",
-            "MS97YmlfcmVzZXJ2YXRpb24ubmFtZT1wcm9qZWN0cy8qL2xvY2F0aW9ucy8q",
-            "L2JpUmVzZXJ2YXRpb259Og5iaV9yZXNlcnZhdGlvbhp/ykEiYmlncXVlcnly",
-            "ZXNlcnZhdGlvbi5nb29nbGVhcGlzLmNvbdJBV2h0dHBzOi8vd3d3Lmdvb2ds",
-            "ZWFwaXMuY29tL2F1dGgvYmlncXVlcnksaHR0cHM6Ly93d3cuZ29vZ2xlYXBp",
-            "cy5jb20vYXV0aC9jbG91ZC1wbGF0Zm9ybULYAQooY29tLmdvb2dsZS5jbG91",
-            "ZC5iaWdxdWVyeS5yZXNlcnZhdGlvbi52MUIQUmVzZXJ2YXRpb25Qcm90b1AB",
-            "WkpjbG91ZC5nb29nbGUuY29tL2dvL2JpZ3F1ZXJ5L3Jlc2VydmF0aW9uL2Fw",
-            "aXYxL3Jlc2VydmF0aW9ucGI7cmVzZXJ2YXRpb25wYqoCJEdvb2dsZS5DbG91",
-            "ZC5CaWdRdWVyeS5SZXNlcnZhdGlvbi5WMcoCJEdvb2dsZVxDbG91ZFxCaWdR",
-            "dWVyeVxSZXNlcnZhdGlvblxWMWIGcHJvdG8z"));
+            "aW9uLnYxLkNyZWF0ZUFzc2lnbm1lbnRSZXF1ZXN0GjAuZ29vZ2xlLmNsb3Vk",
+            "LmJpZ3F1ZXJ5LnJlc2VydmF0aW9uLnYxLkFzc2lnbm1lbnQiZtpBEXBhcmVu",
+            "dCxhc3NpZ25tZW50gtPkkwJMIj4vdjEve3BhcmVudD1wcm9qZWN0cy8qL2xv",
+            "Y2F0aW9ucy8qL3Jlc2VydmF0aW9ucy8qfS9hc3NpZ25tZW50czoKYXNzaWdu",
+            "bWVudBLfAQoPTGlzdEFzc2lnbm1lbnRzEjwuZ29vZ2xlLmNsb3VkLmJpZ3F1",
+            "ZXJ5LnJlc2VydmF0aW9uLnYxLkxpc3RBc3NpZ25tZW50c1JlcXVlc3QaPS5n",
+            "b29nbGUuY2xvdWQuYmlncXVlcnkucmVzZXJ2YXRpb24udjEuTGlzdEFzc2ln",
+            "bm1lbnRzUmVzcG9uc2UiT9pBBnBhcmVudILT5JMCQBI+L3YxL3twYXJlbnQ9",
+            "cHJvamVjdHMvKi9sb2NhdGlvbnMvKi9yZXNlcnZhdGlvbnMvKn0vYXNzaWdu",
+            "bWVudHMSuAEKEERlbGV0ZUFzc2lnbm1lbnQSPS5nb29nbGUuY2xvdWQuYmln",
+            "cXVlcnkucmVzZXJ2YXRpb24udjEuRGVsZXRlQXNzaWdubWVudFJlcXVlc3Qa",
+            "Fi5nb29nbGUucHJvdG9idWYuRW1wdHkiTdpBBG5hbWWC0+STAkAqPi92MS97",
+            "bmFtZT1wcm9qZWN0cy8qL2xvY2F0aW9ucy8qL3Jlc2VydmF0aW9ucy8qL2Fz",
+            "c2lnbm1lbnRzLyp9EuUBChFTZWFyY2hBc3NpZ25tZW50cxI+Lmdvb2dsZS5j",
+            "bG91ZC5iaWdxdWVyeS5yZXNlcnZhdGlvbi52MS5TZWFyY2hBc3NpZ25tZW50",
+            "c1JlcXVlc3QaPy5nb29nbGUuY2xvdWQuYmlncXVlcnkucmVzZXJ2YXRpb24u",
+            "djEuU2VhcmNoQXNzaWdubWVudHNSZXNwb25zZSJPiAIB2kEMcGFyZW50LHF1",
+            "ZXJ5gtPkkwI3EjUvdjEve3BhcmVudD1wcm9qZWN0cy8qL2xvY2F0aW9ucy8q",
+            "fTpzZWFyY2hBc3NpZ25tZW50cxLuAQoUU2VhcmNoQWxsQXNzaWdubWVudHMS",
+            "QS5nb29nbGUuY2xvdWQuYmlncXVlcnkucmVzZXJ2YXRpb24udjEuU2VhcmNo",
+            "QWxsQXNzaWdubWVudHNSZXF1ZXN0GkIuZ29vZ2xlLmNsb3VkLmJpZ3F1ZXJ5",
+            "LnJlc2VydmF0aW9uLnYxLlNlYXJjaEFsbEFzc2lnbm1lbnRzUmVzcG9uc2Ui",
+            "T9pBDHBhcmVudCxxdWVyeYLT5JMCOhI4L3YxL3twYXJlbnQ9cHJvamVjdHMv",
+            "Ki9sb2NhdGlvbnMvKn06c2VhcmNoQWxsQXNzaWdubWVudHMS5QEKDk1vdmVB",
+            "c3NpZ25tZW50EjsuZ29vZ2xlLmNsb3VkLmJpZ3F1ZXJ5LnJlc2VydmF0aW9u",
+            "LnYxLk1vdmVBc3NpZ25tZW50UmVxdWVzdBowLmdvb2dsZS5jbG91ZC5iaWdx",
+            "dWVyeS5yZXNlcnZhdGlvbi52MS5Bc3NpZ25tZW50ImTaQRNuYW1lLGRlc3Rp",
+            "bmF0aW9uX2lkgtPkkwJIIkMvdjEve25hbWU9cHJvamVjdHMvKi9sb2NhdGlv",
+            "bnMvKi9yZXNlcnZhdGlvbnMvKi9hc3NpZ25tZW50cy8qfTptb3ZlOgEqEvsB",
+            "ChBVcGRhdGVBc3NpZ25tZW50Ej0uZ29vZ2xlLmNsb3VkLmJpZ3F1ZXJ5LnJl",
+            "c2VydmF0aW9uLnYxLlVwZGF0ZUFzc2lnbm1lbnRSZXF1ZXN0GjAuZ29vZ2xl",
+            "LmNsb3VkLmJpZ3F1ZXJ5LnJlc2VydmF0aW9uLnYxLkFzc2lnbm1lbnQidtpB",
+            "FmFzc2lnbm1lbnQsdXBkYXRlX21hc2uC0+STAlcySS92MS97YXNzaWdubWVu",
+            "dC5uYW1lPXByb2plY3RzLyovbG9jYXRpb25zLyovcmVzZXJ2YXRpb25zLyov",
+            "YXNzaWdubWVudHMvKn06CmFzc2lnbm1lbnQSxgEKEEdldEJpUmVzZXJ2YXRp",
+            "b24SPS5nb29nbGUuY2xvdWQuYmlncXVlcnkucmVzZXJ2YXRpb24udjEuR2V0",
+            "QmlSZXNlcnZhdGlvblJlcXVlc3QaMy5nb29nbGUuY2xvdWQuYmlncXVlcnku",
+            "cmVzZXJ2YXRpb24udjEuQmlSZXNlcnZhdGlvbiI+2kEEbmFtZYLT5JMCMRIv",
+            "L3YxL3tuYW1lPXByb2plY3RzLyovbG9jYXRpb25zLyovYmlSZXNlcnZhdGlv",
+            "bn0SgQIKE1VwZGF0ZUJpUmVzZXJ2YXRpb24SQC5nb29nbGUuY2xvdWQuYmln",
+            "cXVlcnkucmVzZXJ2YXRpb24udjEuVXBkYXRlQmlSZXNlcnZhdGlvblJlcXVl",
+            "c3QaMy5nb29nbGUuY2xvdWQuYmlncXVlcnkucmVzZXJ2YXRpb24udjEuQmlS",
+            "ZXNlcnZhdGlvbiJz2kEaYmlfcmVzZXJ2YXRpb24sdXBkYXRlX21hc2uC0+ST",
+            "AlAyPi92MS97YmlfcmVzZXJ2YXRpb24ubmFtZT1wcm9qZWN0cy8qL2xvY2F0",
+            "aW9ucy8qL2JpUmVzZXJ2YXRpb259Og5iaV9yZXNlcnZhdGlvbhL0AQoMR2V0",
+            "SWFtUG9saWN5EiIuZ29vZ2xlLmlhbS52MS5HZXRJYW1Qb2xpY3lSZXF1ZXN0",
+            "GhUuZ29vZ2xlLmlhbS52MS5Qb2xpY3kiqAHaQQhyZXNvdXJjZYLT5JMClgES",
+            "QS92MS97cmVzb3VyY2U9cHJvamVjdHMvKi9sb2NhdGlvbnMvKi9yZXNlcnZh",
+            "dGlvbnMvKn06Z2V0SWFtUG9saWN5WlESTy92MS97cmVzb3VyY2U9cHJvamVj",
+            "dHMvKi9sb2NhdGlvbnMvKi9yZXNlcnZhdGlvbnMvKi9hc3NpZ25tZW50cy8q",
+            "fTpnZXRJYW1Qb2xpY3kSgQIKDFNldElhbVBvbGljeRIiLmdvb2dsZS5pYW0u",
+            "djEuU2V0SWFtUG9saWN5UmVxdWVzdBoVLmdvb2dsZS5pYW0udjEuUG9saWN5",
+            "IrUB2kEPcmVzb3VyY2UscG9saWN5gtPkkwKcASJBL3YxL3tyZXNvdXJjZT1w",
+            "cm9qZWN0cy8qL2xvY2F0aW9ucy8qL3Jlc2VydmF0aW9ucy8qfTpzZXRJYW1Q",
+            "b2xpY3k6ASpaVCJPL3YxL3tyZXNvdXJjZT1wcm9qZWN0cy8qL2xvY2F0aW9u",
+            "cy8qL3Jlc2VydmF0aW9ucy8qL2Fzc2lnbm1lbnRzLyp9OnNldElhbVBvbGlj",
+            "eToBKhKbAgoSVGVzdElhbVBlcm1pc3Npb25zEiguZ29vZ2xlLmlhbS52MS5U",
+            "ZXN0SWFtUGVybWlzc2lvbnNSZXF1ZXN0GikuZ29vZ2xlLmlhbS52MS5UZXN0",
+            "SWFtUGVybWlzc2lvbnNSZXNwb25zZSKvAYLT5JMCqAEiRy92MS97cmVzb3Vy",
+            "Y2U9cHJvamVjdHMvKi9sb2NhdGlvbnMvKi9yZXNlcnZhdGlvbnMvKn06dGVz",
+            "dElhbVBlcm1pc3Npb25zOgEqWloiVS92MS97cmVzb3VyY2U9cHJvamVjdHMv",
+            "Ki9sb2NhdGlvbnMvKi9yZXNlcnZhdGlvbnMvKi9hc3NpZ25tZW50cy8qfTp0",
+            "ZXN0SWFtUGVybWlzc2lvbnM6ASoS5wEKFkNyZWF0ZVJlc2VydmF0aW9uR3Jv",
+            "dXASQy5nb29nbGUuY2xvdWQuYmlncXVlcnkucmVzZXJ2YXRpb24udjEuQ3Jl",
+            "YXRlUmVzZXJ2YXRpb25Hcm91cFJlcXVlc3QaNi5nb29nbGUuY2xvdWQuYmln",
+            "cXVlcnkucmVzZXJ2YXRpb24udjEuUmVzZXJ2YXRpb25Hcm91cCJQgtPkkwJK",
+            "IjUvdjEve3BhcmVudD1wcm9qZWN0cy8qL2xvY2F0aW9ucy8qfS9yZXNlcnZh",
+            "dGlvbkdyb3VwczoRcmVzZXJ2YXRpb25fZ3JvdXAS1QEKE0dldFJlc2VydmF0",
+            "aW9uR3JvdXASQC5nb29nbGUuY2xvdWQuYmlncXVlcnkucmVzZXJ2YXRpb24u",
+            "djEuR2V0UmVzZXJ2YXRpb25Hcm91cFJlcXVlc3QaNi5nb29nbGUuY2xvdWQu",
+            "YmlncXVlcnkucmVzZXJ2YXRpb24udjEuUmVzZXJ2YXRpb25Hcm91cCJE2kEE",
+            "bmFtZYLT5JMCNxI1L3YxL3tuYW1lPXByb2plY3RzLyovbG9jYXRpb25zLyov",
+            "cmVzZXJ2YXRpb25Hcm91cHMvKn0SuwEKFkRlbGV0ZVJlc2VydmF0aW9uR3Jv",
+            "dXASQy5nb29nbGUuY2xvdWQuYmlncXVlcnkucmVzZXJ2YXRpb24udjEuRGVs",
+            "ZXRlUmVzZXJ2YXRpb25Hcm91cFJlcXVlc3QaFi5nb29nbGUucHJvdG9idWYu",
+            "RW1wdHkiRNpBBG5hbWWC0+STAjcqNS92MS97bmFtZT1wcm9qZWN0cy8qL2xv",
+            "Y2F0aW9ucy8qL3Jlc2VydmF0aW9uR3JvdXBzLyp9EugBChVMaXN0UmVzZXJ2",
+            "YXRpb25Hcm91cHMSQi5nb29nbGUuY2xvdWQuYmlncXVlcnkucmVzZXJ2YXRp",
+            "b24udjEuTGlzdFJlc2VydmF0aW9uR3JvdXBzUmVxdWVzdBpDLmdvb2dsZS5j",
+            "bG91ZC5iaWdxdWVyeS5yZXNlcnZhdGlvbi52MS5MaXN0UmVzZXJ2YXRpb25H",
+            "cm91cHNSZXNwb25zZSJG2kEGcGFyZW50gtPkkwI3EjUvdjEve3BhcmVudD1w",
+            "cm9qZWN0cy8qL2xvY2F0aW9ucy8qfS9yZXNlcnZhdGlvbkdyb3Vwcxp/ykEi",
+            "YmlncXVlcnlyZXNlcnZhdGlvbi5nb29nbGVhcGlzLmNvbdJBV2h0dHBzOi8v",
+            "d3d3Lmdvb2dsZWFwaXMuY29tL2F1dGgvYmlncXVlcnksaHR0cHM6Ly93d3cu",
+            "Z29vZ2xlYXBpcy5jb20vYXV0aC9jbG91ZC1wbGF0Zm9ybULYAQooY29tLmdv",
+            "b2dsZS5jbG91ZC5iaWdxdWVyeS5yZXNlcnZhdGlvbi52MUIQUmVzZXJ2YXRp",
+            "b25Qcm90b1ABWkpjbG91ZC5nb29nbGUuY29tL2dvL2JpZ3F1ZXJ5L3Jlc2Vy",
+            "dmF0aW9uL2FwaXYxL3Jlc2VydmF0aW9ucGI7cmVzZXJ2YXRpb25wYqoCJEdv",
+            "b2dsZS5DbG91ZC5CaWdRdWVyeS5SZXNlcnZhdGlvbi5WMcoCJEdvb2dsZVxD",
+            "bG91ZFxCaWdRdWVyeVxSZXNlcnZhdGlvblxWMWIGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Api.ClientReflection.Descriptor, global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.EmptyReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.FieldMaskReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, global::Google.Rpc.StatusReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Api.ClientReflection.Descriptor, global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Cloud.Iam.V1.IamPolicyReflection.Descriptor, global::Google.Cloud.Iam.V1.PolicyReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.EmptyReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.FieldMaskReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, global::Google.Rpc.StatusReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(new[] {typeof(global::Google.Cloud.BigQuery.Reservation.V1.Edition), typeof(global::Google.Cloud.BigQuery.Reservation.V1.FailoverMode), }, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.BigQuery.Reservation.V1.Reservation), global::Google.Cloud.BigQuery.Reservation.V1.Reservation.Parser, new[]{ "Name", "SlotCapacity", "IgnoreIdleSlots", "Autoscale", "Concurrency", "CreationTime", "UpdateTime", "MultiRegionAuxiliary", "Edition", "PrimaryLocation", "SecondaryLocation", "OriginalPrimaryLocation", "MaxSlots", "ScalingMode", "ReplicationStatus" }, new[]{ "MaxSlots" }, new[]{ typeof(global::Google.Cloud.BigQuery.Reservation.V1.Reservation.Types.ScalingMode) }, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.BigQuery.Reservation.V1.Reservation.Types.Autoscale), global::Google.Cloud.BigQuery.Reservation.V1.Reservation.Types.Autoscale.Parser, new[]{ "CurrentSlots", "MaxSlots" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.BigQuery.Reservation.V1.Reservation.Types.ReplicationStatus), global::Google.Cloud.BigQuery.Reservation.V1.Reservation.Types.ReplicationStatus.Parser, new[]{ "Error", "LastErrorTime", "LastReplicationTime", "SoftFailoverStartTime" }, null, null, null, null)}),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.BigQuery.Reservation.V1.Reservation), global::Google.Cloud.BigQuery.Reservation.V1.Reservation.Parser, new[]{ "Name", "SlotCapacity", "IgnoreIdleSlots", "Autoscale", "Concurrency", "CreationTime", "UpdateTime", "MultiRegionAuxiliary", "Edition", "PrimaryLocation", "SecondaryLocation", "OriginalPrimaryLocation", "MaxSlots", "ScalingMode", "Labels", "ReservationGroup", "ReplicationStatus", "SchedulingPolicy" }, new[]{ "MaxSlots" }, new[]{ typeof(global::Google.Cloud.BigQuery.Reservation.V1.Reservation.Types.ScalingMode) }, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.BigQuery.Reservation.V1.Reservation.Types.Autoscale), global::Google.Cloud.BigQuery.Reservation.V1.Reservation.Types.Autoscale.Parser, new[]{ "CurrentSlots", "MaxSlots" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.BigQuery.Reservation.V1.Reservation.Types.ReplicationStatus), global::Google.Cloud.BigQuery.Reservation.V1.Reservation.Types.ReplicationStatus.Parser, new[]{ "Error", "LastErrorTime", "LastReplicationTime", "SoftFailoverStartTime" }, null, null, null, null),
+            null, }),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.BigQuery.Reservation.V1.SchedulingPolicy), global::Google.Cloud.BigQuery.Reservation.V1.SchedulingPolicy.Parser, new[]{ "Concurrency", "MaxSlots" }, new[]{ "Concurrency", "MaxSlots" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.BigQuery.Reservation.V1.ReservationGroup), global::Google.Cloud.BigQuery.Reservation.V1.ReservationGroup.Parser, new[]{ "Name" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.BigQuery.Reservation.V1.CapacityCommitment), global::Google.Cloud.BigQuery.Reservation.V1.CapacityCommitment.Parser, new[]{ "Name", "SlotCount", "Plan", "State", "CommitmentStartTime", "CommitmentEndTime", "FailureStatus", "RenewalPlan", "MultiRegionAuxiliary", "Edition", "IsFlatRate" }, null, new[]{ typeof(global::Google.Cloud.BigQuery.Reservation.V1.CapacityCommitment.Types.CommitmentPlan), typeof(global::Google.Cloud.BigQuery.Reservation.V1.CapacityCommitment.Types.State) }, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.BigQuery.Reservation.V1.CreateReservationRequest), global::Google.Cloud.BigQuery.Reservation.V1.CreateReservationRequest.Parser, new[]{ "Parent", "ReservationId", "Reservation" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.BigQuery.Reservation.V1.ListReservationsRequest), global::Google.Cloud.BigQuery.Reservation.V1.ListReservationsRequest.Parser, new[]{ "Parent", "PageSize", "PageToken" }, null, null, null, null),
@@ -337,6 +415,11 @@ namespace Google.Cloud.BigQuery.Reservation.V1 {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.BigQuery.Reservation.V1.DeleteReservationRequest), global::Google.Cloud.BigQuery.Reservation.V1.DeleteReservationRequest.Parser, new[]{ "Name" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.BigQuery.Reservation.V1.UpdateReservationRequest), global::Google.Cloud.BigQuery.Reservation.V1.UpdateReservationRequest.Parser, new[]{ "Reservation", "UpdateMask" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.BigQuery.Reservation.V1.FailoverReservationRequest), global::Google.Cloud.BigQuery.Reservation.V1.FailoverReservationRequest.Parser, new[]{ "Name", "FailoverMode" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.BigQuery.Reservation.V1.CreateReservationGroupRequest), global::Google.Cloud.BigQuery.Reservation.V1.CreateReservationGroupRequest.Parser, new[]{ "Parent", "ReservationGroupId", "ReservationGroup" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.BigQuery.Reservation.V1.GetReservationGroupRequest), global::Google.Cloud.BigQuery.Reservation.V1.GetReservationGroupRequest.Parser, new[]{ "Name" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.BigQuery.Reservation.V1.ListReservationGroupsRequest), global::Google.Cloud.BigQuery.Reservation.V1.ListReservationGroupsRequest.Parser, new[]{ "Parent", "PageSize", "PageToken" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.BigQuery.Reservation.V1.ListReservationGroupsResponse), global::Google.Cloud.BigQuery.Reservation.V1.ListReservationGroupsResponse.Parser, new[]{ "ReservationGroups", "NextPageToken" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.BigQuery.Reservation.V1.DeleteReservationGroupRequest), global::Google.Cloud.BigQuery.Reservation.V1.DeleteReservationGroupRequest.Parser, new[]{ "Name" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.BigQuery.Reservation.V1.CreateCapacityCommitmentRequest), global::Google.Cloud.BigQuery.Reservation.V1.CreateCapacityCommitmentRequest.Parser, new[]{ "Parent", "CapacityCommitment", "EnforceSingleAdminProjectPerOrg", "CapacityCommitmentId" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.BigQuery.Reservation.V1.ListCapacityCommitmentsRequest), global::Google.Cloud.BigQuery.Reservation.V1.ListCapacityCommitmentsRequest.Parser, new[]{ "Parent", "PageSize", "PageToken" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.BigQuery.Reservation.V1.ListCapacityCommitmentsResponse), global::Google.Cloud.BigQuery.Reservation.V1.ListCapacityCommitmentsResponse.Parser, new[]{ "CapacityCommitments", "NextPageToken" }, null, null, null, null),
@@ -345,8 +428,8 @@ namespace Google.Cloud.BigQuery.Reservation.V1 {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.BigQuery.Reservation.V1.UpdateCapacityCommitmentRequest), global::Google.Cloud.BigQuery.Reservation.V1.UpdateCapacityCommitmentRequest.Parser, new[]{ "CapacityCommitment", "UpdateMask" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.BigQuery.Reservation.V1.SplitCapacityCommitmentRequest), global::Google.Cloud.BigQuery.Reservation.V1.SplitCapacityCommitmentRequest.Parser, new[]{ "Name", "SlotCount" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.BigQuery.Reservation.V1.SplitCapacityCommitmentResponse), global::Google.Cloud.BigQuery.Reservation.V1.SplitCapacityCommitmentResponse.Parser, new[]{ "First", "Second" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.BigQuery.Reservation.V1.MergeCapacityCommitmentsRequest), global::Google.Cloud.BigQuery.Reservation.V1.MergeCapacityCommitmentsRequest.Parser, new[]{ "Parent", "CapacityCommitmentIds" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.BigQuery.Reservation.V1.Assignment), global::Google.Cloud.BigQuery.Reservation.V1.Assignment.Parser, new[]{ "Name", "Assignee", "JobType", "State", "EnableGeminiInBigquery" }, null, new[]{ typeof(global::Google.Cloud.BigQuery.Reservation.V1.Assignment.Types.JobType), typeof(global::Google.Cloud.BigQuery.Reservation.V1.Assignment.Types.State) }, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.BigQuery.Reservation.V1.MergeCapacityCommitmentsRequest), global::Google.Cloud.BigQuery.Reservation.V1.MergeCapacityCommitmentsRequest.Parser, new[]{ "Parent", "CapacityCommitmentIds", "CapacityCommitmentId" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.BigQuery.Reservation.V1.Assignment), global::Google.Cloud.BigQuery.Reservation.V1.Assignment.Parser, new[]{ "Name", "Assignee", "JobType", "State", "EnableGeminiInBigquery", "SchedulingPolicy" }, null, new[]{ typeof(global::Google.Cloud.BigQuery.Reservation.V1.Assignment.Types.JobType), typeof(global::Google.Cloud.BigQuery.Reservation.V1.Assignment.Types.State) }, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.BigQuery.Reservation.V1.CreateAssignmentRequest), global::Google.Cloud.BigQuery.Reservation.V1.CreateAssignmentRequest.Parser, new[]{ "Parent", "Assignment", "AssignmentId" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.BigQuery.Reservation.V1.ListAssignmentsRequest), global::Google.Cloud.BigQuery.Reservation.V1.ListAssignmentsRequest.Parser, new[]{ "Parent", "PageSize", "PageToken" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.BigQuery.Reservation.V1.ListAssignmentsResponse), global::Google.Cloud.BigQuery.Reservation.V1.ListAssignmentsResponse.Parser, new[]{ "Assignments", "NextPageToken" }, null, null, null, null),
@@ -393,7 +476,7 @@ namespace Google.Cloud.BigQuery.Reservation.V1 {
 
   /// <summary>
   /// The failover mode when a user initiates a failover on a reservation
-  /// determines how writes that arepending replication are handled after the
+  /// determines how writes that are pending replication are handled after the
   /// failover is initiated.
   /// </summary>
   public enum FailoverMode {
@@ -472,7 +555,10 @@ namespace Google.Cloud.BigQuery.Reservation.V1 {
       originalPrimaryLocation_ = other.originalPrimaryLocation_;
       maxSlots_ = other.maxSlots_;
       scalingMode_ = other.scalingMode_;
+      labels_ = other.labels_.Clone();
+      reservationGroup_ = other.reservationGroup_;
       replicationStatus_ = other.replicationStatus_ != null ? other.replicationStatus_.Clone() : null;
+      schedulingPolicy_ = other.schedulingPolicy_ != null ? other.schedulingPolicy_.Clone() : null;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -486,7 +572,7 @@ namespace Google.Cloud.BigQuery.Reservation.V1 {
     public const int NameFieldNumber = 1;
     private string name_ = "";
     /// <summary>
-    /// The resource name of the reservation, e.g.,
+    /// Identifier. The resource name of the reservation, e.g.,
     /// `projects/*/locations/*/reservations/team1-prod`.
     /// The reservation_id must only contain lower case alphanumeric characters or
     /// dashes. It must start with a letter and must not end with a dash. Its
@@ -505,7 +591,7 @@ namespace Google.Cloud.BigQuery.Reservation.V1 {
     public const int SlotCapacityFieldNumber = 2;
     private long slotCapacity_;
     /// <summary>
-    /// Baseline slots available to this reservation. A slot is a unit of
+    /// Optional. Baseline slots available to this reservation. A slot is a unit of
     /// computational power in BigQuery, and serves as the unit of parallelism.
     ///
     /// Queries using this reservation might use more slots during runtime if
@@ -533,10 +619,10 @@ namespace Google.Cloud.BigQuery.Reservation.V1 {
     public const int IgnoreIdleSlotsFieldNumber = 4;
     private bool ignoreIdleSlots_;
     /// <summary>
-    /// If false, any query or pipeline job using this reservation will use idle
-    /// slots from other reservations within the same admin project. If true, a
-    /// query or pipeline job using this reservation will execute with the slot
-    /// capacity specified in the slot_capacity field at most.
+    /// Optional. If false, any query or pipeline job using this reservation will
+    /// use idle slots from other reservations within the same admin project. If
+    /// true, a query or pipeline job using this reservation will execute with the
+    /// slot capacity specified in the slot_capacity field at most.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -551,7 +637,7 @@ namespace Google.Cloud.BigQuery.Reservation.V1 {
     public const int AutoscaleFieldNumber = 7;
     private global::Google.Cloud.BigQuery.Reservation.V1.Reservation.Types.Autoscale autoscale_;
     /// <summary>
-    /// The configuration parameters for the auto scaling feature.
+    /// Optional. The configuration parameters for the auto scaling feature.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -566,14 +652,13 @@ namespace Google.Cloud.BigQuery.Reservation.V1 {
     public const int ConcurrencyFieldNumber = 16;
     private long concurrency_;
     /// <summary>
-    /// Job concurrency target which sets a soft upper bound on the number of jobs
-    /// that can run concurrently in this reservation. This is a soft target due to
-    /// asynchronous nature of the system and various optimizations for small
-    /// queries.
-    /// Default value is 0 which means that concurrency target will be
-    /// automatically computed by the system.
-    /// NOTE: this field is exposed as target job concurrency in the Information
-    /// Schema, DDL and BigQuery CLI.
+    /// Optional. Job concurrency target which sets a soft upper bound on the
+    /// number of jobs that can run concurrently in this reservation. This is a
+    /// soft target due to asynchronous nature of the system and various
+    /// optimizations for small queries. Default value is 0 which means that
+    /// concurrency target will be automatically computed by the system. NOTE: this
+    /// field is exposed as target job concurrency in the Information Schema, DDL
+    /// and BigQuery CLI.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -628,6 +713,7 @@ namespace Google.Cloud.BigQuery.Reservation.V1 {
     /// NOTE: this is a preview feature. Project must be allow-listed in order to
     /// set this field.
     /// </summary>
+    [global::System.ObsoleteAttribute]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool MultiRegionAuxiliary {
@@ -641,7 +727,7 @@ namespace Google.Cloud.BigQuery.Reservation.V1 {
     public const int EditionFieldNumber = 17;
     private global::Google.Cloud.BigQuery.Reservation.V1.Edition edition_ = global::Google.Cloud.BigQuery.Reservation.V1.Edition.Unspecified;
     /// <summary>
-    /// Edition of the reservation.
+    /// Optional. Edition of the reservation.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -720,10 +806,13 @@ namespace Google.Cloud.BigQuery.Reservation.V1 {
     /// autoscale.current_slots (which accounts for the additional added slots), it
     /// will never exceed the max_slots - baseline.
     ///
-    /// This field must be set together with the scaling_mode enum value.
+    /// This field must be set together with the scaling_mode enum value,
+    /// otherwise the request will be rejected with error code
+    /// `google.rpc.Code.INVALID_ARGUMENT`.
     ///
     /// If the max_slots and scaling_mode are set, the autoscale or
-    /// autoscale.max_slots field must be unset. However, the
+    /// autoscale.max_slots field must be unset. Otherwise the request will be
+    /// rejected with error code `google.rpc.Code.INVALID_ARGUMENT`. However, the
     /// autoscale field may still be in the output. The autopscale.max_slots will
     /// always show as 0 and the autoscaler.current_slots will represent the
     /// current slots from autoscaler excluding idle slots.
@@ -740,12 +829,14 @@ namespace Google.Cloud.BigQuery.Reservation.V1 {
     ///
     /// If the max_slots and scaling_mode are set, then the ignore_idle_slots field
     /// must be aligned with the scaling_mode enum value.(See details in
-    /// ScalingMode comments).
+    /// ScalingMode comments). Otherwise the request will be rejected with
+    /// error code `google.rpc.Code.INVALID_ARGUMENT`.
     ///
     /// Please note,  the max_slots is for user to manage the part of slots greater
     /// than the baseline. Therefore, we don't allow users to set max_slots smaller
     /// or equal to the baseline as it will not be meaningful. If the field is
-    /// present and slot_capacity>=max_slots.
+    /// present and slot_capacity>=max_slots, requests will be rejected with error
+    /// code `google.rpc.Code.INVALID_ARGUMENT`.
     ///
     /// Please note that if max_slots is set to 0, we will treat it as unset.
     /// Customers can set max_slots to 0 and set scaling_mode to
@@ -778,7 +869,8 @@ namespace Google.Cloud.BigQuery.Reservation.V1 {
     private global::Google.Cloud.BigQuery.Reservation.V1.Reservation.Types.ScalingMode scalingMode_ = global::Google.Cloud.BigQuery.Reservation.V1.Reservation.Types.ScalingMode.Unspecified;
     /// <summary>
     /// Optional. The scaling mode for the reservation.
-    /// If the field is present but max_slots is not present.
+    /// If the field is present but max_slots is not present, requests will be
+    /// rejected with error code `google.rpc.Code.INVALID_ARGUMENT`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -786,6 +878,42 @@ namespace Google.Cloud.BigQuery.Reservation.V1 {
       get { return scalingMode_; }
       set {
         scalingMode_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "labels" field.</summary>
+    public const int LabelsFieldNumber = 23;
+    private static readonly pbc::MapField<string, string>.Codec _map_labels_codec
+        = new pbc::MapField<string, string>.Codec(pb::FieldCodec.ForString(10, ""), pb::FieldCodec.ForString(18, ""), 186);
+    private readonly pbc::MapField<string, string> labels_ = new pbc::MapField<string, string>();
+    /// <summary>
+    /// Optional. The labels associated with this reservation. You can use these
+    /// to organize and group your reservations.
+    /// You can set this property when you create or update a reservation.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pbc::MapField<string, string> Labels {
+      get { return labels_; }
+    }
+
+    /// <summary>Field number for the "reservation_group" field.</summary>
+    public const int ReservationGroupFieldNumber = 25;
+    private string reservationGroup_ = "";
+    /// <summary>
+    /// Optional. The reservation group that this reservation belongs to.
+    /// You can set this property when you create or update a reservation.
+    /// Reservations do not need to belong to a reservation group.
+    /// Format:
+    /// projects/{project}/locations/{location}/reservationGroups/{reservation_group}
+    /// or just {reservation_group}
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string ReservationGroup {
+      get { return reservationGroup_; }
+      set {
+        reservationGroup_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
       }
     }
 
@@ -808,6 +936,25 @@ namespace Google.Cloud.BigQuery.Reservation.V1 {
       get { return replicationStatus_; }
       set {
         replicationStatus_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "scheduling_policy" field.</summary>
+    public const int SchedulingPolicyFieldNumber = 27;
+    private global::Google.Cloud.BigQuery.Reservation.V1.SchedulingPolicy schedulingPolicy_;
+    /// <summary>
+    /// Optional. The scheduling policy to use for jobs and queries running under
+    /// this reservation. The scheduling policy controls how the reservation's
+    /// resources are distributed.
+    ///
+    /// This feature is not yet generally available.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Cloud.BigQuery.Reservation.V1.SchedulingPolicy SchedulingPolicy {
+      get { return schedulingPolicy_; }
+      set {
+        schedulingPolicy_ = value;
       }
     }
 
@@ -840,7 +987,10 @@ namespace Google.Cloud.BigQuery.Reservation.V1 {
       if (OriginalPrimaryLocation != other.OriginalPrimaryLocation) return false;
       if (MaxSlots != other.MaxSlots) return false;
       if (ScalingMode != other.ScalingMode) return false;
+      if (!Labels.Equals(other.Labels)) return false;
+      if (ReservationGroup != other.ReservationGroup) return false;
       if (!object.Equals(ReplicationStatus, other.ReplicationStatus)) return false;
+      if (!object.Equals(SchedulingPolicy, other.SchedulingPolicy)) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -862,7 +1012,10 @@ namespace Google.Cloud.BigQuery.Reservation.V1 {
       if (OriginalPrimaryLocation.Length != 0) hash ^= OriginalPrimaryLocation.GetHashCode();
       if (HasMaxSlots) hash ^= MaxSlots.GetHashCode();
       if (ScalingMode != global::Google.Cloud.BigQuery.Reservation.V1.Reservation.Types.ScalingMode.Unspecified) hash ^= ScalingMode.GetHashCode();
+      hash ^= Labels.GetHashCode();
+      if (ReservationGroup.Length != 0) hash ^= ReservationGroup.GetHashCode();
       if (replicationStatus_ != null) hash ^= ReplicationStatus.GetHashCode();
+      if (schedulingPolicy_ != null) hash ^= SchedulingPolicy.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -937,9 +1090,18 @@ namespace Google.Cloud.BigQuery.Reservation.V1 {
         output.WriteRawTag(176, 1);
         output.WriteEnum((int) ScalingMode);
       }
+      labels_.WriteTo(output, _map_labels_codec);
       if (replicationStatus_ != null) {
         output.WriteRawTag(194, 1);
         output.WriteMessage(ReplicationStatus);
+      }
+      if (ReservationGroup.Length != 0) {
+        output.WriteRawTag(202, 1);
+        output.WriteString(ReservationGroup);
+      }
+      if (schedulingPolicy_ != null) {
+        output.WriteRawTag(218, 1);
+        output.WriteMessage(SchedulingPolicy);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
@@ -1007,9 +1169,18 @@ namespace Google.Cloud.BigQuery.Reservation.V1 {
         output.WriteRawTag(176, 1);
         output.WriteEnum((int) ScalingMode);
       }
+      labels_.WriteTo(ref output, _map_labels_codec);
       if (replicationStatus_ != null) {
         output.WriteRawTag(194, 1);
         output.WriteMessage(ReplicationStatus);
+      }
+      if (ReservationGroup.Length != 0) {
+        output.WriteRawTag(202, 1);
+        output.WriteString(ReservationGroup);
+      }
+      if (schedulingPolicy_ != null) {
+        output.WriteRawTag(218, 1);
+        output.WriteMessage(SchedulingPolicy);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
@@ -1063,8 +1234,15 @@ namespace Google.Cloud.BigQuery.Reservation.V1 {
       if (ScalingMode != global::Google.Cloud.BigQuery.Reservation.V1.Reservation.Types.ScalingMode.Unspecified) {
         size += 2 + pb::CodedOutputStream.ComputeEnumSize((int) ScalingMode);
       }
+      size += labels_.CalculateSize(_map_labels_codec);
+      if (ReservationGroup.Length != 0) {
+        size += 2 + pb::CodedOutputStream.ComputeStringSize(ReservationGroup);
+      }
       if (replicationStatus_ != null) {
         size += 2 + pb::CodedOutputStream.ComputeMessageSize(ReplicationStatus);
+      }
+      if (schedulingPolicy_ != null) {
+        size += 2 + pb::CodedOutputStream.ComputeMessageSize(SchedulingPolicy);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -1129,11 +1307,21 @@ namespace Google.Cloud.BigQuery.Reservation.V1 {
       if (other.ScalingMode != global::Google.Cloud.BigQuery.Reservation.V1.Reservation.Types.ScalingMode.Unspecified) {
         ScalingMode = other.ScalingMode;
       }
+      labels_.MergeFrom(other.labels_);
+      if (other.ReservationGroup.Length != 0) {
+        ReservationGroup = other.ReservationGroup;
+      }
       if (other.replicationStatus_ != null) {
         if (replicationStatus_ == null) {
           ReplicationStatus = new global::Google.Cloud.BigQuery.Reservation.V1.Reservation.Types.ReplicationStatus();
         }
         ReplicationStatus.MergeFrom(other.ReplicationStatus);
+      }
+      if (other.schedulingPolicy_ != null) {
+        if (schedulingPolicy_ == null) {
+          SchedulingPolicy = new global::Google.Cloud.BigQuery.Reservation.V1.SchedulingPolicy();
+        }
+        SchedulingPolicy.MergeFrom(other.SchedulingPolicy);
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -1215,11 +1403,26 @@ namespace Google.Cloud.BigQuery.Reservation.V1 {
             ScalingMode = (global::Google.Cloud.BigQuery.Reservation.V1.Reservation.Types.ScalingMode) input.ReadEnum();
             break;
           }
+          case 186: {
+            labels_.AddEntriesFrom(input, _map_labels_codec);
+            break;
+          }
           case 194: {
             if (replicationStatus_ == null) {
               ReplicationStatus = new global::Google.Cloud.BigQuery.Reservation.V1.Reservation.Types.ReplicationStatus();
             }
             input.ReadMessage(ReplicationStatus);
+            break;
+          }
+          case 202: {
+            ReservationGroup = input.ReadString();
+            break;
+          }
+          case 218: {
+            if (schedulingPolicy_ == null) {
+              SchedulingPolicy = new global::Google.Cloud.BigQuery.Reservation.V1.SchedulingPolicy();
+            }
+            input.ReadMessage(SchedulingPolicy);
             break;
           }
         }
@@ -1302,11 +1505,26 @@ namespace Google.Cloud.BigQuery.Reservation.V1 {
             ScalingMode = (global::Google.Cloud.BigQuery.Reservation.V1.Reservation.Types.ScalingMode) input.ReadEnum();
             break;
           }
+          case 186: {
+            labels_.AddEntriesFrom(ref input, _map_labels_codec);
+            break;
+          }
           case 194: {
             if (replicationStatus_ == null) {
               ReplicationStatus = new global::Google.Cloud.BigQuery.Reservation.V1.Reservation.Types.ReplicationStatus();
             }
             input.ReadMessage(ReplicationStatus);
+            break;
+          }
+          case 202: {
+            ReservationGroup = input.ReadString();
+            break;
+          }
+          case 218: {
+            if (schedulingPolicy_ == null) {
+              SchedulingPolicy = new global::Google.Cloud.BigQuery.Reservation.V1.SchedulingPolicy();
+            }
+            input.ReadMessage(SchedulingPolicy);
             break;
           }
         }
@@ -1337,7 +1555,8 @@ namespace Google.Cloud.BigQuery.Reservation.V1 {
         /// slots and no idle slots will be used.
         ///
         /// Please note, in this mode, the ignore_idle_slots field must be set to
-        /// true.
+        /// true. Otherwise the request will be rejected with error code
+        /// `google.rpc.Code.INVALID_ARGUMENT`.
         /// </summary>
         [pbr::OriginalName("AUTOSCALE_ONLY")] AutoscaleOnly = 1,
         /// <summary>
@@ -1358,7 +1577,8 @@ namespace Google.Cloud.BigQuery.Reservation.V1 {
         /// to max_slots.
         ///
         /// Please note, in this mode, the ignore_idle_slots field must be set to
-        /// false.
+        /// false. Otherwise the request will be rejected with error code
+        /// `google.rpc.Code.INVALID_ARGUMENT`.
         /// </summary>
         [pbr::OriginalName("IDLE_SLOTS_ONLY")] IdleSlotsOnly = 2,
         /// <summary>
@@ -1377,7 +1597,8 @@ namespace Google.Cloud.BigQuery.Reservation.V1 {
         /// scale up to 1000 slots with 200 baseline and 800 autoscaling slots.
         ///
         /// Please note, in this mode, the ignore_idle_slots field must be set to
-        /// false.
+        /// false. Otherwise the request will be rejected with error code
+        /// `google.rpc.Code.INVALID_ARGUMENT`.
         /// </summary>
         [pbr::OriginalName("ALL_SLOTS")] AllSlots = 3,
       }
@@ -1454,7 +1675,7 @@ namespace Google.Cloud.BigQuery.Reservation.V1 {
         public const int MaxSlotsFieldNumber = 2;
         private long maxSlots_;
         /// <summary>
-        /// Number of slots to be scaled when needed.
+        /// Optional. Number of slots to be scaled when needed.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -1989,6 +2210,482 @@ namespace Google.Cloud.BigQuery.Reservation.V1 {
   }
 
   /// <summary>
+  /// The scheduling policy controls how a reservation's resources are distributed.
+  /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+  public sealed partial class SchedulingPolicy : pb::IMessage<SchedulingPolicy>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<SchedulingPolicy> _parser = new pb::MessageParser<SchedulingPolicy>(() => new SchedulingPolicy());
+    private pb::UnknownFieldSet _unknownFields;
+    private int _hasBits0;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<SchedulingPolicy> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Cloud.BigQuery.Reservation.V1.ReservationReflection.Descriptor.MessageTypes[1]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public SchedulingPolicy() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public SchedulingPolicy(SchedulingPolicy other) : this() {
+      _hasBits0 = other._hasBits0;
+      concurrency_ = other.concurrency_;
+      maxSlots_ = other.maxSlots_;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public SchedulingPolicy Clone() {
+      return new SchedulingPolicy(this);
+    }
+
+    /// <summary>Field number for the "concurrency" field.</summary>
+    public const int ConcurrencyFieldNumber = 1;
+    private readonly static long ConcurrencyDefaultValue = 0L;
+
+    private long concurrency_;
+    /// <summary>
+    /// Optional. If present and > 0, the reservation will attempt to limit the
+    /// concurrency of jobs running for any particular project within it to the
+    /// given value.
+    ///
+    /// This feature is not yet generally available.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public long Concurrency {
+      get { if ((_hasBits0 & 1) != 0) { return concurrency_; } else { return ConcurrencyDefaultValue; } }
+      set {
+        _hasBits0 |= 1;
+        concurrency_ = value;
+      }
+    }
+    /// <summary>Gets whether the "concurrency" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasConcurrency {
+      get { return (_hasBits0 & 1) != 0; }
+    }
+    /// <summary>Clears the value of the "concurrency" field</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearConcurrency() {
+      _hasBits0 &= ~1;
+    }
+
+    /// <summary>Field number for the "max_slots" field.</summary>
+    public const int MaxSlotsFieldNumber = 2;
+    private readonly static long MaxSlotsDefaultValue = 0L;
+
+    private long maxSlots_;
+    /// <summary>
+    /// Optional. If present and > 0, the reservation will attempt to limit the
+    /// slot consumption of queries running for any particular project within it to
+    /// the given value.
+    ///
+    /// This feature is not yet generally available.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public long MaxSlots {
+      get { if ((_hasBits0 & 2) != 0) { return maxSlots_; } else { return MaxSlotsDefaultValue; } }
+      set {
+        _hasBits0 |= 2;
+        maxSlots_ = value;
+      }
+    }
+    /// <summary>Gets whether the "max_slots" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasMaxSlots {
+      get { return (_hasBits0 & 2) != 0; }
+    }
+    /// <summary>Clears the value of the "max_slots" field</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearMaxSlots() {
+      _hasBits0 &= ~2;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as SchedulingPolicy);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(SchedulingPolicy other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (Concurrency != other.Concurrency) return false;
+      if (MaxSlots != other.MaxSlots) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (HasConcurrency) hash ^= Concurrency.GetHashCode();
+      if (HasMaxSlots) hash ^= MaxSlots.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (HasConcurrency) {
+        output.WriteRawTag(8);
+        output.WriteInt64(Concurrency);
+      }
+      if (HasMaxSlots) {
+        output.WriteRawTag(16);
+        output.WriteInt64(MaxSlots);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (HasConcurrency) {
+        output.WriteRawTag(8);
+        output.WriteInt64(Concurrency);
+      }
+      if (HasMaxSlots) {
+        output.WriteRawTag(16);
+        output.WriteInt64(MaxSlots);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      if (HasConcurrency) {
+        size += 1 + pb::CodedOutputStream.ComputeInt64Size(Concurrency);
+      }
+      if (HasMaxSlots) {
+        size += 1 + pb::CodedOutputStream.ComputeInt64Size(MaxSlots);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(SchedulingPolicy other) {
+      if (other == null) {
+        return;
+      }
+      if (other.HasConcurrency) {
+        Concurrency = other.Concurrency;
+      }
+      if (other.HasMaxSlots) {
+        MaxSlots = other.MaxSlots;
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 8: {
+            Concurrency = input.ReadInt64();
+            break;
+          }
+          case 16: {
+            MaxSlots = input.ReadInt64();
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 8: {
+            Concurrency = input.ReadInt64();
+            break;
+          }
+          case 16: {
+            MaxSlots = input.ReadInt64();
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+  }
+
+  /// <summary>
+  /// A reservation group is a container for reservations.
+  /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+  public sealed partial class ReservationGroup : pb::IMessage<ReservationGroup>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<ReservationGroup> _parser = new pb::MessageParser<ReservationGroup>(() => new ReservationGroup());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<ReservationGroup> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Cloud.BigQuery.Reservation.V1.ReservationReflection.Descriptor.MessageTypes[2]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public ReservationGroup() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public ReservationGroup(ReservationGroup other) : this() {
+      name_ = other.name_;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public ReservationGroup Clone() {
+      return new ReservationGroup(this);
+    }
+
+    /// <summary>Field number for the "name" field.</summary>
+    public const int NameFieldNumber = 1;
+    private string name_ = "";
+    /// <summary>
+    /// Identifier. The resource name of the reservation group, e.g.,
+    /// `projects/*/locations/*/reservationGroups/team1-prod`.
+    /// The reservation_group_id must only contain lower case alphanumeric
+    /// characters or dashes. It must start with a letter and must not end with a
+    /// dash. Its maximum length is 64 characters.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string Name {
+      get { return name_; }
+      set {
+        name_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as ReservationGroup);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(ReservationGroup other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (Name != other.Name) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (Name.Length != 0) hash ^= Name.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (Name.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(Name);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (Name.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(Name);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      if (Name.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Name);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(ReservationGroup other) {
+      if (other == null) {
+        return;
+      }
+      if (other.Name.Length != 0) {
+        Name = other.Name;
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            Name = input.ReadString();
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            Name = input.ReadString();
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+  }
+
+  /// <summary>
   /// Capacity commitment is a way to purchase compute capacity for BigQuery jobs
   /// (in the form of slots) with some committed period of usage. Annual
   /// commitments renew by default. Commitments can be removed after their
@@ -2015,7 +2712,7 @@ namespace Google.Cloud.BigQuery.Reservation.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.BigQuery.Reservation.V1.ReservationReflection.Descriptor.MessageTypes[1]; }
+      get { return global::Google.Cloud.BigQuery.Reservation.V1.ReservationReflection.Descriptor.MessageTypes[3]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -2078,7 +2775,7 @@ namespace Google.Cloud.BigQuery.Reservation.V1 {
     public const int SlotCountFieldNumber = 2;
     private long slotCount_;
     /// <summary>
-    /// Number of slots in this commitment.
+    /// Optional. Number of slots in this commitment.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -2093,7 +2790,7 @@ namespace Google.Cloud.BigQuery.Reservation.V1 {
     public const int PlanFieldNumber = 3;
     private global::Google.Cloud.BigQuery.Reservation.V1.CapacityCommitment.Types.CommitmentPlan plan_ = global::Google.Cloud.BigQuery.Reservation.V1.CapacityCommitment.Types.CommitmentPlan.Unspecified;
     /// <summary>
-    /// Capacity commitment commitment plan.
+    /// Optional. Capacity commitment commitment plan.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -2143,7 +2840,7 @@ namespace Google.Cloud.BigQuery.Reservation.V1 {
     /// <summary>
     /// Output only. The end of the current commitment period. It is applicable
     /// only for ACTIVE capacity commitments. Note after renewal,
-    /// commitment_end_time is the time the renewed commitment expires. So it would
+    /// commitment_end_time is the time the renewed commitment expires. So itwould
     /// be at a time after commitment_start_time + committed period, because we
     /// don't change commitment_start_time ,
     /// </summary>
@@ -2175,9 +2872,10 @@ namespace Google.Cloud.BigQuery.Reservation.V1 {
     public const int RenewalPlanFieldNumber = 8;
     private global::Google.Cloud.BigQuery.Reservation.V1.CapacityCommitment.Types.CommitmentPlan renewalPlan_ = global::Google.Cloud.BigQuery.Reservation.V1.CapacityCommitment.Types.CommitmentPlan.Unspecified;
     /// <summary>
-    /// The plan this capacity commitment is converted to after commitment_end_time
-    /// passes. Once the plan is changed, committed period is extended according to
-    /// commitment plan. Only applicable for ANNUAL and TRIAL commitments.
+    /// Optional. The plan this capacity commitment is converted to after
+    /// commitment_end_time passes. Once the plan is changed, committed period is
+    /// extended according to commitment plan. Only applicable for ANNUAL and TRIAL
+    /// commitments.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -2202,6 +2900,7 @@ namespace Google.Cloud.BigQuery.Reservation.V1 {
     /// NOTE: this is a preview feature. Project must be allow-listed in order to
     /// set this field.
     /// </summary>
+    [global::System.ObsoleteAttribute]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool MultiRegionAuxiliary {
@@ -2215,7 +2914,7 @@ namespace Google.Cloud.BigQuery.Reservation.V1 {
     public const int EditionFieldNumber = 12;
     private global::Google.Cloud.BigQuery.Reservation.V1.Edition edition_ = global::Google.Cloud.BigQuery.Reservation.V1.Edition.Unspecified;
     /// <summary>
-    /// Edition of the capacity commitment.
+    /// Optional. Edition of the capacity commitment.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -2765,7 +3464,7 @@ namespace Google.Cloud.BigQuery.Reservation.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.BigQuery.Reservation.V1.ReservationReflection.Descriptor.MessageTypes[2]; }
+      get { return global::Google.Cloud.BigQuery.Reservation.V1.ReservationReflection.Descriptor.MessageTypes[4]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -3054,7 +3753,7 @@ namespace Google.Cloud.BigQuery.Reservation.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.BigQuery.Reservation.V1.ReservationReflection.Descriptor.MessageTypes[3]; }
+      get { return global::Google.Cloud.BigQuery.Reservation.V1.ReservationReflection.Descriptor.MessageTypes[5]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -3332,7 +4031,7 @@ namespace Google.Cloud.BigQuery.Reservation.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.BigQuery.Reservation.V1.ReservationReflection.Descriptor.MessageTypes[4]; }
+      get { return global::Google.Cloud.BigQuery.Reservation.V1.ReservationReflection.Descriptor.MessageTypes[6]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -3559,7 +4258,7 @@ namespace Google.Cloud.BigQuery.Reservation.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.BigQuery.Reservation.V1.ReservationReflection.Descriptor.MessageTypes[5]; }
+      get { return global::Google.Cloud.BigQuery.Reservation.V1.ReservationReflection.Descriptor.MessageTypes[7]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -3757,7 +4456,7 @@ namespace Google.Cloud.BigQuery.Reservation.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.BigQuery.Reservation.V1.ReservationReflection.Descriptor.MessageTypes[6]; }
+      get { return global::Google.Cloud.BigQuery.Reservation.V1.ReservationReflection.Descriptor.MessageTypes[8]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -3955,7 +4654,7 @@ namespace Google.Cloud.BigQuery.Reservation.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.BigQuery.Reservation.V1.ReservationReflection.Descriptor.MessageTypes[7]; }
+      get { return global::Google.Cloud.BigQuery.Reservation.V1.ReservationReflection.Descriptor.MessageTypes[9]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -4209,7 +4908,7 @@ namespace Google.Cloud.BigQuery.Reservation.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.BigQuery.Reservation.V1.ReservationReflection.Descriptor.MessageTypes[8]; }
+      get { return global::Google.Cloud.BigQuery.Reservation.V1.ReservationReflection.Descriptor.MessageTypes[10]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -4432,6 +5131,1196 @@ namespace Google.Cloud.BigQuery.Reservation.V1 {
 
   /// <summary>
   /// The request for
+  /// [ReservationService.CreateReservationGroup][google.cloud.bigquery.reservation.v1.ReservationService.CreateReservationGroup].
+  /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+  public sealed partial class CreateReservationGroupRequest : pb::IMessage<CreateReservationGroupRequest>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<CreateReservationGroupRequest> _parser = new pb::MessageParser<CreateReservationGroupRequest>(() => new CreateReservationGroupRequest());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<CreateReservationGroupRequest> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Cloud.BigQuery.Reservation.V1.ReservationReflection.Descriptor.MessageTypes[11]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public CreateReservationGroupRequest() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public CreateReservationGroupRequest(CreateReservationGroupRequest other) : this() {
+      parent_ = other.parent_;
+      reservationGroupId_ = other.reservationGroupId_;
+      reservationGroup_ = other.reservationGroup_ != null ? other.reservationGroup_.Clone() : null;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public CreateReservationGroupRequest Clone() {
+      return new CreateReservationGroupRequest(this);
+    }
+
+    /// <summary>Field number for the "parent" field.</summary>
+    public const int ParentFieldNumber = 1;
+    private string parent_ = "";
+    /// <summary>
+    /// Required. Project, location. E.g.,
+    /// `projects/myproject/locations/US`
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string Parent {
+      get { return parent_; }
+      set {
+        parent_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "reservation_group_id" field.</summary>
+    public const int ReservationGroupIdFieldNumber = 2;
+    private string reservationGroupId_ = "";
+    /// <summary>
+    /// Required. The reservation group ID. It must only contain lower case
+    /// alphanumeric characters or dashes. It must start with a letter and must not
+    /// end with a dash. Its maximum length is 64 characters.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string ReservationGroupId {
+      get { return reservationGroupId_; }
+      set {
+        reservationGroupId_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "reservation_group" field.</summary>
+    public const int ReservationGroupFieldNumber = 3;
+    private global::Google.Cloud.BigQuery.Reservation.V1.ReservationGroup reservationGroup_;
+    /// <summary>
+    /// Required. New Reservation Group to create.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Cloud.BigQuery.Reservation.V1.ReservationGroup ReservationGroup {
+      get { return reservationGroup_; }
+      set {
+        reservationGroup_ = value;
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as CreateReservationGroupRequest);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(CreateReservationGroupRequest other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (Parent != other.Parent) return false;
+      if (ReservationGroupId != other.ReservationGroupId) return false;
+      if (!object.Equals(ReservationGroup, other.ReservationGroup)) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (Parent.Length != 0) hash ^= Parent.GetHashCode();
+      if (ReservationGroupId.Length != 0) hash ^= ReservationGroupId.GetHashCode();
+      if (reservationGroup_ != null) hash ^= ReservationGroup.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (Parent.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(Parent);
+      }
+      if (ReservationGroupId.Length != 0) {
+        output.WriteRawTag(18);
+        output.WriteString(ReservationGroupId);
+      }
+      if (reservationGroup_ != null) {
+        output.WriteRawTag(26);
+        output.WriteMessage(ReservationGroup);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (Parent.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(Parent);
+      }
+      if (ReservationGroupId.Length != 0) {
+        output.WriteRawTag(18);
+        output.WriteString(ReservationGroupId);
+      }
+      if (reservationGroup_ != null) {
+        output.WriteRawTag(26);
+        output.WriteMessage(ReservationGroup);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      if (Parent.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Parent);
+      }
+      if (ReservationGroupId.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(ReservationGroupId);
+      }
+      if (reservationGroup_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(ReservationGroup);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(CreateReservationGroupRequest other) {
+      if (other == null) {
+        return;
+      }
+      if (other.Parent.Length != 0) {
+        Parent = other.Parent;
+      }
+      if (other.ReservationGroupId.Length != 0) {
+        ReservationGroupId = other.ReservationGroupId;
+      }
+      if (other.reservationGroup_ != null) {
+        if (reservationGroup_ == null) {
+          ReservationGroup = new global::Google.Cloud.BigQuery.Reservation.V1.ReservationGroup();
+        }
+        ReservationGroup.MergeFrom(other.ReservationGroup);
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            Parent = input.ReadString();
+            break;
+          }
+          case 18: {
+            ReservationGroupId = input.ReadString();
+            break;
+          }
+          case 26: {
+            if (reservationGroup_ == null) {
+              ReservationGroup = new global::Google.Cloud.BigQuery.Reservation.V1.ReservationGroup();
+            }
+            input.ReadMessage(ReservationGroup);
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            Parent = input.ReadString();
+            break;
+          }
+          case 18: {
+            ReservationGroupId = input.ReadString();
+            break;
+          }
+          case 26: {
+            if (reservationGroup_ == null) {
+              ReservationGroup = new global::Google.Cloud.BigQuery.Reservation.V1.ReservationGroup();
+            }
+            input.ReadMessage(ReservationGroup);
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+  }
+
+  /// <summary>
+  /// The request for
+  /// [ReservationService.GetReservationGroup][google.cloud.bigquery.reservation.v1.ReservationService.GetReservationGroup].
+  /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+  public sealed partial class GetReservationGroupRequest : pb::IMessage<GetReservationGroupRequest>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<GetReservationGroupRequest> _parser = new pb::MessageParser<GetReservationGroupRequest>(() => new GetReservationGroupRequest());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<GetReservationGroupRequest> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Cloud.BigQuery.Reservation.V1.ReservationReflection.Descriptor.MessageTypes[12]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public GetReservationGroupRequest() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public GetReservationGroupRequest(GetReservationGroupRequest other) : this() {
+      name_ = other.name_;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public GetReservationGroupRequest Clone() {
+      return new GetReservationGroupRequest(this);
+    }
+
+    /// <summary>Field number for the "name" field.</summary>
+    public const int NameFieldNumber = 1;
+    private string name_ = "";
+    /// <summary>
+    /// Required. Resource name of the reservation group to retrieve. E.g.,
+    ///    `projects/myproject/locations/US/reservationGroups/team1-prod`
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string Name {
+      get { return name_; }
+      set {
+        name_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as GetReservationGroupRequest);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(GetReservationGroupRequest other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (Name != other.Name) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (Name.Length != 0) hash ^= Name.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (Name.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(Name);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (Name.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(Name);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      if (Name.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Name);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(GetReservationGroupRequest other) {
+      if (other == null) {
+        return;
+      }
+      if (other.Name.Length != 0) {
+        Name = other.Name;
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            Name = input.ReadString();
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            Name = input.ReadString();
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+  }
+
+  /// <summary>
+  /// The request for
+  /// [ReservationService.ListReservationGroups][google.cloud.bigquery.reservation.v1.ReservationService.ListReservationGroups].
+  /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+  public sealed partial class ListReservationGroupsRequest : pb::IMessage<ListReservationGroupsRequest>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<ListReservationGroupsRequest> _parser = new pb::MessageParser<ListReservationGroupsRequest>(() => new ListReservationGroupsRequest());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<ListReservationGroupsRequest> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Cloud.BigQuery.Reservation.V1.ReservationReflection.Descriptor.MessageTypes[13]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public ListReservationGroupsRequest() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public ListReservationGroupsRequest(ListReservationGroupsRequest other) : this() {
+      parent_ = other.parent_;
+      pageSize_ = other.pageSize_;
+      pageToken_ = other.pageToken_;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public ListReservationGroupsRequest Clone() {
+      return new ListReservationGroupsRequest(this);
+    }
+
+    /// <summary>Field number for the "parent" field.</summary>
+    public const int ParentFieldNumber = 1;
+    private string parent_ = "";
+    /// <summary>
+    /// Required. The parent resource name containing project and location, e.g.:
+    ///   `projects/myproject/locations/US`
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string Parent {
+      get { return parent_; }
+      set {
+        parent_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "page_size" field.</summary>
+    public const int PageSizeFieldNumber = 2;
+    private int pageSize_;
+    /// <summary>
+    /// The maximum number of items to return per page.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int PageSize {
+      get { return pageSize_; }
+      set {
+        pageSize_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "page_token" field.</summary>
+    public const int PageTokenFieldNumber = 3;
+    private string pageToken_ = "";
+    /// <summary>
+    /// The next_page_token value returned from a previous List request, if any.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string PageToken {
+      get { return pageToken_; }
+      set {
+        pageToken_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as ListReservationGroupsRequest);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(ListReservationGroupsRequest other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (Parent != other.Parent) return false;
+      if (PageSize != other.PageSize) return false;
+      if (PageToken != other.PageToken) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (Parent.Length != 0) hash ^= Parent.GetHashCode();
+      if (PageSize != 0) hash ^= PageSize.GetHashCode();
+      if (PageToken.Length != 0) hash ^= PageToken.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (Parent.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(Parent);
+      }
+      if (PageSize != 0) {
+        output.WriteRawTag(16);
+        output.WriteInt32(PageSize);
+      }
+      if (PageToken.Length != 0) {
+        output.WriteRawTag(26);
+        output.WriteString(PageToken);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (Parent.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(Parent);
+      }
+      if (PageSize != 0) {
+        output.WriteRawTag(16);
+        output.WriteInt32(PageSize);
+      }
+      if (PageToken.Length != 0) {
+        output.WriteRawTag(26);
+        output.WriteString(PageToken);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      if (Parent.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Parent);
+      }
+      if (PageSize != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeInt32Size(PageSize);
+      }
+      if (PageToken.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(PageToken);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(ListReservationGroupsRequest other) {
+      if (other == null) {
+        return;
+      }
+      if (other.Parent.Length != 0) {
+        Parent = other.Parent;
+      }
+      if (other.PageSize != 0) {
+        PageSize = other.PageSize;
+      }
+      if (other.PageToken.Length != 0) {
+        PageToken = other.PageToken;
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            Parent = input.ReadString();
+            break;
+          }
+          case 16: {
+            PageSize = input.ReadInt32();
+            break;
+          }
+          case 26: {
+            PageToken = input.ReadString();
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            Parent = input.ReadString();
+            break;
+          }
+          case 16: {
+            PageSize = input.ReadInt32();
+            break;
+          }
+          case 26: {
+            PageToken = input.ReadString();
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+  }
+
+  /// <summary>
+  /// The response for
+  /// [ReservationService.ListReservationGroups][google.cloud.bigquery.reservation.v1.ReservationService.ListReservationGroups].
+  /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+  public sealed partial class ListReservationGroupsResponse : pb::IMessage<ListReservationGroupsResponse>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<ListReservationGroupsResponse> _parser = new pb::MessageParser<ListReservationGroupsResponse>(() => new ListReservationGroupsResponse());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<ListReservationGroupsResponse> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Cloud.BigQuery.Reservation.V1.ReservationReflection.Descriptor.MessageTypes[14]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public ListReservationGroupsResponse() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public ListReservationGroupsResponse(ListReservationGroupsResponse other) : this() {
+      reservationGroups_ = other.reservationGroups_.Clone();
+      nextPageToken_ = other.nextPageToken_;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public ListReservationGroupsResponse Clone() {
+      return new ListReservationGroupsResponse(this);
+    }
+
+    /// <summary>Field number for the "reservation_groups" field.</summary>
+    public const int ReservationGroupsFieldNumber = 1;
+    private static readonly pb::FieldCodec<global::Google.Cloud.BigQuery.Reservation.V1.ReservationGroup> _repeated_reservationGroups_codec
+        = pb::FieldCodec.ForMessage(10, global::Google.Cloud.BigQuery.Reservation.V1.ReservationGroup.Parser);
+    private readonly pbc::RepeatedField<global::Google.Cloud.BigQuery.Reservation.V1.ReservationGroup> reservationGroups_ = new pbc::RepeatedField<global::Google.Cloud.BigQuery.Reservation.V1.ReservationGroup>();
+    /// <summary>
+    /// List of reservations visible to the user.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pbc::RepeatedField<global::Google.Cloud.BigQuery.Reservation.V1.ReservationGroup> ReservationGroups {
+      get { return reservationGroups_; }
+    }
+
+    /// <summary>Field number for the "next_page_token" field.</summary>
+    public const int NextPageTokenFieldNumber = 2;
+    private string nextPageToken_ = "";
+    /// <summary>
+    /// Token to retrieve the next page of results, or empty if there are no
+    /// more results in the list.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string NextPageToken {
+      get { return nextPageToken_; }
+      set {
+        nextPageToken_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as ListReservationGroupsResponse);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(ListReservationGroupsResponse other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if(!reservationGroups_.Equals(other.reservationGroups_)) return false;
+      if (NextPageToken != other.NextPageToken) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      hash ^= reservationGroups_.GetHashCode();
+      if (NextPageToken.Length != 0) hash ^= NextPageToken.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      reservationGroups_.WriteTo(output, _repeated_reservationGroups_codec);
+      if (NextPageToken.Length != 0) {
+        output.WriteRawTag(18);
+        output.WriteString(NextPageToken);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      reservationGroups_.WriteTo(ref output, _repeated_reservationGroups_codec);
+      if (NextPageToken.Length != 0) {
+        output.WriteRawTag(18);
+        output.WriteString(NextPageToken);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      size += reservationGroups_.CalculateSize(_repeated_reservationGroups_codec);
+      if (NextPageToken.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(NextPageToken);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(ListReservationGroupsResponse other) {
+      if (other == null) {
+        return;
+      }
+      reservationGroups_.Add(other.reservationGroups_);
+      if (other.NextPageToken.Length != 0) {
+        NextPageToken = other.NextPageToken;
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            reservationGroups_.AddEntriesFrom(input, _repeated_reservationGroups_codec);
+            break;
+          }
+          case 18: {
+            NextPageToken = input.ReadString();
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            reservationGroups_.AddEntriesFrom(ref input, _repeated_reservationGroups_codec);
+            break;
+          }
+          case 18: {
+            NextPageToken = input.ReadString();
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+  }
+
+  /// <summary>
+  /// The request for
+  /// [ReservationService.DeleteReservationGroup][google.cloud.bigquery.reservation.v1.ReservationService.DeleteReservationGroup].
+  /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+  public sealed partial class DeleteReservationGroupRequest : pb::IMessage<DeleteReservationGroupRequest>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<DeleteReservationGroupRequest> _parser = new pb::MessageParser<DeleteReservationGroupRequest>(() => new DeleteReservationGroupRequest());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<DeleteReservationGroupRequest> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Cloud.BigQuery.Reservation.V1.ReservationReflection.Descriptor.MessageTypes[15]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public DeleteReservationGroupRequest() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public DeleteReservationGroupRequest(DeleteReservationGroupRequest other) : this() {
+      name_ = other.name_;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public DeleteReservationGroupRequest Clone() {
+      return new DeleteReservationGroupRequest(this);
+    }
+
+    /// <summary>Field number for the "name" field.</summary>
+    public const int NameFieldNumber = 1;
+    private string name_ = "";
+    /// <summary>
+    /// Required. Resource name of the reservation group to retrieve. E.g.,
+    ///    `projects/myproject/locations/US/reservationGroups/team1-prod`
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string Name {
+      get { return name_; }
+      set {
+        name_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as DeleteReservationGroupRequest);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(DeleteReservationGroupRequest other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (Name != other.Name) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (Name.Length != 0) hash ^= Name.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (Name.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(Name);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (Name.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(Name);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      if (Name.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Name);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(DeleteReservationGroupRequest other) {
+      if (other == null) {
+        return;
+      }
+      if (other.Name.Length != 0) {
+        Name = other.Name;
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            Name = input.ReadString();
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            Name = input.ReadString();
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+  }
+
+  /// <summary>
+  /// The request for
   /// [ReservationService.CreateCapacityCommitment][google.cloud.bigquery.reservation.v1.ReservationService.CreateCapacityCommitment].
   /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
@@ -4449,7 +6338,7 @@ namespace Google.Cloud.BigQuery.Reservation.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.BigQuery.Reservation.V1.ReservationReflection.Descriptor.MessageTypes[9]; }
+      get { return global::Google.Cloud.BigQuery.Reservation.V1.ReservationReflection.Descriptor.MessageTypes[16]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -4781,7 +6670,7 @@ namespace Google.Cloud.BigQuery.Reservation.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.BigQuery.Reservation.V1.ReservationReflection.Descriptor.MessageTypes[10]; }
+      get { return global::Google.Cloud.BigQuery.Reservation.V1.ReservationReflection.Descriptor.MessageTypes[17]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -5059,7 +6948,7 @@ namespace Google.Cloud.BigQuery.Reservation.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.BigQuery.Reservation.V1.ReservationReflection.Descriptor.MessageTypes[11]; }
+      get { return global::Google.Cloud.BigQuery.Reservation.V1.ReservationReflection.Descriptor.MessageTypes[18]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -5286,7 +7175,7 @@ namespace Google.Cloud.BigQuery.Reservation.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.BigQuery.Reservation.V1.ReservationReflection.Descriptor.MessageTypes[12]; }
+      get { return global::Google.Cloud.BigQuery.Reservation.V1.ReservationReflection.Descriptor.MessageTypes[19]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -5484,7 +7373,7 @@ namespace Google.Cloud.BigQuery.Reservation.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.BigQuery.Reservation.V1.ReservationReflection.Descriptor.MessageTypes[13]; }
+      get { return global::Google.Cloud.BigQuery.Reservation.V1.ReservationReflection.Descriptor.MessageTypes[20]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -5724,7 +7613,7 @@ namespace Google.Cloud.BigQuery.Reservation.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.BigQuery.Reservation.V1.ReservationReflection.Descriptor.MessageTypes[14]; }
+      get { return global::Google.Cloud.BigQuery.Reservation.V1.ReservationReflection.Descriptor.MessageTypes[21]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -5979,7 +7868,7 @@ namespace Google.Cloud.BigQuery.Reservation.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.BigQuery.Reservation.V1.ReservationReflection.Descriptor.MessageTypes[15]; }
+      get { return global::Google.Cloud.BigQuery.Reservation.V1.ReservationReflection.Descriptor.MessageTypes[22]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -6217,7 +8106,7 @@ namespace Google.Cloud.BigQuery.Reservation.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.BigQuery.Reservation.V1.ReservationReflection.Descriptor.MessageTypes[16]; }
+      get { return global::Google.Cloud.BigQuery.Reservation.V1.ReservationReflection.Descriptor.MessageTypes[23]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -6472,7 +8361,7 @@ namespace Google.Cloud.BigQuery.Reservation.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.BigQuery.Reservation.V1.ReservationReflection.Descriptor.MessageTypes[17]; }
+      get { return global::Google.Cloud.BigQuery.Reservation.V1.ReservationReflection.Descriptor.MessageTypes[24]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -6494,6 +8383,7 @@ namespace Google.Cloud.BigQuery.Reservation.V1 {
     public MergeCapacityCommitmentsRequest(MergeCapacityCommitmentsRequest other) : this() {
       parent_ = other.parent_;
       capacityCommitmentIds_ = other.capacityCommitmentIds_.Clone();
+      capacityCommitmentId_ = other.capacityCommitmentId_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -6537,6 +8427,24 @@ namespace Google.Cloud.BigQuery.Reservation.V1 {
       get { return capacityCommitmentIds_; }
     }
 
+    /// <summary>Field number for the "capacity_commitment_id" field.</summary>
+    public const int CapacityCommitmentIdFieldNumber = 3;
+    private string capacityCommitmentId_ = "";
+    /// <summary>
+    /// Optional. The optional resulting capacity commitment ID. Capacity
+    /// commitment name will be generated automatically if this field is empty.
+    /// This field must only contain lower case alphanumeric characters or dashes.
+    /// The first and last character cannot be a dash. Max length is 64 characters.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string CapacityCommitmentId {
+      get { return capacityCommitmentId_; }
+      set {
+        capacityCommitmentId_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
@@ -6554,6 +8462,7 @@ namespace Google.Cloud.BigQuery.Reservation.V1 {
       }
       if (Parent != other.Parent) return false;
       if(!capacityCommitmentIds_.Equals(other.capacityCommitmentIds_)) return false;
+      if (CapacityCommitmentId != other.CapacityCommitmentId) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -6563,6 +8472,7 @@ namespace Google.Cloud.BigQuery.Reservation.V1 {
       int hash = 1;
       if (Parent.Length != 0) hash ^= Parent.GetHashCode();
       hash ^= capacityCommitmentIds_.GetHashCode();
+      if (CapacityCommitmentId.Length != 0) hash ^= CapacityCommitmentId.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -6586,6 +8496,10 @@ namespace Google.Cloud.BigQuery.Reservation.V1 {
         output.WriteString(Parent);
       }
       capacityCommitmentIds_.WriteTo(output, _repeated_capacityCommitmentIds_codec);
+      if (CapacityCommitmentId.Length != 0) {
+        output.WriteRawTag(26);
+        output.WriteString(CapacityCommitmentId);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -6601,6 +8515,10 @@ namespace Google.Cloud.BigQuery.Reservation.V1 {
         output.WriteString(Parent);
       }
       capacityCommitmentIds_.WriteTo(ref output, _repeated_capacityCommitmentIds_codec);
+      if (CapacityCommitmentId.Length != 0) {
+        output.WriteRawTag(26);
+        output.WriteString(CapacityCommitmentId);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -6615,6 +8533,9 @@ namespace Google.Cloud.BigQuery.Reservation.V1 {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(Parent);
       }
       size += capacityCommitmentIds_.CalculateSize(_repeated_capacityCommitmentIds_codec);
+      if (CapacityCommitmentId.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(CapacityCommitmentId);
+      }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
       }
@@ -6631,6 +8552,9 @@ namespace Google.Cloud.BigQuery.Reservation.V1 {
         Parent = other.Parent;
       }
       capacityCommitmentIds_.Add(other.capacityCommitmentIds_);
+      if (other.CapacityCommitmentId.Length != 0) {
+        CapacityCommitmentId = other.CapacityCommitmentId;
+      }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 
@@ -6654,6 +8578,10 @@ namespace Google.Cloud.BigQuery.Reservation.V1 {
             capacityCommitmentIds_.AddEntriesFrom(input, _repeated_capacityCommitmentIds_codec);
             break;
           }
+          case 26: {
+            CapacityCommitmentId = input.ReadString();
+            break;
+          }
         }
       }
     #endif
@@ -6675,6 +8603,10 @@ namespace Google.Cloud.BigQuery.Reservation.V1 {
           }
           case 18: {
             capacityCommitmentIds_.AddEntriesFrom(ref input, _repeated_capacityCommitmentIds_codec);
+            break;
+          }
+          case 26: {
+            CapacityCommitmentId = input.ReadString();
             break;
           }
         }
@@ -6703,7 +8635,7 @@ namespace Google.Cloud.BigQuery.Reservation.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.BigQuery.Reservation.V1.ReservationReflection.Descriptor.MessageTypes[18]; }
+      get { return global::Google.Cloud.BigQuery.Reservation.V1.ReservationReflection.Descriptor.MessageTypes[25]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -6728,6 +8660,7 @@ namespace Google.Cloud.BigQuery.Reservation.V1 {
       jobType_ = other.jobType_;
       state_ = other.state_;
       enableGeminiInBigquery_ = other.enableGeminiInBigquery_;
+      schedulingPolicy_ = other.schedulingPolicy_ != null ? other.schedulingPolicy_.Clone() : null;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -6759,7 +8692,7 @@ namespace Google.Cloud.BigQuery.Reservation.V1 {
     public const int AssigneeFieldNumber = 4;
     private string assignee_ = "";
     /// <summary>
-    /// The resource which will use the reservation. E.g.
+    /// Optional. The resource which will use the reservation. E.g.
     /// `projects/myproject`, `folders/123`, or `organizations/456`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -6775,7 +8708,7 @@ namespace Google.Cloud.BigQuery.Reservation.V1 {
     public const int JobTypeFieldNumber = 3;
     private global::Google.Cloud.BigQuery.Reservation.V1.Assignment.Types.JobType jobType_ = global::Google.Cloud.BigQuery.Reservation.V1.Assignment.Types.JobType.Unspecified;
     /// <summary>
-    /// Which type of jobs will use the reservation.
+    /// Optional. Which type of jobs will use the reservation.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -6823,6 +8756,26 @@ namespace Google.Cloud.BigQuery.Reservation.V1 {
       }
     }
 
+    /// <summary>Field number for the "scheduling_policy" field.</summary>
+    public const int SchedulingPolicyFieldNumber = 11;
+    private global::Google.Cloud.BigQuery.Reservation.V1.SchedulingPolicy schedulingPolicy_;
+    /// <summary>
+    /// Optional. The scheduling policy to use for jobs and queries of this
+    /// assignee when running under the associated reservation. The scheduling
+    /// policy controls how the reservation's resources are distributed. This
+    /// overrides the default scheduling policy specified on the reservation.
+    ///
+    /// This feature is not yet generally available.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Cloud.BigQuery.Reservation.V1.SchedulingPolicy SchedulingPolicy {
+      get { return schedulingPolicy_; }
+      set {
+        schedulingPolicy_ = value;
+      }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
@@ -6843,6 +8796,7 @@ namespace Google.Cloud.BigQuery.Reservation.V1 {
       if (JobType != other.JobType) return false;
       if (State != other.State) return false;
       if (EnableGeminiInBigquery != other.EnableGeminiInBigquery) return false;
+      if (!object.Equals(SchedulingPolicy, other.SchedulingPolicy)) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -6855,6 +8809,7 @@ namespace Google.Cloud.BigQuery.Reservation.V1 {
       if (JobType != global::Google.Cloud.BigQuery.Reservation.V1.Assignment.Types.JobType.Unspecified) hash ^= JobType.GetHashCode();
       if (State != global::Google.Cloud.BigQuery.Reservation.V1.Assignment.Types.State.Unspecified) hash ^= State.GetHashCode();
       if (EnableGeminiInBigquery != false) hash ^= EnableGeminiInBigquery.GetHashCode();
+      if (schedulingPolicy_ != null) hash ^= SchedulingPolicy.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -6893,6 +8848,10 @@ namespace Google.Cloud.BigQuery.Reservation.V1 {
         output.WriteRawTag(80);
         output.WriteBool(EnableGeminiInBigquery);
       }
+      if (schedulingPolicy_ != null) {
+        output.WriteRawTag(90);
+        output.WriteMessage(SchedulingPolicy);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -6923,6 +8882,10 @@ namespace Google.Cloud.BigQuery.Reservation.V1 {
         output.WriteRawTag(80);
         output.WriteBool(EnableGeminiInBigquery);
       }
+      if (schedulingPolicy_ != null) {
+        output.WriteRawTag(90);
+        output.WriteMessage(SchedulingPolicy);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -6947,6 +8910,9 @@ namespace Google.Cloud.BigQuery.Reservation.V1 {
       }
       if (EnableGeminiInBigquery != false) {
         size += 1 + 1;
+      }
+      if (schedulingPolicy_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(SchedulingPolicy);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -6974,6 +8940,12 @@ namespace Google.Cloud.BigQuery.Reservation.V1 {
       }
       if (other.EnableGeminiInBigquery != false) {
         EnableGeminiInBigquery = other.EnableGeminiInBigquery;
+      }
+      if (other.schedulingPolicy_ != null) {
+        if (schedulingPolicy_ == null) {
+          SchedulingPolicy = new global::Google.Cloud.BigQuery.Reservation.V1.SchedulingPolicy();
+        }
+        SchedulingPolicy.MergeFrom(other.SchedulingPolicy);
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -7010,6 +8982,13 @@ namespace Google.Cloud.BigQuery.Reservation.V1 {
             EnableGeminiInBigquery = input.ReadBool();
             break;
           }
+          case 90: {
+            if (schedulingPolicy_ == null) {
+              SchedulingPolicy = new global::Google.Cloud.BigQuery.Reservation.V1.SchedulingPolicy();
+            }
+            input.ReadMessage(SchedulingPolicy);
+            break;
+          }
         }
       }
     #endif
@@ -7043,6 +9022,13 @@ namespace Google.Cloud.BigQuery.Reservation.V1 {
           }
           case 80: {
             EnableGeminiInBigquery = input.ReadBool();
+            break;
+          }
+          case 90: {
+            if (schedulingPolicy_ == null) {
+              SchedulingPolicy = new global::Google.Cloud.BigQuery.Reservation.V1.SchedulingPolicy();
+            }
+            input.ReadMessage(SchedulingPolicy);
             break;
           }
         }
@@ -7086,6 +9072,26 @@ namespace Google.Cloud.BigQuery.Reservation.V1 {
         /// continuous assignments cannot be mixed with non-continuous assignments.
         /// </summary>
         [pbr::OriginalName("CONTINUOUS")] Continuous = 6,
+        /// <summary>
+        /// Finer granularity background jobs for capturing changes in a source
+        /// database and streaming them into BigQuery. Reservations with this job
+        /// type take priority over a default BACKGROUND reservation assignment (if
+        /// it exists).
+        /// </summary>
+        [pbr::OriginalName("BACKGROUND_CHANGE_DATA_CAPTURE")] BackgroundChangeDataCapture = 7,
+        /// <summary>
+        /// Finer granularity background jobs for refreshing cached metadata for
+        /// BigQuery tables. Reservations with this job type take priority over a
+        /// default BACKGROUND reservation assignment (if it exists).
+        /// </summary>
+        [pbr::OriginalName("BACKGROUND_COLUMN_METADATA_INDEX")] BackgroundColumnMetadataIndex = 8,
+        /// <summary>
+        /// Finer granularity background jobs for refreshing search indexes upon
+        /// BigQuery table columns. Reservations with this job type
+        /// take priority over a default BACKGROUND reservation assignment (if it
+        /// exists).
+        /// </summary>
+        [pbr::OriginalName("BACKGROUND_SEARCH_INDEX_REFRESH")] BackgroundSearchIndexRefresh = 9,
       }
 
       /// <summary>
@@ -7135,7 +9141,7 @@ namespace Google.Cloud.BigQuery.Reservation.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.BigQuery.Reservation.V1.ReservationReflection.Descriptor.MessageTypes[19]; }
+      get { return global::Google.Cloud.BigQuery.Reservation.V1.ReservationReflection.Descriptor.MessageTypes[26]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -7425,7 +9431,7 @@ namespace Google.Cloud.BigQuery.Reservation.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.BigQuery.Reservation.V1.ReservationReflection.Descriptor.MessageTypes[20]; }
+      get { return global::Google.Cloud.BigQuery.Reservation.V1.ReservationReflection.Descriptor.MessageTypes[27]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -7708,7 +9714,7 @@ namespace Google.Cloud.BigQuery.Reservation.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.BigQuery.Reservation.V1.ReservationReflection.Descriptor.MessageTypes[21]; }
+      get { return global::Google.Cloud.BigQuery.Reservation.V1.ReservationReflection.Descriptor.MessageTypes[28]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -7937,7 +9943,7 @@ namespace Google.Cloud.BigQuery.Reservation.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.BigQuery.Reservation.V1.ReservationReflection.Descriptor.MessageTypes[22]; }
+      get { return global::Google.Cloud.BigQuery.Reservation.V1.ReservationReflection.Descriptor.MessageTypes[29]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -8137,7 +10143,7 @@ namespace Google.Cloud.BigQuery.Reservation.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.BigQuery.Reservation.V1.ReservationReflection.Descriptor.MessageTypes[23]; }
+      get { return global::Google.Cloud.BigQuery.Reservation.V1.ReservationReflection.Descriptor.MessageTypes[30]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -8464,7 +10470,7 @@ namespace Google.Cloud.BigQuery.Reservation.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.BigQuery.Reservation.V1.ReservationReflection.Descriptor.MessageTypes[24]; }
+      get { return global::Google.Cloud.BigQuery.Reservation.V1.ReservationReflection.Descriptor.MessageTypes[31]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -8789,7 +10795,7 @@ namespace Google.Cloud.BigQuery.Reservation.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.BigQuery.Reservation.V1.ReservationReflection.Descriptor.MessageTypes[25]; }
+      get { return global::Google.Cloud.BigQuery.Reservation.V1.ReservationReflection.Descriptor.MessageTypes[32]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -9016,7 +11022,7 @@ namespace Google.Cloud.BigQuery.Reservation.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.BigQuery.Reservation.V1.ReservationReflection.Descriptor.MessageTypes[26]; }
+      get { return global::Google.Cloud.BigQuery.Reservation.V1.ReservationReflection.Descriptor.MessageTypes[33]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -9250,7 +11256,7 @@ namespace Google.Cloud.BigQuery.Reservation.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.BigQuery.Reservation.V1.ReservationReflection.Descriptor.MessageTypes[27]; }
+      get { return global::Google.Cloud.BigQuery.Reservation.V1.ReservationReflection.Descriptor.MessageTypes[34]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -9534,7 +11540,7 @@ namespace Google.Cloud.BigQuery.Reservation.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.BigQuery.Reservation.V1.ReservationReflection.Descriptor.MessageTypes[28]; }
+      get { return global::Google.Cloud.BigQuery.Reservation.V1.ReservationReflection.Descriptor.MessageTypes[35]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -9789,7 +11795,7 @@ namespace Google.Cloud.BigQuery.Reservation.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.BigQuery.Reservation.V1.ReservationReflection.Descriptor.MessageTypes[29]; }
+      get { return global::Google.Cloud.BigQuery.Reservation.V1.ReservationReflection.Descriptor.MessageTypes[36]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -9825,7 +11831,7 @@ namespace Google.Cloud.BigQuery.Reservation.V1 {
     public const int ProjectIdFieldNumber = 1;
     private string projectId_ = "";
     /// <summary>
-    /// The assigned project ID of the project.
+    /// Optional. The assigned project ID of the project.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -9840,7 +11846,7 @@ namespace Google.Cloud.BigQuery.Reservation.V1 {
     public const int DatasetIdFieldNumber = 2;
     private string datasetId_ = "";
     /// <summary>
-    /// The ID of the dataset in the above project.
+    /// Optional. The ID of the dataset in the above project.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -9855,7 +11861,7 @@ namespace Google.Cloud.BigQuery.Reservation.V1 {
     public const int TableIdFieldNumber = 3;
     private string tableId_ = "";
     /// <summary>
-    /// The ID of the table in the above dataset.
+    /// Optional. The ID of the table in the above dataset.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -10065,7 +12071,7 @@ namespace Google.Cloud.BigQuery.Reservation.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.BigQuery.Reservation.V1.ReservationReflection.Descriptor.MessageTypes[30]; }
+      get { return global::Google.Cloud.BigQuery.Reservation.V1.ReservationReflection.Descriptor.MessageTypes[37]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -10102,7 +12108,7 @@ namespace Google.Cloud.BigQuery.Reservation.V1 {
     public const int NameFieldNumber = 1;
     private string name_ = "";
     /// <summary>
-    /// The resource name of the singleton BI reservation.
+    /// Identifier. The resource name of the singleton BI reservation.
     /// Reservation names have the form
     /// `projects/{project_id}/locations/{location_id}/biReservation`.
     /// </summary>
@@ -10134,7 +12140,7 @@ namespace Google.Cloud.BigQuery.Reservation.V1 {
     public const int SizeFieldNumber = 4;
     private long size_;
     /// <summary>
-    /// Size of a reservation, in bytes.
+    /// Optional. Size of a reservation, in bytes.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -10151,7 +12157,7 @@ namespace Google.Cloud.BigQuery.Reservation.V1 {
         = pb::FieldCodec.ForMessage(42, global::Google.Cloud.BigQuery.Reservation.V1.TableReference.Parser);
     private readonly pbc::RepeatedField<global::Google.Cloud.BigQuery.Reservation.V1.TableReference> preferredTables_ = new pbc::RepeatedField<global::Google.Cloud.BigQuery.Reservation.V1.TableReference>();
     /// <summary>
-    /// Preferred tables to use BI capacity for.
+    /// Optional. Preferred tables to use BI capacity for.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -10381,7 +12387,7 @@ namespace Google.Cloud.BigQuery.Reservation.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.BigQuery.Reservation.V1.ReservationReflection.Descriptor.MessageTypes[31]; }
+      get { return global::Google.Cloud.BigQuery.Reservation.V1.ReservationReflection.Descriptor.MessageTypes[38]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -10578,7 +12584,7 @@ namespace Google.Cloud.BigQuery.Reservation.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.BigQuery.Reservation.V1.ReservationReflection.Descriptor.MessageTypes[32]; }
+      get { return global::Google.Cloud.BigQuery.Reservation.V1.ReservationReflection.Descriptor.MessageTypes[39]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
