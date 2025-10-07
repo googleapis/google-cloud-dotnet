@@ -3361,7 +3361,7 @@
             "generationAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
             "releaseAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
             "releaseTimestamp": "2024-05-14T07:52:17Z",
-            "lastGeneratedCommit": "35af68f36aeb2c79978680fdc4549740d425dc2a",
+            "lastGeneratedCommit": "a53e1e09d16d311ff6064d237abed3ddd7a5d1fe",
             "apiPaths": [
                 "google/cloud/vision/v1"
             ],
