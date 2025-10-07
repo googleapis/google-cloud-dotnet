@@ -43,6 +43,7 @@ namespace GoogleCSharpSnippets
                 EndpointAsEndpointName = EndpointName.FromProjectLocationEndpoint("[PROJECT]", "[LOCATION]", "[ENDPOINT]"),
                 Instances = { new wkt::Value(), },
                 Parameters = new wkt::Value(),
+                Labels = { { "", "" }, },
             };
             // Make the request
             PredictResponse response = await predictionServiceClient.PredictAsync(request);
