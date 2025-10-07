@@ -29,7 +29,7 @@ namespace Google.Shopping.Merchant.Products.V1 {
             "ZHVjdHMudjEaH2dvb2dsZS9hcGkvZmllbGRfYmVoYXZpb3IucHJvdG8aH2dv",
             "b2dsZS9wcm90b2J1Zi90aW1lc3RhbXAucHJvdG8aIGdvb2dsZS9zaG9wcGlu",
             "Zy90eXBlL3R5cGVzLnByb3RvGhpnb29nbGUvdHlwZS9pbnRlcnZhbC5wcm90",
-            "byLgLAoRUHJvZHVjdEF0dHJpYnV0ZXMSHgoRaWRlbnRpZmllcl9leGlzdHMY",
+            "byLzQAoRUHJvZHVjdEF0dHJpYnV0ZXMSHgoRaWRlbnRpZmllcl9leGlzdHMY",
             "BCABKAhIAIgBARIWCglpc19idW5kbGUYBSABKAhIAYgBARISCgV0aXRsZRgG",
             "IAEoCUgCiAEBEhgKC2Rlc2NyaXB0aW9uGAcgASgJSAOIAQESEQoEbGluaxgI",
             "IAEoCUgEiAEBEhgKC21vYmlsZV9saW5rGAkgASgJSAWIAQESGwoOY2Fub25p",
@@ -70,236 +70,315 @@ namespace Google.Shopping.Merchant.Products.V1 {
             "Y2hhbnQucHJvZHVjdHMudjEuUHJvZHVjdERpbWVuc2lvbhJLCg5wcm9kdWN0",
             "X3dlaWdodBh6IAEoCzIzLmdvb2dsZS5zaG9wcGluZy5tZXJjaGFudC5wcm9k",
             "dWN0cy52MS5Qcm9kdWN0V2VpZ2h0EkAKCHNoaXBwaW5nGCcgAygLMi4uZ29v",
-            "Z2xlLnNob3BwaW5nLm1lcmNoYW50LnByb2R1Y3RzLnYxLlNoaXBwaW5nEl0K",
-            "F2ZyZWVfc2hpcHBpbmdfdGhyZXNob2xkGIcBIAMoCzI7Lmdvb2dsZS5zaG9w",
-            "cGluZy5tZXJjaGFudC5wcm9kdWN0cy52MS5GcmVlU2hpcHBpbmdUaHJlc2hv",
-            "bGQSTQoPc2hpcHBpbmdfd2VpZ2h0GCggASgLMjQuZ29vZ2xlLnNob3BwaW5n",
-            "Lm1lcmNoYW50LnByb2R1Y3RzLnYxLlNoaXBwaW5nV2VpZ2h0ElAKD3NoaXBw",
-            "aW5nX2xlbmd0aBgpIAEoCzI3Lmdvb2dsZS5zaG9wcGluZy5tZXJjaGFudC5w",
-            "cm9kdWN0cy52MS5TaGlwcGluZ0RpbWVuc2lvbhJPCg5zaGlwcGluZ193aWR0",
-            "aBgqIAEoCzI3Lmdvb2dsZS5zaG9wcGluZy5tZXJjaGFudC5wcm9kdWN0cy52",
-            "MS5TaGlwcGluZ0RpbWVuc2lvbhJQCg9zaGlwcGluZ19oZWlnaHQYKyABKAsy",
-            "Ny5nb29nbGUuc2hvcHBpbmcubWVyY2hhbnQucHJvZHVjdHMudjEuU2hpcHBp",
-            "bmdEaW1lbnNpb24SHgoRbWF4X2hhbmRsaW5nX3RpbWUYLCABKANIFYgBARIe",
-            "ChFtaW5faGFuZGxpbmdfdGltZRgtIAEoA0gWiAEBEhsKDnNoaXBwaW5nX2xh",
-            "YmVsGC4gASgJSBeIAQESHwoSdHJhbnNpdF90aW1lX2xhYmVsGC8gASgJSBiI",
-            "AQESEQoEc2l6ZRgwIAEoCUgZiAEBEkoKC3NpemVfc3lzdGVtGDEgASgOMjAu",
-            "Z29vZ2xlLnNob3BwaW5nLm1lcmNoYW50LnByb2R1Y3RzLnYxLlNpemVTeXN0",
-            "ZW1IGogBARJCCgpzaXplX3R5cGVzGDIgAygOMi4uZ29vZ2xlLnNob3BwaW5n",
-            "Lm1lcmNoYW50LnByb2R1Y3RzLnYxLlNpemVUeXBlEmEKF2VuZXJneV9lZmZp",
-            "Y2llbmN5X2NsYXNzGDUgASgOMjsuZ29vZ2xlLnNob3BwaW5nLm1lcmNoYW50",
-            "LnByb2R1Y3RzLnYxLkVuZXJneUVmZmljaWVuY3lDbGFzc0gbiAEBEmUKG21p",
-            "bl9lbmVyZ3lfZWZmaWNpZW5jeV9jbGFzcxg2IAEoDjI7Lmdvb2dsZS5zaG9w",
-            "cGluZy5tZXJjaGFudC5wcm9kdWN0cy52MS5FbmVyZ3lFZmZpY2llbmN5Q2xh",
-            "c3NIHIgBARJlChttYXhfZW5lcmd5X2VmZmljaWVuY3lfY2xhc3MYNyABKA4y",
-            "Oy5nb29nbGUuc2hvcHBpbmcubWVyY2hhbnQucHJvZHVjdHMudjEuRW5lcmd5",
-            "RWZmaWNpZW5jeUNsYXNzSB2IAQESVgoUdW5pdF9wcmljaW5nX21lYXN1cmUY",
-            "OCABKAsyOC5nb29nbGUuc2hvcHBpbmcubWVyY2hhbnQucHJvZHVjdHMudjEu",
-            "VW5pdFByaWNpbmdNZWFzdXJlEl8KGXVuaXRfcHJpY2luZ19iYXNlX21lYXN1",
-            "cmUYOSABKAsyPC5nb29nbGUuc2hvcHBpbmcubWVyY2hhbnQucHJvZHVjdHMu",
-            "djEuVW5pdFByaWNpbmdCYXNlTWVhc3VyZRIWCgltdWx0aXBhY2sYOiABKANI",
-            "HogBARIZCgxhZHNfZ3JvdXBpbmcYOyABKAlIH4gBARISCgphZHNfbGFiZWxz",
-            "GDwgAygJEhkKDGFkc19yZWRpcmVjdBg9IAEoCUggiAEBEjcKEmNvc3Rfb2Zf",
-            "Z29vZHNfc29sZBg+IAEoCzIbLmdvb2dsZS5zaG9wcGluZy50eXBlLlByaWNl",
-            "EkwKD3Byb2R1Y3RfZGV0YWlscxg/IAMoCzIzLmdvb2dsZS5zaG9wcGluZy5t",
-            "ZXJjaGFudC5wcm9kdWN0cy52MS5Qcm9kdWN0RGV0YWlsEhoKEnByb2R1Y3Rf",
-            "aGlnaGxpZ2h0cxhAIAMoCRIbCg5kaXNwbGF5X2Fkc19pZBhBIAEoCUghiAEB",
-            "Eh8KF2Rpc3BsYXlfYWRzX3NpbWlsYXJfaWRzGEIgAygJEh4KEWRpc3BsYXlf",
-            "YWRzX3RpdGxlGEMgASgJSCKIAQESHQoQZGlzcGxheV9hZHNfbGluaxhEIAEo",
-            "CUgjiAEBEh4KEWRpc3BsYXlfYWRzX3ZhbHVlGEUgASgBSCSIAQESFQoNcHJv",
-            "bW90aW9uX2lkcxhGIAMoCRJOCg1waWNrdXBfbWV0aG9kGFAgASgOMjIuZ29v",
-            "Z2xlLnNob3BwaW5nLm1lcmNoYW50LnByb2R1Y3RzLnYxLlBpY2t1cE1ldGhv",
-            "ZEgliAEBEkgKCnBpY2t1cF9zbGEYUSABKA4yLy5nb29nbGUuc2hvcHBpbmcu",
-            "bWVyY2hhbnQucHJvZHVjdHMudjEuUGlja3VwU2xhSCaIAQESGgoNbGlua190",
-            "ZW1wbGF0ZRhSIAEoCUgniAEBEiEKFG1vYmlsZV9saW5rX3RlbXBsYXRlGFMg",
-            "ASgJSCiIAQESGwoOY3VzdG9tX2xhYmVsXzAYRyABKAlIKYgBARIbCg5jdXN0",
-            "b21fbGFiZWxfMRhIIAEoCUgqiAEBEhsKDmN1c3RvbV9sYWJlbF8yGEkgASgJ",
-            "SCuIAQESGwoOY3VzdG9tX2xhYmVsXzMYSiABKAlILIgBARIbCg5jdXN0b21f",
-            "bGFiZWxfNBhLIAEoCUgtiAEBElAKFWluY2x1ZGVkX2Rlc3RpbmF0aW9ucxhM",
-            "IAMoDjIxLmdvb2dsZS5zaG9wcGluZy50eXBlLkRlc3RpbmF0aW9uLkRlc3Rp",
-            "bmF0aW9uRW51bRJQChVleGNsdWRlZF9kZXN0aW5hdGlvbnMYTSADKA4yMS5n",
-            "b29nbGUuc2hvcHBpbmcudHlwZS5EZXN0aW5hdGlvbi5EZXN0aW5hdGlvbkVu",
-            "dW0SJwofc2hvcHBpbmdfYWRzX2V4Y2x1ZGVkX2NvdW50cmllcxhOIAMoCRIf",
-            "ChJleHRlcm5hbF9zZWxsZXJfaWQYASABKAlILogBARI/CgVwYXVzZRgNIAEo",
-            "DjIrLmdvb2dsZS5zaG9wcGluZy5tZXJjaGFudC5wcm9kdWN0cy52MS5QYXVz",
-            "ZUgviAEBEh0KFWxpZmVzdHlsZV9pbWFnZV9saW5rcxgOIAMoCRJxCiJjbG91",
-            "ZF9leHBvcnRfYWRkaXRpb25hbF9wcm9wZXJ0aWVzGFQgAygLMkUuZ29vZ2xl",
-            "LnNob3BwaW5nLm1lcmNoYW50LnByb2R1Y3RzLnYxLkNsb3VkRXhwb3J0QWRk",
-            "aXRpb25hbFByb3BlcnRpZXMSIAoSdmlydHVhbF9tb2RlbF9saW5rGIIBIAEo",
-            "CUgwiAEBElIKDmNlcnRpZmljYXRpb25zGHsgAygLMjouZ29vZ2xlLnNob3Bw",
-            "aW5nLm1lcmNoYW50LnByb2R1Y3RzLnYxLlByb2R1Y3RDZXJ0aWZpY2F0aW9u",
-            "ElUKEHN0cnVjdHVyZWRfdGl0bGUYhAEgASgLMjUuZ29vZ2xlLnNob3BwaW5n",
-            "Lm1lcmNoYW50LnByb2R1Y3RzLnYxLlN0cnVjdHVyZWRUaXRsZUgxiAEBEmEK",
-            "FnN0cnVjdHVyZWRfZGVzY3JpcHRpb24YhQEgASgLMjsuZ29vZ2xlLnNob3Bw",
-            "aW5nLm1lcmNoYW50LnByb2R1Y3RzLnYxLlN0cnVjdHVyZWREZXNjcmlwdGlv",
-            "bkgyiAEBEjsKFmF1dG9fcHJpY2luZ19taW5fcHJpY2UYfCABKAsyGy5nb29n",
-            "bGUuc2hvcHBpbmcudHlwZS5QcmljZRJoChlzdXN0YWluYWJpbGl0eV9pbmNl",
-            "bnRpdmVzGIoBIAMoCzJELmdvb2dsZS5zaG9wcGluZy5tZXJjaGFudC5wcm9k",
-            "dWN0cy52MS5Qcm9kdWN0U3VzdGFpbmFiaWxpdHlJbmNlbnRpdmVCFAoSX2lk",
-            "ZW50aWZpZXJfZXhpc3RzQgwKCl9pc19idW5kbGVCCAoGX3RpdGxlQg4KDF9k",
-            "ZXNjcmlwdGlvbkIHCgVfbGlua0IOCgxfbW9iaWxlX2xpbmtCEQoPX2Nhbm9u",
-            "aWNhbF9saW5rQg0KC19pbWFnZV9saW5rQggKBl9hZHVsdEIMCgpfYWdlX2dy",
-            "b3VwQg8KDV9hdmFpbGFiaWxpdHlCCAoGX2JyYW5kQggKBl9jb2xvckIMCgpf",
-            "Y29uZGl0aW9uQgkKB19nZW5kZXJCGgoYX2dvb2dsZV9wcm9kdWN0X2NhdGVn",
-            "b3J5QhAKDl9pdGVtX2dyb3VwX2lkQgsKCV9tYXRlcmlhbEIGCgRfbXBuQgoK",
-            "CF9wYXR0ZXJuQhoKGF9zZWxsX29uX2dvb2dsZV9xdWFudGl0eUIUChJfbWF4",
-            "X2hhbmRsaW5nX3RpbWVCFAoSX21pbl9oYW5kbGluZ190aW1lQhEKD19zaGlw",
-            "cGluZ19sYWJlbEIVChNfdHJhbnNpdF90aW1lX2xhYmVsQgcKBV9zaXplQg4K",
-            "DF9zaXplX3N5c3RlbUIaChhfZW5lcmd5X2VmZmljaWVuY3lfY2xhc3NCHgoc",
-            "X21pbl9lbmVyZ3lfZWZmaWNpZW5jeV9jbGFzc0IeChxfbWF4X2VuZXJneV9l",
-            "ZmZpY2llbmN5X2NsYXNzQgwKCl9tdWx0aXBhY2tCDwoNX2Fkc19ncm91cGlu",
-            "Z0IPCg1fYWRzX3JlZGlyZWN0QhEKD19kaXNwbGF5X2Fkc19pZEIUChJfZGlz",
-            "cGxheV9hZHNfdGl0bGVCEwoRX2Rpc3BsYXlfYWRzX2xpbmtCFAoSX2Rpc3Bs",
-            "YXlfYWRzX3ZhbHVlQhAKDl9waWNrdXBfbWV0aG9kQg0KC19waWNrdXBfc2xh",
-            "QhAKDl9saW5rX3RlbXBsYXRlQhcKFV9tb2JpbGVfbGlua190ZW1wbGF0ZUIR",
-            "Cg9fY3VzdG9tX2xhYmVsXzBCEQoPX2N1c3RvbV9sYWJlbF8xQhEKD19jdXN0",
-            "b21fbGFiZWxfMkIRCg9fY3VzdG9tX2xhYmVsXzNCEQoPX2N1c3RvbV9sYWJl",
-            "bF80QhUKE19leHRlcm5hbF9zZWxsZXJfaWRCCAoGX3BhdXNlQhUKE192aXJ0",
-            "dWFsX21vZGVsX2xpbmtCEwoRX3N0cnVjdHVyZWRfdGl0bGVCGQoXX3N0cnVj",
-            "dHVyZWRfZGVzY3JpcHRpb24iLQoOU2hpcHBpbmdXZWlnaHQSDQoFdmFsdWUY",
-            "ASABKAESDAoEdW5pdBgCIAEoCSIwChFTaGlwcGluZ0RpbWVuc2lvbhINCgV2",
-            "YWx1ZRgBIAEoARIMCgR1bml0GAIgASgJIjUKFlVuaXRQcmljaW5nQmFzZU1l",
-            "YXN1cmUSDQoFdmFsdWUYASABKAMSDAoEdW5pdBgCIAEoCSIxChJVbml0UHJp",
-            "Y2luZ01lYXN1cmUSDQoFdmFsdWUYASABKAESDAoEdW5pdBgCIAEoCSKgAQoQ",
-            "U3Vic2NyaXB0aW9uQ29zdBJICgZwZXJpb2QYASABKA4yOC5nb29nbGUuc2hv",
-            "cHBpbmcubWVyY2hhbnQucHJvZHVjdHMudjEuU3Vic2NyaXB0aW9uUGVyaW9k",
-            "EhUKDXBlcmlvZF9sZW5ndGgYAiABKAMSKwoGYW1vdW50GAMgASgLMhsuZ29v",
-            "Z2xlLnNob3BwaW5nLnR5cGUuUHJpY2Ui9AEKElByb2R1Y3RJbnN0YWxsbWVu",
-            "dBIOCgZtb250aHMYASABKAMSKwoGYW1vdW50GAIgASgLMhsuZ29vZ2xlLnNo",
-            "b3BwaW5nLnR5cGUuUHJpY2USNQoLZG93bnBheW1lbnQYAyABKAsyGy5nb29n",
-            "bGUuc2hvcHBpbmcudHlwZS5QcmljZUgAiAEBEkoKC2NyZWRpdF90eXBlGAQg",
-            "ASgOMjAuZ29vZ2xlLnNob3BwaW5nLm1lcmNoYW50LnByb2R1Y3RzLnYxLkNy",
-            "ZWRpdFR5cGVIAYgBAUIOCgxfZG93bnBheW1lbnRCDgoMX2NyZWRpdF90eXBl",
-            "IkIKDUxveWFsdHlQb2ludHMSDAoEbmFtZRgBIAEoCRIUCgxwb2ludHNfdmFs",
-            "dWUYAiABKAMSDQoFcmF0aW8YAyABKAEiwQMKDkxveWFsdHlQcm9ncmFtEhoK",
-            "DXByb2dyYW1fbGFiZWwYASABKAlIAIgBARIXCgp0aWVyX2xhYmVsGAIgASgJ",
-            "SAGIAQESLwoFcHJpY2UYAyABKAsyGy5nb29nbGUuc2hvcHBpbmcudHlwZS5Q",
-            "cmljZUgCiAEBEkEKF2Nhc2hiYWNrX2Zvcl9mdXR1cmVfdXNlGAQgASgLMhsu",
-            "Z29vZ2xlLnNob3BwaW5nLnR5cGUuUHJpY2VIA4gBARIbCg5sb3lhbHR5X3Bv",
-            "aW50cxgFIAEoA0gEiAEBEj8KG21lbWJlcl9wcmljZV9lZmZlY3RpdmVfZGF0",
-            "ZRgGIAEoCzIVLmdvb2dsZS50eXBlLkludGVydmFsSAWIAQESGwoOc2hpcHBp",
-            "bmdfbGFiZWwYByABKAlIBogBAUIQCg5fcHJvZ3JhbV9sYWJlbEINCgtfdGll",
-            "cl9sYWJlbEIICgZfcHJpY2VCGgoYX2Nhc2hiYWNrX2Zvcl9mdXR1cmVfdXNl",
-            "QhEKD19sb3lhbHR5X3BvaW50c0IeChxfbWVtYmVyX3ByaWNlX2VmZmVjdGl2",
-            "ZV9kYXRlQhEKD19zaGlwcGluZ19sYWJlbCKDAwoIU2hpcHBpbmcSKgoFcHJp",
-            "Y2UYASABKAsyGy5nb29nbGUuc2hvcHBpbmcudHlwZS5QcmljZRIPCgdjb3Vu",
-            "dHJ5GAIgASgJEg4KBnJlZ2lvbhgDIAEoCRIPCgdzZXJ2aWNlGAQgASgJEhMK",
-            "C2xvY2F0aW9uX2lkGAUgASgDEhsKE2xvY2F0aW9uX2dyb3VwX25hbWUYBiAB",
-            "KAkSEwoLcG9zdGFsX2NvZGUYByABKAkSHgoRbWluX2hhbmRsaW5nX3RpbWUY",
-            "CCABKANIAIgBARIeChFtYXhfaGFuZGxpbmdfdGltZRgJIAEoA0gBiAEBEh0K",
-            "EG1pbl90cmFuc2l0X3RpbWUYCiABKANIAogBARIdChBtYXhfdHJhbnNpdF90",
-            "aW1lGAsgASgDSAOIAQFCFAoSX21pbl9oYW5kbGluZ190aW1lQhQKEl9tYXhf",
-            "aGFuZGxpbmdfdGltZUITChFfbWluX3RyYW5zaXRfdGltZUITChFfbWF4X3Ry",
-            "YW5zaXRfdGltZSKIAQoVRnJlZVNoaXBwaW5nVGhyZXNob2xkEhQKB2NvdW50",
-            "cnkYASABKAlIAIgBARI5Cg9wcmljZV90aHJlc2hvbGQYAiABKAsyGy5nb29n",
-            "bGUuc2hvcHBpbmcudHlwZS5QcmljZUgBiAEBQgoKCF9jb3VudHJ5QhIKEF9w",
-            "cmljZV90aHJlc2hvbGQiVgoNUHJvZHVjdERldGFpbBIUCgxzZWN0aW9uX25h",
-            "bWUYASABKAkSFgoOYXR0cmlidXRlX25hbWUYAiABKAkSFwoPYXR0cmlidXRl",
-            "X3ZhbHVlGAMgASgJIvkCChRQcm9kdWN0Q2VydGlmaWNhdGlvbhJiChdjZXJ0",
-            "aWZpY2F0aW9uX2F1dGhvcml0eRgBIAEoDjI8Lmdvb2dsZS5zaG9wcGluZy5t",
-            "ZXJjaGFudC5wcm9kdWN0cy52MS5DZXJ0aWZpY2F0aW9uQXV0aG9yaXR5SACI",
-            "AQESWAoSY2VydGlmaWNhdGlvbl9uYW1lGAIgASgOMjcuZ29vZ2xlLnNob3Bw",
-            "aW5nLm1lcmNoYW50LnByb2R1Y3RzLnYxLkNlcnRpZmljYXRpb25OYW1lSAGI",
-            "AQESHwoSY2VydGlmaWNhdGlvbl9jb2RlGAMgASgJSAKIAQESIAoTY2VydGlm",
-            "aWNhdGlvbl92YWx1ZRgEIAEoCUgDiAEBQhoKGF9jZXJ0aWZpY2F0aW9uX2F1",
-            "dGhvcml0eUIVChNfY2VydGlmaWNhdGlvbl9uYW1lQhUKE19jZXJ0aWZpY2F0",
-            "aW9uX2NvZGVCFgoUX2NlcnRpZmljYXRpb25fdmFsdWUipgEKD1N0cnVjdHVy",
-            "ZWRUaXRsZRJZChNkaWdpdGFsX3NvdXJjZV90eXBlGAEgASgOMjcuZ29vZ2xl",
-            "LnNob3BwaW5nLm1lcmNoYW50LnByb2R1Y3RzLnYxLkRpZ2l0YWxTb3VyY2VU",
-            "eXBlSACIAQESFAoHY29udGVudBgCIAEoCUgBiAEBQhYKFF9kaWdpdGFsX3Nv",
-            "dXJjZV90eXBlQgoKCF9jb250ZW50IqwBChVTdHJ1Y3R1cmVkRGVzY3JpcHRp",
-            "b24SWQoTZGlnaXRhbF9zb3VyY2VfdHlwZRgBIAEoDjI3Lmdvb2dsZS5zaG9w",
-            "cGluZy5tZXJjaGFudC5wcm9kdWN0cy52MS5EaWdpdGFsU291cmNlVHlwZUgA",
-            "iAEBEhQKB2NvbnRlbnQYAiABKAlIAYgBAUIWChRfZGlnaXRhbF9zb3VyY2Vf",
-            "dHlwZUIKCghfY29udGVudCI5ChBQcm9kdWN0RGltZW5zaW9uEhIKBXZhbHVl",
-            "GAEgASgBQgPgQQISEQoEdW5pdBgCIAEoCUID4EECIjYKDVByb2R1Y3RXZWln",
-            "aHQSEgoFdmFsdWUYASABKAFCA+BBAhIRCgR1bml0GAIgASgJQgPgQQIi6wcK",
-            "DVByb2R1Y3RTdGF0dXMSYwoUZGVzdGluYXRpb25fc3RhdHVzZXMYAyADKAsy",
-            "RS5nb29nbGUuc2hvcHBpbmcubWVyY2hhbnQucHJvZHVjdHMudjEuUHJvZHVj",
-            "dFN0YXR1cy5EZXN0aW5hdGlvblN0YXR1cxJdChFpdGVtX2xldmVsX2lzc3Vl",
-            "cxgEIAMoCzJCLmdvb2dsZS5zaG9wcGluZy5tZXJjaGFudC5wcm9kdWN0cy52",
-            "MS5Qcm9kdWN0U3RhdHVzLkl0ZW1MZXZlbElzc3VlEjEKDWNyZWF0aW9uX2Rh",
-            "dGUYBSABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wEjQKEGxhc3Rf",
-            "dXBkYXRlX2RhdGUYBiABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1w",
-            "EjoKFmdvb2dsZV9leHBpcmF0aW9uX2RhdGUYByABKAsyGi5nb29nbGUucHJv",
-            "dG9idWYuVGltZXN0YW1wGsEBChFEZXN0aW5hdGlvblN0YXR1cxJWChFyZXBv",
-            "cnRpbmdfY29udGV4dBgBIAEoDjI7Lmdvb2dsZS5zaG9wcGluZy50eXBlLlJl",
-            "cG9ydGluZ0NvbnRleHQuUmVwb3J0aW5nQ29udGV4dEVudW0SGgoSYXBwcm92",
-            "ZWRfY291bnRyaWVzGAIgAygJEhkKEXBlbmRpbmdfY291bnRyaWVzGAMgAygJ",
-            "Eh0KFWRpc2FwcHJvdmVkX2NvdW50cmllcxgEIAMoCRqsAwoOSXRlbUxldmVs",
-            "SXNzdWUSDAoEY29kZRgBIAEoCRJdCghzZXZlcml0eRgCIAEoDjJLLmdvb2ds",
-            "ZS5zaG9wcGluZy5tZXJjaGFudC5wcm9kdWN0cy52MS5Qcm9kdWN0U3RhdHVz",
-            "Lkl0ZW1MZXZlbElzc3VlLlNldmVyaXR5EhIKCnJlc29sdXRpb24YAyABKAkS",
-            "EQoJYXR0cmlidXRlGAQgASgJElYKEXJlcG9ydGluZ19jb250ZXh0GAUgASgO",
-            "MjsuZ29vZ2xlLnNob3BwaW5nLnR5cGUuUmVwb3J0aW5nQ29udGV4dC5SZXBv",
-            "cnRpbmdDb250ZXh0RW51bRITCgtkZXNjcmlwdGlvbhgGIAEoCRIOCgZkZXRh",
-            "aWwYByABKAkSFQoNZG9jdW1lbnRhdGlvbhgIIAEoCRIcChRhcHBsaWNhYmxl",
-            "X2NvdW50cmllcxgJIAMoCSJUCghTZXZlcml0eRIYChRTRVZFUklUWV9VTlNQ",
-            "RUNJRklFRBAAEhAKDE5PVF9JTVBBQ1RFRBABEgsKB0RFTU9URUQQAhIPCgtE",
-            "SVNBUFBST1ZFRBADIqUCCh9DbG91ZEV4cG9ydEFkZGl0aW9uYWxQcm9wZXJ0",
-            "aWVzEhoKDXByb3BlcnR5X25hbWUYASABKAlIAIgBARISCgp0ZXh0X3ZhbHVl",
-            "GAIgAygJEhcKCmJvb2xfdmFsdWUYAyABKAhIAYgBARIRCglpbnRfdmFsdWUY",
-            "BCADKAMSEwoLZmxvYXRfdmFsdWUYBSADKAISFgoJbWluX3ZhbHVlGAYgASgC",
-            "SAKIAQESFgoJbWF4X3ZhbHVlGAcgASgCSAOIAQESFgoJdW5pdF9jb2RlGAgg",
-            "ASgJSASIAQFCEAoOX3Byb3BlcnR5X25hbWVCDQoLX2Jvb2xfdmFsdWVCDAoK",
-            "X21pbl92YWx1ZUIMCgpfbWF4X3ZhbHVlQgwKCl91bml0X2NvZGUinQIKHlBy",
-            "b2R1Y3RTdXN0YWluYWJpbGl0eUluY2VudGl2ZRItCgZhbW91bnQYAiABKAsy",
-            "Gy5nb29nbGUuc2hvcHBpbmcudHlwZS5QcmljZUgAEhQKCnBlcmNlbnRhZ2UY",
-            "AyABKAFIABJcCgR0eXBlGAEgASgOMkkuZ29vZ2xlLnNob3BwaW5nLm1lcmNo",
-            "YW50LnByb2R1Y3RzLnYxLlByb2R1Y3RTdXN0YWluYWJpbGl0eUluY2VudGl2",
-            "ZS5UeXBlSAGIAQEiRgoEVHlwZRIUChBUWVBFX1VOU1BFQ0lGSUVEEAASEQoN",
-            "RVZfVEFYX0NSRURJVBABEhUKEUVWX1BSSUNFX0RJU0NPVU5UEAJCBwoFdmFs",
-            "dWVCBwoFX3R5cGUitAEKEkF1dG9tYXRlZERpc2NvdW50cxIwCgtwcmlvcl9w",
-            "cmljZRgBIAEoCzIbLmdvb2dsZS5zaG9wcGluZy50eXBlLlByaWNlEjwKF3By",
-            "aW9yX3ByaWNlX3Byb2dyZXNzaXZlGAIgASgLMhsuZ29vZ2xlLnNob3BwaW5n",
-            "LnR5cGUuUHJpY2USLgoJZ2FkX3ByaWNlGAMgASgLMhsuZ29vZ2xlLnNob3Bw",
-            "aW5nLnR5cGUuUHJpY2UqTgoSU3Vic2NyaXB0aW9uUGVyaW9kEiMKH1NVQlND",
-            "UklQVElPTl9QRVJJT0RfVU5TUEVDSUZJRUQQABIJCgVNT05USBABEggKBFlF",
-            "QVIQAipgCghBZ2VHcm91cBIZChVBR0VfR1JPVVBfVU5TUEVDSUZJRUQQABIJ",
-            "CgVBRFVMVBABEggKBEtJRFMQAhILCgdUT0RETEVSEAMSCgoGSU5GQU5UEAQS",
-            "CwoHTkVXQk9SThAFKoMBCgxBdmFpbGFiaWxpdHkSHAoYQVZBSUxBQklMSVRZ",
-            "X1VOU1BFQ0lGSUVEEAASDAoISU5fU1RPQ0sQARIQCgxPVVRfT0ZfU1RPQ0sQ",
-            "AhIMCghQUkVPUkRFUhADEhgKFExJTUlURURfQVZBSUxBQklMSVRZEAQSDQoJ",
-            "QkFDS09SREVSEAUqSgoJQ29uZGl0aW9uEhkKFUNPTkRJVElPTl9VTlNQRUNJ",
-            "RklFRBAAEgcKA05FVxABEggKBFVTRUQQAhIPCgtSRUZVUkJJU0hFRBADKkIK",
-            "BkdlbmRlchIWChJHRU5ERVJfVU5TUEVDSUZJRUQQABIICgRNQUxFEAESCgoG",
-            "RkVNQUxFEAISCgoGVU5JU0VYEAMqQQoKQ3JlZGl0VHlwZRIbChdDUkVESVRf",
-            "VFlQRV9VTlNQRUNJRklFRBAAEgsKB0ZJTkFOQ0UQARIJCgVMRUFTRRACKoIB",
-            "CgpTaXplU3lzdGVtEhsKF1NJWkVfU1lTVEVNX1VOU1BFQ0lGSUVEEAASBgoC",
-            "QVUQARIGCgJCUhACEgYKAkNOEAMSBgoCREUQBBIGCgJFVRAFEgYKAkZSEAYS",
-            "BgoCSVQQBxIGCgJKUBAIEgcKA01FWBAJEgYKAlVLEAoSBgoCVVMQCypqCghT",
-            "aXplVHlwZRIZChVTSVpFX1RZUEVfVU5TUEVDSUZJRUQQABILCgdSRUdVTEFS",
-            "EAESCgoGUEVUSVRFEAISDQoJTUFURVJOSVRZEAMSBwoDQklHEAQSCAoEVEFM",
-            "TBAFEggKBFBMVVMQBiqMAQoVRW5lcmd5RWZmaWNpZW5jeUNsYXNzEicKI0VO",
-            "RVJHWV9FRkZJQ0lFTkNZX0NMQVNTX1VOU1BFQ0lGSUVEEAASCAoEQVBQUBAB",
-            "EgcKA0FQUBACEgYKAkFQEAMSBQoBQRAEEgUKAUIQBRIFCgFDEAYSBQoBRBAH",
-            "EgUKAUUQCBIFCgFGEAkSBQoBRxAKKmkKDFBpY2t1cE1ldGhvZBIdChlQSUNL",
-            "VVBfTUVUSE9EX1VOU1BFQ0lGSUVEEAASEQoNTk9UX1NVUFBPUlRFRBABEgcK",
-            "A0JVWRACEgsKB1JFU0VSVkUQAxIRCg1TSElQX1RPX1NUT1JFEAQqmAEKCVBp",
-            "Y2t1cFNsYRIaChZQSUNLVVBfU0xBX1VOU1BFQ0lGSUVEEAASDAoIU0FNRV9E",
-            "QVkQARIMCghORVhUX0RBWRACEgsKB1RXT19EQVkQAxINCglUSFJFRV9EQVkQ",
-            "BBIMCghGT1VSX0RBWRAFEgwKCEZJVkVfREFZEAYSCwoHU0lYX0RBWRAHEg4K",
-            "Ck1VTFRJX1dFRUsQCCowCgVQYXVzZRIVChFQQVVTRV9VTlNQRUNJRklFRBAA",
-            "EgcKA0FEUxABEgcKA0FMTBACKmcKFkNlcnRpZmljYXRpb25BdXRob3JpdHkS",
-            "JwojQ0VSVElGSUNBVElPTl9BVVRIT1JJVFlfVU5TUEVDSUZJRUQQABIJCgVB",
-            "REVNRRABEggKBEJNV0sQAhIHCgNFUEEQAxIGCgJFQxAEKtUBChFDZXJ0aWZp",
-            "Y2F0aW9uTmFtZRIiCh5DRVJUSUZJQ0FUSU9OX05BTUVfVU5TUEVDSUZJRUQQ",
-            "ABIPCgtFTkVSR1lfU1RBUhABEh4KGkVORVJHWV9TVEFSX01PU1RfRUZGSUNJ",
-            "RU5UEAISCQoFRVBSRUwQAxIPCgtFVV9FQ09MQUJFTBAEEh0KGVZFSElDTEVf",
-            "RU5FUkdZX0VGRklDSUVOQ1kQBRIwCixWRUhJQ0xFX0VORVJHWV9FRkZJQ0lF",
-            "TkNZX0RJU0NIQVJHRURfQkFUVEVSWRAGKmQKEURpZ2l0YWxTb3VyY2VUeXBl",
-            "EiMKH0RJR0lUQUxfU09VUkNFX1RZUEVfVU5TUEVDSUZJRUQQABIdChlUUkFJ",
-            "TkVEX0FMR09SSVRITUlDX01FRElBEAESCwoHREVGQVVMVBACQoYCCihjb20u",
-            "Z29vZ2xlLnNob3BwaW5nLm1lcmNoYW50LnByb2R1Y3RzLnYxQhNQcm9kdWN0",
-            "c0NvbW1vblByb3RvUAFaSmNsb3VkLmdvb2dsZS5jb20vZ28vc2hvcHBpbmcv",
-            "bWVyY2hhbnQvcHJvZHVjdHMvYXBpdjEvcHJvZHVjdHNwYjtwcm9kdWN0c3Bi",
-            "qgIkR29vZ2xlLlNob3BwaW5nLk1lcmNoYW50LlByb2R1Y3RzLlYxygIkR29v",
-            "Z2xlXFNob3BwaW5nXE1lcmNoYW50XFByb2R1Y3RzXFYx6gIoR29vZ2xlOjpT",
-            "aG9wcGluZzo6TWVyY2hhbnQ6OlByb2R1Y3RzOjpWMWIGcHJvdG8z"));
+            "Z2xlLnNob3BwaW5nLm1lcmNoYW50LnByb2R1Y3RzLnYxLlNoaXBwaW5nEmIK",
+            "EGNhcnJpZXJfc2hpcHBpbmcYjgEgAygLMkcuZ29vZ2xlLnNob3BwaW5nLm1l",
+            "cmNoYW50LnByb2R1Y3RzLnYxLlByb2R1Y3RBdHRyaWJ1dGVzLkNhcnJpZXJT",
+            "aGlwcGluZxJdChdmcmVlX3NoaXBwaW5nX3RocmVzaG9sZBiHASADKAsyOy5n",
+            "b29nbGUuc2hvcHBpbmcubWVyY2hhbnQucHJvZHVjdHMudjEuRnJlZVNoaXBw",
+            "aW5nVGhyZXNob2xkEk0KD3NoaXBwaW5nX3dlaWdodBgoIAEoCzI0Lmdvb2ds",
+            "ZS5zaG9wcGluZy5tZXJjaGFudC5wcm9kdWN0cy52MS5TaGlwcGluZ1dlaWdo",
+            "dBJQCg9zaGlwcGluZ19sZW5ndGgYKSABKAsyNy5nb29nbGUuc2hvcHBpbmcu",
+            "bWVyY2hhbnQucHJvZHVjdHMudjEuU2hpcHBpbmdEaW1lbnNpb24STwoOc2hp",
+            "cHBpbmdfd2lkdGgYKiABKAsyNy5nb29nbGUuc2hvcHBpbmcubWVyY2hhbnQu",
+            "cHJvZHVjdHMudjEuU2hpcHBpbmdEaW1lbnNpb24SUAoPc2hpcHBpbmdfaGVp",
+            "Z2h0GCsgASgLMjcuZ29vZ2xlLnNob3BwaW5nLm1lcmNoYW50LnByb2R1Y3Rz",
+            "LnYxLlNoaXBwaW5nRGltZW5zaW9uEh4KEW1heF9oYW5kbGluZ190aW1lGCwg",
+            "ASgDSBWIAQESHgoRbWluX2hhbmRsaW5nX3RpbWUYLSABKANIFogBARIbCg5z",
+            "aGlwcGluZ19sYWJlbBguIAEoCUgXiAEBEh8KEnRyYW5zaXRfdGltZV9sYWJl",
+            "bBgvIAEoCUgYiAEBEhEKBHNpemUYMCABKAlIGYgBARJKCgtzaXplX3N5c3Rl",
+            "bRgxIAEoDjIwLmdvb2dsZS5zaG9wcGluZy5tZXJjaGFudC5wcm9kdWN0cy52",
+            "MS5TaXplU3lzdGVtSBqIAQESQgoKc2l6ZV90eXBlcxgyIAMoDjIuLmdvb2ds",
+            "ZS5zaG9wcGluZy5tZXJjaGFudC5wcm9kdWN0cy52MS5TaXplVHlwZRJhChdl",
+            "bmVyZ3lfZWZmaWNpZW5jeV9jbGFzcxg1IAEoDjI7Lmdvb2dsZS5zaG9wcGlu",
+            "Zy5tZXJjaGFudC5wcm9kdWN0cy52MS5FbmVyZ3lFZmZpY2llbmN5Q2xhc3NI",
+            "G4gBARJlChttaW5fZW5lcmd5X2VmZmljaWVuY3lfY2xhc3MYNiABKA4yOy5n",
+            "b29nbGUuc2hvcHBpbmcubWVyY2hhbnQucHJvZHVjdHMudjEuRW5lcmd5RWZm",
+            "aWNpZW5jeUNsYXNzSByIAQESZQobbWF4X2VuZXJneV9lZmZpY2llbmN5X2Ns",
+            "YXNzGDcgASgOMjsuZ29vZ2xlLnNob3BwaW5nLm1lcmNoYW50LnByb2R1Y3Rz",
+            "LnYxLkVuZXJneUVmZmljaWVuY3lDbGFzc0gdiAEBElYKFHVuaXRfcHJpY2lu",
+            "Z19tZWFzdXJlGDggASgLMjguZ29vZ2xlLnNob3BwaW5nLm1lcmNoYW50LnBy",
+            "b2R1Y3RzLnYxLlVuaXRQcmljaW5nTWVhc3VyZRJfChl1bml0X3ByaWNpbmdf",
+            "YmFzZV9tZWFzdXJlGDkgASgLMjwuZ29vZ2xlLnNob3BwaW5nLm1lcmNoYW50",
+            "LnByb2R1Y3RzLnYxLlVuaXRQcmljaW5nQmFzZU1lYXN1cmUSFgoJbXVsdGlw",
+            "YWNrGDogASgDSB6IAQESGQoMYWRzX2dyb3VwaW5nGDsgASgJSB+IAQESEgoK",
+            "YWRzX2xhYmVscxg8IAMoCRIZCgxhZHNfcmVkaXJlY3QYPSABKAlIIIgBARI3",
+            "ChJjb3N0X29mX2dvb2RzX3NvbGQYPiABKAsyGy5nb29nbGUuc2hvcHBpbmcu",
+            "dHlwZS5QcmljZRJMCg9wcm9kdWN0X2RldGFpbHMYPyADKAsyMy5nb29nbGUu",
+            "c2hvcHBpbmcubWVyY2hhbnQucHJvZHVjdHMudjEuUHJvZHVjdERldGFpbBIa",
+            "ChJwcm9kdWN0X2hpZ2hsaWdodHMYQCADKAkSGwoOZGlzcGxheV9hZHNfaWQY",
+            "QSABKAlIIYgBARIfChdkaXNwbGF5X2Fkc19zaW1pbGFyX2lkcxhCIAMoCRIe",
+            "ChFkaXNwbGF5X2Fkc190aXRsZRhDIAEoCUgiiAEBEh0KEGRpc3BsYXlfYWRz",
+            "X2xpbmsYRCABKAlII4gBARIeChFkaXNwbGF5X2Fkc192YWx1ZRhFIAEoAUgk",
+            "iAEBEhUKDXByb21vdGlvbl9pZHMYRiADKAkSTgoNcGlja3VwX21ldGhvZBhQ",
+            "IAEoDjIyLmdvb2dsZS5zaG9wcGluZy5tZXJjaGFudC5wcm9kdWN0cy52MS5Q",
+            "aWNrdXBNZXRob2RIJYgBARJICgpwaWNrdXBfc2xhGFEgASgOMi8uZ29vZ2xl",
+            "LnNob3BwaW5nLm1lcmNoYW50LnByb2R1Y3RzLnYxLlBpY2t1cFNsYUgmiAEB",
+            "EhoKDWxpbmtfdGVtcGxhdGUYUiABKAlIJ4gBARIhChRtb2JpbGVfbGlua190",
+            "ZW1wbGF0ZRhTIAEoCUgoiAEBEhsKDmN1c3RvbV9sYWJlbF8wGEcgASgJSCmI",
+            "AQESGwoOY3VzdG9tX2xhYmVsXzEYSCABKAlIKogBARIbCg5jdXN0b21fbGFi",
+            "ZWxfMhhJIAEoCUgriAEBEhsKDmN1c3RvbV9sYWJlbF8zGEogASgJSCyIAQES",
+            "GwoOY3VzdG9tX2xhYmVsXzQYSyABKAlILYgBARJQChVpbmNsdWRlZF9kZXN0",
+            "aW5hdGlvbnMYTCADKA4yMS5nb29nbGUuc2hvcHBpbmcudHlwZS5EZXN0aW5h",
+            "dGlvbi5EZXN0aW5hdGlvbkVudW0SUAoVZXhjbHVkZWRfZGVzdGluYXRpb25z",
+            "GE0gAygOMjEuZ29vZ2xlLnNob3BwaW5nLnR5cGUuRGVzdGluYXRpb24uRGVz",
+            "dGluYXRpb25FbnVtEicKH3Nob3BwaW5nX2Fkc19leGNsdWRlZF9jb3VudHJp",
+            "ZXMYTiADKAkSHwoSZXh0ZXJuYWxfc2VsbGVyX2lkGAEgASgJSC6IAQESPwoF",
+            "cGF1c2UYDSABKA4yKy5nb29nbGUuc2hvcHBpbmcubWVyY2hhbnQucHJvZHVj",
+            "dHMudjEuUGF1c2VIL4gBARIdChVsaWZlc3R5bGVfaW1hZ2VfbGlua3MYDiAD",
+            "KAkScQoiY2xvdWRfZXhwb3J0X2FkZGl0aW9uYWxfcHJvcGVydGllcxhUIAMo",
+            "CzJFLmdvb2dsZS5zaG9wcGluZy5tZXJjaGFudC5wcm9kdWN0cy52MS5DbG91",
+            "ZEV4cG9ydEFkZGl0aW9uYWxQcm9wZXJ0aWVzEiAKEnZpcnR1YWxfbW9kZWxf",
+            "bGluaxiCASABKAlIMIgBARJSCg5jZXJ0aWZpY2F0aW9ucxh7IAMoCzI6Lmdv",
+            "b2dsZS5zaG9wcGluZy5tZXJjaGFudC5wcm9kdWN0cy52MS5Qcm9kdWN0Q2Vy",
+            "dGlmaWNhdGlvbhJVChBzdHJ1Y3R1cmVkX3RpdGxlGIQBIAEoCzI1Lmdvb2ds",
+            "ZS5zaG9wcGluZy5tZXJjaGFudC5wcm9kdWN0cy52MS5TdHJ1Y3R1cmVkVGl0",
+            "bGVIMYgBARJhChZzdHJ1Y3R1cmVkX2Rlc2NyaXB0aW9uGIUBIAEoCzI7Lmdv",
+            "b2dsZS5zaG9wcGluZy5tZXJjaGFudC5wcm9kdWN0cy52MS5TdHJ1Y3R1cmVk",
+            "RGVzY3JpcHRpb25IMogBARI7ChZhdXRvX3ByaWNpbmdfbWluX3ByaWNlGHwg",
+            "ASgLMhsuZ29vZ2xlLnNob3BwaW5nLnR5cGUuUHJpY2USaAoZc3VzdGFpbmFi",
+            "aWxpdHlfaW5jZW50aXZlcxiKASADKAsyRC5nb29nbGUuc2hvcHBpbmcubWVy",
+            "Y2hhbnQucHJvZHVjdHMudjEuUHJvZHVjdFN1c3RhaW5hYmlsaXR5SW5jZW50",
+            "aXZlGqEHCg9DYXJyaWVyU2hpcHBpbmcSFAoHY291bnRyeRgBIAEoCUgAiAEB",
+            "EhMKBnJlZ2lvbhgCIAEoCUgBiAEBEhgKC3Bvc3RhbF9jb2RlGAMgASgJSAKI",
+            "AQESHwoSb3JpZ2luX3Bvc3RhbF9jb2RlGAQgASgJSAOIAQESNAoKZmxhdF9w",
+            "cmljZRgFIAEoCzIbLmdvb2dsZS5zaG9wcGluZy50eXBlLlByaWNlSASIAQES",
+            "ZgoNY2Fycmllcl9wcmljZRgGIAEoDjJKLmdvb2dsZS5zaG9wcGluZy5tZXJj",
+            "aGFudC5wcm9kdWN0cy52MS5Qcm9kdWN0QXR0cmlidXRlcy5DYXJyaWVyUHJp",
+            "Y2VPcHRpb25IBYgBARJHCh1jYXJyaWVyX3ByaWNlX2ZsYXRfYWRqdXN0bWVu",
+            "dBgHIAEoCzIbLmdvb2dsZS5zaG9wcGluZy50eXBlLlByaWNlSAaIAQESMAoj",
+            "Y2Fycmllcl9wcmljZV9wZXJjZW50YWdlX2FkanVzdG1lbnQYCCABKAFIB4gB",
+            "ARIeChFtaW5faGFuZGxpbmdfdGltZRgJIAEoA0gIiAEBEh4KEW1heF9oYW5k",
+            "bGluZ190aW1lGAogASgDSAmIAQESIwoWZml4ZWRfbWluX3RyYW5zaXRfdGlt",
+            "ZRgLIAEoA0gKiAEBEiMKFmZpeGVkX21heF90cmFuc2l0X3RpbWUYDCABKANI",
+            "C4gBARJhChRjYXJyaWVyX3RyYW5zaXRfdGltZRgNIAEoDjI+Lmdvb2dsZS5z",
+            "aG9wcGluZy5tZXJjaGFudC5wcm9kdWN0cy52MS5DYXJyaWVyVHJhbnNpdFRp",
+            "bWVPcHRpb25IDIgBAUIKCghfY291bnRyeUIJCgdfcmVnaW9uQg4KDF9wb3N0",
+            "YWxfY29kZUIVChNfb3JpZ2luX3Bvc3RhbF9jb2RlQg0KC19mbGF0X3ByaWNl",
+            "QhAKDl9jYXJyaWVyX3ByaWNlQiAKHl9jYXJyaWVyX3ByaWNlX2ZsYXRfYWRq",
+            "dXN0bWVudEImCiRfY2Fycmllcl9wcmljZV9wZXJjZW50YWdlX2FkanVzdG1l",
+            "bnRCFAoSX21pbl9oYW5kbGluZ190aW1lQhQKEl9tYXhfaGFuZGxpbmdfdGlt",
+            "ZUIZChdfZml4ZWRfbWluX3RyYW5zaXRfdGltZUIZChdfZml4ZWRfbWF4X3Ry",
+            "YW5zaXRfdGltZUIXChVfY2Fycmllcl90cmFuc2l0X3RpbWUiiAwKEkNhcnJp",
+            "ZXJQcmljZU9wdGlvbhIkCiBDQVJSSUVSX1BSSUNFX09QVElPTl9VTlNQRUNJ",
+            "RklFRBAAEhoKFkFVU1RSQUxJQV9QT1NUX1JFR1VMQVIQARIaChZBVVNUUkFM",
+            "SUFfUE9TVF9FWFBSRVNTEAISHAoYQVVTVFJBTElBX1BPU1RfUkVHVUxBUl9T",
+            "EAMSHAoYQVVTVFJBTElBX1BPU1RfUkVHVUxBUl9NEAQSHAoYQVVTVFJBTElB",
+            "X1BPU1RfUkVHVUxBUl9MEAUSHQoZQVVTVFJBTElBX1BPU1RfUkVHVUxBUl9Y",
+            "TBAGEhwKGEFVU1RSQUxJQV9QT1NUX0VYUFJFU1NfUxAHEhwKGEFVU1RSQUxJ",
+            "QV9QT1NUX0VYUFJFU1NfTRAIEhwKGEFVU1RSQUxJQV9QT1NUX0VYUFJFU1Nf",
+            "TBAJEh0KGUFVU1RSQUxJQV9QT1NUX0VYUFJFU1NfWEwQChIUChBUTlRfUk9B",
+            "RF9FWFBSRVNTEAsSGQoVVE5UX09WRVJOSUdIVF9FWFBSRVNTEAwSFgoSVE9M",
+            "TF9ST0FEX0RFTElWRVJZEA0SGwoXVE9MTF9PVkVSTklHSFRfUFJJT1JJVFkQ",
+            "DhINCglESExfUEFLRVQQDxIQCgxESExfUEFDS0NIRU4QEBISCg5EUERfRVhQ",
+            "UkVTU18xMhAREg8KC0RQRF9FWFBSRVNTEBISFgoSRFBEX0NMQVNTSUNfUEFS",
+            "Q0VMEBMSEwoPSEVSTUVTX1BBQ0tDSEVOEBQSGAoUSEVSTUVTX1BBS0VUS0xB",
+            "U1NFX1MQFRIYChRIRVJNRVNfUEFLRVRLTEFTU0VfTRAWEhgKFEhFUk1FU19Q",
+            "QUtFVEtMQVNTRV9MEBcSDwoLVVBTX0VYUFJFU1MQGBIVChFVUFNfRVhQUkVT",
+            "U19TQVZFUhAZEhgKFFVQU19FWFBSRVNTX1NUQU5EQVJEEBoSDwoLREhMX0VY",
+            "UFJFU1MQGxISCg5ESExfRVhQUkVTU18xMhAcEhAKDERQRF9ORVhUX0RBWRAd",
+            "EhkKFURQRF9TVEFOREFSRF9ORVhUX0RBWRAeEhgKFERQRF9TVEFOREFSRF9U",
+            "V09fREFZEB8SFwoTUk1HXzFTVF9DTEFTU19TTUFMTBAgEhgKFFJNR18xU1Rf",
+            "Q0xBU1NfTUVESVVNECESFwoTUk1HXzJORF9DTEFTU19TTUFMTBAiEhgKFFJN",
+            "R18yTkRfQ0xBU1NfTUVESVVNECMSDwoLVE5UX0VYUFJFU1MQJBISCg5UTlRf",
+            "RVhQUkVTU18xMBAlEhIKDlROVF9FWFBSRVNTXzEyECYSEgoOWU9ERUxfQjJD",
+            "XzQ4SFIQJxISCg5ZT0RFTF9CMkNfNzJIUhAoEhQKEFlPREVMX0IyQ19QQUNL",
+            "RVQQKRIQCgxGRURFWF9HUk9VTkQQKhIXChNGRURFWF9IT01FX0RFTElWRVJZ",
+            "ECsSFwoTRkVERVhfRVhQUkVTU19TQVZFUhAsEhkKFUZFREVYX0ZJUlNUX09W",
+            "RVJOSUdIVBAtEhwKGEZFREVYX1BSSU9SSVRZX09WRVJOSUdIVBAuEhwKGEZF",
+            "REVYX1NUQU5EQVJEX09WRVJOSUdIVBAvEg4KCkZFREVYXzJEQVkQMBIQCgxV",
+            "UFNfU1RBTkRBUkQQMRITCg9VUFNfMk5EX0RBWV9BSVIQMhISCg5VUFNfMk5E",
+            "X0RBWV9BTRAzEhQKEFVQU18zX0RBWV9TRUxFQ1QQNBIOCgpVUFNfR1JPVU5E",
+            "EDUSFAoQVVBTX05FWFRfREFZX0FJUhA2Eh0KGVVQU19ORVhUX0RBWV9BSVJf",
+            "RUFSTFlfQU0QNxIaChZVUFNfTkVYVF9EQVlfQUlSX1NBVkVSEDgSHgoaVVNQ",
+            "U19QUklPUklUWV9NQUlMX0VYUFJFU1MQORITCg9VU1BTX01FRElBX01BSUwQ",
+            "OhIgChxVU1BTX0dST1VORF9BRFZBTlRBR0VfUkVUQUlMEDsSFgoSVVNQU19Q",
+            "UklPUklUWV9NQUlMEDwSJAogVVNQU19HUk9VTkRfQURWQU5UQUdFX0NPTU1F",
+            "UkNJQUwQPUIUChJfaWRlbnRpZmllcl9leGlzdHNCDAoKX2lzX2J1bmRsZUII",
+            "CgZfdGl0bGVCDgoMX2Rlc2NyaXB0aW9uQgcKBV9saW5rQg4KDF9tb2JpbGVf",
+            "bGlua0IRCg9fY2Fub25pY2FsX2xpbmtCDQoLX2ltYWdlX2xpbmtCCAoGX2Fk",
+            "dWx0QgwKCl9hZ2VfZ3JvdXBCDwoNX2F2YWlsYWJpbGl0eUIICgZfYnJhbmRC",
+            "CAoGX2NvbG9yQgwKCl9jb25kaXRpb25CCQoHX2dlbmRlckIaChhfZ29vZ2xl",
+            "X3Byb2R1Y3RfY2F0ZWdvcnlCEAoOX2l0ZW1fZ3JvdXBfaWRCCwoJX21hdGVy",
+            "aWFsQgYKBF9tcG5CCgoIX3BhdHRlcm5CGgoYX3NlbGxfb25fZ29vZ2xlX3F1",
+            "YW50aXR5QhQKEl9tYXhfaGFuZGxpbmdfdGltZUIUChJfbWluX2hhbmRsaW5n",
+            "X3RpbWVCEQoPX3NoaXBwaW5nX2xhYmVsQhUKE190cmFuc2l0X3RpbWVfbGFi",
+            "ZWxCBwoFX3NpemVCDgoMX3NpemVfc3lzdGVtQhoKGF9lbmVyZ3lfZWZmaWNp",
+            "ZW5jeV9jbGFzc0IeChxfbWluX2VuZXJneV9lZmZpY2llbmN5X2NsYXNzQh4K",
+            "HF9tYXhfZW5lcmd5X2VmZmljaWVuY3lfY2xhc3NCDAoKX211bHRpcGFja0IP",
+            "Cg1fYWRzX2dyb3VwaW5nQg8KDV9hZHNfcmVkaXJlY3RCEQoPX2Rpc3BsYXlf",
+            "YWRzX2lkQhQKEl9kaXNwbGF5X2Fkc190aXRsZUITChFfZGlzcGxheV9hZHNf",
+            "bGlua0IUChJfZGlzcGxheV9hZHNfdmFsdWVCEAoOX3BpY2t1cF9tZXRob2RC",
+            "DQoLX3BpY2t1cF9zbGFCEAoOX2xpbmtfdGVtcGxhdGVCFwoVX21vYmlsZV9s",
+            "aW5rX3RlbXBsYXRlQhEKD19jdXN0b21fbGFiZWxfMEIRCg9fY3VzdG9tX2xh",
+            "YmVsXzFCEQoPX2N1c3RvbV9sYWJlbF8yQhEKD19jdXN0b21fbGFiZWxfM0IR",
+            "Cg9fY3VzdG9tX2xhYmVsXzRCFQoTX2V4dGVybmFsX3NlbGxlcl9pZEIICgZf",
+            "cGF1c2VCFQoTX3ZpcnR1YWxfbW9kZWxfbGlua0ITChFfc3RydWN0dXJlZF90",
+            "aXRsZUIZChdfc3RydWN0dXJlZF9kZXNjcmlwdGlvbiItCg5TaGlwcGluZ1dl",
+            "aWdodBINCgV2YWx1ZRgBIAEoARIMCgR1bml0GAIgASgJIjAKEVNoaXBwaW5n",
+            "RGltZW5zaW9uEg0KBXZhbHVlGAEgASgBEgwKBHVuaXQYAiABKAkiNQoWVW5p",
+            "dFByaWNpbmdCYXNlTWVhc3VyZRINCgV2YWx1ZRgBIAEoAxIMCgR1bml0GAIg",
+            "ASgJIjEKElVuaXRQcmljaW5nTWVhc3VyZRINCgV2YWx1ZRgBIAEoARIMCgR1",
+            "bml0GAIgASgJIqABChBTdWJzY3JpcHRpb25Db3N0EkgKBnBlcmlvZBgBIAEo",
+            "DjI4Lmdvb2dsZS5zaG9wcGluZy5tZXJjaGFudC5wcm9kdWN0cy52MS5TdWJz",
+            "Y3JpcHRpb25QZXJpb2QSFQoNcGVyaW9kX2xlbmd0aBgCIAEoAxIrCgZhbW91",
+            "bnQYAyABKAsyGy5nb29nbGUuc2hvcHBpbmcudHlwZS5QcmljZSL0AQoSUHJv",
+            "ZHVjdEluc3RhbGxtZW50Eg4KBm1vbnRocxgBIAEoAxIrCgZhbW91bnQYAiAB",
+            "KAsyGy5nb29nbGUuc2hvcHBpbmcudHlwZS5QcmljZRI1Cgtkb3ducGF5bWVu",
+            "dBgDIAEoCzIbLmdvb2dsZS5zaG9wcGluZy50eXBlLlByaWNlSACIAQESSgoL",
+            "Y3JlZGl0X3R5cGUYBCABKA4yMC5nb29nbGUuc2hvcHBpbmcubWVyY2hhbnQu",
+            "cHJvZHVjdHMudjEuQ3JlZGl0VHlwZUgBiAEBQg4KDF9kb3ducGF5bWVudEIO",
+            "CgxfY3JlZGl0X3R5cGUiQgoNTG95YWx0eVBvaW50cxIMCgRuYW1lGAEgASgJ",
+            "EhQKDHBvaW50c192YWx1ZRgCIAEoAxINCgVyYXRpbxgDIAEoASLBAwoOTG95",
+            "YWx0eVByb2dyYW0SGgoNcHJvZ3JhbV9sYWJlbBgBIAEoCUgAiAEBEhcKCnRp",
+            "ZXJfbGFiZWwYAiABKAlIAYgBARIvCgVwcmljZRgDIAEoCzIbLmdvb2dsZS5z",
+            "aG9wcGluZy50eXBlLlByaWNlSAKIAQESQQoXY2FzaGJhY2tfZm9yX2Z1dHVy",
+            "ZV91c2UYBCABKAsyGy5nb29nbGUuc2hvcHBpbmcudHlwZS5QcmljZUgDiAEB",
+            "EhsKDmxveWFsdHlfcG9pbnRzGAUgASgDSASIAQESPwobbWVtYmVyX3ByaWNl",
+            "X2VmZmVjdGl2ZV9kYXRlGAYgASgLMhUuZ29vZ2xlLnR5cGUuSW50ZXJ2YWxI",
+            "BYgBARIbCg5zaGlwcGluZ19sYWJlbBgHIAEoCUgGiAEBQhAKDl9wcm9ncmFt",
+            "X2xhYmVsQg0KC190aWVyX2xhYmVsQggKBl9wcmljZUIaChhfY2FzaGJhY2tf",
+            "Zm9yX2Z1dHVyZV91c2VCEQoPX2xveWFsdHlfcG9pbnRzQh4KHF9tZW1iZXJf",
+            "cHJpY2VfZWZmZWN0aXZlX2RhdGVCEQoPX3NoaXBwaW5nX2xhYmVsIoMDCghT",
+            "aGlwcGluZxIqCgVwcmljZRgBIAEoCzIbLmdvb2dsZS5zaG9wcGluZy50eXBl",
+            "LlByaWNlEg8KB2NvdW50cnkYAiABKAkSDgoGcmVnaW9uGAMgASgJEg8KB3Nl",
+            "cnZpY2UYBCABKAkSEwoLbG9jYXRpb25faWQYBSABKAMSGwoTbG9jYXRpb25f",
+            "Z3JvdXBfbmFtZRgGIAEoCRITCgtwb3N0YWxfY29kZRgHIAEoCRIeChFtaW5f",
+            "aGFuZGxpbmdfdGltZRgIIAEoA0gAiAEBEh4KEW1heF9oYW5kbGluZ190aW1l",
+            "GAkgASgDSAGIAQESHQoQbWluX3RyYW5zaXRfdGltZRgKIAEoA0gCiAEBEh0K",
+            "EG1heF90cmFuc2l0X3RpbWUYCyABKANIA4gBAUIUChJfbWluX2hhbmRsaW5n",
+            "X3RpbWVCFAoSX21heF9oYW5kbGluZ190aW1lQhMKEV9taW5fdHJhbnNpdF90",
+            "aW1lQhMKEV9tYXhfdHJhbnNpdF90aW1lIogBChVGcmVlU2hpcHBpbmdUaHJl",
+            "c2hvbGQSFAoHY291bnRyeRgBIAEoCUgAiAEBEjkKD3ByaWNlX3RocmVzaG9s",
+            "ZBgCIAEoCzIbLmdvb2dsZS5zaG9wcGluZy50eXBlLlByaWNlSAGIAQFCCgoI",
+            "X2NvdW50cnlCEgoQX3ByaWNlX3RocmVzaG9sZCJWCg1Qcm9kdWN0RGV0YWls",
+            "EhQKDHNlY3Rpb25fbmFtZRgBIAEoCRIWCg5hdHRyaWJ1dGVfbmFtZRgCIAEo",
+            "CRIXCg9hdHRyaWJ1dGVfdmFsdWUYAyABKAki+QIKFFByb2R1Y3RDZXJ0aWZp",
+            "Y2F0aW9uEmIKF2NlcnRpZmljYXRpb25fYXV0aG9yaXR5GAEgASgOMjwuZ29v",
+            "Z2xlLnNob3BwaW5nLm1lcmNoYW50LnByb2R1Y3RzLnYxLkNlcnRpZmljYXRp",
+            "b25BdXRob3JpdHlIAIgBARJYChJjZXJ0aWZpY2F0aW9uX25hbWUYAiABKA4y",
+            "Ny5nb29nbGUuc2hvcHBpbmcubWVyY2hhbnQucHJvZHVjdHMudjEuQ2VydGlm",
+            "aWNhdGlvbk5hbWVIAYgBARIfChJjZXJ0aWZpY2F0aW9uX2NvZGUYAyABKAlI",
+            "AogBARIgChNjZXJ0aWZpY2F0aW9uX3ZhbHVlGAQgASgJSAOIAQFCGgoYX2Nl",
+            "cnRpZmljYXRpb25fYXV0aG9yaXR5QhUKE19jZXJ0aWZpY2F0aW9uX25hbWVC",
+            "FQoTX2NlcnRpZmljYXRpb25fY29kZUIWChRfY2VydGlmaWNhdGlvbl92YWx1",
+            "ZSKmAQoPU3RydWN0dXJlZFRpdGxlElkKE2RpZ2l0YWxfc291cmNlX3R5cGUY",
+            "ASABKA4yNy5nb29nbGUuc2hvcHBpbmcubWVyY2hhbnQucHJvZHVjdHMudjEu",
+            "RGlnaXRhbFNvdXJjZVR5cGVIAIgBARIUCgdjb250ZW50GAIgASgJSAGIAQFC",
+            "FgoUX2RpZ2l0YWxfc291cmNlX3R5cGVCCgoIX2NvbnRlbnQirAEKFVN0cnVj",
+            "dHVyZWREZXNjcmlwdGlvbhJZChNkaWdpdGFsX3NvdXJjZV90eXBlGAEgASgO",
+            "MjcuZ29vZ2xlLnNob3BwaW5nLm1lcmNoYW50LnByb2R1Y3RzLnYxLkRpZ2l0",
+            "YWxTb3VyY2VUeXBlSACIAQESFAoHY29udGVudBgCIAEoCUgBiAEBQhYKFF9k",
+            "aWdpdGFsX3NvdXJjZV90eXBlQgoKCF9jb250ZW50IjkKEFByb2R1Y3REaW1l",
+            "bnNpb24SEgoFdmFsdWUYASABKAFCA+BBAhIRCgR1bml0GAIgASgJQgPgQQIi",
+            "NgoNUHJvZHVjdFdlaWdodBISCgV2YWx1ZRgBIAEoAUID4EECEhEKBHVuaXQY",
+            "AiABKAlCA+BBAiLrBwoNUHJvZHVjdFN0YXR1cxJjChRkZXN0aW5hdGlvbl9z",
+            "dGF0dXNlcxgDIAMoCzJFLmdvb2dsZS5zaG9wcGluZy5tZXJjaGFudC5wcm9k",
+            "dWN0cy52MS5Qcm9kdWN0U3RhdHVzLkRlc3RpbmF0aW9uU3RhdHVzEl0KEWl0",
+            "ZW1fbGV2ZWxfaXNzdWVzGAQgAygLMkIuZ29vZ2xlLnNob3BwaW5nLm1lcmNo",
+            "YW50LnByb2R1Y3RzLnYxLlByb2R1Y3RTdGF0dXMuSXRlbUxldmVsSXNzdWUS",
+            "MQoNY3JlYXRpb25fZGF0ZRgFIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1l",
+            "c3RhbXASNAoQbGFzdF91cGRhdGVfZGF0ZRgGIAEoCzIaLmdvb2dsZS5wcm90",
+            "b2J1Zi5UaW1lc3RhbXASOgoWZ29vZ2xlX2V4cGlyYXRpb25fZGF0ZRgHIAEo",
+            "CzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXAawQEKEURlc3RpbmF0aW9u",
+            "U3RhdHVzElYKEXJlcG9ydGluZ19jb250ZXh0GAEgASgOMjsuZ29vZ2xlLnNo",
+            "b3BwaW5nLnR5cGUuUmVwb3J0aW5nQ29udGV4dC5SZXBvcnRpbmdDb250ZXh0",
+            "RW51bRIaChJhcHByb3ZlZF9jb3VudHJpZXMYAiADKAkSGQoRcGVuZGluZ19j",
+            "b3VudHJpZXMYAyADKAkSHQoVZGlzYXBwcm92ZWRfY291bnRyaWVzGAQgAygJ",
+            "GqwDCg5JdGVtTGV2ZWxJc3N1ZRIMCgRjb2RlGAEgASgJEl0KCHNldmVyaXR5",
+            "GAIgASgOMksuZ29vZ2xlLnNob3BwaW5nLm1lcmNoYW50LnByb2R1Y3RzLnYx",
+            "LlByb2R1Y3RTdGF0dXMuSXRlbUxldmVsSXNzdWUuU2V2ZXJpdHkSEgoKcmVz",
+            "b2x1dGlvbhgDIAEoCRIRCglhdHRyaWJ1dGUYBCABKAkSVgoRcmVwb3J0aW5n",
+            "X2NvbnRleHQYBSABKA4yOy5nb29nbGUuc2hvcHBpbmcudHlwZS5SZXBvcnRp",
+            "bmdDb250ZXh0LlJlcG9ydGluZ0NvbnRleHRFbnVtEhMKC2Rlc2NyaXB0aW9u",
+            "GAYgASgJEg4KBmRldGFpbBgHIAEoCRIVCg1kb2N1bWVudGF0aW9uGAggASgJ",
+            "EhwKFGFwcGxpY2FibGVfY291bnRyaWVzGAkgAygJIlQKCFNldmVyaXR5EhgK",
+            "FFNFVkVSSVRZX1VOU1BFQ0lGSUVEEAASEAoMTk9UX0lNUEFDVEVEEAESCwoH",
+            "REVNT1RFRBACEg8KC0RJU0FQUFJPVkVEEAMipQIKH0Nsb3VkRXhwb3J0QWRk",
+            "aXRpb25hbFByb3BlcnRpZXMSGgoNcHJvcGVydHlfbmFtZRgBIAEoCUgAiAEB",
+            "EhIKCnRleHRfdmFsdWUYAiADKAkSFwoKYm9vbF92YWx1ZRgDIAEoCEgBiAEB",
+            "EhEKCWludF92YWx1ZRgEIAMoAxITCgtmbG9hdF92YWx1ZRgFIAMoAhIWCglt",
+            "aW5fdmFsdWUYBiABKAJIAogBARIWCgltYXhfdmFsdWUYByABKAJIA4gBARIW",
+            "Cgl1bml0X2NvZGUYCCABKAlIBIgBAUIQCg5fcHJvcGVydHlfbmFtZUINCgtf",
+            "Ym9vbF92YWx1ZUIMCgpfbWluX3ZhbHVlQgwKCl9tYXhfdmFsdWVCDAoKX3Vu",
+            "aXRfY29kZSKdAgoeUHJvZHVjdFN1c3RhaW5hYmlsaXR5SW5jZW50aXZlEi0K",
+            "BmFtb3VudBgCIAEoCzIbLmdvb2dsZS5zaG9wcGluZy50eXBlLlByaWNlSAAS",
+            "FAoKcGVyY2VudGFnZRgDIAEoAUgAElwKBHR5cGUYASABKA4ySS5nb29nbGUu",
+            "c2hvcHBpbmcubWVyY2hhbnQucHJvZHVjdHMudjEuUHJvZHVjdFN1c3RhaW5h",
+            "YmlsaXR5SW5jZW50aXZlLlR5cGVIAYgBASJGCgRUeXBlEhQKEFRZUEVfVU5T",
+            "UEVDSUZJRUQQABIRCg1FVl9UQVhfQ1JFRElUEAESFQoRRVZfUFJJQ0VfRElT",
+            "Q09VTlQQAkIHCgV2YWx1ZUIHCgVfdHlwZSK0AQoSQXV0b21hdGVkRGlzY291",
+            "bnRzEjAKC3ByaW9yX3ByaWNlGAEgASgLMhsuZ29vZ2xlLnNob3BwaW5nLnR5",
+            "cGUuUHJpY2USPAoXcHJpb3JfcHJpY2VfcHJvZ3Jlc3NpdmUYAiABKAsyGy5n",
+            "b29nbGUuc2hvcHBpbmcudHlwZS5QcmljZRIuCglnYWRfcHJpY2UYAyABKAsy",
+            "Gy5nb29nbGUuc2hvcHBpbmcudHlwZS5QcmljZSpOChJTdWJzY3JpcHRpb25Q",
+            "ZXJpb2QSIwofU1VCU0NSSVBUSU9OX1BFUklPRF9VTlNQRUNJRklFRBAAEgkK",
+            "BU1PTlRIEAESCAoEWUVBUhACKmAKCEFnZUdyb3VwEhkKFUFHRV9HUk9VUF9V",
+            "TlNQRUNJRklFRBAAEgkKBUFEVUxUEAESCAoES0lEUxACEgsKB1RPRERMRVIQ",
+            "AxIKCgZJTkZBTlQQBBILCgdORVdCT1JOEAUqgwEKDEF2YWlsYWJpbGl0eRIc",
+            "ChhBVkFJTEFCSUxJVFlfVU5TUEVDSUZJRUQQABIMCghJTl9TVE9DSxABEhAK",
+            "DE9VVF9PRl9TVE9DSxACEgwKCFBSRU9SREVSEAMSGAoUTElNSVRFRF9BVkFJ",
+            "TEFCSUxJVFkQBBINCglCQUNLT1JERVIQBSpKCglDb25kaXRpb24SGQoVQ09O",
+            "RElUSU9OX1VOU1BFQ0lGSUVEEAASBwoDTkVXEAESCAoEVVNFRBACEg8KC1JF",
+            "RlVSQklTSEVEEAMqQgoGR2VuZGVyEhYKEkdFTkRFUl9VTlNQRUNJRklFRBAA",
+            "EggKBE1BTEUQARIKCgZGRU1BTEUQAhIKCgZVTklTRVgQAypBCgpDcmVkaXRU",
+            "eXBlEhsKF0NSRURJVF9UWVBFX1VOU1BFQ0lGSUVEEAASCwoHRklOQU5DRRAB",
+            "EgkKBUxFQVNFEAIqggEKClNpemVTeXN0ZW0SGwoXU0laRV9TWVNURU1fVU5T",
+            "UEVDSUZJRUQQABIGCgJBVRABEgYKAkJSEAISBgoCQ04QAxIGCgJERRAEEgYK",
+            "AkVVEAUSBgoCRlIQBhIGCgJJVBAHEgYKAkpQEAgSBwoDTUVYEAkSBgoCVUsQ",
+            "ChIGCgJVUxALKmoKCFNpemVUeXBlEhkKFVNJWkVfVFlQRV9VTlNQRUNJRklF",
+            "RBAAEgsKB1JFR1VMQVIQARIKCgZQRVRJVEUQAhINCglNQVRFUk5JVFkQAxIH",
+            "CgNCSUcQBBIICgRUQUxMEAUSCAoEUExVUxAGKowBChVFbmVyZ3lFZmZpY2ll",
+            "bmN5Q2xhc3MSJwojRU5FUkdZX0VGRklDSUVOQ1lfQ0xBU1NfVU5TUEVDSUZJ",
+            "RUQQABIICgRBUFBQEAESBwoDQVBQEAISBgoCQVAQAxIFCgFBEAQSBQoBQhAF",
+            "EgUKAUMQBhIFCgFEEAcSBQoBRRAIEgUKAUYQCRIFCgFHEAoqaQoMUGlja3Vw",
+            "TWV0aG9kEh0KGVBJQ0tVUF9NRVRIT0RfVU5TUEVDSUZJRUQQABIRCg1OT1Rf",
+            "U1VQUE9SVEVEEAESBwoDQlVZEAISCwoHUkVTRVJWRRADEhEKDVNISVBfVE9f",
+            "U1RPUkUQBCqYAQoJUGlja3VwU2xhEhoKFlBJQ0tVUF9TTEFfVU5TUEVDSUZJ",
+            "RUQQABIMCghTQU1FX0RBWRABEgwKCE5FWFRfREFZEAISCwoHVFdPX0RBWRAD",
+            "Eg0KCVRIUkVFX0RBWRAEEgwKCEZPVVJfREFZEAUSDAoIRklWRV9EQVkQBhIL",
+            "CgdTSVhfREFZEAcSDgoKTVVMVElfV0VFSxAIKjAKBVBhdXNlEhUKEVBBVVNF",
+            "X1VOU1BFQ0lGSUVEEAASBwoDQURTEAESBwoDQUxMEAIqZwoWQ2VydGlmaWNh",
+            "dGlvbkF1dGhvcml0eRInCiNDRVJUSUZJQ0FUSU9OX0FVVEhPUklUWV9VTlNQ",
+            "RUNJRklFRBAAEgkKBUFERU1FEAESCAoEQk1XSxACEgcKA0VQQRADEgYKAkVD",
+            "EAQq1QEKEUNlcnRpZmljYXRpb25OYW1lEiIKHkNFUlRJRklDQVRJT05fTkFN",
+            "RV9VTlNQRUNJRklFRBAAEg8KC0VORVJHWV9TVEFSEAESHgoaRU5FUkdZX1NU",
+            "QVJfTU9TVF9FRkZJQ0lFTlQQAhIJCgVFUFJFTBADEg8KC0VVX0VDT0xBQkVM",
+            "EAQSHQoZVkVISUNMRV9FTkVSR1lfRUZGSUNJRU5DWRAFEjAKLFZFSElDTEVf",
+            "RU5FUkdZX0VGRklDSUVOQ1lfRElTQ0hBUkdFRF9CQVRURVJZEAYqZAoRRGln",
+            "aXRhbFNvdXJjZVR5cGUSIwofRElHSVRBTF9TT1VSQ0VfVFlQRV9VTlNQRUNJ",
+            "RklFRBAAEh0KGVRSQUlORURfQUxHT1JJVEhNSUNfTUVESUEQARILCgdERUZB",
+            "VUxUEAIqyAcKGENhcnJpZXJUcmFuc2l0VGltZU9wdGlvbhIrCidDQVJSSUVS",
+            "X1RSQU5TSVRfVElNRV9PUFRJT05fVU5TUEVDSUZJRUQQABINCglESExfUEFL",
+            "RVQQARIQCgxESExfUEFDS0NIRU4QAhITCg9ESExfRVhQUkVTU0VBU1kQAxIP",
+            "CgtEUERfRVhQUkVTUxAEEhYKEkRQRF9DTEFTU0lDX1BBUkNFTBAFEhIKDkhF",
+            "Uk1FU19IQVVTVFVSEAYSFAoQSEVSTUVTX1BBS0VUU0hPUBAHEhAKDEdMU19C",
+            "VVNJTkVTUxAIEg8KC0dMU19FWFBSRVNTEAkSDwoLR0xTX1BSSVZBVEUQChIW",
+            "ChJDT0xJU1NJTU9fRE9NSUNJTEUQCxIUChBESExfRVhQUkVTU18xMkFNEAwS",
+            "EwoPREhMX0VYUFJFU1NfOUFNEA0SEgoOR0VPRElTX0VYUFJFU1MQDhISCg5H",
+            "RU9ESVNfUEFDS18zMBAPEhMKD0dFT0RJU19TQU1FX0RBWRAQEhEKDUdFT0RJ",
+            "U19UT1BfMjQQERIVChFUTlRfRVNTRU5USUVMXzI0SBASEh0KGVROVF9FU1NF",
+            "TlRJRUxfRkxFWElCSUxJVEUQExIQCgxGRURFWF9HUk9VTkQQFBIXChNGRURF",
+            "WF9IT01FX0RFTElWRVJZEBUSFwoTRkVERVhfRVhQUkVTU19TQVZFUhAWEhkK",
+            "FUZFREVYX0ZJUlNUX09WRVJOSUdIVBAXEhwKGEZFREVYX1BSSU9SSVRZX09W",
+            "RVJOSUdIVBAYEhwKGEZFREVYX1NUQU5EQVJEX09WRVJOSUdIVBAZEg4KCkZF",
+            "REVYXzJEQVkQGhITCg9VUFNfMk5EX0RBWV9BSVIQGxISCg5VUFNfMk5EX0RB",
+            "WV9BTRAcEhQKEFVQU18zX0RBWV9TRUxFQ1QQHRIOCgpVUFNfR1JPVU5EEB4S",
+            "FAoQVVBTX05FWFRfREFZX0FJUhAfEh0KGVVQU19ORVhUX0RBWV9BSVJfRUFS",
+            "TFlfQU0QIBIaChZVUFNfTkVYVF9EQVlfQUlSX1NBVkVSECESHgoaVVNQU19Q",
+            "UklPUklUWV9NQUlMX0VYUFJFU1MQIhITCg9VU1BTX01FRElBX01BSUwQIxIg",
+            "ChxVU1BTX0dST1VORF9BRFZBTlRBR0VfUkVUQUlMECQSFgoSVVNQU19QUklP",
+            "UklUWV9NQUlMECUSJAogVVNQU19HUk9VTkRfQURWQU5UQUdFX0NPTU1FUkNJ",
+            "QUwQJhIZChVVU1BTX0ZJUlNUX0NMQVNTX01BSUwQJ0KGAgooY29tLmdvb2ds",
+            "ZS5zaG9wcGluZy5tZXJjaGFudC5wcm9kdWN0cy52MUITUHJvZHVjdHNDb21t",
+            "b25Qcm90b1ABWkpjbG91ZC5nb29nbGUuY29tL2dvL3Nob3BwaW5nL21lcmNo",
+            "YW50L3Byb2R1Y3RzL2FwaXYxL3Byb2R1Y3RzcGI7cHJvZHVjdHNwYqoCJEdv",
+            "b2dsZS5TaG9wcGluZy5NZXJjaGFudC5Qcm9kdWN0cy5WMcoCJEdvb2dsZVxT",
+            "aG9wcGluZ1xNZXJjaGFudFxQcm9kdWN0c1xWMeoCKEdvb2dsZTo6U2hvcHBp",
+            "bmc6Ok1lcmNoYW50OjpQcm9kdWN0czo6VjFiBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, global::Google.Shopping.Type.TypesReflection.Descriptor, global::Google.Type.IntervalReflection.Descriptor, },
-          new pbr::GeneratedClrTypeInfo(new[] {typeof(global::Google.Shopping.Merchant.Products.V1.SubscriptionPeriod), typeof(global::Google.Shopping.Merchant.Products.V1.AgeGroup), typeof(global::Google.Shopping.Merchant.Products.V1.Availability), typeof(global::Google.Shopping.Merchant.Products.V1.Condition), typeof(global::Google.Shopping.Merchant.Products.V1.Gender), typeof(global::Google.Shopping.Merchant.Products.V1.CreditType), typeof(global::Google.Shopping.Merchant.Products.V1.SizeSystem), typeof(global::Google.Shopping.Merchant.Products.V1.SizeType), typeof(global::Google.Shopping.Merchant.Products.V1.EnergyEfficiencyClass), typeof(global::Google.Shopping.Merchant.Products.V1.PickupMethod), typeof(global::Google.Shopping.Merchant.Products.V1.PickupSla), typeof(global::Google.Shopping.Merchant.Products.V1.Pause), typeof(global::Google.Shopping.Merchant.Products.V1.CertificationAuthority), typeof(global::Google.Shopping.Merchant.Products.V1.CertificationName), typeof(global::Google.Shopping.Merchant.Products.V1.DigitalSourceType), }, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Shopping.Merchant.Products.V1.ProductAttributes), global::Google.Shopping.Merchant.Products.V1.ProductAttributes.Parser, new[]{ "IdentifierExists", "IsBundle", "Title", "Description", "Link", "MobileLink", "CanonicalLink", "ImageLink", "AdditionalImageLinks", "ExpirationDate", "DisclosureDate", "Adult", "AgeGroup", "Availability", "AvailabilityDate", "Brand", "Color", "Condition", "Gender", "GoogleProductCategory", "Gtins", "ItemGroupId", "Material", "Mpn", "Pattern", "Price", "MaximumRetailPrice", "Installment", "SubscriptionCost", "LoyaltyPoints", "LoyaltyPrograms", "ProductTypes", "SalePrice", "SalePriceEffectiveDate", "SellOnGoogleQuantity", "ProductHeight", "ProductLength", "ProductWidth", "ProductWeight", "Shipping", "FreeShippingThreshold", "ShippingWeight", "ShippingLength", "ShippingWidth", "ShippingHeight", "MaxHandlingTime", "MinHandlingTime", "ShippingLabel", "TransitTimeLabel", "Size", "SizeSystem", "SizeTypes", "EnergyEfficiencyClass", "MinEnergyEfficiencyClass", "MaxEnergyEfficiencyClass", "UnitPricingMeasure", "UnitPricingBaseMeasure", "Multipack", "AdsGrouping", "AdsLabels", "AdsRedirect", "CostOfGoodsSold", "ProductDetails", "ProductHighlights", "DisplayAdsId", "DisplayAdsSimilarIds", "DisplayAdsTitle", "DisplayAdsLink", "DisplayAdsValue", "PromotionIds", "PickupMethod", "PickupSla", "LinkTemplate", "MobileLinkTemplate", "CustomLabel0", "CustomLabel1", "CustomLabel2", "CustomLabel3", "CustomLabel4", "IncludedDestinations", "ExcludedDestinations", "ShoppingAdsExcludedCountries", "ExternalSellerId", "Pause", "LifestyleImageLinks", "CloudExportAdditionalProperties", "VirtualModelLink", "Certifications", "StructuredTitle", "StructuredDescription", "AutoPricingMinPrice", "SustainabilityIncentives" }, new[]{ "IdentifierExists", "IsBundle", "Title", "Description", "Link", "MobileLink", "CanonicalLink", "ImageLink", "Adult", "AgeGroup", "Availability", "Brand", "Color", "Condition", "Gender", "GoogleProductCategory", "ItemGroupId", "Material", "Mpn", "Pattern", "SellOnGoogleQuantity", "MaxHandlingTime", "MinHandlingTime", "ShippingLabel", "TransitTimeLabel", "Size", "SizeSystem", "EnergyEfficiencyClass", "MinEnergyEfficiencyClass", "MaxEnergyEfficiencyClass", "Multipack", "AdsGrouping", "AdsRedirect", "DisplayAdsId", "DisplayAdsTitle", "DisplayAdsLink", "DisplayAdsValue", "PickupMethod", "PickupSla", "LinkTemplate", "MobileLinkTemplate", "CustomLabel0", "CustomLabel1", "CustomLabel2", "CustomLabel3", "CustomLabel4", "ExternalSellerId", "Pause", "VirtualModelLink", "StructuredTitle", "StructuredDescription" }, null, null, null),
+          new pbr::GeneratedClrTypeInfo(new[] {typeof(global::Google.Shopping.Merchant.Products.V1.SubscriptionPeriod), typeof(global::Google.Shopping.Merchant.Products.V1.AgeGroup), typeof(global::Google.Shopping.Merchant.Products.V1.Availability), typeof(global::Google.Shopping.Merchant.Products.V1.Condition), typeof(global::Google.Shopping.Merchant.Products.V1.Gender), typeof(global::Google.Shopping.Merchant.Products.V1.CreditType), typeof(global::Google.Shopping.Merchant.Products.V1.SizeSystem), typeof(global::Google.Shopping.Merchant.Products.V1.SizeType), typeof(global::Google.Shopping.Merchant.Products.V1.EnergyEfficiencyClass), typeof(global::Google.Shopping.Merchant.Products.V1.PickupMethod), typeof(global::Google.Shopping.Merchant.Products.V1.PickupSla), typeof(global::Google.Shopping.Merchant.Products.V1.Pause), typeof(global::Google.Shopping.Merchant.Products.V1.CertificationAuthority), typeof(global::Google.Shopping.Merchant.Products.V1.CertificationName), typeof(global::Google.Shopping.Merchant.Products.V1.DigitalSourceType), typeof(global::Google.Shopping.Merchant.Products.V1.CarrierTransitTimeOption), }, null, new pbr::GeneratedClrTypeInfo[] {
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Shopping.Merchant.Products.V1.ProductAttributes), global::Google.Shopping.Merchant.Products.V1.ProductAttributes.Parser, new[]{ "IdentifierExists", "IsBundle", "Title", "Description", "Link", "MobileLink", "CanonicalLink", "ImageLink", "AdditionalImageLinks", "ExpirationDate", "DisclosureDate", "Adult", "AgeGroup", "Availability", "AvailabilityDate", "Brand", "Color", "Condition", "Gender", "GoogleProductCategory", "Gtins", "ItemGroupId", "Material", "Mpn", "Pattern", "Price", "MaximumRetailPrice", "Installment", "SubscriptionCost", "LoyaltyPoints", "LoyaltyPrograms", "ProductTypes", "SalePrice", "SalePriceEffectiveDate", "SellOnGoogleQuantity", "ProductHeight", "ProductLength", "ProductWidth", "ProductWeight", "Shipping", "CarrierShipping", "FreeShippingThreshold", "ShippingWeight", "ShippingLength", "ShippingWidth", "ShippingHeight", "MaxHandlingTime", "MinHandlingTime", "ShippingLabel", "TransitTimeLabel", "Size", "SizeSystem", "SizeTypes", "EnergyEfficiencyClass", "MinEnergyEfficiencyClass", "MaxEnergyEfficiencyClass", "UnitPricingMeasure", "UnitPricingBaseMeasure", "Multipack", "AdsGrouping", "AdsLabels", "AdsRedirect", "CostOfGoodsSold", "ProductDetails", "ProductHighlights", "DisplayAdsId", "DisplayAdsSimilarIds", "DisplayAdsTitle", "DisplayAdsLink", "DisplayAdsValue", "PromotionIds", "PickupMethod", "PickupSla", "LinkTemplate", "MobileLinkTemplate", "CustomLabel0", "CustomLabel1", "CustomLabel2", "CustomLabel3", "CustomLabel4", "IncludedDestinations", "ExcludedDestinations", "ShoppingAdsExcludedCountries", "ExternalSellerId", "Pause", "LifestyleImageLinks", "CloudExportAdditionalProperties", "VirtualModelLink", "Certifications", "StructuredTitle", "StructuredDescription", "AutoPricingMinPrice", "SustainabilityIncentives" }, new[]{ "IdentifierExists", "IsBundle", "Title", "Description", "Link", "MobileLink", "CanonicalLink", "ImageLink", "Adult", "AgeGroup", "Availability", "Brand", "Color", "Condition", "Gender", "GoogleProductCategory", "ItemGroupId", "Material", "Mpn", "Pattern", "SellOnGoogleQuantity", "MaxHandlingTime", "MinHandlingTime", "ShippingLabel", "TransitTimeLabel", "Size", "SizeSystem", "EnergyEfficiencyClass", "MinEnergyEfficiencyClass", "MaxEnergyEfficiencyClass", "Multipack", "AdsGrouping", "AdsRedirect", "DisplayAdsId", "DisplayAdsTitle", "DisplayAdsLink", "DisplayAdsValue", "PickupMethod", "PickupSla", "LinkTemplate", "MobileLinkTemplate", "CustomLabel0", "CustomLabel1", "CustomLabel2", "CustomLabel3", "CustomLabel4", "ExternalSellerId", "Pause", "VirtualModelLink", "StructuredTitle", "StructuredDescription" }, new[]{ typeof(global::Google.Shopping.Merchant.Products.V1.ProductAttributes.Types.CarrierPriceOption) }, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Shopping.Merchant.Products.V1.ProductAttributes.Types.CarrierShipping), global::Google.Shopping.Merchant.Products.V1.ProductAttributes.Types.CarrierShipping.Parser, new[]{ "Country", "Region", "PostalCode", "OriginPostalCode", "FlatPrice", "CarrierPrice", "CarrierPriceFlatAdjustment", "CarrierPricePercentageAdjustment", "MinHandlingTime", "MaxHandlingTime", "FixedMinTransitTime", "FixedMaxTransitTime", "CarrierTransitTime" }, new[]{ "Country", "Region", "PostalCode", "OriginPostalCode", "FlatPrice", "CarrierPrice", "CarrierPriceFlatAdjustment", "CarrierPricePercentageAdjustment", "MinHandlingTime", "MaxHandlingTime", "FixedMinTransitTime", "FixedMaxTransitTime", "CarrierTransitTime" }, null, null, null)}),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Shopping.Merchant.Products.V1.ShippingWeight), global::Google.Shopping.Merchant.Products.V1.ShippingWeight.Parser, new[]{ "Value", "Unit" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Shopping.Merchant.Products.V1.ShippingDimension), global::Google.Shopping.Merchant.Products.V1.ShippingDimension.Parser, new[]{ "Value", "Unit" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Shopping.Merchant.Products.V1.UnitPricingBaseMeasure), global::Google.Shopping.Merchant.Products.V1.UnitPricingBaseMeasure.Parser, new[]{ "Value", "Unit" }, null, null, null, null),
@@ -799,6 +878,172 @@ namespace Google.Shopping.Merchant.Products.V1 {
     [pbr::OriginalName("DEFAULT")] Default = 2,
   }
 
+  /// <summary>
+  /// Possible carrier where transit time is coming from.
+  /// </summary>
+  public enum CarrierTransitTimeOption {
+    /// <summary>
+    /// Carrier transit time option is unspecified.
+    /// </summary>
+    [pbr::OriginalName("CARRIER_TRANSIT_TIME_OPTION_UNSPECIFIED")] Unspecified = 0,
+    /// <summary>
+    /// DHL Paket shipping service.
+    /// </summary>
+    [pbr::OriginalName("DHL_PAKET")] DhlPaket = 1,
+    /// <summary>
+    /// DHL Packchen shipping service.
+    /// </summary>
+    [pbr::OriginalName("DHL_PACKCHEN")] DhlPackchen = 2,
+    /// <summary>
+    /// DHL Express Easy shipping service.
+    /// </summary>
+    [pbr::OriginalName("DHL_EXPRESSEASY")] DhlExpresseasy = 3,
+    /// <summary>
+    /// DPD Express shipping service.
+    /// </summary>
+    [pbr::OriginalName("DPD_EXPRESS")] DpdExpress = 4,
+    /// <summary>
+    /// DPD Classic Parcel shipping service.
+    /// </summary>
+    [pbr::OriginalName("DPD_CLASSIC_PARCEL")] DpdClassicParcel = 5,
+    /// <summary>
+    /// Hermes Haustur shipping service.
+    /// </summary>
+    [pbr::OriginalName("HERMES_HAUSTUR")] HermesHaustur = 6,
+    /// <summary>
+    /// Hermes Paketshop shipping service.
+    /// </summary>
+    [pbr::OriginalName("HERMES_PAKETSHOP")] HermesPaketshop = 7,
+    /// <summary>
+    /// GLS Business shipping service.
+    /// </summary>
+    [pbr::OriginalName("GLS_BUSINESS")] GlsBusiness = 8,
+    /// <summary>
+    /// GLS Express shipping service.
+    /// </summary>
+    [pbr::OriginalName("GLS_EXPRESS")] GlsExpress = 9,
+    /// <summary>
+    /// GLS Private shipping service.
+    /// </summary>
+    [pbr::OriginalName("GLS_PRIVATE")] GlsPrivate = 10,
+    /// <summary>
+    /// Colissimo Domicile shipping service.
+    /// </summary>
+    [pbr::OriginalName("COLISSIMO_DOMICILE")] ColissimoDomicile = 11,
+    /// <summary>
+    /// DHL Express 12 AM shipping service.
+    /// </summary>
+    [pbr::OriginalName("DHL_EXPRESS_12AM")] DhlExpress12Am = 12,
+    /// <summary>
+    /// DHL Express 9 AM shipping service.
+    /// </summary>
+    [pbr::OriginalName("DHL_EXPRESS_9AM")] DhlExpress9Am = 13,
+    /// <summary>
+    /// GEODIS Express shipping service.
+    /// </summary>
+    [pbr::OriginalName("GEODIS_EXPRESS")] GeodisExpress = 14,
+    /// <summary>
+    /// GEODIS Pack 30 shipping service.
+    /// </summary>
+    [pbr::OriginalName("GEODIS_PACK_30")] GeodisPack30 = 15,
+    /// <summary>
+    /// GEODIS Same Day shipping service.
+    /// </summary>
+    [pbr::OriginalName("GEODIS_SAME_DAY")] GeodisSameDay = 16,
+    /// <summary>
+    /// GEODIS Top 24 shipping service.
+    /// </summary>
+    [pbr::OriginalName("GEODIS_TOP_24")] GeodisTop24 = 17,
+    /// <summary>
+    /// TNT Essentiel 24H shipping service.
+    /// </summary>
+    [pbr::OriginalName("TNT_ESSENTIEL_24H")] TntEssentiel24H = 18,
+    /// <summary>
+    /// TNT Essentiel Flexibilite shipping service.
+    /// </summary>
+    [pbr::OriginalName("TNT_ESSENTIEL_FLEXIBILITE")] TntEssentielFlexibilite = 19,
+    /// <summary>
+    /// FedEx Ground shipping service.
+    /// </summary>
+    [pbr::OriginalName("FEDEX_GROUND")] FedexGround = 20,
+    /// <summary>
+    /// FedEx Home Delivery shipping service.
+    /// </summary>
+    [pbr::OriginalName("FEDEX_HOME_DELIVERY")] FedexHomeDelivery = 21,
+    /// <summary>
+    /// FedEx Express Saver shipping service.
+    /// </summary>
+    [pbr::OriginalName("FEDEX_EXPRESS_SAVER")] FedexExpressSaver = 22,
+    /// <summary>
+    /// FedEx First Overnight shipping service.
+    /// </summary>
+    [pbr::OriginalName("FEDEX_FIRST_OVERNIGHT")] FedexFirstOvernight = 23,
+    /// <summary>
+    /// FedEx Priority Overnight shipping service.
+    /// </summary>
+    [pbr::OriginalName("FEDEX_PRIORITY_OVERNIGHT")] FedexPriorityOvernight = 24,
+    /// <summary>
+    /// FedEx Standard Overnight shipping service.
+    /// </summary>
+    [pbr::OriginalName("FEDEX_STANDARD_OVERNIGHT")] FedexStandardOvernight = 25,
+    /// <summary>
+    /// FedEx 2Day shipping service.
+    /// </summary>
+    [pbr::OriginalName("FEDEX_2DAY")] Fedex2Day = 26,
+    /// <summary>
+    /// UPS 2nd Day Air shipping service.
+    /// </summary>
+    [pbr::OriginalName("UPS_2ND_DAY_AIR")] Ups2NdDayAir = 27,
+    /// <summary>
+    /// UPS 2nd Day AM shipping service.
+    /// </summary>
+    [pbr::OriginalName("UPS_2ND_DAY_AM")] Ups2NdDayAm = 28,
+    /// <summary>
+    /// UPS 3 Day Select shipping service.
+    /// </summary>
+    [pbr::OriginalName("UPS_3_DAY_SELECT")] Ups3DaySelect = 29,
+    /// <summary>
+    /// UPS Ground shipping service.
+    /// </summary>
+    [pbr::OriginalName("UPS_GROUND")] UpsGround = 30,
+    /// <summary>
+    /// UPS Next Day Air shipping service.
+    /// </summary>
+    [pbr::OriginalName("UPS_NEXT_DAY_AIR")] UpsNextDayAir = 31,
+    /// <summary>
+    /// UPS Next Day Air Early AM shipping service.
+    /// </summary>
+    [pbr::OriginalName("UPS_NEXT_DAY_AIR_EARLY_AM")] UpsNextDayAirEarlyAm = 32,
+    /// <summary>
+    /// UPS Next Day Air Saver shipping service.
+    /// </summary>
+    [pbr::OriginalName("UPS_NEXT_DAY_AIR_SAVER")] UpsNextDayAirSaver = 33,
+    /// <summary>
+    /// USPS Priority Mail Express shipping service.
+    /// </summary>
+    [pbr::OriginalName("USPS_PRIORITY_MAIL_EXPRESS")] UspsPriorityMailExpress = 34,
+    /// <summary>
+    /// USPS Media Mail shipping service.
+    /// </summary>
+    [pbr::OriginalName("USPS_MEDIA_MAIL")] UspsMediaMail = 35,
+    /// <summary>
+    /// USPS Ground Advantage Retail shipping service.
+    /// </summary>
+    [pbr::OriginalName("USPS_GROUND_ADVANTAGE_RETAIL")] UspsGroundAdvantageRetail = 36,
+    /// <summary>
+    /// USPS Priority Mail shipping service.
+    /// </summary>
+    [pbr::OriginalName("USPS_PRIORITY_MAIL")] UspsPriorityMail = 37,
+    /// <summary>
+    /// USPS Ground Advantage Commercial shipping service.
+    /// </summary>
+    [pbr::OriginalName("USPS_GROUND_ADVANTAGE_COMMERCIAL")] UspsGroundAdvantageCommercial = 38,
+    /// <summary>
+    /// USPS First Class Mail shipping service.
+    /// </summary>
+    [pbr::OriginalName("USPS_FIRST_CLASS_MAIL")] UspsFirstClassMail = 39,
+  }
+
   #endregion
 
   #region Messages
@@ -882,6 +1127,7 @@ namespace Google.Shopping.Merchant.Products.V1 {
       productWidth_ = other.productWidth_ != null ? other.productWidth_.Clone() : null;
       productWeight_ = other.productWeight_ != null ? other.productWeight_.Clone() : null;
       shipping_ = other.shipping_.Clone();
+      carrierShipping_ = other.carrierShipping_.Clone();
       freeShippingThreshold_ = other.freeShippingThreshold_.Clone();
       shippingWeight_ = other.shippingWeight_ != null ? other.shippingWeight_.Clone() : null;
       shippingLength_ = other.shippingLength_ != null ? other.shippingLength_.Clone() : null;
@@ -1880,6 +2126,20 @@ namespace Google.Shopping.Merchant.Products.V1 {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public pbc::RepeatedField<global::Google.Shopping.Merchant.Products.V1.Shipping> Shipping {
       get { return shipping_; }
+    }
+
+    /// <summary>Field number for the "carrier_shipping" field.</summary>
+    public const int CarrierShippingFieldNumber = 142;
+    private static readonly pb::FieldCodec<global::Google.Shopping.Merchant.Products.V1.ProductAttributes.Types.CarrierShipping> _repeated_carrierShipping_codec
+        = pb::FieldCodec.ForMessage(1138, global::Google.Shopping.Merchant.Products.V1.ProductAttributes.Types.CarrierShipping.Parser);
+    private readonly pbc::RepeatedField<global::Google.Shopping.Merchant.Products.V1.ProductAttributes.Types.CarrierShipping> carrierShipping_ = new pbc::RepeatedField<global::Google.Shopping.Merchant.Products.V1.ProductAttributes.Types.CarrierShipping>();
+    /// <summary>
+    /// Rules for carrier-based shipping.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pbc::RepeatedField<global::Google.Shopping.Merchant.Products.V1.ProductAttributes.Types.CarrierShipping> CarrierShipping {
+      get { return carrierShipping_; }
     }
 
     /// <summary>Field number for the "free_shipping_threshold" field.</summary>
@@ -3178,6 +3438,7 @@ namespace Google.Shopping.Merchant.Products.V1 {
       if (!object.Equals(ProductWidth, other.ProductWidth)) return false;
       if (!object.Equals(ProductWeight, other.ProductWeight)) return false;
       if(!shipping_.Equals(other.shipping_)) return false;
+      if(!carrierShipping_.Equals(other.carrierShipping_)) return false;
       if(!freeShippingThreshold_.Equals(other.freeShippingThreshold_)) return false;
       if (!object.Equals(ShippingWeight, other.ShippingWeight)) return false;
       if (!object.Equals(ShippingLength, other.ShippingLength)) return false;
@@ -3277,6 +3538,7 @@ namespace Google.Shopping.Merchant.Products.V1 {
       if (productWidth_ != null) hash ^= ProductWidth.GetHashCode();
       if (productWeight_ != null) hash ^= ProductWeight.GetHashCode();
       hash ^= shipping_.GetHashCode();
+      hash ^= carrierShipping_.GetHashCode();
       hash ^= freeShippingThreshold_.GetHashCode();
       if (shippingWeight_ != null) hash ^= ShippingWeight.GetHashCode();
       if (shippingLength_ != null) hash ^= ShippingLength.GetHashCode();
@@ -3658,6 +3920,7 @@ namespace Google.Shopping.Merchant.Products.V1 {
         output.WriteMessage(MaximumRetailPrice);
       }
       gtins_.WriteTo(output, _repeated_gtins_codec);
+      carrierShipping_.WriteTo(output, _repeated_carrierShipping_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -3979,6 +4242,7 @@ namespace Google.Shopping.Merchant.Products.V1 {
         output.WriteMessage(MaximumRetailPrice);
       }
       gtins_.WriteTo(ref output, _repeated_gtins_codec);
+      carrierShipping_.WriteTo(ref output, _repeated_carrierShipping_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -4099,6 +4363,7 @@ namespace Google.Shopping.Merchant.Products.V1 {
         size += 2 + pb::CodedOutputStream.ComputeMessageSize(ProductWeight);
       }
       size += shipping_.CalculateSize(_repeated_shipping_codec);
+      size += carrierShipping_.CalculateSize(_repeated_carrierShipping_codec);
       size += freeShippingThreshold_.CalculateSize(_repeated_freeShippingThreshold_codec);
       if (shippingWeight_ != null) {
         size += 2 + pb::CodedOutputStream.ComputeMessageSize(ShippingWeight);
@@ -4391,6 +4656,7 @@ namespace Google.Shopping.Merchant.Products.V1 {
         ProductWeight.MergeFrom(other.ProductWeight);
       }
       shipping_.Add(other.shipping_);
+      carrierShipping_.Add(other.carrierShipping_);
       freeShippingThreshold_.Add(other.freeShippingThreshold_);
       if (other.shippingWeight_ != null) {
         if (shippingWeight_ == null) {
@@ -5007,6 +5273,10 @@ namespace Google.Shopping.Merchant.Products.V1 {
             gtins_.AddEntriesFrom(input, _repeated_gtins_codec);
             break;
           }
+          case 1138: {
+            carrierShipping_.AddEntriesFrom(input, _repeated_carrierShipping_codec);
+            break;
+          }
         }
       }
     #endif
@@ -5465,10 +5735,1206 @@ namespace Google.Shopping.Merchant.Products.V1 {
             gtins_.AddEntriesFrom(ref input, _repeated_gtins_codec);
             break;
           }
+          case 1138: {
+            carrierShipping_.AddEntriesFrom(ref input, _repeated_carrierShipping_codec);
+            break;
+          }
         }
       }
     }
     #endif
+
+    #region Nested types
+    /// <summary>Container for nested types declared in the ProductAttributes message type.</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static partial class Types {
+      /// <summary>
+      /// Possible carrier where price is coming from.
+      /// </summary>
+      public enum CarrierPriceOption {
+        /// <summary>
+        /// Carrier price option is unspecified.
+        /// </summary>
+        [pbr::OriginalName("CARRIER_PRICE_OPTION_UNSPECIFIED")] Unspecified = 0,
+        /// <summary>
+        /// Australia Post Regular shipping service.
+        /// </summary>
+        [pbr::OriginalName("AUSTRALIA_POST_REGULAR")] AustraliaPostRegular = 1,
+        /// <summary>
+        /// Australia Post Express shipping service.
+        /// </summary>
+        [pbr::OriginalName("AUSTRALIA_POST_EXPRESS")] AustraliaPostExpress = 2,
+        /// <summary>
+        /// Australia Post Regular Small shipping service.
+        /// </summary>
+        [pbr::OriginalName("AUSTRALIA_POST_REGULAR_S")] AustraliaPostRegularS = 3,
+        /// <summary>
+        /// Australia Post Regular Medium shipping service.
+        /// </summary>
+        [pbr::OriginalName("AUSTRALIA_POST_REGULAR_M")] AustraliaPostRegularM = 4,
+        /// <summary>
+        /// Australia Post Regular Large shipping service.
+        /// </summary>
+        [pbr::OriginalName("AUSTRALIA_POST_REGULAR_L")] AustraliaPostRegularL = 5,
+        /// <summary>
+        /// Australia Post Regular XL shipping service.
+        /// </summary>
+        [pbr::OriginalName("AUSTRALIA_POST_REGULAR_XL")] AustraliaPostRegularXl = 6,
+        /// <summary>
+        /// Australia Post Express Small shipping service.
+        /// </summary>
+        [pbr::OriginalName("AUSTRALIA_POST_EXPRESS_S")] AustraliaPostExpressS = 7,
+        /// <summary>
+        /// Australia Post Express Medium shipping service.
+        /// </summary>
+        [pbr::OriginalName("AUSTRALIA_POST_EXPRESS_M")] AustraliaPostExpressM = 8,
+        /// <summary>
+        /// Australia Post Express Large shipping service.
+        /// </summary>
+        [pbr::OriginalName("AUSTRALIA_POST_EXPRESS_L")] AustraliaPostExpressL = 9,
+        /// <summary>
+        /// Australia Post Express XL shipping service.
+        /// </summary>
+        [pbr::OriginalName("AUSTRALIA_POST_EXPRESS_XL")] AustraliaPostExpressXl = 10,
+        /// <summary>
+        /// TNT Road Express shipping service.
+        /// </summary>
+        [pbr::OriginalName("TNT_ROAD_EXPRESS")] TntRoadExpress = 11,
+        /// <summary>
+        /// TNT Overnight Express shipping service.
+        /// </summary>
+        [pbr::OriginalName("TNT_OVERNIGHT_EXPRESS")] TntOvernightExpress = 12,
+        /// <summary>
+        /// Toll Road Delivery shipping service.
+        /// </summary>
+        [pbr::OriginalName("TOLL_ROAD_DELIVERY")] TollRoadDelivery = 13,
+        /// <summary>
+        /// Toll Overnight Priority shipping service.
+        /// </summary>
+        [pbr::OriginalName("TOLL_OVERNIGHT_PRIORITY")] TollOvernightPriority = 14,
+        /// <summary>
+        /// DHL Paket shipping service.
+        /// </summary>
+        [pbr::OriginalName("DHL_PAKET")] DhlPaket = 15,
+        /// <summary>
+        /// DHL Packchen shipping service.
+        /// </summary>
+        [pbr::OriginalName("DHL_PACKCHEN")] DhlPackchen = 16,
+        /// <summary>
+        /// DPD Express 12 shipping service.
+        /// </summary>
+        [pbr::OriginalName("DPD_EXPRESS_12")] DpdExpress12 = 17,
+        /// <summary>
+        /// DPD Express shipping service.
+        /// </summary>
+        [pbr::OriginalName("DPD_EXPRESS")] DpdExpress = 18,
+        /// <summary>
+        /// DPD Classic Parcel shipping service.
+        /// </summary>
+        [pbr::OriginalName("DPD_CLASSIC_PARCEL")] DpdClassicParcel = 19,
+        /// <summary>
+        /// Hermes Packchen shipping service.
+        /// </summary>
+        [pbr::OriginalName("HERMES_PACKCHEN")] HermesPackchen = 20,
+        /// <summary>
+        /// Hermes Paketklasse S shipping service.
+        /// </summary>
+        [pbr::OriginalName("HERMES_PAKETKLASSE_S")] HermesPaketklasseS = 21,
+        /// <summary>
+        /// Hermes Paketklasse M shipping service.
+        /// </summary>
+        [pbr::OriginalName("HERMES_PAKETKLASSE_M")] HermesPaketklasseM = 22,
+        /// <summary>
+        /// Hermes Paketklasse L shipping service.
+        /// </summary>
+        [pbr::OriginalName("HERMES_PAKETKLASSE_L")] HermesPaketklasseL = 23,
+        /// <summary>
+        /// UPS Express shipping service.
+        /// </summary>
+        [pbr::OriginalName("UPS_EXPRESS")] UpsExpress = 24,
+        /// <summary>
+        /// UPS Express Saver shipping service.
+        /// </summary>
+        [pbr::OriginalName("UPS_EXPRESS_SAVER")] UpsExpressSaver = 25,
+        /// <summary>
+        /// UPS Express Standard shipping service.
+        /// </summary>
+        [pbr::OriginalName("UPS_EXPRESS_STANDARD")] UpsExpressStandard = 26,
+        /// <summary>
+        /// DHL Express shipping service.
+        /// </summary>
+        [pbr::OriginalName("DHL_EXPRESS")] DhlExpress = 27,
+        /// <summary>
+        /// DHL Express 12 shipping service.
+        /// </summary>
+        [pbr::OriginalName("DHL_EXPRESS_12")] DhlExpress12 = 28,
+        /// <summary>
+        /// DPD Next Day shipping service.
+        /// </summary>
+        [pbr::OriginalName("DPD_NEXT_DAY")] DpdNextDay = 29,
+        /// <summary>
+        /// DPD Standard Next Day shipping service.
+        /// </summary>
+        [pbr::OriginalName("DPD_STANDARD_NEXT_DAY")] DpdStandardNextDay = 30,
+        /// <summary>
+        /// DPD Standard Two Day shipping service.
+        /// </summary>
+        [pbr::OriginalName("DPD_STANDARD_TWO_DAY")] DpdStandardTwoDay = 31,
+        /// <summary>
+        /// RMG 1st Class Small shipping service.
+        /// </summary>
+        [pbr::OriginalName("RMG_1ST_CLASS_SMALL")] Rmg1StClassSmall = 32,
+        /// <summary>
+        /// RMG 1st Class Medium shipping service.
+        /// </summary>
+        [pbr::OriginalName("RMG_1ST_CLASS_MEDIUM")] Rmg1StClassMedium = 33,
+        /// <summary>
+        /// RMG 2nd Class Small shipping service.
+        /// </summary>
+        [pbr::OriginalName("RMG_2ND_CLASS_SMALL")] Rmg2NdClassSmall = 34,
+        /// <summary>
+        /// RMG 2nd Class Medium shipping service.
+        /// </summary>
+        [pbr::OriginalName("RMG_2ND_CLASS_MEDIUM")] Rmg2NdClassMedium = 35,
+        /// <summary>
+        /// TNT Express shipping service.
+        /// </summary>
+        [pbr::OriginalName("TNT_EXPRESS")] TntExpress = 36,
+        /// <summary>
+        /// TNT Express 10 shipping service.
+        /// </summary>
+        [pbr::OriginalName("TNT_EXPRESS_10")] TntExpress10 = 37,
+        /// <summary>
+        /// TNT Express 12 shipping service.
+        /// </summary>
+        [pbr::OriginalName("TNT_EXPRESS_12")] TntExpress12 = 38,
+        /// <summary>
+        /// Yodel B2C 48HR shipping service.
+        /// </summary>
+        [pbr::OriginalName("YODEL_B2C_48HR")] YodelB2C48Hr = 39,
+        /// <summary>
+        /// Yodel B2C 72HR shipping service.
+        /// </summary>
+        [pbr::OriginalName("YODEL_B2C_72HR")] YodelB2C72Hr = 40,
+        /// <summary>
+        /// Yodel B2C Packet shipping service.
+        /// </summary>
+        [pbr::OriginalName("YODEL_B2C_PACKET")] YodelB2CPacket = 41,
+        /// <summary>
+        /// FedEx Ground shipping service.
+        /// </summary>
+        [pbr::OriginalName("FEDEX_GROUND")] FedexGround = 42,
+        /// <summary>
+        /// FedEx Home Delivery shipping service.
+        /// </summary>
+        [pbr::OriginalName("FEDEX_HOME_DELIVERY")] FedexHomeDelivery = 43,
+        /// <summary>
+        /// FedEx Express Saver shipping service.
+        /// </summary>
+        [pbr::OriginalName("FEDEX_EXPRESS_SAVER")] FedexExpressSaver = 44,
+        /// <summary>
+        /// FedEx First Overnight shipping service.
+        /// </summary>
+        [pbr::OriginalName("FEDEX_FIRST_OVERNIGHT")] FedexFirstOvernight = 45,
+        /// <summary>
+        /// FedEx Priority Overnight shipping service.
+        /// </summary>
+        [pbr::OriginalName("FEDEX_PRIORITY_OVERNIGHT")] FedexPriorityOvernight = 46,
+        /// <summary>
+        /// FedEx Standard Overnight shipping service.
+        /// </summary>
+        [pbr::OriginalName("FEDEX_STANDARD_OVERNIGHT")] FedexStandardOvernight = 47,
+        /// <summary>
+        /// FedEx 2Day shipping service.
+        /// </summary>
+        [pbr::OriginalName("FEDEX_2DAY")] Fedex2Day = 48,
+        /// <summary>
+        /// UPS Standard shipping service.
+        /// </summary>
+        [pbr::OriginalName("UPS_STANDARD")] UpsStandard = 49,
+        /// <summary>
+        /// UPS 2nd Day Air shipping service.
+        /// </summary>
+        [pbr::OriginalName("UPS_2ND_DAY_AIR")] Ups2NdDayAir = 50,
+        /// <summary>
+        /// UPS 2nd Day AM shipping service.
+        /// </summary>
+        [pbr::OriginalName("UPS_2ND_DAY_AM")] Ups2NdDayAm = 51,
+        /// <summary>
+        /// UPS 3 Day Select shipping service.
+        /// </summary>
+        [pbr::OriginalName("UPS_3_DAY_SELECT")] Ups3DaySelect = 52,
+        /// <summary>
+        /// UPS Ground shipping service.
+        /// </summary>
+        [pbr::OriginalName("UPS_GROUND")] UpsGround = 53,
+        /// <summary>
+        /// UPS Next Day Air shipping service.
+        /// </summary>
+        [pbr::OriginalName("UPS_NEXT_DAY_AIR")] UpsNextDayAir = 54,
+        /// <summary>
+        /// UPS Next Day Air Early AM shipping service.
+        /// </summary>
+        [pbr::OriginalName("UPS_NEXT_DAY_AIR_EARLY_AM")] UpsNextDayAirEarlyAm = 55,
+        /// <summary>
+        /// UPS Next Day Air Saver shipping service.
+        /// </summary>
+        [pbr::OriginalName("UPS_NEXT_DAY_AIR_SAVER")] UpsNextDayAirSaver = 56,
+        /// <summary>
+        /// USPS Priority Mail Express shipping service.
+        /// </summary>
+        [pbr::OriginalName("USPS_PRIORITY_MAIL_EXPRESS")] UspsPriorityMailExpress = 57,
+        /// <summary>
+        /// USPS Media Mail shipping service.
+        /// </summary>
+        [pbr::OriginalName("USPS_MEDIA_MAIL")] UspsMediaMail = 58,
+        /// <summary>
+        /// USPS Ground Advantage Retail shipping service.
+        /// </summary>
+        [pbr::OriginalName("USPS_GROUND_ADVANTAGE_RETAIL")] UspsGroundAdvantageRetail = 59,
+        /// <summary>
+        /// USPS Priority Mail shipping service.
+        /// </summary>
+        [pbr::OriginalName("USPS_PRIORITY_MAIL")] UspsPriorityMail = 60,
+        /// <summary>
+        /// USPS Ground Advantage Commercial shipping service.
+        /// </summary>
+        [pbr::OriginalName("USPS_GROUND_ADVANTAGE_COMMERCIAL")] UspsGroundAdvantageCommercial = 61,
+      }
+
+      /// <summary>
+      /// Carrier-based shipping configuration. Allows for setting shipping speed or
+      /// shipping cost based on a carrier's provided info.
+      /// </summary>
+      [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+      public sealed partial class CarrierShipping : pb::IMessage<CarrierShipping>
+      #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          , pb::IBufferMessage
+      #endif
+      {
+        private static readonly pb::MessageParser<CarrierShipping> _parser = new pb::MessageParser<CarrierShipping>(() => new CarrierShipping());
+        private pb::UnknownFieldSet _unknownFields;
+        private int _hasBits0;
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public static pb::MessageParser<CarrierShipping> Parser { get { return _parser; } }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public static pbr::MessageDescriptor Descriptor {
+          get { return global::Google.Shopping.Merchant.Products.V1.ProductAttributes.Descriptor.NestedTypes[0]; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        pbr::MessageDescriptor pb::IMessage.Descriptor {
+          get { return Descriptor; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public CarrierShipping() {
+          OnConstruction();
+        }
+
+        partial void OnConstruction();
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public CarrierShipping(CarrierShipping other) : this() {
+          _hasBits0 = other._hasBits0;
+          country_ = other.country_;
+          region_ = other.region_;
+          postalCode_ = other.postalCode_;
+          originPostalCode_ = other.originPostalCode_;
+          flatPrice_ = other.flatPrice_ != null ? other.flatPrice_.Clone() : null;
+          carrierPrice_ = other.carrierPrice_;
+          carrierPriceFlatAdjustment_ = other.carrierPriceFlatAdjustment_ != null ? other.carrierPriceFlatAdjustment_.Clone() : null;
+          carrierPricePercentageAdjustment_ = other.carrierPricePercentageAdjustment_;
+          minHandlingTime_ = other.minHandlingTime_;
+          maxHandlingTime_ = other.maxHandlingTime_;
+          fixedMinTransitTime_ = other.fixedMinTransitTime_;
+          fixedMaxTransitTime_ = other.fixedMaxTransitTime_;
+          carrierTransitTime_ = other.carrierTransitTime_;
+          _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public CarrierShipping Clone() {
+          return new CarrierShipping(this);
+        }
+
+        /// <summary>Field number for the "country" field.</summary>
+        public const int CountryFieldNumber = 1;
+        private readonly static string CountryDefaultValue = "";
+
+        private string country_;
+        /// <summary>
+        /// The [CLDR territory
+        /// code](http://www.unicode.org/repos/cldr/tags/latest/common/main/en.xml)
+        /// of the country to which an item will ship.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public string Country {
+          get { return country_ ?? CountryDefaultValue; }
+          set {
+            country_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+          }
+        }
+        /// <summary>Gets whether the "country" field is set</summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public bool HasCountry {
+          get { return country_ != null; }
+        }
+        /// <summary>Clears the value of the "country" field</summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void ClearCountry() {
+          country_ = null;
+        }
+
+        /// <summary>Field number for the "region" field.</summary>
+        public const int RegionFieldNumber = 2;
+        private readonly static string RegionDefaultValue = "";
+
+        private string region_;
+        /// <summary>
+        /// The geographic region to which a shipping rate applies.
+        /// See [region](https://support.google.com/merchants/answer/6324484) for
+        /// more information.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public string Region {
+          get { return region_ ?? RegionDefaultValue; }
+          set {
+            region_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+          }
+        }
+        /// <summary>Gets whether the "region" field is set</summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public bool HasRegion {
+          get { return region_ != null; }
+        }
+        /// <summary>Clears the value of the "region" field</summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void ClearRegion() {
+          region_ = null;
+        }
+
+        /// <summary>Field number for the "postal_code" field.</summary>
+        public const int PostalCodeFieldNumber = 3;
+        private readonly static string PostalCodeDefaultValue = "";
+
+        private string postalCode_;
+        /// <summary>
+        /// The postal code range that the shipping rate applies to, represented by
+        /// a postal code (eg. `94043`), a postal code prefix followed by a *
+        /// wildcard (eg. `94*`), a range between two postal codes (eg.
+        /// `94043-98033`) or two postal code prefixes of equal length (eg.
+        /// `94*-98*`).
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public string PostalCode {
+          get { return postalCode_ ?? PostalCodeDefaultValue; }
+          set {
+            postalCode_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+          }
+        }
+        /// <summary>Gets whether the "postal_code" field is set</summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public bool HasPostalCode {
+          get { return postalCode_ != null; }
+        }
+        /// <summary>Clears the value of the "postal_code" field</summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void ClearPostalCode() {
+          postalCode_ = null;
+        }
+
+        /// <summary>Field number for the "origin_postal_code" field.</summary>
+        public const int OriginPostalCodeFieldNumber = 4;
+        private readonly static string OriginPostalCodeDefaultValue = "";
+
+        private string originPostalCode_;
+        /// <summary>
+        /// The source location postal code from which this offer ships. Represented
+        /// only by a full-length postal code.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public string OriginPostalCode {
+          get { return originPostalCode_ ?? OriginPostalCodeDefaultValue; }
+          set {
+            originPostalCode_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+          }
+        }
+        /// <summary>Gets whether the "origin_postal_code" field is set</summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public bool HasOriginPostalCode {
+          get { return originPostalCode_ != null; }
+        }
+        /// <summary>Clears the value of the "origin_postal_code" field</summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void ClearOriginPostalCode() {
+          originPostalCode_ = null;
+        }
+
+        /// <summary>Field number for the "flat_price" field.</summary>
+        public const int FlatPriceFieldNumber = 5;
+        private global::Google.Shopping.Type.Price flatPrice_;
+        /// <summary>
+        /// Fixed shipping price, represented as a number with currency. Cannot be
+        /// set together with
+        /// [carrierPrice][google.shopping.merchant.products.v1.ProductAttributes.CarrierShipping.carrier_price]
+        /// or its adjustments
+        /// ([carrierPriceFlatAdjustment][google.shopping.merchant.products.v1.ProductAttributes.CarrierShipping.carrier_price_flat_adjustment],
+        /// [carrierPricePercentageAdjustment][google.shopping.merchant.products.v1.ProductAttributes.CarrierShipping.carrier_price_percentage_adjustment]).
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public global::Google.Shopping.Type.Price FlatPrice {
+          get { return flatPrice_; }
+          set {
+            flatPrice_ = value;
+          }
+        }
+
+        /// <summary>Field number for the "carrier_price" field.</summary>
+        public const int CarrierPriceFieldNumber = 6;
+        private readonly static global::Google.Shopping.Merchant.Products.V1.ProductAttributes.Types.CarrierPriceOption CarrierPriceDefaultValue = global::Google.Shopping.Merchant.Products.V1.ProductAttributes.Types.CarrierPriceOption.Unspecified;
+
+        private global::Google.Shopping.Merchant.Products.V1.ProductAttributes.Types.CarrierPriceOption carrierPrice_;
+        /// <summary>
+        /// Selected carrier to calculate the shipping price from. Select a carrier
+        /// from the [available carriers
+        /// list](https://support.google.com/merchants/answer/15449142#Supported),
+        /// for example `AUSTRALIA_POST_REGULAR`. Price will be calculated by this
+        /// selected carrier, the location expressed in
+        /// [originPostalCode][google.shopping.merchant.products.v1.ProductAttributes.CarrierShipping.origin_postal_code],
+        /// along with the user location to determine the accurate shipping price.
+        /// Carrier is represented by a carrier service name or a carrier service ID.
+        /// Cannot be set together with
+        /// [flatPrice][google.shopping.merchant.products.v1.ProductAttributes.CarrierShipping.flat_price].
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public global::Google.Shopping.Merchant.Products.V1.ProductAttributes.Types.CarrierPriceOption CarrierPrice {
+          get { if ((_hasBits0 & 1) != 0) { return carrierPrice_; } else { return CarrierPriceDefaultValue; } }
+          set {
+            _hasBits0 |= 1;
+            carrierPrice_ = value;
+          }
+        }
+        /// <summary>Gets whether the "carrier_price" field is set</summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public bool HasCarrierPrice {
+          get { return (_hasBits0 & 1) != 0; }
+        }
+        /// <summary>Clears the value of the "carrier_price" field</summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void ClearCarrierPrice() {
+          _hasBits0 &= ~1;
+        }
+
+        /// <summary>Field number for the "carrier_price_flat_adjustment" field.</summary>
+        public const int CarrierPriceFlatAdjustmentFieldNumber = 7;
+        private global::Google.Shopping.Type.Price carrierPriceFlatAdjustment_;
+        /// <summary>
+        /// A flat adjustment on the carrier price. Can be either positive or
+        /// negative. Cannot be zero. Requires `carrier_price` to be present. Cannot
+        /// be set together with
+        /// [flatPrice][google.shopping.merchant.products.v1.ProductAttributes.CarrierShipping.flat_price]
+        /// and
+        /// [carrierPricePercentageAdjustment][google.shopping.merchant.products.v1.ProductAttributes.CarrierShipping.carrier_price_percentage_adjustment].
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public global::Google.Shopping.Type.Price CarrierPriceFlatAdjustment {
+          get { return carrierPriceFlatAdjustment_; }
+          set {
+            carrierPriceFlatAdjustment_ = value;
+          }
+        }
+
+        /// <summary>Field number for the "carrier_price_percentage_adjustment" field.</summary>
+        public const int CarrierPricePercentageAdjustmentFieldNumber = 8;
+        private readonly static double CarrierPricePercentageAdjustmentDefaultValue = 0D;
+
+        private double carrierPricePercentageAdjustment_;
+        /// <summary>
+        /// A percentual adjustment on the carrier price. Can be either positive or
+        /// negative. Cannot be zero. Requires `carrier_price` to be present. Cannot
+        /// be set together with
+        /// [flatPrice][google.shopping.merchant.products.v1.ProductAttributes.CarrierShipping.flat_price]
+        /// and
+        /// [carrierPriceFlatAdjustment][google.shopping.merchant.products.v1.ProductAttributes.CarrierShipping.carrier_price_flat_adjustment].
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public double CarrierPricePercentageAdjustment {
+          get { if ((_hasBits0 & 2) != 0) { return carrierPricePercentageAdjustment_; } else { return CarrierPricePercentageAdjustmentDefaultValue; } }
+          set {
+            _hasBits0 |= 2;
+            carrierPricePercentageAdjustment_ = value;
+          }
+        }
+        /// <summary>Gets whether the "carrier_price_percentage_adjustment" field is set</summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public bool HasCarrierPricePercentageAdjustment {
+          get { return (_hasBits0 & 2) != 0; }
+        }
+        /// <summary>Clears the value of the "carrier_price_percentage_adjustment" field</summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void ClearCarrierPricePercentageAdjustment() {
+          _hasBits0 &= ~2;
+        }
+
+        /// <summary>Field number for the "min_handling_time" field.</summary>
+        public const int MinHandlingTimeFieldNumber = 9;
+        private readonly static long MinHandlingTimeDefaultValue = 0L;
+
+        private long minHandlingTime_;
+        /// <summary>
+        /// Minimum handling time (inclusive) between when the order is received and
+        /// shipped in business days. 0 means that the order is shipped on the same
+        /// day as it is received if it happens before the cut-off time.
+        /// [minHandlingTime][google.shopping.merchant.products.v1.ProductAttributes.CarrierShipping.min_handling_time]
+        /// can only be set if
+        /// [maxHandlingTime][google.shopping.merchant.products.v1.ProductAttributes.CarrierShipping.max_handling_time]
+        /// is also set.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public long MinHandlingTime {
+          get { if ((_hasBits0 & 4) != 0) { return minHandlingTime_; } else { return MinHandlingTimeDefaultValue; } }
+          set {
+            _hasBits0 |= 4;
+            minHandlingTime_ = value;
+          }
+        }
+        /// <summary>Gets whether the "min_handling_time" field is set</summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public bool HasMinHandlingTime {
+          get { return (_hasBits0 & 4) != 0; }
+        }
+        /// <summary>Clears the value of the "min_handling_time" field</summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void ClearMinHandlingTime() {
+          _hasBits0 &= ~4;
+        }
+
+        /// <summary>Field number for the "max_handling_time" field.</summary>
+        public const int MaxHandlingTimeFieldNumber = 10;
+        private readonly static long MaxHandlingTimeDefaultValue = 0L;
+
+        private long maxHandlingTime_;
+        /// <summary>
+        /// Maximum handling time (inclusive) between when the order is received and
+        /// shipped in business days. 0 means that the order is shipped on the same
+        /// day as it is received if it happens before the cut-off time. Both
+        /// [maxHandlingTime][google.shopping.merchant.products.v1.ProductAttributes.CarrierShipping.max_handling_time]
+        /// and
+        /// [fixedMaxTransitTime][google.shopping.merchant.products.v1.ProductAttributes.CarrierShipping.fixed_max_transit_time]
+        /// or
+        /// [carrierTransitTime][google.shopping.merchant.products.v1.ProductAttributes.CarrierShipping.carrier_transit_time]
+        /// are required if providing shipping speeds.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public long MaxHandlingTime {
+          get { if ((_hasBits0 & 8) != 0) { return maxHandlingTime_; } else { return MaxHandlingTimeDefaultValue; } }
+          set {
+            _hasBits0 |= 8;
+            maxHandlingTime_ = value;
+          }
+        }
+        /// <summary>Gets whether the "max_handling_time" field is set</summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public bool HasMaxHandlingTime {
+          get { return (_hasBits0 & 8) != 0; }
+        }
+        /// <summary>Clears the value of the "max_handling_time" field</summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void ClearMaxHandlingTime() {
+          _hasBits0 &= ~8;
+        }
+
+        /// <summary>Field number for the "fixed_min_transit_time" field.</summary>
+        public const int FixedMinTransitTimeFieldNumber = 11;
+        private readonly static long FixedMinTransitTimeDefaultValue = 0L;
+
+        private long fixedMinTransitTime_;
+        /// <summary>
+        /// Minimum transit time (inclusive) between when the order has shipped and
+        /// when it is delivered in business days. 0 means that the order is
+        /// delivered on the same day as it ships.
+        /// [fixedMinTransitTime][google.shopping.merchant.products.v1.ProductAttributes.CarrierShipping.fixed_min_transit_time]
+        /// can only be set if
+        /// [fixedMaxTransitTime][google.shopping.merchant.products.v1.ProductAttributes.CarrierShipping.fixed_max_transit_time]
+        /// is set. Cannot be set if
+        /// [carrierTransitTime][google.shopping.merchant.products.v1.ProductAttributes.CarrierShipping.carrier_transit_time]
+        /// is present.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public long FixedMinTransitTime {
+          get { if ((_hasBits0 & 16) != 0) { return fixedMinTransitTime_; } else { return FixedMinTransitTimeDefaultValue; } }
+          set {
+            _hasBits0 |= 16;
+            fixedMinTransitTime_ = value;
+          }
+        }
+        /// <summary>Gets whether the "fixed_min_transit_time" field is set</summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public bool HasFixedMinTransitTime {
+          get { return (_hasBits0 & 16) != 0; }
+        }
+        /// <summary>Clears the value of the "fixed_min_transit_time" field</summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void ClearFixedMinTransitTime() {
+          _hasBits0 &= ~16;
+        }
+
+        /// <summary>Field number for the "fixed_max_transit_time" field.</summary>
+        public const int FixedMaxTransitTimeFieldNumber = 12;
+        private readonly static long FixedMaxTransitTimeDefaultValue = 0L;
+
+        private long fixedMaxTransitTime_;
+        /// <summary>
+        /// Maximum transit time (inclusive) between when the order has shipped and
+        /// when it is delivered in business days. 0 means that the order is
+        /// delivered on the same day as it ships. Needs to be provided together with
+        /// [maxHandlingTime][google.shopping.merchant.products.v1.ProductAttributes.CarrierShipping.max_handling_time].
+        /// Cannot be set if
+        /// [carrierTransitTime][google.shopping.merchant.products.v1.ProductAttributes.CarrierShipping.carrier_transit_time]
+        /// is present.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public long FixedMaxTransitTime {
+          get { if ((_hasBits0 & 32) != 0) { return fixedMaxTransitTime_; } else { return FixedMaxTransitTimeDefaultValue; } }
+          set {
+            _hasBits0 |= 32;
+            fixedMaxTransitTime_ = value;
+          }
+        }
+        /// <summary>Gets whether the "fixed_max_transit_time" field is set</summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public bool HasFixedMaxTransitTime {
+          get { return (_hasBits0 & 32) != 0; }
+        }
+        /// <summary>Clears the value of the "fixed_max_transit_time" field</summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void ClearFixedMaxTransitTime() {
+          _hasBits0 &= ~32;
+        }
+
+        /// <summary>Field number for the "carrier_transit_time" field.</summary>
+        public const int CarrierTransitTimeFieldNumber = 13;
+        private readonly static global::Google.Shopping.Merchant.Products.V1.CarrierTransitTimeOption CarrierTransitTimeDefaultValue = global::Google.Shopping.Merchant.Products.V1.CarrierTransitTimeOption.Unspecified;
+
+        private global::Google.Shopping.Merchant.Products.V1.CarrierTransitTimeOption carrierTransitTime_;
+        /// <summary>
+        /// Selected carrier to calculate the shipping speed from. Select a carrier
+        /// from the [available carriers
+        /// list](https://support.google.com/merchants/answer/15449142#Supported),
+        /// for example `AUSTRALIA_POST_REGULAR`. Speed will be calculated by this
+        /// selected carrier, the location expressed in
+        /// [originPostalCode][google.shopping.merchant.products.v1.ProductAttributes.CarrierShipping.origin_postal_code],
+        /// along with the user location to determine the accurate delivery speed.
+        /// Carrier is represented by a carrier service name or a carrier service ID.
+        /// Cannot be set together with
+        /// [fixedMaxTransitTime][google.shopping.merchant.products.v1.ProductAttributes.CarrierShipping.fixed_max_transit_time]
+        /// or
+        /// [fixedMinTransitTime][google.shopping.merchant.products.v1.ProductAttributes.CarrierShipping.fixed_min_transit_time].
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public global::Google.Shopping.Merchant.Products.V1.CarrierTransitTimeOption CarrierTransitTime {
+          get { if ((_hasBits0 & 64) != 0) { return carrierTransitTime_; } else { return CarrierTransitTimeDefaultValue; } }
+          set {
+            _hasBits0 |= 64;
+            carrierTransitTime_ = value;
+          }
+        }
+        /// <summary>Gets whether the "carrier_transit_time" field is set</summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public bool HasCarrierTransitTime {
+          get { return (_hasBits0 & 64) != 0; }
+        }
+        /// <summary>Clears the value of the "carrier_transit_time" field</summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void ClearCarrierTransitTime() {
+          _hasBits0 &= ~64;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override bool Equals(object other) {
+          return Equals(other as CarrierShipping);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public bool Equals(CarrierShipping other) {
+          if (ReferenceEquals(other, null)) {
+            return false;
+          }
+          if (ReferenceEquals(other, this)) {
+            return true;
+          }
+          if (Country != other.Country) return false;
+          if (Region != other.Region) return false;
+          if (PostalCode != other.PostalCode) return false;
+          if (OriginPostalCode != other.OriginPostalCode) return false;
+          if (!object.Equals(FlatPrice, other.FlatPrice)) return false;
+          if (CarrierPrice != other.CarrierPrice) return false;
+          if (!object.Equals(CarrierPriceFlatAdjustment, other.CarrierPriceFlatAdjustment)) return false;
+          if (!pbc::ProtobufEqualityComparers.BitwiseDoubleEqualityComparer.Equals(CarrierPricePercentageAdjustment, other.CarrierPricePercentageAdjustment)) return false;
+          if (MinHandlingTime != other.MinHandlingTime) return false;
+          if (MaxHandlingTime != other.MaxHandlingTime) return false;
+          if (FixedMinTransitTime != other.FixedMinTransitTime) return false;
+          if (FixedMaxTransitTime != other.FixedMaxTransitTime) return false;
+          if (CarrierTransitTime != other.CarrierTransitTime) return false;
+          return Equals(_unknownFields, other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override int GetHashCode() {
+          int hash = 1;
+          if (HasCountry) hash ^= Country.GetHashCode();
+          if (HasRegion) hash ^= Region.GetHashCode();
+          if (HasPostalCode) hash ^= PostalCode.GetHashCode();
+          if (HasOriginPostalCode) hash ^= OriginPostalCode.GetHashCode();
+          if (flatPrice_ != null) hash ^= FlatPrice.GetHashCode();
+          if (HasCarrierPrice) hash ^= CarrierPrice.GetHashCode();
+          if (carrierPriceFlatAdjustment_ != null) hash ^= CarrierPriceFlatAdjustment.GetHashCode();
+          if (HasCarrierPricePercentageAdjustment) hash ^= pbc::ProtobufEqualityComparers.BitwiseDoubleEqualityComparer.GetHashCode(CarrierPricePercentageAdjustment);
+          if (HasMinHandlingTime) hash ^= MinHandlingTime.GetHashCode();
+          if (HasMaxHandlingTime) hash ^= MaxHandlingTime.GetHashCode();
+          if (HasFixedMinTransitTime) hash ^= FixedMinTransitTime.GetHashCode();
+          if (HasFixedMaxTransitTime) hash ^= FixedMaxTransitTime.GetHashCode();
+          if (HasCarrierTransitTime) hash ^= CarrierTransitTime.GetHashCode();
+          if (_unknownFields != null) {
+            hash ^= _unknownFields.GetHashCode();
+          }
+          return hash;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override string ToString() {
+          return pb::JsonFormatter.ToDiagnosticString(this);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void WriteTo(pb::CodedOutputStream output) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          output.WriteRawMessage(this);
+        #else
+          if (HasCountry) {
+            output.WriteRawTag(10);
+            output.WriteString(Country);
+          }
+          if (HasRegion) {
+            output.WriteRawTag(18);
+            output.WriteString(Region);
+          }
+          if (HasPostalCode) {
+            output.WriteRawTag(26);
+            output.WriteString(PostalCode);
+          }
+          if (HasOriginPostalCode) {
+            output.WriteRawTag(34);
+            output.WriteString(OriginPostalCode);
+          }
+          if (flatPrice_ != null) {
+            output.WriteRawTag(42);
+            output.WriteMessage(FlatPrice);
+          }
+          if (HasCarrierPrice) {
+            output.WriteRawTag(48);
+            output.WriteEnum((int) CarrierPrice);
+          }
+          if (carrierPriceFlatAdjustment_ != null) {
+            output.WriteRawTag(58);
+            output.WriteMessage(CarrierPriceFlatAdjustment);
+          }
+          if (HasCarrierPricePercentageAdjustment) {
+            output.WriteRawTag(65);
+            output.WriteDouble(CarrierPricePercentageAdjustment);
+          }
+          if (HasMinHandlingTime) {
+            output.WriteRawTag(72);
+            output.WriteInt64(MinHandlingTime);
+          }
+          if (HasMaxHandlingTime) {
+            output.WriteRawTag(80);
+            output.WriteInt64(MaxHandlingTime);
+          }
+          if (HasFixedMinTransitTime) {
+            output.WriteRawTag(88);
+            output.WriteInt64(FixedMinTransitTime);
+          }
+          if (HasFixedMaxTransitTime) {
+            output.WriteRawTag(96);
+            output.WriteInt64(FixedMaxTransitTime);
+          }
+          if (HasCarrierTransitTime) {
+            output.WriteRawTag(104);
+            output.WriteEnum((int) CarrierTransitTime);
+          }
+          if (_unknownFields != null) {
+            _unknownFields.WriteTo(output);
+          }
+        #endif
+        }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+          if (HasCountry) {
+            output.WriteRawTag(10);
+            output.WriteString(Country);
+          }
+          if (HasRegion) {
+            output.WriteRawTag(18);
+            output.WriteString(Region);
+          }
+          if (HasPostalCode) {
+            output.WriteRawTag(26);
+            output.WriteString(PostalCode);
+          }
+          if (HasOriginPostalCode) {
+            output.WriteRawTag(34);
+            output.WriteString(OriginPostalCode);
+          }
+          if (flatPrice_ != null) {
+            output.WriteRawTag(42);
+            output.WriteMessage(FlatPrice);
+          }
+          if (HasCarrierPrice) {
+            output.WriteRawTag(48);
+            output.WriteEnum((int) CarrierPrice);
+          }
+          if (carrierPriceFlatAdjustment_ != null) {
+            output.WriteRawTag(58);
+            output.WriteMessage(CarrierPriceFlatAdjustment);
+          }
+          if (HasCarrierPricePercentageAdjustment) {
+            output.WriteRawTag(65);
+            output.WriteDouble(CarrierPricePercentageAdjustment);
+          }
+          if (HasMinHandlingTime) {
+            output.WriteRawTag(72);
+            output.WriteInt64(MinHandlingTime);
+          }
+          if (HasMaxHandlingTime) {
+            output.WriteRawTag(80);
+            output.WriteInt64(MaxHandlingTime);
+          }
+          if (HasFixedMinTransitTime) {
+            output.WriteRawTag(88);
+            output.WriteInt64(FixedMinTransitTime);
+          }
+          if (HasFixedMaxTransitTime) {
+            output.WriteRawTag(96);
+            output.WriteInt64(FixedMaxTransitTime);
+          }
+          if (HasCarrierTransitTime) {
+            output.WriteRawTag(104);
+            output.WriteEnum((int) CarrierTransitTime);
+          }
+          if (_unknownFields != null) {
+            _unknownFields.WriteTo(ref output);
+          }
+        }
+        #endif
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public int CalculateSize() {
+          int size = 0;
+          if (HasCountry) {
+            size += 1 + pb::CodedOutputStream.ComputeStringSize(Country);
+          }
+          if (HasRegion) {
+            size += 1 + pb::CodedOutputStream.ComputeStringSize(Region);
+          }
+          if (HasPostalCode) {
+            size += 1 + pb::CodedOutputStream.ComputeStringSize(PostalCode);
+          }
+          if (HasOriginPostalCode) {
+            size += 1 + pb::CodedOutputStream.ComputeStringSize(OriginPostalCode);
+          }
+          if (flatPrice_ != null) {
+            size += 1 + pb::CodedOutputStream.ComputeMessageSize(FlatPrice);
+          }
+          if (HasCarrierPrice) {
+            size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) CarrierPrice);
+          }
+          if (carrierPriceFlatAdjustment_ != null) {
+            size += 1 + pb::CodedOutputStream.ComputeMessageSize(CarrierPriceFlatAdjustment);
+          }
+          if (HasCarrierPricePercentageAdjustment) {
+            size += 1 + 8;
+          }
+          if (HasMinHandlingTime) {
+            size += 1 + pb::CodedOutputStream.ComputeInt64Size(MinHandlingTime);
+          }
+          if (HasMaxHandlingTime) {
+            size += 1 + pb::CodedOutputStream.ComputeInt64Size(MaxHandlingTime);
+          }
+          if (HasFixedMinTransitTime) {
+            size += 1 + pb::CodedOutputStream.ComputeInt64Size(FixedMinTransitTime);
+          }
+          if (HasFixedMaxTransitTime) {
+            size += 1 + pb::CodedOutputStream.ComputeInt64Size(FixedMaxTransitTime);
+          }
+          if (HasCarrierTransitTime) {
+            size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) CarrierTransitTime);
+          }
+          if (_unknownFields != null) {
+            size += _unknownFields.CalculateSize();
+          }
+          return size;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void MergeFrom(CarrierShipping other) {
+          if (other == null) {
+            return;
+          }
+          if (other.HasCountry) {
+            Country = other.Country;
+          }
+          if (other.HasRegion) {
+            Region = other.Region;
+          }
+          if (other.HasPostalCode) {
+            PostalCode = other.PostalCode;
+          }
+          if (other.HasOriginPostalCode) {
+            OriginPostalCode = other.OriginPostalCode;
+          }
+          if (other.flatPrice_ != null) {
+            if (flatPrice_ == null) {
+              FlatPrice = new global::Google.Shopping.Type.Price();
+            }
+            FlatPrice.MergeFrom(other.FlatPrice);
+          }
+          if (other.HasCarrierPrice) {
+            CarrierPrice = other.CarrierPrice;
+          }
+          if (other.carrierPriceFlatAdjustment_ != null) {
+            if (carrierPriceFlatAdjustment_ == null) {
+              CarrierPriceFlatAdjustment = new global::Google.Shopping.Type.Price();
+            }
+            CarrierPriceFlatAdjustment.MergeFrom(other.CarrierPriceFlatAdjustment);
+          }
+          if (other.HasCarrierPricePercentageAdjustment) {
+            CarrierPricePercentageAdjustment = other.CarrierPricePercentageAdjustment;
+          }
+          if (other.HasMinHandlingTime) {
+            MinHandlingTime = other.MinHandlingTime;
+          }
+          if (other.HasMaxHandlingTime) {
+            MaxHandlingTime = other.MaxHandlingTime;
+          }
+          if (other.HasFixedMinTransitTime) {
+            FixedMinTransitTime = other.FixedMinTransitTime;
+          }
+          if (other.HasFixedMaxTransitTime) {
+            FixedMaxTransitTime = other.FixedMaxTransitTime;
+          }
+          if (other.HasCarrierTransitTime) {
+            CarrierTransitTime = other.CarrierTransitTime;
+          }
+          _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void MergeFrom(pb::CodedInputStream input) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          input.ReadRawMessage(this);
+        #else
+          uint tag;
+          while ((tag = input.ReadTag()) != 0) {
+            switch(tag) {
+              default:
+                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+                break;
+              case 10: {
+                Country = input.ReadString();
+                break;
+              }
+              case 18: {
+                Region = input.ReadString();
+                break;
+              }
+              case 26: {
+                PostalCode = input.ReadString();
+                break;
+              }
+              case 34: {
+                OriginPostalCode = input.ReadString();
+                break;
+              }
+              case 42: {
+                if (flatPrice_ == null) {
+                  FlatPrice = new global::Google.Shopping.Type.Price();
+                }
+                input.ReadMessage(FlatPrice);
+                break;
+              }
+              case 48: {
+                CarrierPrice = (global::Google.Shopping.Merchant.Products.V1.ProductAttributes.Types.CarrierPriceOption) input.ReadEnum();
+                break;
+              }
+              case 58: {
+                if (carrierPriceFlatAdjustment_ == null) {
+                  CarrierPriceFlatAdjustment = new global::Google.Shopping.Type.Price();
+                }
+                input.ReadMessage(CarrierPriceFlatAdjustment);
+                break;
+              }
+              case 65: {
+                CarrierPricePercentageAdjustment = input.ReadDouble();
+                break;
+              }
+              case 72: {
+                MinHandlingTime = input.ReadInt64();
+                break;
+              }
+              case 80: {
+                MaxHandlingTime = input.ReadInt64();
+                break;
+              }
+              case 88: {
+                FixedMinTransitTime = input.ReadInt64();
+                break;
+              }
+              case 96: {
+                FixedMaxTransitTime = input.ReadInt64();
+                break;
+              }
+              case 104: {
+                CarrierTransitTime = (global::Google.Shopping.Merchant.Products.V1.CarrierTransitTimeOption) input.ReadEnum();
+                break;
+              }
+            }
+          }
+        #endif
+        }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+          uint tag;
+          while ((tag = input.ReadTag()) != 0) {
+            switch(tag) {
+              default:
+                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+                break;
+              case 10: {
+                Country = input.ReadString();
+                break;
+              }
+              case 18: {
+                Region = input.ReadString();
+                break;
+              }
+              case 26: {
+                PostalCode = input.ReadString();
+                break;
+              }
+              case 34: {
+                OriginPostalCode = input.ReadString();
+                break;
+              }
+              case 42: {
+                if (flatPrice_ == null) {
+                  FlatPrice = new global::Google.Shopping.Type.Price();
+                }
+                input.ReadMessage(FlatPrice);
+                break;
+              }
+              case 48: {
+                CarrierPrice = (global::Google.Shopping.Merchant.Products.V1.ProductAttributes.Types.CarrierPriceOption) input.ReadEnum();
+                break;
+              }
+              case 58: {
+                if (carrierPriceFlatAdjustment_ == null) {
+                  CarrierPriceFlatAdjustment = new global::Google.Shopping.Type.Price();
+                }
+                input.ReadMessage(CarrierPriceFlatAdjustment);
+                break;
+              }
+              case 65: {
+                CarrierPricePercentageAdjustment = input.ReadDouble();
+                break;
+              }
+              case 72: {
+                MinHandlingTime = input.ReadInt64();
+                break;
+              }
+              case 80: {
+                MaxHandlingTime = input.ReadInt64();
+                break;
+              }
+              case 88: {
+                FixedMinTransitTime = input.ReadInt64();
+                break;
+              }
+              case 96: {
+                FixedMaxTransitTime = input.ReadInt64();
+                break;
+              }
+              case 104: {
+                CarrierTransitTime = (global::Google.Shopping.Merchant.Products.V1.CarrierTransitTimeOption) input.ReadEnum();
+                break;
+              }
+            }
+          }
+        }
+        #endif
+
+      }
+
+    }
+    #endregion
 
   }
 
