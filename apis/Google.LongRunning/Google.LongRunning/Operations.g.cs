@@ -26,52 +26,54 @@ namespace Google.LongRunning {
           string.Concat(
             "CiNnb29nbGUvbG9uZ3J1bm5pbmcvb3BlcmF0aW9ucy5wcm90bxISZ29vZ2xl",
             "LmxvbmdydW5uaW5nGhxnb29nbGUvYXBpL2Fubm90YXRpb25zLnByb3RvGhdn",
-            "b29nbGUvYXBpL2NsaWVudC5wcm90bxoZZ29vZ2xlL3Byb3RvYnVmL2FueS5w",
-            "cm90bxogZ29vZ2xlL3Byb3RvYnVmL2Rlc2NyaXB0b3IucHJvdG8aHmdvb2ds",
-            "ZS9wcm90b2J1Zi9kdXJhdGlvbi5wcm90bxobZ29vZ2xlL3Byb3RvYnVmL2Vt",
-            "cHR5LnByb3RvGhdnb29nbGUvcnBjL3N0YXR1cy5wcm90byKoAQoJT3BlcmF0",
-            "aW9uEgwKBG5hbWUYASABKAkSJgoIbWV0YWRhdGEYAiABKAsyFC5nb29nbGUu",
-            "cHJvdG9idWYuQW55EgwKBGRvbmUYAyABKAgSIwoFZXJyb3IYBCABKAsyEi5n",
-            "b29nbGUucnBjLlN0YXR1c0gAEigKCHJlc3BvbnNlGAUgASgLMhQuZ29vZ2xl",
-            "LnByb3RvYnVmLkFueUgAQggKBnJlc3VsdCIjChNHZXRPcGVyYXRpb25SZXF1",
-            "ZXN0EgwKBG5hbWUYASABKAkiXAoVTGlzdE9wZXJhdGlvbnNSZXF1ZXN0EgwK",
-            "BG5hbWUYBCABKAkSDgoGZmlsdGVyGAEgASgJEhEKCXBhZ2Vfc2l6ZRgCIAEo",
-            "BRISCgpwYWdlX3Rva2VuGAMgASgJImQKFkxpc3RPcGVyYXRpb25zUmVzcG9u",
-            "c2USMQoKb3BlcmF0aW9ucxgBIAMoCzIdLmdvb2dsZS5sb25ncnVubmluZy5P",
-            "cGVyYXRpb24SFwoPbmV4dF9wYWdlX3Rva2VuGAIgASgJIiYKFkNhbmNlbE9w",
-            "ZXJhdGlvblJlcXVlc3QSDAoEbmFtZRgBIAEoCSImChZEZWxldGVPcGVyYXRp",
-            "b25SZXF1ZXN0EgwKBG5hbWUYASABKAkiUAoUV2FpdE9wZXJhdGlvblJlcXVl",
-            "c3QSDAoEbmFtZRgBIAEoCRIqCgd0aW1lb3V0GAIgASgLMhkuZ29vZ2xlLnBy",
-            "b3RvYnVmLkR1cmF0aW9uIj0KDU9wZXJhdGlvbkluZm8SFQoNcmVzcG9uc2Vf",
-            "dHlwZRgBIAEoCRIVCg1tZXRhZGF0YV90eXBlGAIgASgJMqoFCgpPcGVyYXRp",
-            "b25zEpQBCg5MaXN0T3BlcmF0aW9ucxIpLmdvb2dsZS5sb25ncnVubmluZy5M",
-            "aXN0T3BlcmF0aW9uc1JlcXVlc3QaKi5nb29nbGUubG9uZ3J1bm5pbmcuTGlz",
-            "dE9wZXJhdGlvbnNSZXNwb25zZSIr2kELbmFtZSxmaWx0ZXKC0+STAhcSFS92",
-            "MS97bmFtZT1vcGVyYXRpb25zfRJ/CgxHZXRPcGVyYXRpb24SJy5nb29nbGUu",
-            "bG9uZ3J1bm5pbmcuR2V0T3BlcmF0aW9uUmVxdWVzdBodLmdvb2dsZS5sb25n",
-            "cnVubmluZy5PcGVyYXRpb24iJ9pBBG5hbWWC0+STAhoSGC92MS97bmFtZT1v",
-            "cGVyYXRpb25zLyoqfRJ+Cg9EZWxldGVPcGVyYXRpb24SKi5nb29nbGUubG9u",
-            "Z3J1bm5pbmcuRGVsZXRlT3BlcmF0aW9uUmVxdWVzdBoWLmdvb2dsZS5wcm90",
-            "b2J1Zi5FbXB0eSIn2kEEbmFtZYLT5JMCGioYL3YxL3tuYW1lPW9wZXJhdGlv",
-            "bnMvKip9EogBCg9DYW5jZWxPcGVyYXRpb24SKi5nb29nbGUubG9uZ3J1bm5p",
-            "bmcuQ2FuY2VsT3BlcmF0aW9uUmVxdWVzdBoWLmdvb2dsZS5wcm90b2J1Zi5F",
-            "bXB0eSIx2kEEbmFtZYLT5JMCJCIfL3YxL3tuYW1lPW9wZXJhdGlvbnMvKip9",
-            "OmNhbmNlbDoBKhJaCg1XYWl0T3BlcmF0aW9uEiguZ29vZ2xlLmxvbmdydW5u",
-            "aW5nLldhaXRPcGVyYXRpb25SZXF1ZXN0Gh0uZ29vZ2xlLmxvbmdydW5uaW5n",
-            "Lk9wZXJhdGlvbiIAGh3KQRpsb25ncnVubmluZy5nb29nbGVhcGlzLmNvbTpa",
-            "Cg5vcGVyYXRpb25faW5mbxIeLmdvb2dsZS5wcm90b2J1Zi5NZXRob2RPcHRp",
-            "b25zGJkIIAEoCzIhLmdvb2dsZS5sb25ncnVubmluZy5PcGVyYXRpb25JbmZv",
-            "QqUBChZjb20uZ29vZ2xlLmxvbmdydW5uaW5nQg9PcGVyYXRpb25zUHJvdG9Q",
-            "AVpDY2xvdWQuZ29vZ2xlLmNvbS9nby9sb25ncnVubmluZy9hdXRvZ2VuL2xv",
-            "bmdydW5uaW5ncGI7bG9uZ3J1bm5pbmdwYvgBAaICBUdMUlVOqgISR29vZ2xl",
-            "LkxvbmdSdW5uaW5nygISR29vZ2xlXExvbmdSdW5uaW5nYgZwcm90bzM="));
+            "b29nbGUvYXBpL2NsaWVudC5wcm90bxofZ29vZ2xlL2FwaS9maWVsZF9iZWhh",
+            "dmlvci5wcm90bxoZZ29vZ2xlL3Byb3RvYnVmL2FueS5wcm90bxogZ29vZ2xl",
+            "L3Byb3RvYnVmL2Rlc2NyaXB0b3IucHJvdG8aHmdvb2dsZS9wcm90b2J1Zi9k",
+            "dXJhdGlvbi5wcm90bxobZ29vZ2xlL3Byb3RvYnVmL2VtcHR5LnByb3RvGhdn",
+            "b29nbGUvcnBjL3N0YXR1cy5wcm90byKoAQoJT3BlcmF0aW9uEgwKBG5hbWUY",
+            "ASABKAkSJgoIbWV0YWRhdGEYAiABKAsyFC5nb29nbGUucHJvdG9idWYuQW55",
+            "EgwKBGRvbmUYAyABKAgSIwoFZXJyb3IYBCABKAsyEi5nb29nbGUucnBjLlN0",
+            "YXR1c0gAEigKCHJlc3BvbnNlGAUgASgLMhQuZ29vZ2xlLnByb3RvYnVmLkFu",
+            "eUgAQggKBnJlc3VsdCIjChNHZXRPcGVyYXRpb25SZXF1ZXN0EgwKBG5hbWUY",
+            "ASABKAkifAoVTGlzdE9wZXJhdGlvbnNSZXF1ZXN0EgwKBG5hbWUYBCABKAkS",
+            "DgoGZmlsdGVyGAEgASgJEhEKCXBhZ2Vfc2l6ZRgCIAEoBRISCgpwYWdlX3Rv",
+            "a2VuGAMgASgJEh4KFnJldHVybl9wYXJ0aWFsX3N1Y2Nlc3MYBSABKAgifgoW",
+            "TGlzdE9wZXJhdGlvbnNSZXNwb25zZRIxCgpvcGVyYXRpb25zGAEgAygLMh0u",
+            "Z29vZ2xlLmxvbmdydW5uaW5nLk9wZXJhdGlvbhIXCg9uZXh0X3BhZ2VfdG9r",
+            "ZW4YAiABKAkSGAoLdW5yZWFjaGFibGUYAyADKAlCA+BBBiImChZDYW5jZWxP",
+            "cGVyYXRpb25SZXF1ZXN0EgwKBG5hbWUYASABKAkiJgoWRGVsZXRlT3BlcmF0",
+            "aW9uUmVxdWVzdBIMCgRuYW1lGAEgASgJIlAKFFdhaXRPcGVyYXRpb25SZXF1",
+            "ZXN0EgwKBG5hbWUYASABKAkSKgoHdGltZW91dBgCIAEoCzIZLmdvb2dsZS5w",
+            "cm90b2J1Zi5EdXJhdGlvbiI9Cg1PcGVyYXRpb25JbmZvEhUKDXJlc3BvbnNl",
+            "X3R5cGUYASABKAkSFQoNbWV0YWRhdGFfdHlwZRgCIAEoCTKqBQoKT3BlcmF0",
+            "aW9ucxKUAQoOTGlzdE9wZXJhdGlvbnMSKS5nb29nbGUubG9uZ3J1bm5pbmcu",
+            "TGlzdE9wZXJhdGlvbnNSZXF1ZXN0GiouZ29vZ2xlLmxvbmdydW5uaW5nLkxp",
+            "c3RPcGVyYXRpb25zUmVzcG9uc2UiK9pBC25hbWUsZmlsdGVygtPkkwIXEhUv",
+            "djEve25hbWU9b3BlcmF0aW9uc30SfwoMR2V0T3BlcmF0aW9uEicuZ29vZ2xl",
+            "LmxvbmdydW5uaW5nLkdldE9wZXJhdGlvblJlcXVlc3QaHS5nb29nbGUubG9u",
+            "Z3J1bm5pbmcuT3BlcmF0aW9uIifaQQRuYW1lgtPkkwIaEhgvdjEve25hbWU9",
+            "b3BlcmF0aW9ucy8qKn0SfgoPRGVsZXRlT3BlcmF0aW9uEiouZ29vZ2xlLmxv",
+            "bmdydW5uaW5nLkRlbGV0ZU9wZXJhdGlvblJlcXVlc3QaFi5nb29nbGUucHJv",
+            "dG9idWYuRW1wdHkiJ9pBBG5hbWWC0+STAhoqGC92MS97bmFtZT1vcGVyYXRp",
+            "b25zLyoqfRKIAQoPQ2FuY2VsT3BlcmF0aW9uEiouZ29vZ2xlLmxvbmdydW5u",
+            "aW5nLkNhbmNlbE9wZXJhdGlvblJlcXVlc3QaFi5nb29nbGUucHJvdG9idWYu",
+            "RW1wdHkiMdpBBG5hbWWC0+STAiQiHy92MS97bmFtZT1vcGVyYXRpb25zLyoq",
+            "fTpjYW5jZWw6ASoSWgoNV2FpdE9wZXJhdGlvbhIoLmdvb2dsZS5sb25ncnVu",
+            "bmluZy5XYWl0T3BlcmF0aW9uUmVxdWVzdBodLmdvb2dsZS5sb25ncnVubmlu",
+            "Zy5PcGVyYXRpb24iABodykEabG9uZ3J1bm5pbmcuZ29vZ2xlYXBpcy5jb206",
+            "WgoOb3BlcmF0aW9uX2luZm8SHi5nb29nbGUucHJvdG9idWYuTWV0aG9kT3B0",
+            "aW9ucxiZCCABKAsyIS5nb29nbGUubG9uZ3J1bm5pbmcuT3BlcmF0aW9uSW5m",
+            "b0KiAQoWY29tLmdvb2dsZS5sb25ncnVubmluZ0IPT3BlcmF0aW9uc1Byb3Rv",
+            "UAFaQ2Nsb3VkLmdvb2dsZS5jb20vZ28vbG9uZ3J1bm5pbmcvYXV0b2dlbi9s",
+            "b25ncnVubmluZ3BiO2xvbmdydW5uaW5ncGKiAgVHTFJVTqoCEkdvb2dsZS5M",
+            "b25nUnVubmluZ8oCEkdvb2dsZVxMb25nUnVubmluZ2IGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Api.ClientReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.AnyReflection.Descriptor, global::Google.Protobuf.Reflection.DescriptorReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.DurationReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.EmptyReflection.Descriptor, global::Google.Rpc.StatusReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Api.ClientReflection.Descriptor, global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.AnyReflection.Descriptor, global::Google.Protobuf.Reflection.DescriptorReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.DurationReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.EmptyReflection.Descriptor, global::Google.Rpc.StatusReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, new pb::Extension[] { OperationsExtensions.OperationInfo }, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.LongRunning.Operation), global::Google.LongRunning.Operation.Parser, new[]{ "Name", "Metadata", "Done", "Error", "Response" }, new[]{ "Result" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.LongRunning.GetOperationRequest), global::Google.LongRunning.GetOperationRequest.Parser, new[]{ "Name" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.LongRunning.ListOperationsRequest), global::Google.LongRunning.ListOperationsRequest.Parser, new[]{ "Name", "Filter", "PageSize", "PageToken" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.LongRunning.ListOperationsResponse), global::Google.LongRunning.ListOperationsResponse.Parser, new[]{ "Operations", "NextPageToken" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.LongRunning.ListOperationsRequest), global::Google.LongRunning.ListOperationsRequest.Parser, new[]{ "Name", "Filter", "PageSize", "PageToken", "ReturnPartialSuccess" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.LongRunning.ListOperationsResponse), global::Google.LongRunning.ListOperationsResponse.Parser, new[]{ "Operations", "NextPageToken", "Unreachable" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.LongRunning.CancelOperationRequest), global::Google.LongRunning.CancelOperationRequest.Parser, new[]{ "Name" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.LongRunning.DeleteOperationRequest), global::Google.LongRunning.DeleteOperationRequest.Parser, new[]{ "Name" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.LongRunning.WaitOperationRequest), global::Google.LongRunning.WaitOperationRequest.Parser, new[]{ "Name", "Timeout" }, null, null, null, null),
@@ -775,6 +777,7 @@ namespace Google.LongRunning {
       filter_ = other.filter_;
       pageSize_ = other.pageSize_;
       pageToken_ = other.pageToken_;
+      returnPartialSuccess_ = other.returnPartialSuccess_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -844,6 +847,30 @@ namespace Google.LongRunning {
       }
     }
 
+    /// <summary>Field number for the "return_partial_success" field.</summary>
+    public const int ReturnPartialSuccessFieldNumber = 5;
+    private bool returnPartialSuccess_;
+    /// <summary>
+    /// When set to `true`, operations that are reachable are returned as normal,
+    /// and those that are unreachable are returned in the
+    /// [ListOperationsResponse.unreachable] field.
+    ///
+    /// This can only be `true` when reading across collections e.g. when `parent`
+    /// is set to `"projects/example/locations/-"`.
+    ///
+    /// This field is not by default supported and will result in an
+    /// `UNIMPLEMENTED` error if set unless explicitly documented otherwise in
+    /// service or product specific documentation.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool ReturnPartialSuccess {
+      get { return returnPartialSuccess_; }
+      set {
+        returnPartialSuccess_ = value;
+      }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
@@ -863,6 +890,7 @@ namespace Google.LongRunning {
       if (Filter != other.Filter) return false;
       if (PageSize != other.PageSize) return false;
       if (PageToken != other.PageToken) return false;
+      if (ReturnPartialSuccess != other.ReturnPartialSuccess) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -874,6 +902,7 @@ namespace Google.LongRunning {
       if (Filter.Length != 0) hash ^= Filter.GetHashCode();
       if (PageSize != 0) hash ^= PageSize.GetHashCode();
       if (PageToken.Length != 0) hash ^= PageToken.GetHashCode();
+      if (ReturnPartialSuccess != false) hash ^= ReturnPartialSuccess.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -908,6 +937,10 @@ namespace Google.LongRunning {
         output.WriteRawTag(34);
         output.WriteString(Name);
       }
+      if (ReturnPartialSuccess != false) {
+        output.WriteRawTag(40);
+        output.WriteBool(ReturnPartialSuccess);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -934,6 +967,10 @@ namespace Google.LongRunning {
         output.WriteRawTag(34);
         output.WriteString(Name);
       }
+      if (ReturnPartialSuccess != false) {
+        output.WriteRawTag(40);
+        output.WriteBool(ReturnPartialSuccess);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -955,6 +992,9 @@ namespace Google.LongRunning {
       }
       if (PageToken.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(PageToken);
+      }
+      if (ReturnPartialSuccess != false) {
+        size += 1 + 1;
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -979,6 +1019,9 @@ namespace Google.LongRunning {
       }
       if (other.PageToken.Length != 0) {
         PageToken = other.PageToken;
+      }
+      if (other.ReturnPartialSuccess != false) {
+        ReturnPartialSuccess = other.ReturnPartialSuccess;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -1011,6 +1054,10 @@ namespace Google.LongRunning {
             Name = input.ReadString();
             break;
           }
+          case 40: {
+            ReturnPartialSuccess = input.ReadBool();
+            break;
+          }
         }
       }
     #endif
@@ -1040,6 +1087,10 @@ namespace Google.LongRunning {
           }
           case 34: {
             Name = input.ReadString();
+            break;
+          }
+          case 40: {
+            ReturnPartialSuccess = input.ReadBool();
             break;
           }
         }
@@ -1090,6 +1141,7 @@ namespace Google.LongRunning {
     public ListOperationsResponse(ListOperationsResponse other) : this() {
       operations_ = other.operations_.Clone();
       nextPageToken_ = other.nextPageToken_;
+      unreachable_ = other.unreachable_.Clone();
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -1128,6 +1180,23 @@ namespace Google.LongRunning {
       }
     }
 
+    /// <summary>Field number for the "unreachable" field.</summary>
+    public const int UnreachableFieldNumber = 3;
+    private static readonly pb::FieldCodec<string> _repeated_unreachable_codec
+        = pb::FieldCodec.ForString(26);
+    private readonly pbc::RepeatedField<string> unreachable_ = new pbc::RepeatedField<string>();
+    /// <summary>
+    /// Unordered list. Unreachable resources. Populated when the request sets
+    /// `ListOperationsRequest.return_partial_success` and reads across
+    /// collections e.g. when attempting to list all resources across all supported
+    /// locations.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pbc::RepeatedField<string> Unreachable {
+      get { return unreachable_; }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
@@ -1145,6 +1214,7 @@ namespace Google.LongRunning {
       }
       if(!operations_.Equals(other.operations_)) return false;
       if (NextPageToken != other.NextPageToken) return false;
+      if(!unreachable_.Equals(other.unreachable_)) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -1154,6 +1224,7 @@ namespace Google.LongRunning {
       int hash = 1;
       hash ^= operations_.GetHashCode();
       if (NextPageToken.Length != 0) hash ^= NextPageToken.GetHashCode();
+      hash ^= unreachable_.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -1177,6 +1248,7 @@ namespace Google.LongRunning {
         output.WriteRawTag(18);
         output.WriteString(NextPageToken);
       }
+      unreachable_.WriteTo(output, _repeated_unreachable_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -1192,6 +1264,7 @@ namespace Google.LongRunning {
         output.WriteRawTag(18);
         output.WriteString(NextPageToken);
       }
+      unreachable_.WriteTo(ref output, _repeated_unreachable_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -1206,6 +1279,7 @@ namespace Google.LongRunning {
       if (NextPageToken.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(NextPageToken);
       }
+      size += unreachable_.CalculateSize(_repeated_unreachable_codec);
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
       }
@@ -1222,6 +1296,7 @@ namespace Google.LongRunning {
       if (other.NextPageToken.Length != 0) {
         NextPageToken = other.NextPageToken;
       }
+      unreachable_.Add(other.unreachable_);
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 
@@ -1245,6 +1320,10 @@ namespace Google.LongRunning {
             NextPageToken = input.ReadString();
             break;
           }
+          case 26: {
+            unreachable_.AddEntriesFrom(input, _repeated_unreachable_codec);
+            break;
+          }
         }
       }
     #endif
@@ -1266,6 +1345,10 @@ namespace Google.LongRunning {
           }
           case 18: {
             NextPageToken = input.ReadString();
+            break;
+          }
+          case 26: {
+            unreachable_.AddEntriesFrom(ref input, _repeated_unreachable_codec);
             break;
           }
         }
