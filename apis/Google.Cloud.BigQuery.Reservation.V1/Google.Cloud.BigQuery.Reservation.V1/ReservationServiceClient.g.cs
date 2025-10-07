@@ -18,6 +18,7 @@
 using gagr = Google.Api.Gax.ResourceNames;
 using gax = Google.Api.Gax;
 using gaxgrpc = Google.Api.Gax.Grpc;
+using gciv = Google.Cloud.Iam.V1;
 using grpccore = Grpc.Core;
 using grpcinter = Grpc.Core.Interceptors;
 using linq = System.Linq;
@@ -70,6 +71,13 @@ namespace Google.Cloud.BigQuery.Reservation.V1
             UpdateAssignmentSettings = existing.UpdateAssignmentSettings;
             GetBiReservationSettings = existing.GetBiReservationSettings;
             UpdateBiReservationSettings = existing.UpdateBiReservationSettings;
+            GetIamPolicySettings = existing.GetIamPolicySettings;
+            SetIamPolicySettings = existing.SetIamPolicySettings;
+            TestIamPermissionsSettings = existing.TestIamPermissionsSettings;
+            CreateReservationGroupSettings = existing.CreateReservationGroupSettings;
+            GetReservationGroupSettings = existing.GetReservationGroupSettings;
+            DeleteReservationGroupSettings = existing.DeleteReservationGroupSettings;
+            ListReservationGroupsSettings = existing.ListReservationGroupsSettings;
             OnCopy(existing);
         }
 
@@ -442,6 +450,95 @@ namespace Google.Cloud.BigQuery.Reservation.V1
         /// </list>
         /// </remarks>
         public gaxgrpc::CallSettings UpdateBiReservationSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(300000)));
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>ReservationServiceClient.GetIamPolicy</c> and <c>ReservationServiceClient.GetIamPolicyAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>No timeout is applied.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings GetIamPolicySettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>ReservationServiceClient.SetIamPolicy</c> and <c>ReservationServiceClient.SetIamPolicyAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>No timeout is applied.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings SetIamPolicySettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>ReservationServiceClient.TestIamPermissions</c> and <c>ReservationServiceClient.TestIamPermissionsAsync</c>
+        /// .
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>No timeout is applied.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings TestIamPermissionsSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>ReservationServiceClient.CreateReservationGroup</c> and
+        /// <c>ReservationServiceClient.CreateReservationGroupAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>No timeout is applied.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings CreateReservationGroupSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>ReservationServiceClient.GetReservationGroup</c> and <c>ReservationServiceClient.GetReservationGroupAsync</c>
+        /// .
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>No timeout is applied.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings GetReservationGroupSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>ReservationServiceClient.DeleteReservationGroup</c> and
+        /// <c>ReservationServiceClient.DeleteReservationGroupAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>No timeout is applied.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings DeleteReservationGroupSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>ReservationServiceClient.ListReservationGroups</c> and
+        /// <c>ReservationServiceClient.ListReservationGroupsAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>No timeout is applied.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings ListReservationGroupsSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
 
         /// <summary>Creates a deep clone of this object, with all the same property values.</summary>
         /// <returns>A deep clone of this <see cref="ReservationServiceSettings"/> object.</returns>
@@ -4456,6 +4553,941 @@ namespace Google.Cloud.BigQuery.Reservation.V1
         /// <returns>A Task containing the RPC response.</returns>
         public virtual stt::Task<BiReservation> UpdateBiReservationAsync(BiReservation biReservation, wkt::FieldMask updateMask, st::CancellationToken cancellationToken) =>
             UpdateBiReservationAsync(biReservation, updateMask, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Gets the access control policy for a resource.
+        /// May return:
+        /// 
+        /// * A`NOT_FOUND` error if the resource doesn't exist or you don't have the
+        /// permission to view it.
+        /// * An empty policy if the resource exists but doesn't have a set policy.
+        /// 
+        /// Supported resources are:
+        /// - Reservations
+        /// - ReservationAssignments
+        /// 
+        /// To call this method, you must have the following Google IAM permissions:
+        /// 
+        /// - `bigqueryreservation.reservations.getIamPolicy` to get policies on
+        /// reservations.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual gciv::Policy GetIamPolicy(gciv::GetIamPolicyRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Gets the access control policy for a resource.
+        /// May return:
+        /// 
+        /// * A`NOT_FOUND` error if the resource doesn't exist or you don't have the
+        /// permission to view it.
+        /// * An empty policy if the resource exists but doesn't have a set policy.
+        /// 
+        /// Supported resources are:
+        /// - Reservations
+        /// - ReservationAssignments
+        /// 
+        /// To call this method, you must have the following Google IAM permissions:
+        /// 
+        /// - `bigqueryreservation.reservations.getIamPolicy` to get policies on
+        /// reservations.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<gciv::Policy> GetIamPolicyAsync(gciv::GetIamPolicyRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Gets the access control policy for a resource.
+        /// May return:
+        /// 
+        /// * A`NOT_FOUND` error if the resource doesn't exist or you don't have the
+        /// permission to view it.
+        /// * An empty policy if the resource exists but doesn't have a set policy.
+        /// 
+        /// Supported resources are:
+        /// - Reservations
+        /// - ReservationAssignments
+        /// 
+        /// To call this method, you must have the following Google IAM permissions:
+        /// 
+        /// - `bigqueryreservation.reservations.getIamPolicy` to get policies on
+        /// reservations.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<gciv::Policy> GetIamPolicyAsync(gciv::GetIamPolicyRequest request, st::CancellationToken cancellationToken) =>
+            GetIamPolicyAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Gets the access control policy for a resource.
+        /// May return:
+        /// 
+        /// * A`NOT_FOUND` error if the resource doesn't exist or you don't have the
+        /// permission to view it.
+        /// * An empty policy if the resource exists but doesn't have a set policy.
+        /// 
+        /// Supported resources are:
+        /// - Reservations
+        /// - ReservationAssignments
+        /// 
+        /// To call this method, you must have the following Google IAM permissions:
+        /// 
+        /// - `bigqueryreservation.reservations.getIamPolicy` to get policies on
+        /// reservations.
+        /// </summary>
+        /// <param name="resource">
+        /// REQUIRED: The resource for which the policy is being requested.
+        /// See the operation documentation for the appropriate value for this field.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual gciv::Policy GetIamPolicy(string resource, gaxgrpc::CallSettings callSettings = null) =>
+            GetIamPolicy(new gciv::GetIamPolicyRequest
+            {
+                Resource = gax::GaxPreconditions.CheckNotNullOrEmpty(resource, nameof(resource)),
+            }, callSettings);
+
+        /// <summary>
+        /// Gets the access control policy for a resource.
+        /// May return:
+        /// 
+        /// * A`NOT_FOUND` error if the resource doesn't exist or you don't have the
+        /// permission to view it.
+        /// * An empty policy if the resource exists but doesn't have a set policy.
+        /// 
+        /// Supported resources are:
+        /// - Reservations
+        /// - ReservationAssignments
+        /// 
+        /// To call this method, you must have the following Google IAM permissions:
+        /// 
+        /// - `bigqueryreservation.reservations.getIamPolicy` to get policies on
+        /// reservations.
+        /// </summary>
+        /// <param name="resource">
+        /// REQUIRED: The resource for which the policy is being requested.
+        /// See the operation documentation for the appropriate value for this field.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<gciv::Policy> GetIamPolicyAsync(string resource, gaxgrpc::CallSettings callSettings = null) =>
+            GetIamPolicyAsync(new gciv::GetIamPolicyRequest
+            {
+                Resource = gax::GaxPreconditions.CheckNotNullOrEmpty(resource, nameof(resource)),
+            }, callSettings);
+
+        /// <summary>
+        /// Gets the access control policy for a resource.
+        /// May return:
+        /// 
+        /// * A`NOT_FOUND` error if the resource doesn't exist or you don't have the
+        /// permission to view it.
+        /// * An empty policy if the resource exists but doesn't have a set policy.
+        /// 
+        /// Supported resources are:
+        /// - Reservations
+        /// - ReservationAssignments
+        /// 
+        /// To call this method, you must have the following Google IAM permissions:
+        /// 
+        /// - `bigqueryreservation.reservations.getIamPolicy` to get policies on
+        /// reservations.
+        /// </summary>
+        /// <param name="resource">
+        /// REQUIRED: The resource for which the policy is being requested.
+        /// See the operation documentation for the appropriate value for this field.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<gciv::Policy> GetIamPolicyAsync(string resource, st::CancellationToken cancellationToken) =>
+            GetIamPolicyAsync(resource, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Gets the access control policy for a resource.
+        /// May return:
+        /// 
+        /// * A`NOT_FOUND` error if the resource doesn't exist or you don't have the
+        /// permission to view it.
+        /// * An empty policy if the resource exists but doesn't have a set policy.
+        /// 
+        /// Supported resources are:
+        /// - Reservations
+        /// - ReservationAssignments
+        /// 
+        /// To call this method, you must have the following Google IAM permissions:
+        /// 
+        /// - `bigqueryreservation.reservations.getIamPolicy` to get policies on
+        /// reservations.
+        /// </summary>
+        /// <param name="resource">
+        /// REQUIRED: The resource for which the policy is being requested.
+        /// See the operation documentation for the appropriate value for this field.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual gciv::Policy GetIamPolicy(gax::IResourceName resource, gaxgrpc::CallSettings callSettings = null) =>
+            GetIamPolicy(new gciv::GetIamPolicyRequest
+            {
+                ResourceAsResourceName = gax::GaxPreconditions.CheckNotNull(resource, nameof(resource)),
+            }, callSettings);
+
+        /// <summary>
+        /// Gets the access control policy for a resource.
+        /// May return:
+        /// 
+        /// * A`NOT_FOUND` error if the resource doesn't exist or you don't have the
+        /// permission to view it.
+        /// * An empty policy if the resource exists but doesn't have a set policy.
+        /// 
+        /// Supported resources are:
+        /// - Reservations
+        /// - ReservationAssignments
+        /// 
+        /// To call this method, you must have the following Google IAM permissions:
+        /// 
+        /// - `bigqueryreservation.reservations.getIamPolicy` to get policies on
+        /// reservations.
+        /// </summary>
+        /// <param name="resource">
+        /// REQUIRED: The resource for which the policy is being requested.
+        /// See the operation documentation for the appropriate value for this field.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<gciv::Policy> GetIamPolicyAsync(gax::IResourceName resource, gaxgrpc::CallSettings callSettings = null) =>
+            GetIamPolicyAsync(new gciv::GetIamPolicyRequest
+            {
+                ResourceAsResourceName = gax::GaxPreconditions.CheckNotNull(resource, nameof(resource)),
+            }, callSettings);
+
+        /// <summary>
+        /// Gets the access control policy for a resource.
+        /// May return:
+        /// 
+        /// * A`NOT_FOUND` error if the resource doesn't exist or you don't have the
+        /// permission to view it.
+        /// * An empty policy if the resource exists but doesn't have a set policy.
+        /// 
+        /// Supported resources are:
+        /// - Reservations
+        /// - ReservationAssignments
+        /// 
+        /// To call this method, you must have the following Google IAM permissions:
+        /// 
+        /// - `bigqueryreservation.reservations.getIamPolicy` to get policies on
+        /// reservations.
+        /// </summary>
+        /// <param name="resource">
+        /// REQUIRED: The resource for which the policy is being requested.
+        /// See the operation documentation for the appropriate value for this field.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<gciv::Policy> GetIamPolicyAsync(gax::IResourceName resource, st::CancellationToken cancellationToken) =>
+            GetIamPolicyAsync(resource, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Sets an access control policy for a resource. Replaces any existing
+        /// policy.
+        /// 
+        /// Supported resources are:
+        /// - Reservations
+        /// 
+        /// To call this method, you must have the following Google IAM permissions:
+        /// 
+        /// - `bigqueryreservation.reservations.setIamPolicy` to set policies on
+        /// reservations.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual gciv::Policy SetIamPolicy(gciv::SetIamPolicyRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Sets an access control policy for a resource. Replaces any existing
+        /// policy.
+        /// 
+        /// Supported resources are:
+        /// - Reservations
+        /// 
+        /// To call this method, you must have the following Google IAM permissions:
+        /// 
+        /// - `bigqueryreservation.reservations.setIamPolicy` to set policies on
+        /// reservations.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<gciv::Policy> SetIamPolicyAsync(gciv::SetIamPolicyRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Sets an access control policy for a resource. Replaces any existing
+        /// policy.
+        /// 
+        /// Supported resources are:
+        /// - Reservations
+        /// 
+        /// To call this method, you must have the following Google IAM permissions:
+        /// 
+        /// - `bigqueryreservation.reservations.setIamPolicy` to set policies on
+        /// reservations.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<gciv::Policy> SetIamPolicyAsync(gciv::SetIamPolicyRequest request, st::CancellationToken cancellationToken) =>
+            SetIamPolicyAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Sets an access control policy for a resource. Replaces any existing
+        /// policy.
+        /// 
+        /// Supported resources are:
+        /// - Reservations
+        /// 
+        /// To call this method, you must have the following Google IAM permissions:
+        /// 
+        /// - `bigqueryreservation.reservations.setIamPolicy` to set policies on
+        /// reservations.
+        /// </summary>
+        /// <param name="resource">
+        /// REQUIRED: The resource for which the policy is being specified.
+        /// See the operation documentation for the appropriate value for this field.
+        /// </param>
+        /// <param name="policy">
+        /// REQUIRED: The complete policy to be applied to the `resource`. The size of
+        /// the policy is limited to a few 10s of KB. An empty policy is a
+        /// valid policy but certain Cloud Platform services (such as Projects)
+        /// might reject them.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual gciv::Policy SetIamPolicy(string resource, gciv::Policy policy, gaxgrpc::CallSettings callSettings = null) =>
+            SetIamPolicy(new gciv::SetIamPolicyRequest
+            {
+                Resource = gax::GaxPreconditions.CheckNotNullOrEmpty(resource, nameof(resource)),
+                Policy = gax::GaxPreconditions.CheckNotNull(policy, nameof(policy)),
+            }, callSettings);
+
+        /// <summary>
+        /// Sets an access control policy for a resource. Replaces any existing
+        /// policy.
+        /// 
+        /// Supported resources are:
+        /// - Reservations
+        /// 
+        /// To call this method, you must have the following Google IAM permissions:
+        /// 
+        /// - `bigqueryreservation.reservations.setIamPolicy` to set policies on
+        /// reservations.
+        /// </summary>
+        /// <param name="resource">
+        /// REQUIRED: The resource for which the policy is being specified.
+        /// See the operation documentation for the appropriate value for this field.
+        /// </param>
+        /// <param name="policy">
+        /// REQUIRED: The complete policy to be applied to the `resource`. The size of
+        /// the policy is limited to a few 10s of KB. An empty policy is a
+        /// valid policy but certain Cloud Platform services (such as Projects)
+        /// might reject them.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<gciv::Policy> SetIamPolicyAsync(string resource, gciv::Policy policy, gaxgrpc::CallSettings callSettings = null) =>
+            SetIamPolicyAsync(new gciv::SetIamPolicyRequest
+            {
+                Resource = gax::GaxPreconditions.CheckNotNullOrEmpty(resource, nameof(resource)),
+                Policy = gax::GaxPreconditions.CheckNotNull(policy, nameof(policy)),
+            }, callSettings);
+
+        /// <summary>
+        /// Sets an access control policy for a resource. Replaces any existing
+        /// policy.
+        /// 
+        /// Supported resources are:
+        /// - Reservations
+        /// 
+        /// To call this method, you must have the following Google IAM permissions:
+        /// 
+        /// - `bigqueryreservation.reservations.setIamPolicy` to set policies on
+        /// reservations.
+        /// </summary>
+        /// <param name="resource">
+        /// REQUIRED: The resource for which the policy is being specified.
+        /// See the operation documentation for the appropriate value for this field.
+        /// </param>
+        /// <param name="policy">
+        /// REQUIRED: The complete policy to be applied to the `resource`. The size of
+        /// the policy is limited to a few 10s of KB. An empty policy is a
+        /// valid policy but certain Cloud Platform services (such as Projects)
+        /// might reject them.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<gciv::Policy> SetIamPolicyAsync(string resource, gciv::Policy policy, st::CancellationToken cancellationToken) =>
+            SetIamPolicyAsync(resource, policy, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Sets an access control policy for a resource. Replaces any existing
+        /// policy.
+        /// 
+        /// Supported resources are:
+        /// - Reservations
+        /// 
+        /// To call this method, you must have the following Google IAM permissions:
+        /// 
+        /// - `bigqueryreservation.reservations.setIamPolicy` to set policies on
+        /// reservations.
+        /// </summary>
+        /// <param name="resource">
+        /// REQUIRED: The resource for which the policy is being specified.
+        /// See the operation documentation for the appropriate value for this field.
+        /// </param>
+        /// <param name="policy">
+        /// REQUIRED: The complete policy to be applied to the `resource`. The size of
+        /// the policy is limited to a few 10s of KB. An empty policy is a
+        /// valid policy but certain Cloud Platform services (such as Projects)
+        /// might reject them.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual gciv::Policy SetIamPolicy(gax::IResourceName resource, gciv::Policy policy, gaxgrpc::CallSettings callSettings = null) =>
+            SetIamPolicy(new gciv::SetIamPolicyRequest
+            {
+                ResourceAsResourceName = gax::GaxPreconditions.CheckNotNull(resource, nameof(resource)),
+                Policy = gax::GaxPreconditions.CheckNotNull(policy, nameof(policy)),
+            }, callSettings);
+
+        /// <summary>
+        /// Sets an access control policy for a resource. Replaces any existing
+        /// policy.
+        /// 
+        /// Supported resources are:
+        /// - Reservations
+        /// 
+        /// To call this method, you must have the following Google IAM permissions:
+        /// 
+        /// - `bigqueryreservation.reservations.setIamPolicy` to set policies on
+        /// reservations.
+        /// </summary>
+        /// <param name="resource">
+        /// REQUIRED: The resource for which the policy is being specified.
+        /// See the operation documentation for the appropriate value for this field.
+        /// </param>
+        /// <param name="policy">
+        /// REQUIRED: The complete policy to be applied to the `resource`. The size of
+        /// the policy is limited to a few 10s of KB. An empty policy is a
+        /// valid policy but certain Cloud Platform services (such as Projects)
+        /// might reject them.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<gciv::Policy> SetIamPolicyAsync(gax::IResourceName resource, gciv::Policy policy, gaxgrpc::CallSettings callSettings = null) =>
+            SetIamPolicyAsync(new gciv::SetIamPolicyRequest
+            {
+                ResourceAsResourceName = gax::GaxPreconditions.CheckNotNull(resource, nameof(resource)),
+                Policy = gax::GaxPreconditions.CheckNotNull(policy, nameof(policy)),
+            }, callSettings);
+
+        /// <summary>
+        /// Sets an access control policy for a resource. Replaces any existing
+        /// policy.
+        /// 
+        /// Supported resources are:
+        /// - Reservations
+        /// 
+        /// To call this method, you must have the following Google IAM permissions:
+        /// 
+        /// - `bigqueryreservation.reservations.setIamPolicy` to set policies on
+        /// reservations.
+        /// </summary>
+        /// <param name="resource">
+        /// REQUIRED: The resource for which the policy is being specified.
+        /// See the operation documentation for the appropriate value for this field.
+        /// </param>
+        /// <param name="policy">
+        /// REQUIRED: The complete policy to be applied to the `resource`. The size of
+        /// the policy is limited to a few 10s of KB. An empty policy is a
+        /// valid policy but certain Cloud Platform services (such as Projects)
+        /// might reject them.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<gciv::Policy> SetIamPolicyAsync(gax::IResourceName resource, gciv::Policy policy, st::CancellationToken cancellationToken) =>
+            SetIamPolicyAsync(resource, policy, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Gets your permissions on a resource. Returns an empty set of permissions if
+        /// the resource doesn't exist.
+        /// 
+        /// Supported resources are:
+        /// - Reservations
+        /// 
+        /// No Google IAM permissions are required to call this method.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual gciv::TestIamPermissionsResponse TestIamPermissions(gciv::TestIamPermissionsRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Gets your permissions on a resource. Returns an empty set of permissions if
+        /// the resource doesn't exist.
+        /// 
+        /// Supported resources are:
+        /// - Reservations
+        /// 
+        /// No Google IAM permissions are required to call this method.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<gciv::TestIamPermissionsResponse> TestIamPermissionsAsync(gciv::TestIamPermissionsRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Gets your permissions on a resource. Returns an empty set of permissions if
+        /// the resource doesn't exist.
+        /// 
+        /// Supported resources are:
+        /// - Reservations
+        /// 
+        /// No Google IAM permissions are required to call this method.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<gciv::TestIamPermissionsResponse> TestIamPermissionsAsync(gciv::TestIamPermissionsRequest request, st::CancellationToken cancellationToken) =>
+            TestIamPermissionsAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Creates a new reservation group.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual ReservationGroup CreateReservationGroup(CreateReservationGroupRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Creates a new reservation group.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<ReservationGroup> CreateReservationGroupAsync(CreateReservationGroupRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Creates a new reservation group.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<ReservationGroup> CreateReservationGroupAsync(CreateReservationGroupRequest request, st::CancellationToken cancellationToken) =>
+            CreateReservationGroupAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Returns information about the reservation group.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual ReservationGroup GetReservationGroup(GetReservationGroupRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Returns information about the reservation group.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<ReservationGroup> GetReservationGroupAsync(GetReservationGroupRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Returns information about the reservation group.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<ReservationGroup> GetReservationGroupAsync(GetReservationGroupRequest request, st::CancellationToken cancellationToken) =>
+            GetReservationGroupAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Returns information about the reservation group.
+        /// </summary>
+        /// <param name="name">
+        /// Required. Resource name of the reservation group to retrieve. E.g.,
+        /// `projects/myproject/locations/US/reservationGroups/team1-prod`
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual ReservationGroup GetReservationGroup(string name, gaxgrpc::CallSettings callSettings = null) =>
+            GetReservationGroup(new GetReservationGroupRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Returns information about the reservation group.
+        /// </summary>
+        /// <param name="name">
+        /// Required. Resource name of the reservation group to retrieve. E.g.,
+        /// `projects/myproject/locations/US/reservationGroups/team1-prod`
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<ReservationGroup> GetReservationGroupAsync(string name, gaxgrpc::CallSettings callSettings = null) =>
+            GetReservationGroupAsync(new GetReservationGroupRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Returns information about the reservation group.
+        /// </summary>
+        /// <param name="name">
+        /// Required. Resource name of the reservation group to retrieve. E.g.,
+        /// `projects/myproject/locations/US/reservationGroups/team1-prod`
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<ReservationGroup> GetReservationGroupAsync(string name, st::CancellationToken cancellationToken) =>
+            GetReservationGroupAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Returns information about the reservation group.
+        /// </summary>
+        /// <param name="name">
+        /// Required. Resource name of the reservation group to retrieve. E.g.,
+        /// `projects/myproject/locations/US/reservationGroups/team1-prod`
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual ReservationGroup GetReservationGroup(ReservationGroupName name, gaxgrpc::CallSettings callSettings = null) =>
+            GetReservationGroup(new GetReservationGroupRequest
+            {
+                ReservationGroupName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Returns information about the reservation group.
+        /// </summary>
+        /// <param name="name">
+        /// Required. Resource name of the reservation group to retrieve. E.g.,
+        /// `projects/myproject/locations/US/reservationGroups/team1-prod`
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<ReservationGroup> GetReservationGroupAsync(ReservationGroupName name, gaxgrpc::CallSettings callSettings = null) =>
+            GetReservationGroupAsync(new GetReservationGroupRequest
+            {
+                ReservationGroupName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Returns information about the reservation group.
+        /// </summary>
+        /// <param name="name">
+        /// Required. Resource name of the reservation group to retrieve. E.g.,
+        /// `projects/myproject/locations/US/reservationGroups/team1-prod`
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<ReservationGroup> GetReservationGroupAsync(ReservationGroupName name, st::CancellationToken cancellationToken) =>
+            GetReservationGroupAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Deletes a reservation.
+        /// Returns `google.rpc.Code.FAILED_PRECONDITION` when reservation has
+        /// assignments.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual void DeleteReservationGroup(DeleteReservationGroupRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Deletes a reservation.
+        /// Returns `google.rpc.Code.FAILED_PRECONDITION` when reservation has
+        /// assignments.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task DeleteReservationGroupAsync(DeleteReservationGroupRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Deletes a reservation.
+        /// Returns `google.rpc.Code.FAILED_PRECONDITION` when reservation has
+        /// assignments.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task DeleteReservationGroupAsync(DeleteReservationGroupRequest request, st::CancellationToken cancellationToken) =>
+            DeleteReservationGroupAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Deletes a reservation.
+        /// Returns `google.rpc.Code.FAILED_PRECONDITION` when reservation has
+        /// assignments.
+        /// </summary>
+        /// <param name="name">
+        /// Required. Resource name of the reservation group to retrieve. E.g.,
+        /// `projects/myproject/locations/US/reservationGroups/team1-prod`
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual void DeleteReservationGroup(string name, gaxgrpc::CallSettings callSettings = null) =>
+            DeleteReservationGroup(new DeleteReservationGroupRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Deletes a reservation.
+        /// Returns `google.rpc.Code.FAILED_PRECONDITION` when reservation has
+        /// assignments.
+        /// </summary>
+        /// <param name="name">
+        /// Required. Resource name of the reservation group to retrieve. E.g.,
+        /// `projects/myproject/locations/US/reservationGroups/team1-prod`
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task DeleteReservationGroupAsync(string name, gaxgrpc::CallSettings callSettings = null) =>
+            DeleteReservationGroupAsync(new DeleteReservationGroupRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Deletes a reservation.
+        /// Returns `google.rpc.Code.FAILED_PRECONDITION` when reservation has
+        /// assignments.
+        /// </summary>
+        /// <param name="name">
+        /// Required. Resource name of the reservation group to retrieve. E.g.,
+        /// `projects/myproject/locations/US/reservationGroups/team1-prod`
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task DeleteReservationGroupAsync(string name, st::CancellationToken cancellationToken) =>
+            DeleteReservationGroupAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Deletes a reservation.
+        /// Returns `google.rpc.Code.FAILED_PRECONDITION` when reservation has
+        /// assignments.
+        /// </summary>
+        /// <param name="name">
+        /// Required. Resource name of the reservation group to retrieve. E.g.,
+        /// `projects/myproject/locations/US/reservationGroups/team1-prod`
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual void DeleteReservationGroup(ReservationGroupName name, gaxgrpc::CallSettings callSettings = null) =>
+            DeleteReservationGroup(new DeleteReservationGroupRequest
+            {
+                ReservationGroupName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Deletes a reservation.
+        /// Returns `google.rpc.Code.FAILED_PRECONDITION` when reservation has
+        /// assignments.
+        /// </summary>
+        /// <param name="name">
+        /// Required. Resource name of the reservation group to retrieve. E.g.,
+        /// `projects/myproject/locations/US/reservationGroups/team1-prod`
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task DeleteReservationGroupAsync(ReservationGroupName name, gaxgrpc::CallSettings callSettings = null) =>
+            DeleteReservationGroupAsync(new DeleteReservationGroupRequest
+            {
+                ReservationGroupName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Deletes a reservation.
+        /// Returns `google.rpc.Code.FAILED_PRECONDITION` when reservation has
+        /// assignments.
+        /// </summary>
+        /// <param name="name">
+        /// Required. Resource name of the reservation group to retrieve. E.g.,
+        /// `projects/myproject/locations/US/reservationGroups/team1-prod`
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task DeleteReservationGroupAsync(ReservationGroupName name, st::CancellationToken cancellationToken) =>
+            DeleteReservationGroupAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Lists all the reservation groups for the project in the specified location.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="ReservationGroup"/> resources.</returns>
+        public virtual gax::PagedEnumerable<ListReservationGroupsResponse, ReservationGroup> ListReservationGroups(ListReservationGroupsRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Lists all the reservation groups for the project in the specified location.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="ReservationGroup"/> resources.</returns>
+        public virtual gax::PagedAsyncEnumerable<ListReservationGroupsResponse, ReservationGroup> ListReservationGroupsAsync(ListReservationGroupsRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Lists all the reservation groups for the project in the specified location.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent resource name containing project and location, e.g.:
+        /// `projects/myproject/locations/US`
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="ReservationGroup"/> resources.</returns>
+        public virtual gax::PagedEnumerable<ListReservationGroupsResponse, ReservationGroup> ListReservationGroups(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListReservationGroupsRequest request = new ListReservationGroupsRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListReservationGroups(request, callSettings);
+        }
+
+        /// <summary>
+        /// Lists all the reservation groups for the project in the specified location.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent resource name containing project and location, e.g.:
+        /// `projects/myproject/locations/US`
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="ReservationGroup"/> resources.</returns>
+        public virtual gax::PagedAsyncEnumerable<ListReservationGroupsResponse, ReservationGroup> ListReservationGroupsAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListReservationGroupsRequest request = new ListReservationGroupsRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListReservationGroupsAsync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Lists all the reservation groups for the project in the specified location.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent resource name containing project and location, e.g.:
+        /// `projects/myproject/locations/US`
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="ReservationGroup"/> resources.</returns>
+        public virtual gax::PagedEnumerable<ListReservationGroupsResponse, ReservationGroup> ListReservationGroups(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListReservationGroupsRequest request = new ListReservationGroupsRequest
+            {
+                ParentAsLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListReservationGroups(request, callSettings);
+        }
+
+        /// <summary>
+        /// Lists all the reservation groups for the project in the specified location.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent resource name containing project and location, e.g.:
+        /// `projects/myproject/locations/US`
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="ReservationGroup"/> resources.</returns>
+        public virtual gax::PagedAsyncEnumerable<ListReservationGroupsResponse, ReservationGroup> ListReservationGroupsAsync(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListReservationGroupsRequest request = new ListReservationGroupsRequest
+            {
+                ParentAsLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListReservationGroupsAsync(request, callSettings);
+        }
     }
 
     /// <summary>ReservationService client wrapper implementation, for convenient use.</summary>
@@ -4521,6 +5553,20 @@ namespace Google.Cloud.BigQuery.Reservation.V1
         private readonly gaxgrpc::ApiCall<GetBiReservationRequest, BiReservation> _callGetBiReservation;
 
         private readonly gaxgrpc::ApiCall<UpdateBiReservationRequest, BiReservation> _callUpdateBiReservation;
+
+        private readonly gaxgrpc::ApiCall<gciv::GetIamPolicyRequest, gciv::Policy> _callGetIamPolicy;
+
+        private readonly gaxgrpc::ApiCall<gciv::SetIamPolicyRequest, gciv::Policy> _callSetIamPolicy;
+
+        private readonly gaxgrpc::ApiCall<gciv::TestIamPermissionsRequest, gciv::TestIamPermissionsResponse> _callTestIamPermissions;
+
+        private readonly gaxgrpc::ApiCall<CreateReservationGroupRequest, ReservationGroup> _callCreateReservationGroup;
+
+        private readonly gaxgrpc::ApiCall<GetReservationGroupRequest, ReservationGroup> _callGetReservationGroup;
+
+        private readonly gaxgrpc::ApiCall<DeleteReservationGroupRequest, wkt::Empty> _callDeleteReservationGroup;
+
+        private readonly gaxgrpc::ApiCall<ListReservationGroupsRequest, ListReservationGroupsResponse> _callListReservationGroups;
 
         /// <summary>
         /// Constructs a client wrapper for the ReservationService service, with the specified gRPC client and settings.
@@ -4605,6 +5651,27 @@ namespace Google.Cloud.BigQuery.Reservation.V1
             _callUpdateBiReservation = clientHelper.BuildApiCall<UpdateBiReservationRequest, BiReservation>("UpdateBiReservation", grpcClient.UpdateBiReservationAsync, grpcClient.UpdateBiReservation, effectiveSettings.UpdateBiReservationSettings).WithGoogleRequestParam("bi_reservation.name", request => request.BiReservation?.Name);
             Modify_ApiCall(ref _callUpdateBiReservation);
             Modify_UpdateBiReservationApiCall(ref _callUpdateBiReservation);
+            _callGetIamPolicy = clientHelper.BuildApiCall<gciv::GetIamPolicyRequest, gciv::Policy>("GetIamPolicy", grpcClient.GetIamPolicyAsync, grpcClient.GetIamPolicy, effectiveSettings.GetIamPolicySettings).WithGoogleRequestParam("resource", request => request.Resource);
+            Modify_ApiCall(ref _callGetIamPolicy);
+            Modify_GetIamPolicyApiCall(ref _callGetIamPolicy);
+            _callSetIamPolicy = clientHelper.BuildApiCall<gciv::SetIamPolicyRequest, gciv::Policy>("SetIamPolicy", grpcClient.SetIamPolicyAsync, grpcClient.SetIamPolicy, effectiveSettings.SetIamPolicySettings).WithGoogleRequestParam("resource", request => request.Resource);
+            Modify_ApiCall(ref _callSetIamPolicy);
+            Modify_SetIamPolicyApiCall(ref _callSetIamPolicy);
+            _callTestIamPermissions = clientHelper.BuildApiCall<gciv::TestIamPermissionsRequest, gciv::TestIamPermissionsResponse>("TestIamPermissions", grpcClient.TestIamPermissionsAsync, grpcClient.TestIamPermissions, effectiveSettings.TestIamPermissionsSettings).WithGoogleRequestParam("resource", request => request.Resource);
+            Modify_ApiCall(ref _callTestIamPermissions);
+            Modify_TestIamPermissionsApiCall(ref _callTestIamPermissions);
+            _callCreateReservationGroup = clientHelper.BuildApiCall<CreateReservationGroupRequest, ReservationGroup>("CreateReservationGroup", grpcClient.CreateReservationGroupAsync, grpcClient.CreateReservationGroup, effectiveSettings.CreateReservationGroupSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            Modify_ApiCall(ref _callCreateReservationGroup);
+            Modify_CreateReservationGroupApiCall(ref _callCreateReservationGroup);
+            _callGetReservationGroup = clientHelper.BuildApiCall<GetReservationGroupRequest, ReservationGroup>("GetReservationGroup", grpcClient.GetReservationGroupAsync, grpcClient.GetReservationGroup, effectiveSettings.GetReservationGroupSettings).WithGoogleRequestParam("name", request => request.Name);
+            Modify_ApiCall(ref _callGetReservationGroup);
+            Modify_GetReservationGroupApiCall(ref _callGetReservationGroup);
+            _callDeleteReservationGroup = clientHelper.BuildApiCall<DeleteReservationGroupRequest, wkt::Empty>("DeleteReservationGroup", grpcClient.DeleteReservationGroupAsync, grpcClient.DeleteReservationGroup, effectiveSettings.DeleteReservationGroupSettings).WithGoogleRequestParam("name", request => request.Name);
+            Modify_ApiCall(ref _callDeleteReservationGroup);
+            Modify_DeleteReservationGroupApiCall(ref _callDeleteReservationGroup);
+            _callListReservationGroups = clientHelper.BuildApiCall<ListReservationGroupsRequest, ListReservationGroupsResponse>("ListReservationGroups", grpcClient.ListReservationGroupsAsync, grpcClient.ListReservationGroups, effectiveSettings.ListReservationGroupsSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            Modify_ApiCall(ref _callListReservationGroups);
+            Modify_ListReservationGroupsApiCall(ref _callListReservationGroups);
             OnConstruction(grpcClient, effectiveSettings, clientHelper);
         }
 
@@ -4654,6 +5721,20 @@ namespace Google.Cloud.BigQuery.Reservation.V1
 
         partial void Modify_UpdateBiReservationApiCall(ref gaxgrpc::ApiCall<UpdateBiReservationRequest, BiReservation> call);
 
+        partial void Modify_GetIamPolicyApiCall(ref gaxgrpc::ApiCall<gciv::GetIamPolicyRequest, gciv::Policy> call);
+
+        partial void Modify_SetIamPolicyApiCall(ref gaxgrpc::ApiCall<gciv::SetIamPolicyRequest, gciv::Policy> call);
+
+        partial void Modify_TestIamPermissionsApiCall(ref gaxgrpc::ApiCall<gciv::TestIamPermissionsRequest, gciv::TestIamPermissionsResponse> call);
+
+        partial void Modify_CreateReservationGroupApiCall(ref gaxgrpc::ApiCall<CreateReservationGroupRequest, ReservationGroup> call);
+
+        partial void Modify_GetReservationGroupApiCall(ref gaxgrpc::ApiCall<GetReservationGroupRequest, ReservationGroup> call);
+
+        partial void Modify_DeleteReservationGroupApiCall(ref gaxgrpc::ApiCall<DeleteReservationGroupRequest, wkt::Empty> call);
+
+        partial void Modify_ListReservationGroupsApiCall(ref gaxgrpc::ApiCall<ListReservationGroupsRequest, ListReservationGroupsResponse> call);
+
         partial void OnConstruction(ReservationService.ReservationServiceClient grpcClient, ReservationServiceSettings effectiveSettings, gaxgrpc::ClientHelper clientHelper);
 
         /// <summary>The underlying gRPC ReservationService client</summary>
@@ -4702,6 +5783,20 @@ namespace Google.Cloud.BigQuery.Reservation.V1
         partial void Modify_GetBiReservationRequest(ref GetBiReservationRequest request, ref gaxgrpc::CallSettings settings);
 
         partial void Modify_UpdateBiReservationRequest(ref UpdateBiReservationRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_GetIamPolicyRequest(ref gciv::GetIamPolicyRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_SetIamPolicyRequest(ref gciv::SetIamPolicyRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_TestIamPermissionsRequest(ref gciv::TestIamPermissionsRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_CreateReservationGroupRequest(ref CreateReservationGroupRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_GetReservationGroupRequest(ref GetReservationGroupRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_DeleteReservationGroupRequest(ref DeleteReservationGroupRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_ListReservationGroupsRequest(ref ListReservationGroupsRequest request, ref gaxgrpc::CallSettings settings);
 
         /// <summary>
         /// Creates a new reservation resource.
@@ -5530,6 +6625,236 @@ namespace Google.Cloud.BigQuery.Reservation.V1
             Modify_UpdateBiReservationRequest(ref request, ref callSettings);
             return _callUpdateBiReservation.Async(request, callSettings);
         }
+
+        /// <summary>
+        /// Gets the access control policy for a resource.
+        /// May return:
+        /// 
+        /// * A`NOT_FOUND` error if the resource doesn't exist or you don't have the
+        /// permission to view it.
+        /// * An empty policy if the resource exists but doesn't have a set policy.
+        /// 
+        /// Supported resources are:
+        /// - Reservations
+        /// - ReservationAssignments
+        /// 
+        /// To call this method, you must have the following Google IAM permissions:
+        /// 
+        /// - `bigqueryreservation.reservations.getIamPolicy` to get policies on
+        /// reservations.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override gciv::Policy GetIamPolicy(gciv::GetIamPolicyRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_GetIamPolicyRequest(ref request, ref callSettings);
+            return _callGetIamPolicy.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Gets the access control policy for a resource.
+        /// May return:
+        /// 
+        /// * A`NOT_FOUND` error if the resource doesn't exist or you don't have the
+        /// permission to view it.
+        /// * An empty policy if the resource exists but doesn't have a set policy.
+        /// 
+        /// Supported resources are:
+        /// - Reservations
+        /// - ReservationAssignments
+        /// 
+        /// To call this method, you must have the following Google IAM permissions:
+        /// 
+        /// - `bigqueryreservation.reservations.getIamPolicy` to get policies on
+        /// reservations.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override stt::Task<gciv::Policy> GetIamPolicyAsync(gciv::GetIamPolicyRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_GetIamPolicyRequest(ref request, ref callSettings);
+            return _callGetIamPolicy.Async(request, callSettings);
+        }
+
+        /// <summary>
+        /// Sets an access control policy for a resource. Replaces any existing
+        /// policy.
+        /// 
+        /// Supported resources are:
+        /// - Reservations
+        /// 
+        /// To call this method, you must have the following Google IAM permissions:
+        /// 
+        /// - `bigqueryreservation.reservations.setIamPolicy` to set policies on
+        /// reservations.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override gciv::Policy SetIamPolicy(gciv::SetIamPolicyRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_SetIamPolicyRequest(ref request, ref callSettings);
+            return _callSetIamPolicy.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Sets an access control policy for a resource. Replaces any existing
+        /// policy.
+        /// 
+        /// Supported resources are:
+        /// - Reservations
+        /// 
+        /// To call this method, you must have the following Google IAM permissions:
+        /// 
+        /// - `bigqueryreservation.reservations.setIamPolicy` to set policies on
+        /// reservations.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override stt::Task<gciv::Policy> SetIamPolicyAsync(gciv::SetIamPolicyRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_SetIamPolicyRequest(ref request, ref callSettings);
+            return _callSetIamPolicy.Async(request, callSettings);
+        }
+
+        /// <summary>
+        /// Gets your permissions on a resource. Returns an empty set of permissions if
+        /// the resource doesn't exist.
+        /// 
+        /// Supported resources are:
+        /// - Reservations
+        /// 
+        /// No Google IAM permissions are required to call this method.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override gciv::TestIamPermissionsResponse TestIamPermissions(gciv::TestIamPermissionsRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_TestIamPermissionsRequest(ref request, ref callSettings);
+            return _callTestIamPermissions.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Gets your permissions on a resource. Returns an empty set of permissions if
+        /// the resource doesn't exist.
+        /// 
+        /// Supported resources are:
+        /// - Reservations
+        /// 
+        /// No Google IAM permissions are required to call this method.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override stt::Task<gciv::TestIamPermissionsResponse> TestIamPermissionsAsync(gciv::TestIamPermissionsRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_TestIamPermissionsRequest(ref request, ref callSettings);
+            return _callTestIamPermissions.Async(request, callSettings);
+        }
+
+        /// <summary>
+        /// Creates a new reservation group.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override ReservationGroup CreateReservationGroup(CreateReservationGroupRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_CreateReservationGroupRequest(ref request, ref callSettings);
+            return _callCreateReservationGroup.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Creates a new reservation group.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override stt::Task<ReservationGroup> CreateReservationGroupAsync(CreateReservationGroupRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_CreateReservationGroupRequest(ref request, ref callSettings);
+            return _callCreateReservationGroup.Async(request, callSettings);
+        }
+
+        /// <summary>
+        /// Returns information about the reservation group.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override ReservationGroup GetReservationGroup(GetReservationGroupRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_GetReservationGroupRequest(ref request, ref callSettings);
+            return _callGetReservationGroup.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Returns information about the reservation group.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override stt::Task<ReservationGroup> GetReservationGroupAsync(GetReservationGroupRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_GetReservationGroupRequest(ref request, ref callSettings);
+            return _callGetReservationGroup.Async(request, callSettings);
+        }
+
+        /// <summary>
+        /// Deletes a reservation.
+        /// Returns `google.rpc.Code.FAILED_PRECONDITION` when reservation has
+        /// assignments.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override void DeleteReservationGroup(DeleteReservationGroupRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_DeleteReservationGroupRequest(ref request, ref callSettings);
+            _callDeleteReservationGroup.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Deletes a reservation.
+        /// Returns `google.rpc.Code.FAILED_PRECONDITION` when reservation has
+        /// assignments.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override stt::Task DeleteReservationGroupAsync(DeleteReservationGroupRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_DeleteReservationGroupRequest(ref request, ref callSettings);
+            return _callDeleteReservationGroup.Async(request, callSettings);
+        }
+
+        /// <summary>
+        /// Lists all the reservation groups for the project in the specified location.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="ReservationGroup"/> resources.</returns>
+        public override gax::PagedEnumerable<ListReservationGroupsResponse, ReservationGroup> ListReservationGroups(ListReservationGroupsRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_ListReservationGroupsRequest(ref request, ref callSettings);
+            return new gaxgrpc::GrpcPagedEnumerable<ListReservationGroupsRequest, ListReservationGroupsResponse, ReservationGroup>(_callListReservationGroups, request, callSettings);
+        }
+
+        /// <summary>
+        /// Lists all the reservation groups for the project in the specified location.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="ReservationGroup"/> resources.</returns>
+        public override gax::PagedAsyncEnumerable<ListReservationGroupsResponse, ReservationGroup> ListReservationGroupsAsync(ListReservationGroupsRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_ListReservationGroupsRequest(ref request, ref callSettings);
+            return new gaxgrpc::GrpcPagedAsyncEnumerable<ListReservationGroupsRequest, ListReservationGroupsResponse, ReservationGroup>(_callListReservationGroups, request, callSettings);
+        }
     }
 
     public partial class ListReservationsRequest : gaxgrpc::IPageRequest
@@ -5549,6 +6874,10 @@ namespace Google.Cloud.BigQuery.Reservation.V1
     }
 
     public partial class SearchAllAssignmentsRequest : gaxgrpc::IPageRequest
+    {
+    }
+
+    public partial class ListReservationGroupsRequest : gaxgrpc::IPageRequest
     {
     }
 
@@ -5588,6 +6917,14 @@ namespace Google.Cloud.BigQuery.Reservation.V1
     {
         /// <summary>Returns an enumerator that iterates through the resources in this response.</summary>
         public scg::IEnumerator<Assignment> GetEnumerator() => Assignments.GetEnumerator();
+
+        sc::IEnumerator sc::IEnumerable.GetEnumerator() => GetEnumerator();
+    }
+
+    public partial class ListReservationGroupsResponse : gaxgrpc::IPageResponse<ReservationGroup>
+    {
+        /// <summary>Returns an enumerator that iterates through the resources in this response.</summary>
+        public scg::IEnumerator<ReservationGroup> GetEnumerator() => ReservationGroups.GetEnumerator();
 
         sc::IEnumerator sc::IEnumerable.GetEnumerator() => GetEnumerator();
     }

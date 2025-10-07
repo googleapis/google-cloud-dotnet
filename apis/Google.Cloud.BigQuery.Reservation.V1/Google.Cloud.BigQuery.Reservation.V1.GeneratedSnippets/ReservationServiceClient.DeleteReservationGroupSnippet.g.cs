@@ -16,14 +16,12 @@
 
 namespace GoogleCSharpSnippets
 {
-    // [START bigqueryreservation_v1_generated_ReservationService_MergeCapacityCommitments_async]
-    using Google.Api.Gax.ResourceNames;
+    // [START bigqueryreservation_v1_generated_ReservationService_DeleteReservationGroup_sync_flattened]
     using Google.Cloud.BigQuery.Reservation.V1;
-    using System.Threading.Tasks;
 
     public sealed partial class GeneratedReservationServiceClientSnippets
     {
-        /// <summary>Snippet for MergeCapacityCommitmentsAsync</summary>
+        /// <summary>Snippet for DeleteReservationGroup</summary>
         /// <remarks>
         /// This snippet has been automatically generated and should be regarded as a code template only.
         /// It will require modifications to work:
@@ -31,20 +29,15 @@ namespace GoogleCSharpSnippets
         /// - It may require specifying regional endpoints when creating the service client as shown in
         ///   https://cloud.google.com/dotnet/docs/reference/help/client-configuration#endpoint.
         /// </remarks>
-        public async Task MergeCapacityCommitmentsRequestObjectAsync()
+        public void DeleteReservationGroup()
         {
             // Create client
-            ReservationServiceClient reservationServiceClient = await ReservationServiceClient.CreateAsync();
+            ReservationServiceClient reservationServiceClient = ReservationServiceClient.Create();
             // Initialize request argument(s)
-            MergeCapacityCommitmentsRequest request = new MergeCapacityCommitmentsRequest
-            {
-                ParentAsLocationName = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
-                CapacityCommitmentIds = { "", },
-                CapacityCommitmentId = "",
-            };
+            string name = "projects/[PROJECT]/locations/[LOCATION]/reservationGroups/[RESERVATION_GROUP]";
             // Make the request
-            CapacityCommitment response = await reservationServiceClient.MergeCapacityCommitmentsAsync(request);
+            reservationServiceClient.DeleteReservationGroup(name);
         }
     }
-    // [END bigqueryreservation_v1_generated_ReservationService_MergeCapacityCommitments_async]
+    // [END bigqueryreservation_v1_generated_ReservationService_DeleteReservationGroup_sync_flattened]
 }
