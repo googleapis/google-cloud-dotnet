@@ -117,7 +117,7 @@ internal sealed class PredictionServiceEmbeddingGenerator(
                         result.Add(new Embedding<float>(embedding)
                         {
                             CreatedAt = DateTimeOffset.UtcNow,
-                            ModelId = VertexAIExtensions.GetModelIdFromEndpoint(request.Endpoint)
+                            ModelId = !string.IsNullOrWhiteSpace(response.ModelVersionId) ? response.ModelVersionId : VertexAIExtensions.GetModelIdFromEndpoint(request.Endpoint)
                         });
                     }
 

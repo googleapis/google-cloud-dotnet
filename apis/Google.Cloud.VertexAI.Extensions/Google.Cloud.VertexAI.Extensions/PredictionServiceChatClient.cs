@@ -67,7 +67,7 @@ internal sealed class PredictionServiceChatClient(
         ChatResponse chatResponse = new(new ChatMessage(ChatRole.Assistant, []))
         {
             CreatedAt = generateResult.CreateTime?.ToDateTimeOffset(),
-            ModelId = VertexAIExtensions.GetModelIdFromEndpoint(request.Model),
+            ModelId = !string.IsNullOrWhiteSpace(generateResult.ModelVersion) ? generateResult.ModelVersion : VertexAIExtensions.GetModelIdFromEndpoint(request.Model),
             RawRepresentation = generateResult,
             ResponseId = generateResult.ResponseId,
         };
@@ -104,7 +104,7 @@ internal sealed class PredictionServiceChatClient(
             ChatResponseUpdate responseUpdate = new(ChatRole.Assistant, [])
             {
                 CreatedAt = generateResult.CreateTime.ToDateTimeOffset(),
-                ModelId = requestModelId,
+                ModelId = !string.IsNullOrWhiteSpace(generateResult.ModelVersion) ? generateResult.ModelVersion : requestModelId,
                 RawRepresentation = generateResult,
                 ResponseId = generateResult.ResponseId,
             };
