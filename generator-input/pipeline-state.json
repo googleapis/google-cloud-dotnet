@@ -2115,7 +2115,7 @@
             "generationAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
             "releaseAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
             "releaseTimestamp": "2025-02-03T18:00:37Z",
-            "lastGeneratedCommit": "3d5f6a0f3259e12c754f35f65e9b260d41a531af",
+            "lastGeneratedCommit": "c1c2f3e01e494b6fa004ff543cec2a8d84120717",
             "apiPaths": [
                 "google/monitoring/v3"
             ],
