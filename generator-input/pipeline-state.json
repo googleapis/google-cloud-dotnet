@@ -1674,7 +1674,7 @@
             "generationAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
             "releaseAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
             "releaseTimestamp": "2024-12-05T19:00:31Z",
-            "lastGeneratedCommit": "36533b09a6b383f3c30d13c3c26092154ecf5388",
+            "lastGeneratedCommit": "d9a16f2feec3d0f03899e48007a02ce154fc919d",
             "apiPaths": [
                 "google/cloud/gkeconnect/gateway/v1"
             ],
