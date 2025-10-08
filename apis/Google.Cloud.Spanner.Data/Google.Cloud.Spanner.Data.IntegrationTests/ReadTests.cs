@@ -71,10 +71,6 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
                 Assert.Equal(ErrorCode.NotFound, e.ErrorCode);
                 Assert.False(e.IsTransientSpannerFault());
             }
-
-            // Shut the pool associated with the bad database down, to avoid seeing spurious connection failures
-            // later in the log.
-            await SessionPoolHelpers.ShutdownPoolAsync(connectionString);
         }
 
         [Fact]

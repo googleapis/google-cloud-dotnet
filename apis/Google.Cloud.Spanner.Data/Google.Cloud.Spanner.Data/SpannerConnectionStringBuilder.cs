@@ -524,6 +524,9 @@ namespace Google.Cloud.Spanner.Data
         internal Task<SessionPool> AcquireSessionPoolAsync() =>
             SessionPoolManager.AcquireSessionPoolAsync(new SpannerClientCreationOptions(this));
 
+        internal Task<ManagedSession> AcquireManagedSessionAsync() =>
+            SessionPoolManager.AcquireManagedSessionAsync(new SpannerClientCreationOptions(this), DatabaseName, DatabaseRole);
+
         /// <summary>
         /// Copy constructor, used for cloning. (This allows for the use of object initializers, unlike
         /// the <see cref="Clone"/> method.)

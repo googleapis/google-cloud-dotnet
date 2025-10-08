@@ -46,7 +46,7 @@ namespace Google.Cloud.Spanner.Data.Tests
             public async Task FirstCallSucceeds()
             {
                 SpannerClient spannerClientMock = SpannerClientHelpers.CreateMockClient(Logger.DefaultLogger)
-                    .SetupBatchCreateSessionsAsync()
+                    .SetupMultiplexSessionCreationAsync()
                     .SetupExecuteBatchDmlAsync()
                     .SetupCommitAsync();
                 SpannerConnection connection = BuildSpannerConnection(spannerClientMock);
@@ -69,7 +69,7 @@ namespace Google.Cloud.Spanner.Data.Tests
             public async Task CommitAbortsTwice()
             {
                 SpannerClient spannerClientMock = SpannerClientHelpers.CreateMockClient(Logger.DefaultLogger)
-                    .SetupBatchCreateSessionsAsync()
+                    .SetupMultiplexSessionCreationAsync()
                     .SetupExecuteBatchDmlAsync()
                     .SetupCommitAsync_Fails(failures: 2, statusCode: StatusCode.Aborted)
                     .SetupRollbackAsync();
@@ -95,7 +95,7 @@ namespace Google.Cloud.Spanner.Data.Tests
             public async Task BatchDmlAbortsTwice()
             {
                 SpannerClient spannerClientMock = SpannerClientHelpers.CreateMockClient(Logger.DefaultLogger)
-                    .SetupBatchCreateSessionsAsync()
+                    .SetupMultiplexSessionCreationAsync()
                     .SetupBeginTransactionAsync()
                     // With transaction inlining we need batch DML to fail 4 times to get the retriable transaction
                     // to abort twice. That is because on each run of the retriable transaction the batch DML command
@@ -126,7 +126,7 @@ namespace Google.Cloud.Spanner.Data.Tests
             public async Task CommitAbortsTwice_RecommendedDelay()
             {
                 SpannerClient spannerClientMock = SpannerClientHelpers.CreateMockClient(Logger.DefaultLogger)
-                    .SetupBatchCreateSessionsAsync()
+                    .SetupMultiplexSessionCreationAsync()
                     .SetupExecuteBatchDmlAsync()
                     .SetupCommitAsync_Fails(failures: 2, statusCode: StatusCode.Aborted, exceptionRetryDelay: TimeSpan.FromMilliseconds(ExceptionRetryDelayMs))
                     .SetupRollbackAsync();
@@ -151,7 +151,7 @@ namespace Google.Cloud.Spanner.Data.Tests
             public async Task CommitAbortsAlways_RespectsOverallDeadline()
             {
                 SpannerClient spannerClientMock = SpannerClientHelpers.CreateMockClient(Logger.DefaultLogger)
-                    .SetupBatchCreateSessionsAsync()
+                    .SetupMultiplexSessionCreationAsync()
                     .SetupExecuteBatchDmlAsync()
                     .SetupCommitAsync_FailsAlways(statusCode: StatusCode.Aborted)
                     .SetupRollbackAsync();
@@ -186,7 +186,7 @@ namespace Google.Cloud.Spanner.Data.Tests
             public async Task CommitFailsOtherThanAborted()
             {
                 SpannerClient spannerClientMock = SpannerClientHelpers.CreateMockClient(Logger.DefaultLogger)
-                    .SetupBatchCreateSessionsAsync()
+                    .SetupMultiplexSessionCreationAsync()
                     .SetupExecuteBatchDmlAsync()
                     .SetupCommitAsync_Fails(failures: 1, StatusCode.Unknown)
                     .SetupRollbackAsync();
@@ -213,7 +213,7 @@ namespace Google.Cloud.Spanner.Data.Tests
             public async Task WorkFails()
             {
                 SpannerClient spannerClientMock = SpannerClientHelpers.CreateMockClient(Logger.DefaultLogger)
-                    .SetupBatchCreateSessionsAsync();
+                    .SetupMultiplexSessionCreationAsync();
 
                 SpannerConnection connection = BuildSpannerConnection(spannerClientMock);
 

@@ -17,6 +17,7 @@ using Google.Api.Gax.Grpc;
 using Google.Api.Gax.Grpc.Testing;
 using Google.Api.Gax.Testing;
 using Google.Cloud.ClientTesting;
+using Google.Cloud.Spanner.Common.V1;
 using Google.Protobuf;
 using Google.Protobuf.WellKnownTypes;
 using Grpc.Core;
@@ -314,13 +315,17 @@ namespace Google.Cloud.Spanner.V1.Tests
             int maxBufferSize = 10,
             CallSettings callSettings = null,
             RetrySettings retrySettings = null)
-            => new ResultStream(
+        {
+            ManagedSession managedSession = new ManagedSession(client, DatabaseName.FromProjectInstanceDatabase("projectId", "instanceId", "databaseId"), "testDatabaseRole", null);
+            ManagedTransaction transaction = new ManagedTransaction(managedSession, null, null, false, null);
+            return new ResultStream(
                 client,
                 ReadOrQueryRequest.FromRequest(type == typeof(ExecuteSqlRequest) ? new ExecuteSqlRequest() : new ReadRequest() as IReadOrQueryRequest),
-                PooledSession.FromSessionName(new PooledSessionTests.FakeSessionPool(), SessionName.FromProjectInstanceDatabaseSession("projectId", "instanceId", "databaseId", "sessionId")),
+                transaction,
                 callSettings ?? s_simpleCallSettings,
                 maxBufferSize,
                 retrySettings ?? s_retrySettings);
+        }
 
         private static List<PartialResultSet> CreateResultSets(params string[] resumeTokens) =>
             resumeTokens

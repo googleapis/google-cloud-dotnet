@@ -95,7 +95,7 @@ namespace Google.Cloud.Spanner.V1
             _buffer = new LinkedList<PartialResultSet>();
             _client = GaxPreconditions.CheckNotNull(client, nameof(client));
             _request = GaxPreconditions.CheckNotNull(request, nameof(request));
-            _transaction = GaxPreconditions.CheckNotNull(_transaction, nameof(transaction));
+            _transaction = GaxPreconditions.CheckNotNull(transaction, nameof(transaction));
             _callSettings = callSettings;
             _maxBufferSize = GaxPreconditions.CheckArgumentRange(maxBufferSize, nameof(maxBufferSize), 1, 10_000);
             _retrySettings = GaxPreconditions.CheckNotNull(retrySettings, nameof(retrySettings));
@@ -135,7 +135,7 @@ namespace Google.Cloud.Spanner.V1
         {
             var value = await ComputeNextAsync(cancellationToken).ConfigureAwait(false);
             Current = value;
-            _transaction?.UpdatePrecommitToken(value.PrecommitToken);
+            _transaction?.UpdatePrecommitToken(value?.PrecommitToken);
             return value != null;
         }
 
@@ -184,13 +184,13 @@ namespace Google.Cloud.Spanner.V1
                         else
                         {
                             // PooledSession will eventually be deprecated
-                            // We will get rid of this condition thendot
-                            await _pooledSession.ExecuteMaybeWithTransactionSelectorAsync(
-                                    transactionSelectorSetter: SetCommandTransaction,
-                                    commandAsync: ExecuteStreamingAsync,
-                                    inlinedTransactionExtractor: GetInlinedTransaction,
-                                    skipTransactionCreation: false,
-                                    cancellationToken).ConfigureAwait(false);
+                            // We will get rid of this condition then.
+                            //await _pooledSession.ExecuteMaybeWithTransactionSelectorAsync(
+                            //        transactionSelectorSetter: SetCommandTransaction,
+                            //        commandAsync: ExecuteStreamingAsync,
+                            //        inlinedTransactionExtractor: GetInlinedTransaction,
+                            //        skipTransactionCreation: false,
+                            //        cancellationToken).ConfigureAwait(false);
                         }
 
                         void SetCommandTransaction(TransactionSelector transactionSelector) => _request.Transaction = transactionSelector;

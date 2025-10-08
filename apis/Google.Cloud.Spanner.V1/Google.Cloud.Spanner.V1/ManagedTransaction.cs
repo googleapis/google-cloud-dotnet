@@ -18,9 +18,7 @@ using Google.Cloud.Spanner.V1.Internal;
 using Google.Protobuf;
 using Google.Protobuf.WellKnownTypes;
 using System;
-using System.Collections.Generic;
 using System.Linq;
-using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
 using static Google.Cloud.Spanner.V1.TransactionOptions;
@@ -99,6 +97,17 @@ namespace Google.Cloud.Spanner.V1
         /// </remarks>
         public ByteString TransactionId => Interlocked.CompareExchange(ref _transaction, null, null)?.Id;
 
+        /// <summary>
+        /// The read timestamp of the transaction. May be null.
+        /// </summary>
+        /// <remarks>
+        /// Will be set iif a transaction has been started and <see cref="TransactionOptions"/> represents read-only options
+        /// with <see cref="Types.ReadOnly.ReturnReadTimestamp"/> set to true
+        /// or if this session was created using <see cref="SessionPool.CreateDetachedSession(SessionName, ByteString, ModeOneofCase, Timestamp)"/>
+        /// and a value was provided for the <see cref="Timestamp"/> parameter.
+        /// </remarks>
+        public Timestamp ReadTimestamp => Interlocked.CompareExchange(ref _transaction, null, null)?.ReadTimestamp;
+
         // internal for testing
         internal MultiplexedSessionPrecommitToken PrecommitToken { get; set; }
 
@@ -123,7 +132,7 @@ namespace Google.Cloud.Spanner.V1
             GaxPreconditions.CheckArgument(
                 transactionId is null || TransactionOptions.ModeCase != ModeOneofCase.None,
                 nameof(transactionOptions),
-                "No transaction options were specified for the given transasaction ID.");
+                $"No transaction options were specified for the given transasaction ID {transactionId is null}, {transactionId?.ToBase64()}, {TransactionOptions.ModeCase}.");
             GaxPreconditions.CheckArgument(
                 readTimestamp is null || transactionId is not null,
                 nameof(readTimestamp),
@@ -139,10 +148,11 @@ namespace Google.Cloud.Spanner.V1
                     ReadTimestamp = readTimestamp,
                 };
             }
+        }
 
-            // Purva: We do not need these, V1 Session lifecycle will be handled by TargetedMultiplexSession class
-            //_evictionTime = evictionTime;
-            //_refreshTicks = refreshTicks;
+        internal ManagedTransaction WithTransaction(ByteString transactionId, TransactionOptions transactionOptions, bool singleUseTransaction, Timestamp readTimestamp = null)
+        {
+            return new ManagedTransaction(_multiplexSession, transactionId, transactionOptions, singleUseTransaction, readTimestamp);
         }
 
         /// <summary>
@@ -405,21 +415,44 @@ namespace Google.Cloud.Spanner.V1
                         "A transaction has not been acquired because no command execution has been attempted.");
                 }
 
+                const int MaxRetries = 2; // Allow up to 2 attempts: the initial attempt plus one retry.
+                CommitResponse finalResponse;
 
-                request.PrecommitToken = FetchPrecommitToken();
-                CommitResponse response = await RecordSuccessAndExpiredSessions(Client.CommitAsync(request, callSettings)).ConfigureAwait(false);
-                UpdatePrecommitToken(response.PrecommitToken);
+                // Initial attempt
+                finalResponse = await ExecuteCommitOnceAsync(request, callSettings).ConfigureAwait(false);
 
-                if (response.MultiplexedSessionRetryCase == CommitResponse.MultiplexedSessionRetryOneofCase.PrecommitToken)
+                for (int retryAttempt = 1; retryAttempt < MaxRetries; retryAttempt++)
                 {
-                    // One time retry, if signaled to do so by the server with a new Precommit Token
+                    // Check if the server signaled for a retry *after* the initial attempt
+                    if (finalResponse.MultiplexedSessionRetryCase != CommitResponse.MultiplexedSessionRetryOneofCase.PrecommitToken)
+                    {
+                        // No retry token received, exit the loop and return the last response.
+                        return finalResponse;
+                    }
+
+                    // --- Retry Logic ---
                     // Fetch latest precommit token returned in the earlier response for the retry
-                    request.PrecommitToken = FetchPrecommitToken();
-                    response = await RecordSuccessAndExpiredSessions(Client.CommitAsync(request, callSettings)).ConfigureAwait(false);
-                    UpdatePrecommitToken(response.PrecommitToken);
+                    // Execute the commit call again. The result will be stored in finalResponse.
+                    finalResponse = await ExecuteCommitOnceAsync(request, callSettings).ConfigureAwait(false);
                 }
 
-                return response;
+                // After two attempts (initial + one retry), check if the server *still* signals for another retry.
+                // This handles the third time the token is set (after the second execution).
+                if (finalResponse.MultiplexedSessionRetryCase == CommitResponse.MultiplexedSessionRetryOneofCase.PrecommitToken)
+                {
+                    throw new InvalidOperationException("Unexpected MultiplexedSessionRetryOneofCase found on response after retry.");
+                }
+
+                return finalResponse;
+
+                async Task<CommitResponse> ExecuteCommitOnceAsync(CommitRequest request, CallSettings callSettings)
+                {
+                    // The original logic of the Commit call and session updates
+                    request.PrecommitToken = FetchPrecommitToken();
+                    CommitResponse response = await RecordSuccessAndExpiredSessions(Client.CommitAsync(request, callSettings)).ConfigureAwait(false);
+                    UpdatePrecommitToken(response.PrecommitToken);
+                    return response;
+                }
             }
         }
 

@@ -24,6 +24,7 @@ using System;
 using System.Threading;
 using System.Threading.Tasks;
 using Xunit;
+using static Google.Api.Gax.Grpc.ClientHelper;
 
 namespace Google.Cloud.Spanner.Data.Tests;
 
@@ -61,6 +62,7 @@ public class DirectedReadTests
 
     private static readonly SessionName s_sessionName = SessionName.FromProjectInstanceDatabaseSession("project", "instance", "database", "session");
     private static readonly ByteString s_transactionId = ByteString.CopyFromUtf8("transaction");
+    private static readonly DatabaseName s_databaseName = DatabaseName.FromProjectInstanceDatabase("project", "instance", "database");
     private static readonly TransactionOptions s_partitionedDml = new TransactionOptions { PartitionedDml = new TransactionOptions.Types.PartitionedDml() };
     private static readonly TransactionOptions s_readWrite = new TransactionOptions { ReadWrite = new TransactionOptions.Types.ReadWrite() };
     private static readonly TransactionOptions s_readOnly = new TransactionOptions { ReadOnly = new TransactionOptions.Types.ReadOnly() };
@@ -113,12 +115,10 @@ public class DirectedReadTests
             DirectedReadOptions = IncludeDirectedReadOptions
         }, logger: null);
 
-        var sessionPool = new FakeSessionPool(spannerClient);
-        var session = PooledSession
-            .FromSessionName(sessionPool, s_sessionName)
-            .WithTransaction(s_transactionId, s_readOnly, singleUseTransaction);
+        var managedTransaction = CreateManagedTransaction(spannerClient);
+        managedTransaction = managedTransaction.WithTransaction(s_transactionId, s_readOnly, singleUseTransaction);
 
-        await session.ExecuteSqlAsync(new ExecuteSqlRequest(), callSettings: null);
+        await managedTransaction.ExecuteSqlAsync(new ExecuteSqlRequest(), callSettings: null);
         Assert.Equal(IncludeDirectedReadOptions, grpcClient.LastExecuteSqlRequest.DirectedReadOptions);
     }
 
@@ -128,12 +128,10 @@ public class DirectedReadTests
     {
         var grpcClient = new FakeGrpcSpannerClient();
         var spannerClient = new SpannerClientImpl(grpcClient, settings: null, logger: null);
-        var sessionPool = new FakeSessionPool(spannerClient);
-        var session = PooledSession
-            .FromSessionName(sessionPool, s_sessionName)
-            .WithTransaction(s_transactionId, s_readOnly, singleUseTransaction);
+        var managedTransaction = CreateManagedTransaction(spannerClient);
+        managedTransaction = managedTransaction.WithTransaction(s_transactionId, s_readOnly, singleUseTransaction);
 
-        await session.ExecuteSqlAsync(new ExecuteSqlRequest
+        await managedTransaction.ExecuteSqlAsync(new ExecuteSqlRequest
         {
             DirectedReadOptions = IncludeDirectedReadOptions
         }, callSettings: null);
@@ -152,12 +150,10 @@ public class DirectedReadTests
             DirectedReadOptions = ExcludeDirectedReadOptions
         }, logger: null);
 
-        var sessionPool = new FakeSessionPool(spannerClient);
-        var session = PooledSession
-            .FromSessionName(sessionPool, s_sessionName)
-            .WithTransaction(s_transactionId, s_readOnly, singleUseTransaction);
+        var managedTransaction = CreateManagedTransaction(spannerClient);
+        managedTransaction = managedTransaction.WithTransaction(s_transactionId, s_readOnly, singleUseTransaction);
 
-        await session.ExecuteSqlAsync(new ExecuteSqlRequest
+        await managedTransaction.ExecuteSqlAsync(new ExecuteSqlRequest
         {
             DirectedReadOptions = IncludeDirectedReadOptions
         }, callSettings: null);
@@ -180,13 +176,10 @@ public class DirectedReadTests
             DirectedReadOptions = IncludeDirectedReadOptions
         }, logger: null);
 
-        var sessionPool = new FakeSessionPool(spannerClient);
-        var session = PooledSession
-            .FromSessionName(sessionPool, s_sessionName)
-            // Only read-only transaction can be single use.
-            .WithTransaction(s_transactionId, options, singleUseTransaction: false);
+        var managedTransaction = CreateManagedTransaction(spannerClient);
+        managedTransaction = managedTransaction.WithTransaction(s_transactionId, options, singleUseTransaction: false);
 
-        await session.ExecuteSqlAsync(new ExecuteSqlRequest(), callSettings: null);
+        await managedTransaction.ExecuteSqlAsync(new ExecuteSqlRequest(), callSettings: null);
         Assert.Null(grpcClient.LastExecuteSqlRequest.DirectedReadOptions);
     }
 
@@ -201,12 +194,10 @@ public class DirectedReadTests
             DirectedReadOptions = IncludeDirectedReadOptions
         }, logger: null);
 
-        var sessionPool = new FakeSessionPool(spannerClient);
-        var session = PooledSession
-            .FromSessionName(sessionPool, s_sessionName)
-            .WithTransaction(s_transactionId, s_readOnly, singleUseTransaction);
+        var managedTransaction = CreateManagedTransaction(spannerClient);
+        managedTransaction = managedTransaction.WithTransaction(s_transactionId, s_readOnly, singleUseTransaction);
 
-        await session.ExecuteSqlStreamReader(new ExecuteSqlRequest(), callSettings: null).HasDataAsync(default);
+        await managedTransaction.ExecuteSqlStreamReader(new ExecuteSqlRequest(), callSettings: null).HasDataAsync(default);
         Assert.Equal(IncludeDirectedReadOptions, grpcClient.LastExecuteSqlRequest.DirectedReadOptions);
     }
 
@@ -216,12 +207,11 @@ public class DirectedReadTests
     {
         var grpcClient = new FakeGrpcSpannerClient();
         var spannerClient = new SpannerClientImpl(grpcClient, settings: null, logger: null);
-        var sessionPool = new FakeSessionPool(spannerClient);
-        var session = PooledSession
-            .FromSessionName(sessionPool, s_sessionName)
-            .WithTransaction(s_transactionId, s_readOnly, singleUseTransaction);
 
-        await session.ExecuteSqlStreamReader(new ExecuteSqlRequest
+        var managedTransaction = CreateManagedTransaction(spannerClient);
+        managedTransaction = managedTransaction.WithTransaction(s_transactionId, s_readOnly, singleUseTransaction);
+
+        await managedTransaction.ExecuteSqlStreamReader(new ExecuteSqlRequest
         {
             DirectedReadOptions = IncludeDirectedReadOptions
         }, callSettings: null).HasDataAsync(default);
@@ -240,12 +230,10 @@ public class DirectedReadTests
             DirectedReadOptions = ExcludeDirectedReadOptions
         }, logger: null);
 
-        var sessionPool = new FakeSessionPool(spannerClient);
-        var session = PooledSession
-            .FromSessionName(sessionPool, s_sessionName)
-            .WithTransaction(s_transactionId, s_readOnly, singleUseTransaction);
+        var managedTransaction = CreateManagedTransaction(spannerClient);
+        managedTransaction = managedTransaction.WithTransaction(s_transactionId, s_readOnly, singleUseTransaction);
 
-        await session.ExecuteSqlStreamReader(new ExecuteSqlRequest
+        await managedTransaction.ExecuteSqlStreamReader(new ExecuteSqlRequest
         {
             DirectedReadOptions = IncludeDirectedReadOptions
         }, callSettings: null).HasDataAsync(default);
@@ -268,13 +256,10 @@ public class DirectedReadTests
             DirectedReadOptions = IncludeDirectedReadOptions
         }, logger: null);
 
-        var sessionPool = new FakeSessionPool(spannerClient);
-        var session = PooledSession
-            .FromSessionName(sessionPool, s_sessionName)
-            // Only read-only transaction can be single use.
-            .WithTransaction(s_transactionId, options, singleUseTransaction: false);
+        var managedTransaction = CreateManagedTransaction(spannerClient);
+        managedTransaction = managedTransaction.WithTransaction(s_transactionId, options, singleUseTransaction: false);
 
-        await session.ExecuteSqlStreamReader(new ExecuteSqlRequest(), callSettings: null).HasDataAsync(default);
+        await managedTransaction.ExecuteSqlStreamReader(new ExecuteSqlRequest(), callSettings: null).HasDataAsync(default);
         Assert.Null(grpcClient.LastExecuteSqlRequest.DirectedReadOptions);
     }
 
@@ -289,12 +274,10 @@ public class DirectedReadTests
             DirectedReadOptions = IncludeDirectedReadOptions
         }, logger: null);
 
-        var sessionPool = new FakeSessionPool(spannerClient);
-        var session = PooledSession
-            .FromSessionName(sessionPool, s_sessionName)
-            .WithTransaction(s_transactionId, s_readOnly, singleUseTransaction);
+        var managedTransaction = CreateManagedTransaction(spannerClient);
+        managedTransaction = managedTransaction.WithTransaction(s_transactionId, s_readOnly, singleUseTransaction);
 
-        await session.ReadStreamReader(new ReadRequest(), callSettings: null).HasDataAsync(default);
+        await managedTransaction.ReadStreamReader(new ReadRequest(), callSettings: null).HasDataAsync(default);
         Assert.Equal(IncludeDirectedReadOptions, grpcClient.LastReadRequest.DirectedReadOptions);
     }
 
@@ -304,12 +287,11 @@ public class DirectedReadTests
     {
         var grpcClient = new FakeGrpcSpannerClient();
         var spannerClient = new SpannerClientImpl(grpcClient, settings: null, logger: null);
-        var sessionPool = new FakeSessionPool(spannerClient);
-        var session = PooledSession
-            .FromSessionName(sessionPool, s_sessionName)
-            .WithTransaction(s_transactionId, s_readOnly, singleUseTransaction);
 
-        await session.ReadStreamReader(new ReadRequest
+        var managedTransaction = CreateManagedTransaction(spannerClient);
+        managedTransaction = managedTransaction.WithTransaction(s_transactionId, s_readOnly, singleUseTransaction);
+
+        await managedTransaction.ReadStreamReader(new ReadRequest
         {
             DirectedReadOptions = IncludeDirectedReadOptions
         }, callSettings: null).HasDataAsync(default);
@@ -328,12 +310,10 @@ public class DirectedReadTests
             DirectedReadOptions = ExcludeDirectedReadOptions
         }, logger: null);
 
-        var sessionPool = new FakeSessionPool(spannerClient);
-        var session = PooledSession
-            .FromSessionName(sessionPool, s_sessionName)
-            .WithTransaction(s_transactionId, s_readOnly, singleUseTransaction);
+        var managedTransaction = CreateManagedTransaction(spannerClient);
+        managedTransaction = managedTransaction.WithTransaction(s_transactionId, s_readOnly, singleUseTransaction);
 
-        await session.ReadStreamReader(new ReadRequest
+        await managedTransaction.ReadStreamReader(new ReadRequest
         {
             DirectedReadOptions = IncludeDirectedReadOptions
         }, callSettings: null).HasDataAsync(default);
@@ -356,14 +336,26 @@ public class DirectedReadTests
             DirectedReadOptions = IncludeDirectedReadOptions
         }, logger: null);
 
-        var sessionPool = new FakeSessionPool(spannerClient);
-        var session = PooledSession
-            .FromSessionName(sessionPool, s_sessionName)
-            // Only read-only transaction can be single use.
-            .WithTransaction(s_transactionId, options, singleUseTransaction: false);
+        var managedTransaction = CreateManagedTransaction(spannerClient);
+        managedTransaction = managedTransaction.WithTransaction(s_transactionId, options, singleUseTransaction: false);
 
-        await session.ReadStreamReader(new ReadRequest(), callSettings: null).HasDataAsync(default);
+        await managedTransaction.ReadStreamReader(new ReadRequest(), callSettings: null).HasDataAsync(default);
         Assert.Null(grpcClient.LastReadRequest.DirectedReadOptions);
+    }
+
+    private ManagedTransaction CreateManagedTransaction(SpannerClient client)
+    {
+        var managedSession = new ManagedSession(client, s_databaseName, null, null);
+        managedSession.Session = new Session
+        {
+            CreateTime = Timestamp.FromDateTime(DateTime.UtcNow),
+            SessionName = SessionName.FromProjectInstanceDatabaseSession("projectId", "instanceId", "databaseId", "testSessionId"),
+            Multiplexed = true
+        };
+
+        var managedTransaction = new ManagedTransaction(managedSession, null, null, false, null);
+
+        return managedTransaction;
     }
 
     public class FakeGrpcSpannerClient : V1.Spanner.SpannerClient

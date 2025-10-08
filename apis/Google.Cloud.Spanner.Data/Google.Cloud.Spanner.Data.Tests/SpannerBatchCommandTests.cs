@@ -162,7 +162,7 @@ namespace Google.Cloud.Spanner.Data.Tests
         {
             SpannerClient spannerClientMock = SpannerClientHelpers.CreateMockClient(Logger.DefaultLogger);
             spannerClientMock
-                .SetupBatchCreateSessionsAsync();
+                .SetupMultiplexSessionCreationAsync();
             SpannerConnection connection = SpannerCommandTests.BuildSpannerConnection(spannerClientMock);
             SpannerTransaction transaction = connection.BeginTransaction();
             var command = transaction.CreateBatchDmlCommand();
@@ -175,7 +175,7 @@ namespace Google.Cloud.Spanner.Data.Tests
             var priority = Priority.High;
             SpannerClient spannerClientMock = SpannerClientHelpers.CreateMockClient(Logger.DefaultLogger);
             spannerClientMock
-                .SetupBatchCreateSessionsAsync()
+                .SetupMultiplexSessionCreationAsync()
                 .SetupExecuteBatchDmlAsync()
                 .SetupCommitAsync();
             SpannerConnection connection = SpannerCommandTests.BuildSpannerConnection(spannerClientMock);
@@ -198,7 +198,7 @@ namespace Google.Cloud.Spanner.Data.Tests
             var priority = Priority.Medium;
             SpannerClient spannerClientMock = SpannerClientHelpers.CreateMockClient(Logger.DefaultLogger);
             spannerClientMock
-                .SetupBatchCreateSessionsAsync()
+                .SetupMultiplexSessionCreationAsync()
                 .SetupExecuteBatchDmlAsync()
                 .SetupCommitAsync();
             SpannerConnection connection = SpannerCommandTests.BuildSpannerConnection(spannerClientMock);
@@ -224,7 +224,7 @@ namespace Google.Cloud.Spanner.Data.Tests
         public void MaxCommitDelay_DefaultsToNull()
         {
             SpannerClient spannerClientMock = SpannerClientHelpers.CreateMockClient(Logger.DefaultLogger);
-            spannerClientMock.SetupBatchCreateSessionsAsync();
+            spannerClientMock.SetupMultiplexSessionCreationAsync();
             SpannerConnection connection = SpannerCommandTests.BuildSpannerConnection(spannerClientMock);
             var command = connection.CreateBatchDmlCommand();
 
@@ -235,7 +235,7 @@ namespace Google.Cloud.Spanner.Data.Tests
         public void MaxCommitDelay_Valid(TimeSpan? maxCommitDelay)
         {
             SpannerClient spannerClientMock = SpannerClientHelpers.CreateMockClient(Logger.DefaultLogger);
-            spannerClientMock.SetupBatchCreateSessionsAsync();
+            spannerClientMock.SetupMultiplexSessionCreationAsync();
             SpannerConnection connection = SpannerCommandTests.BuildSpannerConnection(spannerClientMock);
             var command = connection.CreateBatchDmlCommand();
 
@@ -248,7 +248,7 @@ namespace Google.Cloud.Spanner.Data.Tests
         public void MaxCommitDelay_Invalid(TimeSpan? maxCommitDelay)
         {
             SpannerClient spannerClientMock = SpannerClientHelpers.CreateMockClient(Logger.DefaultLogger);
-            spannerClientMock.SetupBatchCreateSessionsAsync();
+            spannerClientMock.SetupMultiplexSessionCreationAsync();
             SpannerConnection connection = SpannerCommandTests.BuildSpannerConnection(spannerClientMock);
             var command = connection.CreateBatchDmlCommand();
 
@@ -260,7 +260,7 @@ namespace Google.Cloud.Spanner.Data.Tests
         {
             SpannerClient spannerClientMock = SpannerClientHelpers.CreateMockClient(Logger.DefaultLogger);
             spannerClientMock
-                .SetupBatchCreateSessionsAsync()
+                .SetupMultiplexSessionCreationAsync()
                 .SetupBeginTransactionAsync()
                 .SetupExecuteBatchDmlAsync()
                 .SetupCommitAsync();
@@ -282,7 +282,7 @@ namespace Google.Cloud.Spanner.Data.Tests
 
             SpannerClient spannerClientMock = SpannerClientHelpers.CreateMockClient(Logger.DefaultLogger);
             spannerClientMock
-                .SetupBatchCreateSessionsAsync()
+                .SetupMultiplexSessionCreationAsync()
                 .SetupBeginTransactionAsync()
                 .SetupExecuteBatchDmlAsync()
                 .SetupCommitAsync();
@@ -306,7 +306,7 @@ namespace Google.Cloud.Spanner.Data.Tests
 
             SpannerClient spannerClientMock = SpannerClientHelpers.CreateMockClient(Logger.DefaultLogger);
             spannerClientMock
-                .SetupBatchCreateSessionsAsync()
+                .SetupMultiplexSessionCreationAsync()
                 .SetupBeginTransactionAsync()
                 .SetupExecuteBatchDmlAsync()
                 .SetupCommitAsync();
@@ -333,7 +333,7 @@ namespace Google.Cloud.Spanner.Data.Tests
 
             SpannerClient spannerClientMock = SpannerClientHelpers.CreateMockClient(Logger.DefaultLogger);
             spannerClientMock
-                .SetupBatchCreateSessionsAsync()
+                .SetupMultiplexSessionCreationAsync()
                 .SetupBeginTransactionAsync()
                 .SetupExecuteBatchDmlAsync()
                 .SetupCommitAsync();
@@ -360,7 +360,7 @@ namespace Google.Cloud.Spanner.Data.Tests
 
             SpannerClient spannerClientMock = SpannerClientHelpers.CreateMockClient(Logger.DefaultLogger);
             spannerClientMock
-                .SetupBatchCreateSessionsAsync()
+                .SetupMultiplexSessionCreationAsync()
                 .SetupBeginTransactionAsync()
                 .SetupExecuteBatchDmlAsync()
                 .SetupCommitAsync();
@@ -389,7 +389,7 @@ namespace Google.Cloud.Spanner.Data.Tests
 
             SpannerClient spannerClientMock = SpannerClientHelpers.CreateMockClient(Logger.DefaultLogger);
             spannerClientMock
-                .SetupBatchCreateSessionsAsync()
+                .SetupMultiplexSessionCreationAsync()
                 .SetupBeginTransactionAsync()
                 .SetupExecuteBatchDmlAsync()
                 .SetupCommitAsync();
@@ -418,7 +418,7 @@ namespace Google.Cloud.Spanner.Data.Tests
             var transactionTag = "transaction-tag-1";
             SpannerClient spannerClientMock = SpannerClientHelpers.CreateMockClient(Logger.DefaultLogger);
             spannerClientMock
-                .SetupBatchCreateSessionsAsync()
+                .SetupMultiplexSessionCreationAsync()
                 .SetupExecuteBatchDmlAsync()
                 .SetupCommitAsync();
             SpannerConnection connection = SpannerCommandTests.BuildSpannerConnection(spannerClientMock);

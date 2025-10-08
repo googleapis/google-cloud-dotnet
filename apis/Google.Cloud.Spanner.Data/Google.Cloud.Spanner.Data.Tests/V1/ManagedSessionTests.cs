@@ -28,7 +28,7 @@ public class ManagedSessionTests
     [Fact]
     public async Task TestBuilderCreation()
     {
-        ManagedSession multiplexSession = await FetchTestMultiplexSession();
+        ManagedSession multiplexSession = await FetchTestMultiplexSessionAsync();
 
         Assert.NotNull(multiplexSession);
         Assert.NotNull(multiplexSession.Session);
@@ -41,7 +41,7 @@ public class ManagedSessionTests
     public async Task TestSessionHasExpired()
     {
         SpannerClient fakeClient = CreateFakeClient();
-        ManagedSession multiplexSession = await FetchTestMultiplexSession(fakeClient);
+        ManagedSession multiplexSession = await FetchTestMultiplexSessionAsync(fakeClient);
 
         DateTime sessionCreateTime = multiplexSession.Session.CreateTime.ToDateTime();
         FakeClock clock = (FakeClock) fakeClient.Settings.Clock;
@@ -61,7 +61,7 @@ public class ManagedSessionTests
         return fakeClient;
     }
 
-    private async Task<ManagedSession> FetchTestMultiplexSession(SpannerClient client = null)
+    internal async Task<ManagedSession> FetchTestMultiplexSessionAsync(SpannerClient client = null)
     {
         if (!DatabaseName.TryParse(TestDatabase, out var databaseName))
         {

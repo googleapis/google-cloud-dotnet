@@ -200,7 +200,7 @@ public abstract class SpannerTestDatabaseBase
     private async Task<ManagedSession> CreateMultiplexSession(ManagedSessionOptions options)
     {
         var poolManager = SessionPoolManager.Create(options);
-        var muxSession = await poolManager.AcquireMultiplexSessionAsync(SpannerClientCreationOptions, DatabaseName, null);
+        var muxSession = await poolManager.AcquireManagedSessionAsync(SpannerClientCreationOptions, DatabaseName, null);
 
         return muxSession;
     }

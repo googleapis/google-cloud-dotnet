@@ -59,7 +59,7 @@ public class ManagedSession
     internal Session Session
     {
         get { return _session; }
-        private set { _session = value; }
+        set { _session = value; }
     }
 
     private bool MarkedForRefresh => Interlocked.CompareExchange(ref _markedForRefresh, 0, 0) == 1;

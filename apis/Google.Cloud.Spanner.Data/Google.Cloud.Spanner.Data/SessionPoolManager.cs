@@ -58,8 +58,8 @@ namespace Google.Cloud.Spanner.Data
         private readonly ConcurrentDictionary<SessionPool, TargetedPool> _poolReverseLookup =
             new ConcurrentDictionary<SessionPool, TargetedPool>();
 
-        private readonly ConcurrentDictionary<SpannerClientCreationOptions, ManagedSession> _targetedMuxSessions =
-            new ConcurrentDictionary<SpannerClientCreationOptions, ManagedSession>();
+        private readonly ConcurrentDictionary<(SpannerClientCreationOptions, SessionPoolSegmentKey), Task<ManagedSession>> _targetedMuxSessions =
+            new ConcurrentDictionary<(SpannerClientCreationOptions options, SessionPoolSegmentKey segmentKey), Task<ManagedSession>>();
 
         /// <summary>
         /// The session pool options used for every <see cref="SessionPool"/> created by this session pool manager.
@@ -157,10 +157,11 @@ namespace Google.Cloud.Spanner.Data
             return targetedPool.SessionPoolTask;
         }
 
-        internal async Task<ManagedSession> AcquireMultiplexSessionAsync(SpannerClientCreationOptions options, DatabaseName dbName, string dbRole)
+        internal Task<ManagedSession> AcquireManagedSessionAsync(SpannerClientCreationOptions options, DatabaseName dbName, string dbRole)
         {
+            SessionPoolSegmentKey segmentKey = SessionPoolSegmentKey.Create(dbName).WithDatabaseRole(dbRole);
             GaxPreconditions.CheckNotNull(options, nameof(options));
-            var muxSession = _targetedMuxSessions.GetOrAdd(options, await CreateMultiplexSessionAsync().ConfigureAwait(false));
+            var muxSession = _targetedMuxSessions.GetOrAdd((options, segmentKey), CreateMultiplexSessionAsync());
             return muxSession;
 
             async Task<ManagedSession> CreateMultiplexSessionAsync()
