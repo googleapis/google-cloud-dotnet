@@ -32,7 +32,6 @@ namespace Google.Cloud.CapacityPlanner.V1Beta
         private static scg::IEnumerable<gpr::FileDescriptor> GetFileDescriptors()
         {
             yield return AllocationReflection.Descriptor;
-            yield return CapacityPlanningServiceReflection.Descriptor;
             yield return FutureReservationReflection.Descriptor;
             yield return LocationReflection.Descriptor;
             yield return ResourceReflection.Descriptor;

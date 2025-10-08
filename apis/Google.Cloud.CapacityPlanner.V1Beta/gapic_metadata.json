@@ -5,33 +5,6 @@
   "protoPackage": "google.cloud.capacityplanner.v1beta",
   "libraryPackage": "Google.Cloud.CapacityPlanner.V1Beta",
   "services": {
-    "CapacityPlanningService": {
-      "clients": {
-        "grpc": {
-          "libraryClient": "CapacityPlanningServiceClient",
-          "rpcs": {
-            "GetCapacityPlan": {
-              "methods": [
-                "GetCapacityPlan",
-                "GetCapacityPlanAsync"
-              ]
-            },
-            "QueryCapacityPlanInsights": {
-              "methods": [
-                "QueryCapacityPlanInsights",
-                "QueryCapacityPlanInsightsAsync"
-              ]
-            },
-            "QueryCapacityPlans": {
-              "methods": [
-                "QueryCapacityPlans",
-                "QueryCapacityPlansAsync"
-              ]
-            }
-          }
-        }
-      }
-    },
     "UsageService": {
       "clients": {
         "grpc": {
