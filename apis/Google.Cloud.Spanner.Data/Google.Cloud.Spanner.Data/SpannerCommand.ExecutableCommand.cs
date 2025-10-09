@@ -356,12 +356,19 @@ namespace Google.Cloud.Spanner.Data
                             throw new ArgumentOutOfRangeException();
                     }
                 }
-                else
+                else // Is delete
                 {
+                    // At most one of KeySet or Parameters must be set.
+                    // Parameters would contain a parameter or each of the colums that are part of the key, to delete a single row.
+                    // Key set is a key set specification that allows deleting a set of rows with a single delete mutation.
+                    if (KeySet is not null && Parameters?.Count() > 0)
+                    {
+                        throw new InvalidOperationException($"Only one of {nameof(KeySet)} and {nameof(Parameters)} must be specified.");
+                    }
                     var w = new Mutation.Types.Delete
                     {
                         Table = CommandTextBuilder.TargetTable,
-                        KeySet = new V1.KeySet { Keys = { listValue } }
+                        KeySet = KeySet?.ToProtobuf(conversionOptions) ?? new V1.KeySet { Keys = { listValue } }
                     };
                     return new List<Mutation> { new Mutation { Delete = w } };
                 }
