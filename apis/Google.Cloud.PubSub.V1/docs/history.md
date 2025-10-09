@@ -1,5 +1,11 @@
 # Version history
 
+## Version 3.28.0, released 2025-10-09
+
+### New features
+
+- Support the protocol version in StreamingPullRequest
+
 ## Version 3.27.0, released 2025-07-07
 
 ### New features
