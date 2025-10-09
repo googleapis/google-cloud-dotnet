@@ -263,12 +263,12 @@
         },
         {
             "id": "Google.Cloud.AIPlatform.V1Beta1",
-            "currentVersion": "1.0.0-beta52",
+            "currentVersion": "1.0.0-beta53",
             "generationAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
             "releaseAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
-            "releaseTimestamp": "2025-09-29T07:56:20.207249881Z",
+            "releaseTimestamp": "2025-10-09T15:52:45.812273961Z",
             "lastGeneratedCommit": "7f0c1e5d7a45598b92d2f08e02000f005b757194",
-            "lastReleasedCommit": "374928c41762db87a25977ea3de13b62225bddb8",
+            "lastReleasedCommit": "7f0c1e5d7a45598b92d2f08e02000f005b757194",
             "apiPaths": [
                 "google/cloud/aiplatform/v1beta1"
             ],
@@ -4578,8 +4578,6 @@
                 "apis/Google.Cloud.VertexAI.Extensions/Google.Cloud.VertexAI.Extensions"
             ]
         }
-    ],
-    "commonLibrarySourcePaths": [
     ],
     "ignoredApiPaths": [
         "google/cloud/securityposture/v1",

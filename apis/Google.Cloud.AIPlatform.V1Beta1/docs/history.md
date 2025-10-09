@@ -1,5 +1,12 @@
 # Version history
 
+## Version 1.0.0-beta53, released 2025-10-09
+
+### New features
+
+- Add labels field for Predict API for Imagen use case (v1beta)
+- Auto-generated CL for //google/cloud/aiplatform:aiplatform_v1beta1_public_proto_gen
+
 ## Version 1.0.0-beta52, released 2025-09-29
 
 ### New features
