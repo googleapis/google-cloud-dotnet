@@ -1,5 +1,13 @@
 # Version history
 
+## Version 2.10.0, released 2025-10-09
+
+### New features
+
+- Add new `BACKGROUND_CHANGE_DATA_CAPTURE`, `BACKGROUND_COLUMN_METADATA_INDEX`, and `BACKGROUND_SEARCH_INDEX_REFRESH` reservation assignment types
+- Add support for creation and modification of new reservation groups
+- Add new reservation IAM policy get/set/test methods
+
 ## Version 2.9.0, released 2025-09-03
 
 ### New features
