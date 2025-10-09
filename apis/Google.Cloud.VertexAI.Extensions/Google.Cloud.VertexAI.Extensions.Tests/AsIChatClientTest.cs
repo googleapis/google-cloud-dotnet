@@ -233,6 +233,43 @@ public class AsIChatClientTest
     }
 
     [Fact]
+    public async Task IChatClient_GetResponseAsync_UriContent_InvalidUri_ThrowsException()
+    {
+        DelegateCallInvoker invoker = new()
+        {
+            OnGenerateContentRequest = request =>
+            {
+                GenerateContentResponse response = new();
+                response.Candidates.Add(new Candidate()
+                {
+                    Content = new Content()
+                    {
+                        Role = "model",
+                        Parts =
+                        {
+                            new Part()
+                            {
+                                FileData = new FileData()
+                                {
+                                    FileUri = "not a valid uri",
+                                    MimeType = "image/jpeg"
+                                }
+                            }
+                        }
+                    }
+                });
+
+                return response;
+            }
+        };
+
+        IChatClient chatClient = CreateClient(invoker).AsIChatClient("test-project", "us-central1", defaultModelId: "mymodel");
+        ChatMessage[] messages = [new(ChatRole.User, "Test invalid URI handling")];
+
+        await Assert.ThrowsAsync<UriFormatException>(() => chatClient.GetResponseAsync(messages));
+    }
+
+    [Fact]
     public async Task IChatClient_GetResponseAsync_FunctionCallContent()
     {
         DelegateCallInvoker invoker = new()

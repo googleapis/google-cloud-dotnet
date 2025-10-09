@@ -439,10 +439,7 @@ internal sealed class PredictionServiceChatClient(
             }
             else if (part.FileData is not null)
             {
-                if (Uri.TryCreate(part.FileData.FileUri, UriKind.Absolute, out Uri? uri))
-                {
-                    content = new UriContent(uri, part.FileData.MimeType);
-                }
+                content = new UriContent(new Uri(part.FileData.FileUri), part.FileData.MimeType);
             }
             else if (part.FunctionCall is not null)
             {
