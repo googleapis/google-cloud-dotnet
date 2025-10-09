@@ -7,6 +7,7 @@
     <Description>Vertex AI implementation of Microsoft.Extensions.AI.</Description>
     <PackageTags>Vertex AI;AI Extensions;Google;Cloud</PackageTags>
     <Nullable>enable</Nullable>
+    <NoWarn>$(NoWarn);MEAI001</NoWarn>
   </PropertyGroup>
   <ItemGroup>
     <ProjectReference Include="..\..\Google.Cloud.AIPlatform.V1\Google.Cloud.AIPlatform.V1\Google.Cloud.AIPlatform.V1.csproj" />

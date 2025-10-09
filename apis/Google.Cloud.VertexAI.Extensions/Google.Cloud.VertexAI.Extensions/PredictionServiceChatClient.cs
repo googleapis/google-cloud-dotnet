@@ -12,6 +12,7 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
+using Google.Api.Gax;
 using Google.Api.Gax.Grpc;
 using Google.Cloud.AIPlatform.V1;
 using Google.Protobuf;
@@ -55,7 +56,7 @@ internal sealed class PredictionServiceChatClient(
     /// <inheritdoc />
     public async Task<ChatResponse> GetResponseAsync(IEnumerable<ChatMessage> messages, ChatOptions? options = null, CancellationToken cancellationToken = default)
     {
-        VertexAIExtensions.ThrowIfNull(messages);
+        GaxPreconditions.CheckNotNull(messages, nameof(messages));
 
         // Create the request.
         GenerateContentRequest request = CreateRequest(messages, options);
@@ -88,7 +89,7 @@ internal sealed class PredictionServiceChatClient(
     /// <inheritdoc />
     public async IAsyncEnumerable<ChatResponseUpdate> GetStreamingResponseAsync(IEnumerable<ChatMessage> messages, ChatOptions? options = null, [EnumeratorCancellation] CancellationToken cancellationToken = default)
     {
-        VertexAIExtensions.ThrowIfNull(messages);
+        GaxPreconditions.CheckNotNull(messages, nameof(messages));
 
         // Create the request.
         GenerateContentRequest request = CreateRequest(messages, options);
@@ -126,7 +127,7 @@ internal sealed class PredictionServiceChatClient(
     /// <inheritdoc />
     public object? GetService(System.Type serviceType, object? serviceKey = null)
     {
-        VertexAIExtensions.ThrowIfNull(serviceType);
+        GaxPreconditions.CheckNotNull(serviceType, nameof(serviceType));
 
         if (serviceKey is null)
         {
@@ -134,7 +135,7 @@ internal sealed class PredictionServiceChatClient(
             // as there's no requirement that the same instance be returned each time, and creation is idempotent.
             if (serviceType == typeof(ChatClientMetadata))
             {
-                return _metadata ??= new("gcp.vertex_ai", defaultModelId: _defaultModelId);
+                return _metadata ??= new("gcp.vertex_ai", VertexAIExtensions.ProviderUrl, _defaultModelId);
             }
 
             // Allow a consumer to "break glass" and access the underlying client if they need it.
@@ -297,7 +298,7 @@ internal sealed class PredictionServiceChatClient(
         model ??= _defaultModelId;
         if (string.IsNullOrWhiteSpace(request.Model) && !string.IsNullOrWhiteSpace(model))
         {
-            request.Model = VertexAIExtensions.GetModelEndpoint(_projectId, _location, _publisher, model);
+            request.Model = VertexAIExtensions.GetModelName(_projectId, _location, _publisher, model);
         }
 
         // Transfer messages to request, handling system messages specially

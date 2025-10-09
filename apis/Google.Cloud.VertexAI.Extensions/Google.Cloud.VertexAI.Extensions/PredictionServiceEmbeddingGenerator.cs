@@ -12,6 +12,7 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
+using Google.Api.Gax;
 using Google.Cloud.AIPlatform.V1;
 using Google.Protobuf.WellKnownTypes;
 using Microsoft.Extensions.AI;
@@ -53,7 +54,7 @@ internal sealed class PredictionServiceEmbeddingGenerator(
     /// <inheritdoc />
     public async Task<GeneratedEmbeddings<Embedding<float>>> GenerateAsync(IEnumerable<string> values, EmbeddingGenerationOptions? options = null, CancellationToken cancellationToken = default)
     {
-        VertexAIExtensions.ThrowIfNull(values);
+        GaxPreconditions.CheckNotNull(values, nameof(values));
 
         // Create the PredictRequest object. If the options contains a RawRepresentationFactory, try to use it to
         // create the request instance, allowing the caller to populate it with Vertex-specific options. Otherwise, create
@@ -63,7 +64,7 @@ internal sealed class PredictionServiceEmbeddingGenerator(
         string? model = options?.ModelId ?? _defaultModelId;
         if (string.IsNullOrWhiteSpace(request.Endpoint) && !string.IsNullOrWhiteSpace(model))
         {
-            request.Endpoint = VertexAIExtensions.GetModelEndpoint(_projectId, _location, _publisher, model);
+            request.Endpoint = VertexAIExtensions.GetModelName(_projectId, _location, _publisher, model);
         }
 
         // Add all of the inputs.
@@ -143,15 +144,15 @@ internal sealed class PredictionServiceEmbeddingGenerator(
     /// <inheritdoc />
     public object? GetService(System.Type serviceType, object? serviceKey = null)
     {
-        VertexAIExtensions.ThrowIfNull(serviceType);
+        GaxPreconditions.CheckNotNull(serviceType, nameof(serviceType));
 
         if (serviceKey is null)
         {
             // If there's a request for metadata, lazily-initialize it and return it. We don't need to worry about race conditions,
             // as there's no requirement that the same instance be returned each time, and creation is idempotent.
-            if (serviceType == typeof(EmbeddingGenerationOptions))
+            if (serviceType == typeof(EmbeddingGeneratorMetadata))
             {
-                return _metadata ??= new("gcp.vertex_ai", defaultModelId: _defaultModelId, defaultModelDimensions: _defaultModelDimensions);
+                return _metadata ??= new("gcp.vertex_ai", VertexAIExtensions.ProviderUrl, _defaultModelId, _defaultModelDimensions);
             }
 
             // Allow a consumer to "break glass" and access the underlying client if they need it.

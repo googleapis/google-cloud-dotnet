@@ -62,10 +62,12 @@ public class AsIEmbeddingGeneratorTest
         Assert.Same(embeddingGenerator, embeddingGenerator.GetService<IEmbeddingGenerator<string, Embedding<float>>>());
         Assert.Same(embeddingGenerator, embeddingGenerator.GetService<IDisposable>());
 
-        object? metadata = embeddingGenerator.GetService(typeof(EmbeddingGenerationOptions));
+        EmbeddingGeneratorMetadata? metadata = embeddingGenerator.GetService<EmbeddingGeneratorMetadata>();
         Assert.NotNull(metadata);
-        // The implementation returns EmbeddingGeneratorMetadata but checks for EmbeddingGenerationOptions
-        Assert.IsType<EmbeddingGeneratorMetadata>(metadata);
+        Assert.Equal("gcp.vertex_ai", metadata.ProviderName);
+        Assert.Equal(new("https://aiplatform.googleapis.com:443"), metadata.ProviderUri);
+        Assert.Equal(defaultModelId, metadata.DefaultModelId);
+        Assert.Equal(defaultDimensions, metadata.DefaultModelDimensions);
     }
 
     [Fact]
@@ -234,8 +236,6 @@ public class AsIEmbeddingGeneratorTest
     [Fact] 
     public async Task IEmbeddingGenerator_GenerateAsync_WithUsageMetadata()
     {
-        // This test shows that the structure is being processed, but statistics parsing may not work in the mock
-        // For now, let's verify the embedding data is extracted correctly and accept that Usage might be null
         DelegateCallInvoker invoker = new()
         {
             OnPredictRequest = request =>
@@ -253,14 +253,11 @@ public class AsIEmbeddingGeneratorTest
         Assert.NotNull(result);
         Assert.Single(result);
         Assert.Equal([0.1f, 0.2f, 0.3f], result[0].Vector.ToArray());
-        // Note: Usage metadata parsing from statistics may not work in the mock environment
-        // The implementation does attempt to parse it, but the test structure might not match exactly
     }
 
     [Fact]
     public async Task IEmbeddingGenerator_GenerateAsync_WithMultipleUsageMetadata()
     {
-        // Similar to the above test, focus on embedding extraction rather than usage parsing
         DelegateCallInvoker invoker = new()
         {
             OnPredictRequest = request =>
@@ -285,7 +282,6 @@ public class AsIEmbeddingGeneratorTest
         Assert.Equal(2, result.Count);
         Assert.Equal([0.1f, 0.2f, 0.3f], result[0].Vector.ToArray());
         Assert.Equal([0.4f, 0.5f, 0.6f], result[1].Vector.ToArray());
-        // Note: Usage metadata parsing is implementation-dependent and may not work with mock data
     }
 
     [Fact]

@@ -12,18 +12,17 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
+using Google.Api.Gax;
 using Google.Cloud.AIPlatform.V1;
 using Google.Protobuf.WellKnownTypes;
 using Microsoft.Extensions.AI;
 using System;
-using System.Diagnostics.CodeAnalysis;
 using System.Threading;
 using System.Threading.Tasks;
 
 namespace Google.Cloud.VertexAI.Extensions;
 
 /// <summary>Provides an <see cref="IImageGenerator"/> implementation based on <see cref="PredictionServiceClient"/>.</summary>
-[Experimental("MEAI001")]
 internal sealed class PredictionServiceImageGenerator(
     PredictionServiceClient client,
     string projectId, string location, string? publisher,
@@ -50,17 +49,17 @@ internal sealed class PredictionServiceImageGenerator(
     /// <inheritdoc />
     public async Task<ImageGenerationResponse> GenerateAsync(ImageGenerationRequest request, ImageGenerationOptions? options = null, CancellationToken cancellationToken = default)
     {
-        VertexAIExtensions.ThrowIfNull(request);
+        GaxPreconditions.CheckNotNull(request, nameof(request));
 
         // Create the PredictRequest object. If the options contains a RawRepresentationFactory, try to use it to
         // create the request instance, allowing the caller to populate it with Vertex-specific options. Otherwise, create
         // a new instance directly.
-        PredictRequest predicRequest = options?.RawRepresentationFactory?.Invoke(this) as PredictRequest ?? new();
+        PredictRequest predictRequest = options?.RawRepresentationFactory?.Invoke(this) as PredictRequest ?? new();
 
         string? model = options?.ModelId ?? _defaultModelId;
-        if (string.IsNullOrWhiteSpace(predicRequest.Endpoint) && !string.IsNullOrWhiteSpace(model))
+        if (string.IsNullOrWhiteSpace(predictRequest.Endpoint) && !string.IsNullOrWhiteSpace(model))
         {
-            predicRequest.Endpoint = VertexAIExtensions.GetModelEndpoint(_projectId, _location, _publisher, model);
+            predictRequest.Endpoint = VertexAIExtensions.GetModelName(_projectId, _location, _publisher, model);
         }
 
         // Add the inputs.
@@ -110,9 +109,9 @@ internal sealed class PredictionServiceImageGenerator(
         parameters.Fields.Add("sampleCount", Protobuf.WellKnownTypes.Value.ForNumber(sampleCount));
 
         // Make the request.
-        predicRequest.Instances.Add(new Protobuf.WellKnownTypes.Value { StructValue = instances });
-        predicRequest.Parameters = new Protobuf.WellKnownTypes.Value { StructValue = parameters };
-        PredictResponse response = await _client.PredictAsync(predicRequest).ConfigureAwait(false);
+        predictRequest.Instances.Add(new Protobuf.WellKnownTypes.Value { StructValue = instances });
+        predictRequest.Parameters = new Protobuf.WellKnownTypes.Value { StructValue = parameters };
+        PredictResponse response = await _client.PredictAsync(predictRequest).ConfigureAwait(false);
 
         // Parse the response into a ImageGenerationResponse instance.
         ImageGenerationResponse result = new()
@@ -148,15 +147,15 @@ internal sealed class PredictionServiceImageGenerator(
     /// <inheritdoc />
     public object? GetService(System.Type serviceType, object? serviceKey = null)
     {
-        VertexAIExtensions.ThrowIfNull(serviceType);
+        GaxPreconditions.CheckNotNull(serviceType, nameof(serviceType));
 
         if (serviceKey is null)
         {
             // If there's a request for metadata, lazily-initialize it and return it. We don't need to worry about race conditions,
             // as there's no requirement that the same instance be returned each time, and creation is idempotent.
-            if (serviceType == typeof(EmbeddingGenerationOptions))
+            if (serviceType == typeof(ImageGeneratorMetadata))
             {
-                return _metadata ??= new("gcp.vertex_ai", defaultModelId: _defaultModelId);
+                return _metadata ??= new("gcp.vertex_ai", VertexAIExtensions.ProviderUrl, _defaultModelId);
             }
 
             // Allow a consumer to "break glass" and access the underlying client if they need it.

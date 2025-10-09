@@ -12,11 +12,10 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
+using Google.Api.Gax;
 using Google.Cloud.AIPlatform.V1;
 using Microsoft.Extensions.AI;
 using System;
-using System.Diagnostics.CodeAnalysis;
-using System.Runtime.CompilerServices;
 
 namespace Google.Cloud.VertexAI.Extensions;
 
@@ -43,11 +42,41 @@ public static class VertexAIExtensions
     public static IChatClient AsIChatClient(
         this PredictionServiceClient client, string projectId, string location, string? publisher = null, string? defaultModelId = null)
     {
-        ThrowIfNull(client);
-        ThrowIfNull(projectId);
-        ThrowIfNull(location);
+        GaxPreconditions.CheckNotNull(client, nameof(client));
+        GaxPreconditions.CheckNotNull(projectId, nameof(projectId));
+        GaxPreconditions.CheckNotNull(location, nameof(location));
 
         return new PredictionServiceChatClient(client, projectId, location, publisher, defaultModelId);
+    }
+
+    /// <summary>
+    /// Builds a <see cref="PredictionServiceClient"/> and creates an <see cref="IChatClient"/> wrapper around it.
+    /// </summary>
+    /// <param name="builder">The <see cref="PredictionServiceClientBuilder"/> with which to build the <see cref="PredictionServiceClient"/>.</param>
+    /// <param name="projectId">The ID of the Google Cloud project that accesses the resource, e.g. "my-vertex-project".</param>
+    /// <param name="location">The region where the resource is hosted, e.g. "us-central1".</param>
+    /// <param name="publisher">The model publisher. Defaults to "google" if not specified.</param>
+    /// <param name="defaultModelId">
+    /// The default model ID to use for chat requests if not specified in <see cref="ChatOptions.ModelId"/>.
+    /// If this is not specified, the model ID must be provided in each <see cref="ChatOptions"/> instance.
+    /// The model ID may be just the model name, in which case <paramref name="publisher"/> (defaulting to "google") is used
+    /// in conjunction with <paramref name="projectId"/> and <paramref name="location"/> to form the full resource name.
+    /// It may be "publisher/model", in which case <paramref name="publisher"/> is ignored. Or it may be the full resource name of the model,
+    /// in which case <paramref name="publisher"/>, <paramref name="projectId"/>, and <paramref name="location"/> will all be ignored.
+    /// </param>
+    /// <param name="provider">An optional <see cref="IServiceProvider"/> from which services are requested when building the client.</param>
+    /// <returns>An <see cref="IChatClient"/> that wraps the built client.</returns>
+    /// <exception cref="ArgumentNullException"><paramref name="builder"/> is <see langword="null"/>.</exception>
+    public static IChatClient BuildIChatClient(
+        this PredictionServiceClientBuilder builder,
+        string projectId, string location, string? publisher = null, string? defaultModelId = null,
+        IServiceProvider? provider = null)
+    {
+        GaxPreconditions.CheckNotNull(builder, nameof(builder));
+        GaxPreconditions.CheckNotNull(projectId, nameof(projectId));
+        GaxPreconditions.CheckNotNull(location, nameof(location));
+
+        return builder.Build(provider).AsIChatClient(projectId, location, publisher, defaultModelId);
     }
 
     /// <summary>
@@ -68,11 +97,41 @@ public static class VertexAIExtensions
     public static IEmbeddingGenerator<string, Embedding<float>> AsIEmbeddingGenerator(
         this PredictionServiceClient client, string projectId, string location, string? publisher = null, string? defaultModelId = null, int? defaultModelDimensions = null)
     {
-        ThrowIfNull(client);
-        ThrowIfNull(projectId);
-        ThrowIfNull(location);
+        GaxPreconditions.CheckNotNull(client, nameof(client));
+        GaxPreconditions.CheckNotNull(projectId, nameof(projectId));
+        GaxPreconditions.CheckNotNull(location, nameof(location));
 
         return new PredictionServiceEmbeddingGenerator(client, projectId, location, publisher, defaultModelId, defaultModelDimensions);
+    }
+
+    /// <summary>
+    /// Builds a <see cref="PredictionServiceClient"/> and creates an <see cref="IEmbeddingGenerator{String, Embedding}"/> wrapper around it.
+    /// </summary>
+    /// <param name="builder">The <see cref="PredictionServiceClientBuilder"/> with which to build the <see cref="PredictionServiceClient"/>.</param>
+    /// <param name="projectId">The ID of the Google Cloud project that accesses the resource, e.g. "my-vertex-project".</param>
+    /// <param name="location">The region where the resource is hosted, e.g. "us-central1".</param>
+    /// <param name="publisher">The model publisher. Defaults to "google" if not specified.</param>
+    /// <param name="defaultModelId">
+    /// The default model ID to use for embedding generation requests if not specified in <see cref="EmbeddingGenerationOptions.ModelId"/>.
+    /// If this is not specified, the model ID must be provided in each <see cref="EmbeddingGenerationOptions"/> instance.
+    /// The model ID may be just the model name, in which case <paramref name="publisher"/> (defaulting to "google") is used
+    /// in conjunction with <paramref name="projectId"/> and <paramref name="location"/> to form the full resource name.
+    /// It may be "publisher/model", in which case <paramref name="publisher"/> is ignored. Or it may be the full resource name of the model,
+    /// in which case <paramref name="publisher"/>, <paramref name="projectId"/>, and <paramref name="location"/> will all be ignored.
+    /// </param>
+    /// <param name="provider">An optional <see cref="IServiceProvider"/> from which services are requested when building the client.</param>
+    /// <returns>An <see cref="IEmbeddingGenerator{String, Embedding}"/> that wraps the built client.</returns>
+    /// <exception cref="ArgumentNullException"><paramref name="builder"/> is <see langword="null"/>.</exception>
+    public static IEmbeddingGenerator<string, Embedding<float>> BuildIEmbeddingGenerator(
+        this PredictionServiceClientBuilder builder,
+        string projectId, string location, string? publisher = null, string? defaultModelId = null,
+        IServiceProvider? provider = null)
+    {
+        GaxPreconditions.CheckNotNull(builder, nameof(builder));
+        GaxPreconditions.CheckNotNull(projectId, nameof(projectId));
+        GaxPreconditions.CheckNotNull(location, nameof(location));
+
+        return builder.Build(provider).AsIEmbeddingGenerator(projectId, location, publisher, defaultModelId);
     }
 
     /// <summary>
@@ -89,25 +148,54 @@ public static class VertexAIExtensions
     /// </param>
     /// <returns>An <see cref="IImageGenerator"/> that wraps the specified client.</returns>
     /// <exception cref="ArgumentNullException"><paramref name="client"/> is <see langword="null"/>.</exception>
-    [Experimental("MEAI001")]
     public static IImageGenerator AsIImageGenerator(
         this PredictionServiceClient client, string projectId, string location, string? publisher = null, string? defaultModelId = null)
     {
-        ThrowIfNull(client);
-        ThrowIfNull(projectId);
-        ThrowIfNull(location);
+        GaxPreconditions.CheckNotNull(client, nameof(client));
+        GaxPreconditions.CheckNotNull(projectId, nameof(projectId));
+        GaxPreconditions.CheckNotNull(location, nameof(location));
 
         return new PredictionServiceImageGenerator(client, projectId, location, publisher, defaultModelId);
     }
 
     /// <summary>
-    /// Gets the full model endpoint resource name from the specified parameters.
+    /// Builds a <see cref="PredictionServiceClient"/> and creates an <see cref="IImageGenerator"/> wrapper around it.
+    /// </summary>
+    /// <param name="builder">The <see cref="PredictionServiceClientBuilder"/> with which to build the <see cref="PredictionServiceClient"/>.</param>
+    /// <param name="projectId">The ID of the Google Cloud project that accesses the resource, e.g. "my-vertex-project".</param>
+    /// <param name="location">The region where the resource is hosted, e.g. "us-central1".</param>
+    /// <param name="publisher">The model publisher. Defaults to "google" if not specified.</param>
+    /// <param name="defaultModelId">
+    /// The default model ID to use for image generation requests if not specified in <see cref="ImageGenerationOptions.ModelId"/>.
+    /// If this is not specified, the model ID must be provided in each <see cref="ImageGenerationOptions"/> instance.
+    /// The model ID may be just the model name, in which case <paramref name="publisher"/> (defaulting to "google") is used
+    /// in conjunction with <paramref name="projectId"/> and <paramref name="location"/> to form the full resource name.
+    /// It may be "publisher/model", in which case <paramref name="publisher"/> is ignored. Or it may be the full resource name of the model,
+    /// in which case <paramref name="publisher"/>, <paramref name="projectId"/>, and <paramref name="location"/> will all be ignored.
+    /// </param>
+    /// <param name="provider">An optional <see cref="IServiceProvider"/> from which services are requested when building the client.</param>
+    /// <returns>An <see cref="IImageGenerator"/> that wraps the built client.</returns>
+    /// <exception cref="ArgumentNullException"><paramref name="builder"/> is <see langword="null"/>.</exception>
+    public static IImageGenerator BuildIImageGenerator(
+        this PredictionServiceClientBuilder builder,
+        string projectId, string location, string? publisher = null, string? defaultModelId = null,
+        IServiceProvider? provider = null)
+    {
+        GaxPreconditions.CheckNotNull(builder, nameof(builder));
+        GaxPreconditions.CheckNotNull(projectId, nameof(projectId));
+        GaxPreconditions.CheckNotNull(location, nameof(location));
+
+        return builder.Build(provider).AsIImageGenerator(projectId, location, publisher, defaultModelId);
+    }
+
+    /// <summary>
+    /// Gets the full resource name from the specified parameters.
     /// Handles three model ID formats:
     /// - Simple model name (e.g., "gemini-pro") -> constructs full resource name using provided project/location/publisher
     /// - Publisher/model format (e.g., "anthropic/claude-3-sonnet") -> constructs full resource name using extracted publisher
     /// - Full resource name (e.g., "projects/.../models/...") -> returns as-is
     /// </summary>
-    internal static string GetModelEndpoint(string projectId, string location, string? publisher, string? modelId)
+    internal static string GetModelName(string projectId, string location, string? publisher, string? modelId)
     {
         if (modelId is null)
         {
@@ -138,14 +226,6 @@ public static class VertexAIExtensions
         endpoint.LastIndexOf('/') is int slashPos && slashPos >= 0 ? endpoint.Substring(slashPos + 1) :
         endpoint;
 
-    /// <summary>Throws <see cref="ArgumentNullException"/> if <paramref name="obj"/> is <see langword="null"/>.</summary>
-    internal static void ThrowIfNull(object? obj, [CallerArgumentExpression(nameof(obj))] string? paramName = null)
-    {
-        if (obj is null)
-        {
-            ThrowArgumentNullException(paramName);
-        }
-
-        static void ThrowArgumentNullException(string? paramName) => throw new ArgumentNullException(paramName);
-    }
+    /// <summary>Gets a <see cref="Uri"/> to use as the metadata provider url.</summary>
+    internal static Uri ProviderUrl { get; } = new($"{Uri.UriSchemeHttps}{Uri.SchemeDelimiter}{PredictionServiceClient.DefaultEndpoint}");
 }

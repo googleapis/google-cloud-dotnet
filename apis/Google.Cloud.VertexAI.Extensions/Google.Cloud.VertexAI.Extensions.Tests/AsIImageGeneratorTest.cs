@@ -61,10 +61,11 @@ public class AsIImageGeneratorTest
         Assert.Same(imageGenerator, imageGenerator.GetService<IImageGenerator>());
         Assert.Same(imageGenerator, imageGenerator.GetService<IDisposable>());
 
-        object? metadata = imageGenerator.GetService(typeof(EmbeddingGenerationOptions));
+        ImageGeneratorMetadata? metadata = imageGenerator.GetService<ImageGeneratorMetadata>();
         Assert.NotNull(metadata);
-        // The implementation returns ImageGeneratorMetadata but checks for EmbeddingGenerationOptions
-        Assert.IsType<ImageGeneratorMetadata>(metadata);
+        Assert.Equal("gcp.vertex_ai", metadata.ProviderName);
+        Assert.Equal(new("https://aiplatform.googleapis.com:443"), metadata.ProviderUri);
+        Assert.Equal(defaultModelId, metadata.DefaultModelId);
     }
 
     [Fact]
@@ -411,9 +412,6 @@ public class AsIImageGeneratorTest
             {
                 // Verify endpoint was set via RawRepresentationFactory
                 Assert.Equal("custom-endpoint", request.Endpoint);
-
-                // Note: The implementation overwrites parameters completely, so custom parameters are lost
-                // This is expected behavior - RawRepresentationFactory is mainly for endpoint and other top-level settings
 
                 PredictResponse response = new();
                 response.Predictions.Add(CreateImagePrediction(imageData, "image/png"));

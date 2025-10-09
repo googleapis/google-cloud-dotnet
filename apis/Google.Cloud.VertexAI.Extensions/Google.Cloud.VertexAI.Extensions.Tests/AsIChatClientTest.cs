@@ -66,7 +66,7 @@ public class AsIChatClientTest
         ChatClientMetadata? metadata = chatClient.GetService<ChatClientMetadata>();
         Assert.NotNull(metadata);
         Assert.Equal("gcp.vertex_ai", metadata.ProviderName);
-        Assert.Null(metadata.ProviderUri);
+        Assert.Equal(new("https://aiplatform.googleapis.com:443"), metadata.ProviderUri);
         Assert.Equal(defaultModelId, metadata.DefaultModelId);
     }
 
