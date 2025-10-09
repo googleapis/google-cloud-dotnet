@@ -38,12 +38,12 @@ namespace Google.Cloud.DocumentAI.V1Beta3 {
             "ChBQcm9wZXJ0eU1ldGFkYXRhEhAKCGluYWN0aXZlGAMgASgIElsKGWZpZWxk",
             "X2V4dHJhY3Rpb25fbWV0YWRhdGEYCSABKAsyOC5nb29nbGUuY2xvdWQuZG9j",
             "dW1lbnRhaS52MWJldGEzLkZpZWxkRXh0cmFjdGlvbk1ldGFkYXRhIiYKEkVu",
-            "dGl0eVR5cGVNZXRhZGF0YRIQCghpbmFjdGl2ZRgFIAEoCCKhCQoORG9jdW1l",
+            "dGl0eVR5cGVNZXRhZGF0YRIQCghpbmFjdGl2ZRgFIAEoCCK4CgoORG9jdW1l",
             "bnRTY2hlbWESFAoMZGlzcGxheV9uYW1lGAEgASgJEhMKC2Rlc2NyaXB0aW9u",
             "GAIgASgJElAKDGVudGl0eV90eXBlcxgDIAMoCzI6Lmdvb2dsZS5jbG91ZC5k",
             "b2N1bWVudGFpLnYxYmV0YTMuRG9jdW1lbnRTY2hlbWEuRW50aXR5VHlwZRJK",
             "CghtZXRhZGF0YRgEIAEoCzI4Lmdvb2dsZS5jbG91ZC5kb2N1bWVudGFpLnYx",
-            "YmV0YTMuRG9jdW1lbnRTY2hlbWEuTWV0YWRhdGEargYKCkVudGl0eVR5cGUS",
+            "YmV0YTMuRG9jdW1lbnRTY2hlbWEuTWV0YWRhdGEaxQcKCkVudGl0eVR5cGUS",
             "XAoLZW51bV92YWx1ZXMYDiABKAsyRS5nb29nbGUuY2xvdWQuZG9jdW1lbnRh",
             "aS52MWJldGEzLkRvY3VtZW50U2NoZW1hLkVudGl0eVR5cGUuRW51bVZhbHVl",
             "c0gAEhQKDGRpc3BsYXlfbmFtZRgNIAEoCRIMCgRuYW1lGAEgASgJEhMKC2Rl",
@@ -52,25 +52,29 @@ namespace Google.Cloud.DocumentAI.V1Beta3 {
             "RG9jdW1lbnRTY2hlbWEuRW50aXR5VHlwZS5Qcm9wZXJ0eRJRChRlbnRpdHlf",
             "dHlwZV9tZXRhZGF0YRgLIAEoCzIzLmdvb2dsZS5jbG91ZC5kb2N1bWVudGFp",
             "LnYxYmV0YTMuRW50aXR5VHlwZU1ldGFkYXRhGhwKCkVudW1WYWx1ZXMSDgoG",
-            "dmFsdWVzGAEgAygJGpoDCghQcm9wZXJ0eRIMCgRuYW1lGAEgASgJEhMKC2Rl",
+            "dmFsdWVzGAEgAygJGrEECghQcm9wZXJ0eRIMCgRuYW1lGAEgASgJEhMKC2Rl",
             "c2NyaXB0aW9uGAcgASgJEhQKDGRpc3BsYXlfbmFtZRgGIAEoCRISCgp2YWx1",
             "ZV90eXBlGAIgASgJEmsKD29jY3VycmVuY2VfdHlwZRgDIAEoDjJSLmdvb2ds",
             "ZS5jbG91ZC5kb2N1bWVudGFpLnYxYmV0YTMuRG9jdW1lbnRTY2hlbWEuRW50",
-            "aXR5VHlwZS5Qcm9wZXJ0eS5PY2N1cnJlbmNlVHlwZRJMChFwcm9wZXJ0eV9t",
-            "ZXRhZGF0YRgFIAEoCzIxLmdvb2dsZS5jbG91ZC5kb2N1bWVudGFpLnYxYmV0",
-            "YTMuUHJvcGVydHlNZXRhZGF0YSKFAQoOT2NjdXJyZW5jZVR5cGUSHwobT0ND",
-            "VVJSRU5DRV9UWVBFX1VOU1BFQ0lGSUVEEAASEQoNT1BUSU9OQUxfT05DRRAB",
-            "EhUKEU9QVElPTkFMX01VTFRJUExFEAISEQoNUkVRVUlSRURfT05DRRADEhUK",
-            "EVJFUVVJUkVEX01VTFRJUExFEARCDgoMdmFsdWVfc291cmNlGpQBCghNZXRh",
-            "ZGF0YRIZChFkb2N1bWVudF9zcGxpdHRlchgBIAEoCBImCh5kb2N1bWVudF9h",
-            "bGxvd19tdWx0aXBsZV9sYWJlbHMYAiABKAgSJQodcHJlZml4ZWRfbmFtaW5n",
-            "X29uX3Byb3BlcnRpZXMYBiABKAgSHgoWc2tpcF9uYW1pbmdfdmFsaWRhdGlv",
-            "bhgHIAEoCELvAQojY29tLmdvb2dsZS5jbG91ZC5kb2N1bWVudGFpLnYxYmV0",
-            "YTNCGERvY3VtZW50QWlEb2N1bWVudFNjaGVtYVABWkNjbG91ZC5nb29nbGUu",
-            "Y29tL2dvL2RvY3VtZW50YWkvYXBpdjFiZXRhMy9kb2N1bWVudGFpcGI7ZG9j",
-            "dW1lbnRhaXBiqgIfR29vZ2xlLkNsb3VkLkRvY3VtZW50QUkuVjFCZXRhM8oC",
-            "H0dvb2dsZVxDbG91ZFxEb2N1bWVudEFJXFYxYmV0YTPqAiJHb29nbGU6OkNs",
-            "b3VkOjpEb2N1bWVudEFJOjpWMWJldGEzYgZwcm90bzM="));
+            "aXR5VHlwZS5Qcm9wZXJ0eS5PY2N1cnJlbmNlVHlwZRJaCgZtZXRob2QYCCAB",
+            "KA4ySi5nb29nbGUuY2xvdWQuZG9jdW1lbnRhaS52MWJldGEzLkRvY3VtZW50",
+            "U2NoZW1hLkVudGl0eVR5cGUuUHJvcGVydHkuTWV0aG9kEkwKEXByb3BlcnR5",
+            "X21ldGFkYXRhGAUgASgLMjEuZ29vZ2xlLmNsb3VkLmRvY3VtZW50YWkudjFi",
+            "ZXRhMy5Qcm9wZXJ0eU1ldGFkYXRhIoUBCg5PY2N1cnJlbmNlVHlwZRIfChtP",
+            "Q0NVUlJFTkNFX1RZUEVfVU5TUEVDSUZJRUQQABIRCg1PUFRJT05BTF9PTkNF",
+            "EAESFQoRT1BUSU9OQUxfTVVMVElQTEUQAhIRCg1SRVFVSVJFRF9PTkNFEAMS",
+            "FQoRUkVRVUlSRURfTVVMVElQTEUQBCI5CgZNZXRob2QSFgoSTUVUSE9EX1VO",
+            "U1BFQ0lGSUVEEAASCwoHRVhUUkFDVBABEgoKBkRFUklWRRACQg4KDHZhbHVl",
+            "X3NvdXJjZRqUAQoITWV0YWRhdGESGQoRZG9jdW1lbnRfc3BsaXR0ZXIYASAB",
+            "KAgSJgoeZG9jdW1lbnRfYWxsb3dfbXVsdGlwbGVfbGFiZWxzGAIgASgIEiUK",
+            "HXByZWZpeGVkX25hbWluZ19vbl9wcm9wZXJ0aWVzGAYgASgIEh4KFnNraXBf",
+            "bmFtaW5nX3ZhbGlkYXRpb24YByABKAhC7wEKI2NvbS5nb29nbGUuY2xvdWQu",
+            "ZG9jdW1lbnRhaS52MWJldGEzQhhEb2N1bWVudEFpRG9jdW1lbnRTY2hlbWFQ",
+            "AVpDY2xvdWQuZ29vZ2xlLmNvbS9nby9kb2N1bWVudGFpL2FwaXYxYmV0YTMv",
+            "ZG9jdW1lbnRhaXBiO2RvY3VtZW50YWlwYqoCH0dvb2dsZS5DbG91ZC5Eb2N1",
+            "bWVudEFJLlYxQmV0YTPKAh9Hb29nbGVcQ2xvdWRcRG9jdW1lbnRBSVxWMWJl",
+            "dGEz6gIiR29vZ2xlOjpDbG91ZDo6RG9jdW1lbnRBSTo6VjFiZXRhM2IGcHJv",
+            "dG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
@@ -79,7 +83,7 @@ namespace Google.Cloud.DocumentAI.V1Beta3 {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.DocumentAI.V1Beta3.PropertyMetadata), global::Google.Cloud.DocumentAI.V1Beta3.PropertyMetadata.Parser, new[]{ "Inactive", "FieldExtractionMetadata" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.DocumentAI.V1Beta3.EntityTypeMetadata), global::Google.Cloud.DocumentAI.V1Beta3.EntityTypeMetadata.Parser, new[]{ "Inactive" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.DocumentAI.V1Beta3.DocumentSchema), global::Google.Cloud.DocumentAI.V1Beta3.DocumentSchema.Parser, new[]{ "DisplayName", "Description", "EntityTypes", "Metadata" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.DocumentAI.V1Beta3.DocumentSchema.Types.EntityType), global::Google.Cloud.DocumentAI.V1Beta3.DocumentSchema.Types.EntityType.Parser, new[]{ "EnumValues", "DisplayName", "Name", "Description", "BaseTypes", "Properties", "EntityTypeMetadata" }, new[]{ "ValueSource" }, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.DocumentAI.V1Beta3.DocumentSchema.Types.EntityType.Types.EnumValues), global::Google.Cloud.DocumentAI.V1Beta3.DocumentSchema.Types.EntityType.Types.EnumValues.Parser, new[]{ "Values" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.DocumentAI.V1Beta3.DocumentSchema.Types.EntityType.Types.Property), global::Google.Cloud.DocumentAI.V1Beta3.DocumentSchema.Types.EntityType.Types.Property.Parser, new[]{ "Name", "Description", "DisplayName", "ValueType", "OccurrenceType", "PropertyMetadata" }, null, new[]{ typeof(global::Google.Cloud.DocumentAI.V1Beta3.DocumentSchema.Types.EntityType.Types.Property.Types.OccurrenceType) }, null, null)}),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.DocumentAI.V1Beta3.DocumentSchema.Types.EntityType.Types.Property), global::Google.Cloud.DocumentAI.V1Beta3.DocumentSchema.Types.EntityType.Types.Property.Parser, new[]{ "Name", "Description", "DisplayName", "ValueType", "OccurrenceType", "Method", "PropertyMetadata" }, null, new[]{ typeof(global::Google.Cloud.DocumentAI.V1Beta3.DocumentSchema.Types.EntityType.Types.Property.Types.OccurrenceType), typeof(global::Google.Cloud.DocumentAI.V1Beta3.DocumentSchema.Types.EntityType.Types.Property.Types.Method) }, null, null)}),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.DocumentAI.V1Beta3.DocumentSchema.Types.Metadata), global::Google.Cloud.DocumentAI.V1Beta3.DocumentSchema.Types.Metadata.Parser, new[]{ "DocumentSplitter", "DocumentAllowMultipleLabels", "PrefixedNamingOnProperties", "SkipNamingValidation" }, null, null, null, null)})
           }));
     }
@@ -2051,6 +2055,7 @@ namespace Google.Cloud.DocumentAI.V1Beta3 {
               displayName_ = other.displayName_;
               valueType_ = other.valueType_;
               occurrenceType_ = other.occurrenceType_;
+              method_ = other.method_;
               propertyMetadata_ = other.propertyMetadata_ != null ? other.propertyMetadata_.Clone() : null;
               _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
             }
@@ -2140,6 +2145,21 @@ namespace Google.Cloud.DocumentAI.V1Beta3 {
               }
             }
 
+            /// <summary>Field number for the "method" field.</summary>
+            public const int MethodFieldNumber = 8;
+            private global::Google.Cloud.DocumentAI.V1Beta3.DocumentSchema.Types.EntityType.Types.Property.Types.Method method_ = global::Google.Cloud.DocumentAI.V1Beta3.DocumentSchema.Types.EntityType.Types.Property.Types.Method.Unspecified;
+            /// <summary>
+            /// Specifies how the entity's value is obtained.
+            /// </summary>
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public global::Google.Cloud.DocumentAI.V1Beta3.DocumentSchema.Types.EntityType.Types.Property.Types.Method Method {
+              get { return method_; }
+              set {
+                method_ = value;
+              }
+            }
+
             /// <summary>Field number for the "property_metadata" field.</summary>
             public const int PropertyMetadataFieldNumber = 5;
             private global::Google.Cloud.DocumentAI.V1Beta3.PropertyMetadata propertyMetadata_;
@@ -2175,6 +2195,7 @@ namespace Google.Cloud.DocumentAI.V1Beta3 {
               if (DisplayName != other.DisplayName) return false;
               if (ValueType != other.ValueType) return false;
               if (OccurrenceType != other.OccurrenceType) return false;
+              if (Method != other.Method) return false;
               if (!object.Equals(PropertyMetadata, other.PropertyMetadata)) return false;
               return Equals(_unknownFields, other._unknownFields);
             }
@@ -2188,6 +2209,7 @@ namespace Google.Cloud.DocumentAI.V1Beta3 {
               if (DisplayName.Length != 0) hash ^= DisplayName.GetHashCode();
               if (ValueType.Length != 0) hash ^= ValueType.GetHashCode();
               if (OccurrenceType != global::Google.Cloud.DocumentAI.V1Beta3.DocumentSchema.Types.EntityType.Types.Property.Types.OccurrenceType.Unspecified) hash ^= OccurrenceType.GetHashCode();
+              if (Method != global::Google.Cloud.DocumentAI.V1Beta3.DocumentSchema.Types.EntityType.Types.Property.Types.Method.Unspecified) hash ^= Method.GetHashCode();
               if (propertyMetadata_ != null) hash ^= PropertyMetadata.GetHashCode();
               if (_unknownFields != null) {
                 hash ^= _unknownFields.GetHashCode();
@@ -2231,6 +2253,10 @@ namespace Google.Cloud.DocumentAI.V1Beta3 {
                 output.WriteRawTag(58);
                 output.WriteString(Description);
               }
+              if (Method != global::Google.Cloud.DocumentAI.V1Beta3.DocumentSchema.Types.EntityType.Types.Property.Types.Method.Unspecified) {
+                output.WriteRawTag(64);
+                output.WriteEnum((int) Method);
+              }
               if (_unknownFields != null) {
                 _unknownFields.WriteTo(output);
               }
@@ -2265,6 +2291,10 @@ namespace Google.Cloud.DocumentAI.V1Beta3 {
                 output.WriteRawTag(58);
                 output.WriteString(Description);
               }
+              if (Method != global::Google.Cloud.DocumentAI.V1Beta3.DocumentSchema.Types.EntityType.Types.Property.Types.Method.Unspecified) {
+                output.WriteRawTag(64);
+                output.WriteEnum((int) Method);
+              }
               if (_unknownFields != null) {
                 _unknownFields.WriteTo(ref output);
               }
@@ -2289,6 +2319,9 @@ namespace Google.Cloud.DocumentAI.V1Beta3 {
               }
               if (OccurrenceType != global::Google.Cloud.DocumentAI.V1Beta3.DocumentSchema.Types.EntityType.Types.Property.Types.OccurrenceType.Unspecified) {
                 size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) OccurrenceType);
+              }
+              if (Method != global::Google.Cloud.DocumentAI.V1Beta3.DocumentSchema.Types.EntityType.Types.Property.Types.Method.Unspecified) {
+                size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) Method);
               }
               if (propertyMetadata_ != null) {
                 size += 1 + pb::CodedOutputStream.ComputeMessageSize(PropertyMetadata);
@@ -2319,6 +2352,9 @@ namespace Google.Cloud.DocumentAI.V1Beta3 {
               }
               if (other.OccurrenceType != global::Google.Cloud.DocumentAI.V1Beta3.DocumentSchema.Types.EntityType.Types.Property.Types.OccurrenceType.Unspecified) {
                 OccurrenceType = other.OccurrenceType;
+              }
+              if (other.Method != global::Google.Cloud.DocumentAI.V1Beta3.DocumentSchema.Types.EntityType.Types.Property.Types.Method.Unspecified) {
+                Method = other.Method;
               }
               if (other.propertyMetadata_ != null) {
                 if (propertyMetadata_ == null) {
@@ -2368,6 +2404,10 @@ namespace Google.Cloud.DocumentAI.V1Beta3 {
                     Description = input.ReadString();
                     break;
                   }
+                  case 64: {
+                    Method = (global::Google.Cloud.DocumentAI.V1Beta3.DocumentSchema.Types.EntityType.Types.Property.Types.Method) input.ReadEnum();
+                    break;
+                  }
                 }
               }
             #endif
@@ -2408,6 +2448,10 @@ namespace Google.Cloud.DocumentAI.V1Beta3 {
                   }
                   case 58: {
                     Description = input.ReadString();
+                    break;
+                  }
+                  case 64: {
+                    Method = (global::Google.Cloud.DocumentAI.V1Beta3.DocumentSchema.Types.EntityType.Types.Property.Types.Method) input.ReadEnum();
                     break;
                   }
                 }
@@ -2454,6 +2498,26 @@ namespace Google.Cloud.DocumentAI.V1Beta3 {
                 /// The entity type will appear once or more times.
                 /// </summary>
                 [pbr::OriginalName("REQUIRED_MULTIPLE")] RequiredMultiple = 4,
+              }
+
+              /// <summary>
+              /// Specifies how the entity's value is obtained from the document.
+              /// </summary>
+              public enum Method {
+                /// <summary>
+                /// Unspecified method. It defaults to `EXTRACT`.
+                /// </summary>
+                [pbr::OriginalName("METHOD_UNSPECIFIED")] Unspecified = 0,
+                /// <summary>
+                /// The entity's value is directly extracted as-is from the document
+                /// text.
+                /// </summary>
+                [pbr::OriginalName("EXTRACT")] Extract = 1,
+                /// <summary>
+                /// The entity's value is derived through inference and is not
+                /// necessarily an exact text extraction from the document.
+                /// </summary>
+                [pbr::OriginalName("DERIVE")] Derive = 2,
               }
 
             }
