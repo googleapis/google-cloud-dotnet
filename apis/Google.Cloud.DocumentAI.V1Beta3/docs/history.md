@@ -1,5 +1,34 @@
 # Version history
 
+## Version 2.0.0-beta27, released 2025-10-09
+
+### New features
+
+- A new field `signature_value` is added to message `.google.cloud.documentai.v1beta3.Document`
+- A new enum `Method` is added
+- A new field `method` is added to message `.google.cloud.documentai.v1beta3.Document`
+- A new field `annotations` is added to message `.google.cloud.documentai.v1beta3.Document`
+- A new field `annotations` is added to message `.google.cloud.documentai.v1beta3.Document`
+- A new message `EntityValidationOutput` is added
+- A new message `EntitiesRevision` is added
+- A new field `entity_validation_output` is added to message `.google.cloud.documentai.v1beta3.Document`
+- A new field `entities_revisions` is added to message `.google.cloud.documentai.v1beta3.Document`
+- A new field `entities_revision_id` is added to message `.google.cloud.documentai.v1beta3.Document`
+- A new enum `Method` is added
+- A new field `method` is added to message `.google.cloud.documentai.v1beta3.DocumentSchema`
+
+### Documentation improvements
+
+- A comment for field `training_method` in message `.google.cloud.documentai.v1beta3.TrainProcessorVersionRequest` is changed
+- A comment for field `processor_version_source` in message `.google.cloud.documentai.v1beta3.ImportProcessorVersionRequest` is changed
+- A comment for field `document_schema` in message `.google.cloud.documentai.v1beta3.ProcessorVersion` is changed
+- A comment for field `create_time` in message `.google.cloud.documentai.v1beta3.ProcessorVersion` is changed
+- A comment for field `latest_evaluation` in message `.google.cloud.documentai.v1beta3.ProcessorVersion` is changed
+- A comment for field `kms_key_name` in message `.google.cloud.documentai.v1beta3.ProcessorVersion` is changed
+- A comment for field `kms_key_version_name` in message `.google.cloud.documentai.v1beta3.ProcessorVersion` is changed
+- A comment for field `deprecation_info` in message `.google.cloud.documentai.v1beta3.ProcessorVersion` is changed
+- A comment for field `create_time` in message `.google.cloud.documentai.v1beta3.Processor` is changed
+
 ## Version 2.0.0-beta26, released 2025-04-29
 
 ### New features
