@@ -1,5 +1,16 @@
 # Version history
 
+## Version 3.22.0, released 2025-10-09
+
+### New features
+
+- Added new messages `EntityValidationOutput` and `EntitiesRevision`
+- Added new fields `entity_validation_output`, `entities_revisions`, and `entities_revision_id` to the `Document` message
+
+### Documentation improvements
+
+- The field `training_method` in `TrainProcessorVersionRequest` is now marked as optional
+
 ## Version 3.21.0, released 2025-08-19
 
 ### New features
