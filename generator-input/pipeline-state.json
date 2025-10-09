@@ -3587,11 +3587,12 @@
         },
         {
             "id": "Google.LongRunning",
-            "currentVersion": "3.3.0",
+            "currentVersion": "3.4.0",
             "generationAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
             "releaseAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
-            "releaseTimestamp": "2024-05-14T15:44:16Z",
+            "releaseTimestamp": "2025-10-09T16:18:10.448345946Z",
             "lastGeneratedCommit": "1b141494162fee2993345d056cf709ebf1d0402c",
+            "lastReleasedCommit": "1b141494162fee2993345d056cf709ebf1d0402c",
             "apiPaths": [
                 "google/longrunning"
             ],
