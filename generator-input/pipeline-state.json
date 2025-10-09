@@ -4580,7 +4580,6 @@
         }
     ],
     "commonLibrarySourcePaths": [
-        "Directory.Packages.props"
     ],
     "ignoredApiPaths": [
         "google/cloud/securityposture/v1",
