@@ -4533,10 +4533,12 @@
         },
         {
             "id": "Google.Cloud.CapacityPlanner.V1Beta",
-            "nextVersion": "1.0.0-beta01",
+            "currentVersion": "1.0.0-beta01",
             "generationAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
             "releaseAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
+            "releaseTimestamp": "2025-10-09T16:43:09.340173257Z",
             "lastGeneratedCommit": "2954ae6003c9cfb49ef49c4cbc2e12dc43a97546",
+            "lastReleasedCommit": "2954ae6003c9cfb49ef49c4cbc2e12dc43a97546",
             "apiPaths": [
                 "google/cloud/capacityplanner/v1beta"
             ],
