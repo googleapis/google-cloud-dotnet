@@ -1,5 +1,13 @@
 # Version history
 
+## Version 3.48.0, released 2025-10-09
+
+### New features
+
+- Add labels field for Predict API for Imagen use case (v1beta and v1)
+- Add DeploymentTier enum to DeployedIndex
+- Auto-generated CL for //google/cloud/aiplatform:aiplatform_v1_public_proto_gen
+
 ## Version 3.47.0, released 2025-09-29
 
 ### New features
