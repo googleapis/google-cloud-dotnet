@@ -10,6 +10,6 @@
   <ItemGroup>
     <PackageReference Include="ConfigureAwaitChecker.Analyzer" PrivateAssets="All" />
     <PackageReference Include="Google.Api.Gax.Grpc" />
-    <PackageReference Include="Google.LongRunning" VersionOverride="[3.3.0, 4.0.0)" />
+    <PackageReference Include="Google.LongRunning" VersionOverride="[3.4.0, 4.0.0)" />
   </ItemGroup>
 </Project>
