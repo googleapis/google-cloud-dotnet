@@ -1233,7 +1233,7 @@
             "generationAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
             "releaseAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
             "releaseTimestamp": "2024-05-13T17:12:17Z",
-            "lastGeneratedCommit": "ef3062cf94aaa509a2f1bb1b6cfa022c8327f767",
+            "lastGeneratedCommit": "4823efd0b9944891ec5c387104dcc2ec401307a8",
             "apiPaths": [
                 "google/datastore/admin/v1"
             ],
