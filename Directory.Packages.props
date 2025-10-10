@@ -19,6 +19,9 @@
     <PackageVersion Include="Google.Api.CommonProtos" Version="[2.17.0, 3.0.0)" />
     <PackageVersion Include="Google.Protobuf" Version="3.31.1" />
 
+    <!-- System packages -->
+    <PackageVersion Include="Microsoft.Bcl.AsyncInterfaces" Version="8.0.0" />
+      
     <!-- MS Extensions packages -->    
     <PackageVersion Include="Microsoft.Extensions.Http" Version="8.0.1" />
     <PackageVersion Include="Microsoft.Extensions.Configuration" Version="8.0.0" />
