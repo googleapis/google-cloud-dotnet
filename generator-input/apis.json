@@ -664,7 +664,7 @@
       "dependencies": {
         "Google.Cloud.Iam.V1": "3.4.0",
         "Google.Cloud.OrgPolicy.V1": "3.2.0",
-        "Google.Cloud.OsConfig.V1": "2.4.0",
+        "Google.Cloud.OsConfig.V1": "2.5.0",
         "Google.Identity.AccessContextManager.V1": "2.5.0",
         "Google.LongRunning": "3.4.0"
       },
@@ -1326,7 +1326,7 @@
         "kubernetes"
       ],
       "dependencies": {
-        "Grafeas.V1": "3.8.0"
+        "Grafeas.V1": "3.10.0"
       },
       "generator": "micro",
       "protoPath": "google/cloud/binaryauthorization/v1",
@@ -2081,7 +2081,7 @@
       "testDependencies": {
         "Google.Api.Gax.Grpc.Testing": "default",
         "Google.Cloud.Datastore.Admin.V1": "2.4.0",
-        "Google.Cloud.Firestore.Admin.V1": "3.12.0"
+        "Google.Cloud.Firestore.Admin.V1": "3.15.0"
       },
       "shortName": "datastore",
       "serviceConfigFile": "datastore_v1.yaml",
@@ -2771,7 +2771,7 @@
       "testDependencies": {
         "Google.Api.Gax.Grpc.Testing": "default",
         "Google.Api.Gax.Testing": "default",
-        "Google.Cloud.Firestore.Admin.V1": "3.12.0",
+        "Google.Cloud.Firestore.Admin.V1": "3.15.0",
         "Grpc.Core.Testing": "2.46.6",
         "System.ValueTuple": "default",
         "Xunit.Combinatorial": "default"
@@ -3298,7 +3298,7 @@
         "cryptography"
       ],
       "dependencies": {
-        "Google.Cloud.Kms.V1": "3.11.0"
+        "Google.Cloud.Kms.V1": "3.19.0"
       },
       "generator": "micro",
       "protoPath": "google/cloud/kms/inventory/v1",
@@ -4493,7 +4493,7 @@
       ],
       "dependencies": {
         "Google.Cloud.Iam.V1": "3.4.0",
-        "Google.Cloud.Iam.V2": "1.2.0"
+        "Google.Cloud.Iam.V2": "1.3.0"
       },
       "generator": "micro",
       "protoPath": "google/cloud/policytroubleshooter/iam/v3",
@@ -5617,7 +5617,7 @@
         "Google.Cloud.Iam.V1": "3.4.0"
       },
       "testDependencies": {
-        "Google.Cloud.Storage.V1": "4.10.0"
+        "Google.Cloud.Storage.V1": "4.13.0"
       },
       "generator": "micro",
       "protoPath": "google/storage/v2",
@@ -6017,8 +6017,8 @@
         "AI Extensions"
       ],
       "dependencies": {
-        "Microsoft.Extensions.AI": "default",
-        "Google.Cloud.AIPlatform.V1": "project"
+        "Google.Cloud.AIPlatform.V1": "project",
+        "Microsoft.Extensions.AI": "default"
       },
       "projects": [
         "IntegrationTests",

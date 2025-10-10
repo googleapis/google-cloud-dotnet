@@ -11,7 +11,7 @@
     <PackageReference Include="ConfigureAwaitChecker.Analyzer" PrivateAssets="All" />
     <PackageReference Include="Google.Api.Gax.Grpc" />
     <PackageReference Include="Google.Cloud.Iam.V1" VersionOverride="[3.4.0, 4.0.0)" />
-    <PackageReference Include="Google.Cloud.Iam.V2" VersionOverride="[1.2.0, 2.0.0)" />
+    <PackageReference Include="Google.Cloud.Iam.V2" VersionOverride="[1.3.0, 2.0.0)" />
     <PackageReference Include="Grpc.Core" PrivateAssets="None" Condition="'$(TargetFramework)'=='net462'" />
   </ItemGroup>
 </Project>
