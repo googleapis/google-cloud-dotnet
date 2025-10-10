@@ -23,22 +23,10 @@ using System.Threading.Tasks;
 namespace Google.Cloud.VertexAI.Extensions;
 
 /// <summary>Provides an <see cref="IImageGenerator"/> implementation based on <see cref="PredictionServiceClient"/>.</summary>
-internal sealed class PredictionServiceImageGenerator(
-    PredictionServiceClient client,
-    string projectId, string location, string? publisher,
-    string? defaultModelId) : IImageGenerator
+internal sealed class PredictionServiceImageGenerator(PredictionServiceClient client, string? defaultModelId) : IImageGenerator
 {
     /// <summary>The wrapped <see cref="PredictionServiceClient"/> instance.</summary>
     private readonly PredictionServiceClient _client = client;
-
-    /// <summary>The project ID for the resource.</summary>
-    private readonly string _projectId = projectId;
-
-    /// <summary>The location for the resource.</summary>
-    private readonly string _location = location;
-
-    /// <summary>The publisher for the model.</summary>
-    private readonly string? _publisher = publisher;
 
     /// <summary>The default model that should be used when no override is specified.</summary>
     private readonly string? _defaultModelId = defaultModelId;
@@ -59,7 +47,7 @@ internal sealed class PredictionServiceImageGenerator(
         string? model = options?.ModelId ?? _defaultModelId;
         if (string.IsNullOrWhiteSpace(predictRequest.Endpoint) && !string.IsNullOrWhiteSpace(model))
         {
-            predictRequest.Endpoint = VertexAIExtensions.GetModelName(_projectId, _location, _publisher, model);
+            predictRequest.Endpoint = model;
         }
 
         // Add the inputs.
@@ -155,7 +143,7 @@ internal sealed class PredictionServiceImageGenerator(
             // as there's no requirement that the same instance be returned each time, and creation is idempotent.
             if (serviceType == typeof(ImageGeneratorMetadata))
             {
-                return _metadata ??= new("gcp.vertex_ai", VertexAIExtensions.ProviderUrl, _defaultModelId);
+                return _metadata ??= new(VertexAIExtensions.ProviderName, VertexAIExtensions.ProviderUrl, _defaultModelId);
             }
 
             // Allow a consumer to "break glass" and access the underlying client if they need it.

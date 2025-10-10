@@ -29,23 +29,10 @@ using System.Threading.Tasks;
 namespace Google.Cloud.VertexAI.Extensions;
 
 /// <summary>Provides an <see cref="IChatClient"/> implementation based on <see cref="PredictionServiceClient"/>.</summary>
-internal sealed class PredictionServiceChatClient(
-    PredictionServiceClient client,
-    string projectId, string location, string? publisher,
-    string? defaultModelId)
-    : IChatClient
+internal sealed class PredictionServiceChatClient(PredictionServiceClient client, string? defaultModelId) : IChatClient
 {
     /// <summary>The wrapped <see cref="PredictionServiceClient"/> instance.</summary>
     private readonly PredictionServiceClient _client = client;
-
-    /// <summary>The project ID for the resource.</summary>
-    private readonly string _projectId = projectId;
-
-    /// <summary>The location for the resource.</summary>
-    private readonly string _location = location;
-
-    /// <summary>The publisher for the model.</summary>
-    private readonly string? _publisher = publisher;
 
     /// <summary>The default model that should be used when no override is specified.</summary>
     private readonly string? _defaultModelId = defaultModelId;
@@ -68,7 +55,7 @@ internal sealed class PredictionServiceChatClient(
         ChatResponse chatResponse = new(new ChatMessage(ChatRole.Assistant, []))
         {
             CreatedAt = generateResult.CreateTime?.ToDateTimeOffset(),
-            ModelId = !string.IsNullOrWhiteSpace(generateResult.ModelVersion) ? generateResult.ModelVersion : VertexAIExtensions.GetModelIdFromEndpoint(request.Model),
+            ModelId = !string.IsNullOrWhiteSpace(generateResult.ModelVersion) ? generateResult.ModelVersion : request.Model,
             RawRepresentation = generateResult,
             ResponseId = generateResult.ResponseId,
         };
@@ -93,7 +80,6 @@ internal sealed class PredictionServiceChatClient(
 
         // Create the request.
         GenerateContentRequest request = CreateRequest(messages, options);
-        string? requestModelId = VertexAIExtensions.GetModelIdFromEndpoint(request.Model);
 
         // Send it.
         AsyncResponseStream<GenerateContentResponse> responseStream = _client.StreamGenerateContent(request).GetResponseStream();
@@ -105,7 +91,7 @@ internal sealed class PredictionServiceChatClient(
             ChatResponseUpdate responseUpdate = new(ChatRole.Assistant, [])
             {
                 CreatedAt = generateResult.CreateTime.ToDateTimeOffset(),
-                ModelId = !string.IsNullOrWhiteSpace(generateResult.ModelVersion) ? generateResult.ModelVersion : requestModelId,
+                ModelId = !string.IsNullOrWhiteSpace(generateResult.ModelVersion) ? generateResult.ModelVersion : request.Model,
                 RawRepresentation = generateResult,
                 ResponseId = generateResult.ResponseId,
             };
@@ -135,7 +121,7 @@ internal sealed class PredictionServiceChatClient(
             // as there's no requirement that the same instance be returned each time, and creation is idempotent.
             if (serviceType == typeof(ChatClientMetadata))
             {
-                return _metadata ??= new("gcp.vertex_ai", VertexAIExtensions.ProviderUrl, _defaultModelId);
+                return _metadata ??= new(VertexAIExtensions.ProviderName, VertexAIExtensions.ProviderUrl, _defaultModelId);
             }
 
             // Allow a consumer to "break glass" and access the underlying client if they need it.
@@ -164,8 +150,12 @@ internal sealed class PredictionServiceChatClient(
         // a new instance directly.
         GenerateContentRequest request = options?.RawRepresentationFactory?.Invoke(this) as GenerateContentRequest ?? new();
 
+        if (string.IsNullOrWhiteSpace(request.Model) && !string.IsNullOrWhiteSpace(_defaultModelId))
+        {
+            request.Model = _defaultModelId;
+        }
+
         List<ChatMessage>? systemMessages = null;
-        string? model = null;
         if (options is not null)
         {
             // Transfer over all options to the request.
@@ -186,7 +176,10 @@ internal sealed class PredictionServiceChatClient(
                 request.GenerationConfig.MaxOutputTokens = maxOutputTokens;
             }
 
-            model = options.ModelId;
+            if (!string.IsNullOrWhiteSpace(options.ModelId))
+            {
+                request.Model = options.ModelId;
+            }
 
             if (options.PresencePenalty is { } presencePenalty)
             {
@@ -291,14 +284,6 @@ internal sealed class PredictionServiceChatClient(
                     request.GenerationConfig.ResponseJsonSchema = Protobuf.WellKnownTypes.Value.Parser.ParseJson(schema.ToString());
                 }
             }
-        }
-
-        // Set the model, preferring what was in GenerateContentRequest if one was provided via RawRepresentationFactory,
-        // then what was in ChatOptions.Model, and finally any default set at the IChatClient level.
-        model ??= _defaultModelId;
-        if (string.IsNullOrWhiteSpace(request.Model) && !string.IsNullOrWhiteSpace(model))
-        {
-            request.Model = VertexAIExtensions.GetModelName(_projectId, _location, _publisher, model);
         }
 
         // Transfer messages to request, handling system messages specially

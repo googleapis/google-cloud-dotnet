@@ -31,9 +31,7 @@ public class AsIChatClientTest
     [Fact]
     public void InvalidArguments_Throws()
     {
-        Assert.Throws<ArgumentNullException>("client", () => VertexAIExtensions.AsIChatClient(null!, "test-project", "us-central1"));
-        Assert.Throws<ArgumentNullException>("projectId", () => VertexAIExtensions.AsIChatClient(CreateClient(), null!, "us-central1"));
-        Assert.Throws<ArgumentNullException>("location", () => VertexAIExtensions.AsIChatClient(CreateClient(), "test-project", null!));
+        Assert.Throws<ArgumentNullException>("client", () => VertexAIExtensions.AsIChatClient(null!));
     }
 
     [Fact]
@@ -41,7 +39,7 @@ public class AsIChatClientTest
     {
         PredictionServiceClient client = CreateClient();
 
-        IChatClient chatClient = client.AsIChatClient("test-project", "us-central1");
+        IChatClient chatClient = client.AsIChatClient();
         Assert.NotNull(chatClient);
 
         Assert.Throws<ArgumentNullException>("serviceType", () => chatClient.GetService(null!));
@@ -49,13 +47,13 @@ public class AsIChatClientTest
 
     [Theory]
     [InlineData(null)]
-    [InlineData("fakemodel")]
+    [InlineData("projects/test-project/locations/us-central1/publishers/google/models/fakemodel")]
     [InlineData("projects/test-project/locations/us-central1/publishers/google/models/gemini-pro")]
     public void IChatClient_GetService_ReturnsExpectedInstance(string? defaultModelId)
     {
         PredictionServiceClient client = CreateClient();
 
-        IChatClient chatClient = client.AsIChatClient("test-project", "us-central1", defaultModelId: defaultModelId);
+        IChatClient chatClient = client.AsIChatClient(defaultModelId);
         Assert.NotNull(chatClient);
 
         Assert.Same(client, chatClient.GetService<PredictionServiceClient>());
@@ -75,7 +73,7 @@ public class AsIChatClientTest
     {
         PredictionServiceClient client = CreateClient();
 
-        IChatClient chatClient = client.AsIChatClient("test-project", "us-central1");
+        IChatClient chatClient = client.AsIChatClient();
         Assert.NotNull(chatClient);
 
         chatClient.Dispose();
@@ -101,7 +99,7 @@ public class AsIChatClientTest
             }
         };
 
-        IChatClient chatClient = CreateClient(invoker).AsIChatClient("test-project", "us-central1", defaultModelId: "mymodel");
+        IChatClient chatClient = CreateClient(invoker).AsIChatClient("projects/test-project/locations/us-central1/publishers/google/models/mymodel");
 
         ChatResponse result = await chatClient.GetResponseAsync("Hello");
         Assert.NotNull(result);
@@ -131,7 +129,7 @@ public class AsIChatClientTest
             }
         };
 
-        IChatClient chatClient = CreateClient(invoker).AsIChatClient("test-project", "us-central1", defaultModelId: "mymodel");
+        IChatClient chatClient = CreateClient(invoker).AsIChatClient("projects/test-project/locations/us-central1/publishers/google/models/mymodel");
         ChatMessage[] messages = [new(ChatRole.User, "What is the weather like?")];
 
         ChatResponse result = await chatClient.GetResponseAsync(messages);
@@ -172,7 +170,7 @@ public class AsIChatClientTest
             }
         };
 
-        IChatClient chatClient = CreateClient(invoker).AsIChatClient("test-project", "us-central1", defaultModelId: "mymodel");
+        IChatClient chatClient = CreateClient(invoker).AsIChatClient("projects/test-project/locations/us-central1/publishers/google/models/mymodel");
         ChatMessage[] messages =
         [
             new ChatMessage(ChatRole.User,
@@ -216,7 +214,7 @@ public class AsIChatClientTest
             }
         };
 
-        IChatClient chatClient = CreateClient(invoker).AsIChatClient("test-project", "us-central1", defaultModelId: "mymodel");
+        IChatClient chatClient = CreateClient(invoker).AsIChatClient("projects/test-project/locations/us-central1/publishers/google/models/mymodel");
         ChatMessage[] messages =
         [
             new ChatMessage(ChatRole.User,
@@ -263,7 +261,7 @@ public class AsIChatClientTest
             }
         };
 
-        IChatClient chatClient = CreateClient(invoker).AsIChatClient("test-project", "us-central1", defaultModelId: "mymodel");
+        IChatClient chatClient = CreateClient(invoker).AsIChatClient("projects/test-project/locations/us-central1/publishers/google/models/mymodel");
         ChatMessage[] messages = [new(ChatRole.User, "Test invalid URI handling")];
 
         await Assert.ThrowsAsync<UriFormatException>(() => chatClient.GetResponseAsync(messages));
@@ -300,7 +298,7 @@ public class AsIChatClientTest
             }
         };
 
-        IChatClient chatClient = CreateClient(invoker).AsIChatClient("test-project", "us-central1", defaultModelId: "mymodel");
+        IChatClient chatClient = CreateClient(invoker).AsIChatClient("projects/test-project/locations/us-central1/publishers/google/models/mymodel");
         ChatMessage[] messages = [new(ChatRole.User, "What's the weather in San Francisco?")];
 
         ChatResponse result = await chatClient.GetResponseAsync(messages);
@@ -339,7 +337,7 @@ public class AsIChatClientTest
             }
         };
 
-        IChatClient chatClient = CreateClient(invoker).AsIChatClient("test-project", "us-central1", defaultModelId: "mymodel");
+        IChatClient chatClient = CreateClient(invoker).AsIChatClient("projects/test-project/locations/us-central1/publishers/google/models/mymodel");
         ChatMessage[] messages =
         [
             new ChatMessage(ChatRole.User,
@@ -384,7 +382,7 @@ public class AsIChatClientTest
             }
         };
 
-        IChatClient chatClient = CreateClient(invoker).AsIChatClient("test-project", "us-central1", defaultModelId: "mymodel");
+        IChatClient chatClient = CreateClient(invoker).AsIChatClient("projects/test-project/locations/us-central1/publishers/google/models/mymodel");
         ChatMessage[] messages = [new(ChatRole.User, "Think step by step about this problem.")];
 
         ChatResponse result = await chatClient.GetResponseAsync(messages);
@@ -426,7 +424,7 @@ public class AsIChatClientTest
             }
         };
 
-        IChatClient chatClient = CreateClient(invoker).AsIChatClient("test-project", "us-central1", defaultModelId: "default-model");
+        IChatClient chatClient = CreateClient(invoker).AsIChatClient("projects/test-project/locations/us-central1/publishers/google/models/default-model");
         ChatMessage[] messages = [new(ChatRole.User, "Test message")];
 
         ChatOptions options = new ChatOptions
@@ -475,7 +473,7 @@ public class AsIChatClientTest
             }
         };
 
-        IChatClient chatClient = CreateClient(invoker).AsIChatClient("test-project", "us-central1", defaultModelId: "mymodel");
+        IChatClient chatClient = CreateClient(invoker).AsIChatClient("projects/test-project/locations/us-central1/publishers/google/models/mymodel");
         ChatMessage[] messages =
         [
             new ChatMessage(ChatRole.System, "You are a helpful assistant."),
@@ -519,7 +517,7 @@ public class AsIChatClientTest
             }
         };
 
-        IChatClient chatClient = CreateClient(invoker).AsIChatClient("test-project", "us-central1", defaultModelId: "mymodel");
+        IChatClient chatClient = CreateClient(invoker).AsIChatClient("projects/test-project/locations/us-central1/publishers/google/models/mymodel");
         ChatMessage[] messages = [new(ChatRole.User, "What tools do you have?")];
 
         ChatOptions options = new ChatOptions
@@ -561,7 +559,7 @@ public class AsIChatClientTest
             }
         };
 
-        IChatClient chatClient = CreateClient(invoker).AsIChatClient("test-project", "us-central1", defaultModelId: "mymodel");
+        IChatClient chatClient = CreateClient(invoker).AsIChatClient("projects/test-project/locations/us-central1/publishers/google/models/mymodel");
         ChatMessage[] messages = [new(ChatRole.User, "Test auto tool mode")];
 
         ChatOptions options = new()
@@ -599,7 +597,7 @@ public class AsIChatClientTest
             }
         };
 
-        IChatClient chatClient = CreateClient(invoker).AsIChatClient("test-project", "us-central1", defaultModelId: "mymodel");
+        IChatClient chatClient = CreateClient(invoker).AsIChatClient("projects/test-project/locations/us-central1/publishers/google/models/mymodel");
         ChatMessage[] messages = [new(ChatRole.User, "Test required tool mode")];
 
         ChatOptions options = new()
@@ -639,7 +637,7 @@ public class AsIChatClientTest
             }
         };
 
-        IChatClient chatClient = CreateClient(invoker).AsIChatClient("test-project", "us-central1", defaultModelId: "mymodel");
+        IChatClient chatClient = CreateClient(invoker).AsIChatClient("projects/test-project/locations/us-central1/publishers/google/models/mymodel");
         ChatMessage[] messages = [new(ChatRole.User, "Return JSON")];
 
         ChatOptions options = new()
@@ -684,7 +682,7 @@ public class AsIChatClientTest
             }
         };
 
-        IChatClient chatClient = CreateClient(invoker).AsIChatClient("test-project", "us-central1", defaultModelId: "mymodel");
+        IChatClient chatClient = CreateClient(invoker).AsIChatClient("projects/test-project/locations/us-central1/publishers/google/models/mymodel");
         ChatMessage[] messages = [new(ChatRole.User, "Test usage metadata")];
 
         ChatResponse result = await chatClient.GetResponseAsync(messages);
@@ -728,7 +726,7 @@ public class AsIChatClientTest
                 }
             };
 
-            IChatClient chatClient = CreateClient(invoker).AsIChatClient("test-project", "us-central1", defaultModelId: "mymodel");
+            IChatClient chatClient = CreateClient(invoker).AsIChatClient("projects/test-project/locations/us-central1/publishers/google/models/mymodel");
             ChatMessage[] messages = [new(ChatRole.User, "Test")];
 
             ChatResponse result = await chatClient.GetResponseAsync(messages);
@@ -764,7 +762,7 @@ public class AsIChatClientTest
             }
         };
 
-        IChatClient chatClient = CreateClient(invoker).AsIChatClient("test-project", "us-central1", defaultModelId: "mymodel");
+        IChatClient chatClient = CreateClient(invoker).AsIChatClient("projects/test-project/locations/us-central1/publishers/google/models/mymodel");
         ChatMessage[] messages = [new(ChatRole.User, "Cite your sources")];
 
         ChatResponse result = await chatClient.GetResponseAsync(messages);
@@ -808,7 +806,7 @@ public class AsIChatClientTest
             }
         };
 
-        IChatClient chatClient = CreateClient(invoker).AsIChatClient("test-project", "us-central1", defaultModelId: "mymodel");
+        IChatClient chatClient = CreateClient(invoker).AsIChatClient("projects/test-project/locations/us-central1/publishers/google/models/mymodel");
         ChatMessage[] messages = [new(ChatRole.User, "Problematic content")];
 
         ChatResponse result = await chatClient.GetResponseAsync(messages);
@@ -854,7 +852,7 @@ public class AsIChatClientTest
             OnGenerateContentRequestStreaming = request => responses
         };
 
-        IChatClient chatClient = CreateClient(invoker).AsIChatClient("test-project", "us-central1", defaultModelId: "mymodel");
+        IChatClient chatClient = CreateClient(invoker).AsIChatClient("projects/test-project/locations/us-central1/publishers/google/models/mymodel");
         ChatMessage[] messages = [new(ChatRole.User, "Say hello")];
 
         List<ChatResponseUpdate> updates = [];
@@ -912,7 +910,7 @@ public class AsIChatClientTest
             }
         };
 
-        IChatClient chatClient = CreateClient(invoker).AsIChatClient("test-project", "us-central1", defaultModelId: "mymodel");
+        IChatClient chatClient = CreateClient(invoker).AsIChatClient("projects/test-project/locations/us-central1/publishers/google/models/mymodel");
         ChatMessage[] messages = [new(ChatRole.User, "What is the weather like?")];
 
         List<ChatResponseUpdate> updates = [];
@@ -968,7 +966,7 @@ public class AsIChatClientTest
             }
         };
 
-        IChatClient chatClient = CreateClient(invoker).AsIChatClient("test-project", "us-central1", defaultModelId: "mymodel");
+        IChatClient chatClient = CreateClient(invoker).AsIChatClient("projects/test-project/locations/us-central1/publishers/google/models/mymodel");
         ChatMessage[] messages =
         [
             new ChatMessage(ChatRole.User,
@@ -1027,7 +1025,7 @@ public class AsIChatClientTest
             OnGenerateContentRequestStreaming = request => responses
         };
 
-        IChatClient chatClient = CreateClient(invoker).AsIChatClient("test-project", "us-central1", defaultModelId: "mymodel");
+        IChatClient chatClient = CreateClient(invoker).AsIChatClient("projects/test-project/locations/us-central1/publishers/google/models/mymodel");
         ChatMessage[] messages = [new(ChatRole.User, "What's the weather in San Francisco?")];
 
         List<ChatResponseUpdate> updates = [];
@@ -1082,7 +1080,7 @@ public class AsIChatClientTest
             }
         };
 
-        IChatClient chatClient = CreateClient(invoker).AsIChatClient("test-project", "us-central1", defaultModelId: "default-model");
+        IChatClient chatClient = CreateClient(invoker).AsIChatClient("projects/test-project/locations/us-central1/publishers/google/models/default-model");
         ChatMessage[] messages = [new(ChatRole.User, "Test message")];
 
         ChatOptions options = new()
@@ -1144,7 +1142,7 @@ public class AsIChatClientTest
             }
         };
 
-        IChatClient chatClient = CreateClient(invoker).AsIChatClient("test-project", "us-central1", defaultModelId: "mymodel");
+        IChatClient chatClient = CreateClient(invoker).AsIChatClient("projects/test-project/locations/us-central1/publishers/google/models/mymodel");
         ChatMessage[] messages =
         [
             new ChatMessage(ChatRole.System, "You are a helpful assistant."),
@@ -1198,7 +1196,7 @@ public class AsIChatClientTest
             OnGenerateContentRequestStreaming = request => responses
         };
 
-        IChatClient chatClient = CreateClient(invoker).AsIChatClient("test-project", "us-central1", defaultModelId: "mymodel");
+        IChatClient chatClient = CreateClient(invoker).AsIChatClient("projects/test-project/locations/us-central1/publishers/google/models/mymodel");
         ChatMessage[] messages = [new(ChatRole.User, "Test usage metadata")];
 
         List<ChatResponseUpdate> updates = [];
@@ -1265,7 +1263,7 @@ public class AsIChatClientTest
             }
         };
 
-        IChatClient chatClient = CreateClient(invoker).AsIChatClient("test-project", "us-central1", defaultModelId: "mymodel");
+        IChatClient chatClient = CreateClient(invoker).AsIChatClient("projects/test-project/locations/us-central1/publishers/google/models/mymodel");
         ChatMessage[] messages = [new(ChatRole.User, "What tools do you have?")];
 
         ChatOptions options = new()
@@ -1310,7 +1308,7 @@ public class AsIChatClientTest
             }
         };
 
-        IChatClient chatClient = CreateClient(invoker).AsIChatClient("test-project", "us-central1");
+        IChatClient chatClient = CreateClient(invoker).AsIChatClient();
         ChatMessage[] messages = [new(ChatRole.User, "Test message")];
 
         ChatOptions options = new ChatOptions
@@ -1324,73 +1322,7 @@ public class AsIChatClientTest
         Assert.Equal("Response with full resource model ID.", ((TextContent) result.Messages[0].Contents[0]).Text);
     }
 
-    [Fact]
-    public async Task IChatClient_GetResponseAsync_WithShortModelId()
-    {
-        DelegateCallInvoker invoker = new()
-        {
-            OnGenerateContentRequest = request =>
-            {
-                // Verify the short model ID was expanded to full resource name
-                Assert.Equal("projects/test-project/locations/us-central1/publishers/google/models/gemini-pro", request.Model);
 
-                GenerateContentResponse response = new();
-                response.Candidates.Add(new Candidate()
-                {
-                    Content = new Content() { Role = "model", Parts = { new Part() { Text = "Response with short model ID." } } }
-                });
-
-                return response;
-            }
-        };
-
-        IChatClient chatClient = CreateClient(invoker).AsIChatClient("test-project", "us-central1");
-        ChatMessage[] messages = [new(ChatRole.User, "Test message")];
-
-        ChatOptions options = new ChatOptions
-        {
-            ModelId = "gemini-pro"
-        };
-
-        ChatResponse result = await chatClient.GetResponseAsync(messages, options);
-
-        Assert.NotNull(result);
-        Assert.Equal("Response with short model ID.", ((TextContent) result.Messages[0].Contents[0]).Text);
-    }
-
-    [Fact]
-    public async Task IChatClient_GetResponseAsync_WithCustomPublisher()
-    {
-        DelegateCallInvoker invoker = new()
-        {
-            OnGenerateContentRequest = request =>
-            {
-                // Verify the custom publisher was used
-                Assert.Equal("projects/test-project/locations/us-central1/publishers/anthropic/models/claude-3-sonnet", request.Model);
-
-                GenerateContentResponse response = new();
-                response.Candidates.Add(new Candidate()
-                {
-                    Content = new Content() { Role = "model", Parts = { new Part() { Text = "Response with custom publisher." } } }
-                });
-
-                return response;
-            }
-        };
-
-        IChatClient chatClient = CreateClient(invoker).AsIChatClient("test-project", "us-central1", publisher: "anthropic");
-        ChatMessage[] messages = [new(ChatRole.User, "Test message")];
-
-        ChatOptions options = new ChatOptions
-        {
-            ModelId = "claude-3-sonnet"
-        };
-
-        ChatResponse result = await chatClient.GetResponseAsync(messages, options);
-
-        Assert.NotNull(result);
-        Assert.Equal("Response with custom publisher.", ((TextContent) result.Messages[0].Contents[0]).Text);
-    }
 
     [Fact]
     public async Task IChatClient_GetResponseAsync_EmptyContentHandling()
@@ -1415,48 +1347,13 @@ public class AsIChatClientTest
             }
         };
 
-        IChatClient chatClient = CreateClient(invoker).AsIChatClient("test-project", "us-central1", defaultModelId: "mymodel");
+        IChatClient chatClient = CreateClient(invoker).AsIChatClient("projects/test-project/locations/us-central1/publishers/google/models/mymodel");
         ChatMessage[] messages = [];
 
         ChatResponse result = await chatClient.GetResponseAsync(messages);
 
         Assert.NotNull(result);
         Assert.Equal("Empty input received", ((TextContent) result.Messages[0].Contents[0]).Text);
-    }
-
-    [Fact]
-    public async Task IChatClient_GetResponseAsync_WithPublisherModelFormat()
-    {
-        DelegateCallInvoker invoker = new()
-        {
-            OnGenerateContentRequest = request =>
-            {
-                // Verify publisher/model format was correctly parsed
-                Assert.Equal("projects/test-project/locations/us-central1/publishers/anthropic/models/claude-3-haiku", request.Model);
-
-                GenerateContentResponse response = new();
-                response.Candidates.Add(new Candidate()
-                {
-                    Content = new Content() { Role = "model", Parts = { new Part() { Text = "Response from Anthropic model." } } }
-                });
-
-                return response;
-            }
-        };
-
-        IChatClient chatClient = CreateClient(invoker).AsIChatClient("test-project", "us-central1", publisher: "google");
-        ChatMessage[] messages = [new(ChatRole.User, "Test message")];
-
-        ChatOptions options = new ChatOptions
-        {
-            ModelId = "anthropic/claude-3-haiku" // This should override the default "google" publisher
-        };
-
-        ChatResponse result = await chatClient.GetResponseAsync(messages, options);
-
-        Assert.NotNull(result);
-        Assert.Equal("claude-3-haiku", result.ModelId); // Should extract just the model name from the endpoint
-        Assert.Equal("Response from Anthropic model.", ((TextContent) result.Messages[0].Contents[0]).Text);
     }
 
     [Fact]
@@ -1479,7 +1376,7 @@ public class AsIChatClientTest
             }
         };
 
-        IChatClient chatClient = CreateClient(invoker).AsIChatClient("test-project", "us-central1", publisher: "google");
+        IChatClient chatClient = CreateClient(invoker).AsIChatClient();
         ChatMessage[] messages = [new(ChatRole.User, "Test message")];
 
         ChatOptions options = new ChatOptions
@@ -1490,7 +1387,7 @@ public class AsIChatClientTest
         ChatResponse result = await chatClient.GetResponseAsync(messages, options);
 
         Assert.NotNull(result);
-        Assert.Equal("llama-2-7b-chat", result.ModelId); // Should extract the model name from the full resource name
+        Assert.Equal("projects/custom-project/locations/europe-west1/publishers/meta/models/llama-2-7b-chat", result.ModelId);
         Assert.Equal("Response from custom resource.", ((TextContent) result.Messages[0].Contents[0]).Text);
     }
 
@@ -1501,7 +1398,7 @@ public class AsIChatClientTest
         {
             OnGenerateContentRequest = request =>
             {
-                // Verify default model was expanded correctly
+                // Verify default model was used correctly
                 Assert.Equal("projects/test-project/locations/us-central1/publishers/google/models/default-chat-model", request.Model);
 
                 GenerateContentResponse response = new();
@@ -1514,21 +1411,21 @@ public class AsIChatClientTest
             }
         };
 
-        IChatClient chatClient = CreateClient(invoker).AsIChatClient("test-project", "us-central1", defaultModelId: "default-chat-model");
+        IChatClient chatClient = CreateClient(invoker).AsIChatClient("projects/test-project/locations/us-central1/publishers/google/models/default-chat-model");
         ChatMessage[] messages = [new(ChatRole.User, "Test message")];
 
         // No ModelId in options, should use default
         ChatResponse result = await chatClient.GetResponseAsync(messages);
 
         Assert.NotNull(result);
-        Assert.Equal("default-chat-model", result.ModelId); // Should extract the model name from the endpoint
+        Assert.Equal("projects/test-project/locations/us-central1/publishers/google/models/default-chat-model", result.ModelId);
         Assert.Equal("Response from default model.", ((TextContent) result.Messages[0].Contents[0]).Text);
     }
 
     [Fact]
     public async Task IChatClient_GetResponseAsync_NullMessages_ThrowsArgumentNullException()
     {
-        IChatClient chatClient = CreateClient().AsIChatClient("test-project", "us-central1", defaultModelId: "mymodel");
+        IChatClient chatClient = CreateClient().AsIChatClient("projects/test-project/locations/us-central1/publishers/google/models/mymodel");
 
         await Assert.ThrowsAsync<ArgumentNullException>("messages", () => chatClient.GetResponseAsync(null!));
     }
@@ -1536,7 +1433,7 @@ public class AsIChatClientTest
     [Fact]
     public async Task IChatClient_GetStreamingResponseAsync_NullMessages_ThrowsArgumentNullException()
     {
-        IChatClient chatClient = CreateClient().AsIChatClient("test-project", "us-central1", defaultModelId: "mymodel");
+        IChatClient chatClient = CreateClient().AsIChatClient("projects/test-project/locations/us-central1/publishers/google/models/mymodel");
 
         IAsyncEnumerator<ChatResponseUpdate> enumerator = chatClient.GetStreamingResponseAsync(null!).GetAsyncEnumerator();
         await Assert.ThrowsAsync<ArgumentNullException>("messages", () => enumerator.MoveNextAsync().AsTask());

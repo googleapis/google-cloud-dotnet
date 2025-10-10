@@ -24,23 +24,10 @@ using System.Threading.Tasks;
 namespace Google.Cloud.VertexAI.Extensions;
 
 /// <summary>Provides an <see cref="IEmbeddingGenerator{String, Embedding}"/> implementation based on <see cref="PredictionServiceClient"/>.</summary>
-internal sealed class PredictionServiceEmbeddingGenerator(
-    PredictionServiceClient client,
-    string projectId, string location, string? publisher,
-    string? defaultModelId, int? defaultModelDimensions) :
-    IEmbeddingGenerator<string, Embedding<float>>
+internal sealed class PredictionServiceEmbeddingGenerator(PredictionServiceClient client, string? defaultModelId, int? defaultModelDimensions) : IEmbeddingGenerator<string, Embedding<float>>
 {
     /// <summary>The wrapped <see cref="PredictionServiceClient"/> instance.</summary>
     private readonly PredictionServiceClient _client = client;
-
-    /// <summary>The project ID for the resource.</summary>
-    private readonly string _projectId = projectId;
-
-    /// <summary>The location for the resource.</summary>
-    private readonly string _location = location;
-
-    /// <summary>The publisher for the model.</summary>
-    private readonly string? _publisher = publisher;
 
     /// <summary>The default model that should be used when no override is specified.</summary>
     private readonly string? _defaultModelId = defaultModelId;
@@ -64,7 +51,7 @@ internal sealed class PredictionServiceEmbeddingGenerator(
         string? model = options?.ModelId ?? _defaultModelId;
         if (string.IsNullOrWhiteSpace(request.Endpoint) && !string.IsNullOrWhiteSpace(model))
         {
-            request.Endpoint = VertexAIExtensions.GetModelName(_projectId, _location, _publisher, model);
+            request.Endpoint = model;
         }
 
         // Add all of the inputs.
@@ -118,7 +105,7 @@ internal sealed class PredictionServiceEmbeddingGenerator(
                         result.Add(new Embedding<float>(embedding)
                         {
                             CreatedAt = DateTimeOffset.UtcNow,
-                            ModelId = !string.IsNullOrWhiteSpace(response.ModelVersionId) ? response.ModelVersionId : VertexAIExtensions.GetModelIdFromEndpoint(request.Endpoint)
+                            ModelId = !string.IsNullOrWhiteSpace(response.ModelVersionId) ? response.ModelVersionId : request.Endpoint,
                         });
                     }
 
@@ -152,7 +139,7 @@ internal sealed class PredictionServiceEmbeddingGenerator(
             // as there's no requirement that the same instance be returned each time, and creation is idempotent.
             if (serviceType == typeof(EmbeddingGeneratorMetadata))
             {
-                return _metadata ??= new("gcp.vertex_ai", VertexAIExtensions.ProviderUrl, _defaultModelId, _defaultModelDimensions);
+                return _metadata ??= new(VertexAIExtensions.ProviderName, VertexAIExtensions.ProviderUrl, _defaultModelId, _defaultModelDimensions);
             }
 
             // Allow a consumer to "break glass" and access the underlying client if they need it.

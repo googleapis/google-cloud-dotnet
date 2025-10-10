@@ -28,9 +28,7 @@ public class AsIEmbeddingGeneratorTest
     [Fact]
     public void InvalidArguments_Throws()
     {
-        Assert.Throws<ArgumentNullException>("client", () => VertexAIExtensions.AsIEmbeddingGenerator(null!, "test-project", "us-central1"));
-        Assert.Throws<ArgumentNullException>("projectId", () => VertexAIExtensions.AsIEmbeddingGenerator(CreateClient(), null!, "us-central1"));
-        Assert.Throws<ArgumentNullException>("location", () => VertexAIExtensions.AsIEmbeddingGenerator(CreateClient(), "test-project", null!));
+        Assert.Throws<ArgumentNullException>("client", () => VertexAIExtensions.AsIEmbeddingGenerator(null!));
     }
 
     [Fact]
@@ -38,7 +36,7 @@ public class AsIEmbeddingGeneratorTest
     {
         PredictionServiceClient client = CreateClient();
 
-        IEmbeddingGenerator<string, Embedding<float>> embeddingGenerator = client.AsIEmbeddingGenerator("test-project", "us-central1");
+        IEmbeddingGenerator<string, Embedding<float>> embeddingGenerator = client.AsIEmbeddingGenerator();
         Assert.NotNull(embeddingGenerator);
 
         Assert.Throws<ArgumentNullException>("serviceType", () => embeddingGenerator.GetService(null!));
@@ -47,14 +45,14 @@ public class AsIEmbeddingGeneratorTest
     [Theory]
     [InlineData(null, null)]
     [InlineData(null, 512)]
-    [InlineData("fakemodel", null)]
-    [InlineData("fakemodel", 1024)]
+    [InlineData("projects/test-project/locations/us-central1/publishers/google/models/fakemodel", null)]
+    [InlineData("projects/test-project/locations/us-central1/publishers/google/models/fakemodel", 1024)]
     [InlineData("projects/test-project/locations/us-central1/publishers/google/models/text-embedding-004", null)]
     public void IEmbeddingGenerator_GetService_ReturnsExpectedInstance(string? defaultModelId, int? defaultDimensions)
     {
         PredictionServiceClient client = CreateClient();
 
-        IEmbeddingGenerator<string, Embedding<float>> embeddingGenerator = client.AsIEmbeddingGenerator("test-project", "us-central1", defaultModelId: defaultModelId, defaultModelDimensions: defaultDimensions);
+        IEmbeddingGenerator<string, Embedding<float>> embeddingGenerator = client.AsIEmbeddingGenerator(defaultModelId, defaultDimensions);
         Assert.NotNull(embeddingGenerator);
 
         Assert.Same(client, embeddingGenerator.GetService<PredictionServiceClient>());
@@ -75,7 +73,7 @@ public class AsIEmbeddingGeneratorTest
     {
         PredictionServiceClient client = CreateClient();
 
-        IEmbeddingGenerator<string, Embedding<float>> embeddingGenerator = client.AsIEmbeddingGenerator("test-project", "us-central1");
+        IEmbeddingGenerator<string, Embedding<float>> embeddingGenerator = client.AsIEmbeddingGenerator();
         Assert.NotNull(embeddingGenerator);
 
         embeddingGenerator.Dispose();
@@ -96,7 +94,7 @@ public class AsIEmbeddingGeneratorTest
             }
         };
 
-        IEmbeddingGenerator<string, Embedding<float>> embeddingGenerator = CreateClient(invoker).AsIEmbeddingGenerator("test-project", "us-central1", defaultModelId: "mymodel");
+        IEmbeddingGenerator<string, Embedding<float>> embeddingGenerator = CreateClient(invoker).AsIEmbeddingGenerator("projects/test-project/locations/us-central1/publishers/google/models/mymodel");
 
         GeneratedEmbeddings<Embedding<float>> result = await embeddingGenerator.GenerateAsync(["Hello"]);
         Assert.NotNull(result);
@@ -125,7 +123,7 @@ public class AsIEmbeddingGeneratorTest
             }
         };
 
-        IEmbeddingGenerator<string, Embedding<float>> embeddingGenerator = CreateClient(invoker).AsIEmbeddingGenerator("test-project", "us-central1", defaultModelId: "mymodel");
+        IEmbeddingGenerator<string, Embedding<float>> embeddingGenerator = CreateClient(invoker).AsIEmbeddingGenerator("projects/test-project/locations/us-central1/publishers/google/models/mymodel");
 
         GeneratedEmbeddings<Embedding<float>> result = await embeddingGenerator.GenerateAsync(["Hello", "World", "Test"]);
         Assert.NotNull(result);
@@ -157,7 +155,7 @@ public class AsIEmbeddingGeneratorTest
             }
         };
 
-        IEmbeddingGenerator<string, Embedding<float>> embeddingGenerator = CreateClient(invoker).AsIEmbeddingGenerator("test-project", "us-central1", defaultModelId: "default-model");
+        IEmbeddingGenerator<string, Embedding<float>> embeddingGenerator = CreateClient(invoker).AsIEmbeddingGenerator("projects/test-project/locations/us-central1/publishers/google/models/default-model");
 
         EmbeddingGenerationOptions options = new()
         {
@@ -191,7 +189,7 @@ public class AsIEmbeddingGeneratorTest
             }
         };
 
-        IEmbeddingGenerator<string, Embedding<float>> embeddingGenerator = CreateClient(invoker).AsIEmbeddingGenerator("test-project", "us-central1", defaultModelId: "mymodel", defaultModelDimensions: 768);
+        IEmbeddingGenerator<string, Embedding<float>> embeddingGenerator = CreateClient(invoker).AsIEmbeddingGenerator("projects/test-project/locations/us-central1/publishers/google/models/mymodel", 768);
 
         GeneratedEmbeddings<Embedding<float>> result = await embeddingGenerator.GenerateAsync(["Test"]);
 
@@ -219,7 +217,7 @@ public class AsIEmbeddingGeneratorTest
             }
         };
 
-        IEmbeddingGenerator<string, Embedding<float>> embeddingGenerator = CreateClient(invoker).AsIEmbeddingGenerator("test-project", "us-central1", defaultModelId: "mymodel", defaultModelDimensions: 768);
+        IEmbeddingGenerator<string, Embedding<float>> embeddingGenerator = CreateClient(invoker).AsIEmbeddingGenerator("projects/test-project/locations/us-central1/publishers/google/models/mymodel", 768);
 
         EmbeddingGenerationOptions options = new()
         {
@@ -246,7 +244,7 @@ public class AsIEmbeddingGeneratorTest
             }
         };
 
-        IEmbeddingGenerator<string, Embedding<float>> embeddingGenerator = CreateClient(invoker).AsIEmbeddingGenerator("test-project", "us-central1", defaultModelId: "mymodel");
+        IEmbeddingGenerator<string, Embedding<float>> embeddingGenerator = CreateClient(invoker).AsIEmbeddingGenerator("projects/test-project/locations/us-central1/publishers/google/models/mymodel");
 
         GeneratedEmbeddings<Embedding<float>> result = await embeddingGenerator.GenerateAsync(["Test with tokens"]);
 
@@ -274,7 +272,7 @@ public class AsIEmbeddingGeneratorTest
             }
         };
 
-        IEmbeddingGenerator<string, Embedding<float>> embeddingGenerator = CreateClient(invoker).AsIEmbeddingGenerator("test-project", "us-central1", defaultModelId: "mymodel");
+        IEmbeddingGenerator<string, Embedding<float>> embeddingGenerator = CreateClient(invoker).AsIEmbeddingGenerator("projects/test-project/locations/us-central1/publishers/google/models/mymodel");
 
         GeneratedEmbeddings<Embedding<float>> result = await embeddingGenerator.GenerateAsync(["First text", "Second longer text"]);
 
@@ -306,7 +304,7 @@ public class AsIEmbeddingGeneratorTest
             }
         };
 
-        IEmbeddingGenerator<string, Embedding<float>> embeddingGenerator = CreateClient(invoker).AsIEmbeddingGenerator("test-project", "us-central1", defaultModelId: "mymodel");
+        IEmbeddingGenerator<string, Embedding<float>> embeddingGenerator = CreateClient(invoker).AsIEmbeddingGenerator("projects/test-project/locations/us-central1/publishers/google/models/mymodel");
 
         EmbeddingGenerationOptions options = new()
         {
@@ -347,7 +345,7 @@ public class AsIEmbeddingGeneratorTest
             }
         };
 
-        IEmbeddingGenerator<string, Embedding<float>> embeddingGenerator = CreateClient(invoker).AsIEmbeddingGenerator("test-project", "us-central1", defaultModelId: "mymodel");
+        IEmbeddingGenerator<string, Embedding<float>> embeddingGenerator = CreateClient(invoker).AsIEmbeddingGenerator("projects/test-project/locations/us-central1/publishers/google/models/mymodel");
 
         GeneratedEmbeddings<Embedding<float>> result = await embeddingGenerator.GenerateAsync(["Test"]);
 
@@ -377,7 +375,7 @@ public class AsIEmbeddingGeneratorTest
             }
         };
 
-        IEmbeddingGenerator<string, Embedding<float>> embeddingGenerator = CreateClient(invoker).AsIEmbeddingGenerator("test-project", "us-central1", defaultModelId: "mymodel");
+        IEmbeddingGenerator<string, Embedding<float>> embeddingGenerator = CreateClient(invoker).AsIEmbeddingGenerator("projects/test-project/locations/us-central1/publishers/google/models/mymodel");
 
         GeneratedEmbeddings<Embedding<float>> result = await embeddingGenerator.GenerateAsync(["Test"]);
 
@@ -388,7 +386,7 @@ public class AsIEmbeddingGeneratorTest
     [Fact]
     public async Task IEmbeddingGenerator_GenerateAsync_NullValues_ThrowsArgumentNullException()
     {
-        IEmbeddingGenerator<string, Embedding<float>> embeddingGenerator = CreateClient().AsIEmbeddingGenerator("test-project", "us-central1", defaultModelId: "mymodel");
+        IEmbeddingGenerator<string, Embedding<float>> embeddingGenerator = CreateClient().AsIEmbeddingGenerator("projects/test-project/locations/us-central1/publishers/google/models/mymodel");
 
         await Assert.ThrowsAsync<ArgumentNullException>("values", () => embeddingGenerator.GenerateAsync(null!));
     }
@@ -408,7 +406,7 @@ public class AsIEmbeddingGeneratorTest
             }
         };
 
-        IEmbeddingGenerator<string, Embedding<float>> embeddingGenerator = CreateClient(invoker).AsIEmbeddingGenerator("test-project", "us-central1", defaultModelId: "mymodel");
+        IEmbeddingGenerator<string, Embedding<float>> embeddingGenerator = CreateClient(invoker).AsIEmbeddingGenerator("projects/test-project/locations/us-central1/publishers/google/models/mymodel");
 
         GeneratedEmbeddings<Embedding<float>> result = await embeddingGenerator.GenerateAsync([]);
 
@@ -432,7 +430,7 @@ public class AsIEmbeddingGeneratorTest
             }
         };
 
-        IEmbeddingGenerator<string, Embedding<float>> embeddingGenerator = CreateClient(invoker).AsIEmbeddingGenerator("test-project", "us-central1");
+        IEmbeddingGenerator<string, Embedding<float>> embeddingGenerator = CreateClient(invoker).AsIEmbeddingGenerator();
 
         EmbeddingGenerationOptions options = new()
         {
@@ -447,73 +445,13 @@ public class AsIEmbeddingGeneratorTest
     }
 
     [Fact]
-    public async Task IEmbeddingGenerator_GenerateAsync_WithShortModelId()
-    {
-        DelegateCallInvoker invoker = new()
-        {
-            OnPredictRequest = request =>
-            {
-                // Verify the short model ID was expanded to full resource name
-                Assert.Equal("projects/test-project/locations/us-central1/publishers/google/models/text-embedding-004", request.Endpoint);
-
-                PredictResponse response = new();
-                response.Predictions.Add(CreateEmbeddingPrediction([0.4f, 0.5f, 0.6f]));
-                return response;
-            }
-        };
-
-        IEmbeddingGenerator<string, Embedding<float>> embeddingGenerator = CreateClient(invoker).AsIEmbeddingGenerator("test-project", "us-central1");
-
-        EmbeddingGenerationOptions options = new()
-        {
-            ModelId = "text-embedding-004"
-        };
-
-        GeneratedEmbeddings<Embedding<float>> result = await embeddingGenerator.GenerateAsync(["Test with short model ID"], options);
-
-        Assert.NotNull(result);
-        Assert.Single(result);
-        Assert.Equal([0.4f, 0.5f, 0.6f], result[0].Vector.ToArray());
-    }
-
-    [Fact]
-    public async Task IEmbeddingGenerator_GenerateAsync_WithCustomPublisher()
-    {
-        DelegateCallInvoker invoker = new()
-        {
-            OnPredictRequest = request =>
-            {
-                // Verify the custom publisher was used
-                Assert.Equal("projects/test-project/locations/us-central1/publishers/custom/models/custom-embedding", request.Endpoint);
-
-                PredictResponse response = new();
-                response.Predictions.Add(CreateEmbeddingPrediction([0.7f, 0.8f, 0.9f]));
-                return response;
-            }
-        };
-
-        IEmbeddingGenerator<string, Embedding<float>> embeddingGenerator = CreateClient(invoker).AsIEmbeddingGenerator("test-project", "us-central1", publisher: "custom");
-
-        EmbeddingGenerationOptions options = new()
-        {
-            ModelId = "custom-embedding"
-        };
-
-        GeneratedEmbeddings<Embedding<float>> result = await embeddingGenerator.GenerateAsync(["Test with custom publisher"], options);
-
-        Assert.NotNull(result);
-        Assert.Single(result);
-        Assert.Equal([0.7f, 0.8f, 0.9f], result[0].Vector.ToArray());
-    }
-
-    [Fact]
     public async Task IEmbeddingGenerator_GenerateAsync_DefaultModelUsedWhenNoOverride()
     {
         DelegateCallInvoker invoker = new()
         {
             OnPredictRequest = request =>
             {
-                // Verify default model was used (should be expanded to full resource name)
+                // Verify default model was used
                 Assert.Equal("projects/test-project/locations/us-central1/publishers/google/models/default-model-id", request.Endpoint);
 
                 PredictResponse response = new();
@@ -522,42 +460,12 @@ public class AsIEmbeddingGeneratorTest
             }
         };
 
-        IEmbeddingGenerator<string, Embedding<float>> embeddingGenerator = CreateClient(invoker).AsIEmbeddingGenerator("test-project", "us-central1", defaultModelId: "default-model-id");
+        IEmbeddingGenerator<string, Embedding<float>> embeddingGenerator = CreateClient(invoker).AsIEmbeddingGenerator("projects/test-project/locations/us-central1/publishers/google/models/default-model-id");
 
         GeneratedEmbeddings<Embedding<float>> result = await embeddingGenerator.GenerateAsync(["Test"]);
 
         Assert.NotNull(result);
         Assert.Single(result);
-    }
-
-    [Fact]
-    public async Task IEmbeddingGenerator_GenerateAsync_WithPublisherModelFormat()
-    {
-        DelegateCallInvoker invoker = new()
-        {
-            OnPredictRequest = request =>
-            {
-                // Verify publisher/model format was correctly parsed
-                Assert.Equal("projects/test-project/locations/us-central1/publishers/cohere/models/embed-english-v3.0", request.Endpoint);
-
-                PredictResponse response = new();
-                response.Predictions.Add(CreateEmbeddingPrediction([0.1f, 0.2f, 0.3f]));
-                return response;
-            }
-        };
-
-        IEmbeddingGenerator<string, Embedding<float>> embeddingGenerator = CreateClient(invoker).AsIEmbeddingGenerator("test-project", "us-central1", publisher: "google");
-
-        EmbeddingGenerationOptions options = new()
-        {
-            ModelId = "cohere/embed-english-v3.0" // This should override the default "google" publisher
-        };
-
-        GeneratedEmbeddings<Embedding<float>> result = await embeddingGenerator.GenerateAsync(["Test with publisher override"], options);
-
-        Assert.NotNull(result);
-        Assert.Single(result);
-        Assert.Equal([0.1f, 0.2f, 0.3f], result[0].Vector.ToArray());
     }
 
     [Fact]
@@ -576,7 +484,7 @@ public class AsIEmbeddingGeneratorTest
             }
         };
 
-        IEmbeddingGenerator<string, Embedding<float>> embeddingGenerator = CreateClient(invoker).AsIEmbeddingGenerator("test-project", "us-central1", publisher: "google");
+        IEmbeddingGenerator<string, Embedding<float>> embeddingGenerator = CreateClient(invoker).AsIEmbeddingGenerator();
 
         EmbeddingGenerationOptions options = new()
         {
