@@ -746,7 +746,7 @@
             "generationAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
             "releaseAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
             "releaseTimestamp": "2024-10-14T16:10:26Z",
-            "lastGeneratedCommit": "222764e0853283787ba2203de6b3f57bf05b6bc5",
+            "lastGeneratedCommit": "4823efd0b9944891ec5c387104dcc2ec401307a8",
             "apiPaths": [
                 "google/cloud/bigquery/storage/v1"
             ],
