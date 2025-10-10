@@ -8,7 +8,7 @@
   </PropertyGroup>
   <ItemGroup>
     <ProjectReference Include="..\..\..\tools\Google.Cloud.ClientTesting\Google.Cloud.ClientTesting.csproj" />
-    <PackageReference Include="Google.Cloud.Storage.V1" VersionOverride="[4.10.0, 5.0.0)" />
+    <PackageReference Include="Google.Cloud.Storage.V1" VersionOverride="[4.13.0, 5.0.0)" />
     <ProjectReference Include="..\Google.Cloud.Storage.V2\Google.Cloud.Storage.V2.csproj" />
     <PackageReference Include="Microsoft.NET.Test.Sdk" />
     <PackageReference Include="NSubstitute" />
