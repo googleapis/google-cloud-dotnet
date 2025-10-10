@@ -22,7 +22,6 @@ using grpcinter = Grpc.Core.Interceptors;
 using lro = Google.LongRunning;
 using mel = Microsoft.Extensions.Logging;
 using proto = Google.Protobuf;
-using sc = System.Collections;
 using scg = System.Collections.Generic;
 using sco = System.Collections.ObjectModel;
 using st = System.Threading;
@@ -2043,14 +2042,6 @@ namespace Google.Cloud.Compute.V1
             get => checked((int)MaxResults);
             set => MaxResults = checked((uint)value);
         }
-    }
-
-    public partial class SecurityPolicyList : gaxgrpc::IPageResponse<SecurityPolicy>
-    {
-        /// <summary>Returns an enumerator that iterates through the resources in this response.</summary>
-        public scg::IEnumerator<SecurityPolicy> GetEnumerator() => Items.GetEnumerator();
-
-        sc::IEnumerator sc::IEnumerable.GetEnumerator() => GetEnumerator();
     }
 
     public static partial class RegionSecurityPolicies
