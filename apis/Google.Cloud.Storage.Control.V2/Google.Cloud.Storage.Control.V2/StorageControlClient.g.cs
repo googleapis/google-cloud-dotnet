@@ -17,6 +17,7 @@
 #pragma warning disable CS8981
 using gax = Google.Api.Gax;
 using gaxgrpc = Google.Api.Gax.Grpc;
+using gciv = Google.Cloud.Iam.V1;
 using grpccore = Grpc.Core;
 using grpcinter = Grpc.Core.Interceptors;
 using lro = Google.LongRunning;
@@ -73,6 +74,9 @@ namespace Google.Cloud.Storage.Control.V2
             UpdateFolderIntelligenceConfigSettings = existing.UpdateFolderIntelligenceConfigSettings;
             GetOrganizationIntelligenceConfigSettings = existing.GetOrganizationIntelligenceConfigSettings;
             UpdateOrganizationIntelligenceConfigSettings = existing.UpdateOrganizationIntelligenceConfigSettings;
+            GetIamPolicySettings = existing.GetIamPolicySettings;
+            SetIamPolicySettings = existing.SetIamPolicySettings;
+            TestIamPermissionsSettings = existing.TestIamPermissionsSettings;
             OnCopy(existing);
         }
 
@@ -613,6 +617,42 @@ namespace Google.Cloud.Storage.Control.V2
         /// </list>
         /// </remarks>
         public gaxgrpc::CallSettings UpdateOrganizationIntelligenceConfigSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 5, initialBackoff: sys::TimeSpan.FromMilliseconds(1000), maxBackoff: sys::TimeSpan.FromMilliseconds(60000), backoffMultiplier: 2, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.ResourceExhausted, grpccore::StatusCode.Unavailable, grpccore::StatusCode.DeadlineExceeded, grpccore::StatusCode.Internal, grpccore::StatusCode.Unknown)));
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>StorageControlClient.GetIamPolicy</c> and <c>StorageControlClient.GetIamPolicyAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>Timeout: 60 seconds.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings GetIamPolicySettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000)));
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>StorageControlClient.SetIamPolicy</c> and <c>StorageControlClient.SetIamPolicyAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>Timeout: 60 seconds.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings SetIamPolicySettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000)));
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>StorageControlClient.TestIamPermissions</c> and <c>StorageControlClient.TestIamPermissionsAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>Timeout: 60 seconds.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings TestIamPermissionsSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000)));
 
         /// <summary>Creates a deep clone of this object, with all the same property values.</summary>
         /// <returns>A deep clone of this <see cref="StorageControlSettings"/> object.</returns>
@@ -3773,6 +3813,557 @@ namespace Google.Cloud.Storage.Control.V2
         /// <returns>A Task containing the RPC response.</returns>
         public virtual stt::Task<IntelligenceConfig> UpdateOrganizationIntelligenceConfigAsync(IntelligenceConfig intelligenceConfig, wkt::FieldMask updateMask, st::CancellationToken cancellationToken) =>
             UpdateOrganizationIntelligenceConfigAsync(intelligenceConfig, updateMask, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Gets the IAM policy for a specified bucket.
+        /// The `resource` field in the request should be
+        /// `projects/_/buckets/{bucket}` for a bucket, or
+        /// `projects/_/buckets/{bucket}/managedFolders/{managedFolder}`
+        /// for a managed folder.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual gciv::Policy GetIamPolicy(gciv::GetIamPolicyRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Gets the IAM policy for a specified bucket.
+        /// The `resource` field in the request should be
+        /// `projects/_/buckets/{bucket}` for a bucket, or
+        /// `projects/_/buckets/{bucket}/managedFolders/{managedFolder}`
+        /// for a managed folder.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<gciv::Policy> GetIamPolicyAsync(gciv::GetIamPolicyRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Gets the IAM policy for a specified bucket.
+        /// The `resource` field in the request should be
+        /// `projects/_/buckets/{bucket}` for a bucket, or
+        /// `projects/_/buckets/{bucket}/managedFolders/{managedFolder}`
+        /// for a managed folder.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<gciv::Policy> GetIamPolicyAsync(gciv::GetIamPolicyRequest request, st::CancellationToken cancellationToken) =>
+            GetIamPolicyAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Gets the IAM policy for a specified bucket.
+        /// The `resource` field in the request should be
+        /// `projects/_/buckets/{bucket}` for a bucket, or
+        /// `projects/_/buckets/{bucket}/managedFolders/{managedFolder}`
+        /// for a managed folder.
+        /// </summary>
+        /// <param name="resource">
+        /// REQUIRED: The resource for which the policy is being requested.
+        /// See the operation documentation for the appropriate value for this field.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual gciv::Policy GetIamPolicy(string resource, gaxgrpc::CallSettings callSettings = null) =>
+            GetIamPolicy(new gciv::GetIamPolicyRequest
+            {
+                Resource = gax::GaxPreconditions.CheckNotNullOrEmpty(resource, nameof(resource)),
+            }, callSettings);
+
+        /// <summary>
+        /// Gets the IAM policy for a specified bucket.
+        /// The `resource` field in the request should be
+        /// `projects/_/buckets/{bucket}` for a bucket, or
+        /// `projects/_/buckets/{bucket}/managedFolders/{managedFolder}`
+        /// for a managed folder.
+        /// </summary>
+        /// <param name="resource">
+        /// REQUIRED: The resource for which the policy is being requested.
+        /// See the operation documentation for the appropriate value for this field.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<gciv::Policy> GetIamPolicyAsync(string resource, gaxgrpc::CallSettings callSettings = null) =>
+            GetIamPolicyAsync(new gciv::GetIamPolicyRequest
+            {
+                Resource = gax::GaxPreconditions.CheckNotNullOrEmpty(resource, nameof(resource)),
+            }, callSettings);
+
+        /// <summary>
+        /// Gets the IAM policy for a specified bucket.
+        /// The `resource` field in the request should be
+        /// `projects/_/buckets/{bucket}` for a bucket, or
+        /// `projects/_/buckets/{bucket}/managedFolders/{managedFolder}`
+        /// for a managed folder.
+        /// </summary>
+        /// <param name="resource">
+        /// REQUIRED: The resource for which the policy is being requested.
+        /// See the operation documentation for the appropriate value for this field.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<gciv::Policy> GetIamPolicyAsync(string resource, st::CancellationToken cancellationToken) =>
+            GetIamPolicyAsync(resource, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Gets the IAM policy for a specified bucket.
+        /// The `resource` field in the request should be
+        /// `projects/_/buckets/{bucket}` for a bucket, or
+        /// `projects/_/buckets/{bucket}/managedFolders/{managedFolder}`
+        /// for a managed folder.
+        /// </summary>
+        /// <param name="resource">
+        /// REQUIRED: The resource for which the policy is being requested.
+        /// See the operation documentation for the appropriate value for this field.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual gciv::Policy GetIamPolicy(gax::IResourceName resource, gaxgrpc::CallSettings callSettings = null) =>
+            GetIamPolicy(new gciv::GetIamPolicyRequest
+            {
+                ResourceAsResourceName = gax::GaxPreconditions.CheckNotNull(resource, nameof(resource)),
+            }, callSettings);
+
+        /// <summary>
+        /// Gets the IAM policy for a specified bucket.
+        /// The `resource` field in the request should be
+        /// `projects/_/buckets/{bucket}` for a bucket, or
+        /// `projects/_/buckets/{bucket}/managedFolders/{managedFolder}`
+        /// for a managed folder.
+        /// </summary>
+        /// <param name="resource">
+        /// REQUIRED: The resource for which the policy is being requested.
+        /// See the operation documentation for the appropriate value for this field.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<gciv::Policy> GetIamPolicyAsync(gax::IResourceName resource, gaxgrpc::CallSettings callSettings = null) =>
+            GetIamPolicyAsync(new gciv::GetIamPolicyRequest
+            {
+                ResourceAsResourceName = gax::GaxPreconditions.CheckNotNull(resource, nameof(resource)),
+            }, callSettings);
+
+        /// <summary>
+        /// Gets the IAM policy for a specified bucket.
+        /// The `resource` field in the request should be
+        /// `projects/_/buckets/{bucket}` for a bucket, or
+        /// `projects/_/buckets/{bucket}/managedFolders/{managedFolder}`
+        /// for a managed folder.
+        /// </summary>
+        /// <param name="resource">
+        /// REQUIRED: The resource for which the policy is being requested.
+        /// See the operation documentation for the appropriate value for this field.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<gciv::Policy> GetIamPolicyAsync(gax::IResourceName resource, st::CancellationToken cancellationToken) =>
+            GetIamPolicyAsync(resource, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Updates an IAM policy for the specified bucket.
+        /// The `resource` field in the request should be
+        /// `projects/_/buckets/{bucket}` for a bucket, or
+        /// `projects/_/buckets/{bucket}/managedFolders/{managedFolder}`
+        /// for a managed folder.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual gciv::Policy SetIamPolicy(gciv::SetIamPolicyRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Updates an IAM policy for the specified bucket.
+        /// The `resource` field in the request should be
+        /// `projects/_/buckets/{bucket}` for a bucket, or
+        /// `projects/_/buckets/{bucket}/managedFolders/{managedFolder}`
+        /// for a managed folder.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<gciv::Policy> SetIamPolicyAsync(gciv::SetIamPolicyRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Updates an IAM policy for the specified bucket.
+        /// The `resource` field in the request should be
+        /// `projects/_/buckets/{bucket}` for a bucket, or
+        /// `projects/_/buckets/{bucket}/managedFolders/{managedFolder}`
+        /// for a managed folder.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<gciv::Policy> SetIamPolicyAsync(gciv::SetIamPolicyRequest request, st::CancellationToken cancellationToken) =>
+            SetIamPolicyAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Updates an IAM policy for the specified bucket.
+        /// The `resource` field in the request should be
+        /// `projects/_/buckets/{bucket}` for a bucket, or
+        /// `projects/_/buckets/{bucket}/managedFolders/{managedFolder}`
+        /// for a managed folder.
+        /// </summary>
+        /// <param name="resource">
+        /// REQUIRED: The resource for which the policy is being specified.
+        /// See the operation documentation for the appropriate value for this field.
+        /// </param>
+        /// <param name="policy">
+        /// REQUIRED: The complete policy to be applied to the `resource`. The size of
+        /// the policy is limited to a few 10s of KB. An empty policy is a
+        /// valid policy but certain Cloud Platform services (such as Projects)
+        /// might reject them.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual gciv::Policy SetIamPolicy(string resource, gciv::Policy policy, gaxgrpc::CallSettings callSettings = null) =>
+            SetIamPolicy(new gciv::SetIamPolicyRequest
+            {
+                Resource = gax::GaxPreconditions.CheckNotNullOrEmpty(resource, nameof(resource)),
+                Policy = gax::GaxPreconditions.CheckNotNull(policy, nameof(policy)),
+            }, callSettings);
+
+        /// <summary>
+        /// Updates an IAM policy for the specified bucket.
+        /// The `resource` field in the request should be
+        /// `projects/_/buckets/{bucket}` for a bucket, or
+        /// `projects/_/buckets/{bucket}/managedFolders/{managedFolder}`
+        /// for a managed folder.
+        /// </summary>
+        /// <param name="resource">
+        /// REQUIRED: The resource for which the policy is being specified.
+        /// See the operation documentation for the appropriate value for this field.
+        /// </param>
+        /// <param name="policy">
+        /// REQUIRED: The complete policy to be applied to the `resource`. The size of
+        /// the policy is limited to a few 10s of KB. An empty policy is a
+        /// valid policy but certain Cloud Platform services (such as Projects)
+        /// might reject them.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<gciv::Policy> SetIamPolicyAsync(string resource, gciv::Policy policy, gaxgrpc::CallSettings callSettings = null) =>
+            SetIamPolicyAsync(new gciv::SetIamPolicyRequest
+            {
+                Resource = gax::GaxPreconditions.CheckNotNullOrEmpty(resource, nameof(resource)),
+                Policy = gax::GaxPreconditions.CheckNotNull(policy, nameof(policy)),
+            }, callSettings);
+
+        /// <summary>
+        /// Updates an IAM policy for the specified bucket.
+        /// The `resource` field in the request should be
+        /// `projects/_/buckets/{bucket}` for a bucket, or
+        /// `projects/_/buckets/{bucket}/managedFolders/{managedFolder}`
+        /// for a managed folder.
+        /// </summary>
+        /// <param name="resource">
+        /// REQUIRED: The resource for which the policy is being specified.
+        /// See the operation documentation for the appropriate value for this field.
+        /// </param>
+        /// <param name="policy">
+        /// REQUIRED: The complete policy to be applied to the `resource`. The size of
+        /// the policy is limited to a few 10s of KB. An empty policy is a
+        /// valid policy but certain Cloud Platform services (such as Projects)
+        /// might reject them.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<gciv::Policy> SetIamPolicyAsync(string resource, gciv::Policy policy, st::CancellationToken cancellationToken) =>
+            SetIamPolicyAsync(resource, policy, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Updates an IAM policy for the specified bucket.
+        /// The `resource` field in the request should be
+        /// `projects/_/buckets/{bucket}` for a bucket, or
+        /// `projects/_/buckets/{bucket}/managedFolders/{managedFolder}`
+        /// for a managed folder.
+        /// </summary>
+        /// <param name="resource">
+        /// REQUIRED: The resource for which the policy is being specified.
+        /// See the operation documentation for the appropriate value for this field.
+        /// </param>
+        /// <param name="policy">
+        /// REQUIRED: The complete policy to be applied to the `resource`. The size of
+        /// the policy is limited to a few 10s of KB. An empty policy is a
+        /// valid policy but certain Cloud Platform services (such as Projects)
+        /// might reject them.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual gciv::Policy SetIamPolicy(gax::IResourceName resource, gciv::Policy policy, gaxgrpc::CallSettings callSettings = null) =>
+            SetIamPolicy(new gciv::SetIamPolicyRequest
+            {
+                ResourceAsResourceName = gax::GaxPreconditions.CheckNotNull(resource, nameof(resource)),
+                Policy = gax::GaxPreconditions.CheckNotNull(policy, nameof(policy)),
+            }, callSettings);
+
+        /// <summary>
+        /// Updates an IAM policy for the specified bucket.
+        /// The `resource` field in the request should be
+        /// `projects/_/buckets/{bucket}` for a bucket, or
+        /// `projects/_/buckets/{bucket}/managedFolders/{managedFolder}`
+        /// for a managed folder.
+        /// </summary>
+        /// <param name="resource">
+        /// REQUIRED: The resource for which the policy is being specified.
+        /// See the operation documentation for the appropriate value for this field.
+        /// </param>
+        /// <param name="policy">
+        /// REQUIRED: The complete policy to be applied to the `resource`. The size of
+        /// the policy is limited to a few 10s of KB. An empty policy is a
+        /// valid policy but certain Cloud Platform services (such as Projects)
+        /// might reject them.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<gciv::Policy> SetIamPolicyAsync(gax::IResourceName resource, gciv::Policy policy, gaxgrpc::CallSettings callSettings = null) =>
+            SetIamPolicyAsync(new gciv::SetIamPolicyRequest
+            {
+                ResourceAsResourceName = gax::GaxPreconditions.CheckNotNull(resource, nameof(resource)),
+                Policy = gax::GaxPreconditions.CheckNotNull(policy, nameof(policy)),
+            }, callSettings);
+
+        /// <summary>
+        /// Updates an IAM policy for the specified bucket.
+        /// The `resource` field in the request should be
+        /// `projects/_/buckets/{bucket}` for a bucket, or
+        /// `projects/_/buckets/{bucket}/managedFolders/{managedFolder}`
+        /// for a managed folder.
+        /// </summary>
+        /// <param name="resource">
+        /// REQUIRED: The resource for which the policy is being specified.
+        /// See the operation documentation for the appropriate value for this field.
+        /// </param>
+        /// <param name="policy">
+        /// REQUIRED: The complete policy to be applied to the `resource`. The size of
+        /// the policy is limited to a few 10s of KB. An empty policy is a
+        /// valid policy but certain Cloud Platform services (such as Projects)
+        /// might reject them.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<gciv::Policy> SetIamPolicyAsync(gax::IResourceName resource, gciv::Policy policy, st::CancellationToken cancellationToken) =>
+            SetIamPolicyAsync(resource, policy, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Tests a set of permissions on the given bucket, object, or managed folder
+        /// to see which, if any, are held by the caller.
+        /// The `resource` field in the request should be
+        /// `projects/_/buckets/{bucket}` for a bucket,
+        /// `projects/_/buckets/{bucket}/objects/{object}` for an object, or
+        /// `projects/_/buckets/{bucket}/managedFolders/{managedFolder}`
+        /// for a managed folder.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual gciv::TestIamPermissionsResponse TestIamPermissions(gciv::TestIamPermissionsRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Tests a set of permissions on the given bucket, object, or managed folder
+        /// to see which, if any, are held by the caller.
+        /// The `resource` field in the request should be
+        /// `projects/_/buckets/{bucket}` for a bucket,
+        /// `projects/_/buckets/{bucket}/objects/{object}` for an object, or
+        /// `projects/_/buckets/{bucket}/managedFolders/{managedFolder}`
+        /// for a managed folder.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<gciv::TestIamPermissionsResponse> TestIamPermissionsAsync(gciv::TestIamPermissionsRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Tests a set of permissions on the given bucket, object, or managed folder
+        /// to see which, if any, are held by the caller.
+        /// The `resource` field in the request should be
+        /// `projects/_/buckets/{bucket}` for a bucket,
+        /// `projects/_/buckets/{bucket}/objects/{object}` for an object, or
+        /// `projects/_/buckets/{bucket}/managedFolders/{managedFolder}`
+        /// for a managed folder.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<gciv::TestIamPermissionsResponse> TestIamPermissionsAsync(gciv::TestIamPermissionsRequest request, st::CancellationToken cancellationToken) =>
+            TestIamPermissionsAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Tests a set of permissions on the given bucket, object, or managed folder
+        /// to see which, if any, are held by the caller.
+        /// The `resource` field in the request should be
+        /// `projects/_/buckets/{bucket}` for a bucket,
+        /// `projects/_/buckets/{bucket}/objects/{object}` for an object, or
+        /// `projects/_/buckets/{bucket}/managedFolders/{managedFolder}`
+        /// for a managed folder.
+        /// </summary>
+        /// <param name="resource">
+        /// REQUIRED: The resource for which the policy detail is being requested.
+        /// See the operation documentation for the appropriate value for this field.
+        /// </param>
+        /// <param name="permissions">
+        /// The set of permissions to check for the `resource`. Permissions with
+        /// wildcards (such as '*' or 'storage.*') are not allowed. For more
+        /// information see
+        /// [IAM Overview](https://cloud.google.com/iam/docs/overview#permissions).
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual gciv::TestIamPermissionsResponse TestIamPermissions(string resource, scg::IEnumerable<string> permissions, gaxgrpc::CallSettings callSettings = null) =>
+            TestIamPermissions(new gciv::TestIamPermissionsRequest
+            {
+                Resource = gax::GaxPreconditions.CheckNotNullOrEmpty(resource, nameof(resource)),
+                Permissions =
+                {
+                    gax::GaxPreconditions.CheckNotNull(permissions, nameof(permissions)),
+                },
+            }, callSettings);
+
+        /// <summary>
+        /// Tests a set of permissions on the given bucket, object, or managed folder
+        /// to see which, if any, are held by the caller.
+        /// The `resource` field in the request should be
+        /// `projects/_/buckets/{bucket}` for a bucket,
+        /// `projects/_/buckets/{bucket}/objects/{object}` for an object, or
+        /// `projects/_/buckets/{bucket}/managedFolders/{managedFolder}`
+        /// for a managed folder.
+        /// </summary>
+        /// <param name="resource">
+        /// REQUIRED: The resource for which the policy detail is being requested.
+        /// See the operation documentation for the appropriate value for this field.
+        /// </param>
+        /// <param name="permissions">
+        /// The set of permissions to check for the `resource`. Permissions with
+        /// wildcards (such as '*' or 'storage.*') are not allowed. For more
+        /// information see
+        /// [IAM Overview](https://cloud.google.com/iam/docs/overview#permissions).
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<gciv::TestIamPermissionsResponse> TestIamPermissionsAsync(string resource, scg::IEnumerable<string> permissions, gaxgrpc::CallSettings callSettings = null) =>
+            TestIamPermissionsAsync(new gciv::TestIamPermissionsRequest
+            {
+                Resource = gax::GaxPreconditions.CheckNotNullOrEmpty(resource, nameof(resource)),
+                Permissions =
+                {
+                    gax::GaxPreconditions.CheckNotNull(permissions, nameof(permissions)),
+                },
+            }, callSettings);
+
+        /// <summary>
+        /// Tests a set of permissions on the given bucket, object, or managed folder
+        /// to see which, if any, are held by the caller.
+        /// The `resource` field in the request should be
+        /// `projects/_/buckets/{bucket}` for a bucket,
+        /// `projects/_/buckets/{bucket}/objects/{object}` for an object, or
+        /// `projects/_/buckets/{bucket}/managedFolders/{managedFolder}`
+        /// for a managed folder.
+        /// </summary>
+        /// <param name="resource">
+        /// REQUIRED: The resource for which the policy detail is being requested.
+        /// See the operation documentation for the appropriate value for this field.
+        /// </param>
+        /// <param name="permissions">
+        /// The set of permissions to check for the `resource`. Permissions with
+        /// wildcards (such as '*' or 'storage.*') are not allowed. For more
+        /// information see
+        /// [IAM Overview](https://cloud.google.com/iam/docs/overview#permissions).
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<gciv::TestIamPermissionsResponse> TestIamPermissionsAsync(string resource, scg::IEnumerable<string> permissions, st::CancellationToken cancellationToken) =>
+            TestIamPermissionsAsync(resource, permissions, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Tests a set of permissions on the given bucket, object, or managed folder
+        /// to see which, if any, are held by the caller.
+        /// The `resource` field in the request should be
+        /// `projects/_/buckets/{bucket}` for a bucket,
+        /// `projects/_/buckets/{bucket}/objects/{object}` for an object, or
+        /// `projects/_/buckets/{bucket}/managedFolders/{managedFolder}`
+        /// for a managed folder.
+        /// </summary>
+        /// <param name="resource">
+        /// REQUIRED: The resource for which the policy detail is being requested.
+        /// See the operation documentation for the appropriate value for this field.
+        /// </param>
+        /// <param name="permissions">
+        /// The set of permissions to check for the `resource`. Permissions with
+        /// wildcards (such as '*' or 'storage.*') are not allowed. For more
+        /// information see
+        /// [IAM Overview](https://cloud.google.com/iam/docs/overview#permissions).
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual gciv::TestIamPermissionsResponse TestIamPermissions(gax::IResourceName resource, scg::IEnumerable<string> permissions, gaxgrpc::CallSettings callSettings = null) =>
+            TestIamPermissions(new gciv::TestIamPermissionsRequest
+            {
+                ResourceAsResourceName = gax::GaxPreconditions.CheckNotNull(resource, nameof(resource)),
+                Permissions =
+                {
+                    gax::GaxPreconditions.CheckNotNull(permissions, nameof(permissions)),
+                },
+            }, callSettings);
+
+        /// <summary>
+        /// Tests a set of permissions on the given bucket, object, or managed folder
+        /// to see which, if any, are held by the caller.
+        /// The `resource` field in the request should be
+        /// `projects/_/buckets/{bucket}` for a bucket,
+        /// `projects/_/buckets/{bucket}/objects/{object}` for an object, or
+        /// `projects/_/buckets/{bucket}/managedFolders/{managedFolder}`
+        /// for a managed folder.
+        /// </summary>
+        /// <param name="resource">
+        /// REQUIRED: The resource for which the policy detail is being requested.
+        /// See the operation documentation for the appropriate value for this field.
+        /// </param>
+        /// <param name="permissions">
+        /// The set of permissions to check for the `resource`. Permissions with
+        /// wildcards (such as '*' or 'storage.*') are not allowed. For more
+        /// information see
+        /// [IAM Overview](https://cloud.google.com/iam/docs/overview#permissions).
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<gciv::TestIamPermissionsResponse> TestIamPermissionsAsync(gax::IResourceName resource, scg::IEnumerable<string> permissions, gaxgrpc::CallSettings callSettings = null) =>
+            TestIamPermissionsAsync(new gciv::TestIamPermissionsRequest
+            {
+                ResourceAsResourceName = gax::GaxPreconditions.CheckNotNull(resource, nameof(resource)),
+                Permissions =
+                {
+                    gax::GaxPreconditions.CheckNotNull(permissions, nameof(permissions)),
+                },
+            }, callSettings);
+
+        /// <summary>
+        /// Tests a set of permissions on the given bucket, object, or managed folder
+        /// to see which, if any, are held by the caller.
+        /// The `resource` field in the request should be
+        /// `projects/_/buckets/{bucket}` for a bucket,
+        /// `projects/_/buckets/{bucket}/objects/{object}` for an object, or
+        /// `projects/_/buckets/{bucket}/managedFolders/{managedFolder}`
+        /// for a managed folder.
+        /// </summary>
+        /// <param name="resource">
+        /// REQUIRED: The resource for which the policy detail is being requested.
+        /// See the operation documentation for the appropriate value for this field.
+        /// </param>
+        /// <param name="permissions">
+        /// The set of permissions to check for the `resource`. Permissions with
+        /// wildcards (such as '*' or 'storage.*') are not allowed. For more
+        /// information see
+        /// [IAM Overview](https://cloud.google.com/iam/docs/overview#permissions).
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<gciv::TestIamPermissionsResponse> TestIamPermissionsAsync(gax::IResourceName resource, scg::IEnumerable<string> permissions, st::CancellationToken cancellationToken) =>
+            TestIamPermissionsAsync(resource, permissions, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
     }
 
     /// <summary>StorageControl client wrapper implementation, for convenient use.</summary>
@@ -3826,6 +4417,12 @@ namespace Google.Cloud.Storage.Control.V2
         private readonly gaxgrpc::ApiCall<GetOrganizationIntelligenceConfigRequest, IntelligenceConfig> _callGetOrganizationIntelligenceConfig;
 
         private readonly gaxgrpc::ApiCall<UpdateOrganizationIntelligenceConfigRequest, IntelligenceConfig> _callUpdateOrganizationIntelligenceConfig;
+
+        private readonly gaxgrpc::ApiCall<gciv::GetIamPolicyRequest, gciv::Policy> _callGetIamPolicy;
+
+        private readonly gaxgrpc::ApiCall<gciv::SetIamPolicyRequest, gciv::Policy> _callSetIamPolicy;
+
+        private readonly gaxgrpc::ApiCall<gciv::TestIamPermissionsRequest, gciv::TestIamPermissionsResponse> _callTestIamPermissions;
 
         /// <summary>
         /// Constructs a client wrapper for the StorageControl service, with the specified gRPC client and settings.
@@ -3914,6 +4511,15 @@ namespace Google.Cloud.Storage.Control.V2
             _callUpdateOrganizationIntelligenceConfig = clientHelper.BuildApiCall<UpdateOrganizationIntelligenceConfigRequest, IntelligenceConfig>("UpdateOrganizationIntelligenceConfig", grpcClient.UpdateOrganizationIntelligenceConfigAsync, grpcClient.UpdateOrganizationIntelligenceConfig, effectiveSettings.UpdateOrganizationIntelligenceConfigSettings).WithGoogleRequestParam("intelligence_config.name", request => request.IntelligenceConfig?.Name);
             Modify_ApiCall(ref _callUpdateOrganizationIntelligenceConfig);
             Modify_UpdateOrganizationIntelligenceConfigApiCall(ref _callUpdateOrganizationIntelligenceConfig);
+            _callGetIamPolicy = clientHelper.BuildApiCall<gciv::GetIamPolicyRequest, gciv::Policy>("GetIamPolicy", grpcClient.GetIamPolicyAsync, grpcClient.GetIamPolicy, effectiveSettings.GetIamPolicySettings).WithExtractedGoogleRequestParam(new gaxgrpc::RoutingHeaderExtractor<gciv::GetIamPolicyRequest>().WithExtractedParameter("bucket", "^(.+)$", request => request.Resource).WithExtractedParameter("bucket", "^(projects/[^/]+/buckets/[^/]+)(?:/.*)?$", request => request.Resource));
+            Modify_ApiCall(ref _callGetIamPolicy);
+            Modify_GetIamPolicyApiCall(ref _callGetIamPolicy);
+            _callSetIamPolicy = clientHelper.BuildApiCall<gciv::SetIamPolicyRequest, gciv::Policy>("SetIamPolicy", grpcClient.SetIamPolicyAsync, grpcClient.SetIamPolicy, effectiveSettings.SetIamPolicySettings).WithExtractedGoogleRequestParam(new gaxgrpc::RoutingHeaderExtractor<gciv::SetIamPolicyRequest>().WithExtractedParameter("bucket", "^(.+)$", request => request.Resource).WithExtractedParameter("bucket", "^(projects/[^/]+/buckets/[^/]+)(?:/.*)?$", request => request.Resource));
+            Modify_ApiCall(ref _callSetIamPolicy);
+            Modify_SetIamPolicyApiCall(ref _callSetIamPolicy);
+            _callTestIamPermissions = clientHelper.BuildApiCall<gciv::TestIamPermissionsRequest, gciv::TestIamPermissionsResponse>("TestIamPermissions", grpcClient.TestIamPermissionsAsync, grpcClient.TestIamPermissions, effectiveSettings.TestIamPermissionsSettings).WithExtractedGoogleRequestParam(new gaxgrpc::RoutingHeaderExtractor<gciv::TestIamPermissionsRequest>().WithExtractedParameter("bucket", "^(.+)$", request => request.Resource).WithExtractedParameter("bucket", "^(projects/[^/]+/buckets/[^/]+)/objects(?:/.*)?$", request => request.Resource).WithExtractedParameter("bucket", "^(projects/[^/]+/buckets/[^/]+)/managedFolders(?:/.*)?$", request => request.Resource));
+            Modify_ApiCall(ref _callTestIamPermissions);
+            Modify_TestIamPermissionsApiCall(ref _callTestIamPermissions);
             OnConstruction(grpcClient, effectiveSettings, clientHelper);
         }
 
@@ -3965,6 +4571,12 @@ namespace Google.Cloud.Storage.Control.V2
 
         partial void Modify_UpdateOrganizationIntelligenceConfigApiCall(ref gaxgrpc::ApiCall<UpdateOrganizationIntelligenceConfigRequest, IntelligenceConfig> call);
 
+        partial void Modify_GetIamPolicyApiCall(ref gaxgrpc::ApiCall<gciv::GetIamPolicyRequest, gciv::Policy> call);
+
+        partial void Modify_SetIamPolicyApiCall(ref gaxgrpc::ApiCall<gciv::SetIamPolicyRequest, gciv::Policy> call);
+
+        partial void Modify_TestIamPermissionsApiCall(ref gaxgrpc::ApiCall<gciv::TestIamPermissionsRequest, gciv::TestIamPermissionsResponse> call);
+
         partial void OnConstruction(StorageControl.StorageControlClient grpcClient, StorageControlSettings effectiveSettings, gaxgrpc::ClientHelper clientHelper);
 
         /// <summary>The underlying gRPC StorageControl client</summary>
@@ -4015,6 +4627,12 @@ namespace Google.Cloud.Storage.Control.V2
         partial void Modify_GetOrganizationIntelligenceConfigRequest(ref GetOrganizationIntelligenceConfigRequest request, ref gaxgrpc::CallSettings settings);
 
         partial void Modify_UpdateOrganizationIntelligenceConfigRequest(ref UpdateOrganizationIntelligenceConfigRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_GetIamPolicyRequest(ref gciv::GetIamPolicyRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_SetIamPolicyRequest(ref gciv::SetIamPolicyRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_TestIamPermissionsRequest(ref gciv::TestIamPermissionsRequest request, ref gaxgrpc::CallSettings settings);
 
         /// <summary>
         /// Creates a new folder. This operation is only applicable to a hierarchical
@@ -4757,6 +5375,106 @@ namespace Google.Cloud.Storage.Control.V2
         {
             Modify_UpdateOrganizationIntelligenceConfigRequest(ref request, ref callSettings);
             return _callUpdateOrganizationIntelligenceConfig.Async(request, callSettings);
+        }
+
+        /// <summary>
+        /// Gets the IAM policy for a specified bucket.
+        /// The `resource` field in the request should be
+        /// `projects/_/buckets/{bucket}` for a bucket, or
+        /// `projects/_/buckets/{bucket}/managedFolders/{managedFolder}`
+        /// for a managed folder.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override gciv::Policy GetIamPolicy(gciv::GetIamPolicyRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_GetIamPolicyRequest(ref request, ref callSettings);
+            return _callGetIamPolicy.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Gets the IAM policy for a specified bucket.
+        /// The `resource` field in the request should be
+        /// `projects/_/buckets/{bucket}` for a bucket, or
+        /// `projects/_/buckets/{bucket}/managedFolders/{managedFolder}`
+        /// for a managed folder.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override stt::Task<gciv::Policy> GetIamPolicyAsync(gciv::GetIamPolicyRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_GetIamPolicyRequest(ref request, ref callSettings);
+            return _callGetIamPolicy.Async(request, callSettings);
+        }
+
+        /// <summary>
+        /// Updates an IAM policy for the specified bucket.
+        /// The `resource` field in the request should be
+        /// `projects/_/buckets/{bucket}` for a bucket, or
+        /// `projects/_/buckets/{bucket}/managedFolders/{managedFolder}`
+        /// for a managed folder.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override gciv::Policy SetIamPolicy(gciv::SetIamPolicyRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_SetIamPolicyRequest(ref request, ref callSettings);
+            return _callSetIamPolicy.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Updates an IAM policy for the specified bucket.
+        /// The `resource` field in the request should be
+        /// `projects/_/buckets/{bucket}` for a bucket, or
+        /// `projects/_/buckets/{bucket}/managedFolders/{managedFolder}`
+        /// for a managed folder.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override stt::Task<gciv::Policy> SetIamPolicyAsync(gciv::SetIamPolicyRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_SetIamPolicyRequest(ref request, ref callSettings);
+            return _callSetIamPolicy.Async(request, callSettings);
+        }
+
+        /// <summary>
+        /// Tests a set of permissions on the given bucket, object, or managed folder
+        /// to see which, if any, are held by the caller.
+        /// The `resource` field in the request should be
+        /// `projects/_/buckets/{bucket}` for a bucket,
+        /// `projects/_/buckets/{bucket}/objects/{object}` for an object, or
+        /// `projects/_/buckets/{bucket}/managedFolders/{managedFolder}`
+        /// for a managed folder.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override gciv::TestIamPermissionsResponse TestIamPermissions(gciv::TestIamPermissionsRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_TestIamPermissionsRequest(ref request, ref callSettings);
+            return _callTestIamPermissions.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Tests a set of permissions on the given bucket, object, or managed folder
+        /// to see which, if any, are held by the caller.
+        /// The `resource` field in the request should be
+        /// `projects/_/buckets/{bucket}` for a bucket,
+        /// `projects/_/buckets/{bucket}/objects/{object}` for an object, or
+        /// `projects/_/buckets/{bucket}/managedFolders/{managedFolder}`
+        /// for a managed folder.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override stt::Task<gciv::TestIamPermissionsResponse> TestIamPermissionsAsync(gciv::TestIamPermissionsRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_TestIamPermissionsRequest(ref request, ref callSettings);
+            return _callTestIamPermissions.Async(request, callSettings);
         }
     }
 
