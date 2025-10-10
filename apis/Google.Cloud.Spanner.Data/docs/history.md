@@ -1,5 +1,12 @@
 # Version history
 
+## Version 5.3.0, released 2025-10-09
+
+### New features
+
+- Support for Spanner ReadLockMode options (#14912)
+- Add support for orderBy and lockHint Spanner options (#15106)
+
 ## Version 5.2.0, released 2025-09-17
 
 ### New features

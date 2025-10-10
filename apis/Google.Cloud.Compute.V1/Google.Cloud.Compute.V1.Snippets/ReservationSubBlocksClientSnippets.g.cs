@@ -437,5 +437,147 @@ namespace GoogleCSharpSnippets
             }
             // End snippet
         }
+
+        /// <summary>Snippet for ReportFaulty</summary>
+        public void ReportFaultyRequestObject()
+        {
+            // Snippet: ReportFaulty(ReportFaultyReservationSubBlockRequest, CallSettings)
+            // Create client
+            ReservationSubBlocksClient reservationSubBlocksClient = ReservationSubBlocksClient.Create();
+            // Initialize request argument(s)
+            ReportFaultyReservationSubBlockRequest request = new ReportFaultyReservationSubBlockRequest
+            {
+                Zone = "",
+                ReservationSubBlock = "",
+                RequestId = "",
+                Project = "",
+                ReservationSubBlocksReportFaultyRequestResource = new ReservationSubBlocksReportFaultyRequest(),
+                ParentName = "",
+            };
+            // Make the request
+            lro::Operation<Operation, Operation> response = reservationSubBlocksClient.ReportFaulty(request);
+
+            // Poll until the returned long-running operation is complete
+            lro::Operation<Operation, Operation> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            Operation result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            lro::Operation<Operation, Operation> retrievedResponse = reservationSubBlocksClient.PollOnceReportFaulty(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Operation retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for ReportFaultyAsync</summary>
+        public async Task ReportFaultyRequestObjectAsync()
+        {
+            // Snippet: ReportFaultyAsync(ReportFaultyReservationSubBlockRequest, CallSettings)
+            // Additional: ReportFaultyAsync(ReportFaultyReservationSubBlockRequest, CancellationToken)
+            // Create client
+            ReservationSubBlocksClient reservationSubBlocksClient = await ReservationSubBlocksClient.CreateAsync();
+            // Initialize request argument(s)
+            ReportFaultyReservationSubBlockRequest request = new ReportFaultyReservationSubBlockRequest
+            {
+                Zone = "",
+                ReservationSubBlock = "",
+                RequestId = "",
+                Project = "",
+                ReservationSubBlocksReportFaultyRequestResource = new ReservationSubBlocksReportFaultyRequest(),
+                ParentName = "",
+            };
+            // Make the request
+            lro::Operation<Operation, Operation> response = await reservationSubBlocksClient.ReportFaultyAsync(request);
+
+            // Poll until the returned long-running operation is complete
+            lro::Operation<Operation, Operation> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            Operation result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            lro::Operation<Operation, Operation> retrievedResponse = await reservationSubBlocksClient.PollOnceReportFaultyAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Operation retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for ReportFaulty</summary>
+        public void ReportFaulty()
+        {
+            // Snippet: ReportFaulty(string, string, string, string, ReservationSubBlocksReportFaultyRequest, CallSettings)
+            // Create client
+            ReservationSubBlocksClient reservationSubBlocksClient = ReservationSubBlocksClient.Create();
+            // Initialize request argument(s)
+            string project = "";
+            string zone = "";
+            string parentName = "";
+            string reservationSubBlock = "";
+            ReservationSubBlocksReportFaultyRequest reservationSubBlocksReportFaultyRequestResource = new ReservationSubBlocksReportFaultyRequest();
+            // Make the request
+            lro::Operation<Operation, Operation> response = reservationSubBlocksClient.ReportFaulty(project, zone, parentName, reservationSubBlock, reservationSubBlocksReportFaultyRequestResource);
+
+            // Poll until the returned long-running operation is complete
+            lro::Operation<Operation, Operation> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            Operation result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            lro::Operation<Operation, Operation> retrievedResponse = reservationSubBlocksClient.PollOnceReportFaulty(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Operation retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for ReportFaultyAsync</summary>
+        public async Task ReportFaultyAsync()
+        {
+            // Snippet: ReportFaultyAsync(string, string, string, string, ReservationSubBlocksReportFaultyRequest, CallSettings)
+            // Additional: ReportFaultyAsync(string, string, string, string, ReservationSubBlocksReportFaultyRequest, CancellationToken)
+            // Create client
+            ReservationSubBlocksClient reservationSubBlocksClient = await ReservationSubBlocksClient.CreateAsync();
+            // Initialize request argument(s)
+            string project = "";
+            string zone = "";
+            string parentName = "";
+            string reservationSubBlock = "";
+            ReservationSubBlocksReportFaultyRequest reservationSubBlocksReportFaultyRequestResource = new ReservationSubBlocksReportFaultyRequest();
+            // Make the request
+            lro::Operation<Operation, Operation> response = await reservationSubBlocksClient.ReportFaultyAsync(project, zone, parentName, reservationSubBlock, reservationSubBlocksReportFaultyRequestResource);
+
+            // Poll until the returned long-running operation is complete
+            lro::Operation<Operation, Operation> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            Operation result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            lro::Operation<Operation, Operation> retrievedResponse = await reservationSubBlocksClient.PollOnceReportFaultyAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Operation retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
     }
 }

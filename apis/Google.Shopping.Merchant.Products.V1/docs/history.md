@@ -1,5 +1,11 @@
 # Version history
 
+## Version 1.1.0, released 2025-10-09
+
+### New features
+
+- Include CarrierShipping field inside the Products attribute
+
 ## Version 1.0.0, released 2025-08-05
 
 ### New features
