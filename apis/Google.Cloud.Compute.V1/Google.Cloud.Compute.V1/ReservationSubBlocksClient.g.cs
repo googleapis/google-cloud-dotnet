@@ -50,6 +50,8 @@ namespace Google.Cloud.Compute.V1
             ListSettings = existing.ListSettings;
             PerformMaintenanceSettings = existing.PerformMaintenanceSettings;
             PerformMaintenanceOperationsSettings = existing.PerformMaintenanceOperationsSettings.Clone();
+            ReportFaultySettings = existing.ReportFaultySettings;
+            ReportFaultyOperationsSettings = existing.ReportFaultyOperationsSettings.Clone();
             OnCopy(existing);
         }
 
@@ -124,6 +126,36 @@ namespace Google.Cloud.Compute.V1
         /// </list>
         /// </remarks>
         public lro::OperationsSettings PerformMaintenanceOperationsSettings { get; set; } = new lro::OperationsSettings
+        {
+            DefaultPollSettings = new gax::PollSettings(gax::Expiration.FromTimeout(sys::TimeSpan.FromHours(24)), sys::TimeSpan.FromSeconds(20), 1.5, sys::TimeSpan.FromSeconds(45)),
+        };
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>ReservationSubBlocksClient.ReportFaulty</c> and <c>ReservationSubBlocksClient.ReportFaultyAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>Timeout: 600 seconds.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings ReportFaultySettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(600000)));
+
+        /// <summary>
+        /// Long Running Operation settings for calls to <c>ReservationSubBlocksClient.ReportFaulty</c> and
+        /// <c>ReservationSubBlocksClient.ReportFaultyAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// Uses default <see cref="gax::PollSettings"/> of:
+        /// <list type="bullet">
+        /// <item><description>Initial delay: 20 seconds.</description></item>
+        /// <item><description>Delay multiplier: 1.5</description></item>
+        /// <item><description>Maximum delay: 45 seconds.</description></item>
+        /// <item><description>Total timeout: 24 hours.</description></item>
+        /// </list>
+        /// </remarks>
+        public lro::OperationsSettings ReportFaultyOperationsSettings { get; set; } = new lro::OperationsSettings
         {
             DefaultPollSettings = new gax::PollSettings(gax::Expiration.FromTimeout(sys::TimeSpan.FromHours(24)), sys::TimeSpan.FromSeconds(20), 1.5, sys::TimeSpan.FromSeconds(45)),
         };
@@ -598,6 +630,142 @@ namespace Google.Cloud.Compute.V1
         /// <returns>A Task containing the RPC response.</returns>
         public virtual stt::Task<lro::Operation<Operation, Operation>> PerformMaintenanceAsync(string project, string zone, string parentName, string reservationSubBlock, st::CancellationToken cancellationToken) =>
             PerformMaintenanceAsync(project, zone, parentName, reservationSubBlock, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Allows customers to report a faulty subBlock.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<Operation, Operation> ReportFaulty(ReportFaultyReservationSubBlockRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Allows customers to report a faulty subBlock.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<Operation, Operation>> ReportFaultyAsync(ReportFaultyReservationSubBlockRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Allows customers to report a faulty subBlock.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<Operation, Operation>> ReportFaultyAsync(ReportFaultyReservationSubBlockRequest request, st::CancellationToken cancellationToken) =>
+            ReportFaultyAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>The long-running operations client for <c>ReportFaulty</c>.</summary>
+        public virtual lro::OperationsClient ReportFaultyOperationsClient => throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Poll an operation once, using an <c>operationName</c> from a previous invocation of <c>ReportFaulty</c>.
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The result of polling the operation.</returns>
+        public virtual lro::Operation<Operation, Operation> PollOnceReportFaulty(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<Operation, Operation>.PollOnceFromName(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), ReportFaultyOperationsClient, callSettings);
+
+        /// <summary>
+        /// Asynchronously poll an operation once, using an <c>operationName</c> from a previous invocation of
+        /// <c>ReportFaulty</c>.
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A task representing the result of polling the operation.</returns>
+        public virtual stt::Task<lro::Operation<Operation, Operation>> PollOnceReportFaultyAsync(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<Operation, Operation>.PollOnceFromNameAsync(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), ReportFaultyOperationsClient, callSettings);
+
+        /// <summary>
+        /// Allows customers to report a faulty subBlock.
+        /// </summary>
+        /// <param name="project">
+        /// Project ID for this request.
+        /// </param>
+        /// <param name="zone">
+        /// Name of the zone for this request. Zone name should conform to RFC1035.
+        /// </param>
+        /// <param name="parentName">
+        /// The name of the parent reservation and parent block. In the format of reservations/{reservation_name}/reservationBlocks/{reservation_block_name}
+        /// </param>
+        /// <param name="reservationSubBlock">
+        /// The name of the reservation subBlock. Name should conform to RFC1035 or be a resource ID.
+        /// </param>
+        /// <param name="reservationSubBlocksReportFaultyRequestResource">
+        /// The body resource for this request
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<Operation, Operation> ReportFaulty(string project, string zone, string parentName, string reservationSubBlock, ReservationSubBlocksReportFaultyRequest reservationSubBlocksReportFaultyRequestResource, gaxgrpc::CallSettings callSettings = null) =>
+            ReportFaulty(new ReportFaultyReservationSubBlockRequest
+            {
+                ParentName = gax::GaxPreconditions.CheckNotNullOrEmpty(parentName, nameof(parentName)),
+                Project = gax::GaxPreconditions.CheckNotNullOrEmpty(project, nameof(project)),
+                ReservationSubBlock = gax::GaxPreconditions.CheckNotNullOrEmpty(reservationSubBlock, nameof(reservationSubBlock)),
+                ReservationSubBlocksReportFaultyRequestResource = gax::GaxPreconditions.CheckNotNull(reservationSubBlocksReportFaultyRequestResource, nameof(reservationSubBlocksReportFaultyRequestResource)),
+                Zone = gax::GaxPreconditions.CheckNotNullOrEmpty(zone, nameof(zone)),
+            }, callSettings);
+
+        /// <summary>
+        /// Allows customers to report a faulty subBlock.
+        /// </summary>
+        /// <param name="project">
+        /// Project ID for this request.
+        /// </param>
+        /// <param name="zone">
+        /// Name of the zone for this request. Zone name should conform to RFC1035.
+        /// </param>
+        /// <param name="parentName">
+        /// The name of the parent reservation and parent block. In the format of reservations/{reservation_name}/reservationBlocks/{reservation_block_name}
+        /// </param>
+        /// <param name="reservationSubBlock">
+        /// The name of the reservation subBlock. Name should conform to RFC1035 or be a resource ID.
+        /// </param>
+        /// <param name="reservationSubBlocksReportFaultyRequestResource">
+        /// The body resource for this request
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<Operation, Operation>> ReportFaultyAsync(string project, string zone, string parentName, string reservationSubBlock, ReservationSubBlocksReportFaultyRequest reservationSubBlocksReportFaultyRequestResource, gaxgrpc::CallSettings callSettings = null) =>
+            ReportFaultyAsync(new ReportFaultyReservationSubBlockRequest
+            {
+                ParentName = gax::GaxPreconditions.CheckNotNullOrEmpty(parentName, nameof(parentName)),
+                Project = gax::GaxPreconditions.CheckNotNullOrEmpty(project, nameof(project)),
+                ReservationSubBlock = gax::GaxPreconditions.CheckNotNullOrEmpty(reservationSubBlock, nameof(reservationSubBlock)),
+                ReservationSubBlocksReportFaultyRequestResource = gax::GaxPreconditions.CheckNotNull(reservationSubBlocksReportFaultyRequestResource, nameof(reservationSubBlocksReportFaultyRequestResource)),
+                Zone = gax::GaxPreconditions.CheckNotNullOrEmpty(zone, nameof(zone)),
+            }, callSettings);
+
+        /// <summary>
+        /// Allows customers to report a faulty subBlock.
+        /// </summary>
+        /// <param name="project">
+        /// Project ID for this request.
+        /// </param>
+        /// <param name="zone">
+        /// Name of the zone for this request. Zone name should conform to RFC1035.
+        /// </param>
+        /// <param name="parentName">
+        /// The name of the parent reservation and parent block. In the format of reservations/{reservation_name}/reservationBlocks/{reservation_block_name}
+        /// </param>
+        /// <param name="reservationSubBlock">
+        /// The name of the reservation subBlock. Name should conform to RFC1035 or be a resource ID.
+        /// </param>
+        /// <param name="reservationSubBlocksReportFaultyRequestResource">
+        /// The body resource for this request
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<Operation, Operation>> ReportFaultyAsync(string project, string zone, string parentName, string reservationSubBlock, ReservationSubBlocksReportFaultyRequest reservationSubBlocksReportFaultyRequestResource, st::CancellationToken cancellationToken) =>
+            ReportFaultyAsync(project, zone, parentName, reservationSubBlock, reservationSubBlocksReportFaultyRequestResource, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
     }
 
     /// <summary>ReservationSubBlocks client wrapper implementation, for convenient use.</summary>
@@ -611,6 +779,8 @@ namespace Google.Cloud.Compute.V1
         private readonly gaxgrpc::ApiCall<ListReservationSubBlocksRequest, ReservationSubBlocksListResponse> _callList;
 
         private readonly gaxgrpc::ApiCall<PerformMaintenanceReservationSubBlockRequest, Operation> _callPerformMaintenance;
+
+        private readonly gaxgrpc::ApiCall<ReportFaultyReservationSubBlockRequest, Operation> _callReportFaulty;
 
         /// <summary>
         /// Constructs a client wrapper for the ReservationSubBlocks service, with the specified gRPC client and
@@ -629,6 +799,7 @@ namespace Google.Cloud.Compute.V1
                 Logger = logger,
             });
             PerformMaintenanceOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClientForZoneOperations(), effectiveSettings.PerformMaintenanceOperationsSettings, logger);
+            ReportFaultyOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClientForZoneOperations(), effectiveSettings.ReportFaultyOperationsSettings, logger);
             _callGet = clientHelper.BuildApiCall<GetReservationSubBlockRequest, ReservationSubBlocksGetResponse>("Get", grpcClient.GetAsync, grpcClient.Get, effectiveSettings.GetSettings).WithGoogleRequestParam("project", request => request.Project).WithGoogleRequestParam("zone", request => request.Zone).WithGoogleRequestParam("parent_name", request => request.ParentName).WithGoogleRequestParam("reservation_sub_block", request => request.ReservationSubBlock);
             Modify_ApiCall(ref _callGet);
             Modify_GetApiCall(ref _callGet);
@@ -638,6 +809,9 @@ namespace Google.Cloud.Compute.V1
             _callPerformMaintenance = clientHelper.BuildApiCall<PerformMaintenanceReservationSubBlockRequest, Operation>("PerformMaintenance", grpcClient.PerformMaintenanceAsync, grpcClient.PerformMaintenance, effectiveSettings.PerformMaintenanceSettings).WithGoogleRequestParam("project", request => request.Project).WithGoogleRequestParam("zone", request => request.Zone).WithGoogleRequestParam("parent_name", request => request.ParentName).WithGoogleRequestParam("reservation_sub_block", request => request.ReservationSubBlock);
             Modify_ApiCall(ref _callPerformMaintenance);
             Modify_PerformMaintenanceApiCall(ref _callPerformMaintenance);
+            _callReportFaulty = clientHelper.BuildApiCall<ReportFaultyReservationSubBlockRequest, Operation>("ReportFaulty", grpcClient.ReportFaultyAsync, grpcClient.ReportFaulty, effectiveSettings.ReportFaultySettings).WithGoogleRequestParam("project", request => request.Project).WithGoogleRequestParam("zone", request => request.Zone).WithGoogleRequestParam("parent_name", request => request.ParentName).WithGoogleRequestParam("reservation_sub_block", request => request.ReservationSubBlock);
+            Modify_ApiCall(ref _callReportFaulty);
+            Modify_ReportFaultyApiCall(ref _callReportFaulty);
             OnConstruction(grpcClient, effectiveSettings, clientHelper);
         }
 
@@ -649,6 +823,8 @@ namespace Google.Cloud.Compute.V1
 
         partial void Modify_PerformMaintenanceApiCall(ref gaxgrpc::ApiCall<PerformMaintenanceReservationSubBlockRequest, Operation> call);
 
+        partial void Modify_ReportFaultyApiCall(ref gaxgrpc::ApiCall<ReportFaultyReservationSubBlockRequest, Operation> call);
+
         partial void OnConstruction(ReservationSubBlocks.ReservationSubBlocksClient grpcClient, ReservationSubBlocksSettings effectiveSettings, gaxgrpc::ClientHelper clientHelper);
 
         /// <summary>The underlying gRPC ReservationSubBlocks client</summary>
@@ -659,6 +835,8 @@ namespace Google.Cloud.Compute.V1
         partial void Modify_ListReservationSubBlocksRequest(ref ListReservationSubBlocksRequest request, ref gaxgrpc::CallSettings settings);
 
         partial void Modify_PerformMaintenanceReservationSubBlockRequest(ref PerformMaintenanceReservationSubBlockRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_ReportFaultyReservationSubBlockRequest(ref ReportFaultyReservationSubBlockRequest request, ref gaxgrpc::CallSettings settings);
 
         /// <summary>
         /// Retrieves information about the specified reservation subBlock.
@@ -739,6 +917,39 @@ namespace Google.Cloud.Compute.V1
             GetZoneOperationRequest pollRequest = GetZoneOperationRequest.FromInitialResponse(response);
             request.PopulatePollRequestFields(pollRequest);
             return new lro::Operation<Operation, Operation>(response.ToLroResponse(pollRequest.ToLroOperationName()), PerformMaintenanceOperationsClient);
+        }
+
+        /// <summary>The long-running operations client for <c>ReportFaulty</c>.</summary>
+        public override lro::OperationsClient ReportFaultyOperationsClient { get; }
+
+        /// <summary>
+        /// Allows customers to report a faulty subBlock.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override lro::Operation<Operation, Operation> ReportFaulty(ReportFaultyReservationSubBlockRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_ReportFaultyReservationSubBlockRequest(ref request, ref callSettings);
+            Operation response = _callReportFaulty.Sync(request, callSettings);
+            GetZoneOperationRequest pollRequest = GetZoneOperationRequest.FromInitialResponse(response);
+            request.PopulatePollRequestFields(pollRequest);
+            return new lro::Operation<Operation, Operation>(response.ToLroResponse(pollRequest.ToLroOperationName()), ReportFaultyOperationsClient);
+        }
+
+        /// <summary>
+        /// Allows customers to report a faulty subBlock.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override async stt::Task<lro::Operation<Operation, Operation>> ReportFaultyAsync(ReportFaultyReservationSubBlockRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_ReportFaultyReservationSubBlockRequest(ref request, ref callSettings);
+            Operation response = await _callReportFaulty.Async(request, callSettings).ConfigureAwait(false);
+            GetZoneOperationRequest pollRequest = GetZoneOperationRequest.FromInitialResponse(response);
+            request.PopulatePollRequestFields(pollRequest);
+            return new lro::Operation<Operation, Operation>(response.ToLroResponse(pollRequest.ToLroOperationName()), ReportFaultyOperationsClient);
         }
     }
 
