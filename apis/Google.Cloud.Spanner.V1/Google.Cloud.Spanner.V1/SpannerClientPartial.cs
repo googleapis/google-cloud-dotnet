@@ -166,6 +166,13 @@ namespace Google.Cloud.Spanner.V1
             ApplyRequestIdHeader(ref settings);
         }
 
+        partial void Modify_BatchWriteRequest(ref BatchWriteRequest request, ref CallSettings settings)
+        {
+            ApplyResourcePrefixHeaderFromSession(ref settings, request.Session);
+            MaybeApplyRouteToLeaderHeader(ref settings);
+            ApplyRequestIdHeader(ref settings);
+        }
+
         internal static void ApplyResourcePrefixHeaderFromDatabase(ref CallSettings settings, string resource)
         {
             // If we haven't been given a resource name, just leave the request as it is.
