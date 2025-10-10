@@ -37,48 +37,54 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
             "QgbgQQXgQQESGQoMdHB1X3RvcG9sb2d5GAQgASgJQgPgQQUSKAoYbXVsdGlo",
             "b3N0X2dwdV9ub2RlX2NvdW50GAYgASgFQgbgQQXgQQESWgoUcmVzZXJ2YXRp",
             "b25fYWZmaW5pdHkYBSABKAsyNC5nb29nbGUuY2xvdWQuYWlwbGF0Zm9ybS52",
-            "MWJldGExLlJlc2VydmF0aW9uQWZmaW5pdHlCBuBBBeBBASKCAwoSRGVkaWNh",
+            "MWJldGExLlJlc2VydmF0aW9uQWZmaW5pdHlCBuBBBeBBASKbBQoSRGVkaWNh",
             "dGVkUmVzb3VyY2VzEkoKDG1hY2hpbmVfc3BlYxgBIAEoCzIsLmdvb2dsZS5j",
             "bG91ZC5haXBsYXRmb3JtLnYxYmV0YTEuTWFjaGluZVNwZWNCBuBBAuBBBRIh",
             "ChFtaW5fcmVwbGljYV9jb3VudBgCIAEoBUIG4EEC4EEFEh4KEW1heF9yZXBs",
             "aWNhX2NvdW50GAMgASgFQgPgQQUSIwoWcmVxdWlyZWRfcmVwbGljYV9jb3Vu",
-            "dBgJIAEoBUID4EEBEl0KGGF1dG9zY2FsaW5nX21ldHJpY19zcGVjcxgEIAMo",
-            "CzI2Lmdvb2dsZS5jbG91ZC5haXBsYXRmb3JtLnYxYmV0YTEuQXV0b3NjYWxp",
-            "bmdNZXRyaWNTcGVjQgPgQQUSEQoEc3BvdBgFIAEoCEID4EEBEkYKCmZsZXhf",
-            "c3RhcnQYCiABKAsyKi5nb29nbGUuY2xvdWQuYWlwbGF0Zm9ybS52MWJldGEx",
-            "LkZsZXhTdGFydEIG4EEF4EEBIlQKEkF1dG9tYXRpY1Jlc291cmNlcxIeChFt",
-            "aW5fcmVwbGljYV9jb3VudBgBIAEoBUID4EEFEh4KEW1heF9yZXBsaWNhX2Nv",
-            "dW50GAIgASgFQgPgQQUihQIKF0JhdGNoRGVkaWNhdGVkUmVzb3VyY2VzEkoK",
-            "DG1hY2hpbmVfc3BlYxgBIAEoCzIsLmdvb2dsZS5jbG91ZC5haXBsYXRmb3Jt",
-            "LnYxYmV0YTEuTWFjaGluZVNwZWNCBuBBAuBBBRIjChZzdGFydGluZ19yZXBs",
-            "aWNhX2NvdW50GAIgASgFQgPgQQUSHgoRbWF4X3JlcGxpY2FfY291bnQYAyAB",
-            "KAVCA+BBBRJGCgpmbGV4X3N0YXJ0GAQgASgLMiouZ29vZ2xlLmNsb3VkLmFp",
-            "cGxhdGZvcm0udjFiZXRhMS5GbGV4U3RhcnRCBuBBBeBBARIRCgRzcG90GAUg",
-            "ASgIQgPgQQEiLwoRUmVzb3VyY2VzQ29uc3VtZWQSGgoNcmVwbGljYV9ob3Vy",
-            "cxgBIAEoAUID4EEDIj0KCERpc2tTcGVjEhYKDmJvb3RfZGlza190eXBlGAEg",
-            "ASgJEhkKEWJvb3RfZGlza19zaXplX2diGAIgASgFIj0KElBlcnNpc3RlbnRE",
-            "aXNrU3BlYxIRCglkaXNrX3R5cGUYASABKAkSFAoMZGlza19zaXplX2diGAIg",
-            "ASgDIkwKCE5mc01vdW50EhMKBnNlcnZlchgBIAEoCUID4EECEhEKBHBhdGgY",
-            "AiABKAlCA+BBAhIYCgttb3VudF9wb2ludBgDIAEoCUID4EECIv4BChVBdXRv",
-            "c2NhbGluZ01ldHJpY1NwZWMSGAoLbWV0cmljX25hbWUYASABKAlCA+BBAhIO",
-            "CgZ0YXJnZXQYAiABKAUSewoZbW9uaXRvcmVkX3Jlc291cmNlX2xhYmVscxgD",
-            "IAMoCzJTLmdvb2dsZS5jbG91ZC5haXBsYXRmb3JtLnYxYmV0YTEuQXV0b3Nj",
-            "YWxpbmdNZXRyaWNTcGVjLk1vbml0b3JlZFJlc291cmNlTGFiZWxzRW50cnlC",
-            "A+BBARo+ChxNb25pdG9yZWRSZXNvdXJjZUxhYmVsc0VudHJ5EgsKA2tleRgB",
-            "IAEoCRINCgV2YWx1ZRgCIAEoCToCOAEiLgoQU2hpZWxkZWRWbUNvbmZpZxIa",
-            "ChJlbmFibGVfc2VjdXJlX2Jvb3QYASABKAgiRAoJRmxleFN0YXJ0EjcKFG1h",
-            "eF9ydW50aW1lX2R1cmF0aW9uGAEgASgLMhkuZ29vZ2xlLnByb3RvYnVmLkR1",
-            "cmF0aW9uQuwBCiNjb20uZ29vZ2xlLmNsb3VkLmFpcGxhdGZvcm0udjFiZXRh",
-            "MUIVTWFjaGluZVJlc291cmNlc1Byb3RvUAFaQ2Nsb3VkLmdvb2dsZS5jb20v",
-            "Z28vYWlwbGF0Zm9ybS9hcGl2MWJldGExL2FpcGxhdGZvcm1wYjthaXBsYXRm",
-            "b3JtcGKqAh9Hb29nbGUuQ2xvdWQuQUlQbGF0Zm9ybS5WMUJldGExygIfR29v",
-            "Z2xlXENsb3VkXEFJUGxhdGZvcm1cVjFiZXRhMeoCIkdvb2dsZTo6Q2xvdWQ6",
-            "OkFJUGxhdGZvcm06OlYxYmV0YTFiBnByb3RvMw=="));
+            "dBgJIAEoBUID4EEBEiIKFWluaXRpYWxfcmVwbGljYV9jb3VudBgGIAEoBUID",
+            "4EEFEl0KGGF1dG9zY2FsaW5nX21ldHJpY19zcGVjcxgEIAMoCzI2Lmdvb2ds",
+            "ZS5jbG91ZC5haXBsYXRmb3JtLnYxYmV0YTEuQXV0b3NjYWxpbmdNZXRyaWNT",
+            "cGVjQgPgQQUSEQoEc3BvdBgFIAEoCEID4EEBEkYKCmZsZXhfc3RhcnQYCiAB",
+            "KAsyKi5nb29nbGUuY2xvdWQuYWlwbGF0Zm9ybS52MWJldGExLkZsZXhTdGFy",
+            "dEIG4EEF4EEBEmQKEnNjYWxlX3RvX3plcm9fc3BlYxgLIAEoCzJDLmdvb2ds",
+            "ZS5jbG91ZC5haXBsYXRmb3JtLnYxYmV0YTEuRGVkaWNhdGVkUmVzb3VyY2Vz",
+            "LlNjYWxlVG9aZXJvU3BlY0ID4EEBGowBCg9TY2FsZVRvWmVyb1NwZWMSOgoS",
+            "bWluX3NjYWxldXBfcGVyaW9kGAEgASgLMhkuZ29vZ2xlLnByb3RvYnVmLkR1",
+            "cmF0aW9uQgPgQQESPQoVaWRsZV9zY2FsZWRvd25fcGVyaW9kGAIgASgLMhku",
+            "Z29vZ2xlLnByb3RvYnVmLkR1cmF0aW9uQgPgQQEiVAoSQXV0b21hdGljUmVz",
+            "b3VyY2VzEh4KEW1pbl9yZXBsaWNhX2NvdW50GAEgASgFQgPgQQUSHgoRbWF4",
+            "X3JlcGxpY2FfY291bnQYAiABKAVCA+BBBSKFAgoXQmF0Y2hEZWRpY2F0ZWRS",
+            "ZXNvdXJjZXMSSgoMbWFjaGluZV9zcGVjGAEgASgLMiwuZ29vZ2xlLmNsb3Vk",
+            "LmFpcGxhdGZvcm0udjFiZXRhMS5NYWNoaW5lU3BlY0IG4EEC4EEFEiMKFnN0",
+            "YXJ0aW5nX3JlcGxpY2FfY291bnQYAiABKAVCA+BBBRIeChFtYXhfcmVwbGlj",
+            "YV9jb3VudBgDIAEoBUID4EEFEkYKCmZsZXhfc3RhcnQYBCABKAsyKi5nb29n",
+            "bGUuY2xvdWQuYWlwbGF0Zm9ybS52MWJldGExLkZsZXhTdGFydEIG4EEF4EEB",
+            "EhEKBHNwb3QYBSABKAhCA+BBASIvChFSZXNvdXJjZXNDb25zdW1lZBIaCg1y",
+            "ZXBsaWNhX2hvdXJzGAEgASgBQgPgQQMiPQoIRGlza1NwZWMSFgoOYm9vdF9k",
+            "aXNrX3R5cGUYASABKAkSGQoRYm9vdF9kaXNrX3NpemVfZ2IYAiABKAUiPQoS",
+            "UGVyc2lzdGVudERpc2tTcGVjEhEKCWRpc2tfdHlwZRgBIAEoCRIUCgxkaXNr",
+            "X3NpemVfZ2IYAiABKAMiTAoITmZzTW91bnQSEwoGc2VydmVyGAEgASgJQgPg",
+            "QQISEQoEcGF0aBgCIAEoCUID4EECEhgKC21vdW50X3BvaW50GAMgASgJQgPg",
+            "QQIi/gEKFUF1dG9zY2FsaW5nTWV0cmljU3BlYxIYCgttZXRyaWNfbmFtZRgB",
+            "IAEoCUID4EECEg4KBnRhcmdldBgCIAEoBRJ7Chltb25pdG9yZWRfcmVzb3Vy",
+            "Y2VfbGFiZWxzGAMgAygLMlMuZ29vZ2xlLmNsb3VkLmFpcGxhdGZvcm0udjFi",
+            "ZXRhMS5BdXRvc2NhbGluZ01ldHJpY1NwZWMuTW9uaXRvcmVkUmVzb3VyY2VM",
+            "YWJlbHNFbnRyeUID4EEBGj4KHE1vbml0b3JlZFJlc291cmNlTGFiZWxzRW50",
+            "cnkSCwoDa2V5GAEgASgJEg0KBXZhbHVlGAIgASgJOgI4ASIuChBTaGllbGRl",
+            "ZFZtQ29uZmlnEhoKEmVuYWJsZV9zZWN1cmVfYm9vdBgBIAEoCCJECglGbGV4",
+            "U3RhcnQSNwoUbWF4X3J1bnRpbWVfZHVyYXRpb24YASABKAsyGS5nb29nbGUu",
+            "cHJvdG9idWYuRHVyYXRpb25C7AEKI2NvbS5nb29nbGUuY2xvdWQuYWlwbGF0",
+            "Zm9ybS52MWJldGExQhVNYWNoaW5lUmVzb3VyY2VzUHJvdG9QAVpDY2xvdWQu",
+            "Z29vZ2xlLmNvbS9nby9haXBsYXRmb3JtL2FwaXYxYmV0YTEvYWlwbGF0Zm9y",
+            "bXBiO2FpcGxhdGZvcm1wYqoCH0dvb2dsZS5DbG91ZC5BSVBsYXRmb3JtLlYx",
+            "QmV0YTHKAh9Hb29nbGVcQ2xvdWRcQUlQbGF0Zm9ybVxWMWJldGEx6gIiR29v",
+            "Z2xlOjpDbG91ZDo6QUlQbGF0Zm9ybTo6VjFiZXRhMWIGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Cloud.AIPlatform.V1Beta1.AcceleratorTypeReflection.Descriptor, global::Google.Cloud.AIPlatform.V1Beta1.ReservationAffinityReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.DurationReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1Beta1.MachineSpec), global::Google.Cloud.AIPlatform.V1Beta1.MachineSpec.Parser, new[]{ "MachineType", "AcceleratorType", "AcceleratorCount", "GpuPartitionSize", "TpuTopology", "MultihostGpuNodeCount", "ReservationAffinity" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1Beta1.DedicatedResources), global::Google.Cloud.AIPlatform.V1Beta1.DedicatedResources.Parser, new[]{ "MachineSpec", "MinReplicaCount", "MaxReplicaCount", "RequiredReplicaCount", "AutoscalingMetricSpecs", "Spot", "FlexStart" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1Beta1.DedicatedResources), global::Google.Cloud.AIPlatform.V1Beta1.DedicatedResources.Parser, new[]{ "MachineSpec", "MinReplicaCount", "MaxReplicaCount", "RequiredReplicaCount", "InitialReplicaCount", "AutoscalingMetricSpecs", "Spot", "FlexStart", "ScaleToZeroSpec" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1Beta1.DedicatedResources.Types.ScaleToZeroSpec), global::Google.Cloud.AIPlatform.V1Beta1.DedicatedResources.Types.ScaleToZeroSpec.Parser, new[]{ "MinScaleupPeriod", "IdleScaledownPeriod" }, null, null, null, null)}),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1Beta1.AutomaticResources), global::Google.Cloud.AIPlatform.V1Beta1.AutomaticResources.Parser, new[]{ "MinReplicaCount", "MaxReplicaCount" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1Beta1.BatchDedicatedResources), global::Google.Cloud.AIPlatform.V1Beta1.BatchDedicatedResources.Parser, new[]{ "MachineSpec", "StartingReplicaCount", "MaxReplicaCount", "FlexStart", "Spot" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1Beta1.ResourcesConsumed), global::Google.Cloud.AIPlatform.V1Beta1.ResourcesConsumed.Parser, new[]{ "ReplicaHours" }, null, null, null, null),
@@ -612,9 +618,11 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
       minReplicaCount_ = other.minReplicaCount_;
       maxReplicaCount_ = other.maxReplicaCount_;
       requiredReplicaCount_ = other.requiredReplicaCount_;
+      initialReplicaCount_ = other.initialReplicaCount_;
       autoscalingMetricSpecs_ = other.autoscalingMetricSpecs_.Clone();
       spot_ = other.spot_;
       flexStart_ = other.flexStart_ != null ? other.flexStart_.Clone() : null;
+      scaleToZeroSpec_ = other.scaleToZeroSpec_ != null ? other.scaleToZeroSpec_.Clone() : null;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -705,6 +713,33 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
       }
     }
 
+    /// <summary>Field number for the "initial_replica_count" field.</summary>
+    public const int InitialReplicaCountFieldNumber = 6;
+    private int initialReplicaCount_;
+    /// <summary>
+    /// Immutable. Number of initial replicas being deployed on when scaling the
+    /// workload up from zero or when creating the workload in case
+    /// [min_replica_count][google.cloud.aiplatform.v1beta1.DedicatedResources.min_replica_count]
+    /// = 0. When
+    /// [min_replica_count][google.cloud.aiplatform.v1beta1.DedicatedResources.min_replica_count]
+    /// > 0 (meaning that the scale-to-zero feature is not enabled),
+    /// [initial_replica_count][google.cloud.aiplatform.v1beta1.DedicatedResources.initial_replica_count]
+    /// should not be set. When
+    /// [min_replica_count][google.cloud.aiplatform.v1beta1.DedicatedResources.min_replica_count]
+    /// = 0 (meaning that the scale-to-zero feature is enabled),
+    /// [initial_replica_count][google.cloud.aiplatform.v1beta1.DedicatedResources.initial_replica_count]
+    /// should be larger than zero, but no greater than
+    /// [max_replica_count][google.cloud.aiplatform.v1beta1.DedicatedResources.max_replica_count].
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int InitialReplicaCount {
+      get { return initialReplicaCount_; }
+      set {
+        initialReplicaCount_ = value;
+      }
+    }
+
     /// <summary>Field number for the "autoscaling_metric_specs" field.</summary>
     public const int AutoscalingMetricSpecsFieldNumber = 4;
     private static readonly pb::FieldCodec<global::Google.Cloud.AIPlatform.V1Beta1.AutoscalingMetricSpec> _repeated_autoscalingMetricSpecs_codec
@@ -774,6 +809,21 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
       }
     }
 
+    /// <summary>Field number for the "scale_to_zero_spec" field.</summary>
+    public const int ScaleToZeroSpecFieldNumber = 11;
+    private global::Google.Cloud.AIPlatform.V1Beta1.DedicatedResources.Types.ScaleToZeroSpec scaleToZeroSpec_;
+    /// <summary>
+    /// Optional. Specification for scale-to-zero feature.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Cloud.AIPlatform.V1Beta1.DedicatedResources.Types.ScaleToZeroSpec ScaleToZeroSpec {
+      get { return scaleToZeroSpec_; }
+      set {
+        scaleToZeroSpec_ = value;
+      }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
@@ -793,9 +843,11 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
       if (MinReplicaCount != other.MinReplicaCount) return false;
       if (MaxReplicaCount != other.MaxReplicaCount) return false;
       if (RequiredReplicaCount != other.RequiredReplicaCount) return false;
+      if (InitialReplicaCount != other.InitialReplicaCount) return false;
       if(!autoscalingMetricSpecs_.Equals(other.autoscalingMetricSpecs_)) return false;
       if (Spot != other.Spot) return false;
       if (!object.Equals(FlexStart, other.FlexStart)) return false;
+      if (!object.Equals(ScaleToZeroSpec, other.ScaleToZeroSpec)) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -807,9 +859,11 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
       if (MinReplicaCount != 0) hash ^= MinReplicaCount.GetHashCode();
       if (MaxReplicaCount != 0) hash ^= MaxReplicaCount.GetHashCode();
       if (RequiredReplicaCount != 0) hash ^= RequiredReplicaCount.GetHashCode();
+      if (InitialReplicaCount != 0) hash ^= InitialReplicaCount.GetHashCode();
       hash ^= autoscalingMetricSpecs_.GetHashCode();
       if (Spot != false) hash ^= Spot.GetHashCode();
       if (flexStart_ != null) hash ^= FlexStart.GetHashCode();
+      if (scaleToZeroSpec_ != null) hash ^= ScaleToZeroSpec.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -845,6 +899,10 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
         output.WriteRawTag(40);
         output.WriteBool(Spot);
       }
+      if (InitialReplicaCount != 0) {
+        output.WriteRawTag(48);
+        output.WriteInt32(InitialReplicaCount);
+      }
       if (RequiredReplicaCount != 0) {
         output.WriteRawTag(72);
         output.WriteInt32(RequiredReplicaCount);
@@ -852,6 +910,10 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
       if (flexStart_ != null) {
         output.WriteRawTag(82);
         output.WriteMessage(FlexStart);
+      }
+      if (scaleToZeroSpec_ != null) {
+        output.WriteRawTag(90);
+        output.WriteMessage(ScaleToZeroSpec);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
@@ -880,6 +942,10 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
         output.WriteRawTag(40);
         output.WriteBool(Spot);
       }
+      if (InitialReplicaCount != 0) {
+        output.WriteRawTag(48);
+        output.WriteInt32(InitialReplicaCount);
+      }
       if (RequiredReplicaCount != 0) {
         output.WriteRawTag(72);
         output.WriteInt32(RequiredReplicaCount);
@@ -887,6 +953,10 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
       if (flexStart_ != null) {
         output.WriteRawTag(82);
         output.WriteMessage(FlexStart);
+      }
+      if (scaleToZeroSpec_ != null) {
+        output.WriteRawTag(90);
+        output.WriteMessage(ScaleToZeroSpec);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
@@ -910,12 +980,18 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
       if (RequiredReplicaCount != 0) {
         size += 1 + pb::CodedOutputStream.ComputeInt32Size(RequiredReplicaCount);
       }
+      if (InitialReplicaCount != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeInt32Size(InitialReplicaCount);
+      }
       size += autoscalingMetricSpecs_.CalculateSize(_repeated_autoscalingMetricSpecs_codec);
       if (Spot != false) {
         size += 1 + 1;
       }
       if (flexStart_ != null) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(FlexStart);
+      }
+      if (scaleToZeroSpec_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(ScaleToZeroSpec);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -944,6 +1020,9 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
       if (other.RequiredReplicaCount != 0) {
         RequiredReplicaCount = other.RequiredReplicaCount;
       }
+      if (other.InitialReplicaCount != 0) {
+        InitialReplicaCount = other.InitialReplicaCount;
+      }
       autoscalingMetricSpecs_.Add(other.autoscalingMetricSpecs_);
       if (other.Spot != false) {
         Spot = other.Spot;
@@ -953,6 +1032,12 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
           FlexStart = new global::Google.Cloud.AIPlatform.V1Beta1.FlexStart();
         }
         FlexStart.MergeFrom(other.FlexStart);
+      }
+      if (other.scaleToZeroSpec_ != null) {
+        if (scaleToZeroSpec_ == null) {
+          ScaleToZeroSpec = new global::Google.Cloud.AIPlatform.V1Beta1.DedicatedResources.Types.ScaleToZeroSpec();
+        }
+        ScaleToZeroSpec.MergeFrom(other.ScaleToZeroSpec);
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -992,6 +1077,10 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
             Spot = input.ReadBool();
             break;
           }
+          case 48: {
+            InitialReplicaCount = input.ReadInt32();
+            break;
+          }
           case 72: {
             RequiredReplicaCount = input.ReadInt32();
             break;
@@ -1001,6 +1090,13 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
               FlexStart = new global::Google.Cloud.AIPlatform.V1Beta1.FlexStart();
             }
             input.ReadMessage(FlexStart);
+            break;
+          }
+          case 90: {
+            if (scaleToZeroSpec_ == null) {
+              ScaleToZeroSpec = new global::Google.Cloud.AIPlatform.V1Beta1.DedicatedResources.Types.ScaleToZeroSpec();
+            }
+            input.ReadMessage(ScaleToZeroSpec);
             break;
           }
         }
@@ -1041,6 +1137,10 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
             Spot = input.ReadBool();
             break;
           }
+          case 48: {
+            InitialReplicaCount = input.ReadInt32();
+            break;
+          }
           case 72: {
             RequiredReplicaCount = input.ReadInt32();
             break;
@@ -1052,10 +1152,283 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
             input.ReadMessage(FlexStart);
             break;
           }
+          case 90: {
+            if (scaleToZeroSpec_ == null) {
+              ScaleToZeroSpec = new global::Google.Cloud.AIPlatform.V1Beta1.DedicatedResources.Types.ScaleToZeroSpec();
+            }
+            input.ReadMessage(ScaleToZeroSpec);
+            break;
+          }
         }
       }
     }
     #endif
+
+    #region Nested types
+    /// <summary>Container for nested types declared in the DedicatedResources message type.</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static partial class Types {
+      /// <summary>
+      /// Specification for scale-to-zero feature.
+      /// </summary>
+      [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+      public sealed partial class ScaleToZeroSpec : pb::IMessage<ScaleToZeroSpec>
+      #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          , pb::IBufferMessage
+      #endif
+      {
+        private static readonly pb::MessageParser<ScaleToZeroSpec> _parser = new pb::MessageParser<ScaleToZeroSpec>(() => new ScaleToZeroSpec());
+        private pb::UnknownFieldSet _unknownFields;
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public static pb::MessageParser<ScaleToZeroSpec> Parser { get { return _parser; } }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public static pbr::MessageDescriptor Descriptor {
+          get { return global::Google.Cloud.AIPlatform.V1Beta1.DedicatedResources.Descriptor.NestedTypes[0]; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        pbr::MessageDescriptor pb::IMessage.Descriptor {
+          get { return Descriptor; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public ScaleToZeroSpec() {
+          OnConstruction();
+        }
+
+        partial void OnConstruction();
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public ScaleToZeroSpec(ScaleToZeroSpec other) : this() {
+          minScaleupPeriod_ = other.minScaleupPeriod_ != null ? other.minScaleupPeriod_.Clone() : null;
+          idleScaledownPeriod_ = other.idleScaledownPeriod_ != null ? other.idleScaledownPeriod_.Clone() : null;
+          _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public ScaleToZeroSpec Clone() {
+          return new ScaleToZeroSpec(this);
+        }
+
+        /// <summary>Field number for the "min_scaleup_period" field.</summary>
+        public const int MinScaleupPeriodFieldNumber = 1;
+        private global::Google.Protobuf.WellKnownTypes.Duration minScaleupPeriod_;
+        /// <summary>
+        /// Optional. Minimum duration that a deployment will be scaled up before
+        /// traffic is evaluated for potential scale-down. [MinValue=300] (5 minutes)
+        /// [MaxValue=28800] (8 hours)
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public global::Google.Protobuf.WellKnownTypes.Duration MinScaleupPeriod {
+          get { return minScaleupPeriod_; }
+          set {
+            minScaleupPeriod_ = value;
+          }
+        }
+
+        /// <summary>Field number for the "idle_scaledown_period" field.</summary>
+        public const int IdleScaledownPeriodFieldNumber = 2;
+        private global::Google.Protobuf.WellKnownTypes.Duration idleScaledownPeriod_;
+        /// <summary>
+        /// Optional. Duration of no traffic before scaling to zero.
+        /// [MinValue=3600] (5 minutes)
+        /// [MaxValue=28800] (8 hours)
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public global::Google.Protobuf.WellKnownTypes.Duration IdleScaledownPeriod {
+          get { return idleScaledownPeriod_; }
+          set {
+            idleScaledownPeriod_ = value;
+          }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override bool Equals(object other) {
+          return Equals(other as ScaleToZeroSpec);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public bool Equals(ScaleToZeroSpec other) {
+          if (ReferenceEquals(other, null)) {
+            return false;
+          }
+          if (ReferenceEquals(other, this)) {
+            return true;
+          }
+          if (!object.Equals(MinScaleupPeriod, other.MinScaleupPeriod)) return false;
+          if (!object.Equals(IdleScaledownPeriod, other.IdleScaledownPeriod)) return false;
+          return Equals(_unknownFields, other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override int GetHashCode() {
+          int hash = 1;
+          if (minScaleupPeriod_ != null) hash ^= MinScaleupPeriod.GetHashCode();
+          if (idleScaledownPeriod_ != null) hash ^= IdleScaledownPeriod.GetHashCode();
+          if (_unknownFields != null) {
+            hash ^= _unknownFields.GetHashCode();
+          }
+          return hash;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override string ToString() {
+          return pb::JsonFormatter.ToDiagnosticString(this);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void WriteTo(pb::CodedOutputStream output) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          output.WriteRawMessage(this);
+        #else
+          if (minScaleupPeriod_ != null) {
+            output.WriteRawTag(10);
+            output.WriteMessage(MinScaleupPeriod);
+          }
+          if (idleScaledownPeriod_ != null) {
+            output.WriteRawTag(18);
+            output.WriteMessage(IdleScaledownPeriod);
+          }
+          if (_unknownFields != null) {
+            _unknownFields.WriteTo(output);
+          }
+        #endif
+        }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+          if (minScaleupPeriod_ != null) {
+            output.WriteRawTag(10);
+            output.WriteMessage(MinScaleupPeriod);
+          }
+          if (idleScaledownPeriod_ != null) {
+            output.WriteRawTag(18);
+            output.WriteMessage(IdleScaledownPeriod);
+          }
+          if (_unknownFields != null) {
+            _unknownFields.WriteTo(ref output);
+          }
+        }
+        #endif
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public int CalculateSize() {
+          int size = 0;
+          if (minScaleupPeriod_ != null) {
+            size += 1 + pb::CodedOutputStream.ComputeMessageSize(MinScaleupPeriod);
+          }
+          if (idleScaledownPeriod_ != null) {
+            size += 1 + pb::CodedOutputStream.ComputeMessageSize(IdleScaledownPeriod);
+          }
+          if (_unknownFields != null) {
+            size += _unknownFields.CalculateSize();
+          }
+          return size;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void MergeFrom(ScaleToZeroSpec other) {
+          if (other == null) {
+            return;
+          }
+          if (other.minScaleupPeriod_ != null) {
+            if (minScaleupPeriod_ == null) {
+              MinScaleupPeriod = new global::Google.Protobuf.WellKnownTypes.Duration();
+            }
+            MinScaleupPeriod.MergeFrom(other.MinScaleupPeriod);
+          }
+          if (other.idleScaledownPeriod_ != null) {
+            if (idleScaledownPeriod_ == null) {
+              IdleScaledownPeriod = new global::Google.Protobuf.WellKnownTypes.Duration();
+            }
+            IdleScaledownPeriod.MergeFrom(other.IdleScaledownPeriod);
+          }
+          _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void MergeFrom(pb::CodedInputStream input) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          input.ReadRawMessage(this);
+        #else
+          uint tag;
+          while ((tag = input.ReadTag()) != 0) {
+            switch(tag) {
+              default:
+                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+                break;
+              case 10: {
+                if (minScaleupPeriod_ == null) {
+                  MinScaleupPeriod = new global::Google.Protobuf.WellKnownTypes.Duration();
+                }
+                input.ReadMessage(MinScaleupPeriod);
+                break;
+              }
+              case 18: {
+                if (idleScaledownPeriod_ == null) {
+                  IdleScaledownPeriod = new global::Google.Protobuf.WellKnownTypes.Duration();
+                }
+                input.ReadMessage(IdleScaledownPeriod);
+                break;
+              }
+            }
+          }
+        #endif
+        }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+          uint tag;
+          while ((tag = input.ReadTag()) != 0) {
+            switch(tag) {
+              default:
+                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+                break;
+              case 10: {
+                if (minScaleupPeriod_ == null) {
+                  MinScaleupPeriod = new global::Google.Protobuf.WellKnownTypes.Duration();
+                }
+                input.ReadMessage(MinScaleupPeriod);
+                break;
+              }
+              case 18: {
+                if (idleScaledownPeriod_ == null) {
+                  IdleScaledownPeriod = new global::Google.Protobuf.WellKnownTypes.Duration();
+                }
+                input.ReadMessage(IdleScaledownPeriod);
+                break;
+              }
+            }
+          }
+        }
+        #endif
+
+      }
+
+    }
+    #endregion
 
   }
 
