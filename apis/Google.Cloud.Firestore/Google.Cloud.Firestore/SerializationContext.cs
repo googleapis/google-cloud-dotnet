@@ -13,6 +13,8 @@
 // limitations under the License.
 
 using Google.Cloud.Firestore.Converters;
+using Google.Cloud.Firestore.V1;
+using System;
 using System.Collections.Generic;
 using BclType = System.Type;
 
@@ -31,10 +33,12 @@ namespace Google.Cloud.Firestore
         internal static SerializationContext Default { get; } = new SerializationContext(null);
 
         private readonly IReadOnlyDictionary<BclType, IFirestoreInternalConverter> _customConverters;
+        private readonly IReadOnlyDictionary<BclType, Func<IDictionary<string, Value>, BclType>> _typeDiscriminators;
 
         internal SerializationContext(ConverterRegistry converterRegistry)
         {
             _customConverters = converterRegistry?.ToConverterDictionary();
+            _typeDiscriminators = converterRegistry?.ToTypeDiscriminatorDictionary();
         }
 
         internal IFirestoreInternalConverter GetConverter(BclType targetType)
@@ -42,6 +46,24 @@ namespace Google.Cloud.Firestore
             IFirestoreInternalConverter customConverter = null;
             _customConverters?.TryGetValue(targetType, out customConverter);
             return customConverter ?? ConverterCache.GetConverter(targetType);
+        }
+
+        internal IFirestoreInternalConverter GetDeserializationConverter(BclType targetType, Value value) =>
+            GetDeserializationConverter(targetType, value?.MapValue?.Fields);
+
+        internal IFirestoreInternalConverter GetDeserializationConverter(BclType targetType, IDictionary<string, Value> map)
+        {
+            if (map is not null && _typeDiscriminators?.TryGetValue(targetType, out var discriminator) == true)
+            {
+                var newTargetType = discriminator.Invoke(map);
+                if (newTargetType is null || !targetType.IsAssignableFrom(newTargetType))
+                {
+                    throw new InvalidOperationException($"Type discriminator returned an inappropriate type: {newTargetType}");
+                }
+                targetType = newTargetType;
+            }
+
+            return GetConverter(targetType);
         }
     }
 }
