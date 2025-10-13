@@ -2190,7 +2190,7 @@
             "generationAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
             "releaseAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
             "releaseTimestamp": "2024-05-14T07:22:16Z",
-            "lastGeneratedCommit": "36533b09a6b383f3c30d13c3c26092154ecf5388",
+            "lastGeneratedCommit": "6821943108fe3284f483defc9b60774a3752de2b",
             "apiPaths": [
                 "google/cloud/networksecurity/v1beta1"
             ],
