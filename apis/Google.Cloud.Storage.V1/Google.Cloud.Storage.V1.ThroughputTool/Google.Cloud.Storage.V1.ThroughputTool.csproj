@@ -1,13 +1,11 @@
-﻿<Project Sdk="Microsoft.NET.Sdk">
-
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
     <OutputType>Exe</OutputType>
-    <TargetFrameworks>net462;net8.0</TargetFrameworks>
-    <TargetFrameworks Condition="'$(OS)'!='Windows_NT'">net8.0</TargetFrameworks>
+    <TargetFramework>net8.0</TargetFramework>
+    <IsPackable>false</IsPackable>
   </PropertyGroup>
-
   <ItemGroup>
     <ProjectReference Include="..\Google.Cloud.Storage.V1\Google.Cloud.Storage.V1.csproj" />
   </ItemGroup>
-  
 </Project>

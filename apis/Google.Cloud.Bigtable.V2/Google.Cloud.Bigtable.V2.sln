@@ -9,6 +9,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Google.Cloud.Bigtable.V2.Sn
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Google.Cloud.Bigtable.V2.GeneratedSnippets", "Google.Cloud.Bigtable.V2.GeneratedSnippets\Google.Cloud.Bigtable.V2.GeneratedSnippets.csproj", "{8BCC5B44-6D7C-BB04-52E0-6851F1D0B619}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Google.Cloud.Bigtable.V2.ConformanceTests", "Google.Cloud.Bigtable.V2.ConformanceTests\Google.Cloud.Bigtable.V2.ConformanceTests.csproj", "{DFCD06A1-3FA0-70B0-B5E5-7BF666CF3C9C}"
+EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Google.Cloud.Bigtable.V2.IntegrationTests", "Google.Cloud.Bigtable.V2.IntegrationTests\Google.Cloud.Bigtable.V2.IntegrationTests.csproj", "{58A2E0A6-A273-43E0-C074-A0D9CBF3BB80}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Google.Cloud.Bigtable.V2.Tests", "Google.Cloud.Bigtable.V2.Tests\Google.Cloud.Bigtable.V2.Tests.csproj", "{39CDC7FA-420D-5E65-5EED-0ED6859B7F0F}"
@@ -33,6 +35,10 @@ Global
 		{8BCC5B44-6D7C-BB04-52E0-6851F1D0B619}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{8BCC5B44-6D7C-BB04-52E0-6851F1D0B619}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{8BCC5B44-6D7C-BB04-52E0-6851F1D0B619}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DFCD06A1-3FA0-70B0-B5E5-7BF666CF3C9C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DFCD06A1-3FA0-70B0-B5E5-7BF666CF3C9C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DFCD06A1-3FA0-70B0-B5E5-7BF666CF3C9C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DFCD06A1-3FA0-70B0-B5E5-7BF666CF3C9C}.Release|Any CPU.Build.0 = Release|Any CPU
 		{58A2E0A6-A273-43E0-C074-A0D9CBF3BB80}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{58A2E0A6-A273-43E0-C074-A0D9CBF3BB80}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{58A2E0A6-A273-43E0-C074-A0D9CBF3BB80}.Release|Any CPU.ActiveCfg = Release|Any CPU
