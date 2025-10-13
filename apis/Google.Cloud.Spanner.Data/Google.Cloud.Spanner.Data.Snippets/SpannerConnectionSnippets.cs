@@ -329,13 +329,13 @@ namespace Google.Cloud.Spanner.Data.Snippets
                 // to be called more than once.
                 await connection.RunWithRetriableTransactionAsync(async transaction =>
                 {
-                    // Read the first two keys in the database.
+                    // Read the first 3 keys in the database.
                     List<string> keys = new List<string>();
                     SpannerCommand selectCmd = connection.CreateSelectCommand("SELECT * FROM TestTable");
                     selectCmd.Transaction = transaction;
                     using (SpannerDataReader reader = await selectCmd.ExecuteReaderAsync())
                     {
-                        while (keys.Count < 3 && await reader.ReadAsync())
+                        while (keys.Count < 4 && await reader.ReadAsync())
                         {
                             keys.Add(reader.GetFieldValue<string>("Key"));
                         }
@@ -349,9 +349,10 @@ namespace Google.Cloud.Spanner.Data.Snippets
                     updateCmd.Transaction = transaction;
                     await updateCmd.ExecuteNonQueryAsync();
 
-                    // Delete row for keys[1]
-                    SpannerCommand deleteCmd = connection.CreateDeleteCommand("TestTable");
-                    deleteCmd.Parameters.Add("Key", SpannerDbType.String, keys[1]);
+                    // Delete row for keys[1] and keys[2]
+                    SpannerCommand deleteCmd = connection.CreateDeleteCommandForKeySet(
+                        "TestTable",
+                        KeySet.FromKeys(new Key(keys[1]), new Key(keys[2])));
                     deleteCmd.Transaction = transaction;
                     await deleteCmd.ExecuteNonQueryAsync();
                 });

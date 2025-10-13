@@ -127,8 +127,9 @@ namespace Google.Cloud.Spanner.Data
             SpannerTransaction transaction = null)
             : this(connection, transaction, parameters: null, commandPartition: null, ephemeralTransactionOptions: null)
         {
-            GaxPreconditions.CheckArgument(commandTextBuilder.SpannerCommandType == SpannerCommandType.Read,
-                nameof(commandTextBuilder.SpannerCommandType), "KeySet is only allowed for Read commands");
+            GaxPreconditions.CheckArgument(
+                commandTextBuilder.SpannerCommandType == SpannerCommandType.Read || commandTextBuilder.SpannerCommandType == SpannerCommandType.Delete,
+                nameof(commandTextBuilder.SpannerCommandType), "KeySet is only allowed for Read and Delete commands");
             SpannerCommandTextBuilder = GaxPreconditions.CheckNotNull(commandTextBuilder, nameof(commandTextBuilder));
             KeySet = GaxPreconditions.CheckNotNull(keySet, nameof(keySet));
         }
@@ -235,7 +236,12 @@ namespace Google.Cloud.Spanner.Data
         public new SpannerParameterCollection Parameters { get; } = new SpannerParameterCollection();
 
         /// <summary>
-        /// The keys of the rows that should be read from the target table if the command is Read, or null otherwise.
+        /// The keys of the rows to read or delete from the target table if the command is Read or Delete.
+        /// Null otherwise.
+        /// May also be null for Delete commands, for which
+        /// <see cref="Parameters"/> may be specified to delete a single row
+        /// or neither <see cref="Parameters"/> nor <see cref="KeySet"/> may be specified,
+        /// in which case the delete operation will succeed but will have no effect.
         /// </summary>
         public KeySet KeySet { get; }
 
