@@ -3,6 +3,6 @@
   <PropertyGroup>
     <!-- Make sure we get suitable stack traces for tests -->
     <DebugType>pdbonly</DebugType>
-    <DebugType Condition="'$(TargetFramework)' == 'net6.0'">portable</DebugType>
+    <DebugType Condition="'$(TargetFramework)' == 'net8.0'">portable</DebugType>
   </PropertyGroup>
 </Project>

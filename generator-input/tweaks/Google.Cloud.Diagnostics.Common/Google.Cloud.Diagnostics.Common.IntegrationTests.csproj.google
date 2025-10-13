@@ -4,6 +4,6 @@
     <DebugSymbols>true</DebugSymbols>
     <Optimize Condition="'$(TargetFramework)' == 'net462'">false</Optimize>
     <DebugType Condition="'$(TargetFramework)' == 'net462'">pdbonly</DebugType>
-    <DebugType Condition="'$(TargetFramework)' == 'net6.0'">portable</DebugType>
+    <DebugType Condition="'$(TargetFramework)' == 'net8.0'">portable</DebugType>
   </PropertyGroup>
 </Project>

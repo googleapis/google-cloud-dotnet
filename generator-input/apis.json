@@ -1245,6 +1245,7 @@
       "restNumericEnums": true,
       "includeCommonResourcesProto": true,
       "projects": [
+        "ConformanceTests",
         "IntegrationTests",
         "Tests"
       ]

@@ -76,6 +76,7 @@ internal sealed class NonSourceGenerator
         { ApiType.Other, $"{DefaultNetstandardTarget};net462" }
     };
 
+    private const string ConsoleTargetFramework = "net8.0";
     private const string DefaultTestTargetFrameworks = "net8.0;net462";
 
     private static readonly Dictionary<ApiType, string[]> PackageTypeToImplicitDependencies = new Dictionary<ApiType, string[]>
@@ -196,6 +197,8 @@ internal sealed class NonSourceGenerator
         {
             if (!projectName.StartsWith(api.Id, StringComparison.Ordinal))
             {
+                // An explicit project, e.g. "SampleApp" in Google.Cloud.Logging.Console.
+                GenerateConsoleProject(projectName);
                 continue;
             }
             string suffix = projectName[api.Id.Length..];
@@ -209,6 +212,10 @@ internal sealed class NonSourceGenerator
                 case ".Snippets":
                 case ".GeneratedSnippets":
                     GenerateTestProject(projectName);
+                    break;
+                // Anything not covered above is expected to be a console app.
+                default:
+                    GenerateConsoleProject(projectName);
                     break;
             }
         }
@@ -252,6 +259,19 @@ internal sealed class NonSourceGenerator
             );
             var dependenciesElement = CreateDependenciesElement(api.Id, dependencies, api.StructuredVersion, testProject: false);
             WriteProjectFile(api.Id, propertyGroup, dependenciesElement);
+        }
+
+        void GenerateConsoleProject(string projectName)
+        {
+            var propertyGroup = new XElement("PropertyGroup",
+                // Build-related properties
+                new XElement("OutputType", "Exe"),
+                new XElement("TargetFramework", ConsoleTargetFramework),
+                new XElement("IsPackable", false)
+            );
+            // Each console app depends on the main project
+            XElement dependenciesElement = new XElement("ItemGroup", CreateDependencyElement(projectName, api.Id, ProjectVersionValue, null, false));
+            WriteProjectFile(projectName, propertyGroup, dependenciesElement);
         }
 
         void GenerateTestProject(string projectName)
@@ -304,7 +324,18 @@ internal sealed class NonSourceGenerator
             if (File.Exists(augmentationFile))
             {
                 var augmentationDoc = XDocument.Load(augmentationFile);
-                doc.Add(augmentationDoc.Root.Elements());
+                // Emergency escape hatch for a couple of project files which would be really painful to handle
+                // otherwise: if we have a ReplaceAll attribute in the root of the document, we ignore whatever we
+                // would have generated, and just copy the elements instead.
+                if (augmentationDoc.Root.Attribute("ReplaceAll") is XAttribute replaceAllAttr)
+                {
+                    replaceAllAttr.Remove();
+                    doc = augmentationDoc.Root;
+                }
+                else
+                {
+                    doc.Add(augmentationDoc.Root.Elements());
+                }
             }
 
             // Don't use File.CreateText as that omits the byte order mark.
