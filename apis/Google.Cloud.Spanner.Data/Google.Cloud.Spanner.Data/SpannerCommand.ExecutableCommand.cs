@@ -20,6 +20,7 @@ using Google.Cloud.Spanner.V1;
 using Google.Protobuf;
 using Google.Protobuf.WellKnownTypes;
 using Grpc.Core;
+using Newtonsoft.Json.Linq;
 using System;
 using System.Collections.Generic;
 using System.Data;
@@ -331,6 +332,7 @@ namespace Google.Cloud.Spanner.Data
                 // Avoid calling method multiple times in the loop.
                 var conversionOptions = ConversionOptions;
                 // Whatever we do with the parameters, we'll need them in a ListValue.
+                // This list may be empty in case no parameters have been specified.
                 var listValue = new ListValue
                 {
                     Values = { Parameters.Select(x => x.GetConfiguredSpannerDbType(conversionOptions).ToProtobufValue(x.GetValidatedValue())) }
@@ -341,9 +343,15 @@ namespace Google.Cloud.Spanner.Data
                     var w = new Mutation.Types.Write
                     {
                         Table = CommandTextBuilder.TargetTable,
-                        Columns = { Parameters.Select(x => x.SourceColumn ?? x.ParameterName) },
-                        Values = { listValue }
                     };
+                    // Only initialize the command's columns and values if there are parameters,
+                    // otherwise listValue is an empty list that we add to the list of values,
+                    // which fails even if the list of columns is empty.
+                    if (Parameters.Count > 0)
+                    {
+                        w.Columns.Add(Parameters.Select(x => x.SourceColumn ?? x.ParameterName));
+                        w.Values.Add(listValue);
+                    }
                     switch (CommandTextBuilder.SpannerCommandType)
                     {
                         case SpannerCommandType.Update:
@@ -358,12 +366,19 @@ namespace Google.Cloud.Spanner.Data
                 }
                 else
                 {
-                    var w = new Mutation.Types.Delete
+                    var d = new Mutation.Types.Delete
                     {
                         Table = CommandTextBuilder.TargetTable,
-                        KeySet = new V1.KeySet { Keys = { listValue } }
+                        KeySet = new V1.KeySet { }
                     };
-                    return new List<Mutation> { new Mutation { Delete = w } };
+                    // Only initialize the Keys in the KeySet if there are parameters,
+                    // otherwise listValue is an empty list that we add as the key to a row
+                    // which fails with invalid argument.
+                    if (Parameters.Count > 0)
+                    {
+                        d.KeySet.Keys.Add(listValue);
+                    }
+                    return new List<Mutation> { new Mutation { Delete = d } };
                 }
             }
 
