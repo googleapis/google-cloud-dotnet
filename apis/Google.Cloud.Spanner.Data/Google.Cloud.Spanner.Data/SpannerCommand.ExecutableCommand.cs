@@ -20,7 +20,6 @@ using Google.Cloud.Spanner.V1;
 using Google.Protobuf;
 using Google.Protobuf.WellKnownTypes;
 using Grpc.Core;
-using Newtonsoft.Json.Linq;
 using System;
 using System.Collections.Generic;
 using System.Data;
@@ -364,20 +363,28 @@ namespace Google.Cloud.Spanner.Data
                             throw new ArgumentOutOfRangeException();
                     }
                 }
-                else
+                else // Is delete
                 {
+                    // At most one of KeySet or Parameters must be set.
+                    // To delete a single row, Parameters can be set to contain a parameter for each column in the key.
+                    // Key set is a key set specification that allows deleting a set of rows with a single delete mutation.
+                    // An empty key set is allowed, the delete operation succeeds but it has no effect, no keys are specified
+                    // so no rows are deleted.
+                    // If none is set, the command is noop, but it won't fail.
+                    GaxPreconditions.CheckState(KeySet is null || Parameters.Count == 0,
+                        $"At most one of {nameof(KeySet)} or {nameof(Parameters)} most be set.");
+
                     var d = new Mutation.Types.Delete
                     {
                         Table = CommandTextBuilder.TargetTable,
-                        KeySet = new V1.KeySet { }
+                        KeySet = KeySet?.ToProtobuf(conversionOptions)
+                            // Only initialize the Keys in the KeySet if there are parameters,
+                            // otherwise listValue is an empty list that we add as the key to a row
+                            // which fails with invalid argument.
+                            ?? (Parameters.Count == 0
+                                ? new V1.KeySet()
+                                : new V1.KeySet { Keys = { listValue } })
                     };
-                    // Only initialize the Keys in the KeySet if there are parameters,
-                    // otherwise listValue is an empty list that we add as the key to a row
-                    // which fails with invalid argument.
-                    if (Parameters.Count > 0)
-                    {
-                        d.KeySet.Keys.Add(listValue);
-                    }
                     return new List<Mutation> { new Mutation { Delete = d } };
                 }
             }

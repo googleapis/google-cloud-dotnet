@@ -845,6 +845,19 @@ namespace Google.Cloud.Spanner.Data
             primaryKeys);
 
         /// <summary>
+        /// Creates a new <see cref="SpannerCommand" /> to delete rows from a Spanner database table.
+        /// This method is thread safe.
+        /// </summary>
+        /// <param name="databaseTable">The name of the table from which to delete rows. Must not be null.</param>
+        /// <param name="keySet">The set of primary keys to delete. Must not be null.</param>
+        /// <returns>A configured <see cref="SpannerCommand" /></returns>
+        public SpannerCommand CreateDeleteCommandForKeySet(string databaseTable, KeySet keySet) =>
+            new SpannerCommand(
+                SpannerCommandTextBuilder.CreateDeleteTextBuilder(databaseTable),
+                this,
+                GaxPreconditions.CheckNotNull(keySet, nameof(keySet)));
+
+        /// <summary>
         /// Creates a new <see cref="SpannerCommand" /> to insert rows into a Spanner database table.
         /// This method is thread safe.
         /// </summary>
