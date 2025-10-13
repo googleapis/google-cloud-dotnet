@@ -239,22 +239,22 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
             "bXBsYXRlX25hbWUYAiABKAlCKuBBAfpBJAoibW9kZWxhcm1vci5nb29nbGVh",
             "cGlzLmNvbS9UZW1wbGF0ZSJmChJNb2RhbGl0eVRva2VuQ291bnQSOwoIbW9k",
             "YWxpdHkYASABKA4yKS5nb29nbGUuY2xvdWQuYWlwbGF0Zm9ybS52MWJldGEx",
-            "Lk1vZGFsaXR5EhMKC3Rva2VuX2NvdW50GAIgASgFKtsBCgxIYXJtQ2F0ZWdv",
+            "Lk1vZGFsaXR5EhMKC3Rva2VuX2NvdW50GAIgASgFKvgBCgxIYXJtQ2F0ZWdv",
             "cnkSHQoZSEFSTV9DQVRFR09SWV9VTlNQRUNJRklFRBAAEh0KGUhBUk1fQ0FU",
             "RUdPUllfSEFURV9TUEVFQ0gQARIjCh9IQVJNX0NBVEVHT1JZX0RBTkdFUk9V",
             "U19DT05URU5UEAISHAoYSEFSTV9DQVRFR09SWV9IQVJBU1NNRU5UEAMSIwof",
             "SEFSTV9DQVRFR09SWV9TRVhVQUxMWV9FWFBMSUNJVBAEEiUKHUhBUk1fQ0FU",
-            "RUdPUllfQ0lWSUNfSU5URUdSSVRZEAUaAggBKl0KCE1vZGFsaXR5EhgKFE1P",
-            "REFMSVRZX1VOU1BFQ0lGSUVEEAASCAoEVEVYVBABEgkKBUlNQUdFEAISCQoF",
-            "VklERU8QAxIJCgVBVURJTxAEEgwKCERPQ1VNRU5UEAVCyAIKI2NvbS5nb29n",
-            "bGUuY2xvdWQuYWlwbGF0Zm9ybS52MWJldGExQgxDb250ZW50UHJvdG9QAVpD",
-            "Y2xvdWQuZ29vZ2xlLmNvbS9nby9haXBsYXRmb3JtL2FwaXYxYmV0YTEvYWlw",
-            "bGF0Zm9ybXBiO2FpcGxhdGZvcm1wYqoCH0dvb2dsZS5DbG91ZC5BSVBsYXRm",
-            "b3JtLlYxQmV0YTHKAh9Hb29nbGVcQ2xvdWRcQUlQbGF0Zm9ybVxWMWJldGEx",
-            "6gIiR29vZ2xlOjpDbG91ZDo6QUlQbGF0Zm9ybTo6VjFiZXRhMepBYgoibW9k",
-            "ZWxhcm1vci5nb29nbGVhcGlzLmNvbS9UZW1wbGF0ZRI8cHJvamVjdHMve3By",
-            "b2plY3R9L2xvY2F0aW9ucy97bG9jYXRpb259L3RlbXBsYXRlcy97dGVtcGxh",
-            "dGV9YgZwcm90bzM="));
+            "RUdPUllfQ0lWSUNfSU5URUdSSVRZEAUaAggBEhsKF0hBUk1fQ0FURUdPUllf",
+            "SkFJTEJSRUFLEAYqXQoITW9kYWxpdHkSGAoUTU9EQUxJVFlfVU5TUEVDSUZJ",
+            "RUQQABIICgRURVhUEAESCQoFSU1BR0UQAhIJCgVWSURFTxADEgkKBUFVRElP",
+            "EAQSDAoIRE9DVU1FTlQQBULIAgojY29tLmdvb2dsZS5jbG91ZC5haXBsYXRm",
+            "b3JtLnYxYmV0YTFCDENvbnRlbnRQcm90b1ABWkNjbG91ZC5nb29nbGUuY29t",
+            "L2dvL2FpcGxhdGZvcm0vYXBpdjFiZXRhMS9haXBsYXRmb3JtcGI7YWlwbGF0",
+            "Zm9ybXBiqgIfR29vZ2xlLkNsb3VkLkFJUGxhdGZvcm0uVjFCZXRhMcoCH0dv",
+            "b2dsZVxDbG91ZFxBSVBsYXRmb3JtXFYxYmV0YTHqAiJHb29nbGU6OkNsb3Vk",
+            "OjpBSVBsYXRmb3JtOjpWMWJldGEx6kFiCiJtb2RlbGFybW9yLmdvb2dsZWFw",
+            "aXMuY29tL1RlbXBsYXRlEjxwcm9qZWN0cy97cHJvamVjdH0vbG9jYXRpb25z",
+            "L3tsb2NhdGlvbn0vdGVtcGxhdGVzL3t0ZW1wbGF0ZX1iBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Cloud.AIPlatform.V1Beta1.OpenapiReflection.Descriptor, global::Google.Cloud.AIPlatform.V1Beta1.ToolReflection.Descriptor, global::Google.Cloud.AIPlatform.V1Beta1.VertexRagDataReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.DurationReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.StructReflection.Descriptor, global::Google.Type.DateReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(new[] {typeof(global::Google.Cloud.AIPlatform.V1Beta1.HarmCategory), typeof(global::Google.Cloud.AIPlatform.V1Beta1.Modality), }, null, new pbr::GeneratedClrTypeInfo[] {
@@ -325,6 +325,10 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
     /// </summary>
     [global::System.ObsoleteAttribute]
     [pbr::OriginalName("HARM_CATEGORY_CIVIC_INTEGRITY")] CivicIntegrity = 5,
+    /// <summary>
+    /// The harm category is for jailbreak prompts.
+    /// </summary>
+    [pbr::OriginalName("HARM_CATEGORY_JAILBREAK")] Jailbreak = 6,
   }
 
   /// <summary>
