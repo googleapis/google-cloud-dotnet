@@ -14086,6 +14086,103 @@
       ]
     },
     {
+      "regionTag": "aiplatform_v1_generated_FeatureOnlineStoreService_GenerateFetchAccessToken_sync",
+      "title": "GenerateFetchAccessTokenRequestObject",
+      "description": "Snippet for GenerateFetchAccessToken",
+      "file": "FeatureOnlineStoreServiceClient.GenerateFetchAccessTokenRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GenerateFetchAccessToken",
+        "fullName": "Google.Cloud.AIPlatform.V1.FeatureOnlineStoreServiceClient.GenerateFetchAccessToken",
+        "parameters": [
+          {
+            "type": "Google.Cloud.AIPlatform.V1.GenerateFetchAccessTokenRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.AIPlatform.V1.GenerateFetchAccessTokenResponse",
+        "client": {
+          "shortName": "FeatureOnlineStoreServiceClient",
+          "fullName": "Google.Cloud.AIPlatform.V1.FeatureOnlineStoreServiceClient"
+        },
+        "method": {
+          "shortName": "GenerateFetchAccessToken",
+          "fullName": "google.cloud.aiplatform.v1.FeatureOnlineStoreService.GenerateFetchAccessToken",
+          "service": {
+            "shortName": "FeatureOnlineStoreService",
+            "fullName": "google.cloud.aiplatform.v1.FeatureOnlineStoreService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 44,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 42,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "aiplatform_v1_generated_FeatureOnlineStoreService_GenerateFetchAccessToken_async",
+      "title": "GenerateFetchAccessTokenRequestObjectAsync",
+      "description": "Snippet for GenerateFetchAccessTokenAsync",
+      "file": "FeatureOnlineStoreServiceClient.GenerateFetchAccessTokenRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GenerateFetchAccessTokenAsync",
+        "fullName": "Google.Cloud.AIPlatform.V1.FeatureOnlineStoreServiceClient.GenerateFetchAccessTokenAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.AIPlatform.V1.GenerateFetchAccessTokenRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.AIPlatform.V1.GenerateFetchAccessTokenResponse>",
+        "client": {
+          "shortName": "FeatureOnlineStoreServiceClient",
+          "fullName": "Google.Cloud.AIPlatform.V1.FeatureOnlineStoreServiceClient"
+        },
+        "method": {
+          "shortName": "GenerateFetchAccessToken",
+          "fullName": "google.cloud.aiplatform.v1.FeatureOnlineStoreService.GenerateFetchAccessToken",
+          "service": {
+            "shortName": "FeatureOnlineStoreService",
+            "fullName": "google.cloud.aiplatform.v1.FeatureOnlineStoreService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 45,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 43,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
       "regionTag": "aiplatform_v1_generated_FeatureRegistryService_CreateFeatureGroup_sync",
       "title": "CreateFeatureGroupRequestObject",
       "description": "Snippet for CreateFeatureGroup",
