@@ -79,6 +79,10 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
     static readonly grpc::Marshaller<global::Google.Cloud.AIPlatform.V1Beta1.FeatureViewDirectWriteRequest> __Marshaller_google_cloud_aiplatform_v1beta1_FeatureViewDirectWriteRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.AIPlatform.V1Beta1.FeatureViewDirectWriteRequest.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.AIPlatform.V1Beta1.FeatureViewDirectWriteResponse> __Marshaller_google_cloud_aiplatform_v1beta1_FeatureViewDirectWriteResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.AIPlatform.V1Beta1.FeatureViewDirectWriteResponse.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.AIPlatform.V1Beta1.GenerateFetchAccessTokenRequest> __Marshaller_google_cloud_aiplatform_v1beta1_GenerateFetchAccessTokenRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.AIPlatform.V1Beta1.GenerateFetchAccessTokenRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.AIPlatform.V1Beta1.GenerateFetchAccessTokenResponse> __Marshaller_google_cloud_aiplatform_v1beta1_GenerateFetchAccessTokenResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.AIPlatform.V1Beta1.GenerateFetchAccessTokenResponse.Parser));
 
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.AIPlatform.V1Beta1.FetchFeatureValuesRequest, global::Google.Cloud.AIPlatform.V1Beta1.FetchFeatureValuesResponse> __Method_FetchFeatureValues = new grpc::Method<global::Google.Cloud.AIPlatform.V1Beta1.FetchFeatureValuesRequest, global::Google.Cloud.AIPlatform.V1Beta1.FetchFeatureValuesResponse>(
@@ -111,6 +115,14 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
         "FeatureViewDirectWrite",
         __Marshaller_google_cloud_aiplatform_v1beta1_FeatureViewDirectWriteRequest,
         __Marshaller_google_cloud_aiplatform_v1beta1_FeatureViewDirectWriteResponse);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.AIPlatform.V1Beta1.GenerateFetchAccessTokenRequest, global::Google.Cloud.AIPlatform.V1Beta1.GenerateFetchAccessTokenResponse> __Method_GenerateFetchAccessToken = new grpc::Method<global::Google.Cloud.AIPlatform.V1Beta1.GenerateFetchAccessTokenRequest, global::Google.Cloud.AIPlatform.V1Beta1.GenerateFetchAccessTokenResponse>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "GenerateFetchAccessToken",
+        __Marshaller_google_cloud_aiplatform_v1beta1_GenerateFetchAccessTokenRequest,
+        __Marshaller_google_cloud_aiplatform_v1beta1_GenerateFetchAccessTokenResponse);
 
     /// <summary>Service descriptor</summary>
     public static global::Google.Protobuf.Reflection.ServiceDescriptor Descriptor
@@ -174,6 +186,19 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
       /// <returns>A task indicating completion of the handler.</returns>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task FeatureViewDirectWrite(grpc::IAsyncStreamReader<global::Google.Cloud.AIPlatform.V1Beta1.FeatureViewDirectWriteRequest> requestStream, grpc::IServerStreamWriter<global::Google.Cloud.AIPlatform.V1Beta1.FeatureViewDirectWriteResponse> responseStream, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// RPC to generate an access token for the given feature view. FeatureViews
+      /// under the same FeatureOnlineStore share the same access token.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.AIPlatform.V1Beta1.GenerateFetchAccessTokenResponse> GenerateFetchAccessToken(global::Google.Cloud.AIPlatform.V1Beta1.GenerateFetchAccessTokenRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
       }
@@ -363,6 +388,58 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
       {
         return CallInvoker.AsyncDuplexStreamingCall(__Method_FeatureViewDirectWrite, null, options);
       }
+      /// <summary>
+      /// RPC to generate an access token for the given feature view. FeatureViews
+      /// under the same FeatureOnlineStore share the same access token.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.AIPlatform.V1Beta1.GenerateFetchAccessTokenResponse GenerateFetchAccessToken(global::Google.Cloud.AIPlatform.V1Beta1.GenerateFetchAccessTokenRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return GenerateFetchAccessToken(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// RPC to generate an access token for the given feature view. FeatureViews
+      /// under the same FeatureOnlineStore share the same access token.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.AIPlatform.V1Beta1.GenerateFetchAccessTokenResponse GenerateFetchAccessToken(global::Google.Cloud.AIPlatform.V1Beta1.GenerateFetchAccessTokenRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_GenerateFetchAccessToken, null, options, request);
+      }
+      /// <summary>
+      /// RPC to generate an access token for the given feature view. FeatureViews
+      /// under the same FeatureOnlineStore share the same access token.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.AIPlatform.V1Beta1.GenerateFetchAccessTokenResponse> GenerateFetchAccessTokenAsync(global::Google.Cloud.AIPlatform.V1Beta1.GenerateFetchAccessTokenRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return GenerateFetchAccessTokenAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// RPC to generate an access token for the given feature view. FeatureViews
+      /// under the same FeatureOnlineStore share the same access token.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.AIPlatform.V1Beta1.GenerateFetchAccessTokenResponse> GenerateFetchAccessTokenAsync(global::Google.Cloud.AIPlatform.V1Beta1.GenerateFetchAccessTokenRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_GenerateFetchAccessToken, null, options, request);
+      }
       /// <summary>Creates a new instance of client from given <c>ClientBaseConfiguration</c>.</summary>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       protected override FeatureOnlineStoreServiceClient NewInstance(ClientBaseConfiguration configuration)
@@ -380,7 +457,8 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
           .AddMethod(__Method_FetchFeatureValues, serviceImpl.FetchFeatureValues)
           .AddMethod(__Method_StreamingFetchFeatureValues, serviceImpl.StreamingFetchFeatureValues)
           .AddMethod(__Method_SearchNearestEntities, serviceImpl.SearchNearestEntities)
-          .AddMethod(__Method_FeatureViewDirectWrite, serviceImpl.FeatureViewDirectWrite).Build();
+          .AddMethod(__Method_FeatureViewDirectWrite, serviceImpl.FeatureViewDirectWrite)
+          .AddMethod(__Method_GenerateFetchAccessToken, serviceImpl.GenerateFetchAccessToken).Build();
     }
 
     /// <summary>Register service method with a service binder with or without implementation. Useful when customizing the service binding logic.
@@ -394,6 +472,7 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
       serviceBinder.AddMethod(__Method_StreamingFetchFeatureValues, serviceImpl == null ? null : new grpc::DuplexStreamingServerMethod<global::Google.Cloud.AIPlatform.V1Beta1.StreamingFetchFeatureValuesRequest, global::Google.Cloud.AIPlatform.V1Beta1.StreamingFetchFeatureValuesResponse>(serviceImpl.StreamingFetchFeatureValues));
       serviceBinder.AddMethod(__Method_SearchNearestEntities, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.AIPlatform.V1Beta1.SearchNearestEntitiesRequest, global::Google.Cloud.AIPlatform.V1Beta1.SearchNearestEntitiesResponse>(serviceImpl.SearchNearestEntities));
       serviceBinder.AddMethod(__Method_FeatureViewDirectWrite, serviceImpl == null ? null : new grpc::DuplexStreamingServerMethod<global::Google.Cloud.AIPlatform.V1Beta1.FeatureViewDirectWriteRequest, global::Google.Cloud.AIPlatform.V1Beta1.FeatureViewDirectWriteResponse>(serviceImpl.FeatureViewDirectWrite));
+      serviceBinder.AddMethod(__Method_GenerateFetchAccessToken, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.AIPlatform.V1Beta1.GenerateFetchAccessTokenRequest, global::Google.Cloud.AIPlatform.V1Beta1.GenerateFetchAccessTokenResponse>(serviceImpl.GenerateFetchAccessToken));
     }
 
   }

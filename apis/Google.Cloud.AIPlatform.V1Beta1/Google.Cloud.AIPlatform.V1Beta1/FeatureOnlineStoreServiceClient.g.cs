@@ -54,6 +54,7 @@ namespace Google.Cloud.AIPlatform.V1Beta1
             SearchNearestEntitiesSettings = existing.SearchNearestEntitiesSettings;
             FeatureViewDirectWriteSettings = existing.FeatureViewDirectWriteSettings;
             FeatureViewDirectWriteStreamingSettings = existing.FeatureViewDirectWriteStreamingSettings;
+            GenerateFetchAccessTokenSettings = existing.GenerateFetchAccessTokenSettings;
             LocationsSettings = existing.LocationsSettings;
             IAMPolicySettings = existing.IAMPolicySettings;
             OnCopy(existing);
@@ -128,6 +129,19 @@ namespace Google.Cloud.AIPlatform.V1Beta1
         /// </summary>
         /// <remarks>The default local send queue size is 100.</remarks>
         public gaxgrpc::BidirectionalStreamingSettings FeatureViewDirectWriteStreamingSettings { get; set; } = new gaxgrpc::BidirectionalStreamingSettings(100);
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>FeatureOnlineStoreServiceClient.GenerateFetchAccessToken</c> and
+        /// <c>FeatureOnlineStoreServiceClient.GenerateFetchAccessTokenAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>No timeout is applied.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings GenerateFetchAccessTokenSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
 
         /// <summary>
         /// The settings to use for the <see cref="gcl::LocationsClient"/> associated with the client.
@@ -492,6 +506,36 @@ namespace Google.Cloud.AIPlatform.V1Beta1
         /// <returns>The client-server stream.</returns>
         public virtual FeatureViewDirectWriteStream FeatureViewDirectWrite(gaxgrpc::CallSettings callSettings = null, gaxgrpc::BidirectionalStreamingSettings streamingSettings = null) =>
             throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// RPC to generate an access token for the given feature view. FeatureViews
+        /// under the same FeatureOnlineStore share the same access token.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual GenerateFetchAccessTokenResponse GenerateFetchAccessToken(GenerateFetchAccessTokenRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// RPC to generate an access token for the given feature view. FeatureViews
+        /// under the same FeatureOnlineStore share the same access token.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<GenerateFetchAccessTokenResponse> GenerateFetchAccessTokenAsync(GenerateFetchAccessTokenRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// RPC to generate an access token for the given feature view. FeatureViews
+        /// under the same FeatureOnlineStore share the same access token.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<GenerateFetchAccessTokenResponse> GenerateFetchAccessTokenAsync(GenerateFetchAccessTokenRequest request, st::CancellationToken cancellationToken) =>
+            GenerateFetchAccessTokenAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
     }
 
     /// <summary>FeatureOnlineStoreService client wrapper implementation, for convenient use.</summary>
@@ -507,6 +551,8 @@ namespace Google.Cloud.AIPlatform.V1Beta1
         private readonly gaxgrpc::ApiCall<SearchNearestEntitiesRequest, SearchNearestEntitiesResponse> _callSearchNearestEntities;
 
         private readonly gaxgrpc::ApiBidirectionalStreamingCall<FeatureViewDirectWriteRequest, FeatureViewDirectWriteResponse> _callFeatureViewDirectWrite;
+
+        private readonly gaxgrpc::ApiCall<GenerateFetchAccessTokenRequest, GenerateFetchAccessTokenResponse> _callGenerateFetchAccessToken;
 
         /// <summary>
         /// Constructs a client wrapper for the FeatureOnlineStoreService service, with the specified gRPC client and
@@ -540,6 +586,9 @@ namespace Google.Cloud.AIPlatform.V1Beta1
             _callFeatureViewDirectWrite = clientHelper.BuildApiCall<FeatureViewDirectWriteRequest, FeatureViewDirectWriteResponse>("FeatureViewDirectWrite", grpcClient.FeatureViewDirectWrite, effectiveSettings.FeatureViewDirectWriteSettings, effectiveSettings.FeatureViewDirectWriteStreamingSettings);
             Modify_ApiCall(ref _callFeatureViewDirectWrite);
             Modify_FeatureViewDirectWriteApiCall(ref _callFeatureViewDirectWrite);
+            _callGenerateFetchAccessToken = clientHelper.BuildApiCall<GenerateFetchAccessTokenRequest, GenerateFetchAccessTokenResponse>("GenerateFetchAccessToken", grpcClient.GenerateFetchAccessTokenAsync, grpcClient.GenerateFetchAccessToken, effectiveSettings.GenerateFetchAccessTokenSettings).WithGoogleRequestParam("feature_view", request => request.FeatureView);
+            Modify_ApiCall(ref _callGenerateFetchAccessToken);
+            Modify_GenerateFetchAccessTokenApiCall(ref _callGenerateFetchAccessToken);
             OnConstruction(grpcClient, effectiveSettings, clientHelper);
         }
 
@@ -554,6 +603,8 @@ namespace Google.Cloud.AIPlatform.V1Beta1
         partial void Modify_SearchNearestEntitiesApiCall(ref gaxgrpc::ApiCall<SearchNearestEntitiesRequest, SearchNearestEntitiesResponse> call);
 
         partial void Modify_FeatureViewDirectWriteApiCall(ref gaxgrpc::ApiBidirectionalStreamingCall<FeatureViewDirectWriteRequest, FeatureViewDirectWriteResponse> call);
+
+        partial void Modify_GenerateFetchAccessTokenApiCall(ref gaxgrpc::ApiCall<GenerateFetchAccessTokenRequest, GenerateFetchAccessTokenResponse> call);
 
         partial void OnConstruction(FeatureOnlineStoreService.FeatureOnlineStoreServiceClient grpcClient, FeatureOnlineStoreServiceSettings effectiveSettings, gaxgrpc::ClientHelper clientHelper);
 
@@ -577,6 +628,8 @@ namespace Google.Cloud.AIPlatform.V1Beta1
         partial void Modify_FeatureViewDirectWriteRequestCallSettings(ref gaxgrpc::CallSettings settings);
 
         partial void Modify_FeatureViewDirectWriteRequestRequest(ref FeatureViewDirectWriteRequest request);
+
+        partial void Modify_GenerateFetchAccessTokenRequest(ref GenerateFetchAccessTokenRequest request, ref gaxgrpc::CallSettings settings);
 
         /// <summary>
         /// Fetch feature values under a FeatureView.
@@ -752,6 +805,32 @@ namespace Google.Cloud.AIPlatform.V1Beta1
             grpccore::AsyncDuplexStreamingCall<FeatureViewDirectWriteRequest, FeatureViewDirectWriteResponse> call = _callFeatureViewDirectWrite.Call(callSettings);
             gaxgrpc::BufferedClientStreamWriter<FeatureViewDirectWriteRequest> writeBuffer = new gaxgrpc::BufferedClientStreamWriter<FeatureViewDirectWriteRequest>(call.RequestStream, effectiveStreamingSettings.BufferedClientWriterCapacity);
             return new FeatureViewDirectWriteStreamImpl(this, call, writeBuffer);
+        }
+
+        /// <summary>
+        /// RPC to generate an access token for the given feature view. FeatureViews
+        /// under the same FeatureOnlineStore share the same access token.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override GenerateFetchAccessTokenResponse GenerateFetchAccessToken(GenerateFetchAccessTokenRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_GenerateFetchAccessTokenRequest(ref request, ref callSettings);
+            return _callGenerateFetchAccessToken.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        /// RPC to generate an access token for the given feature view. FeatureViews
+        /// under the same FeatureOnlineStore share the same access token.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override stt::Task<GenerateFetchAccessTokenResponse> GenerateFetchAccessTokenAsync(GenerateFetchAccessTokenRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_GenerateFetchAccessTokenRequest(ref request, ref callSettings);
+            return _callGenerateFetchAccessToken.Async(request, callSettings);
         }
     }
 
