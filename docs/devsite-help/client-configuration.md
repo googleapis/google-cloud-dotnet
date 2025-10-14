@@ -4,12 +4,13 @@ Every client has a corresponding builder class (e.g. `ExampleClientBuilder`) wit
 methods.
 
 The builder allows you to customize various aspects of the client, most notably credentials. For example,
-if you load JSON containing the relevant credentials to use, you might construct a client with:
+if you load JSON containing the relevant service account credentials to use, you might construct a client with:
 
 ```csharp
+var credential = CredentialFactory.FromJson<ServiceAccountCredential>(json).ToGoogleCredential();
 var client = new ExampleClientBuilder
 {
-    JsonCredentials = json
+    GoogleCredential = credential
 }.Build();
 ```
 
@@ -33,11 +34,9 @@ The following properties are used for specifying and configuring which credentia
 uses to authenticate and authorize requests. When no properties are set,
 [application default credentials](https://cloud.google.com/docs/authentication/production#automatically) are used.
 
-### CredentialsPath, JsonCredentials or GoogleCredential
-
-These three (mutually-exclusive) properties represent different ways of providing a `GoogleCredential`. Specifying
-`CredentialsPath` or `JsonCredentials` is equivalent to specifying the result of `GoogleCredential.FromFile` or
-`GoogleCredential.FromJson` for the `GoogleCredential` property.
+### GoogleCredential
+This property is a `GoogleCredential` used for authorizing calls. This credential may be modified by
+`Scopes`, `UseJwtAccessWithScopes` and `QuotaProject`.
 
 ### Scopes, UseJwtAccessWithScopes and QuotaProject
 
