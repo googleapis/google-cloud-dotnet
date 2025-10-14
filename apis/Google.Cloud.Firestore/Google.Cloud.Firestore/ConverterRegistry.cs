@@ -42,7 +42,7 @@ namespace Google.Cloud.Firestore
         /// Adds the given converter to the registry.
         /// </summary>
         /// <typeparam name="T">The type that <paramref name="converter"/> converts to/from.</typeparam>
-        /// <param name="converter">The converter to add.</param>
+        /// <param name="converter">The converter to add. Must not be null.</param>
         /// <exception cref="ArgumentException">There is already a converter in the registry for the given type.</exception>
         public void Add<T>(IFirestoreConverter<T> converter)
         {
@@ -52,10 +52,11 @@ namespace Google.Cloud.Firestore
         }
 
         /// <summary>
-        /// 
+        /// Adds the given type discriminator to the registry.
         /// </summary>
-        /// <typeparam name="T"></typeparam>
-        /// <param name="discriminator"></param>
+        /// <typeparam name="T">The type for which <paramref name="discriminator"/> can determine a concrete type.</typeparam>
+        /// <param name="discriminator">The type discriminator to add. Must not be null.</param>
+        /// <exception cref="ArgumentException">There is already a type discriminator in the registry for the given type.</exception>
         public void Add<T>(IFirestoreTypeDiscriminator<T> discriminator)
         {
             GaxPreconditions.CheckNotNull(discriminator, nameof(discriminator));
