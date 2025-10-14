@@ -417,7 +417,9 @@ namespace Google.Cloud.Firestore.Snippets
         public abstract class Shape
         {
             // We happen to use the short name of the type in all
-            // implementations, but 
+            // implementations, but this is just a matter of convenience.
+            // The type discriminator is not restricted in what fields
+            // of the value are used, or their types, or their values.
             [FirestoreProperty]
             public abstract string Type { get; }
         }
