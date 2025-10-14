@@ -31,7 +31,23 @@ namespace Google.Cloud.VertexAI.Extensions.Tests;
 public class AsIChatClientTest
 {
     [Fact]
-    public void InvalidArguments_Throws()
+    public void AsIChatClient_ValidArguments_CreatesIChatClientSuccessfully()
+    {
+        PredictionServiceClient client = CreateClient();
+        IChatClient chatClient = client.AsIChatClient();
+        Assert.NotNull(chatClient);
+        Assert.Same(client, chatClient.GetService<PredictionServiceClient>());
+    }
+
+    [Fact]
+    public void BuildIChatClient_ValidArguments_CreatesIChatClientSuccessfully()
+    {
+        IChatClient chatClient = new PredictionServiceClientBuilder() { ApiKey = "fake-api-key" }.BuildIChatClient();
+        Assert.NotNull(chatClient.GetService<PredictionServiceClient>());
+    }
+
+    [Fact]
+    public void AsIChatClient_InvalidArguments_Throws()
     {
         Assert.Throws<ArgumentNullException>("client", () => VertexAIExtensions.AsIChatClient(null!));
     }

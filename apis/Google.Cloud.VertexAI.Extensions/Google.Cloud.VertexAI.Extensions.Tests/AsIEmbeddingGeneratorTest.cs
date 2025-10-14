@@ -26,7 +26,23 @@ namespace Google.Cloud.VertexAI.Extensions.Tests;
 public class AsIEmbeddingGeneratorTest
 {
     [Fact]
-    public void InvalidArguments_Throws()
+    public void AsIEmbeddingGenerator_ValidArguments_CreatesIEmbeddingGeneratorSuccessfully()
+    {
+        PredictionServiceClient client = CreateClient();
+        IEmbeddingGenerator generator = client.AsIEmbeddingGenerator();
+        Assert.NotNull(generator);
+        Assert.Same(client, generator.GetService<PredictionServiceClient>());
+    }
+
+    [Fact]
+    public void BuildIEmbeddingGenerator_ValidArguments_CreatesIEmbeddingGeneratorSuccessfully()
+    {
+        IEmbeddingGenerator generator = new PredictionServiceClientBuilder() { ApiKey = "fake-api-key" }.BuildIEmbeddingGenerator();
+        Assert.NotNull(generator.GetService<PredictionServiceClient>());
+    }
+
+    [Fact]
+    public void AsIEmbeddingGenerator_InvalidArguments_Throws()
     {
         Assert.Throws<ArgumentNullException>("client", () => VertexAIExtensions.AsIEmbeddingGenerator(null!));
     }
