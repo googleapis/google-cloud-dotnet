@@ -1,5 +1,11 @@
 # Version history
 
+## Version 1.5.0, released 2025-10-14
+
+### Bug fixes
+
+- Upgrade gRPC service registration func
+
 ## Version 1.4.0, released 2025-05-15
 
 ### New features

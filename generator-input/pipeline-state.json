@@ -3037,12 +3037,12 @@
         },
         {
             "id": "Google.Cloud.Storage.Control.V2",
-            "currentVersion": "1.4.0",
+            "currentVersion": "1.5.0",
             "generationAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
             "releaseAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
-            "releaseTimestamp": "2025-05-15T20:28:49.609552Z",
+            "releaseTimestamp": "2025-10-14T07:35:48.600219637Z",
             "lastGeneratedCommit": "9da837b53027792b642ef5240527217f2863c505",
-            "lastReleasedCommit": "e6c5fab81918fda9facc0ee0b1a470e94ba05f18",
+            "lastReleasedCommit": "9da837b53027792b642ef5240527217f2863c505",
             "apiPaths": [
                 "google/storage/control/v2"
             ],
