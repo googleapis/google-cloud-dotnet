@@ -17,10 +17,10 @@ using Google.Protobuf.WellKnownTypes;
 using Grpc.Core;
 using Microsoft.Extensions.AI;
 using System;
-using System.Drawing;
 using System.Linq;
 using System.Threading.Tasks;
 using Xunit;
+using Value = Google.Protobuf.WellKnownTypes.Value;
 
 namespace Google.Cloud.VertexAI.Extensions.Tests;
 
@@ -63,7 +63,7 @@ public class AsIImageGeneratorTest
         Assert.NotNull(metadata);
         Assert.Equal("gcp.vertex_ai", metadata.ProviderName);
         Assert.Equal(new("https://aiplatform.googleapis.com:443"), metadata.ProviderUri);
-        Assert.Equal(defaultModelId, metadata.DefaultModelId);
+        Assert.Equal(defaultModelId?.Substring(defaultModelId.LastIndexOf('/') + 1), metadata.DefaultModelId);
     }
 
     [Fact]
@@ -318,7 +318,7 @@ public class AsIImageGeneratorTest
         ImageGenerationRequest request = new() { Prompt = "Image with specific size" };
         ImageGenerationOptions options = new() 
         { 
-            ImageSize = new Size(1024, 768)
+            ImageSize = new(1024, 768)
         };
 
         ImageGenerationResponse result = await imageGenerator.GenerateAsync(request, options);
@@ -355,7 +355,7 @@ public class AsIImageGeneratorTest
         ImageGenerationRequest request = new() { Prompt = "Square image" };
         ImageGenerationOptions options = new() 
         { 
-            ImageSize = new Size(512, 512)
+            ImageSize = new(512, 512)
         };
 
         ImageGenerationResponse result = await imageGenerator.GenerateAsync(request, options);
@@ -390,7 +390,7 @@ public class AsIImageGeneratorTest
         ImageGenerationRequest request = new() { Prompt = "Image with invalid size" };
         ImageGenerationOptions options = new() 
         { 
-            ImageSize = new Size(0, 0)
+            ImageSize = new(0, 0)
         };
 
         ImageGenerationResponse result = await imageGenerator.GenerateAsync(request, options);
@@ -427,11 +427,11 @@ public class AsIImageGeneratorTest
                 PredictRequest predictRequest = new()
                 {
                     Endpoint = "custom-endpoint",
-                    Parameters = new Protobuf.WellKnownTypes.Value
+                    Parameters = new()
                     {
-                        StructValue = new Struct
+                        StructValue = new()
                         {
-                            Fields = { { "customParameter", Protobuf.WellKnownTypes.Value.ForString("customValue") } }
+                            Fields = { { "customParameter", Value.ForString("customValue") } }
                         }
                     }
                 };
@@ -487,7 +487,7 @@ public class AsIImageGeneratorTest
             ModelId = "projects/test/locations/us-central1/publishers/google/models/imagen-3.0-generate-001",
             Count = 2,
             MediaType = "image/webp",
-            ImageSize = new Size(1920, 1080)
+            ImageSize = new(1920, 1080)
         };
 
         ImageGenerationResponse result = await imageGenerator.GenerateAsync(request, options);
@@ -563,11 +563,11 @@ public class AsIImageGeneratorTest
                 PredictResponse response = new();
                 
                 // Add a malformed prediction (missing bytesBase64Encoded field)
-                response.Predictions.Add(new Protobuf.WellKnownTypes.Value
+                response.Predictions.Add(new Value
                 {
-                    StructValue = new Struct
+                    StructValue = new()
                     {
-                        Fields = { { "invalid", Protobuf.WellKnownTypes.Value.ForString("data") } }
+                        Fields = { { "invalid", Value.ForString("data") } }
                     }
                 });
 
@@ -597,13 +597,13 @@ public class AsIImageGeneratorTest
                 PredictResponse response = new();
                 
                 // Add prediction without explicit mimeType (should default to image/png)
-                response.Predictions.Add(new Protobuf.WellKnownTypes.Value
+                response.Predictions.Add(new Value
                 {
-                    StructValue = new Struct
+                    StructValue = new()
                     {
                         Fields = 
                         { 
-                            { "bytesBase64Encoded", Protobuf.WellKnownTypes.Value.ForString(Convert.ToBase64String(imageData)) }
+                            { "bytesBase64Encoded", Value.ForString(Convert.ToBase64String(imageData)) }
                         }
                     }
                 });
@@ -730,15 +730,15 @@ public class AsIImageGeneratorTest
         await Assert.ThrowsAsync<ArgumentNullException>("request", () => imageGenerator.GenerateAsync(null!));
     }
 
-    private static Protobuf.WellKnownTypes.Value CreateImagePrediction(byte[] imageData, string mimeType) =>
+    private static Value CreateImagePrediction(byte[] imageData, string mimeType) =>
         new()
         {
-            StructValue = new Struct
+            StructValue = new()
             {
                 Fields =
                 {
-                    { "bytesBase64Encoded", Protobuf.WellKnownTypes.Value.ForString(Convert.ToBase64String(imageData)) },
-                    { "mimeType", Protobuf.WellKnownTypes.Value.ForString(mimeType) }
+                    { "bytesBase64Encoded", Value.ForString(Convert.ToBase64String(imageData)) },
+                    { "mimeType", Value.ForString(mimeType) }
                 }
             }
         };

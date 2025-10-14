@@ -90,7 +90,7 @@ public static class VertexAIExtensions
     /// <returns>An <see cref="IEmbeddingGenerator{String, Embedding}"/> that wraps the built client.</returns>
     /// <exception cref="ArgumentNullException"><paramref name="builder"/> is <see langword="null"/>.</exception>
     public static IEmbeddingGenerator<string, Embedding<float>> BuildIEmbeddingGenerator(
-        this PredictionServiceClientBuilder builder, IServiceProvider? provider = null, string ? defaultModelId = null)
+        this PredictionServiceClientBuilder builder, IServiceProvider? provider = null, string? defaultModelId = null)
     {
         GaxPreconditions.CheckNotNull(builder, nameof(builder));
 
@@ -127,7 +127,7 @@ public static class VertexAIExtensions
     /// <returns>An <see cref="IImageGenerator"/> that wraps the built client.</returns>
     /// <exception cref="ArgumentNullException"><paramref name="builder"/> is <see langword="null"/>.</exception>
     public static IImageGenerator BuildIImageGenerator(
-        this PredictionServiceClientBuilder builder, IServiceProvider? provider = null, string ? defaultModelId = null)
+        this PredictionServiceClientBuilder builder, IServiceProvider? provider = null, string? defaultModelId = null)
     {
         GaxPreconditions.CheckNotNull(builder, nameof(builder));
 
@@ -139,4 +139,10 @@ public static class VertexAIExtensions
 
     /// <summary>Gets a <see cref="Uri"/> to use as the metadata provider url.</summary>
     internal static Uri ProviderUrl { get; } = new($"{Uri.UriSchemeHttps}{Uri.SchemeDelimiter}{PredictionServiceClient.DefaultEndpoint}");
+
+    /// <summary>Extracts just the model ID from <paramref name="resourceName"/>, if possible.</summary>
+    internal static string? ExtractModelIdFromResourceName(string? resourceName) =>
+        resourceName is null ? null :
+        EndpointName.TryParse(resourceName, out EndpointName? endpointName) && !string.IsNullOrWhiteSpace(endpointName.ModelId) ? endpointName.ModelId :
+        resourceName;
 }

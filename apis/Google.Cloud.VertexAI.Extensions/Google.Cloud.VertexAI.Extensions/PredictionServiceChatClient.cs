@@ -25,6 +25,8 @@ using System.Runtime.CompilerServices;
 using System.Text.Json;
 using System.Threading;
 using System.Threading.Tasks;
+using Value = Google.Protobuf.WellKnownTypes.Value;
+using Struct = Google.Protobuf.WellKnownTypes.Struct;
 
 namespace Google.Cloud.VertexAI.Extensions;
 
@@ -121,7 +123,10 @@ internal sealed class PredictionServiceChatClient(PredictionServiceClient client
             // as there's no requirement that the same instance be returned each time, and creation is idempotent.
             if (serviceType == typeof(ChatClientMetadata))
             {
-                return _metadata ??= new(VertexAIExtensions.ProviderName, VertexAIExtensions.ProviderUrl, _defaultModelId);
+                return _metadata ??= new(
+                    VertexAIExtensions.ProviderName,
+                    VertexAIExtensions.ProviderUrl,
+                    VertexAIExtensions.ExtractModelIdFromResourceName(_defaultModelId));
             }
 
             // Allow a consumer to "break glass" and access the underlying client if they need it.
@@ -226,7 +231,7 @@ internal sealed class PredictionServiceChatClient(PredictionServiceClient client
                             {
                                 Name = af.Name,
                                 Description = af.Description ?? "",
-                                ParametersJsonSchema = Protobuf.WellKnownTypes.Value.Parser.ParseJson(af.JsonSchema.ToString()),
+                                ParametersJsonSchema = Value.Parser.ParseJson(af.JsonSchema.ToString()),
                             });
                             break;
 
@@ -281,7 +286,7 @@ internal sealed class PredictionServiceChatClient(PredictionServiceClient client
                 request.GenerationConfig.ResponseMimeType = "application/json";
                 if (responseFormat.Schema is { } schema)
                 {
-                    request.GenerationConfig.ResponseJsonSchema = Protobuf.WellKnownTypes.Value.Parser.ParseJson(schema.ToString());
+                    request.GenerationConfig.ResponseJsonSchema = Value.Parser.ParseJson(schema.ToString());
                 }
             }
         }
@@ -370,8 +375,8 @@ internal sealed class PredictionServiceChatClient(PredictionServiceClient client
                         {
                             Name = functionCallContent.Name,
                             Args = functionCallContent.Arguments is not null ?
-                                Protobuf.WellKnownTypes.Struct.Parser.ParseJson(JsonSerializer.Serialize(functionCallContent.Arguments)) :
-                                new Protobuf.WellKnownTypes.Struct()
+                                Struct.Parser.ParseJson(JsonSerializer.Serialize(functionCallContent.Arguments)) :
+                                new()
                         }
                     });
                     break;
@@ -383,8 +388,8 @@ internal sealed class PredictionServiceChatClient(PredictionServiceClient client
                         {
                             Name = functionResultContent.CallId,
                             Response = functionResultContent.Result is not null ?
-                            Protobuf.WellKnownTypes.Struct.Parser.ParseJson(JsonSerializer.Serialize(new { result = functionResultContent.Result })) :
-                            new Protobuf.WellKnownTypes.Struct()
+                            Struct.Parser.ParseJson(JsonSerializer.Serialize(new { result = functionResultContent.Result })) :
+                            new()
                         }
                     });
                     break;
@@ -412,36 +417,24 @@ internal sealed class PredictionServiceChatClient(PredictionServiceClient client
     {
         foreach (var part in parts)
         {
-            AIContent? content = null;
+            AIContent? content = part.DataCase switch
+            {
+                Part.DataOneofCase.Text => new TextContent(part.Text),
 
-            if (!string.IsNullOrEmpty(part.Text))
-            {
-                content = new TextContent(part.Text);
-            }
-            else if (part.InlineData is not null)
-            {
-                content = new DataContent(part.InlineData.Data.ToByteArray(), part.InlineData.MimeType);
-            }
-            else if (part.FileData is not null)
-            {
-                content = new UriContent(new Uri(part.FileData.FileUri), part.FileData.MimeType);
-            }
-            else if (part.FunctionCall is not null)
-            {
-                content = new FunctionCallContent(part.FunctionCall.Name, part.FunctionCall.Name, part.FunctionCall.Args is not null ?
-                    JsonSerializer.Deserialize<Dictionary<string, object?>>(part.FunctionCall.Args.ToString()) :
-                    null);
-            }
-            else if (part.FunctionResponse is not null)
-            {
-                content = new FunctionResultContent(part.FunctionResponse.Name, part.FunctionResponse.Response is not null ?
-                    JsonSerializer.Deserialize<object>(part.FunctionResponse.Response.ToString()) :
-                    null);
-            }
-            else if (part.Thought)
-            {
-                content = new TextReasoningContent(null) { ProtectedData = part.ThoughtSignature.ToBase64() };
-            }
+                Part.DataOneofCase.InlineData => new DataContent(part.InlineData!.Data.ToByteArray(), part.InlineData.MimeType),
+
+                Part.DataOneofCase.FileData => new UriContent(new Uri(part.FileData!.FileUri), part.FileData.MimeType),
+
+                Part.DataOneofCase.FunctionCall => new FunctionCallContent(part.FunctionCall!.Name, part.FunctionCall.Name,
+                    part.FunctionCall.Args is not null ? JsonSerializer.Deserialize<Dictionary<string, object?>>(part.FunctionCall.Args.ToString()) : null),
+
+                Part.DataOneofCase.FunctionResponse => new FunctionResultContent(part.FunctionResponse!.Name,
+                    part.FunctionResponse.Response is not null ? JsonSerializer.Deserialize<object>(part.FunctionResponse.Response.ToString()) : null),
+
+                _ when part.Thought => new TextReasoningContent(null) { ProtectedData = part.ThoughtSignature.ToBase64() },
+
+                _ => null,
+            };
 
             if (content is not null)
             {

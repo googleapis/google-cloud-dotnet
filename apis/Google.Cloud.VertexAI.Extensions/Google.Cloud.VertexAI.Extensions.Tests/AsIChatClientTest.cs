@@ -14,6 +14,7 @@
 
 using Google.Cloud.AIPlatform.V1;
 using Google.Protobuf;
+using Google.Protobuf.WellKnownTypes;
 using Grpc.Core;
 using Microsoft.Extensions.AI;
 using System;
@@ -23,6 +24,7 @@ using System.Text.RegularExpressions;
 using System.Threading;
 using System.Threading.Tasks;
 using Xunit;
+using Struct = Google.Protobuf.WellKnownTypes.Struct;
 
 namespace Google.Cloud.VertexAI.Extensions.Tests;
 
@@ -65,7 +67,7 @@ public class AsIChatClientTest
         Assert.NotNull(metadata);
         Assert.Equal("gcp.vertex_ai", metadata.ProviderName);
         Assert.Equal(new("https://aiplatform.googleapis.com:443"), metadata.ProviderUri);
-        Assert.Equal(defaultModelId, metadata.DefaultModelId);
+        Assert.Equal(defaultModelId?.Substring(defaultModelId.LastIndexOf('/') + 1), metadata.DefaultModelId);
     }
 
     [Fact]
@@ -86,17 +88,7 @@ public class AsIChatClientTest
     {
         DelegateCallInvoker invoker = new()
         {
-            OnGenerateContentRequest = request =>
-            {
-                GenerateContentResponse response = new();
-
-                response.Candidates.Add(new Candidate()
-                {
-                    Content = new Content() { Role = "model", Parts = { new Part() { Text = "Hello" } } }
-                });
-
-                return response;
-            }
+            OnGenerateContentRequest = request => CreateResponse(new() { Role = "model", Parts = { new Part() { Text = "Hello" } } }),
         };
 
         IChatClient chatClient = CreateClient(invoker).AsIChatClient("projects/test-project/locations/us-central1/publishers/google/models/mymodel");
@@ -118,13 +110,8 @@ public class AsIChatClientTest
                 Assert.Single(request.Contents[0].Parts);
                 Assert.Equal("What is the weather like?", request.Contents[0].Parts[0].Text);
 
-                GenerateContentResponse response = new();
-                response.Candidates.Add(new Candidate()
-                {
-                    Content = new Content() { Role = "model", Parts = { new Part() { Text = "It's sunny today." } } },
-                    FinishReason = Candidate.Types.FinishReason.Stop
-                });
-
+                GenerateContentResponse response = CreateResponse(new() { Role = "model", Parts = { new Part() { Text = "It's sunny today." } } });
+                response.Candidates[0].FinishReason = Candidate.Types.FinishReason.Stop;
                 return response;
             }
         };
@@ -136,8 +123,7 @@ public class AsIChatClientTest
 
         Assert.NotNull(result);
         Assert.Equal(ChatRole.Assistant, result.Messages[0].Role);
-        Assert.Single(result.Messages[0].Contents);
-        Assert.IsType<TextContent>(result.Messages[0].Contents[0]);
+        Assert.IsType<TextContent>(Assert.Single(result.Messages[0].Contents));
         Assert.Equal("It's sunny today.", ((TextContent) result.Messages[0].Contents[0]).Text);
         Assert.Equal(ChatFinishReason.Stop, result.FinishReason);
     }
@@ -160,20 +146,14 @@ public class AsIChatClientTest
                 Assert.Equal("image/png", request.Contents[0].Parts[1].InlineData.MimeType);
                 Assert.True(request.Contents[0].Parts[1].InlineData.Data.ToByteArray().SequenceEqual(imageData));
 
-                GenerateContentResponse response = new();
-                response.Candidates.Add(new Candidate()
-                {
-                    Content = new Content() { Role = "model", Parts = { new Part() { Text = "I see an image." } } }
-                });
-
-                return response;
+                return CreateResponse(new() { Role = "model", Parts = { new Part() { Text = "I see an image." } } });
             }
         };
 
         IChatClient chatClient = CreateClient(invoker).AsIChatClient("projects/test-project/locations/us-central1/publishers/google/models/mymodel");
         ChatMessage[] messages =
         [
-            new ChatMessage(ChatRole.User,
+            new(ChatRole.User,
             [
                 new TextContent("Describe this image"),
                 new DataContent(imageData, "image/png")
@@ -204,20 +184,14 @@ public class AsIChatClientTest
                 Assert.Equal("https://example.com/image.jpg", request.Contents[0].Parts[1].FileData.FileUri);
                 Assert.Equal("image/jpeg", request.Contents[0].Parts[1].FileData.MimeType);
 
-                GenerateContentResponse response = new();
-                response.Candidates.Add(new Candidate()
-                {
-                    Content = new Content() { Role = "model", Parts = { new Part() { Text = "Image analysis complete." } } }
-                });
-
-                return response;
+                return CreateResponse(new() { Role = "model", Parts = { new Part() { Text = "Image analysis complete." } } });
             }
         };
 
         IChatClient chatClient = CreateClient(invoker).AsIChatClient("projects/test-project/locations/us-central1/publishers/google/models/mymodel");
         ChatMessage[] messages =
         [
-            new ChatMessage(ChatRole.User,
+            new(ChatRole.User,
             [
                 new TextContent("Analyze this image"),
                 new UriContent(imageUri, "image/jpeg")
@@ -235,30 +209,22 @@ public class AsIChatClientTest
     {
         DelegateCallInvoker invoker = new()
         {
-            OnGenerateContentRequest = request =>
-            {
-                GenerateContentResponse response = new();
-                response.Candidates.Add(new Candidate()
+            OnGenerateContentRequest = request => CreateResponse(
+                new()
                 {
-                    Content = new Content()
+                    Role = "model",
+                    Parts =
                     {
-                        Role = "model",
-                        Parts =
+                        new Part()
                         {
-                            new Part()
+                            FileData = new()
                             {
-                                FileData = new FileData()
-                                {
-                                    FileUri = "not a valid uri",
-                                    MimeType = "image/jpeg"
-                                }
+                                FileUri = "not a valid uri",
+                                MimeType = "image/jpeg"
                             }
                         }
                     }
-                });
-
-                return response;
-            }
+                }),
         };
 
         IChatClient chatClient = CreateClient(invoker).AsIChatClient("projects/test-project/locations/us-central1/publishers/google/models/mymodel");
@@ -272,30 +238,22 @@ public class AsIChatClientTest
     {
         DelegateCallInvoker invoker = new()
         {
-            OnGenerateContentRequest = request =>
-            {
-                GenerateContentResponse response = new();
-                response.Candidates.Add(new Candidate()
+            OnGenerateContentRequest = request => CreateResponse(
+                new()
                 {
-                    Content = new Content()
-                    {
-                        Role = "model",
-                        Parts =
+                    Role = "model",
+                    Parts =
                         {
                             new Part()
                             {
-                                FunctionCall = new FunctionCall
+                                FunctionCall = new()
                                 {
                                     Name = "get_weather",
-                                    Args = Protobuf.WellKnownTypes.Struct.Parser.ParseJson("{\"location\": \"San Francisco\"}")
+                                    Args = Struct.Parser.ParseJson("{\"location\": \"San Francisco\"}")
                                 }
                             }
                         }
-                    }
-                });
-
-                return response;
-            }
+                }),
         };
 
         IChatClient chatClient = CreateClient(invoker).AsIChatClient("projects/test-project/locations/us-central1/publishers/google/models/mymodel");
@@ -304,8 +262,7 @@ public class AsIChatClientTest
         ChatResponse result = await chatClient.GetResponseAsync(messages);
 
         Assert.NotNull(result);
-        Assert.Single(result.Messages[0].Contents);
-        Assert.IsType<FunctionCallContent>(result.Messages[0].Contents[0]);
+        Assert.IsType<FunctionCallContent>(Assert.Single(result.Messages[0].Contents));
 
         FunctionCallContent functionCall = (FunctionCallContent) result.Messages[0].Contents[0];
         Assert.Equal("get_weather", functionCall.Name);
@@ -327,20 +284,14 @@ public class AsIChatClientTest
                 Assert.NotNull(request.Contents[0].Parts[0].FunctionResponse);
                 Assert.Equal("call_123", request.Contents[0].Parts[0].FunctionResponse.Name);
 
-                GenerateContentResponse response = new();
-                response.Candidates.Add(new Candidate()
-                {
-                    Content = new Content() { Role = "model", Parts = { new Part() { Text = "Based on the weather data, it's sunny." } } }
-                });
-
-                return response;
+                return CreateResponse(new() { Role = "model", Parts = { new Part() { Text = "Based on the weather data, it's sunny." } } });
             }
         };
 
         IChatClient chatClient = CreateClient(invoker).AsIChatClient("projects/test-project/locations/us-central1/publishers/google/models/mymodel");
         ChatMessage[] messages =
         [
-            new ChatMessage(ChatRole.User,
+            new(ChatRole.User,
             [
                 new FunctionResultContent("call_123", new { temperature = 72, condition = "sunny" })
             ])
@@ -359,15 +310,11 @@ public class AsIChatClientTest
 
         DelegateCallInvoker invoker = new()
         {
-            OnGenerateContentRequest = request =>
-            {
-                GenerateContentResponse response = new();
-                response.Candidates.Add(new Candidate()
+            OnGenerateContentRequest = request => CreateResponse(
+                new()
                 {
-                    Content = new Content()
-                    {
-                        Role = "model",
-                        Parts =
+                    Role = "model",
+                    Parts =
                         {
                             new Part()
                             {
@@ -375,11 +322,7 @@ public class AsIChatClientTest
                                 ThoughtSignature = ByteString.FromBase64(reasoningData)
                             }
                         }
-                    }
-                });
-
-                return response;
-            }
+                }),
         };
 
         IChatClient chatClient = CreateClient(invoker).AsIChatClient("projects/test-project/locations/us-central1/publishers/google/models/mymodel");
@@ -388,8 +331,7 @@ public class AsIChatClientTest
         ChatResponse result = await chatClient.GetResponseAsync(messages);
 
         Assert.NotNull(result);
-        Assert.Single(result.Messages[0].Contents);
-        Assert.IsType<TextReasoningContent>(result.Messages[0].Contents[0]);
+        Assert.IsType<TextReasoningContent>(Assert.Single(result.Messages[0].Contents));
 
         TextReasoningContent reasoningContent = (TextReasoningContent) result.Messages[0].Contents[0];
         Assert.Equal(reasoningData, reasoningContent.ProtectedData);
@@ -404,30 +346,26 @@ public class AsIChatClientTest
             {
                 // Verify ChatOptions were applied correctly
                 Assert.Equal("projects/test/locations/us-central1/publishers/google/models/gemini-pro", request.Model);
-                Assert.NotNull(request.GenerationConfig);
-                Assert.Equal(0.7f, request.GenerationConfig.Temperature);
-                Assert.Equal(0.9f, request.GenerationConfig.TopP);
-                Assert.Equal(40, request.GenerationConfig.TopK);
-                Assert.Equal(100, request.GenerationConfig.MaxOutputTokens);
-                Assert.Equal(42, request.GenerationConfig.Seed);
-                Assert.Equal(0.5f, request.GenerationConfig.FrequencyPenalty);
-                Assert.Equal(0.3f, request.GenerationConfig.PresencePenalty);
-                Assert.Contains("STOP", request.GenerationConfig.StopSequences);
-
-                GenerateContentResponse response = new();
-                response.Candidates.Add(new Candidate()
+                Assert.Equal(new()
                 {
-                    Content = new Content() { Role = "model", Parts = { new Part() { Text = "Response with options applied." } } }
-                });
+                    Temperature = 0.7f,
+                    TopP = 0.9f,
+                    TopK = 40,
+                    MaxOutputTokens = 100,
+                    Seed = 42,
+                    FrequencyPenalty = 0.5f,
+                    PresencePenalty = 0.3f,
+                    StopSequences = { "STOP" }
+                }, request.GenerationConfig);
 
-                return response;
+                return CreateResponse(new() { Role = "model", Parts = { new Part() { Text = "Response with options applied." } } });
             }
         };
 
         IChatClient chatClient = CreateClient(invoker).AsIChatClient("projects/test-project/locations/us-central1/publishers/google/models/default-model");
         ChatMessage[] messages = [new(ChatRole.User, "Test message")];
 
-        ChatOptions options = new ChatOptions
+        ChatOptions options = new()
         {
             ModelId = "projects/test/locations/us-central1/publishers/google/models/gemini-pro",
             Temperature = 0.7f,
@@ -463,21 +401,15 @@ public class AsIChatClientTest
                 Assert.Single(request.Contents);
                 Assert.Equal("user", request.Contents[0].Role);
 
-                GenerateContentResponse response = new();
-                response.Candidates.Add(new Candidate()
-                {
-                    Content = new Content() { Role = "model", Parts = { new Part() { Text = "I'm here to help!" } } }
-                });
-
-                return response;
+                return CreateResponse(new() { Role = "model", Parts = { new Part() { Text = "I'm here to help!" } } });
             }
         };
 
         IChatClient chatClient = CreateClient(invoker).AsIChatClient("projects/test-project/locations/us-central1/publishers/google/models/mymodel");
         ChatMessage[] messages =
         [
-            new ChatMessage(ChatRole.System, "You are a helpful assistant."),
-            new ChatMessage(ChatRole.User, "Hello")
+            new(ChatRole.System, "You are a helpful assistant."),
+            new(ChatRole.User, "Hello")
         ];
 
         ChatResponse result = await chatClient.GetResponseAsync(messages);
@@ -507,20 +439,14 @@ public class AsIChatClientTest
                 Assert.Contains(request.Tools, t => t.Retrieval != null);
                 Assert.Contains(request.Tools, t => t.GoogleSearch != null);
 
-                GenerateContentResponse response = new();
-                response.Candidates.Add(new Candidate()
-                {
-                    Content = new Content() { Role = "model", Parts = { new Part() { Text = "I can use tools to help you." } } }
-                });
-
-                return response;
+                return CreateResponse(new() { Role = "model", Parts = { new Part() { Text = "I can use tools to help you." } } });
             }
         };
 
         IChatClient chatClient = CreateClient(invoker).AsIChatClient("projects/test-project/locations/us-central1/publishers/google/models/mymodel");
         ChatMessage[] messages = [new(ChatRole.User, "What tools do you have?")];
 
-        ChatOptions options = new ChatOptions
+        ChatOptions options = new()
         {
             Tools =
             [
@@ -549,13 +475,7 @@ public class AsIChatClientTest
                 Assert.NotNull(request.ToolConfig.FunctionCallingConfig);
                 Assert.Equal(FunctionCallingConfig.Types.Mode.Auto, request.ToolConfig.FunctionCallingConfig.Mode);
 
-                GenerateContentResponse response = new();
-                response.Candidates.Add(new Candidate()
-                {
-                    Content = new Content() { Role = "model", Parts = { new Part() { Text = "Auto mode enabled." } } }
-                });
-
-                return response;
+                return CreateResponse(new() { Role = "model", Parts = { new Part() { Text = "Auto mode enabled." } } });
             }
         };
 
@@ -565,7 +485,7 @@ public class AsIChatClientTest
         ChatOptions options = new()
         {
             Tools = [new HostedCodeInterpreterTool()],
-            ToolMode = new AutoChatToolMode()
+            ToolMode = ChatToolMode.Auto,
         };
 
         ChatResponse result = await chatClient.GetResponseAsync(messages, options);
@@ -587,13 +507,7 @@ public class AsIChatClientTest
                 Assert.Equal(FunctionCallingConfig.Types.Mode.Any, request.ToolConfig.FunctionCallingConfig.Mode);
                 Assert.Contains("get_weather", request.ToolConfig.FunctionCallingConfig.AllowedFunctionNames);
 
-                GenerateContentResponse response = new();
-                response.Candidates.Add(new Candidate()
-                {
-                    Content = new Content() { Role = "model", Parts = { new Part() { Text = "Required mode with specific function." } } }
-                });
-
-                return response;
+                return CreateResponse(new() { Role = "model", Parts = { new Part() { Text = "Required mode with specific function." } } });
             }
         };
 
@@ -603,7 +517,7 @@ public class AsIChatClientTest
         ChatOptions options = new()
         {
             Tools = [AIFunctionFactory.Create((string location) => "the weather", "get_weather", "Gets weather information")],
-            ToolMode = new RequiredChatToolMode("get_weather")
+            ToolMode = ChatToolMode.RequireSpecific("get_weather")
         };
 
         ChatResponse result = await chatClient.GetResponseAsync(messages, options);
@@ -627,13 +541,7 @@ public class AsIChatClientTest
                     "\"properties\":{\"result\":{\"type\":\"string\"}}",
                     Regex.Replace(request.GenerationConfig.ResponseJsonSchema.ToString(), @"\s+", ""));
 
-                GenerateContentResponse response = new();
-                response.Candidates.Add(new Candidate()
-                {
-                    Content = new Content() { Role = "model", Parts = { new Part() { Text = "{\"result\": \"success\"}" } } }
-                });
-
-                return response;
+                return CreateResponse(new() { Role = "model", Parts = { new Part() { Text = """{"result": "success"}""" } } });
             }
         };
 
@@ -663,13 +571,9 @@ public class AsIChatClientTest
         {
             OnGenerateContentRequest = request =>
             {
-                GenerateContentResponse response = new();
-                response.Candidates.Add(new Candidate()
-                {
-                    Content = new Content() { Role = "model", Parts = { new Part() { Text = "Response with usage." } } }
-                });
+                GenerateContentResponse response = CreateResponse(new() { Role = "model", Parts = { new Part() { Text = "Response with usage." } } });
 
-                response.UsageMetadata = new GenerateContentResponse.Types.UsageMetadata
+                response.UsageMetadata = new()
                 {
                     PromptTokenCount = 10,
                     CandidatesTokenCount = 5,
@@ -715,13 +619,8 @@ public class AsIChatClientTest
             {
                 OnGenerateContentRequest = request =>
                 {
-                    GenerateContentResponse response = new();
-                    response.Candidates.Add(new Candidate()
-                    {
-                        Content = new Content() { Role = "model", Parts = { new Part() { Text = "Test response" } } },
-                        FinishReason = googleReason
-                    });
-
+                    GenerateContentResponse response = CreateResponse(new() { Role = "model", Parts = { new Part() { Text = "Test response" } } });
+                    response.Candidates[0].FinishReason = googleReason;
                     return response;
                 }
             };
@@ -742,22 +641,21 @@ public class AsIChatClientTest
         {
             OnGenerateContentRequest = request =>
             {
-                GenerateContentResponse response = new();
-                Candidate candidate = new()
+                GenerateContentResponse response = CreateResponse(new() { Role = "model", Parts = { new Part() { Text = "This is cited content." } } });
+                response.Candidates[0].CitationMetadata = new()
                 {
-                    Content = new Content() { Role = "model", Parts = { new Part() { Text = "This is cited content." } } },
-                    CitationMetadata = new CitationMetadata()
+                    Citations =
+                    {
+                        new Citation
+                        {
+                            Title = "Example Source",
+                            Uri = "https://example.com",
+                            StartIndex = 0,
+                            EndIndex = 10
+                        }
+                    }
                 };
 
-                candidate.CitationMetadata.Citations.Add(new Citation
-                {
-                    Title = "Example Source",
-                    Uri = "https://example.com",
-                    StartIndex = 0,
-                    EndIndex = 10
-                });
-
-                response.Candidates.Add(candidate);
                 return response;
             }
         };
@@ -791,13 +689,9 @@ public class AsIChatClientTest
         {
             OnGenerateContentRequest = request =>
             {
-                GenerateContentResponse response = new();
-                response.Candidates.Add(new Candidate()
-                {
-                    Content = new Content() { Role = "model", Parts = { new Part() { Text = "Response text" } } }
-                });
+                GenerateContentResponse response = CreateResponse(new() { Role = "model", Parts = { new Part() { Text = "Response text" } } });
 
-                response.PromptFeedback = new GenerateContentResponse.Types.PromptFeedback
+                response.PromptFeedback = new()
                 {
                     BlockReasonMessage = "Content blocked due to safety reasons"
                 };
@@ -813,6 +707,7 @@ public class AsIChatClientTest
 
         Assert.NotNull(result);
         Assert.Equal(2, result.Messages[0].Contents.Count);
+
         Assert.IsType<TextContent>(result.Messages[0].Contents[0]);
 
         ErrorContent errorContent = Assert.IsType<ErrorContent>(result.Messages[0].Contents[1]);
@@ -824,24 +719,24 @@ public class AsIChatClientTest
     {
         GenerateContentResponse[] responses =
         [
-            new GenerateContentResponse
+            new()
             {
-                Candidates = { new Candidate { Content = new Content { Role = "model", Parts = { new Part { Text = "Hello" } } } } },
-                CreateTime = Protobuf.WellKnownTypes.Timestamp.FromDateTime(DateTime.UtcNow),
+                Candidates = { new Candidate { Content = new() { Role = "model", Parts = { new Part { Text = "Hello" } } } } },
+                CreateTime = Timestamp.FromDateTime(DateTime.UtcNow),
                 ModelVersion = "test-model",
                 ResponseId = "response-1"
             },
-            new GenerateContentResponse
+            new()
             {
-                Candidates = { new Candidate { Content = new Content { Role = "model", Parts = { new Part { Text = " world" } } } } },
-                CreateTime = Protobuf.WellKnownTypes.Timestamp.FromDateTime(DateTime.UtcNow),
+                Candidates = { new Candidate { Content = new() { Role = "model", Parts = { new Part { Text = " world" } } } } },
+                CreateTime = Timestamp.FromDateTime(DateTime.UtcNow),
                 ModelVersion = "test-model",
                 ResponseId = "response-2"
             },
-            new GenerateContentResponse
+            new()
             {
-                Candidates = { new Candidate { Content = new Content { Role = "model", Parts = { new Part { Text = "!" } } } } },
-                CreateTime = Protobuf.WellKnownTypes.Timestamp.FromDateTime(DateTime.UtcNow),
+                Candidates = { new Candidate { Content = new() { Role = "model", Parts = { new Part { Text = "!" } } } } },
+                CreateTime = Timestamp.FromDateTime(DateTime.UtcNow),
                 ModelVersion = "test-model",
                 ResponseId = "response-3"
             }
@@ -865,7 +760,7 @@ public class AsIChatClientTest
         Assert.All(updates, update => Assert.Equal(ChatRole.Assistant, update.Role));
 
         string[] texts = [.. updates.Select(u => ((TextContent) u.Contents[0]).Text)];
-        Assert.Equal(new[] { "Hello", " world", "!" }, texts);
+        Assert.Equal(["Hello", " world", "!"], texts);
     }
 
     [Fact]
@@ -873,24 +768,24 @@ public class AsIChatClientTest
     {
         GenerateContentResponse[] responses =
         [
-            new GenerateContentResponse
+            new()
             {
-                Candidates = { new Candidate { Content = new Content { Role = "model", Parts = { new Part { Text = "It's" } } } } },
-                CreateTime = Protobuf.WellKnownTypes.Timestamp.FromDateTime(DateTime.UtcNow),
+                Candidates = { new Candidate { Content = new() { Role = "model", Parts = { new Part { Text = "It's" } } } } },
+                CreateTime = Timestamp.FromDateTime(DateTime.UtcNow),
                 ModelVersion = "test-model",
                 ResponseId = "response-1"
             },
-            new GenerateContentResponse
+            new()
             {
-                Candidates = { new Candidate { Content = new Content { Role = "model", Parts = { new Part { Text = " sunny" } } } } },
-                CreateTime = Protobuf.WellKnownTypes.Timestamp.FromDateTime(DateTime.UtcNow),
+                Candidates = { new Candidate { Content = new() { Role = "model", Parts = { new Part { Text = " sunny" } } } } },
+                CreateTime = Timestamp.FromDateTime(DateTime.UtcNow),
                 ModelVersion = "test-model",
                 ResponseId = "response-2"
             },
-            new GenerateContentResponse
+            new()
             {
-                Candidates = { new Candidate { Content = new Content { Role = "model", Parts = { new Part { Text = " today." } } } } },
-                CreateTime = Protobuf.WellKnownTypes.Timestamp.FromDateTime(DateTime.UtcNow),
+                Candidates = { new Candidate { Content = new() { Role = "model", Parts = { new Part { Text = " today." } } } } },
+                CreateTime = Timestamp.FromDateTime(DateTime.UtcNow),
                 ModelVersion = "test-model",
                 ResponseId = "response-3"
             }
@@ -923,7 +818,7 @@ public class AsIChatClientTest
         Assert.All(updates, update => Assert.Equal(ChatRole.Assistant, update.Role));
 
         string[] texts = [.. updates.Select(u => ((TextContent) u.Contents[0]).Text)];
-        Assert.Equal(new[] { "It's", " sunny", " today." }, texts);
+        Assert.Equal(["It's", " sunny", " today."], texts);
     }
 
     [Fact]
@@ -933,17 +828,17 @@ public class AsIChatClientTest
 
         GenerateContentResponse[] responses =
         [
-            new GenerateContentResponse
+            new()
             {
-                Candidates = { new Candidate { Content = new Content { Role = "model", Parts = { new Part { Text = "I see" } } } } },
-                CreateTime = Protobuf.WellKnownTypes.Timestamp.FromDateTime(DateTime.UtcNow),
+                Candidates = { new Candidate { Content = new() { Role = "model", Parts = { new Part { Text = "I see" } } } } },
+                CreateTime = Timestamp.FromDateTime(DateTime.UtcNow),
                 ModelVersion = "test-model",
                 ResponseId = "response-1"
             },
-            new GenerateContentResponse
+            new()
             {
-                Candidates = { new Candidate { Content = new Content { Role = "model", Parts = { new Part { Text = " an image." } } } } },
-                CreateTime = Protobuf.WellKnownTypes.Timestamp.FromDateTime(DateTime.UtcNow),
+                Candidates = { new Candidate { Content = new() { Role = "model", Parts = { new Part { Text = " an image." } } } } },
+                CreateTime = Timestamp.FromDateTime(DateTime.UtcNow),
                 ModelVersion = "test-model",
                 ResponseId = "response-2"
             }
@@ -969,7 +864,7 @@ public class AsIChatClientTest
         IChatClient chatClient = CreateClient(invoker).AsIChatClient("projects/test-project/locations/us-central1/publishers/google/models/mymodel");
         ChatMessage[] messages =
         [
-            new ChatMessage(ChatRole.User,
+            new(ChatRole.User,
             [
                 new TextContent("Describe this image"),
                 new DataContent(imageData, "image/png")
@@ -986,7 +881,7 @@ public class AsIChatClientTest
         Assert.All(updates, update => Assert.Equal(ChatRole.Assistant, update.Role));
 
         string[] texts = [.. updates.Select(u => ((TextContent) u.Contents[0]).Text)];
-        Assert.Equal(new[] { "I see", " an image." }, texts);
+        Assert.Equal(["I see", " an image."], texts);
     }
 
     [Fact]
@@ -994,27 +889,27 @@ public class AsIChatClientTest
     {
         GenerateContentResponse[] responses =
         [
-            new GenerateContentResponse
+            new()
             {
                 Candidates = { new Candidate
                 {
-                    Content = new Content
+                    Content = new()
                     {
                         Role = "model",
                         Parts =
                         {
                             new Part
                             {
-                                FunctionCall = new FunctionCall
+                                FunctionCall = new()
                                 {
                                     Name = "get_weather",
-                                    Args = Protobuf.WellKnownTypes.Struct.Parser.ParseJson("{\"location\": \"San Francisco\"}")
+                                    Args = Struct.Parser.ParseJson("{\"location\": \"San Francisco\"}")
                                 }
                             }
                         }
                     }
                 } },
-                CreateTime = Protobuf.WellKnownTypes.Timestamp.FromDateTime(DateTime.UtcNow),
+                CreateTime = Timestamp.FromDateTime(DateTime.UtcNow),
                 ModelVersion = "test-model",
                 ResponseId = "response-1"
             }
@@ -1036,8 +931,7 @@ public class AsIChatClientTest
 
         Assert.Single(updates);
         Assert.Equal(ChatRole.Assistant, updates[0].Role);
-        Assert.Single(updates[0].Contents);
-        Assert.IsType<FunctionCallContent>(updates[0].Contents[0]);
+        Assert.IsType<FunctionCallContent>(Assert.Single(updates[0].Contents));
 
         FunctionCallContent functionCall = (FunctionCallContent) updates[0].Contents[0];
         Assert.Equal("get_weather", functionCall.Name);
@@ -1050,17 +944,17 @@ public class AsIChatClientTest
     {
         GenerateContentResponse[] responses =
         [
-            new GenerateContentResponse
+            new()
             {
-                Candidates = { new Candidate { Content = new Content { Role = "model", Parts = { new Part { Text = "Response with" } } } } },
-                CreateTime = Protobuf.WellKnownTypes.Timestamp.FromDateTime(DateTime.UtcNow),
+                Candidates = { new Candidate { Content = new() { Role = "model", Parts = { new Part { Text = "Response with" } } } } },
+                CreateTime = Timestamp.FromDateTime(DateTime.UtcNow),
                 ModelVersion = "test-model",
                 ResponseId = "response-1"
             },
-            new GenerateContentResponse
+            new()
             {
-                Candidates = { new Candidate { Content = new Content { Role = "model", Parts = { new Part { Text = " options applied." } } } } },
-                CreateTime = Protobuf.WellKnownTypes.Timestamp.FromDateTime(DateTime.UtcNow),
+                Candidates = { new Candidate { Content = new() { Role = "model", Parts = { new Part { Text = " options applied." } } } } },
+                CreateTime = Timestamp.FromDateTime(DateTime.UtcNow),
                 ModelVersion = "test-model",
                 ResponseId = "response-2"
             }
@@ -1072,9 +966,11 @@ public class AsIChatClientTest
             {
                 // Verify ChatOptions were applied correctly
                 Assert.Equal("projects/test/locations/us-central1/publishers/google/models/gemini-pro", request.Model);
-                Assert.NotNull(request.GenerationConfig);
-                Assert.Equal(0.7f, request.GenerationConfig.Temperature);
-                Assert.Equal(0.9f, request.GenerationConfig.TopP);
+                Assert.Equal(new()
+                {
+                    Temperature = 0.7f,
+                    TopP = 0.9f
+                }, request.GenerationConfig);
 
                 return responses;
             }
@@ -1100,7 +996,7 @@ public class AsIChatClientTest
         Assert.All(updates, update => Assert.Equal(ChatRole.Assistant, update.Role));
 
         string[] texts = [.. updates.Select(u => ((TextContent) u.Contents[0]).Text)];
-        Assert.Equal(new[] { "Response with", " options applied." }, texts);
+        Assert.Equal(["Response with", " options applied."], texts);
     }
 
     [Fact]
@@ -1108,17 +1004,17 @@ public class AsIChatClientTest
     {
         GenerateContentResponse[] responses =
         [
-            new GenerateContentResponse
+            new()
             {
-                Candidates = { new Candidate { Content = new Content { Role = "model", Parts = { new Part { Text = "I'm here" } } } } },
-                CreateTime = Protobuf.WellKnownTypes.Timestamp.FromDateTime(DateTime.UtcNow),
+                Candidates = { new Candidate { Content = new() { Role = "model", Parts = { new Part { Text = "I'm here" } } } } },
+                CreateTime = Timestamp.FromDateTime(DateTime.UtcNow),
                 ModelVersion = "test-model",
                 ResponseId = "response-1"
             },
-            new GenerateContentResponse
+            new()
             {
-                Candidates = { new Candidate { Content = new Content { Role = "model", Parts = { new Part { Text = " to help!" } } } } },
-                CreateTime = Protobuf.WellKnownTypes.Timestamp.FromDateTime(DateTime.UtcNow),
+                Candidates = { new Candidate { Content = new() { Role = "model", Parts = { new Part { Text = " to help!" } } } } },
+                CreateTime = Timestamp.FromDateTime(DateTime.UtcNow),
                 ModelVersion = "test-model",
                 ResponseId = "response-2"
             }
@@ -1145,8 +1041,8 @@ public class AsIChatClientTest
         IChatClient chatClient = CreateClient(invoker).AsIChatClient("projects/test-project/locations/us-central1/publishers/google/models/mymodel");
         ChatMessage[] messages =
         [
-            new ChatMessage(ChatRole.System, "You are a helpful assistant."),
-            new ChatMessage(ChatRole.User, "Hello")
+            new(ChatRole.System, "You are a helpful assistant."),
+            new(ChatRole.User, "Hello")
         ];
 
         List<ChatResponseUpdate> updates = [];
@@ -1159,7 +1055,7 @@ public class AsIChatClientTest
         Assert.All(updates, update => Assert.Equal(ChatRole.Assistant, update.Role));
 
         string[] texts = [.. updates.Select(u => ((TextContent) u.Contents[0]).Text)];
-        Assert.Equal(new[] { "I'm here", " to help!" }, texts);
+        Assert.Equal(["I'm here", " to help!"], texts);
     }
 
     [Fact]
@@ -1167,20 +1063,20 @@ public class AsIChatClientTest
     {
         GenerateContentResponse[] responses =
         [
-            new GenerateContentResponse
+            new()
             {
                 Candidates = { new Candidate { Content = new Content { Role = "model", Parts = { new Part { Text = "Response" } } } } },
-                CreateTime = Protobuf.WellKnownTypes.Timestamp.FromDateTime(DateTime.UtcNow),
+                CreateTime = Timestamp.FromDateTime(DateTime.UtcNow),
                 ModelVersion = "test-model",
                 ResponseId = "response-1"
             },
-            new GenerateContentResponse
+            new()
             {
-                Candidates = { new Candidate { Content = new Content { Role = "model", Parts = { new Part { Text = " with usage." } } } } },
-                CreateTime = Protobuf.WellKnownTypes.Timestamp.FromDateTime(DateTime.UtcNow),
+                Candidates = { new Candidate { Content = new() { Role = "model", Parts = { new Part { Text = " with usage." } } } } },
+                CreateTime = Timestamp.FromDateTime(DateTime.UtcNow),
                 ModelVersion = "test-model",
                 ResponseId = "response-2",
-                UsageMetadata = new GenerateContentResponse.Types.UsageMetadata
+                UsageMetadata = new()
                 {
                     PromptTokenCount = 10,
                     CandidatesTokenCount = 5,
@@ -1208,8 +1104,7 @@ public class AsIChatClientTest
         Assert.Equal(2, updates.Count);
 
         // First update should not have usage content
-        Assert.Single(updates[0].Contents);
-        Assert.IsType<TextContent>(updates[0].Contents[0]);
+        Assert.IsType<TextContent>(Assert.Single(updates[0].Contents));
 
         // Second update should have both text and usage content
         Assert.Equal(2, updates[1].Contents.Count);
@@ -1227,17 +1122,17 @@ public class AsIChatClientTest
     {
         GenerateContentResponse[] responses =
         [
-            new GenerateContentResponse
+            new()
             {
-                Candidates = { new Candidate { Content = new Content { Role = "model", Parts = { new Part { Text = "I can use" } } } } },
-                CreateTime = Protobuf.WellKnownTypes.Timestamp.FromDateTime(DateTime.UtcNow),
+                Candidates = { new Candidate { Content = new() { Role = "model", Parts = { new Part { Text = "I can use" } } } } },
+                CreateTime = Timestamp.FromDateTime(DateTime.UtcNow),
                 ModelVersion = "test-model",
                 ResponseId = "response-1"
             },
-            new GenerateContentResponse
+            new()
             {
-                Candidates = { new Candidate { Content = new Content { Role = "model", Parts = { new Part { Text = " tools to help you." } } } } },
-                CreateTime = Protobuf.WellKnownTypes.Timestamp.FromDateTime(DateTime.UtcNow),
+                Candidates = { new Candidate { Content = new() { Role = "model", Parts = { new Part { Text = " tools to help you." } } } } },
+                CreateTime = Timestamp.FromDateTime(DateTime.UtcNow),
                 ModelVersion = "test-model",
                 ResponseId = "response-2"
             }
@@ -1285,7 +1180,7 @@ public class AsIChatClientTest
         Assert.All(updates, update => Assert.Equal(ChatRole.Assistant, update.Role));
 
         string[] texts = [.. updates.Select(u => ((TextContent) u.Contents[0]).Text)];
-        Assert.Equal(new[] { "I can use", " tools to help you." }, texts);
+        Assert.Equal(["I can use", " tools to help you."], texts);
     }
 
     [Fact]
@@ -1298,20 +1193,14 @@ public class AsIChatClientTest
                 // Verify the full resource model ID was used
                 Assert.Equal("projects/test-project/locations/us-central1/publishers/google/models/gemini-pro", request.Model);
 
-                GenerateContentResponse response = new();
-                response.Candidates.Add(new Candidate()
-                {
-                    Content = new Content() { Role = "model", Parts = { new Part() { Text = "Response with full resource model ID." } } }
-                });
-
-                return response;
+                return CreateResponse(new() { Role = "model", Parts = { new Part() { Text = "Response with full resource model ID." } } });
             }
         };
 
         IChatClient chatClient = CreateClient(invoker).AsIChatClient();
         ChatMessage[] messages = [new(ChatRole.User, "Test message")];
 
-        ChatOptions options = new ChatOptions
+        ChatOptions options = new()
         {
             ModelId = "projects/test-project/locations/us-central1/publishers/google/models/gemini-pro"
         };
@@ -1337,13 +1226,7 @@ public class AsIChatClientTest
                 Assert.Single(request.Contents[0].Parts);
                 Assert.Equal("", request.Contents[0].Parts[0].Text);
 
-                GenerateContentResponse response = new();
-                response.Candidates.Add(new Candidate()
-                {
-                    Content = new Content() { Role = "model", Parts = { new Part() { Text = "Empty input received" } } }
-                });
-
-                return response;
+                return CreateResponse(new() { Role = "model", Parts = { new Part() { Text = "Empty input received" } } });
             }
         };
 
@@ -1366,20 +1249,14 @@ public class AsIChatClientTest
                 // Verify full resource name was used as-is
                 Assert.Equal("projects/custom-project/locations/europe-west1/publishers/meta/models/llama-2-7b-chat", request.Model);
 
-                GenerateContentResponse response = new();
-                response.Candidates.Add(new Candidate()
-                {
-                    Content = new Content() { Role = "model", Parts = { new Part() { Text = "Response from custom resource." } } }
-                });
-
-                return response;
+                return CreateResponse(new() { Role = "model", Parts = { new Part() { Text = "Response from custom resource." } } });
             }
         };
 
         IChatClient chatClient = CreateClient(invoker).AsIChatClient();
         ChatMessage[] messages = [new(ChatRole.User, "Test message")];
 
-        ChatOptions options = new ChatOptions
+        ChatOptions options = new()
         {
             ModelId = "projects/custom-project/locations/europe-west1/publishers/meta/models/llama-2-7b-chat"
         };
@@ -1401,13 +1278,7 @@ public class AsIChatClientTest
                 // Verify default model was used correctly
                 Assert.Equal("projects/test-project/locations/us-central1/publishers/google/models/default-chat-model", request.Model);
 
-                GenerateContentResponse response = new();
-                response.Candidates.Add(new Candidate()
-                {
-                    Content = new Content() { Role = "model", Parts = { new Part() { Text = "Response from default model." } } }
-                });
-
-                return response;
+                return CreateResponse(new() { Role = "model", Parts = { new Part() { Text = "Response from default model." } } });
             }
         };
 
@@ -1437,6 +1308,18 @@ public class AsIChatClientTest
 
         IAsyncEnumerator<ChatResponseUpdate> enumerator = chatClient.GetStreamingResponseAsync(null!).GetAsyncEnumerator();
         await Assert.ThrowsAsync<ArgumentNullException>("messages", () => enumerator.MoveNextAsync().AsTask());
+    }
+
+    private static GenerateContentResponse CreateResponse(Content content)
+    {
+        GenerateContentResponse response = new();
+
+        response.Candidates.Add(new Candidate()
+        {
+            Content = content,
+        });
+
+        return response;
     }
 
     private static PredictionServiceClient CreateClient(CallInvoker? callInvoker = null) =>

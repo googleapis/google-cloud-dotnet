@@ -13,13 +13,13 @@
 // limitations under the License.
 
 using Google.Cloud.AIPlatform.V1;
-using Google.Protobuf.WellKnownTypes;
 using Grpc.Core;
 using Microsoft.Extensions.AI;
 using System;
 using System.Linq;
 using System.Threading.Tasks;
 using Xunit;
+using Value = Google.Protobuf.WellKnownTypes.Value;
 
 namespace Google.Cloud.VertexAI.Extensions.Tests;
 
@@ -64,7 +64,7 @@ public class AsIEmbeddingGeneratorTest
         Assert.NotNull(metadata);
         Assert.Equal("gcp.vertex_ai", metadata.ProviderName);
         Assert.Equal(new("https://aiplatform.googleapis.com:443"), metadata.ProviderUri);
-        Assert.Equal(defaultModelId, metadata.DefaultModelId);
+        Assert.Equal(defaultModelId?.Substring(defaultModelId.LastIndexOf('/') + 1), metadata.DefaultModelId);
         Assert.Equal(defaultDimensions, metadata.DefaultModelDimensions);
     }
 
@@ -313,11 +313,11 @@ public class AsIEmbeddingGeneratorTest
                 PredictRequest request = new()
                 {
                     Endpoint = "custom-endpoint",
-                    Parameters = new Protobuf.WellKnownTypes.Value
+                    Parameters = new Value
                     {
-                        StructValue = new Struct
+                        StructValue = new()
                         {
-                            Fields = { { "customParameter", Protobuf.WellKnownTypes.Value.ForString("customValue") } }
+                            Fields = { { "customParameter", Value.ForString("customValue") } }
                         }
                     }
                 };
@@ -363,11 +363,11 @@ public class AsIEmbeddingGeneratorTest
                 PredictResponse response = new();
                 
                 // Add a malformed prediction (missing embeddings field)
-                response.Predictions.Add(new Protobuf.WellKnownTypes.Value
+                response.Predictions.Add(new Value
                 {
-                    StructValue = new Struct
+                    StructValue = new()
                     {
-                        Fields = { { "invalid", Protobuf.WellKnownTypes.Value.ForString("data") } }
+                        Fields = { { "invalid", Value.ForString("data") } }
                     }
                 });
 
@@ -498,27 +498,26 @@ public class AsIEmbeddingGeneratorTest
         Assert.Equal([0.4f, 0.5f, 0.6f], result[0].Vector.ToArray());
     }
 
-    private static Protobuf.WellKnownTypes.Value CreateEmbeddingPrediction(float[] embedding)
-    {
-        return new Protobuf.WellKnownTypes.Value
+    private static Value CreateEmbeddingPrediction(float[] embedding) =>
+        new()
         {
-            StructValue = new Struct
+            StructValue = new()
             {
                 Fields =
                 {
                     {
-                        "embeddings", new Protobuf.WellKnownTypes.Value
+                        "embeddings", new Value
                         {
-                            StructValue = new Struct
+                            StructValue = new()
                             {
                                 Fields =
                                 {
                                     {
-                                        "values", new Protobuf.WellKnownTypes.Value
+                                        "values", new()
                                         {
-                                            ListValue = new ListValue
+                                            ListValue = new()
                                             {
-                                                Values = { embedding.Select(f => Protobuf.WellKnownTypes.Value.ForNumber(f)) }
+                                                Values = { embedding.Select(f => Value.ForNumber(f)) }
                                             }
                                         }
                                     }
@@ -529,38 +528,37 @@ public class AsIEmbeddingGeneratorTest
                 }
             }
         };
-    }
 
-    private static Protobuf.WellKnownTypes.Value CreateEmbeddingPredictionWithTokens(float[] embedding, int tokenCount)
+    private static Value CreateEmbeddingPredictionWithTokens(float[] embedding, int tokenCount)
     {
-        return new Protobuf.WellKnownTypes.Value
+        return new Value
         {
-            StructValue = new Struct
+            StructValue = new()
             {
                 Fields =
                 {
                     {
-                        "embeddings", new Protobuf.WellKnownTypes.Value
+                        "embeddings", new()
                         {
-                            StructValue = new Struct
+                            StructValue = new()
                             {
                                 Fields =
                                 {
                                     {
-                                        "values", new Protobuf.WellKnownTypes.Value
+                                        "values", new()
                                         {
-                                            ListValue = new ListValue
+                                            ListValue = new()
                                             {
-                                                Values = { embedding.Select(f => Protobuf.WellKnownTypes.Value.ForNumber(f)) }
+                                                Values = { embedding.Select(f => Value.ForNumber(f)) }
                                             }
                                         }
                                     },
                                     {
-                                        "statistics", new Protobuf.WellKnownTypes.Value
+                                        "statistics", new()
                                         {
-                                            StructValue = new Struct
+                                            StructValue = new()
                                             {
-                                                Fields = { { "token_count", Protobuf.WellKnownTypes.Value.ForNumber(tokenCount) } }
+                                                Fields = { { "token_count", Value.ForNumber(tokenCount) } }
                                             }
                                         }
                                     }

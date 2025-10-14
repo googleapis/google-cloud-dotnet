@@ -13,8 +13,8 @@
 // limitations under the License.
 
 using Google.Cloud.AIPlatform.V1;
+using Google.Cloud.ClientTesting;
 using Microsoft.Extensions.AI;
-using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
@@ -24,15 +24,13 @@ namespace Google.Cloud.VertexAI.Extensions.Tests;
 
 public class VertexAIExtensionsTest
 {
-    private static readonly string? s_projectId = Environment.GetEnvironmentVariable("TEST_PROJECT");
-    private static readonly string? s_location = Environment.GetEnvironmentVariable("TEST_PROJECT_LOCATION");
+    private static readonly string? s_projectId = TestEnvironment.GetTestProjectId();
+    private static readonly string? s_location = TestEnvironment.GetProjectLocationId();
 
     [Fact]
     public async Task AsIChatClient_BasicRequestResponse_NonStreaming()
     {
-        (string projectId, string location) = EnsureConfiguration();
-
-        IChatClient client = (await CreateClientAsync()).AsIChatClient(EndpointName.FormatProjectLocationPublisherModel(projectId, location, "google", "gemini-2.5-pro"));
+        IChatClient client = (await CreateClientAsync()).AsIChatClient(EndpointName.FormatProjectLocationPublisherModel(s_projectId, s_location, "google", "gemini-2.5-pro"));
         Assert.NotNull(client);
 
         var response = await client.GetResponseAsync("Hello");
@@ -43,29 +41,18 @@ public class VertexAIExtensionsTest
     [Fact]
     public async Task AsIChatClient_BasicRequestResponse_Streaming()
     {
-        (string projectId, string location) = EnsureConfiguration();
-
-        IChatClient client = (await CreateClientAsync()).AsIChatClient(EndpointName.FormatProjectLocationPublisherModel(projectId, location, "google", "gemini-2.5-pro"));
+        IChatClient client = (await CreateClientAsync()).AsIChatClient(EndpointName.FormatProjectLocationPublisherModel(s_projectId, s_location, "google", "gemini-2.5-pro"));
         Assert.NotNull(client);
 
-        List<ChatResponseUpdate> updates = [];
-        await foreach (var update in client.GetStreamingResponseAsync("Hello"))
-        {
-            updates.Add(update);
-        }
-
-        Assert.NotEmpty(updates);
-
-        ChatResponse response = updates.ToChatResponse();
+        ChatResponse response = await client.GetStreamingResponseAsync("Hello").ToChatResponseAsync();
+        Assert.NotNull(response);
         Assert.NotEmpty(response.Text);
     }
 
     [Fact]
     public async Task AsIEmbeddingGenerator_EmbedSeveralInputs()
     {
-        (string projectId, string location) = EnsureConfiguration();
-
-        IEmbeddingGenerator<string, Embedding<float>> generator = (await CreateClientAsync()).AsIEmbeddingGenerator(EndpointName.FormatProjectLocationPublisherModel(projectId, location, "google", "gemini-embedding-001"));
+        IEmbeddingGenerator<string, Embedding<float>> generator = (await CreateClientAsync()).AsIEmbeddingGenerator(EndpointName.FormatProjectLocationPublisherModel(s_projectId, s_location, "google", "gemini-embedding-001"));
         Assert.NotNull(generator);
 
         GeneratedEmbeddings<Embedding<float>> embeddings = await generator.GenerateAsync(["Hello", "World"]);
@@ -81,9 +68,7 @@ public class VertexAIExtensionsTest
     [Fact]
     public async Task AsIImageGenerator_GenerateImage()
     {
-        (string projectId, string location) = EnsureConfiguration();
-
-        IImageGenerator generator = (await CreateClientAsync()).AsIImageGenerator(EndpointName.FormatProjectLocationPublisherModel(projectId, location, "google", "imagen-4.0-fast-generate-001"));
+        IImageGenerator generator = (await CreateClientAsync()).AsIImageGenerator(EndpointName.FormatProjectLocationPublisherModel(s_projectId, s_location, "google", "imagen-4.0-fast-generate-001"));
         Assert.NotNull(generator);
 
         ImageGenerationResponse response = await generator.GenerateImagesAsync("A cute baby sea otter");
@@ -92,16 +77,6 @@ public class VertexAIExtensionsTest
         DataContent image = Assert.Single(response.Contents.OfType<DataContent>());
         Assert.Equal("image/png", image.MediaType);
         Assert.InRange(image.Data.Length, 1, int.MaxValue);
-    }
-
-    private static (string ProjectId, string Location) EnsureConfiguration()
-    {
-        if (string.IsNullOrEmpty(s_projectId) || string.IsNullOrEmpty(s_location))
-        {
-            throw new InvalidOperationException("Set the TEST_PROJECT and TEST_PROJECT_LOCATION environment variables to run these tests.");
-        }
-
-        return (s_projectId!, s_location!);
     }
 
     private static Task<PredictionServiceClient> CreateClientAsync() =>

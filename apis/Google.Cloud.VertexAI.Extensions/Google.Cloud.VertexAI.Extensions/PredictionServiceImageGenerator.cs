@@ -14,11 +14,12 @@
 
 using Google.Api.Gax;
 using Google.Cloud.AIPlatform.V1;
-using Google.Protobuf.WellKnownTypes;
 using Microsoft.Extensions.AI;
 using System;
 using System.Threading;
 using System.Threading.Tasks;
+using Value = Google.Protobuf.WellKnownTypes.Value;
+using Struct = Google.Protobuf.WellKnownTypes.Struct;
 
 namespace Google.Cloud.VertexAI.Extensions;
 
@@ -54,7 +55,7 @@ internal sealed class PredictionServiceImageGenerator(PredictionServiceClient cl
         Struct instances = new();
         if (request.Prompt is { } prompt)
         {
-            instances.Fields.Add("prompt", Protobuf.WellKnownTypes.Value.ForString(prompt));
+            instances.Fields.Add("prompt", Value.ForString(prompt));
         }
 
         // Add any options.
@@ -69,9 +70,9 @@ internal sealed class PredictionServiceImageGenerator(PredictionServiceClient cl
 
             if (options.MediaType is { } mediaType)
             {
-                parameters.Fields.Add("outputOptions", new Protobuf.WellKnownTypes.Value
+                parameters.Fields.Add("outputOptions", new()
                 {
-                    StructValue = new Struct { Fields = { { "mimeType", Protobuf.WellKnownTypes.Value.ForString(mediaType) } } },
+                    StructValue = new Struct { Fields = { { "mimeType", Value.ForString(mediaType) } } },
                 });
             }
 
@@ -79,7 +80,7 @@ internal sealed class PredictionServiceImageGenerator(PredictionServiceClient cl
             {
                 int gcd = GCD(imageSize.Width, imageSize.Height);
 
-                parameters.Fields.Add("aspectRatio", Protobuf.WellKnownTypes.Value.ForString($"{imageSize.Width / gcd}:{imageSize.Height / gcd}"));
+                parameters.Fields.Add("aspectRatio", Value.ForString($"{imageSize.Width / gcd}:{imageSize.Height / gcd}"));
 
                 static int GCD(int x, int y)
                 {
@@ -94,11 +95,11 @@ internal sealed class PredictionServiceImageGenerator(PredictionServiceClient cl
                 }
             }
         }
-        parameters.Fields.Add("sampleCount", Protobuf.WellKnownTypes.Value.ForNumber(sampleCount));
+        parameters.Fields.Add("sampleCount", Value.ForNumber(sampleCount));
 
         // Make the request.
-        predictRequest.Instances.Add(new Protobuf.WellKnownTypes.Value { StructValue = instances });
-        predictRequest.Parameters = new Protobuf.WellKnownTypes.Value { StructValue = parameters };
+        predictRequest.Instances.Add(new Value { StructValue = instances });
+        predictRequest.Parameters = new() { StructValue = parameters };
         PredictResponse response = await _client.PredictAsync(predictRequest).ConfigureAwait(false);
 
         // Parse the response into a ImageGenerationResponse instance.
@@ -110,15 +111,15 @@ internal sealed class PredictionServiceImageGenerator(PredictionServiceClient cl
         if (response.Predictions is not null)
         {
             // Process each prediction.
-            foreach (Protobuf.WellKnownTypes.Value pred in response.Predictions)
+            foreach (Value pred in response.Predictions)
             {
-                if (pred.KindCase == Protobuf.WellKnownTypes.Value.KindOneofCase.StructValue &&
-                    pred.StructValue.Fields.TryGetValue("bytesBase64Encoded", out Protobuf.WellKnownTypes.Value base64Value) &&
-                    base64Value.KindCase == Protobuf.WellKnownTypes.Value.KindOneofCase.StringValue)
+                if (pred.KindCase == Value.KindOneofCase.StructValue &&
+                    pred.StructValue.Fields.TryGetValue("bytesBase64Encoded", out Value base64Value) &&
+                    base64Value.KindCase == Value.KindOneofCase.StringValue)
                 {
                     string mediaType = "image/png";
-                    if (pred.StructValue.Fields.TryGetValue("mimeType", out Protobuf.WellKnownTypes.Value mimeTypeValue) &&
-                        mimeTypeValue.KindCase == Protobuf.WellKnownTypes.Value.KindOneofCase.StringValue)
+                    if (pred.StructValue.Fields.TryGetValue("mimeType", out Value mimeTypeValue) &&
+                        mimeTypeValue.KindCase == Value.KindOneofCase.StringValue)
                     {
                         mediaType = mimeTypeValue.StringValue;
                     }
@@ -143,7 +144,10 @@ internal sealed class PredictionServiceImageGenerator(PredictionServiceClient cl
             // as there's no requirement that the same instance be returned each time, and creation is idempotent.
             if (serviceType == typeof(ImageGeneratorMetadata))
             {
-                return _metadata ??= new(VertexAIExtensions.ProviderName, VertexAIExtensions.ProviderUrl, _defaultModelId);
+                return _metadata ??= new(
+                    VertexAIExtensions.ProviderName,
+                    VertexAIExtensions.ProviderUrl,
+                    VertexAIExtensions.ExtractModelIdFromResourceName(_defaultModelId));
             }
 
             // Allow a consumer to "break glass" and access the underlying client if they need it.

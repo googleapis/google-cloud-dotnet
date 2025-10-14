@@ -14,12 +14,13 @@
 
 using Google.Api.Gax;
 using Google.Cloud.AIPlatform.V1;
-using Google.Protobuf.WellKnownTypes;
 using Microsoft.Extensions.AI;
 using System;
 using System.Collections.Generic;
 using System.Threading;
 using System.Threading.Tasks;
+using Value = Google.Protobuf.WellKnownTypes.Value;
+using Struct = Google.Protobuf.WellKnownTypes.Struct;
 
 namespace Google.Cloud.VertexAI.Extensions;
 
@@ -57,11 +58,11 @@ internal sealed class PredictionServiceEmbeddingGenerator(PredictionServiceClien
         // Add all of the inputs.
         foreach (string value in values)
         {
-            request.Instances.Add(new Protobuf.WellKnownTypes.Value
+            request.Instances.Add(new Value
             {
                 StructValue = new Struct
                 {
-                    Fields = { { "content", Protobuf.WellKnownTypes.Value.ForString(value) } },
+                    Fields = { { "content", Value.ForString(value) } },
                 }
             });
         }
@@ -71,7 +72,7 @@ internal sealed class PredictionServiceEmbeddingGenerator(PredictionServiceClien
         {
             (request.Parameters ??= new()).StructValue ??= new Struct
             {
-                Fields = { { "outputDimensionality", Protobuf.WellKnownTypes.Value.ForNumber(outputDimensions) } },
+                Fields = { { "outputDimensionality", Value.ForNumber(outputDimensions) } },
             };
         }
 
@@ -84,17 +85,17 @@ internal sealed class PredictionServiceEmbeddingGenerator(PredictionServiceClien
         if (response.Predictions is not null)
         {
             // Process each prediction.
-            foreach (Protobuf.WellKnownTypes.Value pred in response.Predictions)
+            foreach (Value pred in response.Predictions)
             {
-                if (pred.KindCase == Protobuf.WellKnownTypes.Value.KindOneofCase.StructValue &&
-                    pred.StructValue.Fields.TryGetValue("embeddings", out Protobuf.WellKnownTypes.Value embeddingsValue) &&
-                    embeddingsValue.KindCase == Protobuf.WellKnownTypes.Value.KindOneofCase.StructValue)
+                if (pred.KindCase == Value.KindOneofCase.StructValue &&
+                    pred.StructValue.Fields.TryGetValue("embeddings", out Value embeddingsValue) &&
+                    embeddingsValue.KindCase == Value.KindOneofCase.StructValue)
                 {
                     // Convert the embedding values into an Embedding<float>.
-                    if (embeddingsValue.StructValue.Fields.TryGetValue("values", out Protobuf.WellKnownTypes.Value listValue) &&
-                        listValue.KindCase == Protobuf.WellKnownTypes.Value.KindOneofCase.ListValue)
+                    if (embeddingsValue.StructValue.Fields.TryGetValue("values", out Value listValue) &&
+                        listValue.KindCase == Value.KindOneofCase.ListValue)
                     {
-                        Protobuf.Collections.RepeatedField<Protobuf.WellKnownTypes.Value> numberValues = listValue.ListValue.Values;
+                        Protobuf.Collections.RepeatedField<Value> numberValues = listValue.ListValue.Values;
 
                         float[] embedding = new float[numberValues.Count];
                         for (int j = 0; j < numberValues.Count; j++)
@@ -110,10 +111,10 @@ internal sealed class PredictionServiceEmbeddingGenerator(PredictionServiceClien
                     }
 
                     // Sum up any token counts to include as UsageDetails.
-                    if (embeddingsValue.StructValue.Fields.TryGetValue("statistics", out Protobuf.WellKnownTypes.Value statsValue) &&
-                        statsValue.KindCase == Protobuf.WellKnownTypes.Value.KindOneofCase.StructValue &&
-                        statsValue.StructValue.Fields.TryGetValue("token_count", out Protobuf.WellKnownTypes.Value tokenCountValue) &&
-                        tokenCountValue.KindCase == Protobuf.WellKnownTypes.Value.KindOneofCase.NumberValue)
+                    if (embeddingsValue.StructValue.Fields.TryGetValue("statistics", out Value statsValue) &&
+                        statsValue.KindCase == Value.KindOneofCase.StructValue &&
+                        statsValue.StructValue.Fields.TryGetValue("token_count", out Value tokenCountValue) &&
+                        tokenCountValue.KindCase == Value.KindOneofCase.NumberValue)
                     {
                         int tokenCount = (int) tokenCountValue.NumberValue;
 
@@ -139,7 +140,11 @@ internal sealed class PredictionServiceEmbeddingGenerator(PredictionServiceClien
             // as there's no requirement that the same instance be returned each time, and creation is idempotent.
             if (serviceType == typeof(EmbeddingGeneratorMetadata))
             {
-                return _metadata ??= new(VertexAIExtensions.ProviderName, VertexAIExtensions.ProviderUrl, _defaultModelId, _defaultModelDimensions);
+                return _metadata ??= new(
+                    VertexAIExtensions.ProviderName,
+                    VertexAIExtensions.ProviderUrl,
+                    VertexAIExtensions.ExtractModelIdFromResourceName(_defaultModelId),
+                    _defaultModelDimensions);
             }
 
             // Allow a consumer to "break glass" and access the underlying client if they need it.
