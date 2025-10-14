@@ -1,5 +1,20 @@
 # Version history
 
+## Version 4.21.0, released 2025-10-14
+
+### New features
+
+- Inspect and deid templates in RedactImage
+- Store DlpJob findings in a Cloud Storage bucket
+- Publish DlpJob findings to Dataplex Universal Catalog
+- Cloud Storage discovery filters based on tag filters
+
+### Documentation improvements
+
+- Clarify ListProjectDataProfiles API supports filter by project_id
+- Clarify List*DataProfiles APIs supports filter by profile_last_generated
+- Clarify filter syntax for List* APIs
+
 ## Version 4.20.0, released 2025-09-16
 
 ### New features
