@@ -27,7 +27,24 @@ namespace Google.Cloud.VertexAI.Extensions.Tests;
 public class AsIImageGeneratorTest
 {
     [Fact]
-    public void InvalidArguments_Throws()
+    public void AsIImageGenerator_ValidArguments_CreatesIImageGeneratorSuccessfully()
+    {
+        PredictionServiceClient client = CreateClient();
+        IImageGenerator generator = client.AsIImageGenerator();
+        Assert.NotNull(generator);
+        Assert.Same(client, generator.GetService<PredictionServiceClient>());
+    }
+
+    [Fact]
+    public void BuildIImageGenerator_ValidArguments_CreatesIImageGeneratorSuccessfully()
+    {
+        IImageGenerator generator = new PredictionServiceClientBuilder() { ApiKey = "fake-api-key" }.BuildIImageGenerator();
+        Assert.NotNull(generator.GetService<PredictionServiceClient>());
+    }
+
+
+    [Fact]
+    public void AsIImageGenerator_InvalidArguments_Throws()
     {
         Assert.Throws<ArgumentNullException>("client", () => VertexAIExtensions.AsIImageGenerator(null!));
     }

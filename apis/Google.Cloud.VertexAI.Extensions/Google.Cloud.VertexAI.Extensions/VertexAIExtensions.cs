@@ -56,7 +56,11 @@ public static class VertexAIExtensions
     {
         GaxPreconditions.CheckNotNull(builder, nameof(builder));
 
-        return builder.Build(provider).AsIChatClient(defaultModelId);
+        PredictionServiceClient client = provider is not null ?
+            builder.Build(provider) :
+            builder.Build();
+
+        return client.AsIChatClient(defaultModelId);
     }
 
     /// <summary>
@@ -94,7 +98,11 @@ public static class VertexAIExtensions
     {
         GaxPreconditions.CheckNotNull(builder, nameof(builder));
 
-        return builder.Build(provider).AsIEmbeddingGenerator(defaultModelId);
+        PredictionServiceClient client = provider is not null ?
+            builder.Build(provider) :
+            builder.Build();
+
+        return client.AsIEmbeddingGenerator(defaultModelId);
     }
 
     /// <summary>
@@ -131,7 +139,11 @@ public static class VertexAIExtensions
     {
         GaxPreconditions.CheckNotNull(builder, nameof(builder));
 
-        return builder.Build(provider).AsIImageGenerator(defaultModelId);
+        PredictionServiceClient client = provider is not null ?
+            builder.Build(provider) :
+            builder.Build();
+
+        return client.AsIImageGenerator(defaultModelId);
     }
 
     /// <summary>Gets the name of the provider for use as the metadata provider name.</summary>
