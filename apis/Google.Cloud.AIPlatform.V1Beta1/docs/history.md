@@ -1,5 +1,16 @@
 # Version history
 
+## Version 1.0.0-beta54, released 2025-10-14
+
+### New features
+
+- Add aspect_ratio and image_config for v1beta1 version
+- Add additional proto fields and GenerateFetchAccessToken API
+- Add JAILBREAK category to SafetySettings for prediction service
+- A new message `ScaleToZeroSpec` is added
+- A new field `initial_replica_count` is added to message `.google.cloud.aiplatform.v1beta1.DedicatedResources`
+- A new field `scale_to_zero_spec` is added to message `.google.cloud.aiplatform.v1beta1.DedicatedResources`
+
 ## Version 1.0.0-beta53, released 2025-10-09
 
 ### New features
