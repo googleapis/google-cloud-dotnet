@@ -1,5 +1,13 @@
 # Version history
 
+## Version 3.49.0, released 2025-10-14
+
+### New features
+
+- Add JAILBREAK category to SafetySettings for prediction service
+- Add JAILBREAK as a new Prompt block reason in PredictionService
+- Add additional proto fields and GenerateFetchAccessToken API
+
 ## Version 3.48.0, released 2025-10-09
 
 ### New features
