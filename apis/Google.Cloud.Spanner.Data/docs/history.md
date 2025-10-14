@@ -1,5 +1,15 @@
 # Version history
 
+## Version 5.4.0, released 2025-10-14
+
+### New features
+
+- Support using KeySet for delete mutations
+
+### Bug fixes
+
+- No parameters on mutations
+
 ## Version 5.3.0, released 2025-10-09
 
 ### New features
