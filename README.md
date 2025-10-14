@@ -365,8 +365,7 @@ Next, choose a method for authenticating API requests from within your project:
 
       ```
       set GOOGLE_APPLICATION_CREDENTIALS=/path/to/my/key.json
-      ```
-    * Specify the credentials as explained in the [client configuration documentation](https://cloud.google.com/dotnet/docs/reference/help/client-configuration#specifying-credentials)
+      ``` 
     * If running locally for development/testing, you can authenticate using the [Google Cloud SDK](https://cloud.google.com/sdk/).
       Download the SDK if you haven't already, then login by running the following in the command line:
 
