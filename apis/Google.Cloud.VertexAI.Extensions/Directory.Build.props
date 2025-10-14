@@ -1,0 +1,9 @@
+<Project>
+  <Import Project="$([MSBuild]::GetPathOfFileAbove('Directory.Build.props', '$(MSBuildThisFileDirectory)../'))" />
+
+  <PropertyGroup>
+    <NoWarn>$(NoWarn);MEAI001</NoWarn>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+</Project>
