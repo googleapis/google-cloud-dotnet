@@ -4,6 +4,12 @@ This package is primarily a dependency of Google.Cloud.Firestore. See the
 [Google.Cloud.Firestore version history](https://googleapis.dev/dotnet/Google.Cloud.Firestore/latest/history.html)
 for more details.
 
+## Version 3.11.0, released 2025-10-15
+
+### New features
+
+- Implement support for Firestore type discriminators
+
 ## Version 3.10.0, released 2025-03-12
 
 ### Documentation improvements

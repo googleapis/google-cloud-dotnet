@@ -1,5 +1,11 @@
 # Version history
 
+## Version 3.11.0, released 2025-10-15
+
+### New features
+
+- Implement support for Firestore type discriminators
+
 ## Version 3.10.0, released 2025-03-12
 
 ### New features
