@@ -1,5 +1,17 @@
 # Version history
 
+## Version 3.50.0, released 2025-10-15
+
+### New features
+
+- Add support for Inline source based deployment
+- Add aspect_ratio and image_config for v1 version
+
+### Documentation improvements
+
+- A comment for message `ReasoningEngineSpec` is changed
+- A comment for field `package_spec` in message `.google.cloud.aiplatform.v1.ReasoningEngineSpec` is changed
+
 ## Version 3.49.0, released 2025-10-14
 
 ### New features
