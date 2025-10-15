@@ -1,5 +1,16 @@
 # Version history
 
+## Version 1.0.0-beta55, released 2025-10-15
+
+### New features
+
+- Add support for Inline source based deployment
+
+### Documentation improvements
+
+- A comment for message `ReasoningEngineSpec` is changed
+- A comment for field `package_spec` in message `.google.cloud.aiplatform.v1beta1.ReasoningEngineSpec` is changed
+
 ## Version 1.0.0-beta54, released 2025-10-14
 
 ### New features
