@@ -1,0 +1,29 @@
+syntax = "proto3";
+
+package Google.Cloud.BigQuery.Storage.V1.IntegrationTests;
+
+import "google/protobuf/timestamp.proto";
+
+message ComplexTestMessage {
+  string id = 1;
+  int32 count = 2;
+  bool is_active = 3;
+  google.protobuf.Timestamp created_at = 4;
+  bytes data = 5;
+  repeated string tags = 6;
+  NestedMessage nested_field = 7;
+  repeated NestedMessage repeated_nested_field = 8;
+  Status status = 9;
+}
+
+message NestedMessage {
+  string name = 1;
+  double score = 2;
+}
+
+enum Status {
+  STATUS_UNSPECIFIED = 0;
+  ACTIVE = 1;
+  INACTIVE = 2;
+  PENDING = 3;
+}
