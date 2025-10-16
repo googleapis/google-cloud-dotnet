@@ -41,7 +41,7 @@ namespace GoogleCSharpSnippets
                 TopicName = TopicName.FromProjectTopic("[PROJECT]", "[TOPIC]"),
                 Labels = { { "", "" }, },
                 MessageStoragePolicy = new MessageStoragePolicy(),
-                KmsKeyName = "",
+                KmsKeyNameAsCryptoKeyName = CryptoKeyName.FromProjectLocationKeyRingCryptoKey("[PROJECT]", "[LOCATION]", "[KEY_RING]", "[CRYPTO_KEY]"),
                 SchemaSettings = new SchemaSettings(),
                 SatisfiesPzs = false,
                 MessageRetentionDuration = new Duration(),
@@ -51,6 +51,7 @@ namespace GoogleCSharpSnippets
                 {
                     new MessageTransform(),
                 },
+                Tags = { { "", "" }, },
             };
             // Make the request
             Topic response = await publisherServiceApiClient.CreateTopicAsync(request);
