@@ -3694,7 +3694,7 @@
             "generationAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
             "releaseAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
             "releaseTimestamp": "2024-09-26T08:24:24Z",
-            "lastGeneratedCommit": "3fb120eb5c474ec18cddd88f8365e3c2c99289e5",
+            "lastGeneratedCommit": "4c5d582e991ca0b60299343b44ecabe80eae1a69",
             "apiPaths": [
                 "google/maps/routeoptimization/v1"
             ],

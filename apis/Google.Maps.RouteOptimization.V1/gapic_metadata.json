@@ -21,6 +21,18 @@
                 "OptimizeTours",
                 "OptimizeToursAsync"
               ]
+            },
+            "OptimizeToursLongRunning": {
+              "methods": [
+                "OptimizeToursLongRunning",
+                "OptimizeToursLongRunningAsync"
+              ]
+            },
+            "OptimizeToursUri": {
+              "methods": [
+                "OptimizeToursUri",
+                "OptimizeToursUriAsync"
+              ]
             }
           }
         }

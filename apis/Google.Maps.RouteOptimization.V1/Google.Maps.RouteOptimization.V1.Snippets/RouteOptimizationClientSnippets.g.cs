@@ -173,5 +173,183 @@ namespace GoogleCSharpSnippets
             }
             // End snippet
         }
+
+        /// <summary>Snippet for OptimizeToursLongRunning</summary>
+        public void OptimizeToursLongRunningRequestObject()
+        {
+            // Snippet: OptimizeToursLongRunning(OptimizeToursRequest, CallSettings)
+            // Create client
+            RouteOptimizationClient routeOptimizationClient = RouteOptimizationClient.Create();
+            // Initialize request argument(s)
+            OptimizeToursRequest request = new OptimizeToursRequest
+            {
+                Parent = "",
+                Timeout = new Duration(),
+                Model = new ShipmentModel(),
+                SolvingMode = OptimizeToursRequest.Types.SolvingMode.DefaultSolve,
+                MaxValidationErrors = 0,
+                SearchMode = OptimizeToursRequest.Types.SearchMode.Unspecified,
+                InjectedFirstSolutionRoutes =
+                {
+                    new ShipmentRoute(),
+                },
+                InjectedSolutionConstraint = new InjectedSolutionConstraint(),
+                RefreshDetailsRoutes =
+                {
+                    new ShipmentRoute(),
+                },
+                InterpretInjectedSolutionsUsingLabels = false,
+                ConsiderRoadTraffic = false,
+                PopulatePolylines = false,
+                PopulateTransitionPolylines = false,
+                AllowLargeDeadlineDespiteInterruptionRisk = false,
+                UseGeodesicDistances = false,
+                GeodesicMetersPerSecond = 0,
+                Label = "",
+            };
+            // Make the request
+            Operation<OptimizeToursResponse, OptimizeToursLongRunningMetadata> response = routeOptimizationClient.OptimizeToursLongRunning(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<OptimizeToursResponse, OptimizeToursLongRunningMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            OptimizeToursResponse result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<OptimizeToursResponse, OptimizeToursLongRunningMetadata> retrievedResponse = routeOptimizationClient.PollOnceOptimizeToursLongRunning(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                OptimizeToursResponse retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for OptimizeToursLongRunningAsync</summary>
+        public async Task OptimizeToursLongRunningRequestObjectAsync()
+        {
+            // Snippet: OptimizeToursLongRunningAsync(OptimizeToursRequest, CallSettings)
+            // Additional: OptimizeToursLongRunningAsync(OptimizeToursRequest, CancellationToken)
+            // Create client
+            RouteOptimizationClient routeOptimizationClient = await RouteOptimizationClient.CreateAsync();
+            // Initialize request argument(s)
+            OptimizeToursRequest request = new OptimizeToursRequest
+            {
+                Parent = "",
+                Timeout = new Duration(),
+                Model = new ShipmentModel(),
+                SolvingMode = OptimizeToursRequest.Types.SolvingMode.DefaultSolve,
+                MaxValidationErrors = 0,
+                SearchMode = OptimizeToursRequest.Types.SearchMode.Unspecified,
+                InjectedFirstSolutionRoutes =
+                {
+                    new ShipmentRoute(),
+                },
+                InjectedSolutionConstraint = new InjectedSolutionConstraint(),
+                RefreshDetailsRoutes =
+                {
+                    new ShipmentRoute(),
+                },
+                InterpretInjectedSolutionsUsingLabels = false,
+                ConsiderRoadTraffic = false,
+                PopulatePolylines = false,
+                PopulateTransitionPolylines = false,
+                AllowLargeDeadlineDespiteInterruptionRisk = false,
+                UseGeodesicDistances = false,
+                GeodesicMetersPerSecond = 0,
+                Label = "",
+            };
+            // Make the request
+            Operation<OptimizeToursResponse, OptimizeToursLongRunningMetadata> response = await routeOptimizationClient.OptimizeToursLongRunningAsync(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<OptimizeToursResponse, OptimizeToursLongRunningMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            OptimizeToursResponse result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<OptimizeToursResponse, OptimizeToursLongRunningMetadata> retrievedResponse = await routeOptimizationClient.PollOnceOptimizeToursLongRunningAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                OptimizeToursResponse retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for OptimizeToursUri</summary>
+        public void OptimizeToursUriRequestObject()
+        {
+            // Snippet: OptimizeToursUri(OptimizeToursUriRequest, CallSettings)
+            // Create client
+            RouteOptimizationClient routeOptimizationClient = RouteOptimizationClient.Create();
+            // Initialize request argument(s)
+            OptimizeToursUriRequest request = new OptimizeToursUriRequest
+            {
+                Parent = "",
+                Input = new Uri(),
+                Output = new Uri(),
+            };
+            // Make the request
+            Operation<OptimizeToursUriResponse, OptimizeToursUriMetadata> response = routeOptimizationClient.OptimizeToursUri(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<OptimizeToursUriResponse, OptimizeToursUriMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            OptimizeToursUriResponse result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<OptimizeToursUriResponse, OptimizeToursUriMetadata> retrievedResponse = routeOptimizationClient.PollOnceOptimizeToursUri(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                OptimizeToursUriResponse retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for OptimizeToursUriAsync</summary>
+        public async Task OptimizeToursUriRequestObjectAsync()
+        {
+            // Snippet: OptimizeToursUriAsync(OptimizeToursUriRequest, CallSettings)
+            // Additional: OptimizeToursUriAsync(OptimizeToursUriRequest, CancellationToken)
+            // Create client
+            RouteOptimizationClient routeOptimizationClient = await RouteOptimizationClient.CreateAsync();
+            // Initialize request argument(s)
+            OptimizeToursUriRequest request = new OptimizeToursUriRequest
+            {
+                Parent = "",
+                Input = new Uri(),
+                Output = new Uri(),
+            };
+            // Make the request
+            Operation<OptimizeToursUriResponse, OptimizeToursUriMetadata> response = await routeOptimizationClient.OptimizeToursUriAsync(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<OptimizeToursUriResponse, OptimizeToursUriMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            OptimizeToursUriResponse result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<OptimizeToursUriResponse, OptimizeToursUriMetadata> retrievedResponse = await routeOptimizationClient.PollOnceOptimizeToursUriAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                OptimizeToursUriResponse retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
     }
 }
