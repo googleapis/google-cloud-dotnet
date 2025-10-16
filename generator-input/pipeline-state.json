@@ -2760,7 +2760,7 @@
             "generationAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
             "releaseAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
             "releaseTimestamp": "2025-04-23T17:04:28Z",
-            "lastGeneratedCommit": "0a0dffc19bed400afdeec0f67b1726b6b23173fb",
+            "lastGeneratedCommit": "a32b926f35bf473f7ba31383e5247175beccd576",
             "apiPaths": [
                 "google/cloud/secrets/v1beta1"
             ],
