@@ -40,6 +40,7 @@ namespace GoogleCSharpSnippets
                 SnapshotName = SnapshotName.FromProjectSnapshot("[PROJECT]", "[SNAPSHOT]"),
                 SubscriptionAsSubscriptionName = SubscriptionName.FromProjectSubscription("[PROJECT]", "[SUBSCRIPTION]"),
                 Labels = { { "", "" }, },
+                Tags = { { "", "" }, },
             };
             // Make the request
             Snapshot response = await subscriberServiceApiClient.CreateSnapshotAsync(request);

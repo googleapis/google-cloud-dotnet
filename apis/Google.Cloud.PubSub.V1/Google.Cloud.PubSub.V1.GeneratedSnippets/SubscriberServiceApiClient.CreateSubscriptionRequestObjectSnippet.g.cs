@@ -60,6 +60,7 @@ namespace GoogleCSharpSnippets
                 {
                     new MessageTransform(),
                 },
+                Tags = { { "", "" }, },
             };
             // Make the request
             Subscription response = subscriberServiceApiClient.CreateSubscription(request);
