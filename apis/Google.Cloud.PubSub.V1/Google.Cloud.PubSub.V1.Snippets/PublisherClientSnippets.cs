@@ -12,15 +12,11 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
+using Google.Apis.Auth.OAuth2;
 using Microsoft.Extensions.DependencyInjection;
 using Xunit;
 
 namespace Google.Cloud.PubSub.V1.Snippets;
-
-// Temporarily disable warnings for obsolete methods. See
-// https://github.com/googleapis/google-api-dotnet-client/pull/3043
-// for more details.
-#pragma warning disable CS0618
 
 public class PublisherClientSnippets
 {
@@ -43,13 +39,15 @@ public class PublisherClientSnippets
         string projectId = "projectId";
         string topicId = "topicId";
         var services = new ServiceCollection();
+        var googleCredential = GoogleCredential.FromAccessToken("fake-access-token");
 
         // Sample: AddCustomizedPublisherClient
         TopicName topicName = TopicName.FromProjectTopic(projectId, topicId);
         services.AddPublisherClient(builder =>
         {
             builder.TopicName = topicName;
-            builder.CredentialsPath = "path/to/credentials.json";
+            // An instance of Google.Apis.Auth.OAuth2.GoogleCredential that you can create using Google.Apis.Auth.OAuth2.CredentialFactory and other GoogleCredential factory methods.
+            builder.GoogleCredential = googleCredential;
             // Other settings to customize.
         });
         // End sample
