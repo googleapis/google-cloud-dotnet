@@ -17,6 +17,11 @@ using Xunit;
 
 namespace Google.Cloud.PubSub.V1.Snippets;
 
+// Temporarily disable warnings for obsolete methods. See
+// https://github.com/googleapis/google-api-dotnet-client/pull/3043
+// for more details.
+#pragma warning disable CS0618
+
 public class PublisherClientSnippets
 {
     [Fact]

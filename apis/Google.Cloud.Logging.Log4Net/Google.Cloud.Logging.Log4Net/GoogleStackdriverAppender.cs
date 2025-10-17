@@ -25,11 +25,15 @@ using log4net.Core;
 using log4net.Layout;
 using System;
 using System.Collections.Generic;
-using System.IO;
 using System.Linq;
 using System.Security;
 using System.Threading;
 using System.Threading.Tasks;
+
+// Temporarily disable warnings for obsolete methods. See
+// https://github.com/googleapis/google-api-dotnet-client/pull/3043
+// for more details.
+#pragma warning disable CS0618
 
 namespace Google.Cloud.Logging.Log4Net
 {
