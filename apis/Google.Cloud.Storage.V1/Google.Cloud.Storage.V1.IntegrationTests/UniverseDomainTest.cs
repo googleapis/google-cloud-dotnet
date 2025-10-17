@@ -20,6 +20,11 @@ using Xunit;
 
 namespace Google.Cloud.Storage.V1.IntegrationTests;
 
+// Temporarily disable warnings for obsolete methods. See
+// https://github.com/googleapis/google-api-dotnet-client/pull/3043
+// for more details.
+#pragma warning disable CS0618
+
 public class UniverseDomainTest : IDisposable
 {
     private StorageClient _storage;

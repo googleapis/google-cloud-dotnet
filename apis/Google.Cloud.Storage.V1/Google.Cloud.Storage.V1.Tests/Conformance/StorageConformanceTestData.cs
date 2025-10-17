@@ -1,4 +1,4 @@
-﻿// Copyright 2019 Google LLC
+// Copyright 2019 Google LLC
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -15,6 +15,11 @@
 using Google.Apis.Auth.OAuth2;
 using Google.Cloud.ClientTesting;
 using System.IO;
+
+// Temporarily disable warnings for obsolete methods. See
+// https://github.com/googleapis/google-api-dotnet-client/pull/3043
+// for more details.
+#pragma warning disable CS0618
 
 namespace Google.Cloud.Storage.V1.Tests.Conformance
 {

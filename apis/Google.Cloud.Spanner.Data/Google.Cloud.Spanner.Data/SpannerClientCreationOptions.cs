@@ -19,6 +19,11 @@ using System;
 using System.Text;
 using System.Threading.Tasks;
 
+// Temporarily disable warnings for obsolete methods. See
+// https://github.com/googleapis/google-api-dotnet-client/pull/3043
+// for more details.
+#pragma warning disable CS0618
+
 namespace Google.Cloud.Spanner.Data
 {
     /// <summary>
