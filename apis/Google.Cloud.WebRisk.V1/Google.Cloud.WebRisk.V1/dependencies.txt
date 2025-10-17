@@ -1,0 +1,7 @@
+This is a placeholder file to provoke a dependency-only release
+
+- Google.Api.CommonProtos: v2.16.0.0 => v2.17.0.0
+- Google.Api.Gax: v4.9.0.0 => v4.12.1.0
+- Google.Api.Gax.Grpc: v4.9.0.0 => v4.12.1.0
+- Google.LongRunning: v3.3.0.0 => v3.4.0.0
+- Google.Protobuf: v3.28.2.0 => v3.31.1.0
