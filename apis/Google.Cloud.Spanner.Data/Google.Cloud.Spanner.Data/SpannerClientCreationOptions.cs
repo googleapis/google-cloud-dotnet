@@ -19,11 +19,6 @@ using System;
 using System.Text;
 using System.Threading.Tasks;
 
-// Temporarily disable warnings for obsolete methods. See
-// https://github.com/googleapis/google-api-dotnet-client/pull/3043
-// for more details.
-#pragma warning disable CS0618
-
 namespace Google.Cloud.Spanner.Data
 {
     /// <summary>
@@ -44,7 +39,9 @@ namespace Google.Cloud.Spanner.Data
                 EmulatorDetection = builder.EmulatorDetection,
                 EnvironmentVariableProvider = builder.EnvironmentVariableProvider,
                 Endpoint = builder.ContainsKey(nameof(builder.Host)) || builder.ContainsKey(nameof(builder.Port)) ? builder.EndPoint : null,
+#pragma warning disable CS0618 // Temporarily disable warnings for obsolete methods. See b/453009677 for more details.
                 CredentialsPath = builder.CredentialFile == "" ? null: builder.CredentialFile,
+#pragma warning restore CS0618
                 ChannelCredentials = builder.CredentialOverride,
                 GoogleCredential = builder.GoogleCredential,
                 AffinityChannelPoolConfiguration = new ChannelPoolConfig
@@ -71,7 +68,9 @@ namespace Google.Cloud.Spanner.Data
                 // Note we don't copy emulator detection properties because we already took care
                 // of emulator detection on the constructor.
                 Endpoint = ClientBuilder.Endpoint,
+#pragma warning disable CS0618 // Temporarily disable warnings for obsolete methods. See b/453009677 for more details.
                 CredentialsPath = ClientBuilder.CredentialsPath,
+#pragma warning disable CS0618
                 ChannelCredentials = ClientBuilder.ChannelCredentials,
                 GoogleCredential = ClientBuilder.GoogleCredential,
                 AffinityChannelPoolConfiguration = ClientBuilder.AffinityChannelPoolConfiguration,
@@ -89,7 +88,9 @@ namespace Google.Cloud.Spanner.Data
                 // Note we don't copy emulator detection properties because we already took care
                 // of emulator detection on the constructor.
                 Endpoint = ClientBuilder.Endpoint,
+#pragma warning disable CS0618 // Temporarily disable warnings for obsolete methods. See b/453009677 for more details.
                 CredentialsPath = ClientBuilder.CredentialsPath,
+#pragma warning restore CS0618
                 ChannelCredentials = ClientBuilder.ChannelCredentials,
                 GoogleCredential = ClientBuilder.GoogleCredential,
                 // If we ever have settings of our own, we need to merge those with these.
@@ -112,7 +113,9 @@ namespace Google.Cloud.Spanner.Data
             UsesEmulator == other.UsesEmulator &&
             // TODO: Consider overriding ClientBuilderBase and SpannerClientBuilder Equals, etc.
             Equals(ClientBuilder.Endpoint, other.ClientBuilder.Endpoint) &&
+#pragma warning disable CS0618 // Temporarily disable warnings for obsolete methods. See b/453009677 for more details.
             Equals(ClientBuilder.CredentialsPath, other.ClientBuilder.CredentialsPath) &&
+#pragma warning restore CS0618
             Equals(ClientBuilder.ChannelCredentials, other.ClientBuilder.ChannelCredentials) &&
             Equals(ClientBuilder.GoogleCredential, other.ClientBuilder.GoogleCredential) &&
             Equals(ClientBuilder.AffinityChannelPoolConfiguration, other.ClientBuilder.AffinityChannelPoolConfiguration) &&
@@ -126,7 +129,9 @@ namespace Google.Cloud.Spanner.Data
             {
                 int hash = 31;
                 hash = hash * 23 + (ClientBuilder.Endpoint?.GetHashCode() ?? 0);
+#pragma warning disable CS0618 // Temporarily disable warnings for obsolete methods. See b/453009677 for more details.
                 hash = hash * 23 + (ClientBuilder.CredentialsPath?.GetHashCode() ?? 0);
+#pragma warning restore CS0618
                 hash = hash * 23 + (ClientBuilder.ChannelCredentials?.GetHashCode() ?? 0);
                 hash = hash * 23 + (ClientBuilder.GoogleCredential?.GetHashCode() ?? 0);
                 hash = hash * 23 + UsesEmulator.GetHashCode();
@@ -145,10 +150,12 @@ namespace Google.Cloud.Spanner.Data
         public override string ToString()
         {
             var builder = new StringBuilder($"EndPoint: {ClientBuilder.Endpoint ?? "Default"}");
+#pragma warning disable CS0618 // Temporarily disable warnings for obsolete methods. See b/453009677 for more details.
             if (!string.IsNullOrEmpty(ClientBuilder.CredentialsPath))
             {
                 builder.Append($"; CredentialsFile: {ClientBuilder.CredentialsPath}");
             }
+#pragma warning restore CS0618
             if (ClientBuilder.ChannelCredentials is not null)
             {
                 builder.Append($"; CredentialsOverride: True");
