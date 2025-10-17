@@ -23,11 +23,6 @@ using System.Linq;
 using System.Threading;
 using System.Threading.Tasks;
 
-// Temporarily disable warnings for obsolete methods. See
-// https://github.com/googleapis/google-api-dotnet-client/pull/3043
-// for more details.
-#pragma warning disable CS0618
-
 namespace Google.Cloud.Storage.V1
 {
     /// <summary>
@@ -143,8 +138,10 @@ namespace Google.Cloud.Storage.V1
         protected override void Validate()
         {
             base.Validate();
+#pragma warning disable CS0618 // Temporarily disable warnings for obsolete methods.
             GaxPreconditions.CheckState(!UnauthenticatedAccess || (ApiKey == null && Credential == null && CredentialsPath == null && JsonCredentials == null),
                 "When requesting unauthenticated access, don't specify any other credentials.");
+#pragma warning restore CS0618
         }
 
         private StorageClientBuilder MaybeUseEmulator()
@@ -203,8 +200,10 @@ namespace Google.Cloud.Storage.V1
                     }
                     // When the settings *only* support the use of an emulator, the other properties shouldn't be set.
                     CheckNotSet(BaseUri, nameof(BaseUri));
+#pragma warning disable CS0618 // Temporarily disable warnings for obsolete methods.
                     CheckNotSet(CredentialsPath, nameof(CredentialsPath));
                     CheckNotSet(JsonCredentials, nameof(JsonCredentials));
+#pragma warning restore CS0618
                     CheckNotSet(QuotaProject, nameof(QuotaProject));
                     CheckNotSet(Credential, nameof(Credential));
                     CheckNotSet(ApiKey, nameof(ApiKey));
@@ -254,7 +253,7 @@ namespace Google.Cloud.Storage.V1
         private void CopySettingsForEmulator(StorageClientBuilder source)
         {
             GaxPreconditions.CheckNotNull(source, nameof(source));
-            // From ClientBuilderBase            
+            // From ClientBuilderBase
             HttpClientFactory = source.HttpClientFactory;
             ApplicationName = source.ApplicationName;
 
