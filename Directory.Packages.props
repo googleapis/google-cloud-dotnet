@@ -20,7 +20,7 @@
     <PackageVersion Include="Google.Protobuf" Version="3.31.1" />
 
     <!-- System packages -->
-    <PackageVersion Include="Microsoft.Bcl.AsyncInterfaces" Version="8.0.0" />
+    <PackageVersion Include="Microsoft.Bcl.AsyncInterfaces" Version="9.0.10" />
       
     <!-- MS Extensions packages -->    
     <PackageVersion Include="Microsoft.Extensions.Http" Version="8.0.1" />
