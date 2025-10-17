@@ -25,7 +25,7 @@ namespace Google.Apps.Card.V1 {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "Ch5nb29nbGUvYXBwcy9jYXJkL3YxL2NhcmQucHJvdG8SE2dvb2dsZS5hcHBz",
-            "LmNhcmQudjEaF2dvb2dsZS90eXBlL2NvbG9yLnByb3RvIscICgRDYXJkEjQK",
+            "LmNhcmQudjEaF2dvb2dsZS90eXBlL2NvbG9yLnByb3RvIsMKCgRDYXJkEjQK",
             "BmhlYWRlchgBIAEoCzIkLmdvb2dsZS5hcHBzLmNhcmQudjEuQ2FyZC5DYXJk",
             "SGVhZGVyEjMKCHNlY3Rpb25zGAIgAygLMiEuZ29vZ2xlLmFwcHMuY2FyZC52",
             "MS5DYXJkLlNlY3Rpb24SRQoVc2VjdGlvbl9kaXZpZGVyX3N0eWxlGAkgASgO",
@@ -39,199 +39,263 @@ namespace Google.Apps.Card.V1 {
             "SGVhZGVyEg0KBXRpdGxlGAEgASgJEhAKCHN1YnRpdGxlGAIgASgJEjkKCmlt",
             "YWdlX3R5cGUYAyABKA4yJS5nb29nbGUuYXBwcy5jYXJkLnYxLldpZGdldC5J",
             "bWFnZVR5cGUSEQoJaW1hZ2VfdXJsGAQgASgJEhYKDmltYWdlX2FsdF90ZXh0",
-            "GAUgASgJGoEBCgdTZWN0aW9uEg4KBmhlYWRlchgBIAEoCRIsCgd3aWRnZXRz",
+            "GAUgASgJGsEBCgdTZWN0aW9uEg4KBmhlYWRlchgBIAEoCRIsCgd3aWRnZXRz",
             "GAIgAygLMhsuZ29vZ2xlLmFwcHMuY2FyZC52MS5XaWRnZXQSEwoLY29sbGFw",
             "c2libGUYBSABKAgSIwobdW5jb2xsYXBzaWJsZV93aWRnZXRzX2NvdW50GAYg",
-            "ASgFGlIKCkNhcmRBY3Rpb24SFAoMYWN0aW9uX2xhYmVsGAEgASgJEi4KCG9u",
-            "X2NsaWNrGAIgASgLMhwuZ29vZ2xlLmFwcHMuY2FyZC52MS5PbkNsaWNrGn0K",
-            "D0NhcmRGaXhlZEZvb3RlchIzCg5wcmltYXJ5X2J1dHRvbhgBIAEoCzIbLmdv",
-            "b2dsZS5hcHBzLmNhcmQudjEuQnV0dG9uEjUKEHNlY29uZGFyeV9idXR0b24Y",
-            "AiABKAsyGy5nb29nbGUuYXBwcy5jYXJkLnYxLkJ1dHRvbiJQCgxEaXZpZGVy",
-            "U3R5bGUSHQoZRElWSURFUl9TVFlMRV9VTlNQRUNJRklFRBAAEhEKDVNPTElE",
-            "X0RJVklERVIQARIOCgpOT19ESVZJREVSEAIiRAoMRGlzcGxheVN0eWxlEh0K",
-            "GURJU1BMQVlfU1RZTEVfVU5TUEVDSUZJRUQQABIICgRQRUVLEAESCwoHUkVQ",
-            "TEFDRRACIoYGCgZXaWRnZXQSPAoOdGV4dF9wYXJhZ3JhcGgYASABKAsyIi5n",
-            "b29nbGUuYXBwcy5jYXJkLnYxLlRleHRQYXJhZ3JhcGhIABIrCgVpbWFnZRgC",
-            "IAEoCzIaLmdvb2dsZS5hcHBzLmNhcmQudjEuSW1hZ2VIABI8Cg5kZWNvcmF0",
-            "ZWRfdGV4dBgDIAEoCzIiLmdvb2dsZS5hcHBzLmNhcmQudjEuRGVjb3JhdGVk",
-            "VGV4dEgAEjYKC2J1dHRvbl9saXN0GAQgASgLMh8uZ29vZ2xlLmFwcHMuY2Fy",
-            "ZC52MS5CdXR0b25MaXN0SAASNAoKdGV4dF9pbnB1dBgFIAEoCzIeLmdvb2ds",
-            "ZS5hcHBzLmNhcmQudjEuVGV4dElucHV0SAASPgoPc2VsZWN0aW9uX2lucHV0",
-            "GAYgASgLMiMuZ29vZ2xlLmFwcHMuY2FyZC52MS5TZWxlY3Rpb25JbnB1dEgA",
-            "Ej8KEGRhdGVfdGltZV9waWNrZXIYByABKAsyIy5nb29nbGUuYXBwcy5jYXJk",
-            "LnYxLkRhdGVUaW1lUGlja2VySAASLwoHZGl2aWRlchgJIAEoCzIcLmdvb2ds",
-            "ZS5hcHBzLmNhcmQudjEuRGl2aWRlckgAEikKBGdyaWQYCiABKAsyGS5nb29n",
-            "bGUuYXBwcy5jYXJkLnYxLkdyaWRIABIvCgdjb2x1bW5zGAsgASgLMhwuZ29v",
-            "Z2xlLmFwcHMuY2FyZC52MS5Db2x1bW5zSAASTQoUaG9yaXpvbnRhbF9hbGln",
-            "bm1lbnQYCCABKA4yLy5nb29nbGUuYXBwcy5jYXJkLnYxLldpZGdldC5Ib3Jp",
-            "em9udGFsQWxpZ25tZW50IiMKCUltYWdlVHlwZRIKCgZTUVVBUkUQABIKCgZD",
-            "SVJDTEUQASJbChNIb3Jpem9udGFsQWxpZ25tZW50EiQKIEhPUklaT05UQUxf",
-            "QUxJR05NRU5UX1VOU1BFQ0lGSUVEEAASCQoFU1RBUlQQARIKCgZDRU5URVIQ",
-            "AhIHCgNFTkQQA0IGCgRkYXRhIh0KDVRleHRQYXJhZ3JhcGgSDAoEdGV4dBgB",
-            "IAEoCSJcCgVJbWFnZRIRCglpbWFnZV91cmwYASABKAkSLgoIb25fY2xpY2sY",
-            "AiABKAsyHC5nb29nbGUuYXBwcy5jYXJkLnYxLk9uQ2xpY2sSEAoIYWx0X3Rl",
-            "eHQYAyABKAkiCQoHRGl2aWRlciKeBQoNRGVjb3JhdGVkVGV4dBIrCgRpY29u",
-            "GAEgASgLMhkuZ29vZ2xlLmFwcHMuY2FyZC52MS5JY29uQgIYARItCgpzdGFy",
-            "dF9pY29uGAwgASgLMhkuZ29vZ2xlLmFwcHMuY2FyZC52MS5JY29uEhEKCXRv",
-            "cF9sYWJlbBgDIAEoCRIMCgR0ZXh0GAQgASgJEhEKCXdyYXBfdGV4dBgFIAEo",
-            "CBIUCgxib3R0b21fbGFiZWwYBiABKAkSLgoIb25fY2xpY2sYByABKAsyHC5n",
-            "b29nbGUuYXBwcy5jYXJkLnYxLk9uQ2xpY2sSLQoGYnV0dG9uGAggASgLMhsu",
-            "Z29vZ2xlLmFwcHMuY2FyZC52MS5CdXR0b25IABJKCg5zd2l0Y2hfY29udHJv",
-            "bBgJIAEoCzIwLmdvb2dsZS5hcHBzLmNhcmQudjEuRGVjb3JhdGVkVGV4dC5T",
-            "d2l0Y2hDb250cm9sSAASLQoIZW5kX2ljb24YCyABKAsyGS5nb29nbGUuYXBw",
-            "cy5jYXJkLnYxLkljb25IABqBAgoNU3dpdGNoQ29udHJvbBIMCgRuYW1lGAEg",
-            "ASgJEg0KBXZhbHVlGAIgASgJEhAKCHNlbGVjdGVkGAMgASgIEjUKEG9uX2No",
-            "YW5nZV9hY3Rpb24YBCABKAsyGy5nb29nbGUuYXBwcy5jYXJkLnYxLkFjdGlv",
-            "bhJSCgxjb250cm9sX3R5cGUYBSABKA4yPC5nb29nbGUuYXBwcy5jYXJkLnYx",
-            "LkRlY29yYXRlZFRleHQuU3dpdGNoQ29udHJvbC5Db250cm9sVHlwZSI2CgtD",
-            "b250cm9sVHlwZRIKCgZTV0lUQ0gQABIMCghDSEVDS0JPWBABEg0KCUNIRUNL",
-            "X0JPWBACQgkKB2NvbnRyb2wi9AIKCVRleHRJbnB1dBIMCgRuYW1lGAEgASgJ",
-            "Eg0KBWxhYmVsGAIgASgJEhEKCWhpbnRfdGV4dBgDIAEoCRINCgV2YWx1ZRgE",
-            "IAEoCRIxCgR0eXBlGAUgASgOMiMuZ29vZ2xlLmFwcHMuY2FyZC52MS5UZXh0",
-            "SW5wdXQuVHlwZRI1ChBvbl9jaGFuZ2VfYWN0aW9uGAYgASgLMhsuZ29vZ2xl",
-            "LmFwcHMuY2FyZC52MS5BY3Rpb24SPQoTaW5pdGlhbF9zdWdnZXN0aW9ucxgH",
-            "IAEoCzIgLmdvb2dsZS5hcHBzLmNhcmQudjEuU3VnZ2VzdGlvbnMSOQoUYXV0",
-            "b19jb21wbGV0ZV9hY3Rpb24YCCABKAsyGy5nb29nbGUuYXBwcy5jYXJkLnYx",
-            "LkFjdGlvbhIYChBwbGFjZWhvbGRlcl90ZXh0GAwgASgJIioKBFR5cGUSDwoL",
-            "U0lOR0xFX0xJTkUQABIRCg1NVUxUSVBMRV9MSU5FEAEiegoLU3VnZ2VzdGlv",
-            "bnMSPgoFaXRlbXMYASADKAsyLy5nb29nbGUuYXBwcy5jYXJkLnYxLlN1Z2dl",
-            "c3Rpb25zLlN1Z2dlc3Rpb25JdGVtGisKDlN1Z2dlc3Rpb25JdGVtEg4KBHRl",
-            "eHQYASABKAlIAEIJCgdjb250ZW50IjoKCkJ1dHRvbkxpc3QSLAoHYnV0dG9u",
-            "cxgBIAMoCzIbLmdvb2dsZS5hcHBzLmNhcmQudjEuQnV0dG9uIusGCg5TZWxl",
-            "Y3Rpb25JbnB1dBIMCgRuYW1lGAEgASgJEg0KBWxhYmVsGAIgASgJEj8KBHR5",
-            "cGUYAyABKA4yMS5nb29nbGUuYXBwcy5jYXJkLnYxLlNlbGVjdGlvbklucHV0",
-            "LlNlbGVjdGlvblR5cGUSQAoFaXRlbXMYBCADKAsyMS5nb29nbGUuYXBwcy5j",
-            "YXJkLnYxLlNlbGVjdGlvbklucHV0LlNlbGVjdGlvbkl0ZW0SNQoQb25fY2hh",
-            "bmdlX2FjdGlvbhgFIAEoCzIbLmdvb2dsZS5hcHBzLmNhcmQudjEuQWN0aW9u",
-            "EicKH211bHRpX3NlbGVjdF9tYXhfc2VsZWN0ZWRfaXRlbXMYBiABKAUSJQod",
-            "bXVsdGlfc2VsZWN0X21pbl9xdWVyeV9sZW5ndGgYByABKAUSOwoUZXh0ZXJu",
-            "YWxfZGF0YV9zb3VyY2UYCCABKAsyGy5nb29nbGUuYXBwcy5jYXJkLnYxLkFj",
-            "dGlvbkgAElYKFHBsYXRmb3JtX2RhdGFfc291cmNlGAkgASgLMjYuZ29vZ2xl",
-            "LmFwcHMuY2FyZC52MS5TZWxlY3Rpb25JbnB1dC5QbGF0Zm9ybURhdGFTb3Vy",
-            "Y2VIABprCg1TZWxlY3Rpb25JdGVtEgwKBHRleHQYASABKAkSDQoFdmFsdWUY",
-            "AiABKAkSEAoIc2VsZWN0ZWQYAyABKAgSFgoOc3RhcnRfaWNvbl91cmkYBCAB",
-            "KAkSEwoLYm90dG9tX3RleHQYBSABKAkatQEKElBsYXRmb3JtRGF0YVNvdXJj",
-            "ZRJlChJjb21tb25fZGF0YV9zb3VyY2UYASABKA4yRy5nb29nbGUuYXBwcy5j",
-            "YXJkLnYxLlNlbGVjdGlvbklucHV0LlBsYXRmb3JtRGF0YVNvdXJjZS5Db21t",
-            "b25EYXRhU291cmNlSAAiKQoQQ29tbW9uRGF0YVNvdXJjZRILCgdVTktOT1dO",
-            "EAASCAoEVVNFUhABQg0KC2RhdGFfc291cmNlIlwKDVNlbGVjdGlvblR5cGUS",
-            "DQoJQ0hFQ0tfQk9YEAASEAoMUkFESU9fQlVUVE9OEAESCgoGU1dJVENIEAIS",
-            "DAoIRFJPUERPV04QAxIQCgxNVUxUSV9TRUxFQ1QQBEIaChhtdWx0aV9zZWxl",
-            "Y3RfZGF0YV9zb3VyY2UipwIKDkRhdGVUaW1lUGlja2VyEgwKBG5hbWUYASAB",
-            "KAkSDQoFbGFiZWwYAiABKAkSRAoEdHlwZRgDIAEoDjI2Lmdvb2dsZS5hcHBz",
-            "LmNhcmQudjEuRGF0ZVRpbWVQaWNrZXIuRGF0ZVRpbWVQaWNrZXJUeXBlEhYK",
-            "DnZhbHVlX21zX2Vwb2NoGAQgASgDEhwKFHRpbWV6b25lX29mZnNldF9kYXRl",
-            "GAUgASgFEjUKEG9uX2NoYW5nZV9hY3Rpb24YBiABKAsyGy5nb29nbGUuYXBw",
-            "cy5jYXJkLnYxLkFjdGlvbiJFChJEYXRlVGltZVBpY2tlclR5cGUSEQoNREFU",
-            "RV9BTkRfVElNRRAAEg0KCURBVEVfT05MWRABEg0KCVRJTUVfT05MWRACIrYB",
-            "CgZCdXR0b24SDAoEdGV4dBgBIAEoCRInCgRpY29uGAIgASgLMhkuZ29vZ2xl",
-            "LmFwcHMuY2FyZC52MS5JY29uEiEKBWNvbG9yGAMgASgLMhIuZ29vZ2xlLnR5",
-            "cGUuQ29sb3ISLgoIb25fY2xpY2sYBCABKAsyHC5nb29nbGUuYXBwcy5jYXJk",
-            "LnYxLk9uQ2xpY2sSEAoIZGlzYWJsZWQYBSABKAgSEAoIYWx0X3RleHQYBiAB",
-            "KAkiwgEKBEljb24SFAoKa25vd25faWNvbhgBIAEoCUgAEhIKCGljb25fdXJs",
-            "GAIgASgJSAASOgoNbWF0ZXJpYWxfaWNvbhgFIAEoCzIhLmdvb2dsZS5hcHBz",
-            "LmNhcmQudjEuTWF0ZXJpYWxJY29uSAASEAoIYWx0X3RleHQYAyABKAkSOQoK",
-            "aW1hZ2VfdHlwZRgEIAEoDjIlLmdvb2dsZS5hcHBzLmNhcmQudjEuV2lkZ2V0",
-            "LkltYWdlVHlwZUIHCgVpY29ucyJJCgxNYXRlcmlhbEljb24SDAoEbmFtZRgB",
-            "IAEoCRIMCgRmaWxsGAIgASgIEg4KBndlaWdodBgDIAEoBRINCgVncmFkZRgE",
-            "IAEoBSLaAQoOSW1hZ2VDcm9wU3R5bGUSPwoEdHlwZRgBIAEoDjIxLmdvb2ds",
-            "ZS5hcHBzLmNhcmQudjEuSW1hZ2VDcm9wU3R5bGUuSW1hZ2VDcm9wVHlwZRIU",
-            "Cgxhc3BlY3RfcmF0aW8YAiABKAEicQoNSW1hZ2VDcm9wVHlwZRIfChtJTUFH",
-            "RV9DUk9QX1RZUEVfVU5TUEVDSUZJRUQQABIKCgZTUVVBUkUQARIKCgZDSVJD",
-            "TEUQAhIUChBSRUNUQU5HTEVfQ1VTVE9NEAMSEQoNUkVDVEFOR0xFXzRfMxAE",
-            "Is8BCgtCb3JkZXJTdHlsZRI5CgR0eXBlGAEgASgOMisuZ29vZ2xlLmFwcHMu",
-            "Y2FyZC52MS5Cb3JkZXJTdHlsZS5Cb3JkZXJUeXBlEigKDHN0cm9rZV9jb2xv",
-            "chgCIAEoCzISLmdvb2dsZS50eXBlLkNvbG9yEhUKDWNvcm5lcl9yYWRpdXMY",
-            "AyABKAUiRAoKQm9yZGVyVHlwZRIbChdCT1JERVJfVFlQRV9VTlNQRUNJRklF",
-            "RBAAEg0KCU5PX0JPUkRFUhABEgoKBlNUUk9LRRACIqYBCg5JbWFnZUNvbXBv",
-            "bmVudBIRCglpbWFnZV91cmkYASABKAkSEAoIYWx0X3RleHQYAiABKAkSNwoK",
-            "Y3JvcF9zdHlsZRgDIAEoCzIjLmdvb2dsZS5hcHBzLmNhcmQudjEuSW1hZ2VD",
-            "cm9wU3R5bGUSNgoMYm9yZGVyX3N0eWxlGAQgASgLMiAuZ29vZ2xlLmFwcHMu",
-            "Y2FyZC52MS5Cb3JkZXJTdHlsZSLLAwoER3JpZBINCgV0aXRsZRgBIAEoCRIx",
-            "CgVpdGVtcxgCIAMoCzIiLmdvb2dsZS5hcHBzLmNhcmQudjEuR3JpZC5Hcmlk",
-            "SXRlbRI2Cgxib3JkZXJfc3R5bGUYAyABKAsyIC5nb29nbGUuYXBwcy5jYXJk",
-            "LnYxLkJvcmRlclN0eWxlEhQKDGNvbHVtbl9jb3VudBgEIAEoBRIuCghvbl9j",
-            "bGljaxgFIAEoCzIcLmdvb2dsZS5hcHBzLmNhcmQudjEuT25DbGljaxqCAgoI",
-            "R3JpZEl0ZW0SCgoCaWQYASABKAkSMgoFaW1hZ2UYAiABKAsyIy5nb29nbGUu",
-            "YXBwcy5jYXJkLnYxLkltYWdlQ29tcG9uZW50Eg0KBXRpdGxlGAMgASgJEhAK",
-            "CHN1YnRpdGxlGAQgASgJEkEKBmxheW91dBgJIAEoDjIxLmdvb2dsZS5hcHBz",
-            "LmNhcmQudjEuR3JpZC5HcmlkSXRlbS5HcmlkSXRlbUxheW91dCJSCg5Hcmlk",
-            "SXRlbUxheW91dBIgChxHUklEX0lURU1fTEFZT1VUX1VOU1BFQ0lGSUVEEAAS",
-            "DgoKVEVYVF9CRUxPVxABEg4KClRFWFRfQUJPVkUQAiL9BwoHQ29sdW1ucxI5",
-            "Cgxjb2x1bW5faXRlbXMYAiADKAsyIy5nb29nbGUuYXBwcy5jYXJkLnYxLkNv",
-            "bHVtbnMuQ29sdW1uGrYHCgZDb2x1bW4SVgoVaG9yaXpvbnRhbF9zaXplX3N0",
-            "eWxlGAEgASgOMjcuZ29vZ2xlLmFwcHMuY2FyZC52MS5Db2x1bW5zLkNvbHVt",
-            "bi5Ib3Jpem9udGFsU2l6ZVN0eWxlEk0KFGhvcml6b250YWxfYWxpZ25tZW50",
-            "GAIgASgOMi8uZ29vZ2xlLmFwcHMuY2FyZC52MS5XaWRnZXQuSG9yaXpvbnRh",
-            "bEFsaWdubWVudBJRChJ2ZXJ0aWNhbF9hbGlnbm1lbnQYAyABKA4yNS5nb29n",
-            "bGUuYXBwcy5jYXJkLnYxLkNvbHVtbnMuQ29sdW1uLlZlcnRpY2FsQWxpZ25t",
-            "ZW50EjwKB3dpZGdldHMYBCADKAsyKy5nb29nbGUuYXBwcy5jYXJkLnYxLkNv",
-            "bHVtbnMuQ29sdW1uLldpZGdldHMaqQMKB1dpZGdldHMSPAoOdGV4dF9wYXJh",
-            "Z3JhcGgYASABKAsyIi5nb29nbGUuYXBwcy5jYXJkLnYxLlRleHRQYXJhZ3Jh",
-            "cGhIABIrCgVpbWFnZRgCIAEoCzIaLmdvb2dsZS5hcHBzLmNhcmQudjEuSW1h",
-            "Z2VIABI8Cg5kZWNvcmF0ZWRfdGV4dBgDIAEoCzIiLmdvb2dsZS5hcHBzLmNh",
-            "cmQudjEuRGVjb3JhdGVkVGV4dEgAEjYKC2J1dHRvbl9saXN0GAQgASgLMh8u",
-            "Z29vZ2xlLmFwcHMuY2FyZC52MS5CdXR0b25MaXN0SAASNAoKdGV4dF9pbnB1",
-            "dBgFIAEoCzIeLmdvb2dsZS5hcHBzLmNhcmQudjEuVGV4dElucHV0SAASPgoP",
-            "c2VsZWN0aW9uX2lucHV0GAYgASgLMiMuZ29vZ2xlLmFwcHMuY2FyZC52MS5T",
-            "ZWxlY3Rpb25JbnB1dEgAEj8KEGRhdGVfdGltZV9waWNrZXIYByABKAsyIy5n",
-            "b29nbGUuYXBwcy5jYXJkLnYxLkRhdGVUaW1lUGlja2VySABCBgoEZGF0YSJu",
-            "ChNIb3Jpem9udGFsU2l6ZVN0eWxlEiUKIUhPUklaT05UQUxfU0laRV9TVFlM",
-            "RV9VTlNQRUNJRklFRBAAEhgKFEZJTExfQVZBSUxBQkxFX1NQQUNFEAESFgoS",
-            "RklMTF9NSU5JTVVNX1NQQUNFEAIiWAoRVmVydGljYWxBbGlnbm1lbnQSIgoe",
-            "VkVSVElDQUxfQUxJR05NRU5UX1VOU1BFQ0lGSUVEEAASCgoGQ0VOVEVSEAES",
-            "BwoDVE9QEAISCgoGQk9UVE9NEAMi4AEKB09uQ2xpY2sSLQoGYWN0aW9uGAEg",
-            "ASgLMhsuZ29vZ2xlLmFwcHMuY2FyZC52MS5BY3Rpb25IABIyCglvcGVuX2xp",
-            "bmsYAiABKAsyHS5nb29nbGUuYXBwcy5jYXJkLnYxLk9wZW5MaW5rSAASPwoY",
-            "b3Blbl9keW5hbWljX2xpbmtfYWN0aW9uGAMgASgLMhsuZ29vZ2xlLmFwcHMu",
-            "Y2FyZC52MS5BY3Rpb25IABIpCgRjYXJkGAQgASgLMhkuZ29vZ2xlLmFwcHMu",
-            "Y2FyZC52MS5DYXJkSABCBgoEZGF0YSLRAQoIT3BlbkxpbmsSCwoDdXJsGAEg",
-            "ASgJEjUKB29wZW5fYXMYAiABKA4yJC5nb29nbGUuYXBwcy5jYXJkLnYxLk9w",
-            "ZW5MaW5rLk9wZW5BcxI3Cghvbl9jbG9zZRgDIAEoDjIlLmdvb2dsZS5hcHBz",
-            "LmNhcmQudjEuT3BlbkxpbmsuT25DbG9zZSIkCgZPcGVuQXMSDQoJRlVMTF9T",
-            "SVpFEAASCwoHT1ZFUkxBWRABIiIKB09uQ2xvc2USCwoHTk9USElORxAAEgoK",
-            "BlJFTE9BRBABIogDCgZBY3Rpb24SEAoIZnVuY3Rpb24YASABKAkSPwoKcGFy",
-            "YW1ldGVycxgCIAMoCzIrLmdvb2dsZS5hcHBzLmNhcmQudjEuQWN0aW9uLkFj",
-            "dGlvblBhcmFtZXRlchJBCg5sb2FkX2luZGljYXRvchgDIAEoDjIpLmdvb2ds",
-            "ZS5hcHBzLmNhcmQudjEuQWN0aW9uLkxvYWRJbmRpY2F0b3ISFgoOcGVyc2lz",
-            "dF92YWx1ZXMYBCABKAgSPAoLaW50ZXJhY3Rpb24YBSABKA4yJy5nb29nbGUu",
-            "YXBwcy5jYXJkLnYxLkFjdGlvbi5JbnRlcmFjdGlvbhotCg9BY3Rpb25QYXJh",
-            "bWV0ZXISCwoDa2V5GAEgASgJEg0KBXZhbHVlGAIgASgJIiYKDUxvYWRJbmRp",
-            "Y2F0b3ISCwoHU1BJTk5FUhAAEggKBE5PTkUQASI7CgtJbnRlcmFjdGlvbhIb",
-            "ChdJTlRFUkFDVElPTl9VTlNQRUNJRklFRBAAEg8KC09QRU5fRElBTE9HEAFC",
-            "pAEKF2NvbS5nb29nbGUuYXBwcy5jYXJkLnYxQglDYXJkUHJvdG9QAVo3Z29v",
-            "Z2xlLmdvbGFuZy5vcmcvZ2VucHJvdG8vZ29vZ2xlYXBpcy9hcHBzL2NhcmQv",
-            "djE7Y2FyZKoCE0dvb2dsZS5BcHBzLkNhcmQuVjHKAhNHb29nbGVcQXBwc1xD",
-            "YXJkXFYx6gIWR29vZ2xlOjpBcHBzOjpDYXJkOjpWMWIGcHJvdG8z"));
+            "ASgFEj4KEGNvbGxhcHNlX2NvbnRyb2wYCCABKAsyJC5nb29nbGUuYXBwcy5j",
+            "YXJkLnYxLkNvbGxhcHNlQ29udHJvbBpSCgpDYXJkQWN0aW9uEhQKDGFjdGlv",
+            "bl9sYWJlbBgBIAEoCRIuCghvbl9jbGljaxgCIAEoCzIcLmdvb2dsZS5hcHBz",
+            "LmNhcmQudjEuT25DbGljaxq5AQoMTmVzdGVkV2lkZ2V0EjwKDnRleHRfcGFy",
+            "YWdyYXBoGAEgASgLMiIuZ29vZ2xlLmFwcHMuY2FyZC52MS5UZXh0UGFyYWdy",
+            "YXBoSAASNgoLYnV0dG9uX2xpc3QYAyABKAsyHy5nb29nbGUuYXBwcy5jYXJk",
+            "LnYxLkJ1dHRvbkxpc3RIABIrCgVpbWFnZRgKIAEoCzIaLmdvb2dsZS5hcHBz",
+            "LmNhcmQudjEuSW1hZ2VIAEIGCgRkYXRhGn0KD0NhcmRGaXhlZEZvb3RlchIz",
+            "Cg5wcmltYXJ5X2J1dHRvbhgBIAEoCzIbLmdvb2dsZS5hcHBzLmNhcmQudjEu",
+            "QnV0dG9uEjUKEHNlY29uZGFyeV9idXR0b24YAiABKAsyGy5nb29nbGUuYXBw",
+            "cy5jYXJkLnYxLkJ1dHRvbiJQCgxEaXZpZGVyU3R5bGUSHQoZRElWSURFUl9T",
+            "VFlMRV9VTlNQRUNJRklFRBAAEhEKDVNPTElEX0RJVklERVIQARIOCgpOT19E",
+            "SVZJREVSEAIiRAoMRGlzcGxheVN0eWxlEh0KGURJU1BMQVlfU1RZTEVfVU5T",
+            "UEVDSUZJRUQQABIICgRQRUVLEAESCwoHUkVQTEFDRRACIscHCgZXaWRnZXQS",
+            "PAoOdGV4dF9wYXJhZ3JhcGgYASABKAsyIi5nb29nbGUuYXBwcy5jYXJkLnYx",
+            "LlRleHRQYXJhZ3JhcGhIABIrCgVpbWFnZRgCIAEoCzIaLmdvb2dsZS5hcHBz",
+            "LmNhcmQudjEuSW1hZ2VIABI8Cg5kZWNvcmF0ZWRfdGV4dBgDIAEoCzIiLmdv",
+            "b2dsZS5hcHBzLmNhcmQudjEuRGVjb3JhdGVkVGV4dEgAEjYKC2J1dHRvbl9s",
+            "aXN0GAQgASgLMh8uZ29vZ2xlLmFwcHMuY2FyZC52MS5CdXR0b25MaXN0SAAS",
+            "NAoKdGV4dF9pbnB1dBgFIAEoCzIeLmdvb2dsZS5hcHBzLmNhcmQudjEuVGV4",
+            "dElucHV0SAASPgoPc2VsZWN0aW9uX2lucHV0GAYgASgLMiMuZ29vZ2xlLmFw",
+            "cHMuY2FyZC52MS5TZWxlY3Rpb25JbnB1dEgAEj8KEGRhdGVfdGltZV9waWNr",
+            "ZXIYByABKAsyIy5nb29nbGUuYXBwcy5jYXJkLnYxLkRhdGVUaW1lUGlja2Vy",
+            "SAASLwoHZGl2aWRlchgJIAEoCzIcLmdvb2dsZS5hcHBzLmNhcmQudjEuRGl2",
+            "aWRlckgAEikKBGdyaWQYCiABKAsyGS5nb29nbGUuYXBwcy5jYXJkLnYxLkdy",
+            "aWRIABIvCgdjb2x1bW5zGAsgASgLMhwuZ29vZ2xlLmFwcHMuY2FyZC52MS5D",
+            "b2x1bW5zSAASMQoIY2Fyb3VzZWwYDSABKAsyHS5nb29nbGUuYXBwcy5jYXJk",
+            "LnYxLkNhcm91c2VsSAASMgoJY2hpcF9saXN0GA4gASgLMh0uZ29vZ2xlLmFw",
+            "cHMuY2FyZC52MS5DaGlwTGlzdEgAEk0KFGhvcml6b250YWxfYWxpZ25tZW50",
+            "GAggASgOMi8uZ29vZ2xlLmFwcHMuY2FyZC52MS5XaWRnZXQuSG9yaXpvbnRh",
+            "bEFsaWdubWVudCIjCglJbWFnZVR5cGUSCgoGU1FVQVJFEAASCgoGQ0lSQ0xF",
+            "EAEiWwoTSG9yaXpvbnRhbEFsaWdubWVudBIkCiBIT1JJWk9OVEFMX0FMSUdO",
+            "TUVOVF9VTlNQRUNJRklFRBAAEgkKBVNUQVJUEAESCgoGQ0VOVEVSEAISBwoD",
+            "RU5EEAMiWAoRVmVydGljYWxBbGlnbm1lbnQSIgoeVkVSVElDQUxfQUxJR05N",
+            "RU5UX1VOU1BFQ0lGSUVEEAASBwoDVE9QEAESCgoGTUlERExFEAISCgoGQk9U",
+            "VE9NEANCBgoEZGF0YSK3AQoNVGV4dFBhcmFncmFwaBIMCgR0ZXh0GAEgASgJ",
+            "EhEKCW1heF9saW5lcxgCIAEoBRJCCgt0ZXh0X3N5bnRheBgEIAEoDjItLmdv",
+            "b2dsZS5hcHBzLmNhcmQudjEuVGV4dFBhcmFncmFwaC5UZXh0U3ludGF4IkEK",
+            "ClRleHRTeW50YXgSGwoXVEVYVF9TWU5UQVhfVU5TUEVDSUZJRUQQABIICgRI",
+            "VE1MEAESDAoITUFSS0RPV04QAiJcCgVJbWFnZRIRCglpbWFnZV91cmwYASAB",
+            "KAkSLgoIb25fY2xpY2sYAiABKAsyHC5nb29nbGUuYXBwcy5jYXJkLnYxLk9u",
+            "Q2xpY2sSEAoIYWx0X3RleHQYAyABKAkiCQoHRGl2aWRlciKpBwoNRGVjb3Jh",
+            "dGVkVGV4dBIrCgRpY29uGAEgASgLMhkuZ29vZ2xlLmFwcHMuY2FyZC52MS5J",
+            "Y29uQgIYARItCgpzdGFydF9pY29uGAwgASgLMhkuZ29vZ2xlLmFwcHMuY2Fy",
+            "ZC52MS5JY29uElQKHXN0YXJ0X2ljb25fdmVydGljYWxfYWxpZ25tZW50GA0g",
+            "ASgOMi0uZ29vZ2xlLmFwcHMuY2FyZC52MS5XaWRnZXQuVmVydGljYWxBbGln",
+            "bm1lbnQSEQoJdG9wX2xhYmVsGAMgASgJEjoKDnRvcF9sYWJlbF90ZXh0GBEg",
+            "ASgLMiIuZ29vZ2xlLmFwcHMuY2FyZC52MS5UZXh0UGFyYWdyYXBoEgwKBHRl",
+            "eHQYBCABKAkSOAoMY29udGVudF90ZXh0GBIgASgLMiIuZ29vZ2xlLmFwcHMu",
+            "Y2FyZC52MS5UZXh0UGFyYWdyYXBoEhEKCXdyYXBfdGV4dBgFIAEoCBIUCgxi",
+            "b3R0b21fbGFiZWwYBiABKAkSPQoRYm90dG9tX2xhYmVsX3RleHQYEyABKAsy",
+            "Ii5nb29nbGUuYXBwcy5jYXJkLnYxLlRleHRQYXJhZ3JhcGgSLgoIb25fY2xp",
+            "Y2sYByABKAsyHC5nb29nbGUuYXBwcy5jYXJkLnYxLk9uQ2xpY2sSLQoGYnV0",
+            "dG9uGAggASgLMhsuZ29vZ2xlLmFwcHMuY2FyZC52MS5CdXR0b25IABJKCg5z",
+            "d2l0Y2hfY29udHJvbBgJIAEoCzIwLmdvb2dsZS5hcHBzLmNhcmQudjEuRGVj",
+            "b3JhdGVkVGV4dC5Td2l0Y2hDb250cm9sSAASLQoIZW5kX2ljb24YCyABKAsy",
+            "GS5nb29nbGUuYXBwcy5jYXJkLnYxLkljb25IABqBAgoNU3dpdGNoQ29udHJv",
+            "bBIMCgRuYW1lGAEgASgJEg0KBXZhbHVlGAIgASgJEhAKCHNlbGVjdGVkGAMg",
+            "ASgIEjUKEG9uX2NoYW5nZV9hY3Rpb24YBCABKAsyGy5nb29nbGUuYXBwcy5j",
+            "YXJkLnYxLkFjdGlvbhJSCgxjb250cm9sX3R5cGUYBSABKA4yPC5nb29nbGUu",
+            "YXBwcy5jYXJkLnYxLkRlY29yYXRlZFRleHQuU3dpdGNoQ29udHJvbC5Db250",
+            "cm9sVHlwZSI2CgtDb250cm9sVHlwZRIKCgZTV0lUQ0gQABIMCghDSEVDS0JP",
+            "WBABEg0KCUNIRUNLX0JPWBACQgkKB2NvbnRyb2wiqQMKCVRleHRJbnB1dBIM",
+            "CgRuYW1lGAEgASgJEg0KBWxhYmVsGAIgASgJEhEKCWhpbnRfdGV4dBgDIAEo",
+            "CRINCgV2YWx1ZRgEIAEoCRIxCgR0eXBlGAUgASgOMiMuZ29vZ2xlLmFwcHMu",
+            "Y2FyZC52MS5UZXh0SW5wdXQuVHlwZRI1ChBvbl9jaGFuZ2VfYWN0aW9uGAYg",
+            "ASgLMhsuZ29vZ2xlLmFwcHMuY2FyZC52MS5BY3Rpb24SPQoTaW5pdGlhbF9z",
+            "dWdnZXN0aW9ucxgHIAEoCzIgLmdvb2dsZS5hcHBzLmNhcmQudjEuU3VnZ2Vz",
+            "dGlvbnMSOQoUYXV0b19jb21wbGV0ZV9hY3Rpb24YCCABKAsyGy5nb29nbGUu",
+            "YXBwcy5jYXJkLnYxLkFjdGlvbhIzCgp2YWxpZGF0aW9uGAsgASgLMh8uZ29v",
+            "Z2xlLmFwcHMuY2FyZC52MS5WYWxpZGF0aW9uEhgKEHBsYWNlaG9sZGVyX3Rl",
+            "eHQYDCABKAkiKgoEVHlwZRIPCgtTSU5HTEVfTElORRAAEhEKDU1VTFRJUExF",
+            "X0xJTkUQASJ6CgtTdWdnZXN0aW9ucxI+CgVpdGVtcxgBIAMoCzIvLmdvb2ds",
+            "ZS5hcHBzLmNhcmQudjEuU3VnZ2VzdGlvbnMuU3VnZ2VzdGlvbkl0ZW0aKwoO",
+            "U3VnZ2VzdGlvbkl0ZW0SDgoEdGV4dBgBIAEoCUgAQgkKB2NvbnRlbnQiOgoK",
+            "QnV0dG9uTGlzdBIsCgdidXR0b25zGAEgAygLMhsuZ29vZ2xlLmFwcHMuY2Fy",
+            "ZC52MS5CdXR0b24ipAcKDlNlbGVjdGlvbklucHV0EgwKBG5hbWUYASABKAkS",
+            "DQoFbGFiZWwYAiABKAkSPwoEdHlwZRgDIAEoDjIxLmdvb2dsZS5hcHBzLmNh",
+            "cmQudjEuU2VsZWN0aW9uSW5wdXQuU2VsZWN0aW9uVHlwZRJACgVpdGVtcxgE",
+            "IAMoCzIxLmdvb2dsZS5hcHBzLmNhcmQudjEuU2VsZWN0aW9uSW5wdXQuU2Vs",
+            "ZWN0aW9uSXRlbRI1ChBvbl9jaGFuZ2VfYWN0aW9uGAUgASgLMhsuZ29vZ2xl",
+            "LmFwcHMuY2FyZC52MS5BY3Rpb24SLAofbXVsdGlfc2VsZWN0X21heF9zZWxl",
+            "Y3RlZF9pdGVtcxgGIAEoBUgBiAEBEiUKHW11bHRpX3NlbGVjdF9taW5fcXVl",
+            "cnlfbGVuZ3RoGAcgASgFEjsKFGV4dGVybmFsX2RhdGFfc291cmNlGAggASgL",
+            "MhsuZ29vZ2xlLmFwcHMuY2FyZC52MS5BY3Rpb25IABJWChRwbGF0Zm9ybV9k",
+            "YXRhX3NvdXJjZRgJIAEoCzI2Lmdvb2dsZS5hcHBzLmNhcmQudjEuU2VsZWN0",
+            "aW9uSW5wdXQuUGxhdGZvcm1EYXRhU291cmNlSAAaewoNU2VsZWN0aW9uSXRl",
+            "bRIMCgR0ZXh0GAEgASgJEg0KBXZhbHVlGAIgASgJEhAKCHNlbGVjdGVkGAMg",
+            "ASgIEhgKDnN0YXJ0X2ljb25fdXJpGAQgASgJSAASEwoLYm90dG9tX3RleHQY",
+            "BSABKAlCDAoKc3RhcnRfaWNvbhq1AQoSUGxhdGZvcm1EYXRhU291cmNlEmUK",
+            "EmNvbW1vbl9kYXRhX3NvdXJjZRgBIAEoDjJHLmdvb2dsZS5hcHBzLmNhcmQu",
+            "djEuU2VsZWN0aW9uSW5wdXQuUGxhdGZvcm1EYXRhU291cmNlLkNvbW1vbkRh",
+            "dGFTb3VyY2VIACIpChBDb21tb25EYXRhU291cmNlEgsKB1VOS05PV04QABII",
+            "CgRVU0VSEAFCDQoLZGF0YV9zb3VyY2UiXAoNU2VsZWN0aW9uVHlwZRINCglD",
+            "SEVDS19CT1gQABIQCgxSQURJT19CVVRUT04QARIKCgZTV0lUQ0gQAhIMCghE",
+            "Uk9QRE9XThADEhAKDE1VTFRJX1NFTEVDVBAEQhoKGG11bHRpX3NlbGVjdF9k",
+            "YXRhX3NvdXJjZUIiCiBfbXVsdGlfc2VsZWN0X21heF9zZWxlY3RlZF9pdGVt",
+            "cyK/AgoORGF0ZVRpbWVQaWNrZXISDAoEbmFtZRgBIAEoCRINCgVsYWJlbBgC",
+            "IAEoCRJECgR0eXBlGAMgASgOMjYuZ29vZ2xlLmFwcHMuY2FyZC52MS5EYXRl",
+            "VGltZVBpY2tlci5EYXRlVGltZVBpY2tlclR5cGUSGwoOdmFsdWVfbXNfZXBv",
+            "Y2gYBCABKANIAIgBARIcChR0aW1lem9uZV9vZmZzZXRfZGF0ZRgFIAEoBRI1",
+            "ChBvbl9jaGFuZ2VfYWN0aW9uGAYgASgLMhsuZ29vZ2xlLmFwcHMuY2FyZC52",
+            "MS5BY3Rpb24iRQoSRGF0ZVRpbWVQaWNrZXJUeXBlEhEKDURBVEVfQU5EX1RJ",
+            "TUUQABINCglEQVRFX09OTFkQARINCglUSU1FX09OTFkQAkIRCg9fdmFsdWVf",
+            "bXNfZXBvY2gi5QEKDE92ZXJmbG93TWVudRJBCgVpdGVtcxgBIAMoCzIyLmdv",
+            "b2dsZS5hcHBzLmNhcmQudjEuT3ZlcmZsb3dNZW51Lk92ZXJmbG93TWVudUl0",
+            "ZW0akQEKEE92ZXJmbG93TWVudUl0ZW0SLQoKc3RhcnRfaWNvbhgBIAEoCzIZ",
+            "Lmdvb2dsZS5hcHBzLmNhcmQudjEuSWNvbhIMCgR0ZXh0GAIgASgJEi4KCG9u",
+            "X2NsaWNrGAMgASgLMhwuZ29vZ2xlLmFwcHMuY2FyZC52MS5PbkNsaWNrEhAK",
+            "CGRpc2FibGVkGAQgASgIIsACCgZCdXR0b24SDAoEdGV4dBgBIAEoCRInCgRp",
+            "Y29uGAIgASgLMhkuZ29vZ2xlLmFwcHMuY2FyZC52MS5JY29uEiEKBWNvbG9y",
+            "GAMgASgLMhIuZ29vZ2xlLnR5cGUuQ29sb3ISLgoIb25fY2xpY2sYBCABKAsy",
+            "HC5nb29nbGUuYXBwcy5jYXJkLnYxLk9uQ2xpY2sSEAoIZGlzYWJsZWQYBSAB",
+            "KAgSEAoIYWx0X3RleHQYBiABKAkSLgoEdHlwZRgHIAEoDjIgLmdvb2dsZS5h",
+            "cHBzLmNhcmQudjEuQnV0dG9uLlR5cGUiWAoEVHlwZRIUChBUWVBFX1VOU1BF",
+            "Q0lGSUVEEAASDAoIT1VUTElORUQQARIKCgZGSUxMRUQQAhIQCgxGSUxMRURf",
+            "VE9OQUwQAxIOCgpCT1JERVJMRVNTEAQiwgEKBEljb24SFAoKa25vd25faWNv",
+            "bhgBIAEoCUgAEhIKCGljb25fdXJsGAIgASgJSAASOgoNbWF0ZXJpYWxfaWNv",
+            "bhgFIAEoCzIhLmdvb2dsZS5hcHBzLmNhcmQudjEuTWF0ZXJpYWxJY29uSAAS",
+            "EAoIYWx0X3RleHQYAyABKAkSOQoKaW1hZ2VfdHlwZRgEIAEoDjIlLmdvb2ds",
+            "ZS5hcHBzLmNhcmQudjEuV2lkZ2V0LkltYWdlVHlwZUIHCgVpY29ucyJJCgxN",
+            "YXRlcmlhbEljb24SDAoEbmFtZRgBIAEoCRIMCgRmaWxsGAIgASgIEg4KBndl",
+            "aWdodBgDIAEoBRINCgVncmFkZRgEIAEoBSLaAQoOSW1hZ2VDcm9wU3R5bGUS",
+            "PwoEdHlwZRgBIAEoDjIxLmdvb2dsZS5hcHBzLmNhcmQudjEuSW1hZ2VDcm9w",
+            "U3R5bGUuSW1hZ2VDcm9wVHlwZRIUCgxhc3BlY3RfcmF0aW8YAiABKAEicQoN",
+            "SW1hZ2VDcm9wVHlwZRIfChtJTUFHRV9DUk9QX1RZUEVfVU5TUEVDSUZJRUQQ",
+            "ABIKCgZTUVVBUkUQARIKCgZDSVJDTEUQAhIUChBSRUNUQU5HTEVfQ1VTVE9N",
+            "EAMSEQoNUkVDVEFOR0xFXzRfMxAEIs8BCgtCb3JkZXJTdHlsZRI5CgR0eXBl",
+            "GAEgASgOMisuZ29vZ2xlLmFwcHMuY2FyZC52MS5Cb3JkZXJTdHlsZS5Cb3Jk",
+            "ZXJUeXBlEigKDHN0cm9rZV9jb2xvchgCIAEoCzISLmdvb2dsZS50eXBlLkNv",
+            "bG9yEhUKDWNvcm5lcl9yYWRpdXMYAyABKAUiRAoKQm9yZGVyVHlwZRIbChdC",
+            "T1JERVJfVFlQRV9VTlNQRUNJRklFRBAAEg0KCU5PX0JPUkRFUhABEgoKBlNU",
+            "Uk9LRRACIqYBCg5JbWFnZUNvbXBvbmVudBIRCglpbWFnZV91cmkYASABKAkS",
+            "EAoIYWx0X3RleHQYAiABKAkSNwoKY3JvcF9zdHlsZRgDIAEoCzIjLmdvb2ds",
+            "ZS5hcHBzLmNhcmQudjEuSW1hZ2VDcm9wU3R5bGUSNgoMYm9yZGVyX3N0eWxl",
+            "GAQgASgLMiAuZ29vZ2xlLmFwcHMuY2FyZC52MS5Cb3JkZXJTdHlsZSLLAwoE",
+            "R3JpZBINCgV0aXRsZRgBIAEoCRIxCgVpdGVtcxgCIAMoCzIiLmdvb2dsZS5h",
+            "cHBzLmNhcmQudjEuR3JpZC5HcmlkSXRlbRI2Cgxib3JkZXJfc3R5bGUYAyAB",
+            "KAsyIC5nb29nbGUuYXBwcy5jYXJkLnYxLkJvcmRlclN0eWxlEhQKDGNvbHVt",
+            "bl9jb3VudBgEIAEoBRIuCghvbl9jbGljaxgFIAEoCzIcLmdvb2dsZS5hcHBz",
+            "LmNhcmQudjEuT25DbGljaxqCAgoIR3JpZEl0ZW0SCgoCaWQYASABKAkSMgoF",
+            "aW1hZ2UYAiABKAsyIy5nb29nbGUuYXBwcy5jYXJkLnYxLkltYWdlQ29tcG9u",
+            "ZW50Eg0KBXRpdGxlGAMgASgJEhAKCHN1YnRpdGxlGAQgASgJEkEKBmxheW91",
+            "dBgJIAEoDjIxLmdvb2dsZS5hcHBzLmNhcmQudjEuR3JpZC5HcmlkSXRlbS5H",
+            "cmlkSXRlbUxheW91dCJSCg5HcmlkSXRlbUxheW91dBIgChxHUklEX0lURU1f",
+            "TEFZT1VUX1VOU1BFQ0lGSUVEEAASDgoKVEVYVF9CRUxPVxABEg4KClRFWFRf",
+            "QUJPVkUQAiKxCAoHQ29sdW1ucxI5Cgxjb2x1bW5faXRlbXMYAiADKAsyIy5n",
+            "b29nbGUuYXBwcy5jYXJkLnYxLkNvbHVtbnMuQ29sdW1uGuoHCgZDb2x1bW4S",
+            "VgoVaG9yaXpvbnRhbF9zaXplX3N0eWxlGAEgASgOMjcuZ29vZ2xlLmFwcHMu",
+            "Y2FyZC52MS5Db2x1bW5zLkNvbHVtbi5Ib3Jpem9udGFsU2l6ZVN0eWxlEk0K",
+            "FGhvcml6b250YWxfYWxpZ25tZW50GAIgASgOMi8uZ29vZ2xlLmFwcHMuY2Fy",
+            "ZC52MS5XaWRnZXQuSG9yaXpvbnRhbEFsaWdubWVudBJRChJ2ZXJ0aWNhbF9h",
+            "bGlnbm1lbnQYAyABKA4yNS5nb29nbGUuYXBwcy5jYXJkLnYxLkNvbHVtbnMu",
+            "Q29sdW1uLlZlcnRpY2FsQWxpZ25tZW50EjwKB3dpZGdldHMYBCADKAsyKy5n",
+            "b29nbGUuYXBwcy5jYXJkLnYxLkNvbHVtbnMuQ29sdW1uLldpZGdldHMa3QMK",
+            "B1dpZGdldHMSPAoOdGV4dF9wYXJhZ3JhcGgYASABKAsyIi5nb29nbGUuYXBw",
+            "cy5jYXJkLnYxLlRleHRQYXJhZ3JhcGhIABIrCgVpbWFnZRgCIAEoCzIaLmdv",
+            "b2dsZS5hcHBzLmNhcmQudjEuSW1hZ2VIABI8Cg5kZWNvcmF0ZWRfdGV4dBgD",
+            "IAEoCzIiLmdvb2dsZS5hcHBzLmNhcmQudjEuRGVjb3JhdGVkVGV4dEgAEjYK",
+            "C2J1dHRvbl9saXN0GAQgASgLMh8uZ29vZ2xlLmFwcHMuY2FyZC52MS5CdXR0",
+            "b25MaXN0SAASNAoKdGV4dF9pbnB1dBgFIAEoCzIeLmdvb2dsZS5hcHBzLmNh",
+            "cmQudjEuVGV4dElucHV0SAASPgoPc2VsZWN0aW9uX2lucHV0GAYgASgLMiMu",
+            "Z29vZ2xlLmFwcHMuY2FyZC52MS5TZWxlY3Rpb25JbnB1dEgAEj8KEGRhdGVf",
+            "dGltZV9waWNrZXIYByABKAsyIy5nb29nbGUuYXBwcy5jYXJkLnYxLkRhdGVU",
+            "aW1lUGlja2VySAASMgoJY2hpcF9saXN0GAggASgLMh0uZ29vZ2xlLmFwcHMu",
+            "Y2FyZC52MS5DaGlwTGlzdEgAQgYKBGRhdGEibgoTSG9yaXpvbnRhbFNpemVT",
+            "dHlsZRIlCiFIT1JJWk9OVEFMX1NJWkVfU1RZTEVfVU5TUEVDSUZJRUQQABIY",
+            "ChRGSUxMX0FWQUlMQUJMRV9TUEFDRRABEhYKEkZJTExfTUlOSU1VTV9TUEFD",
+            "RRACIlgKEVZlcnRpY2FsQWxpZ25tZW50EiIKHlZFUlRJQ0FMX0FMSUdOTUVO",
+            "VF9VTlNQRUNJRklFRBAAEgoKBkNFTlRFUhABEgcKA1RPUBACEgoKBkJPVFRP",
+            "TRADItgBCghDYXJvdXNlbBJCCg5jYXJvdXNlbF9jYXJkcxgEIAMoCzIqLmdv",
+            "b2dsZS5hcHBzLmNhcmQudjEuQ2Fyb3VzZWwuQ2Fyb3VzZWxDYXJkGocBCgxD",
+            "YXJvdXNlbENhcmQSNwoHd2lkZ2V0cxgBIAMoCzImLmdvb2dsZS5hcHBzLmNh",
+            "cmQudjEuQ2FyZC5OZXN0ZWRXaWRnZXQSPgoOZm9vdGVyX3dpZGdldHMYAiAD",
+            "KAsyJi5nb29nbGUuYXBwcy5jYXJkLnYxLkNhcmQuTmVzdGVkV2lkZ2V0IsoB",
+            "Cg9Db2xsYXBzZUNvbnRyb2wSTQoUaG9yaXpvbnRhbF9hbGlnbm1lbnQYASAB",
+            "KA4yLy5nb29nbGUuYXBwcy5jYXJkLnYxLldpZGdldC5Ib3Jpem9udGFsQWxp",
+            "Z25tZW50EjIKDWV4cGFuZF9idXR0b24YAiABKAsyGy5nb29nbGUuYXBwcy5j",
+            "YXJkLnYxLkJ1dHRvbhI0Cg9jb2xsYXBzZV9idXR0b24YAyABKAsyGy5nb29n",
+            "bGUuYXBwcy5jYXJkLnYxLkJ1dHRvbiKcAgoHT25DbGljaxItCgZhY3Rpb24Y",
+            "ASABKAsyGy5nb29nbGUuYXBwcy5jYXJkLnYxLkFjdGlvbkgAEjIKCW9wZW5f",
+            "bGluaxgCIAEoCzIdLmdvb2dsZS5hcHBzLmNhcmQudjEuT3BlbkxpbmtIABI/",
+            "ChhvcGVuX2R5bmFtaWNfbGlua19hY3Rpb24YAyABKAsyGy5nb29nbGUuYXBw",
+            "cy5jYXJkLnYxLkFjdGlvbkgAEikKBGNhcmQYBCABKAsyGS5nb29nbGUuYXBw",
+            "cy5jYXJkLnYxLkNhcmRIABI6Cg1vdmVyZmxvd19tZW51GAggASgLMiEuZ29v",
+            "Z2xlLmFwcHMuY2FyZC52MS5PdmVyZmxvd01lbnVIAEIGCgRkYXRhItEBCghP",
+            "cGVuTGluaxILCgN1cmwYASABKAkSNQoHb3Blbl9hcxgCIAEoDjIkLmdvb2ds",
+            "ZS5hcHBzLmNhcmQudjEuT3BlbkxpbmsuT3BlbkFzEjcKCG9uX2Nsb3NlGAMg",
+            "ASgOMiUuZ29vZ2xlLmFwcHMuY2FyZC52MS5PcGVuTGluay5PbkNsb3NlIiQK",
+            "Bk9wZW5BcxINCglGVUxMX1NJWkUQABILCgdPVkVSTEFZEAEiIgoHT25DbG9z",
+            "ZRILCgdOT1RISU5HEAASCgoGUkVMT0FEEAEixAMKBkFjdGlvbhIQCghmdW5j",
+            "dGlvbhgBIAEoCRI/CgpwYXJhbWV0ZXJzGAIgAygLMisuZ29vZ2xlLmFwcHMu",
+            "Y2FyZC52MS5BY3Rpb24uQWN0aW9uUGFyYW1ldGVyEkEKDmxvYWRfaW5kaWNh",
+            "dG9yGAMgASgOMikuZ29vZ2xlLmFwcHMuY2FyZC52MS5BY3Rpb24uTG9hZElu",
+            "ZGljYXRvchIWCg5wZXJzaXN0X3ZhbHVlcxgEIAEoCBI8CgtpbnRlcmFjdGlv",
+            "bhgFIAEoDjInLmdvb2dsZS5hcHBzLmNhcmQudjEuQWN0aW9uLkludGVyYWN0",
+            "aW9uEhgKEHJlcXVpcmVkX3dpZGdldHMYBiADKAkSIAoYYWxsX3dpZGdldHNf",
+            "YXJlX3JlcXVpcmVkGAcgASgIGi0KD0FjdGlvblBhcmFtZXRlchILCgNrZXkY",
+            "ASABKAkSDQoFdmFsdWUYAiABKAkiJgoNTG9hZEluZGljYXRvchILCgdTUElO",
+            "TkVSEAASCAoETk9ORRABIjsKC0ludGVyYWN0aW9uEhsKF0lOVEVSQUNUSU9O",
+            "X1VOU1BFQ0lGSUVEEAASDwoLT1BFTl9ESUFMT0cQASLMAQoKVmFsaWRhdGlv",
+            "bhIXCg9jaGFyYWN0ZXJfbGltaXQYASABKAUSPQoKaW5wdXRfdHlwZRgCIAEo",
+            "DjIpLmdvb2dsZS5hcHBzLmNhcmQudjEuVmFsaWRhdGlvbi5JbnB1dFR5cGUi",
+            "ZgoJSW5wdXRUeXBlEhoKFklOUFVUX1RZUEVfVU5TUEVDSUZJRUQQABIICgRU",
+            "RVhUEAESCwoHSU5URUdFUhACEgkKBUZMT0FUEAMSCQoFRU1BSUwQBBIQCgxF",
+            "TU9KSV9QSUNLRVIQBSK0AQoIQ2hpcExpc3QSNAoGbGF5b3V0GAEgASgOMiQu",
+            "Z29vZ2xlLmFwcHMuY2FyZC52MS5DaGlwTGlzdC5MYXlvdXQSKAoFY2hpcHMY",
+            "AiADKAsyGS5nb29nbGUuYXBwcy5jYXJkLnYxLkNoaXAiSAoGTGF5b3V0EhYK",
+            "EkxBWU9VVF9VTlNQRUNJRklFRBAAEgsKB1dSQVBQRUQQARIZChVIT1JJWk9O",
+            "VEFMX1NDUk9MTEFCTEUQAiKnAQoEQ2hpcBInCgRpY29uGAEgASgLMhkuZ29v",
+            "Z2xlLmFwcHMuY2FyZC52MS5JY29uEg0KBWxhYmVsGAIgASgJEi4KCG9uX2Ns",
+            "aWNrGAMgASgLMhwuZ29vZ2xlLmFwcHMuY2FyZC52MS5PbkNsaWNrEhMKB2Vu",
+            "YWJsZWQYBCABKAhCAhgBEhAKCGRpc2FibGVkGAYgASgIEhAKCGFsdF90ZXh0",
+            "GAUgASgJQqQBChdjb20uZ29vZ2xlLmFwcHMuY2FyZC52MUIJQ2FyZFByb3Rv",
+            "UAFaN2dvb2dsZS5nb2xhbmcub3JnL2dlbnByb3RvL2dvb2dsZWFwaXMvYXBw",
+            "cy9jYXJkL3YxO2NhcmSqAhNHb29nbGUuQXBwcy5DYXJkLlYxygITR29vZ2xl",
+            "XEFwcHNcQ2FyZFxWMeoCFkdvb2dsZTo6QXBwczo6Q2FyZDo6VjFiBnByb3Rv",
+            "Mw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Type.ColorReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Apps.Card.V1.Card), global::Google.Apps.Card.V1.Card.Parser, new[]{ "Header", "Sections", "SectionDividerStyle", "CardActions", "Name", "FixedFooter", "DisplayStyle", "PeekCardHeader" }, null, new[]{ typeof(global::Google.Apps.Card.V1.Card.Types.DividerStyle), typeof(global::Google.Apps.Card.V1.Card.Types.DisplayStyle) }, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Apps.Card.V1.Card.Types.CardHeader), global::Google.Apps.Card.V1.Card.Types.CardHeader.Parser, new[]{ "Title", "Subtitle", "ImageType", "ImageUrl", "ImageAltText" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Apps.Card.V1.Card.Types.Section), global::Google.Apps.Card.V1.Card.Types.Section.Parser, new[]{ "Header", "Widgets", "Collapsible", "UncollapsibleWidgetsCount" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Apps.Card.V1.Card.Types.Section), global::Google.Apps.Card.V1.Card.Types.Section.Parser, new[]{ "Header", "Widgets", "Collapsible", "UncollapsibleWidgetsCount", "CollapseControl" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Apps.Card.V1.Card.Types.CardAction), global::Google.Apps.Card.V1.Card.Types.CardAction.Parser, new[]{ "ActionLabel", "OnClick" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Apps.Card.V1.Card.Types.NestedWidget), global::Google.Apps.Card.V1.Card.Types.NestedWidget.Parser, new[]{ "TextParagraph", "ButtonList", "Image" }, new[]{ "Data" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Apps.Card.V1.Card.Types.CardFixedFooter), global::Google.Apps.Card.V1.Card.Types.CardFixedFooter.Parser, new[]{ "PrimaryButton", "SecondaryButton" }, null, null, null, null)}),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Apps.Card.V1.Widget), global::Google.Apps.Card.V1.Widget.Parser, new[]{ "TextParagraph", "Image", "DecoratedText", "ButtonList", "TextInput", "SelectionInput", "DateTimePicker", "Divider", "Grid", "Columns", "HorizontalAlignment" }, new[]{ "Data" }, new[]{ typeof(global::Google.Apps.Card.V1.Widget.Types.ImageType), typeof(global::Google.Apps.Card.V1.Widget.Types.HorizontalAlignment) }, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Apps.Card.V1.TextParagraph), global::Google.Apps.Card.V1.TextParagraph.Parser, new[]{ "Text" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Apps.Card.V1.Widget), global::Google.Apps.Card.V1.Widget.Parser, new[]{ "TextParagraph", "Image", "DecoratedText", "ButtonList", "TextInput", "SelectionInput", "DateTimePicker", "Divider", "Grid", "Columns", "Carousel", "ChipList", "HorizontalAlignment" }, new[]{ "Data" }, new[]{ typeof(global::Google.Apps.Card.V1.Widget.Types.ImageType), typeof(global::Google.Apps.Card.V1.Widget.Types.HorizontalAlignment), typeof(global::Google.Apps.Card.V1.Widget.Types.VerticalAlignment) }, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Apps.Card.V1.TextParagraph), global::Google.Apps.Card.V1.TextParagraph.Parser, new[]{ "Text", "MaxLines", "TextSyntax" }, null, new[]{ typeof(global::Google.Apps.Card.V1.TextParagraph.Types.TextSyntax) }, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Apps.Card.V1.Image), global::Google.Apps.Card.V1.Image.Parser, new[]{ "ImageUrl", "OnClick", "AltText" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Apps.Card.V1.Divider), global::Google.Apps.Card.V1.Divider.Parser, null, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Apps.Card.V1.DecoratedText), global::Google.Apps.Card.V1.DecoratedText.Parser, new[]{ "Icon", "StartIcon", "TopLabel", "Text", "WrapText", "BottomLabel", "OnClick", "Button", "SwitchControl", "EndIcon" }, new[]{ "Control" }, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Apps.Card.V1.DecoratedText.Types.SwitchControl), global::Google.Apps.Card.V1.DecoratedText.Types.SwitchControl.Parser, new[]{ "Name", "Value", "Selected", "OnChangeAction", "ControlType" }, null, new[]{ typeof(global::Google.Apps.Card.V1.DecoratedText.Types.SwitchControl.Types.ControlType) }, null, null)}),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Apps.Card.V1.TextInput), global::Google.Apps.Card.V1.TextInput.Parser, new[]{ "Name", "Label", "HintText", "Value", "Type", "OnChangeAction", "InitialSuggestions", "AutoCompleteAction", "PlaceholderText" }, null, new[]{ typeof(global::Google.Apps.Card.V1.TextInput.Types.Type) }, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Apps.Card.V1.DecoratedText), global::Google.Apps.Card.V1.DecoratedText.Parser, new[]{ "Icon", "StartIcon", "StartIconVerticalAlignment", "TopLabel", "TopLabelText", "Text", "ContentText", "WrapText", "BottomLabel", "BottomLabelText", "OnClick", "Button", "SwitchControl", "EndIcon" }, new[]{ "Control" }, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Apps.Card.V1.DecoratedText.Types.SwitchControl), global::Google.Apps.Card.V1.DecoratedText.Types.SwitchControl.Parser, new[]{ "Name", "Value", "Selected", "OnChangeAction", "ControlType" }, null, new[]{ typeof(global::Google.Apps.Card.V1.DecoratedText.Types.SwitchControl.Types.ControlType) }, null, null)}),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Apps.Card.V1.TextInput), global::Google.Apps.Card.V1.TextInput.Parser, new[]{ "Name", "Label", "HintText", "Value", "Type", "OnChangeAction", "InitialSuggestions", "AutoCompleteAction", "Validation", "PlaceholderText" }, null, new[]{ typeof(global::Google.Apps.Card.V1.TextInput.Types.Type) }, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Apps.Card.V1.Suggestions), global::Google.Apps.Card.V1.Suggestions.Parser, new[]{ "Items" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Apps.Card.V1.Suggestions.Types.SuggestionItem), global::Google.Apps.Card.V1.Suggestions.Types.SuggestionItem.Parser, new[]{ "Text" }, new[]{ "Content" }, null, null, null)}),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Apps.Card.V1.ButtonList), global::Google.Apps.Card.V1.ButtonList.Parser, new[]{ "Buttons" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Apps.Card.V1.SelectionInput), global::Google.Apps.Card.V1.SelectionInput.Parser, new[]{ "Name", "Label", "Type", "Items", "OnChangeAction", "MultiSelectMaxSelectedItems", "MultiSelectMinQueryLength", "ExternalDataSource", "PlatformDataSource" }, new[]{ "MultiSelectDataSource" }, new[]{ typeof(global::Google.Apps.Card.V1.SelectionInput.Types.SelectionType) }, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Apps.Card.V1.SelectionInput.Types.SelectionItem), global::Google.Apps.Card.V1.SelectionInput.Types.SelectionItem.Parser, new[]{ "Text", "Value", "Selected", "StartIconUri", "BottomText" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Apps.Card.V1.SelectionInput), global::Google.Apps.Card.V1.SelectionInput.Parser, new[]{ "Name", "Label", "Type", "Items", "OnChangeAction", "MultiSelectMaxSelectedItems", "MultiSelectMinQueryLength", "ExternalDataSource", "PlatformDataSource" }, new[]{ "MultiSelectDataSource", "MultiSelectMaxSelectedItems" }, new[]{ typeof(global::Google.Apps.Card.V1.SelectionInput.Types.SelectionType) }, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Apps.Card.V1.SelectionInput.Types.SelectionItem), global::Google.Apps.Card.V1.SelectionInput.Types.SelectionItem.Parser, new[]{ "Text", "Value", "Selected", "StartIconUri", "BottomText" }, new[]{ "StartIcon" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Apps.Card.V1.SelectionInput.Types.PlatformDataSource), global::Google.Apps.Card.V1.SelectionInput.Types.PlatformDataSource.Parser, new[]{ "CommonDataSource" }, new[]{ "DataSource" }, new[]{ typeof(global::Google.Apps.Card.V1.SelectionInput.Types.PlatformDataSource.Types.CommonDataSource) }, null, null)}),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Apps.Card.V1.DateTimePicker), global::Google.Apps.Card.V1.DateTimePicker.Parser, new[]{ "Name", "Label", "Type", "ValueMsEpoch", "TimezoneOffsetDate", "OnChangeAction" }, null, new[]{ typeof(global::Google.Apps.Card.V1.DateTimePicker.Types.DateTimePickerType) }, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Apps.Card.V1.Button), global::Google.Apps.Card.V1.Button.Parser, new[]{ "Text", "Icon", "Color", "OnClick", "Disabled", "AltText" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Apps.Card.V1.DateTimePicker), global::Google.Apps.Card.V1.DateTimePicker.Parser, new[]{ "Name", "Label", "Type", "ValueMsEpoch", "TimezoneOffsetDate", "OnChangeAction" }, new[]{ "ValueMsEpoch" }, new[]{ typeof(global::Google.Apps.Card.V1.DateTimePicker.Types.DateTimePickerType) }, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Apps.Card.V1.OverflowMenu), global::Google.Apps.Card.V1.OverflowMenu.Parser, new[]{ "Items" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Apps.Card.V1.OverflowMenu.Types.OverflowMenuItem), global::Google.Apps.Card.V1.OverflowMenu.Types.OverflowMenuItem.Parser, new[]{ "StartIcon", "Text", "OnClick", "Disabled" }, null, null, null, null)}),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Apps.Card.V1.Button), global::Google.Apps.Card.V1.Button.Parser, new[]{ "Text", "Icon", "Color", "OnClick", "Disabled", "AltText", "Type" }, null, new[]{ typeof(global::Google.Apps.Card.V1.Button.Types.Type) }, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Apps.Card.V1.Icon), global::Google.Apps.Card.V1.Icon.Parser, new[]{ "KnownIcon", "IconUrl", "MaterialIcon", "AltText", "ImageType" }, new[]{ "Icons" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Apps.Card.V1.MaterialIcon), global::Google.Apps.Card.V1.MaterialIcon.Parser, new[]{ "Name", "Fill", "Weight", "Grade" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Apps.Card.V1.ImageCropStyle), global::Google.Apps.Card.V1.ImageCropStyle.Parser, new[]{ "Type", "AspectRatio" }, null, new[]{ typeof(global::Google.Apps.Card.V1.ImageCropStyle.Types.ImageCropType) }, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Apps.Card.V1.BorderStyle), global::Google.Apps.Card.V1.BorderStyle.Parser, new[]{ "Type", "StrokeColor", "CornerRadius" }, null, new[]{ typeof(global::Google.Apps.Card.V1.BorderStyle.Types.BorderType) }, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Apps.Card.V1.ImageComponent), global::Google.Apps.Card.V1.ImageComponent.Parser, new[]{ "ImageUri", "AltText", "CropStyle", "BorderStyle" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Apps.Card.V1.Grid), global::Google.Apps.Card.V1.Grid.Parser, new[]{ "Title", "Items", "BorderStyle", "ColumnCount", "OnClick" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Apps.Card.V1.Grid.Types.GridItem), global::Google.Apps.Card.V1.Grid.Types.GridItem.Parser, new[]{ "Id", "Image", "Title", "Subtitle", "Layout" }, null, new[]{ typeof(global::Google.Apps.Card.V1.Grid.Types.GridItem.Types.GridItemLayout) }, null, null)}),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Apps.Card.V1.Columns), global::Google.Apps.Card.V1.Columns.Parser, new[]{ "ColumnItems" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Apps.Card.V1.Columns.Types.Column), global::Google.Apps.Card.V1.Columns.Types.Column.Parser, new[]{ "HorizontalSizeStyle", "HorizontalAlignment", "VerticalAlignment", "Widgets" }, null, new[]{ typeof(global::Google.Apps.Card.V1.Columns.Types.Column.Types.HorizontalSizeStyle), typeof(global::Google.Apps.Card.V1.Columns.Types.Column.Types.VerticalAlignment) }, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Apps.Card.V1.Columns.Types.Column.Types.Widgets), global::Google.Apps.Card.V1.Columns.Types.Column.Types.Widgets.Parser, new[]{ "TextParagraph", "Image", "DecoratedText", "ButtonList", "TextInput", "SelectionInput", "DateTimePicker" }, new[]{ "Data" }, null, null, null)})}),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Apps.Card.V1.OnClick), global::Google.Apps.Card.V1.OnClick.Parser, new[]{ "Action", "OpenLink", "OpenDynamicLinkAction", "Card" }, new[]{ "Data" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Apps.Card.V1.Columns), global::Google.Apps.Card.V1.Columns.Parser, new[]{ "ColumnItems" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Apps.Card.V1.Columns.Types.Column), global::Google.Apps.Card.V1.Columns.Types.Column.Parser, new[]{ "HorizontalSizeStyle", "HorizontalAlignment", "VerticalAlignment", "Widgets" }, null, new[]{ typeof(global::Google.Apps.Card.V1.Columns.Types.Column.Types.HorizontalSizeStyle), typeof(global::Google.Apps.Card.V1.Columns.Types.Column.Types.VerticalAlignment) }, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Apps.Card.V1.Columns.Types.Column.Types.Widgets), global::Google.Apps.Card.V1.Columns.Types.Column.Types.Widgets.Parser, new[]{ "TextParagraph", "Image", "DecoratedText", "ButtonList", "TextInput", "SelectionInput", "DateTimePicker", "ChipList" }, new[]{ "Data" }, null, null, null)})}),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Apps.Card.V1.Carousel), global::Google.Apps.Card.V1.Carousel.Parser, new[]{ "CarouselCards" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Apps.Card.V1.Carousel.Types.CarouselCard), global::Google.Apps.Card.V1.Carousel.Types.CarouselCard.Parser, new[]{ "Widgets", "FooterWidgets" }, null, null, null, null)}),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Apps.Card.V1.CollapseControl), global::Google.Apps.Card.V1.CollapseControl.Parser, new[]{ "HorizontalAlignment", "ExpandButton", "CollapseButton" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Apps.Card.V1.OnClick), global::Google.Apps.Card.V1.OnClick.Parser, new[]{ "Action", "OpenLink", "OpenDynamicLinkAction", "Card", "OverflowMenu" }, new[]{ "Data" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Apps.Card.V1.OpenLink), global::Google.Apps.Card.V1.OpenLink.Parser, new[]{ "Url", "OpenAs", "OnClose" }, null, new[]{ typeof(global::Google.Apps.Card.V1.OpenLink.Types.OpenAs), typeof(global::Google.Apps.Card.V1.OpenLink.Types.OnClose) }, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Apps.Card.V1.Action), global::Google.Apps.Card.V1.Action.Parser, new[]{ "Function", "Parameters", "LoadIndicator", "PersistValues", "Interaction" }, null, new[]{ typeof(global::Google.Apps.Card.V1.Action.Types.LoadIndicator), typeof(global::Google.Apps.Card.V1.Action.Types.Interaction) }, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Apps.Card.V1.Action.Types.ActionParameter), global::Google.Apps.Card.V1.Action.Types.ActionParameter.Parser, new[]{ "Key", "Value" }, null, null, null, null)})
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Apps.Card.V1.Action), global::Google.Apps.Card.V1.Action.Parser, new[]{ "Function", "Parameters", "LoadIndicator", "PersistValues", "Interaction", "RequiredWidgets", "AllWidgetsAreRequired" }, null, new[]{ typeof(global::Google.Apps.Card.V1.Action.Types.LoadIndicator), typeof(global::Google.Apps.Card.V1.Action.Types.Interaction) }, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Apps.Card.V1.Action.Types.ActionParameter), global::Google.Apps.Card.V1.Action.Types.ActionParameter.Parser, new[]{ "Key", "Value" }, null, null, null, null)}),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Apps.Card.V1.Validation), global::Google.Apps.Card.V1.Validation.Parser, new[]{ "CharacterLimit", "InputType" }, null, new[]{ typeof(global::Google.Apps.Card.V1.Validation.Types.InputType) }, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Apps.Card.V1.ChipList), global::Google.Apps.Card.V1.ChipList.Parser, new[]{ "Layout", "Chips" }, null, new[]{ typeof(global::Google.Apps.Card.V1.ChipList.Types.Layout) }, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Apps.Card.V1.Chip), global::Google.Apps.Card.V1.Chip.Parser, new[]{ "Icon", "Label", "OnClick", "Enabled", "Disabled", "AltText" }, null, null, null, null)
           }));
     }
     #endregion
@@ -240,7 +304,7 @@ namespace Google.Apps.Card.V1 {
   #region Messages
   /// <summary>
   /// A card interface displayed in a Google Chat message or Google Workspace
-  /// Add-on.
+  /// add-on.
   ///
   /// Cards support a defined layout, interactive UI elements like buttons, and
   /// rich media like images. Use cards to present detailed information,
@@ -253,8 +317,12 @@ namespace Google.Apps.Card.V1 {
   ///
   /// * For Google Chat apps, see [Design the components of a card or
   ///   dialog](https://developers.google.com/workspace/chat/design-components-card-dialog).
-  /// * For Google Workspace Add-ons, see [Card-based
+  /// * For Google Workspace add-ons, see [Card-based
   /// interfaces](https://developers.google.com/apps-script/add-ons/concepts/cards).
+  ///
+  /// Note: You can add up to 100 widgets per card. Any widgets beyond this
+  /// limit are ignored. This limit applies to both card messages and dialogs
+  /// in Google Chat apps, and to cards in Google Workspace add-ons.
   ///
   /// **Example: Card message for a Google Chat app**
   ///
@@ -433,7 +501,7 @@ namespace Google.Apps.Card.V1 {
     public const int SectionDividerStyleFieldNumber = 9;
     private global::Google.Apps.Card.V1.Card.Types.DividerStyle sectionDividerStyle_ = global::Google.Apps.Card.V1.Card.Types.DividerStyle.Unspecified;
     /// <summary>
-    /// The divider style between sections.
+    /// The divider style between the header, sections and footer.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -453,7 +521,7 @@ namespace Google.Apps.Card.V1 {
     /// The card's actions. Actions are added to the card's toolbar menu.
     ///
     /// [Google Workspace
-    /// Add-ons](https://developers.google.com/workspace/add-ons):
+    /// add-ons](https://developers.google.com/workspace/add-ons):
     ///
     /// For example, the following JSON constructs a card action menu with
     /// `Settings` and `Send Feedback` options:
@@ -499,7 +567,7 @@ namespace Google.Apps.Card.V1 {
     /// Name of the card. Used as a card identifier in card navigation.
     ///
     /// [Google Workspace
-    /// Add-ons](https://developers.google.com/workspace/add-ons):
+    /// add-ons](https://developers.google.com/workspace/add-ons):
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -523,7 +591,7 @@ namespace Google.Apps.Card.V1 {
     /// [card
     /// messages](https://developers.google.com/workspace/chat/create-messages#create).
     ///
-    /// [Google Workspace Add-ons and Chat
+    /// [Google Workspace add-ons and Chat
     /// apps](https://developers.google.com/workspace/extend):
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -539,11 +607,11 @@ namespace Google.Apps.Card.V1 {
     public const int DisplayStyleFieldNumber = 6;
     private global::Google.Apps.Card.V1.Card.Types.DisplayStyle displayStyle_ = global::Google.Apps.Card.V1.Card.Types.DisplayStyle.Unspecified;
     /// <summary>
-    /// In Google Workspace Add-ons, sets the display properties of the
+    /// In Google Workspace add-ons, sets the display properties of the
     /// `peekCardHeader`.
     ///
     /// [Google Workspace
-    /// Add-ons](https://developers.google.com/workspace/add-ons):
+    /// add-ons](https://developers.google.com/workspace/add-ons):
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -563,7 +631,7 @@ namespace Google.Apps.Card.V1 {
     /// cards and the contextual cards.
     ///
     /// [Google Workspace
-    /// Add-ons](https://developers.google.com/workspace/add-ons):
+    /// add-ons](https://developers.google.com/workspace/add-ons):
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -889,7 +957,7 @@ namespace Google.Apps.Card.V1 {
       /// The divider style of a card. Currently only used for dividers betweens card
       /// sections.
       ///
-      /// [Google Workspace Add-ons and Chat
+      /// [Google Workspace add-ons and Chat
       /// apps](https://developers.google.com/workspace/extend):
       /// </summary>
       public enum DividerStyle {
@@ -898,21 +966,22 @@ namespace Google.Apps.Card.V1 {
         /// </summary>
         [pbr::OriginalName("DIVIDER_STYLE_UNSPECIFIED")] Unspecified = 0,
         /// <summary>
-        /// Default option. Render a solid divider between sections.
+        /// Default option. Render a solid divider.
         /// </summary>
         [pbr::OriginalName("SOLID_DIVIDER")] SolidDivider = 1,
         /// <summary>
-        /// If set, no divider is rendered between sections.
+        /// If set, no divider is rendered. This style completely removes the divider
+        /// from the layout. The result is equivalent to not adding a divider at all.
         /// </summary>
         [pbr::OriginalName("NO_DIVIDER")] NoDivider = 2,
       }
 
       /// <summary>
-      /// In Google Workspace Add-ons,
+      /// In Google Workspace add-ons,
       /// determines how a card is displayed.
       ///
       /// [Google Workspace
-      /// Add-ons](https://developers.google.com/workspace/add-ons):
+      /// add-ons](https://developers.google.com/workspace/add-ons):
       /// </summary>
       public enum DisplayStyle {
         /// <summary>
@@ -937,7 +1006,7 @@ namespace Google.Apps.Card.V1 {
       /// Represents a card header. For an example in Google Chat apps, see [Add a
       /// header](https://developers.google.com/workspace/chat/design-components-card-dialog#add_a_header).
       ///
-      /// [Google Workspace Add-ons and Chat
+      /// [Google Workspace add-ons and Chat
       /// apps](https://developers.google.com/workspace/extend):
       /// </summary>
       [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
@@ -1029,7 +1098,7 @@ namespace Google.Apps.Card.V1 {
         /// <summary>
         /// The shape used to crop the image.
         ///
-        /// [Google Workspace Add-ons and Chat
+        /// [Google Workspace add-ons and Chat
         /// apps](https://developers.google.com/workspace/extend):
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1304,7 +1373,7 @@ namespace Google.Apps.Card.V1 {
       /// A section contains a collection of widgets that are rendered
       /// vertically in the order that they're specified.
       ///
-      /// [Google Workspace Add-ons and Chat
+      /// [Google Workspace add-ons and Chat
       /// apps](https://developers.google.com/workspace/extend):
       /// </summary>
       [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
@@ -1346,6 +1415,7 @@ namespace Google.Apps.Card.V1 {
           widgets_ = other.widgets_.Clone();
           collapsible_ = other.collapsible_;
           uncollapsibleWidgetsCount_ = other.uncollapsibleWidgetsCount_;
+          collapseControl_ = other.collapseControl_ != null ? other.collapseControl_.Clone() : null;
           _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
         }
 
@@ -1367,7 +1437,7 @@ namespace Google.Apps.Card.V1 {
         /// and
         /// [Formatting
         /// text in Google Workspace
-        /// Add-ons](https://developers.google.com/apps-script/add-ons/concepts/widgets#text_formatting).
+        /// add-ons](https://developers.google.com/apps-script/add-ons/concepts/widgets#text_formatting).
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -1437,6 +1507,23 @@ namespace Google.Apps.Card.V1 {
           }
         }
 
+        /// <summary>Field number for the "collapse_control" field.</summary>
+        public const int CollapseControlFieldNumber = 8;
+        private global::Google.Apps.Card.V1.CollapseControl collapseControl_;
+        /// <summary>
+        /// Optional. Define the expand and collapse button of the section.
+        /// This button will be shown only if the section is collapsible.
+        /// If this field isn't set, the default button is used.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public global::Google.Apps.Card.V1.CollapseControl CollapseControl {
+          get { return collapseControl_; }
+          set {
+            collapseControl_ = value;
+          }
+        }
+
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public override bool Equals(object other) {
@@ -1456,6 +1543,7 @@ namespace Google.Apps.Card.V1 {
           if(!widgets_.Equals(other.widgets_)) return false;
           if (Collapsible != other.Collapsible) return false;
           if (UncollapsibleWidgetsCount != other.UncollapsibleWidgetsCount) return false;
+          if (!object.Equals(CollapseControl, other.CollapseControl)) return false;
           return Equals(_unknownFields, other._unknownFields);
         }
 
@@ -1467,6 +1555,7 @@ namespace Google.Apps.Card.V1 {
           hash ^= widgets_.GetHashCode();
           if (Collapsible != false) hash ^= Collapsible.GetHashCode();
           if (UncollapsibleWidgetsCount != 0) hash ^= UncollapsibleWidgetsCount.GetHashCode();
+          if (collapseControl_ != null) hash ^= CollapseControl.GetHashCode();
           if (_unknownFields != null) {
             hash ^= _unknownFields.GetHashCode();
           }
@@ -1498,6 +1587,10 @@ namespace Google.Apps.Card.V1 {
             output.WriteRawTag(48);
             output.WriteInt32(UncollapsibleWidgetsCount);
           }
+          if (collapseControl_ != null) {
+            output.WriteRawTag(66);
+            output.WriteMessage(CollapseControl);
+          }
           if (_unknownFields != null) {
             _unknownFields.WriteTo(output);
           }
@@ -1521,6 +1614,10 @@ namespace Google.Apps.Card.V1 {
             output.WriteRawTag(48);
             output.WriteInt32(UncollapsibleWidgetsCount);
           }
+          if (collapseControl_ != null) {
+            output.WriteRawTag(66);
+            output.WriteMessage(CollapseControl);
+          }
           if (_unknownFields != null) {
             _unknownFields.WriteTo(ref output);
           }
@@ -1540,6 +1637,9 @@ namespace Google.Apps.Card.V1 {
           }
           if (UncollapsibleWidgetsCount != 0) {
             size += 1 + pb::CodedOutputStream.ComputeInt32Size(UncollapsibleWidgetsCount);
+          }
+          if (collapseControl_ != null) {
+            size += 1 + pb::CodedOutputStream.ComputeMessageSize(CollapseControl);
           }
           if (_unknownFields != null) {
             size += _unknownFields.CalculateSize();
@@ -1562,6 +1662,12 @@ namespace Google.Apps.Card.V1 {
           }
           if (other.UncollapsibleWidgetsCount != 0) {
             UncollapsibleWidgetsCount = other.UncollapsibleWidgetsCount;
+          }
+          if (other.collapseControl_ != null) {
+            if (collapseControl_ == null) {
+              CollapseControl = new global::Google.Apps.Card.V1.CollapseControl();
+            }
+            CollapseControl.MergeFrom(other.CollapseControl);
           }
           _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
         }
@@ -1592,6 +1698,13 @@ namespace Google.Apps.Card.V1 {
               }
               case 48: {
                 UncollapsibleWidgetsCount = input.ReadInt32();
+                break;
+              }
+              case 66: {
+                if (collapseControl_ == null) {
+                  CollapseControl = new global::Google.Apps.Card.V1.CollapseControl();
+                }
+                input.ReadMessage(CollapseControl);
                 break;
               }
             }
@@ -1625,6 +1738,13 @@ namespace Google.Apps.Card.V1 {
                 UncollapsibleWidgetsCount = input.ReadInt32();
                 break;
               }
+              case 66: {
+                if (collapseControl_ == null) {
+                  CollapseControl = new global::Google.Apps.Card.V1.CollapseControl();
+                }
+                input.ReadMessage(CollapseControl);
+                break;
+              }
             }
           }
         }
@@ -1638,7 +1758,7 @@ namespace Google.Apps.Card.V1 {
       /// invoice, or open the invoice in a browser.
       ///
       /// [Google Workspace
-      /// Add-ons](https://developers.google.com/workspace/add-ons):
+      /// add-ons](https://developers.google.com/workspace/add-ons):
       /// </summary>
       [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
       public sealed partial class CardAction : pb::IMessage<CardAction>
@@ -1883,6 +2003,359 @@ namespace Google.Apps.Card.V1 {
       }
 
       /// <summary>
+      /// A list of widgets that can be displayed in a containing layout, such
+      /// as a `CarouselCard`.
+      /// [Google Chat apps](https://developers.google.com/workspace/chat):
+      /// </summary>
+      [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+      public sealed partial class NestedWidget : pb::IMessage<NestedWidget>
+      #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          , pb::IBufferMessage
+      #endif
+      {
+        private static readonly pb::MessageParser<NestedWidget> _parser = new pb::MessageParser<NestedWidget>(() => new NestedWidget());
+        private pb::UnknownFieldSet _unknownFields;
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public static pb::MessageParser<NestedWidget> Parser { get { return _parser; } }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public static pbr::MessageDescriptor Descriptor {
+          get { return global::Google.Apps.Card.V1.Card.Descriptor.NestedTypes[3]; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        pbr::MessageDescriptor pb::IMessage.Descriptor {
+          get { return Descriptor; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public NestedWidget() {
+          OnConstruction();
+        }
+
+        partial void OnConstruction();
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public NestedWidget(NestedWidget other) : this() {
+          switch (other.DataCase) {
+            case DataOneofCase.TextParagraph:
+              TextParagraph = other.TextParagraph.Clone();
+              break;
+            case DataOneofCase.ButtonList:
+              ButtonList = other.ButtonList.Clone();
+              break;
+            case DataOneofCase.Image:
+              Image = other.Image.Clone();
+              break;
+          }
+
+          _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public NestedWidget Clone() {
+          return new NestedWidget(this);
+        }
+
+        /// <summary>Field number for the "text_paragraph" field.</summary>
+        public const int TextParagraphFieldNumber = 1;
+        /// <summary>
+        /// A text paragraph widget.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public global::Google.Apps.Card.V1.TextParagraph TextParagraph {
+          get { return dataCase_ == DataOneofCase.TextParagraph ? (global::Google.Apps.Card.V1.TextParagraph) data_ : null; }
+          set {
+            data_ = value;
+            dataCase_ = value == null ? DataOneofCase.None : DataOneofCase.TextParagraph;
+          }
+        }
+
+        /// <summary>Field number for the "button_list" field.</summary>
+        public const int ButtonListFieldNumber = 3;
+        /// <summary>
+        /// A button list widget.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public global::Google.Apps.Card.V1.ButtonList ButtonList {
+          get { return dataCase_ == DataOneofCase.ButtonList ? (global::Google.Apps.Card.V1.ButtonList) data_ : null; }
+          set {
+            data_ = value;
+            dataCase_ = value == null ? DataOneofCase.None : DataOneofCase.ButtonList;
+          }
+        }
+
+        /// <summary>Field number for the "image" field.</summary>
+        public const int ImageFieldNumber = 10;
+        /// <summary>
+        /// An image widget.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public global::Google.Apps.Card.V1.Image Image {
+          get { return dataCase_ == DataOneofCase.Image ? (global::Google.Apps.Card.V1.Image) data_ : null; }
+          set {
+            data_ = value;
+            dataCase_ = value == null ? DataOneofCase.None : DataOneofCase.Image;
+          }
+        }
+
+        private object data_;
+        /// <summary>Enum of possible cases for the "data" oneof.</summary>
+        public enum DataOneofCase {
+          None = 0,
+          TextParagraph = 1,
+          ButtonList = 3,
+          Image = 10,
+        }
+        private DataOneofCase dataCase_ = DataOneofCase.None;
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public DataOneofCase DataCase {
+          get { return dataCase_; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void ClearData() {
+          dataCase_ = DataOneofCase.None;
+          data_ = null;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override bool Equals(object other) {
+          return Equals(other as NestedWidget);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public bool Equals(NestedWidget other) {
+          if (ReferenceEquals(other, null)) {
+            return false;
+          }
+          if (ReferenceEquals(other, this)) {
+            return true;
+          }
+          if (!object.Equals(TextParagraph, other.TextParagraph)) return false;
+          if (!object.Equals(ButtonList, other.ButtonList)) return false;
+          if (!object.Equals(Image, other.Image)) return false;
+          if (DataCase != other.DataCase) return false;
+          return Equals(_unknownFields, other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override int GetHashCode() {
+          int hash = 1;
+          if (dataCase_ == DataOneofCase.TextParagraph) hash ^= TextParagraph.GetHashCode();
+          if (dataCase_ == DataOneofCase.ButtonList) hash ^= ButtonList.GetHashCode();
+          if (dataCase_ == DataOneofCase.Image) hash ^= Image.GetHashCode();
+          hash ^= (int) dataCase_;
+          if (_unknownFields != null) {
+            hash ^= _unknownFields.GetHashCode();
+          }
+          return hash;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override string ToString() {
+          return pb::JsonFormatter.ToDiagnosticString(this);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void WriteTo(pb::CodedOutputStream output) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          output.WriteRawMessage(this);
+        #else
+          if (dataCase_ == DataOneofCase.TextParagraph) {
+            output.WriteRawTag(10);
+            output.WriteMessage(TextParagraph);
+          }
+          if (dataCase_ == DataOneofCase.ButtonList) {
+            output.WriteRawTag(26);
+            output.WriteMessage(ButtonList);
+          }
+          if (dataCase_ == DataOneofCase.Image) {
+            output.WriteRawTag(82);
+            output.WriteMessage(Image);
+          }
+          if (_unknownFields != null) {
+            _unknownFields.WriteTo(output);
+          }
+        #endif
+        }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+          if (dataCase_ == DataOneofCase.TextParagraph) {
+            output.WriteRawTag(10);
+            output.WriteMessage(TextParagraph);
+          }
+          if (dataCase_ == DataOneofCase.ButtonList) {
+            output.WriteRawTag(26);
+            output.WriteMessage(ButtonList);
+          }
+          if (dataCase_ == DataOneofCase.Image) {
+            output.WriteRawTag(82);
+            output.WriteMessage(Image);
+          }
+          if (_unknownFields != null) {
+            _unknownFields.WriteTo(ref output);
+          }
+        }
+        #endif
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public int CalculateSize() {
+          int size = 0;
+          if (dataCase_ == DataOneofCase.TextParagraph) {
+            size += 1 + pb::CodedOutputStream.ComputeMessageSize(TextParagraph);
+          }
+          if (dataCase_ == DataOneofCase.ButtonList) {
+            size += 1 + pb::CodedOutputStream.ComputeMessageSize(ButtonList);
+          }
+          if (dataCase_ == DataOneofCase.Image) {
+            size += 1 + pb::CodedOutputStream.ComputeMessageSize(Image);
+          }
+          if (_unknownFields != null) {
+            size += _unknownFields.CalculateSize();
+          }
+          return size;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void MergeFrom(NestedWidget other) {
+          if (other == null) {
+            return;
+          }
+          switch (other.DataCase) {
+            case DataOneofCase.TextParagraph:
+              if (TextParagraph == null) {
+                TextParagraph = new global::Google.Apps.Card.V1.TextParagraph();
+              }
+              TextParagraph.MergeFrom(other.TextParagraph);
+              break;
+            case DataOneofCase.ButtonList:
+              if (ButtonList == null) {
+                ButtonList = new global::Google.Apps.Card.V1.ButtonList();
+              }
+              ButtonList.MergeFrom(other.ButtonList);
+              break;
+            case DataOneofCase.Image:
+              if (Image == null) {
+                Image = new global::Google.Apps.Card.V1.Image();
+              }
+              Image.MergeFrom(other.Image);
+              break;
+          }
+
+          _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void MergeFrom(pb::CodedInputStream input) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          input.ReadRawMessage(this);
+        #else
+          uint tag;
+          while ((tag = input.ReadTag()) != 0) {
+            switch(tag) {
+              default:
+                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+                break;
+              case 10: {
+                global::Google.Apps.Card.V1.TextParagraph subBuilder = new global::Google.Apps.Card.V1.TextParagraph();
+                if (dataCase_ == DataOneofCase.TextParagraph) {
+                  subBuilder.MergeFrom(TextParagraph);
+                }
+                input.ReadMessage(subBuilder);
+                TextParagraph = subBuilder;
+                break;
+              }
+              case 26: {
+                global::Google.Apps.Card.V1.ButtonList subBuilder = new global::Google.Apps.Card.V1.ButtonList();
+                if (dataCase_ == DataOneofCase.ButtonList) {
+                  subBuilder.MergeFrom(ButtonList);
+                }
+                input.ReadMessage(subBuilder);
+                ButtonList = subBuilder;
+                break;
+              }
+              case 82: {
+                global::Google.Apps.Card.V1.Image subBuilder = new global::Google.Apps.Card.V1.Image();
+                if (dataCase_ == DataOneofCase.Image) {
+                  subBuilder.MergeFrom(Image);
+                }
+                input.ReadMessage(subBuilder);
+                Image = subBuilder;
+                break;
+              }
+            }
+          }
+        #endif
+        }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+          uint tag;
+          while ((tag = input.ReadTag()) != 0) {
+            switch(tag) {
+              default:
+                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+                break;
+              case 10: {
+                global::Google.Apps.Card.V1.TextParagraph subBuilder = new global::Google.Apps.Card.V1.TextParagraph();
+                if (dataCase_ == DataOneofCase.TextParagraph) {
+                  subBuilder.MergeFrom(TextParagraph);
+                }
+                input.ReadMessage(subBuilder);
+                TextParagraph = subBuilder;
+                break;
+              }
+              case 26: {
+                global::Google.Apps.Card.V1.ButtonList subBuilder = new global::Google.Apps.Card.V1.ButtonList();
+                if (dataCase_ == DataOneofCase.ButtonList) {
+                  subBuilder.MergeFrom(ButtonList);
+                }
+                input.ReadMessage(subBuilder);
+                ButtonList = subBuilder;
+                break;
+              }
+              case 82: {
+                global::Google.Apps.Card.V1.Image subBuilder = new global::Google.Apps.Card.V1.Image();
+                if (dataCase_ == DataOneofCase.Image) {
+                  subBuilder.MergeFrom(Image);
+                }
+                input.ReadMessage(subBuilder);
+                Image = subBuilder;
+                break;
+              }
+            }
+          }
+        }
+        #endif
+
+      }
+
+      /// <summary>
       /// A persistent (sticky) footer that that appears at the bottom of the card.
       ///
       /// Setting `fixedFooter` without specifying a `primaryButton` or a
@@ -1895,7 +2368,7 @@ namespace Google.Apps.Card.V1 {
       /// For an example in Google Chat apps, see [Add a persistent
       /// footer](https://developers.google.com/workspace/chat/design-components-card-dialog#add_a_persistent_footer).
       ///
-      /// [Google Workspace Add-ons and Chat
+      /// [Google Workspace add-ons and Chat
       /// apps](https://developers.google.com/workspace/extend):
       /// </summary>
       [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
@@ -1913,7 +2386,7 @@ namespace Google.Apps.Card.V1 {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public static pbr::MessageDescriptor Descriptor {
-          get { return global::Google.Apps.Card.V1.Card.Descriptor.NestedTypes[3]; }
+          get { return global::Google.Apps.Card.V1.Card.Descriptor.NestedTypes[4]; }
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -2230,6 +2703,12 @@ namespace Google.Apps.Card.V1 {
         case DataOneofCase.Columns:
           Columns = other.Columns.Clone();
           break;
+        case DataOneofCase.Carousel:
+          Carousel = other.Carousel.Clone();
+          break;
+        case DataOneofCase.ChipList:
+          ChipList = other.ChipList.Clone();
+          break;
       }
 
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
@@ -2251,7 +2730,7 @@ namespace Google.Apps.Card.V1 {
     /// and
     /// [Formatting
     /// text in Google Workspace
-    /// Add-ons](https://developers.google.com/apps-script/add-ons/concepts/widgets#text_formatting).
+    /// add-ons](https://developers.google.com/apps-script/add-ons/concepts/widgets#text_formatting).
     ///
     /// For example, the following JSON creates a bolded text:
     /// ```
@@ -2345,7 +2824,6 @@ namespace Google.Apps.Card.V1 {
     ///         "red": 0,
     ///         "green": 0,
     ///         "blue": 1,
-    ///         "alpha": 1
     ///       },
     ///       "disabled": true,
     ///     },
@@ -2486,7 +2964,7 @@ namespace Google.Apps.Card.V1 {
     ///   "name": "appointment_time",
     ///   "label": "Book your appointment at:",
     ///   "type": "DATE_AND_TIME",
-    ///   "valueMsEpoch": "796435200000"
+    ///   "valueMsEpoch": 796435200000
     /// }
     /// ```
     /// </summary>
@@ -2531,7 +3009,7 @@ namespace Google.Apps.Card.V1 {
     /// of columns. A grid with 10 items and 2 columns has 5 rows. A grid with 11
     /// items and 2 columns has 6 rows.
     ///
-    /// [Google Workspace Add-ons and
+    /// [Google Workspace add-ons and
     /// Chat apps](https://developers.google.com/workspace/extend):
     ///
     /// For example, the following JSON creates a 2 column grid with a single
@@ -2629,6 +3107,80 @@ namespace Google.Apps.Card.V1 {
       }
     }
 
+    /// <summary>Field number for the "carousel" field.</summary>
+    public const int CarouselFieldNumber = 13;
+    /// <summary>
+    /// A carousel contains a collection of nested widgets.
+    /// For example, this is a JSON representation of a carousel that contains
+    /// two text paragraphs.
+    ///
+    /// ```
+    /// {
+    ///   "widgets": [
+    ///     {
+    ///       "textParagraph": {
+    ///         "text": "First text paragraph in the carousel."
+    ///       }
+    ///     },
+    ///     {
+    ///       "textParagraph": {
+    ///         "text": "Second text paragraph in the carousel."
+    ///       }
+    ///     }
+    ///   ]
+    /// }
+    /// ```
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Apps.Card.V1.Carousel Carousel {
+      get { return dataCase_ == DataOneofCase.Carousel ? (global::Google.Apps.Card.V1.Carousel) data_ : null; }
+      set {
+        data_ = value;
+        dataCase_ = value == null ? DataOneofCase.None : DataOneofCase.Carousel;
+      }
+    }
+
+    /// <summary>Field number for the "chip_list" field.</summary>
+    public const int ChipListFieldNumber = 14;
+    /// <summary>
+    /// A list of chips.
+    ///
+    /// For example, the following JSON creates two chips. The first
+    /// is a text chip and the second is an icon chip that opens a
+    /// link:
+    /// ```
+    /// "chipList": {
+    ///   "chips": [
+    ///     {
+    ///       "text": "Edit",
+    ///       "disabled": true,
+    ///     },
+    ///     {
+    ///       "icon": {
+    ///         "knownIcon": "INVITE",
+    ///         "altText": "check calendar"
+    ///       },
+    ///       "onClick": {
+    ///         "openLink": {
+    ///           "url": "https://example.com/calendar"
+    ///         }
+    ///       }
+    ///     }
+    ///   ]
+    /// }
+    /// ```
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Apps.Card.V1.ChipList ChipList {
+      get { return dataCase_ == DataOneofCase.ChipList ? (global::Google.Apps.Card.V1.ChipList) data_ : null; }
+      set {
+        data_ = value;
+        dataCase_ = value == null ? DataOneofCase.None : DataOneofCase.ChipList;
+      }
+    }
+
     /// <summary>Field number for the "horizontal_alignment" field.</summary>
     public const int HorizontalAlignmentFieldNumber = 8;
     private global::Google.Apps.Card.V1.Widget.Types.HorizontalAlignment horizontalAlignment_ = global::Google.Apps.Card.V1.Widget.Types.HorizontalAlignment.Unspecified;
@@ -2658,6 +3210,8 @@ namespace Google.Apps.Card.V1 {
       Divider = 9,
       Grid = 10,
       Columns = 11,
+      Carousel = 13,
+      ChipList = 14,
     }
     private DataOneofCase dataCase_ = DataOneofCase.None;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -2698,6 +3252,8 @@ namespace Google.Apps.Card.V1 {
       if (!object.Equals(Divider, other.Divider)) return false;
       if (!object.Equals(Grid, other.Grid)) return false;
       if (!object.Equals(Columns, other.Columns)) return false;
+      if (!object.Equals(Carousel, other.Carousel)) return false;
+      if (!object.Equals(ChipList, other.ChipList)) return false;
       if (HorizontalAlignment != other.HorizontalAlignment) return false;
       if (DataCase != other.DataCase) return false;
       return Equals(_unknownFields, other._unknownFields);
@@ -2717,6 +3273,8 @@ namespace Google.Apps.Card.V1 {
       if (dataCase_ == DataOneofCase.Divider) hash ^= Divider.GetHashCode();
       if (dataCase_ == DataOneofCase.Grid) hash ^= Grid.GetHashCode();
       if (dataCase_ == DataOneofCase.Columns) hash ^= Columns.GetHashCode();
+      if (dataCase_ == DataOneofCase.Carousel) hash ^= Carousel.GetHashCode();
+      if (dataCase_ == DataOneofCase.ChipList) hash ^= ChipList.GetHashCode();
       if (HorizontalAlignment != global::Google.Apps.Card.V1.Widget.Types.HorizontalAlignment.Unspecified) hash ^= HorizontalAlignment.GetHashCode();
       hash ^= (int) dataCase_;
       if (_unknownFields != null) {
@@ -2781,6 +3339,14 @@ namespace Google.Apps.Card.V1 {
         output.WriteRawTag(90);
         output.WriteMessage(Columns);
       }
+      if (dataCase_ == DataOneofCase.Carousel) {
+        output.WriteRawTag(106);
+        output.WriteMessage(Carousel);
+      }
+      if (dataCase_ == DataOneofCase.ChipList) {
+        output.WriteRawTag(114);
+        output.WriteMessage(ChipList);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -2835,6 +3401,14 @@ namespace Google.Apps.Card.V1 {
         output.WriteRawTag(90);
         output.WriteMessage(Columns);
       }
+      if (dataCase_ == DataOneofCase.Carousel) {
+        output.WriteRawTag(106);
+        output.WriteMessage(Carousel);
+      }
+      if (dataCase_ == DataOneofCase.ChipList) {
+        output.WriteRawTag(114);
+        output.WriteMessage(ChipList);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -2874,6 +3448,12 @@ namespace Google.Apps.Card.V1 {
       }
       if (dataCase_ == DataOneofCase.Columns) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(Columns);
+      }
+      if (dataCase_ == DataOneofCase.Carousel) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(Carousel);
+      }
+      if (dataCase_ == DataOneofCase.ChipList) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(ChipList);
       }
       if (HorizontalAlignment != global::Google.Apps.Card.V1.Widget.Types.HorizontalAlignment.Unspecified) {
         size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) HorizontalAlignment);
@@ -2954,6 +3534,18 @@ namespace Google.Apps.Card.V1 {
           }
           Columns.MergeFrom(other.Columns);
           break;
+        case DataOneofCase.Carousel:
+          if (Carousel == null) {
+            Carousel = new global::Google.Apps.Card.V1.Carousel();
+          }
+          Carousel.MergeFrom(other.Carousel);
+          break;
+        case DataOneofCase.ChipList:
+          if (ChipList == null) {
+            ChipList = new global::Google.Apps.Card.V1.ChipList();
+          }
+          ChipList.MergeFrom(other.ChipList);
+          break;
       }
 
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
@@ -3065,6 +3657,24 @@ namespace Google.Apps.Card.V1 {
             Columns = subBuilder;
             break;
           }
+          case 106: {
+            global::Google.Apps.Card.V1.Carousel subBuilder = new global::Google.Apps.Card.V1.Carousel();
+            if (dataCase_ == DataOneofCase.Carousel) {
+              subBuilder.MergeFrom(Carousel);
+            }
+            input.ReadMessage(subBuilder);
+            Carousel = subBuilder;
+            break;
+          }
+          case 114: {
+            global::Google.Apps.Card.V1.ChipList subBuilder = new global::Google.Apps.Card.V1.ChipList();
+            if (dataCase_ == DataOneofCase.ChipList) {
+              subBuilder.MergeFrom(ChipList);
+            }
+            input.ReadMessage(subBuilder);
+            ChipList = subBuilder;
+            break;
+          }
         }
       }
     #endif
@@ -3174,6 +3784,24 @@ namespace Google.Apps.Card.V1 {
             Columns = subBuilder;
             break;
           }
+          case 106: {
+            global::Google.Apps.Card.V1.Carousel subBuilder = new global::Google.Apps.Card.V1.Carousel();
+            if (dataCase_ == DataOneofCase.Carousel) {
+              subBuilder.MergeFrom(Carousel);
+            }
+            input.ReadMessage(subBuilder);
+            Carousel = subBuilder;
+            break;
+          }
+          case 114: {
+            global::Google.Apps.Card.V1.ChipList subBuilder = new global::Google.Apps.Card.V1.ChipList();
+            if (dataCase_ == DataOneofCase.ChipList) {
+              subBuilder.MergeFrom(ChipList);
+            }
+            input.ReadMessage(subBuilder);
+            ChipList = subBuilder;
+            break;
+          }
         }
       }
     }
@@ -3187,7 +3815,7 @@ namespace Google.Apps.Card.V1 {
       /// <summary>
       /// The shape used to crop the image.
       ///
-      /// [Google Workspace Add-ons and Chat
+      /// [Google Workspace add-ons and Chat
       /// apps](https://developers.google.com/workspace/extend):
       /// </summary>
       public enum ImageType {
@@ -3231,6 +3859,28 @@ namespace Google.Apps.Card.V1 {
         [pbr::OriginalName("END")] End = 3,
       }
 
+      /// <summary>
+      /// Represents vertical alignment attribute.
+      /// </summary>
+      public enum VerticalAlignment {
+        /// <summary>
+        /// Unspecified type. Do not use.
+        /// </summary>
+        [pbr::OriginalName("VERTICAL_ALIGNMENT_UNSPECIFIED")] Unspecified = 0,
+        /// <summary>
+        /// Alignment to the top position.
+        /// </summary>
+        [pbr::OriginalName("TOP")] Top = 1,
+        /// <summary>
+        /// Alignment to the middle position.
+        /// </summary>
+        [pbr::OriginalName("MIDDLE")] Middle = 2,
+        /// <summary>
+        /// Alignment to the bottom position.
+        /// </summary>
+        [pbr::OriginalName("BOTTOM")] Bottom = 3,
+      }
+
     }
     #endregion
 
@@ -3247,9 +3897,9 @@ namespace Google.Apps.Card.V1 {
   /// and
   /// [Formatting
   /// text in Google Workspace
-  /// Add-ons](https://developers.google.com/apps-script/add-ons/concepts/widgets#text_formatting).
+  /// add-ons](https://developers.google.com/apps-script/add-ons/concepts/widgets#text_formatting).
   ///
-  /// [Google Workspace Add-ons and
+  /// [Google Workspace add-ons and
   /// Chat apps](https://developers.google.com/workspace/extend):
   /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
@@ -3288,6 +3938,8 @@ namespace Google.Apps.Card.V1 {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public TextParagraph(TextParagraph other) : this() {
       text_ = other.text_;
+      maxLines_ = other.maxLines_;
+      textSyntax_ = other.textSyntax_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -3312,6 +3964,45 @@ namespace Google.Apps.Card.V1 {
       }
     }
 
+    /// <summary>Field number for the "max_lines" field.</summary>
+    public const int MaxLinesFieldNumber = 2;
+    private int maxLines_;
+    /// <summary>
+    /// The maximum number of lines of text that are displayed in the widget. If
+    /// the text exceeds the specified maximum number of lines, the excess
+    /// content is concealed behind a **show more** button. If the text is equal or
+    /// shorter than the specified maximum number of lines, a **show more** button
+    /// isn't displayed.
+    ///
+    /// The default value is 0, in which case
+    /// all context is displayed. Negative values are ignored.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int MaxLines {
+      get { return maxLines_; }
+      set {
+        maxLines_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "text_syntax" field.</summary>
+    public const int TextSyntaxFieldNumber = 4;
+    private global::Google.Apps.Card.V1.TextParagraph.Types.TextSyntax textSyntax_ = global::Google.Apps.Card.V1.TextParagraph.Types.TextSyntax.Unspecified;
+    /// <summary>
+    /// The syntax of the text. If not set, the text is rendered as HTML.
+    ///
+    /// [Google Chat apps](https://developers.google.com/workspace/chat):
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Apps.Card.V1.TextParagraph.Types.TextSyntax TextSyntax {
+      get { return textSyntax_; }
+      set {
+        textSyntax_ = value;
+      }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
@@ -3328,6 +4019,8 @@ namespace Google.Apps.Card.V1 {
         return true;
       }
       if (Text != other.Text) return false;
+      if (MaxLines != other.MaxLines) return false;
+      if (TextSyntax != other.TextSyntax) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -3336,6 +4029,8 @@ namespace Google.Apps.Card.V1 {
     public override int GetHashCode() {
       int hash = 1;
       if (Text.Length != 0) hash ^= Text.GetHashCode();
+      if (MaxLines != 0) hash ^= MaxLines.GetHashCode();
+      if (TextSyntax != global::Google.Apps.Card.V1.TextParagraph.Types.TextSyntax.Unspecified) hash ^= TextSyntax.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -3358,6 +4053,14 @@ namespace Google.Apps.Card.V1 {
         output.WriteRawTag(10);
         output.WriteString(Text);
       }
+      if (MaxLines != 0) {
+        output.WriteRawTag(16);
+        output.WriteInt32(MaxLines);
+      }
+      if (TextSyntax != global::Google.Apps.Card.V1.TextParagraph.Types.TextSyntax.Unspecified) {
+        output.WriteRawTag(32);
+        output.WriteEnum((int) TextSyntax);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -3372,6 +4075,14 @@ namespace Google.Apps.Card.V1 {
         output.WriteRawTag(10);
         output.WriteString(Text);
       }
+      if (MaxLines != 0) {
+        output.WriteRawTag(16);
+        output.WriteInt32(MaxLines);
+      }
+      if (TextSyntax != global::Google.Apps.Card.V1.TextParagraph.Types.TextSyntax.Unspecified) {
+        output.WriteRawTag(32);
+        output.WriteEnum((int) TextSyntax);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -3384,6 +4095,12 @@ namespace Google.Apps.Card.V1 {
       int size = 0;
       if (Text.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(Text);
+      }
+      if (MaxLines != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeInt32Size(MaxLines);
+      }
+      if (TextSyntax != global::Google.Apps.Card.V1.TextParagraph.Types.TextSyntax.Unspecified) {
+        size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) TextSyntax);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -3399,6 +4116,12 @@ namespace Google.Apps.Card.V1 {
       }
       if (other.Text.Length != 0) {
         Text = other.Text;
+      }
+      if (other.MaxLines != 0) {
+        MaxLines = other.MaxLines;
+      }
+      if (other.TextSyntax != global::Google.Apps.Card.V1.TextParagraph.Types.TextSyntax.Unspecified) {
+        TextSyntax = other.TextSyntax;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -3417,6 +4140,14 @@ namespace Google.Apps.Card.V1 {
             break;
           case 10: {
             Text = input.ReadString();
+            break;
+          }
+          case 16: {
+            MaxLines = input.ReadInt32();
+            break;
+          }
+          case 32: {
+            TextSyntax = (global::Google.Apps.Card.V1.TextParagraph.Types.TextSyntax) input.ReadEnum();
             break;
           }
         }
@@ -3438,10 +4169,46 @@ namespace Google.Apps.Card.V1 {
             Text = input.ReadString();
             break;
           }
+          case 16: {
+            MaxLines = input.ReadInt32();
+            break;
+          }
+          case 32: {
+            TextSyntax = (global::Google.Apps.Card.V1.TextParagraph.Types.TextSyntax) input.ReadEnum();
+            break;
+          }
         }
       }
     }
     #endif
+
+    #region Nested types
+    /// <summary>Container for nested types declared in the TextParagraph message type.</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static partial class Types {
+      /// <summary>
+      /// Syntax to use for formatting text.
+      ///
+      /// [Google Chat apps](https://developers.google.com/workspace/chat):
+      /// </summary>
+      public enum TextSyntax {
+        /// <summary>
+        /// The text is rendered as HTML if unspecified.
+        /// </summary>
+        [pbr::OriginalName("TEXT_SYNTAX_UNSPECIFIED")] Unspecified = 0,
+        /// <summary>
+        /// The text is rendered as HTML. This is the default value.
+        /// </summary>
+        [pbr::OriginalName("HTML")] Html = 1,
+        /// <summary>
+        /// The text is rendered as Markdown.
+        /// </summary>
+        [pbr::OriginalName("MARKDOWN")] Markdown = 2,
+      }
+
+    }
+    #endregion
 
   }
 
@@ -3450,7 +4217,7 @@ namespace Google.Apps.Card.V1 {
   /// example, see [Add an
   /// image](https://developers.google.com/workspace/chat/add-text-image-card-dialog#add_an_image).
   ///
-  /// [Google Workspace Add-ons and Chat
+  /// [Google Workspace add-ons and Chat
   /// apps](https://developers.google.com/workspace/extend):
   /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
@@ -3747,7 +4514,7 @@ namespace Google.Apps.Card.V1 {
   /// [Add a horizontal divider between
   /// widgets](https://developers.google.com/workspace/chat/format-structure-card-dialog#add_a_horizontal_divider_between_widgets).
   ///
-  /// [Google Workspace Add-ons and Chat
+  /// [Google Workspace add-ons and Chat
   /// apps](https://developers.google.com/workspace/extend):
   ///
   /// For example, the following JSON creates a divider:
@@ -3916,7 +4683,7 @@ namespace Google.Apps.Card.V1 {
   /// Google Chat apps, see [Display text with decorative
   /// text](https://developers.google.com/workspace/chat/add-text-image-card-dialog#display_text_with_decorative_elements).
   ///
-  /// [Google Workspace Add-ons and Chat
+  /// [Google Workspace add-ons and Chat
   /// apps](https://developers.google.com/workspace/extend):
   /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
@@ -3956,10 +4723,14 @@ namespace Google.Apps.Card.V1 {
     public DecoratedText(DecoratedText other) : this() {
       icon_ = other.icon_ != null ? other.icon_.Clone() : null;
       startIcon_ = other.startIcon_ != null ? other.startIcon_.Clone() : null;
+      startIconVerticalAlignment_ = other.startIconVerticalAlignment_;
       topLabel_ = other.topLabel_;
+      topLabelText_ = other.topLabelText_ != null ? other.topLabelText_.Clone() : null;
       text_ = other.text_;
+      contentText_ = other.contentText_ != null ? other.contentText_.Clone() : null;
       wrapText_ = other.wrapText_;
       bottomLabel_ = other.bottomLabel_;
+      bottomLabelText_ = other.bottomLabelText_ != null ? other.bottomLabelText_.Clone() : null;
       onClick_ = other.onClick_ != null ? other.onClick_.Clone() : null;
       switch (other.ControlCase) {
         case ControlOneofCase.Button:
@@ -4013,6 +4784,24 @@ namespace Google.Apps.Card.V1 {
       }
     }
 
+    /// <summary>Field number for the "start_icon_vertical_alignment" field.</summary>
+    public const int StartIconVerticalAlignmentFieldNumber = 13;
+    private global::Google.Apps.Card.V1.Widget.Types.VerticalAlignment startIconVerticalAlignment_ = global::Google.Apps.Card.V1.Widget.Types.VerticalAlignment.Unspecified;
+    /// <summary>
+    /// Optional. Vertical alignment of the start icon. If not set, the icon
+    /// will be vertically centered.
+    ///
+    /// [Google Chat apps](https://developers.google.com/workspace/chat):
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Apps.Card.V1.Widget.Types.VerticalAlignment StartIconVerticalAlignment {
+      get { return startIconVerticalAlignment_; }
+      set {
+        startIconVerticalAlignment_ = value;
+      }
+    }
+
     /// <summary>Field number for the "top_label" field.</summary>
     public const int TopLabelFieldNumber = 3;
     private string topLabel_ = "";
@@ -4025,6 +4814,24 @@ namespace Google.Apps.Card.V1 {
       get { return topLabel_; }
       set {
         topLabel_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "top_label_text" field.</summary>
+    public const int TopLabelTextFieldNumber = 17;
+    private global::Google.Apps.Card.V1.TextParagraph topLabelText_;
+    /// <summary>
+    /// `TextParagraph` equivalent of `top_label`. Always truncates. Allows for
+    /// more complex formatting than `top_label`.
+    ///
+    /// [Google Chat apps](https://developers.google.com/workspace/chat):
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Apps.Card.V1.TextParagraph TopLabelText {
+      get { return topLabelText_; }
+      set {
+        topLabelText_ = value;
       }
     }
 
@@ -4041,7 +4848,7 @@ namespace Google.Apps.Card.V1 {
     /// and
     /// [Formatting
     /// text in Google Workspace
-    /// Add-ons](https://developers.google.com/apps-script/add-ons/concepts/widgets#text_formatting).
+    /// add-ons](https://developers.google.com/apps-script/add-ons/concepts/widgets#text_formatting).
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -4049,6 +4856,24 @@ namespace Google.Apps.Card.V1 {
       get { return text_; }
       set {
         text_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "content_text" field.</summary>
+    public const int ContentTextFieldNumber = 18;
+    private global::Google.Apps.Card.V1.TextParagraph contentText_;
+    /// <summary>
+    /// `TextParagraph` equivalent of `text`. Allows for more complex formatting
+    /// than `text`.
+    ///
+    /// [Google Chat apps](https://developers.google.com/workspace/chat):
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Apps.Card.V1.TextParagraph ContentText {
+      get { return contentText_; }
+      set {
+        contentText_ = value;
       }
     }
 
@@ -4082,6 +4907,24 @@ namespace Google.Apps.Card.V1 {
       get { return bottomLabel_; }
       set {
         bottomLabel_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "bottom_label_text" field.</summary>
+    public const int BottomLabelTextFieldNumber = 19;
+    private global::Google.Apps.Card.V1.TextParagraph bottomLabelText_;
+    /// <summary>
+    /// `TextParagraph` equivalent of `bottom_label`. Always wraps. Allows for
+    /// more complex formatting than `bottom_label`.
+    ///
+    /// [Google Chat apps](https://developers.google.com/workspace/chat):
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Apps.Card.V1.TextParagraph BottomLabelText {
+      get { return bottomLabelText_; }
+      set {
+        bottomLabelText_ = value;
       }
     }
 
@@ -4191,10 +5034,14 @@ namespace Google.Apps.Card.V1 {
       }
       if (!object.Equals(Icon, other.Icon)) return false;
       if (!object.Equals(StartIcon, other.StartIcon)) return false;
+      if (StartIconVerticalAlignment != other.StartIconVerticalAlignment) return false;
       if (TopLabel != other.TopLabel) return false;
+      if (!object.Equals(TopLabelText, other.TopLabelText)) return false;
       if (Text != other.Text) return false;
+      if (!object.Equals(ContentText, other.ContentText)) return false;
       if (WrapText != other.WrapText) return false;
       if (BottomLabel != other.BottomLabel) return false;
+      if (!object.Equals(BottomLabelText, other.BottomLabelText)) return false;
       if (!object.Equals(OnClick, other.OnClick)) return false;
       if (!object.Equals(Button, other.Button)) return false;
       if (!object.Equals(SwitchControl, other.SwitchControl)) return false;
@@ -4209,10 +5056,14 @@ namespace Google.Apps.Card.V1 {
       int hash = 1;
       if (icon_ != null) hash ^= Icon.GetHashCode();
       if (startIcon_ != null) hash ^= StartIcon.GetHashCode();
+      if (StartIconVerticalAlignment != global::Google.Apps.Card.V1.Widget.Types.VerticalAlignment.Unspecified) hash ^= StartIconVerticalAlignment.GetHashCode();
       if (TopLabel.Length != 0) hash ^= TopLabel.GetHashCode();
+      if (topLabelText_ != null) hash ^= TopLabelText.GetHashCode();
       if (Text.Length != 0) hash ^= Text.GetHashCode();
+      if (contentText_ != null) hash ^= ContentText.GetHashCode();
       if (WrapText != false) hash ^= WrapText.GetHashCode();
       if (BottomLabel.Length != 0) hash ^= BottomLabel.GetHashCode();
+      if (bottomLabelText_ != null) hash ^= BottomLabelText.GetHashCode();
       if (onClick_ != null) hash ^= OnClick.GetHashCode();
       if (controlCase_ == ControlOneofCase.Button) hash ^= Button.GetHashCode();
       if (controlCase_ == ControlOneofCase.SwitchControl) hash ^= SwitchControl.GetHashCode();
@@ -4276,6 +5127,22 @@ namespace Google.Apps.Card.V1 {
         output.WriteRawTag(98);
         output.WriteMessage(StartIcon);
       }
+      if (StartIconVerticalAlignment != global::Google.Apps.Card.V1.Widget.Types.VerticalAlignment.Unspecified) {
+        output.WriteRawTag(104);
+        output.WriteEnum((int) StartIconVerticalAlignment);
+      }
+      if (topLabelText_ != null) {
+        output.WriteRawTag(138, 1);
+        output.WriteMessage(TopLabelText);
+      }
+      if (contentText_ != null) {
+        output.WriteRawTag(146, 1);
+        output.WriteMessage(ContentText);
+      }
+      if (bottomLabelText_ != null) {
+        output.WriteRawTag(154, 1);
+        output.WriteMessage(BottomLabelText);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -4326,6 +5193,22 @@ namespace Google.Apps.Card.V1 {
         output.WriteRawTag(98);
         output.WriteMessage(StartIcon);
       }
+      if (StartIconVerticalAlignment != global::Google.Apps.Card.V1.Widget.Types.VerticalAlignment.Unspecified) {
+        output.WriteRawTag(104);
+        output.WriteEnum((int) StartIconVerticalAlignment);
+      }
+      if (topLabelText_ != null) {
+        output.WriteRawTag(138, 1);
+        output.WriteMessage(TopLabelText);
+      }
+      if (contentText_ != null) {
+        output.WriteRawTag(146, 1);
+        output.WriteMessage(ContentText);
+      }
+      if (bottomLabelText_ != null) {
+        output.WriteRawTag(154, 1);
+        output.WriteMessage(BottomLabelText);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -4342,17 +5225,29 @@ namespace Google.Apps.Card.V1 {
       if (startIcon_ != null) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(StartIcon);
       }
+      if (StartIconVerticalAlignment != global::Google.Apps.Card.V1.Widget.Types.VerticalAlignment.Unspecified) {
+        size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) StartIconVerticalAlignment);
+      }
       if (TopLabel.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(TopLabel);
       }
+      if (topLabelText_ != null) {
+        size += 2 + pb::CodedOutputStream.ComputeMessageSize(TopLabelText);
+      }
       if (Text.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(Text);
+      }
+      if (contentText_ != null) {
+        size += 2 + pb::CodedOutputStream.ComputeMessageSize(ContentText);
       }
       if (WrapText != false) {
         size += 1 + 1;
       }
       if (BottomLabel.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(BottomLabel);
+      }
+      if (bottomLabelText_ != null) {
+        size += 2 + pb::CodedOutputStream.ComputeMessageSize(BottomLabelText);
       }
       if (onClick_ != null) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(OnClick);
@@ -4390,17 +5285,38 @@ namespace Google.Apps.Card.V1 {
         }
         StartIcon.MergeFrom(other.StartIcon);
       }
+      if (other.StartIconVerticalAlignment != global::Google.Apps.Card.V1.Widget.Types.VerticalAlignment.Unspecified) {
+        StartIconVerticalAlignment = other.StartIconVerticalAlignment;
+      }
       if (other.TopLabel.Length != 0) {
         TopLabel = other.TopLabel;
       }
+      if (other.topLabelText_ != null) {
+        if (topLabelText_ == null) {
+          TopLabelText = new global::Google.Apps.Card.V1.TextParagraph();
+        }
+        TopLabelText.MergeFrom(other.TopLabelText);
+      }
       if (other.Text.Length != 0) {
         Text = other.Text;
+      }
+      if (other.contentText_ != null) {
+        if (contentText_ == null) {
+          ContentText = new global::Google.Apps.Card.V1.TextParagraph();
+        }
+        ContentText.MergeFrom(other.ContentText);
       }
       if (other.WrapText != false) {
         WrapText = other.WrapText;
       }
       if (other.BottomLabel.Length != 0) {
         BottomLabel = other.BottomLabel;
+      }
+      if (other.bottomLabelText_ != null) {
+        if (bottomLabelText_ == null) {
+          BottomLabelText = new global::Google.Apps.Card.V1.TextParagraph();
+        }
+        BottomLabelText.MergeFrom(other.BottomLabelText);
       }
       if (other.onClick_ != null) {
         if (onClick_ == null) {
@@ -4508,6 +5424,31 @@ namespace Google.Apps.Card.V1 {
             input.ReadMessage(StartIcon);
             break;
           }
+          case 104: {
+            StartIconVerticalAlignment = (global::Google.Apps.Card.V1.Widget.Types.VerticalAlignment) input.ReadEnum();
+            break;
+          }
+          case 138: {
+            if (topLabelText_ == null) {
+              TopLabelText = new global::Google.Apps.Card.V1.TextParagraph();
+            }
+            input.ReadMessage(TopLabelText);
+            break;
+          }
+          case 146: {
+            if (contentText_ == null) {
+              ContentText = new global::Google.Apps.Card.V1.TextParagraph();
+            }
+            input.ReadMessage(ContentText);
+            break;
+          }
+          case 154: {
+            if (bottomLabelText_ == null) {
+              BottomLabelText = new global::Google.Apps.Card.V1.TextParagraph();
+            }
+            input.ReadMessage(BottomLabelText);
+            break;
+          }
         }
       }
     #endif
@@ -4587,6 +5528,31 @@ namespace Google.Apps.Card.V1 {
             input.ReadMessage(StartIcon);
             break;
           }
+          case 104: {
+            StartIconVerticalAlignment = (global::Google.Apps.Card.V1.Widget.Types.VerticalAlignment) input.ReadEnum();
+            break;
+          }
+          case 138: {
+            if (topLabelText_ == null) {
+              TopLabelText = new global::Google.Apps.Card.V1.TextParagraph();
+            }
+            input.ReadMessage(TopLabelText);
+            break;
+          }
+          case 146: {
+            if (contentText_ == null) {
+              ContentText = new global::Google.Apps.Card.V1.TextParagraph();
+            }
+            input.ReadMessage(ContentText);
+            break;
+          }
+          case 154: {
+            if (bottomLabelText_ == null) {
+              BottomLabelText = new global::Google.Apps.Card.V1.TextParagraph();
+            }
+            input.ReadMessage(BottomLabelText);
+            break;
+          }
         }
       }
     }
@@ -4600,7 +5566,7 @@ namespace Google.Apps.Card.V1 {
       /// <summary>
       /// Either a toggle-style switch or a checkbox inside a `decoratedText` widget.
       ///
-      /// [Google Workspace Add-ons and Chat
+      /// [Google Workspace add-ons and Chat
       /// apps](https://developers.google.com/workspace/extend):
       ///
       /// Only supported in the `decoratedText` widget.
@@ -4727,7 +5693,7 @@ namespace Google.Apps.Card.V1 {
         /// <summary>
         /// How the switch appears in the user interface.
         ///
-        /// [Google Workspace Add-ons
+        /// [Google Workspace add-ons
         /// and Chat apps](https://developers.google.com/workspace/extend):
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -4983,7 +5949,7 @@ namespace Google.Apps.Card.V1 {
           /// <summary>
           /// How the switch appears in the user interface.
           ///
-          /// [Google Workspace Add-ons
+          /// [Google Workspace add-ons
           /// and Chat apps](https://developers.google.com/workspace/extend):
           /// </summary>
           public enum ControlType {
@@ -5013,8 +5979,11 @@ namespace Google.Apps.Card.V1 {
 
   /// <summary>
   /// A field in which users can enter text. Supports suggestions and on-change
-  /// actions. For an example in Google Chat apps, see [Add a field in which a user
-  /// can enter
+  /// actions.
+  /// Supports form submission validation. When `Action.all_widgets_are_required`
+  /// is set to `true` or this widget is specified in `Action.required_widgets`,
+  /// the submission action is blocked unless a value is entered. For an example in
+  /// Google Chat apps, see [Add a field in which a user can enter
   /// text](https://developers.google.com/workspace/chat/design-interactive-card-dialog#add_a_field_in_which_a_user_can_enter_text).
   ///
   /// Chat apps receive and can process the value of entered text during form input
@@ -5025,7 +5994,7 @@ namespace Google.Apps.Card.V1 {
   /// use a text input. To collect defined or enumerated data from users, use the
   /// [SelectionInput][google.apps.card.v1.SelectionInput] widget.
   ///
-  /// [Google Workspace Add-ons and Chat
+  /// [Google Workspace add-ons and Chat
   /// apps](https://developers.google.com/workspace/extend):
   /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
@@ -5071,6 +6040,7 @@ namespace Google.Apps.Card.V1 {
       onChangeAction_ = other.onChangeAction_ != null ? other.onChangeAction_.Clone() : null;
       initialSuggestions_ = other.initialSuggestions_ != null ? other.initialSuggestions_.Clone() : null;
       autoCompleteAction_ = other.autoCompleteAction_ != null ? other.autoCompleteAction_.Clone() : null;
+      validation_ = other.validation_ != null ? other.validation_.Clone() : null;
       placeholderText_ = other.placeholderText_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
@@ -5213,7 +6183,7 @@ namespace Google.Apps.Card.V1 {
     /// to `MULTIPLE_LINE`.
     ///
     /// [Google Workspace
-    /// Add-ons and Chat apps](https://developers.google.com/workspace/extend):
+    /// add-ons and Chat apps](https://developers.google.com/workspace/extend):
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -5238,7 +6208,7 @@ namespace Google.Apps.Card.V1 {
     /// a custom function.
     ///
     /// [Google Workspace
-    /// Add-ons](https://developers.google.com/workspace/add-ons):
+    /// add-ons](https://developers.google.com/workspace/add-ons):
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -5246,6 +6216,24 @@ namespace Google.Apps.Card.V1 {
       get { return autoCompleteAction_; }
       set {
         autoCompleteAction_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "validation" field.</summary>
+    public const int ValidationFieldNumber = 11;
+    private global::Google.Apps.Card.V1.Validation validation_;
+    /// <summary>
+    /// Specify the input format validation necessary for this text field.
+    ///
+    /// [Google Workspace add-ons and Chat
+    /// apps](https://developers.google.com/workspace/extend):
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Apps.Card.V1.Validation Validation {
+      get { return validation_; }
+      set {
+        validation_ = value;
       }
     }
 
@@ -5291,6 +6279,7 @@ namespace Google.Apps.Card.V1 {
       if (!object.Equals(OnChangeAction, other.OnChangeAction)) return false;
       if (!object.Equals(InitialSuggestions, other.InitialSuggestions)) return false;
       if (!object.Equals(AutoCompleteAction, other.AutoCompleteAction)) return false;
+      if (!object.Equals(Validation, other.Validation)) return false;
       if (PlaceholderText != other.PlaceholderText) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
@@ -5307,6 +6296,7 @@ namespace Google.Apps.Card.V1 {
       if (onChangeAction_ != null) hash ^= OnChangeAction.GetHashCode();
       if (initialSuggestions_ != null) hash ^= InitialSuggestions.GetHashCode();
       if (autoCompleteAction_ != null) hash ^= AutoCompleteAction.GetHashCode();
+      if (validation_ != null) hash ^= Validation.GetHashCode();
       if (PlaceholderText.Length != 0) hash ^= PlaceholderText.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
@@ -5358,6 +6348,10 @@ namespace Google.Apps.Card.V1 {
         output.WriteRawTag(66);
         output.WriteMessage(AutoCompleteAction);
       }
+      if (validation_ != null) {
+        output.WriteRawTag(90);
+        output.WriteMessage(Validation);
+      }
       if (PlaceholderText.Length != 0) {
         output.WriteRawTag(98);
         output.WriteString(PlaceholderText);
@@ -5404,6 +6398,10 @@ namespace Google.Apps.Card.V1 {
         output.WriteRawTag(66);
         output.WriteMessage(AutoCompleteAction);
       }
+      if (validation_ != null) {
+        output.WriteRawTag(90);
+        output.WriteMessage(Validation);
+      }
       if (PlaceholderText.Length != 0) {
         output.WriteRawTag(98);
         output.WriteString(PlaceholderText);
@@ -5441,6 +6439,9 @@ namespace Google.Apps.Card.V1 {
       }
       if (autoCompleteAction_ != null) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(AutoCompleteAction);
+      }
+      if (validation_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(Validation);
       }
       if (PlaceholderText.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(PlaceholderText);
@@ -5489,6 +6490,12 @@ namespace Google.Apps.Card.V1 {
           AutoCompleteAction = new global::Google.Apps.Card.V1.Action();
         }
         AutoCompleteAction.MergeFrom(other.AutoCompleteAction);
+      }
+      if (other.validation_ != null) {
+        if (validation_ == null) {
+          Validation = new global::Google.Apps.Card.V1.Validation();
+        }
+        Validation.MergeFrom(other.Validation);
       }
       if (other.PlaceholderText.Length != 0) {
         PlaceholderText = other.PlaceholderText;
@@ -5547,6 +6554,13 @@ namespace Google.Apps.Card.V1 {
               AutoCompleteAction = new global::Google.Apps.Card.V1.Action();
             }
             input.ReadMessage(AutoCompleteAction);
+            break;
+          }
+          case 90: {
+            if (validation_ == null) {
+              Validation = new global::Google.Apps.Card.V1.Validation();
+            }
+            input.ReadMessage(Validation);
             break;
           }
           case 98: {
@@ -5609,6 +6623,13 @@ namespace Google.Apps.Card.V1 {
             input.ReadMessage(AutoCompleteAction);
             break;
           }
+          case 90: {
+            if (validation_ == null) {
+              Validation = new global::Google.Apps.Card.V1.Validation();
+            }
+            input.ReadMessage(Validation);
+            break;
+          }
           case 98: {
             PlaceholderText = input.ReadString();
             break;
@@ -5629,7 +6650,7 @@ namespace Google.Apps.Card.V1 {
       /// `initialSuggestions` is specified, `type` is always `SINGLE_LINE`,
       /// even if it's set to `MULTIPLE_LINE`.
       ///
-      /// [Google Workspace Add-ons and Chat
+      /// [Google Workspace add-ons and Chat
       /// apps](https://developers.google.com/workspace/extend):
       /// </summary>
       public enum Type {
@@ -5666,7 +6687,7 @@ namespace Google.Apps.Card.V1 {
   /// to `MULTIPLE_LINE`.
   ///
   /// [Google Workspace
-  /// Add-ons and Chat apps](https://developers.google.com/workspace/extend):
+  /// add-ons and Chat apps](https://developers.google.com/workspace/extend):
   /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class Suggestions : pb::IMessage<Suggestions>
@@ -5857,7 +6878,7 @@ namespace Google.Apps.Card.V1 {
       /// <summary>
       /// One suggested value that users can enter in a text input field.
       ///
-      /// [Google Workspace Add-ons and Chat
+      /// [Google Workspace add-ons and Chat
       /// apps](https://developers.google.com/workspace/extend):
       /// </summary>
       [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
@@ -6109,7 +7130,7 @@ namespace Google.Apps.Card.V1 {
   /// [Add a
   /// button](https://developers.google.com/workspace/chat/design-interactive-card-dialog#add_a_button).
   ///
-  /// [Google Workspace Add-ons and Chat
+  /// [Google Workspace add-ons and Chat
   /// apps](https://developers.google.com/workspace/extend):
   /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
@@ -6296,9 +7317,12 @@ namespace Google.Apps.Card.V1 {
 
   /// <summary>
   /// A widget that creates one or more UI items that users can select.
-  /// For example, a dropdown menu or checkboxes. You can use this widget to
-  /// collect data that can be predicted or enumerated. For an example in Google
-  /// Chat apps, see [Add selectable UI
+  /// Supports form submission validation for `dropdown` and `multiselect` menus
+  /// only. When `Action.all_widgets_are_required` is set to `true` or this widget
+  /// is specified in `Action.required_widgets`, the submission action is blocked
+  /// unless a value is selected. For example, a dropdown menu or checkboxes. You
+  /// can use this widget to collect data that can be predicted or enumerated. For
+  /// an example in Google Chat apps, see [Add selectable UI
   /// elements](/workspace/chat/design-interactive-card-dialog#add_selectable_ui_elements).
   ///
   /// Chat apps can process the value of items that users select or input. For
@@ -6308,7 +7332,7 @@ namespace Google.Apps.Card.V1 {
   /// To collect undefined or abstract data from users, use
   /// the [TextInput][google.apps.card.v1.TextInput] widget.
   ///
-  /// [Google Workspace Add-ons
+  /// [Google Workspace add-ons
   /// and Chat apps](https://developers.google.com/workspace/extend):
   /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
@@ -6319,6 +7343,7 @@ namespace Google.Apps.Card.V1 {
   {
     private static readonly pb::MessageParser<SelectionInput> _parser = new pb::MessageParser<SelectionInput>(() => new SelectionInput());
     private pb::UnknownFieldSet _unknownFields;
+    private int _hasBits0;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pb::MessageParser<SelectionInput> Parser { get { return _parser; } }
@@ -6346,6 +7371,7 @@ namespace Google.Apps.Card.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public SelectionInput(SelectionInput other) : this() {
+      _hasBits0 = other._hasBits0;
       name_ = other.name_;
       label_ = other.label_;
       type_ = other.type_;
@@ -6375,7 +7401,8 @@ namespace Google.Apps.Card.V1 {
     public const int NameFieldNumber = 1;
     private string name_ = "";
     /// <summary>
-    /// The name that identifies the selection input in a form input event.
+    /// Required. The name that identifies the selection input in a form input
+    /// event.
     ///
     /// For details about working with form inputs, see [Receive form
     /// data](https://developers.google.com/workspace/chat/read-form-data).
@@ -6463,6 +7490,8 @@ namespace Google.Apps.Card.V1 {
 
     /// <summary>Field number for the "multi_select_max_selected_items" field.</summary>
     public const int MultiSelectMaxSelectedItemsFieldNumber = 6;
+    private readonly static int MultiSelectMaxSelectedItemsDefaultValue = 0;
+
     private int multiSelectMaxSelectedItems_;
     /// <summary>
     /// For multiselect menus, the maximum number of items that a user can select.
@@ -6471,10 +7500,23 @@ namespace Google.Apps.Card.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int MultiSelectMaxSelectedItems {
-      get { return multiSelectMaxSelectedItems_; }
+      get { if ((_hasBits0 & 1) != 0) { return multiSelectMaxSelectedItems_; } else { return MultiSelectMaxSelectedItemsDefaultValue; } }
       set {
+        _hasBits0 |= 1;
         multiSelectMaxSelectedItems_ = value;
       }
+    }
+    /// <summary>Gets whether the "multi_select_max_selected_items" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasMultiSelectMaxSelectedItems {
+      get { return (_hasBits0 & 1) != 0; }
+    }
+    /// <summary>Clears the value of the "multi_select_max_selected_items" field</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearMultiSelectMaxSelectedItems() {
+      _hasBits0 &= ~1;
     }
 
     /// <summary>Field number for the "multi_select_min_query_length" field.</summary>
@@ -6482,11 +7524,15 @@ namespace Google.Apps.Card.V1 {
     private int multiSelectMinQueryLength_;
     /// <summary>
     /// For multiselect menus, the number of text characters that a user inputs
-    /// before the app queries autocomplete and displays suggested items
-    /// in the menu.
+    /// before the menu returns suggested selection items.
     ///
-    /// If unspecified, defaults to 0 characters for static data sources and 3
-    /// characters for external data sources.
+    /// If unset, the multiselect menu uses the following default values:
+    ///
+    /// * If the menu uses a static array of `SelectionInput` items, defaults to
+    ///   0 characters and immediately populates items from the array.
+    /// * If the menu uses a dynamic data source (`multi_select_data_source`),
+    ///  defaults to 3 characters before querying the data source to return
+    ///  suggested items.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -6500,7 +7546,7 @@ namespace Google.Apps.Card.V1 {
     /// <summary>Field number for the "external_data_source" field.</summary>
     public const int ExternalDataSourceFieldNumber = 8;
     /// <summary>
-    /// An external data source, such as a relational data base.
+    /// An external data source, such as a relational database.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -6585,7 +7631,7 @@ namespace Google.Apps.Card.V1 {
       if (Type != global::Google.Apps.Card.V1.SelectionInput.Types.SelectionType.CheckBox) hash ^= Type.GetHashCode();
       hash ^= items_.GetHashCode();
       if (onChangeAction_ != null) hash ^= OnChangeAction.GetHashCode();
-      if (MultiSelectMaxSelectedItems != 0) hash ^= MultiSelectMaxSelectedItems.GetHashCode();
+      if (HasMultiSelectMaxSelectedItems) hash ^= MultiSelectMaxSelectedItems.GetHashCode();
       if (MultiSelectMinQueryLength != 0) hash ^= MultiSelectMinQueryLength.GetHashCode();
       if (multiSelectDataSourceCase_ == MultiSelectDataSourceOneofCase.ExternalDataSource) hash ^= ExternalDataSource.GetHashCode();
       if (multiSelectDataSourceCase_ == MultiSelectDataSourceOneofCase.PlatformDataSource) hash ^= PlatformDataSource.GetHashCode();
@@ -6625,7 +7671,7 @@ namespace Google.Apps.Card.V1 {
         output.WriteRawTag(42);
         output.WriteMessage(OnChangeAction);
       }
-      if (MultiSelectMaxSelectedItems != 0) {
+      if (HasMultiSelectMaxSelectedItems) {
         output.WriteRawTag(48);
         output.WriteInt32(MultiSelectMaxSelectedItems);
       }
@@ -6668,7 +7714,7 @@ namespace Google.Apps.Card.V1 {
         output.WriteRawTag(42);
         output.WriteMessage(OnChangeAction);
       }
-      if (MultiSelectMaxSelectedItems != 0) {
+      if (HasMultiSelectMaxSelectedItems) {
         output.WriteRawTag(48);
         output.WriteInt32(MultiSelectMaxSelectedItems);
       }
@@ -6707,7 +7753,7 @@ namespace Google.Apps.Card.V1 {
       if (onChangeAction_ != null) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(OnChangeAction);
       }
-      if (MultiSelectMaxSelectedItems != 0) {
+      if (HasMultiSelectMaxSelectedItems) {
         size += 1 + pb::CodedOutputStream.ComputeInt32Size(MultiSelectMaxSelectedItems);
       }
       if (MultiSelectMinQueryLength != 0) {
@@ -6747,7 +7793,7 @@ namespace Google.Apps.Card.V1 {
         }
         OnChangeAction.MergeFrom(other.OnChangeAction);
       }
-      if (other.MultiSelectMaxSelectedItems != 0) {
+      if (other.HasMultiSelectMaxSelectedItems) {
         MultiSelectMaxSelectedItems = other.MultiSelectMaxSelectedItems;
       }
       if (other.MultiSelectMinQueryLength != 0) {
@@ -6914,7 +7960,7 @@ namespace Google.Apps.Card.V1 {
       /// Each selection input supports one type of selection. Mixing checkboxes
       /// and switches, for example, isn't supported.
       ///
-      /// [Google Workspace Add-ons and Chat
+      /// [Google Workspace add-ons and Chat
       /// apps](https://developers.google.com/workspace/extend):
       /// </summary>
       public enum SelectionType {
@@ -6935,38 +7981,36 @@ namespace Google.Apps.Card.V1 {
         /// </summary>
         [pbr::OriginalName("DROPDOWN")] Dropdown = 3,
         /// <summary>
-        /// A multiselect menu for static or dynamic data. From the menu bar,
-        /// users select one or more items. Users can also input values to populate
-        /// dynamic data. For example, users can start typing the name of a Google
-        /// Chat space and the widget autosuggests the space.
+        /// A menu with a text box. Users can type and select one or more items.
+        /// For Google Workspace add-ons, you must populate items using a static
+        /// array of `SelectionItem` objects.
         ///
-        /// To populate items for a multiselect menu, you can use one of the
-        /// following types of data sources:
+        /// For Google Chat apps, you can also populate items using a dynamic data
+        /// source and autosuggest items as users type in the menu. For example,
+        /// users can start typing the name of a Google Chat space and the widget
+        /// autosuggests the space. To dynamically populate items for a multiselect
+        /// menu, use one of the following types of data sources:
         ///
-        ///  * Static data: Items are specified as `SelectionItem` objects in the
-        ///    widget. Up to 100 items.
         ///  * Google Workspace data: Items are populated using data from Google
         ///    Workspace, such as Google Workspace users or Google Chat spaces.
         ///  * External data: Items are populated from an external data
         ///    source outside of Google Workspace.
         ///
-        /// For examples of how to implement multiselect menus, see
+        /// For examples of how to implement multiselect menus for Chat apps, see
         /// [Add a multiselect
         /// menu](https://developers.google.com/workspace/chat/design-interactive-card-dialog#multiselect-menu).
         ///
-        /// [Google Workspace Add-ons and Chat
+        /// [Google Workspace add-ons and Chat
         /// apps](https://developers.google.com/workspace/extend):
-        /// Multiselect for Google Workspace Add-ons are in
-        /// Developer Preview.
         /// </summary>
         [pbr::OriginalName("MULTI_SELECT")] MultiSelect = 4,
       }
 
       /// <summary>
       /// An item that users can select in a selection input, such as a checkbox
-      /// or switch.
+      /// or switch. Supports up to 100 items.
       ///
-      /// [Google Workspace Add-ons and Chat
+      /// [Google Workspace add-ons and Chat
       /// apps](https://developers.google.com/workspace/extend):
       /// </summary>
       [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
@@ -7007,8 +8051,13 @@ namespace Google.Apps.Card.V1 {
           text_ = other.text_;
           value_ = other.value_;
           selected_ = other.selected_;
-          startIconUri_ = other.startIconUri_;
           bottomText_ = other.bottomText_;
+          switch (other.StartIconCase) {
+            case StartIconOneofCase.StartIconUri:
+              StartIconUri = other.StartIconUri;
+              break;
+          }
+
           _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
         }
 
@@ -7071,19 +8120,27 @@ namespace Google.Apps.Card.V1 {
 
         /// <summary>Field number for the "start_icon_uri" field.</summary>
         public const int StartIconUriFieldNumber = 4;
-        private string startIconUri_ = "";
-        /// <summary>
-        /// For multiselect menus, the URL for the icon displayed next to
-        /// the item's `text` field. Supports PNG and JPEG files. Must be an `HTTPS`
-        /// URL. For example,
-        /// `https://developers.google.com/workspace/chat/images/quickstart-app-avatar.png`.
-        /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public string StartIconUri {
-          get { return startIconUri_; }
+          get { return HasStartIconUri ? (string) startIcon_ : ""; }
           set {
-            startIconUri_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+            startIcon_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+            startIconCase_ = StartIconOneofCase.StartIconUri;
+          }
+        }
+        /// <summary>Gets whether the "start_icon_uri" field is set</summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public bool HasStartIconUri {
+          get { return startIconCase_ == StartIconOneofCase.StartIconUri; }
+        }
+        /// <summary> Clears the value of the oneof if it's currently set to "start_icon_uri" </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void ClearStartIconUri() {
+          if (HasStartIconUri) {
+            ClearStartIcon();
           }
         }
 
@@ -7101,6 +8158,26 @@ namespace Google.Apps.Card.V1 {
           set {
             bottomText_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
           }
+        }
+
+        private object startIcon_;
+        /// <summary>Enum of possible cases for the "start_icon" oneof.</summary>
+        public enum StartIconOneofCase {
+          None = 0,
+          StartIconUri = 4,
+        }
+        private StartIconOneofCase startIconCase_ = StartIconOneofCase.None;
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public StartIconOneofCase StartIconCase {
+          get { return startIconCase_; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void ClearStartIcon() {
+          startIconCase_ = StartIconOneofCase.None;
+          startIcon_ = null;
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -7123,6 +8200,7 @@ namespace Google.Apps.Card.V1 {
           if (Selected != other.Selected) return false;
           if (StartIconUri != other.StartIconUri) return false;
           if (BottomText != other.BottomText) return false;
+          if (StartIconCase != other.StartIconCase) return false;
           return Equals(_unknownFields, other._unknownFields);
         }
 
@@ -7133,8 +8211,9 @@ namespace Google.Apps.Card.V1 {
           if (Text.Length != 0) hash ^= Text.GetHashCode();
           if (Value.Length != 0) hash ^= Value.GetHashCode();
           if (Selected != false) hash ^= Selected.GetHashCode();
-          if (StartIconUri.Length != 0) hash ^= StartIconUri.GetHashCode();
+          if (HasStartIconUri) hash ^= StartIconUri.GetHashCode();
           if (BottomText.Length != 0) hash ^= BottomText.GetHashCode();
+          hash ^= (int) startIconCase_;
           if (_unknownFields != null) {
             hash ^= _unknownFields.GetHashCode();
           }
@@ -7165,7 +8244,7 @@ namespace Google.Apps.Card.V1 {
             output.WriteRawTag(24);
             output.WriteBool(Selected);
           }
-          if (StartIconUri.Length != 0) {
+          if (HasStartIconUri) {
             output.WriteRawTag(34);
             output.WriteString(StartIconUri);
           }
@@ -7195,7 +8274,7 @@ namespace Google.Apps.Card.V1 {
             output.WriteRawTag(24);
             output.WriteBool(Selected);
           }
-          if (StartIconUri.Length != 0) {
+          if (HasStartIconUri) {
             output.WriteRawTag(34);
             output.WriteString(StartIconUri);
           }
@@ -7222,7 +8301,7 @@ namespace Google.Apps.Card.V1 {
           if (Selected != false) {
             size += 1 + 1;
           }
-          if (StartIconUri.Length != 0) {
+          if (HasStartIconUri) {
             size += 1 + pb::CodedOutputStream.ComputeStringSize(StartIconUri);
           }
           if (BottomText.Length != 0) {
@@ -7249,12 +8328,15 @@ namespace Google.Apps.Card.V1 {
           if (other.Selected != false) {
             Selected = other.Selected;
           }
-          if (other.StartIconUri.Length != 0) {
-            StartIconUri = other.StartIconUri;
-          }
           if (other.BottomText.Length != 0) {
             BottomText = other.BottomText;
           }
+          switch (other.StartIconCase) {
+            case StartIconOneofCase.StartIconUri:
+              StartIconUri = other.StartIconUri;
+              break;
+          }
+
           _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
         }
 
@@ -7613,8 +8695,11 @@ namespace Google.Apps.Card.V1 {
   }
 
   /// <summary>
-  /// Lets users input a date, a time, or both a date and a time. For an example in
-  /// Google Chat apps, see [Let a user pick a date and
+  /// Lets users input a date, a time, or both a date and a time.
+  /// Supports form submission validation. When `Action.all_widgets_are_required`
+  /// is set to `true` or this widget is specified in `Action.required_widgets`,
+  /// the submission action is blocked unless a value is selected. For an example
+  /// in Google Chat apps, see [Let a user pick a date and
   /// time](https://developers.google.com/workspace/chat/design-interactive-card-dialog#let_a_user_pick_a_date_and_time).
   ///
   /// Users can input text or use the picker to select dates and times. If users
@@ -7622,7 +8707,7 @@ namespace Google.Apps.Card.V1 {
   /// to input the information correctly.
   ///
   /// [Google Workspace
-  /// Add-ons and Chat apps](https://developers.google.com/workspace/extend):
+  /// add-ons and Chat apps](https://developers.google.com/workspace/extend):
   /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class DateTimePicker : pb::IMessage<DateTimePicker>
@@ -7632,6 +8717,7 @@ namespace Google.Apps.Card.V1 {
   {
     private static readonly pb::MessageParser<DateTimePicker> _parser = new pb::MessageParser<DateTimePicker>(() => new DateTimePicker());
     private pb::UnknownFieldSet _unknownFields;
+    private int _hasBits0;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pb::MessageParser<DateTimePicker> Parser { get { return _parser; } }
@@ -7659,6 +8745,7 @@ namespace Google.Apps.Card.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public DateTimePicker(DateTimePicker other) : this() {
+      _hasBits0 = other._hasBits0;
       name_ = other.name_;
       label_ = other.label_;
       type_ = other.type_;
@@ -7726,10 +8813,12 @@ namespace Google.Apps.Card.V1 {
 
     /// <summary>Field number for the "value_ms_epoch" field.</summary>
     public const int ValueMsEpochFieldNumber = 4;
+    private readonly static long ValueMsEpochDefaultValue = 0L;
+
     private long valueMsEpoch_;
     /// <summary>
-    /// The default value displayed in the widget, in milliseconds since [Unix
-    /// epoch time](https://en.wikipedia.org/wiki/Unix_time).
+    /// Optional. The default value displayed in the widget, in milliseconds since
+    /// [Unix epoch time](https://en.wikipedia.org/wiki/Unix_time).
     ///
     /// Specify the value based on the type of picker (`DateTimePickerType`):
     ///
@@ -7743,10 +8832,23 @@ namespace Google.Apps.Card.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public long ValueMsEpoch {
-      get { return valueMsEpoch_; }
+      get { if ((_hasBits0 & 1) != 0) { return valueMsEpoch_; } else { return ValueMsEpochDefaultValue; } }
       set {
+        _hasBits0 |= 1;
         valueMsEpoch_ = value;
       }
+    }
+    /// <summary>Gets whether the "value_ms_epoch" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasValueMsEpoch {
+      get { return (_hasBits0 & 1) != 0; }
+    }
+    /// <summary>Clears the value of the "value_ms_epoch" field</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearValueMsEpoch() {
+      _hasBits0 &= ~1;
     }
 
     /// <summary>Field number for the "timezone_offset_date" field.</summary>
@@ -7813,7 +8915,7 @@ namespace Google.Apps.Card.V1 {
       if (Name.Length != 0) hash ^= Name.GetHashCode();
       if (Label.Length != 0) hash ^= Label.GetHashCode();
       if (Type != global::Google.Apps.Card.V1.DateTimePicker.Types.DateTimePickerType.DateAndTime) hash ^= Type.GetHashCode();
-      if (ValueMsEpoch != 0L) hash ^= ValueMsEpoch.GetHashCode();
+      if (HasValueMsEpoch) hash ^= ValueMsEpoch.GetHashCode();
       if (TimezoneOffsetDate != 0) hash ^= TimezoneOffsetDate.GetHashCode();
       if (onChangeAction_ != null) hash ^= OnChangeAction.GetHashCode();
       if (_unknownFields != null) {
@@ -7846,7 +8948,7 @@ namespace Google.Apps.Card.V1 {
         output.WriteRawTag(24);
         output.WriteEnum((int) Type);
       }
-      if (ValueMsEpoch != 0L) {
+      if (HasValueMsEpoch) {
         output.WriteRawTag(32);
         output.WriteInt64(ValueMsEpoch);
       }
@@ -7880,7 +8982,7 @@ namespace Google.Apps.Card.V1 {
         output.WriteRawTag(24);
         output.WriteEnum((int) Type);
       }
-      if (ValueMsEpoch != 0L) {
+      if (HasValueMsEpoch) {
         output.WriteRawTag(32);
         output.WriteInt64(ValueMsEpoch);
       }
@@ -7911,7 +9013,7 @@ namespace Google.Apps.Card.V1 {
       if (Type != global::Google.Apps.Card.V1.DateTimePicker.Types.DateTimePickerType.DateAndTime) {
         size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) Type);
       }
-      if (ValueMsEpoch != 0L) {
+      if (HasValueMsEpoch) {
         size += 1 + pb::CodedOutputStream.ComputeInt64Size(ValueMsEpoch);
       }
       if (TimezoneOffsetDate != 0) {
@@ -7941,7 +9043,7 @@ namespace Google.Apps.Card.V1 {
       if (other.Type != global::Google.Apps.Card.V1.DateTimePicker.Types.DateTimePickerType.DateAndTime) {
         Type = other.Type;
       }
-      if (other.ValueMsEpoch != 0L) {
+      if (other.HasValueMsEpoch) {
         ValueMsEpoch = other.ValueMsEpoch;
       }
       if (other.TimezoneOffsetDate != 0) {
@@ -8051,7 +9153,7 @@ namespace Google.Apps.Card.V1 {
       /// The format for the date and time in the `DateTimePicker` widget.
       /// Determines whether users can input a date, a time, or both a date and time.
       ///
-      /// [Google Workspace Add-ons and Chat
+      /// [Google Workspace add-ons and Chat
       /// apps](https://developers.google.com/workspace/extend):
       /// </summary>
       public enum DateTimePickerType {
@@ -8075,6 +9177,546 @@ namespace Google.Apps.Card.V1 {
   }
 
   /// <summary>
+  /// A widget that presents a pop-up menu with one or more actions that users can
+  /// invoke. For example, showing non-primary actions in a card. You can use this
+  /// widget when actions don't fit in the available space. To use, specify this
+  /// widget in the `OnClick` action of widgets that support it. For example, in a
+  /// `Button`.
+  ///
+  /// [Google Workspace add-ons and Chat
+  /// apps](https://developers.google.com/workspace/extend):
+  /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+  public sealed partial class OverflowMenu : pb::IMessage<OverflowMenu>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<OverflowMenu> _parser = new pb::MessageParser<OverflowMenu>(() => new OverflowMenu());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<OverflowMenu> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Apps.Card.V1.CardReflection.Descriptor.MessageTypes[11]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public OverflowMenu() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public OverflowMenu(OverflowMenu other) : this() {
+      items_ = other.items_.Clone();
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public OverflowMenu Clone() {
+      return new OverflowMenu(this);
+    }
+
+    /// <summary>Field number for the "items" field.</summary>
+    public const int ItemsFieldNumber = 1;
+    private static readonly pb::FieldCodec<global::Google.Apps.Card.V1.OverflowMenu.Types.OverflowMenuItem> _repeated_items_codec
+        = pb::FieldCodec.ForMessage(10, global::Google.Apps.Card.V1.OverflowMenu.Types.OverflowMenuItem.Parser);
+    private readonly pbc::RepeatedField<global::Google.Apps.Card.V1.OverflowMenu.Types.OverflowMenuItem> items_ = new pbc::RepeatedField<global::Google.Apps.Card.V1.OverflowMenu.Types.OverflowMenuItem>();
+    /// <summary>
+    /// Required. The list of menu options.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pbc::RepeatedField<global::Google.Apps.Card.V1.OverflowMenu.Types.OverflowMenuItem> Items {
+      get { return items_; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as OverflowMenu);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(OverflowMenu other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if(!items_.Equals(other.items_)) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      hash ^= items_.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      items_.WriteTo(output, _repeated_items_codec);
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      items_.WriteTo(ref output, _repeated_items_codec);
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      size += items_.CalculateSize(_repeated_items_codec);
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(OverflowMenu other) {
+      if (other == null) {
+        return;
+      }
+      items_.Add(other.items_);
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            items_.AddEntriesFrom(input, _repeated_items_codec);
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            items_.AddEntriesFrom(ref input, _repeated_items_codec);
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+    #region Nested types
+    /// <summary>Container for nested types declared in the OverflowMenu message type.</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static partial class Types {
+      /// <summary>
+      /// An option that users can invoke in an overflow menu.
+      ///
+      /// [Google Workspace add-ons and Chat
+      /// apps](https://developers.google.com/workspace/extend):
+      /// </summary>
+      [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+      public sealed partial class OverflowMenuItem : pb::IMessage<OverflowMenuItem>
+      #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          , pb::IBufferMessage
+      #endif
+      {
+        private static readonly pb::MessageParser<OverflowMenuItem> _parser = new pb::MessageParser<OverflowMenuItem>(() => new OverflowMenuItem());
+        private pb::UnknownFieldSet _unknownFields;
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public static pb::MessageParser<OverflowMenuItem> Parser { get { return _parser; } }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public static pbr::MessageDescriptor Descriptor {
+          get { return global::Google.Apps.Card.V1.OverflowMenu.Descriptor.NestedTypes[0]; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        pbr::MessageDescriptor pb::IMessage.Descriptor {
+          get { return Descriptor; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public OverflowMenuItem() {
+          OnConstruction();
+        }
+
+        partial void OnConstruction();
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public OverflowMenuItem(OverflowMenuItem other) : this() {
+          startIcon_ = other.startIcon_ != null ? other.startIcon_.Clone() : null;
+          text_ = other.text_;
+          onClick_ = other.onClick_ != null ? other.onClick_.Clone() : null;
+          disabled_ = other.disabled_;
+          _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public OverflowMenuItem Clone() {
+          return new OverflowMenuItem(this);
+        }
+
+        /// <summary>Field number for the "start_icon" field.</summary>
+        public const int StartIconFieldNumber = 1;
+        private global::Google.Apps.Card.V1.Icon startIcon_;
+        /// <summary>
+        /// The icon displayed in front of the text.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public global::Google.Apps.Card.V1.Icon StartIcon {
+          get { return startIcon_; }
+          set {
+            startIcon_ = value;
+          }
+        }
+
+        /// <summary>Field number for the "text" field.</summary>
+        public const int TextFieldNumber = 2;
+        private string text_ = "";
+        /// <summary>
+        /// Required. The text that identifies or describes the item to users.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public string Text {
+          get { return text_; }
+          set {
+            text_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+          }
+        }
+
+        /// <summary>Field number for the "on_click" field.</summary>
+        public const int OnClickFieldNumber = 3;
+        private global::Google.Apps.Card.V1.OnClick onClick_;
+        /// <summary>
+        /// Required. The action invoked when a menu option is selected.
+        /// This `OnClick` cannot contain an `OverflowMenu`, any specified
+        /// `OverflowMenu` is dropped and the menu item disabled.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public global::Google.Apps.Card.V1.OnClick OnClick {
+          get { return onClick_; }
+          set {
+            onClick_ = value;
+          }
+        }
+
+        /// <summary>Field number for the "disabled" field.</summary>
+        public const int DisabledFieldNumber = 4;
+        private bool disabled_;
+        /// <summary>
+        /// Whether the menu option is disabled.
+        /// Defaults to false.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public bool Disabled {
+          get { return disabled_; }
+          set {
+            disabled_ = value;
+          }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override bool Equals(object other) {
+          return Equals(other as OverflowMenuItem);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public bool Equals(OverflowMenuItem other) {
+          if (ReferenceEquals(other, null)) {
+            return false;
+          }
+          if (ReferenceEquals(other, this)) {
+            return true;
+          }
+          if (!object.Equals(StartIcon, other.StartIcon)) return false;
+          if (Text != other.Text) return false;
+          if (!object.Equals(OnClick, other.OnClick)) return false;
+          if (Disabled != other.Disabled) return false;
+          return Equals(_unknownFields, other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override int GetHashCode() {
+          int hash = 1;
+          if (startIcon_ != null) hash ^= StartIcon.GetHashCode();
+          if (Text.Length != 0) hash ^= Text.GetHashCode();
+          if (onClick_ != null) hash ^= OnClick.GetHashCode();
+          if (Disabled != false) hash ^= Disabled.GetHashCode();
+          if (_unknownFields != null) {
+            hash ^= _unknownFields.GetHashCode();
+          }
+          return hash;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override string ToString() {
+          return pb::JsonFormatter.ToDiagnosticString(this);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void WriteTo(pb::CodedOutputStream output) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          output.WriteRawMessage(this);
+        #else
+          if (startIcon_ != null) {
+            output.WriteRawTag(10);
+            output.WriteMessage(StartIcon);
+          }
+          if (Text.Length != 0) {
+            output.WriteRawTag(18);
+            output.WriteString(Text);
+          }
+          if (onClick_ != null) {
+            output.WriteRawTag(26);
+            output.WriteMessage(OnClick);
+          }
+          if (Disabled != false) {
+            output.WriteRawTag(32);
+            output.WriteBool(Disabled);
+          }
+          if (_unknownFields != null) {
+            _unknownFields.WriteTo(output);
+          }
+        #endif
+        }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+          if (startIcon_ != null) {
+            output.WriteRawTag(10);
+            output.WriteMessage(StartIcon);
+          }
+          if (Text.Length != 0) {
+            output.WriteRawTag(18);
+            output.WriteString(Text);
+          }
+          if (onClick_ != null) {
+            output.WriteRawTag(26);
+            output.WriteMessage(OnClick);
+          }
+          if (Disabled != false) {
+            output.WriteRawTag(32);
+            output.WriteBool(Disabled);
+          }
+          if (_unknownFields != null) {
+            _unknownFields.WriteTo(ref output);
+          }
+        }
+        #endif
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public int CalculateSize() {
+          int size = 0;
+          if (startIcon_ != null) {
+            size += 1 + pb::CodedOutputStream.ComputeMessageSize(StartIcon);
+          }
+          if (Text.Length != 0) {
+            size += 1 + pb::CodedOutputStream.ComputeStringSize(Text);
+          }
+          if (onClick_ != null) {
+            size += 1 + pb::CodedOutputStream.ComputeMessageSize(OnClick);
+          }
+          if (Disabled != false) {
+            size += 1 + 1;
+          }
+          if (_unknownFields != null) {
+            size += _unknownFields.CalculateSize();
+          }
+          return size;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void MergeFrom(OverflowMenuItem other) {
+          if (other == null) {
+            return;
+          }
+          if (other.startIcon_ != null) {
+            if (startIcon_ == null) {
+              StartIcon = new global::Google.Apps.Card.V1.Icon();
+            }
+            StartIcon.MergeFrom(other.StartIcon);
+          }
+          if (other.Text.Length != 0) {
+            Text = other.Text;
+          }
+          if (other.onClick_ != null) {
+            if (onClick_ == null) {
+              OnClick = new global::Google.Apps.Card.V1.OnClick();
+            }
+            OnClick.MergeFrom(other.OnClick);
+          }
+          if (other.Disabled != false) {
+            Disabled = other.Disabled;
+          }
+          _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void MergeFrom(pb::CodedInputStream input) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          input.ReadRawMessage(this);
+        #else
+          uint tag;
+          while ((tag = input.ReadTag()) != 0) {
+            switch(tag) {
+              default:
+                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+                break;
+              case 10: {
+                if (startIcon_ == null) {
+                  StartIcon = new global::Google.Apps.Card.V1.Icon();
+                }
+                input.ReadMessage(StartIcon);
+                break;
+              }
+              case 18: {
+                Text = input.ReadString();
+                break;
+              }
+              case 26: {
+                if (onClick_ == null) {
+                  OnClick = new global::Google.Apps.Card.V1.OnClick();
+                }
+                input.ReadMessage(OnClick);
+                break;
+              }
+              case 32: {
+                Disabled = input.ReadBool();
+                break;
+              }
+            }
+          }
+        #endif
+        }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+          uint tag;
+          while ((tag = input.ReadTag()) != 0) {
+            switch(tag) {
+              default:
+                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+                break;
+              case 10: {
+                if (startIcon_ == null) {
+                  StartIcon = new global::Google.Apps.Card.V1.Icon();
+                }
+                input.ReadMessage(StartIcon);
+                break;
+              }
+              case 18: {
+                Text = input.ReadString();
+                break;
+              }
+              case 26: {
+                if (onClick_ == null) {
+                  OnClick = new global::Google.Apps.Card.V1.OnClick();
+                }
+                input.ReadMessage(OnClick);
+                break;
+              }
+              case 32: {
+                Disabled = input.ReadBool();
+                break;
+              }
+            }
+          }
+        }
+        #endif
+
+      }
+
+    }
+    #endregion
+
+  }
+
+  /// <summary>
   /// A text, icon, or text and icon button that users can click. For an example in
   /// Google Chat apps, see
   /// [Add a
@@ -8086,7 +9728,7 @@ namespace Google.Apps.Card.V1 {
   /// `onClick` action.
   ///
   /// [Google Workspace
-  /// Add-ons and Chat apps](https://developers.google.com/workspace/extend):
+  /// add-ons and Chat apps](https://developers.google.com/workspace/extend):
   /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class Button : pb::IMessage<Button>
@@ -8103,7 +9745,7 @@ namespace Google.Apps.Card.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Apps.Card.V1.CardReflection.Descriptor.MessageTypes[11]; }
+      get { return global::Google.Apps.Card.V1.CardReflection.Descriptor.MessageTypes[12]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -8129,6 +9771,7 @@ namespace Google.Apps.Card.V1 {
       onClick_ = other.onClick_ != null ? other.onClick_.Clone() : null;
       disabled_ = other.disabled_;
       altText_ = other.altText_;
+      type_ = other.type_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -8157,8 +9800,8 @@ namespace Google.Apps.Card.V1 {
     public const int IconFieldNumber = 2;
     private global::Google.Apps.Card.V1.Icon icon_;
     /// <summary>
-    /// The icon image. If both `icon` and `text` are set, then the icon appears
-    /// before the text.
+    /// An icon displayed inside the button. If both `icon` and `text` are set,
+    /// then the icon appears before the text.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -8173,38 +9816,29 @@ namespace Google.Apps.Card.V1 {
     public const int ColorFieldNumber = 3;
     private global::Google.Type.Color color_;
     /// <summary>
-    /// If set, the button is filled with a solid background color and the font
-    /// color changes to maintain contrast with the background color. For example,
-    /// setting a blue background likely results in white text.
+    /// Optional. The color of the button. If set, the button `type` is set to
+    /// `FILLED` and the color of `text` and `icon` fields are set to a
+    /// contrasting color for readability. For example, if the button color is
+    /// set to blue, any text or icons in the button are set to white.
     ///
-    /// If unset, the image background is white and the font color is blue.
+    /// To set the button color, specify a value for the `red`, `green`, and `blue`
+    /// fields.
+    /// The value must be a float number between 0 and 1 based on the RGB color
+    /// value, where `0` (0/255) represents the absence of color  and `1` (255/255)
+    /// represents the maximum intensity of the color.
     ///
-    /// For red, green, and blue, the value of each field is a `float` number that
-    /// you can express in either of two ways: as a number between 0 and 255
-    /// divided by 255 (153/255), or as a value between 0 and 1 (0.6). 0 represents
-    /// the absence of a color and 1 or 255/255 represent the full presence of that
-    /// color on the RGB scale.
-    ///
-    /// Optionally set `alpha`, which sets a level of transparency using this
-    /// equation:
-    ///
-    /// ```
-    /// pixel color = alpha * (this color) + (1.0 - alpha) * (background color)
-    /// ```
-    ///
-    /// For `alpha`, a value of `1` corresponds with a solid color, and a value of
-    /// `0` corresponds with a completely transparent color.
-    ///
-    /// For example, the following color represents a half transparent red:
+    /// For example, the following sets the color to red at its maximum intensity:
     ///
     /// ```
     /// "color": {
     ///    "red": 1,
     ///    "green": 0,
     ///    "blue": 0,
-    ///    "alpha": 0.5
     /// }
     /// ```
+    ///
+    /// The `alpha` field is unavailable for button color. If specified, this field
+    /// is ignored.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -8267,6 +9901,23 @@ namespace Google.Apps.Card.V1 {
       }
     }
 
+    /// <summary>Field number for the "type" field.</summary>
+    public const int TypeFieldNumber = 7;
+    private global::Google.Apps.Card.V1.Button.Types.Type type_ = global::Google.Apps.Card.V1.Button.Types.Type.Unspecified;
+    /// <summary>
+    /// Optional. The type of a button. If unset, button type defaults to
+    /// `OUTLINED`. If the `color` field is set, the button type is forced to
+    /// `FILLED` and any value set for this field is ignored.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Apps.Card.V1.Button.Types.Type Type {
+      get { return type_; }
+      set {
+        type_ = value;
+      }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
@@ -8288,6 +9939,7 @@ namespace Google.Apps.Card.V1 {
       if (!object.Equals(OnClick, other.OnClick)) return false;
       if (Disabled != other.Disabled) return false;
       if (AltText != other.AltText) return false;
+      if (Type != other.Type) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -8301,6 +9953,7 @@ namespace Google.Apps.Card.V1 {
       if (onClick_ != null) hash ^= OnClick.GetHashCode();
       if (Disabled != false) hash ^= Disabled.GetHashCode();
       if (AltText.Length != 0) hash ^= AltText.GetHashCode();
+      if (Type != global::Google.Apps.Card.V1.Button.Types.Type.Unspecified) hash ^= Type.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -8343,6 +9996,10 @@ namespace Google.Apps.Card.V1 {
         output.WriteRawTag(50);
         output.WriteString(AltText);
       }
+      if (Type != global::Google.Apps.Card.V1.Button.Types.Type.Unspecified) {
+        output.WriteRawTag(56);
+        output.WriteEnum((int) Type);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -8377,6 +10034,10 @@ namespace Google.Apps.Card.V1 {
         output.WriteRawTag(50);
         output.WriteString(AltText);
       }
+      if (Type != global::Google.Apps.Card.V1.Button.Types.Type.Unspecified) {
+        output.WriteRawTag(56);
+        output.WriteEnum((int) Type);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -8404,6 +10065,9 @@ namespace Google.Apps.Card.V1 {
       }
       if (AltText.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(AltText);
+      }
+      if (Type != global::Google.Apps.Card.V1.Button.Types.Type.Unspecified) {
+        size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) Type);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -8443,6 +10107,9 @@ namespace Google.Apps.Card.V1 {
       }
       if (other.AltText.Length != 0) {
         AltText = other.AltText;
+      }
+      if (other.Type != global::Google.Apps.Card.V1.Button.Types.Type.Unspecified) {
+        Type = other.Type;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -8490,6 +10157,10 @@ namespace Google.Apps.Card.V1 {
           }
           case 50: {
             AltText = input.ReadString();
+            break;
+          }
+          case 56: {
+            Type = (global::Google.Apps.Card.V1.Button.Types.Type) input.ReadEnum();
             break;
           }
         }
@@ -8540,10 +10211,60 @@ namespace Google.Apps.Card.V1 {
             AltText = input.ReadString();
             break;
           }
+          case 56: {
+            Type = (global::Google.Apps.Card.V1.Button.Types.Type) input.ReadEnum();
+            break;
+          }
         }
       }
     }
     #endif
+
+    #region Nested types
+    /// <summary>Container for nested types declared in the Button message type.</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static partial class Types {
+      /// <summary>
+      /// Optional. The
+      /// [type](https://m3.material.io/components/all-buttons#9134ac95-678e-49ae-a50a-e71948011b05)
+      /// of a button. If `color` field is set, the `type` is forced to `FILLED`.
+      ///
+      /// [Google Chat apps](https://developers.google.com/workspace/chat):
+      /// </summary>
+      public enum Type {
+        /// <summary>
+        /// Don't use. Unspecified.
+        /// </summary>
+        [pbr::OriginalName("TYPE_UNSPECIFIED")] Unspecified = 0,
+        /// <summary>
+        /// Outlined buttons are medium-emphasis buttons. They usually contain
+        /// actions that are important, but aren’t the primary action in a Chat app
+        /// or an add-on.
+        /// </summary>
+        [pbr::OriginalName("OUTLINED")] Outlined = 1,
+        /// <summary>
+        /// A filled button has a container with a solid color. It has the most
+        /// visual impact and is recommended for the important and primary action in
+        /// a Chat app or an add-on.
+        /// </summary>
+        [pbr::OriginalName("FILLED")] Filled = 2,
+        /// <summary>
+        /// A filled tonal button is an alternative middle ground between filled and
+        /// outlined buttons. They’re useful in contexts where a lower-priority
+        /// button requires slightly more emphasis than an outline button would give.
+        /// </summary>
+        [pbr::OriginalName("FILLED_TONAL")] FilledTonal = 3,
+        /// <summary>
+        /// A button does not have an invisible container in its default state. It is
+        /// often used for the lowest priority actions, especially when presenting
+        /// multiple options.
+        /// </summary>
+        [pbr::OriginalName("BORDERLESS")] Borderless = 4,
+      }
+
+    }
+    #endregion
 
   }
 
@@ -8558,7 +10279,7 @@ namespace Google.Apps.Card.V1 {
   /// [custom](https://developers.google.com/workspace/chat/format-messages#customicons)
   /// icons.
   ///
-  /// [Google Workspace Add-ons and Chat
+  /// [Google Workspace add-ons and Chat
   /// apps](https://developers.google.com/workspace/extend):
   /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
@@ -8576,7 +10297,7 @@ namespace Google.Apps.Card.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Apps.Card.V1.CardReflection.Descriptor.MessageTypes[12]; }
+      get { return global::Google.Apps.Card.V1.CardReflection.Descriptor.MessageTypes[13]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -9063,7 +10784,7 @@ namespace Google.Apps.Card.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Apps.Card.V1.CardReflection.Descriptor.MessageTypes[13]; }
+      get { return global::Google.Apps.Card.V1.CardReflection.Descriptor.MessageTypes[14]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -9384,7 +11105,7 @@ namespace Google.Apps.Card.V1 {
   /// <summary>
   /// Represents the crop style applied to an image.
   ///
-  /// [Google Workspace Add-ons and
+  /// [Google Workspace add-ons and
   /// Chat apps](https://developers.google.com/workspace/extend):
   ///
   /// For example, here's how to apply a 16:9 aspect ratio:
@@ -9411,7 +11132,7 @@ namespace Google.Apps.Card.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Apps.Card.V1.CardReflection.Descriptor.MessageTypes[14]; }
+      get { return global::Google.Apps.Card.V1.CardReflection.Descriptor.MessageTypes[15]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -9644,7 +11365,7 @@ namespace Google.Apps.Card.V1 {
       /// <summary>
       /// Represents the crop style applied to an image.
       ///
-      /// [Google Workspace Add-ons
+      /// [Google Workspace add-ons
       /// and Chat apps](https://developers.google.com/workspace/extend):
       /// </summary>
       public enum ImageCropType {
@@ -9680,7 +11401,7 @@ namespace Google.Apps.Card.V1 {
   /// The style options for the border of a card or widget, including the border
   /// type and color.
   ///
-  /// [Google Workspace Add-ons and Chat
+  /// [Google Workspace add-ons and Chat
   /// apps](https://developers.google.com/workspace/extend):
   /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
@@ -9698,7 +11419,7 @@ namespace Google.Apps.Card.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Apps.Card.V1.CardReflection.Descriptor.MessageTypes[15]; }
+      get { return global::Google.Apps.Card.V1.CardReflection.Descriptor.MessageTypes[16]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -9750,6 +11471,25 @@ namespace Google.Apps.Card.V1 {
     private global::Google.Type.Color strokeColor_;
     /// <summary>
     /// The colors to use when the type is `BORDER_TYPE_STROKE`.
+    ///
+    /// To set the stroke color, specify a value for the `red`, `green`, and `blue`
+    /// fields.
+    /// The value must be a float number between 0 and 1 based on the RGB color
+    /// value, where `0` (0/255) represents the absence of color  and `1` (255/255)
+    /// represents the maximum intensity of the color.
+    ///
+    /// For example, the following sets the color to red at its maximum intensity:
+    ///
+    /// ```
+    /// "color": {
+    ///    "red": 1,
+    ///    "green": 0,
+    ///    "blue": 0,
+    /// }
+    /// ```
+    ///
+    /// The `alpha` field is unavailable for stroke color. If specified, this field
+    /// is ignored.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -9971,7 +11711,7 @@ namespace Google.Apps.Card.V1 {
       /// <summary>
       /// Represents the border types applied to widgets.
       ///
-      /// [Google Workspace Add-ons
+      /// [Google Workspace add-ons
       /// and Chat apps](https://developers.google.com/workspace/extend):
       /// </summary>
       public enum BorderType {
@@ -9980,11 +11720,11 @@ namespace Google.Apps.Card.V1 {
         /// </summary>
         [pbr::OriginalName("BORDER_TYPE_UNSPECIFIED")] Unspecified = 0,
         /// <summary>
-        /// Default value. No border.
+        /// No border.
         /// </summary>
         [pbr::OriginalName("NO_BORDER")] NoBorder = 1,
         /// <summary>
-        /// Outline.
+        /// Default value. Outline.
         /// </summary>
         [pbr::OriginalName("STROKE")] Stroke = 2,
       }
@@ -9997,7 +11737,7 @@ namespace Google.Apps.Card.V1 {
   /// <summary>
   /// Represents an image.
   ///
-  /// [Google Workspace Add-ons and Chat
+  /// [Google Workspace add-ons and Chat
   /// apps](https://developers.google.com/workspace/extend):
   /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
@@ -10015,7 +11755,7 @@ namespace Google.Apps.Card.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Apps.Card.V1.CardReflection.Descriptor.MessageTypes[16]; }
+      get { return global::Google.Apps.Card.V1.CardReflection.Descriptor.MessageTypes[17]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -10343,7 +12083,7 @@ namespace Google.Apps.Card.V1 {
   /// 10 items and 2 columns has 5 rows. A grid with 11 items and 2 columns
   /// has 6 rows.
   ///
-  /// [Google Workspace Add-ons and Chat
+  /// [Google Workspace add-ons and Chat
   /// apps](https://developers.google.com/workspace/extend):
   ///
   /// For example, the following JSON creates a 2 column grid with a single
@@ -10395,7 +12135,7 @@ namespace Google.Apps.Card.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Apps.Card.V1.CardReflection.Descriptor.MessageTypes[17]; }
+      get { return global::Google.Apps.Card.V1.CardReflection.Descriptor.MessageTypes[18]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -10751,7 +12491,7 @@ namespace Google.Apps.Card.V1 {
       /// Represents an item in a grid layout. Items can contain text, an image, or
       /// both text and an image.
       ///
-      /// [Google Workspace Add-ons and Chat
+      /// [Google Workspace add-ons and Chat
       /// apps](https://developers.google.com/workspace/extend):
       /// </summary>
       [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
@@ -11123,7 +12863,7 @@ namespace Google.Apps.Card.V1 {
           /// <summary>
           /// Represents the various layout options available for a grid item.
           ///
-          /// [Google Workspace Add-ons and Chat
+          /// [Google Workspace add-ons and Chat
           /// apps](https://developers.google.com/workspace/extend):
           /// </summary>
           public enum GridItemLayout {
@@ -11175,13 +12915,16 @@ namespace Google.Apps.Card.V1 {
   /// * On Android devices, the second column wraps if the screen width is
   ///   less than or equal to 320 dp.
   ///
-  /// To include more than 2 columns, or to use rows, use the
+  /// To include more than two columns, or to use rows, use the
   /// [`Grid`][google.apps.card.v1.Grid] widget.
   ///
-  /// [Google Workspace Add-ons and Chat
+  /// [Google Workspace add-ons and Chat
   /// apps](https://developers.google.com/workspace/extend):
-  /// Columns for Google Workspace Add-ons are in
-  /// Developer Preview.
+  /// The add-on UIs that support columns include:
+  ///
+  /// * The dialog displayed when users open the add-on from an email draft.
+  /// * The dialog displayed when users open the add-on from the
+  /// **Add attachment** menu in a Google Calendar event.
   /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class Columns : pb::IMessage<Columns>
@@ -11198,7 +12941,7 @@ namespace Google.Apps.Card.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Apps.Card.V1.CardReflection.Descriptor.MessageTypes[18]; }
+      get { return global::Google.Apps.Card.V1.CardReflection.Descriptor.MessageTypes[19]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -11371,10 +13114,8 @@ namespace Google.Apps.Card.V1 {
       /// <summary>
       /// A column.
       ///
-      /// [Google Workspace Add-ons and Chat
-      /// apps](https://developers.google.com/workspace/extend):
-      /// Columns for Google Workspace Add-ons are in
-      /// Developer Preview.
+      /// [Google Workspace add-ons and Chat
+      /// apps](https://developers.google.com/workspace/extend)
       /// </summary>
       [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
       public sealed partial class Column : pb::IMessage<Column>
@@ -11689,10 +13430,8 @@ namespace Google.Apps.Card.V1 {
           /// column depends on both the `HorizontalSizeStyle` and the width of the
           /// widgets within the column.
           ///
-          /// [Google Workspace Add-ons and Chat
-          /// apps](https://developers.google.com/workspace/extend):
-          /// Columns for Google Workspace Add-ons are in
-          /// Developer Preview.
+          /// [Google Workspace add-ons and Chat
+          /// apps](https://developers.google.com/workspace/extend)
           /// </summary>
           public enum HorizontalSizeStyle {
             /// <summary>
@@ -11716,10 +13455,8 @@ namespace Google.Apps.Card.V1 {
           /// Specifies whether widgets align to the top, bottom, or center of a
           /// column.
           ///
-          /// [Google Workspace Add-ons and Chat
-          /// apps](https://developers.google.com/workspace/extend):
-          /// Columns for Google Workspace Add-ons are in
-          /// Developer Preview.
+          /// [Google Workspace add-ons and Chat
+          /// apps](https://developers.google.com/workspace/extend)
           /// </summary>
           public enum VerticalAlignment {
             /// <summary>
@@ -11743,10 +13480,8 @@ namespace Google.Apps.Card.V1 {
           /// <summary>
           /// The supported widgets that you can include in a column.
           ///
-          /// [Google Workspace Add-ons and Chat
-          /// apps](https://developers.google.com/workspace/extend):
-          /// Columns for Google Workspace Add-ons are in
-          /// Developer Preview.
+          /// [Google Workspace add-ons and Chat
+          /// apps](https://developers.google.com/workspace/extend)
           /// </summary>
           [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
           public sealed partial class Widgets : pb::IMessage<Widgets>
@@ -11804,6 +13539,9 @@ namespace Google.Apps.Card.V1 {
                   break;
                 case DataOneofCase.DateTimePicker:
                   DateTimePicker = other.DateTimePicker.Clone();
+                  break;
+                case DataOneofCase.ChipList:
+                  ChipList = other.ChipList.Clone();
                   break;
               }
 
@@ -11921,6 +13659,21 @@ namespace Google.Apps.Card.V1 {
               }
             }
 
+            /// <summary>Field number for the "chip_list" field.</summary>
+            public const int ChipListFieldNumber = 8;
+            /// <summary>
+            /// [ChipList][google.apps.card.v1.ChipList] widget.
+            /// </summary>
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public global::Google.Apps.Card.V1.ChipList ChipList {
+              get { return dataCase_ == DataOneofCase.ChipList ? (global::Google.Apps.Card.V1.ChipList) data_ : null; }
+              set {
+                data_ = value;
+                dataCase_ = value == null ? DataOneofCase.None : DataOneofCase.ChipList;
+              }
+            }
+
             private object data_;
             /// <summary>Enum of possible cases for the "data" oneof.</summary>
             public enum DataOneofCase {
@@ -11932,6 +13685,7 @@ namespace Google.Apps.Card.V1 {
               TextInput = 5,
               SelectionInput = 6,
               DateTimePicker = 7,
+              ChipList = 8,
             }
             private DataOneofCase dataCase_ = DataOneofCase.None;
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -11969,6 +13723,7 @@ namespace Google.Apps.Card.V1 {
               if (!object.Equals(TextInput, other.TextInput)) return false;
               if (!object.Equals(SelectionInput, other.SelectionInput)) return false;
               if (!object.Equals(DateTimePicker, other.DateTimePicker)) return false;
+              if (!object.Equals(ChipList, other.ChipList)) return false;
               if (DataCase != other.DataCase) return false;
               return Equals(_unknownFields, other._unknownFields);
             }
@@ -11984,6 +13739,7 @@ namespace Google.Apps.Card.V1 {
               if (dataCase_ == DataOneofCase.TextInput) hash ^= TextInput.GetHashCode();
               if (dataCase_ == DataOneofCase.SelectionInput) hash ^= SelectionInput.GetHashCode();
               if (dataCase_ == DataOneofCase.DateTimePicker) hash ^= DateTimePicker.GetHashCode();
+              if (dataCase_ == DataOneofCase.ChipList) hash ^= ChipList.GetHashCode();
               hash ^= (int) dataCase_;
               if (_unknownFields != null) {
                 hash ^= _unknownFields.GetHashCode();
@@ -12031,6 +13787,10 @@ namespace Google.Apps.Card.V1 {
                 output.WriteRawTag(58);
                 output.WriteMessage(DateTimePicker);
               }
+              if (dataCase_ == DataOneofCase.ChipList) {
+                output.WriteRawTag(66);
+                output.WriteMessage(ChipList);
+              }
               if (_unknownFields != null) {
                 _unknownFields.WriteTo(output);
               }
@@ -12069,6 +13829,10 @@ namespace Google.Apps.Card.V1 {
                 output.WriteRawTag(58);
                 output.WriteMessage(DateTimePicker);
               }
+              if (dataCase_ == DataOneofCase.ChipList) {
+                output.WriteRawTag(66);
+                output.WriteMessage(ChipList);
+              }
               if (_unknownFields != null) {
                 _unknownFields.WriteTo(ref output);
               }
@@ -12099,6 +13863,9 @@ namespace Google.Apps.Card.V1 {
               }
               if (dataCase_ == DataOneofCase.DateTimePicker) {
                 size += 1 + pb::CodedOutputStream.ComputeMessageSize(DateTimePicker);
+              }
+              if (dataCase_ == DataOneofCase.ChipList) {
+                size += 1 + pb::CodedOutputStream.ComputeMessageSize(ChipList);
               }
               if (_unknownFields != null) {
                 size += _unknownFields.CalculateSize();
@@ -12154,6 +13921,12 @@ namespace Google.Apps.Card.V1 {
                     DateTimePicker = new global::Google.Apps.Card.V1.DateTimePicker();
                   }
                   DateTimePicker.MergeFrom(other.DateTimePicker);
+                  break;
+                case DataOneofCase.ChipList:
+                  if (ChipList == null) {
+                    ChipList = new global::Google.Apps.Card.V1.ChipList();
+                  }
+                  ChipList.MergeFrom(other.ChipList);
                   break;
               }
 
@@ -12235,6 +14008,15 @@ namespace Google.Apps.Card.V1 {
                     DateTimePicker = subBuilder;
                     break;
                   }
+                  case 66: {
+                    global::Google.Apps.Card.V1.ChipList subBuilder = new global::Google.Apps.Card.V1.ChipList();
+                    if (dataCase_ == DataOneofCase.ChipList) {
+                      subBuilder.MergeFrom(ChipList);
+                    }
+                    input.ReadMessage(subBuilder);
+                    ChipList = subBuilder;
+                    break;
+                  }
                 }
               }
             #endif
@@ -12313,6 +14095,15 @@ namespace Google.Apps.Card.V1 {
                     DateTimePicker = subBuilder;
                     break;
                   }
+                  case 66: {
+                    global::Google.Apps.Card.V1.ChipList subBuilder = new global::Google.Apps.Card.V1.ChipList();
+                    if (dataCase_ == DataOneofCase.ChipList) {
+                      subBuilder.MergeFrom(ChipList);
+                    }
+                    input.ReadMessage(subBuilder);
+                    ChipList = subBuilder;
+                    break;
+                  }
                 }
               }
             }
@@ -12331,10 +14122,763 @@ namespace Google.Apps.Card.V1 {
   }
 
   /// <summary>
+  /// A carousel, also known as a slider, rotates and displays a list of widgets in
+  /// a slideshow format, with buttons navigating to the previous or next widget.
+  ///
+  /// For example, this is a JSON representation of a carousel that contains three
+  /// text paragraph widgets.
+  ///
+  /// ```
+  /// {
+  ///   "carouselCards": [
+  ///     {
+  ///       "widgets": [
+  ///         {
+  ///           "textParagraph": {
+  ///             "text": "First text paragraph in carousel",
+  ///           }
+  ///         }
+  ///       ]
+  ///     },
+  ///     {
+  ///       "widgets": [
+  ///         {
+  ///           "textParagraph": {
+  ///             "text": "Second text paragraph in carousel",
+  ///           }
+  ///         }
+  ///       ]
+  ///     },
+  ///     {
+  ///       "widgets": [
+  ///         {
+  ///           "textParagraph": {
+  ///             "text": "Third text paragraph in carousel",
+  ///           }
+  ///         }
+  ///       ]
+  ///     }
+  ///   ]
+  /// }
+  /// ```
+  ///
+  /// [Google Chat apps](https://developers.google.com/workspace/chat):
+  /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+  public sealed partial class Carousel : pb::IMessage<Carousel>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<Carousel> _parser = new pb::MessageParser<Carousel>(() => new Carousel());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<Carousel> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Apps.Card.V1.CardReflection.Descriptor.MessageTypes[20]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public Carousel() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public Carousel(Carousel other) : this() {
+      carouselCards_ = other.carouselCards_.Clone();
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public Carousel Clone() {
+      return new Carousel(this);
+    }
+
+    /// <summary>Field number for the "carousel_cards" field.</summary>
+    public const int CarouselCardsFieldNumber = 4;
+    private static readonly pb::FieldCodec<global::Google.Apps.Card.V1.Carousel.Types.CarouselCard> _repeated_carouselCards_codec
+        = pb::FieldCodec.ForMessage(34, global::Google.Apps.Card.V1.Carousel.Types.CarouselCard.Parser);
+    private readonly pbc::RepeatedField<global::Google.Apps.Card.V1.Carousel.Types.CarouselCard> carouselCards_ = new pbc::RepeatedField<global::Google.Apps.Card.V1.Carousel.Types.CarouselCard>();
+    /// <summary>
+    /// A list of cards included in the carousel.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pbc::RepeatedField<global::Google.Apps.Card.V1.Carousel.Types.CarouselCard> CarouselCards {
+      get { return carouselCards_; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as Carousel);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(Carousel other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if(!carouselCards_.Equals(other.carouselCards_)) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      hash ^= carouselCards_.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      carouselCards_.WriteTo(output, _repeated_carouselCards_codec);
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      carouselCards_.WriteTo(ref output, _repeated_carouselCards_codec);
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      size += carouselCards_.CalculateSize(_repeated_carouselCards_codec);
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(Carousel other) {
+      if (other == null) {
+        return;
+      }
+      carouselCards_.Add(other.carouselCards_);
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 34: {
+            carouselCards_.AddEntriesFrom(input, _repeated_carouselCards_codec);
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 34: {
+            carouselCards_.AddEntriesFrom(ref input, _repeated_carouselCards_codec);
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+    #region Nested types
+    /// <summary>Container for nested types declared in the Carousel message type.</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static partial class Types {
+      /// <summary>
+      /// A card that can be displayed as a carousel item.
+      /// [Google Chat apps](https://developers.google.com/workspace/chat):
+      /// </summary>
+      [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+      public sealed partial class CarouselCard : pb::IMessage<CarouselCard>
+      #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          , pb::IBufferMessage
+      #endif
+      {
+        private static readonly pb::MessageParser<CarouselCard> _parser = new pb::MessageParser<CarouselCard>(() => new CarouselCard());
+        private pb::UnknownFieldSet _unknownFields;
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public static pb::MessageParser<CarouselCard> Parser { get { return _parser; } }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public static pbr::MessageDescriptor Descriptor {
+          get { return global::Google.Apps.Card.V1.Carousel.Descriptor.NestedTypes[0]; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        pbr::MessageDescriptor pb::IMessage.Descriptor {
+          get { return Descriptor; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public CarouselCard() {
+          OnConstruction();
+        }
+
+        partial void OnConstruction();
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public CarouselCard(CarouselCard other) : this() {
+          widgets_ = other.widgets_.Clone();
+          footerWidgets_ = other.footerWidgets_.Clone();
+          _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public CarouselCard Clone() {
+          return new CarouselCard(this);
+        }
+
+        /// <summary>Field number for the "widgets" field.</summary>
+        public const int WidgetsFieldNumber = 1;
+        private static readonly pb::FieldCodec<global::Google.Apps.Card.V1.Card.Types.NestedWidget> _repeated_widgets_codec
+            = pb::FieldCodec.ForMessage(10, global::Google.Apps.Card.V1.Card.Types.NestedWidget.Parser);
+        private readonly pbc::RepeatedField<global::Google.Apps.Card.V1.Card.Types.NestedWidget> widgets_ = new pbc::RepeatedField<global::Google.Apps.Card.V1.Card.Types.NestedWidget>();
+        /// <summary>
+        /// A list of widgets displayed in the carousel card. The widgets are
+        /// displayed in the order that they are specified.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public pbc::RepeatedField<global::Google.Apps.Card.V1.Card.Types.NestedWidget> Widgets {
+          get { return widgets_; }
+        }
+
+        /// <summary>Field number for the "footer_widgets" field.</summary>
+        public const int FooterWidgetsFieldNumber = 2;
+        private static readonly pb::FieldCodec<global::Google.Apps.Card.V1.Card.Types.NestedWidget> _repeated_footerWidgets_codec
+            = pb::FieldCodec.ForMessage(18, global::Google.Apps.Card.V1.Card.Types.NestedWidget.Parser);
+        private readonly pbc::RepeatedField<global::Google.Apps.Card.V1.Card.Types.NestedWidget> footerWidgets_ = new pbc::RepeatedField<global::Google.Apps.Card.V1.Card.Types.NestedWidget>();
+        /// <summary>
+        /// A list of widgets displayed at the bottom of the carousel card. The
+        /// widgets are displayed in the order that they are specified.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public pbc::RepeatedField<global::Google.Apps.Card.V1.Card.Types.NestedWidget> FooterWidgets {
+          get { return footerWidgets_; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override bool Equals(object other) {
+          return Equals(other as CarouselCard);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public bool Equals(CarouselCard other) {
+          if (ReferenceEquals(other, null)) {
+            return false;
+          }
+          if (ReferenceEquals(other, this)) {
+            return true;
+          }
+          if(!widgets_.Equals(other.widgets_)) return false;
+          if(!footerWidgets_.Equals(other.footerWidgets_)) return false;
+          return Equals(_unknownFields, other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override int GetHashCode() {
+          int hash = 1;
+          hash ^= widgets_.GetHashCode();
+          hash ^= footerWidgets_.GetHashCode();
+          if (_unknownFields != null) {
+            hash ^= _unknownFields.GetHashCode();
+          }
+          return hash;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override string ToString() {
+          return pb::JsonFormatter.ToDiagnosticString(this);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void WriteTo(pb::CodedOutputStream output) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          output.WriteRawMessage(this);
+        #else
+          widgets_.WriteTo(output, _repeated_widgets_codec);
+          footerWidgets_.WriteTo(output, _repeated_footerWidgets_codec);
+          if (_unknownFields != null) {
+            _unknownFields.WriteTo(output);
+          }
+        #endif
+        }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+          widgets_.WriteTo(ref output, _repeated_widgets_codec);
+          footerWidgets_.WriteTo(ref output, _repeated_footerWidgets_codec);
+          if (_unknownFields != null) {
+            _unknownFields.WriteTo(ref output);
+          }
+        }
+        #endif
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public int CalculateSize() {
+          int size = 0;
+          size += widgets_.CalculateSize(_repeated_widgets_codec);
+          size += footerWidgets_.CalculateSize(_repeated_footerWidgets_codec);
+          if (_unknownFields != null) {
+            size += _unknownFields.CalculateSize();
+          }
+          return size;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void MergeFrom(CarouselCard other) {
+          if (other == null) {
+            return;
+          }
+          widgets_.Add(other.widgets_);
+          footerWidgets_.Add(other.footerWidgets_);
+          _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void MergeFrom(pb::CodedInputStream input) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          input.ReadRawMessage(this);
+        #else
+          uint tag;
+          while ((tag = input.ReadTag()) != 0) {
+            switch(tag) {
+              default:
+                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+                break;
+              case 10: {
+                widgets_.AddEntriesFrom(input, _repeated_widgets_codec);
+                break;
+              }
+              case 18: {
+                footerWidgets_.AddEntriesFrom(input, _repeated_footerWidgets_codec);
+                break;
+              }
+            }
+          }
+        #endif
+        }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+          uint tag;
+          while ((tag = input.ReadTag()) != 0) {
+            switch(tag) {
+              default:
+                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+                break;
+              case 10: {
+                widgets_.AddEntriesFrom(ref input, _repeated_widgets_codec);
+                break;
+              }
+              case 18: {
+                footerWidgets_.AddEntriesFrom(ref input, _repeated_footerWidgets_codec);
+                break;
+              }
+            }
+          }
+        }
+        #endif
+
+      }
+
+    }
+    #endregion
+
+  }
+
+  /// <summary>
+  /// Represent an expand and collapse control.
+  ///
+  /// [Google Workspace add-ons and Chat
+  /// apps](https://developers.google.com/workspace/extend):
+  /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+  public sealed partial class CollapseControl : pb::IMessage<CollapseControl>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<CollapseControl> _parser = new pb::MessageParser<CollapseControl>(() => new CollapseControl());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<CollapseControl> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Apps.Card.V1.CardReflection.Descriptor.MessageTypes[21]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public CollapseControl() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public CollapseControl(CollapseControl other) : this() {
+      horizontalAlignment_ = other.horizontalAlignment_;
+      expandButton_ = other.expandButton_ != null ? other.expandButton_.Clone() : null;
+      collapseButton_ = other.collapseButton_ != null ? other.collapseButton_.Clone() : null;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public CollapseControl Clone() {
+      return new CollapseControl(this);
+    }
+
+    /// <summary>Field number for the "horizontal_alignment" field.</summary>
+    public const int HorizontalAlignmentFieldNumber = 1;
+    private global::Google.Apps.Card.V1.Widget.Types.HorizontalAlignment horizontalAlignment_ = global::Google.Apps.Card.V1.Widget.Types.HorizontalAlignment.Unspecified;
+    /// <summary>
+    /// The horizontal alignment of the expand and collapse button.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Apps.Card.V1.Widget.Types.HorizontalAlignment HorizontalAlignment {
+      get { return horizontalAlignment_; }
+      set {
+        horizontalAlignment_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "expand_button" field.</summary>
+    public const int ExpandButtonFieldNumber = 2;
+    private global::Google.Apps.Card.V1.Button expandButton_;
+    /// <summary>
+    /// Optional. Define a customizable button to expand the section.
+    /// Both expand_button and collapse_button field must be set. Only one
+    /// field set will not take into effect.
+    /// If this field isn't set, the default button is used.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Apps.Card.V1.Button ExpandButton {
+      get { return expandButton_; }
+      set {
+        expandButton_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "collapse_button" field.</summary>
+    public const int CollapseButtonFieldNumber = 3;
+    private global::Google.Apps.Card.V1.Button collapseButton_;
+    /// <summary>
+    /// Optional. Define a customizable button to collapse the section.
+    /// Both expand_button and collapse_button field must be set. Only one
+    /// field set will not take into effect.
+    /// If this field isn't set, the default button is used.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Apps.Card.V1.Button CollapseButton {
+      get { return collapseButton_; }
+      set {
+        collapseButton_ = value;
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as CollapseControl);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(CollapseControl other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (HorizontalAlignment != other.HorizontalAlignment) return false;
+      if (!object.Equals(ExpandButton, other.ExpandButton)) return false;
+      if (!object.Equals(CollapseButton, other.CollapseButton)) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (HorizontalAlignment != global::Google.Apps.Card.V1.Widget.Types.HorizontalAlignment.Unspecified) hash ^= HorizontalAlignment.GetHashCode();
+      if (expandButton_ != null) hash ^= ExpandButton.GetHashCode();
+      if (collapseButton_ != null) hash ^= CollapseButton.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (HorizontalAlignment != global::Google.Apps.Card.V1.Widget.Types.HorizontalAlignment.Unspecified) {
+        output.WriteRawTag(8);
+        output.WriteEnum((int) HorizontalAlignment);
+      }
+      if (expandButton_ != null) {
+        output.WriteRawTag(18);
+        output.WriteMessage(ExpandButton);
+      }
+      if (collapseButton_ != null) {
+        output.WriteRawTag(26);
+        output.WriteMessage(CollapseButton);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (HorizontalAlignment != global::Google.Apps.Card.V1.Widget.Types.HorizontalAlignment.Unspecified) {
+        output.WriteRawTag(8);
+        output.WriteEnum((int) HorizontalAlignment);
+      }
+      if (expandButton_ != null) {
+        output.WriteRawTag(18);
+        output.WriteMessage(ExpandButton);
+      }
+      if (collapseButton_ != null) {
+        output.WriteRawTag(26);
+        output.WriteMessage(CollapseButton);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      if (HorizontalAlignment != global::Google.Apps.Card.V1.Widget.Types.HorizontalAlignment.Unspecified) {
+        size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) HorizontalAlignment);
+      }
+      if (expandButton_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(ExpandButton);
+      }
+      if (collapseButton_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(CollapseButton);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(CollapseControl other) {
+      if (other == null) {
+        return;
+      }
+      if (other.HorizontalAlignment != global::Google.Apps.Card.V1.Widget.Types.HorizontalAlignment.Unspecified) {
+        HorizontalAlignment = other.HorizontalAlignment;
+      }
+      if (other.expandButton_ != null) {
+        if (expandButton_ == null) {
+          ExpandButton = new global::Google.Apps.Card.V1.Button();
+        }
+        ExpandButton.MergeFrom(other.ExpandButton);
+      }
+      if (other.collapseButton_ != null) {
+        if (collapseButton_ == null) {
+          CollapseButton = new global::Google.Apps.Card.V1.Button();
+        }
+        CollapseButton.MergeFrom(other.CollapseButton);
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 8: {
+            HorizontalAlignment = (global::Google.Apps.Card.V1.Widget.Types.HorizontalAlignment) input.ReadEnum();
+            break;
+          }
+          case 18: {
+            if (expandButton_ == null) {
+              ExpandButton = new global::Google.Apps.Card.V1.Button();
+            }
+            input.ReadMessage(ExpandButton);
+            break;
+          }
+          case 26: {
+            if (collapseButton_ == null) {
+              CollapseButton = new global::Google.Apps.Card.V1.Button();
+            }
+            input.ReadMessage(CollapseButton);
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 8: {
+            HorizontalAlignment = (global::Google.Apps.Card.V1.Widget.Types.HorizontalAlignment) input.ReadEnum();
+            break;
+          }
+          case 18: {
+            if (expandButton_ == null) {
+              ExpandButton = new global::Google.Apps.Card.V1.Button();
+            }
+            input.ReadMessage(ExpandButton);
+            break;
+          }
+          case 26: {
+            if (collapseButton_ == null) {
+              CollapseButton = new global::Google.Apps.Card.V1.Button();
+            }
+            input.ReadMessage(CollapseButton);
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+  }
+
+  /// <summary>
   /// Represents how to respond when users click an interactive element on
   /// a card, such as a button.
   ///
-  /// [Google Workspace Add-ons and Chat
+  /// [Google Workspace add-ons and Chat
   /// apps](https://developers.google.com/workspace/extend):
   /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
@@ -12352,7 +14896,7 @@ namespace Google.Apps.Card.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Apps.Card.V1.CardReflection.Descriptor.MessageTypes[19]; }
+      get { return global::Google.Apps.Card.V1.CardReflection.Descriptor.MessageTypes[22]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -12384,6 +14928,9 @@ namespace Google.Apps.Card.V1 {
           break;
         case DataOneofCase.Card:
           Card = other.Card.Clone();
+          break;
+        case DataOneofCase.OverflowMenu:
+          OverflowMenu = other.OverflowMenu.Clone();
           break;
       }
 
@@ -12435,7 +14982,7 @@ namespace Google.Apps.Card.V1 {
     /// web client to do before the open link action response comes back.
     ///
     /// [Google Workspace
-    /// Add-ons](https://developers.google.com/workspace/add-ons):
+    /// add-ons](https://developers.google.com/workspace/add-ons):
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -12453,7 +15000,7 @@ namespace Google.Apps.Card.V1 {
     /// A new card is pushed to the card stack after clicking if specified.
     ///
     /// [Google Workspace
-    /// Add-ons](https://developers.google.com/workspace/add-ons):
+    /// add-ons](https://developers.google.com/workspace/add-ons):
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -12465,6 +15012,21 @@ namespace Google.Apps.Card.V1 {
       }
     }
 
+    /// <summary>Field number for the "overflow_menu" field.</summary>
+    public const int OverflowMenuFieldNumber = 8;
+    /// <summary>
+    /// If specified, this `onClick` opens an overflow menu.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Apps.Card.V1.OverflowMenu OverflowMenu {
+      get { return dataCase_ == DataOneofCase.OverflowMenu ? (global::Google.Apps.Card.V1.OverflowMenu) data_ : null; }
+      set {
+        data_ = value;
+        dataCase_ = value == null ? DataOneofCase.None : DataOneofCase.OverflowMenu;
+      }
+    }
+
     private object data_;
     /// <summary>Enum of possible cases for the "data" oneof.</summary>
     public enum DataOneofCase {
@@ -12473,6 +15035,7 @@ namespace Google.Apps.Card.V1 {
       OpenLink = 2,
       OpenDynamicLinkAction = 3,
       Card = 4,
+      OverflowMenu = 8,
     }
     private DataOneofCase dataCase_ = DataOneofCase.None;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -12507,6 +15070,7 @@ namespace Google.Apps.Card.V1 {
       if (!object.Equals(OpenLink, other.OpenLink)) return false;
       if (!object.Equals(OpenDynamicLinkAction, other.OpenDynamicLinkAction)) return false;
       if (!object.Equals(Card, other.Card)) return false;
+      if (!object.Equals(OverflowMenu, other.OverflowMenu)) return false;
       if (DataCase != other.DataCase) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
@@ -12519,6 +15083,7 @@ namespace Google.Apps.Card.V1 {
       if (dataCase_ == DataOneofCase.OpenLink) hash ^= OpenLink.GetHashCode();
       if (dataCase_ == DataOneofCase.OpenDynamicLinkAction) hash ^= OpenDynamicLinkAction.GetHashCode();
       if (dataCase_ == DataOneofCase.Card) hash ^= Card.GetHashCode();
+      if (dataCase_ == DataOneofCase.OverflowMenu) hash ^= OverflowMenu.GetHashCode();
       hash ^= (int) dataCase_;
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
@@ -12554,6 +15119,10 @@ namespace Google.Apps.Card.V1 {
         output.WriteRawTag(34);
         output.WriteMessage(Card);
       }
+      if (dataCase_ == DataOneofCase.OverflowMenu) {
+        output.WriteRawTag(66);
+        output.WriteMessage(OverflowMenu);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -12580,6 +15149,10 @@ namespace Google.Apps.Card.V1 {
         output.WriteRawTag(34);
         output.WriteMessage(Card);
       }
+      if (dataCase_ == DataOneofCase.OverflowMenu) {
+        output.WriteRawTag(66);
+        output.WriteMessage(OverflowMenu);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -12601,6 +15174,9 @@ namespace Google.Apps.Card.V1 {
       }
       if (dataCase_ == DataOneofCase.Card) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(Card);
+      }
+      if (dataCase_ == DataOneofCase.OverflowMenu) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(OverflowMenu);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -12638,6 +15214,12 @@ namespace Google.Apps.Card.V1 {
             Card = new global::Google.Apps.Card.V1.Card();
           }
           Card.MergeFrom(other.Card);
+          break;
+        case DataOneofCase.OverflowMenu:
+          if (OverflowMenu == null) {
+            OverflowMenu = new global::Google.Apps.Card.V1.OverflowMenu();
+          }
+          OverflowMenu.MergeFrom(other.OverflowMenu);
           break;
       }
 
@@ -12692,6 +15274,15 @@ namespace Google.Apps.Card.V1 {
             Card = subBuilder;
             break;
           }
+          case 66: {
+            global::Google.Apps.Card.V1.OverflowMenu subBuilder = new global::Google.Apps.Card.V1.OverflowMenu();
+            if (dataCase_ == DataOneofCase.OverflowMenu) {
+              subBuilder.MergeFrom(OverflowMenu);
+            }
+            input.ReadMessage(subBuilder);
+            OverflowMenu = subBuilder;
+            break;
+          }
         }
       }
     #endif
@@ -12743,6 +15334,15 @@ namespace Google.Apps.Card.V1 {
             Card = subBuilder;
             break;
           }
+          case 66: {
+            global::Google.Apps.Card.V1.OverflowMenu subBuilder = new global::Google.Apps.Card.V1.OverflowMenu();
+            if (dataCase_ == DataOneofCase.OverflowMenu) {
+              subBuilder.MergeFrom(OverflowMenu);
+            }
+            input.ReadMessage(subBuilder);
+            OverflowMenu = subBuilder;
+            break;
+          }
         }
       }
     }
@@ -12753,7 +15353,7 @@ namespace Google.Apps.Card.V1 {
   /// <summary>
   /// Represents an `onClick` event that opens a hyperlink.
   ///
-  /// [Google Workspace Add-ons and Chat
+  /// [Google Workspace add-ons and Chat
   /// apps](https://developers.google.com/workspace/extend):
   /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
@@ -12771,7 +15371,7 @@ namespace Google.Apps.Card.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Apps.Card.V1.CardReflection.Descriptor.MessageTypes[20]; }
+      get { return global::Google.Apps.Card.V1.CardReflection.Descriptor.MessageTypes[23]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -12825,7 +15425,7 @@ namespace Google.Apps.Card.V1 {
     /// How to open a link.
     ///
     /// [Google Workspace
-    /// Add-ons](https://developers.google.com/workspace/add-ons):
+    /// add-ons](https://developers.google.com/workspace/add-ons):
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -12844,7 +15444,7 @@ namespace Google.Apps.Card.V1 {
     /// until the window closes.
     ///
     /// [Google Workspace
-    /// Add-ons](https://developers.google.com/workspace/add-ons):
+    /// add-ons](https://developers.google.com/workspace/add-ons):
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -13047,7 +15647,7 @@ namespace Google.Apps.Card.V1 {
       /// client doesn't support it. `FULL_SIZE` is supported by all clients.
       ///
       /// [Google Workspace
-      /// Add-ons](https://developers.google.com/workspace/add-ons):
+      /// add-ons](https://developers.google.com/workspace/add-ons):
       /// </summary>
       public enum OpenAs {
         /// <summary>
@@ -13071,7 +15671,7 @@ namespace Google.Apps.Card.V1 {
       /// can't support both values, `OnClose` takes precedence.
       ///
       /// [Google Workspace
-      /// Add-ons](https://developers.google.com/workspace/add-ons):
+      /// add-ons](https://developers.google.com/workspace/add-ons):
       /// </summary>
       public enum OnClose {
         /// <summary>
@@ -13099,7 +15699,7 @@ namespace Google.Apps.Card.V1 {
   /// For example, you can invoke an Apps Script script to handle the form.
   /// If the action is triggered, the form values are sent to the server.
   ///
-  /// [Google Workspace Add-ons and Chat
+  /// [Google Workspace add-ons and Chat
   /// apps](https://developers.google.com/workspace/extend):
   /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
@@ -13117,7 +15717,7 @@ namespace Google.Apps.Card.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Apps.Card.V1.CardReflection.Descriptor.MessageTypes[21]; }
+      get { return global::Google.Apps.Card.V1.CardReflection.Descriptor.MessageTypes[24]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -13142,6 +15742,8 @@ namespace Google.Apps.Card.V1 {
       loadIndicator_ = other.loadIndicator_;
       persistValues_ = other.persistValues_;
       interaction_ = other.interaction_;
+      requiredWidgets_ = other.requiredWidgets_.Clone();
+      allWidgetsAreRequired_ = other.allWidgetsAreRequired_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -13156,7 +15758,7 @@ namespace Google.Apps.Card.V1 {
     private string function_ = "";
     /// <summary>
     /// A custom function to invoke when the containing element is
-    /// clicked or othrwise activated.
+    /// clicked or otherwise activated.
     ///
     /// For example usage, see [Read form
     /// data](https://developers.google.com/workspace/chat/read-form-data).
@@ -13263,6 +15865,46 @@ namespace Google.Apps.Card.V1 {
       }
     }
 
+    /// <summary>Field number for the "required_widgets" field.</summary>
+    public const int RequiredWidgetsFieldNumber = 6;
+    private static readonly pb::FieldCodec<string> _repeated_requiredWidgets_codec
+        = pb::FieldCodec.ForString(50);
+    private readonly pbc::RepeatedField<string> requiredWidgets_ = new pbc::RepeatedField<string>();
+    /// <summary>
+    /// Optional. Fill this list with the names of widgets that this Action
+    /// needs for a valid submission.
+    ///
+    /// If the widgets listed here don't have a value when this Action is invoked,
+    /// the form submission is aborted.
+    ///
+    /// [Google Workspace add-ons and Chat
+    /// apps](https://developers.google.com/workspace/extend):
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pbc::RepeatedField<string> RequiredWidgets {
+      get { return requiredWidgets_; }
+    }
+
+    /// <summary>Field number for the "all_widgets_are_required" field.</summary>
+    public const int AllWidgetsAreRequiredFieldNumber = 7;
+    private bool allWidgetsAreRequired_;
+    /// <summary>
+    /// Optional. If this is true, then all widgets are considered required by
+    /// this action.
+    ///
+    /// [Google Workspace add-ons and Chat
+    /// apps](https://developers.google.com/workspace/extend):
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool AllWidgetsAreRequired {
+      get { return allWidgetsAreRequired_; }
+      set {
+        allWidgetsAreRequired_ = value;
+      }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
@@ -13283,6 +15925,8 @@ namespace Google.Apps.Card.V1 {
       if (LoadIndicator != other.LoadIndicator) return false;
       if (PersistValues != other.PersistValues) return false;
       if (Interaction != other.Interaction) return false;
+      if(!requiredWidgets_.Equals(other.requiredWidgets_)) return false;
+      if (AllWidgetsAreRequired != other.AllWidgetsAreRequired) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -13295,6 +15939,8 @@ namespace Google.Apps.Card.V1 {
       if (LoadIndicator != global::Google.Apps.Card.V1.Action.Types.LoadIndicator.Spinner) hash ^= LoadIndicator.GetHashCode();
       if (PersistValues != false) hash ^= PersistValues.GetHashCode();
       if (Interaction != global::Google.Apps.Card.V1.Action.Types.Interaction.Unspecified) hash ^= Interaction.GetHashCode();
+      hash ^= requiredWidgets_.GetHashCode();
+      if (AllWidgetsAreRequired != false) hash ^= AllWidgetsAreRequired.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -13330,6 +15976,11 @@ namespace Google.Apps.Card.V1 {
         output.WriteRawTag(40);
         output.WriteEnum((int) Interaction);
       }
+      requiredWidgets_.WriteTo(output, _repeated_requiredWidgets_codec);
+      if (AllWidgetsAreRequired != false) {
+        output.WriteRawTag(56);
+        output.WriteBool(AllWidgetsAreRequired);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -13357,6 +16008,11 @@ namespace Google.Apps.Card.V1 {
         output.WriteRawTag(40);
         output.WriteEnum((int) Interaction);
       }
+      requiredWidgets_.WriteTo(ref output, _repeated_requiredWidgets_codec);
+      if (AllWidgetsAreRequired != false) {
+        output.WriteRawTag(56);
+        output.WriteBool(AllWidgetsAreRequired);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -13379,6 +16035,10 @@ namespace Google.Apps.Card.V1 {
       }
       if (Interaction != global::Google.Apps.Card.V1.Action.Types.Interaction.Unspecified) {
         size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) Interaction);
+      }
+      size += requiredWidgets_.CalculateSize(_repeated_requiredWidgets_codec);
+      if (AllWidgetsAreRequired != false) {
+        size += 1 + 1;
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -13404,6 +16064,10 @@ namespace Google.Apps.Card.V1 {
       }
       if (other.Interaction != global::Google.Apps.Card.V1.Action.Types.Interaction.Unspecified) {
         Interaction = other.Interaction;
+      }
+      requiredWidgets_.Add(other.requiredWidgets_);
+      if (other.AllWidgetsAreRequired != false) {
+        AllWidgetsAreRequired = other.AllWidgetsAreRequired;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -13438,6 +16102,14 @@ namespace Google.Apps.Card.V1 {
           }
           case 40: {
             Interaction = (global::Google.Apps.Card.V1.Action.Types.Interaction) input.ReadEnum();
+            break;
+          }
+          case 50: {
+            requiredWidgets_.AddEntriesFrom(input, _repeated_requiredWidgets_codec);
+            break;
+          }
+          case 56: {
+            AllWidgetsAreRequired = input.ReadBool();
             break;
           }
         }
@@ -13475,6 +16147,14 @@ namespace Google.Apps.Card.V1 {
             Interaction = (global::Google.Apps.Card.V1.Action.Types.Interaction) input.ReadEnum();
             break;
           }
+          case 50: {
+            requiredWidgets_.AddEntriesFrom(ref input, _repeated_requiredWidgets_codec);
+            break;
+          }
+          case 56: {
+            AllWidgetsAreRequired = input.ReadBool();
+            break;
+          }
         }
       }
     }
@@ -13489,7 +16169,7 @@ namespace Google.Apps.Card.V1 {
       /// Specifies the loading indicator that the action displays while
       /// making the call to the action.
       ///
-      /// [Google Workspace Add-ons and Chat
+      /// [Google Workspace add-ons and Chat
       /// apps](https://developers.google.com/workspace/extend):
       /// </summary>
       public enum LoadIndicator {
@@ -13550,7 +16230,7 @@ namespace Google.Apps.Card.V1 {
       /// To learn more, see
       /// [`CommonEventObject`](https://developers.google.com/workspace/chat/api/reference/rest/v1/Event#commoneventobject).
       ///
-      /// [Google Workspace Add-ons and Chat
+      /// [Google Workspace add-ons and Chat
       /// apps](https://developers.google.com/workspace/extend):
       /// </summary>
       [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
@@ -13788,6 +16468,974 @@ namespace Google.Apps.Card.V1 {
 
     }
     #endregion
+
+  }
+
+  /// <summary>
+  /// Represents the necessary data for validating the widget it's attached to.
+  ///
+  /// [Google Workspace add-ons and Chat
+  /// apps](https://developers.google.com/workspace/extend):
+  /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+  public sealed partial class Validation : pb::IMessage<Validation>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<Validation> _parser = new pb::MessageParser<Validation>(() => new Validation());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<Validation> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Apps.Card.V1.CardReflection.Descriptor.MessageTypes[25]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public Validation() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public Validation(Validation other) : this() {
+      characterLimit_ = other.characterLimit_;
+      inputType_ = other.inputType_;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public Validation Clone() {
+      return new Validation(this);
+    }
+
+    /// <summary>Field number for the "character_limit" field.</summary>
+    public const int CharacterLimitFieldNumber = 1;
+    private int characterLimit_;
+    /// <summary>
+    /// Specify the character limit for text input widgets.  Note that this is
+    /// only used for text input and is ignored for other widgets.
+    ///
+    /// [Google Workspace add-ons and Chat
+    /// apps](https://developers.google.com/workspace/extend):
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CharacterLimit {
+      get { return characterLimit_; }
+      set {
+        characterLimit_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "input_type" field.</summary>
+    public const int InputTypeFieldNumber = 2;
+    private global::Google.Apps.Card.V1.Validation.Types.InputType inputType_ = global::Google.Apps.Card.V1.Validation.Types.InputType.Unspecified;
+    /// <summary>
+    /// Specify the type of the input widgets.
+    ///
+    /// [Google Workspace add-ons and Chat
+    /// apps](https://developers.google.com/workspace/extend):
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Apps.Card.V1.Validation.Types.InputType InputType {
+      get { return inputType_; }
+      set {
+        inputType_ = value;
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as Validation);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(Validation other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (CharacterLimit != other.CharacterLimit) return false;
+      if (InputType != other.InputType) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (CharacterLimit != 0) hash ^= CharacterLimit.GetHashCode();
+      if (InputType != global::Google.Apps.Card.V1.Validation.Types.InputType.Unspecified) hash ^= InputType.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (CharacterLimit != 0) {
+        output.WriteRawTag(8);
+        output.WriteInt32(CharacterLimit);
+      }
+      if (InputType != global::Google.Apps.Card.V1.Validation.Types.InputType.Unspecified) {
+        output.WriteRawTag(16);
+        output.WriteEnum((int) InputType);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (CharacterLimit != 0) {
+        output.WriteRawTag(8);
+        output.WriteInt32(CharacterLimit);
+      }
+      if (InputType != global::Google.Apps.Card.V1.Validation.Types.InputType.Unspecified) {
+        output.WriteRawTag(16);
+        output.WriteEnum((int) InputType);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      if (CharacterLimit != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeInt32Size(CharacterLimit);
+      }
+      if (InputType != global::Google.Apps.Card.V1.Validation.Types.InputType.Unspecified) {
+        size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) InputType);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(Validation other) {
+      if (other == null) {
+        return;
+      }
+      if (other.CharacterLimit != 0) {
+        CharacterLimit = other.CharacterLimit;
+      }
+      if (other.InputType != global::Google.Apps.Card.V1.Validation.Types.InputType.Unspecified) {
+        InputType = other.InputType;
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 8: {
+            CharacterLimit = input.ReadInt32();
+            break;
+          }
+          case 16: {
+            InputType = (global::Google.Apps.Card.V1.Validation.Types.InputType) input.ReadEnum();
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 8: {
+            CharacterLimit = input.ReadInt32();
+            break;
+          }
+          case 16: {
+            InputType = (global::Google.Apps.Card.V1.Validation.Types.InputType) input.ReadEnum();
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+    #region Nested types
+    /// <summary>Container for nested types declared in the Validation message type.</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static partial class Types {
+      /// <summary>
+      /// The type of the input widget.
+      /// </summary>
+      public enum InputType {
+        /// <summary>
+        /// Unspecified type. Do not use.
+        /// </summary>
+        [pbr::OriginalName("INPUT_TYPE_UNSPECIFIED")] Unspecified = 0,
+        /// <summary>
+        /// Regular text that accepts all characters.
+        /// </summary>
+        [pbr::OriginalName("TEXT")] Text = 1,
+        /// <summary>
+        /// An integer value.
+        /// </summary>
+        [pbr::OriginalName("INTEGER")] Integer = 2,
+        /// <summary>
+        /// A float value.
+        /// </summary>
+        [pbr::OriginalName("FLOAT")] Float = 3,
+        /// <summary>
+        /// An email address.
+        /// </summary>
+        [pbr::OriginalName("EMAIL")] Email = 4,
+        /// <summary>
+        /// A emoji selected from system-provided emoji picker.
+        /// </summary>
+        [pbr::OriginalName("EMOJI_PICKER")] EmojiPicker = 5,
+      }
+
+    }
+    #endregion
+
+  }
+
+  /// <summary>
+  /// A list of chips layed out horizontally, which can either scroll horizontally
+  /// or wrap to the next line.
+  ///
+  /// [Google Workspace add-ons and Chat
+  /// apps](https://developers.google.com/workspace/extend):
+  /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+  public sealed partial class ChipList : pb::IMessage<ChipList>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<ChipList> _parser = new pb::MessageParser<ChipList>(() => new ChipList());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<ChipList> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Apps.Card.V1.CardReflection.Descriptor.MessageTypes[26]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public ChipList() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public ChipList(ChipList other) : this() {
+      layout_ = other.layout_;
+      chips_ = other.chips_.Clone();
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public ChipList Clone() {
+      return new ChipList(this);
+    }
+
+    /// <summary>Field number for the "layout" field.</summary>
+    public const int LayoutFieldNumber = 1;
+    private global::Google.Apps.Card.V1.ChipList.Types.Layout layout_ = global::Google.Apps.Card.V1.ChipList.Types.Layout.Unspecified;
+    /// <summary>
+    /// Specified chip list layout.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Apps.Card.V1.ChipList.Types.Layout Layout {
+      get { return layout_; }
+      set {
+        layout_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "chips" field.</summary>
+    public const int ChipsFieldNumber = 2;
+    private static readonly pb::FieldCodec<global::Google.Apps.Card.V1.Chip> _repeated_chips_codec
+        = pb::FieldCodec.ForMessage(18, global::Google.Apps.Card.V1.Chip.Parser);
+    private readonly pbc::RepeatedField<global::Google.Apps.Card.V1.Chip> chips_ = new pbc::RepeatedField<global::Google.Apps.Card.V1.Chip>();
+    /// <summary>
+    /// An array of chips.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pbc::RepeatedField<global::Google.Apps.Card.V1.Chip> Chips {
+      get { return chips_; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as ChipList);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(ChipList other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (Layout != other.Layout) return false;
+      if(!chips_.Equals(other.chips_)) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (Layout != global::Google.Apps.Card.V1.ChipList.Types.Layout.Unspecified) hash ^= Layout.GetHashCode();
+      hash ^= chips_.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (Layout != global::Google.Apps.Card.V1.ChipList.Types.Layout.Unspecified) {
+        output.WriteRawTag(8);
+        output.WriteEnum((int) Layout);
+      }
+      chips_.WriteTo(output, _repeated_chips_codec);
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (Layout != global::Google.Apps.Card.V1.ChipList.Types.Layout.Unspecified) {
+        output.WriteRawTag(8);
+        output.WriteEnum((int) Layout);
+      }
+      chips_.WriteTo(ref output, _repeated_chips_codec);
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      if (Layout != global::Google.Apps.Card.V1.ChipList.Types.Layout.Unspecified) {
+        size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) Layout);
+      }
+      size += chips_.CalculateSize(_repeated_chips_codec);
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(ChipList other) {
+      if (other == null) {
+        return;
+      }
+      if (other.Layout != global::Google.Apps.Card.V1.ChipList.Types.Layout.Unspecified) {
+        Layout = other.Layout;
+      }
+      chips_.Add(other.chips_);
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 8: {
+            Layout = (global::Google.Apps.Card.V1.ChipList.Types.Layout) input.ReadEnum();
+            break;
+          }
+          case 18: {
+            chips_.AddEntriesFrom(input, _repeated_chips_codec);
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 8: {
+            Layout = (global::Google.Apps.Card.V1.ChipList.Types.Layout) input.ReadEnum();
+            break;
+          }
+          case 18: {
+            chips_.AddEntriesFrom(ref input, _repeated_chips_codec);
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+    #region Nested types
+    /// <summary>Container for nested types declared in the ChipList message type.</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static partial class Types {
+      /// <summary>
+      /// The chip list layout.
+      /// </summary>
+      public enum Layout {
+        /// <summary>
+        /// Don't use. Unspecified.
+        /// </summary>
+        [pbr::OriginalName("LAYOUT_UNSPECIFIED")] Unspecified = 0,
+        /// <summary>
+        /// Default value. The chip list wraps to the next line if there isn't enough
+        /// horizontal space.
+        /// </summary>
+        [pbr::OriginalName("WRAPPED")] Wrapped = 1,
+        /// <summary>
+        /// The chips scroll horizontally if they don't fit in the available space.
+        /// </summary>
+        [pbr::OriginalName("HORIZONTAL_SCROLLABLE")] HorizontalScrollable = 2,
+      }
+
+    }
+    #endregion
+
+  }
+
+  /// <summary>
+  /// A text, icon, or text and icon chip that users can click.
+  ///
+  /// [Google Workspace add-ons and Chat
+  /// apps](https://developers.google.com/workspace/extend):
+  /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+  public sealed partial class Chip : pb::IMessage<Chip>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<Chip> _parser = new pb::MessageParser<Chip>(() => new Chip());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<Chip> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Apps.Card.V1.CardReflection.Descriptor.MessageTypes[27]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public Chip() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public Chip(Chip other) : this() {
+      icon_ = other.icon_ != null ? other.icon_.Clone() : null;
+      label_ = other.label_;
+      onClick_ = other.onClick_ != null ? other.onClick_.Clone() : null;
+      enabled_ = other.enabled_;
+      disabled_ = other.disabled_;
+      altText_ = other.altText_;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public Chip Clone() {
+      return new Chip(this);
+    }
+
+    /// <summary>Field number for the "icon" field.</summary>
+    public const int IconFieldNumber = 1;
+    private global::Google.Apps.Card.V1.Icon icon_;
+    /// <summary>
+    /// The icon image. If both `icon` and `text` are set, then the icon appears
+    /// before the text.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Apps.Card.V1.Icon Icon {
+      get { return icon_; }
+      set {
+        icon_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "label" field.</summary>
+    public const int LabelFieldNumber = 2;
+    private string label_ = "";
+    /// <summary>
+    /// The text displayed inside the chip.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string Label {
+      get { return label_; }
+      set {
+        label_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "on_click" field.</summary>
+    public const int OnClickFieldNumber = 3;
+    private global::Google.Apps.Card.V1.OnClick onClick_;
+    /// <summary>
+    /// Optional. The action to perform when a user clicks the chip, such as
+    /// opening a hyperlink or running a custom function.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Apps.Card.V1.OnClick OnClick {
+      get { return onClick_; }
+      set {
+        onClick_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "enabled" field.</summary>
+    public const int EnabledFieldNumber = 4;
+    private bool enabled_;
+    /// <summary>
+    /// Whether the chip is in an active state and responds to user actions.
+    /// Defaults to `true`.
+    /// Deprecated. Use `disabled` instead.
+    /// </summary>
+    [global::System.ObsoleteAttribute]
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Enabled {
+      get { return enabled_; }
+      set {
+        enabled_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "disabled" field.</summary>
+    public const int DisabledFieldNumber = 6;
+    private bool disabled_;
+    /// <summary>
+    /// Whether the chip is in an inactive state and ignores user actions.
+    /// Defaults to `false`.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Disabled {
+      get { return disabled_; }
+      set {
+        disabled_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "alt_text" field.</summary>
+    public const int AltTextFieldNumber = 5;
+    private string altText_ = "";
+    /// <summary>
+    /// The alternative text that's used for accessibility.
+    ///
+    /// Set descriptive text that lets users know what the chip does. For
+    /// example, if a chip opens a hyperlink, write: "Opens a new
+    /// browser tab and navigates to the Google Chat developer documentation at
+    /// https://developers.google.com/workspace/chat".
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string AltText {
+      get { return altText_; }
+      set {
+        altText_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as Chip);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(Chip other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (!object.Equals(Icon, other.Icon)) return false;
+      if (Label != other.Label) return false;
+      if (!object.Equals(OnClick, other.OnClick)) return false;
+      if (Enabled != other.Enabled) return false;
+      if (Disabled != other.Disabled) return false;
+      if (AltText != other.AltText) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (icon_ != null) hash ^= Icon.GetHashCode();
+      if (Label.Length != 0) hash ^= Label.GetHashCode();
+      if (onClick_ != null) hash ^= OnClick.GetHashCode();
+      if (Enabled != false) hash ^= Enabled.GetHashCode();
+      if (Disabled != false) hash ^= Disabled.GetHashCode();
+      if (AltText.Length != 0) hash ^= AltText.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (icon_ != null) {
+        output.WriteRawTag(10);
+        output.WriteMessage(Icon);
+      }
+      if (Label.Length != 0) {
+        output.WriteRawTag(18);
+        output.WriteString(Label);
+      }
+      if (onClick_ != null) {
+        output.WriteRawTag(26);
+        output.WriteMessage(OnClick);
+      }
+      if (Enabled != false) {
+        output.WriteRawTag(32);
+        output.WriteBool(Enabled);
+      }
+      if (AltText.Length != 0) {
+        output.WriteRawTag(42);
+        output.WriteString(AltText);
+      }
+      if (Disabled != false) {
+        output.WriteRawTag(48);
+        output.WriteBool(Disabled);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (icon_ != null) {
+        output.WriteRawTag(10);
+        output.WriteMessage(Icon);
+      }
+      if (Label.Length != 0) {
+        output.WriteRawTag(18);
+        output.WriteString(Label);
+      }
+      if (onClick_ != null) {
+        output.WriteRawTag(26);
+        output.WriteMessage(OnClick);
+      }
+      if (Enabled != false) {
+        output.WriteRawTag(32);
+        output.WriteBool(Enabled);
+      }
+      if (AltText.Length != 0) {
+        output.WriteRawTag(42);
+        output.WriteString(AltText);
+      }
+      if (Disabled != false) {
+        output.WriteRawTag(48);
+        output.WriteBool(Disabled);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      if (icon_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(Icon);
+      }
+      if (Label.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Label);
+      }
+      if (onClick_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(OnClick);
+      }
+      if (Enabled != false) {
+        size += 1 + 1;
+      }
+      if (Disabled != false) {
+        size += 1 + 1;
+      }
+      if (AltText.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(AltText);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(Chip other) {
+      if (other == null) {
+        return;
+      }
+      if (other.icon_ != null) {
+        if (icon_ == null) {
+          Icon = new global::Google.Apps.Card.V1.Icon();
+        }
+        Icon.MergeFrom(other.Icon);
+      }
+      if (other.Label.Length != 0) {
+        Label = other.Label;
+      }
+      if (other.onClick_ != null) {
+        if (onClick_ == null) {
+          OnClick = new global::Google.Apps.Card.V1.OnClick();
+        }
+        OnClick.MergeFrom(other.OnClick);
+      }
+      if (other.Enabled != false) {
+        Enabled = other.Enabled;
+      }
+      if (other.Disabled != false) {
+        Disabled = other.Disabled;
+      }
+      if (other.AltText.Length != 0) {
+        AltText = other.AltText;
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            if (icon_ == null) {
+              Icon = new global::Google.Apps.Card.V1.Icon();
+            }
+            input.ReadMessage(Icon);
+            break;
+          }
+          case 18: {
+            Label = input.ReadString();
+            break;
+          }
+          case 26: {
+            if (onClick_ == null) {
+              OnClick = new global::Google.Apps.Card.V1.OnClick();
+            }
+            input.ReadMessage(OnClick);
+            break;
+          }
+          case 32: {
+            Enabled = input.ReadBool();
+            break;
+          }
+          case 42: {
+            AltText = input.ReadString();
+            break;
+          }
+          case 48: {
+            Disabled = input.ReadBool();
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            if (icon_ == null) {
+              Icon = new global::Google.Apps.Card.V1.Icon();
+            }
+            input.ReadMessage(Icon);
+            break;
+          }
+          case 18: {
+            Label = input.ReadString();
+            break;
+          }
+          case 26: {
+            if (onClick_ == null) {
+              OnClick = new global::Google.Apps.Card.V1.OnClick();
+            }
+            input.ReadMessage(OnClick);
+            break;
+          }
+          case 32: {
+            Enabled = input.ReadBool();
+            break;
+          }
+          case 42: {
+            AltText = input.ReadString();
+            break;
+          }
+          case 48: {
+            Disabled = input.ReadBool();
+            break;
+          }
+        }
+      }
+    }
+    #endif
 
   }
 
