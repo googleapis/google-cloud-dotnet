@@ -35,7 +35,7 @@ namespace Google.Cloud.Language.V1.Tests
                 .Select(value => value.Split('/')[0])
                 .OrderBy(key => key)
                 .ToList();
-            string[] expectedKeys = { "gapic", "gax", "gl-dotnet", "grpc" };
+            string[] expectedKeys = { "gapic", "gax", "gl-dotnet", "grpc", "pb" };
             Assert.Equal(expectedKeys, keys);
         }
 
