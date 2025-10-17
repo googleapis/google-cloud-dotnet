@@ -33,11 +33,6 @@ using System.Reflection;
 using Newtonsoft.Json.Linq;
 using Grpc.Auth;
 
-// Temporarily disable warnings for obsolete methods. See
-// https://github.com/googleapis/google-api-dotnet-client/pull/3043
-// for more details.
-#pragma warning disable CS0618
-
 namespace Google.Cloud.Logging.NLog
 {
     /// <summary>
@@ -284,8 +279,10 @@ namespace Google.Cloud.Logging.NLog
             GaxPreconditions.CheckState(string.IsNullOrWhiteSpace(credentialFile) || string.IsNullOrWhiteSpace(credentialJson),
                 $"{nameof(CredentialFile)} and {nameof(CredentialJson)} must not both be set.");
             var credential =
+#pragma warning disable CS0618 // Temporarily disable warnings for obsolete methods. See b/453009677 for more details.
                 !string.IsNullOrWhiteSpace(credentialFile) ? GoogleCredential.FromFile(credentialFile) :
                 !string.IsNullOrWhiteSpace(credentialJson) ? GoogleCredential.FromJson(credentialJson) :
+#pragma warning restore CS0618
                 null;
             if (credential == null)
             {

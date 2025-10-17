@@ -30,11 +30,6 @@ using System.Security;
 using System.Threading;
 using System.Threading.Tasks;
 
-// Temporarily disable warnings for obsolete methods. See
-// https://github.com/googleapis/google-api-dotnet-client/pull/3043
-// for more details.
-#pragma warning disable CS0618
-
 namespace Google.Cloud.Logging.Log4Net
 {
     /// <summary>
@@ -238,8 +233,10 @@ namespace Google.Cloud.Logging.Log4Net
         private GoogleCredential GetCredentialFromConfiguration()
         {
             var credential =
+#pragma warning disable CS0618 // Temporarily disable warnings for obsolete methods. See b/453009677 for more details.
                 !string.IsNullOrWhiteSpace(CredentialFile) ? GoogleCredential.FromFile(CredentialFile) :
                 !string.IsNullOrWhiteSpace(CredentialJson) ? GoogleCredential.FromJson(CredentialJson) :
+#pragma warning restore CS0618
                 null;
             if (credential == null)
             {
