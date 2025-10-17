@@ -32,14 +32,18 @@ namespace Google.Cloud.Storage.V1.Tests
         [Fact]
         public void FromCredentialFile_Validations()
         {
+#pragma warning disable CS0618 // Temporarily disable warnings for obsolete methods.
             Assert.Throws<ArgumentNullException>(() => UrlSigner.FromCredentialFile(null));
             Assert.Throws<FileNotFoundException>(() => UrlSigner.FromCredentialFile("does_not_exist.txt"));
+#pragma warning restore CS0618
         }
 
         [Fact]
         public void FromCredentialStream_Validations()
         {
+#pragma warning disable CS0618 // Temporarily disable warnings for obsolete methods.
             Assert.Throws<ArgumentNullException>(() => UrlSigner.FromCredentialStream(null));
+#pragma warning restore CS0618
         }
 
         [Fact]
