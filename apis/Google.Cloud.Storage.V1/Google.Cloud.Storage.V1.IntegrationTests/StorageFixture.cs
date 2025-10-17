@@ -30,11 +30,6 @@ using System.Threading;
 using System.Threading.Tasks;
 using Xunit;
 
-// Temporarily disable warnings for obsolete methods. See
-// https://github.com/googleapis/google-api-dotnet-client/pull/3043
-// for more details.
-#pragma warning disable CS0618
-
 namespace Google.Cloud.Storage.V1.IntegrationTests
 {
     /// <summary>
@@ -202,7 +197,7 @@ namespace Google.Cloud.Storage.V1.IntegrationTests
             {
                 return null;
             }
-            var credential = GoogleCredential.FromFile(file);
+            var credential = CredentialFactory.FromFile<ServiceAccountCredential>(file).ToGoogleCredential();
             return StorageClient.Create(credential);
         }
 
