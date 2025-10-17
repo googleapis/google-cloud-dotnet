@@ -16,11 +16,6 @@ using Google.Apis.Auth.OAuth2;
 using Google.Cloud.ClientTesting;
 using System.IO;
 
-// Temporarily disable warnings for obsolete methods. See
-// https://github.com/googleapis/google-api-dotnet-client/pull/3043
-// for more details.
-#pragma warning disable CS0618
-
 namespace Google.Cloud.Storage.V1.Tests.Conformance
 {
     /// <summary>
@@ -42,7 +37,7 @@ namespace Google.Cloud.Storage.V1.Tests.Conformance
         {
             TestData = ConformanceTestData.Load<TestFile>("storage", "v1");
             var serviceAccountFile = Path.Combine(TestData.DataPath, "test_service_account.not-a-test.json");
-            TestCredential = (ServiceAccountCredential) GoogleCredential.FromFile(serviceAccountFile).UnderlyingCredential;
+            TestCredential = CredentialFactory.FromFile<ServiceAccountCredential>(serviceAccountFile);
         }
     }
 }
