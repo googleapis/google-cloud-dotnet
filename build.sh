@@ -36,8 +36,12 @@ while (( "$#" )); do
     runtests=false
   elif [[ "$1" == "--diff" ]]
   then
-    apis+=($(git diff main --name-only | grep -e 'apis/.*/' | cut -d/ -f 2 | uniq))
-    diff=true
+    if git diff main --name-only | grep -q "Directory.Packages.prop"; then
+      echo "Directory.Packages.prop has changed. Building and testing everything."
+    else
+      apis+=($(git diff main --name-only | grep -e 'apis/.*/' | cut -d/ -f 2 | uniq))
+      diff=true
+    fi
   elif [[ "$1" == "--regex" ]]
   then
     shift

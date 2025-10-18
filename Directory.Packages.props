@@ -3,7 +3,6 @@
     <!-- Default Grpc.Core versions: these should typically be changed together -->
     <PackageVersion Include="Grpc.Core" Version="[2.46.6, 3.0.0)" />
     <PackageVersion Include="Grpc.Core.Testing" Version="[2.46.6, 3.0.0)" />
-    
 
     <!-- Default GAX versions: these should typically be changed together -->
     <PackageVersion Include="Google.Api.Gax" Version="[4.12.1, 5.0.0)" />
@@ -11,8 +10,8 @@
     <PackageVersion Include="Google.Api.Gax.Grpc" Version="[4.12.1, 5.0.0)" />
     <PackageVersion Include="Google.Api.Gax.Testing" Version="[4.12.1, 5.0.0)" />
     <PackageVersion Include="Google.Api.Gax.Grpc.Testing" Version="[4.12.1, 5.0.0)" />
-    
-    <!-- 
+
+    <!--
       - The Google.Protobuf version should usually be the one that
       - the current Google.Api.CommonProtos version depends on.
       -->
@@ -21,8 +20,8 @@
 
     <!-- System packages -->
     <PackageVersion Include="Microsoft.Bcl.AsyncInterfaces" Version="9.0.10" />
-      
-    <!-- MS Extensions packages -->    
+
+    <!-- MS Extensions packages -->
     <PackageVersion Include="Microsoft.Extensions.Http" Version="8.0.1" />
     <PackageVersion Include="Microsoft.Extensions.Configuration" Version="8.0.0" />
     <PackageVersion Include="Microsoft.Extensions.Configuration.Abstractions" Version="8.0.0" />
