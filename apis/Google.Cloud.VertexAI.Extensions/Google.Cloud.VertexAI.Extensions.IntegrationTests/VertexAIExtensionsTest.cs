@@ -39,6 +39,50 @@ public class VertexAIExtensionsTest
     }
 
     [Fact]
+    public async Task AsIChatClient_ThinkingRequestResponse_NonStreaming()
+    {
+        IChatClient client = (await CreateClientAsync()).AsIChatClient(EndpointName.FormatProjectLocationPublisherModel(s_projectId, s_location, "google", "gemini-2.5-pro"));
+        Assert.NotNull(client);
+
+        ChatOptions options = new ChatOptions
+        {
+            RawRepresentationFactory = _ => new GenerateContentRequest
+            {
+                GenerationConfig = new()
+                {
+                    ThinkingConfig = new()
+                    {
+                        IncludeThoughts = true,
+                        ThinkingBudget = 1024
+                    },
+                    Temperature = 0
+                }
+            },
+            // Gemini only includes thought signatures if tools are provided.
+            Tools = [
+                AIFunctionFactory.Create((string city) =>
+                {
+                    return "Periods of rain or drizzle, 15 C";
+                },
+                "get_current_weather",
+                "Get the current weather in a given location")
+            ]
+        };
+
+        ChatMessage[] messages = [
+            // Let's try to make it as deterministic as possible and avoid it calling the tool.  We expect a Thought and Text response.
+            new ChatMessage(ChatRole.System, "You are a helpful assistant.  Note that the get_current_weather tool is currently in maintenance and must not be called."),
+            new ChatMessage(ChatRole.User, "Hello")
+        ];
+        var response = await client.GetResponseAsync(messages, options);
+        Assert.NotNull(response);
+        Assert.IsType<TextReasoningContent>(response.Messages[0].Contents[0]);
+        Assert.IsType<TextContent>(response.Messages[0].Contents[1]);
+        Assert.NotEmpty((string)response.Messages[0].Contents[1].AdditionalProperties?["ThoughtSignature"]!);
+        Assert.NotEmpty(response.Text);
+    }
+
+    [Fact]
     public async Task AsIChatClient_BasicRequestResponse_Streaming()
     {
         IChatClient client = (await CreateClientAsync()).AsIChatClient(EndpointName.FormatProjectLocationPublisherModel(s_projectId, s_location, "google", "gemini-2.5-pro"));
@@ -46,6 +90,50 @@ public class VertexAIExtensionsTest
 
         ChatResponse response = await client.GetStreamingResponseAsync("Hello").ToChatResponseAsync();
         Assert.NotNull(response);
+        Assert.NotEmpty(response.Text);
+    }
+
+    [Fact]
+    public async Task AsIChatClient_ThinkingRequestResponse_Streaming()
+    {
+        IChatClient client = (await CreateClientAsync()).AsIChatClient(EndpointName.FormatProjectLocationPublisherModel(s_projectId, s_location, "google", "gemini-2.5-pro"));
+        Assert.NotNull(client);
+
+        ChatOptions options = new ChatOptions
+        {
+            RawRepresentationFactory = _ => new GenerateContentRequest
+            {
+                GenerationConfig = new()
+                {
+                    ThinkingConfig = new()
+                    {
+                        IncludeThoughts = true,
+                        ThinkingBudget = 1024
+                    },
+                    Temperature = 0
+                }
+            },
+            // Gemini only includes thought signatures if tools are provided.
+            Tools = [
+                AIFunctionFactory.Create((string city) =>
+                {
+                    return "Periods of rain or drizzle, 15 C";
+                },
+                "get_current_weather",
+                "Get the current weather in a given location")
+            ]
+        };
+
+        ChatMessage[] messages = [
+            // Let's try to make it as deterministic as possible and avoid it calling the tool.  We expect a Thought and Text response.
+            new ChatMessage(ChatRole.System, "You are a helpful assistant.  Note that the get_current_weather tool is currently in maintenance and must not be called."),
+            new ChatMessage(ChatRole.User, "Help me plan a birthday party for a 3 year old.")
+        ];
+        var response = await client.GetStreamingResponseAsync(messages, options).ToChatResponseAsync();
+        Assert.NotNull(response);
+        Assert.IsType<TextReasoningContent>(response.Messages[0].Contents[0]);
+        Assert.IsType<TextContent>(response.Messages[0].Contents[1]);
+        Assert.NotEmpty((string) response.Messages[0].Contents[1].AdditionalProperties?["ThoughtSignature"]!);
         Assert.NotEmpty(response.Text);
     }
 

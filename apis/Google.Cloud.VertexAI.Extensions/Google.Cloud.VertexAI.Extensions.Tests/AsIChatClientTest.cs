@@ -145,6 +145,105 @@ public class AsIChatClientTest
     }
 
     [Fact]
+    public async Task IChatClient_GetResponseAsync_TextContentWithThoughtsIncluded_IncludesThoughtInResponseAndNotInText()
+    {
+        DelegateCallInvoker invoker = new()
+        {
+            OnGenerateContentRequest = request =>
+            {
+                GenerateContentResponse response = CreateResponse(new()
+                {
+                    Role = "model",
+                    Parts = {
+                        new Part() { Text = "I'm thinking about it.", Thought = true },
+                        new Part() { Text = "It's sunny today.", ThoughtSignature = ByteString.CopyFromUtf8("some signature")}
+                    }
+                });
+                response.Candidates[0].FinishReason = Candidate.Types.FinishReason.Stop;
+                return response;
+            }
+        };
+
+        IChatClient chatClient = CreateClient(invoker).AsIChatClient("projects/test-project/locations/us-central1/publishers/google/models/mymodel");
+        ChatMessage[] messages = [new(ChatRole.User, "What's the weather today?  Think about it.")];
+
+        ChatResponse result = await chatClient.GetResponseAsync(messages);
+
+        Assert.NotNull(result);
+        Assert.Equal(2, result.Messages[0].Contents.Count);
+        Assert.Equal("I'm thinking about it.", ((TextReasoningContent) result.Messages[0].Contents[0]).Text);
+        Assert.Equal(ByteString.CopyFromUtf8("some signature").ToBase64(), ((TextContent) result.Messages[0].Contents[1]).AdditionalProperties?["ThoughtSignature"]);
+        Assert.Equal("It's sunny today.", ((TextContent) result.Messages[0].Contents[1]).Text);
+        Assert.Equal("It's sunny today.", result.Text);
+    }
+
+    [Fact]
+    public async Task IChatClient_GetResponseAsync_TextContentWithThoughtSignature_SetsAdditionalProperty()
+    {
+        DelegateCallInvoker invoker = new()
+        {
+            OnGenerateContentRequest = request =>
+            {
+                GenerateContentResponse response = CreateResponse(new()
+                {
+                    Role = "model",
+                    Parts = {
+                        new Part() { Text = "It's sunny today.", ThoughtSignature = ByteString.CopyFromUtf8("some signature")}
+                    }
+                });
+                return response;
+            }
+        };
+
+        IChatClient chatClient = CreateClient(invoker).AsIChatClient("projects/test-project/locations/us-central1/publishers/google/models/mymodel");
+        ChatMessage[] messages = [new(ChatRole.User, "What's the weather today?  Think about it.")];
+
+        ChatResponse result = await chatClient.GetResponseAsync(messages);
+
+        Assert.NotNull(result);
+        Assert.Equal(1, result.Messages[0].Contents.Count);
+        Assert.Equal("It's sunny today.", ((TextContent) result.Messages[0].Contents[0]).Text);
+        Assert.NotNull(result.Messages[0].Contents[0].AdditionalProperties?["ThoughtSignature"]);
+        Assert.Equal(ByteString.CopyFromUtf8("some signature"), ByteString.FromBase64((string) result.Messages[0].Contents[0].AdditionalProperties?["ThoughtSignature"]!));
+    }
+
+    [Fact]
+    public async Task IChatClient_GetResponseAsync_AdditionalPropertyThoughtSignatureSet_ExistsInRequest()
+    {
+        DelegateCallInvoker invoker = new()
+        {
+            OnGenerateContentRequest = request =>
+            {
+                Assert.Equal(ByteString.CopyFromUtf8("weather signature"), request.Contents[1].Parts[0].ThoughtSignature);
+
+                GenerateContentResponse response = CreateResponse(new()
+                {
+                    Role = "model",
+                    Parts = {
+                        new Part() { Text = "No you don't need a coat.", ThoughtSignature = ByteString.CopyFromUtf8("coat signature")}
+                    }
+                });
+                return response;
+            }
+        };
+
+        IChatClient chatClient = CreateClient(invoker).AsIChatClient("projects/test-project/locations/us-central1/publishers/google/models/mymodel");
+
+        TextContent serverResponse = new TextContent("It's 15 degrees and sunny.")
+        {
+            AdditionalProperties = new() { { "ThoughtSignature", ByteString.CopyFromUtf8("weather signature").ToBase64()} }
+        };
+
+        ChatMessage[] messages = [
+            new(ChatRole.User, "What's the weather today?"),
+            new(ChatRole.Assistant, [serverResponse] ),
+            new(ChatRole.User, "Do I need a coat?")
+        ];
+
+        ChatResponse result = await chatClient.GetResponseAsync(messages);
+    }
+
+    [Fact]
     public async Task IChatClient_GetResponseAsync_DataContent()
     {
         byte[] imageData = [0x89, 0x50, 0x4E, 0x47]; // PNG header bytes
@@ -334,8 +433,8 @@ public class AsIChatClientTest
                         {
                             new Part()
                             {
+                                Text = "After considering the options, here is my answer.",
                                 Thought = true,
-                                ThoughtSignature = ByteString.FromBase64(reasoningData)
                             }
                         }
                 }),
@@ -350,7 +449,6 @@ public class AsIChatClientTest
         Assert.IsType<TextReasoningContent>(Assert.Single(result.Messages[0].Contents));
 
         TextReasoningContent reasoningContent = (TextReasoningContent) result.Messages[0].Contents[0];
-        Assert.Equal(reasoningData, reasoningContent.ProtectedData);
     }
 
     [Fact]

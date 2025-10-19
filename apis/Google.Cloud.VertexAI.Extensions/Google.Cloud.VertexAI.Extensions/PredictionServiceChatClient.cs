@@ -336,6 +336,12 @@ internal sealed class PredictionServiceChatClient(PredictionServiceClient client
     {
         foreach (AIContent content in contents)
         {
+            var thoughtSignature = content.AdditionalProperties is { } props &&
+                                           props.TryGetValue("ThoughtSignature", out var thoughtSignatureObject) &&
+                                           thoughtSignatureObject is string thoughtSignatureString
+                        ? ByteString.FromBase64(thoughtSignatureString)
+                        : ByteString.Empty;
+
             switch (content)
             {
                 case AIContent when content.RawRepresentation is Part part:
@@ -343,7 +349,10 @@ internal sealed class PredictionServiceChatClient(PredictionServiceClient client
                     break;
 
                 case TextContent textContent:
-                    parts.Add(new Part() { Text = textContent.Text });
+                    parts.Add(new Part() {
+                        Text = textContent.Text,
+                        ThoughtSignature = thoughtSignature,
+                    });
                     break;
 
                 case DataContent dataContent:
@@ -353,7 +362,8 @@ internal sealed class PredictionServiceChatClient(PredictionServiceClient client
                         {
                             MimeType = dataContent.MediaType,
                             Data = ByteString.CopyFrom(dataContent.Data.Span)
-                        }
+                        },
+                        ThoughtSignature = thoughtSignature,
                     });
                     break;
 
@@ -364,7 +374,8 @@ internal sealed class PredictionServiceChatClient(PredictionServiceClient client
                         {
                             FileUri = uriContent.Uri.AbsoluteUri,
                             MimeType = uriContent.MediaType
-                        }
+                        },
+                        ThoughtSignature = thoughtSignature,
                     });
                     break;
 
@@ -377,7 +388,8 @@ internal sealed class PredictionServiceChatClient(PredictionServiceClient client
                             Args = functionCallContent.Arguments is not null ?
                                 Struct.Parser.ParseJson(JsonSerializer.Serialize(functionCallContent.Arguments)) :
                                 new()
-                        }
+                        },
+                        ThoughtSignature = thoughtSignature,
                     });
                     break;
 
@@ -390,23 +402,13 @@ internal sealed class PredictionServiceChatClient(PredictionServiceClient client
                             Response = functionResultContent.Result is not null ?
                             Struct.Parser.ParseJson(JsonSerializer.Serialize(new { result = functionResultContent.Result })) :
                             new()
-                        }
+                        },
+                        ThoughtSignature = thoughtSignature,
                     });
                     break;
 
-                case TextReasoningContent reasoningContent when reasoningContent.ProtectedData is { } reasoningData:
-                    try
-                    {
-                        parts.Add(new Part()
-                        {
-                            Thought = true,
-                            ThoughtSignature = ByteString.FromBase64(reasoningData),
-                        });
-                    }
-                    catch
-                    {
-                        // Ignore reasoning data if we can't parse it.
-                    }
+                case TextReasoningContent reasoningContent:
+                    // noop.  Thoughts (ie, thought summaries) should not be sent back to the model and do not contain a ThoughtSignature.  ThoughtSignature is sent in the Part(s).
                     break;
             }
         }
@@ -419,6 +421,8 @@ internal sealed class PredictionServiceChatClient(PredictionServiceClient client
         {
             AIContent? content = part.DataCase switch
             {
+                _ when part.Thought => new TextReasoningContent(part.Text),
+
                 Part.DataOneofCase.Text => new TextContent(part.Text),
 
                 Part.DataOneofCase.InlineData => new DataContent(part.InlineData!.Data.ToByteArray(), part.InlineData.MimeType),
@@ -431,13 +435,16 @@ internal sealed class PredictionServiceChatClient(PredictionServiceClient client
                 Part.DataOneofCase.FunctionResponse => new FunctionResultContent(part.FunctionResponse!.Name,
                     part.FunctionResponse.Response is not null ? JsonSerializer.Deserialize<object>(part.FunctionResponse.Response.ToString()) : null),
 
-                _ when part.Thought => new TextReasoningContent(null) { ProtectedData = part.ThoughtSignature.ToBase64() },
-
                 _ => null,
             };
 
             if (content is not null)
             {
+                if (part.ThoughtSignature is { } thoughtSignature && thoughtSignature.Length > 0)
+                {
+                    (content.AdditionalProperties ??= new AdditionalPropertiesDictionary())["ThoughtSignature"] = thoughtSignature.ToBase64();
+                }
+
                 contents.Add(content);
             }
         }
@@ -493,16 +500,19 @@ internal sealed class PredictionServiceChatClient(PredictionServiceClient client
     }
 
     /// <summary>Creates an M.E.AI <see cref="ChatFinishReason"/> from a Google <see cref="ConvertFinishReason(Candidate.Types.FinishReason)"/>.</summary>
-    private static ChatFinishReason ConvertFinishReason(Candidate.Types.FinishReason finishReason) =>
+    private static ChatFinishReason? ConvertFinishReason(Candidate.Types.FinishReason finishReason) =>
         finishReason switch
         {
             Candidate.Types.FinishReason.MaxTokens => ChatFinishReason.Length,
             Candidate.Types.FinishReason.MalformedFunctionCall => ChatFinishReason.ToolCalls,
+            Candidate.Types.FinishReason.Stop => ChatFinishReason.Stop,
             Candidate.Types.FinishReason.Safety or
                 Candidate.Types.FinishReason.Recitation or
                 Candidate.Types.FinishReason.Blocklist or
                 Candidate.Types.FinishReason.ProhibitedContent or
-                Candidate.Types.FinishReason.Spii => ChatFinishReason.ContentFilter,
+                Candidate.Types.FinishReason.Spii or
+                Candidate.Types.FinishReason.ModelArmor => ChatFinishReason.ContentFilter,
+            Candidate.Types.FinishReason.Unspecified => null,
             _ => ChatFinishReason.Stop
         };
 
