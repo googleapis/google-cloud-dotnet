@@ -75,10 +75,16 @@ public class VertexAIExtensionsTest
             new ChatMessage(ChatRole.User, "Hello")
         ];
         var response = await client.GetResponseAsync(messages, options);
+
         Assert.NotNull(response);
-        Assert.IsType<TextReasoningContent>(response.Messages[0].Contents[0]);
-        Assert.IsType<TextContent>(response.Messages[0].Contents[1]);
-        Assert.NotEmpty((string)response.Messages[0].Contents[1].AdditionalProperties?["ThoughtSignature"]!);
+
+        var textContent = response.Messages[0].Contents.OfType<TextContent>().SingleOrDefault();
+        var thoughtContent = response.Messages[0].Contents.OfType<TextReasoningContent>().SingleOrDefault(x => x.ProtectedData is null);
+        var thoughtSignatureContent = response.Messages[0].Contents.OfType<TextReasoningContent>().SingleOrDefault(x => x.ProtectedData is not null);
+
+        Assert.NotNull(textContent);
+        Assert.NotNull(thoughtContent);
+        Assert.NotNull(thoughtSignatureContent);
         Assert.NotEmpty(response.Text);
     }
 
@@ -129,11 +135,22 @@ public class VertexAIExtensionsTest
             new ChatMessage(ChatRole.System, "You are a helpful assistant.  Note that the get_current_weather tool is currently in maintenance and must not be called."),
             new ChatMessage(ChatRole.User, "Help me plan a birthday party for a 3 year old.")
         ];
-        var response = await client.GetStreamingResponseAsync(messages, options).ToChatResponseAsync();
+
+        var items = await client.GetStreamingResponseAsync(messages, options).ToListAsync();
+        var response = items.ToChatResponse();
+
+
+
         Assert.NotNull(response);
-        Assert.IsType<TextReasoningContent>(response.Messages[0].Contents[0]);
-        Assert.IsType<TextContent>(response.Messages[0].Contents[1]);
-        Assert.NotEmpty((string) response.Messages[0].Contents[1].AdditionalProperties?["ThoughtSignature"]!);
+
+
+        var textContent = response.Messages[0].Contents.OfType<TextContent>().SingleOrDefault();
+        var thoughtContent = response.Messages[0].Contents.OfType<TextReasoningContent>().SingleOrDefault(x => x.ProtectedData is null);
+        var thoughtSignatureContent = response.Messages[0].Contents.OfType<TextReasoningContent>().SingleOrDefault(x => x.ProtectedData is not null);
+
+        Assert.NotNull(textContent);
+        Assert.NotNull(thoughtContent);
+        Assert.NotNull(thoughtSignatureContent);
         Assert.NotEmpty(response.Text);
     }
 

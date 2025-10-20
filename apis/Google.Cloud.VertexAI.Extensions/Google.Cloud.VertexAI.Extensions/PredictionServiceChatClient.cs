@@ -334,14 +334,9 @@ internal sealed class PredictionServiceChatClient(PredictionServiceClient client
     /// <summary>Creates <see cref="Part"/>s for <paramref name="contents"/> and adds them to <paramref name="parts"/>.</summary>
     private static void AddPartsForAIContents(IEnumerable<AIContent> contents, RepeatedField<Part> parts)
     {
+        ByteString thoughtSignature = ByteString.Empty;
         foreach (AIContent content in contents)
         {
-            var thoughtSignature = content.AdditionalProperties is { } props &&
-                                           props.TryGetValue("ThoughtSignature", out var thoughtSignatureObject) &&
-                                           thoughtSignatureObject is string thoughtSignatureString
-                        ? ByteString.FromBase64(thoughtSignatureString)
-                        : ByteString.Empty;
-
             switch (content)
             {
                 case AIContent when content.RawRepresentation is Part part:
@@ -351,7 +346,6 @@ internal sealed class PredictionServiceChatClient(PredictionServiceClient client
                 case TextContent textContent:
                     parts.Add(new Part() {
                         Text = textContent.Text,
-                        ThoughtSignature = thoughtSignature,
                     });
                     break;
 
@@ -363,7 +357,6 @@ internal sealed class PredictionServiceChatClient(PredictionServiceClient client
                             MimeType = dataContent.MediaType,
                             Data = ByteString.CopyFrom(dataContent.Data.Span)
                         },
-                        ThoughtSignature = thoughtSignature,
                     });
                     break;
 
@@ -375,7 +368,6 @@ internal sealed class PredictionServiceChatClient(PredictionServiceClient client
                             FileUri = uriContent.Uri.AbsoluteUri,
                             MimeType = uriContent.MediaType
                         },
-                        ThoughtSignature = thoughtSignature,
                     });
                     break;
 
@@ -388,8 +380,7 @@ internal sealed class PredictionServiceChatClient(PredictionServiceClient client
                             Args = functionCallContent.Arguments is not null ?
                                 Struct.Parser.ParseJson(JsonSerializer.Serialize(functionCallContent.Arguments)) :
                                 new()
-                        },
-                        ThoughtSignature = thoughtSignature,
+                        }
                     });
                     break;
 
@@ -402,15 +393,21 @@ internal sealed class PredictionServiceChatClient(PredictionServiceClient client
                             Response = functionResultContent.Result is not null ?
                             Struct.Parser.ParseJson(JsonSerializer.Serialize(new { result = functionResultContent.Result })) :
                             new()
-                        },
-                        ThoughtSignature = thoughtSignature,
+                        }
                     });
                     break;
 
-                case TextReasoningContent reasoningContent:
-                    // noop.  Thoughts (ie, thought summaries) should not be sent back to the model and do not contain a ThoughtSignature.  ThoughtSignature is sent in the Part(s).
+                // we expect 0 or 1 TextReasoningContent with ProtectedData set per collection of AIContent returned from the mnodel.
+                case TextReasoningContent reasoningContent when !string.IsNullOrEmpty(reasoningContent.ProtectedData):
+                    thoughtSignature = ByteString.FromBase64(reasoningContent.ProtectedData);
                     break;
             }
+        }
+
+        // add the TextReasoningContent's ThoughtSignature to the first part if we have one.
+        if (parts.Any() && !thoughtSignature.IsEmpty)
+        {
+            parts[0].ThoughtSignature = thoughtSignature;
         }
     }
 
@@ -419,6 +416,11 @@ internal sealed class PredictionServiceChatClient(PredictionServiceClient client
     {
         foreach (var part in parts)
         {
+            if (!part.ThoughtSignature.IsEmpty)
+            {
+                contents.Add(new TextReasoningContent(null) { ProtectedData = part.ThoughtSignature.ToBase64() });
+            }
+
             AIContent? content = part.DataCase switch
             {
                 _ when part.Thought => new TextReasoningContent(part.Text),
@@ -440,11 +442,6 @@ internal sealed class PredictionServiceChatClient(PredictionServiceClient client
 
             if (content is not null)
             {
-                if (part.ThoughtSignature is { } thoughtSignature && thoughtSignature.Length > 0)
-                {
-                    (content.AdditionalProperties ??= new AdditionalPropertiesDictionary())["ThoughtSignature"] = thoughtSignature.ToBase64();
-                }
-
                 contents.Add(content);
             }
         }
@@ -513,7 +510,7 @@ internal sealed class PredictionServiceChatClient(PredictionServiceClient client
                 Candidate.Types.FinishReason.Spii or
                 Candidate.Types.FinishReason.ModelArmor => ChatFinishReason.ContentFilter,
             Candidate.Types.FinishReason.Unspecified => null,
-            _ => ChatFinishReason.Stop
+            _ => null
         };
 
     /// <summary>Creates a <see cref="UsageDetails"/> populated from the supplied <paramref name="usageMetadata"/>.</summary>
