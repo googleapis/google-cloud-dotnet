@@ -1,5 +1,11 @@
 # Version history
 
+## Version 2.0.0-beta16, released 2025-10-20
+
+### New features
+
+- Add `relax_safety_filters` proto field for Gemini TTS
+
 ## Version 2.0.0-beta15, released 2025-09-24
 
 ### New features
