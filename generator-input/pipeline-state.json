@@ -2542,12 +2542,12 @@
         },
         {
             "id": "Google.Cloud.PubSub.V1",
-            "currentVersion": "3.28.0",
+            "currentVersion": "3.29.0",
             "generationAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
             "releaseAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
-            "releaseTimestamp": "2025-10-09T16:02:01.100060805Z",
+            "releaseTimestamp": "2025-10-20T16:00:48.670629677Z",
             "lastGeneratedCommit": "e9389923bc69ee18417b47085d09191224638282",
-            "lastReleasedCommit": "a4ded737527f57207f37ba9e9c9b44732a0eb70f",
+            "lastReleasedCommit": "e9389923bc69ee18417b47085d09191224638282",
             "apiPaths": [
                 "google/pubsub/v1"
             ],
