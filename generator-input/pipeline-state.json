@@ -75,11 +75,12 @@
         },
         {
             "id": "Google.Apps.Card.V1",
-            "currentVersion": "1.0.0-beta01",
+            "currentVersion": "1.0.0-beta02",
             "generationAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
             "releaseAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
-            "releaseTimestamp": "2024-04-17T16:56:21Z",
+            "releaseTimestamp": "2025-10-20T15:53:48.926320484Z",
             "lastGeneratedCommit": "fef700942b6a3ef8bbaf253306a0a652a1858552",
+            "lastReleasedCommit": "fef700942b6a3ef8bbaf253306a0a652a1858552",
             "apiPaths": [
                 "google/apps/card/v1"
             ],
