@@ -3692,11 +3692,12 @@
         },
         {
             "id": "Google.Maps.RouteOptimization.V1",
-            "currentVersion": "1.2.0",
+            "currentVersion": "1.3.0",
             "generationAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
             "releaseAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
-            "releaseTimestamp": "2024-09-26T08:24:24Z",
+            "releaseTimestamp": "2025-10-20T16:50:14.600385304Z",
             "lastGeneratedCommit": "4c5d582e991ca0b60299343b44ecabe80eae1a69",
+            "lastReleasedCommit": "4c5d582e991ca0b60299343b44ecabe80eae1a69",
             "apiPaths": [
                 "google/maps/routeoptimization/v1"
             ],
