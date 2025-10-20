@@ -1,5 +1,12 @@
 # Version history
 
+## Version 1.11.0, released 2025-10-20
+
+### Bug fixes
+
+- Include AssistAnswer as a part of the Session
+- Add labels for additional Sessions identification
+
 ## Version 1.10.0, released 2025-09-16
 
 ### New features
