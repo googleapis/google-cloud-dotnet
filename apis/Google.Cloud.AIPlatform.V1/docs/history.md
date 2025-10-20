@@ -1,5 +1,15 @@
 # Version history
 
+## Version 3.51.0, released 2025-10-20
+
+### New features
+
+- Continuous Tuning
+
+### Documentation improvements
+
+- Updated docs for related fields
+
 ## Version 3.50.0, released 2025-10-15
 
 ### New features
