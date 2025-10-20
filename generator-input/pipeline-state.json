@@ -3053,11 +3053,12 @@
         },
         {
             "id": "Google.Cloud.Storage.V1",
-            "currentVersion": "4.13.0",
+            "currentVersion": "4.14.0",
             "generationAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
             "releaseAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
-            "releaseTimestamp": "2025-04-25T08:34:24Z",
+            "releaseTimestamp": "2025-10-20T16:16:52.493030050Z",
             "lastGeneratedCommit": "7e795c44dae36500aeb8715536eedc3597c56e5e",
+            "lastReleasedCommit": "7e795c44dae36500aeb8715536eedc3597c56e5e",
             "sourcePaths": [
                 "apis/Google.Cloud.Storage.V1/Google.Cloud.Storage.V1"
             ]
@@ -3191,12 +3192,12 @@
         },
         {
             "id": "Google.Cloud.TextToSpeech.V1",
-            "currentVersion": "3.15.0",
+            "currentVersion": "3.16.0",
             "generationAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
             "releaseAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
-            "releaseTimestamp": "2025-09-24T07:56:04.878784217Z",
+            "releaseTimestamp": "2025-10-20T16:48:06.019313035Z",
             "lastGeneratedCommit": "59aac0a6555b532c36d18a9c30c557db9676c745",
-            "lastReleasedCommit": "b2cd70b6fe7faea000afabff7eebd5db5c4c23c8",
+            "lastReleasedCommit": "59aac0a6555b532c36d18a9c30c557db9676c745",
             "apiPaths": [
                 "google/cloud/texttospeech/v1"
             ],
