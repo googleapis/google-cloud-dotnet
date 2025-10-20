@@ -1,5 +1,11 @@
 # Version history
 
+## Version 1.0.0-beta56, released 2025-10-20
+
+### New features
+
+- Add FunctionResponsePart and excluded_predefined_functions in ComputerUse
+
 ## Version 1.0.0-beta55, released 2025-10-15
 
 ### New features
