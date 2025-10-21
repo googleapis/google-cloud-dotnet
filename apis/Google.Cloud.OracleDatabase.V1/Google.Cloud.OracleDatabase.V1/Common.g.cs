@@ -27,21 +27,59 @@ namespace Google.Cloud.OracleDatabase.V1 {
             "Citnb29nbGUvY2xvdWQvb3JhY2xlZGF0YWJhc2UvdjEvY29tbW9uLnByb3Rv",
             "Eh5nb29nbGUuY2xvdWQub3JhY2xlZGF0YWJhc2UudjEaH2dvb2dsZS9hcGkv",
             "ZmllbGRfYmVoYXZpb3IucHJvdG8iJQoPQ3VzdG9tZXJDb250YWN0EhIKBWVt",
-            "YWlsGAEgASgJQgPgQQJC5QEKImNvbS5nb29nbGUuY2xvdWQub3JhY2xlZGF0",
-            "YWJhc2UudjFCC0NvbW1vblByb3RvUAFaSmNsb3VkLmdvb2dsZS5jb20vZ28v",
-            "b3JhY2xlZGF0YWJhc2UvYXBpdjEvb3JhY2xlZGF0YWJhc2VwYjtvcmFjbGVk",
-            "YXRhYmFzZXBiqgIeR29vZ2xlLkNsb3VkLk9yYWNsZURhdGFiYXNlLlYxygIe",
-            "R29vZ2xlXENsb3VkXE9yYWNsZURhdGFiYXNlXFYx6gIhR29vZ2xlOjpDbG91",
-            "ZDo6T3JhY2xlRGF0YWJhc2U6OlYxYgZwcm90bzM="));
+            "YWlsGAEgASgJQgPgQQIikwIKEUlkZW50aXR5Q29ubmVjdG9yEiAKE3NlcnZp",
+            "Y2VfYWdlbnRfZW1haWwYASABKAlCA+BBAxJgChBjb25uZWN0aW9uX3N0YXRl",
+            "GAIgASgOMkEuZ29vZ2xlLmNsb3VkLm9yYWNsZWRhdGFiYXNlLnYxLklkZW50",
+            "aXR5Q29ubmVjdG9yLkNvbm5lY3Rpb25TdGF0ZUID4EEDInoKD0Nvbm5lY3Rp",
+            "b25TdGF0ZRIgChxDT05ORUNUSU9OX1NUQVRFX1VOU1BFQ0lGSUVEEAASDQoJ",
+            "Q09OTkVDVEVEEAESFwoTUEFSVElBTExZX0NPTk5FQ1RFRBACEhAKDERJU0NP",
+            "Tk5FQ1RFRBADEgsKB1VOS05PV04QBCKbAQobRGF0YUNvbGxlY3Rpb25PcHRp",
+            "b25zQ29tbW9uEioKHWlzX2RpYWdub3N0aWNzX2V2ZW50c19lbmFibGVkGAEg",
+            "ASgIQgPgQQESKQocaXNfaGVhbHRoX21vbml0b3JpbmdfZW5hYmxlZBgCIAEo",
+            "CEID4EEBEiUKGGlzX2luY2lkZW50X2xvZ3NfZW5hYmxlZBgDIAEoCEID4EEB",
+            "Kl0KDENvbXB1dGVNb2RlbBIdChlDT01QVVRFX01PREVMX1VOU1BFQ0lGSUVE",
+            "EAASFgoSQ09NUFVURV9NT0RFTF9FQ1BVEAESFgoSQ09NUFVURV9NT0RFTF9P",
+            "Q1BVEAJC5QEKImNvbS5nb29nbGUuY2xvdWQub3JhY2xlZGF0YWJhc2UudjFC",
+            "C0NvbW1vblByb3RvUAFaSmNsb3VkLmdvb2dsZS5jb20vZ28vb3JhY2xlZGF0",
+            "YWJhc2UvYXBpdjEvb3JhY2xlZGF0YWJhc2VwYjtvcmFjbGVkYXRhYmFzZXBi",
+            "qgIeR29vZ2xlLkNsb3VkLk9yYWNsZURhdGFiYXNlLlYxygIeR29vZ2xlXENs",
+            "b3VkXE9yYWNsZURhdGFiYXNlXFYx6gIhR29vZ2xlOjpDbG91ZDo6T3JhY2xl",
+            "RGF0YWJhc2U6OlYxYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, },
-          new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.OracleDatabase.V1.CustomerContact), global::Google.Cloud.OracleDatabase.V1.CustomerContact.Parser, new[]{ "Email" }, null, null, null, null)
+          new pbr::GeneratedClrTypeInfo(new[] {typeof(global::Google.Cloud.OracleDatabase.V1.ComputeModel), }, null, new pbr::GeneratedClrTypeInfo[] {
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.OracleDatabase.V1.CustomerContact), global::Google.Cloud.OracleDatabase.V1.CustomerContact.Parser, new[]{ "Email" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.OracleDatabase.V1.IdentityConnector), global::Google.Cloud.OracleDatabase.V1.IdentityConnector.Parser, new[]{ "ServiceAgentEmail", "ConnectionState" }, null, new[]{ typeof(global::Google.Cloud.OracleDatabase.V1.IdentityConnector.Types.ConnectionState) }, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.OracleDatabase.V1.DataCollectionOptionsCommon), global::Google.Cloud.OracleDatabase.V1.DataCollectionOptionsCommon.Parser, new[]{ "IsDiagnosticsEventsEnabled", "IsHealthMonitoringEnabled", "IsIncidentLogsEnabled" }, null, null, null, null)
           }));
     }
     #endregion
 
   }
+  #region Enums
+  /// <summary>
+  /// The compute model of the Exadata Infrastructure, VM Cluster and Autonomous
+  /// Database.
+  /// </summary>
+  public enum ComputeModel {
+    /// <summary>
+    /// Unspecified compute model.
+    /// </summary>
+    [pbr::OriginalName("COMPUTE_MODEL_UNSPECIFIED")] Unspecified = 0,
+    /// <summary>
+    /// Abstract measure of compute resources. ECPUs are based on the number of
+    /// cores elastically allocated from a pool of compute and storage servers.
+    /// </summary>
+    [pbr::OriginalName("COMPUTE_MODEL_ECPU")] Ecpu = 1,
+    /// <summary>
+    /// Physical measure of compute resources. OCPUs are based on the physical
+    /// core of a processor.
+    /// </summary>
+    [pbr::OriginalName("COMPUTE_MODEL_OCPU")] Ocpu = 2,
+  }
+
+  #endregion
+
   #region Messages
   /// <summary>
   /// The CustomerContact reference as defined by Oracle.
@@ -232,6 +270,556 @@ namespace Google.Cloud.OracleDatabase.V1 {
             break;
           case 10: {
             Email = input.ReadString();
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+  }
+
+  /// <summary>
+  /// The identity connector details which will allow OCI to securely access
+  /// the resources in the customer project.
+  /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+  public sealed partial class IdentityConnector : pb::IMessage<IdentityConnector>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<IdentityConnector> _parser = new pb::MessageParser<IdentityConnector>(() => new IdentityConnector());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<IdentityConnector> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Cloud.OracleDatabase.V1.CommonReflection.Descriptor.MessageTypes[1]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public IdentityConnector() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public IdentityConnector(IdentityConnector other) : this() {
+      serviceAgentEmail_ = other.serviceAgentEmail_;
+      connectionState_ = other.connectionState_;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public IdentityConnector Clone() {
+      return new IdentityConnector(this);
+    }
+
+    /// <summary>Field number for the "service_agent_email" field.</summary>
+    public const int ServiceAgentEmailFieldNumber = 1;
+    private string serviceAgentEmail_ = "";
+    /// <summary>
+    /// Output only. A google managed service account on which customers can grant
+    /// roles to access resources in the customer project. Example:
+    /// `p176944527254-55-75119d87fd8f@gcp-sa-oci.iam.gserviceaccount.com`
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string ServiceAgentEmail {
+      get { return serviceAgentEmail_; }
+      set {
+        serviceAgentEmail_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "connection_state" field.</summary>
+    public const int ConnectionStateFieldNumber = 2;
+    private global::Google.Cloud.OracleDatabase.V1.IdentityConnector.Types.ConnectionState connectionState_ = global::Google.Cloud.OracleDatabase.V1.IdentityConnector.Types.ConnectionState.Unspecified;
+    /// <summary>
+    /// Output only. The connection state of the identity connector.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Cloud.OracleDatabase.V1.IdentityConnector.Types.ConnectionState ConnectionState {
+      get { return connectionState_; }
+      set {
+        connectionState_ = value;
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as IdentityConnector);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(IdentityConnector other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (ServiceAgentEmail != other.ServiceAgentEmail) return false;
+      if (ConnectionState != other.ConnectionState) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (ServiceAgentEmail.Length != 0) hash ^= ServiceAgentEmail.GetHashCode();
+      if (ConnectionState != global::Google.Cloud.OracleDatabase.V1.IdentityConnector.Types.ConnectionState.Unspecified) hash ^= ConnectionState.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (ServiceAgentEmail.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(ServiceAgentEmail);
+      }
+      if (ConnectionState != global::Google.Cloud.OracleDatabase.V1.IdentityConnector.Types.ConnectionState.Unspecified) {
+        output.WriteRawTag(16);
+        output.WriteEnum((int) ConnectionState);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (ServiceAgentEmail.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(ServiceAgentEmail);
+      }
+      if (ConnectionState != global::Google.Cloud.OracleDatabase.V1.IdentityConnector.Types.ConnectionState.Unspecified) {
+        output.WriteRawTag(16);
+        output.WriteEnum((int) ConnectionState);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      if (ServiceAgentEmail.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(ServiceAgentEmail);
+      }
+      if (ConnectionState != global::Google.Cloud.OracleDatabase.V1.IdentityConnector.Types.ConnectionState.Unspecified) {
+        size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) ConnectionState);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(IdentityConnector other) {
+      if (other == null) {
+        return;
+      }
+      if (other.ServiceAgentEmail.Length != 0) {
+        ServiceAgentEmail = other.ServiceAgentEmail;
+      }
+      if (other.ConnectionState != global::Google.Cloud.OracleDatabase.V1.IdentityConnector.Types.ConnectionState.Unspecified) {
+        ConnectionState = other.ConnectionState;
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            ServiceAgentEmail = input.ReadString();
+            break;
+          }
+          case 16: {
+            ConnectionState = (global::Google.Cloud.OracleDatabase.V1.IdentityConnector.Types.ConnectionState) input.ReadEnum();
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            ServiceAgentEmail = input.ReadString();
+            break;
+          }
+          case 16: {
+            ConnectionState = (global::Google.Cloud.OracleDatabase.V1.IdentityConnector.Types.ConnectionState) input.ReadEnum();
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+    #region Nested types
+    /// <summary>Container for nested types declared in the IdentityConnector message type.</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static partial class Types {
+      /// <summary>
+      /// The various connection states of the WorkloadIdentityPoolConnection.
+      /// </summary>
+      public enum ConnectionState {
+        /// <summary>
+        /// Default unspecified value.
+        /// </summary>
+        [pbr::OriginalName("CONNECTION_STATE_UNSPECIFIED")] Unspecified = 0,
+        /// <summary>
+        /// The identity pool connection is connected.
+        /// </summary>
+        [pbr::OriginalName("CONNECTED")] Connected = 1,
+        /// <summary>
+        /// The identity pool connection is partially connected.
+        /// </summary>
+        [pbr::OriginalName("PARTIALLY_CONNECTED")] PartiallyConnected = 2,
+        /// <summary>
+        /// The identity pool connection is disconnected.
+        /// </summary>
+        [pbr::OriginalName("DISCONNECTED")] Disconnected = 3,
+        /// <summary>
+        /// The identity pool connection is in an unknown state.
+        /// </summary>
+        [pbr::OriginalName("UNKNOWN")] Unknown = 4,
+      }
+
+    }
+    #endregion
+
+  }
+
+  /// <summary>
+  /// Data collection options for diagnostics.
+  /// https://docs.oracle.com/en-us/iaas/api/#/en/database/20160918/datatypes/DataCollectionOptions
+  /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+  public sealed partial class DataCollectionOptionsCommon : pb::IMessage<DataCollectionOptionsCommon>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<DataCollectionOptionsCommon> _parser = new pb::MessageParser<DataCollectionOptionsCommon>(() => new DataCollectionOptionsCommon());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<DataCollectionOptionsCommon> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Cloud.OracleDatabase.V1.CommonReflection.Descriptor.MessageTypes[2]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public DataCollectionOptionsCommon() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public DataCollectionOptionsCommon(DataCollectionOptionsCommon other) : this() {
+      isDiagnosticsEventsEnabled_ = other.isDiagnosticsEventsEnabled_;
+      isHealthMonitoringEnabled_ = other.isHealthMonitoringEnabled_;
+      isIncidentLogsEnabled_ = other.isIncidentLogsEnabled_;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public DataCollectionOptionsCommon Clone() {
+      return new DataCollectionOptionsCommon(this);
+    }
+
+    /// <summary>Field number for the "is_diagnostics_events_enabled" field.</summary>
+    public const int IsDiagnosticsEventsEnabledFieldNumber = 1;
+    private bool isDiagnosticsEventsEnabled_;
+    /// <summary>
+    /// Optional. Indicates whether to enable data collection for diagnostics.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool IsDiagnosticsEventsEnabled {
+      get { return isDiagnosticsEventsEnabled_; }
+      set {
+        isDiagnosticsEventsEnabled_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "is_health_monitoring_enabled" field.</summary>
+    public const int IsHealthMonitoringEnabledFieldNumber = 2;
+    private bool isHealthMonitoringEnabled_;
+    /// <summary>
+    /// Optional. Indicates whether to enable health monitoring.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool IsHealthMonitoringEnabled {
+      get { return isHealthMonitoringEnabled_; }
+      set {
+        isHealthMonitoringEnabled_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "is_incident_logs_enabled" field.</summary>
+    public const int IsIncidentLogsEnabledFieldNumber = 3;
+    private bool isIncidentLogsEnabled_;
+    /// <summary>
+    /// Optional. Indicates whether to enable incident logs and trace collection.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool IsIncidentLogsEnabled {
+      get { return isIncidentLogsEnabled_; }
+      set {
+        isIncidentLogsEnabled_ = value;
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as DataCollectionOptionsCommon);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(DataCollectionOptionsCommon other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (IsDiagnosticsEventsEnabled != other.IsDiagnosticsEventsEnabled) return false;
+      if (IsHealthMonitoringEnabled != other.IsHealthMonitoringEnabled) return false;
+      if (IsIncidentLogsEnabled != other.IsIncidentLogsEnabled) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (IsDiagnosticsEventsEnabled != false) hash ^= IsDiagnosticsEventsEnabled.GetHashCode();
+      if (IsHealthMonitoringEnabled != false) hash ^= IsHealthMonitoringEnabled.GetHashCode();
+      if (IsIncidentLogsEnabled != false) hash ^= IsIncidentLogsEnabled.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (IsDiagnosticsEventsEnabled != false) {
+        output.WriteRawTag(8);
+        output.WriteBool(IsDiagnosticsEventsEnabled);
+      }
+      if (IsHealthMonitoringEnabled != false) {
+        output.WriteRawTag(16);
+        output.WriteBool(IsHealthMonitoringEnabled);
+      }
+      if (IsIncidentLogsEnabled != false) {
+        output.WriteRawTag(24);
+        output.WriteBool(IsIncidentLogsEnabled);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (IsDiagnosticsEventsEnabled != false) {
+        output.WriteRawTag(8);
+        output.WriteBool(IsDiagnosticsEventsEnabled);
+      }
+      if (IsHealthMonitoringEnabled != false) {
+        output.WriteRawTag(16);
+        output.WriteBool(IsHealthMonitoringEnabled);
+      }
+      if (IsIncidentLogsEnabled != false) {
+        output.WriteRawTag(24);
+        output.WriteBool(IsIncidentLogsEnabled);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      if (IsDiagnosticsEventsEnabled != false) {
+        size += 1 + 1;
+      }
+      if (IsHealthMonitoringEnabled != false) {
+        size += 1 + 1;
+      }
+      if (IsIncidentLogsEnabled != false) {
+        size += 1 + 1;
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(DataCollectionOptionsCommon other) {
+      if (other == null) {
+        return;
+      }
+      if (other.IsDiagnosticsEventsEnabled != false) {
+        IsDiagnosticsEventsEnabled = other.IsDiagnosticsEventsEnabled;
+      }
+      if (other.IsHealthMonitoringEnabled != false) {
+        IsHealthMonitoringEnabled = other.IsHealthMonitoringEnabled;
+      }
+      if (other.IsIncidentLogsEnabled != false) {
+        IsIncidentLogsEnabled = other.IsIncidentLogsEnabled;
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 8: {
+            IsDiagnosticsEventsEnabled = input.ReadBool();
+            break;
+          }
+          case 16: {
+            IsHealthMonitoringEnabled = input.ReadBool();
+            break;
+          }
+          case 24: {
+            IsIncidentLogsEnabled = input.ReadBool();
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 8: {
+            IsDiagnosticsEventsEnabled = input.ReadBool();
+            break;
+          }
+          case 16: {
+            IsHealthMonitoringEnabled = input.ReadBool();
+            break;
+          }
+          case 24: {
+            IsIncidentLogsEnabled = input.ReadBool();
             break;
           }
         }

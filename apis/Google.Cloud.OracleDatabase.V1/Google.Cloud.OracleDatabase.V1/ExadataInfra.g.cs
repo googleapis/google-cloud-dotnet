@@ -44,7 +44,7 @@ namespace Google.Cloud.OracleDatabase.V1 {
             "ZRJicHJvamVjdHMve3Byb2plY3R9L2xvY2F0aW9ucy97bG9jYXRpb259L2Ns",
             "b3VkRXhhZGF0YUluZnJhc3RydWN0dXJlcy97Y2xvdWRfZXhhZGF0YV9pbmZy",
             "YXN0cnVjdHVyZX0qG2Nsb3VkRXhhZGF0YUluZnJhc3RydWN0dXJlczIaY2xv",
-            "dWRFeGFkYXRhSW5mcmFzdHJ1Y3R1cmUipgoKJENsb3VkRXhhZGF0YUluZnJh",
+            "dWRFeGFkYXRhSW5mcmFzdHJ1Y3R1cmUitQsKJENsb3VkRXhhZGF0YUluZnJh",
             "c3RydWN0dXJlUHJvcGVydGllcxIRCgRvY2lkGAEgASgJQgPgQQMSGgoNY29t",
             "cHV0ZV9jb3VudBgCIAEoBUID4EEBEhoKDXN0b3JhZ2VfY291bnQYAyABKAVC",
             "A+BBARIiChV0b3RhbF9zdG9yYWdlX3NpemVfZ2IYBCABKAVCA+BBARImChlh",
@@ -70,36 +70,39 @@ namespace Google.Cloud.OracleDatabase.V1 {
             "cl9jb250YWN0cxgZIAMoCzIvLmdvb2dsZS5jbG91ZC5vcmFjbGVkYXRhYmFz",
             "ZS52MS5DdXN0b21lckNvbnRhY3RCA+BBARIrCh5tb250aGx5X3N0b3JhZ2Vf",
             "c2VydmVyX3ZlcnNpb24YGiABKAlCA+BBAxImChltb250aGx5X2RiX3NlcnZl",
-            "cl92ZXJzaW9uGBsgASgJQgPgQQMilwEKBVN0YXRlEhUKEVNUQVRFX1VOU1BF",
-            "Q0lGSUVEEAASEAoMUFJPVklTSU9OSU5HEAESDQoJQVZBSUxBQkxFEAISDAoI",
-            "VVBEQVRJTkcQAxIPCgtURVJNSU5BVElORxAEEg4KClRFUk1JTkFURUQQBRIK",
-            "CgZGQUlMRUQQBhIbChdNQUlOVEVOQU5DRV9JTl9QUk9HUkVTUxAHIqUFChFN",
-            "YWludGVuYW5jZVdpbmRvdxJmCgpwcmVmZXJlbmNlGAEgASgOMk0uZ29vZ2xl",
-            "LmNsb3VkLm9yYWNsZWRhdGFiYXNlLnYxLk1haW50ZW5hbmNlV2luZG93Lk1h",
-            "aW50ZW5hbmNlV2luZG93UHJlZmVyZW5jZUID4EEBEicKBm1vbnRocxgCIAMo",
-            "DjISLmdvb2dsZS50eXBlLk1vbnRoQgPgQQESGwoOd2Vla3Nfb2ZfbW9udGgY",
-            "AyADKAVCA+BBARIxCgxkYXlzX29mX3dlZWsYBCADKA4yFi5nb29nbGUudHlw",
-            "ZS5EYXlPZldlZWtCA+BBARIZCgxob3Vyc19vZl9kYXkYBSADKAVCA+BBARIb",
-            "Cg5sZWFkX3RpbWVfd2VlaxgGIAEoBUID4EEBEloKDXBhdGNoaW5nX21vZGUY",
-            "ByABKA4yPi5nb29nbGUuY2xvdWQub3JhY2xlZGF0YWJhc2UudjEuTWFpbnRl",
-            "bmFuY2VXaW5kb3cuUGF0Y2hpbmdNb2RlQgPgQQESJwoaY3VzdG9tX2FjdGlv",
-            "bl90aW1lb3V0X21pbnMYCCABKAVCA+BBARItCiBpc19jdXN0b21fYWN0aW9u",
-            "X3RpbWVvdXRfZW5hYmxlZBgJIAEoCEID4EEBInYKG01haW50ZW5hbmNlV2lu",
-            "ZG93UHJlZmVyZW5jZRItCilNQUlOVEVOQU5DRV9XSU5ET1dfUFJFRkVSRU5D",
-            "RV9VTlNQRUNJRklFRBAAEhUKEUNVU1RPTV9QUkVGRVJFTkNFEAESEQoNTk9f",
-            "UFJFRkVSRU5DRRACIksKDFBhdGNoaW5nTW9kZRIdChlQQVRDSElOR19NT0RF",
-            "X1VOU1BFQ0lGSUVEEAASCwoHUk9MTElORxABEg8KC05PTl9ST0xMSU5HEAJC",
-            "+QEKImNvbS5nb29nbGUuY2xvdWQub3JhY2xlZGF0YWJhc2UudjFCH0Nsb3Vk",
-            "RXhhZGF0YUluZnJhc3RydWN0dXJlUHJvdG9QAVpKY2xvdWQuZ29vZ2xlLmNv",
-            "bS9nby9vcmFjbGVkYXRhYmFzZS9hcGl2MS9vcmFjbGVkYXRhYmFzZXBiO29y",
-            "YWNsZWRhdGFiYXNlcGKqAh5Hb29nbGUuQ2xvdWQuT3JhY2xlRGF0YWJhc2Uu",
-            "VjHKAh5Hb29nbGVcQ2xvdWRcT3JhY2xlRGF0YWJhc2VcVjHqAiFHb29nbGU6",
-            "OkNsb3VkOjpPcmFjbGVEYXRhYmFzZTo6VjFiBnByb3RvMw=="));
+            "cl92ZXJzaW9uGBsgASgJQgPgQQMSSAoNY29tcHV0ZV9tb2RlbBgfIAEoDjIs",
+            "Lmdvb2dsZS5jbG91ZC5vcmFjbGVkYXRhYmFzZS52MS5Db21wdXRlTW9kZWxC",
+            "A+BBAxIhChRkYXRhYmFzZV9zZXJ2ZXJfdHlwZRgdIAEoCUID4EEDEiAKE3N0",
+            "b3JhZ2Vfc2VydmVyX3R5cGUYHiABKAlCA+BBAyKXAQoFU3RhdGUSFQoRU1RB",
+            "VEVfVU5TUEVDSUZJRUQQABIQCgxQUk9WSVNJT05JTkcQARINCglBVkFJTEFC",
+            "TEUQAhIMCghVUERBVElORxADEg8KC1RFUk1JTkFUSU5HEAQSDgoKVEVSTUlO",
+            "QVRFRBAFEgoKBkZBSUxFRBAGEhsKF01BSU5URU5BTkNFX0lOX1BST0dSRVNT",
+            "EAcipQUKEU1haW50ZW5hbmNlV2luZG93EmYKCnByZWZlcmVuY2UYASABKA4y",
+            "TS5nb29nbGUuY2xvdWQub3JhY2xlZGF0YWJhc2UudjEuTWFpbnRlbmFuY2VX",
+            "aW5kb3cuTWFpbnRlbmFuY2VXaW5kb3dQcmVmZXJlbmNlQgPgQQESJwoGbW9u",
+            "dGhzGAIgAygOMhIuZ29vZ2xlLnR5cGUuTW9udGhCA+BBARIbCg53ZWVrc19v",
+            "Zl9tb250aBgDIAMoBUID4EEBEjEKDGRheXNfb2Zfd2VlaxgEIAMoDjIWLmdv",
+            "b2dsZS50eXBlLkRheU9mV2Vla0ID4EEBEhkKDGhvdXJzX29mX2RheRgFIAMo",
+            "BUID4EEBEhsKDmxlYWRfdGltZV93ZWVrGAYgASgFQgPgQQESWgoNcGF0Y2hp",
+            "bmdfbW9kZRgHIAEoDjI+Lmdvb2dsZS5jbG91ZC5vcmFjbGVkYXRhYmFzZS52",
+            "MS5NYWludGVuYW5jZVdpbmRvdy5QYXRjaGluZ01vZGVCA+BBARInChpjdXN0",
+            "b21fYWN0aW9uX3RpbWVvdXRfbWlucxgIIAEoBUID4EEBEi0KIGlzX2N1c3Rv",
+            "bV9hY3Rpb25fdGltZW91dF9lbmFibGVkGAkgASgIQgPgQQEidgobTWFpbnRl",
+            "bmFuY2VXaW5kb3dQcmVmZXJlbmNlEi0KKU1BSU5URU5BTkNFX1dJTkRPV19Q",
+            "UkVGRVJFTkNFX1VOU1BFQ0lGSUVEEAASFQoRQ1VTVE9NX1BSRUZFUkVOQ0UQ",
+            "ARIRCg1OT19QUkVGRVJFTkNFEAIiSwoMUGF0Y2hpbmdNb2RlEh0KGVBBVENI",
+            "SU5HX01PREVfVU5TUEVDSUZJRUQQABILCgdST0xMSU5HEAESDwoLTk9OX1JP",
+            "TExJTkcQAkL5AQoiY29tLmdvb2dsZS5jbG91ZC5vcmFjbGVkYXRhYmFzZS52",
+            "MUIfQ2xvdWRFeGFkYXRhSW5mcmFzdHJ1Y3R1cmVQcm90b1ABWkpjbG91ZC5n",
+            "b29nbGUuY29tL2dvL29yYWNsZWRhdGFiYXNlL2FwaXYxL29yYWNsZWRhdGFi",
+            "YXNlcGI7b3JhY2xlZGF0YWJhc2VwYqoCHkdvb2dsZS5DbG91ZC5PcmFjbGVE",
+            "YXRhYmFzZS5WMcoCHkdvb2dsZVxDbG91ZFxPcmFjbGVEYXRhYmFzZVxWMeoC",
+            "IUdvb2dsZTo6Q2xvdWQ6Ok9yYWNsZURhdGFiYXNlOjpWMWIGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Cloud.OracleDatabase.V1.CommonReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, global::Google.Type.DayofweekReflection.Descriptor, global::Google.Type.MonthReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.OracleDatabase.V1.CloudExadataInfrastructure), global::Google.Cloud.OracleDatabase.V1.CloudExadataInfrastructure.Parser, new[]{ "Name", "DisplayName", "GcpOracleZone", "EntitlementId", "Properties", "Labels", "CreateTime" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { null, }),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.OracleDatabase.V1.CloudExadataInfrastructureProperties), global::Google.Cloud.OracleDatabase.V1.CloudExadataInfrastructureProperties.Parser, new[]{ "Ocid", "ComputeCount", "StorageCount", "TotalStorageSizeGb", "AvailableStorageSizeGb", "MaintenanceWindow", "State", "Shape", "OciUrl", "CpuCount", "MaxCpuCount", "MemorySizeGb", "MaxMemoryGb", "DbNodeStorageSizeGb", "MaxDbNodeStorageSizeGb", "DataStorageSizeTb", "MaxDataStorageTb", "ActivatedStorageCount", "AdditionalStorageCount", "DbServerVersion", "StorageServerVersion", "NextMaintenanceRunId", "NextMaintenanceRunTime", "NextSecurityMaintenanceRunTime", "CustomerContacts", "MonthlyStorageServerVersion", "MonthlyDbServerVersion" }, null, new[]{ typeof(global::Google.Cloud.OracleDatabase.V1.CloudExadataInfrastructureProperties.Types.State) }, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.OracleDatabase.V1.CloudExadataInfrastructureProperties), global::Google.Cloud.OracleDatabase.V1.CloudExadataInfrastructureProperties.Parser, new[]{ "Ocid", "ComputeCount", "StorageCount", "TotalStorageSizeGb", "AvailableStorageSizeGb", "MaintenanceWindow", "State", "Shape", "OciUrl", "CpuCount", "MaxCpuCount", "MemorySizeGb", "MaxMemoryGb", "DbNodeStorageSizeGb", "MaxDbNodeStorageSizeGb", "DataStorageSizeTb", "MaxDataStorageTb", "ActivatedStorageCount", "AdditionalStorageCount", "DbServerVersion", "StorageServerVersion", "NextMaintenanceRunId", "NextMaintenanceRunTime", "NextSecurityMaintenanceRunTime", "CustomerContacts", "MonthlyStorageServerVersion", "MonthlyDbServerVersion", "ComputeModel", "DatabaseServerType", "StorageServerType" }, null, new[]{ typeof(global::Google.Cloud.OracleDatabase.V1.CloudExadataInfrastructureProperties.Types.State) }, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.OracleDatabase.V1.MaintenanceWindow), global::Google.Cloud.OracleDatabase.V1.MaintenanceWindow.Parser, new[]{ "Preference", "Months", "WeeksOfMonth", "DaysOfWeek", "HoursOfDay", "LeadTimeWeek", "PatchingMode", "CustomActionTimeoutMins", "IsCustomActionTimeoutEnabled" }, null, new[]{ typeof(global::Google.Cloud.OracleDatabase.V1.MaintenanceWindow.Types.MaintenanceWindowPreference), typeof(global::Google.Cloud.OracleDatabase.V1.MaintenanceWindow.Types.PatchingMode) }, null, null)
           }));
     }
@@ -198,7 +201,9 @@ namespace Google.Cloud.OracleDatabase.V1 {
     public const int GcpOracleZoneFieldNumber = 8;
     private string gcpOracleZone_ = "";
     /// <summary>
-    /// Optional. Google Cloud Platform location where Oracle Exadata is hosted.
+    /// Optional. The GCP Oracle zone where Oracle Exadata Infrastructure is
+    /// hosted. Example: us-east4-b-r2. If not specified, the system will pick a
+    /// zone based on availability.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -619,6 +624,9 @@ namespace Google.Cloud.OracleDatabase.V1 {
       customerContacts_ = other.customerContacts_.Clone();
       monthlyStorageServerVersion_ = other.monthlyStorageServerVersion_;
       monthlyDbServerVersion_ = other.monthlyDbServerVersion_;
+      computeModel_ = other.computeModel_;
+      databaseServerType_ = other.databaseServerType_;
+      storageServerType_ = other.storageServerType_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -1043,6 +1051,51 @@ namespace Google.Cloud.OracleDatabase.V1 {
       }
     }
 
+    /// <summary>Field number for the "compute_model" field.</summary>
+    public const int ComputeModelFieldNumber = 31;
+    private global::Google.Cloud.OracleDatabase.V1.ComputeModel computeModel_ = global::Google.Cloud.OracleDatabase.V1.ComputeModel.Unspecified;
+    /// <summary>
+    /// Output only. The compute model of the Exadata Infrastructure.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Cloud.OracleDatabase.V1.ComputeModel ComputeModel {
+      get { return computeModel_; }
+      set {
+        computeModel_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "database_server_type" field.</summary>
+    public const int DatabaseServerTypeFieldNumber = 29;
+    private string databaseServerType_ = "";
+    /// <summary>
+    /// Output only. The database server type of the Exadata Infrastructure.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string DatabaseServerType {
+      get { return databaseServerType_; }
+      set {
+        databaseServerType_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "storage_server_type" field.</summary>
+    public const int StorageServerTypeFieldNumber = 30;
+    private string storageServerType_ = "";
+    /// <summary>
+    /// Output only. The storage server type of the Exadata Infrastructure.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string StorageServerType {
+      get { return storageServerType_; }
+      set {
+        storageServerType_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
@@ -1085,6 +1138,9 @@ namespace Google.Cloud.OracleDatabase.V1 {
       if(!customerContacts_.Equals(other.customerContacts_)) return false;
       if (MonthlyStorageServerVersion != other.MonthlyStorageServerVersion) return false;
       if (MonthlyDbServerVersion != other.MonthlyDbServerVersion) return false;
+      if (ComputeModel != other.ComputeModel) return false;
+      if (DatabaseServerType != other.DatabaseServerType) return false;
+      if (StorageServerType != other.StorageServerType) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -1119,6 +1175,9 @@ namespace Google.Cloud.OracleDatabase.V1 {
       hash ^= customerContacts_.GetHashCode();
       if (MonthlyStorageServerVersion.Length != 0) hash ^= MonthlyStorageServerVersion.GetHashCode();
       if (MonthlyDbServerVersion.Length != 0) hash ^= MonthlyDbServerVersion.GetHashCode();
+      if (ComputeModel != global::Google.Cloud.OracleDatabase.V1.ComputeModel.Unspecified) hash ^= ComputeModel.GetHashCode();
+      if (DatabaseServerType.Length != 0) hash ^= DatabaseServerType.GetHashCode();
+      if (StorageServerType.Length != 0) hash ^= StorageServerType.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -1242,6 +1301,18 @@ namespace Google.Cloud.OracleDatabase.V1 {
         output.WriteRawTag(218, 1);
         output.WriteString(MonthlyDbServerVersion);
       }
+      if (DatabaseServerType.Length != 0) {
+        output.WriteRawTag(234, 1);
+        output.WriteString(DatabaseServerType);
+      }
+      if (StorageServerType.Length != 0) {
+        output.WriteRawTag(242, 1);
+        output.WriteString(StorageServerType);
+      }
+      if (ComputeModel != global::Google.Cloud.OracleDatabase.V1.ComputeModel.Unspecified) {
+        output.WriteRawTag(248, 1);
+        output.WriteEnum((int) ComputeModel);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -1357,6 +1428,18 @@ namespace Google.Cloud.OracleDatabase.V1 {
         output.WriteRawTag(218, 1);
         output.WriteString(MonthlyDbServerVersion);
       }
+      if (DatabaseServerType.Length != 0) {
+        output.WriteRawTag(234, 1);
+        output.WriteString(DatabaseServerType);
+      }
+      if (StorageServerType.Length != 0) {
+        output.WriteRawTag(242, 1);
+        output.WriteString(StorageServerType);
+      }
+      if (ComputeModel != global::Google.Cloud.OracleDatabase.V1.ComputeModel.Unspecified) {
+        output.WriteRawTag(248, 1);
+        output.WriteEnum((int) ComputeModel);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -1445,6 +1528,15 @@ namespace Google.Cloud.OracleDatabase.V1 {
       }
       if (MonthlyDbServerVersion.Length != 0) {
         size += 2 + pb::CodedOutputStream.ComputeStringSize(MonthlyDbServerVersion);
+      }
+      if (ComputeModel != global::Google.Cloud.OracleDatabase.V1.ComputeModel.Unspecified) {
+        size += 2 + pb::CodedOutputStream.ComputeEnumSize((int) ComputeModel);
+      }
+      if (DatabaseServerType.Length != 0) {
+        size += 2 + pb::CodedOutputStream.ComputeStringSize(DatabaseServerType);
+      }
+      if (StorageServerType.Length != 0) {
+        size += 2 + pb::CodedOutputStream.ComputeStringSize(StorageServerType);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -1545,6 +1637,15 @@ namespace Google.Cloud.OracleDatabase.V1 {
       }
       if (other.MonthlyDbServerVersion.Length != 0) {
         MonthlyDbServerVersion = other.MonthlyDbServerVersion;
+      }
+      if (other.ComputeModel != global::Google.Cloud.OracleDatabase.V1.ComputeModel.Unspecified) {
+        ComputeModel = other.ComputeModel;
+      }
+      if (other.DatabaseServerType.Length != 0) {
+        DatabaseServerType = other.DatabaseServerType;
+      }
+      if (other.StorageServerType.Length != 0) {
+        StorageServerType = other.StorageServerType;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -1678,6 +1779,18 @@ namespace Google.Cloud.OracleDatabase.V1 {
             MonthlyDbServerVersion = input.ReadString();
             break;
           }
+          case 234: {
+            DatabaseServerType = input.ReadString();
+            break;
+          }
+          case 242: {
+            StorageServerType = input.ReadString();
+            break;
+          }
+          case 248: {
+            ComputeModel = (global::Google.Cloud.OracleDatabase.V1.ComputeModel) input.ReadEnum();
+            break;
+          }
         }
       }
     #endif
@@ -1808,6 +1921,18 @@ namespace Google.Cloud.OracleDatabase.V1 {
           }
           case 218: {
             MonthlyDbServerVersion = input.ReadString();
+            break;
+          }
+          case 234: {
+            DatabaseServerType = input.ReadString();
+            break;
+          }
+          case 242: {
+            StorageServerType = input.ReadString();
+            break;
+          }
+          case 248: {
+            ComputeModel = (global::Google.Cloud.OracleDatabase.V1.ComputeModel) input.ReadEnum();
             break;
           }
         }
