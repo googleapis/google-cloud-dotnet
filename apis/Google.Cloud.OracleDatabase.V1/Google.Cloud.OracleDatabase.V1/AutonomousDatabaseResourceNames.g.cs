@@ -15,6 +15,7 @@
 // Generated code. DO NOT EDIT!
 
 #pragma warning disable CS8981
+using gagr = Google.Api.Gax.ResourceNames;
 using gax = Google.Api.Gax;
 using gcov = Google.Cloud.OracleDatabase.V1;
 using sys = System;
@@ -310,6 +311,67 @@ namespace Google.Cloud.OracleDatabase.V1
         {
             get => string.IsNullOrEmpty(Network) ? null : NetworkName.Parse(Network, allowUnparsed: true);
             set => Network = value?.ToString() ?? "";
+        }
+
+        /// <summary>
+        /// <see cref="gcov::AutonomousDatabaseName"/>-typed view over the <see cref="PeerAutonomousDatabases"/>
+        /// resource name property.
+        /// </summary>
+        public gax::ResourceNameList<gcov::AutonomousDatabaseName> PeerAutonomousDatabasesAsAutonomousDatabaseNames
+        {
+            get => new gax::ResourceNameList<gcov::AutonomousDatabaseName>(PeerAutonomousDatabases, s => string.IsNullOrEmpty(s) ? null : gcov::AutonomousDatabaseName.Parse(s, allowUnparsed: true));
+        }
+
+        /// <summary>
+        /// <see cref="gagr::LocationName"/>-typed view over the <see cref="DisasterRecoverySupportedLocations"/>
+        /// resource name property.
+        /// </summary>
+        public gax::ResourceNameList<gagr::LocationName> DisasterRecoverySupportedLocationsAsLocationNames
+        {
+            get => new gax::ResourceNameList<gagr::LocationName>(DisasterRecoverySupportedLocations, s => string.IsNullOrEmpty(s) ? null : gagr::LocationName.Parse(s, allowUnparsed: true));
+        }
+
+        /// <summary>
+        /// <see cref="OdbNetworkName"/>-typed view over the <see cref="OdbNetwork"/> resource name property.
+        /// </summary>
+        public OdbNetworkName OdbNetworkAsOdbNetworkName
+        {
+            get => string.IsNullOrEmpty(OdbNetwork) ? null : OdbNetworkName.Parse(OdbNetwork, allowUnparsed: true);
+            set => OdbNetwork = value?.ToString() ?? "";
+        }
+
+        /// <summary>
+        /// <see cref="OdbSubnetName"/>-typed view over the <see cref="OdbSubnet"/> resource name property.
+        /// </summary>
+        public OdbSubnetName OdbSubnetAsOdbSubnetName
+        {
+            get => string.IsNullOrEmpty(OdbSubnet) ? null : OdbSubnetName.Parse(OdbSubnet, allowUnparsed: true);
+            set => OdbSubnet = value?.ToString() ?? "";
+        }
+    }
+
+    public partial class SourceConfig
+    {
+        /// <summary>
+        /// <see cref="AutonomousDatabaseName"/>-typed view over the <see cref="AutonomousDatabase"/> resource name
+        /// property.
+        /// </summary>
+        public AutonomousDatabaseName AutonomousDatabaseAsAutonomousDatabaseName
+        {
+            get => string.IsNullOrEmpty(AutonomousDatabase) ? null : AutonomousDatabaseName.Parse(AutonomousDatabase, allowUnparsed: true);
+            set => AutonomousDatabase = value?.ToString() ?? "";
+        }
+    }
+
+    public partial class EncryptionKey
+    {
+        /// <summary>
+        /// <see cref="CryptoKeyName"/>-typed view over the <see cref="KmsKey"/> resource name property.
+        /// </summary>
+        public CryptoKeyName KmsKeyAsCryptoKeyName
+        {
+            get => string.IsNullOrEmpty(KmsKey) ? null : CryptoKeyName.Parse(KmsKey, allowUnparsed: true);
+            set => KmsKey = value?.ToString() ?? "";
         }
     }
 }

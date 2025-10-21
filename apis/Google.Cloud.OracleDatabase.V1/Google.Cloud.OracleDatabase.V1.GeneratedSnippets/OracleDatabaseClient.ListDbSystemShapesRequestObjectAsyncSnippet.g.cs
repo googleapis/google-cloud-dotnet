@@ -42,6 +42,7 @@ namespace GoogleCSharpSnippets
             ListDbSystemShapesRequest request = new ListDbSystemShapesRequest
             {
                 ParentAsLocationName = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
+                Filter = "",
             };
             // Make the request
             PagedAsyncEnumerable<ListDbSystemShapesResponse, DbSystemShape> response = oracleDatabaseClient.ListDbSystemShapesAsync(request);

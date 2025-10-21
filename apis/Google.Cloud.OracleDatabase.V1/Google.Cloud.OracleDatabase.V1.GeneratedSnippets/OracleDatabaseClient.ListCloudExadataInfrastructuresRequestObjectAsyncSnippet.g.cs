@@ -42,6 +42,8 @@ namespace GoogleCSharpSnippets
             ListCloudExadataInfrastructuresRequest request = new ListCloudExadataInfrastructuresRequest
             {
                 ParentAsLocationName = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
+                Filter = "",
+                OrderBy = "",
             };
             // Make the request
             PagedAsyncEnumerable<ListCloudExadataInfrastructuresResponse, CloudExadataInfrastructure> response = oracleDatabaseClient.ListCloudExadataInfrastructuresAsync(request);

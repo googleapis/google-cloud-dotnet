@@ -72,14 +72,25 @@ namespace Google.Cloud.OracleDatabase.V1
             yield return AutonomousDbBackupReflection.Descriptor;
             yield return AutonomousDbVersionReflection.Descriptor;
             yield return CommonReflection.Descriptor;
+            yield return DatabaseReflection.Descriptor;
+            yield return DatabaseCharacterSetReflection.Descriptor;
             yield return DbNodeReflection.Descriptor;
             yield return DbServerReflection.Descriptor;
+            yield return DbSystemReflection.Descriptor;
+            yield return DbSystemInitialStorageSizeReflection.Descriptor;
             yield return DbSystemShapeReflection.Descriptor;
+            yield return DbVersionReflection.Descriptor;
             yield return EntitlementReflection.Descriptor;
             yield return ExadataInfraReflection.Descriptor;
+            yield return ExadbVmClusterReflection.Descriptor;
+            yield return ExascaleDbStorageVaultReflection.Descriptor;
             yield return GiVersionReflection.Descriptor;
             yield return LocationMetadataReflection.Descriptor;
+            yield return MinorVersionReflection.Descriptor;
+            yield return OdbNetworkReflection.Descriptor;
+            yield return OdbSubnetReflection.Descriptor;
             yield return OracledatabaseReflection.Descriptor;
+            yield return PluggableDatabaseReflection.Descriptor;
             yield return VmClusterReflection.Descriptor;
             yield return lro::OperationsReflection.Descriptor;
         }

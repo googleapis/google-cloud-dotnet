@@ -16,14 +16,16 @@
 
 namespace GoogleCSharpSnippets
 {
-    // [START oracledatabase_v1_generated_OracleDatabase_ListDbNodes_sync_flattened_resourceNames]
+    // [START oracledatabase_v1_generated_OracleDatabase_ListDbVersions_async_flattened]
     using Google.Api.Gax;
     using Google.Cloud.OracleDatabase.V1;
     using System;
+    using System.Linq;
+    using System.Threading.Tasks;
 
     public sealed partial class GeneratedOracleDatabaseClientSnippets
     {
-        /// <summary>Snippet for ListDbNodes</summary>
+        /// <summary>Snippet for ListDbVersionsAsync</summary>
         /// <remarks>
         /// This snippet has been automatically generated and should be regarded as a code template only.
         /// It will require modifications to work:
@@ -31,40 +33,40 @@ namespace GoogleCSharpSnippets
         /// - It may require specifying regional endpoints when creating the service client as shown in
         ///   https://cloud.google.com/dotnet/docs/reference/help/client-configuration#endpoint.
         /// </remarks>
-        public void ListDbNodesResourceNames()
+        public async Task ListDbVersionsAsync()
         {
             // Create client
-            OracleDatabaseClient oracleDatabaseClient = OracleDatabaseClient.Create();
+            OracleDatabaseClient oracleDatabaseClient = await OracleDatabaseClient.CreateAsync();
             // Initialize request argument(s)
-            CloudVmClusterName parent = CloudVmClusterName.FromProjectLocationCloudVmCluster("[PROJECT]", "[LOCATION]", "[CLOUD_VM_CLUSTER]");
+            string parent = "projects/[PROJECT]/locations/[LOCATION]";
             // Make the request
-            PagedEnumerable<ListDbNodesResponse, DbNode> response = oracleDatabaseClient.ListDbNodes(parent);
+            PagedAsyncEnumerable<ListDbVersionsResponse, DbVersion> response = oracleDatabaseClient.ListDbVersionsAsync(parent);
 
             // Iterate over all response items, lazily performing RPCs as required
-            foreach (DbNode item in response)
+            await response.ForEachAsync((DbVersion item) =>
             {
                 // Do something with each item
                 Console.WriteLine(item);
-            }
+            });
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            foreach (ListDbNodesResponse page in response.AsRawResponses())
+            await response.AsRawResponses().ForEachAsync((ListDbVersionsResponse page) =>
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
-                foreach (DbNode item in page)
+                foreach (DbVersion item in page)
                 {
                     // Do something with each item
                     Console.WriteLine(item);
                 }
-            }
+            });
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
-            Page<DbNode> singlePage = response.ReadPage(pageSize);
+            Page<DbVersion> singlePage = await response.ReadPageAsync(pageSize);
             // Do something with the page of items
             Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
-            foreach (DbNode item in singlePage)
+            foreach (DbVersion item in singlePage)
             {
                 // Do something with each item
                 Console.WriteLine(item);
@@ -73,5 +75,5 @@ namespace GoogleCSharpSnippets
             string nextPageToken = singlePage.NextPageToken;
         }
     }
-    // [END oracledatabase_v1_generated_OracleDatabase_ListDbNodes_sync_flattened_resourceNames]
+    // [END oracledatabase_v1_generated_OracleDatabase_ListDbVersions_async_flattened]
 }

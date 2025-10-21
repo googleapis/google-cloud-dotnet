@@ -16,8 +16,9 @@
 
 namespace GoogleCSharpSnippets
 {
-    // [START oracledatabase_v1_generated_OracleDatabase_ListDbNodes_async_flattened_resourceNames]
+    // [START oracledatabase_v1_generated_OracleDatabase_ListDbSystemInitialStorageSizes_async]
     using Google.Api.Gax;
+    using Google.Api.Gax.ResourceNames;
     using Google.Cloud.OracleDatabase.V1;
     using System;
     using System.Linq;
@@ -25,7 +26,7 @@ namespace GoogleCSharpSnippets
 
     public sealed partial class GeneratedOracleDatabaseClientSnippets
     {
-        /// <summary>Snippet for ListDbNodesAsync</summary>
+        /// <summary>Snippet for ListDbSystemInitialStorageSizesAsync</summary>
         /// <remarks>
         /// This snippet has been automatically generated and should be regarded as a code template only.
         /// It will require modifications to work:
@@ -33,28 +34,31 @@ namespace GoogleCSharpSnippets
         /// - It may require specifying regional endpoints when creating the service client as shown in
         ///   https://cloud.google.com/dotnet/docs/reference/help/client-configuration#endpoint.
         /// </remarks>
-        public async Task ListDbNodesResourceNamesAsync()
+        public async Task ListDbSystemInitialStorageSizesRequestObjectAsync()
         {
             // Create client
             OracleDatabaseClient oracleDatabaseClient = await OracleDatabaseClient.CreateAsync();
             // Initialize request argument(s)
-            CloudVmClusterName parent = CloudVmClusterName.FromProjectLocationCloudVmCluster("[PROJECT]", "[LOCATION]", "[CLOUD_VM_CLUSTER]");
+            ListDbSystemInitialStorageSizesRequest request = new ListDbSystemInitialStorageSizesRequest
+            {
+                ParentAsLocationName = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
+            };
             // Make the request
-            PagedAsyncEnumerable<ListDbNodesResponse, DbNode> response = oracleDatabaseClient.ListDbNodesAsync(parent);
+            PagedAsyncEnumerable<ListDbSystemInitialStorageSizesResponse, DbSystemInitialStorageSize> response = oracleDatabaseClient.ListDbSystemInitialStorageSizesAsync(request);
 
             // Iterate over all response items, lazily performing RPCs as required
-            await response.ForEachAsync((DbNode item) =>
+            await response.ForEachAsync((DbSystemInitialStorageSize item) =>
             {
                 // Do something with each item
                 Console.WriteLine(item);
             });
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            await response.AsRawResponses().ForEachAsync((ListDbNodesResponse page) =>
+            await response.AsRawResponses().ForEachAsync((ListDbSystemInitialStorageSizesResponse page) =>
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
-                foreach (DbNode item in page)
+                foreach (DbSystemInitialStorageSize item in page)
                 {
                     // Do something with each item
                     Console.WriteLine(item);
@@ -63,10 +67,10 @@ namespace GoogleCSharpSnippets
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
-            Page<DbNode> singlePage = await response.ReadPageAsync(pageSize);
+            Page<DbSystemInitialStorageSize> singlePage = await response.ReadPageAsync(pageSize);
             // Do something with the page of items
             Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
-            foreach (DbNode item in singlePage)
+            foreach (DbSystemInitialStorageSize item in singlePage)
             {
                 // Do something with each item
                 Console.WriteLine(item);
@@ -75,5 +79,5 @@ namespace GoogleCSharpSnippets
             string nextPageToken = singlePage.NextPageToken;
         }
     }
-    // [END oracledatabase_v1_generated_OracleDatabase_ListDbNodes_async_flattened_resourceNames]
+    // [END oracledatabase_v1_generated_OracleDatabase_ListDbSystemInitialStorageSizes_async]
 }
