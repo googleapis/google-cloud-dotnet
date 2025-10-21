@@ -1,5 +1,16 @@
 # Version history
 
+## Version 1.0.0-beta16, released 2025-10-21
+
+### New features
+
+- Add moved_place and moved_place_id to Place
+
+### Documentation improvements
+
+- Change comments in some fields in Places API
+- Clarify behavior of primary types and weekday text
+
 ## Version 1.0.0-beta15, released 2025-05-15
 
 ### New features
