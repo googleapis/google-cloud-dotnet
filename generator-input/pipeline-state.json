@@ -3054,10 +3054,10 @@
         },
         {
             "id": "Google.Cloud.Storage.V1",
-            "currentVersion": "4.14.0",
+            "currentVersion": "4.13.0",
             "generationAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
-            "releaseAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
-            "releaseTimestamp": "2025-10-21T16:39:31.539482715Z",
+            "releaseAutomationLevel": "AUTOMATION_LEVEL_BLOCKED",
+            "releaseTimestamp": "2025-04-25T08:34:24Z",
             "lastGeneratedCommit": "7e795c44dae36500aeb8715536eedc3597c56e5e",
             "lastReleasedCommit": "7e795c44dae36500aeb8715536eedc3597c56e5e",
             "sourcePaths": [
