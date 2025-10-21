@@ -3054,11 +3054,12 @@
         },
         {
             "id": "Google.Cloud.Storage.V1",
-            "currentVersion": "4.13.0",
+            "currentVersion": "4.14.0",
             "generationAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
             "releaseAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
-            "releaseTimestamp": "2025-04-25T08:34:24Z",
+            "releaseTimestamp": "2025-10-21T16:39:31.539482715Z",
             "lastGeneratedCommit": "7e795c44dae36500aeb8715536eedc3597c56e5e",
+            "lastReleasedCommit": "7e795c44dae36500aeb8715536eedc3597c56e5e",
             "sourcePaths": [
                 "apis/Google.Cloud.Storage.V1/Google.Cloud.Storage.V1"
             ]
@@ -3678,12 +3679,12 @@
         },
         {
             "id": "Google.Maps.Places.V1",
-            "currentVersion": "1.0.0-beta15",
+            "currentVersion": "1.0.0-beta16",
             "generationAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
             "releaseAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
-            "releaseTimestamp": "2025-05-15T08:06:08.740516254Z",
+            "releaseTimestamp": "2025-10-21T17:12:31.263251413Z",
             "lastGeneratedCommit": "1b5c44879f3281d05731a0bf3fc0345ff4463eed",
-            "lastReleasedCommit": "6942862f40d7a65b8e65ec491605d90d48458eaa",
+            "lastReleasedCommit": "1b5c44879f3281d05731a0bf3fc0345ff4463eed",
             "apiPaths": [
                 "google/maps/places/v1"
             ],
