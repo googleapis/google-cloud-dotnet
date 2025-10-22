@@ -183,4 +183,16 @@ namespace Google.Cloud.AIPlatform.V1Beta1
             set => Endpoint = value?.ToString() ?? "";
         }
     }
+
+    public partial class EmbedContentRequest
+    {
+        /// <summary>
+        /// <see cref="EndpointName"/>-typed view over the <see cref="Model"/> resource name property.
+        /// </summary>
+        public EndpointName ModelAsEndpointName
+        {
+            get => string.IsNullOrEmpty(Model) ? null : EndpointName.Parse(Model, allowUnparsed: true);
+            set => Model = value?.ToString() ?? "";
+        }
+    }
 }
