@@ -68,6 +68,7 @@ namespace Google.Cloud.AIPlatform.V1Beta1
             GenerateContentSettings = existing.GenerateContentSettings;
             StreamGenerateContentSettings = existing.StreamGenerateContentSettings;
             ChatCompletionsSettings = existing.ChatCompletionsSettings;
+            EmbedContentSettings = existing.EmbedContentSettings;
             LocationsSettings = existing.LocationsSettings;
             IAMPolicySettings = existing.IAMPolicySettings;
             OnCopy(existing);
@@ -290,6 +291,18 @@ namespace Google.Cloud.AIPlatform.V1Beta1
         /// </list>
         /// </remarks>
         public gaxgrpc::CallSettings ChatCompletionsSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>PredictionServiceClient.EmbedContent</c> and <c>PredictionServiceClient.EmbedContentAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>No timeout is applied.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings EmbedContentSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
 
         /// <summary>
         /// The settings to use for the <see cref="gcl::LocationsClient"/> associated with the client.
@@ -1973,6 +1986,145 @@ namespace Google.Cloud.AIPlatform.V1Beta1
                 EndpointAsEndpointName = gax::GaxPreconditions.CheckNotNull(endpoint, nameof(endpoint)),
                 HttpBody = httpBody,
             }, callSettings);
+
+        /// <summary>
+        /// Embed content with multimodal inputs.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual EmbedContentResponse EmbedContent(EmbedContentRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Embed content with multimodal inputs.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<EmbedContentResponse> EmbedContentAsync(EmbedContentRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Embed content with multimodal inputs.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<EmbedContentResponse> EmbedContentAsync(EmbedContentRequest request, st::CancellationToken cancellationToken) =>
+            EmbedContentAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Embed content with multimodal inputs.
+        /// </summary>
+        /// <param name="model">
+        /// Required. The name of the publisher model requested to serve the
+        /// prediction. Format:
+        /// `projects/{project}/locations/{location}/publishers/*/models/*`
+        /// </param>
+        /// <param name="content">
+        /// Required. Input content to be embedded. Required.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual EmbedContentResponse EmbedContent(string model, Content content, gaxgrpc::CallSettings callSettings = null) =>
+            EmbedContent(new EmbedContentRequest
+            {
+                Model = model ?? "",
+                Content = content,
+            }, callSettings);
+
+        /// <summary>
+        /// Embed content with multimodal inputs.
+        /// </summary>
+        /// <param name="model">
+        /// Required. The name of the publisher model requested to serve the
+        /// prediction. Format:
+        /// `projects/{project}/locations/{location}/publishers/*/models/*`
+        /// </param>
+        /// <param name="content">
+        /// Required. Input content to be embedded. Required.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<EmbedContentResponse> EmbedContentAsync(string model, Content content, gaxgrpc::CallSettings callSettings = null) =>
+            EmbedContentAsync(new EmbedContentRequest
+            {
+                Model = model ?? "",
+                Content = content,
+            }, callSettings);
+
+        /// <summary>
+        /// Embed content with multimodal inputs.
+        /// </summary>
+        /// <param name="model">
+        /// Required. The name of the publisher model requested to serve the
+        /// prediction. Format:
+        /// `projects/{project}/locations/{location}/publishers/*/models/*`
+        /// </param>
+        /// <param name="content">
+        /// Required. Input content to be embedded. Required.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<EmbedContentResponse> EmbedContentAsync(string model, Content content, st::CancellationToken cancellationToken) =>
+            EmbedContentAsync(model, content, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Embed content with multimodal inputs.
+        /// </summary>
+        /// <param name="model">
+        /// Required. The name of the publisher model requested to serve the
+        /// prediction. Format:
+        /// `projects/{project}/locations/{location}/publishers/*/models/*`
+        /// </param>
+        /// <param name="content">
+        /// Required. Input content to be embedded. Required.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual EmbedContentResponse EmbedContent(EndpointName model, Content content, gaxgrpc::CallSettings callSettings = null) =>
+            EmbedContent(new EmbedContentRequest
+            {
+                ModelAsEndpointName = model,
+                Content = content,
+            }, callSettings);
+
+        /// <summary>
+        /// Embed content with multimodal inputs.
+        /// </summary>
+        /// <param name="model">
+        /// Required. The name of the publisher model requested to serve the
+        /// prediction. Format:
+        /// `projects/{project}/locations/{location}/publishers/*/models/*`
+        /// </param>
+        /// <param name="content">
+        /// Required. Input content to be embedded. Required.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<EmbedContentResponse> EmbedContentAsync(EndpointName model, Content content, gaxgrpc::CallSettings callSettings = null) =>
+            EmbedContentAsync(new EmbedContentRequest
+            {
+                ModelAsEndpointName = model,
+                Content = content,
+            }, callSettings);
+
+        /// <summary>
+        /// Embed content with multimodal inputs.
+        /// </summary>
+        /// <param name="model">
+        /// Required. The name of the publisher model requested to serve the
+        /// prediction. Format:
+        /// `projects/{project}/locations/{location}/publishers/*/models/*`
+        /// </param>
+        /// <param name="content">
+        /// Required. Input content to be embedded. Required.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<EmbedContentResponse> EmbedContentAsync(EndpointName model, Content content, st::CancellationToken cancellationToken) =>
+            EmbedContentAsync(model, content, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
     }
 
     /// <summary>PredictionService client wrapper implementation, for convenient use.</summary>
@@ -2010,6 +2162,8 @@ namespace Google.Cloud.AIPlatform.V1Beta1
         private readonly gaxgrpc::ApiServerStreamingCall<GenerateContentRequest, GenerateContentResponse> _callStreamGenerateContent;
 
         private readonly gaxgrpc::ApiServerStreamingCall<ChatCompletionsRequest, ga::HttpBody> _callChatCompletions;
+
+        private readonly gaxgrpc::ApiCall<EmbedContentRequest, EmbedContentResponse> _callEmbedContent;
 
         /// <summary>
         /// Constructs a client wrapper for the PredictionService service, with the specified gRPC client and settings.
@@ -2073,6 +2227,9 @@ namespace Google.Cloud.AIPlatform.V1Beta1
             _callChatCompletions = clientHelper.BuildApiCall<ChatCompletionsRequest, ga::HttpBody>("ChatCompletions", grpcClient.ChatCompletions, effectiveSettings.ChatCompletionsSettings).WithGoogleRequestParam("endpoint", request => request.Endpoint);
             Modify_ApiCall(ref _callChatCompletions);
             Modify_ChatCompletionsApiCall(ref _callChatCompletions);
+            _callEmbedContent = clientHelper.BuildApiCall<EmbedContentRequest, EmbedContentResponse>("EmbedContent", grpcClient.EmbedContentAsync, grpcClient.EmbedContent, effectiveSettings.EmbedContentSettings).WithGoogleRequestParam("model", request => request.Model);
+            Modify_ApiCall(ref _callEmbedContent);
+            Modify_EmbedContentApiCall(ref _callEmbedContent);
             OnConstruction(grpcClient, effectiveSettings, clientHelper);
         }
 
@@ -2111,6 +2268,8 @@ namespace Google.Cloud.AIPlatform.V1Beta1
         partial void Modify_StreamGenerateContentApiCall(ref gaxgrpc::ApiServerStreamingCall<GenerateContentRequest, GenerateContentResponse> call);
 
         partial void Modify_ChatCompletionsApiCall(ref gaxgrpc::ApiServerStreamingCall<ChatCompletionsRequest, ga::HttpBody> call);
+
+        partial void Modify_EmbedContentApiCall(ref gaxgrpc::ApiCall<EmbedContentRequest, EmbedContentResponse> call);
 
         partial void OnConstruction(PredictionService.PredictionServiceClient grpcClient, PredictionServiceSettings effectiveSettings, gaxgrpc::ClientHelper clientHelper);
 
@@ -2158,6 +2317,8 @@ namespace Google.Cloud.AIPlatform.V1Beta1
         partial void Modify_GenerateContentRequest(ref GenerateContentRequest request, ref gaxgrpc::CallSettings settings);
 
         partial void Modify_ChatCompletionsRequest(ref ChatCompletionsRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_EmbedContentRequest(ref EmbedContentRequest request, ref gaxgrpc::CallSettings settings);
 
         /// <summary>
         /// Perform an online prediction.
@@ -2697,6 +2858,30 @@ namespace Google.Cloud.AIPlatform.V1Beta1
         {
             Modify_ChatCompletionsRequest(ref request, ref callSettings);
             return new ChatCompletionsStreamImpl(_callChatCompletions.Call(request, callSettings));
+        }
+
+        /// <summary>
+        /// Embed content with multimodal inputs.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override EmbedContentResponse EmbedContent(EmbedContentRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_EmbedContentRequest(ref request, ref callSettings);
+            return _callEmbedContent.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Embed content with multimodal inputs.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override stt::Task<EmbedContentResponse> EmbedContentAsync(EmbedContentRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_EmbedContentRequest(ref request, ref callSettings);
+            return _callEmbedContent.Async(request, callSettings);
         }
     }
 

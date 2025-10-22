@@ -111,6 +111,10 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
     static readonly grpc::Marshaller<global::Google.Cloud.AIPlatform.V1Beta1.GenerateContentResponse> __Marshaller_google_cloud_aiplatform_v1beta1_GenerateContentResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.AIPlatform.V1Beta1.GenerateContentResponse.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.AIPlatform.V1Beta1.ChatCompletionsRequest> __Marshaller_google_cloud_aiplatform_v1beta1_ChatCompletionsRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.AIPlatform.V1Beta1.ChatCompletionsRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.AIPlatform.V1Beta1.EmbedContentRequest> __Marshaller_google_cloud_aiplatform_v1beta1_EmbedContentRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.AIPlatform.V1Beta1.EmbedContentRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.AIPlatform.V1Beta1.EmbedContentResponse> __Marshaller_google_cloud_aiplatform_v1beta1_EmbedContentResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.AIPlatform.V1Beta1.EmbedContentResponse.Parser));
 
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.AIPlatform.V1Beta1.PredictRequest, global::Google.Cloud.AIPlatform.V1Beta1.PredictResponse> __Method_Predict = new grpc::Method<global::Google.Cloud.AIPlatform.V1Beta1.PredictRequest, global::Google.Cloud.AIPlatform.V1Beta1.PredictResponse>(
@@ -231,6 +235,14 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
         "ChatCompletions",
         __Marshaller_google_cloud_aiplatform_v1beta1_ChatCompletionsRequest,
         __Marshaller_google_api_HttpBody);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.AIPlatform.V1Beta1.EmbedContentRequest, global::Google.Cloud.AIPlatform.V1Beta1.EmbedContentResponse> __Method_EmbedContent = new grpc::Method<global::Google.Cloud.AIPlatform.V1Beta1.EmbedContentRequest, global::Google.Cloud.AIPlatform.V1Beta1.EmbedContentResponse>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "EmbedContent",
+        __Marshaller_google_cloud_aiplatform_v1beta1_EmbedContentRequest,
+        __Marshaller_google_cloud_aiplatform_v1beta1_EmbedContentResponse);
 
     /// <summary>Service descriptor</summary>
     public static global::Google.Protobuf.Reflection.ServiceDescriptor Descriptor
@@ -452,6 +464,18 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
       /// <returns>A task indicating completion of the handler.</returns>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task ChatCompletions(global::Google.Cloud.AIPlatform.V1Beta1.ChatCompletionsRequest request, grpc::IServerStreamWriter<global::Google.Api.HttpBody> responseStream, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Embed content with multimodal inputs.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.AIPlatform.V1Beta1.EmbedContentResponse> EmbedContent(global::Google.Cloud.AIPlatform.V1Beta1.EmbedContentRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
       }
@@ -1101,6 +1125,54 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
       {
         return CallInvoker.AsyncServerStreamingCall(__Method_ChatCompletions, null, options, request);
       }
+      /// <summary>
+      /// Embed content with multimodal inputs.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.AIPlatform.V1Beta1.EmbedContentResponse EmbedContent(global::Google.Cloud.AIPlatform.V1Beta1.EmbedContentRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return EmbedContent(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Embed content with multimodal inputs.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.AIPlatform.V1Beta1.EmbedContentResponse EmbedContent(global::Google.Cloud.AIPlatform.V1Beta1.EmbedContentRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_EmbedContent, null, options, request);
+      }
+      /// <summary>
+      /// Embed content with multimodal inputs.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.AIPlatform.V1Beta1.EmbedContentResponse> EmbedContentAsync(global::Google.Cloud.AIPlatform.V1Beta1.EmbedContentRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return EmbedContentAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Embed content with multimodal inputs.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.AIPlatform.V1Beta1.EmbedContentResponse> EmbedContentAsync(global::Google.Cloud.AIPlatform.V1Beta1.EmbedContentRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_EmbedContent, null, options, request);
+      }
       /// <summary>Creates a new instance of client from given <c>ClientBaseConfiguration</c>.</summary>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       protected override PredictionServiceClient NewInstance(ClientBaseConfiguration configuration)
@@ -1129,7 +1201,8 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
           .AddMethod(__Method_CountTokens, serviceImpl.CountTokens)
           .AddMethod(__Method_GenerateContent, serviceImpl.GenerateContent)
           .AddMethod(__Method_StreamGenerateContent, serviceImpl.StreamGenerateContent)
-          .AddMethod(__Method_ChatCompletions, serviceImpl.ChatCompletions).Build();
+          .AddMethod(__Method_ChatCompletions, serviceImpl.ChatCompletions)
+          .AddMethod(__Method_EmbedContent, serviceImpl.EmbedContent).Build();
     }
 
     /// <summary>Register service method with a service binder with or without implementation. Useful when customizing the service binding logic.
@@ -1154,6 +1227,7 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
       serviceBinder.AddMethod(__Method_GenerateContent, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.AIPlatform.V1Beta1.GenerateContentRequest, global::Google.Cloud.AIPlatform.V1Beta1.GenerateContentResponse>(serviceImpl.GenerateContent));
       serviceBinder.AddMethod(__Method_StreamGenerateContent, serviceImpl == null ? null : new grpc::ServerStreamingServerMethod<global::Google.Cloud.AIPlatform.V1Beta1.GenerateContentRequest, global::Google.Cloud.AIPlatform.V1Beta1.GenerateContentResponse>(serviceImpl.StreamGenerateContent));
       serviceBinder.AddMethod(__Method_ChatCompletions, serviceImpl == null ? null : new grpc::ServerStreamingServerMethod<global::Google.Cloud.AIPlatform.V1Beta1.ChatCompletionsRequest, global::Google.Api.HttpBody>(serviceImpl.ChatCompletions));
+      serviceBinder.AddMethod(__Method_EmbedContent, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.AIPlatform.V1Beta1.EmbedContentRequest, global::Google.Cloud.AIPlatform.V1Beta1.EmbedContentResponse>(serviceImpl.EmbedContent));
     }
 
   }
