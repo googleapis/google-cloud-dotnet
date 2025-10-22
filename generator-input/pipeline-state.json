@@ -1117,7 +1117,7 @@
             "generationAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
             "releaseAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
             "releaseTimestamp": "2025-07-22T07:58:29.449593799Z",
-            "lastGeneratedCommit": "a53e1e09d16d311ff6064d237abed3ddd7a5d1fe",
+            "lastGeneratedCommit": "94ccdfe4519e0ba817bd33aa22eb9c64f88a6874",
             "lastReleasedCommit": "a640ed837f82299e6ec7b805d2c111add7704a2e",
             "apiPaths": [
                 "google/container/v1"
