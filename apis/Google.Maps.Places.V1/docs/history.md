@@ -1,5 +1,12 @@
 # Version history
 
+## Version 1.0.0-beta17, released 2025-10-23
+
+### New features
+
+- Add Review.visitDate field to indicate when the review author visited
+- Add Place.consumerAlert field for suspicious review activity
+
 ## Version 1.0.0-beta16, released 2025-10-21
 
 ### New features
