@@ -28,7 +28,7 @@ namespace Google.Maps.Places.V1 {
             "bWFwcy5wbGFjZXMudjEaGWdvb2dsZS9hcGkvcmVzb3VyY2UucHJvdG8aJ2dv",
             "b2dsZS9tYXBzL3BsYWNlcy92MS9hdHRyaWJ1dGlvbi5wcm90bxofZ29vZ2xl",
             "L3Byb3RvYnVmL3RpbWVzdGFtcC5wcm90bxoWZ29vZ2xlL3R5cGUvZGF0ZS5w",
-            "cm90bxogZ29vZ2xlL3R5cGUvbG9jYWxpemVkX3RleHQucHJvdG8irgMKBlJl",
+            "cm90bxogZ29vZ2xlL3R5cGUvbG9jYWxpemVkX3RleHQucHJvdG8i1QMKBlJl",
             "dmlldxIMCgRuYW1lGAEgASgJEikKIXJlbGF0aXZlX3B1Ymxpc2hfdGltZV9k",
             "ZXNjcmlwdGlvbhgCIAEoCRIoCgR0ZXh0GAkgASgLMhouZ29vZ2xlLnR5cGUu",
             "TG9jYWxpemVkVGV4dBIxCg1vcmlnaW5hbF90ZXh0GAwgASgLMhouZ29vZ2xl",
@@ -36,17 +36,18 @@ namespace Google.Maps.Places.V1 {
             "X2F0dHJpYnV0aW9uGA0gASgLMiguZ29vZ2xlLm1hcHMucGxhY2VzLnYxLkF1",
             "dGhvckF0dHJpYnV0aW9uEjAKDHB1Ymxpc2hfdGltZRgOIAEoCzIaLmdvb2ds",
             "ZS5wcm90b2J1Zi5UaW1lc3RhbXASGAoQZmxhZ19jb250ZW50X3VyaRgPIAEo",
-            "CRIXCg9nb29nbGVfbWFwc191cmkYECABKAk6U+pBUAoccGxhY2VzLmdvb2ds",
-            "ZWFwaXMuY29tL1JldmlldxIfcGxhY2VzL3twbGFjZX0vcmV2aWV3cy97cmV2",
-            "aWV3fSoHcmV2aWV3czIGcmV2aWV3QpwBChljb20uZ29vZ2xlLm1hcHMucGxh",
-            "Y2VzLnYxQgtSZXZpZXdQcm90b1ABWjdjbG91ZC5nb29nbGUuY29tL2dvL21h",
-            "cHMvcGxhY2VzL2FwaXYxL3BsYWNlc3BiO3BsYWNlc3BiogIGR01QU1YxqgIV",
-            "R29vZ2xlLk1hcHMuUGxhY2VzLlYxygIVR29vZ2xlXE1hcHNcUGxhY2VzXFYx",
-            "YgZwcm90bzM="));
+            "CRIXCg9nb29nbGVfbWFwc191cmkYECABKAkSJQoKdmlzaXRfZGF0ZRgRIAEo",
+            "CzIRLmdvb2dsZS50eXBlLkRhdGU6U+pBUAoccGxhY2VzLmdvb2dsZWFwaXMu",
+            "Y29tL1JldmlldxIfcGxhY2VzL3twbGFjZX0vcmV2aWV3cy97cmV2aWV3fSoH",
+            "cmV2aWV3czIGcmV2aWV3QpwBChljb20uZ29vZ2xlLm1hcHMucGxhY2VzLnYx",
+            "QgtSZXZpZXdQcm90b1ABWjdjbG91ZC5nb29nbGUuY29tL2dvL21hcHMvcGxh",
+            "Y2VzL2FwaXYxL3BsYWNlc3BiO3BsYWNlc3BiogIGR01QU1YxqgIVR29vZ2xl",
+            "Lk1hcHMuUGxhY2VzLlYxygIVR29vZ2xlXE1hcHNcUGxhY2VzXFYxYgZwcm90",
+            "bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.ResourceReflection.Descriptor, global::Google.Maps.Places.V1.AttributionReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, global::Google.Type.DateReflection.Descriptor, global::Google.Type.LocalizedTextReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Maps.Places.V1.Review), global::Google.Maps.Places.V1.Review.Parser, new[]{ "Name", "RelativePublishTimeDescription", "Text", "OriginalText", "Rating", "AuthorAttribution", "PublishTime", "FlagContentUri", "GoogleMapsUri" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Maps.Places.V1.Review), global::Google.Maps.Places.V1.Review.Parser, new[]{ "Name", "RelativePublishTimeDescription", "Text", "OriginalText", "Rating", "AuthorAttribution", "PublishTime", "FlagContentUri", "GoogleMapsUri", "VisitDate" }, null, null, null, null)
           }));
     }
     #endregion
@@ -100,6 +101,7 @@ namespace Google.Maps.Places.V1 {
       publishTime_ = other.publishTime_ != null ? other.publishTime_.Clone() : null;
       flagContentUri_ = other.flagContentUri_;
       googleMapsUri_ = other.googleMapsUri_;
+      visitDate_ = other.visitDate_ != null ? other.visitDate_.Clone() : null;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -247,6 +249,22 @@ namespace Google.Maps.Places.V1 {
       }
     }
 
+    /// <summary>Field number for the "visit_date" field.</summary>
+    public const int VisitDateFieldNumber = 17;
+    private global::Google.Type.Date visitDate_;
+    /// <summary>
+    /// The date when the author visited the place. This is truncated to the year
+    /// and month of the visit.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Type.Date VisitDate {
+      get { return visitDate_; }
+      set {
+        visitDate_ = value;
+      }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
@@ -271,6 +289,7 @@ namespace Google.Maps.Places.V1 {
       if (!object.Equals(PublishTime, other.PublishTime)) return false;
       if (FlagContentUri != other.FlagContentUri) return false;
       if (GoogleMapsUri != other.GoogleMapsUri) return false;
+      if (!object.Equals(VisitDate, other.VisitDate)) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -287,6 +306,7 @@ namespace Google.Maps.Places.V1 {
       if (publishTime_ != null) hash ^= PublishTime.GetHashCode();
       if (FlagContentUri.Length != 0) hash ^= FlagContentUri.GetHashCode();
       if (GoogleMapsUri.Length != 0) hash ^= GoogleMapsUri.GetHashCode();
+      if (visitDate_ != null) hash ^= VisitDate.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -341,6 +361,10 @@ namespace Google.Maps.Places.V1 {
         output.WriteRawTag(130, 1);
         output.WriteString(GoogleMapsUri);
       }
+      if (visitDate_ != null) {
+        output.WriteRawTag(138, 1);
+        output.WriteMessage(VisitDate);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -387,6 +411,10 @@ namespace Google.Maps.Places.V1 {
         output.WriteRawTag(130, 1);
         output.WriteString(GoogleMapsUri);
       }
+      if (visitDate_ != null) {
+        output.WriteRawTag(138, 1);
+        output.WriteMessage(VisitDate);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -423,6 +451,9 @@ namespace Google.Maps.Places.V1 {
       }
       if (GoogleMapsUri.Length != 0) {
         size += 2 + pb::CodedOutputStream.ComputeStringSize(GoogleMapsUri);
+      }
+      if (visitDate_ != null) {
+        size += 2 + pb::CodedOutputStream.ComputeMessageSize(VisitDate);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -474,6 +505,12 @@ namespace Google.Maps.Places.V1 {
       }
       if (other.GoogleMapsUri.Length != 0) {
         GoogleMapsUri = other.GoogleMapsUri;
+      }
+      if (other.visitDate_ != null) {
+        if (visitDate_ == null) {
+          VisitDate = new global::Google.Type.Date();
+        }
+        VisitDate.MergeFrom(other.VisitDate);
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -538,6 +575,13 @@ namespace Google.Maps.Places.V1 {
             GoogleMapsUri = input.ReadString();
             break;
           }
+          case 138: {
+            if (visitDate_ == null) {
+              VisitDate = new global::Google.Type.Date();
+            }
+            input.ReadMessage(VisitDate);
+            break;
+          }
         }
       }
     #endif
@@ -599,6 +643,13 @@ namespace Google.Maps.Places.V1 {
           }
           case 130: {
             GoogleMapsUri = input.ReadString();
+            break;
+          }
+          case 138: {
+            if (visitDate_ == null) {
+              VisitDate = new global::Google.Type.Date();
+            }
+            input.ReadMessage(VisitDate);
             break;
           }
         }
