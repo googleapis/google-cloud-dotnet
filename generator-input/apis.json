@@ -26,7 +26,7 @@
       "id": "Google.Ads.DataManager.V1",
       "version": "1.0.0-beta00",
       "type": "grpc",
-      "productName": "Data Manager",
+      "productName": "Ads Data Manager",
       "productUrl": "https://developers.google.com/data-manager",
       "description": "A unified ingestion API for data partners, agencies and advertisers to connect first-party data across Google advertising products.",
       "tags": [],
