@@ -38,10 +38,10 @@ namespace GoogleCSharpSnippets
             // Initialize request argument(s)
             FetchReportResultRowsRequest request = new FetchReportResultRowsRequest { Name = "", };
             // Make the request
-            PagedEnumerable<FetchReportResultRowsResponse, Report.Types.DataTable.Types.Row> response = reportServiceClient.FetchReportResultRows(request);
+            PagedEnumerable<FetchReportResultRowsResponse, ReportDataTable.Types.Row> response = reportServiceClient.FetchReportResultRows(request);
 
             // Iterate over all response items, lazily performing RPCs as required
-            foreach (Report.Types.DataTable.Types.Row item in response)
+            foreach (ReportDataTable.Types.Row item in response)
             {
                 // Do something with each item
                 Console.WriteLine(item);
@@ -52,7 +52,7 @@ namespace GoogleCSharpSnippets
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
-                foreach (Report.Types.DataTable.Types.Row item in page)
+                foreach (ReportDataTable.Types.Row item in page)
                 {
                     // Do something with each item
                     Console.WriteLine(item);
@@ -61,10 +61,10 @@ namespace GoogleCSharpSnippets
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
-            Page<Report.Types.DataTable.Types.Row> singlePage = response.ReadPage(pageSize);
+            Page<ReportDataTable.Types.Row> singlePage = response.ReadPage(pageSize);
             // Do something with the page of items
             Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
-            foreach (Report.Types.DataTable.Types.Row item in singlePage)
+            foreach (ReportDataTable.Types.Row item in singlePage)
             {
                 // Do something with each item
                 Console.WriteLine(item);

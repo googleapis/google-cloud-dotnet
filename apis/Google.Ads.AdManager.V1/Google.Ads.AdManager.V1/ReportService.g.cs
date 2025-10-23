@@ -25,74 +25,75 @@ namespace Google.Ads.AdManager.V1 {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "Cixnb29nbGUvYWRzL2FkbWFuYWdlci92MS9yZXBvcnRfc2VydmljZS5wcm90",
-            "bxIXZ29vZ2xlLmFkcy5hZG1hbmFnZXIudjEaLWdvb2dsZS9hZHMvYWRtYW5h",
-            "Z2VyL3YxL3JlcG9ydF9tZXNzYWdlcy5wcm90bxocZ29vZ2xlL2FwaS9hbm5v",
-            "dGF0aW9ucy5wcm90bxoXZ29vZ2xlL2FwaS9jbGllbnQucHJvdG8aH2dvb2ds",
-            "ZS9hcGkvZmllbGRfYmVoYXZpb3IucHJvdG8aGWdvb2dsZS9hcGkvcmVzb3Vy",
-            "Y2UucHJvdG8aI2dvb2dsZS9sb25ncnVubmluZy9vcGVyYXRpb25zLnByb3Rv",
-            "GiBnb29nbGUvcHJvdG9idWYvZmllbGRfbWFzay5wcm90bxofZ29vZ2xlL3By",
-            "b3RvYnVmL3RpbWVzdGFtcC5wcm90byJJChBSdW5SZXBvcnRSZXF1ZXN0EjUK",
-            "BG5hbWUYASABKAlCJ+BBAvpBIQofYWRtYW5hZ2VyLmdvb2dsZWFwaXMuY29t",
-            "L1JlcG9ydCJjChFSdW5SZXBvcnRNZXRhZGF0YRIYChBwZXJjZW50X2NvbXBs",
-            "ZXRlGAIgASgFEjQKBnJlcG9ydBgEIAEoCUIk+kEhCh9hZG1hbmFnZXIuZ29v",
-            "Z2xlYXBpcy5jb20vUmVwb3J0IioKEVJ1blJlcG9ydFJlc3BvbnNlEhUKDXJl",
-            "cG9ydF9yZXN1bHQYASABKAkiSQoQR2V0UmVwb3J0UmVxdWVzdBI1CgRuYW1l",
-            "GAEgASgJQifgQQL6QSEKH2FkbWFuYWdlci5nb29nbGVhcGlzLmNvbS9SZXBv",
-            "cnQivgEKEkxpc3RSZXBvcnRzUmVxdWVzdBI4CgZwYXJlbnQYASABKAlCKOBB",
-            "AvpBIgogYWRtYW5hZ2VyLmdvb2dsZWFwaXMuY29tL05ldHdvcmsSFgoJcGFn",
-            "ZV9zaXplGAIgASgFQgPgQQESFwoKcGFnZV90b2tlbhgDIAEoCUID4EEBEhMK",
-            "BmZpbHRlchgEIAEoCUID4EEBEhUKCG9yZGVyX2J5GAUgASgJQgPgQQESEQoE",
-            "c2tpcBgGIAEoBUID4EEBInQKE0xpc3RSZXBvcnRzUmVzcG9uc2USMAoHcmVw",
-            "b3J0cxgBIAMoCzIfLmdvb2dsZS5hZHMuYWRtYW5hZ2VyLnYxLlJlcG9ydBIX",
-            "Cg9uZXh0X3BhZ2VfdG9rZW4YAiABKAkSEgoKdG90YWxfc2l6ZRgDIAEoBSKF",
-            "AQoTQ3JlYXRlUmVwb3J0UmVxdWVzdBI4CgZwYXJlbnQYASABKAlCKOBBAvpB",
-            "IgogYWRtYW5hZ2VyLmdvb2dsZWFwaXMuY29tL05ldHdvcmsSNAoGcmVwb3J0",
-            "GAIgASgLMh8uZ29vZ2xlLmFkcy5hZG1hbmFnZXIudjEuUmVwb3J0QgPgQQIi",
-            "gQEKE1VwZGF0ZVJlcG9ydFJlcXVlc3QSNAoGcmVwb3J0GAEgASgLMh8uZ29v",
-            "Z2xlLmFkcy5hZG1hbmFnZXIudjEuUmVwb3J0QgPgQQISNAoLdXBkYXRlX21h",
-            "c2sYAiABKAsyGi5nb29nbGUucHJvdG9idWYuRmllbGRNYXNrQgPgQQIiXQoc",
-            "RmV0Y2hSZXBvcnRSZXN1bHRSb3dzUmVxdWVzdBIMCgRuYW1lGAEgASgJEhYK",
+            "bxIXZ29vZ2xlLmFkcy5hZG1hbmFnZXIudjEaL2dvb2dsZS9hZHMvYWRtYW5h",
+            "Z2VyL3YxL3JlcG9ydF9kZWZpbml0aW9uLnByb3RvGi1nb29nbGUvYWRzL2Fk",
+            "bWFuYWdlci92MS9yZXBvcnRfbWVzc2FnZXMucHJvdG8aHGdvb2dsZS9hcGkv",
+            "YW5ub3RhdGlvbnMucHJvdG8aF2dvb2dsZS9hcGkvY2xpZW50LnByb3RvGh9n",
+            "b29nbGUvYXBpL2ZpZWxkX2JlaGF2aW9yLnByb3RvGhlnb29nbGUvYXBpL3Jl",
+            "c291cmNlLnByb3RvGiNnb29nbGUvbG9uZ3J1bm5pbmcvb3BlcmF0aW9ucy5w",
+            "cm90bxogZ29vZ2xlL3Byb3RvYnVmL2ZpZWxkX21hc2sucHJvdG8aH2dvb2ds",
+            "ZS9wcm90b2J1Zi90aW1lc3RhbXAucHJvdG8iSQoQUnVuUmVwb3J0UmVxdWVz",
+            "dBI1CgRuYW1lGAEgASgJQifgQQL6QSEKH2FkbWFuYWdlci5nb29nbGVhcGlz",
+            "LmNvbS9SZXBvcnQiYwoRUnVuUmVwb3J0TWV0YWRhdGESGAoQcGVyY2VudF9j",
+            "b21wbGV0ZRgCIAEoBRI0CgZyZXBvcnQYBCABKAlCJPpBIQofYWRtYW5hZ2Vy",
+            "Lmdvb2dsZWFwaXMuY29tL1JlcG9ydCIqChFSdW5SZXBvcnRSZXNwb25zZRIV",
+            "Cg1yZXBvcnRfcmVzdWx0GAEgASgJIkkKEEdldFJlcG9ydFJlcXVlc3QSNQoE",
+            "bmFtZRgBIAEoCUIn4EEC+kEhCh9hZG1hbmFnZXIuZ29vZ2xlYXBpcy5jb20v",
+            "UmVwb3J0Ir4BChJMaXN0UmVwb3J0c1JlcXVlc3QSOAoGcGFyZW50GAEgASgJ",
+            "QijgQQL6QSIKIGFkbWFuYWdlci5nb29nbGVhcGlzLmNvbS9OZXR3b3JrEhYK",
             "CXBhZ2Vfc2l6ZRgCIAEoBUID4EEBEhcKCnBhZ2VfdG9rZW4YAyABKAlCA+BB",
-            "ASLlAgodRmV0Y2hSZXBvcnRSZXN1bHRSb3dzUmVzcG9uc2USOwoEcm93cxgB",
-            "IAMoCzItLmdvb2dsZS5hZHMuYWRtYW5hZ2VyLnYxLlJlcG9ydC5EYXRhVGFi",
-            "bGUuUm93EiwKCHJ1bl90aW1lGAIgASgLMhouZ29vZ2xlLnByb3RvYnVmLlRp",
-            "bWVzdGFtcBJNCgtkYXRlX3JhbmdlcxgDIAMoCzI4Lmdvb2dsZS5hZHMuYWRt",
-            "YW5hZ2VyLnYxLlJlcG9ydC5EYXRlUmFuZ2UuRml4ZWREYXRlUmFuZ2USWAoW",
-            "Y29tcGFyaXNvbl9kYXRlX3JhbmdlcxgEIAMoCzI4Lmdvb2dsZS5hZHMuYWRt",
-            "YW5hZ2VyLnYxLlJlcG9ydC5EYXRlUmFuZ2UuRml4ZWREYXRlUmFuZ2USFwoP",
-            "dG90YWxfcm93X2NvdW50GAUgASgFEhcKD25leHRfcGFnZV90b2tlbhgGIAEo",
-            "CTLSCAoNUmVwb3J0U2VydmljZRKHAQoJR2V0UmVwb3J0EikuZ29vZ2xlLmFk",
-            "cy5hZG1hbmFnZXIudjEuR2V0UmVwb3J0UmVxdWVzdBofLmdvb2dsZS5hZHMu",
-            "YWRtYW5hZ2VyLnYxLlJlcG9ydCIu2kEEbmFtZYLT5JMCIRIfL3YxL3tuYW1l",
-            "PW5ldHdvcmtzLyovcmVwb3J0cy8qfRKaAQoLTGlzdFJlcG9ydHMSKy5nb29n",
-            "bGUuYWRzLmFkbWFuYWdlci52MS5MaXN0UmVwb3J0c1JlcXVlc3QaLC5nb29n",
-            "bGUuYWRzLmFkbWFuYWdlci52MS5MaXN0UmVwb3J0c1Jlc3BvbnNlIjDaQQZw",
-            "YXJlbnSC0+STAiESHy92MS97cGFyZW50PW5ldHdvcmtzLyp9L3JlcG9ydHMS",
-            "ngEKDENyZWF0ZVJlcG9ydBIsLmdvb2dsZS5hZHMuYWRtYW5hZ2VyLnYxLkNy",
-            "ZWF0ZVJlcG9ydFJlcXVlc3QaHy5nb29nbGUuYWRzLmFkbWFuYWdlci52MS5S",
-            "ZXBvcnQiP9pBDXBhcmVudCxyZXBvcnSC0+STAikiHy92MS97cGFyZW50PW5l",
-            "dHdvcmtzLyp9L3JlcG9ydHM6BnJlcG9ydBKqAQoMVXBkYXRlUmVwb3J0Eiwu",
-            "Z29vZ2xlLmFkcy5hZG1hbmFnZXIudjEuVXBkYXRlUmVwb3J0UmVxdWVzdBof",
-            "Lmdvb2dsZS5hZHMuYWRtYW5hZ2VyLnYxLlJlcG9ydCJL2kEScmVwb3J0LHVw",
-            "ZGF0ZV9tYXNrgtPkkwIwMiYvdjEve3JlcG9ydC5uYW1lPW5ldHdvcmtzLyov",
-            "cmVwb3J0cy8qfToGcmVwb3J0ErUBCglSdW5SZXBvcnQSKS5nb29nbGUuYWRz",
-            "LmFkbWFuYWdlci52MS5SdW5SZXBvcnRSZXF1ZXN0Gh0uZ29vZ2xlLmxvbmdy",
-            "dW5uaW5nLk9wZXJhdGlvbiJeykEmChFSdW5SZXBvcnRSZXNwb25zZRIRUnVu",
-            "UmVwb3J0TWV0YWRhdGHaQQRuYW1lgtPkkwIoIiMvdjEve25hbWU9bmV0d29y",
-            "a3MvKi9yZXBvcnRzLyp9OnJ1bjoBKhLKAQoVRmV0Y2hSZXBvcnRSZXN1bHRS",
-            "b3dzEjUuZ29vZ2xlLmFkcy5hZG1hbmFnZXIudjEuRmV0Y2hSZXBvcnRSZXN1",
-            "bHRSb3dzUmVxdWVzdBo2Lmdvb2dsZS5hZHMuYWRtYW5hZ2VyLnYxLkZldGNo",
-            "UmVwb3J0UmVzdWx0Um93c1Jlc3BvbnNlIkLaQQRuYW1lgtPkkwI1EjMvdjEv",
-            "e25hbWU9bmV0d29ya3MvKi9yZXBvcnRzLyovcmVzdWx0cy8qfTpmZXRjaFJv",
-            "d3MaR8pBGGFkbWFuYWdlci5nb29nbGVhcGlzLmNvbdJBKWh0dHBzOi8vd3d3",
-            "Lmdvb2dsZWFwaXMuY29tL2F1dGgvYWRtYW5hZ2VyQsYBChtjb20uZ29vZ2xl",
-            "LmFkcy5hZG1hbmFnZXIudjFCElJlcG9ydFNlcnZpY2VQcm90b1ABWkBnb29n",
-            "bGUuZ29sYW5nLm9yZy9nZW5wcm90by9nb29nbGVhcGlzL2Fkcy9hZG1hbmFn",
-            "ZXIvdjE7YWRtYW5hZ2VyqgIXR29vZ2xlLkFkcy5BZE1hbmFnZXIuVjHKAhdH",
-            "b29nbGVcQWRzXEFkTWFuYWdlclxWMeoCGkdvb2dsZTo6QWRzOjpBZE1hbmFn",
-            "ZXI6OlYxYgZwcm90bzM="));
+            "ARITCgZmaWx0ZXIYBCABKAlCA+BBARIVCghvcmRlcl9ieRgFIAEoCUID4EEB",
+            "EhEKBHNraXAYBiABKAVCA+BBASJ0ChNMaXN0UmVwb3J0c1Jlc3BvbnNlEjAK",
+            "B3JlcG9ydHMYASADKAsyHy5nb29nbGUuYWRzLmFkbWFuYWdlci52MS5SZXBv",
+            "cnQSFwoPbmV4dF9wYWdlX3Rva2VuGAIgASgJEhIKCnRvdGFsX3NpemUYAyAB",
+            "KAUihQEKE0NyZWF0ZVJlcG9ydFJlcXVlc3QSOAoGcGFyZW50GAEgASgJQijg",
+            "QQL6QSIKIGFkbWFuYWdlci5nb29nbGVhcGlzLmNvbS9OZXR3b3JrEjQKBnJl",
+            "cG9ydBgCIAEoCzIfLmdvb2dsZS5hZHMuYWRtYW5hZ2VyLnYxLlJlcG9ydEID",
+            "4EECIoEBChNVcGRhdGVSZXBvcnRSZXF1ZXN0EjQKBnJlcG9ydBgBIAEoCzIf",
+            "Lmdvb2dsZS5hZHMuYWRtYW5hZ2VyLnYxLlJlcG9ydEID4EECEjQKC3VwZGF0",
+            "ZV9tYXNrGAIgASgLMhouZ29vZ2xlLnByb3RvYnVmLkZpZWxkTWFza0ID4EEC",
+            "Il0KHEZldGNoUmVwb3J0UmVzdWx0Um93c1JlcXVlc3QSDAoEbmFtZRgBIAEo",
+            "CRIWCglwYWdlX3NpemUYAiABKAVCA+BBARIXCgpwYWdlX3Rva2VuGAMgASgJ",
+            "QgPgQQEi+AIKHUZldGNoUmVwb3J0UmVzdWx0Um93c1Jlc3BvbnNlEjoKBHJv",
+            "d3MYASADKAsyLC5nb29nbGUuYWRzLmFkbWFuYWdlci52MS5SZXBvcnREYXRh",
+            "VGFibGUuUm93EiwKCHJ1bl90aW1lGAIgASgLMhouZ29vZ2xlLnByb3RvYnVm",
+            "LlRpbWVzdGFtcBJXCgtkYXRlX3JhbmdlcxgDIAMoCzJCLmdvb2dsZS5hZHMu",
+            "YWRtYW5hZ2VyLnYxLlJlcG9ydERlZmluaXRpb24uRGF0ZVJhbmdlLkZpeGVk",
+            "RGF0ZVJhbmdlEmIKFmNvbXBhcmlzb25fZGF0ZV9yYW5nZXMYBCADKAsyQi5n",
+            "b29nbGUuYWRzLmFkbWFuYWdlci52MS5SZXBvcnREZWZpbml0aW9uLkRhdGVS",
+            "YW5nZS5GaXhlZERhdGVSYW5nZRIXCg90b3RhbF9yb3dfY291bnQYBSABKAUS",
+            "FwoPbmV4dF9wYWdlX3Rva2VuGAYgASgJMtIICg1SZXBvcnRTZXJ2aWNlEocB",
+            "CglHZXRSZXBvcnQSKS5nb29nbGUuYWRzLmFkbWFuYWdlci52MS5HZXRSZXBv",
+            "cnRSZXF1ZXN0Gh8uZ29vZ2xlLmFkcy5hZG1hbmFnZXIudjEuUmVwb3J0Ii7a",
+            "QQRuYW1lgtPkkwIhEh8vdjEve25hbWU9bmV0d29ya3MvKi9yZXBvcnRzLyp9",
+            "EpoBCgtMaXN0UmVwb3J0cxIrLmdvb2dsZS5hZHMuYWRtYW5hZ2VyLnYxLkxp",
+            "c3RSZXBvcnRzUmVxdWVzdBosLmdvb2dsZS5hZHMuYWRtYW5hZ2VyLnYxLkxp",
+            "c3RSZXBvcnRzUmVzcG9uc2UiMNpBBnBhcmVudILT5JMCIRIfL3YxL3twYXJl",
+            "bnQ9bmV0d29ya3MvKn0vcmVwb3J0cxKeAQoMQ3JlYXRlUmVwb3J0EiwuZ29v",
+            "Z2xlLmFkcy5hZG1hbmFnZXIudjEuQ3JlYXRlUmVwb3J0UmVxdWVzdBofLmdv",
+            "b2dsZS5hZHMuYWRtYW5hZ2VyLnYxLlJlcG9ydCI/2kENcGFyZW50LHJlcG9y",
+            "dILT5JMCKSIfL3YxL3twYXJlbnQ9bmV0d29ya3MvKn0vcmVwb3J0czoGcmVw",
+            "b3J0EqoBCgxVcGRhdGVSZXBvcnQSLC5nb29nbGUuYWRzLmFkbWFuYWdlci52",
+            "MS5VcGRhdGVSZXBvcnRSZXF1ZXN0Gh8uZ29vZ2xlLmFkcy5hZG1hbmFnZXIu",
+            "djEuUmVwb3J0IkvaQRJyZXBvcnQsdXBkYXRlX21hc2uC0+STAjAyJi92MS97",
+            "cmVwb3J0Lm5hbWU9bmV0d29ya3MvKi9yZXBvcnRzLyp9OgZyZXBvcnQStQEK",
+            "CVJ1blJlcG9ydBIpLmdvb2dsZS5hZHMuYWRtYW5hZ2VyLnYxLlJ1blJlcG9y",
+            "dFJlcXVlc3QaHS5nb29nbGUubG9uZ3J1bm5pbmcuT3BlcmF0aW9uIl7KQSYK",
+            "EVJ1blJlcG9ydFJlc3BvbnNlEhFSdW5SZXBvcnRNZXRhZGF0YdpBBG5hbWWC",
+            "0+STAigiIy92MS97bmFtZT1uZXR3b3Jrcy8qL3JlcG9ydHMvKn06cnVuOgEq",
+            "EsoBChVGZXRjaFJlcG9ydFJlc3VsdFJvd3MSNS5nb29nbGUuYWRzLmFkbWFu",
+            "YWdlci52MS5GZXRjaFJlcG9ydFJlc3VsdFJvd3NSZXF1ZXN0GjYuZ29vZ2xl",
+            "LmFkcy5hZG1hbmFnZXIudjEuRmV0Y2hSZXBvcnRSZXN1bHRSb3dzUmVzcG9u",
+            "c2UiQtpBBG5hbWWC0+STAjUSMy92MS97bmFtZT1uZXR3b3Jrcy8qL3JlcG9y",
+            "dHMvKi9yZXN1bHRzLyp9OmZldGNoUm93cxpHykEYYWRtYW5hZ2VyLmdvb2ds",
+            "ZWFwaXMuY29t0kEpaHR0cHM6Ly93d3cuZ29vZ2xlYXBpcy5jb20vYXV0aC9h",
+            "ZG1hbmFnZXJCxgEKG2NvbS5nb29nbGUuYWRzLmFkbWFuYWdlci52MUISUmVw",
+            "b3J0U2VydmljZVByb3RvUAFaQGdvb2dsZS5nb2xhbmcub3JnL2dlbnByb3Rv",
+            "L2dvb2dsZWFwaXMvYWRzL2FkbWFuYWdlci92MTthZG1hbmFnZXKqAhdHb29n",
+            "bGUuQWRzLkFkTWFuYWdlci5WMcoCF0dvb2dsZVxBZHNcQWRNYW5hZ2VyXFYx",
+            "6gIaR29vZ2xlOjpBZHM6OkFkTWFuYWdlcjo6VjFiBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::Google.Ads.AdManager.V1.ReportMessagesReflection.Descriptor, global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Api.ClientReflection.Descriptor, global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.LongRunning.OperationsReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.FieldMaskReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::Google.Ads.AdManager.V1.ReportDefinitionReflection.Descriptor, global::Google.Ads.AdManager.V1.ReportMessagesReflection.Descriptor, global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Api.ClientReflection.Descriptor, global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.LongRunning.OperationsReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.FieldMaskReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Ads.AdManager.V1.RunReportRequest), global::Google.Ads.AdManager.V1.RunReportRequest.Parser, new[]{ "Name" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Ads.AdManager.V1.RunReportMetadata), global::Google.Ads.AdManager.V1.RunReportMetadata.Parser, new[]{ "PercentComplete", "Report" }, null, null, null, null),
@@ -1013,8 +1014,8 @@ namespace Google.Ads.AdManager.V1 {
     /// <summary>
     /// Optional. The maximum number of `Reports` to return. The service may return
     /// fewer than this value. If unspecified, at most 50 `Reports` will be
-    /// returned. The maximum value is 1000; values above 1000 will be coerced to
-    /// 1000.
+    /// returned. The maximum value is 1000; values greater than 1000 will be
+    /// coerced to 1000.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -1435,7 +1436,7 @@ namespace Google.Ads.AdManager.V1 {
     /// If a filter was included in the request, this reflects the total number
     /// after the filtering is applied.
     ///
-    /// `total_size` will not be calculated in the response unless it has been
+    /// `total_size` won't be calculated in the response unless it has been
     /// included in a response field mask. The response field mask can be provided
     /// to the method by using the URL parameter `$fields` or `fields`, or by using
     /// the HTTP/gRPC header `X-Goog-FieldMask`.
@@ -2196,7 +2197,8 @@ namespace Google.Ads.AdManager.V1 {
     /// <summary>
     /// Optional. The maximum number of rows to return. The service may return
     /// fewer than this value. If unspecified, at most 1,000 rows will be returned.
-    /// The maximum value is 10,000; values above 10,000 will be reduced to 10,000.
+    /// The maximum value is 10,000; values greater than 10,000 will be reduced to
+    /// 10,000.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -2459,15 +2461,15 @@ namespace Google.Ads.AdManager.V1 {
 
     /// <summary>Field number for the "rows" field.</summary>
     public const int RowsFieldNumber = 1;
-    private static readonly pb::FieldCodec<global::Google.Ads.AdManager.V1.Report.Types.DataTable.Types.Row> _repeated_rows_codec
-        = pb::FieldCodec.ForMessage(10, global::Google.Ads.AdManager.V1.Report.Types.DataTable.Types.Row.Parser);
-    private readonly pbc::RepeatedField<global::Google.Ads.AdManager.V1.Report.Types.DataTable.Types.Row> rows_ = new pbc::RepeatedField<global::Google.Ads.AdManager.V1.Report.Types.DataTable.Types.Row>();
+    private static readonly pb::FieldCodec<global::Google.Ads.AdManager.V1.ReportDataTable.Types.Row> _repeated_rows_codec
+        = pb::FieldCodec.ForMessage(10, global::Google.Ads.AdManager.V1.ReportDataTable.Types.Row.Parser);
+    private readonly pbc::RepeatedField<global::Google.Ads.AdManager.V1.ReportDataTable.Types.Row> rows_ = new pbc::RepeatedField<global::Google.Ads.AdManager.V1.ReportDataTable.Types.Row>();
     /// <summary>
     /// Up to `page_size` rows of report data.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public pbc::RepeatedField<global::Google.Ads.AdManager.V1.Report.Types.DataTable.Types.Row> Rows {
+    public pbc::RepeatedField<global::Google.Ads.AdManager.V1.ReportDataTable.Types.Row> Rows {
       get { return rows_; }
     }
 
@@ -2489,9 +2491,9 @@ namespace Google.Ads.AdManager.V1 {
 
     /// <summary>Field number for the "date_ranges" field.</summary>
     public const int DateRangesFieldNumber = 3;
-    private static readonly pb::FieldCodec<global::Google.Ads.AdManager.V1.Report.Types.DateRange.Types.FixedDateRange> _repeated_dateRanges_codec
-        = pb::FieldCodec.ForMessage(26, global::Google.Ads.AdManager.V1.Report.Types.DateRange.Types.FixedDateRange.Parser);
-    private readonly pbc::RepeatedField<global::Google.Ads.AdManager.V1.Report.Types.DateRange.Types.FixedDateRange> dateRanges_ = new pbc::RepeatedField<global::Google.Ads.AdManager.V1.Report.Types.DateRange.Types.FixedDateRange>();
+    private static readonly pb::FieldCodec<global::Google.Ads.AdManager.V1.ReportDefinition.Types.DateRange.Types.FixedDateRange> _repeated_dateRanges_codec
+        = pb::FieldCodec.ForMessage(26, global::Google.Ads.AdManager.V1.ReportDefinition.Types.DateRange.Types.FixedDateRange.Parser);
+    private readonly pbc::RepeatedField<global::Google.Ads.AdManager.V1.ReportDefinition.Types.DateRange.Types.FixedDateRange> dateRanges_ = new pbc::RepeatedField<global::Google.Ads.AdManager.V1.ReportDefinition.Types.DateRange.Types.FixedDateRange>();
     /// <summary>
     /// The computed fixed date ranges this report includes.
     /// Only returned with the first page of results (when page_token is not
@@ -2499,15 +2501,15 @@ namespace Google.Ads.AdManager.V1 {
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public pbc::RepeatedField<global::Google.Ads.AdManager.V1.Report.Types.DateRange.Types.FixedDateRange> DateRanges {
+    public pbc::RepeatedField<global::Google.Ads.AdManager.V1.ReportDefinition.Types.DateRange.Types.FixedDateRange> DateRanges {
       get { return dateRanges_; }
     }
 
     /// <summary>Field number for the "comparison_date_ranges" field.</summary>
     public const int ComparisonDateRangesFieldNumber = 4;
-    private static readonly pb::FieldCodec<global::Google.Ads.AdManager.V1.Report.Types.DateRange.Types.FixedDateRange> _repeated_comparisonDateRanges_codec
-        = pb::FieldCodec.ForMessage(34, global::Google.Ads.AdManager.V1.Report.Types.DateRange.Types.FixedDateRange.Parser);
-    private readonly pbc::RepeatedField<global::Google.Ads.AdManager.V1.Report.Types.DateRange.Types.FixedDateRange> comparisonDateRanges_ = new pbc::RepeatedField<global::Google.Ads.AdManager.V1.Report.Types.DateRange.Types.FixedDateRange>();
+    private static readonly pb::FieldCodec<global::Google.Ads.AdManager.V1.ReportDefinition.Types.DateRange.Types.FixedDateRange> _repeated_comparisonDateRanges_codec
+        = pb::FieldCodec.ForMessage(34, global::Google.Ads.AdManager.V1.ReportDefinition.Types.DateRange.Types.FixedDateRange.Parser);
+    private readonly pbc::RepeatedField<global::Google.Ads.AdManager.V1.ReportDefinition.Types.DateRange.Types.FixedDateRange> comparisonDateRanges_ = new pbc::RepeatedField<global::Google.Ads.AdManager.V1.ReportDefinition.Types.DateRange.Types.FixedDateRange>();
     /// <summary>
     /// The computed comparison fixed date ranges this report includes.
     /// Only returned with the first page of results (when page_token is not
@@ -2515,7 +2517,7 @@ namespace Google.Ads.AdManager.V1 {
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public pbc::RepeatedField<global::Google.Ads.AdManager.V1.Report.Types.DateRange.Types.FixedDateRange> ComparisonDateRanges {
+    public pbc::RepeatedField<global::Google.Ads.AdManager.V1.ReportDefinition.Types.DateRange.Types.FixedDateRange> ComparisonDateRanges {
       get { return comparisonDateRanges_; }
     }
 

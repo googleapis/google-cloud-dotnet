@@ -27,6 +27,7 @@ using sco = System.Collections.ObjectModel;
 using st = System.Threading;
 using stt = System.Threading.Tasks;
 using sys = System;
+using wkt = Google.Protobuf.WellKnownTypes;
 
 namespace Google.Ads.AdManager.V1
 {
@@ -47,6 +48,13 @@ namespace Google.Ads.AdManager.V1
             gax::GaxPreconditions.CheckNotNull(existing, nameof(existing));
             GetPlacementSettings = existing.GetPlacementSettings;
             ListPlacementsSettings = existing.ListPlacementsSettings;
+            CreatePlacementSettings = existing.CreatePlacementSettings;
+            UpdatePlacementSettings = existing.UpdatePlacementSettings;
+            BatchCreatePlacementsSettings = existing.BatchCreatePlacementsSettings;
+            BatchUpdatePlacementsSettings = existing.BatchUpdatePlacementsSettings;
+            BatchActivatePlacementsSettings = existing.BatchActivatePlacementsSettings;
+            BatchDeactivatePlacementsSettings = existing.BatchDeactivatePlacementsSettings;
+            BatchArchivePlacementsSettings = existing.BatchArchivePlacementsSettings;
             OnCopy(existing);
         }
 
@@ -75,6 +83,95 @@ namespace Google.Ads.AdManager.V1
         /// </list>
         /// </remarks>
         public gaxgrpc::CallSettings ListPlacementsSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>PlacementServiceClient.CreatePlacement</c> and <c>PlacementServiceClient.CreatePlacementAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>No timeout is applied.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings CreatePlacementSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>PlacementServiceClient.UpdatePlacement</c> and <c>PlacementServiceClient.UpdatePlacementAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>No timeout is applied.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings UpdatePlacementSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>PlacementServiceClient.BatchCreatePlacements</c> and <c>PlacementServiceClient.BatchCreatePlacementsAsync</c>
+        /// .
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>No timeout is applied.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings BatchCreatePlacementsSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>PlacementServiceClient.BatchUpdatePlacements</c> and <c>PlacementServiceClient.BatchUpdatePlacementsAsync</c>
+        /// .
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>No timeout is applied.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings BatchUpdatePlacementsSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>PlacementServiceClient.BatchActivatePlacements</c> and
+        /// <c>PlacementServiceClient.BatchActivatePlacementsAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>No timeout is applied.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings BatchActivatePlacementsSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>PlacementServiceClient.BatchDeactivatePlacements</c> and
+        /// <c>PlacementServiceClient.BatchDeactivatePlacementsAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>No timeout is applied.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings BatchDeactivatePlacementsSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>PlacementServiceClient.BatchArchivePlacements</c> and
+        /// <c>PlacementServiceClient.BatchArchivePlacementsAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>No timeout is applied.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings BatchArchivePlacementsSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
 
         /// <summary>Creates a deep clone of this object, with all the same property values.</summary>
         /// <returns>A deep clone of this <see cref="PlacementServiceSettings"/> object.</returns>
@@ -481,6 +578,989 @@ namespace Google.Ads.AdManager.V1
             }
             return ListPlacementsAsync(request, callSettings);
         }
+
+        /// <summary>
+        /// API to create an `Placement` object.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual Placement CreatePlacement(CreatePlacementRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// API to create an `Placement` object.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<Placement> CreatePlacementAsync(CreatePlacementRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// API to create an `Placement` object.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<Placement> CreatePlacementAsync(CreatePlacementRequest request, st::CancellationToken cancellationToken) =>
+            CreatePlacementAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// API to create an `Placement` object.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent resource where this `Placement` will be created.
+        /// Format: `networks/{network_code}`
+        /// </param>
+        /// <param name="placement">
+        /// Required. The `Placement` to create.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual Placement CreatePlacement(string parent, Placement placement, gaxgrpc::CallSettings callSettings = null) =>
+            CreatePlacement(new CreatePlacementRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+                Placement = gax::GaxPreconditions.CheckNotNull(placement, nameof(placement)),
+            }, callSettings);
+
+        /// <summary>
+        /// API to create an `Placement` object.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent resource where this `Placement` will be created.
+        /// Format: `networks/{network_code}`
+        /// </param>
+        /// <param name="placement">
+        /// Required. The `Placement` to create.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<Placement> CreatePlacementAsync(string parent, Placement placement, gaxgrpc::CallSettings callSettings = null) =>
+            CreatePlacementAsync(new CreatePlacementRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+                Placement = gax::GaxPreconditions.CheckNotNull(placement, nameof(placement)),
+            }, callSettings);
+
+        /// <summary>
+        /// API to create an `Placement` object.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent resource where this `Placement` will be created.
+        /// Format: `networks/{network_code}`
+        /// </param>
+        /// <param name="placement">
+        /// Required. The `Placement` to create.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<Placement> CreatePlacementAsync(string parent, Placement placement, st::CancellationToken cancellationToken) =>
+            CreatePlacementAsync(parent, placement, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// API to create an `Placement` object.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent resource where this `Placement` will be created.
+        /// Format: `networks/{network_code}`
+        /// </param>
+        /// <param name="placement">
+        /// Required. The `Placement` to create.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual Placement CreatePlacement(NetworkName parent, Placement placement, gaxgrpc::CallSettings callSettings = null) =>
+            CreatePlacement(new CreatePlacementRequest
+            {
+                ParentAsNetworkName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                Placement = gax::GaxPreconditions.CheckNotNull(placement, nameof(placement)),
+            }, callSettings);
+
+        /// <summary>
+        /// API to create an `Placement` object.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent resource where this `Placement` will be created.
+        /// Format: `networks/{network_code}`
+        /// </param>
+        /// <param name="placement">
+        /// Required. The `Placement` to create.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<Placement> CreatePlacementAsync(NetworkName parent, Placement placement, gaxgrpc::CallSettings callSettings = null) =>
+            CreatePlacementAsync(new CreatePlacementRequest
+            {
+                ParentAsNetworkName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                Placement = gax::GaxPreconditions.CheckNotNull(placement, nameof(placement)),
+            }, callSettings);
+
+        /// <summary>
+        /// API to create an `Placement` object.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent resource where this `Placement` will be created.
+        /// Format: `networks/{network_code}`
+        /// </param>
+        /// <param name="placement">
+        /// Required. The `Placement` to create.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<Placement> CreatePlacementAsync(NetworkName parent, Placement placement, st::CancellationToken cancellationToken) =>
+            CreatePlacementAsync(parent, placement, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// API to update an `Placement` object.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual Placement UpdatePlacement(UpdatePlacementRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// API to update an `Placement` object.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<Placement> UpdatePlacementAsync(UpdatePlacementRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// API to update an `Placement` object.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<Placement> UpdatePlacementAsync(UpdatePlacementRequest request, st::CancellationToken cancellationToken) =>
+            UpdatePlacementAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// API to update an `Placement` object.
+        /// </summary>
+        /// <param name="placement">
+        /// Required. The `Placement` to update.
+        /// 
+        /// The `Placement`'s name is used to identify the `Placement` to
+        /// update. Format:
+        /// `networks/{network_code}/placements/{placement_id}`
+        /// </param>
+        /// <param name="updateMask">
+        /// Required. The list of fields to update.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual Placement UpdatePlacement(Placement placement, wkt::FieldMask updateMask, gaxgrpc::CallSettings callSettings = null) =>
+            UpdatePlacement(new UpdatePlacementRequest
+            {
+                Placement = gax::GaxPreconditions.CheckNotNull(placement, nameof(placement)),
+                UpdateMask = gax::GaxPreconditions.CheckNotNull(updateMask, nameof(updateMask)),
+            }, callSettings);
+
+        /// <summary>
+        /// API to update an `Placement` object.
+        /// </summary>
+        /// <param name="placement">
+        /// Required. The `Placement` to update.
+        /// 
+        /// The `Placement`'s name is used to identify the `Placement` to
+        /// update. Format:
+        /// `networks/{network_code}/placements/{placement_id}`
+        /// </param>
+        /// <param name="updateMask">
+        /// Required. The list of fields to update.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<Placement> UpdatePlacementAsync(Placement placement, wkt::FieldMask updateMask, gaxgrpc::CallSettings callSettings = null) =>
+            UpdatePlacementAsync(new UpdatePlacementRequest
+            {
+                Placement = gax::GaxPreconditions.CheckNotNull(placement, nameof(placement)),
+                UpdateMask = gax::GaxPreconditions.CheckNotNull(updateMask, nameof(updateMask)),
+            }, callSettings);
+
+        /// <summary>
+        /// API to update an `Placement` object.
+        /// </summary>
+        /// <param name="placement">
+        /// Required. The `Placement` to update.
+        /// 
+        /// The `Placement`'s name is used to identify the `Placement` to
+        /// update. Format:
+        /// `networks/{network_code}/placements/{placement_id}`
+        /// </param>
+        /// <param name="updateMask">
+        /// Required. The list of fields to update.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<Placement> UpdatePlacementAsync(Placement placement, wkt::FieldMask updateMask, st::CancellationToken cancellationToken) =>
+            UpdatePlacementAsync(placement, updateMask, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// API to batch create `Placement` objects.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual BatchCreatePlacementsResponse BatchCreatePlacements(BatchCreatePlacementsRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// API to batch create `Placement` objects.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<BatchCreatePlacementsResponse> BatchCreatePlacementsAsync(BatchCreatePlacementsRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// API to batch create `Placement` objects.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<BatchCreatePlacementsResponse> BatchCreatePlacementsAsync(BatchCreatePlacementsRequest request, st::CancellationToken cancellationToken) =>
+            BatchCreatePlacementsAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// API to batch create `Placement` objects.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent resource where the `Placement`s will be created.
+        /// Format: `networks/{network_code}`
+        /// The parent field in the CreatePlacementRequest messages match this
+        /// field.
+        /// </param>
+        /// <param name="requests">
+        /// Required. The `Placement` objects to create.
+        /// A maximum of 100 objects can be created in a batch.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual BatchCreatePlacementsResponse BatchCreatePlacements(string parent, scg::IEnumerable<CreatePlacementRequest> requests, gaxgrpc::CallSettings callSettings = null) =>
+            BatchCreatePlacements(new BatchCreatePlacementsRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+                Requests =
+                {
+                    gax::GaxPreconditions.CheckNotNull(requests, nameof(requests)),
+                },
+            }, callSettings);
+
+        /// <summary>
+        /// API to batch create `Placement` objects.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent resource where the `Placement`s will be created.
+        /// Format: `networks/{network_code}`
+        /// The parent field in the CreatePlacementRequest messages match this
+        /// field.
+        /// </param>
+        /// <param name="requests">
+        /// Required. The `Placement` objects to create.
+        /// A maximum of 100 objects can be created in a batch.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<BatchCreatePlacementsResponse> BatchCreatePlacementsAsync(string parent, scg::IEnumerable<CreatePlacementRequest> requests, gaxgrpc::CallSettings callSettings = null) =>
+            BatchCreatePlacementsAsync(new BatchCreatePlacementsRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+                Requests =
+                {
+                    gax::GaxPreconditions.CheckNotNull(requests, nameof(requests)),
+                },
+            }, callSettings);
+
+        /// <summary>
+        /// API to batch create `Placement` objects.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent resource where the `Placement`s will be created.
+        /// Format: `networks/{network_code}`
+        /// The parent field in the CreatePlacementRequest messages match this
+        /// field.
+        /// </param>
+        /// <param name="requests">
+        /// Required. The `Placement` objects to create.
+        /// A maximum of 100 objects can be created in a batch.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<BatchCreatePlacementsResponse> BatchCreatePlacementsAsync(string parent, scg::IEnumerable<CreatePlacementRequest> requests, st::CancellationToken cancellationToken) =>
+            BatchCreatePlacementsAsync(parent, requests, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// API to batch create `Placement` objects.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent resource where the `Placement`s will be created.
+        /// Format: `networks/{network_code}`
+        /// The parent field in the CreatePlacementRequest messages match this
+        /// field.
+        /// </param>
+        /// <param name="requests">
+        /// Required. The `Placement` objects to create.
+        /// A maximum of 100 objects can be created in a batch.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual BatchCreatePlacementsResponse BatchCreatePlacements(NetworkName parent, scg::IEnumerable<CreatePlacementRequest> requests, gaxgrpc::CallSettings callSettings = null) =>
+            BatchCreatePlacements(new BatchCreatePlacementsRequest
+            {
+                ParentAsNetworkName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                Requests =
+                {
+                    gax::GaxPreconditions.CheckNotNull(requests, nameof(requests)),
+                },
+            }, callSettings);
+
+        /// <summary>
+        /// API to batch create `Placement` objects.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent resource where the `Placement`s will be created.
+        /// Format: `networks/{network_code}`
+        /// The parent field in the CreatePlacementRequest messages match this
+        /// field.
+        /// </param>
+        /// <param name="requests">
+        /// Required. The `Placement` objects to create.
+        /// A maximum of 100 objects can be created in a batch.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<BatchCreatePlacementsResponse> BatchCreatePlacementsAsync(NetworkName parent, scg::IEnumerable<CreatePlacementRequest> requests, gaxgrpc::CallSettings callSettings = null) =>
+            BatchCreatePlacementsAsync(new BatchCreatePlacementsRequest
+            {
+                ParentAsNetworkName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                Requests =
+                {
+                    gax::GaxPreconditions.CheckNotNull(requests, nameof(requests)),
+                },
+            }, callSettings);
+
+        /// <summary>
+        /// API to batch create `Placement` objects.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent resource where the `Placement`s will be created.
+        /// Format: `networks/{network_code}`
+        /// The parent field in the CreatePlacementRequest messages match this
+        /// field.
+        /// </param>
+        /// <param name="requests">
+        /// Required. The `Placement` objects to create.
+        /// A maximum of 100 objects can be created in a batch.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<BatchCreatePlacementsResponse> BatchCreatePlacementsAsync(NetworkName parent, scg::IEnumerable<CreatePlacementRequest> requests, st::CancellationToken cancellationToken) =>
+            BatchCreatePlacementsAsync(parent, requests, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// API to batch update `Placement` objects.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual BatchUpdatePlacementsResponse BatchUpdatePlacements(BatchUpdatePlacementsRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// API to batch update `Placement` objects.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<BatchUpdatePlacementsResponse> BatchUpdatePlacementsAsync(BatchUpdatePlacementsRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// API to batch update `Placement` objects.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<BatchUpdatePlacementsResponse> BatchUpdatePlacementsAsync(BatchUpdatePlacementsRequest request, st::CancellationToken cancellationToken) =>
+            BatchUpdatePlacementsAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// API to batch update `Placement` objects.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent resource where `Placements` will be updated.
+        /// Format: `networks/{network_code}`
+        /// The parent field in the UpdatePlacementsRequest must match this
+        /// field.
+        /// </param>
+        /// <param name="requests">
+        /// Required. The `Placement` objects to update.
+        /// A maximum of 100 objects can be updated in a batch.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual BatchUpdatePlacementsResponse BatchUpdatePlacements(string parent, scg::IEnumerable<UpdatePlacementRequest> requests, gaxgrpc::CallSettings callSettings = null) =>
+            BatchUpdatePlacements(new BatchUpdatePlacementsRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+                Requests =
+                {
+                    gax::GaxPreconditions.CheckNotNull(requests, nameof(requests)),
+                },
+            }, callSettings);
+
+        /// <summary>
+        /// API to batch update `Placement` objects.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent resource where `Placements` will be updated.
+        /// Format: `networks/{network_code}`
+        /// The parent field in the UpdatePlacementsRequest must match this
+        /// field.
+        /// </param>
+        /// <param name="requests">
+        /// Required. The `Placement` objects to update.
+        /// A maximum of 100 objects can be updated in a batch.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<BatchUpdatePlacementsResponse> BatchUpdatePlacementsAsync(string parent, scg::IEnumerable<UpdatePlacementRequest> requests, gaxgrpc::CallSettings callSettings = null) =>
+            BatchUpdatePlacementsAsync(new BatchUpdatePlacementsRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+                Requests =
+                {
+                    gax::GaxPreconditions.CheckNotNull(requests, nameof(requests)),
+                },
+            }, callSettings);
+
+        /// <summary>
+        /// API to batch update `Placement` objects.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent resource where `Placements` will be updated.
+        /// Format: `networks/{network_code}`
+        /// The parent field in the UpdatePlacementsRequest must match this
+        /// field.
+        /// </param>
+        /// <param name="requests">
+        /// Required. The `Placement` objects to update.
+        /// A maximum of 100 objects can be updated in a batch.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<BatchUpdatePlacementsResponse> BatchUpdatePlacementsAsync(string parent, scg::IEnumerable<UpdatePlacementRequest> requests, st::CancellationToken cancellationToken) =>
+            BatchUpdatePlacementsAsync(parent, requests, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// API to batch update `Placement` objects.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent resource where `Placements` will be updated.
+        /// Format: `networks/{network_code}`
+        /// The parent field in the UpdatePlacementsRequest must match this
+        /// field.
+        /// </param>
+        /// <param name="requests">
+        /// Required. The `Placement` objects to update.
+        /// A maximum of 100 objects can be updated in a batch.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual BatchUpdatePlacementsResponse BatchUpdatePlacements(NetworkName parent, scg::IEnumerable<UpdatePlacementRequest> requests, gaxgrpc::CallSettings callSettings = null) =>
+            BatchUpdatePlacements(new BatchUpdatePlacementsRequest
+            {
+                ParentAsNetworkName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                Requests =
+                {
+                    gax::GaxPreconditions.CheckNotNull(requests, nameof(requests)),
+                },
+            }, callSettings);
+
+        /// <summary>
+        /// API to batch update `Placement` objects.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent resource where `Placements` will be updated.
+        /// Format: `networks/{network_code}`
+        /// The parent field in the UpdatePlacementsRequest must match this
+        /// field.
+        /// </param>
+        /// <param name="requests">
+        /// Required. The `Placement` objects to update.
+        /// A maximum of 100 objects can be updated in a batch.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<BatchUpdatePlacementsResponse> BatchUpdatePlacementsAsync(NetworkName parent, scg::IEnumerable<UpdatePlacementRequest> requests, gaxgrpc::CallSettings callSettings = null) =>
+            BatchUpdatePlacementsAsync(new BatchUpdatePlacementsRequest
+            {
+                ParentAsNetworkName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                Requests =
+                {
+                    gax::GaxPreconditions.CheckNotNull(requests, nameof(requests)),
+                },
+            }, callSettings);
+
+        /// <summary>
+        /// API to batch update `Placement` objects.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent resource where `Placements` will be updated.
+        /// Format: `networks/{network_code}`
+        /// The parent field in the UpdatePlacementsRequest must match this
+        /// field.
+        /// </param>
+        /// <param name="requests">
+        /// Required. The `Placement` objects to update.
+        /// A maximum of 100 objects can be updated in a batch.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<BatchUpdatePlacementsResponse> BatchUpdatePlacementsAsync(NetworkName parent, scg::IEnumerable<UpdatePlacementRequest> requests, st::CancellationToken cancellationToken) =>
+            BatchUpdatePlacementsAsync(parent, requests, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Activates a list of `Placement` objects.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual BatchActivatePlacementsResponse BatchActivatePlacements(BatchActivatePlacementsRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Activates a list of `Placement` objects.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<BatchActivatePlacementsResponse> BatchActivatePlacementsAsync(BatchActivatePlacementsRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Activates a list of `Placement` objects.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<BatchActivatePlacementsResponse> BatchActivatePlacementsAsync(BatchActivatePlacementsRequest request, st::CancellationToken cancellationToken) =>
+            BatchActivatePlacementsAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Activates a list of `Placement` objects.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. Format: `networks/{network_code}`
+        /// </param>
+        /// <param name="names">
+        /// Required. The names of the `Placement` objects to activate.
+        /// Format: `networks/{network_code}/placements/{placement_id}`
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual BatchActivatePlacementsResponse BatchActivatePlacements(string parent, scg::IEnumerable<string> names, gaxgrpc::CallSettings callSettings = null) =>
+            BatchActivatePlacements(new BatchActivatePlacementsRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+                Names =
+                {
+                    gax::GaxPreconditions.CheckNotNull(names, nameof(names)),
+                },
+            }, callSettings);
+
+        /// <summary>
+        /// Activates a list of `Placement` objects.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. Format: `networks/{network_code}`
+        /// </param>
+        /// <param name="names">
+        /// Required. The names of the `Placement` objects to activate.
+        /// Format: `networks/{network_code}/placements/{placement_id}`
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<BatchActivatePlacementsResponse> BatchActivatePlacementsAsync(string parent, scg::IEnumerable<string> names, gaxgrpc::CallSettings callSettings = null) =>
+            BatchActivatePlacementsAsync(new BatchActivatePlacementsRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+                Names =
+                {
+                    gax::GaxPreconditions.CheckNotNull(names, nameof(names)),
+                },
+            }, callSettings);
+
+        /// <summary>
+        /// Activates a list of `Placement` objects.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. Format: `networks/{network_code}`
+        /// </param>
+        /// <param name="names">
+        /// Required. The names of the `Placement` objects to activate.
+        /// Format: `networks/{network_code}/placements/{placement_id}`
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<BatchActivatePlacementsResponse> BatchActivatePlacementsAsync(string parent, scg::IEnumerable<string> names, st::CancellationToken cancellationToken) =>
+            BatchActivatePlacementsAsync(parent, names, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Activates a list of `Placement` objects.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. Format: `networks/{network_code}`
+        /// </param>
+        /// <param name="names">
+        /// Required. The names of the `Placement` objects to activate.
+        /// Format: `networks/{network_code}/placements/{placement_id}`
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual BatchActivatePlacementsResponse BatchActivatePlacements(NetworkName parent, scg::IEnumerable<PlacementName> names, gaxgrpc::CallSettings callSettings = null) =>
+            BatchActivatePlacements(new BatchActivatePlacementsRequest
+            {
+                ParentAsNetworkName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                PlacementNames =
+                {
+                    gax::GaxPreconditions.CheckNotNull(names, nameof(names)),
+                },
+            }, callSettings);
+
+        /// <summary>
+        /// Activates a list of `Placement` objects.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. Format: `networks/{network_code}`
+        /// </param>
+        /// <param name="names">
+        /// Required. The names of the `Placement` objects to activate.
+        /// Format: `networks/{network_code}/placements/{placement_id}`
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<BatchActivatePlacementsResponse> BatchActivatePlacementsAsync(NetworkName parent, scg::IEnumerable<PlacementName> names, gaxgrpc::CallSettings callSettings = null) =>
+            BatchActivatePlacementsAsync(new BatchActivatePlacementsRequest
+            {
+                ParentAsNetworkName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                PlacementNames =
+                {
+                    gax::GaxPreconditions.CheckNotNull(names, nameof(names)),
+                },
+            }, callSettings);
+
+        /// <summary>
+        /// Activates a list of `Placement` objects.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. Format: `networks/{network_code}`
+        /// </param>
+        /// <param name="names">
+        /// Required. The names of the `Placement` objects to activate.
+        /// Format: `networks/{network_code}/placements/{placement_id}`
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<BatchActivatePlacementsResponse> BatchActivatePlacementsAsync(NetworkName parent, scg::IEnumerable<PlacementName> names, st::CancellationToken cancellationToken) =>
+            BatchActivatePlacementsAsync(parent, names, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Deactivates a list of `Placement` objects.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual BatchDeactivatePlacementsResponse BatchDeactivatePlacements(BatchDeactivatePlacementsRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Deactivates a list of `Placement` objects.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<BatchDeactivatePlacementsResponse> BatchDeactivatePlacementsAsync(BatchDeactivatePlacementsRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Deactivates a list of `Placement` objects.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<BatchDeactivatePlacementsResponse> BatchDeactivatePlacementsAsync(BatchDeactivatePlacementsRequest request, st::CancellationToken cancellationToken) =>
+            BatchDeactivatePlacementsAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Deactivates a list of `Placement` objects.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. Format: `networks/{network_code}`
+        /// </param>
+        /// <param name="names">
+        /// Required. The names of the `Placement` objects to deactivate.
+        /// Format: `networks/{network_code}/placements/{placement_id}`
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual BatchDeactivatePlacementsResponse BatchDeactivatePlacements(string parent, scg::IEnumerable<string> names, gaxgrpc::CallSettings callSettings = null) =>
+            BatchDeactivatePlacements(new BatchDeactivatePlacementsRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+                Names =
+                {
+                    gax::GaxPreconditions.CheckNotNull(names, nameof(names)),
+                },
+            }, callSettings);
+
+        /// <summary>
+        /// Deactivates a list of `Placement` objects.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. Format: `networks/{network_code}`
+        /// </param>
+        /// <param name="names">
+        /// Required. The names of the `Placement` objects to deactivate.
+        /// Format: `networks/{network_code}/placements/{placement_id}`
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<BatchDeactivatePlacementsResponse> BatchDeactivatePlacementsAsync(string parent, scg::IEnumerable<string> names, gaxgrpc::CallSettings callSettings = null) =>
+            BatchDeactivatePlacementsAsync(new BatchDeactivatePlacementsRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+                Names =
+                {
+                    gax::GaxPreconditions.CheckNotNull(names, nameof(names)),
+                },
+            }, callSettings);
+
+        /// <summary>
+        /// Deactivates a list of `Placement` objects.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. Format: `networks/{network_code}`
+        /// </param>
+        /// <param name="names">
+        /// Required. The names of the `Placement` objects to deactivate.
+        /// Format: `networks/{network_code}/placements/{placement_id}`
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<BatchDeactivatePlacementsResponse> BatchDeactivatePlacementsAsync(string parent, scg::IEnumerable<string> names, st::CancellationToken cancellationToken) =>
+            BatchDeactivatePlacementsAsync(parent, names, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Deactivates a list of `Placement` objects.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. Format: `networks/{network_code}`
+        /// </param>
+        /// <param name="names">
+        /// Required. The names of the `Placement` objects to deactivate.
+        /// Format: `networks/{network_code}/placements/{placement_id}`
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual BatchDeactivatePlacementsResponse BatchDeactivatePlacements(NetworkName parent, scg::IEnumerable<PlacementName> names, gaxgrpc::CallSettings callSettings = null) =>
+            BatchDeactivatePlacements(new BatchDeactivatePlacementsRequest
+            {
+                ParentAsNetworkName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                PlacementNames =
+                {
+                    gax::GaxPreconditions.CheckNotNull(names, nameof(names)),
+                },
+            }, callSettings);
+
+        /// <summary>
+        /// Deactivates a list of `Placement` objects.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. Format: `networks/{network_code}`
+        /// </param>
+        /// <param name="names">
+        /// Required. The names of the `Placement` objects to deactivate.
+        /// Format: `networks/{network_code}/placements/{placement_id}`
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<BatchDeactivatePlacementsResponse> BatchDeactivatePlacementsAsync(NetworkName parent, scg::IEnumerable<PlacementName> names, gaxgrpc::CallSettings callSettings = null) =>
+            BatchDeactivatePlacementsAsync(new BatchDeactivatePlacementsRequest
+            {
+                ParentAsNetworkName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                PlacementNames =
+                {
+                    gax::GaxPreconditions.CheckNotNull(names, nameof(names)),
+                },
+            }, callSettings);
+
+        /// <summary>
+        /// Deactivates a list of `Placement` objects.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. Format: `networks/{network_code}`
+        /// </param>
+        /// <param name="names">
+        /// Required. The names of the `Placement` objects to deactivate.
+        /// Format: `networks/{network_code}/placements/{placement_id}`
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<BatchDeactivatePlacementsResponse> BatchDeactivatePlacementsAsync(NetworkName parent, scg::IEnumerable<PlacementName> names, st::CancellationToken cancellationToken) =>
+            BatchDeactivatePlacementsAsync(parent, names, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Archives a list of `Placement` objects.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual BatchArchivePlacementsResponse BatchArchivePlacements(BatchArchivePlacementsRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Archives a list of `Placement` objects.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<BatchArchivePlacementsResponse> BatchArchivePlacementsAsync(BatchArchivePlacementsRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Archives a list of `Placement` objects.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<BatchArchivePlacementsResponse> BatchArchivePlacementsAsync(BatchArchivePlacementsRequest request, st::CancellationToken cancellationToken) =>
+            BatchArchivePlacementsAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Archives a list of `Placement` objects.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. Format: `networks/{network_code}`
+        /// </param>
+        /// <param name="names">
+        /// Required. The names of the `Placement` objects to archive.
+        /// Format: `networks/{network_code}/placements/{placement_id}`
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual BatchArchivePlacementsResponse BatchArchivePlacements(string parent, scg::IEnumerable<string> names, gaxgrpc::CallSettings callSettings = null) =>
+            BatchArchivePlacements(new BatchArchivePlacementsRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+                Names =
+                {
+                    gax::GaxPreconditions.CheckNotNull(names, nameof(names)),
+                },
+            }, callSettings);
+
+        /// <summary>
+        /// Archives a list of `Placement` objects.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. Format: `networks/{network_code}`
+        /// </param>
+        /// <param name="names">
+        /// Required. The names of the `Placement` objects to archive.
+        /// Format: `networks/{network_code}/placements/{placement_id}`
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<BatchArchivePlacementsResponse> BatchArchivePlacementsAsync(string parent, scg::IEnumerable<string> names, gaxgrpc::CallSettings callSettings = null) =>
+            BatchArchivePlacementsAsync(new BatchArchivePlacementsRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+                Names =
+                {
+                    gax::GaxPreconditions.CheckNotNull(names, nameof(names)),
+                },
+            }, callSettings);
+
+        /// <summary>
+        /// Archives a list of `Placement` objects.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. Format: `networks/{network_code}`
+        /// </param>
+        /// <param name="names">
+        /// Required. The names of the `Placement` objects to archive.
+        /// Format: `networks/{network_code}/placements/{placement_id}`
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<BatchArchivePlacementsResponse> BatchArchivePlacementsAsync(string parent, scg::IEnumerable<string> names, st::CancellationToken cancellationToken) =>
+            BatchArchivePlacementsAsync(parent, names, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Archives a list of `Placement` objects.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. Format: `networks/{network_code}`
+        /// </param>
+        /// <param name="names">
+        /// Required. The names of the `Placement` objects to archive.
+        /// Format: `networks/{network_code}/placements/{placement_id}`
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual BatchArchivePlacementsResponse BatchArchivePlacements(NetworkName parent, scg::IEnumerable<PlacementName> names, gaxgrpc::CallSettings callSettings = null) =>
+            BatchArchivePlacements(new BatchArchivePlacementsRequest
+            {
+                ParentAsNetworkName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                PlacementNames =
+                {
+                    gax::GaxPreconditions.CheckNotNull(names, nameof(names)),
+                },
+            }, callSettings);
+
+        /// <summary>
+        /// Archives a list of `Placement` objects.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. Format: `networks/{network_code}`
+        /// </param>
+        /// <param name="names">
+        /// Required. The names of the `Placement` objects to archive.
+        /// Format: `networks/{network_code}/placements/{placement_id}`
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<BatchArchivePlacementsResponse> BatchArchivePlacementsAsync(NetworkName parent, scg::IEnumerable<PlacementName> names, gaxgrpc::CallSettings callSettings = null) =>
+            BatchArchivePlacementsAsync(new BatchArchivePlacementsRequest
+            {
+                ParentAsNetworkName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                PlacementNames =
+                {
+                    gax::GaxPreconditions.CheckNotNull(names, nameof(names)),
+                },
+            }, callSettings);
+
+        /// <summary>
+        /// Archives a list of `Placement` objects.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. Format: `networks/{network_code}`
+        /// </param>
+        /// <param name="names">
+        /// Required. The names of the `Placement` objects to archive.
+        /// Format: `networks/{network_code}/placements/{placement_id}`
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<BatchArchivePlacementsResponse> BatchArchivePlacementsAsync(NetworkName parent, scg::IEnumerable<PlacementName> names, st::CancellationToken cancellationToken) =>
+            BatchArchivePlacementsAsync(parent, names, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
     }
 
     /// <summary>PlacementService client wrapper implementation, for convenient use.</summary>
@@ -492,6 +1572,20 @@ namespace Google.Ads.AdManager.V1
         private readonly gaxgrpc::ApiCall<GetPlacementRequest, Placement> _callGetPlacement;
 
         private readonly gaxgrpc::ApiCall<ListPlacementsRequest, ListPlacementsResponse> _callListPlacements;
+
+        private readonly gaxgrpc::ApiCall<CreatePlacementRequest, Placement> _callCreatePlacement;
+
+        private readonly gaxgrpc::ApiCall<UpdatePlacementRequest, Placement> _callUpdatePlacement;
+
+        private readonly gaxgrpc::ApiCall<BatchCreatePlacementsRequest, BatchCreatePlacementsResponse> _callBatchCreatePlacements;
+
+        private readonly gaxgrpc::ApiCall<BatchUpdatePlacementsRequest, BatchUpdatePlacementsResponse> _callBatchUpdatePlacements;
+
+        private readonly gaxgrpc::ApiCall<BatchActivatePlacementsRequest, BatchActivatePlacementsResponse> _callBatchActivatePlacements;
+
+        private readonly gaxgrpc::ApiCall<BatchDeactivatePlacementsRequest, BatchDeactivatePlacementsResponse> _callBatchDeactivatePlacements;
+
+        private readonly gaxgrpc::ApiCall<BatchArchivePlacementsRequest, BatchArchivePlacementsResponse> _callBatchArchivePlacements;
 
         /// <summary>
         /// Constructs a client wrapper for the PlacementService service, with the specified gRPC client and settings.
@@ -514,6 +1608,27 @@ namespace Google.Ads.AdManager.V1
             _callListPlacements = clientHelper.BuildApiCall<ListPlacementsRequest, ListPlacementsResponse>("ListPlacements", grpcClient.ListPlacementsAsync, grpcClient.ListPlacements, effectiveSettings.ListPlacementsSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callListPlacements);
             Modify_ListPlacementsApiCall(ref _callListPlacements);
+            _callCreatePlacement = clientHelper.BuildApiCall<CreatePlacementRequest, Placement>("CreatePlacement", grpcClient.CreatePlacementAsync, grpcClient.CreatePlacement, effectiveSettings.CreatePlacementSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            Modify_ApiCall(ref _callCreatePlacement);
+            Modify_CreatePlacementApiCall(ref _callCreatePlacement);
+            _callUpdatePlacement = clientHelper.BuildApiCall<UpdatePlacementRequest, Placement>("UpdatePlacement", grpcClient.UpdatePlacementAsync, grpcClient.UpdatePlacement, effectiveSettings.UpdatePlacementSettings).WithGoogleRequestParam("placement.name", request => request.Placement?.Name);
+            Modify_ApiCall(ref _callUpdatePlacement);
+            Modify_UpdatePlacementApiCall(ref _callUpdatePlacement);
+            _callBatchCreatePlacements = clientHelper.BuildApiCall<BatchCreatePlacementsRequest, BatchCreatePlacementsResponse>("BatchCreatePlacements", grpcClient.BatchCreatePlacementsAsync, grpcClient.BatchCreatePlacements, effectiveSettings.BatchCreatePlacementsSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            Modify_ApiCall(ref _callBatchCreatePlacements);
+            Modify_BatchCreatePlacementsApiCall(ref _callBatchCreatePlacements);
+            _callBatchUpdatePlacements = clientHelper.BuildApiCall<BatchUpdatePlacementsRequest, BatchUpdatePlacementsResponse>("BatchUpdatePlacements", grpcClient.BatchUpdatePlacementsAsync, grpcClient.BatchUpdatePlacements, effectiveSettings.BatchUpdatePlacementsSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            Modify_ApiCall(ref _callBatchUpdatePlacements);
+            Modify_BatchUpdatePlacementsApiCall(ref _callBatchUpdatePlacements);
+            _callBatchActivatePlacements = clientHelper.BuildApiCall<BatchActivatePlacementsRequest, BatchActivatePlacementsResponse>("BatchActivatePlacements", grpcClient.BatchActivatePlacementsAsync, grpcClient.BatchActivatePlacements, effectiveSettings.BatchActivatePlacementsSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            Modify_ApiCall(ref _callBatchActivatePlacements);
+            Modify_BatchActivatePlacementsApiCall(ref _callBatchActivatePlacements);
+            _callBatchDeactivatePlacements = clientHelper.BuildApiCall<BatchDeactivatePlacementsRequest, BatchDeactivatePlacementsResponse>("BatchDeactivatePlacements", grpcClient.BatchDeactivatePlacementsAsync, grpcClient.BatchDeactivatePlacements, effectiveSettings.BatchDeactivatePlacementsSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            Modify_ApiCall(ref _callBatchDeactivatePlacements);
+            Modify_BatchDeactivatePlacementsApiCall(ref _callBatchDeactivatePlacements);
+            _callBatchArchivePlacements = clientHelper.BuildApiCall<BatchArchivePlacementsRequest, BatchArchivePlacementsResponse>("BatchArchivePlacements", grpcClient.BatchArchivePlacementsAsync, grpcClient.BatchArchivePlacements, effectiveSettings.BatchArchivePlacementsSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            Modify_ApiCall(ref _callBatchArchivePlacements);
+            Modify_BatchArchivePlacementsApiCall(ref _callBatchArchivePlacements);
             OnConstruction(grpcClient, effectiveSettings, clientHelper);
         }
 
@@ -523,6 +1638,20 @@ namespace Google.Ads.AdManager.V1
 
         partial void Modify_ListPlacementsApiCall(ref gaxgrpc::ApiCall<ListPlacementsRequest, ListPlacementsResponse> call);
 
+        partial void Modify_CreatePlacementApiCall(ref gaxgrpc::ApiCall<CreatePlacementRequest, Placement> call);
+
+        partial void Modify_UpdatePlacementApiCall(ref gaxgrpc::ApiCall<UpdatePlacementRequest, Placement> call);
+
+        partial void Modify_BatchCreatePlacementsApiCall(ref gaxgrpc::ApiCall<BatchCreatePlacementsRequest, BatchCreatePlacementsResponse> call);
+
+        partial void Modify_BatchUpdatePlacementsApiCall(ref gaxgrpc::ApiCall<BatchUpdatePlacementsRequest, BatchUpdatePlacementsResponse> call);
+
+        partial void Modify_BatchActivatePlacementsApiCall(ref gaxgrpc::ApiCall<BatchActivatePlacementsRequest, BatchActivatePlacementsResponse> call);
+
+        partial void Modify_BatchDeactivatePlacementsApiCall(ref gaxgrpc::ApiCall<BatchDeactivatePlacementsRequest, BatchDeactivatePlacementsResponse> call);
+
+        partial void Modify_BatchArchivePlacementsApiCall(ref gaxgrpc::ApiCall<BatchArchivePlacementsRequest, BatchArchivePlacementsResponse> call);
+
         partial void OnConstruction(PlacementService.PlacementServiceClient grpcClient, PlacementServiceSettings effectiveSettings, gaxgrpc::ClientHelper clientHelper);
 
         /// <summary>The underlying gRPC PlacementService client</summary>
@@ -531,6 +1660,20 @@ namespace Google.Ads.AdManager.V1
         partial void Modify_GetPlacementRequest(ref GetPlacementRequest request, ref gaxgrpc::CallSettings settings);
 
         partial void Modify_ListPlacementsRequest(ref ListPlacementsRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_CreatePlacementRequest(ref CreatePlacementRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_UpdatePlacementRequest(ref UpdatePlacementRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_BatchCreatePlacementsRequest(ref BatchCreatePlacementsRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_BatchUpdatePlacementsRequest(ref BatchUpdatePlacementsRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_BatchActivatePlacementsRequest(ref BatchActivatePlacementsRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_BatchDeactivatePlacementsRequest(ref BatchDeactivatePlacementsRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_BatchArchivePlacementsRequest(ref BatchArchivePlacementsRequest request, ref gaxgrpc::CallSettings settings);
 
         /// <summary>
         /// API to retrieve a `Placement` object.
@@ -578,6 +1721,174 @@ namespace Google.Ads.AdManager.V1
         {
             Modify_ListPlacementsRequest(ref request, ref callSettings);
             return new gaxgrpc::GrpcPagedAsyncEnumerable<ListPlacementsRequest, ListPlacementsResponse, Placement>(_callListPlacements, request, callSettings);
+        }
+
+        /// <summary>
+        /// API to create an `Placement` object.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override Placement CreatePlacement(CreatePlacementRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_CreatePlacementRequest(ref request, ref callSettings);
+            return _callCreatePlacement.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        /// API to create an `Placement` object.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override stt::Task<Placement> CreatePlacementAsync(CreatePlacementRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_CreatePlacementRequest(ref request, ref callSettings);
+            return _callCreatePlacement.Async(request, callSettings);
+        }
+
+        /// <summary>
+        /// API to update an `Placement` object.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override Placement UpdatePlacement(UpdatePlacementRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_UpdatePlacementRequest(ref request, ref callSettings);
+            return _callUpdatePlacement.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        /// API to update an `Placement` object.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override stt::Task<Placement> UpdatePlacementAsync(UpdatePlacementRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_UpdatePlacementRequest(ref request, ref callSettings);
+            return _callUpdatePlacement.Async(request, callSettings);
+        }
+
+        /// <summary>
+        /// API to batch create `Placement` objects.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override BatchCreatePlacementsResponse BatchCreatePlacements(BatchCreatePlacementsRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_BatchCreatePlacementsRequest(ref request, ref callSettings);
+            return _callBatchCreatePlacements.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        /// API to batch create `Placement` objects.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override stt::Task<BatchCreatePlacementsResponse> BatchCreatePlacementsAsync(BatchCreatePlacementsRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_BatchCreatePlacementsRequest(ref request, ref callSettings);
+            return _callBatchCreatePlacements.Async(request, callSettings);
+        }
+
+        /// <summary>
+        /// API to batch update `Placement` objects.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override BatchUpdatePlacementsResponse BatchUpdatePlacements(BatchUpdatePlacementsRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_BatchUpdatePlacementsRequest(ref request, ref callSettings);
+            return _callBatchUpdatePlacements.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        /// API to batch update `Placement` objects.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override stt::Task<BatchUpdatePlacementsResponse> BatchUpdatePlacementsAsync(BatchUpdatePlacementsRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_BatchUpdatePlacementsRequest(ref request, ref callSettings);
+            return _callBatchUpdatePlacements.Async(request, callSettings);
+        }
+
+        /// <summary>
+        /// Activates a list of `Placement` objects.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override BatchActivatePlacementsResponse BatchActivatePlacements(BatchActivatePlacementsRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_BatchActivatePlacementsRequest(ref request, ref callSettings);
+            return _callBatchActivatePlacements.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Activates a list of `Placement` objects.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override stt::Task<BatchActivatePlacementsResponse> BatchActivatePlacementsAsync(BatchActivatePlacementsRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_BatchActivatePlacementsRequest(ref request, ref callSettings);
+            return _callBatchActivatePlacements.Async(request, callSettings);
+        }
+
+        /// <summary>
+        /// Deactivates a list of `Placement` objects.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override BatchDeactivatePlacementsResponse BatchDeactivatePlacements(BatchDeactivatePlacementsRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_BatchDeactivatePlacementsRequest(ref request, ref callSettings);
+            return _callBatchDeactivatePlacements.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Deactivates a list of `Placement` objects.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override stt::Task<BatchDeactivatePlacementsResponse> BatchDeactivatePlacementsAsync(BatchDeactivatePlacementsRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_BatchDeactivatePlacementsRequest(ref request, ref callSettings);
+            return _callBatchDeactivatePlacements.Async(request, callSettings);
+        }
+
+        /// <summary>
+        /// Archives a list of `Placement` objects.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override BatchArchivePlacementsResponse BatchArchivePlacements(BatchArchivePlacementsRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_BatchArchivePlacementsRequest(ref request, ref callSettings);
+            return _callBatchArchivePlacements.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Archives a list of `Placement` objects.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override stt::Task<BatchArchivePlacementsResponse> BatchArchivePlacementsAsync(BatchArchivePlacementsRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_BatchArchivePlacementsRequest(ref request, ref callSettings);
+            return _callBatchArchivePlacements.Async(request, callSettings);
         }
     }
 

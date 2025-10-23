@@ -71,6 +71,26 @@ namespace Google.Ads.AdManager.V1 {
     static readonly grpc::Marshaller<global::Google.Ads.AdManager.V1.ListCustomFieldsRequest> __Marshaller_google_ads_admanager_v1_ListCustomFieldsRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Ads.AdManager.V1.ListCustomFieldsRequest.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Ads.AdManager.V1.ListCustomFieldsResponse> __Marshaller_google_ads_admanager_v1_ListCustomFieldsResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Ads.AdManager.V1.ListCustomFieldsResponse.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Ads.AdManager.V1.CreateCustomFieldRequest> __Marshaller_google_ads_admanager_v1_CreateCustomFieldRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Ads.AdManager.V1.CreateCustomFieldRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Ads.AdManager.V1.BatchCreateCustomFieldsRequest> __Marshaller_google_ads_admanager_v1_BatchCreateCustomFieldsRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Ads.AdManager.V1.BatchCreateCustomFieldsRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Ads.AdManager.V1.BatchCreateCustomFieldsResponse> __Marshaller_google_ads_admanager_v1_BatchCreateCustomFieldsResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Ads.AdManager.V1.BatchCreateCustomFieldsResponse.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Ads.AdManager.V1.UpdateCustomFieldRequest> __Marshaller_google_ads_admanager_v1_UpdateCustomFieldRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Ads.AdManager.V1.UpdateCustomFieldRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Ads.AdManager.V1.BatchUpdateCustomFieldsRequest> __Marshaller_google_ads_admanager_v1_BatchUpdateCustomFieldsRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Ads.AdManager.V1.BatchUpdateCustomFieldsRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Ads.AdManager.V1.BatchUpdateCustomFieldsResponse> __Marshaller_google_ads_admanager_v1_BatchUpdateCustomFieldsResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Ads.AdManager.V1.BatchUpdateCustomFieldsResponse.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Ads.AdManager.V1.BatchActivateCustomFieldsRequest> __Marshaller_google_ads_admanager_v1_BatchActivateCustomFieldsRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Ads.AdManager.V1.BatchActivateCustomFieldsRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Ads.AdManager.V1.BatchActivateCustomFieldsResponse> __Marshaller_google_ads_admanager_v1_BatchActivateCustomFieldsResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Ads.AdManager.V1.BatchActivateCustomFieldsResponse.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Ads.AdManager.V1.BatchDeactivateCustomFieldsRequest> __Marshaller_google_ads_admanager_v1_BatchDeactivateCustomFieldsRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Ads.AdManager.V1.BatchDeactivateCustomFieldsRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Ads.AdManager.V1.BatchDeactivateCustomFieldsResponse> __Marshaller_google_ads_admanager_v1_BatchDeactivateCustomFieldsResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Ads.AdManager.V1.BatchDeactivateCustomFieldsResponse.Parser));
 
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Ads.AdManager.V1.GetCustomFieldRequest, global::Google.Ads.AdManager.V1.CustomField> __Method_GetCustomField = new grpc::Method<global::Google.Ads.AdManager.V1.GetCustomFieldRequest, global::Google.Ads.AdManager.V1.CustomField>(
@@ -87,6 +107,54 @@ namespace Google.Ads.AdManager.V1 {
         "ListCustomFields",
         __Marshaller_google_ads_admanager_v1_ListCustomFieldsRequest,
         __Marshaller_google_ads_admanager_v1_ListCustomFieldsResponse);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Ads.AdManager.V1.CreateCustomFieldRequest, global::Google.Ads.AdManager.V1.CustomField> __Method_CreateCustomField = new grpc::Method<global::Google.Ads.AdManager.V1.CreateCustomFieldRequest, global::Google.Ads.AdManager.V1.CustomField>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "CreateCustomField",
+        __Marshaller_google_ads_admanager_v1_CreateCustomFieldRequest,
+        __Marshaller_google_ads_admanager_v1_CustomField);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Ads.AdManager.V1.BatchCreateCustomFieldsRequest, global::Google.Ads.AdManager.V1.BatchCreateCustomFieldsResponse> __Method_BatchCreateCustomFields = new grpc::Method<global::Google.Ads.AdManager.V1.BatchCreateCustomFieldsRequest, global::Google.Ads.AdManager.V1.BatchCreateCustomFieldsResponse>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "BatchCreateCustomFields",
+        __Marshaller_google_ads_admanager_v1_BatchCreateCustomFieldsRequest,
+        __Marshaller_google_ads_admanager_v1_BatchCreateCustomFieldsResponse);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Ads.AdManager.V1.UpdateCustomFieldRequest, global::Google.Ads.AdManager.V1.CustomField> __Method_UpdateCustomField = new grpc::Method<global::Google.Ads.AdManager.V1.UpdateCustomFieldRequest, global::Google.Ads.AdManager.V1.CustomField>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "UpdateCustomField",
+        __Marshaller_google_ads_admanager_v1_UpdateCustomFieldRequest,
+        __Marshaller_google_ads_admanager_v1_CustomField);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Ads.AdManager.V1.BatchUpdateCustomFieldsRequest, global::Google.Ads.AdManager.V1.BatchUpdateCustomFieldsResponse> __Method_BatchUpdateCustomFields = new grpc::Method<global::Google.Ads.AdManager.V1.BatchUpdateCustomFieldsRequest, global::Google.Ads.AdManager.V1.BatchUpdateCustomFieldsResponse>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "BatchUpdateCustomFields",
+        __Marshaller_google_ads_admanager_v1_BatchUpdateCustomFieldsRequest,
+        __Marshaller_google_ads_admanager_v1_BatchUpdateCustomFieldsResponse);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Ads.AdManager.V1.BatchActivateCustomFieldsRequest, global::Google.Ads.AdManager.V1.BatchActivateCustomFieldsResponse> __Method_BatchActivateCustomFields = new grpc::Method<global::Google.Ads.AdManager.V1.BatchActivateCustomFieldsRequest, global::Google.Ads.AdManager.V1.BatchActivateCustomFieldsResponse>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "BatchActivateCustomFields",
+        __Marshaller_google_ads_admanager_v1_BatchActivateCustomFieldsRequest,
+        __Marshaller_google_ads_admanager_v1_BatchActivateCustomFieldsResponse);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Ads.AdManager.V1.BatchDeactivateCustomFieldsRequest, global::Google.Ads.AdManager.V1.BatchDeactivateCustomFieldsResponse> __Method_BatchDeactivateCustomFields = new grpc::Method<global::Google.Ads.AdManager.V1.BatchDeactivateCustomFieldsRequest, global::Google.Ads.AdManager.V1.BatchDeactivateCustomFieldsResponse>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "BatchDeactivateCustomFields",
+        __Marshaller_google_ads_admanager_v1_BatchDeactivateCustomFieldsRequest,
+        __Marshaller_google_ads_admanager_v1_BatchDeactivateCustomFieldsResponse);
 
     /// <summary>Service descriptor</summary>
     public static global::Google.Protobuf.Reflection.ServiceDescriptor Descriptor
@@ -118,6 +186,78 @@ namespace Google.Ads.AdManager.V1 {
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Ads.AdManager.V1.ListCustomFieldsResponse> ListCustomFields(global::Google.Ads.AdManager.V1.ListCustomFieldsRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// API to create a `CustomField` object.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Ads.AdManager.V1.CustomField> CreateCustomField(global::Google.Ads.AdManager.V1.CreateCustomFieldRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// API to batch create `CustomField` objects.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Ads.AdManager.V1.BatchCreateCustomFieldsResponse> BatchCreateCustomFields(global::Google.Ads.AdManager.V1.BatchCreateCustomFieldsRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// API to update a `CustomField` object.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Ads.AdManager.V1.CustomField> UpdateCustomField(global::Google.Ads.AdManager.V1.UpdateCustomFieldRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// API to batch update `CustomField` objects.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Ads.AdManager.V1.BatchUpdateCustomFieldsResponse> BatchUpdateCustomFields(global::Google.Ads.AdManager.V1.BatchUpdateCustomFieldsRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Activates a list of `CustomField` objects.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Ads.AdManager.V1.BatchActivateCustomFieldsResponse> BatchActivateCustomFields(global::Google.Ads.AdManager.V1.BatchActivateCustomFieldsRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Deactivates a list of `CustomField` objects.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Ads.AdManager.V1.BatchDeactivateCustomFieldsResponse> BatchDeactivateCustomFields(global::Google.Ads.AdManager.V1.BatchDeactivateCustomFieldsRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
       }
@@ -247,6 +387,294 @@ namespace Google.Ads.AdManager.V1 {
       {
         return CallInvoker.AsyncUnaryCall(__Method_ListCustomFields, null, options, request);
       }
+      /// <summary>
+      /// API to create a `CustomField` object.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Ads.AdManager.V1.CustomField CreateCustomField(global::Google.Ads.AdManager.V1.CreateCustomFieldRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return CreateCustomField(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// API to create a `CustomField` object.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Ads.AdManager.V1.CustomField CreateCustomField(global::Google.Ads.AdManager.V1.CreateCustomFieldRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_CreateCustomField, null, options, request);
+      }
+      /// <summary>
+      /// API to create a `CustomField` object.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Ads.AdManager.V1.CustomField> CreateCustomFieldAsync(global::Google.Ads.AdManager.V1.CreateCustomFieldRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return CreateCustomFieldAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// API to create a `CustomField` object.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Ads.AdManager.V1.CustomField> CreateCustomFieldAsync(global::Google.Ads.AdManager.V1.CreateCustomFieldRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_CreateCustomField, null, options, request);
+      }
+      /// <summary>
+      /// API to batch create `CustomField` objects.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Ads.AdManager.V1.BatchCreateCustomFieldsResponse BatchCreateCustomFields(global::Google.Ads.AdManager.V1.BatchCreateCustomFieldsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return BatchCreateCustomFields(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// API to batch create `CustomField` objects.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Ads.AdManager.V1.BatchCreateCustomFieldsResponse BatchCreateCustomFields(global::Google.Ads.AdManager.V1.BatchCreateCustomFieldsRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_BatchCreateCustomFields, null, options, request);
+      }
+      /// <summary>
+      /// API to batch create `CustomField` objects.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Ads.AdManager.V1.BatchCreateCustomFieldsResponse> BatchCreateCustomFieldsAsync(global::Google.Ads.AdManager.V1.BatchCreateCustomFieldsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return BatchCreateCustomFieldsAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// API to batch create `CustomField` objects.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Ads.AdManager.V1.BatchCreateCustomFieldsResponse> BatchCreateCustomFieldsAsync(global::Google.Ads.AdManager.V1.BatchCreateCustomFieldsRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_BatchCreateCustomFields, null, options, request);
+      }
+      /// <summary>
+      /// API to update a `CustomField` object.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Ads.AdManager.V1.CustomField UpdateCustomField(global::Google.Ads.AdManager.V1.UpdateCustomFieldRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return UpdateCustomField(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// API to update a `CustomField` object.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Ads.AdManager.V1.CustomField UpdateCustomField(global::Google.Ads.AdManager.V1.UpdateCustomFieldRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_UpdateCustomField, null, options, request);
+      }
+      /// <summary>
+      /// API to update a `CustomField` object.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Ads.AdManager.V1.CustomField> UpdateCustomFieldAsync(global::Google.Ads.AdManager.V1.UpdateCustomFieldRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return UpdateCustomFieldAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// API to update a `CustomField` object.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Ads.AdManager.V1.CustomField> UpdateCustomFieldAsync(global::Google.Ads.AdManager.V1.UpdateCustomFieldRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_UpdateCustomField, null, options, request);
+      }
+      /// <summary>
+      /// API to batch update `CustomField` objects.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Ads.AdManager.V1.BatchUpdateCustomFieldsResponse BatchUpdateCustomFields(global::Google.Ads.AdManager.V1.BatchUpdateCustomFieldsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return BatchUpdateCustomFields(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// API to batch update `CustomField` objects.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Ads.AdManager.V1.BatchUpdateCustomFieldsResponse BatchUpdateCustomFields(global::Google.Ads.AdManager.V1.BatchUpdateCustomFieldsRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_BatchUpdateCustomFields, null, options, request);
+      }
+      /// <summary>
+      /// API to batch update `CustomField` objects.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Ads.AdManager.V1.BatchUpdateCustomFieldsResponse> BatchUpdateCustomFieldsAsync(global::Google.Ads.AdManager.V1.BatchUpdateCustomFieldsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return BatchUpdateCustomFieldsAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// API to batch update `CustomField` objects.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Ads.AdManager.V1.BatchUpdateCustomFieldsResponse> BatchUpdateCustomFieldsAsync(global::Google.Ads.AdManager.V1.BatchUpdateCustomFieldsRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_BatchUpdateCustomFields, null, options, request);
+      }
+      /// <summary>
+      /// Activates a list of `CustomField` objects.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Ads.AdManager.V1.BatchActivateCustomFieldsResponse BatchActivateCustomFields(global::Google.Ads.AdManager.V1.BatchActivateCustomFieldsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return BatchActivateCustomFields(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Activates a list of `CustomField` objects.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Ads.AdManager.V1.BatchActivateCustomFieldsResponse BatchActivateCustomFields(global::Google.Ads.AdManager.V1.BatchActivateCustomFieldsRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_BatchActivateCustomFields, null, options, request);
+      }
+      /// <summary>
+      /// Activates a list of `CustomField` objects.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Ads.AdManager.V1.BatchActivateCustomFieldsResponse> BatchActivateCustomFieldsAsync(global::Google.Ads.AdManager.V1.BatchActivateCustomFieldsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return BatchActivateCustomFieldsAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Activates a list of `CustomField` objects.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Ads.AdManager.V1.BatchActivateCustomFieldsResponse> BatchActivateCustomFieldsAsync(global::Google.Ads.AdManager.V1.BatchActivateCustomFieldsRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_BatchActivateCustomFields, null, options, request);
+      }
+      /// <summary>
+      /// Deactivates a list of `CustomField` objects.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Ads.AdManager.V1.BatchDeactivateCustomFieldsResponse BatchDeactivateCustomFields(global::Google.Ads.AdManager.V1.BatchDeactivateCustomFieldsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return BatchDeactivateCustomFields(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Deactivates a list of `CustomField` objects.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Ads.AdManager.V1.BatchDeactivateCustomFieldsResponse BatchDeactivateCustomFields(global::Google.Ads.AdManager.V1.BatchDeactivateCustomFieldsRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_BatchDeactivateCustomFields, null, options, request);
+      }
+      /// <summary>
+      /// Deactivates a list of `CustomField` objects.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Ads.AdManager.V1.BatchDeactivateCustomFieldsResponse> BatchDeactivateCustomFieldsAsync(global::Google.Ads.AdManager.V1.BatchDeactivateCustomFieldsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return BatchDeactivateCustomFieldsAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Deactivates a list of `CustomField` objects.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Ads.AdManager.V1.BatchDeactivateCustomFieldsResponse> BatchDeactivateCustomFieldsAsync(global::Google.Ads.AdManager.V1.BatchDeactivateCustomFieldsRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_BatchDeactivateCustomFields, null, options, request);
+      }
       /// <summary>Creates a new instance of client from given <c>ClientBaseConfiguration</c>.</summary>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       protected override CustomFieldServiceClient NewInstance(ClientBaseConfiguration configuration)
@@ -262,7 +690,13 @@ namespace Google.Ads.AdManager.V1 {
     {
       return grpc::ServerServiceDefinition.CreateBuilder()
           .AddMethod(__Method_GetCustomField, serviceImpl.GetCustomField)
-          .AddMethod(__Method_ListCustomFields, serviceImpl.ListCustomFields).Build();
+          .AddMethod(__Method_ListCustomFields, serviceImpl.ListCustomFields)
+          .AddMethod(__Method_CreateCustomField, serviceImpl.CreateCustomField)
+          .AddMethod(__Method_BatchCreateCustomFields, serviceImpl.BatchCreateCustomFields)
+          .AddMethod(__Method_UpdateCustomField, serviceImpl.UpdateCustomField)
+          .AddMethod(__Method_BatchUpdateCustomFields, serviceImpl.BatchUpdateCustomFields)
+          .AddMethod(__Method_BatchActivateCustomFields, serviceImpl.BatchActivateCustomFields)
+          .AddMethod(__Method_BatchDeactivateCustomFields, serviceImpl.BatchDeactivateCustomFields).Build();
     }
 
     /// <summary>Register service method with a service binder with or without implementation. Useful when customizing the service binding logic.
@@ -274,6 +708,12 @@ namespace Google.Ads.AdManager.V1 {
     {
       serviceBinder.AddMethod(__Method_GetCustomField, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Ads.AdManager.V1.GetCustomFieldRequest, global::Google.Ads.AdManager.V1.CustomField>(serviceImpl.GetCustomField));
       serviceBinder.AddMethod(__Method_ListCustomFields, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Ads.AdManager.V1.ListCustomFieldsRequest, global::Google.Ads.AdManager.V1.ListCustomFieldsResponse>(serviceImpl.ListCustomFields));
+      serviceBinder.AddMethod(__Method_CreateCustomField, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Ads.AdManager.V1.CreateCustomFieldRequest, global::Google.Ads.AdManager.V1.CustomField>(serviceImpl.CreateCustomField));
+      serviceBinder.AddMethod(__Method_BatchCreateCustomFields, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Ads.AdManager.V1.BatchCreateCustomFieldsRequest, global::Google.Ads.AdManager.V1.BatchCreateCustomFieldsResponse>(serviceImpl.BatchCreateCustomFields));
+      serviceBinder.AddMethod(__Method_UpdateCustomField, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Ads.AdManager.V1.UpdateCustomFieldRequest, global::Google.Ads.AdManager.V1.CustomField>(serviceImpl.UpdateCustomField));
+      serviceBinder.AddMethod(__Method_BatchUpdateCustomFields, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Ads.AdManager.V1.BatchUpdateCustomFieldsRequest, global::Google.Ads.AdManager.V1.BatchUpdateCustomFieldsResponse>(serviceImpl.BatchUpdateCustomFields));
+      serviceBinder.AddMethod(__Method_BatchActivateCustomFields, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Ads.AdManager.V1.BatchActivateCustomFieldsRequest, global::Google.Ads.AdManager.V1.BatchActivateCustomFieldsResponse>(serviceImpl.BatchActivateCustomFields));
+      serviceBinder.AddMethod(__Method_BatchDeactivateCustomFields, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Ads.AdManager.V1.BatchDeactivateCustomFieldsRequest, global::Google.Ads.AdManager.V1.BatchDeactivateCustomFieldsResponse>(serviceImpl.BatchDeactivateCustomFields));
     }
 
   }

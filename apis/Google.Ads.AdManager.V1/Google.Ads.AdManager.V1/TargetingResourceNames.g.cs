@@ -59,6 +59,46 @@ namespace Google.Ads.AdManager.V1
         }
     }
 
+    public partial class BrowserTargeting
+    {
+        /// <summary>
+        /// <see cref="BrowserName"/>-typed view over the <see cref="TargetedBrowsers"/> resource name property.
+        /// </summary>
+        public gax::ResourceNameList<BrowserName> TargetedBrowsersAsBrowserNames
+        {
+            get => new gax::ResourceNameList<BrowserName>(TargetedBrowsers, s => string.IsNullOrEmpty(s) ? null : BrowserName.Parse(s, allowUnparsed: true));
+        }
+
+        /// <summary>
+        /// <see cref="BrowserName"/>-typed view over the <see cref="ExcludedBrowsers"/> resource name property.
+        /// </summary>
+        public gax::ResourceNameList<BrowserName> ExcludedBrowsersAsBrowserNames
+        {
+            get => new gax::ResourceNameList<BrowserName>(ExcludedBrowsers, s => string.IsNullOrEmpty(s) ? null : BrowserName.Parse(s, allowUnparsed: true));
+        }
+    }
+
+    public partial class BrowserLanguageTargeting
+    {
+        /// <summary>
+        /// <see cref="BrowserLanguageName"/>-typed view over the <see cref="TargetedBrowserLanguages"/> resource name
+        /// property.
+        /// </summary>
+        public gax::ResourceNameList<BrowserLanguageName> TargetedBrowserLanguagesAsBrowserLanguageNames
+        {
+            get => new gax::ResourceNameList<BrowserLanguageName>(TargetedBrowserLanguages, s => string.IsNullOrEmpty(s) ? null : BrowserLanguageName.Parse(s, allowUnparsed: true));
+        }
+
+        /// <summary>
+        /// <see cref="BrowserLanguageName"/>-typed view over the <see cref="ExcludedBrowserLanguages"/> resource name
+        /// property.
+        /// </summary>
+        public gax::ResourceNameList<BrowserLanguageName> ExcludedBrowserLanguagesAsBrowserLanguageNames
+        {
+            get => new gax::ResourceNameList<BrowserLanguageName>(ExcludedBrowserLanguages, s => string.IsNullOrEmpty(s) ? null : BrowserLanguageName.Parse(s, allowUnparsed: true));
+        }
+    }
+
     public partial class DeviceCategoryTargeting
     {
         /// <summary>
@@ -77,6 +117,105 @@ namespace Google.Ads.AdManager.V1
         public gax::ResourceNameList<DeviceCategoryName> ExcludedCategoriesAsDeviceCategoryNames
         {
             get => new gax::ResourceNameList<DeviceCategoryName>(ExcludedCategories, s => string.IsNullOrEmpty(s) ? null : DeviceCategoryName.Parse(s, allowUnparsed: true));
+        }
+    }
+
+    public partial class DeviceCapabilityTargeting
+    {
+        /// <summary>
+        /// <see cref="DeviceCapabilityName"/>-typed view over the <see cref="TargetedCapabilities"/> resource name
+        /// property.
+        /// </summary>
+        public gax::ResourceNameList<DeviceCapabilityName> TargetedCapabilitiesAsDeviceCapabilityNames
+        {
+            get => new gax::ResourceNameList<DeviceCapabilityName>(TargetedCapabilities, s => string.IsNullOrEmpty(s) ? null : DeviceCapabilityName.Parse(s, allowUnparsed: true));
+        }
+
+        /// <summary>
+        /// <see cref="DeviceCapabilityName"/>-typed view over the <see cref="ExcludedCapabilities"/> resource name
+        /// property.
+        /// </summary>
+        public gax::ResourceNameList<DeviceCapabilityName> ExcludedCapabilitiesAsDeviceCapabilityNames
+        {
+            get => new gax::ResourceNameList<DeviceCapabilityName>(ExcludedCapabilities, s => string.IsNullOrEmpty(s) ? null : DeviceCapabilityName.Parse(s, allowUnparsed: true));
+        }
+    }
+
+    public partial class DeviceManufacturerTargeting
+    {
+        /// <summary>
+        /// <see cref="DeviceManufacturerName"/>-typed view over the <see cref="TargetedDeviceManufacturers"/> resource
+        /// name property.
+        /// </summary>
+        public gax::ResourceNameList<DeviceManufacturerName> TargetedDeviceManufacturersAsDeviceManufacturerNames
+        {
+            get => new gax::ResourceNameList<DeviceManufacturerName>(TargetedDeviceManufacturers, s => string.IsNullOrEmpty(s) ? null : DeviceManufacturerName.Parse(s, allowUnparsed: true));
+        }
+
+        /// <summary>
+        /// <see cref="DeviceManufacturerName"/>-typed view over the <see cref="ExcludedDeviceManufacturers"/> resource
+        /// name property.
+        /// </summary>
+        public gax::ResourceNameList<DeviceManufacturerName> ExcludedDeviceManufacturersAsDeviceManufacturerNames
+        {
+            get => new gax::ResourceNameList<DeviceManufacturerName>(ExcludedDeviceManufacturers, s => string.IsNullOrEmpty(s) ? null : DeviceManufacturerName.Parse(s, allowUnparsed: true));
+        }
+
+        /// <summary>
+        /// <see cref="MobileDeviceName"/>-typed view over the <see cref="TargetedMobileDevices"/> resource name
+        /// property.
+        /// </summary>
+        public gax::ResourceNameList<MobileDeviceName> TargetedMobileDevicesAsMobileDeviceNames
+        {
+            get => new gax::ResourceNameList<MobileDeviceName>(TargetedMobileDevices, s => string.IsNullOrEmpty(s) ? null : MobileDeviceName.Parse(s, allowUnparsed: true));
+        }
+
+        /// <summary>
+        /// <see cref="MobileDeviceName"/>-typed view over the <see cref="ExcludedMobileDevices"/> resource name
+        /// property.
+        /// </summary>
+        public gax::ResourceNameList<MobileDeviceName> ExcludedMobileDevicesAsMobileDeviceNames
+        {
+            get => new gax::ResourceNameList<MobileDeviceName>(ExcludedMobileDevices, s => string.IsNullOrEmpty(s) ? null : MobileDeviceName.Parse(s, allowUnparsed: true));
+        }
+
+        /// <summary>
+        /// <see cref="MobileDeviceSubmodelName"/>-typed view over the <see cref="TargetedMobileDeviceSubmodels"/>
+        /// resource name property.
+        /// </summary>
+        public gax::ResourceNameList<MobileDeviceSubmodelName> TargetedMobileDeviceSubmodelsAsMobileDeviceSubmodelNames
+        {
+            get => new gax::ResourceNameList<MobileDeviceSubmodelName>(TargetedMobileDeviceSubmodels, s => string.IsNullOrEmpty(s) ? null : MobileDeviceSubmodelName.Parse(s, allowUnparsed: true));
+        }
+
+        /// <summary>
+        /// <see cref="MobileDeviceSubmodelName"/>-typed view over the <see cref="ExcludedMobileDeviceSubmodels"/>
+        /// resource name property.
+        /// </summary>
+        public gax::ResourceNameList<MobileDeviceSubmodelName> ExcludedMobileDeviceSubmodelsAsMobileDeviceSubmodelNames
+        {
+            get => new gax::ResourceNameList<MobileDeviceSubmodelName>(ExcludedMobileDeviceSubmodels, s => string.IsNullOrEmpty(s) ? null : MobileDeviceSubmodelName.Parse(s, allowUnparsed: true));
+        }
+    }
+
+    public partial class MobileCarrierTargeting
+    {
+        /// <summary>
+        /// <see cref="MobileCarrierName"/>-typed view over the <see cref="TargetedMobileCarriers"/> resource name
+        /// property.
+        /// </summary>
+        public gax::ResourceNameList<MobileCarrierName> TargetedMobileCarriersAsMobileCarrierNames
+        {
+            get => new gax::ResourceNameList<MobileCarrierName>(TargetedMobileCarriers, s => string.IsNullOrEmpty(s) ? null : MobileCarrierName.Parse(s, allowUnparsed: true));
+        }
+
+        /// <summary>
+        /// <see cref="MobileCarrierName"/>-typed view over the <see cref="ExcludedMobileCarriers"/> resource name
+        /// property.
+        /// </summary>
+        public gax::ResourceNameList<MobileCarrierName> ExcludedMobileCarriersAsMobileCarrierNames
+        {
+            get => new gax::ResourceNameList<MobileCarrierName>(ExcludedMobileCarriers, s => string.IsNullOrEmpty(s) ? null : MobileCarrierName.Parse(s, allowUnparsed: true));
         }
     }
 
@@ -159,6 +298,85 @@ namespace Google.Ads.AdManager.V1
         public gax::ResourceNameList<CustomTargetingValueName> CustomTargetingValuesAsCustomTargetingValueNames
         {
             get => new gax::ResourceNameList<CustomTargetingValueName>(CustomTargetingValues, s => string.IsNullOrEmpty(s) ? null : CustomTargetingValueName.Parse(s, allowUnparsed: true));
+        }
+    }
+
+    public partial class AudienceSegmentTargeting
+    {
+        /// <summary>
+        /// <see cref="AudienceSegmentName"/>-typed view over the <see cref="AudienceSegments"/> resource name property.
+        /// </summary>
+        public gax::ResourceNameList<AudienceSegmentName> AudienceSegmentsAsAudienceSegmentNames
+        {
+            get => new gax::ResourceNameList<AudienceSegmentName>(AudienceSegments, s => string.IsNullOrEmpty(s) ? null : AudienceSegmentName.Parse(s, allowUnparsed: true));
+        }
+    }
+
+    public partial class CmsMetadataTargeting
+    {
+        /// <summary>
+        /// <see cref="CmsMetadataValueName"/>-typed view over the <see cref="CmsMetadataValues"/> resource name
+        /// property.
+        /// </summary>
+        public gax::ResourceNameList<CmsMetadataValueName> CmsMetadataValuesAsCmsMetadataValueNames
+        {
+            get => new gax::ResourceNameList<CmsMetadataValueName>(CmsMetadataValues, s => string.IsNullOrEmpty(s) ? null : CmsMetadataValueName.Parse(s, allowUnparsed: true));
+        }
+    }
+
+    public partial class ContentTargeting
+    {
+        /// <summary>
+        /// <see cref="ContentName"/>-typed view over the <see cref="TargetedContent"/> resource name property.
+        /// </summary>
+        public gax::ResourceNameList<ContentName> TargetedContentAsContentNames
+        {
+            get => new gax::ResourceNameList<ContentName>(TargetedContent, s => string.IsNullOrEmpty(s) ? null : ContentName.Parse(s, allowUnparsed: true));
+        }
+
+        /// <summary>
+        /// <see cref="ContentName"/>-typed view over the <see cref="ExcludedContent"/> resource name property.
+        /// </summary>
+        public gax::ResourceNameList<ContentName> ExcludedContentAsContentNames
+        {
+            get => new gax::ResourceNameList<ContentName>(ExcludedContent, s => string.IsNullOrEmpty(s) ? null : ContentName.Parse(s, allowUnparsed: true));
+        }
+
+        /// <summary>
+        /// <see cref="ContentBundleName"/>-typed view over the <see cref="TargetedContentBundles"/> resource name
+        /// property.
+        /// </summary>
+        public gax::ResourceNameList<ContentBundleName> TargetedContentBundlesAsContentBundleNames
+        {
+            get => new gax::ResourceNameList<ContentBundleName>(TargetedContentBundles, s => string.IsNullOrEmpty(s) ? null : ContentBundleName.Parse(s, allowUnparsed: true));
+        }
+
+        /// <summary>
+        /// <see cref="ContentBundleName"/>-typed view over the <see cref="ExcludedContentBundles"/> resource name
+        /// property.
+        /// </summary>
+        public gax::ResourceNameList<ContentBundleName> ExcludedContentBundlesAsContentBundleNames
+        {
+            get => new gax::ResourceNameList<ContentBundleName>(ExcludedContentBundles, s => string.IsNullOrEmpty(s) ? null : ContentBundleName.Parse(s, allowUnparsed: true));
+        }
+    }
+
+    public partial class FirstPartyMobileApplicationTargeting
+    {
+        /// <summary>
+        /// <see cref="ApplicationName"/>-typed view over the <see cref="TargetedApplications"/> resource name property.
+        /// </summary>
+        public gax::ResourceNameList<ApplicationName> TargetedApplicationsAsApplicationNames
+        {
+            get => new gax::ResourceNameList<ApplicationName>(TargetedApplications, s => string.IsNullOrEmpty(s) ? null : ApplicationName.Parse(s, allowUnparsed: true));
+        }
+
+        /// <summary>
+        /// <see cref="ApplicationName"/>-typed view over the <see cref="ExcludedApplications"/> resource name property.
+        /// </summary>
+        public gax::ResourceNameList<ApplicationName> ExcludedApplicationsAsApplicationNames
+        {
+            get => new gax::ResourceNameList<ApplicationName>(ExcludedApplications, s => string.IsNullOrEmpty(s) ? null : ApplicationName.Parse(s, allowUnparsed: true));
         }
     }
 }

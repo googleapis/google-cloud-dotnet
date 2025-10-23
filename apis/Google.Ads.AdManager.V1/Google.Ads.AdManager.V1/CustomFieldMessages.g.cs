@@ -46,14 +46,14 @@ namespace Google.Ads.AdManager.V1 {
             "L2N1c3RvbUZpZWxkcy97Y3VzdG9tX2ZpZWxkfSoMY3VzdG9tRmllbGRzMgtj",
             "dXN0b21GaWVsZEISChBfY3VzdG9tX2ZpZWxkX2lkQg8KDV9kaXNwbGF5X25h",
             "bWVCDgoMX2Rlc2NyaXB0aW9uQgkKB19zdGF0dXNCDgoMX2VudGl0eV90eXBl",
-            "QgwKCl9kYXRhX3R5cGVCDQoLX3Zpc2liaWxpdHkiUwoRQ3VzdG9tRmllbGRP",
-            "cHRpb24SIwoWY3VzdG9tX2ZpZWxkX29wdGlvbl9pZBgBIAEoA0ID4EEDEhkK",
-            "DGRpc3BsYXlfbmFtZRgCIAEoCUID4EECQswBChtjb20uZ29vZ2xlLmFkcy5h",
-            "ZG1hbmFnZXIudjFCGEN1c3RvbUZpZWxkTWVzc2FnZXNQcm90b1ABWkBnb29n",
-            "bGUuZ29sYW5nLm9yZy9nZW5wcm90by9nb29nbGVhcGlzL2Fkcy9hZG1hbmFn",
-            "ZXIvdjE7YWRtYW5hZ2VyqgIXR29vZ2xlLkFkcy5BZE1hbmFnZXIuVjHKAhdH",
-            "b29nbGVcQWRzXEFkTWFuYWdlclxWMeoCGkdvb2dsZTo6QWRzOjpBZE1hbmFn",
-            "ZXI6OlYxYgZwcm90bzM="));
+            "QgwKCl9kYXRhX3R5cGVCDQoLX3Zpc2liaWxpdHkiVgoRQ3VzdG9tRmllbGRP",
+            "cHRpb24SJgoWY3VzdG9tX2ZpZWxkX29wdGlvbl9pZBgBIAEoA0IG4EEB4EEH",
+            "EhkKDGRpc3BsYXlfbmFtZRgCIAEoCUID4EECQswBChtjb20uZ29vZ2xlLmFk",
+            "cy5hZG1hbmFnZXIudjFCGEN1c3RvbUZpZWxkTWVzc2FnZXNQcm90b1ABWkBn",
+            "b29nbGUuZ29sYW5nLm9yZy9nZW5wcm90by9nb29nbGVhcGlzL2Fkcy9hZG1h",
+            "bmFnZXIvdjE7YWRtYW5hZ2VyqgIXR29vZ2xlLkFkcy5BZE1hbmFnZXIuVjHK",
+            "AhdHb29nbGVcQWRzXEFkTWFuYWdlclxWMeoCGkdvb2dsZTo6QWRzOjpBZE1h",
+            "bmFnZXI6OlYxYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Ads.AdManager.V1.CustomFieldEnumsReflection.Descriptor, global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
@@ -733,7 +733,7 @@ namespace Google.Ads.AdManager.V1 {
     public const int CustomFieldOptionIdFieldNumber = 1;
     private long customFieldOptionId_;
     /// <summary>
-    /// Output only. `CustomFieldOption` ID.
+    /// Optional. Non-empty default. `CustomFieldOption` ID.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
