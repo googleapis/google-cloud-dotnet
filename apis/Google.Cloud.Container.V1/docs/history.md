@@ -1,5 +1,26 @@
 # Version history
 
+## Version 3.36.0, released 2025-10-23
+
+### New features
+
+- Add node_kernel_module_loading field to LinuxNodeConfig
+- Add network_tier_config field to NodeNetworkConfig
+- Add writable_cgroups field to ContainerdConfig
+- Deprecate enable_legacy_lustre_port field in LustreCsiDriverConfig
+- Add network_tier_config field to IPAllocationPolicy
+- Deprecate enterprise_config field in Cluster
+- Deprecate desired_enterprise_config field in ClusterUpdate
+- Add autoscaled_rollout_policy field to BlueGreenSettings
+- Add end_time_behavior field to MaintenanceExclusionOptions
+- Add privileged_admission_config field to Autopilot
+- Add membership_type field to Fleet
+- Add rotation_config field to SecretManagerConfig
+
+### Documentation improvements
+
+- Various documentation fixes
+
 ## Version 3.35.0, released 2025-07-22
 
 ### New features
