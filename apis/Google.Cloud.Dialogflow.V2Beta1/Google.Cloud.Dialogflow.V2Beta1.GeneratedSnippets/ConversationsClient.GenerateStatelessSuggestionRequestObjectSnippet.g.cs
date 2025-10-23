@@ -51,6 +51,7 @@ namespace GoogleCSharpSnippets
                 {
                     TriggerEvent.Unspecified,
                 },
+                SecuritySettings = "",
             };
             // Make the request
             GenerateStatelessSuggestionResponse response = conversationsClient.GenerateStatelessSuggestion(request);

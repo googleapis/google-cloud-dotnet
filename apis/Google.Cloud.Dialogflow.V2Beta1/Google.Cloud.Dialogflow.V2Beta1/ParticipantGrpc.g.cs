@@ -85,6 +85,10 @@ namespace Google.Cloud.Dialogflow.V2Beta1 {
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Dialogflow.V2Beta1.StreamingAnalyzeContentResponse> __Marshaller_google_cloud_dialogflow_v2beta1_StreamingAnalyzeContentResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Dialogflow.V2Beta1.StreamingAnalyzeContentResponse.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.Dialogflow.V2Beta1.BidiStreamingAnalyzeContentRequest> __Marshaller_google_cloud_dialogflow_v2beta1_BidiStreamingAnalyzeContentRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Dialogflow.V2Beta1.BidiStreamingAnalyzeContentRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.Dialogflow.V2Beta1.BidiStreamingAnalyzeContentResponse> __Marshaller_google_cloud_dialogflow_v2beta1_BidiStreamingAnalyzeContentResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Dialogflow.V2Beta1.BidiStreamingAnalyzeContentResponse.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Dialogflow.V2Beta1.SuggestArticlesRequest> __Marshaller_google_cloud_dialogflow_v2beta1_SuggestArticlesRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Dialogflow.V2Beta1.SuggestArticlesRequest.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Dialogflow.V2Beta1.SuggestArticlesResponse> __Marshaller_google_cloud_dialogflow_v2beta1_SuggestArticlesResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Dialogflow.V2Beta1.SuggestArticlesResponse.Parser));
@@ -156,6 +160,14 @@ namespace Google.Cloud.Dialogflow.V2Beta1 {
         "StreamingAnalyzeContent",
         __Marshaller_google_cloud_dialogflow_v2beta1_StreamingAnalyzeContentRequest,
         __Marshaller_google_cloud_dialogflow_v2beta1_StreamingAnalyzeContentResponse);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.Dialogflow.V2Beta1.BidiStreamingAnalyzeContentRequest, global::Google.Cloud.Dialogflow.V2Beta1.BidiStreamingAnalyzeContentResponse> __Method_BidiStreamingAnalyzeContent = new grpc::Method<global::Google.Cloud.Dialogflow.V2Beta1.BidiStreamingAnalyzeContentRequest, global::Google.Cloud.Dialogflow.V2Beta1.BidiStreamingAnalyzeContentResponse>(
+        grpc::MethodType.DuplexStreaming,
+        __ServiceName,
+        "BidiStreamingAnalyzeContent",
+        __Marshaller_google_cloud_dialogflow_v2beta1_BidiStreamingAnalyzeContentRequest,
+        __Marshaller_google_cloud_dialogflow_v2beta1_BidiStreamingAnalyzeContentResponse);
 
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.Dialogflow.V2Beta1.SuggestArticlesRequest, global::Google.Cloud.Dialogflow.V2Beta1.SuggestArticlesResponse> __Method_SuggestArticles = new grpc::Method<global::Google.Cloud.Dialogflow.V2Beta1.SuggestArticlesRequest, global::Google.Cloud.Dialogflow.V2Beta1.SuggestArticlesResponse>(
@@ -303,6 +315,20 @@ namespace Google.Cloud.Dialogflow.V2Beta1 {
       /// <returns>A task indicating completion of the handler.</returns>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task StreamingAnalyzeContent(grpc::IAsyncStreamReader<global::Google.Cloud.Dialogflow.V2Beta1.StreamingAnalyzeContentRequest> requestStream, grpc::IServerStreamWriter<global::Google.Cloud.Dialogflow.V2Beta1.StreamingAnalyzeContentResponse> responseStream, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Bidirectional endless streaming version of
+      /// [StreamingAnalyzeContent][google.cloud.dialogflow.v2beta1.Participants.StreamingAnalyzeContent].
+      /// </summary>
+      /// <param name="requestStream">Used for reading requests from the client.</param>
+      /// <param name="responseStream">Used for sending responses back to the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>A task indicating completion of the handler.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task BidiStreamingAnalyzeContent(grpc::IAsyncStreamReader<global::Google.Cloud.Dialogflow.V2Beta1.BidiStreamingAnalyzeContentRequest> requestStream, grpc::IServerStreamWriter<global::Google.Cloud.Dialogflow.V2Beta1.BidiStreamingAnalyzeContentResponse> responseStream, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
       }
@@ -762,6 +788,30 @@ namespace Google.Cloud.Dialogflow.V2Beta1 {
       public virtual grpc::AsyncDuplexStreamingCall<global::Google.Cloud.Dialogflow.V2Beta1.StreamingAnalyzeContentRequest, global::Google.Cloud.Dialogflow.V2Beta1.StreamingAnalyzeContentResponse> StreamingAnalyzeContent(grpc::CallOptions options)
       {
         return CallInvoker.AsyncDuplexStreamingCall(__Method_StreamingAnalyzeContent, null, options);
+      }
+      /// <summary>
+      /// Bidirectional endless streaming version of
+      /// [StreamingAnalyzeContent][google.cloud.dialogflow.v2beta1.Participants.StreamingAnalyzeContent].
+      /// </summary>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncDuplexStreamingCall<global::Google.Cloud.Dialogflow.V2Beta1.BidiStreamingAnalyzeContentRequest, global::Google.Cloud.Dialogflow.V2Beta1.BidiStreamingAnalyzeContentResponse> BidiStreamingAnalyzeContent(grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return BidiStreamingAnalyzeContent(new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Bidirectional endless streaming version of
+      /// [StreamingAnalyzeContent][google.cloud.dialogflow.v2beta1.Participants.StreamingAnalyzeContent].
+      /// </summary>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncDuplexStreamingCall<global::Google.Cloud.Dialogflow.V2Beta1.BidiStreamingAnalyzeContentRequest, global::Google.Cloud.Dialogflow.V2Beta1.BidiStreamingAnalyzeContentResponse> BidiStreamingAnalyzeContent(grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncDuplexStreamingCall(__Method_BidiStreamingAnalyzeContent, null, options);
       }
       /// <summary>
       /// Gets suggested articles for a participant based on specific historical
@@ -1251,6 +1301,7 @@ namespace Google.Cloud.Dialogflow.V2Beta1 {
           .AddMethod(__Method_UpdateParticipant, serviceImpl.UpdateParticipant)
           .AddMethod(__Method_AnalyzeContent, serviceImpl.AnalyzeContent)
           .AddMethod(__Method_StreamingAnalyzeContent, serviceImpl.StreamingAnalyzeContent)
+          .AddMethod(__Method_BidiStreamingAnalyzeContent, serviceImpl.BidiStreamingAnalyzeContent)
           .AddMethod(__Method_SuggestArticles, serviceImpl.SuggestArticles)
           .AddMethod(__Method_SuggestFaqAnswers, serviceImpl.SuggestFaqAnswers)
           .AddMethod(__Method_SuggestSmartReplies, serviceImpl.SuggestSmartReplies)
@@ -1272,6 +1323,7 @@ namespace Google.Cloud.Dialogflow.V2Beta1 {
       serviceBinder.AddMethod(__Method_UpdateParticipant, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Dialogflow.V2Beta1.UpdateParticipantRequest, global::Google.Cloud.Dialogflow.V2Beta1.Participant>(serviceImpl.UpdateParticipant));
       serviceBinder.AddMethod(__Method_AnalyzeContent, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Dialogflow.V2Beta1.AnalyzeContentRequest, global::Google.Cloud.Dialogflow.V2Beta1.AnalyzeContentResponse>(serviceImpl.AnalyzeContent));
       serviceBinder.AddMethod(__Method_StreamingAnalyzeContent, serviceImpl == null ? null : new grpc::DuplexStreamingServerMethod<global::Google.Cloud.Dialogflow.V2Beta1.StreamingAnalyzeContentRequest, global::Google.Cloud.Dialogflow.V2Beta1.StreamingAnalyzeContentResponse>(serviceImpl.StreamingAnalyzeContent));
+      serviceBinder.AddMethod(__Method_BidiStreamingAnalyzeContent, serviceImpl == null ? null : new grpc::DuplexStreamingServerMethod<global::Google.Cloud.Dialogflow.V2Beta1.BidiStreamingAnalyzeContentRequest, global::Google.Cloud.Dialogflow.V2Beta1.BidiStreamingAnalyzeContentResponse>(serviceImpl.BidiStreamingAnalyzeContent));
       serviceBinder.AddMethod(__Method_SuggestArticles, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Dialogflow.V2Beta1.SuggestArticlesRequest, global::Google.Cloud.Dialogflow.V2Beta1.SuggestArticlesResponse>(serviceImpl.SuggestArticles));
       serviceBinder.AddMethod(__Method_SuggestFaqAnswers, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Dialogflow.V2Beta1.SuggestFaqAnswersRequest, global::Google.Cloud.Dialogflow.V2Beta1.SuggestFaqAnswersResponse>(serviceImpl.SuggestFaqAnswers));
       serviceBinder.AddMethod(__Method_SuggestSmartReplies, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Dialogflow.V2Beta1.SuggestSmartRepliesRequest, global::Google.Cloud.Dialogflow.V2Beta1.SuggestSmartRepliesResponse>(serviceImpl.SuggestSmartReplies));

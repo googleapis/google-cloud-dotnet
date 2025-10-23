@@ -54,6 +54,8 @@ namespace Google.Cloud.Dialogflow.V2Beta1
             AnalyzeContentSettings = existing.AnalyzeContentSettings;
             StreamingAnalyzeContentSettings = existing.StreamingAnalyzeContentSettings;
             StreamingAnalyzeContentStreamingSettings = existing.StreamingAnalyzeContentStreamingSettings;
+            BidiStreamingAnalyzeContentSettings = existing.BidiStreamingAnalyzeContentSettings;
+            BidiStreamingAnalyzeContentStreamingSettings = existing.BidiStreamingAnalyzeContentStreamingSettings;
             SuggestArticlesSettings = existing.SuggestArticlesSettings;
             SuggestFaqAnswersSettings = existing.SuggestFaqAnswersSettings;
             SuggestSmartRepliesSettings = existing.SuggestSmartRepliesSettings;
@@ -176,6 +178,22 @@ namespace Google.Cloud.Dialogflow.V2Beta1
         /// </summary>
         /// <remarks>The default local send queue size is 100.</remarks>
         public gaxgrpc::BidirectionalStreamingSettings StreamingAnalyzeContentStreamingSettings { get; set; } = new gaxgrpc::BidirectionalStreamingSettings(100);
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>ParticipantsClient.BidiStreamingAnalyzeContent</c> and
+        /// <c>ParticipantsClient.BidiStreamingAnalyzeContentAsync</c>.
+        /// </summary>
+        /// <remarks>Timeout: 1800 seconds.</remarks>
+        public gaxgrpc::CallSettings BidiStreamingAnalyzeContentSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(1800000)));
+
+        /// <summary>
+        /// <see cref="gaxgrpc::BidirectionalStreamingSettings"/> for calls to
+        /// <c>ParticipantsClient.BidiStreamingAnalyzeContent</c> and
+        /// <c>ParticipantsClient.BidiStreamingAnalyzeContentAsync</c>.
+        /// </summary>
+        /// <remarks>The default local send queue size is 100.</remarks>
+        public gaxgrpc::BidirectionalStreamingSettings BidiStreamingAnalyzeContentStreamingSettings { get; set; } = new gaxgrpc::BidirectionalStreamingSettings(100);
 
         /// <summary>
         /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
@@ -1427,6 +1445,24 @@ namespace Google.Cloud.Dialogflow.V2Beta1
             throw new sys::NotImplementedException();
 
         /// <summary>
+        /// Bidirectional streaming methods for
+        /// <see cref="BidiStreamingAnalyzeContent(gaxgrpc::CallSettings,gaxgrpc::BidirectionalStreamingSettings)"/>.
+        /// </summary>
+        public abstract partial class BidiStreamingAnalyzeContentStream : gaxgrpc::BidirectionalStreamingBase<BidiStreamingAnalyzeContentRequest, BidiStreamingAnalyzeContentResponse>
+        {
+        }
+
+        /// <summary>
+        /// Bidirectional endless streaming version of
+        /// [StreamingAnalyzeContent][google.cloud.dialogflow.v2beta1.Participants.StreamingAnalyzeContent].
+        /// </summary>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <param name="streamingSettings">If not null, applies streaming overrides to this RPC call.</param>
+        /// <returns>The client-server stream.</returns>
+        public virtual BidiStreamingAnalyzeContentStream BidiStreamingAnalyzeContent(gaxgrpc::CallSettings callSettings = null, gaxgrpc::BidirectionalStreamingSettings streamingSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
         /// Gets suggested articles for a participant based on specific historical
         /// messages.
         /// 
@@ -2054,6 +2090,8 @@ namespace Google.Cloud.Dialogflow.V2Beta1
 
         private readonly gaxgrpc::ApiBidirectionalStreamingCall<StreamingAnalyzeContentRequest, StreamingAnalyzeContentResponse> _callStreamingAnalyzeContent;
 
+        private readonly gaxgrpc::ApiBidirectionalStreamingCall<BidiStreamingAnalyzeContentRequest, BidiStreamingAnalyzeContentResponse> _callBidiStreamingAnalyzeContent;
+
         private readonly gaxgrpc::ApiCall<SuggestArticlesRequest, SuggestArticlesResponse> _callSuggestArticles;
 
         private readonly gaxgrpc::ApiCall<SuggestFaqAnswersRequest, SuggestFaqAnswersResponse> _callSuggestFaqAnswers;
@@ -2102,6 +2140,9 @@ namespace Google.Cloud.Dialogflow.V2Beta1
             _callStreamingAnalyzeContent = clientHelper.BuildApiCall<StreamingAnalyzeContentRequest, StreamingAnalyzeContentResponse>("StreamingAnalyzeContent", grpcClient.StreamingAnalyzeContent, effectiveSettings.StreamingAnalyzeContentSettings, effectiveSettings.StreamingAnalyzeContentStreamingSettings);
             Modify_ApiCall(ref _callStreamingAnalyzeContent);
             Modify_StreamingAnalyzeContentApiCall(ref _callStreamingAnalyzeContent);
+            _callBidiStreamingAnalyzeContent = clientHelper.BuildApiCall<BidiStreamingAnalyzeContentRequest, BidiStreamingAnalyzeContentResponse>("BidiStreamingAnalyzeContent", grpcClient.BidiStreamingAnalyzeContent, effectiveSettings.BidiStreamingAnalyzeContentSettings, effectiveSettings.BidiStreamingAnalyzeContentStreamingSettings);
+            Modify_ApiCall(ref _callBidiStreamingAnalyzeContent);
+            Modify_BidiStreamingAnalyzeContentApiCall(ref _callBidiStreamingAnalyzeContent);
             _callSuggestArticles = clientHelper.BuildApiCall<SuggestArticlesRequest, SuggestArticlesResponse>("SuggestArticles", grpcClient.SuggestArticlesAsync, grpcClient.SuggestArticles, effectiveSettings.SuggestArticlesSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callSuggestArticles);
             Modify_SuggestArticlesApiCall(ref _callSuggestArticles);
@@ -2143,6 +2184,8 @@ namespace Google.Cloud.Dialogflow.V2Beta1
 
         partial void Modify_StreamingAnalyzeContentApiCall(ref gaxgrpc::ApiBidirectionalStreamingCall<StreamingAnalyzeContentRequest, StreamingAnalyzeContentResponse> call);
 
+        partial void Modify_BidiStreamingAnalyzeContentApiCall(ref gaxgrpc::ApiBidirectionalStreamingCall<BidiStreamingAnalyzeContentRequest, BidiStreamingAnalyzeContentResponse> call);
+
         partial void Modify_SuggestArticlesApiCall(ref gaxgrpc::ApiCall<SuggestArticlesRequest, SuggestArticlesResponse> call);
 
         partial void Modify_SuggestFaqAnswersApiCall(ref gaxgrpc::ApiCall<SuggestFaqAnswersRequest, SuggestFaqAnswersResponse> call);
@@ -2178,6 +2221,10 @@ namespace Google.Cloud.Dialogflow.V2Beta1
         partial void Modify_StreamingAnalyzeContentRequestCallSettings(ref gaxgrpc::CallSettings settings);
 
         partial void Modify_StreamingAnalyzeContentRequestRequest(ref StreamingAnalyzeContentRequest request);
+
+        partial void Modify_BidiStreamingAnalyzeContentRequestCallSettings(ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_BidiStreamingAnalyzeContentRequestRequest(ref BidiStreamingAnalyzeContentRequest request);
 
         partial void Modify_SuggestArticlesRequest(ref SuggestArticlesRequest request, ref gaxgrpc::CallSettings settings);
 
@@ -2395,6 +2442,67 @@ namespace Google.Cloud.Dialogflow.V2Beta1
             grpccore::AsyncDuplexStreamingCall<StreamingAnalyzeContentRequest, StreamingAnalyzeContentResponse> call = _callStreamingAnalyzeContent.Call(callSettings);
             gaxgrpc::BufferedClientStreamWriter<StreamingAnalyzeContentRequest> writeBuffer = new gaxgrpc::BufferedClientStreamWriter<StreamingAnalyzeContentRequest>(call.RequestStream, effectiveStreamingSettings.BufferedClientWriterCapacity);
             return new StreamingAnalyzeContentStreamImpl(this, call, writeBuffer);
+        }
+
+        internal sealed partial class BidiStreamingAnalyzeContentStreamImpl : BidiStreamingAnalyzeContentStream
+        {
+            /// <summary>Construct the bidirectional streaming method for <c>BidiStreamingAnalyzeContent</c>.</summary>
+            /// <param name="service">The service containing this streaming method.</param>
+            /// <param name="call">The underlying gRPC duplex streaming call.</param>
+            /// <param name="writeBuffer">
+            /// The <see cref="gaxgrpc::BufferedClientStreamWriter{BidiStreamingAnalyzeContentRequest}"/> instance
+            /// associated with this streaming call.
+            /// </param>
+            public BidiStreamingAnalyzeContentStreamImpl(ParticipantsClientImpl service, grpccore::AsyncDuplexStreamingCall<BidiStreamingAnalyzeContentRequest, BidiStreamingAnalyzeContentResponse> call, gaxgrpc::BufferedClientStreamWriter<BidiStreamingAnalyzeContentRequest> writeBuffer)
+            {
+                _service = service;
+                GrpcCall = call;
+                _writeBuffer = writeBuffer;
+            }
+
+            private ParticipantsClientImpl _service;
+
+            private gaxgrpc::BufferedClientStreamWriter<BidiStreamingAnalyzeContentRequest> _writeBuffer;
+
+            public override grpccore::AsyncDuplexStreamingCall<BidiStreamingAnalyzeContentRequest, BidiStreamingAnalyzeContentResponse> GrpcCall { get; }
+
+            private BidiStreamingAnalyzeContentRequest ModifyRequest(BidiStreamingAnalyzeContentRequest request)
+            {
+                _service.Modify_BidiStreamingAnalyzeContentRequestRequest(ref request);
+                return request;
+            }
+
+            public override stt::Task TryWriteAsync(BidiStreamingAnalyzeContentRequest message) =>
+                _writeBuffer.TryWriteAsync(ModifyRequest(message));
+
+            public override stt::Task WriteAsync(BidiStreamingAnalyzeContentRequest message) =>
+                _writeBuffer.WriteAsync(ModifyRequest(message));
+
+            public override stt::Task TryWriteAsync(BidiStreamingAnalyzeContentRequest message, grpccore::WriteOptions options) =>
+                _writeBuffer.TryWriteAsync(ModifyRequest(message), options);
+
+            public override stt::Task WriteAsync(BidiStreamingAnalyzeContentRequest message, grpccore::WriteOptions options) =>
+                _writeBuffer.WriteAsync(ModifyRequest(message), options);
+
+            public override stt::Task TryWriteCompleteAsync() => _writeBuffer.TryWriteCompleteAsync();
+
+            public override stt::Task WriteCompleteAsync() => _writeBuffer.WriteCompleteAsync();
+        }
+
+        /// <summary>
+        /// Bidirectional endless streaming version of
+        /// [StreamingAnalyzeContent][google.cloud.dialogflow.v2beta1.Participants.StreamingAnalyzeContent].
+        /// </summary>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <param name="streamingSettings">If not null, applies streaming overrides to this RPC call.</param>
+        /// <returns>The client-server stream.</returns>
+        public override ParticipantsClient.BidiStreamingAnalyzeContentStream BidiStreamingAnalyzeContent(gaxgrpc::CallSettings callSettings = null, gaxgrpc::BidirectionalStreamingSettings streamingSettings = null)
+        {
+            Modify_BidiStreamingAnalyzeContentRequestCallSettings(ref callSettings);
+            gaxgrpc::BidirectionalStreamingSettings effectiveStreamingSettings = streamingSettings ?? _callBidiStreamingAnalyzeContent.StreamingSettings;
+            grpccore::AsyncDuplexStreamingCall<BidiStreamingAnalyzeContentRequest, BidiStreamingAnalyzeContentResponse> call = _callBidiStreamingAnalyzeContent.Call(callSettings);
+            gaxgrpc::BufferedClientStreamWriter<BidiStreamingAnalyzeContentRequest> writeBuffer = new gaxgrpc::BufferedClientStreamWriter<BidiStreamingAnalyzeContentRequest>(call.RequestStream, effectiveStreamingSettings.BufferedClientWriterCapacity);
+            return new BidiStreamingAnalyzeContentStreamImpl(this, call, writeBuffer);
         }
 
         /// <summary>
