@@ -1,5 +1,27 @@
 # Version history
 
+## Version 1.0.0-beta24, released 2025-10-23
+
+### New features
+
+- Added support for Build Your Own Assist feature
+- Improved generator quota management
+- Context references added to conversation for dynamic data ingestion
+- Added Vertex extension tool support to v2/v2beta1
+- Add a turn complete signal to BidiStreamingAnalyzeContent
+- A new field 'security_settings' is added to GenerateStatelessSuggestionRequest
+- Add Agent Assist Generator Evaluation feature
+- Expose skip_empty_event_based_suggestion in ConversationProfile
+- Expose debug info field in ConversationProfile
+- Expose flexible safety filter change, rai_settings in ConversationProfile
+- Added support for AI Coach feature
+- Added tool support for AI Coach feature
+
+### Documentation improvements
+
+- Update documentation for transcription language code configuration
+- Updated comments for the `SuggestionInput` message, documenting how it is used with tools
+
 ## Version 1.0.0-beta23, released 2025-03-10
 
 ### New features
