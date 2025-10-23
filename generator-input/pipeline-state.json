@@ -3680,12 +3680,12 @@
         },
         {
             "id": "Google.Maps.Places.V1",
-            "currentVersion": "1.0.0-beta16",
+            "currentVersion": "1.0.0-beta17",
             "generationAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
             "releaseAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
-            "releaseTimestamp": "2025-10-21T17:12:31.263251413Z",
+            "releaseTimestamp": "2025-10-23T16:13:36.487624306Z",
             "lastGeneratedCommit": "b61fb21bbac838de7f55cf2c60d371a47fc2799e",
-            "lastReleasedCommit": "1b5c44879f3281d05731a0bf3fc0345ff4463eed",
+            "lastReleasedCommit": "b61fb21bbac838de7f55cf2c60d371a47fc2799e",
             "apiPaths": [
                 "google/maps/places/v1"
             ],
