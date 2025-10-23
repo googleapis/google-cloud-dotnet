@@ -9916,12 +9916,12 @@
       "segments": [
         {
           "start": 20,
-          "end": 58,
+          "end": 59,
           "type": "FULL"
         },
         {
           "start": 35,
-          "end": 56,
+          "end": 57,
           "type": "SHORT"
         }
       ]
@@ -9965,12 +9965,12 @@
       "segments": [
         {
           "start": 20,
-          "end": 59,
+          "end": 60,
           "type": "FULL"
         },
         {
           "start": 36,
-          "end": 57,
+          "end": 58,
           "type": "SHORT"
         }
       ]
@@ -18260,6 +18260,1199 @@
       ]
     },
     {
+      "regionTag": "dialogflow_v2beta1_generated_GeneratorEvaluations_CreateGeneratorEvaluation_sync",
+      "title": "CreateGeneratorEvaluationRequestObject",
+      "description": "Snippet for CreateGeneratorEvaluation",
+      "file": "GeneratorEvaluationsClient.CreateGeneratorEvaluationRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateGeneratorEvaluation",
+        "fullName": "Google.Cloud.Dialogflow.V2Beta1.GeneratorEvaluationsClient.CreateGeneratorEvaluation",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Dialogflow.V2Beta1.CreateGeneratorEvaluationRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.Dialogflow.V2Beta1.GeneratorEvaluation, Google.Cloud.Dialogflow.V2Beta1.GeneratorEvaluationOperationMetadata>",
+        "client": {
+          "shortName": "GeneratorEvaluationsClient",
+          "fullName": "Google.Cloud.Dialogflow.V2Beta1.GeneratorEvaluationsClient"
+        },
+        "method": {
+          "shortName": "CreateGeneratorEvaluation",
+          "fullName": "google.cloud.dialogflow.v2beta1.GeneratorEvaluations.CreateGeneratorEvaluation",
+          "service": {
+            "shortName": "GeneratorEvaluations",
+            "fullName": "google.cloud.dialogflow.v2beta1.GeneratorEvaluations"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 62,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 60,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "dialogflow_v2beta1_generated_GeneratorEvaluations_CreateGeneratorEvaluation_async",
+      "title": "CreateGeneratorEvaluationRequestObjectAsync",
+      "description": "Snippet for CreateGeneratorEvaluationAsync",
+      "file": "GeneratorEvaluationsClient.CreateGeneratorEvaluationRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateGeneratorEvaluationAsync",
+        "fullName": "Google.Cloud.Dialogflow.V2Beta1.GeneratorEvaluationsClient.CreateGeneratorEvaluationAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Dialogflow.V2Beta1.CreateGeneratorEvaluationRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.Dialogflow.V2Beta1.GeneratorEvaluation, Google.Cloud.Dialogflow.V2Beta1.GeneratorEvaluationOperationMetadata>>",
+        "client": {
+          "shortName": "GeneratorEvaluationsClient",
+          "fullName": "Google.Cloud.Dialogflow.V2Beta1.GeneratorEvaluationsClient"
+        },
+        "method": {
+          "shortName": "CreateGeneratorEvaluation",
+          "fullName": "google.cloud.dialogflow.v2beta1.GeneratorEvaluations.CreateGeneratorEvaluation",
+          "service": {
+            "shortName": "GeneratorEvaluations",
+            "fullName": "google.cloud.dialogflow.v2beta1.GeneratorEvaluations"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 63,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 61,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "dialogflow_v2beta1_generated_GeneratorEvaluations_CreateGeneratorEvaluation_sync_flattened",
+      "title": "CreateGeneratorEvaluation",
+      "description": "Snippet for CreateGeneratorEvaluation",
+      "file": "GeneratorEvaluationsClient.CreateGeneratorEvaluationSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateGeneratorEvaluation",
+        "fullName": "Google.Cloud.Dialogflow.V2Beta1.GeneratorEvaluationsClient.CreateGeneratorEvaluation",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.Dialogflow.V2Beta1.GeneratorEvaluation",
+            "name": "generatorEvaluation"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.Dialogflow.V2Beta1.GeneratorEvaluation, Google.Cloud.Dialogflow.V2Beta1.GeneratorEvaluationOperationMetadata>",
+        "client": {
+          "shortName": "GeneratorEvaluationsClient",
+          "fullName": "Google.Cloud.Dialogflow.V2Beta1.GeneratorEvaluationsClient"
+        },
+        "method": {
+          "shortName": "CreateGeneratorEvaluation",
+          "fullName": "google.cloud.dialogflow.v2beta1.GeneratorEvaluations.CreateGeneratorEvaluation",
+          "service": {
+            "shortName": "GeneratorEvaluations",
+            "fullName": "google.cloud.dialogflow.v2beta1.GeneratorEvaluations"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 59,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 57,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "dialogflow_v2beta1_generated_GeneratorEvaluations_CreateGeneratorEvaluation_async_flattened",
+      "title": "CreateGeneratorEvaluationAsync",
+      "description": "Snippet for CreateGeneratorEvaluationAsync",
+      "file": "GeneratorEvaluationsClient.CreateGeneratorEvaluationAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateGeneratorEvaluationAsync",
+        "fullName": "Google.Cloud.Dialogflow.V2Beta1.GeneratorEvaluationsClient.CreateGeneratorEvaluationAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.Dialogflow.V2Beta1.GeneratorEvaluation",
+            "name": "generatorEvaluation"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.Dialogflow.V2Beta1.GeneratorEvaluation, Google.Cloud.Dialogflow.V2Beta1.GeneratorEvaluationOperationMetadata>>",
+        "client": {
+          "shortName": "GeneratorEvaluationsClient",
+          "fullName": "Google.Cloud.Dialogflow.V2Beta1.GeneratorEvaluationsClient"
+        },
+        "method": {
+          "shortName": "CreateGeneratorEvaluation",
+          "fullName": "google.cloud.dialogflow.v2beta1.GeneratorEvaluations.CreateGeneratorEvaluation",
+          "service": {
+            "shortName": "GeneratorEvaluations",
+            "fullName": "google.cloud.dialogflow.v2beta1.GeneratorEvaluations"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 60,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 58,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "dialogflow_v2beta1_generated_GeneratorEvaluations_CreateGeneratorEvaluation_sync_flattened_resourceNames",
+      "title": "CreateGeneratorEvaluationResourceNames",
+      "description": "Snippet for CreateGeneratorEvaluation",
+      "file": "GeneratorEvaluationsClient.CreateGeneratorEvaluationResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateGeneratorEvaluation",
+        "fullName": "Google.Cloud.Dialogflow.V2Beta1.GeneratorEvaluationsClient.CreateGeneratorEvaluation",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Dialogflow.V2Beta1.GeneratorName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.Dialogflow.V2Beta1.GeneratorEvaluation",
+            "name": "generatorEvaluation"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.Dialogflow.V2Beta1.GeneratorEvaluation, Google.Cloud.Dialogflow.V2Beta1.GeneratorEvaluationOperationMetadata>",
+        "client": {
+          "shortName": "GeneratorEvaluationsClient",
+          "fullName": "Google.Cloud.Dialogflow.V2Beta1.GeneratorEvaluationsClient"
+        },
+        "method": {
+          "shortName": "CreateGeneratorEvaluation",
+          "fullName": "google.cloud.dialogflow.v2beta1.GeneratorEvaluations.CreateGeneratorEvaluation",
+          "service": {
+            "shortName": "GeneratorEvaluations",
+            "fullName": "google.cloud.dialogflow.v2beta1.GeneratorEvaluations"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 59,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 57,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "dialogflow_v2beta1_generated_GeneratorEvaluations_CreateGeneratorEvaluation_async_flattened_resourceNames",
+      "title": "CreateGeneratorEvaluationResourceNamesAsync",
+      "description": "Snippet for CreateGeneratorEvaluationAsync",
+      "file": "GeneratorEvaluationsClient.CreateGeneratorEvaluationResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateGeneratorEvaluationAsync",
+        "fullName": "Google.Cloud.Dialogflow.V2Beta1.GeneratorEvaluationsClient.CreateGeneratorEvaluationAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Dialogflow.V2Beta1.GeneratorName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.Dialogflow.V2Beta1.GeneratorEvaluation",
+            "name": "generatorEvaluation"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.Dialogflow.V2Beta1.GeneratorEvaluation, Google.Cloud.Dialogflow.V2Beta1.GeneratorEvaluationOperationMetadata>>",
+        "client": {
+          "shortName": "GeneratorEvaluationsClient",
+          "fullName": "Google.Cloud.Dialogflow.V2Beta1.GeneratorEvaluationsClient"
+        },
+        "method": {
+          "shortName": "CreateGeneratorEvaluation",
+          "fullName": "google.cloud.dialogflow.v2beta1.GeneratorEvaluations.CreateGeneratorEvaluation",
+          "service": {
+            "shortName": "GeneratorEvaluations",
+            "fullName": "google.cloud.dialogflow.v2beta1.GeneratorEvaluations"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 60,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 58,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "dialogflow_v2beta1_generated_GeneratorEvaluations_GetGeneratorEvaluation_sync",
+      "title": "GetGeneratorEvaluationRequestObject",
+      "description": "Snippet for GetGeneratorEvaluation",
+      "file": "GeneratorEvaluationsClient.GetGeneratorEvaluationRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetGeneratorEvaluation",
+        "fullName": "Google.Cloud.Dialogflow.V2Beta1.GeneratorEvaluationsClient.GetGeneratorEvaluation",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Dialogflow.V2Beta1.GetGeneratorEvaluationRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.Dialogflow.V2Beta1.GeneratorEvaluation",
+        "client": {
+          "shortName": "GeneratorEvaluationsClient",
+          "fullName": "Google.Cloud.Dialogflow.V2Beta1.GeneratorEvaluationsClient"
+        },
+        "method": {
+          "shortName": "GetGeneratorEvaluation",
+          "fullName": "google.cloud.dialogflow.v2beta1.GeneratorEvaluations.GetGeneratorEvaluation",
+          "service": {
+            "shortName": "GeneratorEvaluations",
+            "fullName": "google.cloud.dialogflow.v2beta1.GeneratorEvaluations"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 44,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 42,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "dialogflow_v2beta1_generated_GeneratorEvaluations_GetGeneratorEvaluation_async",
+      "title": "GetGeneratorEvaluationRequestObjectAsync",
+      "description": "Snippet for GetGeneratorEvaluationAsync",
+      "file": "GeneratorEvaluationsClient.GetGeneratorEvaluationRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetGeneratorEvaluationAsync",
+        "fullName": "Google.Cloud.Dialogflow.V2Beta1.GeneratorEvaluationsClient.GetGeneratorEvaluationAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Dialogflow.V2Beta1.GetGeneratorEvaluationRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Dialogflow.V2Beta1.GeneratorEvaluation>",
+        "client": {
+          "shortName": "GeneratorEvaluationsClient",
+          "fullName": "Google.Cloud.Dialogflow.V2Beta1.GeneratorEvaluationsClient"
+        },
+        "method": {
+          "shortName": "GetGeneratorEvaluation",
+          "fullName": "google.cloud.dialogflow.v2beta1.GeneratorEvaluations.GetGeneratorEvaluation",
+          "service": {
+            "shortName": "GeneratorEvaluations",
+            "fullName": "google.cloud.dialogflow.v2beta1.GeneratorEvaluations"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 45,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 43,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "dialogflow_v2beta1_generated_GeneratorEvaluations_GetGeneratorEvaluation_sync_flattened",
+      "title": "GetGeneratorEvaluation",
+      "description": "Snippet for GetGeneratorEvaluation",
+      "file": "GeneratorEvaluationsClient.GetGeneratorEvaluationSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetGeneratorEvaluation",
+        "fullName": "Google.Cloud.Dialogflow.V2Beta1.GeneratorEvaluationsClient.GetGeneratorEvaluation",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.Dialogflow.V2Beta1.GeneratorEvaluation",
+        "client": {
+          "shortName": "GeneratorEvaluationsClient",
+          "fullName": "Google.Cloud.Dialogflow.V2Beta1.GeneratorEvaluationsClient"
+        },
+        "method": {
+          "shortName": "GetGeneratorEvaluation",
+          "fullName": "google.cloud.dialogflow.v2beta1.GeneratorEvaluations.GetGeneratorEvaluation",
+          "service": {
+            "shortName": "GeneratorEvaluations",
+            "fullName": "google.cloud.dialogflow.v2beta1.GeneratorEvaluations"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "dialogflow_v2beta1_generated_GeneratorEvaluations_GetGeneratorEvaluation_async_flattened",
+      "title": "GetGeneratorEvaluationAsync",
+      "description": "Snippet for GetGeneratorEvaluationAsync",
+      "file": "GeneratorEvaluationsClient.GetGeneratorEvaluationAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetGeneratorEvaluationAsync",
+        "fullName": "Google.Cloud.Dialogflow.V2Beta1.GeneratorEvaluationsClient.GetGeneratorEvaluationAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Dialogflow.V2Beta1.GeneratorEvaluation>",
+        "client": {
+          "shortName": "GeneratorEvaluationsClient",
+          "fullName": "Google.Cloud.Dialogflow.V2Beta1.GeneratorEvaluationsClient"
+        },
+        "method": {
+          "shortName": "GetGeneratorEvaluation",
+          "fullName": "google.cloud.dialogflow.v2beta1.GeneratorEvaluations.GetGeneratorEvaluation",
+          "service": {
+            "shortName": "GeneratorEvaluations",
+            "fullName": "google.cloud.dialogflow.v2beta1.GeneratorEvaluations"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "dialogflow_v2beta1_generated_GeneratorEvaluations_GetGeneratorEvaluation_sync_flattened_resourceNames",
+      "title": "GetGeneratorEvaluationResourceNames",
+      "description": "Snippet for GetGeneratorEvaluation",
+      "file": "GeneratorEvaluationsClient.GetGeneratorEvaluationResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetGeneratorEvaluation",
+        "fullName": "Google.Cloud.Dialogflow.V2Beta1.GeneratorEvaluationsClient.GetGeneratorEvaluation",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Dialogflow.V2Beta1.GeneratorEvaluationName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.Dialogflow.V2Beta1.GeneratorEvaluation",
+        "client": {
+          "shortName": "GeneratorEvaluationsClient",
+          "fullName": "Google.Cloud.Dialogflow.V2Beta1.GeneratorEvaluationsClient"
+        },
+        "method": {
+          "shortName": "GetGeneratorEvaluation",
+          "fullName": "google.cloud.dialogflow.v2beta1.GeneratorEvaluations.GetGeneratorEvaluation",
+          "service": {
+            "shortName": "GeneratorEvaluations",
+            "fullName": "google.cloud.dialogflow.v2beta1.GeneratorEvaluations"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "dialogflow_v2beta1_generated_GeneratorEvaluations_GetGeneratorEvaluation_async_flattened_resourceNames",
+      "title": "GetGeneratorEvaluationResourceNamesAsync",
+      "description": "Snippet for GetGeneratorEvaluationAsync",
+      "file": "GeneratorEvaluationsClient.GetGeneratorEvaluationResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetGeneratorEvaluationAsync",
+        "fullName": "Google.Cloud.Dialogflow.V2Beta1.GeneratorEvaluationsClient.GetGeneratorEvaluationAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Dialogflow.V2Beta1.GeneratorEvaluationName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Dialogflow.V2Beta1.GeneratorEvaluation>",
+        "client": {
+          "shortName": "GeneratorEvaluationsClient",
+          "fullName": "Google.Cloud.Dialogflow.V2Beta1.GeneratorEvaluationsClient"
+        },
+        "method": {
+          "shortName": "GetGeneratorEvaluation",
+          "fullName": "google.cloud.dialogflow.v2beta1.GeneratorEvaluations.GetGeneratorEvaluation",
+          "service": {
+            "shortName": "GeneratorEvaluations",
+            "fullName": "google.cloud.dialogflow.v2beta1.GeneratorEvaluations"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "dialogflow_v2beta1_generated_GeneratorEvaluations_ListGeneratorEvaluations_sync",
+      "title": "ListGeneratorEvaluationsRequestObject",
+      "description": "Snippet for ListGeneratorEvaluations",
+      "file": "GeneratorEvaluationsClient.ListGeneratorEvaluationsRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListGeneratorEvaluations",
+        "fullName": "Google.Cloud.Dialogflow.V2Beta1.GeneratorEvaluationsClient.ListGeneratorEvaluations",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Dialogflow.V2Beta1.ListGeneratorEvaluationsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.Dialogflow.V2Beta1.ListGeneratorEvaluationsResponse, Google.Cloud.Dialogflow.V2Beta1.GeneratorEvaluation>",
+        "client": {
+          "shortName": "GeneratorEvaluationsClient",
+          "fullName": "Google.Cloud.Dialogflow.V2Beta1.GeneratorEvaluationsClient"
+        },
+        "method": {
+          "shortName": "ListGeneratorEvaluations",
+          "fullName": "google.cloud.dialogflow.v2beta1.GeneratorEvaluations.ListGeneratorEvaluations",
+          "service": {
+            "shortName": "GeneratorEvaluations",
+            "fullName": "google.cloud.dialogflow.v2beta1.GeneratorEvaluations"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 78,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 76,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "dialogflow_v2beta1_generated_GeneratorEvaluations_ListGeneratorEvaluations_async",
+      "title": "ListGeneratorEvaluationsRequestObjectAsync",
+      "description": "Snippet for ListGeneratorEvaluationsAsync",
+      "file": "GeneratorEvaluationsClient.ListGeneratorEvaluationsRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListGeneratorEvaluationsAsync",
+        "fullName": "Google.Cloud.Dialogflow.V2Beta1.GeneratorEvaluationsClient.ListGeneratorEvaluationsAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Dialogflow.V2Beta1.ListGeneratorEvaluationsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.Dialogflow.V2Beta1.ListGeneratorEvaluationsResponse, Google.Cloud.Dialogflow.V2Beta1.GeneratorEvaluation>",
+        "client": {
+          "shortName": "GeneratorEvaluationsClient",
+          "fullName": "Google.Cloud.Dialogflow.V2Beta1.GeneratorEvaluationsClient"
+        },
+        "method": {
+          "shortName": "ListGeneratorEvaluations",
+          "fullName": "google.cloud.dialogflow.v2beta1.GeneratorEvaluations.ListGeneratorEvaluations",
+          "service": {
+            "shortName": "GeneratorEvaluations",
+            "fullName": "google.cloud.dialogflow.v2beta1.GeneratorEvaluations"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 80,
+          "type": "FULL"
+        },
+        {
+          "start": 38,
+          "end": 78,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "dialogflow_v2beta1_generated_GeneratorEvaluations_ListGeneratorEvaluations_sync_flattened",
+      "title": "ListGeneratorEvaluations",
+      "description": "Snippet for ListGeneratorEvaluations",
+      "file": "GeneratorEvaluationsClient.ListGeneratorEvaluationsSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListGeneratorEvaluations",
+        "fullName": "Google.Cloud.Dialogflow.V2Beta1.GeneratorEvaluationsClient.ListGeneratorEvaluations",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.Dialogflow.V2Beta1.ListGeneratorEvaluationsResponse, Google.Cloud.Dialogflow.V2Beta1.GeneratorEvaluation>",
+        "client": {
+          "shortName": "GeneratorEvaluationsClient",
+          "fullName": "Google.Cloud.Dialogflow.V2Beta1.GeneratorEvaluationsClient"
+        },
+        "method": {
+          "shortName": "ListGeneratorEvaluations",
+          "fullName": "google.cloud.dialogflow.v2beta1.GeneratorEvaluations.ListGeneratorEvaluations",
+          "service": {
+            "shortName": "GeneratorEvaluations",
+            "fullName": "google.cloud.dialogflow.v2beta1.GeneratorEvaluations"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 75,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 73,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "dialogflow_v2beta1_generated_GeneratorEvaluations_ListGeneratorEvaluations_async_flattened",
+      "title": "ListGeneratorEvaluationsAsync",
+      "description": "Snippet for ListGeneratorEvaluationsAsync",
+      "file": "GeneratorEvaluationsClient.ListGeneratorEvaluationsAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListGeneratorEvaluationsAsync",
+        "fullName": "Google.Cloud.Dialogflow.V2Beta1.GeneratorEvaluationsClient.ListGeneratorEvaluationsAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.Dialogflow.V2Beta1.ListGeneratorEvaluationsResponse, Google.Cloud.Dialogflow.V2Beta1.GeneratorEvaluation>",
+        "client": {
+          "shortName": "GeneratorEvaluationsClient",
+          "fullName": "Google.Cloud.Dialogflow.V2Beta1.GeneratorEvaluationsClient"
+        },
+        "method": {
+          "shortName": "ListGeneratorEvaluations",
+          "fullName": "google.cloud.dialogflow.v2beta1.GeneratorEvaluations.ListGeneratorEvaluations",
+          "service": {
+            "shortName": "GeneratorEvaluations",
+            "fullName": "google.cloud.dialogflow.v2beta1.GeneratorEvaluations"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 77,
+          "type": "FULL"
+        },
+        {
+          "start": 38,
+          "end": 75,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "dialogflow_v2beta1_generated_GeneratorEvaluations_ListGeneratorEvaluations_sync_flattened_resourceNames",
+      "title": "ListGeneratorEvaluationsResourceNames",
+      "description": "Snippet for ListGeneratorEvaluations",
+      "file": "GeneratorEvaluationsClient.ListGeneratorEvaluationsResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListGeneratorEvaluations",
+        "fullName": "Google.Cloud.Dialogflow.V2Beta1.GeneratorEvaluationsClient.ListGeneratorEvaluations",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Dialogflow.V2Beta1.GeneratorName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.Dialogflow.V2Beta1.ListGeneratorEvaluationsResponse, Google.Cloud.Dialogflow.V2Beta1.GeneratorEvaluation>",
+        "client": {
+          "shortName": "GeneratorEvaluationsClient",
+          "fullName": "Google.Cloud.Dialogflow.V2Beta1.GeneratorEvaluationsClient"
+        },
+        "method": {
+          "shortName": "ListGeneratorEvaluations",
+          "fullName": "google.cloud.dialogflow.v2beta1.GeneratorEvaluations.ListGeneratorEvaluations",
+          "service": {
+            "shortName": "GeneratorEvaluations",
+            "fullName": "google.cloud.dialogflow.v2beta1.GeneratorEvaluations"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 75,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 73,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "dialogflow_v2beta1_generated_GeneratorEvaluations_ListGeneratorEvaluations_async_flattened_resourceNames",
+      "title": "ListGeneratorEvaluationsResourceNamesAsync",
+      "description": "Snippet for ListGeneratorEvaluationsAsync",
+      "file": "GeneratorEvaluationsClient.ListGeneratorEvaluationsResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListGeneratorEvaluationsAsync",
+        "fullName": "Google.Cloud.Dialogflow.V2Beta1.GeneratorEvaluationsClient.ListGeneratorEvaluationsAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Dialogflow.V2Beta1.GeneratorName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.Dialogflow.V2Beta1.ListGeneratorEvaluationsResponse, Google.Cloud.Dialogflow.V2Beta1.GeneratorEvaluation>",
+        "client": {
+          "shortName": "GeneratorEvaluationsClient",
+          "fullName": "Google.Cloud.Dialogflow.V2Beta1.GeneratorEvaluationsClient"
+        },
+        "method": {
+          "shortName": "ListGeneratorEvaluations",
+          "fullName": "google.cloud.dialogflow.v2beta1.GeneratorEvaluations.ListGeneratorEvaluations",
+          "service": {
+            "shortName": "GeneratorEvaluations",
+            "fullName": "google.cloud.dialogflow.v2beta1.GeneratorEvaluations"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 77,
+          "type": "FULL"
+        },
+        {
+          "start": 38,
+          "end": 75,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "dialogflow_v2beta1_generated_GeneratorEvaluations_DeleteGeneratorEvaluation_sync",
+      "title": "DeleteGeneratorEvaluationRequestObject",
+      "description": "Snippet for DeleteGeneratorEvaluation",
+      "file": "GeneratorEvaluationsClient.DeleteGeneratorEvaluationRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteGeneratorEvaluation",
+        "fullName": "Google.Cloud.Dialogflow.V2Beta1.GeneratorEvaluationsClient.DeleteGeneratorEvaluation",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Dialogflow.V2Beta1.DeleteGeneratorEvaluationRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "client": {
+          "shortName": "GeneratorEvaluationsClient",
+          "fullName": "Google.Cloud.Dialogflow.V2Beta1.GeneratorEvaluationsClient"
+        },
+        "method": {
+          "shortName": "DeleteGeneratorEvaluation",
+          "fullName": "google.cloud.dialogflow.v2beta1.GeneratorEvaluations.DeleteGeneratorEvaluation",
+          "service": {
+            "shortName": "GeneratorEvaluations",
+            "fullName": "google.cloud.dialogflow.v2beta1.GeneratorEvaluations"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 44,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 42,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "dialogflow_v2beta1_generated_GeneratorEvaluations_DeleteGeneratorEvaluation_async",
+      "title": "DeleteGeneratorEvaluationRequestObjectAsync",
+      "description": "Snippet for DeleteGeneratorEvaluationAsync",
+      "file": "GeneratorEvaluationsClient.DeleteGeneratorEvaluationRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteGeneratorEvaluationAsync",
+        "fullName": "Google.Cloud.Dialogflow.V2Beta1.GeneratorEvaluationsClient.DeleteGeneratorEvaluationAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Dialogflow.V2Beta1.DeleteGeneratorEvaluationRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task",
+        "client": {
+          "shortName": "GeneratorEvaluationsClient",
+          "fullName": "Google.Cloud.Dialogflow.V2Beta1.GeneratorEvaluationsClient"
+        },
+        "method": {
+          "shortName": "DeleteGeneratorEvaluation",
+          "fullName": "google.cloud.dialogflow.v2beta1.GeneratorEvaluations.DeleteGeneratorEvaluation",
+          "service": {
+            "shortName": "GeneratorEvaluations",
+            "fullName": "google.cloud.dialogflow.v2beta1.GeneratorEvaluations"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 45,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 43,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "dialogflow_v2beta1_generated_GeneratorEvaluations_DeleteGeneratorEvaluation_sync_flattened",
+      "title": "DeleteGeneratorEvaluation",
+      "description": "Snippet for DeleteGeneratorEvaluation",
+      "file": "GeneratorEvaluationsClient.DeleteGeneratorEvaluationSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteGeneratorEvaluation",
+        "fullName": "Google.Cloud.Dialogflow.V2Beta1.GeneratorEvaluationsClient.DeleteGeneratorEvaluation",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "client": {
+          "shortName": "GeneratorEvaluationsClient",
+          "fullName": "Google.Cloud.Dialogflow.V2Beta1.GeneratorEvaluationsClient"
+        },
+        "method": {
+          "shortName": "DeleteGeneratorEvaluation",
+          "fullName": "google.cloud.dialogflow.v2beta1.GeneratorEvaluations.DeleteGeneratorEvaluation",
+          "service": {
+            "shortName": "GeneratorEvaluations",
+            "fullName": "google.cloud.dialogflow.v2beta1.GeneratorEvaluations"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "dialogflow_v2beta1_generated_GeneratorEvaluations_DeleteGeneratorEvaluation_async_flattened",
+      "title": "DeleteGeneratorEvaluationAsync",
+      "description": "Snippet for DeleteGeneratorEvaluationAsync",
+      "file": "GeneratorEvaluationsClient.DeleteGeneratorEvaluationAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteGeneratorEvaluationAsync",
+        "fullName": "Google.Cloud.Dialogflow.V2Beta1.GeneratorEvaluationsClient.DeleteGeneratorEvaluationAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task",
+        "client": {
+          "shortName": "GeneratorEvaluationsClient",
+          "fullName": "Google.Cloud.Dialogflow.V2Beta1.GeneratorEvaluationsClient"
+        },
+        "method": {
+          "shortName": "DeleteGeneratorEvaluation",
+          "fullName": "google.cloud.dialogflow.v2beta1.GeneratorEvaluations.DeleteGeneratorEvaluation",
+          "service": {
+            "shortName": "GeneratorEvaluations",
+            "fullName": "google.cloud.dialogflow.v2beta1.GeneratorEvaluations"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "dialogflow_v2beta1_generated_GeneratorEvaluations_DeleteGeneratorEvaluation_sync_flattened_resourceNames",
+      "title": "DeleteGeneratorEvaluationResourceNames",
+      "description": "Snippet for DeleteGeneratorEvaluation",
+      "file": "GeneratorEvaluationsClient.DeleteGeneratorEvaluationResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteGeneratorEvaluation",
+        "fullName": "Google.Cloud.Dialogflow.V2Beta1.GeneratorEvaluationsClient.DeleteGeneratorEvaluation",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Dialogflow.V2Beta1.GeneratorEvaluationName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "client": {
+          "shortName": "GeneratorEvaluationsClient",
+          "fullName": "Google.Cloud.Dialogflow.V2Beta1.GeneratorEvaluationsClient"
+        },
+        "method": {
+          "shortName": "DeleteGeneratorEvaluation",
+          "fullName": "google.cloud.dialogflow.v2beta1.GeneratorEvaluations.DeleteGeneratorEvaluation",
+          "service": {
+            "shortName": "GeneratorEvaluations",
+            "fullName": "google.cloud.dialogflow.v2beta1.GeneratorEvaluations"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "dialogflow_v2beta1_generated_GeneratorEvaluations_DeleteGeneratorEvaluation_async_flattened_resourceNames",
+      "title": "DeleteGeneratorEvaluationResourceNamesAsync",
+      "description": "Snippet for DeleteGeneratorEvaluationAsync",
+      "file": "GeneratorEvaluationsClient.DeleteGeneratorEvaluationResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteGeneratorEvaluationAsync",
+        "fullName": "Google.Cloud.Dialogflow.V2Beta1.GeneratorEvaluationsClient.DeleteGeneratorEvaluationAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Dialogflow.V2Beta1.GeneratorEvaluationName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task",
+        "client": {
+          "shortName": "GeneratorEvaluationsClient",
+          "fullName": "Google.Cloud.Dialogflow.V2Beta1.GeneratorEvaluationsClient"
+        },
+        "method": {
+          "shortName": "DeleteGeneratorEvaluation",
+          "fullName": "google.cloud.dialogflow.v2beta1.GeneratorEvaluations.DeleteGeneratorEvaluation",
+          "service": {
+            "shortName": "GeneratorEvaluations",
+            "fullName": "google.cloud.dialogflow.v2beta1.GeneratorEvaluations"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
       "regionTag": "dialogflow_v2beta1_generated_Generators_CreateGenerator_sync",
       "title": "CreateGeneratorRequestObject",
       "description": "Snippet for CreateGenerator",
@@ -26423,6 +27616,54 @@
       ]
     },
     {
+      "regionTag": "dialogflow_v2beta1_generated_Participants_BidiStreamingAnalyzeContent_sync",
+      "title": "BidiStreamingAnalyzeContent",
+      "description": "Snippet for BidiStreamingAnalyzeContent",
+      "file": "ParticipantsClient.BidiStreamingAnalyzeContentSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "BidiStreamingAnalyzeContent",
+        "fullName": "Google.Cloud.Dialogflow.V2Beta1.ParticipantsClient.BidiStreamingAnalyzeContent",
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.BidirectionalStreamingSettings",
+            "name": "streamingSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.Dialogflow.V2Beta1.ParticipantsClient+BidiStreamingAnalyzeContentStream",
+        "client": {
+          "shortName": "ParticipantsClient",
+          "fullName": "Google.Cloud.Dialogflow.V2Beta1.ParticipantsClient"
+        },
+        "method": {
+          "shortName": "BidiStreamingAnalyzeContent",
+          "fullName": "google.cloud.dialogflow.v2beta1.Participants.BidiStreamingAnalyzeContent",
+          "service": {
+            "shortName": "Participants",
+            "fullName": "google.cloud.dialogflow.v2beta1.Participants"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 77,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 75,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
       "regionTag": "dialogflow_v2beta1_generated_Participants_SuggestArticles_sync",
       "title": "SuggestArticlesRequestObject",
       "description": "Snippet for SuggestArticles",
@@ -31993,6 +33234,1415 @@
           "service": {
             "shortName": "SipTrunks",
             "fullName": "google.cloud.dialogflow.v2beta1.SipTrunks"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 44,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 42,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "dialogflow_v2beta1_generated_Tools_CreateTool_sync",
+      "title": "CreateToolRequestObject",
+      "description": "Snippet for CreateTool",
+      "file": "ToolsClient.CreateToolRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateTool",
+        "fullName": "Google.Cloud.Dialogflow.V2Beta1.ToolsClient.CreateTool",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Dialogflow.V2Beta1.CreateToolRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.Dialogflow.V2Beta1.Tool",
+        "client": {
+          "shortName": "ToolsClient",
+          "fullName": "Google.Cloud.Dialogflow.V2Beta1.ToolsClient"
+        },
+        "method": {
+          "shortName": "CreateTool",
+          "fullName": "google.cloud.dialogflow.v2beta1.Tools.CreateTool",
+          "service": {
+            "shortName": "Tools",
+            "fullName": "google.cloud.dialogflow.v2beta1.Tools"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 47,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 45,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "dialogflow_v2beta1_generated_Tools_CreateTool_async",
+      "title": "CreateToolRequestObjectAsync",
+      "description": "Snippet for CreateToolAsync",
+      "file": "ToolsClient.CreateToolRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateToolAsync",
+        "fullName": "Google.Cloud.Dialogflow.V2Beta1.ToolsClient.CreateToolAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Dialogflow.V2Beta1.CreateToolRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Dialogflow.V2Beta1.Tool>",
+        "client": {
+          "shortName": "ToolsClient",
+          "fullName": "Google.Cloud.Dialogflow.V2Beta1.ToolsClient"
+        },
+        "method": {
+          "shortName": "CreateTool",
+          "fullName": "google.cloud.dialogflow.v2beta1.Tools.CreateTool",
+          "service": {
+            "shortName": "Tools",
+            "fullName": "google.cloud.dialogflow.v2beta1.Tools"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 48,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 46,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "dialogflow_v2beta1_generated_Tools_CreateTool_sync_flattened",
+      "title": "CreateTool",
+      "description": "Snippet for CreateTool",
+      "file": "ToolsClient.CreateToolSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateTool",
+        "fullName": "Google.Cloud.Dialogflow.V2Beta1.ToolsClient.CreateTool",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.Dialogflow.V2Beta1.Tool",
+            "name": "tool"
+          },
+          {
+            "type": "System.String",
+            "name": "toolId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.Dialogflow.V2Beta1.Tool",
+        "client": {
+          "shortName": "ToolsClient",
+          "fullName": "Google.Cloud.Dialogflow.V2Beta1.ToolsClient"
+        },
+        "method": {
+          "shortName": "CreateTool",
+          "fullName": "google.cloud.dialogflow.v2beta1.Tools.CreateTool",
+          "service": {
+            "shortName": "Tools",
+            "fullName": "google.cloud.dialogflow.v2beta1.Tools"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 43,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 41,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "dialogflow_v2beta1_generated_Tools_CreateTool_async_flattened",
+      "title": "CreateToolAsync",
+      "description": "Snippet for CreateToolAsync",
+      "file": "ToolsClient.CreateToolAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateToolAsync",
+        "fullName": "Google.Cloud.Dialogflow.V2Beta1.ToolsClient.CreateToolAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.Dialogflow.V2Beta1.Tool",
+            "name": "tool"
+          },
+          {
+            "type": "System.String",
+            "name": "toolId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Dialogflow.V2Beta1.Tool>",
+        "client": {
+          "shortName": "ToolsClient",
+          "fullName": "Google.Cloud.Dialogflow.V2Beta1.ToolsClient"
+        },
+        "method": {
+          "shortName": "CreateTool",
+          "fullName": "google.cloud.dialogflow.v2beta1.Tools.CreateTool",
+          "service": {
+            "shortName": "Tools",
+            "fullName": "google.cloud.dialogflow.v2beta1.Tools"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 44,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 42,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "dialogflow_v2beta1_generated_Tools_CreateTool_sync_flattened_resourceNames",
+      "title": "CreateToolResourceNames",
+      "description": "Snippet for CreateTool",
+      "file": "ToolsClient.CreateToolResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateTool",
+        "fullName": "Google.Cloud.Dialogflow.V2Beta1.ToolsClient.CreateTool",
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.LocationName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.Dialogflow.V2Beta1.Tool",
+            "name": "tool"
+          },
+          {
+            "type": "System.String",
+            "name": "toolId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.Dialogflow.V2Beta1.Tool",
+        "client": {
+          "shortName": "ToolsClient",
+          "fullName": "Google.Cloud.Dialogflow.V2Beta1.ToolsClient"
+        },
+        "method": {
+          "shortName": "CreateTool",
+          "fullName": "google.cloud.dialogflow.v2beta1.Tools.CreateTool",
+          "service": {
+            "shortName": "Tools",
+            "fullName": "google.cloud.dialogflow.v2beta1.Tools"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 44,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 42,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "dialogflow_v2beta1_generated_Tools_CreateTool_async_flattened_resourceNames",
+      "title": "CreateToolResourceNamesAsync",
+      "description": "Snippet for CreateToolAsync",
+      "file": "ToolsClient.CreateToolResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateToolAsync",
+        "fullName": "Google.Cloud.Dialogflow.V2Beta1.ToolsClient.CreateToolAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.LocationName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.Dialogflow.V2Beta1.Tool",
+            "name": "tool"
+          },
+          {
+            "type": "System.String",
+            "name": "toolId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Dialogflow.V2Beta1.Tool>",
+        "client": {
+          "shortName": "ToolsClient",
+          "fullName": "Google.Cloud.Dialogflow.V2Beta1.ToolsClient"
+        },
+        "method": {
+          "shortName": "CreateTool",
+          "fullName": "google.cloud.dialogflow.v2beta1.Tools.CreateTool",
+          "service": {
+            "shortName": "Tools",
+            "fullName": "google.cloud.dialogflow.v2beta1.Tools"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 45,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 43,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "dialogflow_v2beta1_generated_Tools_GetTool_sync",
+      "title": "GetToolRequestObject",
+      "description": "Snippet for GetTool",
+      "file": "ToolsClient.GetToolRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetTool",
+        "fullName": "Google.Cloud.Dialogflow.V2Beta1.ToolsClient.GetTool",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Dialogflow.V2Beta1.GetToolRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.Dialogflow.V2Beta1.Tool",
+        "client": {
+          "shortName": "ToolsClient",
+          "fullName": "Google.Cloud.Dialogflow.V2Beta1.ToolsClient"
+        },
+        "method": {
+          "shortName": "GetTool",
+          "fullName": "google.cloud.dialogflow.v2beta1.Tools.GetTool",
+          "service": {
+            "shortName": "Tools",
+            "fullName": "google.cloud.dialogflow.v2beta1.Tools"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 44,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 42,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "dialogflow_v2beta1_generated_Tools_GetTool_async",
+      "title": "GetToolRequestObjectAsync",
+      "description": "Snippet for GetToolAsync",
+      "file": "ToolsClient.GetToolRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetToolAsync",
+        "fullName": "Google.Cloud.Dialogflow.V2Beta1.ToolsClient.GetToolAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Dialogflow.V2Beta1.GetToolRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Dialogflow.V2Beta1.Tool>",
+        "client": {
+          "shortName": "ToolsClient",
+          "fullName": "Google.Cloud.Dialogflow.V2Beta1.ToolsClient"
+        },
+        "method": {
+          "shortName": "GetTool",
+          "fullName": "google.cloud.dialogflow.v2beta1.Tools.GetTool",
+          "service": {
+            "shortName": "Tools",
+            "fullName": "google.cloud.dialogflow.v2beta1.Tools"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 45,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 43,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "dialogflow_v2beta1_generated_Tools_GetTool_sync_flattened",
+      "title": "GetTool",
+      "description": "Snippet for GetTool",
+      "file": "ToolsClient.GetToolSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetTool",
+        "fullName": "Google.Cloud.Dialogflow.V2Beta1.ToolsClient.GetTool",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.Dialogflow.V2Beta1.Tool",
+        "client": {
+          "shortName": "ToolsClient",
+          "fullName": "Google.Cloud.Dialogflow.V2Beta1.ToolsClient"
+        },
+        "method": {
+          "shortName": "GetTool",
+          "fullName": "google.cloud.dialogflow.v2beta1.Tools.GetTool",
+          "service": {
+            "shortName": "Tools",
+            "fullName": "google.cloud.dialogflow.v2beta1.Tools"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "dialogflow_v2beta1_generated_Tools_GetTool_async_flattened",
+      "title": "GetToolAsync",
+      "description": "Snippet for GetToolAsync",
+      "file": "ToolsClient.GetToolAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetToolAsync",
+        "fullName": "Google.Cloud.Dialogflow.V2Beta1.ToolsClient.GetToolAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Dialogflow.V2Beta1.Tool>",
+        "client": {
+          "shortName": "ToolsClient",
+          "fullName": "Google.Cloud.Dialogflow.V2Beta1.ToolsClient"
+        },
+        "method": {
+          "shortName": "GetTool",
+          "fullName": "google.cloud.dialogflow.v2beta1.Tools.GetTool",
+          "service": {
+            "shortName": "Tools",
+            "fullName": "google.cloud.dialogflow.v2beta1.Tools"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "dialogflow_v2beta1_generated_Tools_GetTool_sync_flattened_resourceNames",
+      "title": "GetToolResourceNames",
+      "description": "Snippet for GetTool",
+      "file": "ToolsClient.GetToolResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetTool",
+        "fullName": "Google.Cloud.Dialogflow.V2Beta1.ToolsClient.GetTool",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Dialogflow.V2Beta1.ToolName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.Dialogflow.V2Beta1.Tool",
+        "client": {
+          "shortName": "ToolsClient",
+          "fullName": "Google.Cloud.Dialogflow.V2Beta1.ToolsClient"
+        },
+        "method": {
+          "shortName": "GetTool",
+          "fullName": "google.cloud.dialogflow.v2beta1.Tools.GetTool",
+          "service": {
+            "shortName": "Tools",
+            "fullName": "google.cloud.dialogflow.v2beta1.Tools"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "dialogflow_v2beta1_generated_Tools_GetTool_async_flattened_resourceNames",
+      "title": "GetToolResourceNamesAsync",
+      "description": "Snippet for GetToolAsync",
+      "file": "ToolsClient.GetToolResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetToolAsync",
+        "fullName": "Google.Cloud.Dialogflow.V2Beta1.ToolsClient.GetToolAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Dialogflow.V2Beta1.ToolName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Dialogflow.V2Beta1.Tool>",
+        "client": {
+          "shortName": "ToolsClient",
+          "fullName": "Google.Cloud.Dialogflow.V2Beta1.ToolsClient"
+        },
+        "method": {
+          "shortName": "GetTool",
+          "fullName": "google.cloud.dialogflow.v2beta1.Tools.GetTool",
+          "service": {
+            "shortName": "Tools",
+            "fullName": "google.cloud.dialogflow.v2beta1.Tools"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "dialogflow_v2beta1_generated_Tools_ListTools_sync",
+      "title": "ListToolsRequestObject",
+      "description": "Snippet for ListTools",
+      "file": "ToolsClient.ListToolsRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListTools",
+        "fullName": "Google.Cloud.Dialogflow.V2Beta1.ToolsClient.ListTools",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Dialogflow.V2Beta1.ListToolsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.Dialogflow.V2Beta1.ListToolsResponse, Google.Cloud.Dialogflow.V2Beta1.Tool>",
+        "client": {
+          "shortName": "ToolsClient",
+          "fullName": "Google.Cloud.Dialogflow.V2Beta1.ToolsClient"
+        },
+        "method": {
+          "shortName": "ListTools",
+          "fullName": "google.cloud.dialogflow.v2beta1.Tools.ListTools",
+          "service": {
+            "shortName": "Tools",
+            "fullName": "google.cloud.dialogflow.v2beta1.Tools"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 79,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 77,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "dialogflow_v2beta1_generated_Tools_ListTools_async",
+      "title": "ListToolsRequestObjectAsync",
+      "description": "Snippet for ListToolsAsync",
+      "file": "ToolsClient.ListToolsRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListToolsAsync",
+        "fullName": "Google.Cloud.Dialogflow.V2Beta1.ToolsClient.ListToolsAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Dialogflow.V2Beta1.ListToolsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.Dialogflow.V2Beta1.ListToolsResponse, Google.Cloud.Dialogflow.V2Beta1.Tool>",
+        "client": {
+          "shortName": "ToolsClient",
+          "fullName": "Google.Cloud.Dialogflow.V2Beta1.ToolsClient"
+        },
+        "method": {
+          "shortName": "ListTools",
+          "fullName": "google.cloud.dialogflow.v2beta1.Tools.ListTools",
+          "service": {
+            "shortName": "Tools",
+            "fullName": "google.cloud.dialogflow.v2beta1.Tools"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 81,
+          "type": "FULL"
+        },
+        {
+          "start": 39,
+          "end": 79,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "dialogflow_v2beta1_generated_Tools_ListTools_sync_flattened",
+      "title": "ListTools",
+      "description": "Snippet for ListTools",
+      "file": "ToolsClient.ListToolsSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListTools",
+        "fullName": "Google.Cloud.Dialogflow.V2Beta1.ToolsClient.ListTools",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.Dialogflow.V2Beta1.ListToolsResponse, Google.Cloud.Dialogflow.V2Beta1.Tool>",
+        "client": {
+          "shortName": "ToolsClient",
+          "fullName": "Google.Cloud.Dialogflow.V2Beta1.ToolsClient"
+        },
+        "method": {
+          "shortName": "ListTools",
+          "fullName": "google.cloud.dialogflow.v2beta1.Tools.ListTools",
+          "service": {
+            "shortName": "Tools",
+            "fullName": "google.cloud.dialogflow.v2beta1.Tools"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 75,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 73,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "dialogflow_v2beta1_generated_Tools_ListTools_async_flattened",
+      "title": "ListToolsAsync",
+      "description": "Snippet for ListToolsAsync",
+      "file": "ToolsClient.ListToolsAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListToolsAsync",
+        "fullName": "Google.Cloud.Dialogflow.V2Beta1.ToolsClient.ListToolsAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.Dialogflow.V2Beta1.ListToolsResponse, Google.Cloud.Dialogflow.V2Beta1.Tool>",
+        "client": {
+          "shortName": "ToolsClient",
+          "fullName": "Google.Cloud.Dialogflow.V2Beta1.ToolsClient"
+        },
+        "method": {
+          "shortName": "ListTools",
+          "fullName": "google.cloud.dialogflow.v2beta1.Tools.ListTools",
+          "service": {
+            "shortName": "Tools",
+            "fullName": "google.cloud.dialogflow.v2beta1.Tools"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 77,
+          "type": "FULL"
+        },
+        {
+          "start": 38,
+          "end": 75,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "dialogflow_v2beta1_generated_Tools_ListTools_sync_flattened_resourceNames",
+      "title": "ListToolsResourceNames",
+      "description": "Snippet for ListTools",
+      "file": "ToolsClient.ListToolsResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListTools",
+        "fullName": "Google.Cloud.Dialogflow.V2Beta1.ToolsClient.ListTools",
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.LocationName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.Dialogflow.V2Beta1.ListToolsResponse, Google.Cloud.Dialogflow.V2Beta1.Tool>",
+        "client": {
+          "shortName": "ToolsClient",
+          "fullName": "Google.Cloud.Dialogflow.V2Beta1.ToolsClient"
+        },
+        "method": {
+          "shortName": "ListTools",
+          "fullName": "google.cloud.dialogflow.v2beta1.Tools.ListTools",
+          "service": {
+            "shortName": "Tools",
+            "fullName": "google.cloud.dialogflow.v2beta1.Tools"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 76,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 74,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "dialogflow_v2beta1_generated_Tools_ListTools_async_flattened_resourceNames",
+      "title": "ListToolsResourceNamesAsync",
+      "description": "Snippet for ListToolsAsync",
+      "file": "ToolsClient.ListToolsResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListToolsAsync",
+        "fullName": "Google.Cloud.Dialogflow.V2Beta1.ToolsClient.ListToolsAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.LocationName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.Dialogflow.V2Beta1.ListToolsResponse, Google.Cloud.Dialogflow.V2Beta1.Tool>",
+        "client": {
+          "shortName": "ToolsClient",
+          "fullName": "Google.Cloud.Dialogflow.V2Beta1.ToolsClient"
+        },
+        "method": {
+          "shortName": "ListTools",
+          "fullName": "google.cloud.dialogflow.v2beta1.Tools.ListTools",
+          "service": {
+            "shortName": "Tools",
+            "fullName": "google.cloud.dialogflow.v2beta1.Tools"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 78,
+          "type": "FULL"
+        },
+        {
+          "start": 39,
+          "end": 76,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "dialogflow_v2beta1_generated_Tools_DeleteTool_sync",
+      "title": "DeleteToolRequestObject",
+      "description": "Snippet for DeleteTool",
+      "file": "ToolsClient.DeleteToolRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteTool",
+        "fullName": "Google.Cloud.Dialogflow.V2Beta1.ToolsClient.DeleteTool",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Dialogflow.V2Beta1.DeleteToolRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "client": {
+          "shortName": "ToolsClient",
+          "fullName": "Google.Cloud.Dialogflow.V2Beta1.ToolsClient"
+        },
+        "method": {
+          "shortName": "DeleteTool",
+          "fullName": "google.cloud.dialogflow.v2beta1.Tools.DeleteTool",
+          "service": {
+            "shortName": "Tools",
+            "fullName": "google.cloud.dialogflow.v2beta1.Tools"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 44,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 42,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "dialogflow_v2beta1_generated_Tools_DeleteTool_async",
+      "title": "DeleteToolRequestObjectAsync",
+      "description": "Snippet for DeleteToolAsync",
+      "file": "ToolsClient.DeleteToolRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteToolAsync",
+        "fullName": "Google.Cloud.Dialogflow.V2Beta1.ToolsClient.DeleteToolAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Dialogflow.V2Beta1.DeleteToolRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task",
+        "client": {
+          "shortName": "ToolsClient",
+          "fullName": "Google.Cloud.Dialogflow.V2Beta1.ToolsClient"
+        },
+        "method": {
+          "shortName": "DeleteTool",
+          "fullName": "google.cloud.dialogflow.v2beta1.Tools.DeleteTool",
+          "service": {
+            "shortName": "Tools",
+            "fullName": "google.cloud.dialogflow.v2beta1.Tools"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 45,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 43,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "dialogflow_v2beta1_generated_Tools_DeleteTool_sync_flattened",
+      "title": "DeleteTool",
+      "description": "Snippet for DeleteTool",
+      "file": "ToolsClient.DeleteToolSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteTool",
+        "fullName": "Google.Cloud.Dialogflow.V2Beta1.ToolsClient.DeleteTool",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "client": {
+          "shortName": "ToolsClient",
+          "fullName": "Google.Cloud.Dialogflow.V2Beta1.ToolsClient"
+        },
+        "method": {
+          "shortName": "DeleteTool",
+          "fullName": "google.cloud.dialogflow.v2beta1.Tools.DeleteTool",
+          "service": {
+            "shortName": "Tools",
+            "fullName": "google.cloud.dialogflow.v2beta1.Tools"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "dialogflow_v2beta1_generated_Tools_DeleteTool_async_flattened",
+      "title": "DeleteToolAsync",
+      "description": "Snippet for DeleteToolAsync",
+      "file": "ToolsClient.DeleteToolAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteToolAsync",
+        "fullName": "Google.Cloud.Dialogflow.V2Beta1.ToolsClient.DeleteToolAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task",
+        "client": {
+          "shortName": "ToolsClient",
+          "fullName": "Google.Cloud.Dialogflow.V2Beta1.ToolsClient"
+        },
+        "method": {
+          "shortName": "DeleteTool",
+          "fullName": "google.cloud.dialogflow.v2beta1.Tools.DeleteTool",
+          "service": {
+            "shortName": "Tools",
+            "fullName": "google.cloud.dialogflow.v2beta1.Tools"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "dialogflow_v2beta1_generated_Tools_DeleteTool_sync_flattened_resourceNames",
+      "title": "DeleteToolResourceNames",
+      "description": "Snippet for DeleteTool",
+      "file": "ToolsClient.DeleteToolResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteTool",
+        "fullName": "Google.Cloud.Dialogflow.V2Beta1.ToolsClient.DeleteTool",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Dialogflow.V2Beta1.ToolName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "client": {
+          "shortName": "ToolsClient",
+          "fullName": "Google.Cloud.Dialogflow.V2Beta1.ToolsClient"
+        },
+        "method": {
+          "shortName": "DeleteTool",
+          "fullName": "google.cloud.dialogflow.v2beta1.Tools.DeleteTool",
+          "service": {
+            "shortName": "Tools",
+            "fullName": "google.cloud.dialogflow.v2beta1.Tools"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "dialogflow_v2beta1_generated_Tools_DeleteTool_async_flattened_resourceNames",
+      "title": "DeleteToolResourceNamesAsync",
+      "description": "Snippet for DeleteToolAsync",
+      "file": "ToolsClient.DeleteToolResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteToolAsync",
+        "fullName": "Google.Cloud.Dialogflow.V2Beta1.ToolsClient.DeleteToolAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Dialogflow.V2Beta1.ToolName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task",
+        "client": {
+          "shortName": "ToolsClient",
+          "fullName": "Google.Cloud.Dialogflow.V2Beta1.ToolsClient"
+        },
+        "method": {
+          "shortName": "DeleteTool",
+          "fullName": "google.cloud.dialogflow.v2beta1.Tools.DeleteTool",
+          "service": {
+            "shortName": "Tools",
+            "fullName": "google.cloud.dialogflow.v2beta1.Tools"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "dialogflow_v2beta1_generated_Tools_UpdateTool_sync",
+      "title": "UpdateToolRequestObject",
+      "description": "Snippet for UpdateTool",
+      "file": "ToolsClient.UpdateToolRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateTool",
+        "fullName": "Google.Cloud.Dialogflow.V2Beta1.ToolsClient.UpdateTool",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Dialogflow.V2Beta1.UpdateToolRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.Dialogflow.V2Beta1.Tool",
+        "client": {
+          "shortName": "ToolsClient",
+          "fullName": "Google.Cloud.Dialogflow.V2Beta1.ToolsClient"
+        },
+        "method": {
+          "shortName": "UpdateTool",
+          "fullName": "google.cloud.dialogflow.v2beta1.Tools.UpdateTool",
+          "service": {
+            "shortName": "Tools",
+            "fullName": "google.cloud.dialogflow.v2beta1.Tools"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 46,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 44,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "dialogflow_v2beta1_generated_Tools_UpdateTool_async",
+      "title": "UpdateToolRequestObjectAsync",
+      "description": "Snippet for UpdateToolAsync",
+      "file": "ToolsClient.UpdateToolRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateToolAsync",
+        "fullName": "Google.Cloud.Dialogflow.V2Beta1.ToolsClient.UpdateToolAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Dialogflow.V2Beta1.UpdateToolRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Dialogflow.V2Beta1.Tool>",
+        "client": {
+          "shortName": "ToolsClient",
+          "fullName": "Google.Cloud.Dialogflow.V2Beta1.ToolsClient"
+        },
+        "method": {
+          "shortName": "UpdateTool",
+          "fullName": "google.cloud.dialogflow.v2beta1.Tools.UpdateTool",
+          "service": {
+            "shortName": "Tools",
+            "fullName": "google.cloud.dialogflow.v2beta1.Tools"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 47,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 45,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "dialogflow_v2beta1_generated_Tools_UpdateTool_sync_flattened",
+      "title": "UpdateTool",
+      "description": "Snippet for UpdateTool",
+      "file": "ToolsClient.UpdateToolSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateTool",
+        "fullName": "Google.Cloud.Dialogflow.V2Beta1.ToolsClient.UpdateTool",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Dialogflow.V2Beta1.Tool",
+            "name": "tool"
+          },
+          {
+            "type": "Google.Protobuf.WellKnownTypes.FieldMask",
+            "name": "updateMask"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.Dialogflow.V2Beta1.Tool",
+        "client": {
+          "shortName": "ToolsClient",
+          "fullName": "Google.Cloud.Dialogflow.V2Beta1.ToolsClient"
+        },
+        "method": {
+          "shortName": "UpdateTool",
+          "fullName": "google.cloud.dialogflow.v2beta1.Tools.UpdateTool",
+          "service": {
+            "shortName": "Tools",
+            "fullName": "google.cloud.dialogflow.v2beta1.Tools"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 43,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 41,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "dialogflow_v2beta1_generated_Tools_UpdateTool_async_flattened",
+      "title": "UpdateToolAsync",
+      "description": "Snippet for UpdateToolAsync",
+      "file": "ToolsClient.UpdateToolAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateToolAsync",
+        "fullName": "Google.Cloud.Dialogflow.V2Beta1.ToolsClient.UpdateToolAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Dialogflow.V2Beta1.Tool",
+            "name": "tool"
+          },
+          {
+            "type": "Google.Protobuf.WellKnownTypes.FieldMask",
+            "name": "updateMask"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Dialogflow.V2Beta1.Tool>",
+        "client": {
+          "shortName": "ToolsClient",
+          "fullName": "Google.Cloud.Dialogflow.V2Beta1.ToolsClient"
+        },
+        "method": {
+          "shortName": "UpdateTool",
+          "fullName": "google.cloud.dialogflow.v2beta1.Tools.UpdateTool",
+          "service": {
+            "shortName": "Tools",
+            "fullName": "google.cloud.dialogflow.v2beta1.Tools"
           }
         }
       },

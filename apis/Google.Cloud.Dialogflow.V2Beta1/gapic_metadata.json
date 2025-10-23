@@ -479,6 +479,39 @@
         }
       }
     },
+    "GeneratorEvaluations": {
+      "clients": {
+        "grpc": {
+          "libraryClient": "GeneratorEvaluationsClient",
+          "rpcs": {
+            "CreateGeneratorEvaluation": {
+              "methods": [
+                "CreateGeneratorEvaluation",
+                "CreateGeneratorEvaluationAsync"
+              ]
+            },
+            "DeleteGeneratorEvaluation": {
+              "methods": [
+                "DeleteGeneratorEvaluation",
+                "DeleteGeneratorEvaluationAsync"
+              ]
+            },
+            "GetGeneratorEvaluation": {
+              "methods": [
+                "GetGeneratorEvaluation",
+                "GetGeneratorEvaluationAsync"
+              ]
+            },
+            "ListGeneratorEvaluations": {
+              "methods": [
+                "ListGeneratorEvaluations",
+                "ListGeneratorEvaluationsAsync"
+              ]
+            }
+          }
+        }
+      }
+    },
     "Generators": {
       "clients": {
         "grpc": {
@@ -617,6 +650,12 @@
               "methods": [
                 "AnalyzeContent",
                 "AnalyzeContentAsync"
+              ]
+            },
+            "BidiStreamingAnalyzeContent": {
+              "methods": [
+                "BidiStreamingAnalyzeContent",
+                "BidiStreamingAnalyzeContentAsync"
               ]
             },
             "CompileSuggestion": {
@@ -815,6 +854,45 @@
               "methods": [
                 "UpdateSipTrunk",
                 "UpdateSipTrunkAsync"
+              ]
+            }
+          }
+        }
+      }
+    },
+    "Tools": {
+      "clients": {
+        "grpc": {
+          "libraryClient": "ToolsClient",
+          "rpcs": {
+            "CreateTool": {
+              "methods": [
+                "CreateTool",
+                "CreateToolAsync"
+              ]
+            },
+            "DeleteTool": {
+              "methods": [
+                "DeleteTool",
+                "DeleteToolAsync"
+              ]
+            },
+            "GetTool": {
+              "methods": [
+                "GetTool",
+                "GetToolAsync"
+              ]
+            },
+            "ListTools": {
+              "methods": [
+                "ListTools",
+                "ListToolsAsync"
+              ]
+            },
+            "UpdateTool": {
+              "methods": [
+                "UpdateTool",
+                "UpdateToolAsync"
               ]
             }
           }

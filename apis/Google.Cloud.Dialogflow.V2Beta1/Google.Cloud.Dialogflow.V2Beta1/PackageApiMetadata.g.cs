@@ -62,6 +62,7 @@ namespace Google.Cloud.Dialogflow.V2Beta1
         private static scg::IEnumerable<gpr::FileDescriptor> GetFileDescriptors()
         {
             yield return AgentReflection.Descriptor;
+            yield return AgentCoachingInstructionReflection.Descriptor;
             yield return AnswerRecordReflection.Descriptor;
             yield return AudioConfigReflection.Descriptor;
             yield return ContextReflection.Descriptor;
@@ -75,14 +76,18 @@ namespace Google.Cloud.Dialogflow.V2Beta1
             yield return FulfillmentReflection.Descriptor;
             yield return GcsReflection.Descriptor;
             yield return GeneratorReflection.Descriptor;
+            yield return GeneratorEvaluationReflection.Descriptor;
             yield return HumanAgentAssistantEventReflection.Descriptor;
             yield return IntentReflection.Descriptor;
             yield return KnowledgeBaseReflection.Descriptor;
+            yield return OperationsReflection.Descriptor;
             yield return ParticipantReflection.Descriptor;
             yield return PhoneNumberReflection.Descriptor;
             yield return SessionReflection.Descriptor;
             yield return SessionEntityTypeReflection.Descriptor;
             yield return SipTrunkReflection.Descriptor;
+            yield return ToolReflection.Descriptor;
+            yield return ToolCallReflection.Descriptor;
             yield return ValidationResultReflection.Descriptor;
             yield return VersionReflection.Descriptor;
             yield return WebhookReflection.Descriptor;
