@@ -1,5 +1,46 @@
 # Version history
 
+## Version 1.0.0-beta03, released 2025-10-23
+
+### New features
+
+- Added Application resource
+- Added AudienceSegment resource
+- Added Browser resource
+- Added BrowserLanguage resource
+- Added CmsMetadataKey resource
+- Added CmsMetadataValue resource
+- Added methods for reading and writing Contact resources
+- Added DeviceCapability resource
+- Added DeviceManufacturer resource
+- Added MobileCarrier resource
+- Added MobileDevice resource
+- Added MobileDeviceSubmodel resource
+- Added additional Report dimensions and metrics
+- Added Content resource
+- Added ContentBundle resource
+- Added ContentLabel resource
+- Added CreativeTemplate resource
+- Added Team resource
+- Added required field `displayName` to Team
+- Added Site resource
+- Added AdReviewCenterAd methods
+- Added required fields `displayName` and `company` to Contact
+
+### Bug fixes
+
+- Made AdUnitSize fields proto3 optional
+- Made Label fields proto3 optional
+- Made Contact fields proto3 optional
+- Made Company fields proto3 optional
+- Moved multiple Report messages and submessages
+- Renamed ReportDefinition.Dimensions PROGRAMMATIC_BUYER_ID and PROGRAMMATIC_BUYER_NAME to DEAL_BUYER_ID and DEAL_BUYER_NAME
+- Renamed ReportDefinition.Dimension AD_SERVER_UNFILTERED_IMPRESSIONS to AD_SERVER_UNFILTERED_DOWNLOADED_IMPRESSIONS
+
+### Documentation improvements
+
+- Clarified pagination defaults for List methods
+
 ## Version 1.0.0-beta02, released 2025-07-07
 
 ### New features
