@@ -23,6 +23,23 @@
       "restNumericEnums": true
     },
     {
+      "id": "Google.Ads.DataManager.V1",
+      "version": "1.0.0-beta00",
+      "type": "grpc",
+      "productName": "Data Manager",
+      "productUrl": "https://developers.google.com/data-manager",
+      "description": "A unified ingestion API for data partners, agencies and advertisers to connect first-party data across Google advertising products.",
+      "tags": [],
+      "dependencies": {},
+      "generator": "micro",
+      "protoPath": "google/ads/datamanager/v1",
+      "includeCommonResourcesProto": true,
+      "shortName": "datamanager",
+      "serviceConfigFile": "datamanager_v1.yaml",
+      "transport": "grpc+rest",
+      "restNumericEnums": true
+    },
+    {
       "id": "Google.Ads.MarketingPlatform.Admin.V1Alpha",
       "version": "1.0.0-alpha01",
       "type": "grpc",
