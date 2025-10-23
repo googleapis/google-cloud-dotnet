@@ -1,5 +1,11 @@
 # Version history
 
+## Version 1.0.0-beta57, released 2025-10-23
+
+### New features
+
+- Add EmbedContent method v1beta1
+
 ## Version 1.0.0-beta56, released 2025-10-20
 
 ### New features
