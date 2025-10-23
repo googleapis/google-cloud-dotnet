@@ -745,10 +745,10 @@ namespace GoogleCSharpSnippets
             // Initialize request argument(s)
             FetchReportResultRowsRequest request = new FetchReportResultRowsRequest { Name = "", };
             // Make the request
-            PagedEnumerable<FetchReportResultRowsResponse, Report.Types.DataTable.Types.Row> response = reportServiceClient.FetchReportResultRows(request);
+            PagedEnumerable<FetchReportResultRowsResponse, ReportDataTable.Types.Row> response = reportServiceClient.FetchReportResultRows(request);
 
             // Iterate over all response items, lazily performing RPCs as required
-            foreach (Report.Types.DataTable.Types.Row item in response)
+            foreach (ReportDataTable.Types.Row item in response)
             {
                 // Do something with each item
                 Console.WriteLine(item);
@@ -759,7 +759,7 @@ namespace GoogleCSharpSnippets
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
-                foreach (Report.Types.DataTable.Types.Row item in page)
+                foreach (ReportDataTable.Types.Row item in page)
                 {
                     // Do something with each item
                     Console.WriteLine(item);
@@ -768,10 +768,10 @@ namespace GoogleCSharpSnippets
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
-            Page<Report.Types.DataTable.Types.Row> singlePage = response.ReadPage(pageSize);
+            Page<ReportDataTable.Types.Row> singlePage = response.ReadPage(pageSize);
             // Do something with the page of items
             Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
-            foreach (Report.Types.DataTable.Types.Row item in singlePage)
+            foreach (ReportDataTable.Types.Row item in singlePage)
             {
                 // Do something with each item
                 Console.WriteLine(item);
@@ -790,10 +790,10 @@ namespace GoogleCSharpSnippets
             // Initialize request argument(s)
             FetchReportResultRowsRequest request = new FetchReportResultRowsRequest { Name = "", };
             // Make the request
-            PagedAsyncEnumerable<FetchReportResultRowsResponse, Report.Types.DataTable.Types.Row> response = reportServiceClient.FetchReportResultRowsAsync(request);
+            PagedAsyncEnumerable<FetchReportResultRowsResponse, ReportDataTable.Types.Row> response = reportServiceClient.FetchReportResultRowsAsync(request);
 
             // Iterate over all response items, lazily performing RPCs as required
-            await response.ForEachAsync((Report.Types.DataTable.Types.Row item) =>
+            await response.ForEachAsync((ReportDataTable.Types.Row item) =>
             {
                 // Do something with each item
                 Console.WriteLine(item);
@@ -804,7 +804,7 @@ namespace GoogleCSharpSnippets
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
-                foreach (Report.Types.DataTable.Types.Row item in page)
+                foreach (ReportDataTable.Types.Row item in page)
                 {
                     // Do something with each item
                     Console.WriteLine(item);
@@ -813,10 +813,10 @@ namespace GoogleCSharpSnippets
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
-            Page<Report.Types.DataTable.Types.Row> singlePage = await response.ReadPageAsync(pageSize);
+            Page<ReportDataTable.Types.Row> singlePage = await response.ReadPageAsync(pageSize);
             // Do something with the page of items
             Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
-            foreach (Report.Types.DataTable.Types.Row item in singlePage)
+            foreach (ReportDataTable.Types.Row item in singlePage)
             {
                 // Do something with each item
                 Console.WriteLine(item);
@@ -835,10 +835,10 @@ namespace GoogleCSharpSnippets
             // Initialize request argument(s)
             string name = "";
             // Make the request
-            PagedEnumerable<FetchReportResultRowsResponse, Report.Types.DataTable.Types.Row> response = reportServiceClient.FetchReportResultRows(name);
+            PagedEnumerable<FetchReportResultRowsResponse, ReportDataTable.Types.Row> response = reportServiceClient.FetchReportResultRows(name);
 
             // Iterate over all response items, lazily performing RPCs as required
-            foreach (Report.Types.DataTable.Types.Row item in response)
+            foreach (ReportDataTable.Types.Row item in response)
             {
                 // Do something with each item
                 Console.WriteLine(item);
@@ -849,7 +849,7 @@ namespace GoogleCSharpSnippets
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
-                foreach (Report.Types.DataTable.Types.Row item in page)
+                foreach (ReportDataTable.Types.Row item in page)
                 {
                     // Do something with each item
                     Console.WriteLine(item);
@@ -858,10 +858,10 @@ namespace GoogleCSharpSnippets
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
-            Page<Report.Types.DataTable.Types.Row> singlePage = response.ReadPage(pageSize);
+            Page<ReportDataTable.Types.Row> singlePage = response.ReadPage(pageSize);
             // Do something with the page of items
             Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
-            foreach (Report.Types.DataTable.Types.Row item in singlePage)
+            foreach (ReportDataTable.Types.Row item in singlePage)
             {
                 // Do something with each item
                 Console.WriteLine(item);
@@ -880,10 +880,10 @@ namespace GoogleCSharpSnippets
             // Initialize request argument(s)
             string name = "";
             // Make the request
-            PagedAsyncEnumerable<FetchReportResultRowsResponse, Report.Types.DataTable.Types.Row> response = reportServiceClient.FetchReportResultRowsAsync(name);
+            PagedAsyncEnumerable<FetchReportResultRowsResponse, ReportDataTable.Types.Row> response = reportServiceClient.FetchReportResultRowsAsync(name);
 
             // Iterate over all response items, lazily performing RPCs as required
-            await response.ForEachAsync((Report.Types.DataTable.Types.Row item) =>
+            await response.ForEachAsync((ReportDataTable.Types.Row item) =>
             {
                 // Do something with each item
                 Console.WriteLine(item);
@@ -894,7 +894,7 @@ namespace GoogleCSharpSnippets
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
-                foreach (Report.Types.DataTable.Types.Row item in page)
+                foreach (ReportDataTable.Types.Row item in page)
                 {
                     // Do something with each item
                     Console.WriteLine(item);
@@ -903,10 +903,10 @@ namespace GoogleCSharpSnippets
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
-            Page<Report.Types.DataTable.Types.Row> singlePage = await response.ReadPageAsync(pageSize);
+            Page<ReportDataTable.Types.Row> singlePage = await response.ReadPageAsync(pageSize);
             // Do something with the page of items
             Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
-            foreach (Report.Types.DataTable.Types.Row item in singlePage)
+            foreach (ReportDataTable.Types.Row item in singlePage)
             {
                 // Do something with each item
                 Console.WriteLine(item);

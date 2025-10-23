@@ -25,20 +25,30 @@ namespace Google.Ads.AdManager.V1 {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "Citnb29nbGUvYWRzL2FkbWFuYWdlci92MS90ZWFtX21lc3NhZ2VzLnByb3Rv",
-            "Ehdnb29nbGUuYWRzLmFkbWFuYWdlci52MRofZ29vZ2xlL2FwaS9maWVsZF9i",
-            "ZWhhdmlvci5wcm90bxoZZ29vZ2xlL2FwaS9yZXNvdXJjZS5wcm90byJwCgRU",
-            "ZWFtEhEKBG5hbWUYASABKAlCA+BBCDpV6kFSCh1hZG1hbmFnZXIuZ29vZ2xl",
-            "YXBpcy5jb20vVGVhbRIkbmV0d29ya3Mve25ldHdvcmtfY29kZX0vdGVhbXMv",
-            "e3RlYW19KgV0ZWFtczIEdGVhbULFAQobY29tLmdvb2dsZS5hZHMuYWRtYW5h",
-            "Z2VyLnYxQhFUZWFtTWVzc2FnZXNQcm90b1ABWkBnb29nbGUuZ29sYW5nLm9y",
-            "Zy9nZW5wcm90by9nb29nbGVhcGlzL2Fkcy9hZG1hbmFnZXIvdjE7YWRtYW5h",
-            "Z2VyqgIXR29vZ2xlLkFkcy5BZE1hbmFnZXIuVjHKAhdHb29nbGVcQWRzXEFk",
-            "TWFuYWdlclxWMeoCGkdvb2dsZTo6QWRzOjpBZE1hbmFnZXI6OlYxYgZwcm90",
-            "bzM="));
+            "Ehdnb29nbGUuYWRzLmFkbWFuYWdlci52MRooZ29vZ2xlL2Fkcy9hZG1hbmFn",
+            "ZXIvdjEvdGVhbV9lbnVtcy5wcm90bxofZ29vZ2xlL2FwaS9maWVsZF9iZWhh",
+            "dmlvci5wcm90bxoZZ29vZ2xlL2FwaS9yZXNvdXJjZS5wcm90byKWBAoEVGVh",
+            "bRIRCgRuYW1lGAEgASgJQgPgQQgSHgoMZGlzcGxheV9uYW1lGAMgASgJQgPg",
+            "QQJIAIgBARIdCgtkZXNjcmlwdGlvbhgEIAEoCUID4EEBSAGIAQESTAoGc3Rh",
+            "dHVzGAUgASgOMjIuZ29vZ2xlLmFkcy5hZG1hbmFnZXIudjEuVGVhbVN0YXR1",
+            "c0VudW0uVGVhbVN0YXR1c0ID4EEDSAKIAQESJgoUYWxsX2NvbXBhbmllc19h",
+            "Y2Nlc3MYBiABKAhCA+BBAUgDiAEBEiYKFGFsbF9pbnZlbnRvcnlfYWNjZXNz",
+            "GAcgASgIQgPgQQFIBIgBARJZCgthY2Nlc3NfdHlwZRgIIAEoDjI6Lmdvb2ds",
+            "ZS5hZHMuYWRtYW5hZ2VyLnYxLlRlYW1BY2Nlc3NUeXBlRW51bS5UZWFtQWNj",
+            "ZXNzVHlwZUID4EEBSAWIAQE6VepBUgodYWRtYW5hZ2VyLmdvb2dsZWFwaXMu",
+            "Y29tL1RlYW0SJG5ldHdvcmtzL3tuZXR3b3JrX2NvZGV9L3RlYW1zL3t0ZWFt",
+            "fSoFdGVhbXMyBHRlYW1CDwoNX2Rpc3BsYXlfbmFtZUIOCgxfZGVzY3JpcHRp",
+            "b25CCQoHX3N0YXR1c0IXChVfYWxsX2NvbXBhbmllc19hY2Nlc3NCFwoVX2Fs",
+            "bF9pbnZlbnRvcnlfYWNjZXNzQg4KDF9hY2Nlc3NfdHlwZULFAQobY29tLmdv",
+            "b2dsZS5hZHMuYWRtYW5hZ2VyLnYxQhFUZWFtTWVzc2FnZXNQcm90b1ABWkBn",
+            "b29nbGUuZ29sYW5nLm9yZy9nZW5wcm90by9nb29nbGVhcGlzL2Fkcy9hZG1h",
+            "bmFnZXIvdjE7YWRtYW5hZ2VyqgIXR29vZ2xlLkFkcy5BZE1hbmFnZXIuVjHK",
+            "AhdHb29nbGVcQWRzXEFkTWFuYWdlclxWMeoCGkdvb2dsZTo6QWRzOjpBZE1h",
+            "bmFnZXI6OlYxYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::Google.Ads.AdManager.V1.TeamEnumsReflection.Descriptor, global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Ads.AdManager.V1.Team), global::Google.Ads.AdManager.V1.Team.Parser, new[]{ "Name" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Ads.AdManager.V1.Team), global::Google.Ads.AdManager.V1.Team.Parser, new[]{ "Name", "DisplayName", "Description", "Status", "AllCompaniesAccess", "AllInventoryAccess", "AccessType" }, new[]{ "DisplayName", "Description", "Status", "AllCompaniesAccess", "AllInventoryAccess", "AccessType" }, null, null, null)
           }));
     }
     #endregion
@@ -56,6 +66,7 @@ namespace Google.Ads.AdManager.V1 {
   {
     private static readonly pb::MessageParser<Team> _parser = new pb::MessageParser<Team>(() => new Team());
     private pb::UnknownFieldSet _unknownFields;
+    private int _hasBits0;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pb::MessageParser<Team> Parser { get { return _parser; } }
@@ -83,7 +94,14 @@ namespace Google.Ads.AdManager.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public Team(Team other) : this() {
+      _hasBits0 = other._hasBits0;
       name_ = other.name_;
+      displayName_ = other.displayName_;
+      description_ = other.description_;
+      status_ = other.status_;
+      allCompaniesAccess_ = other.allCompaniesAccess_;
+      allInventoryAccess_ = other.allInventoryAccess_;
+      accessType_ = other.accessType_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -109,6 +127,191 @@ namespace Google.Ads.AdManager.V1 {
       }
     }
 
+    /// <summary>Field number for the "display_name" field.</summary>
+    public const int DisplayNameFieldNumber = 3;
+    private readonly static string DisplayNameDefaultValue = "";
+
+    private string displayName_;
+    /// <summary>
+    /// Required. The name of the Team. This value has a maximum length of 127
+    /// characters.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string DisplayName {
+      get { return displayName_ ?? DisplayNameDefaultValue; }
+      set {
+        displayName_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+    /// <summary>Gets whether the "display_name" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasDisplayName {
+      get { return displayName_ != null; }
+    }
+    /// <summary>Clears the value of the "display_name" field</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearDisplayName() {
+      displayName_ = null;
+    }
+
+    /// <summary>Field number for the "description" field.</summary>
+    public const int DescriptionFieldNumber = 4;
+    private readonly static string DescriptionDefaultValue = "";
+
+    private string description_;
+    /// <summary>
+    /// Optional. The description of the Team. This value has a maximum length of
+    /// 255 characters.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string Description {
+      get { return description_ ?? DescriptionDefaultValue; }
+      set {
+        description_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+    /// <summary>Gets whether the "description" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasDescription {
+      get { return description_ != null; }
+    }
+    /// <summary>Clears the value of the "description" field</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearDescription() {
+      description_ = null;
+    }
+
+    /// <summary>Field number for the "status" field.</summary>
+    public const int StatusFieldNumber = 5;
+    private readonly static global::Google.Ads.AdManager.V1.TeamStatusEnum.Types.TeamStatus StatusDefaultValue = global::Google.Ads.AdManager.V1.TeamStatusEnum.Types.TeamStatus.Unspecified;
+
+    private global::Google.Ads.AdManager.V1.TeamStatusEnum.Types.TeamStatus status_;
+    /// <summary>
+    /// Output only. The status of the Team. This value determines the visibility
+    /// of the team in the UI.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Ads.AdManager.V1.TeamStatusEnum.Types.TeamStatus Status {
+      get { if ((_hasBits0 & 1) != 0) { return status_; } else { return StatusDefaultValue; } }
+      set {
+        _hasBits0 |= 1;
+        status_ = value;
+      }
+    }
+    /// <summary>Gets whether the "status" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasStatus {
+      get { return (_hasBits0 & 1) != 0; }
+    }
+    /// <summary>Clears the value of the "status" field</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearStatus() {
+      _hasBits0 &= ~1;
+    }
+
+    /// <summary>Field number for the "all_companies_access" field.</summary>
+    public const int AllCompaniesAccessFieldNumber = 6;
+    private readonly static bool AllCompaniesAccessDefaultValue = false;
+
+    private bool allCompaniesAccess_;
+    /// <summary>
+    /// Optional. Whether or not users on this team have access to all companies.
+    /// If this value is true, then an error will be thrown if an attempt is made
+    /// to associate this team with a Company.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool AllCompaniesAccess {
+      get { if ((_hasBits0 & 2) != 0) { return allCompaniesAccess_; } else { return AllCompaniesAccessDefaultValue; } }
+      set {
+        _hasBits0 |= 2;
+        allCompaniesAccess_ = value;
+      }
+    }
+    /// <summary>Gets whether the "all_companies_access" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasAllCompaniesAccess {
+      get { return (_hasBits0 & 2) != 0; }
+    }
+    /// <summary>Clears the value of the "all_companies_access" field</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearAllCompaniesAccess() {
+      _hasBits0 &= ~2;
+    }
+
+    /// <summary>Field number for the "all_inventory_access" field.</summary>
+    public const int AllInventoryAccessFieldNumber = 7;
+    private readonly static bool AllInventoryAccessDefaultValue = false;
+
+    private bool allInventoryAccess_;
+    /// <summary>
+    /// Optional. Whether or not users on this team have access to all inventory.
+    /// If this value is true, then an error will be thrown if an attempt is made
+    /// to associate this team with an AdUnit.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool AllInventoryAccess {
+      get { if ((_hasBits0 & 4) != 0) { return allInventoryAccess_; } else { return AllInventoryAccessDefaultValue; } }
+      set {
+        _hasBits0 |= 4;
+        allInventoryAccess_ = value;
+      }
+    }
+    /// <summary>Gets whether the "all_inventory_access" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasAllInventoryAccess {
+      get { return (_hasBits0 & 4) != 0; }
+    }
+    /// <summary>Clears the value of the "all_inventory_access" field</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearAllInventoryAccess() {
+      _hasBits0 &= ~4;
+    }
+
+    /// <summary>Field number for the "access_type" field.</summary>
+    public const int AccessTypeFieldNumber = 8;
+    private readonly static global::Google.Ads.AdManager.V1.TeamAccessTypeEnum.Types.TeamAccessType AccessTypeDefaultValue = global::Google.Ads.AdManager.V1.TeamAccessTypeEnum.Types.TeamAccessType.Unspecified;
+
+    private global::Google.Ads.AdManager.V1.TeamAccessTypeEnum.Types.TeamAccessType accessType_;
+    /// <summary>
+    /// Optional. The default access to orders for users on this team.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Ads.AdManager.V1.TeamAccessTypeEnum.Types.TeamAccessType AccessType {
+      get { if ((_hasBits0 & 8) != 0) { return accessType_; } else { return AccessTypeDefaultValue; } }
+      set {
+        _hasBits0 |= 8;
+        accessType_ = value;
+      }
+    }
+    /// <summary>Gets whether the "access_type" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasAccessType {
+      get { return (_hasBits0 & 8) != 0; }
+    }
+    /// <summary>Clears the value of the "access_type" field</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearAccessType() {
+      _hasBits0 &= ~8;
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
@@ -125,6 +328,12 @@ namespace Google.Ads.AdManager.V1 {
         return true;
       }
       if (Name != other.Name) return false;
+      if (DisplayName != other.DisplayName) return false;
+      if (Description != other.Description) return false;
+      if (Status != other.Status) return false;
+      if (AllCompaniesAccess != other.AllCompaniesAccess) return false;
+      if (AllInventoryAccess != other.AllInventoryAccess) return false;
+      if (AccessType != other.AccessType) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -133,6 +342,12 @@ namespace Google.Ads.AdManager.V1 {
     public override int GetHashCode() {
       int hash = 1;
       if (Name.Length != 0) hash ^= Name.GetHashCode();
+      if (HasDisplayName) hash ^= DisplayName.GetHashCode();
+      if (HasDescription) hash ^= Description.GetHashCode();
+      if (HasStatus) hash ^= Status.GetHashCode();
+      if (HasAllCompaniesAccess) hash ^= AllCompaniesAccess.GetHashCode();
+      if (HasAllInventoryAccess) hash ^= AllInventoryAccess.GetHashCode();
+      if (HasAccessType) hash ^= AccessType.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -155,6 +370,30 @@ namespace Google.Ads.AdManager.V1 {
         output.WriteRawTag(10);
         output.WriteString(Name);
       }
+      if (HasDisplayName) {
+        output.WriteRawTag(26);
+        output.WriteString(DisplayName);
+      }
+      if (HasDescription) {
+        output.WriteRawTag(34);
+        output.WriteString(Description);
+      }
+      if (HasStatus) {
+        output.WriteRawTag(40);
+        output.WriteEnum((int) Status);
+      }
+      if (HasAllCompaniesAccess) {
+        output.WriteRawTag(48);
+        output.WriteBool(AllCompaniesAccess);
+      }
+      if (HasAllInventoryAccess) {
+        output.WriteRawTag(56);
+        output.WriteBool(AllInventoryAccess);
+      }
+      if (HasAccessType) {
+        output.WriteRawTag(64);
+        output.WriteEnum((int) AccessType);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -169,6 +408,30 @@ namespace Google.Ads.AdManager.V1 {
         output.WriteRawTag(10);
         output.WriteString(Name);
       }
+      if (HasDisplayName) {
+        output.WriteRawTag(26);
+        output.WriteString(DisplayName);
+      }
+      if (HasDescription) {
+        output.WriteRawTag(34);
+        output.WriteString(Description);
+      }
+      if (HasStatus) {
+        output.WriteRawTag(40);
+        output.WriteEnum((int) Status);
+      }
+      if (HasAllCompaniesAccess) {
+        output.WriteRawTag(48);
+        output.WriteBool(AllCompaniesAccess);
+      }
+      if (HasAllInventoryAccess) {
+        output.WriteRawTag(56);
+        output.WriteBool(AllInventoryAccess);
+      }
+      if (HasAccessType) {
+        output.WriteRawTag(64);
+        output.WriteEnum((int) AccessType);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -181,6 +444,24 @@ namespace Google.Ads.AdManager.V1 {
       int size = 0;
       if (Name.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(Name);
+      }
+      if (HasDisplayName) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(DisplayName);
+      }
+      if (HasDescription) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Description);
+      }
+      if (HasStatus) {
+        size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) Status);
+      }
+      if (HasAllCompaniesAccess) {
+        size += 1 + 1;
+      }
+      if (HasAllInventoryAccess) {
+        size += 1 + 1;
+      }
+      if (HasAccessType) {
+        size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) AccessType);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -196,6 +477,24 @@ namespace Google.Ads.AdManager.V1 {
       }
       if (other.Name.Length != 0) {
         Name = other.Name;
+      }
+      if (other.HasDisplayName) {
+        DisplayName = other.DisplayName;
+      }
+      if (other.HasDescription) {
+        Description = other.Description;
+      }
+      if (other.HasStatus) {
+        Status = other.Status;
+      }
+      if (other.HasAllCompaniesAccess) {
+        AllCompaniesAccess = other.AllCompaniesAccess;
+      }
+      if (other.HasAllInventoryAccess) {
+        AllInventoryAccess = other.AllInventoryAccess;
+      }
+      if (other.HasAccessType) {
+        AccessType = other.AccessType;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -216,6 +515,30 @@ namespace Google.Ads.AdManager.V1 {
             Name = input.ReadString();
             break;
           }
+          case 26: {
+            DisplayName = input.ReadString();
+            break;
+          }
+          case 34: {
+            Description = input.ReadString();
+            break;
+          }
+          case 40: {
+            Status = (global::Google.Ads.AdManager.V1.TeamStatusEnum.Types.TeamStatus) input.ReadEnum();
+            break;
+          }
+          case 48: {
+            AllCompaniesAccess = input.ReadBool();
+            break;
+          }
+          case 56: {
+            AllInventoryAccess = input.ReadBool();
+            break;
+          }
+          case 64: {
+            AccessType = (global::Google.Ads.AdManager.V1.TeamAccessTypeEnum.Types.TeamAccessType) input.ReadEnum();
+            break;
+          }
         }
       }
     #endif
@@ -233,6 +556,30 @@ namespace Google.Ads.AdManager.V1 {
             break;
           case 10: {
             Name = input.ReadString();
+            break;
+          }
+          case 26: {
+            DisplayName = input.ReadString();
+            break;
+          }
+          case 34: {
+            Description = input.ReadString();
+            break;
+          }
+          case 40: {
+            Status = (global::Google.Ads.AdManager.V1.TeamStatusEnum.Types.TeamStatus) input.ReadEnum();
+            break;
+          }
+          case 48: {
+            AllCompaniesAccess = input.ReadBool();
+            break;
+          }
+          case 56: {
+            AllInventoryAccess = input.ReadBool();
+            break;
+          }
+          case 64: {
+            AccessType = (global::Google.Ads.AdManager.V1.TeamAccessTypeEnum.Types.TeamAccessType) input.ReadEnum();
             break;
           }
         }

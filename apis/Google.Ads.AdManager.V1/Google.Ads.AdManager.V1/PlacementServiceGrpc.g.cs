@@ -71,6 +71,30 @@ namespace Google.Ads.AdManager.V1 {
     static readonly grpc::Marshaller<global::Google.Ads.AdManager.V1.ListPlacementsRequest> __Marshaller_google_ads_admanager_v1_ListPlacementsRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Ads.AdManager.V1.ListPlacementsRequest.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Ads.AdManager.V1.ListPlacementsResponse> __Marshaller_google_ads_admanager_v1_ListPlacementsResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Ads.AdManager.V1.ListPlacementsResponse.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Ads.AdManager.V1.CreatePlacementRequest> __Marshaller_google_ads_admanager_v1_CreatePlacementRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Ads.AdManager.V1.CreatePlacementRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Ads.AdManager.V1.UpdatePlacementRequest> __Marshaller_google_ads_admanager_v1_UpdatePlacementRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Ads.AdManager.V1.UpdatePlacementRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Ads.AdManager.V1.BatchCreatePlacementsRequest> __Marshaller_google_ads_admanager_v1_BatchCreatePlacementsRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Ads.AdManager.V1.BatchCreatePlacementsRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Ads.AdManager.V1.BatchCreatePlacementsResponse> __Marshaller_google_ads_admanager_v1_BatchCreatePlacementsResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Ads.AdManager.V1.BatchCreatePlacementsResponse.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Ads.AdManager.V1.BatchUpdatePlacementsRequest> __Marshaller_google_ads_admanager_v1_BatchUpdatePlacementsRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Ads.AdManager.V1.BatchUpdatePlacementsRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Ads.AdManager.V1.BatchUpdatePlacementsResponse> __Marshaller_google_ads_admanager_v1_BatchUpdatePlacementsResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Ads.AdManager.V1.BatchUpdatePlacementsResponse.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Ads.AdManager.V1.BatchActivatePlacementsRequest> __Marshaller_google_ads_admanager_v1_BatchActivatePlacementsRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Ads.AdManager.V1.BatchActivatePlacementsRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Ads.AdManager.V1.BatchActivatePlacementsResponse> __Marshaller_google_ads_admanager_v1_BatchActivatePlacementsResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Ads.AdManager.V1.BatchActivatePlacementsResponse.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Ads.AdManager.V1.BatchDeactivatePlacementsRequest> __Marshaller_google_ads_admanager_v1_BatchDeactivatePlacementsRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Ads.AdManager.V1.BatchDeactivatePlacementsRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Ads.AdManager.V1.BatchDeactivatePlacementsResponse> __Marshaller_google_ads_admanager_v1_BatchDeactivatePlacementsResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Ads.AdManager.V1.BatchDeactivatePlacementsResponse.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Ads.AdManager.V1.BatchArchivePlacementsRequest> __Marshaller_google_ads_admanager_v1_BatchArchivePlacementsRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Ads.AdManager.V1.BatchArchivePlacementsRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Ads.AdManager.V1.BatchArchivePlacementsResponse> __Marshaller_google_ads_admanager_v1_BatchArchivePlacementsResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Ads.AdManager.V1.BatchArchivePlacementsResponse.Parser));
 
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Ads.AdManager.V1.GetPlacementRequest, global::Google.Ads.AdManager.V1.Placement> __Method_GetPlacement = new grpc::Method<global::Google.Ads.AdManager.V1.GetPlacementRequest, global::Google.Ads.AdManager.V1.Placement>(
@@ -87,6 +111,62 @@ namespace Google.Ads.AdManager.V1 {
         "ListPlacements",
         __Marshaller_google_ads_admanager_v1_ListPlacementsRequest,
         __Marshaller_google_ads_admanager_v1_ListPlacementsResponse);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Ads.AdManager.V1.CreatePlacementRequest, global::Google.Ads.AdManager.V1.Placement> __Method_CreatePlacement = new grpc::Method<global::Google.Ads.AdManager.V1.CreatePlacementRequest, global::Google.Ads.AdManager.V1.Placement>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "CreatePlacement",
+        __Marshaller_google_ads_admanager_v1_CreatePlacementRequest,
+        __Marshaller_google_ads_admanager_v1_Placement);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Ads.AdManager.V1.UpdatePlacementRequest, global::Google.Ads.AdManager.V1.Placement> __Method_UpdatePlacement = new grpc::Method<global::Google.Ads.AdManager.V1.UpdatePlacementRequest, global::Google.Ads.AdManager.V1.Placement>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "UpdatePlacement",
+        __Marshaller_google_ads_admanager_v1_UpdatePlacementRequest,
+        __Marshaller_google_ads_admanager_v1_Placement);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Ads.AdManager.V1.BatchCreatePlacementsRequest, global::Google.Ads.AdManager.V1.BatchCreatePlacementsResponse> __Method_BatchCreatePlacements = new grpc::Method<global::Google.Ads.AdManager.V1.BatchCreatePlacementsRequest, global::Google.Ads.AdManager.V1.BatchCreatePlacementsResponse>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "BatchCreatePlacements",
+        __Marshaller_google_ads_admanager_v1_BatchCreatePlacementsRequest,
+        __Marshaller_google_ads_admanager_v1_BatchCreatePlacementsResponse);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Ads.AdManager.V1.BatchUpdatePlacementsRequest, global::Google.Ads.AdManager.V1.BatchUpdatePlacementsResponse> __Method_BatchUpdatePlacements = new grpc::Method<global::Google.Ads.AdManager.V1.BatchUpdatePlacementsRequest, global::Google.Ads.AdManager.V1.BatchUpdatePlacementsResponse>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "BatchUpdatePlacements",
+        __Marshaller_google_ads_admanager_v1_BatchUpdatePlacementsRequest,
+        __Marshaller_google_ads_admanager_v1_BatchUpdatePlacementsResponse);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Ads.AdManager.V1.BatchActivatePlacementsRequest, global::Google.Ads.AdManager.V1.BatchActivatePlacementsResponse> __Method_BatchActivatePlacements = new grpc::Method<global::Google.Ads.AdManager.V1.BatchActivatePlacementsRequest, global::Google.Ads.AdManager.V1.BatchActivatePlacementsResponse>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "BatchActivatePlacements",
+        __Marshaller_google_ads_admanager_v1_BatchActivatePlacementsRequest,
+        __Marshaller_google_ads_admanager_v1_BatchActivatePlacementsResponse);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Ads.AdManager.V1.BatchDeactivatePlacementsRequest, global::Google.Ads.AdManager.V1.BatchDeactivatePlacementsResponse> __Method_BatchDeactivatePlacements = new grpc::Method<global::Google.Ads.AdManager.V1.BatchDeactivatePlacementsRequest, global::Google.Ads.AdManager.V1.BatchDeactivatePlacementsResponse>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "BatchDeactivatePlacements",
+        __Marshaller_google_ads_admanager_v1_BatchDeactivatePlacementsRequest,
+        __Marshaller_google_ads_admanager_v1_BatchDeactivatePlacementsResponse);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Ads.AdManager.V1.BatchArchivePlacementsRequest, global::Google.Ads.AdManager.V1.BatchArchivePlacementsResponse> __Method_BatchArchivePlacements = new grpc::Method<global::Google.Ads.AdManager.V1.BatchArchivePlacementsRequest, global::Google.Ads.AdManager.V1.BatchArchivePlacementsResponse>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "BatchArchivePlacements",
+        __Marshaller_google_ads_admanager_v1_BatchArchivePlacementsRequest,
+        __Marshaller_google_ads_admanager_v1_BatchArchivePlacementsResponse);
 
     /// <summary>Service descriptor</summary>
     public static global::Google.Protobuf.Reflection.ServiceDescriptor Descriptor
@@ -118,6 +198,90 @@ namespace Google.Ads.AdManager.V1 {
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Ads.AdManager.V1.ListPlacementsResponse> ListPlacements(global::Google.Ads.AdManager.V1.ListPlacementsRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// API to create an `Placement` object.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Ads.AdManager.V1.Placement> CreatePlacement(global::Google.Ads.AdManager.V1.CreatePlacementRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// API to update an `Placement` object.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Ads.AdManager.V1.Placement> UpdatePlacement(global::Google.Ads.AdManager.V1.UpdatePlacementRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// API to batch create `Placement` objects.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Ads.AdManager.V1.BatchCreatePlacementsResponse> BatchCreatePlacements(global::Google.Ads.AdManager.V1.BatchCreatePlacementsRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// API to batch update `Placement` objects.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Ads.AdManager.V1.BatchUpdatePlacementsResponse> BatchUpdatePlacements(global::Google.Ads.AdManager.V1.BatchUpdatePlacementsRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Activates a list of `Placement` objects.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Ads.AdManager.V1.BatchActivatePlacementsResponse> BatchActivatePlacements(global::Google.Ads.AdManager.V1.BatchActivatePlacementsRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Deactivates a list of `Placement` objects.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Ads.AdManager.V1.BatchDeactivatePlacementsResponse> BatchDeactivatePlacements(global::Google.Ads.AdManager.V1.BatchDeactivatePlacementsRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Archives a list of `Placement` objects.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Ads.AdManager.V1.BatchArchivePlacementsResponse> BatchArchivePlacements(global::Google.Ads.AdManager.V1.BatchArchivePlacementsRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
       }
@@ -247,6 +411,342 @@ namespace Google.Ads.AdManager.V1 {
       {
         return CallInvoker.AsyncUnaryCall(__Method_ListPlacements, null, options, request);
       }
+      /// <summary>
+      /// API to create an `Placement` object.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Ads.AdManager.V1.Placement CreatePlacement(global::Google.Ads.AdManager.V1.CreatePlacementRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return CreatePlacement(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// API to create an `Placement` object.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Ads.AdManager.V1.Placement CreatePlacement(global::Google.Ads.AdManager.V1.CreatePlacementRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_CreatePlacement, null, options, request);
+      }
+      /// <summary>
+      /// API to create an `Placement` object.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Ads.AdManager.V1.Placement> CreatePlacementAsync(global::Google.Ads.AdManager.V1.CreatePlacementRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return CreatePlacementAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// API to create an `Placement` object.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Ads.AdManager.V1.Placement> CreatePlacementAsync(global::Google.Ads.AdManager.V1.CreatePlacementRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_CreatePlacement, null, options, request);
+      }
+      /// <summary>
+      /// API to update an `Placement` object.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Ads.AdManager.V1.Placement UpdatePlacement(global::Google.Ads.AdManager.V1.UpdatePlacementRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return UpdatePlacement(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// API to update an `Placement` object.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Ads.AdManager.V1.Placement UpdatePlacement(global::Google.Ads.AdManager.V1.UpdatePlacementRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_UpdatePlacement, null, options, request);
+      }
+      /// <summary>
+      /// API to update an `Placement` object.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Ads.AdManager.V1.Placement> UpdatePlacementAsync(global::Google.Ads.AdManager.V1.UpdatePlacementRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return UpdatePlacementAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// API to update an `Placement` object.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Ads.AdManager.V1.Placement> UpdatePlacementAsync(global::Google.Ads.AdManager.V1.UpdatePlacementRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_UpdatePlacement, null, options, request);
+      }
+      /// <summary>
+      /// API to batch create `Placement` objects.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Ads.AdManager.V1.BatchCreatePlacementsResponse BatchCreatePlacements(global::Google.Ads.AdManager.V1.BatchCreatePlacementsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return BatchCreatePlacements(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// API to batch create `Placement` objects.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Ads.AdManager.V1.BatchCreatePlacementsResponse BatchCreatePlacements(global::Google.Ads.AdManager.V1.BatchCreatePlacementsRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_BatchCreatePlacements, null, options, request);
+      }
+      /// <summary>
+      /// API to batch create `Placement` objects.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Ads.AdManager.V1.BatchCreatePlacementsResponse> BatchCreatePlacementsAsync(global::Google.Ads.AdManager.V1.BatchCreatePlacementsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return BatchCreatePlacementsAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// API to batch create `Placement` objects.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Ads.AdManager.V1.BatchCreatePlacementsResponse> BatchCreatePlacementsAsync(global::Google.Ads.AdManager.V1.BatchCreatePlacementsRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_BatchCreatePlacements, null, options, request);
+      }
+      /// <summary>
+      /// API to batch update `Placement` objects.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Ads.AdManager.V1.BatchUpdatePlacementsResponse BatchUpdatePlacements(global::Google.Ads.AdManager.V1.BatchUpdatePlacementsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return BatchUpdatePlacements(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// API to batch update `Placement` objects.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Ads.AdManager.V1.BatchUpdatePlacementsResponse BatchUpdatePlacements(global::Google.Ads.AdManager.V1.BatchUpdatePlacementsRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_BatchUpdatePlacements, null, options, request);
+      }
+      /// <summary>
+      /// API to batch update `Placement` objects.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Ads.AdManager.V1.BatchUpdatePlacementsResponse> BatchUpdatePlacementsAsync(global::Google.Ads.AdManager.V1.BatchUpdatePlacementsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return BatchUpdatePlacementsAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// API to batch update `Placement` objects.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Ads.AdManager.V1.BatchUpdatePlacementsResponse> BatchUpdatePlacementsAsync(global::Google.Ads.AdManager.V1.BatchUpdatePlacementsRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_BatchUpdatePlacements, null, options, request);
+      }
+      /// <summary>
+      /// Activates a list of `Placement` objects.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Ads.AdManager.V1.BatchActivatePlacementsResponse BatchActivatePlacements(global::Google.Ads.AdManager.V1.BatchActivatePlacementsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return BatchActivatePlacements(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Activates a list of `Placement` objects.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Ads.AdManager.V1.BatchActivatePlacementsResponse BatchActivatePlacements(global::Google.Ads.AdManager.V1.BatchActivatePlacementsRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_BatchActivatePlacements, null, options, request);
+      }
+      /// <summary>
+      /// Activates a list of `Placement` objects.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Ads.AdManager.V1.BatchActivatePlacementsResponse> BatchActivatePlacementsAsync(global::Google.Ads.AdManager.V1.BatchActivatePlacementsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return BatchActivatePlacementsAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Activates a list of `Placement` objects.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Ads.AdManager.V1.BatchActivatePlacementsResponse> BatchActivatePlacementsAsync(global::Google.Ads.AdManager.V1.BatchActivatePlacementsRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_BatchActivatePlacements, null, options, request);
+      }
+      /// <summary>
+      /// Deactivates a list of `Placement` objects.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Ads.AdManager.V1.BatchDeactivatePlacementsResponse BatchDeactivatePlacements(global::Google.Ads.AdManager.V1.BatchDeactivatePlacementsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return BatchDeactivatePlacements(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Deactivates a list of `Placement` objects.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Ads.AdManager.V1.BatchDeactivatePlacementsResponse BatchDeactivatePlacements(global::Google.Ads.AdManager.V1.BatchDeactivatePlacementsRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_BatchDeactivatePlacements, null, options, request);
+      }
+      /// <summary>
+      /// Deactivates a list of `Placement` objects.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Ads.AdManager.V1.BatchDeactivatePlacementsResponse> BatchDeactivatePlacementsAsync(global::Google.Ads.AdManager.V1.BatchDeactivatePlacementsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return BatchDeactivatePlacementsAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Deactivates a list of `Placement` objects.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Ads.AdManager.V1.BatchDeactivatePlacementsResponse> BatchDeactivatePlacementsAsync(global::Google.Ads.AdManager.V1.BatchDeactivatePlacementsRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_BatchDeactivatePlacements, null, options, request);
+      }
+      /// <summary>
+      /// Archives a list of `Placement` objects.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Ads.AdManager.V1.BatchArchivePlacementsResponse BatchArchivePlacements(global::Google.Ads.AdManager.V1.BatchArchivePlacementsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return BatchArchivePlacements(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Archives a list of `Placement` objects.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Ads.AdManager.V1.BatchArchivePlacementsResponse BatchArchivePlacements(global::Google.Ads.AdManager.V1.BatchArchivePlacementsRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_BatchArchivePlacements, null, options, request);
+      }
+      /// <summary>
+      /// Archives a list of `Placement` objects.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Ads.AdManager.V1.BatchArchivePlacementsResponse> BatchArchivePlacementsAsync(global::Google.Ads.AdManager.V1.BatchArchivePlacementsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return BatchArchivePlacementsAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Archives a list of `Placement` objects.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Ads.AdManager.V1.BatchArchivePlacementsResponse> BatchArchivePlacementsAsync(global::Google.Ads.AdManager.V1.BatchArchivePlacementsRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_BatchArchivePlacements, null, options, request);
+      }
       /// <summary>Creates a new instance of client from given <c>ClientBaseConfiguration</c>.</summary>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       protected override PlacementServiceClient NewInstance(ClientBaseConfiguration configuration)
@@ -262,7 +762,14 @@ namespace Google.Ads.AdManager.V1 {
     {
       return grpc::ServerServiceDefinition.CreateBuilder()
           .AddMethod(__Method_GetPlacement, serviceImpl.GetPlacement)
-          .AddMethod(__Method_ListPlacements, serviceImpl.ListPlacements).Build();
+          .AddMethod(__Method_ListPlacements, serviceImpl.ListPlacements)
+          .AddMethod(__Method_CreatePlacement, serviceImpl.CreatePlacement)
+          .AddMethod(__Method_UpdatePlacement, serviceImpl.UpdatePlacement)
+          .AddMethod(__Method_BatchCreatePlacements, serviceImpl.BatchCreatePlacements)
+          .AddMethod(__Method_BatchUpdatePlacements, serviceImpl.BatchUpdatePlacements)
+          .AddMethod(__Method_BatchActivatePlacements, serviceImpl.BatchActivatePlacements)
+          .AddMethod(__Method_BatchDeactivatePlacements, serviceImpl.BatchDeactivatePlacements)
+          .AddMethod(__Method_BatchArchivePlacements, serviceImpl.BatchArchivePlacements).Build();
     }
 
     /// <summary>Register service method with a service binder with or without implementation. Useful when customizing the service binding logic.
@@ -274,6 +781,13 @@ namespace Google.Ads.AdManager.V1 {
     {
       serviceBinder.AddMethod(__Method_GetPlacement, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Ads.AdManager.V1.GetPlacementRequest, global::Google.Ads.AdManager.V1.Placement>(serviceImpl.GetPlacement));
       serviceBinder.AddMethod(__Method_ListPlacements, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Ads.AdManager.V1.ListPlacementsRequest, global::Google.Ads.AdManager.V1.ListPlacementsResponse>(serviceImpl.ListPlacements));
+      serviceBinder.AddMethod(__Method_CreatePlacement, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Ads.AdManager.V1.CreatePlacementRequest, global::Google.Ads.AdManager.V1.Placement>(serviceImpl.CreatePlacement));
+      serviceBinder.AddMethod(__Method_UpdatePlacement, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Ads.AdManager.V1.UpdatePlacementRequest, global::Google.Ads.AdManager.V1.Placement>(serviceImpl.UpdatePlacement));
+      serviceBinder.AddMethod(__Method_BatchCreatePlacements, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Ads.AdManager.V1.BatchCreatePlacementsRequest, global::Google.Ads.AdManager.V1.BatchCreatePlacementsResponse>(serviceImpl.BatchCreatePlacements));
+      serviceBinder.AddMethod(__Method_BatchUpdatePlacements, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Ads.AdManager.V1.BatchUpdatePlacementsRequest, global::Google.Ads.AdManager.V1.BatchUpdatePlacementsResponse>(serviceImpl.BatchUpdatePlacements));
+      serviceBinder.AddMethod(__Method_BatchActivatePlacements, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Ads.AdManager.V1.BatchActivatePlacementsRequest, global::Google.Ads.AdManager.V1.BatchActivatePlacementsResponse>(serviceImpl.BatchActivatePlacements));
+      serviceBinder.AddMethod(__Method_BatchDeactivatePlacements, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Ads.AdManager.V1.BatchDeactivatePlacementsRequest, global::Google.Ads.AdManager.V1.BatchDeactivatePlacementsResponse>(serviceImpl.BatchDeactivatePlacements));
+      serviceBinder.AddMethod(__Method_BatchArchivePlacements, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Ads.AdManager.V1.BatchArchivePlacementsRequest, global::Google.Ads.AdManager.V1.BatchArchivePlacementsResponse>(serviceImpl.BatchArchivePlacements));
     }
 
   }

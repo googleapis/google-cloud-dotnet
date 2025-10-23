@@ -432,8 +432,7 @@ namespace Google.Ads.AdManager.V1 {
     private string creator_;
     /// <summary>
     /// Output only. The resource name of the User who created the Order on behalf
-    /// of the advertiser. This value is assigned by Google. Format:
-    /// "networks/{network_code}/users/{user_id}"
+    /// of the advertiser. Format: "networks/{network_code}/users/{user_id}"
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -490,9 +489,9 @@ namespace Google.Ads.AdManager.V1 {
     public const int StartTimeFieldNumber = 19;
     private global::Google.Protobuf.WellKnownTypes.Timestamp startTime_;
     /// <summary>
-    /// Output only. The instant at which the Order and its associated line items
-    /// are eligible to begin serving. This attribute is derived from the line item
-    /// of the order that has the earliest LineItem.start_time.
+    /// Output only. The instant at which the Order and its associated Line items
+    /// are eligible to begin serving. This attribute is derived from the Line item
+    /// of the order that has the earliest `LineItem.start_time`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -507,9 +506,9 @@ namespace Google.Ads.AdManager.V1 {
     public const int EndTimeFieldNumber = 12;
     private global::Google.Protobuf.WellKnownTypes.Timestamp endTime_;
     /// <summary>
-    /// Output only. The instant at which the Order and its associated line items
-    /// stop being served. This attribute is derived from the line item of the
-    /// order that has the latest LineItem.end_time.
+    /// Output only. The instant at which the Order and its associated Line items
+    /// stop being served. This attribute is derived from the Line item of the
+    /// order that has the latest `LineItem.end_time`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]

@@ -30,7 +30,7 @@ namespace Google.Ads.AdManager.V1 {
             "YW5hZ2VyL3YxL3RhcmdldGVkX3ZpZGVvX2J1bXBlcl90eXBlX2VudW0ucHJv",
             "dG8aMWdvb2dsZS9hZHMvYWRtYW5hZ2VyL3YxL3ZpZGVvX3Bvc2l0aW9uX2Vu",
             "dW0ucHJvdG8aH2dvb2dsZS9hcGkvZmllbGRfYmVoYXZpb3IucHJvdG8aGWdv",
-            "b2dsZS9hcGkvcmVzb3VyY2UucHJvdG8ikQUKCVRhcmdldGluZxJBCg1nZW9f",
+            "b2dsZS9hcGkvcmVzb3VyY2UucHJvdG8ivAYKCVRhcmdldGluZxJBCg1nZW9f",
             "dGFyZ2V0aW5nGAIgASgLMiUuZ29vZ2xlLmFkcy5hZG1hbmFnZXIudjEuR2Vv",
             "VGFyZ2V0aW5nQgPgQQESTwoUdGVjaG5vbG9neV90YXJnZXRpbmcYAyABKAsy",
             "LC5nb29nbGUuYWRzLmFkbWFuYWdlci52MS5UZWNobm9sb2d5VGFyZ2V0aW5n",
@@ -45,94 +45,172 @@ namespace Google.Ads.AdManager.V1 {
             "DCABKAsyLy5nb29nbGUuYWRzLmFkbWFuYWdlci52MS5WaWRlb1Bvc2l0aW9u",
             "VGFyZ2V0aW5nQgPgQQESUgoWZGF0YV9zZWdtZW50X3RhcmdldGluZxgNIAEo",
             "CzItLmdvb2dsZS5hZHMuYWRtYW5hZ2VyLnYxLkRhdGFTZWdtZW50VGFyZ2V0",
-            "aW5nQgPgQQEilAEKDEdlb1RhcmdldGluZxJBCg10YXJnZXRlZF9nZW9zGAMg",
-            "AygJQirgQQH6QSQKImFkbWFuYWdlci5nb29nbGVhcGlzLmNvbS9HZW9UYXJn",
-            "ZXQSQQoNZXhjbHVkZWRfZ2VvcxgEIAMoCUIq4EEB+kEkCiJhZG1hbmFnZXIu",
-            "Z29vZ2xlYXBpcy5jb20vR2VvVGFyZ2V0IpoCChNUZWNobm9sb2d5VGFyZ2V0",
-            "aW5nEk0KE2JhbmR3aWR0aF90YXJnZXRpbmcYAyABKAsyKy5nb29nbGUuYWRz",
-            "LmFkbWFuYWdlci52MS5CYW5kd2lkdGhUYXJnZXRpbmdCA+BBARJYChlkZXZp",
-            "Y2VfY2F0ZWdvcnlfdGFyZ2V0aW5nGAEgASgLMjAuZ29vZ2xlLmFkcy5hZG1h",
-            "bmFnZXIudjEuRGV2aWNlQ2F0ZWdvcnlUYXJnZXRpbmdCA+BBARJaChpvcGVy",
-            "YXRpbmdfc3lzdGVtX3RhcmdldGluZxgCIAEoCzIxLmdvb2dsZS5hZHMuYWRt",
-            "YW5hZ2VyLnYxLk9wZXJhdGluZ1N5c3RlbVRhcmdldGluZ0ID4EEBIrwBChJC",
-            "YW5kd2lkdGhUYXJnZXRpbmcSUgoZdGFyZ2V0ZWRfYmFuZHdpZHRoX2dyb3Vw",
-            "cxgDIAMoCUIv4EEB+kEpCidhZG1hbmFnZXIuZ29vZ2xlYXBpcy5jb20vQmFu",
-            "ZHdpZHRoR3JvdXASUgoZZXhjbHVkZWRfYmFuZHdpZHRoX2dyb3VwcxgEIAMo",
-            "CUIv4EEB+kEpCidhZG1hbmFnZXIuZ29vZ2xlYXBpcy5jb20vQmFuZHdpZHRo",
-            "R3JvdXAitQEKF0RldmljZUNhdGVnb3J5VGFyZ2V0aW5nEkwKE3RhcmdldGVk",
-            "X2NhdGVnb3JpZXMYAyADKAlCL+BBAfpBKQonYWRtYW5hZ2VyLmdvb2dsZWFw",
-            "aXMuY29tL0RldmljZUNhdGVnb3J5EkwKE2V4Y2x1ZGVkX2NhdGVnb3JpZXMY",
-            "BCADKAlCL+BBAfpBKQonYWRtYW5hZ2VyLmdvb2dsZWFwaXMuY29tL0Rldmlj",
-            "ZUNhdGVnb3J5IpADChhPcGVyYXRpbmdTeXN0ZW1UYXJnZXRpbmcSVAoadGFy",
-            "Z2V0ZWRfb3BlcmF0aW5nX3N5c3RlbXMYBSADKAlCMOBBAfpBKgooYWRtYW5h",
-            "Z2VyLmdvb2dsZWFwaXMuY29tL09wZXJhdGluZ1N5c3RlbRJUChpleGNsdWRl",
-            "ZF9vcGVyYXRpbmdfc3lzdGVtcxgGIAMoCUIw4EEB+kEqCihhZG1hbmFnZXIu",
-            "Z29vZ2xlYXBpcy5jb20vT3BlcmF0aW5nU3lzdGVtEmMKInRhcmdldGVkX29w",
-            "ZXJhdGluZ19zeXN0ZW1fdmVyc2lvbnMYByADKAlCN+BBAfpBMQovYWRtYW5h",
-            "Z2VyLmdvb2dsZWFwaXMuY29tL09wZXJhdGluZ1N5c3RlbVZlcnNpb24SYwoi",
-            "ZXhjbHVkZWRfb3BlcmF0aW5nX3N5c3RlbV92ZXJzaW9ucxgIIAMoCUI34EEB",
-            "+kExCi9hZG1hbmFnZXIuZ29vZ2xlYXBpcy5jb20vT3BlcmF0aW5nU3lzdGVt",
-            "VmVyc2lvbiLxAQoSSW52ZW50b3J5VGFyZ2V0aW5nEkgKEXRhcmdldGVkX2Fk",
-            "X3VuaXRzGAEgAygLMiguZ29vZ2xlLmFkcy5hZG1hbmFnZXIudjEuQWRVbml0",
-            "VGFyZ2V0aW5nQgPgQQESSAoRZXhjbHVkZWRfYWRfdW5pdHMYAiADKAsyKC5n",
-            "b29nbGUuYWRzLmFkbWFuYWdlci52MS5BZFVuaXRUYXJnZXRpbmdCA+BBARJH",
-            "ChN0YXJnZXRlZF9wbGFjZW1lbnRzGAUgAygJQirgQQH6QSQKImFkbWFuYWdl",
-            "ci5nb29nbGVhcGlzLmNvbS9QbGFjZW1lbnQilgEKD0FkVW5pdFRhcmdldGlu",
-            "ZxIgChNpbmNsdWRlX2Rlc2NlbmRhbnRzGAEgASgISACIAQESPQoHYWRfdW5p",
-            "dBgDIAEoCUIn4EEB+kEhCh9hZG1hbmFnZXIuZ29vZ2xlYXBpcy5jb20vQWRV",
-            "bml0SAGIAQFCFgoUX2luY2x1ZGVfZGVzY2VuZGFudHNCCgoIX2FkX3VuaXQi",
-            "eAoYUmVxdWVzdFBsYXRmb3JtVGFyZ2V0aW5nElwKEXJlcXVlc3RfcGxhdGZv",
-            "cm1zGAEgAygOMjwuZ29vZ2xlLmFkcy5hZG1hbmFnZXIudjEuUmVxdWVzdFBs",
-            "YXRmb3JtRW51bS5SZXF1ZXN0UGxhdGZvcm1CA+BBASJoCg9DdXN0b21UYXJn",
-            "ZXRpbmcSVQoYY3VzdG9tX3RhcmdldGluZ19jbGF1c2VzGAEgAygLMi4uZ29v",
-            "Z2xlLmFkcy5hZG1hbmFnZXIudjEuQ3VzdG9tVGFyZ2V0aW5nQ2xhdXNlQgPg",
-            "QQEicAoVQ3VzdG9tVGFyZ2V0aW5nQ2xhdXNlElcKGWN1c3RvbV90YXJnZXRp",
-            "bmdfbGl0ZXJhbHMYASADKAsyLy5nb29nbGUuYWRzLmFkbWFuYWdlci52MS5D",
-            "dXN0b21UYXJnZXRpbmdMaXRlcmFsQgPgQQEihQIKFkN1c3RvbVRhcmdldGlu",
-            "Z0xpdGVyYWwSFQoIbmVnYXRpdmUYASABKAhIAIgBARJWChRjdXN0b21fdGFy",
-            "Z2V0aW5nX2tleRgEIAEoCUIz4EEB+kEtCithZG1hbmFnZXIuZ29vZ2xlYXBp",
-            "cy5jb20vQ3VzdG9tVGFyZ2V0aW5nS2V5SAGIAQESVgoXY3VzdG9tX3Rhcmdl",
-            "dGluZ192YWx1ZXMYBSADKAlCNeBBAfpBLwotYWRtYW5hZ2VyLmdvb2dsZWFw",
-            "aXMuY29tL0N1c3RvbVRhcmdldGluZ1ZhbHVlQgsKCV9uZWdhdGl2ZUIXChVf",
-            "Y3VzdG9tX3RhcmdldGluZ19rZXkiXQoTVXNlckRvbWFpblRhcmdldGluZxIi",
-            "ChV0YXJnZXRlZF91c2VyX2RvbWFpbnMYASADKAlCA+BBARIiChVleGNsdWRl",
-            "ZF91c2VyX2RvbWFpbnMYAiADKAlCA+BBASJeChZWaWRlb1Bvc2l0aW9uVGFy",
-            "Z2V0aW5nEkQKD3ZpZGVvX3Bvc2l0aW9ucxgBIAMoCzImLmdvb2dsZS5hZHMu",
-            "YWRtYW5hZ2VyLnYxLlZpZGVvUG9zaXRpb25CA+BBASKgAwoNVmlkZW9Qb3Np",
-            "dGlvbhIfCg1taWRyb2xsX2luZGV4GAEgASgDQgPgQQFIAIgBARInChVyZXZl",
-            "cnNlX21pZHJvbGxfaW5kZXgYAiABKANCA+BBAUgBiAEBEh4KDHBvZF9wb3Np",
-            "dGlvbhgDIAEoA0ID4EEBSAKIAQESWQoNcG9zaXRpb25fdHlwZRgFIAEoDjI4",
-            "Lmdvb2dsZS5hZHMuYWRtYW5hZ2VyLnYxLlZpZGVvUG9zaXRpb25FbnVtLlZp",
-            "ZGVvUG9zaXRpb25CA+BBAUgDiAEBEmsKC2J1bXBlcl90eXBlGAYgASgOMkwu",
-            "Z29vZ2xlLmFkcy5hZG1hbmFnZXIudjEuVGFyZ2V0ZWRWaWRlb0J1bXBlclR5",
-            "cGVFbnVtLlRhcmdldGVkVmlkZW9CdW1wZXJUeXBlQgPgQQFIBIgBAUIQCg5f",
-            "bWlkcm9sbF9pbmRleEIYChZfcmV2ZXJzZV9taWRyb2xsX2luZGV4Qg8KDV9w",
-            "b2RfcG9zaXRpb25CEAoOX3Bvc2l0aW9uX3R5cGVCDgoMX2J1bXBlcl90eXBl",
-            "Ij8KFERhdGFTZWdtZW50VGFyZ2V0aW5nEicKGmhhc19kYXRhX3NlZ21lbnRf",
-            "dGFyZ2V0aW5nGAIgASgIQgPgQQNCwgEKG2NvbS5nb29nbGUuYWRzLmFkbWFu",
-            "YWdlci52MUIOVGFyZ2V0aW5nUHJvdG9QAVpAZ29vZ2xlLmdvbGFuZy5vcmcv",
-            "Z2VucHJvdG8vZ29vZ2xlYXBpcy9hZHMvYWRtYW5hZ2VyL3YxO2FkbWFuYWdl",
-            "cqoCF0dvb2dsZS5BZHMuQWRNYW5hZ2VyLlYxygIXR29vZ2xlXEFkc1xBZE1h",
-            "bmFnZXJcVjHqAhpHb29nbGU6OkFkczo6QWRNYW5hZ2VyOjpWMWIGcHJvdG8z"));
+            "aW5nQgPgQQESSQoRY29udGVudF90YXJnZXRpbmcYDyABKAsyKS5nb29nbGUu",
+            "YWRzLmFkbWFuYWdlci52MS5Db250ZW50VGFyZ2V0aW5nQgPgQQESXgocbW9i",
+            "aWxlX2FwcGxpY2F0aW9uX3RhcmdldGluZxgSIAEoCzIzLmdvb2dsZS5hZHMu",
+            "YWRtYW5hZ2VyLnYxLk1vYmlsZUFwcGxpY2F0aW9uVGFyZ2V0aW5nQgPgQQEi",
+            "lAEKDEdlb1RhcmdldGluZxJBCg10YXJnZXRlZF9nZW9zGAMgAygJQirgQQH6",
+            "QSQKImFkbWFuYWdlci5nb29nbGVhcGlzLmNvbS9HZW9UYXJnZXQSQQoNZXhj",
+            "bHVkZWRfZ2VvcxgEIAMoCUIq4EEB+kEkCiJhZG1hbmFnZXIuZ29vZ2xlYXBp",
+            "cy5jb20vR2VvVGFyZ2V0ItkFChNUZWNobm9sb2d5VGFyZ2V0aW5nEk0KE2Jh",
+            "bmR3aWR0aF90YXJnZXRpbmcYAyABKAsyKy5nb29nbGUuYWRzLmFkbWFuYWdl",
+            "ci52MS5CYW5kd2lkdGhUYXJnZXRpbmdCA+BBARJJChFicm93c2VyX3Rhcmdl",
+            "dGluZxgEIAEoCzIpLmdvb2dsZS5hZHMuYWRtYW5hZ2VyLnYxLkJyb3dzZXJU",
+            "YXJnZXRpbmdCA+BBARJaChpicm93c2VyX2xhbmd1YWdlX3RhcmdldGluZxgF",
+            "IAEoCzIxLmdvb2dsZS5hZHMuYWRtYW5hZ2VyLnYxLkJyb3dzZXJMYW5ndWFn",
+            "ZVRhcmdldGluZ0ID4EEBElwKG2RldmljZV9jYXBhYmlsaXR5X3RhcmdldGlu",
+            "ZxgGIAEoCzIyLmdvb2dsZS5hZHMuYWRtYW5hZ2VyLnYxLkRldmljZUNhcGFi",
+            "aWxpdHlUYXJnZXRpbmdCA+BBARJYChlkZXZpY2VfY2F0ZWdvcnlfdGFyZ2V0",
+            "aW5nGAEgASgLMjAuZ29vZ2xlLmFkcy5hZG1hbmFnZXIudjEuRGV2aWNlQ2F0",
+            "ZWdvcnlUYXJnZXRpbmdCA+BBARJgCh1kZXZpY2VfbWFudWZhY3R1cmVyX3Rh",
+            "cmdldGluZxgHIAEoCzI0Lmdvb2dsZS5hZHMuYWRtYW5hZ2VyLnYxLkRldmlj",
+            "ZU1hbnVmYWN0dXJlclRhcmdldGluZ0ID4EEBElYKGG1vYmlsZV9jYXJyaWVy",
+            "X3RhcmdldGluZxgIIAEoCzIvLmdvb2dsZS5hZHMuYWRtYW5hZ2VyLnYxLk1v",
+            "YmlsZUNhcnJpZXJUYXJnZXRpbmdCA+BBARJaChpvcGVyYXRpbmdfc3lzdGVt",
+            "X3RhcmdldGluZxgCIAEoCzIxLmdvb2dsZS5hZHMuYWRtYW5hZ2VyLnYxLk9w",
+            "ZXJhdGluZ1N5c3RlbVRhcmdldGluZ0ID4EEBIrwBChJCYW5kd2lkdGhUYXJn",
+            "ZXRpbmcSUgoZdGFyZ2V0ZWRfYmFuZHdpZHRoX2dyb3VwcxgDIAMoCUIv4EEB",
+            "+kEpCidhZG1hbmFnZXIuZ29vZ2xlYXBpcy5jb20vQmFuZHdpZHRoR3JvdXAS",
+            "UgoZZXhjbHVkZWRfYmFuZHdpZHRoX2dyb3VwcxgEIAMoCUIv4EEB+kEpCidh",
+            "ZG1hbmFnZXIuZ29vZ2xlYXBpcy5jb20vQmFuZHdpZHRoR3JvdXAinAEKEEJy",
+            "b3dzZXJUYXJnZXRpbmcSQwoRdGFyZ2V0ZWRfYnJvd3NlcnMYAyADKAlCKOBB",
+            "AfpBIgogYWRtYW5hZ2VyLmdvb2dsZWFwaXMuY29tL0Jyb3dzZXISQwoRZXhj",
+            "bHVkZWRfYnJvd3NlcnMYBCADKAlCKOBBAfpBIgogYWRtYW5hZ2VyLmdvb2ds",
+            "ZWFwaXMuY29tL0Jyb3dzZXIixgEKGEJyb3dzZXJMYW5ndWFnZVRhcmdldGlu",
+            "ZxJUChp0YXJnZXRlZF9icm93c2VyX2xhbmd1YWdlcxgDIAMoCUIw4EEB+kEq",
+            "CihhZG1hbmFnZXIuZ29vZ2xlYXBpcy5jb20vQnJvd3Nlckxhbmd1YWdlElQK",
+            "GmV4Y2x1ZGVkX2Jyb3dzZXJfbGFuZ3VhZ2VzGAQgAygJQjDgQQH6QSoKKGFk",
+            "bWFuYWdlci5nb29nbGVhcGlzLmNvbS9Ccm93c2VyTGFuZ3VhZ2UitQEKF0Rl",
+            "dmljZUNhdGVnb3J5VGFyZ2V0aW5nEkwKE3RhcmdldGVkX2NhdGVnb3JpZXMY",
+            "AyADKAlCL+BBAfpBKQonYWRtYW5hZ2VyLmdvb2dsZWFwaXMuY29tL0Rldmlj",
+            "ZUNhdGVnb3J5EkwKE2V4Y2x1ZGVkX2NhdGVnb3JpZXMYBCADKAlCL+BBAfpB",
+            "KQonYWRtYW5hZ2VyLmdvb2dsZWFwaXMuY29tL0RldmljZUNhdGVnb3J5Ir8B",
+            "ChlEZXZpY2VDYXBhYmlsaXR5VGFyZ2V0aW5nElAKFXRhcmdldGVkX2NhcGFi",
+            "aWxpdGllcxgDIAMoCUIx4EEB+kErCilhZG1hbmFnZXIuZ29vZ2xlYXBpcy5j",
+            "b20vRGV2aWNlQ2FwYWJpbGl0eRJQChVleGNsdWRlZF9jYXBhYmlsaXRpZXMY",
+            "BCADKAlCMeBBAfpBKwopYWRtYW5hZ2VyLmdvb2dsZWFwaXMuY29tL0Rldmlj",
+            "ZUNhcGFiaWxpdHkitwQKG0RldmljZU1hbnVmYWN0dXJlclRhcmdldGluZxJa",
+            "Ch10YXJnZXRlZF9kZXZpY2VfbWFudWZhY3R1cmVycxgHIAMoCUIz4EEB+kEt",
+            "CithZG1hbmFnZXIuZ29vZ2xlYXBpcy5jb20vRGV2aWNlTWFudWZhY3R1cmVy",
+            "EloKHWV4Y2x1ZGVkX2RldmljZV9tYW51ZmFjdHVyZXJzGAggAygJQjPgQQH6",
+            "QS0KK2FkbWFuYWdlci5nb29nbGVhcGlzLmNvbS9EZXZpY2VNYW51ZmFjdHVy",
+            "ZXISTgoXdGFyZ2V0ZWRfbW9iaWxlX2RldmljZXMYCSADKAlCLeBBAfpBJwol",
+            "YWRtYW5hZ2VyLmdvb2dsZWFwaXMuY29tL01vYmlsZURldmljZRJOChdleGNs",
+            "dWRlZF9tb2JpbGVfZGV2aWNlcxgKIAMoCUIt4EEB+kEnCiVhZG1hbmFnZXIu",
+            "Z29vZ2xlYXBpcy5jb20vTW9iaWxlRGV2aWNlEl8KIHRhcmdldGVkX21vYmls",
+            "ZV9kZXZpY2Vfc3VibW9kZWxzGAsgAygJQjXgQQH6QS8KLWFkbWFuYWdlci5n",
+            "b29nbGVhcGlzLmNvbS9Nb2JpbGVEZXZpY2VTdWJtb2RlbBJfCiBleGNsdWRl",
+            "ZF9tb2JpbGVfZGV2aWNlX3N1Ym1vZGVscxgMIAMoCUI14EEB+kEvCi1hZG1h",
+            "bmFnZXIuZ29vZ2xlYXBpcy5jb20vTW9iaWxlRGV2aWNlU3VibW9kZWwivAEK",
+            "Fk1vYmlsZUNhcnJpZXJUYXJnZXRpbmcSUAoYdGFyZ2V0ZWRfbW9iaWxlX2Nh",
+            "cnJpZXJzGAMgAygJQi7gQQH6QSgKJmFkbWFuYWdlci5nb29nbGVhcGlzLmNv",
+            "bS9Nb2JpbGVDYXJyaWVyElAKGGV4Y2x1ZGVkX21vYmlsZV9jYXJyaWVycxgE",
+            "IAMoCUIu4EEB+kEoCiZhZG1hbmFnZXIuZ29vZ2xlYXBpcy5jb20vTW9iaWxl",
+            "Q2FycmllciKQAwoYT3BlcmF0aW5nU3lzdGVtVGFyZ2V0aW5nElQKGnRhcmdl",
+            "dGVkX29wZXJhdGluZ19zeXN0ZW1zGAUgAygJQjDgQQH6QSoKKGFkbWFuYWdl",
+            "ci5nb29nbGVhcGlzLmNvbS9PcGVyYXRpbmdTeXN0ZW0SVAoaZXhjbHVkZWRf",
+            "b3BlcmF0aW5nX3N5c3RlbXMYBiADKAlCMOBBAfpBKgooYWRtYW5hZ2VyLmdv",
+            "b2dsZWFwaXMuY29tL09wZXJhdGluZ1N5c3RlbRJjCiJ0YXJnZXRlZF9vcGVy",
+            "YXRpbmdfc3lzdGVtX3ZlcnNpb25zGAcgAygJQjfgQQH6QTEKL2FkbWFuYWdl",
+            "ci5nb29nbGVhcGlzLmNvbS9PcGVyYXRpbmdTeXN0ZW1WZXJzaW9uEmMKImV4",
+            "Y2x1ZGVkX29wZXJhdGluZ19zeXN0ZW1fdmVyc2lvbnMYCCADKAlCN+BBAfpB",
+            "MQovYWRtYW5hZ2VyLmdvb2dsZWFwaXMuY29tL09wZXJhdGluZ1N5c3RlbVZl",
+            "cnNpb24i8QEKEkludmVudG9yeVRhcmdldGluZxJIChF0YXJnZXRlZF9hZF91",
+            "bml0cxgBIAMoCzIoLmdvb2dsZS5hZHMuYWRtYW5hZ2VyLnYxLkFkVW5pdFRh",
+            "cmdldGluZ0ID4EEBEkgKEWV4Y2x1ZGVkX2FkX3VuaXRzGAIgAygLMiguZ29v",
+            "Z2xlLmFkcy5hZG1hbmFnZXIudjEuQWRVbml0VGFyZ2V0aW5nQgPgQQESRwoT",
+            "dGFyZ2V0ZWRfcGxhY2VtZW50cxgFIAMoCUIq4EEB+kEkCiJhZG1hbmFnZXIu",
+            "Z29vZ2xlYXBpcy5jb20vUGxhY2VtZW50IpYBCg9BZFVuaXRUYXJnZXRpbmcS",
+            "IAoTaW5jbHVkZV9kZXNjZW5kYW50cxgBIAEoCEgAiAEBEj0KB2FkX3VuaXQY",
+            "AyABKAlCJ+BBAfpBIQofYWRtYW5hZ2VyLmdvb2dsZWFwaXMuY29tL0FkVW5p",
+            "dEgBiAEBQhYKFF9pbmNsdWRlX2Rlc2NlbmRhbnRzQgoKCF9hZF91bml0IngK",
+            "GFJlcXVlc3RQbGF0Zm9ybVRhcmdldGluZxJcChFyZXF1ZXN0X3BsYXRmb3Jt",
+            "cxgBIAMoDjI8Lmdvb2dsZS5hZHMuYWRtYW5hZ2VyLnYxLlJlcXVlc3RQbGF0",
+            "Zm9ybUVudW0uUmVxdWVzdFBsYXRmb3JtQgPgQQEiaAoPQ3VzdG9tVGFyZ2V0",
+            "aW5nElUKGGN1c3RvbV90YXJnZXRpbmdfY2xhdXNlcxgBIAMoCzIuLmdvb2ds",
+            "ZS5hZHMuYWRtYW5hZ2VyLnYxLkN1c3RvbVRhcmdldGluZ0NsYXVzZUID4EEB",
+            "IqICChVDdXN0b21UYXJnZXRpbmdDbGF1c2USVwoZY3VzdG9tX3RhcmdldGlu",
+            "Z19saXRlcmFscxgBIAMoCzIvLmdvb2dsZS5hZHMuYWRtYW5hZ2VyLnYxLkN1",
+            "c3RvbVRhcmdldGluZ0xpdGVyYWxCA+BBARJbChthdWRpZW5jZV9zZWdtZW50",
+            "X3RhcmdldGluZ3MYAiADKAsyMS5nb29nbGUuYWRzLmFkbWFuYWdlci52MS5B",
+            "dWRpZW5jZVNlZ21lbnRUYXJnZXRpbmdCA+BBARJTChdjbXNfbWV0YWRhdGFf",
+            "dGFyZ2V0aW5ncxgDIAMoCzItLmdvb2dsZS5hZHMuYWRtYW5hZ2VyLnYxLkNt",
+            "c01ldGFkYXRhVGFyZ2V0aW5nQgPgQQEihQIKFkN1c3RvbVRhcmdldGluZ0xp",
+            "dGVyYWwSFQoIbmVnYXRpdmUYASABKAhIAIgBARJWChRjdXN0b21fdGFyZ2V0",
+            "aW5nX2tleRgEIAEoCUIz4EEB+kEtCithZG1hbmFnZXIuZ29vZ2xlYXBpcy5j",
+            "b20vQ3VzdG9tVGFyZ2V0aW5nS2V5SAGIAQESVgoXY3VzdG9tX3RhcmdldGlu",
+            "Z192YWx1ZXMYBSADKAlCNeBBAfpBLwotYWRtYW5hZ2VyLmdvb2dsZWFwaXMu",
+            "Y29tL0N1c3RvbVRhcmdldGluZ1ZhbHVlQgsKCV9uZWdhdGl2ZUIXChVfY3Vz",
+            "dG9tX3RhcmdldGluZ19rZXkiiwEKGEF1ZGllbmNlU2VnbWVudFRhcmdldGlu",
+            "ZxIVCghuZWdhdGl2ZRgBIAEoCEgAiAEBEksKEWF1ZGllbmNlX3NlZ21lbnRz",
+            "GAMgAygJQjDgQQH6QSoKKGFkbWFuYWdlci5nb29nbGVhcGlzLmNvbS9BdWRp",
+            "ZW5jZVNlZ21lbnRCCwoJX25lZ2F0aXZlIooBChRDbXNNZXRhZGF0YVRhcmdl",
+            "dGluZxIVCghuZWdhdGl2ZRgBIAEoCEgAiAEBEk4KE2Ntc19tZXRhZGF0YV92",
+            "YWx1ZXMYAyADKAlCMeBBAfpBKwopYWRtYW5hZ2VyLmdvb2dsZWFwaXMuY29t",
+            "L0Ntc01ldGFkYXRhVmFsdWVCCwoJX25lZ2F0aXZlIl0KE1VzZXJEb21haW5U",
+            "YXJnZXRpbmcSIgoVdGFyZ2V0ZWRfdXNlcl9kb21haW5zGAEgAygJQgPgQQES",
+            "IgoVZXhjbHVkZWRfdXNlcl9kb21haW5zGAIgAygJQgPgQQEiXgoWVmlkZW9Q",
+            "b3NpdGlvblRhcmdldGluZxJECg92aWRlb19wb3NpdGlvbnMYASADKAsyJi5n",
+            "b29nbGUuYWRzLmFkbWFuYWdlci52MS5WaWRlb1Bvc2l0aW9uQgPgQQEioAMK",
+            "DVZpZGVvUG9zaXRpb24SHwoNbWlkcm9sbF9pbmRleBgBIAEoA0ID4EEBSACI",
+            "AQESJwoVcmV2ZXJzZV9taWRyb2xsX2luZGV4GAIgASgDQgPgQQFIAYgBARIe",
+            "Cgxwb2RfcG9zaXRpb24YAyABKANCA+BBAUgCiAEBElkKDXBvc2l0aW9uX3R5",
+            "cGUYBSABKA4yOC5nb29nbGUuYWRzLmFkbWFuYWdlci52MS5WaWRlb1Bvc2l0",
+            "aW9uRW51bS5WaWRlb1Bvc2l0aW9uQgPgQQFIA4gBARJrCgtidW1wZXJfdHlw",
+            "ZRgGIAEoDjJMLmdvb2dsZS5hZHMuYWRtYW5hZ2VyLnYxLlRhcmdldGVkVmlk",
+            "ZW9CdW1wZXJUeXBlRW51bS5UYXJnZXRlZFZpZGVvQnVtcGVyVHlwZUID4EEB",
+            "SASIAQFCEAoOX21pZHJvbGxfaW5kZXhCGAoWX3JldmVyc2VfbWlkcm9sbF9p",
+            "bmRleEIPCg1fcG9kX3Bvc2l0aW9uQhAKDl9wb3NpdGlvbl90eXBlQg4KDF9i",
+            "dW1wZXJfdHlwZSI/ChREYXRhU2VnbWVudFRhcmdldGluZxInChpoYXNfZGF0",
+            "YV9zZWdtZW50X3RhcmdldGluZxgCIAEoCEID4EEDIr4CChBDb250ZW50VGFy",
+            "Z2V0aW5nEkIKEHRhcmdldGVkX2NvbnRlbnQYBSADKAlCKOBBAfpBIgogYWRt",
+            "YW5hZ2VyLmdvb2dsZWFwaXMuY29tL0NvbnRlbnQSQgoQZXhjbHVkZWRfY29u",
+            "dGVudBgGIAMoCUIo4EEB+kEiCiBhZG1hbmFnZXIuZ29vZ2xlYXBpcy5jb20v",
+            "Q29udGVudBJQChh0YXJnZXRlZF9jb250ZW50X2J1bmRsZXMYByADKAlCLuBB",
+            "AfpBKAomYWRtYW5hZ2VyLmdvb2dsZWFwaXMuY29tL0NvbnRlbnRCdW5kbGUS",
+            "UAoYZXhjbHVkZWRfY29udGVudF9idW5kbGVzGAggAygJQi7gQQH6QSgKJmFk",
+            "bWFuYWdlci5nb29nbGVhcGlzLmNvbS9Db250ZW50QnVuZGxlIo4BChpNb2Jp",
+            "bGVBcHBsaWNhdGlvblRhcmdldGluZxJjChVmaXJzdF9wYXJ0eV90YXJnZXRp",
+            "bmcYASABKAsyPS5nb29nbGUuYWRzLmFkbWFuYWdlci52MS5GaXJzdFBhcnR5",
+            "TW9iaWxlQXBwbGljYXRpb25UYXJnZXRpbmdCA+BBAUgAQgsKCXRhcmdldGlu",
+            "ZyLAAQokRmlyc3RQYXJ0eU1vYmlsZUFwcGxpY2F0aW9uVGFyZ2V0aW5nEksK",
+            "FXRhcmdldGVkX2FwcGxpY2F0aW9ucxgDIAMoCUIs4EEB+kEmCiRhZG1hbmFn",
+            "ZXIuZ29vZ2xlYXBpcy5jb20vQXBwbGljYXRpb24SSwoVZXhjbHVkZWRfYXBw",
+            "bGljYXRpb25zGAQgAygJQizgQQH6QSYKJGFkbWFuYWdlci5nb29nbGVhcGlz",
+            "LmNvbS9BcHBsaWNhdGlvbkLCAQobY29tLmdvb2dsZS5hZHMuYWRtYW5hZ2Vy",
+            "LnYxQg5UYXJnZXRpbmdQcm90b1ABWkBnb29nbGUuZ29sYW5nLm9yZy9nZW5w",
+            "cm90by9nb29nbGVhcGlzL2Fkcy9hZG1hbmFnZXIvdjE7YWRtYW5hZ2VyqgIX",
+            "R29vZ2xlLkFkcy5BZE1hbmFnZXIuVjHKAhdHb29nbGVcQWRzXEFkTWFuYWdl",
+            "clxWMeoCGkdvb2dsZTo6QWRzOjpBZE1hbmFnZXI6OlYxYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Ads.AdManager.V1.RequestPlatformEnumReflection.Descriptor, global::Google.Ads.AdManager.V1.TargetedVideoBumperTypeEnumReflection.Descriptor, global::Google.Ads.AdManager.V1.VideoPositionEnumReflection.Descriptor, global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Ads.AdManager.V1.Targeting), global::Google.Ads.AdManager.V1.Targeting.Parser, new[]{ "GeoTargeting", "TechnologyTargeting", "InventoryTargeting", "RequestPlatformTargeting", "CustomTargeting", "UserDomainTargeting", "VideoPositionTargeting", "DataSegmentTargeting" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Ads.AdManager.V1.Targeting), global::Google.Ads.AdManager.V1.Targeting.Parser, new[]{ "GeoTargeting", "TechnologyTargeting", "InventoryTargeting", "RequestPlatformTargeting", "CustomTargeting", "UserDomainTargeting", "VideoPositionTargeting", "DataSegmentTargeting", "ContentTargeting", "MobileApplicationTargeting" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Ads.AdManager.V1.GeoTargeting), global::Google.Ads.AdManager.V1.GeoTargeting.Parser, new[]{ "TargetedGeos", "ExcludedGeos" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Ads.AdManager.V1.TechnologyTargeting), global::Google.Ads.AdManager.V1.TechnologyTargeting.Parser, new[]{ "BandwidthTargeting", "DeviceCategoryTargeting", "OperatingSystemTargeting" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Ads.AdManager.V1.TechnologyTargeting), global::Google.Ads.AdManager.V1.TechnologyTargeting.Parser, new[]{ "BandwidthTargeting", "BrowserTargeting", "BrowserLanguageTargeting", "DeviceCapabilityTargeting", "DeviceCategoryTargeting", "DeviceManufacturerTargeting", "MobileCarrierTargeting", "OperatingSystemTargeting" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Ads.AdManager.V1.BandwidthTargeting), global::Google.Ads.AdManager.V1.BandwidthTargeting.Parser, new[]{ "TargetedBandwidthGroups", "ExcludedBandwidthGroups" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Ads.AdManager.V1.BrowserTargeting), global::Google.Ads.AdManager.V1.BrowserTargeting.Parser, new[]{ "TargetedBrowsers", "ExcludedBrowsers" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Ads.AdManager.V1.BrowserLanguageTargeting), global::Google.Ads.AdManager.V1.BrowserLanguageTargeting.Parser, new[]{ "TargetedBrowserLanguages", "ExcludedBrowserLanguages" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Ads.AdManager.V1.DeviceCategoryTargeting), global::Google.Ads.AdManager.V1.DeviceCategoryTargeting.Parser, new[]{ "TargetedCategories", "ExcludedCategories" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Ads.AdManager.V1.DeviceCapabilityTargeting), global::Google.Ads.AdManager.V1.DeviceCapabilityTargeting.Parser, new[]{ "TargetedCapabilities", "ExcludedCapabilities" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Ads.AdManager.V1.DeviceManufacturerTargeting), global::Google.Ads.AdManager.V1.DeviceManufacturerTargeting.Parser, new[]{ "TargetedDeviceManufacturers", "ExcludedDeviceManufacturers", "TargetedMobileDevices", "ExcludedMobileDevices", "TargetedMobileDeviceSubmodels", "ExcludedMobileDeviceSubmodels" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Ads.AdManager.V1.MobileCarrierTargeting), global::Google.Ads.AdManager.V1.MobileCarrierTargeting.Parser, new[]{ "TargetedMobileCarriers", "ExcludedMobileCarriers" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Ads.AdManager.V1.OperatingSystemTargeting), global::Google.Ads.AdManager.V1.OperatingSystemTargeting.Parser, new[]{ "TargetedOperatingSystems", "ExcludedOperatingSystems", "TargetedOperatingSystemVersions", "ExcludedOperatingSystemVersions" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Ads.AdManager.V1.InventoryTargeting), global::Google.Ads.AdManager.V1.InventoryTargeting.Parser, new[]{ "TargetedAdUnits", "ExcludedAdUnits", "TargetedPlacements" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Ads.AdManager.V1.AdUnitTargeting), global::Google.Ads.AdManager.V1.AdUnitTargeting.Parser, new[]{ "IncludeDescendants", "AdUnit" }, new[]{ "IncludeDescendants", "AdUnit" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Ads.AdManager.V1.RequestPlatformTargeting), global::Google.Ads.AdManager.V1.RequestPlatformTargeting.Parser, new[]{ "RequestPlatforms" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Ads.AdManager.V1.CustomTargeting), global::Google.Ads.AdManager.V1.CustomTargeting.Parser, new[]{ "CustomTargetingClauses" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Ads.AdManager.V1.CustomTargetingClause), global::Google.Ads.AdManager.V1.CustomTargetingClause.Parser, new[]{ "CustomTargetingLiterals" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Ads.AdManager.V1.CustomTargetingClause), global::Google.Ads.AdManager.V1.CustomTargetingClause.Parser, new[]{ "CustomTargetingLiterals", "AudienceSegmentTargetings", "CmsMetadataTargetings" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Ads.AdManager.V1.CustomTargetingLiteral), global::Google.Ads.AdManager.V1.CustomTargetingLiteral.Parser, new[]{ "Negative", "CustomTargetingKey", "CustomTargetingValues" }, new[]{ "Negative", "CustomTargetingKey" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Ads.AdManager.V1.AudienceSegmentTargeting), global::Google.Ads.AdManager.V1.AudienceSegmentTargeting.Parser, new[]{ "Negative", "AudienceSegments" }, new[]{ "Negative" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Ads.AdManager.V1.CmsMetadataTargeting), global::Google.Ads.AdManager.V1.CmsMetadataTargeting.Parser, new[]{ "Negative", "CmsMetadataValues" }, new[]{ "Negative" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Ads.AdManager.V1.UserDomainTargeting), global::Google.Ads.AdManager.V1.UserDomainTargeting.Parser, new[]{ "TargetedUserDomains", "ExcludedUserDomains" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Ads.AdManager.V1.VideoPositionTargeting), global::Google.Ads.AdManager.V1.VideoPositionTargeting.Parser, new[]{ "VideoPositions" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Ads.AdManager.V1.VideoPosition), global::Google.Ads.AdManager.V1.VideoPosition.Parser, new[]{ "MidrollIndex", "ReverseMidrollIndex", "PodPosition", "PositionType", "BumperType" }, new[]{ "MidrollIndex", "ReverseMidrollIndex", "PodPosition", "PositionType", "BumperType" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Ads.AdManager.V1.DataSegmentTargeting), global::Google.Ads.AdManager.V1.DataSegmentTargeting.Parser, new[]{ "HasDataSegmentTargeting" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Ads.AdManager.V1.DataSegmentTargeting), global::Google.Ads.AdManager.V1.DataSegmentTargeting.Parser, new[]{ "HasDataSegmentTargeting" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Ads.AdManager.V1.ContentTargeting), global::Google.Ads.AdManager.V1.ContentTargeting.Parser, new[]{ "TargetedContent", "ExcludedContent", "TargetedContentBundles", "ExcludedContentBundles" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Ads.AdManager.V1.MobileApplicationTargeting), global::Google.Ads.AdManager.V1.MobileApplicationTargeting.Parser, new[]{ "FirstPartyTargeting" }, new[]{ "Targeting" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Ads.AdManager.V1.FirstPartyMobileApplicationTargeting), global::Google.Ads.AdManager.V1.FirstPartyMobileApplicationTargeting.Parser, new[]{ "TargetedApplications", "ExcludedApplications" }, null, null, null, null)
           }));
     }
     #endregion
@@ -185,6 +263,8 @@ namespace Google.Ads.AdManager.V1 {
       userDomainTargeting_ = other.userDomainTargeting_ != null ? other.userDomainTargeting_.Clone() : null;
       videoPositionTargeting_ = other.videoPositionTargeting_ != null ? other.videoPositionTargeting_.Clone() : null;
       dataSegmentTargeting_ = other.dataSegmentTargeting_ != null ? other.dataSegmentTargeting_.Clone() : null;
+      contentTargeting_ = other.contentTargeting_ != null ? other.contentTargeting_.Clone() : null;
+      mobileApplicationTargeting_ = other.mobileApplicationTargeting_ != null ? other.mobileApplicationTargeting_.Clone() : null;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -315,6 +395,36 @@ namespace Google.Ads.AdManager.V1 {
       }
     }
 
+    /// <summary>Field number for the "content_targeting" field.</summary>
+    public const int ContentTargetingFieldNumber = 15;
+    private global::Google.Ads.AdManager.V1.ContentTargeting contentTargeting_;
+    /// <summary>
+    /// Optional. Used to target content.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Ads.AdManager.V1.ContentTargeting ContentTargeting {
+      get { return contentTargeting_; }
+      set {
+        contentTargeting_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "mobile_application_targeting" field.</summary>
+    public const int MobileApplicationTargetingFieldNumber = 18;
+    private global::Google.Ads.AdManager.V1.MobileApplicationTargeting mobileApplicationTargeting_;
+    /// <summary>
+    /// Optional. Used to target mobile applications.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Ads.AdManager.V1.MobileApplicationTargeting MobileApplicationTargeting {
+      get { return mobileApplicationTargeting_; }
+      set {
+        mobileApplicationTargeting_ = value;
+      }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
@@ -338,6 +448,8 @@ namespace Google.Ads.AdManager.V1 {
       if (!object.Equals(UserDomainTargeting, other.UserDomainTargeting)) return false;
       if (!object.Equals(VideoPositionTargeting, other.VideoPositionTargeting)) return false;
       if (!object.Equals(DataSegmentTargeting, other.DataSegmentTargeting)) return false;
+      if (!object.Equals(ContentTargeting, other.ContentTargeting)) return false;
+      if (!object.Equals(MobileApplicationTargeting, other.MobileApplicationTargeting)) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -353,6 +465,8 @@ namespace Google.Ads.AdManager.V1 {
       if (userDomainTargeting_ != null) hash ^= UserDomainTargeting.GetHashCode();
       if (videoPositionTargeting_ != null) hash ^= VideoPositionTargeting.GetHashCode();
       if (dataSegmentTargeting_ != null) hash ^= DataSegmentTargeting.GetHashCode();
+      if (contentTargeting_ != null) hash ^= ContentTargeting.GetHashCode();
+      if (mobileApplicationTargeting_ != null) hash ^= MobileApplicationTargeting.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -403,6 +517,14 @@ namespace Google.Ads.AdManager.V1 {
         output.WriteRawTag(106);
         output.WriteMessage(DataSegmentTargeting);
       }
+      if (contentTargeting_ != null) {
+        output.WriteRawTag(122);
+        output.WriteMessage(ContentTargeting);
+      }
+      if (mobileApplicationTargeting_ != null) {
+        output.WriteRawTag(146, 1);
+        output.WriteMessage(MobileApplicationTargeting);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -445,6 +567,14 @@ namespace Google.Ads.AdManager.V1 {
         output.WriteRawTag(106);
         output.WriteMessage(DataSegmentTargeting);
       }
+      if (contentTargeting_ != null) {
+        output.WriteRawTag(122);
+        output.WriteMessage(ContentTargeting);
+      }
+      if (mobileApplicationTargeting_ != null) {
+        output.WriteRawTag(146, 1);
+        output.WriteMessage(MobileApplicationTargeting);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -478,6 +608,12 @@ namespace Google.Ads.AdManager.V1 {
       }
       if (dataSegmentTargeting_ != null) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(DataSegmentTargeting);
+      }
+      if (contentTargeting_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(ContentTargeting);
+      }
+      if (mobileApplicationTargeting_ != null) {
+        size += 2 + pb::CodedOutputStream.ComputeMessageSize(MobileApplicationTargeting);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -538,6 +674,18 @@ namespace Google.Ads.AdManager.V1 {
           DataSegmentTargeting = new global::Google.Ads.AdManager.V1.DataSegmentTargeting();
         }
         DataSegmentTargeting.MergeFrom(other.DataSegmentTargeting);
+      }
+      if (other.contentTargeting_ != null) {
+        if (contentTargeting_ == null) {
+          ContentTargeting = new global::Google.Ads.AdManager.V1.ContentTargeting();
+        }
+        ContentTargeting.MergeFrom(other.ContentTargeting);
+      }
+      if (other.mobileApplicationTargeting_ != null) {
+        if (mobileApplicationTargeting_ == null) {
+          MobileApplicationTargeting = new global::Google.Ads.AdManager.V1.MobileApplicationTargeting();
+        }
+        MobileApplicationTargeting.MergeFrom(other.MobileApplicationTargeting);
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -610,6 +758,20 @@ namespace Google.Ads.AdManager.V1 {
             input.ReadMessage(DataSegmentTargeting);
             break;
           }
+          case 122: {
+            if (contentTargeting_ == null) {
+              ContentTargeting = new global::Google.Ads.AdManager.V1.ContentTargeting();
+            }
+            input.ReadMessage(ContentTargeting);
+            break;
+          }
+          case 146: {
+            if (mobileApplicationTargeting_ == null) {
+              MobileApplicationTargeting = new global::Google.Ads.AdManager.V1.MobileApplicationTargeting();
+            }
+            input.ReadMessage(MobileApplicationTargeting);
+            break;
+          }
         }
       }
     #endif
@@ -679,6 +841,20 @@ namespace Google.Ads.AdManager.V1 {
               DataSegmentTargeting = new global::Google.Ads.AdManager.V1.DataSegmentTargeting();
             }
             input.ReadMessage(DataSegmentTargeting);
+            break;
+          }
+          case 122: {
+            if (contentTargeting_ == null) {
+              ContentTargeting = new global::Google.Ads.AdManager.V1.ContentTargeting();
+            }
+            input.ReadMessage(ContentTargeting);
+            break;
+          }
+          case 146: {
+            if (mobileApplicationTargeting_ == null) {
+              MobileApplicationTargeting = new global::Google.Ads.AdManager.V1.MobileApplicationTargeting();
+            }
+            input.ReadMessage(MobileApplicationTargeting);
             break;
           }
         }
@@ -942,7 +1118,12 @@ namespace Google.Ads.AdManager.V1 {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public TechnologyTargeting(TechnologyTargeting other) : this() {
       bandwidthTargeting_ = other.bandwidthTargeting_ != null ? other.bandwidthTargeting_.Clone() : null;
+      browserTargeting_ = other.browserTargeting_ != null ? other.browserTargeting_.Clone() : null;
+      browserLanguageTargeting_ = other.browserLanguageTargeting_ != null ? other.browserLanguageTargeting_.Clone() : null;
+      deviceCapabilityTargeting_ = other.deviceCapabilityTargeting_ != null ? other.deviceCapabilityTargeting_.Clone() : null;
       deviceCategoryTargeting_ = other.deviceCategoryTargeting_ != null ? other.deviceCategoryTargeting_.Clone() : null;
+      deviceManufacturerTargeting_ = other.deviceManufacturerTargeting_ != null ? other.deviceManufacturerTargeting_.Clone() : null;
+      mobileCarrierTargeting_ = other.mobileCarrierTargeting_ != null ? other.mobileCarrierTargeting_.Clone() : null;
       operatingSystemTargeting_ = other.operatingSystemTargeting_ != null ? other.operatingSystemTargeting_.Clone() : null;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
@@ -968,6 +1149,51 @@ namespace Google.Ads.AdManager.V1 {
       }
     }
 
+    /// <summary>Field number for the "browser_targeting" field.</summary>
+    public const int BrowserTargetingFieldNumber = 4;
+    private global::Google.Ads.AdManager.V1.BrowserTargeting browserTargeting_;
+    /// <summary>
+    /// Optional. Browser targeting dimension.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Ads.AdManager.V1.BrowserTargeting BrowserTargeting {
+      get { return browserTargeting_; }
+      set {
+        browserTargeting_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "browser_language_targeting" field.</summary>
+    public const int BrowserLanguageTargetingFieldNumber = 5;
+    private global::Google.Ads.AdManager.V1.BrowserLanguageTargeting browserLanguageTargeting_;
+    /// <summary>
+    /// Optional. Browser language targeting dimension.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Ads.AdManager.V1.BrowserLanguageTargeting BrowserLanguageTargeting {
+      get { return browserLanguageTargeting_; }
+      set {
+        browserLanguageTargeting_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "device_capability_targeting" field.</summary>
+    public const int DeviceCapabilityTargetingFieldNumber = 6;
+    private global::Google.Ads.AdManager.V1.DeviceCapabilityTargeting deviceCapabilityTargeting_;
+    /// <summary>
+    /// Optional. Device capability targeting dimension.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Ads.AdManager.V1.DeviceCapabilityTargeting DeviceCapabilityTargeting {
+      get { return deviceCapabilityTargeting_; }
+      set {
+        deviceCapabilityTargeting_ = value;
+      }
+    }
+
     /// <summary>Field number for the "device_category_targeting" field.</summary>
     public const int DeviceCategoryTargetingFieldNumber = 1;
     private global::Google.Ads.AdManager.V1.DeviceCategoryTargeting deviceCategoryTargeting_;
@@ -980,6 +1206,36 @@ namespace Google.Ads.AdManager.V1 {
       get { return deviceCategoryTargeting_; }
       set {
         deviceCategoryTargeting_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "device_manufacturer_targeting" field.</summary>
+    public const int DeviceManufacturerTargetingFieldNumber = 7;
+    private global::Google.Ads.AdManager.V1.DeviceManufacturerTargeting deviceManufacturerTargeting_;
+    /// <summary>
+    /// Optional. Device manufacturer targeting dimension.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Ads.AdManager.V1.DeviceManufacturerTargeting DeviceManufacturerTargeting {
+      get { return deviceManufacturerTargeting_; }
+      set {
+        deviceManufacturerTargeting_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "mobile_carrier_targeting" field.</summary>
+    public const int MobileCarrierTargetingFieldNumber = 8;
+    private global::Google.Ads.AdManager.V1.MobileCarrierTargeting mobileCarrierTargeting_;
+    /// <summary>
+    /// Optional. Mobile carrier targeting dimension.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Ads.AdManager.V1.MobileCarrierTargeting MobileCarrierTargeting {
+      get { return mobileCarrierTargeting_; }
+      set {
+        mobileCarrierTargeting_ = value;
       }
     }
 
@@ -1014,7 +1270,12 @@ namespace Google.Ads.AdManager.V1 {
         return true;
       }
       if (!object.Equals(BandwidthTargeting, other.BandwidthTargeting)) return false;
+      if (!object.Equals(BrowserTargeting, other.BrowserTargeting)) return false;
+      if (!object.Equals(BrowserLanguageTargeting, other.BrowserLanguageTargeting)) return false;
+      if (!object.Equals(DeviceCapabilityTargeting, other.DeviceCapabilityTargeting)) return false;
       if (!object.Equals(DeviceCategoryTargeting, other.DeviceCategoryTargeting)) return false;
+      if (!object.Equals(DeviceManufacturerTargeting, other.DeviceManufacturerTargeting)) return false;
+      if (!object.Equals(MobileCarrierTargeting, other.MobileCarrierTargeting)) return false;
       if (!object.Equals(OperatingSystemTargeting, other.OperatingSystemTargeting)) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
@@ -1024,7 +1285,12 @@ namespace Google.Ads.AdManager.V1 {
     public override int GetHashCode() {
       int hash = 1;
       if (bandwidthTargeting_ != null) hash ^= BandwidthTargeting.GetHashCode();
+      if (browserTargeting_ != null) hash ^= BrowserTargeting.GetHashCode();
+      if (browserLanguageTargeting_ != null) hash ^= BrowserLanguageTargeting.GetHashCode();
+      if (deviceCapabilityTargeting_ != null) hash ^= DeviceCapabilityTargeting.GetHashCode();
       if (deviceCategoryTargeting_ != null) hash ^= DeviceCategoryTargeting.GetHashCode();
+      if (deviceManufacturerTargeting_ != null) hash ^= DeviceManufacturerTargeting.GetHashCode();
+      if (mobileCarrierTargeting_ != null) hash ^= MobileCarrierTargeting.GetHashCode();
       if (operatingSystemTargeting_ != null) hash ^= OperatingSystemTargeting.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
@@ -1056,6 +1322,26 @@ namespace Google.Ads.AdManager.V1 {
         output.WriteRawTag(26);
         output.WriteMessage(BandwidthTargeting);
       }
+      if (browserTargeting_ != null) {
+        output.WriteRawTag(34);
+        output.WriteMessage(BrowserTargeting);
+      }
+      if (browserLanguageTargeting_ != null) {
+        output.WriteRawTag(42);
+        output.WriteMessage(BrowserLanguageTargeting);
+      }
+      if (deviceCapabilityTargeting_ != null) {
+        output.WriteRawTag(50);
+        output.WriteMessage(DeviceCapabilityTargeting);
+      }
+      if (deviceManufacturerTargeting_ != null) {
+        output.WriteRawTag(58);
+        output.WriteMessage(DeviceManufacturerTargeting);
+      }
+      if (mobileCarrierTargeting_ != null) {
+        output.WriteRawTag(66);
+        output.WriteMessage(MobileCarrierTargeting);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -1078,6 +1364,26 @@ namespace Google.Ads.AdManager.V1 {
         output.WriteRawTag(26);
         output.WriteMessage(BandwidthTargeting);
       }
+      if (browserTargeting_ != null) {
+        output.WriteRawTag(34);
+        output.WriteMessage(BrowserTargeting);
+      }
+      if (browserLanguageTargeting_ != null) {
+        output.WriteRawTag(42);
+        output.WriteMessage(BrowserLanguageTargeting);
+      }
+      if (deviceCapabilityTargeting_ != null) {
+        output.WriteRawTag(50);
+        output.WriteMessage(DeviceCapabilityTargeting);
+      }
+      if (deviceManufacturerTargeting_ != null) {
+        output.WriteRawTag(58);
+        output.WriteMessage(DeviceManufacturerTargeting);
+      }
+      if (mobileCarrierTargeting_ != null) {
+        output.WriteRawTag(66);
+        output.WriteMessage(MobileCarrierTargeting);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -1091,8 +1397,23 @@ namespace Google.Ads.AdManager.V1 {
       if (bandwidthTargeting_ != null) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(BandwidthTargeting);
       }
+      if (browserTargeting_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(BrowserTargeting);
+      }
+      if (browserLanguageTargeting_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(BrowserLanguageTargeting);
+      }
+      if (deviceCapabilityTargeting_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(DeviceCapabilityTargeting);
+      }
       if (deviceCategoryTargeting_ != null) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(DeviceCategoryTargeting);
+      }
+      if (deviceManufacturerTargeting_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(DeviceManufacturerTargeting);
+      }
+      if (mobileCarrierTargeting_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(MobileCarrierTargeting);
       }
       if (operatingSystemTargeting_ != null) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(OperatingSystemTargeting);
@@ -1115,11 +1436,41 @@ namespace Google.Ads.AdManager.V1 {
         }
         BandwidthTargeting.MergeFrom(other.BandwidthTargeting);
       }
+      if (other.browserTargeting_ != null) {
+        if (browserTargeting_ == null) {
+          BrowserTargeting = new global::Google.Ads.AdManager.V1.BrowserTargeting();
+        }
+        BrowserTargeting.MergeFrom(other.BrowserTargeting);
+      }
+      if (other.browserLanguageTargeting_ != null) {
+        if (browserLanguageTargeting_ == null) {
+          BrowserLanguageTargeting = new global::Google.Ads.AdManager.V1.BrowserLanguageTargeting();
+        }
+        BrowserLanguageTargeting.MergeFrom(other.BrowserLanguageTargeting);
+      }
+      if (other.deviceCapabilityTargeting_ != null) {
+        if (deviceCapabilityTargeting_ == null) {
+          DeviceCapabilityTargeting = new global::Google.Ads.AdManager.V1.DeviceCapabilityTargeting();
+        }
+        DeviceCapabilityTargeting.MergeFrom(other.DeviceCapabilityTargeting);
+      }
       if (other.deviceCategoryTargeting_ != null) {
         if (deviceCategoryTargeting_ == null) {
           DeviceCategoryTargeting = new global::Google.Ads.AdManager.V1.DeviceCategoryTargeting();
         }
         DeviceCategoryTargeting.MergeFrom(other.DeviceCategoryTargeting);
+      }
+      if (other.deviceManufacturerTargeting_ != null) {
+        if (deviceManufacturerTargeting_ == null) {
+          DeviceManufacturerTargeting = new global::Google.Ads.AdManager.V1.DeviceManufacturerTargeting();
+        }
+        DeviceManufacturerTargeting.MergeFrom(other.DeviceManufacturerTargeting);
+      }
+      if (other.mobileCarrierTargeting_ != null) {
+        if (mobileCarrierTargeting_ == null) {
+          MobileCarrierTargeting = new global::Google.Ads.AdManager.V1.MobileCarrierTargeting();
+        }
+        MobileCarrierTargeting.MergeFrom(other.MobileCarrierTargeting);
       }
       if (other.operatingSystemTargeting_ != null) {
         if (operatingSystemTargeting_ == null) {
@@ -1163,6 +1514,41 @@ namespace Google.Ads.AdManager.V1 {
             input.ReadMessage(BandwidthTargeting);
             break;
           }
+          case 34: {
+            if (browserTargeting_ == null) {
+              BrowserTargeting = new global::Google.Ads.AdManager.V1.BrowserTargeting();
+            }
+            input.ReadMessage(BrowserTargeting);
+            break;
+          }
+          case 42: {
+            if (browserLanguageTargeting_ == null) {
+              BrowserLanguageTargeting = new global::Google.Ads.AdManager.V1.BrowserLanguageTargeting();
+            }
+            input.ReadMessage(BrowserLanguageTargeting);
+            break;
+          }
+          case 50: {
+            if (deviceCapabilityTargeting_ == null) {
+              DeviceCapabilityTargeting = new global::Google.Ads.AdManager.V1.DeviceCapabilityTargeting();
+            }
+            input.ReadMessage(DeviceCapabilityTargeting);
+            break;
+          }
+          case 58: {
+            if (deviceManufacturerTargeting_ == null) {
+              DeviceManufacturerTargeting = new global::Google.Ads.AdManager.V1.DeviceManufacturerTargeting();
+            }
+            input.ReadMessage(DeviceManufacturerTargeting);
+            break;
+          }
+          case 66: {
+            if (mobileCarrierTargeting_ == null) {
+              MobileCarrierTargeting = new global::Google.Ads.AdManager.V1.MobileCarrierTargeting();
+            }
+            input.ReadMessage(MobileCarrierTargeting);
+            break;
+          }
         }
       }
     #endif
@@ -1197,6 +1583,41 @@ namespace Google.Ads.AdManager.V1 {
               BandwidthTargeting = new global::Google.Ads.AdManager.V1.BandwidthTargeting();
             }
             input.ReadMessage(BandwidthTargeting);
+            break;
+          }
+          case 34: {
+            if (browserTargeting_ == null) {
+              BrowserTargeting = new global::Google.Ads.AdManager.V1.BrowserTargeting();
+            }
+            input.ReadMessage(BrowserTargeting);
+            break;
+          }
+          case 42: {
+            if (browserLanguageTargeting_ == null) {
+              BrowserLanguageTargeting = new global::Google.Ads.AdManager.V1.BrowserLanguageTargeting();
+            }
+            input.ReadMessage(BrowserLanguageTargeting);
+            break;
+          }
+          case 50: {
+            if (deviceCapabilityTargeting_ == null) {
+              DeviceCapabilityTargeting = new global::Google.Ads.AdManager.V1.DeviceCapabilityTargeting();
+            }
+            input.ReadMessage(DeviceCapabilityTargeting);
+            break;
+          }
+          case 58: {
+            if (deviceManufacturerTargeting_ == null) {
+              DeviceManufacturerTargeting = new global::Google.Ads.AdManager.V1.DeviceManufacturerTargeting();
+            }
+            input.ReadMessage(DeviceManufacturerTargeting);
+            break;
+          }
+          case 66: {
+            if (mobileCarrierTargeting_ == null) {
+              MobileCarrierTargeting = new global::Google.Ads.AdManager.V1.MobileCarrierTargeting();
+            }
+            input.ReadMessage(MobileCarrierTargeting);
             break;
           }
         }
@@ -1427,6 +1848,447 @@ namespace Google.Ads.AdManager.V1 {
   }
 
   /// <summary>
+  /// Browser Targeting.
+  ///
+  /// Allows publishers to target/exclude a browser type (e.g. Chrome, Firefox,
+  /// Safari). For more information, see
+  /// https://support.google.com/admanager/answer/2884033 (Targeting types >
+  /// Browser).
+  /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+  public sealed partial class BrowserTargeting : pb::IMessage<BrowserTargeting>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<BrowserTargeting> _parser = new pb::MessageParser<BrowserTargeting>(() => new BrowserTargeting());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<BrowserTargeting> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Ads.AdManager.V1.TargetingReflection.Descriptor.MessageTypes[4]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public BrowserTargeting() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public BrowserTargeting(BrowserTargeting other) : this() {
+      targetedBrowsers_ = other.targetedBrowsers_.Clone();
+      excludedBrowsers_ = other.excludedBrowsers_.Clone();
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public BrowserTargeting Clone() {
+      return new BrowserTargeting(this);
+    }
+
+    /// <summary>Field number for the "targeted_browsers" field.</summary>
+    public const int TargetedBrowsersFieldNumber = 3;
+    private static readonly pb::FieldCodec<string> _repeated_targetedBrowsers_codec
+        = pb::FieldCodec.ForString(26);
+    private readonly pbc::RepeatedField<string> targetedBrowsers_ = new pbc::RepeatedField<string>();
+    /// <summary>
+    /// Optional. A list of browser resource names that should be
+    /// targeted/included.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pbc::RepeatedField<string> TargetedBrowsers {
+      get { return targetedBrowsers_; }
+    }
+
+    /// <summary>Field number for the "excluded_browsers" field.</summary>
+    public const int ExcludedBrowsersFieldNumber = 4;
+    private static readonly pb::FieldCodec<string> _repeated_excludedBrowsers_codec
+        = pb::FieldCodec.ForString(34);
+    private readonly pbc::RepeatedField<string> excludedBrowsers_ = new pbc::RepeatedField<string>();
+    /// <summary>
+    /// Optional. A list of browser resource names that should be excluded.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pbc::RepeatedField<string> ExcludedBrowsers {
+      get { return excludedBrowsers_; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as BrowserTargeting);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(BrowserTargeting other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if(!targetedBrowsers_.Equals(other.targetedBrowsers_)) return false;
+      if(!excludedBrowsers_.Equals(other.excludedBrowsers_)) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      hash ^= targetedBrowsers_.GetHashCode();
+      hash ^= excludedBrowsers_.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      targetedBrowsers_.WriteTo(output, _repeated_targetedBrowsers_codec);
+      excludedBrowsers_.WriteTo(output, _repeated_excludedBrowsers_codec);
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      targetedBrowsers_.WriteTo(ref output, _repeated_targetedBrowsers_codec);
+      excludedBrowsers_.WriteTo(ref output, _repeated_excludedBrowsers_codec);
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      size += targetedBrowsers_.CalculateSize(_repeated_targetedBrowsers_codec);
+      size += excludedBrowsers_.CalculateSize(_repeated_excludedBrowsers_codec);
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(BrowserTargeting other) {
+      if (other == null) {
+        return;
+      }
+      targetedBrowsers_.Add(other.targetedBrowsers_);
+      excludedBrowsers_.Add(other.excludedBrowsers_);
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 26: {
+            targetedBrowsers_.AddEntriesFrom(input, _repeated_targetedBrowsers_codec);
+            break;
+          }
+          case 34: {
+            excludedBrowsers_.AddEntriesFrom(input, _repeated_excludedBrowsers_codec);
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 26: {
+            targetedBrowsers_.AddEntriesFrom(ref input, _repeated_targetedBrowsers_codec);
+            break;
+          }
+          case 34: {
+            excludedBrowsers_.AddEntriesFrom(ref input, _repeated_excludedBrowsers_codec);
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+  }
+
+  /// <summary>
+  /// Browser Language Targeting.
+  ///
+  /// For ads targeting mobile apps and their associated WebViews, the language
+  /// used is based on the language specified by the user in their mobile device
+  /// settings. If a browser has more than one language assigned to it, each
+  /// language generates an impression.
+  /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+  public sealed partial class BrowserLanguageTargeting : pb::IMessage<BrowserLanguageTargeting>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<BrowserLanguageTargeting> _parser = new pb::MessageParser<BrowserLanguageTargeting>(() => new BrowserLanguageTargeting());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<BrowserLanguageTargeting> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Ads.AdManager.V1.TargetingReflection.Descriptor.MessageTypes[5]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public BrowserLanguageTargeting() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public BrowserLanguageTargeting(BrowserLanguageTargeting other) : this() {
+      targetedBrowserLanguages_ = other.targetedBrowserLanguages_.Clone();
+      excludedBrowserLanguages_ = other.excludedBrowserLanguages_.Clone();
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public BrowserLanguageTargeting Clone() {
+      return new BrowserLanguageTargeting(this);
+    }
+
+    /// <summary>Field number for the "targeted_browser_languages" field.</summary>
+    public const int TargetedBrowserLanguagesFieldNumber = 3;
+    private static readonly pb::FieldCodec<string> _repeated_targetedBrowserLanguages_codec
+        = pb::FieldCodec.ForString(26);
+    private readonly pbc::RepeatedField<string> targetedBrowserLanguages_ = new pbc::RepeatedField<string>();
+    /// <summary>
+    /// Optional. A list of browser language resource names that should be
+    /// targeted/included.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pbc::RepeatedField<string> TargetedBrowserLanguages {
+      get { return targetedBrowserLanguages_; }
+    }
+
+    /// <summary>Field number for the "excluded_browser_languages" field.</summary>
+    public const int ExcludedBrowserLanguagesFieldNumber = 4;
+    private static readonly pb::FieldCodec<string> _repeated_excludedBrowserLanguages_codec
+        = pb::FieldCodec.ForString(34);
+    private readonly pbc::RepeatedField<string> excludedBrowserLanguages_ = new pbc::RepeatedField<string>();
+    /// <summary>
+    /// Optional. A list of browser language resource names that should be
+    /// excluded.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pbc::RepeatedField<string> ExcludedBrowserLanguages {
+      get { return excludedBrowserLanguages_; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as BrowserLanguageTargeting);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(BrowserLanguageTargeting other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if(!targetedBrowserLanguages_.Equals(other.targetedBrowserLanguages_)) return false;
+      if(!excludedBrowserLanguages_.Equals(other.excludedBrowserLanguages_)) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      hash ^= targetedBrowserLanguages_.GetHashCode();
+      hash ^= excludedBrowserLanguages_.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      targetedBrowserLanguages_.WriteTo(output, _repeated_targetedBrowserLanguages_codec);
+      excludedBrowserLanguages_.WriteTo(output, _repeated_excludedBrowserLanguages_codec);
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      targetedBrowserLanguages_.WriteTo(ref output, _repeated_targetedBrowserLanguages_codec);
+      excludedBrowserLanguages_.WriteTo(ref output, _repeated_excludedBrowserLanguages_codec);
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      size += targetedBrowserLanguages_.CalculateSize(_repeated_targetedBrowserLanguages_codec);
+      size += excludedBrowserLanguages_.CalculateSize(_repeated_excludedBrowserLanguages_codec);
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(BrowserLanguageTargeting other) {
+      if (other == null) {
+        return;
+      }
+      targetedBrowserLanguages_.Add(other.targetedBrowserLanguages_);
+      excludedBrowserLanguages_.Add(other.excludedBrowserLanguages_);
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 26: {
+            targetedBrowserLanguages_.AddEntriesFrom(input, _repeated_targetedBrowserLanguages_codec);
+            break;
+          }
+          case 34: {
+            excludedBrowserLanguages_.AddEntriesFrom(input, _repeated_excludedBrowserLanguages_codec);
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 26: {
+            targetedBrowserLanguages_.AddEntriesFrom(ref input, _repeated_targetedBrowserLanguages_codec);
+            break;
+          }
+          case 34: {
+            excludedBrowserLanguages_.AddEntriesFrom(ref input, _repeated_excludedBrowserLanguages_codec);
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+  }
+
+  /// <summary>
   /// Represents a list of targeted and excluded device categories.
   /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
@@ -1444,7 +2306,7 @@ namespace Google.Ads.AdManager.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Ads.AdManager.V1.TargetingReflection.Descriptor.MessageTypes[4]; }
+      get { return global::Google.Ads.AdManager.V1.TargetingReflection.Descriptor.MessageTypes[6]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1642,6 +2504,785 @@ namespace Google.Ads.AdManager.V1 {
   }
 
   /// <summary>
+  /// Device Capability Targeting.
+  ///
+  /// Can be used to target/exclude users using mobile apps, ad requests resulting
+  /// from apps built on the MRAID standard, or users on devices that are able to
+  /// make phone calls versus devices that aren't able to make phone calls, such as
+  /// tablets.
+  /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+  public sealed partial class DeviceCapabilityTargeting : pb::IMessage<DeviceCapabilityTargeting>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<DeviceCapabilityTargeting> _parser = new pb::MessageParser<DeviceCapabilityTargeting>(() => new DeviceCapabilityTargeting());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<DeviceCapabilityTargeting> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Ads.AdManager.V1.TargetingReflection.Descriptor.MessageTypes[7]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public DeviceCapabilityTargeting() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public DeviceCapabilityTargeting(DeviceCapabilityTargeting other) : this() {
+      targetedCapabilities_ = other.targetedCapabilities_.Clone();
+      excludedCapabilities_ = other.excludedCapabilities_.Clone();
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public DeviceCapabilityTargeting Clone() {
+      return new DeviceCapabilityTargeting(this);
+    }
+
+    /// <summary>Field number for the "targeted_capabilities" field.</summary>
+    public const int TargetedCapabilitiesFieldNumber = 3;
+    private static readonly pb::FieldCodec<string> _repeated_targetedCapabilities_codec
+        = pb::FieldCodec.ForString(26);
+    private readonly pbc::RepeatedField<string> targetedCapabilities_ = new pbc::RepeatedField<string>();
+    /// <summary>
+    /// Optional. A list of device capability resource names that should be
+    /// targeted/included.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pbc::RepeatedField<string> TargetedCapabilities {
+      get { return targetedCapabilities_; }
+    }
+
+    /// <summary>Field number for the "excluded_capabilities" field.</summary>
+    public const int ExcludedCapabilitiesFieldNumber = 4;
+    private static readonly pb::FieldCodec<string> _repeated_excludedCapabilities_codec
+        = pb::FieldCodec.ForString(34);
+    private readonly pbc::RepeatedField<string> excludedCapabilities_ = new pbc::RepeatedField<string>();
+    /// <summary>
+    /// Optional. A list of device capability resource names that should be
+    /// excluded.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pbc::RepeatedField<string> ExcludedCapabilities {
+      get { return excludedCapabilities_; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as DeviceCapabilityTargeting);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(DeviceCapabilityTargeting other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if(!targetedCapabilities_.Equals(other.targetedCapabilities_)) return false;
+      if(!excludedCapabilities_.Equals(other.excludedCapabilities_)) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      hash ^= targetedCapabilities_.GetHashCode();
+      hash ^= excludedCapabilities_.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      targetedCapabilities_.WriteTo(output, _repeated_targetedCapabilities_codec);
+      excludedCapabilities_.WriteTo(output, _repeated_excludedCapabilities_codec);
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      targetedCapabilities_.WriteTo(ref output, _repeated_targetedCapabilities_codec);
+      excludedCapabilities_.WriteTo(ref output, _repeated_excludedCapabilities_codec);
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      size += targetedCapabilities_.CalculateSize(_repeated_targetedCapabilities_codec);
+      size += excludedCapabilities_.CalculateSize(_repeated_excludedCapabilities_codec);
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(DeviceCapabilityTargeting other) {
+      if (other == null) {
+        return;
+      }
+      targetedCapabilities_.Add(other.targetedCapabilities_);
+      excludedCapabilities_.Add(other.excludedCapabilities_);
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 26: {
+            targetedCapabilities_.AddEntriesFrom(input, _repeated_targetedCapabilities_codec);
+            break;
+          }
+          case 34: {
+            excludedCapabilities_.AddEntriesFrom(input, _repeated_excludedCapabilities_codec);
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 26: {
+            targetedCapabilities_.AddEntriesFrom(ref input, _repeated_targetedCapabilities_codec);
+            break;
+          }
+          case 34: {
+            excludedCapabilities_.AddEntriesFrom(ref input, _repeated_excludedCapabilities_codec);
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+  }
+
+  /// <summary>
+  /// Device Manufacturer Targeting.
+  ///
+  /// Can be used to target/exclude users on devices made by specific brands or
+  /// companies, such as Apple, Google, Samsung and others. For more information,
+  /// see https://support.google.com/admanager/answer/2884033 ("Targeting types >
+  /// Device manufacturer").
+  /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+  public sealed partial class DeviceManufacturerTargeting : pb::IMessage<DeviceManufacturerTargeting>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<DeviceManufacturerTargeting> _parser = new pb::MessageParser<DeviceManufacturerTargeting>(() => new DeviceManufacturerTargeting());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<DeviceManufacturerTargeting> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Ads.AdManager.V1.TargetingReflection.Descriptor.MessageTypes[8]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public DeviceManufacturerTargeting() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public DeviceManufacturerTargeting(DeviceManufacturerTargeting other) : this() {
+      targetedDeviceManufacturers_ = other.targetedDeviceManufacturers_.Clone();
+      excludedDeviceManufacturers_ = other.excludedDeviceManufacturers_.Clone();
+      targetedMobileDevices_ = other.targetedMobileDevices_.Clone();
+      excludedMobileDevices_ = other.excludedMobileDevices_.Clone();
+      targetedMobileDeviceSubmodels_ = other.targetedMobileDeviceSubmodels_.Clone();
+      excludedMobileDeviceSubmodels_ = other.excludedMobileDeviceSubmodels_.Clone();
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public DeviceManufacturerTargeting Clone() {
+      return new DeviceManufacturerTargeting(this);
+    }
+
+    /// <summary>Field number for the "targeted_device_manufacturers" field.</summary>
+    public const int TargetedDeviceManufacturersFieldNumber = 7;
+    private static readonly pb::FieldCodec<string> _repeated_targetedDeviceManufacturers_codec
+        = pb::FieldCodec.ForString(58);
+    private readonly pbc::RepeatedField<string> targetedDeviceManufacturers_ = new pbc::RepeatedField<string>();
+    /// <summary>
+    /// Optional. A list of device manufacturer resource names that should be
+    /// targeted/included.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pbc::RepeatedField<string> TargetedDeviceManufacturers {
+      get { return targetedDeviceManufacturers_; }
+    }
+
+    /// <summary>Field number for the "excluded_device_manufacturers" field.</summary>
+    public const int ExcludedDeviceManufacturersFieldNumber = 8;
+    private static readonly pb::FieldCodec<string> _repeated_excludedDeviceManufacturers_codec
+        = pb::FieldCodec.ForString(66);
+    private readonly pbc::RepeatedField<string> excludedDeviceManufacturers_ = new pbc::RepeatedField<string>();
+    /// <summary>
+    /// Optional. A list of device manufacturer resource names that should be
+    /// excluded.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pbc::RepeatedField<string> ExcludedDeviceManufacturers {
+      get { return excludedDeviceManufacturers_; }
+    }
+
+    /// <summary>Field number for the "targeted_mobile_devices" field.</summary>
+    public const int TargetedMobileDevicesFieldNumber = 9;
+    private static readonly pb::FieldCodec<string> _repeated_targetedMobileDevices_codec
+        = pb::FieldCodec.ForString(74);
+    private readonly pbc::RepeatedField<string> targetedMobileDevices_ = new pbc::RepeatedField<string>();
+    /// <summary>
+    /// Optional. A list of mobile device resource names that should be
+    /// targeted/included.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pbc::RepeatedField<string> TargetedMobileDevices {
+      get { return targetedMobileDevices_; }
+    }
+
+    /// <summary>Field number for the "excluded_mobile_devices" field.</summary>
+    public const int ExcludedMobileDevicesFieldNumber = 10;
+    private static readonly pb::FieldCodec<string> _repeated_excludedMobileDevices_codec
+        = pb::FieldCodec.ForString(82);
+    private readonly pbc::RepeatedField<string> excludedMobileDevices_ = new pbc::RepeatedField<string>();
+    /// <summary>
+    /// Optional. A list of mobile device resource names that should be excluded.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pbc::RepeatedField<string> ExcludedMobileDevices {
+      get { return excludedMobileDevices_; }
+    }
+
+    /// <summary>Field number for the "targeted_mobile_device_submodels" field.</summary>
+    public const int TargetedMobileDeviceSubmodelsFieldNumber = 11;
+    private static readonly pb::FieldCodec<string> _repeated_targetedMobileDeviceSubmodels_codec
+        = pb::FieldCodec.ForString(90);
+    private readonly pbc::RepeatedField<string> targetedMobileDeviceSubmodels_ = new pbc::RepeatedField<string>();
+    /// <summary>
+    /// Optional. A list of mobile device submodel resource names that should be
+    /// targeted/included.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pbc::RepeatedField<string> TargetedMobileDeviceSubmodels {
+      get { return targetedMobileDeviceSubmodels_; }
+    }
+
+    /// <summary>Field number for the "excluded_mobile_device_submodels" field.</summary>
+    public const int ExcludedMobileDeviceSubmodelsFieldNumber = 12;
+    private static readonly pb::FieldCodec<string> _repeated_excludedMobileDeviceSubmodels_codec
+        = pb::FieldCodec.ForString(98);
+    private readonly pbc::RepeatedField<string> excludedMobileDeviceSubmodels_ = new pbc::RepeatedField<string>();
+    /// <summary>
+    /// Optional. A list of mobile device submodel resource names that should be
+    /// excluded.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pbc::RepeatedField<string> ExcludedMobileDeviceSubmodels {
+      get { return excludedMobileDeviceSubmodels_; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as DeviceManufacturerTargeting);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(DeviceManufacturerTargeting other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if(!targetedDeviceManufacturers_.Equals(other.targetedDeviceManufacturers_)) return false;
+      if(!excludedDeviceManufacturers_.Equals(other.excludedDeviceManufacturers_)) return false;
+      if(!targetedMobileDevices_.Equals(other.targetedMobileDevices_)) return false;
+      if(!excludedMobileDevices_.Equals(other.excludedMobileDevices_)) return false;
+      if(!targetedMobileDeviceSubmodels_.Equals(other.targetedMobileDeviceSubmodels_)) return false;
+      if(!excludedMobileDeviceSubmodels_.Equals(other.excludedMobileDeviceSubmodels_)) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      hash ^= targetedDeviceManufacturers_.GetHashCode();
+      hash ^= excludedDeviceManufacturers_.GetHashCode();
+      hash ^= targetedMobileDevices_.GetHashCode();
+      hash ^= excludedMobileDevices_.GetHashCode();
+      hash ^= targetedMobileDeviceSubmodels_.GetHashCode();
+      hash ^= excludedMobileDeviceSubmodels_.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      targetedDeviceManufacturers_.WriteTo(output, _repeated_targetedDeviceManufacturers_codec);
+      excludedDeviceManufacturers_.WriteTo(output, _repeated_excludedDeviceManufacturers_codec);
+      targetedMobileDevices_.WriteTo(output, _repeated_targetedMobileDevices_codec);
+      excludedMobileDevices_.WriteTo(output, _repeated_excludedMobileDevices_codec);
+      targetedMobileDeviceSubmodels_.WriteTo(output, _repeated_targetedMobileDeviceSubmodels_codec);
+      excludedMobileDeviceSubmodels_.WriteTo(output, _repeated_excludedMobileDeviceSubmodels_codec);
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      targetedDeviceManufacturers_.WriteTo(ref output, _repeated_targetedDeviceManufacturers_codec);
+      excludedDeviceManufacturers_.WriteTo(ref output, _repeated_excludedDeviceManufacturers_codec);
+      targetedMobileDevices_.WriteTo(ref output, _repeated_targetedMobileDevices_codec);
+      excludedMobileDevices_.WriteTo(ref output, _repeated_excludedMobileDevices_codec);
+      targetedMobileDeviceSubmodels_.WriteTo(ref output, _repeated_targetedMobileDeviceSubmodels_codec);
+      excludedMobileDeviceSubmodels_.WriteTo(ref output, _repeated_excludedMobileDeviceSubmodels_codec);
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      size += targetedDeviceManufacturers_.CalculateSize(_repeated_targetedDeviceManufacturers_codec);
+      size += excludedDeviceManufacturers_.CalculateSize(_repeated_excludedDeviceManufacturers_codec);
+      size += targetedMobileDevices_.CalculateSize(_repeated_targetedMobileDevices_codec);
+      size += excludedMobileDevices_.CalculateSize(_repeated_excludedMobileDevices_codec);
+      size += targetedMobileDeviceSubmodels_.CalculateSize(_repeated_targetedMobileDeviceSubmodels_codec);
+      size += excludedMobileDeviceSubmodels_.CalculateSize(_repeated_excludedMobileDeviceSubmodels_codec);
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(DeviceManufacturerTargeting other) {
+      if (other == null) {
+        return;
+      }
+      targetedDeviceManufacturers_.Add(other.targetedDeviceManufacturers_);
+      excludedDeviceManufacturers_.Add(other.excludedDeviceManufacturers_);
+      targetedMobileDevices_.Add(other.targetedMobileDevices_);
+      excludedMobileDevices_.Add(other.excludedMobileDevices_);
+      targetedMobileDeviceSubmodels_.Add(other.targetedMobileDeviceSubmodels_);
+      excludedMobileDeviceSubmodels_.Add(other.excludedMobileDeviceSubmodels_);
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 58: {
+            targetedDeviceManufacturers_.AddEntriesFrom(input, _repeated_targetedDeviceManufacturers_codec);
+            break;
+          }
+          case 66: {
+            excludedDeviceManufacturers_.AddEntriesFrom(input, _repeated_excludedDeviceManufacturers_codec);
+            break;
+          }
+          case 74: {
+            targetedMobileDevices_.AddEntriesFrom(input, _repeated_targetedMobileDevices_codec);
+            break;
+          }
+          case 82: {
+            excludedMobileDevices_.AddEntriesFrom(input, _repeated_excludedMobileDevices_codec);
+            break;
+          }
+          case 90: {
+            targetedMobileDeviceSubmodels_.AddEntriesFrom(input, _repeated_targetedMobileDeviceSubmodels_codec);
+            break;
+          }
+          case 98: {
+            excludedMobileDeviceSubmodels_.AddEntriesFrom(input, _repeated_excludedMobileDeviceSubmodels_codec);
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 58: {
+            targetedDeviceManufacturers_.AddEntriesFrom(ref input, _repeated_targetedDeviceManufacturers_codec);
+            break;
+          }
+          case 66: {
+            excludedDeviceManufacturers_.AddEntriesFrom(ref input, _repeated_excludedDeviceManufacturers_codec);
+            break;
+          }
+          case 74: {
+            targetedMobileDevices_.AddEntriesFrom(ref input, _repeated_targetedMobileDevices_codec);
+            break;
+          }
+          case 82: {
+            excludedMobileDevices_.AddEntriesFrom(ref input, _repeated_excludedMobileDevices_codec);
+            break;
+          }
+          case 90: {
+            targetedMobileDeviceSubmodels_.AddEntriesFrom(ref input, _repeated_targetedMobileDeviceSubmodels_codec);
+            break;
+          }
+          case 98: {
+            excludedMobileDeviceSubmodels_.AddEntriesFrom(ref input, _repeated_excludedMobileDeviceSubmodels_codec);
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+  }
+
+  /// <summary>
+  /// Mobile Carrier Targeting.
+  ///
+  /// Can be used to target/exclude a variety of mobile carriers, such as AT&amp;T,
+  /// Verizon, or T-Mobile.
+  /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+  public sealed partial class MobileCarrierTargeting : pb::IMessage<MobileCarrierTargeting>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<MobileCarrierTargeting> _parser = new pb::MessageParser<MobileCarrierTargeting>(() => new MobileCarrierTargeting());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<MobileCarrierTargeting> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Ads.AdManager.V1.TargetingReflection.Descriptor.MessageTypes[9]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public MobileCarrierTargeting() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public MobileCarrierTargeting(MobileCarrierTargeting other) : this() {
+      targetedMobileCarriers_ = other.targetedMobileCarriers_.Clone();
+      excludedMobileCarriers_ = other.excludedMobileCarriers_.Clone();
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public MobileCarrierTargeting Clone() {
+      return new MobileCarrierTargeting(this);
+    }
+
+    /// <summary>Field number for the "targeted_mobile_carriers" field.</summary>
+    public const int TargetedMobileCarriersFieldNumber = 3;
+    private static readonly pb::FieldCodec<string> _repeated_targetedMobileCarriers_codec
+        = pb::FieldCodec.ForString(26);
+    private readonly pbc::RepeatedField<string> targetedMobileCarriers_ = new pbc::RepeatedField<string>();
+    /// <summary>
+    /// Optional. A list of mobile carrier resource names that should be
+    /// targeted/included.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pbc::RepeatedField<string> TargetedMobileCarriers {
+      get { return targetedMobileCarriers_; }
+    }
+
+    /// <summary>Field number for the "excluded_mobile_carriers" field.</summary>
+    public const int ExcludedMobileCarriersFieldNumber = 4;
+    private static readonly pb::FieldCodec<string> _repeated_excludedMobileCarriers_codec
+        = pb::FieldCodec.ForString(34);
+    private readonly pbc::RepeatedField<string> excludedMobileCarriers_ = new pbc::RepeatedField<string>();
+    /// <summary>
+    /// Optional. A list of mobile carrier resource names that should be excluded.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pbc::RepeatedField<string> ExcludedMobileCarriers {
+      get { return excludedMobileCarriers_; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as MobileCarrierTargeting);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(MobileCarrierTargeting other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if(!targetedMobileCarriers_.Equals(other.targetedMobileCarriers_)) return false;
+      if(!excludedMobileCarriers_.Equals(other.excludedMobileCarriers_)) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      hash ^= targetedMobileCarriers_.GetHashCode();
+      hash ^= excludedMobileCarriers_.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      targetedMobileCarriers_.WriteTo(output, _repeated_targetedMobileCarriers_codec);
+      excludedMobileCarriers_.WriteTo(output, _repeated_excludedMobileCarriers_codec);
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      targetedMobileCarriers_.WriteTo(ref output, _repeated_targetedMobileCarriers_codec);
+      excludedMobileCarriers_.WriteTo(ref output, _repeated_excludedMobileCarriers_codec);
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      size += targetedMobileCarriers_.CalculateSize(_repeated_targetedMobileCarriers_codec);
+      size += excludedMobileCarriers_.CalculateSize(_repeated_excludedMobileCarriers_codec);
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(MobileCarrierTargeting other) {
+      if (other == null) {
+        return;
+      }
+      targetedMobileCarriers_.Add(other.targetedMobileCarriers_);
+      excludedMobileCarriers_.Add(other.excludedMobileCarriers_);
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 26: {
+            targetedMobileCarriers_.AddEntriesFrom(input, _repeated_targetedMobileCarriers_codec);
+            break;
+          }
+          case 34: {
+            excludedMobileCarriers_.AddEntriesFrom(input, _repeated_excludedMobileCarriers_codec);
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 26: {
+            targetedMobileCarriers_.AddEntriesFrom(ref input, _repeated_targetedMobileCarriers_codec);
+            break;
+          }
+          case 34: {
+            excludedMobileCarriers_.AddEntriesFrom(ref input, _repeated_excludedMobileCarriers_codec);
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+  }
+
+  /// <summary>
   /// Operating System Targeting
   /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
@@ -1659,7 +3300,7 @@ namespace Google.Ads.AdManager.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Ads.AdManager.V1.TargetingReflection.Descriptor.MessageTypes[5]; }
+      get { return global::Google.Ads.AdManager.V1.TargetingReflection.Descriptor.MessageTypes[10]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1938,7 +3579,7 @@ namespace Google.Ads.AdManager.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Ads.AdManager.V1.TargetingReflection.Descriptor.MessageTypes[6]; }
+      get { return global::Google.Ads.AdManager.V1.TargetingReflection.Descriptor.MessageTypes[11]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -2187,7 +3828,7 @@ namespace Google.Ads.AdManager.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Ads.AdManager.V1.TargetingReflection.Descriptor.MessageTypes[7]; }
+      get { return global::Google.Ads.AdManager.V1.TargetingReflection.Descriptor.MessageTypes[12]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -2453,7 +4094,7 @@ namespace Google.Ads.AdManager.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Ads.AdManager.V1.TargetingReflection.Descriptor.MessageTypes[8]; }
+      get { return global::Google.Ads.AdManager.V1.TargetingReflection.Descriptor.MessageTypes[13]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -2641,7 +4282,7 @@ namespace Google.Ads.AdManager.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Ads.AdManager.V1.TargetingReflection.Descriptor.MessageTypes[9]; }
+      get { return global::Google.Ads.AdManager.V1.TargetingReflection.Descriptor.MessageTypes[14]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -2826,7 +4467,7 @@ namespace Google.Ads.AdManager.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Ads.AdManager.V1.TargetingReflection.Descriptor.MessageTypes[10]; }
+      get { return global::Google.Ads.AdManager.V1.TargetingReflection.Descriptor.MessageTypes[15]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -2847,6 +4488,8 @@ namespace Google.Ads.AdManager.V1 {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public CustomTargetingClause(CustomTargetingClause other) : this() {
       customTargetingLiterals_ = other.customTargetingLiterals_.Clone();
+      audienceSegmentTargetings_ = other.audienceSegmentTargetings_.Clone();
+      cmsMetadataTargetings_ = other.cmsMetadataTargetings_.Clone();
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -2870,6 +4513,34 @@ namespace Google.Ads.AdManager.V1 {
       get { return customTargetingLiterals_; }
     }
 
+    /// <summary>Field number for the "audience_segment_targetings" field.</summary>
+    public const int AudienceSegmentTargetingsFieldNumber = 2;
+    private static readonly pb::FieldCodec<global::Google.Ads.AdManager.V1.AudienceSegmentTargeting> _repeated_audienceSegmentTargetings_codec
+        = pb::FieldCodec.ForMessage(18, global::Google.Ads.AdManager.V1.AudienceSegmentTargeting.Parser);
+    private readonly pbc::RepeatedField<global::Google.Ads.AdManager.V1.AudienceSegmentTargeting> audienceSegmentTargetings_ = new pbc::RepeatedField<global::Google.Ads.AdManager.V1.AudienceSegmentTargeting>();
+    /// <summary>
+    /// Optional. Leaf targeting expressions for audience segments.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pbc::RepeatedField<global::Google.Ads.AdManager.V1.AudienceSegmentTargeting> AudienceSegmentTargetings {
+      get { return audienceSegmentTargetings_; }
+    }
+
+    /// <summary>Field number for the "cms_metadata_targetings" field.</summary>
+    public const int CmsMetadataTargetingsFieldNumber = 3;
+    private static readonly pb::FieldCodec<global::Google.Ads.AdManager.V1.CmsMetadataTargeting> _repeated_cmsMetadataTargetings_codec
+        = pb::FieldCodec.ForMessage(26, global::Google.Ads.AdManager.V1.CmsMetadataTargeting.Parser);
+    private readonly pbc::RepeatedField<global::Google.Ads.AdManager.V1.CmsMetadataTargeting> cmsMetadataTargetings_ = new pbc::RepeatedField<global::Google.Ads.AdManager.V1.CmsMetadataTargeting>();
+    /// <summary>
+    /// Optional. Leaf targeting expressions for cms metadata.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pbc::RepeatedField<global::Google.Ads.AdManager.V1.CmsMetadataTargeting> CmsMetadataTargetings {
+      get { return cmsMetadataTargetings_; }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
@@ -2886,6 +4557,8 @@ namespace Google.Ads.AdManager.V1 {
         return true;
       }
       if(!customTargetingLiterals_.Equals(other.customTargetingLiterals_)) return false;
+      if(!audienceSegmentTargetings_.Equals(other.audienceSegmentTargetings_)) return false;
+      if(!cmsMetadataTargetings_.Equals(other.cmsMetadataTargetings_)) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -2894,6 +4567,8 @@ namespace Google.Ads.AdManager.V1 {
     public override int GetHashCode() {
       int hash = 1;
       hash ^= customTargetingLiterals_.GetHashCode();
+      hash ^= audienceSegmentTargetings_.GetHashCode();
+      hash ^= cmsMetadataTargetings_.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -2913,6 +4588,8 @@ namespace Google.Ads.AdManager.V1 {
       output.WriteRawMessage(this);
     #else
       customTargetingLiterals_.WriteTo(output, _repeated_customTargetingLiterals_codec);
+      audienceSegmentTargetings_.WriteTo(output, _repeated_audienceSegmentTargetings_codec);
+      cmsMetadataTargetings_.WriteTo(output, _repeated_cmsMetadataTargetings_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -2924,6 +4601,8 @@ namespace Google.Ads.AdManager.V1 {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       customTargetingLiterals_.WriteTo(ref output, _repeated_customTargetingLiterals_codec);
+      audienceSegmentTargetings_.WriteTo(ref output, _repeated_audienceSegmentTargetings_codec);
+      cmsMetadataTargetings_.WriteTo(ref output, _repeated_cmsMetadataTargetings_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -2935,6 +4614,8 @@ namespace Google.Ads.AdManager.V1 {
     public int CalculateSize() {
       int size = 0;
       size += customTargetingLiterals_.CalculateSize(_repeated_customTargetingLiterals_codec);
+      size += audienceSegmentTargetings_.CalculateSize(_repeated_audienceSegmentTargetings_codec);
+      size += cmsMetadataTargetings_.CalculateSize(_repeated_cmsMetadataTargetings_codec);
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
       }
@@ -2948,6 +4629,8 @@ namespace Google.Ads.AdManager.V1 {
         return;
       }
       customTargetingLiterals_.Add(other.customTargetingLiterals_);
+      audienceSegmentTargetings_.Add(other.audienceSegmentTargetings_);
+      cmsMetadataTargetings_.Add(other.cmsMetadataTargetings_);
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 
@@ -2967,6 +4650,14 @@ namespace Google.Ads.AdManager.V1 {
             customTargetingLiterals_.AddEntriesFrom(input, _repeated_customTargetingLiterals_codec);
             break;
           }
+          case 18: {
+            audienceSegmentTargetings_.AddEntriesFrom(input, _repeated_audienceSegmentTargetings_codec);
+            break;
+          }
+          case 26: {
+            cmsMetadataTargetings_.AddEntriesFrom(input, _repeated_cmsMetadataTargetings_codec);
+            break;
+          }
         }
       }
     #endif
@@ -2984,6 +4675,14 @@ namespace Google.Ads.AdManager.V1 {
             break;
           case 10: {
             customTargetingLiterals_.AddEntriesFrom(ref input, _repeated_customTargetingLiterals_codec);
+            break;
+          }
+          case 18: {
+            audienceSegmentTargetings_.AddEntriesFrom(ref input, _repeated_audienceSegmentTargetings_codec);
+            break;
+          }
+          case 26: {
+            cmsMetadataTargetings_.AddEntriesFrom(ref input, _repeated_cmsMetadataTargetings_codec);
             break;
           }
         }
@@ -3012,7 +4711,7 @@ namespace Google.Ads.AdManager.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Ads.AdManager.V1.TargetingReflection.Descriptor.MessageTypes[11]; }
+      get { return global::Google.Ads.AdManager.V1.TargetingReflection.Descriptor.MessageTypes[16]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -3291,6 +4990,499 @@ namespace Google.Ads.AdManager.V1 {
   }
 
   /// <summary>
+  /// Represents targeting for audience segments. The values are combined in a
+  /// logical `OR`.
+  /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+  public sealed partial class AudienceSegmentTargeting : pb::IMessage<AudienceSegmentTargeting>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<AudienceSegmentTargeting> _parser = new pb::MessageParser<AudienceSegmentTargeting>(() => new AudienceSegmentTargeting());
+    private pb::UnknownFieldSet _unknownFields;
+    private int _hasBits0;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<AudienceSegmentTargeting> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Ads.AdManager.V1.TargetingReflection.Descriptor.MessageTypes[17]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public AudienceSegmentTargeting() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public AudienceSegmentTargeting(AudienceSegmentTargeting other) : this() {
+      _hasBits0 = other._hasBits0;
+      negative_ = other.negative_;
+      audienceSegments_ = other.audienceSegments_.Clone();
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public AudienceSegmentTargeting Clone() {
+      return new AudienceSegmentTargeting(this);
+    }
+
+    /// <summary>Field number for the "negative" field.</summary>
+    public const int NegativeFieldNumber = 1;
+    private readonly static bool NegativeDefaultValue = false;
+
+    private bool negative_;
+    /// <summary>
+    /// Whether this expression is negatively targeted, meaning it matches
+    /// ad requests that exclude the below values.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Negative {
+      get { if ((_hasBits0 & 1) != 0) { return negative_; } else { return NegativeDefaultValue; } }
+      set {
+        _hasBits0 |= 1;
+        negative_ = value;
+      }
+    }
+    /// <summary>Gets whether the "negative" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasNegative {
+      get { return (_hasBits0 & 1) != 0; }
+    }
+    /// <summary>Clears the value of the "negative" field</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearNegative() {
+      _hasBits0 &= ~1;
+    }
+
+    /// <summary>Field number for the "audience_segments" field.</summary>
+    public const int AudienceSegmentsFieldNumber = 3;
+    private static readonly pb::FieldCodec<string> _repeated_audienceSegments_codec
+        = pb::FieldCodec.ForString(26);
+    private readonly pbc::RepeatedField<string> audienceSegments_ = new pbc::RepeatedField<string>();
+    /// <summary>
+    /// Optional. The targeted audience segments.
+    ///
+    /// This is either the resource name of a first-party audience segment or an
+    /// alias to the effective third-party audience segment. Third-party audience
+    /// segment resource names containing `~direct` or `~global` will be normalized
+    /// by the server. For example, `networks/1234/audienceSegments/4567~direct`
+    /// will be normalized to `networks/1234/audienceSegments/4567`.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pbc::RepeatedField<string> AudienceSegments {
+      get { return audienceSegments_; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as AudienceSegmentTargeting);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(AudienceSegmentTargeting other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (Negative != other.Negative) return false;
+      if(!audienceSegments_.Equals(other.audienceSegments_)) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (HasNegative) hash ^= Negative.GetHashCode();
+      hash ^= audienceSegments_.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (HasNegative) {
+        output.WriteRawTag(8);
+        output.WriteBool(Negative);
+      }
+      audienceSegments_.WriteTo(output, _repeated_audienceSegments_codec);
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (HasNegative) {
+        output.WriteRawTag(8);
+        output.WriteBool(Negative);
+      }
+      audienceSegments_.WriteTo(ref output, _repeated_audienceSegments_codec);
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      if (HasNegative) {
+        size += 1 + 1;
+      }
+      size += audienceSegments_.CalculateSize(_repeated_audienceSegments_codec);
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(AudienceSegmentTargeting other) {
+      if (other == null) {
+        return;
+      }
+      if (other.HasNegative) {
+        Negative = other.Negative;
+      }
+      audienceSegments_.Add(other.audienceSegments_);
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 8: {
+            Negative = input.ReadBool();
+            break;
+          }
+          case 26: {
+            audienceSegments_.AddEntriesFrom(input, _repeated_audienceSegments_codec);
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 8: {
+            Negative = input.ReadBool();
+            break;
+          }
+          case 26: {
+            audienceSegments_.AddEntriesFrom(ref input, _repeated_audienceSegments_codec);
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+  }
+
+  /// <summary>
+  /// Represents targeting for CMS metadata. The values are ORed together.
+  /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+  public sealed partial class CmsMetadataTargeting : pb::IMessage<CmsMetadataTargeting>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<CmsMetadataTargeting> _parser = new pb::MessageParser<CmsMetadataTargeting>(() => new CmsMetadataTargeting());
+    private pb::UnknownFieldSet _unknownFields;
+    private int _hasBits0;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<CmsMetadataTargeting> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Ads.AdManager.V1.TargetingReflection.Descriptor.MessageTypes[18]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public CmsMetadataTargeting() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public CmsMetadataTargeting(CmsMetadataTargeting other) : this() {
+      _hasBits0 = other._hasBits0;
+      negative_ = other.negative_;
+      cmsMetadataValues_ = other.cmsMetadataValues_.Clone();
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public CmsMetadataTargeting Clone() {
+      return new CmsMetadataTargeting(this);
+    }
+
+    /// <summary>Field number for the "negative" field.</summary>
+    public const int NegativeFieldNumber = 1;
+    private readonly static bool NegativeDefaultValue = false;
+
+    private bool negative_;
+    /// <summary>
+    /// Whether this expression is negatively targeted, meaning it matches
+    /// ad requests that exclude the below values.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Negative {
+      get { if ((_hasBits0 & 1) != 0) { return negative_; } else { return NegativeDefaultValue; } }
+      set {
+        _hasBits0 |= 1;
+        negative_ = value;
+      }
+    }
+    /// <summary>Gets whether the "negative" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasNegative {
+      get { return (_hasBits0 & 1) != 0; }
+    }
+    /// <summary>Clears the value of the "negative" field</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearNegative() {
+      _hasBits0 &= ~1;
+    }
+
+    /// <summary>Field number for the "cms_metadata_values" field.</summary>
+    public const int CmsMetadataValuesFieldNumber = 3;
+    private static readonly pb::FieldCodec<string> _repeated_cmsMetadataValues_codec
+        = pb::FieldCodec.ForString(26);
+    private readonly pbc::RepeatedField<string> cmsMetadataValues_ = new pbc::RepeatedField<string>();
+    /// <summary>
+    /// Optional. The resource names of the targeted CMS metadata values.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pbc::RepeatedField<string> CmsMetadataValues {
+      get { return cmsMetadataValues_; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as CmsMetadataTargeting);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(CmsMetadataTargeting other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (Negative != other.Negative) return false;
+      if(!cmsMetadataValues_.Equals(other.cmsMetadataValues_)) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (HasNegative) hash ^= Negative.GetHashCode();
+      hash ^= cmsMetadataValues_.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (HasNegative) {
+        output.WriteRawTag(8);
+        output.WriteBool(Negative);
+      }
+      cmsMetadataValues_.WriteTo(output, _repeated_cmsMetadataValues_codec);
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (HasNegative) {
+        output.WriteRawTag(8);
+        output.WriteBool(Negative);
+      }
+      cmsMetadataValues_.WriteTo(ref output, _repeated_cmsMetadataValues_codec);
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      if (HasNegative) {
+        size += 1 + 1;
+      }
+      size += cmsMetadataValues_.CalculateSize(_repeated_cmsMetadataValues_codec);
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(CmsMetadataTargeting other) {
+      if (other == null) {
+        return;
+      }
+      if (other.HasNegative) {
+        Negative = other.Negative;
+      }
+      cmsMetadataValues_.Add(other.cmsMetadataValues_);
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 8: {
+            Negative = input.ReadBool();
+            break;
+          }
+          case 26: {
+            cmsMetadataValues_.AddEntriesFrom(input, _repeated_cmsMetadataValues_codec);
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 8: {
+            Negative = input.ReadBool();
+            break;
+          }
+          case 26: {
+            cmsMetadataValues_.AddEntriesFrom(ref input, _repeated_cmsMetadataValues_codec);
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+  }
+
+  /// <summary>
   /// User Domain Targeting
   /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
@@ -3308,7 +5500,7 @@ namespace Google.Ads.AdManager.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Ads.AdManager.V1.TargetingReflection.Descriptor.MessageTypes[12]; }
+      get { return global::Google.Ads.AdManager.V1.TargetingReflection.Descriptor.MessageTypes[19]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -3522,7 +5714,7 @@ namespace Google.Ads.AdManager.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Ads.AdManager.V1.TargetingReflection.Descriptor.MessageTypes[13]; }
+      get { return global::Google.Ads.AdManager.V1.TargetingReflection.Descriptor.MessageTypes[20]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -3709,7 +5901,7 @@ namespace Google.Ads.AdManager.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Ads.AdManager.V1.TargetingReflection.Descriptor.MessageTypes[14]; }
+      get { return global::Google.Ads.AdManager.V1.TargetingReflection.Descriptor.MessageTypes[21]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -4151,7 +6343,7 @@ namespace Google.Ads.AdManager.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Ads.AdManager.V1.TargetingReflection.Descriptor.MessageTypes[15]; }
+      get { return global::Google.Ads.AdManager.V1.TargetingReflection.Descriptor.MessageTypes[22]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -4320,6 +6512,743 @@ namespace Google.Ads.AdManager.V1 {
             break;
           case 16: {
             HasDataSegmentTargeting = input.ReadBool();
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+  }
+
+  /// <summary>
+  /// Content Targeting
+  ///
+  /// Targeted/excluded content entities and bundles.
+  /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+  public sealed partial class ContentTargeting : pb::IMessage<ContentTargeting>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<ContentTargeting> _parser = new pb::MessageParser<ContentTargeting>(() => new ContentTargeting());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<ContentTargeting> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Ads.AdManager.V1.TargetingReflection.Descriptor.MessageTypes[23]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public ContentTargeting() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public ContentTargeting(ContentTargeting other) : this() {
+      targetedContent_ = other.targetedContent_.Clone();
+      excludedContent_ = other.excludedContent_.Clone();
+      targetedContentBundles_ = other.targetedContentBundles_.Clone();
+      excludedContentBundles_ = other.excludedContentBundles_.Clone();
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public ContentTargeting Clone() {
+      return new ContentTargeting(this);
+    }
+
+    /// <summary>Field number for the "targeted_content" field.</summary>
+    public const int TargetedContentFieldNumber = 5;
+    private static readonly pb::FieldCodec<string> _repeated_targetedContent_codec
+        = pb::FieldCodec.ForString(42);
+    private readonly pbc::RepeatedField<string> targetedContent_ = new pbc::RepeatedField<string>();
+    /// <summary>
+    /// Optional. The resource names of the
+    /// [Content][google.ads.admanager.v1.Content] that should be
+    /// targeted/included.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pbc::RepeatedField<string> TargetedContent {
+      get { return targetedContent_; }
+    }
+
+    /// <summary>Field number for the "excluded_content" field.</summary>
+    public const int ExcludedContentFieldNumber = 6;
+    private static readonly pb::FieldCodec<string> _repeated_excludedContent_codec
+        = pb::FieldCodec.ForString(50);
+    private readonly pbc::RepeatedField<string> excludedContent_ = new pbc::RepeatedField<string>();
+    /// <summary>
+    /// Optional. The resource names of the
+    /// [Content][google.ads.admanager.v1.Content] that should be
+    /// excluded.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pbc::RepeatedField<string> ExcludedContent {
+      get { return excludedContent_; }
+    }
+
+    /// <summary>Field number for the "targeted_content_bundles" field.</summary>
+    public const int TargetedContentBundlesFieldNumber = 7;
+    private static readonly pb::FieldCodec<string> _repeated_targetedContentBundles_codec
+        = pb::FieldCodec.ForString(58);
+    private readonly pbc::RepeatedField<string> targetedContentBundles_ = new pbc::RepeatedField<string>();
+    /// <summary>
+    /// Optional. The resource names of the
+    /// [ContentBundles][google.ads.admanager.v1.ContentBundle] that
+    /// should be targeted/included.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pbc::RepeatedField<string> TargetedContentBundles {
+      get { return targetedContentBundles_; }
+    }
+
+    /// <summary>Field number for the "excluded_content_bundles" field.</summary>
+    public const int ExcludedContentBundlesFieldNumber = 8;
+    private static readonly pb::FieldCodec<string> _repeated_excludedContentBundles_codec
+        = pb::FieldCodec.ForString(66);
+    private readonly pbc::RepeatedField<string> excludedContentBundles_ = new pbc::RepeatedField<string>();
+    /// <summary>
+    /// Optional. The resource names of the
+    /// [ContentBundles][google.ads.admanager.v1.ContentBundle] that
+    /// should be excluded.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pbc::RepeatedField<string> ExcludedContentBundles {
+      get { return excludedContentBundles_; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as ContentTargeting);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(ContentTargeting other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if(!targetedContent_.Equals(other.targetedContent_)) return false;
+      if(!excludedContent_.Equals(other.excludedContent_)) return false;
+      if(!targetedContentBundles_.Equals(other.targetedContentBundles_)) return false;
+      if(!excludedContentBundles_.Equals(other.excludedContentBundles_)) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      hash ^= targetedContent_.GetHashCode();
+      hash ^= excludedContent_.GetHashCode();
+      hash ^= targetedContentBundles_.GetHashCode();
+      hash ^= excludedContentBundles_.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      targetedContent_.WriteTo(output, _repeated_targetedContent_codec);
+      excludedContent_.WriteTo(output, _repeated_excludedContent_codec);
+      targetedContentBundles_.WriteTo(output, _repeated_targetedContentBundles_codec);
+      excludedContentBundles_.WriteTo(output, _repeated_excludedContentBundles_codec);
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      targetedContent_.WriteTo(ref output, _repeated_targetedContent_codec);
+      excludedContent_.WriteTo(ref output, _repeated_excludedContent_codec);
+      targetedContentBundles_.WriteTo(ref output, _repeated_targetedContentBundles_codec);
+      excludedContentBundles_.WriteTo(ref output, _repeated_excludedContentBundles_codec);
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      size += targetedContent_.CalculateSize(_repeated_targetedContent_codec);
+      size += excludedContent_.CalculateSize(_repeated_excludedContent_codec);
+      size += targetedContentBundles_.CalculateSize(_repeated_targetedContentBundles_codec);
+      size += excludedContentBundles_.CalculateSize(_repeated_excludedContentBundles_codec);
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(ContentTargeting other) {
+      if (other == null) {
+        return;
+      }
+      targetedContent_.Add(other.targetedContent_);
+      excludedContent_.Add(other.excludedContent_);
+      targetedContentBundles_.Add(other.targetedContentBundles_);
+      excludedContentBundles_.Add(other.excludedContentBundles_);
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 42: {
+            targetedContent_.AddEntriesFrom(input, _repeated_targetedContent_codec);
+            break;
+          }
+          case 50: {
+            excludedContent_.AddEntriesFrom(input, _repeated_excludedContent_codec);
+            break;
+          }
+          case 58: {
+            targetedContentBundles_.AddEntriesFrom(input, _repeated_targetedContentBundles_codec);
+            break;
+          }
+          case 66: {
+            excludedContentBundles_.AddEntriesFrom(input, _repeated_excludedContentBundles_codec);
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 42: {
+            targetedContent_.AddEntriesFrom(ref input, _repeated_targetedContent_codec);
+            break;
+          }
+          case 50: {
+            excludedContent_.AddEntriesFrom(ref input, _repeated_excludedContent_codec);
+            break;
+          }
+          case 58: {
+            targetedContentBundles_.AddEntriesFrom(ref input, _repeated_targetedContentBundles_codec);
+            break;
+          }
+          case 66: {
+            excludedContentBundles_.AddEntriesFrom(ref input, _repeated_excludedContentBundles_codec);
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+  }
+
+  /// <summary>
+  /// Mobile Application Targeting
+  /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+  public sealed partial class MobileApplicationTargeting : pb::IMessage<MobileApplicationTargeting>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<MobileApplicationTargeting> _parser = new pb::MessageParser<MobileApplicationTargeting>(() => new MobileApplicationTargeting());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<MobileApplicationTargeting> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Ads.AdManager.V1.TargetingReflection.Descriptor.MessageTypes[24]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public MobileApplicationTargeting() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public MobileApplicationTargeting(MobileApplicationTargeting other) : this() {
+      switch (other.TargetingCase) {
+        case TargetingOneofCase.FirstPartyTargeting:
+          FirstPartyTargeting = other.FirstPartyTargeting.Clone();
+          break;
+      }
+
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public MobileApplicationTargeting Clone() {
+      return new MobileApplicationTargeting(this);
+    }
+
+    /// <summary>Field number for the "first_party_targeting" field.</summary>
+    public const int FirstPartyTargetingFieldNumber = 1;
+    /// <summary>
+    /// Optional. The targeted/excluded first-party mobile applications.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Ads.AdManager.V1.FirstPartyMobileApplicationTargeting FirstPartyTargeting {
+      get { return targetingCase_ == TargetingOneofCase.FirstPartyTargeting ? (global::Google.Ads.AdManager.V1.FirstPartyMobileApplicationTargeting) targeting_ : null; }
+      set {
+        targeting_ = value;
+        targetingCase_ = value == null ? TargetingOneofCase.None : TargetingOneofCase.FirstPartyTargeting;
+      }
+    }
+
+    private object targeting_;
+    /// <summary>Enum of possible cases for the "targeting" oneof.</summary>
+    public enum TargetingOneofCase {
+      None = 0,
+      FirstPartyTargeting = 1,
+    }
+    private TargetingOneofCase targetingCase_ = TargetingOneofCase.None;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public TargetingOneofCase TargetingCase {
+      get { return targetingCase_; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearTargeting() {
+      targetingCase_ = TargetingOneofCase.None;
+      targeting_ = null;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as MobileApplicationTargeting);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(MobileApplicationTargeting other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (!object.Equals(FirstPartyTargeting, other.FirstPartyTargeting)) return false;
+      if (TargetingCase != other.TargetingCase) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (targetingCase_ == TargetingOneofCase.FirstPartyTargeting) hash ^= FirstPartyTargeting.GetHashCode();
+      hash ^= (int) targetingCase_;
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (targetingCase_ == TargetingOneofCase.FirstPartyTargeting) {
+        output.WriteRawTag(10);
+        output.WriteMessage(FirstPartyTargeting);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (targetingCase_ == TargetingOneofCase.FirstPartyTargeting) {
+        output.WriteRawTag(10);
+        output.WriteMessage(FirstPartyTargeting);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      if (targetingCase_ == TargetingOneofCase.FirstPartyTargeting) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(FirstPartyTargeting);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(MobileApplicationTargeting other) {
+      if (other == null) {
+        return;
+      }
+      switch (other.TargetingCase) {
+        case TargetingOneofCase.FirstPartyTargeting:
+          if (FirstPartyTargeting == null) {
+            FirstPartyTargeting = new global::Google.Ads.AdManager.V1.FirstPartyMobileApplicationTargeting();
+          }
+          FirstPartyTargeting.MergeFrom(other.FirstPartyTargeting);
+          break;
+      }
+
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            global::Google.Ads.AdManager.V1.FirstPartyMobileApplicationTargeting subBuilder = new global::Google.Ads.AdManager.V1.FirstPartyMobileApplicationTargeting();
+            if (targetingCase_ == TargetingOneofCase.FirstPartyTargeting) {
+              subBuilder.MergeFrom(FirstPartyTargeting);
+            }
+            input.ReadMessage(subBuilder);
+            FirstPartyTargeting = subBuilder;
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            global::Google.Ads.AdManager.V1.FirstPartyMobileApplicationTargeting subBuilder = new global::Google.Ads.AdManager.V1.FirstPartyMobileApplicationTargeting();
+            if (targetingCase_ == TargetingOneofCase.FirstPartyTargeting) {
+              subBuilder.MergeFrom(FirstPartyTargeting);
+            }
+            input.ReadMessage(subBuilder);
+            FirstPartyTargeting = subBuilder;
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+  }
+
+  /// <summary>
+  /// First-party mobile application targeting.
+  /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+  public sealed partial class FirstPartyMobileApplicationTargeting : pb::IMessage<FirstPartyMobileApplicationTargeting>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<FirstPartyMobileApplicationTargeting> _parser = new pb::MessageParser<FirstPartyMobileApplicationTargeting>(() => new FirstPartyMobileApplicationTargeting());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<FirstPartyMobileApplicationTargeting> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Ads.AdManager.V1.TargetingReflection.Descriptor.MessageTypes[25]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public FirstPartyMobileApplicationTargeting() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public FirstPartyMobileApplicationTargeting(FirstPartyMobileApplicationTargeting other) : this() {
+      targetedApplications_ = other.targetedApplications_.Clone();
+      excludedApplications_ = other.excludedApplications_.Clone();
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public FirstPartyMobileApplicationTargeting Clone() {
+      return new FirstPartyMobileApplicationTargeting(this);
+    }
+
+    /// <summary>Field number for the "targeted_applications" field.</summary>
+    public const int TargetedApplicationsFieldNumber = 3;
+    private static readonly pb::FieldCodec<string> _repeated_targetedApplications_codec
+        = pb::FieldCodec.ForString(26);
+    private readonly pbc::RepeatedField<string> targetedApplications_ = new pbc::RepeatedField<string>();
+    /// <summary>
+    /// Optional. The resource names of the first-party applications that should be
+    /// targeted.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pbc::RepeatedField<string> TargetedApplications {
+      get { return targetedApplications_; }
+    }
+
+    /// <summary>Field number for the "excluded_applications" field.</summary>
+    public const int ExcludedApplicationsFieldNumber = 4;
+    private static readonly pb::FieldCodec<string> _repeated_excludedApplications_codec
+        = pb::FieldCodec.ForString(34);
+    private readonly pbc::RepeatedField<string> excludedApplications_ = new pbc::RepeatedField<string>();
+    /// <summary>
+    /// Optional. The resource names of the first-party applications that should be
+    /// excluded.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pbc::RepeatedField<string> ExcludedApplications {
+      get { return excludedApplications_; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as FirstPartyMobileApplicationTargeting);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(FirstPartyMobileApplicationTargeting other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if(!targetedApplications_.Equals(other.targetedApplications_)) return false;
+      if(!excludedApplications_.Equals(other.excludedApplications_)) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      hash ^= targetedApplications_.GetHashCode();
+      hash ^= excludedApplications_.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      targetedApplications_.WriteTo(output, _repeated_targetedApplications_codec);
+      excludedApplications_.WriteTo(output, _repeated_excludedApplications_codec);
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      targetedApplications_.WriteTo(ref output, _repeated_targetedApplications_codec);
+      excludedApplications_.WriteTo(ref output, _repeated_excludedApplications_codec);
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      size += targetedApplications_.CalculateSize(_repeated_targetedApplications_codec);
+      size += excludedApplications_.CalculateSize(_repeated_excludedApplications_codec);
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(FirstPartyMobileApplicationTargeting other) {
+      if (other == null) {
+        return;
+      }
+      targetedApplications_.Add(other.targetedApplications_);
+      excludedApplications_.Add(other.excludedApplications_);
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 26: {
+            targetedApplications_.AddEntriesFrom(input, _repeated_targetedApplications_codec);
+            break;
+          }
+          case 34: {
+            excludedApplications_.AddEntriesFrom(input, _repeated_excludedApplications_codec);
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 26: {
+            targetedApplications_.AddEntriesFrom(ref input, _repeated_targetedApplications_codec);
+            break;
+          }
+          case 34: {
+            excludedApplications_.AddEntriesFrom(ref input, _repeated_excludedApplications_codec);
             break;
           }
         }

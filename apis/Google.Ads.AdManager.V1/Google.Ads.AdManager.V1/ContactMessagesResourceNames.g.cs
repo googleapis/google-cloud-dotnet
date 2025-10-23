@@ -259,5 +259,14 @@ namespace Google.Ads.AdManager.V1
             get => string.IsNullOrEmpty(Name) ? null : gaav::ContactName.Parse(Name, allowUnparsed: true);
             set => Name = value?.ToString() ?? "";
         }
+
+        /// <summary>
+        /// <see cref="CompanyName"/>-typed view over the <see cref="Company"/> resource name property.
+        /// </summary>
+        public CompanyName CompanyAsCompanyName
+        {
+            get => string.IsNullOrEmpty(Company) ? null : CompanyName.Parse(Company, allowUnparsed: true);
+            set => Company = value?.ToString() ?? "";
+        }
     }
 }

@@ -18,7 +18,9 @@ namespace GoogleCSharpSnippets
 {
     using Google.Ads.AdManager.V1;
     using Google.Api.Gax;
+    using Google.Protobuf.WellKnownTypes;
     using System;
+    using System.Collections.Generic;
     using System.Linq;
     using System.Threading.Tasks;
 
@@ -391,6 +393,607 @@ namespace GoogleCSharpSnippets
             }
             // Store the pageToken, for when the next page is required.
             string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateCustomField</summary>
+        public void CreateCustomFieldRequestObject()
+        {
+            // Snippet: CreateCustomField(CreateCustomFieldRequest, CallSettings)
+            // Create client
+            CustomFieldServiceClient customFieldServiceClient = CustomFieldServiceClient.Create();
+            // Initialize request argument(s)
+            CreateCustomFieldRequest request = new CreateCustomFieldRequest
+            {
+                ParentAsNetworkName = NetworkName.FromNetworkCode("[NETWORK_CODE]"),
+                CustomField = new CustomField(),
+            };
+            // Make the request
+            CustomField response = customFieldServiceClient.CreateCustomField(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateCustomFieldAsync</summary>
+        public async Task CreateCustomFieldRequestObjectAsync()
+        {
+            // Snippet: CreateCustomFieldAsync(CreateCustomFieldRequest, CallSettings)
+            // Additional: CreateCustomFieldAsync(CreateCustomFieldRequest, CancellationToken)
+            // Create client
+            CustomFieldServiceClient customFieldServiceClient = await CustomFieldServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            CreateCustomFieldRequest request = new CreateCustomFieldRequest
+            {
+                ParentAsNetworkName = NetworkName.FromNetworkCode("[NETWORK_CODE]"),
+                CustomField = new CustomField(),
+            };
+            // Make the request
+            CustomField response = await customFieldServiceClient.CreateCustomFieldAsync(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateCustomField</summary>
+        public void CreateCustomField()
+        {
+            // Snippet: CreateCustomField(string, CustomField, CallSettings)
+            // Create client
+            CustomFieldServiceClient customFieldServiceClient = CustomFieldServiceClient.Create();
+            // Initialize request argument(s)
+            string parent = "networks/[NETWORK_CODE]";
+            CustomField customField = new CustomField();
+            // Make the request
+            CustomField response = customFieldServiceClient.CreateCustomField(parent, customField);
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateCustomFieldAsync</summary>
+        public async Task CreateCustomFieldAsync()
+        {
+            // Snippet: CreateCustomFieldAsync(string, CustomField, CallSettings)
+            // Additional: CreateCustomFieldAsync(string, CustomField, CancellationToken)
+            // Create client
+            CustomFieldServiceClient customFieldServiceClient = await CustomFieldServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            string parent = "networks/[NETWORK_CODE]";
+            CustomField customField = new CustomField();
+            // Make the request
+            CustomField response = await customFieldServiceClient.CreateCustomFieldAsync(parent, customField);
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateCustomField</summary>
+        public void CreateCustomFieldResourceNames()
+        {
+            // Snippet: CreateCustomField(NetworkName, CustomField, CallSettings)
+            // Create client
+            CustomFieldServiceClient customFieldServiceClient = CustomFieldServiceClient.Create();
+            // Initialize request argument(s)
+            NetworkName parent = NetworkName.FromNetworkCode("[NETWORK_CODE]");
+            CustomField customField = new CustomField();
+            // Make the request
+            CustomField response = customFieldServiceClient.CreateCustomField(parent, customField);
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateCustomFieldAsync</summary>
+        public async Task CreateCustomFieldResourceNamesAsync()
+        {
+            // Snippet: CreateCustomFieldAsync(NetworkName, CustomField, CallSettings)
+            // Additional: CreateCustomFieldAsync(NetworkName, CustomField, CancellationToken)
+            // Create client
+            CustomFieldServiceClient customFieldServiceClient = await CustomFieldServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            NetworkName parent = NetworkName.FromNetworkCode("[NETWORK_CODE]");
+            CustomField customField = new CustomField();
+            // Make the request
+            CustomField response = await customFieldServiceClient.CreateCustomFieldAsync(parent, customField);
+            // End snippet
+        }
+
+        /// <summary>Snippet for BatchCreateCustomFields</summary>
+        public void BatchCreateCustomFieldsRequestObject()
+        {
+            // Snippet: BatchCreateCustomFields(BatchCreateCustomFieldsRequest, CallSettings)
+            // Create client
+            CustomFieldServiceClient customFieldServiceClient = CustomFieldServiceClient.Create();
+            // Initialize request argument(s)
+            BatchCreateCustomFieldsRequest request = new BatchCreateCustomFieldsRequest
+            {
+                ParentAsNetworkName = NetworkName.FromNetworkCode("[NETWORK_CODE]"),
+                Requests =
+                {
+                    new CreateCustomFieldRequest(),
+                },
+            };
+            // Make the request
+            BatchCreateCustomFieldsResponse response = customFieldServiceClient.BatchCreateCustomFields(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for BatchCreateCustomFieldsAsync</summary>
+        public async Task BatchCreateCustomFieldsRequestObjectAsync()
+        {
+            // Snippet: BatchCreateCustomFieldsAsync(BatchCreateCustomFieldsRequest, CallSettings)
+            // Additional: BatchCreateCustomFieldsAsync(BatchCreateCustomFieldsRequest, CancellationToken)
+            // Create client
+            CustomFieldServiceClient customFieldServiceClient = await CustomFieldServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            BatchCreateCustomFieldsRequest request = new BatchCreateCustomFieldsRequest
+            {
+                ParentAsNetworkName = NetworkName.FromNetworkCode("[NETWORK_CODE]"),
+                Requests =
+                {
+                    new CreateCustomFieldRequest(),
+                },
+            };
+            // Make the request
+            BatchCreateCustomFieldsResponse response = await customFieldServiceClient.BatchCreateCustomFieldsAsync(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for BatchCreateCustomFields</summary>
+        public void BatchCreateCustomFields()
+        {
+            // Snippet: BatchCreateCustomFields(string, IEnumerable<CreateCustomFieldRequest>, CallSettings)
+            // Create client
+            CustomFieldServiceClient customFieldServiceClient = CustomFieldServiceClient.Create();
+            // Initialize request argument(s)
+            string parent = "networks/[NETWORK_CODE]";
+            IEnumerable<CreateCustomFieldRequest> requests = new CreateCustomFieldRequest[]
+            {
+                new CreateCustomFieldRequest(),
+            };
+            // Make the request
+            BatchCreateCustomFieldsResponse response = customFieldServiceClient.BatchCreateCustomFields(parent, requests);
+            // End snippet
+        }
+
+        /// <summary>Snippet for BatchCreateCustomFieldsAsync</summary>
+        public async Task BatchCreateCustomFieldsAsync()
+        {
+            // Snippet: BatchCreateCustomFieldsAsync(string, IEnumerable<CreateCustomFieldRequest>, CallSettings)
+            // Additional: BatchCreateCustomFieldsAsync(string, IEnumerable<CreateCustomFieldRequest>, CancellationToken)
+            // Create client
+            CustomFieldServiceClient customFieldServiceClient = await CustomFieldServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            string parent = "networks/[NETWORK_CODE]";
+            IEnumerable<CreateCustomFieldRequest> requests = new CreateCustomFieldRequest[]
+            {
+                new CreateCustomFieldRequest(),
+            };
+            // Make the request
+            BatchCreateCustomFieldsResponse response = await customFieldServiceClient.BatchCreateCustomFieldsAsync(parent, requests);
+            // End snippet
+        }
+
+        /// <summary>Snippet for BatchCreateCustomFields</summary>
+        public void BatchCreateCustomFieldsResourceNames()
+        {
+            // Snippet: BatchCreateCustomFields(NetworkName, IEnumerable<CreateCustomFieldRequest>, CallSettings)
+            // Create client
+            CustomFieldServiceClient customFieldServiceClient = CustomFieldServiceClient.Create();
+            // Initialize request argument(s)
+            NetworkName parent = NetworkName.FromNetworkCode("[NETWORK_CODE]");
+            IEnumerable<CreateCustomFieldRequest> requests = new CreateCustomFieldRequest[]
+            {
+                new CreateCustomFieldRequest(),
+            };
+            // Make the request
+            BatchCreateCustomFieldsResponse response = customFieldServiceClient.BatchCreateCustomFields(parent, requests);
+            // End snippet
+        }
+
+        /// <summary>Snippet for BatchCreateCustomFieldsAsync</summary>
+        public async Task BatchCreateCustomFieldsResourceNamesAsync()
+        {
+            // Snippet: BatchCreateCustomFieldsAsync(NetworkName, IEnumerable<CreateCustomFieldRequest>, CallSettings)
+            // Additional: BatchCreateCustomFieldsAsync(NetworkName, IEnumerable<CreateCustomFieldRequest>, CancellationToken)
+            // Create client
+            CustomFieldServiceClient customFieldServiceClient = await CustomFieldServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            NetworkName parent = NetworkName.FromNetworkCode("[NETWORK_CODE]");
+            IEnumerable<CreateCustomFieldRequest> requests = new CreateCustomFieldRequest[]
+            {
+                new CreateCustomFieldRequest(),
+            };
+            // Make the request
+            BatchCreateCustomFieldsResponse response = await customFieldServiceClient.BatchCreateCustomFieldsAsync(parent, requests);
+            // End snippet
+        }
+
+        /// <summary>Snippet for UpdateCustomField</summary>
+        public void UpdateCustomFieldRequestObject()
+        {
+            // Snippet: UpdateCustomField(UpdateCustomFieldRequest, CallSettings)
+            // Create client
+            CustomFieldServiceClient customFieldServiceClient = CustomFieldServiceClient.Create();
+            // Initialize request argument(s)
+            UpdateCustomFieldRequest request = new UpdateCustomFieldRequest
+            {
+                CustomField = new CustomField(),
+                UpdateMask = new FieldMask(),
+            };
+            // Make the request
+            CustomField response = customFieldServiceClient.UpdateCustomField(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for UpdateCustomFieldAsync</summary>
+        public async Task UpdateCustomFieldRequestObjectAsync()
+        {
+            // Snippet: UpdateCustomFieldAsync(UpdateCustomFieldRequest, CallSettings)
+            // Additional: UpdateCustomFieldAsync(UpdateCustomFieldRequest, CancellationToken)
+            // Create client
+            CustomFieldServiceClient customFieldServiceClient = await CustomFieldServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            UpdateCustomFieldRequest request = new UpdateCustomFieldRequest
+            {
+                CustomField = new CustomField(),
+                UpdateMask = new FieldMask(),
+            };
+            // Make the request
+            CustomField response = await customFieldServiceClient.UpdateCustomFieldAsync(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for UpdateCustomField</summary>
+        public void UpdateCustomField()
+        {
+            // Snippet: UpdateCustomField(CustomField, FieldMask, CallSettings)
+            // Create client
+            CustomFieldServiceClient customFieldServiceClient = CustomFieldServiceClient.Create();
+            // Initialize request argument(s)
+            CustomField customField = new CustomField();
+            FieldMask updateMask = new FieldMask();
+            // Make the request
+            CustomField response = customFieldServiceClient.UpdateCustomField(customField, updateMask);
+            // End snippet
+        }
+
+        /// <summary>Snippet for UpdateCustomFieldAsync</summary>
+        public async Task UpdateCustomFieldAsync()
+        {
+            // Snippet: UpdateCustomFieldAsync(CustomField, FieldMask, CallSettings)
+            // Additional: UpdateCustomFieldAsync(CustomField, FieldMask, CancellationToken)
+            // Create client
+            CustomFieldServiceClient customFieldServiceClient = await CustomFieldServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            CustomField customField = new CustomField();
+            FieldMask updateMask = new FieldMask();
+            // Make the request
+            CustomField response = await customFieldServiceClient.UpdateCustomFieldAsync(customField, updateMask);
+            // End snippet
+        }
+
+        /// <summary>Snippet for BatchUpdateCustomFields</summary>
+        public void BatchUpdateCustomFieldsRequestObject()
+        {
+            // Snippet: BatchUpdateCustomFields(BatchUpdateCustomFieldsRequest, CallSettings)
+            // Create client
+            CustomFieldServiceClient customFieldServiceClient = CustomFieldServiceClient.Create();
+            // Initialize request argument(s)
+            BatchUpdateCustomFieldsRequest request = new BatchUpdateCustomFieldsRequest
+            {
+                ParentAsNetworkName = NetworkName.FromNetworkCode("[NETWORK_CODE]"),
+                Requests =
+                {
+                    new UpdateCustomFieldRequest(),
+                },
+            };
+            // Make the request
+            BatchUpdateCustomFieldsResponse response = customFieldServiceClient.BatchUpdateCustomFields(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for BatchUpdateCustomFieldsAsync</summary>
+        public async Task BatchUpdateCustomFieldsRequestObjectAsync()
+        {
+            // Snippet: BatchUpdateCustomFieldsAsync(BatchUpdateCustomFieldsRequest, CallSettings)
+            // Additional: BatchUpdateCustomFieldsAsync(BatchUpdateCustomFieldsRequest, CancellationToken)
+            // Create client
+            CustomFieldServiceClient customFieldServiceClient = await CustomFieldServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            BatchUpdateCustomFieldsRequest request = new BatchUpdateCustomFieldsRequest
+            {
+                ParentAsNetworkName = NetworkName.FromNetworkCode("[NETWORK_CODE]"),
+                Requests =
+                {
+                    new UpdateCustomFieldRequest(),
+                },
+            };
+            // Make the request
+            BatchUpdateCustomFieldsResponse response = await customFieldServiceClient.BatchUpdateCustomFieldsAsync(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for BatchUpdateCustomFields</summary>
+        public void BatchUpdateCustomFields()
+        {
+            // Snippet: BatchUpdateCustomFields(string, IEnumerable<UpdateCustomFieldRequest>, CallSettings)
+            // Create client
+            CustomFieldServiceClient customFieldServiceClient = CustomFieldServiceClient.Create();
+            // Initialize request argument(s)
+            string parent = "networks/[NETWORK_CODE]";
+            IEnumerable<UpdateCustomFieldRequest> requests = new UpdateCustomFieldRequest[]
+            {
+                new UpdateCustomFieldRequest(),
+            };
+            // Make the request
+            BatchUpdateCustomFieldsResponse response = customFieldServiceClient.BatchUpdateCustomFields(parent, requests);
+            // End snippet
+        }
+
+        /// <summary>Snippet for BatchUpdateCustomFieldsAsync</summary>
+        public async Task BatchUpdateCustomFieldsAsync()
+        {
+            // Snippet: BatchUpdateCustomFieldsAsync(string, IEnumerable<UpdateCustomFieldRequest>, CallSettings)
+            // Additional: BatchUpdateCustomFieldsAsync(string, IEnumerable<UpdateCustomFieldRequest>, CancellationToken)
+            // Create client
+            CustomFieldServiceClient customFieldServiceClient = await CustomFieldServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            string parent = "networks/[NETWORK_CODE]";
+            IEnumerable<UpdateCustomFieldRequest> requests = new UpdateCustomFieldRequest[]
+            {
+                new UpdateCustomFieldRequest(),
+            };
+            // Make the request
+            BatchUpdateCustomFieldsResponse response = await customFieldServiceClient.BatchUpdateCustomFieldsAsync(parent, requests);
+            // End snippet
+        }
+
+        /// <summary>Snippet for BatchUpdateCustomFields</summary>
+        public void BatchUpdateCustomFieldsResourceNames()
+        {
+            // Snippet: BatchUpdateCustomFields(NetworkName, IEnumerable<UpdateCustomFieldRequest>, CallSettings)
+            // Create client
+            CustomFieldServiceClient customFieldServiceClient = CustomFieldServiceClient.Create();
+            // Initialize request argument(s)
+            NetworkName parent = NetworkName.FromNetworkCode("[NETWORK_CODE]");
+            IEnumerable<UpdateCustomFieldRequest> requests = new UpdateCustomFieldRequest[]
+            {
+                new UpdateCustomFieldRequest(),
+            };
+            // Make the request
+            BatchUpdateCustomFieldsResponse response = customFieldServiceClient.BatchUpdateCustomFields(parent, requests);
+            // End snippet
+        }
+
+        /// <summary>Snippet for BatchUpdateCustomFieldsAsync</summary>
+        public async Task BatchUpdateCustomFieldsResourceNamesAsync()
+        {
+            // Snippet: BatchUpdateCustomFieldsAsync(NetworkName, IEnumerable<UpdateCustomFieldRequest>, CallSettings)
+            // Additional: BatchUpdateCustomFieldsAsync(NetworkName, IEnumerable<UpdateCustomFieldRequest>, CancellationToken)
+            // Create client
+            CustomFieldServiceClient customFieldServiceClient = await CustomFieldServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            NetworkName parent = NetworkName.FromNetworkCode("[NETWORK_CODE]");
+            IEnumerable<UpdateCustomFieldRequest> requests = new UpdateCustomFieldRequest[]
+            {
+                new UpdateCustomFieldRequest(),
+            };
+            // Make the request
+            BatchUpdateCustomFieldsResponse response = await customFieldServiceClient.BatchUpdateCustomFieldsAsync(parent, requests);
+            // End snippet
+        }
+
+        /// <summary>Snippet for BatchActivateCustomFields</summary>
+        public void BatchActivateCustomFieldsRequestObject()
+        {
+            // Snippet: BatchActivateCustomFields(BatchActivateCustomFieldsRequest, CallSettings)
+            // Create client
+            CustomFieldServiceClient customFieldServiceClient = CustomFieldServiceClient.Create();
+            // Initialize request argument(s)
+            BatchActivateCustomFieldsRequest request = new BatchActivateCustomFieldsRequest
+            {
+                ParentAsNetworkName = NetworkName.FromNetworkCode("[NETWORK_CODE]"),
+                CustomFieldNames =
+                {
+                    CustomFieldName.FromNetworkCodeCustomField("[NETWORK_CODE]", "[CUSTOM_FIELD]"),
+                },
+            };
+            // Make the request
+            BatchActivateCustomFieldsResponse response = customFieldServiceClient.BatchActivateCustomFields(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for BatchActivateCustomFieldsAsync</summary>
+        public async Task BatchActivateCustomFieldsRequestObjectAsync()
+        {
+            // Snippet: BatchActivateCustomFieldsAsync(BatchActivateCustomFieldsRequest, CallSettings)
+            // Additional: BatchActivateCustomFieldsAsync(BatchActivateCustomFieldsRequest, CancellationToken)
+            // Create client
+            CustomFieldServiceClient customFieldServiceClient = await CustomFieldServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            BatchActivateCustomFieldsRequest request = new BatchActivateCustomFieldsRequest
+            {
+                ParentAsNetworkName = NetworkName.FromNetworkCode("[NETWORK_CODE]"),
+                CustomFieldNames =
+                {
+                    CustomFieldName.FromNetworkCodeCustomField("[NETWORK_CODE]", "[CUSTOM_FIELD]"),
+                },
+            };
+            // Make the request
+            BatchActivateCustomFieldsResponse response = await customFieldServiceClient.BatchActivateCustomFieldsAsync(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for BatchActivateCustomFields</summary>
+        public void BatchActivateCustomFields()
+        {
+            // Snippet: BatchActivateCustomFields(string, IEnumerable<string>, CallSettings)
+            // Create client
+            CustomFieldServiceClient customFieldServiceClient = CustomFieldServiceClient.Create();
+            // Initialize request argument(s)
+            string parent = "networks/[NETWORK_CODE]";
+            IEnumerable<string> names = new string[]
+            {
+                "networks/[NETWORK_CODE]/customFields/[CUSTOM_FIELD]",
+            };
+            // Make the request
+            BatchActivateCustomFieldsResponse response = customFieldServiceClient.BatchActivateCustomFields(parent, names);
+            // End snippet
+        }
+
+        /// <summary>Snippet for BatchActivateCustomFieldsAsync</summary>
+        public async Task BatchActivateCustomFieldsAsync()
+        {
+            // Snippet: BatchActivateCustomFieldsAsync(string, IEnumerable<string>, CallSettings)
+            // Additional: BatchActivateCustomFieldsAsync(string, IEnumerable<string>, CancellationToken)
+            // Create client
+            CustomFieldServiceClient customFieldServiceClient = await CustomFieldServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            string parent = "networks/[NETWORK_CODE]";
+            IEnumerable<string> names = new string[]
+            {
+                "networks/[NETWORK_CODE]/customFields/[CUSTOM_FIELD]",
+            };
+            // Make the request
+            BatchActivateCustomFieldsResponse response = await customFieldServiceClient.BatchActivateCustomFieldsAsync(parent, names);
+            // End snippet
+        }
+
+        /// <summary>Snippet for BatchActivateCustomFields</summary>
+        public void BatchActivateCustomFieldsResourceNames()
+        {
+            // Snippet: BatchActivateCustomFields(NetworkName, IEnumerable<CustomFieldName>, CallSettings)
+            // Create client
+            CustomFieldServiceClient customFieldServiceClient = CustomFieldServiceClient.Create();
+            // Initialize request argument(s)
+            NetworkName parent = NetworkName.FromNetworkCode("[NETWORK_CODE]");
+            IEnumerable<CustomFieldName> names = new CustomFieldName[]
+            {
+                CustomFieldName.FromNetworkCodeCustomField("[NETWORK_CODE]", "[CUSTOM_FIELD]"),
+            };
+            // Make the request
+            BatchActivateCustomFieldsResponse response = customFieldServiceClient.BatchActivateCustomFields(parent, names);
+            // End snippet
+        }
+
+        /// <summary>Snippet for BatchActivateCustomFieldsAsync</summary>
+        public async Task BatchActivateCustomFieldsResourceNamesAsync()
+        {
+            // Snippet: BatchActivateCustomFieldsAsync(NetworkName, IEnumerable<CustomFieldName>, CallSettings)
+            // Additional: BatchActivateCustomFieldsAsync(NetworkName, IEnumerable<CustomFieldName>, CancellationToken)
+            // Create client
+            CustomFieldServiceClient customFieldServiceClient = await CustomFieldServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            NetworkName parent = NetworkName.FromNetworkCode("[NETWORK_CODE]");
+            IEnumerable<CustomFieldName> names = new CustomFieldName[]
+            {
+                CustomFieldName.FromNetworkCodeCustomField("[NETWORK_CODE]", "[CUSTOM_FIELD]"),
+            };
+            // Make the request
+            BatchActivateCustomFieldsResponse response = await customFieldServiceClient.BatchActivateCustomFieldsAsync(parent, names);
+            // End snippet
+        }
+
+        /// <summary>Snippet for BatchDeactivateCustomFields</summary>
+        public void BatchDeactivateCustomFieldsRequestObject()
+        {
+            // Snippet: BatchDeactivateCustomFields(BatchDeactivateCustomFieldsRequest, CallSettings)
+            // Create client
+            CustomFieldServiceClient customFieldServiceClient = CustomFieldServiceClient.Create();
+            // Initialize request argument(s)
+            BatchDeactivateCustomFieldsRequest request = new BatchDeactivateCustomFieldsRequest
+            {
+                ParentAsNetworkName = NetworkName.FromNetworkCode("[NETWORK_CODE]"),
+                CustomFieldNames =
+                {
+                    CustomFieldName.FromNetworkCodeCustomField("[NETWORK_CODE]", "[CUSTOM_FIELD]"),
+                },
+            };
+            // Make the request
+            BatchDeactivateCustomFieldsResponse response = customFieldServiceClient.BatchDeactivateCustomFields(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for BatchDeactivateCustomFieldsAsync</summary>
+        public async Task BatchDeactivateCustomFieldsRequestObjectAsync()
+        {
+            // Snippet: BatchDeactivateCustomFieldsAsync(BatchDeactivateCustomFieldsRequest, CallSettings)
+            // Additional: BatchDeactivateCustomFieldsAsync(BatchDeactivateCustomFieldsRequest, CancellationToken)
+            // Create client
+            CustomFieldServiceClient customFieldServiceClient = await CustomFieldServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            BatchDeactivateCustomFieldsRequest request = new BatchDeactivateCustomFieldsRequest
+            {
+                ParentAsNetworkName = NetworkName.FromNetworkCode("[NETWORK_CODE]"),
+                CustomFieldNames =
+                {
+                    CustomFieldName.FromNetworkCodeCustomField("[NETWORK_CODE]", "[CUSTOM_FIELD]"),
+                },
+            };
+            // Make the request
+            BatchDeactivateCustomFieldsResponse response = await customFieldServiceClient.BatchDeactivateCustomFieldsAsync(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for BatchDeactivateCustomFields</summary>
+        public void BatchDeactivateCustomFields()
+        {
+            // Snippet: BatchDeactivateCustomFields(string, IEnumerable<string>, CallSettings)
+            // Create client
+            CustomFieldServiceClient customFieldServiceClient = CustomFieldServiceClient.Create();
+            // Initialize request argument(s)
+            string parent = "networks/[NETWORK_CODE]";
+            IEnumerable<string> names = new string[]
+            {
+                "networks/[NETWORK_CODE]/customFields/[CUSTOM_FIELD]",
+            };
+            // Make the request
+            BatchDeactivateCustomFieldsResponse response = customFieldServiceClient.BatchDeactivateCustomFields(parent, names);
+            // End snippet
+        }
+
+        /// <summary>Snippet for BatchDeactivateCustomFieldsAsync</summary>
+        public async Task BatchDeactivateCustomFieldsAsync()
+        {
+            // Snippet: BatchDeactivateCustomFieldsAsync(string, IEnumerable<string>, CallSettings)
+            // Additional: BatchDeactivateCustomFieldsAsync(string, IEnumerable<string>, CancellationToken)
+            // Create client
+            CustomFieldServiceClient customFieldServiceClient = await CustomFieldServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            string parent = "networks/[NETWORK_CODE]";
+            IEnumerable<string> names = new string[]
+            {
+                "networks/[NETWORK_CODE]/customFields/[CUSTOM_FIELD]",
+            };
+            // Make the request
+            BatchDeactivateCustomFieldsResponse response = await customFieldServiceClient.BatchDeactivateCustomFieldsAsync(parent, names);
+            // End snippet
+        }
+
+        /// <summary>Snippet for BatchDeactivateCustomFields</summary>
+        public void BatchDeactivateCustomFieldsResourceNames()
+        {
+            // Snippet: BatchDeactivateCustomFields(NetworkName, IEnumerable<CustomFieldName>, CallSettings)
+            // Create client
+            CustomFieldServiceClient customFieldServiceClient = CustomFieldServiceClient.Create();
+            // Initialize request argument(s)
+            NetworkName parent = NetworkName.FromNetworkCode("[NETWORK_CODE]");
+            IEnumerable<CustomFieldName> names = new CustomFieldName[]
+            {
+                CustomFieldName.FromNetworkCodeCustomField("[NETWORK_CODE]", "[CUSTOM_FIELD]"),
+            };
+            // Make the request
+            BatchDeactivateCustomFieldsResponse response = customFieldServiceClient.BatchDeactivateCustomFields(parent, names);
+            // End snippet
+        }
+
+        /// <summary>Snippet for BatchDeactivateCustomFieldsAsync</summary>
+        public async Task BatchDeactivateCustomFieldsResourceNamesAsync()
+        {
+            // Snippet: BatchDeactivateCustomFieldsAsync(NetworkName, IEnumerable<CustomFieldName>, CallSettings)
+            // Additional: BatchDeactivateCustomFieldsAsync(NetworkName, IEnumerable<CustomFieldName>, CancellationToken)
+            // Create client
+            CustomFieldServiceClient customFieldServiceClient = await CustomFieldServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            NetworkName parent = NetworkName.FromNetworkCode("[NETWORK_CODE]");
+            IEnumerable<CustomFieldName> names = new CustomFieldName[]
+            {
+                CustomFieldName.FromNetworkCodeCustomField("[NETWORK_CODE]", "[CUSTOM_FIELD]"),
+            };
+            // Make the request
+            BatchDeactivateCustomFieldsResponse response = await customFieldServiceClient.BatchDeactivateCustomFieldsAsync(parent, names);
             // End snippet
         }
     }
