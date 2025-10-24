@@ -262,7 +262,7 @@ namespace Google.Apps.Chat.V1 {
         /// </summary>
         [pbr::OriginalName("CREATOR")] Creator = 1,
         /// <summary>
-        /// A space manager deleted the message.
+        /// An owner or manager deleted the message.
         /// </summary>
         [pbr::OriginalName("SPACE_OWNER")] SpaceOwner = 2,
         /// <summary>
