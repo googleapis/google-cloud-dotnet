@@ -1684,6 +1684,12 @@
                 "DirectRawPredictAsync"
               ]
             },
+            "EmbedContent": {
+              "methods": [
+                "EmbedContent",
+                "EmbedContentAsync"
+              ]
+            },
             "Explain": {
               "methods": [
                 "Explain",
