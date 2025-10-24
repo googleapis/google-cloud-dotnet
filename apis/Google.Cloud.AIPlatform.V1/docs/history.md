@@ -1,5 +1,11 @@
 # Version history
 
+## Version 3.53.0, released 2025-10-24
+
+### New features
+
+- Add EmbedContent method v1
+
 ## Version 3.52.0, released 2025-10-21
 
 ### New features
