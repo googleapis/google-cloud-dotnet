@@ -202,6 +202,7 @@ namespace Google.Cloud.AIPlatform.V1
             yield return TuningJobReflection.Descriptor;
             yield return TypesReflection.Descriptor;
             yield return UnmanagedContainerModelReflection.Descriptor;
+            yield return UsageMetadataReflection.Descriptor;
             yield return UserActionReferenceReflection.Descriptor;
             yield return ValueReflection.Descriptor;
             yield return VertexRagDataReflection.Descriptor;

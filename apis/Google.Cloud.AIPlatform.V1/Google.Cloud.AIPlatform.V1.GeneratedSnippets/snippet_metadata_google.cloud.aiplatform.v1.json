@@ -71775,6 +71775,309 @@
       ]
     },
     {
+      "regionTag": "aiplatform_v1_generated_PredictionService_EmbedContent_sync",
+      "title": "EmbedContentRequestObject",
+      "description": "Snippet for EmbedContent",
+      "file": "PredictionServiceClient.EmbedContentRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "EmbedContent",
+        "fullName": "Google.Cloud.AIPlatform.V1.PredictionServiceClient.EmbedContent",
+        "parameters": [
+          {
+            "type": "Google.Cloud.AIPlatform.V1.EmbedContentRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.AIPlatform.V1.EmbedContentResponse",
+        "client": {
+          "shortName": "PredictionServiceClient",
+          "fullName": "Google.Cloud.AIPlatform.V1.PredictionServiceClient"
+        },
+        "method": {
+          "shortName": "EmbedContent",
+          "fullName": "google.cloud.aiplatform.v1.PredictionService.EmbedContent",
+          "service": {
+            "shortName": "PredictionService",
+            "fullName": "google.cloud.aiplatform.v1.PredictionService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 49,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 47,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "aiplatform_v1_generated_PredictionService_EmbedContent_async",
+      "title": "EmbedContentRequestObjectAsync",
+      "description": "Snippet for EmbedContentAsync",
+      "file": "PredictionServiceClient.EmbedContentRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "EmbedContentAsync",
+        "fullName": "Google.Cloud.AIPlatform.V1.PredictionServiceClient.EmbedContentAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.AIPlatform.V1.EmbedContentRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.AIPlatform.V1.EmbedContentResponse>",
+        "client": {
+          "shortName": "PredictionServiceClient",
+          "fullName": "Google.Cloud.AIPlatform.V1.PredictionServiceClient"
+        },
+        "method": {
+          "shortName": "EmbedContent",
+          "fullName": "google.cloud.aiplatform.v1.PredictionService.EmbedContent",
+          "service": {
+            "shortName": "PredictionService",
+            "fullName": "google.cloud.aiplatform.v1.PredictionService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 50,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 48,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "aiplatform_v1_generated_PredictionService_EmbedContent_sync_flattened",
+      "title": "EmbedContent",
+      "description": "Snippet for EmbedContent",
+      "file": "PredictionServiceClient.EmbedContentSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "EmbedContent",
+        "fullName": "Google.Cloud.AIPlatform.V1.PredictionServiceClient.EmbedContent",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "model"
+          },
+          {
+            "type": "Google.Cloud.AIPlatform.V1.Content",
+            "name": "content"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.AIPlatform.V1.EmbedContentResponse",
+        "client": {
+          "shortName": "PredictionServiceClient",
+          "fullName": "Google.Cloud.AIPlatform.V1.PredictionServiceClient"
+        },
+        "method": {
+          "shortName": "EmbedContent",
+          "fullName": "google.cloud.aiplatform.v1.PredictionService.EmbedContent",
+          "service": {
+            "shortName": "PredictionService",
+            "fullName": "google.cloud.aiplatform.v1.PredictionService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "aiplatform_v1_generated_PredictionService_EmbedContent_async_flattened",
+      "title": "EmbedContentAsync",
+      "description": "Snippet for EmbedContentAsync",
+      "file": "PredictionServiceClient.EmbedContentAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "EmbedContentAsync",
+        "fullName": "Google.Cloud.AIPlatform.V1.PredictionServiceClient.EmbedContentAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "model"
+          },
+          {
+            "type": "Google.Cloud.AIPlatform.V1.Content",
+            "name": "content"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.AIPlatform.V1.EmbedContentResponse>",
+        "client": {
+          "shortName": "PredictionServiceClient",
+          "fullName": "Google.Cloud.AIPlatform.V1.PredictionServiceClient"
+        },
+        "method": {
+          "shortName": "EmbedContent",
+          "fullName": "google.cloud.aiplatform.v1.PredictionService.EmbedContent",
+          "service": {
+            "shortName": "PredictionService",
+            "fullName": "google.cloud.aiplatform.v1.PredictionService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 43,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 41,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "aiplatform_v1_generated_PredictionService_EmbedContent_sync_flattened_resourceNames",
+      "title": "EmbedContentResourceNames",
+      "description": "Snippet for EmbedContent",
+      "file": "PredictionServiceClient.EmbedContentResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "EmbedContent",
+        "fullName": "Google.Cloud.AIPlatform.V1.PredictionServiceClient.EmbedContent",
+        "parameters": [
+          {
+            "type": "Google.Cloud.AIPlatform.V1.EndpointName",
+            "name": "model"
+          },
+          {
+            "type": "Google.Cloud.AIPlatform.V1.Content",
+            "name": "content"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.AIPlatform.V1.EmbedContentResponse",
+        "client": {
+          "shortName": "PredictionServiceClient",
+          "fullName": "Google.Cloud.AIPlatform.V1.PredictionServiceClient"
+        },
+        "method": {
+          "shortName": "EmbedContent",
+          "fullName": "google.cloud.aiplatform.v1.PredictionService.EmbedContent",
+          "service": {
+            "shortName": "PredictionService",
+            "fullName": "google.cloud.aiplatform.v1.PredictionService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "aiplatform_v1_generated_PredictionService_EmbedContent_async_flattened_resourceNames",
+      "title": "EmbedContentResourceNamesAsync",
+      "description": "Snippet for EmbedContentAsync",
+      "file": "PredictionServiceClient.EmbedContentResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "EmbedContentAsync",
+        "fullName": "Google.Cloud.AIPlatform.V1.PredictionServiceClient.EmbedContentAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.AIPlatform.V1.EndpointName",
+            "name": "model"
+          },
+          {
+            "type": "Google.Cloud.AIPlatform.V1.Content",
+            "name": "content"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.AIPlatform.V1.EmbedContentResponse>",
+        "client": {
+          "shortName": "PredictionServiceClient",
+          "fullName": "Google.Cloud.AIPlatform.V1.PredictionServiceClient"
+        },
+        "method": {
+          "shortName": "EmbedContent",
+          "fullName": "google.cloud.aiplatform.v1.PredictionService.EmbedContent",
+          "service": {
+            "shortName": "PredictionService",
+            "fullName": "google.cloud.aiplatform.v1.PredictionService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 43,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 41,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
       "regionTag": "aiplatform_v1_generated_ReasoningEngineExecutionService_QueryReasoningEngine_sync",
       "title": "QueryReasoningEngineRequestObject",
       "description": "Snippet for QueryReasoningEngine",
