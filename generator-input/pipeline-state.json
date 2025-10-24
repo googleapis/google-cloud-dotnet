@@ -1891,7 +1891,7 @@
             "generationAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
             "releaseAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
             "releaseTimestamp": "2024-05-14T07:16:17Z",
-            "lastGeneratedCommit": "ada88fe8801a840b197706a8068fee1ca45b0f6f",
+            "lastGeneratedCommit": "6e4f2a51f70f16e8102c59e93e930f0df0a0f768",
             "apiPaths": [
                 "google/cloud/location"
             ],
