@@ -334,6 +334,7 @@ internal sealed class PredictionServiceChatClient(PredictionServiceClient client
     /// <summary>Creates <see cref="Part"/>s for <paramref name="contents"/> and adds them to <paramref name="parts"/>.</summary>
     private static void AddPartsForAIContents(IEnumerable<AIContent> contents, RepeatedField<Part> parts)
     {
+        ByteString thoughtSignature = ByteString.Empty;
         foreach (AIContent content in contents)
         {
             switch (content)
@@ -343,7 +344,9 @@ internal sealed class PredictionServiceChatClient(PredictionServiceClient client
                     break;
 
                 case TextContent textContent:
-                    parts.Add(new Part() { Text = textContent.Text });
+                    parts.Add(new Part() {
+                        Text = textContent.Text,
+                    });
                     break;
 
                 case DataContent dataContent:
@@ -353,7 +356,7 @@ internal sealed class PredictionServiceChatClient(PredictionServiceClient client
                         {
                             MimeType = dataContent.MediaType,
                             Data = ByteString.CopyFrom(dataContent.Data.Span)
-                        }
+                        },
                     });
                     break;
 
@@ -364,7 +367,7 @@ internal sealed class PredictionServiceChatClient(PredictionServiceClient client
                         {
                             FileUri = uriContent.Uri.AbsoluteUri,
                             MimeType = uriContent.MediaType
-                        }
+                        },
                     });
                     break;
 
@@ -394,21 +397,17 @@ internal sealed class PredictionServiceChatClient(PredictionServiceClient client
                     });
                     break;
 
-                case TextReasoningContent reasoningContent when reasoningContent.ProtectedData is { } reasoningData:
-                    try
-                    {
-                        parts.Add(new Part()
-                        {
-                            Thought = true,
-                            ThoughtSignature = ByteString.FromBase64(reasoningData),
-                        });
-                    }
-                    catch
-                    {
-                        // Ignore reasoning data if we can't parse it.
-                    }
+                // we expect 0 or 1 TextReasoningContent with ProtectedData set per collection of AIContent returned from the mnodel.
+                case TextReasoningContent reasoningContent when !string.IsNullOrEmpty(reasoningContent.ProtectedData):
+                    thoughtSignature = ByteString.FromBase64(reasoningContent.ProtectedData);
                     break;
             }
+        }
+
+        // add the TextReasoningContent's ThoughtSignature to the first part if we have one.
+        if (parts.Any() && !thoughtSignature.IsEmpty)
+        {
+            parts[0].ThoughtSignature = thoughtSignature;
         }
     }
 
@@ -417,8 +416,15 @@ internal sealed class PredictionServiceChatClient(PredictionServiceClient client
     {
         foreach (var part in parts)
         {
+            if (!part.ThoughtSignature.IsEmpty)
+            {
+                contents.Add(new TextReasoningContent(null) { ProtectedData = part.ThoughtSignature.ToBase64() });
+            }
+
             AIContent? content = part.DataCase switch
             {
+                _ when part.Thought => new TextReasoningContent(part.Text),
+
                 Part.DataOneofCase.Text => new TextContent(part.Text),
 
                 Part.DataOneofCase.InlineData => new DataContent(part.InlineData!.Data.ToByteArray(), part.InlineData.MimeType),
@@ -430,8 +436,6 @@ internal sealed class PredictionServiceChatClient(PredictionServiceClient client
 
                 Part.DataOneofCase.FunctionResponse => new FunctionResultContent(part.FunctionResponse!.Name,
                     part.FunctionResponse.Response is not null ? JsonSerializer.Deserialize<object>(part.FunctionResponse.Response.ToString()) : null),
-
-                _ when part.Thought => new TextReasoningContent(null) { ProtectedData = part.ThoughtSignature.ToBase64() },
 
                 _ => null,
             };
@@ -493,17 +497,20 @@ internal sealed class PredictionServiceChatClient(PredictionServiceClient client
     }
 
     /// <summary>Creates an M.E.AI <see cref="ChatFinishReason"/> from a Google <see cref="ConvertFinishReason(Candidate.Types.FinishReason)"/>.</summary>
-    private static ChatFinishReason ConvertFinishReason(Candidate.Types.FinishReason finishReason) =>
+    private static ChatFinishReason? ConvertFinishReason(Candidate.Types.FinishReason finishReason) =>
         finishReason switch
         {
             Candidate.Types.FinishReason.MaxTokens => ChatFinishReason.Length,
             Candidate.Types.FinishReason.MalformedFunctionCall => ChatFinishReason.ToolCalls,
+            Candidate.Types.FinishReason.Stop => ChatFinishReason.Stop,
             Candidate.Types.FinishReason.Safety or
                 Candidate.Types.FinishReason.Recitation or
                 Candidate.Types.FinishReason.Blocklist or
                 Candidate.Types.FinishReason.ProhibitedContent or
-                Candidate.Types.FinishReason.Spii => ChatFinishReason.ContentFilter,
-            _ => ChatFinishReason.Stop
+                Candidate.Types.FinishReason.Spii or
+                Candidate.Types.FinishReason.ModelArmor => ChatFinishReason.ContentFilter,
+            Candidate.Types.FinishReason.Unspecified => null,
+            _ => null
         };
 
     /// <summary>Creates a <see cref="UsageDetails"/> populated from the supplied <paramref name="usageMetadata"/>.</summary>
