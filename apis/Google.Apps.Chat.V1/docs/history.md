@@ -1,5 +1,15 @@
 # Version history
 
+## Version 1.0.0-beta18, released 2025-10-24
+
+### New features
+
+- Add ROLE_ASSISTANT_MANAGER to the MembershipRole enum in the Membership proto and assistant_managers_allowed to the PermissionSetting
+
+### Documentation improvements
+
+- Update field documentations for space.proto and membership.proto
+
 ## Version 1.0.0-beta17, released 2025-08-28
 
 ### Bug fixes
