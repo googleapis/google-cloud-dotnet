@@ -1016,7 +1016,7 @@
             "generationAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
             "releaseAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
             "releaseTimestamp": "2024-03-26T20:38:23Z",
-            "lastGeneratedCommit": "9415ba048aa587b1b2df2b96fc00aa009c831597",
+            "lastGeneratedCommit": "6e4f2a51f70f16e8102c59e93e930f0df0a0f768",
             "apiPaths": [
                 "google/cloud/common"
             ],
