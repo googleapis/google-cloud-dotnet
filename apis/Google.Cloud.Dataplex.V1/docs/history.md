@@ -1,5 +1,22 @@
 # Version history
 
+## Version 3.11.0, released 2025-10-24
+
+### New features
+
+- A new message `DataDocumentationSpec` is added representing Data Documentation Spec
+- A new message `DataDocumentationResult` is added representing Data Documentation Result
+- A new field `data_documentation_spec` is added for Data Documentation Spec to message `.google.cloud.dataplex.v1.DataScan`
+- A new field `data_documentation_result` is added for Data Documentation Result to message `.google.cloud.dataplex.v1.DataScan`
+- A new field `data_documentation_spec` is added for Data Documentation Spec to message `.google.cloud.dataplex.v1.DataScanJob`
+- A new field `data_documentation_result` is added for Data Documentation Result in `.google.cloud.dataplex.v1.DataScanJob`
+- A new data scan type Data documentation added.
+
+### Documentation improvements
+
+- A comment for message `DataScan` is changed
+- A comment for field `resource` in message `.google.cloud.dataplex.v1.DataSource` is changed
+
 ## Version 3.10.0, released 2025-09-16
 
 ### New features
