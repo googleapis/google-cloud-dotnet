@@ -3443,6 +3443,11 @@ namespace Google.Cloud.Dataplex.V1
 
         /// <summary>
         /// Lists Entries within an EntryGroup.
+        /// Caution: The Vertex AI, Bigtable, Spanner, Pub/Sub, Dataform, and Dataproc
+        /// Metastore metadata that is stored in Dataplex Universal Catalog is
+        /// changing. For more information, see [Changes to metadata stored in
+        /// Dataplex Universal
+        /// Catalog](https://cloud.google.com/dataplex/docs/metadata-changes).
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -3452,6 +3457,11 @@ namespace Google.Cloud.Dataplex.V1
 
         /// <summary>
         /// Lists Entries within an EntryGroup.
+        /// Caution: The Vertex AI, Bigtable, Spanner, Pub/Sub, Dataform, and Dataproc
+        /// Metastore metadata that is stored in Dataplex Universal Catalog is
+        /// changing. For more information, see [Changes to metadata stored in
+        /// Dataplex Universal
+        /// Catalog](https://cloud.google.com/dataplex/docs/metadata-changes).
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -3461,6 +3471,11 @@ namespace Google.Cloud.Dataplex.V1
 
         /// <summary>
         /// Lists Entries within an EntryGroup.
+        /// Caution: The Vertex AI, Bigtable, Spanner, Pub/Sub, Dataform, and Dataproc
+        /// Metastore metadata that is stored in Dataplex Universal Catalog is
+        /// changing. For more information, see [Changes to metadata stored in
+        /// Dataplex Universal
+        /// Catalog](https://cloud.google.com/dataplex/docs/metadata-changes).
         /// </summary>
         /// <param name="parent">
         /// Required. The resource name of the parent Entry Group:
@@ -3495,6 +3510,11 @@ namespace Google.Cloud.Dataplex.V1
 
         /// <summary>
         /// Lists Entries within an EntryGroup.
+        /// Caution: The Vertex AI, Bigtable, Spanner, Pub/Sub, Dataform, and Dataproc
+        /// Metastore metadata that is stored in Dataplex Universal Catalog is
+        /// changing. For more information, see [Changes to metadata stored in
+        /// Dataplex Universal
+        /// Catalog](https://cloud.google.com/dataplex/docs/metadata-changes).
         /// </summary>
         /// <param name="parent">
         /// Required. The resource name of the parent Entry Group:
@@ -3529,6 +3549,11 @@ namespace Google.Cloud.Dataplex.V1
 
         /// <summary>
         /// Lists Entries within an EntryGroup.
+        /// Caution: The Vertex AI, Bigtable, Spanner, Pub/Sub, Dataform, and Dataproc
+        /// Metastore metadata that is stored in Dataplex Universal Catalog is
+        /// changing. For more information, see [Changes to metadata stored in
+        /// Dataplex Universal
+        /// Catalog](https://cloud.google.com/dataplex/docs/metadata-changes).
         /// </summary>
         /// <param name="parent">
         /// Required. The resource name of the parent Entry Group:
@@ -3563,6 +3588,11 @@ namespace Google.Cloud.Dataplex.V1
 
         /// <summary>
         /// Lists Entries within an EntryGroup.
+        /// Caution: The Vertex AI, Bigtable, Spanner, Pub/Sub, Dataform, and Dataproc
+        /// Metastore metadata that is stored in Dataplex Universal Catalog is
+        /// changing. For more information, see [Changes to metadata stored in
+        /// Dataplex Universal
+        /// Catalog](https://cloud.google.com/dataplex/docs/metadata-changes).
         /// </summary>
         /// <param name="parent">
         /// Required. The resource name of the parent Entry Group:
@@ -3597,6 +3627,11 @@ namespace Google.Cloud.Dataplex.V1
 
         /// <summary>
         /// Gets an Entry.
+        /// Caution: The Vertex AI, Bigtable, Spanner, Pub/Sub, Dataform, and Dataproc
+        /// Metastore metadata that is stored in Dataplex Universal Catalog is
+        /// changing. For more information, see [Changes to metadata stored in
+        /// Dataplex Universal
+        /// Catalog](https://cloud.google.com/dataplex/docs/metadata-changes).
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -3606,6 +3641,11 @@ namespace Google.Cloud.Dataplex.V1
 
         /// <summary>
         /// Gets an Entry.
+        /// Caution: The Vertex AI, Bigtable, Spanner, Pub/Sub, Dataform, and Dataproc
+        /// Metastore metadata that is stored in Dataplex Universal Catalog is
+        /// changing. For more information, see [Changes to metadata stored in
+        /// Dataplex Universal
+        /// Catalog](https://cloud.google.com/dataplex/docs/metadata-changes).
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -3615,6 +3655,11 @@ namespace Google.Cloud.Dataplex.V1
 
         /// <summary>
         /// Gets an Entry.
+        /// Caution: The Vertex AI, Bigtable, Spanner, Pub/Sub, Dataform, and Dataproc
+        /// Metastore metadata that is stored in Dataplex Universal Catalog is
+        /// changing. For more information, see [Changes to metadata stored in
+        /// Dataplex Universal
+        /// Catalog](https://cloud.google.com/dataplex/docs/metadata-changes).
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -3624,6 +3669,11 @@ namespace Google.Cloud.Dataplex.V1
 
         /// <summary>
         /// Gets an Entry.
+        /// Caution: The Vertex AI, Bigtable, Spanner, Pub/Sub, Dataform, and Dataproc
+        /// Metastore metadata that is stored in Dataplex Universal Catalog is
+        /// changing. For more information, see [Changes to metadata stored in
+        /// Dataplex Universal
+        /// Catalog](https://cloud.google.com/dataplex/docs/metadata-changes).
         /// </summary>
         /// <param name="name">
         /// Required. The resource name of the Entry:
@@ -3639,6 +3689,11 @@ namespace Google.Cloud.Dataplex.V1
 
         /// <summary>
         /// Gets an Entry.
+        /// Caution: The Vertex AI, Bigtable, Spanner, Pub/Sub, Dataform, and Dataproc
+        /// Metastore metadata that is stored in Dataplex Universal Catalog is
+        /// changing. For more information, see [Changes to metadata stored in
+        /// Dataplex Universal
+        /// Catalog](https://cloud.google.com/dataplex/docs/metadata-changes).
         /// </summary>
         /// <param name="name">
         /// Required. The resource name of the Entry:
@@ -3654,6 +3709,11 @@ namespace Google.Cloud.Dataplex.V1
 
         /// <summary>
         /// Gets an Entry.
+        /// Caution: The Vertex AI, Bigtable, Spanner, Pub/Sub, Dataform, and Dataproc
+        /// Metastore metadata that is stored in Dataplex Universal Catalog is
+        /// changing. For more information, see [Changes to metadata stored in
+        /// Dataplex Universal
+        /// Catalog](https://cloud.google.com/dataplex/docs/metadata-changes).
         /// </summary>
         /// <param name="name">
         /// Required. The resource name of the Entry:
@@ -3666,6 +3726,11 @@ namespace Google.Cloud.Dataplex.V1
 
         /// <summary>
         /// Gets an Entry.
+        /// Caution: The Vertex AI, Bigtable, Spanner, Pub/Sub, Dataform, and Dataproc
+        /// Metastore metadata that is stored in Dataplex Universal Catalog is
+        /// changing. For more information, see [Changes to metadata stored in
+        /// Dataplex Universal
+        /// Catalog](https://cloud.google.com/dataplex/docs/metadata-changes).
         /// </summary>
         /// <param name="name">
         /// Required. The resource name of the Entry:
@@ -3681,6 +3746,11 @@ namespace Google.Cloud.Dataplex.V1
 
         /// <summary>
         /// Gets an Entry.
+        /// Caution: The Vertex AI, Bigtable, Spanner, Pub/Sub, Dataform, and Dataproc
+        /// Metastore metadata that is stored in Dataplex Universal Catalog is
+        /// changing. For more information, see [Changes to metadata stored in
+        /// Dataplex Universal
+        /// Catalog](https://cloud.google.com/dataplex/docs/metadata-changes).
         /// </summary>
         /// <param name="name">
         /// Required. The resource name of the Entry:
@@ -3696,6 +3766,11 @@ namespace Google.Cloud.Dataplex.V1
 
         /// <summary>
         /// Gets an Entry.
+        /// Caution: The Vertex AI, Bigtable, Spanner, Pub/Sub, Dataform, and Dataproc
+        /// Metastore metadata that is stored in Dataplex Universal Catalog is
+        /// changing. For more information, see [Changes to metadata stored in
+        /// Dataplex Universal
+        /// Catalog](https://cloud.google.com/dataplex/docs/metadata-changes).
         /// </summary>
         /// <param name="name">
         /// Required. The resource name of the Entry:
@@ -3708,6 +3783,11 @@ namespace Google.Cloud.Dataplex.V1
 
         /// <summary>
         /// Looks up an entry by name using the permission on the source system.
+        /// Caution: The Vertex AI, Bigtable, Spanner, Pub/Sub, Dataform, and Dataproc
+        /// Metastore metadata that is stored in Dataplex Universal Catalog is
+        /// changing. For more information, see [Changes to metadata stored in
+        /// Dataplex Universal
+        /// Catalog](https://cloud.google.com/dataplex/docs/metadata-changes).
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -3717,6 +3797,11 @@ namespace Google.Cloud.Dataplex.V1
 
         /// <summary>
         /// Looks up an entry by name using the permission on the source system.
+        /// Caution: The Vertex AI, Bigtable, Spanner, Pub/Sub, Dataform, and Dataproc
+        /// Metastore metadata that is stored in Dataplex Universal Catalog is
+        /// changing. For more information, see [Changes to metadata stored in
+        /// Dataplex Universal
+        /// Catalog](https://cloud.google.com/dataplex/docs/metadata-changes).
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -3726,6 +3811,11 @@ namespace Google.Cloud.Dataplex.V1
 
         /// <summary>
         /// Looks up an entry by name using the permission on the source system.
+        /// Caution: The Vertex AI, Bigtable, Spanner, Pub/Sub, Dataform, and Dataproc
+        /// Metastore metadata that is stored in Dataplex Universal Catalog is
+        /// changing. For more information, see [Changes to metadata stored in
+        /// Dataplex Universal
+        /// Catalog](https://cloud.google.com/dataplex/docs/metadata-changes).
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -5712,6 +5802,11 @@ namespace Google.Cloud.Dataplex.V1
 
         /// <summary>
         /// Lists Entries within an EntryGroup.
+        /// Caution: The Vertex AI, Bigtable, Spanner, Pub/Sub, Dataform, and Dataproc
+        /// Metastore metadata that is stored in Dataplex Universal Catalog is
+        /// changing. For more information, see [Changes to metadata stored in
+        /// Dataplex Universal
+        /// Catalog](https://cloud.google.com/dataplex/docs/metadata-changes).
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -5724,6 +5819,11 @@ namespace Google.Cloud.Dataplex.V1
 
         /// <summary>
         /// Lists Entries within an EntryGroup.
+        /// Caution: The Vertex AI, Bigtable, Spanner, Pub/Sub, Dataform, and Dataproc
+        /// Metastore metadata that is stored in Dataplex Universal Catalog is
+        /// changing. For more information, see [Changes to metadata stored in
+        /// Dataplex Universal
+        /// Catalog](https://cloud.google.com/dataplex/docs/metadata-changes).
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -5736,6 +5836,11 @@ namespace Google.Cloud.Dataplex.V1
 
         /// <summary>
         /// Gets an Entry.
+        /// Caution: The Vertex AI, Bigtable, Spanner, Pub/Sub, Dataform, and Dataproc
+        /// Metastore metadata that is stored in Dataplex Universal Catalog is
+        /// changing. For more information, see [Changes to metadata stored in
+        /// Dataplex Universal
+        /// Catalog](https://cloud.google.com/dataplex/docs/metadata-changes).
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -5748,6 +5853,11 @@ namespace Google.Cloud.Dataplex.V1
 
         /// <summary>
         /// Gets an Entry.
+        /// Caution: The Vertex AI, Bigtable, Spanner, Pub/Sub, Dataform, and Dataproc
+        /// Metastore metadata that is stored in Dataplex Universal Catalog is
+        /// changing. For more information, see [Changes to metadata stored in
+        /// Dataplex Universal
+        /// Catalog](https://cloud.google.com/dataplex/docs/metadata-changes).
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -5760,6 +5870,11 @@ namespace Google.Cloud.Dataplex.V1
 
         /// <summary>
         /// Looks up an entry by name using the permission on the source system.
+        /// Caution: The Vertex AI, Bigtable, Spanner, Pub/Sub, Dataform, and Dataproc
+        /// Metastore metadata that is stored in Dataplex Universal Catalog is
+        /// changing. For more information, see [Changes to metadata stored in
+        /// Dataplex Universal
+        /// Catalog](https://cloud.google.com/dataplex/docs/metadata-changes).
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -5772,6 +5887,11 @@ namespace Google.Cloud.Dataplex.V1
 
         /// <summary>
         /// Looks up an entry by name using the permission on the source system.
+        /// Caution: The Vertex AI, Bigtable, Spanner, Pub/Sub, Dataform, and Dataproc
+        /// Metastore metadata that is stored in Dataplex Universal Catalog is
+        /// changing. For more information, see [Changes to metadata stored in
+        /// Dataplex Universal
+        /// Catalog](https://cloud.google.com/dataplex/docs/metadata-changes).
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>

@@ -614,6 +614,11 @@ namespace Google.Cloud.Dataplex.V1 {
 
       /// <summary>
       /// Lists Entries within an EntryGroup.
+      /// Caution: The Vertex AI, Bigtable, Spanner, Pub/Sub, Dataform, and Dataproc
+      /// Metastore metadata that is stored in Dataplex Universal Catalog is
+      /// changing. For more information, see [Changes to metadata stored in
+      /// Dataplex Universal
+      /// Catalog](https://cloud.google.com/dataplex/docs/metadata-changes).
       /// </summary>
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
@@ -626,6 +631,11 @@ namespace Google.Cloud.Dataplex.V1 {
 
       /// <summary>
       /// Gets an Entry.
+      /// Caution: The Vertex AI, Bigtable, Spanner, Pub/Sub, Dataform, and Dataproc
+      /// Metastore metadata that is stored in Dataplex Universal Catalog is
+      /// changing. For more information, see [Changes to metadata stored in
+      /// Dataplex Universal
+      /// Catalog](https://cloud.google.com/dataplex/docs/metadata-changes).
       /// </summary>
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
@@ -638,6 +648,11 @@ namespace Google.Cloud.Dataplex.V1 {
 
       /// <summary>
       /// Looks up an entry by name using the permission on the source system.
+      /// Caution: The Vertex AI, Bigtable, Spanner, Pub/Sub, Dataform, and Dataproc
+      /// Metastore metadata that is stored in Dataplex Universal Catalog is
+      /// changing. For more information, see [Changes to metadata stored in
+      /// Dataplex Universal
+      /// Catalog](https://cloud.google.com/dataplex/docs/metadata-changes).
       /// </summary>
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
@@ -1645,6 +1660,11 @@ namespace Google.Cloud.Dataplex.V1 {
       }
       /// <summary>
       /// Lists Entries within an EntryGroup.
+      /// Caution: The Vertex AI, Bigtable, Spanner, Pub/Sub, Dataform, and Dataproc
+      /// Metastore metadata that is stored in Dataplex Universal Catalog is
+      /// changing. For more information, see [Changes to metadata stored in
+      /// Dataplex Universal
+      /// Catalog](https://cloud.google.com/dataplex/docs/metadata-changes).
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -1658,6 +1678,11 @@ namespace Google.Cloud.Dataplex.V1 {
       }
       /// <summary>
       /// Lists Entries within an EntryGroup.
+      /// Caution: The Vertex AI, Bigtable, Spanner, Pub/Sub, Dataform, and Dataproc
+      /// Metastore metadata that is stored in Dataplex Universal Catalog is
+      /// changing. For more information, see [Changes to metadata stored in
+      /// Dataplex Universal
+      /// Catalog](https://cloud.google.com/dataplex/docs/metadata-changes).
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -1669,6 +1694,11 @@ namespace Google.Cloud.Dataplex.V1 {
       }
       /// <summary>
       /// Lists Entries within an EntryGroup.
+      /// Caution: The Vertex AI, Bigtable, Spanner, Pub/Sub, Dataform, and Dataproc
+      /// Metastore metadata that is stored in Dataplex Universal Catalog is
+      /// changing. For more information, see [Changes to metadata stored in
+      /// Dataplex Universal
+      /// Catalog](https://cloud.google.com/dataplex/docs/metadata-changes).
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -1682,6 +1712,11 @@ namespace Google.Cloud.Dataplex.V1 {
       }
       /// <summary>
       /// Lists Entries within an EntryGroup.
+      /// Caution: The Vertex AI, Bigtable, Spanner, Pub/Sub, Dataform, and Dataproc
+      /// Metastore metadata that is stored in Dataplex Universal Catalog is
+      /// changing. For more information, see [Changes to metadata stored in
+      /// Dataplex Universal
+      /// Catalog](https://cloud.google.com/dataplex/docs/metadata-changes).
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -1693,6 +1728,11 @@ namespace Google.Cloud.Dataplex.V1 {
       }
       /// <summary>
       /// Gets an Entry.
+      /// Caution: The Vertex AI, Bigtable, Spanner, Pub/Sub, Dataform, and Dataproc
+      /// Metastore metadata that is stored in Dataplex Universal Catalog is
+      /// changing. For more information, see [Changes to metadata stored in
+      /// Dataplex Universal
+      /// Catalog](https://cloud.google.com/dataplex/docs/metadata-changes).
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -1706,6 +1746,11 @@ namespace Google.Cloud.Dataplex.V1 {
       }
       /// <summary>
       /// Gets an Entry.
+      /// Caution: The Vertex AI, Bigtable, Spanner, Pub/Sub, Dataform, and Dataproc
+      /// Metastore metadata that is stored in Dataplex Universal Catalog is
+      /// changing. For more information, see [Changes to metadata stored in
+      /// Dataplex Universal
+      /// Catalog](https://cloud.google.com/dataplex/docs/metadata-changes).
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -1717,6 +1762,11 @@ namespace Google.Cloud.Dataplex.V1 {
       }
       /// <summary>
       /// Gets an Entry.
+      /// Caution: The Vertex AI, Bigtable, Spanner, Pub/Sub, Dataform, and Dataproc
+      /// Metastore metadata that is stored in Dataplex Universal Catalog is
+      /// changing. For more information, see [Changes to metadata stored in
+      /// Dataplex Universal
+      /// Catalog](https://cloud.google.com/dataplex/docs/metadata-changes).
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -1730,6 +1780,11 @@ namespace Google.Cloud.Dataplex.V1 {
       }
       /// <summary>
       /// Gets an Entry.
+      /// Caution: The Vertex AI, Bigtable, Spanner, Pub/Sub, Dataform, and Dataproc
+      /// Metastore metadata that is stored in Dataplex Universal Catalog is
+      /// changing. For more information, see [Changes to metadata stored in
+      /// Dataplex Universal
+      /// Catalog](https://cloud.google.com/dataplex/docs/metadata-changes).
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -1741,6 +1796,11 @@ namespace Google.Cloud.Dataplex.V1 {
       }
       /// <summary>
       /// Looks up an entry by name using the permission on the source system.
+      /// Caution: The Vertex AI, Bigtable, Spanner, Pub/Sub, Dataform, and Dataproc
+      /// Metastore metadata that is stored in Dataplex Universal Catalog is
+      /// changing. For more information, see [Changes to metadata stored in
+      /// Dataplex Universal
+      /// Catalog](https://cloud.google.com/dataplex/docs/metadata-changes).
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -1754,6 +1814,11 @@ namespace Google.Cloud.Dataplex.V1 {
       }
       /// <summary>
       /// Looks up an entry by name using the permission on the source system.
+      /// Caution: The Vertex AI, Bigtable, Spanner, Pub/Sub, Dataform, and Dataproc
+      /// Metastore metadata that is stored in Dataplex Universal Catalog is
+      /// changing. For more information, see [Changes to metadata stored in
+      /// Dataplex Universal
+      /// Catalog](https://cloud.google.com/dataplex/docs/metadata-changes).
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -1765,6 +1830,11 @@ namespace Google.Cloud.Dataplex.V1 {
       }
       /// <summary>
       /// Looks up an entry by name using the permission on the source system.
+      /// Caution: The Vertex AI, Bigtable, Spanner, Pub/Sub, Dataform, and Dataproc
+      /// Metastore metadata that is stored in Dataplex Universal Catalog is
+      /// changing. For more information, see [Changes to metadata stored in
+      /// Dataplex Universal
+      /// Catalog](https://cloud.google.com/dataplex/docs/metadata-changes).
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -1778,6 +1848,11 @@ namespace Google.Cloud.Dataplex.V1 {
       }
       /// <summary>
       /// Looks up an entry by name using the permission on the source system.
+      /// Caution: The Vertex AI, Bigtable, Spanner, Pub/Sub, Dataform, and Dataproc
+      /// Metastore metadata that is stored in Dataplex Universal Catalog is
+      /// changing. For more information, see [Changes to metadata stored in
+      /// Dataplex Universal
+      /// Catalog](https://cloud.google.com/dataplex/docs/metadata-changes).
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
