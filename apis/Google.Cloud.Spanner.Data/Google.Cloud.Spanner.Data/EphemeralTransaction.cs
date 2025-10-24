@@ -163,6 +163,7 @@ namespace Google.Cloud.Spanner.Data
             }
         }
 
+        // We don't need this method to be async anymore since we are not acquiring/creating any new session to execute this with multiplex session.
         Task<ReliableStreamReader> ISpannerTransaction.ExecuteReadOrQueryAsync(ReadOrQueryRequest request, CancellationToken cancellationToken)
         {
             GaxPreconditions.CheckState(_creationOptions is null || _creationOptions.TimestampBound is not null,
@@ -170,15 +171,18 @@ namespace Google.Cloud.Spanner.Data
          
             return ExecuteHelper.WithErrorTranslationAndProfiling(Impl, "EphemeralTransaction.ExecuteReadOrQuery", _connection.Logger);
 
-            async Task<ReliableStreamReader> Impl()
+            Task<ReliableStreamReader> Impl()
             {
-                PooledSession session = await _connection.AcquireSessionAsync(_creationOptions, cancellationToken, out _).ConfigureAwait(false);
+                //PooledSession session = await _connection.AcquireSessionAsync(_creationOptions, cancellationToken, out _).ConfigureAwait(false);
+                ManagedTransaction transaction = _connection.AcquireManagedTransaction(_creationOptions, out _);
                 var callSettings = _connection.CreateCallSettings(
                     request.GetCallSettings,
                     cancellationToken);
-                var reader = request.ExecuteReadOrQueryStreamReader(session, callSettings);
-                reader.StreamClosed += delegate { session.ReleaseToPool(forceDelete: false); };
-                return reader;
+                var reader = request.ExecuteReadOrQueryStreamReader(transaction, callSettings);
+
+                // We don't need any cleanup wrt Session resources when stream closes
+                //reader.StreamClosed += delegate { session.ReleaseToPool(forceDelete: false); };
+                return Task.FromResult(reader);
             }
         }
     }

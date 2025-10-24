@@ -61,16 +61,19 @@ namespace Google.Cloud.Spanner.Data
         {
             GaxPreconditions.CheckNotNull(asyncWork, nameof(asyncWork));
 
-            // Session will be initialized and subsequently modified by CommitAttempt.
-            PooledSession session = null;
-            try
-            {
-                return await ExecuteWithRetryAsync(CommitAttempt, cancellationToken).ConfigureAwait(false);
-            }
-            finally
-            {
-                session?.Dispose();
-            }
+            // Managed Transaction will be initialized and subsequently modified by CommitAttempt.
+            //PooledSession session = null;
+            ManagedTransaction managedTransaction = null;
+
+            return await ExecuteWithRetryAsync(CommitAttempt, cancellationToken).ConfigureAwait(false);
+            //try
+            //{
+            //    return await ExecuteWithRetryAsync(CommitAttempt, cancellationToken).ConfigureAwait(false);
+            //}
+            //finally
+            //{
+            //    session?.Dispose();
+            //}
 
             async Task<TResult> CommitAttempt()
             {
@@ -82,9 +85,11 @@ namespace Google.Cloud.Spanner.Data
                         try
                         {
                             SpannerTransactionCreationOptions effectiveCreationOptions = _creationOptions;
-                            session = await (session?.RefreshedOrNewAsync(cancellationToken) ?? _connection.AcquireSessionAsync(_creationOptions, cancellationToken, out effectiveCreationOptions)).ConfigureAwait(false);
 
-                            transaction = new SpannerTransaction(_connection, session, effectiveCreationOptions, _transactionOptions, isRetriable: true);
+                            managedTransaction = _connection.AcquireManagedTransaction(_creationOptions, out effectiveCreationOptions);
+                            //session = await (session?.RefreshedOrNewAsync(cancellationToken) ?? _connection.AcquireSessionAsync(_creationOptions, cancellationToken, out effectiveCreationOptions)).ConfigureAwait(false);
+
+                            transaction = new SpannerTransaction(_connection, managedTransaction, effectiveCreationOptions, _transactionOptions, isRetriable: true);
 
                             TResult result = await asyncWork(transaction).ConfigureAwait(false);
                             await transaction.CommitAsync(cancellationToken).ConfigureAwait(false);
