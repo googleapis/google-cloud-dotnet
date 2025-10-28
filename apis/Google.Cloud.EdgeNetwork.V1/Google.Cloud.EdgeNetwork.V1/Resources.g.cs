@@ -60,7 +60,7 @@ namespace Google.Cloud.EdgeNetwork.V1 {
             "bmdUeXBlEhwKGEJPTkRJTkdfVFlQRV9VTlNQRUNJRklFRBAAEgoKBkJPTkRF",
             "RBABEg4KCk5PTl9CT05ERUQQAjpt6kFqCiFlZGdlbmV0d29yay5nb29nbGVh",
             "cGlzLmNvbS9TdWJuZXQSRXByb2plY3RzL3twcm9qZWN0fS9sb2NhdGlvbnMv",
-            "e2xvY2F0aW9ufS96b25lcy97em9uZX0vc3VibmV0cy97c3VibmV0fSKZBQoM",
+            "e2xvY2F0aW9ufS96b25lcy97em9uZX0vc3VibmV0cy97c3VibmV0fSL6BQoM",
             "SW50ZXJjb25uZWN0EhEKBG5hbWUYASABKAlCA+BBAhI0CgtjcmVhdGVfdGlt",
             "ZRgCIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXBCA+BBAxI0Cgt1",
             "cGRhdGVfdGltZRgDIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXBC",
@@ -70,112 +70,120 @@ namespace Google.Cloud.EdgeNetwork.V1 {
             "bGUuY2xvdWQuZWRnZW5ldHdvcmsudjEuSW50ZXJjb25uZWN0LkludGVyY29u",
             "bmVjdFR5cGVCA+BBARIRCgR1dWlkGAcgASgJQgPgQQMSJwoaZGV2aWNlX2Ns",
             "b3VkX3Jlc291cmNlX25hbWUYCCABKAlCA+BBAxIbCg5waHlzaWNhbF9wb3J0",
-            "cxgJIAMoCUID4EEDGi0KC0xhYmVsc0VudHJ5EgsKA2tleRgBIAEoCRINCgV2",
-            "YWx1ZRgCIAEoCToCOAEiRAoQSW50ZXJjb25uZWN0VHlwZRIhCh1JTlRFUkNP",
-            "Tk5FQ1RfVFlQRV9VTlNQRUNJRklFRBAAEg0KCURFRElDQVRFRBABOn/qQXwK",
-            "J2VkZ2VuZXR3b3JrLmdvb2dsZWFwaXMuY29tL0ludGVyY29ubmVjdBJRcHJv",
-            "amVjdHMve3Byb2plY3R9L2xvY2F0aW9ucy97bG9jYXRpb259L3pvbmVzL3t6",
-            "b25lfS9pbnRlcmNvbm5lY3RzL3tpbnRlcmNvbm5lY3R9IroFChZJbnRlcmNv",
-            "bm5lY3RBdHRhY2htZW50EhEKBG5hbWUYASABKAlCA+BBAhI0CgtjcmVhdGVf",
-            "dGltZRgCIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXBCA+BBAxI0",
-            "Cgt1cGRhdGVfdGltZRgDIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3Rh",
-            "bXBCA+BBAxJPCgZsYWJlbHMYBCADKAsyPy5nb29nbGUuY2xvdWQuZWRnZW5l",
-            "dHdvcmsudjEuSW50ZXJjb25uZWN0QXR0YWNobWVudC5MYWJlbHNFbnRyeRIY",
-            "CgtkZXNjcmlwdGlvbhgFIAEoCUID4EEBEkUKDGludGVyY29ubmVjdBgGIAEo",
-            "CUIv4EEC+kEpCidlZGdlbmV0d29yay5nb29nbGVhcGlzLmNvbS9JbnRlcmNv",
-            "bm5lY3QSOwoHbmV0d29yaxgLIAEoCUIq4EEB+kEkCiJlZGdlbmV0d29yay5n",
-            "b29nbGVhcGlzLmNvbS9OZXR3b3JrEhQKB3ZsYW5faWQYCCABKAVCA+BBAhIL",
-            "CgNtdHUYCSABKAUSPgoFc3RhdGUYCiABKA4yKi5nb29nbGUuY2xvdWQuZWRn",
-            "ZW5ldHdvcmsudjEuUmVzb3VyY2VTdGF0ZUID4EEDGi0KC0xhYmVsc0VudHJ5",
-            "EgsKA2tleRgBIAEoCRINCgV2YWx1ZRgCIAEoCToCOAE6nwHqQZsBCjFlZGdl",
-            "bmV0d29yay5nb29nbGVhcGlzLmNvbS9JbnRlcmNvbm5lY3RBdHRhY2htZW50",
-            "EmZwcm9qZWN0cy97cHJvamVjdH0vbG9jYXRpb25zL3tsb2NhdGlvbn0vem9u",
-            "ZXMve3pvbmV9L2ludGVyY29ubmVjdEF0dGFjaG1lbnRzL3tpbnRlcmNvbm5l",
-            "Y3RfYXR0YWNobWVudH0i8AgKBlJvdXRlchIRCgRuYW1lGAEgASgJQgPgQQIS",
-            "NAoLY3JlYXRlX3RpbWUYAiABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0",
-            "YW1wQgPgQQMSNAoLdXBkYXRlX3RpbWUYAyABKAsyGi5nb29nbGUucHJvdG9i",
-            "dWYuVGltZXN0YW1wQgPgQQMSPwoGbGFiZWxzGAQgAygLMi8uZ29vZ2xlLmNs",
-            "b3VkLmVkZ2VuZXR3b3JrLnYxLlJvdXRlci5MYWJlbHNFbnRyeRIYCgtkZXNj",
-            "cmlwdGlvbhgFIAEoCUID4EEBEjsKB25ldHdvcmsYBiABKAlCKuBBAvpBJAoi",
-            "ZWRnZW5ldHdvcmsuZ29vZ2xlYXBpcy5jb20vTmV0d29yaxJACglpbnRlcmZh",
-            "Y2UYByADKAsyLS5nb29nbGUuY2xvdWQuZWRnZW5ldHdvcmsudjEuUm91dGVy",
-            "LkludGVyZmFjZRI9CghiZ3BfcGVlchgIIAMoCzIrLmdvb2dsZS5jbG91ZC5l",
-            "ZGdlbmV0d29yay52MS5Sb3V0ZXIuQmdwUGVlchI0CgNiZ3AYCSABKAsyJy5n",
-            "b29nbGUuY2xvdWQuZWRnZW5ldHdvcmsudjEuUm91dGVyLkJncBI+CgVzdGF0",
-            "ZRgKIAEoDjIqLmdvb2dsZS5jbG91ZC5lZGdlbmV0d29yay52MS5SZXNvdXJj",
-            "ZVN0YXRlQgPgQQMSIQoUcm91dGVfYWR2ZXJ0aXNlbWVudHMYCyADKAlCA+BB",
-            "ARqaAQoJSW50ZXJmYWNlEgwKBG5hbWUYASABKAkSEQoJaXB2NF9jaWRyGAMg",
-            "ASgJEhEKCWlwdjZfY2lkchgGIAEoCRImCh5saW5rZWRfaW50ZXJjb25uZWN0",
-            "X2F0dGFjaG1lbnQYAiABKAkSEgoKc3VibmV0d29yaxgEIAEoCRIdChVsb29w",
-            "YmFja19pcF9hZGRyZXNzZXMYBSADKAkavgEKB0JncFBlZXISDAoEbmFtZRgB",
-            "IAEoCRIRCglpbnRlcmZhY2UYAiABKAkSGwoTaW50ZXJmYWNlX2lwdjRfY2lk",
-            "chgDIAEoCRIbChNpbnRlcmZhY2VfaXB2Nl9jaWRyGAcgASgJEhYKDnBlZXJf",
-            "aXB2NF9jaWRyGAQgASgJEhYKDnBlZXJfaXB2Nl9jaWRyGAYgASgJEhAKCHBl",
-            "ZXJfYXNuGAUgASgNEhYKCWxvY2FsX2FzbhgIIAEoDUID4EEDGjkKA0JncBIL",
-            "CgNhc24YASABKA0SJQoda2VlcGFsaXZlX2ludGVydmFsX2luX3NlY29uZHMY",
-            "AiABKA0aLQoLTGFiZWxzRW50cnkSCwoDa2V5GAEgASgJEg0KBXZhbHVlGAIg",
-            "ASgJOgI4ATpt6kFqCiFlZGdlbmV0d29yay5nb29nbGVhcGlzLmNvbS9Sb3V0",
-            "ZXISRXByb2plY3RzL3twcm9qZWN0fS9sb2NhdGlvbnMve2xvY2F0aW9ufS96",
-            "b25lcy97em9uZX0vcm91dGVycy97cm91dGVyfSI7ChBMaW5rTGF5ZXJBZGRy",
-            "ZXNzEhMKC21hY19hZGRyZXNzGAEgASgJEhIKCmlwX2FkZHJlc3MYAiABKAki",
-            "fgoMU3VibmV0U3RhdHVzEgwKBG5hbWUYASABKAkSEwoLbWFjX2FkZHJlc3MY",
-            "AiABKAkSSwoUbGlua19sYXllcl9hZGRyZXNzZXMYAyADKAsyLS5nb29nbGUu",
-            "Y2xvdWQuZWRnZW5ldHdvcmsudjEuTGlua0xheWVyQWRkcmVzcyLxCAoXSW50",
-            "ZXJjb25uZWN0RGlhZ25vc3RpY3MSEwoLbWFjX2FkZHJlc3MYASABKAkSSwoU",
-            "bGlua19sYXllcl9hZGRyZXNzZXMYAiADKAsyLS5nb29nbGUuY2xvdWQuZWRn",
-            "ZW5ldHdvcmsudjEuTGlua0xheWVyQWRkcmVzcxJOCgVsaW5rcxgDIAMoCzI/",
-            "Lmdvb2dsZS5jbG91ZC5lZGdlbmV0d29yay52MS5JbnRlcmNvbm5lY3REaWFn",
-            "bm9zdGljcy5MaW5rU3RhdHVzGrACCgpMaW5rU3RhdHVzEhIKCmNpcmN1aXRf",
-            "aWQYASABKAkSWAoLbGFjcF9zdGF0dXMYAiABKAsyQy5nb29nbGUuY2xvdWQu",
-            "ZWRnZW5ldHdvcmsudjEuSW50ZXJjb25uZWN0RGlhZ25vc3RpY3MuTGlua0xB",
-            "Q1BTdGF0dXMSWgoNbGxkcF9zdGF0dXNlcxgDIAMoCzJDLmdvb2dsZS5jbG91",
-            "ZC5lZGdlbmV0d29yay52MS5JbnRlcmNvbm5lY3REaWFnbm9zdGljcy5MaW5r",
-            "TExEUFN0YXR1cxJYCg1wYWNrZXRfY291bnRzGAQgASgLMkEuZ29vZ2xlLmNs",
-            "b3VkLmVkZ2VuZXR3b3JrLnYxLkludGVyY29ubmVjdERpYWdub3N0aWNzLlBh",
-            "Y2tldENvdW50cxqnAQoMUGFja2V0Q291bnRzEhcKD2luYm91bmRfdW5pY2Fz",
-            "dBgBIAEoAxIWCg5pbmJvdW5kX2Vycm9ycxgCIAEoAxIYChBpbmJvdW5kX2Rp",
-            "c2NhcmRzGAMgASgDEhgKEG91dGJvdW5kX3VuaWNhc3QYBCABKAMSFwoPb3V0",
-            "Ym91bmRfZXJyb3JzGAUgASgDEhkKEW91dGJvdW5kX2Rpc2NhcmRzGAYgASgD",
-            "GpACCg5MaW5rTEFDUFN0YXR1cxJYCgVzdGF0ZRgBIAEoDjJJLmdvb2dsZS5j",
-            "bG91ZC5lZGdlbmV0d29yay52MS5JbnRlcmNvbm5lY3REaWFnbm9zdGljcy5M",
-            "aW5rTEFDUFN0YXR1cy5TdGF0ZRIYChBnb29nbGVfc3lzdGVtX2lkGAIgASgJ",
-            "EhoKEm5laWdoYm9yX3N5c3RlbV9pZBgDIAEoCRIUCgxhZ2dyZWdhdGFibGUY",
-            "BCABKAgSEgoKY29sbGVjdGluZxgFIAEoCBIUCgxkaXN0cmlidXRpbmcYBiAB",
-            "KAgiLgoFU3RhdGUSCwoHVU5LTk9XThAAEgoKBkFDVElWRRABEgwKCERFVEFD",
-            "SEVEEAIaswEKDkxpbmtMTERQU3RhdHVzEhgKEHBlZXJfc3lzdGVtX25hbWUY",
-            "ASABKAkSHwoXcGVlcl9zeXN0ZW1fZGVzY3JpcHRpb24YAiABKAkSFwoPcGVl",
-            "cl9jaGFzc2lzX2lkGAMgASgJEhwKFHBlZXJfY2hhc3Npc19pZF90eXBlGAQg",
-            "ASgJEhQKDHBlZXJfcG9ydF9pZBgFIAEoCRIZChFwZWVyX3BvcnRfaWRfdHlw",
-            "ZRgGIAEoCSLqBAoMUm91dGVyU3RhdHVzEjgKB25ldHdvcmsYASABKAlCJ/pB",
-            "JAoiZWRnZW5ldHdvcmsuZ29vZ2xlYXBpcy5jb20vTmV0d29yaxJQCg9iZ3Bf",
-            "cGVlcl9zdGF0dXMYAiADKAsyNy5nb29nbGUuY2xvdWQuZWRnZW5ldHdvcmsu",
-            "djEuUm91dGVyU3RhdHVzLkJncFBlZXJTdGF0dXMa0QIKDUJncFBlZXJTdGF0",
-            "dXMSDAoEbmFtZRgBIAEoCRISCgppcF9hZGRyZXNzGAIgASgJEhcKD3BlZXJf",
-            "aXBfYWRkcmVzcxgDIAEoCRJRCgZzdGF0dXMYBCABKA4yQS5nb29nbGUuY2xv",
-            "dWQuZWRnZW5ldHdvcmsudjEuUm91dGVyU3RhdHVzLkJncFBlZXJTdGF0dXMu",
-            "QmdwU3RhdHVzEg0KBXN0YXRlGAUgASgJEg4KBnVwdGltZRgGIAEoCRIWCg51",
-            "cHRpbWVfc2Vjb25kcxgHIAEoAxJPCg5wcmVmaXhfY291bnRlchgIIAEoCzI3",
-            "Lmdvb2dsZS5jbG91ZC5lZGdlbmV0d29yay52MS5Sb3V0ZXJTdGF0dXMuUHJl",
-            "Zml4Q291bnRlciIqCglCZ3BTdGF0dXMSCwoHVU5LTk9XThAAEgYKAlVQEAES",
-            "CAoERE9XThACGnoKDVByZWZpeENvdW50ZXISEgoKYWR2ZXJ0aXNlZBgBIAEo",
-            "AxIOCgZkZW5pZWQYAiABKAMSEAoIcmVjZWl2ZWQYAyABKAMSDAoEc2VudBgE",
-            "IAEoAxISCgpzdXBwcmVzc2VkGAUgASgDEhEKCXdpdGhkcmF3bhgGIAEoAyqJ",
-            "AQoNUmVzb3VyY2VTdGF0ZRIRCg1TVEFURV9VTktOT1dOEAASEQoNU1RBVEVf",
-            "UEVORElORxABEhYKElNUQVRFX1BST1ZJU0lPTklORxACEhEKDVNUQVRFX1JV",
-            "Tk5JTkcQAxITCg9TVEFURV9TVVNQRU5ERUQQBBISCg5TVEFURV9ERUxFVElO",
-            "RxAFQtMBCh9jb20uZ29vZ2xlLmNsb3VkLmVkZ2VuZXR3b3JrLnYxQg5SZXNv",
-            "dXJjZXNQcm90b1ABWkFjbG91ZC5nb29nbGUuY29tL2dvL2VkZ2VuZXR3b3Jr",
-            "L2FwaXYxL2VkZ2VuZXR3b3JrcGI7ZWRnZW5ldHdvcmtwYqoCG0dvb2dsZS5D",
-            "bG91ZC5FZGdlTmV0d29yay5WMcoCG0dvb2dsZVxDbG91ZFxFZGdlTmV0d29y",
-            "a1xWMeoCHkdvb2dsZTo6Q2xvdWQ6OkVkZ2VOZXR3b3JrOjpWMWIGcHJvdG8z"));
+            "cxgJIAMoCUID4EEDEl8KG3JlbW90ZV9wZWVyaW5nX25ldHdvcmtfdHlwZRgK",
+            "IAEoDjI1Lmdvb2dsZS5jbG91ZC5lZGdlbmV0d29yay52MS5SZW1vdGVQZWVy",
+            "aW5nTmV0d29ya1R5cGVCA+BBARotCgtMYWJlbHNFbnRyeRILCgNrZXkYASAB",
+            "KAkSDQoFdmFsdWUYAiABKAk6AjgBIkQKEEludGVyY29ubmVjdFR5cGUSIQod",
+            "SU5URVJDT05ORUNUX1RZUEVfVU5TUEVDSUZJRUQQABINCglERURJQ0FURUQQ",
+            "ATp/6kF8CidlZGdlbmV0d29yay5nb29nbGVhcGlzLmNvbS9JbnRlcmNvbm5l",
+            "Y3QSUXByb2plY3RzL3twcm9qZWN0fS9sb2NhdGlvbnMve2xvY2F0aW9ufS96",
+            "b25lcy97em9uZX0vaW50ZXJjb25uZWN0cy97aW50ZXJjb25uZWN0fSKMBgoW",
+            "SW50ZXJjb25uZWN0QXR0YWNobWVudBIRCgRuYW1lGAEgASgJQgPgQQISNAoL",
+            "Y3JlYXRlX3RpbWUYAiABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1w",
+            "QgPgQQMSNAoLdXBkYXRlX3RpbWUYAyABKAsyGi5nb29nbGUucHJvdG9idWYu",
+            "VGltZXN0YW1wQgPgQQMSTwoGbGFiZWxzGAQgAygLMj8uZ29vZ2xlLmNsb3Vk",
+            "LmVkZ2VuZXR3b3JrLnYxLkludGVyY29ubmVjdEF0dGFjaG1lbnQuTGFiZWxz",
+            "RW50cnkSGAoLZGVzY3JpcHRpb24YBSABKAlCA+BBARJFCgxpbnRlcmNvbm5l",
+            "Y3QYBiABKAlCL+BBAvpBKQonZWRnZW5ldHdvcmsuZ29vZ2xlYXBpcy5jb20v",
+            "SW50ZXJjb25uZWN0EjsKB25ldHdvcmsYCyABKAlCKuBBAfpBJAoiZWRnZW5l",
+            "dHdvcmsuZ29vZ2xlYXBpcy5jb20vTmV0d29yaxIUCgd2bGFuX2lkGAggASgF",
+            "QgPgQQISCwoDbXR1GAkgASgFEj4KBXN0YXRlGAogASgOMiouZ29vZ2xlLmNs",
+            "b3VkLmVkZ2VuZXR3b3JrLnYxLlJlc291cmNlU3RhdGVCA+BBAxJQCgxwZWVy",
+            "aW5nX3R5cGUYDCABKA4yNS5nb29nbGUuY2xvdWQuZWRnZW5ldHdvcmsudjEu",
+            "UmVtb3RlUGVlcmluZ05ldHdvcmtUeXBlQgPgQQEaLQoLTGFiZWxzRW50cnkS",
+            "CwoDa2V5GAEgASgJEg0KBXZhbHVlGAIgASgJOgI4ATqfAepBmwEKMWVkZ2Vu",
+            "ZXR3b3JrLmdvb2dsZWFwaXMuY29tL0ludGVyY29ubmVjdEF0dGFjaG1lbnQS",
+            "ZnByb2plY3RzL3twcm9qZWN0fS9sb2NhdGlvbnMve2xvY2F0aW9ufS96b25l",
+            "cy97em9uZX0vaW50ZXJjb25uZWN0QXR0YWNobWVudHMve2ludGVyY29ubmVj",
+            "dF9hdHRhY2htZW50fSLwCAoGUm91dGVyEhEKBG5hbWUYASABKAlCA+BBAhI0",
+            "CgtjcmVhdGVfdGltZRgCIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3Rh",
+            "bXBCA+BBAxI0Cgt1cGRhdGVfdGltZRgDIAEoCzIaLmdvb2dsZS5wcm90b2J1",
+            "Zi5UaW1lc3RhbXBCA+BBAxI/CgZsYWJlbHMYBCADKAsyLy5nb29nbGUuY2xv",
+            "dWQuZWRnZW5ldHdvcmsudjEuUm91dGVyLkxhYmVsc0VudHJ5EhgKC2Rlc2Ny",
+            "aXB0aW9uGAUgASgJQgPgQQESOwoHbmV0d29yaxgGIAEoCUIq4EEC+kEkCiJl",
+            "ZGdlbmV0d29yay5nb29nbGVhcGlzLmNvbS9OZXR3b3JrEkAKCWludGVyZmFj",
+            "ZRgHIAMoCzItLmdvb2dsZS5jbG91ZC5lZGdlbmV0d29yay52MS5Sb3V0ZXIu",
+            "SW50ZXJmYWNlEj0KCGJncF9wZWVyGAggAygLMisuZ29vZ2xlLmNsb3VkLmVk",
+            "Z2VuZXR3b3JrLnYxLlJvdXRlci5CZ3BQZWVyEjQKA2JncBgJIAEoCzInLmdv",
+            "b2dsZS5jbG91ZC5lZGdlbmV0d29yay52MS5Sb3V0ZXIuQmdwEj4KBXN0YXRl",
+            "GAogASgOMiouZ29vZ2xlLmNsb3VkLmVkZ2VuZXR3b3JrLnYxLlJlc291cmNl",
+            "U3RhdGVCA+BBAxIhChRyb3V0ZV9hZHZlcnRpc2VtZW50cxgLIAMoCUID4EEB",
+            "GpoBCglJbnRlcmZhY2USDAoEbmFtZRgBIAEoCRIRCglpcHY0X2NpZHIYAyAB",
+            "KAkSEQoJaXB2Nl9jaWRyGAYgASgJEiYKHmxpbmtlZF9pbnRlcmNvbm5lY3Rf",
+            "YXR0YWNobWVudBgCIAEoCRISCgpzdWJuZXR3b3JrGAQgASgJEh0KFWxvb3Bi",
+            "YWNrX2lwX2FkZHJlc3NlcxgFIAMoCRq+AQoHQmdwUGVlchIMCgRuYW1lGAEg",
+            "ASgJEhEKCWludGVyZmFjZRgCIAEoCRIbChNpbnRlcmZhY2VfaXB2NF9jaWRy",
+            "GAMgASgJEhsKE2ludGVyZmFjZV9pcHY2X2NpZHIYByABKAkSFgoOcGVlcl9p",
+            "cHY0X2NpZHIYBCABKAkSFgoOcGVlcl9pcHY2X2NpZHIYBiABKAkSEAoIcGVl",
+            "cl9hc24YBSABKA0SFgoJbG9jYWxfYXNuGAggASgNQgPgQQMaOQoDQmdwEgsK",
+            "A2FzbhgBIAEoDRIlCh1rZWVwYWxpdmVfaW50ZXJ2YWxfaW5fc2Vjb25kcxgC",
+            "IAEoDRotCgtMYWJlbHNFbnRyeRILCgNrZXkYASABKAkSDQoFdmFsdWUYAiAB",
+            "KAk6AjgBOm3qQWoKIWVkZ2VuZXR3b3JrLmdvb2dsZWFwaXMuY29tL1JvdXRl",
+            "chJFcHJvamVjdHMve3Byb2plY3R9L2xvY2F0aW9ucy97bG9jYXRpb259L3pv",
+            "bmVzL3t6b25lfS9yb3V0ZXJzL3tyb3V0ZXJ9IjsKEExpbmtMYXllckFkZHJl",
+            "c3MSEwoLbWFjX2FkZHJlc3MYASABKAkSEgoKaXBfYWRkcmVzcxgCIAEoCSJ+",
+            "CgxTdWJuZXRTdGF0dXMSDAoEbmFtZRgBIAEoCRITCgttYWNfYWRkcmVzcxgC",
+            "IAEoCRJLChRsaW5rX2xheWVyX2FkZHJlc3NlcxgDIAMoCzItLmdvb2dsZS5j",
+            "bG91ZC5lZGdlbmV0d29yay52MS5MaW5rTGF5ZXJBZGRyZXNzIvEIChdJbnRl",
+            "cmNvbm5lY3REaWFnbm9zdGljcxITCgttYWNfYWRkcmVzcxgBIAEoCRJLChRs",
+            "aW5rX2xheWVyX2FkZHJlc3NlcxgCIAMoCzItLmdvb2dsZS5jbG91ZC5lZGdl",
+            "bmV0d29yay52MS5MaW5rTGF5ZXJBZGRyZXNzEk4KBWxpbmtzGAMgAygLMj8u",
+            "Z29vZ2xlLmNsb3VkLmVkZ2VuZXR3b3JrLnYxLkludGVyY29ubmVjdERpYWdu",
+            "b3N0aWNzLkxpbmtTdGF0dXMasAIKCkxpbmtTdGF0dXMSEgoKY2lyY3VpdF9p",
+            "ZBgBIAEoCRJYCgtsYWNwX3N0YXR1cxgCIAEoCzJDLmdvb2dsZS5jbG91ZC5l",
+            "ZGdlbmV0d29yay52MS5JbnRlcmNvbm5lY3REaWFnbm9zdGljcy5MaW5rTEFD",
+            "UFN0YXR1cxJaCg1sbGRwX3N0YXR1c2VzGAMgAygLMkMuZ29vZ2xlLmNsb3Vk",
+            "LmVkZ2VuZXR3b3JrLnYxLkludGVyY29ubmVjdERpYWdub3N0aWNzLkxpbmtM",
+            "TERQU3RhdHVzElgKDXBhY2tldF9jb3VudHMYBCABKAsyQS5nb29nbGUuY2xv",
+            "dWQuZWRnZW5ldHdvcmsudjEuSW50ZXJjb25uZWN0RGlhZ25vc3RpY3MuUGFj",
+            "a2V0Q291bnRzGqcBCgxQYWNrZXRDb3VudHMSFwoPaW5ib3VuZF91bmljYXN0",
+            "GAEgASgDEhYKDmluYm91bmRfZXJyb3JzGAIgASgDEhgKEGluYm91bmRfZGlz",
+            "Y2FyZHMYAyABKAMSGAoQb3V0Ym91bmRfdW5pY2FzdBgEIAEoAxIXCg9vdXRi",
+            "b3VuZF9lcnJvcnMYBSABKAMSGQoRb3V0Ym91bmRfZGlzY2FyZHMYBiABKAMa",
+            "kAIKDkxpbmtMQUNQU3RhdHVzElgKBXN0YXRlGAEgASgOMkkuZ29vZ2xlLmNs",
+            "b3VkLmVkZ2VuZXR3b3JrLnYxLkludGVyY29ubmVjdERpYWdub3N0aWNzLkxp",
+            "bmtMQUNQU3RhdHVzLlN0YXRlEhgKEGdvb2dsZV9zeXN0ZW1faWQYAiABKAkS",
+            "GgoSbmVpZ2hib3Jfc3lzdGVtX2lkGAMgASgJEhQKDGFnZ3JlZ2F0YWJsZRgE",
+            "IAEoCBISCgpjb2xsZWN0aW5nGAUgASgIEhQKDGRpc3RyaWJ1dGluZxgGIAEo",
+            "CCIuCgVTdGF0ZRILCgdVTktOT1dOEAASCgoGQUNUSVZFEAESDAoIREVUQUNI",
+            "RUQQAhqzAQoOTGlua0xMRFBTdGF0dXMSGAoQcGVlcl9zeXN0ZW1fbmFtZRgB",
+            "IAEoCRIfChdwZWVyX3N5c3RlbV9kZXNjcmlwdGlvbhgCIAEoCRIXCg9wZWVy",
+            "X2NoYXNzaXNfaWQYAyABKAkSHAoUcGVlcl9jaGFzc2lzX2lkX3R5cGUYBCAB",
+            "KAkSFAoMcGVlcl9wb3J0X2lkGAUgASgJEhkKEXBlZXJfcG9ydF9pZF90eXBl",
+            "GAYgASgJIuoECgxSb3V0ZXJTdGF0dXMSOAoHbmV0d29yaxgBIAEoCUIn+kEk",
+            "CiJlZGdlbmV0d29yay5nb29nbGVhcGlzLmNvbS9OZXR3b3JrElAKD2JncF9w",
+            "ZWVyX3N0YXR1cxgCIAMoCzI3Lmdvb2dsZS5jbG91ZC5lZGdlbmV0d29yay52",
+            "MS5Sb3V0ZXJTdGF0dXMuQmdwUGVlclN0YXR1cxrRAgoNQmdwUGVlclN0YXR1",
+            "cxIMCgRuYW1lGAEgASgJEhIKCmlwX2FkZHJlc3MYAiABKAkSFwoPcGVlcl9p",
+            "cF9hZGRyZXNzGAMgASgJElEKBnN0YXR1cxgEIAEoDjJBLmdvb2dsZS5jbG91",
+            "ZC5lZGdlbmV0d29yay52MS5Sb3V0ZXJTdGF0dXMuQmdwUGVlclN0YXR1cy5C",
+            "Z3BTdGF0dXMSDQoFc3RhdGUYBSABKAkSDgoGdXB0aW1lGAYgASgJEhYKDnVw",
+            "dGltZV9zZWNvbmRzGAcgASgDEk8KDnByZWZpeF9jb3VudGVyGAggASgLMjcu",
+            "Z29vZ2xlLmNsb3VkLmVkZ2VuZXR3b3JrLnYxLlJvdXRlclN0YXR1cy5QcmVm",
+            "aXhDb3VudGVyIioKCUJncFN0YXR1cxILCgdVTktOT1dOEAASBgoCVVAQARII",
+            "CgRET1dOEAIaegoNUHJlZml4Q291bnRlchISCgphZHZlcnRpc2VkGAEgASgD",
+            "Eg4KBmRlbmllZBgCIAEoAxIQCghyZWNlaXZlZBgDIAEoAxIMCgRzZW50GAQg",
+            "ASgDEhIKCnN1cHByZXNzZWQYBSABKAMSEQoJd2l0aGRyYXduGAYgASgDKokB",
+            "Cg1SZXNvdXJjZVN0YXRlEhEKDVNUQVRFX1VOS05PV04QABIRCg1TVEFURV9Q",
+            "RU5ESU5HEAESFgoSU1RBVEVfUFJPVklTSU9OSU5HEAISEQoNU1RBVEVfUlVO",
+            "TklORxADEhMKD1NUQVRFX1NVU1BFTkRFRBAEEhIKDlNUQVRFX0RFTEVUSU5H",
+            "EAUqrQEKGFJlbW90ZVBlZXJpbmdOZXR3b3JrVHlwZRIrCidSRU1PVEVfUEVF",
+            "UklOR19ORVRXT1JLX1RZUEVfVU5TUEVDSUZJRUQQABIxCi1SRU1PVEVfUEVF",
+            "UklOR19ORVRXT1JLX1RZUEVfQ1VTVE9NRVJfSU5URVJOQUwQARIxCi1SRU1P",
+            "VEVfUEVFUklOR19ORVRXT1JLX1RZUEVfQ1VTVE9NRVJfSU5URVJORVQQAkLT",
+            "AQofY29tLmdvb2dsZS5jbG91ZC5lZGdlbmV0d29yay52MUIOUmVzb3VyY2Vz",
+            "UHJvdG9QAVpBY2xvdWQuZ29vZ2xlLmNvbS9nby9lZGdlbmV0d29yay9hcGl2",
+            "MS9lZGdlbmV0d29ya3BiO2VkZ2VuZXR3b3JrcGKqAhtHb29nbGUuQ2xvdWQu",
+            "RWRnZU5ldHdvcmsuVjHKAhtHb29nbGVcQ2xvdWRcRWRnZU5ldHdvcmtcVjHq",
+            "Ah5Hb29nbGU6OkNsb3VkOjpFZGdlTmV0d29yazo6VjFiBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
-          new pbr::GeneratedClrTypeInfo(new[] {typeof(global::Google.Cloud.EdgeNetwork.V1.ResourceState), }, null, new pbr::GeneratedClrTypeInfo[] {
+          new pbr::GeneratedClrTypeInfo(new[] {typeof(global::Google.Cloud.EdgeNetwork.V1.ResourceState), typeof(global::Google.Cloud.EdgeNetwork.V1.RemotePeeringNetworkType), }, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.EdgeNetwork.V1.Zone), global::Google.Cloud.EdgeNetwork.V1.Zone.Parser, new[]{ "Name", "CreateTime", "UpdateTime", "Labels", "LayoutName" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { null, }),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.EdgeNetwork.V1.Network), global::Google.Cloud.EdgeNetwork.V1.Network.Parser, new[]{ "Name", "CreateTime", "UpdateTime", "Labels", "Description", "Mtu" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { null, }),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.EdgeNetwork.V1.Subnet), global::Google.Cloud.EdgeNetwork.V1.Subnet.Parser, new[]{ "Name", "CreateTime", "UpdateTime", "Labels", "Description", "Network", "Ipv4Cidr", "Ipv6Cidr", "VlanId", "BondingType", "State" }, null, new[]{ typeof(global::Google.Cloud.EdgeNetwork.V1.Subnet.Types.BondingType) }, null, new pbr::GeneratedClrTypeInfo[] { null, }),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.EdgeNetwork.V1.Interconnect), global::Google.Cloud.EdgeNetwork.V1.Interconnect.Parser, new[]{ "Name", "CreateTime", "UpdateTime", "Labels", "Description", "InterconnectType", "Uuid", "DeviceCloudResourceName", "PhysicalPorts" }, null, new[]{ typeof(global::Google.Cloud.EdgeNetwork.V1.Interconnect.Types.InterconnectType) }, null, new pbr::GeneratedClrTypeInfo[] { null, }),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.EdgeNetwork.V1.InterconnectAttachment), global::Google.Cloud.EdgeNetwork.V1.InterconnectAttachment.Parser, new[]{ "Name", "CreateTime", "UpdateTime", "Labels", "Description", "Interconnect", "Network", "VlanId", "Mtu", "State" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { null, }),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.EdgeNetwork.V1.Interconnect), global::Google.Cloud.EdgeNetwork.V1.Interconnect.Parser, new[]{ "Name", "CreateTime", "UpdateTime", "Labels", "Description", "InterconnectType", "Uuid", "DeviceCloudResourceName", "PhysicalPorts", "RemotePeeringNetworkType" }, null, new[]{ typeof(global::Google.Cloud.EdgeNetwork.V1.Interconnect.Types.InterconnectType) }, null, new pbr::GeneratedClrTypeInfo[] { null, }),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.EdgeNetwork.V1.InterconnectAttachment), global::Google.Cloud.EdgeNetwork.V1.InterconnectAttachment.Parser, new[]{ "Name", "CreateTime", "UpdateTime", "Labels", "Description", "Interconnect", "Network", "VlanId", "Mtu", "State", "PeeringType" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { null, }),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.EdgeNetwork.V1.Router), global::Google.Cloud.EdgeNetwork.V1.Router.Parser, new[]{ "Name", "CreateTime", "UpdateTime", "Labels", "Description", "Network", "Interface", "BgpPeer", "Bgp", "State", "RouteAdvertisements" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.EdgeNetwork.V1.Router.Types.Interface), global::Google.Cloud.EdgeNetwork.V1.Router.Types.Interface.Parser, new[]{ "Name", "Ipv4Cidr", "Ipv6Cidr", "LinkedInterconnectAttachment", "Subnetwork", "LoopbackIpAddresses" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.EdgeNetwork.V1.Router.Types.BgpPeer), global::Google.Cloud.EdgeNetwork.V1.Router.Types.BgpPeer.Parser, new[]{ "Name", "Interface", "InterfaceIpv4Cidr", "InterfaceIpv6Cidr", "PeerIpv4Cidr", "PeerIpv6Cidr", "PeerAsn", "LocalAsn" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.EdgeNetwork.V1.Router.Types.Bgp), global::Google.Cloud.EdgeNetwork.V1.Router.Types.Bgp.Parser, new[]{ "Asn", "KeepaliveIntervalInSeconds" }, null, null, null, null),
@@ -226,6 +234,25 @@ namespace Google.Cloud.EdgeNetwork.V1 {
     /// The resource is under deletion.
     /// </summary>
     [pbr::OriginalName("STATE_DELETING")] StateDeleting = 5,
+  }
+
+  /// <summary>
+  /// Defines the remote peering destination for the interface. It is required
+  /// when peering separation is enabled.
+  /// </summary>
+  public enum RemotePeeringNetworkType {
+    /// <summary>
+    /// Unspecified.
+    /// </summary>
+    [pbr::OriginalName("REMOTE_PEERING_NETWORK_TYPE_UNSPECIFIED")] Unspecified = 0,
+    /// <summary>
+    /// Customer's trusted internal network.
+    /// </summary>
+    [pbr::OriginalName("REMOTE_PEERING_NETWORK_TYPE_CUSTOMER_INTERNAL")] CustomerInternal = 1,
+    /// <summary>
+    /// Customer's untrust network that has internet access.
+    /// </summary>
+    [pbr::OriginalName("REMOTE_PEERING_NETWORK_TYPE_CUSTOMER_INTERNET")] CustomerInternet = 2,
   }
 
   #endregion
@@ -1668,6 +1695,7 @@ namespace Google.Cloud.EdgeNetwork.V1 {
       uuid_ = other.uuid_;
       deviceCloudResourceName_ = other.deviceCloudResourceName_;
       physicalPorts_ = other.physicalPorts_.Clone();
+      remotePeeringNetworkType_ = other.remotePeeringNetworkType_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -1813,6 +1841,22 @@ namespace Google.Cloud.EdgeNetwork.V1 {
       get { return physicalPorts_; }
     }
 
+    /// <summary>Field number for the "remote_peering_network_type" field.</summary>
+    public const int RemotePeeringNetworkTypeFieldNumber = 10;
+    private global::Google.Cloud.EdgeNetwork.V1.RemotePeeringNetworkType remotePeeringNetworkType_ = global::Google.Cloud.EdgeNetwork.V1.RemotePeeringNetworkType.Unspecified;
+    /// <summary>
+    /// Optional. The remote peering network type of the interconnect. It is
+    /// required when peering separation is enabled.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Cloud.EdgeNetwork.V1.RemotePeeringNetworkType RemotePeeringNetworkType {
+      get { return remotePeeringNetworkType_; }
+      set {
+        remotePeeringNetworkType_ = value;
+      }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
@@ -1837,6 +1881,7 @@ namespace Google.Cloud.EdgeNetwork.V1 {
       if (Uuid != other.Uuid) return false;
       if (DeviceCloudResourceName != other.DeviceCloudResourceName) return false;
       if(!physicalPorts_.Equals(other.physicalPorts_)) return false;
+      if (RemotePeeringNetworkType != other.RemotePeeringNetworkType) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -1853,6 +1898,7 @@ namespace Google.Cloud.EdgeNetwork.V1 {
       if (Uuid.Length != 0) hash ^= Uuid.GetHashCode();
       if (DeviceCloudResourceName.Length != 0) hash ^= DeviceCloudResourceName.GetHashCode();
       hash ^= physicalPorts_.GetHashCode();
+      if (RemotePeeringNetworkType != global::Google.Cloud.EdgeNetwork.V1.RemotePeeringNetworkType.Unspecified) hash ^= RemotePeeringNetworkType.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -1901,6 +1947,10 @@ namespace Google.Cloud.EdgeNetwork.V1 {
         output.WriteString(DeviceCloudResourceName);
       }
       physicalPorts_.WriteTo(output, _repeated_physicalPorts_codec);
+      if (RemotePeeringNetworkType != global::Google.Cloud.EdgeNetwork.V1.RemotePeeringNetworkType.Unspecified) {
+        output.WriteRawTag(80);
+        output.WriteEnum((int) RemotePeeringNetworkType);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -1941,6 +1991,10 @@ namespace Google.Cloud.EdgeNetwork.V1 {
         output.WriteString(DeviceCloudResourceName);
       }
       physicalPorts_.WriteTo(ref output, _repeated_physicalPorts_codec);
+      if (RemotePeeringNetworkType != global::Google.Cloud.EdgeNetwork.V1.RemotePeeringNetworkType.Unspecified) {
+        output.WriteRawTag(80);
+        output.WriteEnum((int) RemotePeeringNetworkType);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -1974,6 +2028,9 @@ namespace Google.Cloud.EdgeNetwork.V1 {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(DeviceCloudResourceName);
       }
       size += physicalPorts_.CalculateSize(_repeated_physicalPorts_codec);
+      if (RemotePeeringNetworkType != global::Google.Cloud.EdgeNetwork.V1.RemotePeeringNetworkType.Unspecified) {
+        size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) RemotePeeringNetworkType);
+      }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
       }
@@ -2015,6 +2072,9 @@ namespace Google.Cloud.EdgeNetwork.V1 {
         DeviceCloudResourceName = other.DeviceCloudResourceName;
       }
       physicalPorts_.Add(other.physicalPorts_);
+      if (other.RemotePeeringNetworkType != global::Google.Cloud.EdgeNetwork.V1.RemotePeeringNetworkType.Unspecified) {
+        RemotePeeringNetworkType = other.RemotePeeringNetworkType;
+      }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 
@@ -2072,6 +2132,10 @@ namespace Google.Cloud.EdgeNetwork.V1 {
             physicalPorts_.AddEntriesFrom(input, _repeated_physicalPorts_codec);
             break;
           }
+          case 80: {
+            RemotePeeringNetworkType = (global::Google.Cloud.EdgeNetwork.V1.RemotePeeringNetworkType) input.ReadEnum();
+            break;
+          }
         }
       }
     #endif
@@ -2127,6 +2191,10 @@ namespace Google.Cloud.EdgeNetwork.V1 {
           }
           case 74: {
             physicalPorts_.AddEntriesFrom(ref input, _repeated_physicalPorts_codec);
+            break;
+          }
+          case 80: {
+            RemotePeeringNetworkType = (global::Google.Cloud.EdgeNetwork.V1.RemotePeeringNetworkType) input.ReadEnum();
             break;
           }
         }
@@ -2206,6 +2274,7 @@ namespace Google.Cloud.EdgeNetwork.V1 {
       vlanId_ = other.vlanId_;
       mtu_ = other.mtu_;
       state_ = other.state_;
+      peeringType_ = other.peeringType_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -2370,6 +2439,22 @@ namespace Google.Cloud.EdgeNetwork.V1 {
       }
     }
 
+    /// <summary>Field number for the "peering_type" field.</summary>
+    public const int PeeringTypeFieldNumber = 12;
+    private global::Google.Cloud.EdgeNetwork.V1.RemotePeeringNetworkType peeringType_ = global::Google.Cloud.EdgeNetwork.V1.RemotePeeringNetworkType.Unspecified;
+    /// <summary>
+    /// Optional. The remote peering network type of the underlying interconnect.
+    /// It is required when peering separation is enabled.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Cloud.EdgeNetwork.V1.RemotePeeringNetworkType PeeringType {
+      get { return peeringType_; }
+      set {
+        peeringType_ = value;
+      }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
@@ -2395,6 +2480,7 @@ namespace Google.Cloud.EdgeNetwork.V1 {
       if (VlanId != other.VlanId) return false;
       if (Mtu != other.Mtu) return false;
       if (State != other.State) return false;
+      if (PeeringType != other.PeeringType) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -2412,6 +2498,7 @@ namespace Google.Cloud.EdgeNetwork.V1 {
       if (VlanId != 0) hash ^= VlanId.GetHashCode();
       if (Mtu != 0) hash ^= Mtu.GetHashCode();
       if (State != global::Google.Cloud.EdgeNetwork.V1.ResourceState.StateUnknown) hash ^= State.GetHashCode();
+      if (PeeringType != global::Google.Cloud.EdgeNetwork.V1.RemotePeeringNetworkType.Unspecified) hash ^= PeeringType.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -2467,6 +2554,10 @@ namespace Google.Cloud.EdgeNetwork.V1 {
         output.WriteRawTag(90);
         output.WriteString(Network);
       }
+      if (PeeringType != global::Google.Cloud.EdgeNetwork.V1.RemotePeeringNetworkType.Unspecified) {
+        output.WriteRawTag(96);
+        output.WriteEnum((int) PeeringType);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -2514,6 +2605,10 @@ namespace Google.Cloud.EdgeNetwork.V1 {
         output.WriteRawTag(90);
         output.WriteString(Network);
       }
+      if (PeeringType != global::Google.Cloud.EdgeNetwork.V1.RemotePeeringNetworkType.Unspecified) {
+        output.WriteRawTag(96);
+        output.WriteEnum((int) PeeringType);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -2551,6 +2646,9 @@ namespace Google.Cloud.EdgeNetwork.V1 {
       }
       if (State != global::Google.Cloud.EdgeNetwork.V1.ResourceState.StateUnknown) {
         size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) State);
+      }
+      if (PeeringType != global::Google.Cloud.EdgeNetwork.V1.RemotePeeringNetworkType.Unspecified) {
+        size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) PeeringType);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -2597,6 +2695,9 @@ namespace Google.Cloud.EdgeNetwork.V1 {
       }
       if (other.State != global::Google.Cloud.EdgeNetwork.V1.ResourceState.StateUnknown) {
         State = other.State;
+      }
+      if (other.PeeringType != global::Google.Cloud.EdgeNetwork.V1.RemotePeeringNetworkType.Unspecified) {
+        PeeringType = other.PeeringType;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -2659,6 +2760,10 @@ namespace Google.Cloud.EdgeNetwork.V1 {
             Network = input.ReadString();
             break;
           }
+          case 96: {
+            PeeringType = (global::Google.Cloud.EdgeNetwork.V1.RemotePeeringNetworkType) input.ReadEnum();
+            break;
+          }
         }
       }
     #endif
@@ -2718,6 +2823,10 @@ namespace Google.Cloud.EdgeNetwork.V1 {
           }
           case 90: {
             Network = input.ReadString();
+            break;
+          }
+          case 96: {
+            PeeringType = (global::Google.Cloud.EdgeNetwork.V1.RemotePeeringNetworkType) input.ReadEnum();
             break;
           }
         }
