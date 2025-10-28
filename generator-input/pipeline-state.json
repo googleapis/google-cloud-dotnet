@@ -1474,11 +1474,12 @@
         },
         {
             "id": "Google.Cloud.EdgeNetwork.V1",
-            "currentVersion": "1.4.0",
+            "currentVersion": "1.5.0",
             "generationAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
             "releaseAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
-            "releaseTimestamp": "2024-07-08T16:38:20Z",
+            "releaseTimestamp": "2025-10-28T08:31:59.400558160Z",
             "lastGeneratedCommit": "b1a9eefc2e1021fb9465bdac5e2984499451ae34",
+            "lastReleasedCommit": "b1a9eefc2e1021fb9465bdac5e2984499451ae34",
             "apiPaths": [
                 "google/cloud/edgenetwork/v1"
             ],
