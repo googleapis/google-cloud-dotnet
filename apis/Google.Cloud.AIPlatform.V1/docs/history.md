@@ -1,5 +1,13 @@
 # Version history
 
+## Version 3.54.0, released 2025-10-28
+
+### Bug fixes
+
+- Updating `bigtable_metadata` field name in `FeatureOnlineStore`
+- Updating `enableDirectBigtableAccess` field name in FeatureOnlineStore`
+- Updating `bigtable_metadata` field name in `FeatureView`
+
 ## Version 3.53.0, released 2025-10-24
 
 ### New features
