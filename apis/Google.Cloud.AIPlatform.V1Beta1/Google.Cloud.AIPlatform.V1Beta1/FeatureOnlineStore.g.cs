@@ -53,7 +53,7 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
             "Z3RhYmxlEmMKDGF1dG9fc2NhbGluZxgBIAEoCzJILmdvb2dsZS5jbG91ZC5h",
             "aXBsYXRmb3JtLnYxYmV0YTEuRmVhdHVyZU9ubGluZVN0b3JlLkJpZ3RhYmxl",
             "LkF1dG9TY2FsaW5nQgPgQQISKgodZW5hYmxlX2RpcmVjdF9iaWd0YWJsZV9h",
-            "Y2Nlc3MYAiABKAhCA+BBARJtChFiaWd0YWJsZV9tZXRhZGF0YRgDIAEoCzJN",
+            "Y2Nlc3MYAyABKAhCA+BBARJtChFiaWd0YWJsZV9tZXRhZGF0YRgEIAEoCzJN",
             "Lmdvb2dsZS5jbG91ZC5haXBsYXRmb3JtLnYxYmV0YTEuRmVhdHVyZU9ubGlu",
             "ZVN0b3JlLkJpZ3RhYmxlLkJpZ3RhYmxlTWV0YWRhdGFCA+BBAxpsCgtBdXRv",
             "U2NhbGluZxIbCg5taW5fbm9kZV9jb3VudBgBIAEoBUID4EECEhsKDm1heF9u",
@@ -975,7 +975,7 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
         }
 
         /// <summary>Field number for the "enable_direct_bigtable_access" field.</summary>
-        public const int EnableDirectBigtableAccessFieldNumber = 2;
+        public const int EnableDirectBigtableAccessFieldNumber = 3;
         private bool enableDirectBigtableAccess_;
         /// <summary>
         /// If true, enable direct access to the Bigtable instance.
@@ -990,7 +990,7 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
         }
 
         /// <summary>Field number for the "bigtable_metadata" field.</summary>
-        public const int BigtableMetadataFieldNumber = 3;
+        public const int BigtableMetadataFieldNumber = 4;
         private global::Google.Cloud.AIPlatform.V1Beta1.FeatureOnlineStore.Types.Bigtable.Types.BigtableMetadata bigtableMetadata_;
         /// <summary>
         /// Metadata of the Bigtable instance. Output only.
@@ -1055,11 +1055,11 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
             output.WriteMessage(AutoScaling);
           }
           if (EnableDirectBigtableAccess != false) {
-            output.WriteRawTag(16);
+            output.WriteRawTag(24);
             output.WriteBool(EnableDirectBigtableAccess);
           }
           if (bigtableMetadata_ != null) {
-            output.WriteRawTag(26);
+            output.WriteRawTag(34);
             output.WriteMessage(BigtableMetadata);
           }
           if (_unknownFields != null) {
@@ -1077,11 +1077,11 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
             output.WriteMessage(AutoScaling);
           }
           if (EnableDirectBigtableAccess != false) {
-            output.WriteRawTag(16);
+            output.WriteRawTag(24);
             output.WriteBool(EnableDirectBigtableAccess);
           }
           if (bigtableMetadata_ != null) {
-            output.WriteRawTag(26);
+            output.WriteRawTag(34);
             output.WriteMessage(BigtableMetadata);
           }
           if (_unknownFields != null) {
@@ -1152,11 +1152,11 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
                 input.ReadMessage(AutoScaling);
                 break;
               }
-              case 16: {
+              case 24: {
                 EnableDirectBigtableAccess = input.ReadBool();
                 break;
               }
-              case 26: {
+              case 34: {
                 if (bigtableMetadata_ == null) {
                   BigtableMetadata = new global::Google.Cloud.AIPlatform.V1Beta1.FeatureOnlineStore.Types.Bigtable.Types.BigtableMetadata();
                 }
@@ -1185,11 +1185,11 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
                 input.ReadMessage(AutoScaling);
                 break;
               }
-              case 16: {
+              case 24: {
                 EnableDirectBigtableAccess = input.ReadBool();
                 break;
               }
-              case 26: {
+              case 34: {
                 if (bigtableMetadata_ == null) {
                   BigtableMetadata = new global::Google.Cloud.AIPlatform.V1Beta1.FeatureOnlineStore.Types.Bigtable.Types.BigtableMetadata();
                 }
