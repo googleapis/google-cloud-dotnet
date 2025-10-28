@@ -4605,6 +4605,18 @@
             "sourcePaths": [
                 "apis/Google.Ads.DataManager.V1/Google.Ads.DataManager.V1"
             ]
+        },
+        {
+            "id": "Google.Cloud.HypercomputeCluster.V1Beta",
+            "nextVersion": "1.0.0-beta01",
+            "generationAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
+            "releaseAutomationLevel": "AUTOMATION_LEVEL_BLOCKED",
+            "apiPaths": [
+                "google/cloud/hypercomputecluster/v1beta"
+            ],
+            "sourcePaths": [
+                "apis/Google.Cloud.HypercomputeCluster.V1Beta/Google.Cloud.HypercomputeCluster.V1Beta"
+            ]
         }
     ],
     "ignoredApiPaths": [
