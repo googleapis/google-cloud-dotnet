@@ -53,7 +53,7 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
             "Y2xvdWQuYWlwbGF0Zm9ybS52MWJldGExLkZlYXR1cmVWaWV3LlNlcnZpY2VB",
             "Z2VudFR5cGVCA+BBARIiChVzZXJ2aWNlX2FjY291bnRfZW1haWwYDSABKAlC",
             "A+BBAxIaCg1zYXRpc2ZpZXNfcHpzGBMgASgIQgPgQQMSGgoNc2F0aXNmaWVz",
-            "X3B6aRgUIAEoCEID4EEDEl0KEWJpZ3RhYmxlX21ldGFkYXRhGBUgASgLMj0u",
+            "X3B6aRgUIAEoCEID4EEDEl0KEWJpZ3RhYmxlX21ldGFkYXRhGBYgASgLMj0u",
             "Z29vZ2xlLmNsb3VkLmFpcGxhdGZvcm0udjFiZXRhMS5GZWF0dXJlVmlldy5C",
             "aWd0YWJsZU1ldGFkYXRhQgPgQQMaQgoOQmlnUXVlcnlTb3VyY2USEAoDdXJp",
             "GAEgASgJQgPgQQISHgoRZW50aXR5X2lkX2NvbHVtbnMYAiADKAlCA+BBAhoa",
@@ -479,7 +479,7 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
     }
 
     /// <summary>Field number for the "bigtable_metadata" field.</summary>
-    public const int BigtableMetadataFieldNumber = 21;
+    public const int BigtableMetadataFieldNumber = 22;
     private global::Google.Cloud.AIPlatform.V1Beta1.FeatureView.Types.BigtableMetadata bigtableMetadata_;
     /// <summary>
     /// Metadata containing information about the Cloud Bigtable.
@@ -653,7 +653,7 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
         output.WriteBool(SatisfiesPzi);
       }
       if (bigtableMetadata_ != null) {
-        output.WriteRawTag(170, 1);
+        output.WriteRawTag(178, 1);
         output.WriteMessage(BigtableMetadata);
       }
       if (_unknownFields != null) {
@@ -728,7 +728,7 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
         output.WriteBool(SatisfiesPzi);
       }
       if (bigtableMetadata_ != null) {
-        output.WriteRawTag(170, 1);
+        output.WriteRawTag(178, 1);
         output.WriteMessage(BigtableMetadata);
       }
       if (_unknownFields != null) {
@@ -996,7 +996,7 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
             SatisfiesPzi = input.ReadBool();
             break;
           }
-          case 170: {
+          case 178: {
             if (bigtableMetadata_ == null) {
               BigtableMetadata = new global::Google.Cloud.AIPlatform.V1Beta1.FeatureView.Types.BigtableMetadata();
             }
@@ -1115,7 +1115,7 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
             SatisfiesPzi = input.ReadBool();
             break;
           }
-          case 170: {
+          case 178: {
             if (bigtableMetadata_ == null) {
               BigtableMetadata = new global::Google.Cloud.AIPlatform.V1Beta1.FeatureView.Types.BigtableMetadata();
             }
