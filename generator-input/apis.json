@@ -3115,6 +3115,26 @@
       "restNumericEnums": true
     },
     {
+      "id": "Google.Cloud.HypercomputeCluster.V1Beta",
+      "version": "1.0.0-beta00",
+      "type": "grpc",
+      "productName": "Cluster Director",
+      "productUrl": "https://cloud.google.com/blog/products/compute/managed-slurm-and-other-cluster-director-enhancements",
+      "description": "",
+      "tags": [],
+      "dependencies": {
+        "Google.Cloud.Location": "2.3.0",
+        "Google.LongRunning": "3.4.0"
+      },
+      "generator": "micro",
+      "protoPath": "google/cloud/hypercomputecluster/v1beta",
+      "includeCommonResourcesProto": true,
+      "shortName": "hypercomputecluster",
+      "serviceConfigFile": "hypercomputecluster_v1beta.yaml",
+      "transport": "grpc+rest",
+      "restNumericEnums": true
+    },
+    {
       "id": "Google.Cloud.Iam.Admin.V1",
       "version": "2.4.0",
       "type": "grpc",
