@@ -702,11 +702,10 @@ internal sealed class NonSourceGenerator
         DeleteRelative(".repo-metadata.json");
         DeleteRelative(".repo-metadata.json");
 
-        DeleteProject(apiLayout.ProductionDirectory);
-        DeleteProject(apiLayout.UnitTestsDirectory);
-        DeleteProject(apiLayout.IntegrationTestsDirectory);
-        DeleteProject(apiLayout.GeneratedSnippetsDirectory);
-        DeleteProject(apiLayout.SnippetsDirectory);
+        foreach (var project in api.DeriveProjects())
+        {
+            DeleteProject(Path.Combine(apiLayout.SourceDirectory, project));
+        }
 
         void DeleteProject(string directory)
         {
