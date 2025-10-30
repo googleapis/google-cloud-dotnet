@@ -182,7 +182,7 @@ namespace Google.Cloud.Spanner.Data
 
                 // We don't need any cleanup wrt Session resources when stream closes
                 //reader.StreamClosed += delegate { session.ReleaseToPool(forceDelete: false); };
-                return Task.FromResult(reader);
+                return reader;
             }
         }
     }

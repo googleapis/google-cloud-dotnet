@@ -124,18 +124,18 @@ public class RouteToLeaderTests
     {
         { managedTransaction => managedTransaction.WithTransaction(s_transactionId, s_partitionedDml, false).ExecuteSqlAsync(new ExecuteSqlRequest(), callSettings: null) },
         { managedTransaction => managedTransaction.WithTransaction(s_transactionId, s_readWrite, false).ExecuteSqlAsync(new ExecuteSqlRequest(), callSettings: null) },
-        { managedTransaction => managedTransaction.WithTransaction(s_transactionId, s_partitionedDml, false).ReadStreamReader(new ReadRequest(), callSettings: null).NextAsync(default) },
-        { managedTransaction => managedTransaction.WithTransaction(s_transactionId, s_readWrite, false).ReadStreamReader(new ReadRequest(), callSettings: null).NextAsync(default) },
-        { managedTransaction => managedTransaction.WithTransaction(s_transactionId, s_partitionedDml, false).ExecuteSqlStreamReader(new ExecuteSqlRequest(), callSettings: null).NextAsync(default) },
-        { managedTransaction => managedTransaction.WithTransaction(s_transactionId, s_readWrite, false).ExecuteSqlStreamReader(new ExecuteSqlRequest(), callSettings: null).NextAsync(default) },
-        { managedTransaction => managedTransaction.WithTransaction(s_transactionId, s_readWrite, false).ExecuteSqlStreamReader(new ExecuteSqlRequest(), callSettings: null).NextAsync(default) },
+        { async managedTransaction => await (await managedTransaction.WithTransaction(s_transactionId, s_partitionedDml, false).ReadStreamReaderAsync(new ReadRequest(), callSettings: null)).NextAsync(default) },
+        { async managedTransaction => await (await managedTransaction.WithTransaction(s_transactionId, s_readWrite, false).ReadStreamReaderAsync(new ReadRequest(), callSettings: null)).NextAsync(default) },
+        { async managedTransaction => await (await managedTransaction.WithTransaction(s_transactionId, s_partitionedDml, false).ExecuteSqlStreamReaderAsync(new ExecuteSqlRequest(), callSettings: null)).NextAsync(default) },
+        { async managedTransaction => await (await managedTransaction.WithTransaction(s_transactionId, s_readWrite, false).ExecuteSqlStreamReaderAsync(new ExecuteSqlRequest(), callSettings: null)).NextAsync(default) },
+        { async managedTransaction => await (await managedTransaction.WithTransaction(s_transactionId, s_readWrite, false).ExecuteSqlStreamReaderAsync(new ExecuteSqlRequest(), callSettings: null)).NextAsync(default) },
     };
 
     public static TheoryData<Func<ManagedTransaction, Task>> ManagedTransactionDoesNotRouteToLeader => new TheoryData<Func<ManagedTransaction, Task>>
     {
         { managedTransaction => managedTransaction.WithTransaction(s_transactionId, s_readOnly, false).ExecuteSqlAsync(new ExecuteSqlRequest(), callSettings: null) },
-        { managedTransaction => managedTransaction.WithTransaction(s_transactionId, s_readOnly, false).ReadStreamReader(new ReadRequest(), callSettings: null).NextAsync(default) },
-        { managedTransaction => managedTransaction.WithTransaction(s_transactionId, s_readOnly, false).ExecuteSqlStreamReader(new ExecuteSqlRequest(), callSettings: null).NextAsync(default) },
+        { async managedTransaction => await (await managedTransaction.WithTransaction(s_transactionId, s_readOnly, false).ReadStreamReaderAsync(new ReadRequest(), callSettings: null)).NextAsync(default) },
+        { async managedTransaction => await (await managedTransaction.WithTransaction(s_transactionId, s_readOnly, false).ExecuteSqlStreamReaderAsync(new ExecuteSqlRequest(), callSettings: null)).NextAsync(default) },
     };
 
     [Theory]

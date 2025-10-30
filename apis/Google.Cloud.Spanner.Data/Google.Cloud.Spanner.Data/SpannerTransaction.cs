@@ -59,7 +59,7 @@ namespace Google.Cloud.Spanner.Data
     public sealed class SpannerTransaction : SpannerTransactionBase, ISpannerTransaction
     {
         private readonly List<Mutation> _mutations = new List<Mutation>();
-        private readonly SpannerTransactionCreationOptions _creationOptions;
+        internal readonly SpannerTransactionCreationOptions _creationOptions; // internal for testing
         // This value will be true if and only if this transaction was created by RetriableTransaction.
         private readonly bool _isRetriable = false;
         private int _disposed = 0;
@@ -106,7 +106,7 @@ namespace Google.Cloud.Spanner.Data
 
         //private readonly PooledSession _session;
 
-        private readonly ManagedTransaction _transaction;
+        internal readonly ManagedTransaction _transaction; // internal for testing
 
         /// <summary>
         /// Options to apply to the transaction after creation, usually before committing the transaction
@@ -346,7 +346,7 @@ namespace Google.Cloud.Spanner.Data
             var callSettings = SpannerConnection.CreateCallSettings(
                 request.GetCallSettings,
                 cancellationToken);
-            return Task.FromResult(request.ExecuteReadOrQueryStreamReader(_transaction, callSettings));
+            return request.ExecuteReadOrQueryStreamReader(_transaction, callSettings);
         }
 
         Task<long> ISpannerTransaction.ExecuteDmlAsync(ExecuteSqlRequest request, CancellationToken cancellationToken, int timeoutSeconds)
@@ -362,7 +362,7 @@ namespace Google.Cloud.Spanner.Data
                 // Note: ExecuteSql would work, but by using a streaming call we enable potential future scenarios
                 // where the server returns interim resume tokens to avoid timeouts.
                 var callSettings = SpannerConnection.CreateCallSettings(settings => settings.ExecuteStreamingSqlSettings, timeoutSeconds, cancellationToken);
-                using (var reader = _transaction.ExecuteSqlStreamReader(request, callSettings))
+                using (var reader = await _transaction.ExecuteSqlStreamReaderAsync(request, callSettings).ConfigureAwait(false))
                 {
                     await reader.NextAsync(cancellationToken).ConfigureAwait(false);
                     var stats = reader.Stats;
@@ -395,7 +395,7 @@ namespace Google.Cloud.Spanner.Data
             return ExecuteHelper.WithErrorTranslationAndProfiling(async () =>
             {
                 var callSettings = SpannerConnection.CreateCallSettings(settings => settings.ExecuteStreamingSqlSettings, timeoutSeconds, cancellationToken);
-                using var reader = _transaction.ExecuteSqlStreamReader(request, callSettings);
+                using var reader = await _transaction.ExecuteSqlStreamReaderAsync(request, callSettings).ConfigureAwait(false);
                 await reader.EnsureInitializedAsync(cancellationToken).ConfigureAwait(false);
                 return reader;
             }, "SpannerTransaction.ExecuteDmlReader", SpannerConnection.Logger);

@@ -197,7 +197,7 @@ public class DirectedReadTests
         var managedTransaction = CreateManagedTransaction(spannerClient);
         managedTransaction = managedTransaction.WithTransaction(s_transactionId, s_readOnly, singleUseTransaction);
 
-        await managedTransaction.ExecuteSqlStreamReader(new ExecuteSqlRequest(), callSettings: null).HasDataAsync(default);
+        await (await managedTransaction.ExecuteSqlStreamReaderAsync(new ExecuteSqlRequest(), callSettings: null)).HasDataAsync(default);
         Assert.Equal(IncludeDirectedReadOptions, grpcClient.LastExecuteSqlRequest.DirectedReadOptions);
     }
 
@@ -211,10 +211,10 @@ public class DirectedReadTests
         var managedTransaction = CreateManagedTransaction(spannerClient);
         managedTransaction = managedTransaction.WithTransaction(s_transactionId, s_readOnly, singleUseTransaction);
 
-        await managedTransaction.ExecuteSqlStreamReader(new ExecuteSqlRequest
+        await (await managedTransaction.ExecuteSqlStreamReaderAsync(new ExecuteSqlRequest
         {
             DirectedReadOptions = IncludeDirectedReadOptions
-        }, callSettings: null).HasDataAsync(default);
+        }, callSettings: null)).HasDataAsync(default);
 
         Assert.Equal(IncludeDirectedReadOptions, grpcClient.LastExecuteSqlRequest.DirectedReadOptions);
     }
@@ -233,10 +233,10 @@ public class DirectedReadTests
         var managedTransaction = CreateManagedTransaction(spannerClient);
         managedTransaction = managedTransaction.WithTransaction(s_transactionId, s_readOnly, singleUseTransaction);
 
-        await managedTransaction.ExecuteSqlStreamReader(new ExecuteSqlRequest
+        await (await managedTransaction.ExecuteSqlStreamReaderAsync(new ExecuteSqlRequest
         {
             DirectedReadOptions = IncludeDirectedReadOptions
-        }, callSettings: null).HasDataAsync(default);
+        }, callSettings: null)).HasDataAsync(default);
 
         Assert.Equal(IncludeDirectedReadOptions, grpcClient.LastExecuteSqlRequest.DirectedReadOptions);
     }
@@ -259,7 +259,7 @@ public class DirectedReadTests
         var managedTransaction = CreateManagedTransaction(spannerClient);
         managedTransaction = managedTransaction.WithTransaction(s_transactionId, options, singleUseTransaction: false);
 
-        await managedTransaction.ExecuteSqlStreamReader(new ExecuteSqlRequest(), callSettings: null).HasDataAsync(default);
+        await(await  managedTransaction.ExecuteSqlStreamReaderAsync(new ExecuteSqlRequest(), callSettings: null)).HasDataAsync(default);
         Assert.Null(grpcClient.LastExecuteSqlRequest.DirectedReadOptions);
     }
 
@@ -277,7 +277,9 @@ public class DirectedReadTests
         var managedTransaction = CreateManagedTransaction(spannerClient);
         managedTransaction = managedTransaction.WithTransaction(s_transactionId, s_readOnly, singleUseTransaction);
 
-        await managedTransaction.ReadStreamReader(new ReadRequest(), callSettings: null).HasDataAsync(default);
+        var reader = await managedTransaction.ReadStreamReaderAsync(new ReadRequest(), callSettings: null);
+        await reader.HasDataAsync(default);
+
         Assert.Equal(IncludeDirectedReadOptions, grpcClient.LastReadRequest.DirectedReadOptions);
     }
 
@@ -291,10 +293,10 @@ public class DirectedReadTests
         var managedTransaction = CreateManagedTransaction(spannerClient);
         managedTransaction = managedTransaction.WithTransaction(s_transactionId, s_readOnly, singleUseTransaction);
 
-        await managedTransaction.ReadStreamReader(new ReadRequest
+        await (await managedTransaction.ReadStreamReaderAsync(new ReadRequest
         {
             DirectedReadOptions = IncludeDirectedReadOptions
-        }, callSettings: null).HasDataAsync(default);
+        }, callSettings: null)).HasDataAsync(default);
 
         Assert.Equal(IncludeDirectedReadOptions, grpcClient.LastReadRequest.DirectedReadOptions);
     }
@@ -313,10 +315,10 @@ public class DirectedReadTests
         var managedTransaction = CreateManagedTransaction(spannerClient);
         managedTransaction = managedTransaction.WithTransaction(s_transactionId, s_readOnly, singleUseTransaction);
 
-        await managedTransaction.ReadStreamReader(new ReadRequest
+        await (await managedTransaction.ReadStreamReaderAsync(new ReadRequest
         {
             DirectedReadOptions = IncludeDirectedReadOptions
-        }, callSettings: null).HasDataAsync(default);
+        }, callSettings: null)).HasDataAsync(default);
 
         Assert.Equal(IncludeDirectedReadOptions, grpcClient.LastReadRequest.DirectedReadOptions);
     }
@@ -339,7 +341,7 @@ public class DirectedReadTests
         var managedTransaction = CreateManagedTransaction(spannerClient);
         managedTransaction = managedTransaction.WithTransaction(s_transactionId, options, singleUseTransaction: false);
 
-        await managedTransaction.ReadStreamReader(new ReadRequest(), callSettings: null).HasDataAsync(default);
+        await (await managedTransaction.ReadStreamReaderAsync(new ReadRequest(), callSettings: null)).HasDataAsync(default);
         Assert.Null(grpcClient.LastReadRequest.DirectedReadOptions);
     }
 

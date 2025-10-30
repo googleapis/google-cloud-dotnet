@@ -49,7 +49,7 @@ namespace Google.Cloud.Spanner.V1.IntegrationTests
                 {
                     await connection.OpenAsync(default);
                     ManagedTransaction managedTransaction = connection.AcquireManagedTransaction(null, out _);
-                    using (var reader = managedTransaction.ExecuteSqlStreamReader(request, null))
+                    using (var reader = await managedTransaction.ExecuteSqlStreamReaderAsync(request, null))
                     {
                         // While there are more values to read, HasDataAsync should return true
                         for (int valuesRead = 0; valuesRead < expectedValueCount; valuesRead++)

@@ -54,7 +54,7 @@ namespace Google.Cloud.Spanner.V1
         /// Will be <see cref="TransactionOptions.ModeOneofCase.None"/> if <see cref="TransactionId"/>
         /// is null.
         /// </remarks>
-        private TransactionOptions TransactionOptions { get; }
+        internal TransactionOptions TransactionOptions { get; }
 
         /// <summary>
         /// The transaction mode for the transaction that is or may be associated with this session.
@@ -153,6 +153,23 @@ namespace Google.Cloud.Spanner.V1
         internal ManagedTransaction WithTransaction(ByteString transactionId, TransactionOptions transactionOptions, bool singleUseTransaction, Timestamp readTimestamp = null)
         {
             return new ManagedTransaction(_multiplexSession, transactionId, transactionOptions, singleUseTransaction, readTimestamp);
+        }
+
+        private Mutation MaybeFetchMutationKey(Protobuf.Collections.RepeatedField<Mutation> mutations)
+        {
+            if(mutations.Count < 1)
+            {
+                return null;
+            }
+
+            // Fetch first mutation in list, we will return the first mutation by default if it meets all conditions
+            Mutation key = mutations.ElementAt(0);
+            if(key.Delete?.KeySet.Keys.Count < 1)
+            {
+                return null;
+            }
+
+            return key;
         }
 
         /// <summary>
@@ -372,22 +389,22 @@ namespace Google.Cloud.Spanner.V1
         /// from this object.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A task representing the asynchronous operation. When the task completes, the result is the response from the RPC.</returns>
-        public Task<CommitResponse> CommitAsync(CommitRequest request, CallSettings callSettings)
+        public async Task<CommitResponse> CommitAsync(CommitRequest request, CallSettings callSettings)
         {
-            MaybeWaitOnSessionRefresh();
+            await MaybeWaitOnSessionRefresh().ConfigureAwait(false);
             GaxPreconditions.CheckNotNull(request, nameof(request));
 
             request.SessionAsSessionName = SessionName;
             request.PrecommitToken = FetchPrecommitToken();
 
-            return ExecuteMaybeWithTransactionSelectorAsync(
+            return await ExecuteMaybeWithTransactionSelectorAsync(
                 transactionSelectorSetter: SetCommandTransaction,
                 commandAsync: CommitAsync,
                 inlinedTransactionExtractor: null, // Commit does not support inline transactions.
                 skipTransactionCreation: request.Mutations.Count == 0, // If there are only mutations we won't have a transaction but we need one.
                 callSettings?.CancellationToken ?? default,
                 // Multiplex sessions needs a mutation key in transaction create for a purely mutation based transaction
-                mutationKey: request.Mutations.Count > 0 ? request.Mutations.ElementAt(0) : null);
+                mutationKey: request.Mutations.Count > 0 ? MaybeFetchMutationKey(request.Mutations) : null).ConfigureAwait(false);
 
             void SetCommandTransaction(TransactionSelector transactionSelector)
             {
@@ -415,33 +432,14 @@ namespace Google.Cloud.Spanner.V1
                         "A transaction has not been acquired because no command execution has been attempted.");
                 }
 
-                const int MaxRetries = 2; // Allow up to 2 attempts: the initial attempt plus one retry.
                 CommitResponse finalResponse;
 
-                // Initial attempt
-                finalResponse = await ExecuteCommitOnceAsync(request, callSettings).ConfigureAwait(false);
-
-                for (int retryAttempt = 1; retryAttempt < MaxRetries; retryAttempt++)
+                do
                 {
-                    // Check if the server signaled for a retry *after* the initial attempt
-                    if (finalResponse.MultiplexedSessionRetryCase != CommitResponse.MultiplexedSessionRetryOneofCase.PrecommitToken)
-                    {
-                        // No retry token received, exit the loop and return the last response.
-                        return finalResponse;
-                    }
-
-                    // --- Retry Logic ---
-                    // Fetch latest precommit token returned in the earlier response for the retry
-                    // Execute the commit call again. The result will be stored in finalResponse.
+                    // This loop will keep executing as long as we are signaled by Spanner to retry the Commit
+                    // It only exits if we no longer receive a PrecommitToken based retry enum from backend
                     finalResponse = await ExecuteCommitOnceAsync(request, callSettings).ConfigureAwait(false);
-                }
-
-                // After two attempts (initial + one retry), check if the server *still* signals for another retry.
-                // This handles the third time the token is set (after the second execution).
-                if (finalResponse.MultiplexedSessionRetryCase == CommitResponse.MultiplexedSessionRetryOneofCase.PrecommitToken)
-                {
-                    throw new InvalidOperationException("Unexpected MultiplexedSessionRetryOneofCase found on response after retry.");
-                }
+                } while (finalResponse.MultiplexedSessionRetryCase == CommitResponse.MultiplexedSessionRetryOneofCase.PrecommitToken);
 
                 return finalResponse;
 
@@ -463,19 +461,19 @@ namespace Google.Cloud.Spanner.V1
         /// from this object.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A task representing the asynchronous operation.</returns>
-        public Task RollbackAsync(RollbackRequest request, CallSettings callSettings)
+        public async Task RollbackAsync(RollbackRequest request, CallSettings callSettings)
         {
-            MaybeWaitOnSessionRefresh();
+            await MaybeWaitOnSessionRefresh().ConfigureAwait(false);
             GaxPreconditions.CheckNotNull(request, nameof(request));
 
             request.SessionAsSessionName = SessionName;
 
-            return ExecuteMaybeWithTransactionSelectorAsync(
+            await ExecuteMaybeWithTransactionSelectorAsync(
                 transactionSelectorSetter: SetCommandTransaction,
                 commandAsync: RollbackAsync,
                 inlinedTransactionExtractor: null, // Rollback does not support inline transactions.
                 skipTransactionCreation: true, // If there's no transaction by the time roll back is called, we fail, we don't need to create one.
-                callSettings?.CancellationToken ?? default);
+                callSettings?.CancellationToken ?? default).ConfigureAwait(false);
 
             void SetCommandTransaction(TransactionSelector transactionSelector)
             {
@@ -539,19 +537,19 @@ namespace Google.Cloud.Spanner.V1
         /// from this object.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A task representing the asynchronous operation. When the task completes, the result is the response from the RPC.</returns>
-        internal Task<PartitionResponse> PartitionReadOrQueryAsync(PartitionReadOrQueryRequest request, CallSettings callSettings)
+        internal async Task<PartitionResponse> PartitionReadOrQueryAsync(PartitionReadOrQueryRequest request, CallSettings callSettings)
         {
-            MaybeWaitOnSessionRefresh();
+            await MaybeWaitOnSessionRefresh().ConfigureAwait(false);
             GaxPreconditions.CheckNotNull(request, nameof(request));
 
             request.SessionAsSessionName = SessionName;
 
-            return ExecuteMaybeWithTransactionSelectorAsync(
+            return await ExecuteMaybeWithTransactionSelectorAsync(
                 transactionSelectorSetter: SetCommandTransaction,
                 commandAsync: PartitionReadOrQueryAsync,
                 inlinedTransactionExtractor: GetInlinedTransaction,
                 skipTransactionCreation: false,
-                callSettings?.CancellationToken ?? default);
+                callSettings?.CancellationToken ?? default).ConfigureAwait(false);
 
             void SetCommandTransaction(TransactionSelector transactionSelector)
             {
@@ -594,8 +592,8 @@ namespace Google.Cloud.Spanner.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A <see cref="ReliableStreamReader"/> for the streaming SQL request.</returns>
-        public ReliableStreamReader ReadStreamReader(ReadRequest request, CallSettings callSettings) =>
-            ExecuteReadOrQueryStreamReader(ReadOrQueryRequest.FromRequest(request), callSettings);
+        public async Task<ReliableStreamReader> ReadStreamReaderAsync(ReadRequest request, CallSettings callSettings) =>
+            await ExecuteReadOrQueryStreamReader(ReadOrQueryRequest.FromRequest(request), callSettings).ConfigureAwait(false);
 
         /// <summary>
         /// Creates a <see cref="ReliableStreamReader"/> for the given request.
@@ -608,8 +606,8 @@ namespace Google.Cloud.Spanner.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A <see cref="ReliableStreamReader"/> for the streaming SQL request.</returns>
-        public ReliableStreamReader ExecuteSqlStreamReader(ExecuteSqlRequest request, CallSettings callSettings) =>
-            ExecuteReadOrQueryStreamReader(ReadOrQueryRequest.FromRequest(request), callSettings);
+        public async Task<ReliableStreamReader> ExecuteSqlStreamReaderAsync(ExecuteSqlRequest request, CallSettings callSettings) =>
+            await ExecuteReadOrQueryStreamReader(ReadOrQueryRequest.FromRequest(request), callSettings).ConfigureAwait(false);
 
         /// <summary>
         /// Creates a <see cref="ReliableStreamReader"/> for the given request
@@ -618,9 +616,9 @@ namespace Google.Cloud.Spanner.V1
         /// from this object. If this object's <see cref="TransactionId"/> is null, the request's transaction is not modified.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A <see cref="ReliableStreamReader"/> for the streaming read request.</returns>
-        internal ReliableStreamReader ExecuteReadOrQueryStreamReader(ReadOrQueryRequest request, CallSettings callSettings)
+        internal async Task<ReliableStreamReader> ExecuteReadOrQueryStreamReader(ReadOrQueryRequest request, CallSettings callSettings)
         {
-            MaybeWaitOnSessionRefresh();
+            await MaybeWaitOnSessionRefresh().ConfigureAwait(false);
             GaxPreconditions.CheckNotNull(request, nameof(request));
 
             request.SessionAsSessionName = SessionName;
@@ -642,19 +640,19 @@ namespace Google.Cloud.Spanner.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A task representing the asynchronous operation. When the task completes, the result is the response from the RPC.</returns>
-        public Task<ResultSet> ExecuteSqlAsync(ExecuteSqlRequest request, CallSettings callSettings)
+        public async Task<ResultSet> ExecuteSqlAsync(ExecuteSqlRequest request, CallSettings callSettings)
         {
-            MaybeWaitOnSessionRefresh();
+            await MaybeWaitOnSessionRefresh().ConfigureAwait(false);
             GaxPreconditions.CheckNotNull(request, nameof(request));
 
             request.SessionAsSessionName = SessionName;
 
-            return ExecuteMaybeWithTransactionSelectorAsync(
+            return await ExecuteMaybeWithTransactionSelectorAsync(
                 transactionSelectorSetter: SetCommandTransaction,
                 commandAsync: ExecuteSqlAsync,
                 inlinedTransactionExtractor: GetInlinedTransaction,
                 skipTransactionCreation: false,
-                callSettings?.CancellationToken ?? default);
+                callSettings?.CancellationToken ?? default).ConfigureAwait(false);
 
             void SetCommandTransaction(TransactionSelector transactionSelector) => request.Transaction = transactionSelector;
 
@@ -677,19 +675,19 @@ namespace Google.Cloud.Spanner.V1
         /// from this object. If this object's <see cref="TransactionId"/> is null, the request's transaction is not modified.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A task representing the asynchronous operation. When the task completes, the result is the response from the RPC.</returns>
-        public Task<ExecuteBatchDmlResponse> ExecuteBatchDmlAsync(ExecuteBatchDmlRequest request, CallSettings callSettings)
+        public async Task<ExecuteBatchDmlResponse> ExecuteBatchDmlAsync(ExecuteBatchDmlRequest request, CallSettings callSettings)
         {
-            MaybeWaitOnSessionRefresh();
+            await MaybeWaitOnSessionRefresh().ConfigureAwait(false);
             GaxPreconditions.CheckNotNull(request, nameof(request));
 
             request.SessionAsSessionName = SessionName;
 
-            return ExecuteMaybeWithTransactionSelectorAsync(
+            return await ExecuteMaybeWithTransactionSelectorAsync(
                 transactionSelectorSetter: SetCommandTransaction,
                 commandAsync: ExecuteBatchDmlAsync,
                 inlinedTransactionExtractor: GetInlinedTransaction,
                 skipTransactionCreation: false,
-                callSettings?.CancellationToken ?? default);
+                callSettings?.CancellationToken ?? default).ConfigureAwait(false);
 
             void SetCommandTransaction(TransactionSelector transactionSelector) => request.Transaction = transactionSelector;
 
@@ -716,9 +714,9 @@ namespace Google.Cloud.Spanner.V1
             // This was agreed as part of the client library desing.
         }
 
-        private void MaybeWaitOnSessionRefresh()
+        private async Task MaybeWaitOnSessionRefresh()
         {
-            _multiplexSession.MaybeRefreshWithTimePeriodCheck();
+            await _multiplexSession.MaybeRefreshWithTimePeriodCheck().ConfigureAwait(false);
         }
 
         private async Task<T> RecordSuccessAndExpiredSessions<T>(Task<T> task)

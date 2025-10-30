@@ -109,7 +109,7 @@ public class ManagedSession
         };
     }
 
-    private async Task<Boolean> UpdateMuxSession(bool needsRefresh, double intervalInDays)
+    private async Task<bool> UpdateMuxSession(bool needsRefresh, double intervalInDays)
     {
         Session oldSession = _session;
         await CreateOrRefreshSessionsAsync(default).ConfigureAwait(false);
@@ -117,14 +117,14 @@ public class ManagedSession
         return _session != oldSession;
     }
 
-    internal void MaybeRefreshWithTimePeriodCheck()
+    internal async Task MaybeRefreshWithTimePeriodCheck()
     {
         if (SessionHasExpired(ForceRefreshIntervalInDays))
         {
             // If the session has expired on a client RPC request call, or has exceeded the 28 day Mux session refresh guidance
             // No request can proceed without us having a new Session to work with
             // Block on refreshing and getting a new session
-            bool sessionIsRefreshed = UpdateMuxSession(true, ForceRefreshIntervalInDays).Result;
+            bool sessionIsRefreshed = await UpdateMuxSession(true, ForceRefreshIntervalInDays).ConfigureAwait(false);
 
             if (!sessionIsRefreshed)
             {
@@ -168,7 +168,7 @@ public class ManagedSession
 
             Session multiplexSession;
 
-            bool acquiredSemaphore = false;
+            bool acquiredSemaphore = false; // Create a task and check non null for multiple threads initiating refresh
             try
             {
                 if (needsRefresh && MarkedForRefresh && !SessionHasExpired(ForceRefreshIntervalInDays))

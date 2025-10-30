@@ -293,8 +293,8 @@ namespace Google.Cloud.Spanner.V1
         /// <param name="transaction">The managed transaction to use for the request.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A <see cref="ReliableStreamReader"/> for this request.</returns>
-        public ReliableStreamReader ExecuteReadOrQueryStreamReader(ManagedTransaction transaction, CallSettings callSettings) =>
-            transaction.ExecuteReadOrQueryStreamReader(this, callSettings);
+        public async Task<ReliableStreamReader> ExecuteReadOrQueryStreamReader(ManagedTransaction transaction, CallSettings callSettings) =>
+            await transaction.ExecuteReadOrQueryStreamReader(this, callSettings).ConfigureAwait(false);
 
         /// <summary>
         /// Creates a <see cref="ReliableStreamReader"/> for this request

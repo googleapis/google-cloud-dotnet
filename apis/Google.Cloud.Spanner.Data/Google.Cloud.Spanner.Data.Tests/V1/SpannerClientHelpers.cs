@@ -48,6 +48,7 @@ namespace Google.Cloud.Spanner.V1.Tests
         internal const string Instance = "dummy-instance";
         internal const string Database = "dummy-database";
         private static readonly string s_retryInfoMetadataKey = RetryInfo.Descriptor.FullName + "-bin";
+        internal static readonly ByteString s_transactionId = ByteString.CopyFromUtf8("transaction");
 
         /// <summary>
         /// Creates a mock SpannerClient configured with settings that include a fake clock
@@ -402,7 +403,7 @@ namespace Google.Cloud.Spanner.V1.Tests
 
         internal static Transaction MaybeGetTransaction(TransactionSelector selector) => selector?.SelectorCase switch
         {
-            TransactionSelector.SelectorOneofCase.Begin => new Transaction { Id = ByteString.CopyFromUtf8("transaction") },
+            TransactionSelector.SelectorOneofCase.Begin => new Transaction { Id = s_transactionId },
             _ => null
         };
     }
