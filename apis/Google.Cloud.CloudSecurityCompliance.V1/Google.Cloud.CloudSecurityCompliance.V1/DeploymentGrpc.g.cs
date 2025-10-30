@@ -146,7 +146,10 @@ namespace Google.Cloud.CloudSecurityCompliance.V1 {
     public abstract partial class DeploymentBase
     {
       /// <summary>
-      /// Creates a new FrameworkDeployment in a given parent resource.
+      /// Creates a framework deployment in a given parent resource. A
+      /// framework deployment lets you assign a particular framework version to an
+      /// organization, folder, or project so that you can control and monitor
+      /// those resources using the framework's cloud controls.
       /// </summary>
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
@@ -158,7 +161,7 @@ namespace Google.Cloud.CloudSecurityCompliance.V1 {
       }
 
       /// <summary>
-      /// Deletes a single FrameworkDeployment.
+      /// Deletes a framework deployment.
       /// </summary>
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
@@ -170,7 +173,7 @@ namespace Google.Cloud.CloudSecurityCompliance.V1 {
       }
 
       /// <summary>
-      /// Gets details of a single FrameworkDeployment.
+      /// Gets details about a framework deployment.
       /// </summary>
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
@@ -182,7 +185,7 @@ namespace Google.Cloud.CloudSecurityCompliance.V1 {
       }
 
       /// <summary>
-      /// Lists FrameworkDeployments in a given parent resource.
+      /// Lists the framework deployments in a given parent resource.
       /// </summary>
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
@@ -194,7 +197,7 @@ namespace Google.Cloud.CloudSecurityCompliance.V1 {
       }
 
       /// <summary>
-      /// Gets details of a single CloudControlDeployment.
+      /// Gets details about a cloud control deployment.
       /// </summary>
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
@@ -206,7 +209,7 @@ namespace Google.Cloud.CloudSecurityCompliance.V1 {
       }
 
       /// <summary>
-      /// Lists CloudControlDeployments in a given parent resource.
+      /// Lists the cloud conrol deployments in a given parent resource.
       /// </summary>
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
@@ -247,7 +250,10 @@ namespace Google.Cloud.CloudSecurityCompliance.V1 {
       }
 
       /// <summary>
-      /// Creates a new FrameworkDeployment in a given parent resource.
+      /// Creates a framework deployment in a given parent resource. A
+      /// framework deployment lets you assign a particular framework version to an
+      /// organization, folder, or project so that you can control and monitor
+      /// those resources using the framework's cloud controls.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -260,7 +266,10 @@ namespace Google.Cloud.CloudSecurityCompliance.V1 {
         return CreateFrameworkDeployment(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Creates a new FrameworkDeployment in a given parent resource.
+      /// Creates a framework deployment in a given parent resource. A
+      /// framework deployment lets you assign a particular framework version to an
+      /// organization, folder, or project so that you can control and monitor
+      /// those resources using the framework's cloud controls.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -271,7 +280,10 @@ namespace Google.Cloud.CloudSecurityCompliance.V1 {
         return CallInvoker.BlockingUnaryCall(__Method_CreateFrameworkDeployment, null, options, request);
       }
       /// <summary>
-      /// Creates a new FrameworkDeployment in a given parent resource.
+      /// Creates a framework deployment in a given parent resource. A
+      /// framework deployment lets you assign a particular framework version to an
+      /// organization, folder, or project so that you can control and monitor
+      /// those resources using the framework's cloud controls.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -284,7 +296,10 @@ namespace Google.Cloud.CloudSecurityCompliance.V1 {
         return CreateFrameworkDeploymentAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Creates a new FrameworkDeployment in a given parent resource.
+      /// Creates a framework deployment in a given parent resource. A
+      /// framework deployment lets you assign a particular framework version to an
+      /// organization, folder, or project so that you can control and monitor
+      /// those resources using the framework's cloud controls.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -295,7 +310,7 @@ namespace Google.Cloud.CloudSecurityCompliance.V1 {
         return CallInvoker.AsyncUnaryCall(__Method_CreateFrameworkDeployment, null, options, request);
       }
       /// <summary>
-      /// Deletes a single FrameworkDeployment.
+      /// Deletes a framework deployment.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -308,7 +323,7 @@ namespace Google.Cloud.CloudSecurityCompliance.V1 {
         return DeleteFrameworkDeployment(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Deletes a single FrameworkDeployment.
+      /// Deletes a framework deployment.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -319,7 +334,7 @@ namespace Google.Cloud.CloudSecurityCompliance.V1 {
         return CallInvoker.BlockingUnaryCall(__Method_DeleteFrameworkDeployment, null, options, request);
       }
       /// <summary>
-      /// Deletes a single FrameworkDeployment.
+      /// Deletes a framework deployment.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -332,7 +347,7 @@ namespace Google.Cloud.CloudSecurityCompliance.V1 {
         return DeleteFrameworkDeploymentAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Deletes a single FrameworkDeployment.
+      /// Deletes a framework deployment.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -343,7 +358,7 @@ namespace Google.Cloud.CloudSecurityCompliance.V1 {
         return CallInvoker.AsyncUnaryCall(__Method_DeleteFrameworkDeployment, null, options, request);
       }
       /// <summary>
-      /// Gets details of a single FrameworkDeployment.
+      /// Gets details about a framework deployment.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -356,7 +371,7 @@ namespace Google.Cloud.CloudSecurityCompliance.V1 {
         return GetFrameworkDeployment(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Gets details of a single FrameworkDeployment.
+      /// Gets details about a framework deployment.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -367,7 +382,7 @@ namespace Google.Cloud.CloudSecurityCompliance.V1 {
         return CallInvoker.BlockingUnaryCall(__Method_GetFrameworkDeployment, null, options, request);
       }
       /// <summary>
-      /// Gets details of a single FrameworkDeployment.
+      /// Gets details about a framework deployment.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -380,7 +395,7 @@ namespace Google.Cloud.CloudSecurityCompliance.V1 {
         return GetFrameworkDeploymentAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Gets details of a single FrameworkDeployment.
+      /// Gets details about a framework deployment.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -391,7 +406,7 @@ namespace Google.Cloud.CloudSecurityCompliance.V1 {
         return CallInvoker.AsyncUnaryCall(__Method_GetFrameworkDeployment, null, options, request);
       }
       /// <summary>
-      /// Lists FrameworkDeployments in a given parent resource.
+      /// Lists the framework deployments in a given parent resource.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -404,7 +419,7 @@ namespace Google.Cloud.CloudSecurityCompliance.V1 {
         return ListFrameworkDeployments(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Lists FrameworkDeployments in a given parent resource.
+      /// Lists the framework deployments in a given parent resource.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -415,7 +430,7 @@ namespace Google.Cloud.CloudSecurityCompliance.V1 {
         return CallInvoker.BlockingUnaryCall(__Method_ListFrameworkDeployments, null, options, request);
       }
       /// <summary>
-      /// Lists FrameworkDeployments in a given parent resource.
+      /// Lists the framework deployments in a given parent resource.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -428,7 +443,7 @@ namespace Google.Cloud.CloudSecurityCompliance.V1 {
         return ListFrameworkDeploymentsAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Lists FrameworkDeployments in a given parent resource.
+      /// Lists the framework deployments in a given parent resource.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -439,7 +454,7 @@ namespace Google.Cloud.CloudSecurityCompliance.V1 {
         return CallInvoker.AsyncUnaryCall(__Method_ListFrameworkDeployments, null, options, request);
       }
       /// <summary>
-      /// Gets details of a single CloudControlDeployment.
+      /// Gets details about a cloud control deployment.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -452,7 +467,7 @@ namespace Google.Cloud.CloudSecurityCompliance.V1 {
         return GetCloudControlDeployment(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Gets details of a single CloudControlDeployment.
+      /// Gets details about a cloud control deployment.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -463,7 +478,7 @@ namespace Google.Cloud.CloudSecurityCompliance.V1 {
         return CallInvoker.BlockingUnaryCall(__Method_GetCloudControlDeployment, null, options, request);
       }
       /// <summary>
-      /// Gets details of a single CloudControlDeployment.
+      /// Gets details about a cloud control deployment.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -476,7 +491,7 @@ namespace Google.Cloud.CloudSecurityCompliance.V1 {
         return GetCloudControlDeploymentAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Gets details of a single CloudControlDeployment.
+      /// Gets details about a cloud control deployment.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -487,7 +502,7 @@ namespace Google.Cloud.CloudSecurityCompliance.V1 {
         return CallInvoker.AsyncUnaryCall(__Method_GetCloudControlDeployment, null, options, request);
       }
       /// <summary>
-      /// Lists CloudControlDeployments in a given parent resource.
+      /// Lists the cloud conrol deployments in a given parent resource.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -500,7 +515,7 @@ namespace Google.Cloud.CloudSecurityCompliance.V1 {
         return ListCloudControlDeployments(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Lists CloudControlDeployments in a given parent resource.
+      /// Lists the cloud conrol deployments in a given parent resource.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -511,7 +526,7 @@ namespace Google.Cloud.CloudSecurityCompliance.V1 {
         return CallInvoker.BlockingUnaryCall(__Method_ListCloudControlDeployments, null, options, request);
       }
       /// <summary>
-      /// Lists CloudControlDeployments in a given parent resource.
+      /// Lists the cloud conrol deployments in a given parent resource.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -524,7 +539,7 @@ namespace Google.Cloud.CloudSecurityCompliance.V1 {
         return ListCloudControlDeploymentsAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Lists CloudControlDeployments in a given parent resource.
+      /// Lists the cloud conrol deployments in a given parent resource.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>

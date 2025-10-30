@@ -57,79 +57,80 @@ namespace Google.Cloud.CloudSecurityCompliance.V1 {
             "CnBhZ2VfdG9rZW4YAyABKAlCA+BBASKDAQoZTGlzdENsb3VkQ29udHJvbHNS",
             "ZXNwb25zZRJNCg5jbG91ZF9jb250cm9scxgBIAMoCzI1Lmdvb2dsZS5jbG91",
             "ZC5jbG91ZHNlY3VyaXR5Y29tcGxpYW5jZS52MS5DbG91ZENvbnRyb2wSFwoP",
-            "bmV4dF9wYWdlX3Rva2VuGAIgASgJImMKFkdldENsb3VkQ29udHJvbFJlcXVl",
-            "c3QSSQoEbmFtZRgBIAEoCUI74EEC+kE1CjNjbG91ZHNlY3VyaXR5Y29tcGxp",
-            "YW5jZS5nb29nbGVhcGlzLmNvbS9DbG91ZENvbnRyb2wi2gEKGUNyZWF0ZUNs",
-            "b3VkQ29udHJvbFJlcXVlc3QSSwoGcGFyZW50GAEgASgJQjvgQQL6QTUSM2Ns",
-            "b3Vkc2VjdXJpdHljb21wbGlhbmNlLmdvb2dsZWFwaXMuY29tL0Nsb3VkQ29u",
-            "dHJvbBIdChBjbG91ZF9jb250cm9sX2lkGAIgASgJQgPgQQISUQoNY2xvdWRf",
-            "Y29udHJvbBgDIAEoCzI1Lmdvb2dsZS5jbG91ZC5jbG91ZHNlY3VyaXR5Y29t",
-            "cGxpYW5jZS52MS5DbG91ZENvbnRyb2xCA+BBAiKkAQoZVXBkYXRlQ2xvdWRD",
-            "b250cm9sUmVxdWVzdBI0Cgt1cGRhdGVfbWFzaxgBIAEoCzIaLmdvb2dsZS5w",
-            "cm90b2J1Zi5GaWVsZE1hc2tCA+BBARJRCg1jbG91ZF9jb250cm9sGAIgASgL",
-            "MjUuZ29vZ2xlLmNsb3VkLmNsb3Vkc2VjdXJpdHljb21wbGlhbmNlLnYxLkNs",
-            "b3VkQ29udHJvbEID4EECImYKGURlbGV0ZUNsb3VkQ29udHJvbFJlcXVlc3QS",
-            "SQoEbmFtZRgBIAEoCUI74EEC+kE1CjNjbG91ZHNlY3VyaXR5Y29tcGxpYW5j",
-            "ZS5nb29nbGVhcGlzLmNvbS9DbG91ZENvbnRyb2wyoRIKBkNvbmZpZxLXAQoO",
-            "TGlzdEZyYW1ld29ya3MSPi5nb29nbGUuY2xvdWQuY2xvdWRzZWN1cml0eWNv",
-            "bXBsaWFuY2UudjEuTGlzdEZyYW1ld29ya3NSZXF1ZXN0Gj8uZ29vZ2xlLmNs",
-            "b3VkLmNsb3Vkc2VjdXJpdHljb21wbGlhbmNlLnYxLkxpc3RGcmFtZXdvcmtz",
-            "UmVzcG9uc2UiRNpBBnBhcmVudILT5JMCNRIzL3YxL3twYXJlbnQ9b3JnYW5p",
-            "emF0aW9ucy8qL2xvY2F0aW9ucy8qfS9mcmFtZXdvcmtzEsQBCgxHZXRGcmFt",
-            "ZXdvcmsSPC5nb29nbGUuY2xvdWQuY2xvdWRzZWN1cml0eWNvbXBsaWFuY2Uu",
-            "djEuR2V0RnJhbWV3b3JrUmVxdWVzdBoyLmdvb2dsZS5jbG91ZC5jbG91ZHNl",
-            "Y3VyaXR5Y29tcGxpYW5jZS52MS5GcmFtZXdvcmsiQtpBBG5hbWWC0+STAjUS",
-            "My92MS97bmFtZT1vcmdhbml6YXRpb25zLyovbG9jYXRpb25zLyovZnJhbWV3",
-            "b3Jrcy8qfRLuAQoPQ3JlYXRlRnJhbWV3b3JrEj8uZ29vZ2xlLmNsb3VkLmNs",
-            "b3Vkc2VjdXJpdHljb21wbGlhbmNlLnYxLkNyZWF0ZUZyYW1ld29ya1JlcXVl",
-            "c3QaMi5nb29nbGUuY2xvdWQuY2xvdWRzZWN1cml0eWNvbXBsaWFuY2UudjEu",
-            "RnJhbWV3b3JrImbaQR1wYXJlbnQsZnJhbWV3b3JrLGZyYW1ld29ya19pZILT",
-            "5JMCQCIzL3YxL3twYXJlbnQ9b3JnYW5pemF0aW9ucy8qL2xvY2F0aW9ucy8q",
-            "fS9mcmFtZXdvcmtzOglmcmFtZXdvcmsS8AEKD1VwZGF0ZUZyYW1ld29yaxI/",
-            "Lmdvb2dsZS5jbG91ZC5jbG91ZHNlY3VyaXR5Y29tcGxpYW5jZS52MS5VcGRh",
-            "dGVGcmFtZXdvcmtSZXF1ZXN0GjIuZ29vZ2xlLmNsb3VkLmNsb3Vkc2VjdXJp",
-            "dHljb21wbGlhbmNlLnYxLkZyYW1ld29yayJo2kEVZnJhbWV3b3JrLHVwZGF0",
-            "ZV9tYXNrgtPkkwJKMj0vdjEve2ZyYW1ld29yay5uYW1lPW9yZ2FuaXphdGlv",
-            "bnMvKi9sb2NhdGlvbnMvKi9mcmFtZXdvcmtzLyp9OglmcmFtZXdvcmsSrgEK",
-            "D0RlbGV0ZUZyYW1ld29yaxI/Lmdvb2dsZS5jbG91ZC5jbG91ZHNlY3VyaXR5",
-            "Y29tcGxpYW5jZS52MS5EZWxldGVGcmFtZXdvcmtSZXF1ZXN0GhYuZ29vZ2xl",
-            "LnByb3RvYnVmLkVtcHR5IkLaQQRuYW1lgtPkkwI1KjMvdjEve25hbWU9b3Jn",
-            "YW5pemF0aW9ucy8qL2xvY2F0aW9ucy8qL2ZyYW1ld29ya3MvKn0S4wEKEUxp",
-            "c3RDbG91ZENvbnRyb2xzEkEuZ29vZ2xlLmNsb3VkLmNsb3Vkc2VjdXJpdHlj",
-            "b21wbGlhbmNlLnYxLkxpc3RDbG91ZENvbnRyb2xzUmVxdWVzdBpCLmdvb2ds",
-            "ZS5jbG91ZC5jbG91ZHNlY3VyaXR5Y29tcGxpYW5jZS52MS5MaXN0Q2xvdWRD",
-            "b250cm9sc1Jlc3BvbnNlIkfaQQZwYXJlbnSC0+STAjgSNi92MS97cGFyZW50",
-            "PW9yZ2FuaXphdGlvbnMvKi9sb2NhdGlvbnMvKn0vY2xvdWRDb250cm9scxLQ",
-            "AQoPR2V0Q2xvdWRDb250cm9sEj8uZ29vZ2xlLmNsb3VkLmNsb3Vkc2VjdXJp",
-            "dHljb21wbGlhbmNlLnYxLkdldENsb3VkQ29udHJvbFJlcXVlc3QaNS5nb29n",
-            "bGUuY2xvdWQuY2xvdWRzZWN1cml0eWNvbXBsaWFuY2UudjEuQ2xvdWRDb250",
-            "cm9sIkXaQQRuYW1lgtPkkwI4EjYvdjEve25hbWU9b3JnYW5pemF0aW9ucy8q",
-            "L2xvY2F0aW9ucy8qL2Nsb3VkQ29udHJvbHMvKn0ShgIKEkNyZWF0ZUNsb3Vk",
-            "Q29udHJvbBJCLmdvb2dsZS5jbG91ZC5jbG91ZHNlY3VyaXR5Y29tcGxpYW5j",
-            "ZS52MS5DcmVhdGVDbG91ZENvbnRyb2xSZXF1ZXN0GjUuZ29vZ2xlLmNsb3Vk",
-            "LmNsb3Vkc2VjdXJpdHljb21wbGlhbmNlLnYxLkNsb3VkQ29udHJvbCJ12kEl",
-            "cGFyZW50LGNsb3VkX2NvbnRyb2wsY2xvdWRfY29udHJvbF9pZILT5JMCRyI2",
-            "L3YxL3twYXJlbnQ9b3JnYW5pemF0aW9ucy8qL2xvY2F0aW9ucy8qfS9jbG91",
-            "ZENvbnRyb2xzOg1jbG91ZF9jb250cm9sEogCChJVcGRhdGVDbG91ZENvbnRy",
-            "b2wSQi5nb29nbGUuY2xvdWQuY2xvdWRzZWN1cml0eWNvbXBsaWFuY2UudjEu",
-            "VXBkYXRlQ2xvdWRDb250cm9sUmVxdWVzdBo1Lmdvb2dsZS5jbG91ZC5jbG91",
-            "ZHNlY3VyaXR5Y29tcGxpYW5jZS52MS5DbG91ZENvbnRyb2wid9pBGWNsb3Vk",
-            "X2NvbnRyb2wsdXBkYXRlX21hc2uC0+STAlUyRC92MS97Y2xvdWRfY29udHJv",
-            "bC5uYW1lPW9yZ2FuaXphdGlvbnMvKi9sb2NhdGlvbnMvKi9jbG91ZENvbnRy",
-            "b2xzLyp9Og1jbG91ZF9jb250cm9sErcBChJEZWxldGVDbG91ZENvbnRyb2wS",
-            "Qi5nb29nbGUuY2xvdWQuY2xvdWRzZWN1cml0eWNvbXBsaWFuY2UudjEuRGVs",
-            "ZXRlQ2xvdWRDb250cm9sUmVxdWVzdBoWLmdvb2dsZS5wcm90b2J1Zi5FbXB0",
-            "eSJF2kEEbmFtZYLT5JMCOCo2L3YxL3tuYW1lPW9yZ2FuaXphdGlvbnMvKi9s",
-            "b2NhdGlvbnMvKi9jbG91ZENvbnRyb2xzLyp9GlrKQSZjbG91ZHNlY3VyaXR5",
-            "Y29tcGxpYW5jZS5nb29nbGVhcGlzLmNvbdJBLmh0dHBzOi8vd3d3Lmdvb2ds",
-            "ZWFwaXMuY29tL2F1dGgvY2xvdWQtcGxhdGZvcm1CpAIKK2NvbS5nb29nbGUu",
-            "Y2xvdWQuY2xvdWRzZWN1cml0eWNvbXBsaWFuY2UudjFCC0NvbmZpZ1Byb3Rv",
-            "UAFaZWNsb3VkLmdvb2dsZS5jb20vZ28vY2xvdWRzZWN1cml0eWNvbXBsaWFu",
-            "Y2UvYXBpdjEvY2xvdWRzZWN1cml0eWNvbXBsaWFuY2VwYjtjbG91ZHNlY3Vy",
-            "aXR5Y29tcGxpYW5jZXBiqgInR29vZ2xlLkNsb3VkLkNsb3VkU2VjdXJpdHlD",
-            "b21wbGlhbmNlLlYxygInR29vZ2xlXENsb3VkXENsb3VkU2VjdXJpdHlDb21w",
-            "bGlhbmNlXFYx6gIqR29vZ2xlOjpDbG91ZDo6Q2xvdWRTZWN1cml0eUNvbXBs",
-            "aWFuY2U6OlYxYgZwcm90bzM="));
+            "bmV4dF9wYWdlX3Rva2VuGAIgASgJIoMBChZHZXRDbG91ZENvbnRyb2xSZXF1",
+            "ZXN0EkkKBG5hbWUYASABKAlCO+BBAvpBNQozY2xvdWRzZWN1cml0eWNvbXBs",
+            "aWFuY2UuZ29vZ2xlYXBpcy5jb20vQ2xvdWRDb250cm9sEh4KEW1ham9yX3Jl",
+            "dmlzaW9uX2lkGAIgASgDQgPgQQEi2gEKGUNyZWF0ZUNsb3VkQ29udHJvbFJl",
+            "cXVlc3QSSwoGcGFyZW50GAEgASgJQjvgQQL6QTUSM2Nsb3Vkc2VjdXJpdHlj",
+            "b21wbGlhbmNlLmdvb2dsZWFwaXMuY29tL0Nsb3VkQ29udHJvbBIdChBjbG91",
+            "ZF9jb250cm9sX2lkGAIgASgJQgPgQQISUQoNY2xvdWRfY29udHJvbBgDIAEo",
+            "CzI1Lmdvb2dsZS5jbG91ZC5jbG91ZHNlY3VyaXR5Y29tcGxpYW5jZS52MS5D",
+            "bG91ZENvbnRyb2xCA+BBAiKkAQoZVXBkYXRlQ2xvdWRDb250cm9sUmVxdWVz",
+            "dBI0Cgt1cGRhdGVfbWFzaxgBIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5GaWVs",
+            "ZE1hc2tCA+BBARJRCg1jbG91ZF9jb250cm9sGAIgASgLMjUuZ29vZ2xlLmNs",
+            "b3VkLmNsb3Vkc2VjdXJpdHljb21wbGlhbmNlLnYxLkNsb3VkQ29udHJvbEID",
+            "4EECImYKGURlbGV0ZUNsb3VkQ29udHJvbFJlcXVlc3QSSQoEbmFtZRgBIAEo",
+            "CUI74EEC+kE1CjNjbG91ZHNlY3VyaXR5Y29tcGxpYW5jZS5nb29nbGVhcGlz",
+            "LmNvbS9DbG91ZENvbnRyb2wyoRIKBkNvbmZpZxLXAQoOTGlzdEZyYW1ld29y",
+            "a3MSPi5nb29nbGUuY2xvdWQuY2xvdWRzZWN1cml0eWNvbXBsaWFuY2UudjEu",
+            "TGlzdEZyYW1ld29ya3NSZXF1ZXN0Gj8uZ29vZ2xlLmNsb3VkLmNsb3Vkc2Vj",
+            "dXJpdHljb21wbGlhbmNlLnYxLkxpc3RGcmFtZXdvcmtzUmVzcG9uc2UiRNpB",
+            "BnBhcmVudILT5JMCNRIzL3YxL3twYXJlbnQ9b3JnYW5pemF0aW9ucy8qL2xv",
+            "Y2F0aW9ucy8qfS9mcmFtZXdvcmtzEsQBCgxHZXRGcmFtZXdvcmsSPC5nb29n",
+            "bGUuY2xvdWQuY2xvdWRzZWN1cml0eWNvbXBsaWFuY2UudjEuR2V0RnJhbWV3",
+            "b3JrUmVxdWVzdBoyLmdvb2dsZS5jbG91ZC5jbG91ZHNlY3VyaXR5Y29tcGxp",
+            "YW5jZS52MS5GcmFtZXdvcmsiQtpBBG5hbWWC0+STAjUSMy92MS97bmFtZT1v",
+            "cmdhbml6YXRpb25zLyovbG9jYXRpb25zLyovZnJhbWV3b3Jrcy8qfRLuAQoP",
+            "Q3JlYXRlRnJhbWV3b3JrEj8uZ29vZ2xlLmNsb3VkLmNsb3Vkc2VjdXJpdHlj",
+            "b21wbGlhbmNlLnYxLkNyZWF0ZUZyYW1ld29ya1JlcXVlc3QaMi5nb29nbGUu",
+            "Y2xvdWQuY2xvdWRzZWN1cml0eWNvbXBsaWFuY2UudjEuRnJhbWV3b3JrImba",
+            "QR1wYXJlbnQsZnJhbWV3b3JrLGZyYW1ld29ya19pZILT5JMCQCIzL3YxL3tw",
+            "YXJlbnQ9b3JnYW5pemF0aW9ucy8qL2xvY2F0aW9ucy8qfS9mcmFtZXdvcmtz",
+            "OglmcmFtZXdvcmsS8AEKD1VwZGF0ZUZyYW1ld29yaxI/Lmdvb2dsZS5jbG91",
+            "ZC5jbG91ZHNlY3VyaXR5Y29tcGxpYW5jZS52MS5VcGRhdGVGcmFtZXdvcmtS",
+            "ZXF1ZXN0GjIuZ29vZ2xlLmNsb3VkLmNsb3Vkc2VjdXJpdHljb21wbGlhbmNl",
+            "LnYxLkZyYW1ld29yayJo2kEVZnJhbWV3b3JrLHVwZGF0ZV9tYXNrgtPkkwJK",
+            "Mj0vdjEve2ZyYW1ld29yay5uYW1lPW9yZ2FuaXphdGlvbnMvKi9sb2NhdGlv",
+            "bnMvKi9mcmFtZXdvcmtzLyp9OglmcmFtZXdvcmsSrgEKD0RlbGV0ZUZyYW1l",
+            "d29yaxI/Lmdvb2dsZS5jbG91ZC5jbG91ZHNlY3VyaXR5Y29tcGxpYW5jZS52",
+            "MS5EZWxldGVGcmFtZXdvcmtSZXF1ZXN0GhYuZ29vZ2xlLnByb3RvYnVmLkVt",
+            "cHR5IkLaQQRuYW1lgtPkkwI1KjMvdjEve25hbWU9b3JnYW5pemF0aW9ucy8q",
+            "L2xvY2F0aW9ucy8qL2ZyYW1ld29ya3MvKn0S4wEKEUxpc3RDbG91ZENvbnRy",
+            "b2xzEkEuZ29vZ2xlLmNsb3VkLmNsb3Vkc2VjdXJpdHljb21wbGlhbmNlLnYx",
+            "Lkxpc3RDbG91ZENvbnRyb2xzUmVxdWVzdBpCLmdvb2dsZS5jbG91ZC5jbG91",
+            "ZHNlY3VyaXR5Y29tcGxpYW5jZS52MS5MaXN0Q2xvdWRDb250cm9sc1Jlc3Bv",
+            "bnNlIkfaQQZwYXJlbnSC0+STAjgSNi92MS97cGFyZW50PW9yZ2FuaXphdGlv",
+            "bnMvKi9sb2NhdGlvbnMvKn0vY2xvdWRDb250cm9scxLQAQoPR2V0Q2xvdWRD",
+            "b250cm9sEj8uZ29vZ2xlLmNsb3VkLmNsb3Vkc2VjdXJpdHljb21wbGlhbmNl",
+            "LnYxLkdldENsb3VkQ29udHJvbFJlcXVlc3QaNS5nb29nbGUuY2xvdWQuY2xv",
+            "dWRzZWN1cml0eWNvbXBsaWFuY2UudjEuQ2xvdWRDb250cm9sIkXaQQRuYW1l",
+            "gtPkkwI4EjYvdjEve25hbWU9b3JnYW5pemF0aW9ucy8qL2xvY2F0aW9ucy8q",
+            "L2Nsb3VkQ29udHJvbHMvKn0ShgIKEkNyZWF0ZUNsb3VkQ29udHJvbBJCLmdv",
+            "b2dsZS5jbG91ZC5jbG91ZHNlY3VyaXR5Y29tcGxpYW5jZS52MS5DcmVhdGVD",
+            "bG91ZENvbnRyb2xSZXF1ZXN0GjUuZ29vZ2xlLmNsb3VkLmNsb3Vkc2VjdXJp",
+            "dHljb21wbGlhbmNlLnYxLkNsb3VkQ29udHJvbCJ12kElcGFyZW50LGNsb3Vk",
+            "X2NvbnRyb2wsY2xvdWRfY29udHJvbF9pZILT5JMCRyI2L3YxL3twYXJlbnQ9",
+            "b3JnYW5pemF0aW9ucy8qL2xvY2F0aW9ucy8qfS9jbG91ZENvbnRyb2xzOg1j",
+            "bG91ZF9jb250cm9sEogCChJVcGRhdGVDbG91ZENvbnRyb2wSQi5nb29nbGUu",
+            "Y2xvdWQuY2xvdWRzZWN1cml0eWNvbXBsaWFuY2UudjEuVXBkYXRlQ2xvdWRD",
+            "b250cm9sUmVxdWVzdBo1Lmdvb2dsZS5jbG91ZC5jbG91ZHNlY3VyaXR5Y29t",
+            "cGxpYW5jZS52MS5DbG91ZENvbnRyb2wid9pBGWNsb3VkX2NvbnRyb2wsdXBk",
+            "YXRlX21hc2uC0+STAlUyRC92MS97Y2xvdWRfY29udHJvbC5uYW1lPW9yZ2Fu",
+            "aXphdGlvbnMvKi9sb2NhdGlvbnMvKi9jbG91ZENvbnRyb2xzLyp9Og1jbG91",
+            "ZF9jb250cm9sErcBChJEZWxldGVDbG91ZENvbnRyb2wSQi5nb29nbGUuY2xv",
+            "dWQuY2xvdWRzZWN1cml0eWNvbXBsaWFuY2UudjEuRGVsZXRlQ2xvdWRDb250",
+            "cm9sUmVxdWVzdBoWLmdvb2dsZS5wcm90b2J1Zi5FbXB0eSJF2kEEbmFtZYLT",
+            "5JMCOCo2L3YxL3tuYW1lPW9yZ2FuaXphdGlvbnMvKi9sb2NhdGlvbnMvKi9j",
+            "bG91ZENvbnRyb2xzLyp9GlrKQSZjbG91ZHNlY3VyaXR5Y29tcGxpYW5jZS5n",
+            "b29nbGVhcGlzLmNvbdJBLmh0dHBzOi8vd3d3Lmdvb2dsZWFwaXMuY29tL2F1",
+            "dGgvY2xvdWQtcGxhdGZvcm1CpAIKK2NvbS5nb29nbGUuY2xvdWQuY2xvdWRz",
+            "ZWN1cml0eWNvbXBsaWFuY2UudjFCC0NvbmZpZ1Byb3RvUAFaZWNsb3VkLmdv",
+            "b2dsZS5jb20vZ28vY2xvdWRzZWN1cml0eWNvbXBsaWFuY2UvYXBpdjEvY2xv",
+            "dWRzZWN1cml0eWNvbXBsaWFuY2VwYjtjbG91ZHNlY3VyaXR5Y29tcGxpYW5j",
+            "ZXBiqgInR29vZ2xlLkNsb3VkLkNsb3VkU2VjdXJpdHlDb21wbGlhbmNlLlYx",
+            "ygInR29vZ2xlXENsb3VkXENsb3VkU2VjdXJpdHlDb21wbGlhbmNlXFYx6gIq",
+            "R29vZ2xlOjpDbG91ZDo6Q2xvdWRTZWN1cml0eUNvbXBsaWFuY2U6OlYxYgZw",
+            "cm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Api.ClientReflection.Descriptor, global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Cloud.CloudSecurityCompliance.V1.CommonReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.EmptyReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.FieldMaskReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
@@ -141,7 +142,7 @@ namespace Google.Cloud.CloudSecurityCompliance.V1 {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.CloudSecurityCompliance.V1.DeleteFrameworkRequest), global::Google.Cloud.CloudSecurityCompliance.V1.DeleteFrameworkRequest.Parser, new[]{ "Name" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.CloudSecurityCompliance.V1.ListCloudControlsRequest), global::Google.Cloud.CloudSecurityCompliance.V1.ListCloudControlsRequest.Parser, new[]{ "Parent", "PageSize", "PageToken" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.CloudSecurityCompliance.V1.ListCloudControlsResponse), global::Google.Cloud.CloudSecurityCompliance.V1.ListCloudControlsResponse.Parser, new[]{ "CloudControls", "NextPageToken" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.CloudSecurityCompliance.V1.GetCloudControlRequest), global::Google.Cloud.CloudSecurityCompliance.V1.GetCloudControlRequest.Parser, new[]{ "Name" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.CloudSecurityCompliance.V1.GetCloudControlRequest), global::Google.Cloud.CloudSecurityCompliance.V1.GetCloudControlRequest.Parser, new[]{ "Name", "MajorRevisionId" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.CloudSecurityCompliance.V1.CreateCloudControlRequest), global::Google.Cloud.CloudSecurityCompliance.V1.CreateCloudControlRequest.Parser, new[]{ "Parent", "CloudControlId", "CloudControl" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.CloudSecurityCompliance.V1.UpdateCloudControlRequest), global::Google.Cloud.CloudSecurityCompliance.V1.UpdateCloudControlRequest.Parser, new[]{ "UpdateMask", "CloudControl" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.CloudSecurityCompliance.V1.DeleteCloudControlRequest), global::Google.Cloud.CloudSecurityCompliance.V1.DeleteCloudControlRequest.Parser, new[]{ "Name" }, null, null, null, null)
@@ -152,7 +153,7 @@ namespace Google.Cloud.CloudSecurityCompliance.V1 {
   }
   #region Messages
   /// <summary>
-  /// Request message for listing Frameworks.
+  /// Request message for [ListFrameworks][].
   /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class ListFrameworksRequest : pb::IMessage<ListFrameworksRequest>
@@ -207,7 +208,7 @@ namespace Google.Cloud.CloudSecurityCompliance.V1 {
     /// <summary>
     /// Required. The parent resource name, in the format
     /// `organizations/{organization}/locations/{location}`.
-    /// Only global location is supported.
+    /// The only supported location is `global`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -435,8 +436,8 @@ namespace Google.Cloud.CloudSecurityCompliance.V1 {
   }
 
   /// <summary>
-  /// Response message for listing Frameworks.
-  /// Contains a paginated list of Framework resources.
+  /// The response message for [ListFrameworks][].
+  /// Returns a paginated list of Framework resources.
   /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class ListFrameworksResponse : pb::IMessage<ListFrameworksResponse>
@@ -490,7 +491,7 @@ namespace Google.Cloud.CloudSecurityCompliance.V1 {
         = pb::FieldCodec.ForMessage(10, global::Google.Cloud.CloudSecurityCompliance.V1.Framework.Parser);
     private readonly pbc::RepeatedField<global::Google.Cloud.CloudSecurityCompliance.V1.Framework> frameworks_ = new pbc::RepeatedField<global::Google.Cloud.CloudSecurityCompliance.V1.Framework>();
     /// <summary>
-    /// The list of Framework resources.
+    /// The list of framework resources.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -662,7 +663,7 @@ namespace Google.Cloud.CloudSecurityCompliance.V1 {
   }
 
   /// <summary>
-  /// Request message for getting a Framework.
+  /// The request message for [GetFramework][].
   /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class GetFrameworkRequest : pb::IMessage<GetFrameworkRequest>
@@ -714,9 +715,9 @@ namespace Google.Cloud.CloudSecurityCompliance.V1 {
     public const int NameFieldNumber = 1;
     private string name_ = "";
     /// <summary>
-    /// Required. The name of the framework to retrieve.
-    /// Format:
-    /// organizations/{organization}/locations/{location}/frameworks/{framework_id}
+    /// Required. The name of the framework to retrieve, in the format
+    /// `organizations/{organization}/locations/{location}/frameworks/{framework_id}`
+    /// The only supported location is `global`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -731,8 +732,8 @@ namespace Google.Cloud.CloudSecurityCompliance.V1 {
     public const int MajorRevisionIdFieldNumber = 2;
     private long majorRevisionId_;
     /// <summary>
-    /// Optional. The Framework major version to retrieve. If not specified, the
-    /// most recently updated revision_id is retrieved.
+    /// Optional. The framework major version to retrieve. If not specified, the
+    /// most recently updated `revision_id` is retrieved.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -901,7 +902,7 @@ namespace Google.Cloud.CloudSecurityCompliance.V1 {
   }
 
   /// <summary>
-  /// Request message for creating a Framework
+  /// The request message for [CreateFramework][].
   /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class CreateFrameworkRequest : pb::IMessage<CreateFrameworkRequest>
@@ -956,6 +957,7 @@ namespace Google.Cloud.CloudSecurityCompliance.V1 {
     /// <summary>
     /// Required. The parent resource name, in the format
     /// `organizations/{organization}/locations/{location}`.
+    /// The only supported location is `global`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -970,9 +972,8 @@ namespace Google.Cloud.CloudSecurityCompliance.V1 {
     public const int FrameworkIdFieldNumber = 2;
     private string frameworkId_ = "";
     /// <summary>
-    /// Required. ID of the framework.
-    /// This is not the full name of the framework.
-    /// This is the last part of the full name of the framework.
+    /// Required. The identifier (ID) of the framework. The ID is not the full name
+    /// of the framework; it's the last part of the full name of the framework.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -987,7 +988,7 @@ namespace Google.Cloud.CloudSecurityCompliance.V1 {
     public const int FrameworkFieldNumber = 3;
     private global::Google.Cloud.CloudSecurityCompliance.V1.Framework framework_;
     /// <summary>
-    /// Required. The resource being created
+    /// Required. The resource being created.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -1189,7 +1190,7 @@ namespace Google.Cloud.CloudSecurityCompliance.V1 {
   }
 
   /// <summary>
-  /// Request message for updating a Framework.
+  /// The request message for [UpdateFramework][].
   /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class UpdateFrameworkRequest : pb::IMessage<UpdateFrameworkRequest>
@@ -1242,12 +1243,11 @@ namespace Google.Cloud.CloudSecurityCompliance.V1 {
     public const int UpdateMaskFieldNumber = 1;
     private global::Google.Protobuf.WellKnownTypes.FieldMask updateMask_;
     /// <summary>
-    /// Optional. Field mask is used to specify the fields to be overwritten in the
-    /// Framework resource by the update.
-    /// The fields specified in the update_mask are relative to the resource, not
-    /// the full request. A field will be overwritten if it is in the mask. If the
-    /// user does not provide a mask then all fields present in the request will be
-    /// overwritten.
+    /// Optional. A field mask is used to specify the fields to be overwritten in
+    /// the framework resource by the update. The fields specified in the
+    /// `update_mask` are relative to the resource, not the full request. A field
+    /// is overwritten if it is in the mask. If you don't provide a mask then all
+    /// fields present in the request will be overwritten.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -1262,7 +1262,7 @@ namespace Google.Cloud.CloudSecurityCompliance.V1 {
     public const int FrameworkFieldNumber = 2;
     private global::Google.Cloud.CloudSecurityCompliance.V1.Framework framework_;
     /// <summary>
-    /// Required. The resource being updated
+    /// Required. The resource that is being updated.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -1488,7 +1488,7 @@ namespace Google.Cloud.CloudSecurityCompliance.V1 {
   }
 
   /// <summary>
-  /// Request message for deleting a Framework.
+  /// Request message for [DeleteFramework][].
   /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class DeleteFrameworkRequest : pb::IMessage<DeleteFrameworkRequest>
@@ -1539,8 +1539,9 @@ namespace Google.Cloud.CloudSecurityCompliance.V1 {
     public const int NameFieldNumber = 1;
     private string name_ = "";
     /// <summary>
-    /// Required. Name of the resource, in the format
+    /// Required. The name of the resource, in the format
     /// `organizations/{organization}/locations/{location}/frameworks/{framework}`.
+    /// The only supported location is `global`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -1685,7 +1686,7 @@ namespace Google.Cloud.CloudSecurityCompliance.V1 {
   }
 
   /// <summary>
-  /// Request message for listing CloudControls.
+  /// Request message for [ListCloudControls][].
   /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class ListCloudControlsRequest : pb::IMessage<ListCloudControlsRequest>
@@ -1740,6 +1741,7 @@ namespace Google.Cloud.CloudSecurityCompliance.V1 {
     /// <summary>
     /// Required. The parent resource name, in the format
     /// `organizations/{organization}/locations/{location}`.
+    /// The only supported location is `global`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -1754,7 +1756,7 @@ namespace Google.Cloud.CloudSecurityCompliance.V1 {
     public const int PageSizeFieldNumber = 2;
     private int pageSize_;
     /// <summary>
-    /// Optional. The maximum number of CloudControls to return. The default value
+    /// Optional. The maximum number of cloud controls to return. The default value
     /// is `500`.
     ///
     /// If you exceed the maximum value of `1000`, then the service uses the
@@ -1773,12 +1775,13 @@ namespace Google.Cloud.CloudSecurityCompliance.V1 {
     public const int PageTokenFieldNumber = 3;
     private string pageToken_ = "";
     /// <summary>
-    /// Optional. A pagination token returned from a previous request to list
-    /// CloudControls. Provide this token to retrieve the next page of results.
+    /// Optional. A pagination token that's returned from a previous request to
+    /// list cloud controls. Provide this token to retrieve the next page of
+    /// results.
     ///
-    /// When paginating, parent provided to
-    /// ListCloudControls request must match the call that provided the page
-    /// token.
+    /// When paginating, the parent that you provide to the
+    /// [ListCloudControls][google.cloud.cloudsecuritycompliance.v1.Config.ListCloudControls]
+    /// request must match the call that provided the page token.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -1971,7 +1974,7 @@ namespace Google.Cloud.CloudSecurityCompliance.V1 {
   }
 
   /// <summary>
-  /// Response message for ListCloudControls.
+  /// The response message for [ListCloudControls][].
   /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class ListCloudControlsResponse : pb::IMessage<ListCloudControlsResponse>
@@ -2197,7 +2200,7 @@ namespace Google.Cloud.CloudSecurityCompliance.V1 {
   }
 
   /// <summary>
-  /// Request message for getting a CloudControl.
+  /// The request message for [GetCloudControl][].
   /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class GetCloudControlRequest : pb::IMessage<GetCloudControlRequest>
@@ -2235,6 +2238,7 @@ namespace Google.Cloud.CloudSecurityCompliance.V1 {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public GetCloudControlRequest(GetCloudControlRequest other) : this() {
       name_ = other.name_;
+      majorRevisionId_ = other.majorRevisionId_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -2248,8 +2252,9 @@ namespace Google.Cloud.CloudSecurityCompliance.V1 {
     public const int NameFieldNumber = 1;
     private string name_ = "";
     /// <summary>
-    /// Required. The name of the cloudcontrol to retrieve in the format:
-    /// organizations/{organization}/locations/{location}/cloudControls/{cloud_control}
+    /// Required. The name of the cloud control to retrieve, in the format
+    /// `organizations/{organization}/locations/{location}/cloudControls/{cloud_control}`.
+    /// The only supported location is `global`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -2257,6 +2262,22 @@ namespace Google.Cloud.CloudSecurityCompliance.V1 {
       get { return name_; }
       set {
         name_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "major_revision_id" field.</summary>
+    public const int MajorRevisionIdFieldNumber = 2;
+    private long majorRevisionId_;
+    /// <summary>
+    /// Optional. The major version of the cloud control to retrieve. If not
+    /// specified, the most recently updated `revision_id` is retrieved.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public long MajorRevisionId {
+      get { return majorRevisionId_; }
+      set {
+        majorRevisionId_ = value;
       }
     }
 
@@ -2276,6 +2297,7 @@ namespace Google.Cloud.CloudSecurityCompliance.V1 {
         return true;
       }
       if (Name != other.Name) return false;
+      if (MajorRevisionId != other.MajorRevisionId) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -2284,6 +2306,7 @@ namespace Google.Cloud.CloudSecurityCompliance.V1 {
     public override int GetHashCode() {
       int hash = 1;
       if (Name.Length != 0) hash ^= Name.GetHashCode();
+      if (MajorRevisionId != 0L) hash ^= MajorRevisionId.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -2306,6 +2329,10 @@ namespace Google.Cloud.CloudSecurityCompliance.V1 {
         output.WriteRawTag(10);
         output.WriteString(Name);
       }
+      if (MajorRevisionId != 0L) {
+        output.WriteRawTag(16);
+        output.WriteInt64(MajorRevisionId);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -2320,6 +2347,10 @@ namespace Google.Cloud.CloudSecurityCompliance.V1 {
         output.WriteRawTag(10);
         output.WriteString(Name);
       }
+      if (MajorRevisionId != 0L) {
+        output.WriteRawTag(16);
+        output.WriteInt64(MajorRevisionId);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -2332,6 +2363,9 @@ namespace Google.Cloud.CloudSecurityCompliance.V1 {
       int size = 0;
       if (Name.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(Name);
+      }
+      if (MajorRevisionId != 0L) {
+        size += 1 + pb::CodedOutputStream.ComputeInt64Size(MajorRevisionId);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -2347,6 +2381,9 @@ namespace Google.Cloud.CloudSecurityCompliance.V1 {
       }
       if (other.Name.Length != 0) {
         Name = other.Name;
+      }
+      if (other.MajorRevisionId != 0L) {
+        MajorRevisionId = other.MajorRevisionId;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -2365,6 +2402,10 @@ namespace Google.Cloud.CloudSecurityCompliance.V1 {
             break;
           case 10: {
             Name = input.ReadString();
+            break;
+          }
+          case 16: {
+            MajorRevisionId = input.ReadInt64();
             break;
           }
         }
@@ -2386,6 +2427,10 @@ namespace Google.Cloud.CloudSecurityCompliance.V1 {
             Name = input.ReadString();
             break;
           }
+          case 16: {
+            MajorRevisionId = input.ReadInt64();
+            break;
+          }
         }
       }
     }
@@ -2394,7 +2439,7 @@ namespace Google.Cloud.CloudSecurityCompliance.V1 {
   }
 
   /// <summary>
-  /// Request message for creating a CloudControl
+  /// The request message for [CreateCloudControl][].
   /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class CreateCloudControlRequest : pb::IMessage<CreateCloudControlRequest>
@@ -2449,6 +2494,7 @@ namespace Google.Cloud.CloudSecurityCompliance.V1 {
     /// <summary>
     /// Required. The parent resource name, in the format
     /// `organizations/{organization}/locations/{location}`.
+    /// The only supported location is `global`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -2463,9 +2509,9 @@ namespace Google.Cloud.CloudSecurityCompliance.V1 {
     public const int CloudControlIdFieldNumber = 2;
     private string cloudControlId_ = "";
     /// <summary>
-    /// Required. ID of the CloudControl.
-    /// This is the last segment of the CloudControl resource name.
-    /// Format: `^[a-zA-Z][a-zA-Z0-9-]{0,61}[a-zA-Z0-9]$`.
+    /// Required. The identifier for the cloud control, which is the last segment
+    /// of the cloud control name. The format is
+    /// `^[a-zA-Z][a-zA-Z0-9-]{0,61}[a-zA-Z0-9]$`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -2480,7 +2526,7 @@ namespace Google.Cloud.CloudSecurityCompliance.V1 {
     public const int CloudControlFieldNumber = 3;
     private global::Google.Cloud.CloudSecurityCompliance.V1.CloudControl cloudControl_;
     /// <summary>
-    /// Required. The resource being created
+    /// Required. The cloud control that's being created.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -2682,7 +2728,7 @@ namespace Google.Cloud.CloudSecurityCompliance.V1 {
   }
 
   /// <summary>
-  /// Request message for UpdateCloudControl.
+  /// The request message for [UpdateCloudControl][].
   /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class UpdateCloudControlRequest : pb::IMessage<UpdateCloudControlRequest>
@@ -2734,17 +2780,20 @@ namespace Google.Cloud.CloudSecurityCompliance.V1 {
     public const int UpdateMaskFieldNumber = 1;
     private global::Google.Protobuf.WellKnownTypes.FieldMask updateMask_;
     /// <summary>
-    /// Optional. Field mask is used to specify the fields to be overwritten in the
-    /// CloudControl resource by the update.
-    /// The fields specified in the update_mask are relative to the resource, not
-    /// the full request. A field will be overwritten if it is in the mask. If the
-    /// user does not provide a mask then all fields present in the request will be
-    /// overwritten. The fields that can be updated are:
-    /// 1. Display_name
-    /// 2. Description
-    /// 3. Parameters
-    /// 4. Rules
-    /// 5. ParameterSpec.
+    /// Optional. Use a field mask to specify the fields to be overwritten in the
+    /// cloud control during the update.
+    /// The fields that you specify in the `update_mask` are relative to the
+    /// cloud control, not the full request. A field is overwritten if it is in
+    /// the mask. If you don't provide a mask, all fields in the request
+    /// are updated.
+    ///
+    /// You can update the following fields:
+    ///
+    /// - Display name
+    /// - Description
+    /// - Parameters
+    /// - Rules
+    /// - Parameter specification
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -2759,7 +2808,7 @@ namespace Google.Cloud.CloudSecurityCompliance.V1 {
     public const int CloudControlFieldNumber = 2;
     private global::Google.Cloud.CloudSecurityCompliance.V1.CloudControl cloudControl_;
     /// <summary>
-    /// Required. The resource being updated
+    /// Required. The cloud control that you're updating.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -2946,7 +2995,7 @@ namespace Google.Cloud.CloudSecurityCompliance.V1 {
   }
 
   /// <summary>
-  /// Request message for deleting a CloudControl.
+  /// The request message for [DeleteCloudControl][].
   /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class DeleteCloudControlRequest : pb::IMessage<DeleteCloudControlRequest>
@@ -2997,8 +3046,9 @@ namespace Google.Cloud.CloudSecurityCompliance.V1 {
     public const int NameFieldNumber = 1;
     private string name_ = "";
     /// <summary>
-    /// Required. Name of the resource, in the format
+    /// Required. The name of the cloud control to delete, in the format
     /// `organizations/{organization}/locations/{location}/CloudControls/{CloudControl}`.
+    /// The only supported location is `global`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]

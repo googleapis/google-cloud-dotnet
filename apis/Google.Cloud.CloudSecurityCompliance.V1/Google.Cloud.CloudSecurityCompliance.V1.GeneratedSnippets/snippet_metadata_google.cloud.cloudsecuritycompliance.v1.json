@@ -11,6 +11,1848 @@
   },
   "snippets": [
     {
+      "regionTag": "cloudsecuritycompliance_v1_generated_Audit_GenerateFrameworkAuditScopeReport_sync",
+      "title": "GenerateFrameworkAuditScopeReportRequestObject",
+      "description": "Snippet for GenerateFrameworkAuditScopeReport",
+      "file": "AuditClient.GenerateFrameworkAuditScopeReportRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GenerateFrameworkAuditScopeReport",
+        "fullName": "Google.Cloud.CloudSecurityCompliance.V1.AuditClient.GenerateFrameworkAuditScopeReport",
+        "parameters": [
+          {
+            "type": "Google.Cloud.CloudSecurityCompliance.V1.GenerateFrameworkAuditScopeReportRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.CloudSecurityCompliance.V1.GenerateFrameworkAuditScopeReportResponse",
+        "client": {
+          "shortName": "AuditClient",
+          "fullName": "Google.Cloud.CloudSecurityCompliance.V1.AuditClient"
+        },
+        "method": {
+          "shortName": "GenerateFrameworkAuditScopeReport",
+          "fullName": "google.cloud.cloudsecuritycompliance.v1.Audit.GenerateFrameworkAuditScopeReport",
+          "service": {
+            "shortName": "Audit",
+            "fullName": "google.cloud.cloudsecuritycompliance.v1.Audit"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 46,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 44,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "cloudsecuritycompliance_v1_generated_Audit_GenerateFrameworkAuditScopeReport_async",
+      "title": "GenerateFrameworkAuditScopeReportRequestObjectAsync",
+      "description": "Snippet for GenerateFrameworkAuditScopeReportAsync",
+      "file": "AuditClient.GenerateFrameworkAuditScopeReportRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GenerateFrameworkAuditScopeReportAsync",
+        "fullName": "Google.Cloud.CloudSecurityCompliance.V1.AuditClient.GenerateFrameworkAuditScopeReportAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.CloudSecurityCompliance.V1.GenerateFrameworkAuditScopeReportRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.CloudSecurityCompliance.V1.GenerateFrameworkAuditScopeReportResponse>",
+        "client": {
+          "shortName": "AuditClient",
+          "fullName": "Google.Cloud.CloudSecurityCompliance.V1.AuditClient"
+        },
+        "method": {
+          "shortName": "GenerateFrameworkAuditScopeReport",
+          "fullName": "google.cloud.cloudsecuritycompliance.v1.Audit.GenerateFrameworkAuditScopeReport",
+          "service": {
+            "shortName": "Audit",
+            "fullName": "google.cloud.cloudsecuritycompliance.v1.Audit"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 47,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 45,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "cloudsecuritycompliance_v1_generated_Audit_GenerateFrameworkAuditScopeReport_sync_flattened",
+      "title": "GenerateFrameworkAuditScopeReport",
+      "description": "Snippet for GenerateFrameworkAuditScopeReport",
+      "file": "AuditClient.GenerateFrameworkAuditScopeReportSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GenerateFrameworkAuditScopeReport",
+        "fullName": "Google.Cloud.CloudSecurityCompliance.V1.AuditClient.GenerateFrameworkAuditScopeReport",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "scope"
+          },
+          {
+            "type": "Google.Cloud.CloudSecurityCompliance.V1.GenerateFrameworkAuditScopeReportRequest+Types+Format",
+            "name": "reportFormat"
+          },
+          {
+            "type": "System.String",
+            "name": "complianceFramework"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.CloudSecurityCompliance.V1.GenerateFrameworkAuditScopeReportResponse",
+        "client": {
+          "shortName": "AuditClient",
+          "fullName": "Google.Cloud.CloudSecurityCompliance.V1.AuditClient"
+        },
+        "method": {
+          "shortName": "GenerateFrameworkAuditScopeReport",
+          "fullName": "google.cloud.cloudsecuritycompliance.v1.Audit.GenerateFrameworkAuditScopeReport",
+          "service": {
+            "shortName": "Audit",
+            "fullName": "google.cloud.cloudsecuritycompliance.v1.Audit"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 43,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 41,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "cloudsecuritycompliance_v1_generated_Audit_GenerateFrameworkAuditScopeReport_async_flattened",
+      "title": "GenerateFrameworkAuditScopeReportAsync",
+      "description": "Snippet for GenerateFrameworkAuditScopeReportAsync",
+      "file": "AuditClient.GenerateFrameworkAuditScopeReportAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GenerateFrameworkAuditScopeReportAsync",
+        "fullName": "Google.Cloud.CloudSecurityCompliance.V1.AuditClient.GenerateFrameworkAuditScopeReportAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "scope"
+          },
+          {
+            "type": "Google.Cloud.CloudSecurityCompliance.V1.GenerateFrameworkAuditScopeReportRequest+Types+Format",
+            "name": "reportFormat"
+          },
+          {
+            "type": "System.String",
+            "name": "complianceFramework"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.CloudSecurityCompliance.V1.GenerateFrameworkAuditScopeReportResponse>",
+        "client": {
+          "shortName": "AuditClient",
+          "fullName": "Google.Cloud.CloudSecurityCompliance.V1.AuditClient"
+        },
+        "method": {
+          "shortName": "GenerateFrameworkAuditScopeReport",
+          "fullName": "google.cloud.cloudsecuritycompliance.v1.Audit.GenerateFrameworkAuditScopeReport",
+          "service": {
+            "shortName": "Audit",
+            "fullName": "google.cloud.cloudsecuritycompliance.v1.Audit"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 44,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 42,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "cloudsecuritycompliance_v1_generated_Audit_CreateFrameworkAudit_sync",
+      "title": "CreateFrameworkAuditRequestObject",
+      "description": "Snippet for CreateFrameworkAudit",
+      "file": "AuditClient.CreateFrameworkAuditRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateFrameworkAudit",
+        "fullName": "Google.Cloud.CloudSecurityCompliance.V1.AuditClient.CreateFrameworkAudit",
+        "parameters": [
+          {
+            "type": "Google.Cloud.CloudSecurityCompliance.V1.CreateFrameworkAuditRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.CloudSecurityCompliance.V1.FrameworkAudit, Google.Cloud.CloudSecurityCompliance.V1.OperationMetadata>",
+        "client": {
+          "shortName": "AuditClient",
+          "fullName": "Google.Cloud.CloudSecurityCompliance.V1.AuditClient"
+        },
+        "method": {
+          "shortName": "CreateFrameworkAudit",
+          "fullName": "google.cloud.cloudsecuritycompliance.v1.Audit.CreateFrameworkAudit",
+          "service": {
+            "shortName": "Audit",
+            "fullName": "google.cloud.cloudsecuritycompliance.v1.Audit"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 64,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 62,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "cloudsecuritycompliance_v1_generated_Audit_CreateFrameworkAudit_async",
+      "title": "CreateFrameworkAuditRequestObjectAsync",
+      "description": "Snippet for CreateFrameworkAuditAsync",
+      "file": "AuditClient.CreateFrameworkAuditRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateFrameworkAuditAsync",
+        "fullName": "Google.Cloud.CloudSecurityCompliance.V1.AuditClient.CreateFrameworkAuditAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.CloudSecurityCompliance.V1.CreateFrameworkAuditRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.CloudSecurityCompliance.V1.FrameworkAudit, Google.Cloud.CloudSecurityCompliance.V1.OperationMetadata>>",
+        "client": {
+          "shortName": "AuditClient",
+          "fullName": "Google.Cloud.CloudSecurityCompliance.V1.AuditClient"
+        },
+        "method": {
+          "shortName": "CreateFrameworkAudit",
+          "fullName": "google.cloud.cloudsecuritycompliance.v1.Audit.CreateFrameworkAudit",
+          "service": {
+            "shortName": "Audit",
+            "fullName": "google.cloud.cloudsecuritycompliance.v1.Audit"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 65,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 63,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "cloudsecuritycompliance_v1_generated_Audit_CreateFrameworkAudit_sync_flattened",
+      "title": "CreateFrameworkAudit",
+      "description": "Snippet for CreateFrameworkAudit",
+      "file": "AuditClient.CreateFrameworkAuditSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateFrameworkAudit",
+        "fullName": "Google.Cloud.CloudSecurityCompliance.V1.AuditClient.CreateFrameworkAudit",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.CloudSecurityCompliance.V1.FrameworkAudit",
+            "name": "frameworkAudit"
+          },
+          {
+            "type": "System.String",
+            "name": "frameworkAuditId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.CloudSecurityCompliance.V1.FrameworkAudit, Google.Cloud.CloudSecurityCompliance.V1.OperationMetadata>",
+        "client": {
+          "shortName": "AuditClient",
+          "fullName": "Google.Cloud.CloudSecurityCompliance.V1.AuditClient"
+        },
+        "method": {
+          "shortName": "CreateFrameworkAudit",
+          "fullName": "google.cloud.cloudsecuritycompliance.v1.Audit.CreateFrameworkAudit",
+          "service": {
+            "shortName": "Audit",
+            "fullName": "google.cloud.cloudsecuritycompliance.v1.Audit"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 60,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 58,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "cloudsecuritycompliance_v1_generated_Audit_CreateFrameworkAudit_async_flattened",
+      "title": "CreateFrameworkAuditAsync",
+      "description": "Snippet for CreateFrameworkAuditAsync",
+      "file": "AuditClient.CreateFrameworkAuditAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateFrameworkAuditAsync",
+        "fullName": "Google.Cloud.CloudSecurityCompliance.V1.AuditClient.CreateFrameworkAuditAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.CloudSecurityCompliance.V1.FrameworkAudit",
+            "name": "frameworkAudit"
+          },
+          {
+            "type": "System.String",
+            "name": "frameworkAuditId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.CloudSecurityCompliance.V1.FrameworkAudit, Google.Cloud.CloudSecurityCompliance.V1.OperationMetadata>>",
+        "client": {
+          "shortName": "AuditClient",
+          "fullName": "Google.Cloud.CloudSecurityCompliance.V1.AuditClient"
+        },
+        "method": {
+          "shortName": "CreateFrameworkAudit",
+          "fullName": "google.cloud.cloudsecuritycompliance.v1.Audit.CreateFrameworkAudit",
+          "service": {
+            "shortName": "Audit",
+            "fullName": "google.cloud.cloudsecuritycompliance.v1.Audit"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 61,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 59,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "cloudsecuritycompliance_v1_generated_Audit_CreateFrameworkAudit_sync_flattened_resourceNames1",
+      "title": "CreateFrameworkAuditResourceNames1",
+      "description": "Snippet for CreateFrameworkAudit",
+      "file": "AuditClient.CreateFrameworkAuditResourceNames1Snippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateFrameworkAudit",
+        "fullName": "Google.Cloud.CloudSecurityCompliance.V1.AuditClient.CreateFrameworkAudit",
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.LocationName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.CloudSecurityCompliance.V1.FrameworkAudit",
+            "name": "frameworkAudit"
+          },
+          {
+            "type": "System.String",
+            "name": "frameworkAuditId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.CloudSecurityCompliance.V1.FrameworkAudit, Google.Cloud.CloudSecurityCompliance.V1.OperationMetadata>",
+        "client": {
+          "shortName": "AuditClient",
+          "fullName": "Google.Cloud.CloudSecurityCompliance.V1.AuditClient"
+        },
+        "method": {
+          "shortName": "CreateFrameworkAudit",
+          "fullName": "google.cloud.cloudsecuritycompliance.v1.Audit.CreateFrameworkAudit",
+          "service": {
+            "shortName": "Audit",
+            "fullName": "google.cloud.cloudsecuritycompliance.v1.Audit"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 61,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 59,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "cloudsecuritycompliance_v1_generated_Audit_CreateFrameworkAudit_async_flattened_resourceNames1",
+      "title": "CreateFrameworkAuditResourceNames1Async",
+      "description": "Snippet for CreateFrameworkAuditAsync",
+      "file": "AuditClient.CreateFrameworkAuditResourceNames1AsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateFrameworkAuditAsync",
+        "fullName": "Google.Cloud.CloudSecurityCompliance.V1.AuditClient.CreateFrameworkAuditAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.LocationName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.CloudSecurityCompliance.V1.FrameworkAudit",
+            "name": "frameworkAudit"
+          },
+          {
+            "type": "System.String",
+            "name": "frameworkAuditId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.CloudSecurityCompliance.V1.FrameworkAudit, Google.Cloud.CloudSecurityCompliance.V1.OperationMetadata>>",
+        "client": {
+          "shortName": "AuditClient",
+          "fullName": "Google.Cloud.CloudSecurityCompliance.V1.AuditClient"
+        },
+        "method": {
+          "shortName": "CreateFrameworkAudit",
+          "fullName": "google.cloud.cloudsecuritycompliance.v1.Audit.CreateFrameworkAudit",
+          "service": {
+            "shortName": "Audit",
+            "fullName": "google.cloud.cloudsecuritycompliance.v1.Audit"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 62,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 60,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "cloudsecuritycompliance_v1_generated_Audit_CreateFrameworkAudit_sync_flattened_resourceNames2",
+      "title": "CreateFrameworkAuditResourceNames2",
+      "description": "Snippet for CreateFrameworkAudit",
+      "file": "AuditClient.CreateFrameworkAuditResourceNames2Snippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateFrameworkAudit",
+        "fullName": "Google.Cloud.CloudSecurityCompliance.V1.AuditClient.CreateFrameworkAudit",
+        "parameters": [
+          {
+            "type": "Google.Cloud.CloudSecurityCompliance.V1.OrganizationLocationName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.CloudSecurityCompliance.V1.FrameworkAudit",
+            "name": "frameworkAudit"
+          },
+          {
+            "type": "System.String",
+            "name": "frameworkAuditId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.CloudSecurityCompliance.V1.FrameworkAudit, Google.Cloud.CloudSecurityCompliance.V1.OperationMetadata>",
+        "client": {
+          "shortName": "AuditClient",
+          "fullName": "Google.Cloud.CloudSecurityCompliance.V1.AuditClient"
+        },
+        "method": {
+          "shortName": "CreateFrameworkAudit",
+          "fullName": "google.cloud.cloudsecuritycompliance.v1.Audit.CreateFrameworkAudit",
+          "service": {
+            "shortName": "Audit",
+            "fullName": "google.cloud.cloudsecuritycompliance.v1.Audit"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 60,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 58,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "cloudsecuritycompliance_v1_generated_Audit_CreateFrameworkAudit_async_flattened_resourceNames2",
+      "title": "CreateFrameworkAuditResourceNames2Async",
+      "description": "Snippet for CreateFrameworkAuditAsync",
+      "file": "AuditClient.CreateFrameworkAuditResourceNames2AsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateFrameworkAuditAsync",
+        "fullName": "Google.Cloud.CloudSecurityCompliance.V1.AuditClient.CreateFrameworkAuditAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.CloudSecurityCompliance.V1.OrganizationLocationName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.CloudSecurityCompliance.V1.FrameworkAudit",
+            "name": "frameworkAudit"
+          },
+          {
+            "type": "System.String",
+            "name": "frameworkAuditId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.CloudSecurityCompliance.V1.FrameworkAudit, Google.Cloud.CloudSecurityCompliance.V1.OperationMetadata>>",
+        "client": {
+          "shortName": "AuditClient",
+          "fullName": "Google.Cloud.CloudSecurityCompliance.V1.AuditClient"
+        },
+        "method": {
+          "shortName": "CreateFrameworkAudit",
+          "fullName": "google.cloud.cloudsecuritycompliance.v1.Audit.CreateFrameworkAudit",
+          "service": {
+            "shortName": "Audit",
+            "fullName": "google.cloud.cloudsecuritycompliance.v1.Audit"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 61,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 59,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "cloudsecuritycompliance_v1_generated_Audit_ListFrameworkAudits_sync",
+      "title": "ListFrameworkAuditsRequestObject",
+      "description": "Snippet for ListFrameworkAudits",
+      "file": "AuditClient.ListFrameworkAuditsRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListFrameworkAudits",
+        "fullName": "Google.Cloud.CloudSecurityCompliance.V1.AuditClient.ListFrameworkAudits",
+        "parameters": [
+          {
+            "type": "Google.Cloud.CloudSecurityCompliance.V1.ListFrameworkAuditsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.CloudSecurityCompliance.V1.ListFrameworkAuditsResponse, Google.Cloud.CloudSecurityCompliance.V1.FrameworkAudit>",
+        "client": {
+          "shortName": "AuditClient",
+          "fullName": "Google.Cloud.CloudSecurityCompliance.V1.AuditClient"
+        },
+        "method": {
+          "shortName": "ListFrameworkAudits",
+          "fullName": "google.cloud.cloudsecuritycompliance.v1.Audit.ListFrameworkAudits",
+          "service": {
+            "shortName": "Audit",
+            "fullName": "google.cloud.cloudsecuritycompliance.v1.Audit"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 80,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 78,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "cloudsecuritycompliance_v1_generated_Audit_ListFrameworkAudits_async",
+      "title": "ListFrameworkAuditsRequestObjectAsync",
+      "description": "Snippet for ListFrameworkAuditsAsync",
+      "file": "AuditClient.ListFrameworkAuditsRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListFrameworkAuditsAsync",
+        "fullName": "Google.Cloud.CloudSecurityCompliance.V1.AuditClient.ListFrameworkAuditsAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.CloudSecurityCompliance.V1.ListFrameworkAuditsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.CloudSecurityCompliance.V1.ListFrameworkAuditsResponse, Google.Cloud.CloudSecurityCompliance.V1.FrameworkAudit>",
+        "client": {
+          "shortName": "AuditClient",
+          "fullName": "Google.Cloud.CloudSecurityCompliance.V1.AuditClient"
+        },
+        "method": {
+          "shortName": "ListFrameworkAudits",
+          "fullName": "google.cloud.cloudsecuritycompliance.v1.Audit.ListFrameworkAudits",
+          "service": {
+            "shortName": "Audit",
+            "fullName": "google.cloud.cloudsecuritycompliance.v1.Audit"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 82,
+          "type": "FULL"
+        },
+        {
+          "start": 39,
+          "end": 80,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "cloudsecuritycompliance_v1_generated_Audit_ListFrameworkAudits_sync_flattened",
+      "title": "ListFrameworkAudits",
+      "description": "Snippet for ListFrameworkAudits",
+      "file": "AuditClient.ListFrameworkAuditsSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListFrameworkAudits",
+        "fullName": "Google.Cloud.CloudSecurityCompliance.V1.AuditClient.ListFrameworkAudits",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.CloudSecurityCompliance.V1.ListFrameworkAuditsResponse, Google.Cloud.CloudSecurityCompliance.V1.FrameworkAudit>",
+        "client": {
+          "shortName": "AuditClient",
+          "fullName": "Google.Cloud.CloudSecurityCompliance.V1.AuditClient"
+        },
+        "method": {
+          "shortName": "ListFrameworkAudits",
+          "fullName": "google.cloud.cloudsecuritycompliance.v1.Audit.ListFrameworkAudits",
+          "service": {
+            "shortName": "Audit",
+            "fullName": "google.cloud.cloudsecuritycompliance.v1.Audit"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 75,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 73,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "cloudsecuritycompliance_v1_generated_Audit_ListFrameworkAudits_async_flattened",
+      "title": "ListFrameworkAuditsAsync",
+      "description": "Snippet for ListFrameworkAuditsAsync",
+      "file": "AuditClient.ListFrameworkAuditsAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListFrameworkAuditsAsync",
+        "fullName": "Google.Cloud.CloudSecurityCompliance.V1.AuditClient.ListFrameworkAuditsAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.CloudSecurityCompliance.V1.ListFrameworkAuditsResponse, Google.Cloud.CloudSecurityCompliance.V1.FrameworkAudit>",
+        "client": {
+          "shortName": "AuditClient",
+          "fullName": "Google.Cloud.CloudSecurityCompliance.V1.AuditClient"
+        },
+        "method": {
+          "shortName": "ListFrameworkAudits",
+          "fullName": "google.cloud.cloudsecuritycompliance.v1.Audit.ListFrameworkAudits",
+          "service": {
+            "shortName": "Audit",
+            "fullName": "google.cloud.cloudsecuritycompliance.v1.Audit"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 77,
+          "type": "FULL"
+        },
+        {
+          "start": 38,
+          "end": 75,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "cloudsecuritycompliance_v1_generated_Audit_ListFrameworkAudits_sync_flattened_resourceNames1",
+      "title": "ListFrameworkAuditsResourceNames1",
+      "description": "Snippet for ListFrameworkAudits",
+      "file": "AuditClient.ListFrameworkAuditsResourceNames1Snippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListFrameworkAudits",
+        "fullName": "Google.Cloud.CloudSecurityCompliance.V1.AuditClient.ListFrameworkAudits",
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.LocationName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.CloudSecurityCompliance.V1.ListFrameworkAuditsResponse, Google.Cloud.CloudSecurityCompliance.V1.FrameworkAudit>",
+        "client": {
+          "shortName": "AuditClient",
+          "fullName": "Google.Cloud.CloudSecurityCompliance.V1.AuditClient"
+        },
+        "method": {
+          "shortName": "ListFrameworkAudits",
+          "fullName": "google.cloud.cloudsecuritycompliance.v1.Audit.ListFrameworkAudits",
+          "service": {
+            "shortName": "Audit",
+            "fullName": "google.cloud.cloudsecuritycompliance.v1.Audit"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 76,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 74,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "cloudsecuritycompliance_v1_generated_Audit_ListFrameworkAudits_async_flattened_resourceNames1",
+      "title": "ListFrameworkAuditsResourceNames1Async",
+      "description": "Snippet for ListFrameworkAuditsAsync",
+      "file": "AuditClient.ListFrameworkAuditsResourceNames1AsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListFrameworkAuditsAsync",
+        "fullName": "Google.Cloud.CloudSecurityCompliance.V1.AuditClient.ListFrameworkAuditsAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.LocationName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.CloudSecurityCompliance.V1.ListFrameworkAuditsResponse, Google.Cloud.CloudSecurityCompliance.V1.FrameworkAudit>",
+        "client": {
+          "shortName": "AuditClient",
+          "fullName": "Google.Cloud.CloudSecurityCompliance.V1.AuditClient"
+        },
+        "method": {
+          "shortName": "ListFrameworkAudits",
+          "fullName": "google.cloud.cloudsecuritycompliance.v1.Audit.ListFrameworkAudits",
+          "service": {
+            "shortName": "Audit",
+            "fullName": "google.cloud.cloudsecuritycompliance.v1.Audit"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 78,
+          "type": "FULL"
+        },
+        {
+          "start": 39,
+          "end": 76,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "cloudsecuritycompliance_v1_generated_Audit_ListFrameworkAudits_sync_flattened_resourceNames2",
+      "title": "ListFrameworkAuditsResourceNames2",
+      "description": "Snippet for ListFrameworkAudits",
+      "file": "AuditClient.ListFrameworkAuditsResourceNames2Snippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListFrameworkAudits",
+        "fullName": "Google.Cloud.CloudSecurityCompliance.V1.AuditClient.ListFrameworkAudits",
+        "parameters": [
+          {
+            "type": "Google.Cloud.CloudSecurityCompliance.V1.OrganizationLocationName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.CloudSecurityCompliance.V1.ListFrameworkAuditsResponse, Google.Cloud.CloudSecurityCompliance.V1.FrameworkAudit>",
+        "client": {
+          "shortName": "AuditClient",
+          "fullName": "Google.Cloud.CloudSecurityCompliance.V1.AuditClient"
+        },
+        "method": {
+          "shortName": "ListFrameworkAudits",
+          "fullName": "google.cloud.cloudsecuritycompliance.v1.Audit.ListFrameworkAudits",
+          "service": {
+            "shortName": "Audit",
+            "fullName": "google.cloud.cloudsecuritycompliance.v1.Audit"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 75,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 73,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "cloudsecuritycompliance_v1_generated_Audit_ListFrameworkAudits_async_flattened_resourceNames2",
+      "title": "ListFrameworkAuditsResourceNames2Async",
+      "description": "Snippet for ListFrameworkAuditsAsync",
+      "file": "AuditClient.ListFrameworkAuditsResourceNames2AsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListFrameworkAuditsAsync",
+        "fullName": "Google.Cloud.CloudSecurityCompliance.V1.AuditClient.ListFrameworkAuditsAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.CloudSecurityCompliance.V1.OrganizationLocationName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.CloudSecurityCompliance.V1.ListFrameworkAuditsResponse, Google.Cloud.CloudSecurityCompliance.V1.FrameworkAudit>",
+        "client": {
+          "shortName": "AuditClient",
+          "fullName": "Google.Cloud.CloudSecurityCompliance.V1.AuditClient"
+        },
+        "method": {
+          "shortName": "ListFrameworkAudits",
+          "fullName": "google.cloud.cloudsecuritycompliance.v1.Audit.ListFrameworkAudits",
+          "service": {
+            "shortName": "Audit",
+            "fullName": "google.cloud.cloudsecuritycompliance.v1.Audit"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 77,
+          "type": "FULL"
+        },
+        {
+          "start": 38,
+          "end": 75,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "cloudsecuritycompliance_v1_generated_Audit_GetFrameworkAudit_sync",
+      "title": "GetFrameworkAuditRequestObject",
+      "description": "Snippet for GetFrameworkAudit",
+      "file": "AuditClient.GetFrameworkAuditRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetFrameworkAudit",
+        "fullName": "Google.Cloud.CloudSecurityCompliance.V1.AuditClient.GetFrameworkAudit",
+        "parameters": [
+          {
+            "type": "Google.Cloud.CloudSecurityCompliance.V1.GetFrameworkAuditRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.CloudSecurityCompliance.V1.FrameworkAudit",
+        "client": {
+          "shortName": "AuditClient",
+          "fullName": "Google.Cloud.CloudSecurityCompliance.V1.AuditClient"
+        },
+        "method": {
+          "shortName": "GetFrameworkAudit",
+          "fullName": "google.cloud.cloudsecuritycompliance.v1.Audit.GetFrameworkAudit",
+          "service": {
+            "shortName": "Audit",
+            "fullName": "google.cloud.cloudsecuritycompliance.v1.Audit"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 44,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 42,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "cloudsecuritycompliance_v1_generated_Audit_GetFrameworkAudit_async",
+      "title": "GetFrameworkAuditRequestObjectAsync",
+      "description": "Snippet for GetFrameworkAuditAsync",
+      "file": "AuditClient.GetFrameworkAuditRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetFrameworkAuditAsync",
+        "fullName": "Google.Cloud.CloudSecurityCompliance.V1.AuditClient.GetFrameworkAuditAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.CloudSecurityCompliance.V1.GetFrameworkAuditRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.CloudSecurityCompliance.V1.FrameworkAudit>",
+        "client": {
+          "shortName": "AuditClient",
+          "fullName": "Google.Cloud.CloudSecurityCompliance.V1.AuditClient"
+        },
+        "method": {
+          "shortName": "GetFrameworkAudit",
+          "fullName": "google.cloud.cloudsecuritycompliance.v1.Audit.GetFrameworkAudit",
+          "service": {
+            "shortName": "Audit",
+            "fullName": "google.cloud.cloudsecuritycompliance.v1.Audit"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 45,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 43,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "cloudsecuritycompliance_v1_generated_Audit_GetFrameworkAudit_sync_flattened",
+      "title": "GetFrameworkAudit",
+      "description": "Snippet for GetFrameworkAudit",
+      "file": "AuditClient.GetFrameworkAuditSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetFrameworkAudit",
+        "fullName": "Google.Cloud.CloudSecurityCompliance.V1.AuditClient.GetFrameworkAudit",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.CloudSecurityCompliance.V1.FrameworkAudit",
+        "client": {
+          "shortName": "AuditClient",
+          "fullName": "Google.Cloud.CloudSecurityCompliance.V1.AuditClient"
+        },
+        "method": {
+          "shortName": "GetFrameworkAudit",
+          "fullName": "google.cloud.cloudsecuritycompliance.v1.Audit.GetFrameworkAudit",
+          "service": {
+            "shortName": "Audit",
+            "fullName": "google.cloud.cloudsecuritycompliance.v1.Audit"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "cloudsecuritycompliance_v1_generated_Audit_GetFrameworkAudit_async_flattened",
+      "title": "GetFrameworkAuditAsync",
+      "description": "Snippet for GetFrameworkAuditAsync",
+      "file": "AuditClient.GetFrameworkAuditAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetFrameworkAuditAsync",
+        "fullName": "Google.Cloud.CloudSecurityCompliance.V1.AuditClient.GetFrameworkAuditAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.CloudSecurityCompliance.V1.FrameworkAudit>",
+        "client": {
+          "shortName": "AuditClient",
+          "fullName": "Google.Cloud.CloudSecurityCompliance.V1.AuditClient"
+        },
+        "method": {
+          "shortName": "GetFrameworkAudit",
+          "fullName": "google.cloud.cloudsecuritycompliance.v1.Audit.GetFrameworkAudit",
+          "service": {
+            "shortName": "Audit",
+            "fullName": "google.cloud.cloudsecuritycompliance.v1.Audit"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "cloudsecuritycompliance_v1_generated_Audit_GetFrameworkAudit_sync_flattened_resourceNames",
+      "title": "GetFrameworkAuditResourceNames",
+      "description": "Snippet for GetFrameworkAudit",
+      "file": "AuditClient.GetFrameworkAuditResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetFrameworkAudit",
+        "fullName": "Google.Cloud.CloudSecurityCompliance.V1.AuditClient.GetFrameworkAudit",
+        "parameters": [
+          {
+            "type": "Google.Cloud.CloudSecurityCompliance.V1.FrameworkAuditName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.CloudSecurityCompliance.V1.FrameworkAudit",
+        "client": {
+          "shortName": "AuditClient",
+          "fullName": "Google.Cloud.CloudSecurityCompliance.V1.AuditClient"
+        },
+        "method": {
+          "shortName": "GetFrameworkAudit",
+          "fullName": "google.cloud.cloudsecuritycompliance.v1.Audit.GetFrameworkAudit",
+          "service": {
+            "shortName": "Audit",
+            "fullName": "google.cloud.cloudsecuritycompliance.v1.Audit"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "cloudsecuritycompliance_v1_generated_Audit_GetFrameworkAudit_async_flattened_resourceNames",
+      "title": "GetFrameworkAuditResourceNamesAsync",
+      "description": "Snippet for GetFrameworkAuditAsync",
+      "file": "AuditClient.GetFrameworkAuditResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetFrameworkAuditAsync",
+        "fullName": "Google.Cloud.CloudSecurityCompliance.V1.AuditClient.GetFrameworkAuditAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.CloudSecurityCompliance.V1.FrameworkAuditName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.CloudSecurityCompliance.V1.FrameworkAudit>",
+        "client": {
+          "shortName": "AuditClient",
+          "fullName": "Google.Cloud.CloudSecurityCompliance.V1.AuditClient"
+        },
+        "method": {
+          "shortName": "GetFrameworkAudit",
+          "fullName": "google.cloud.cloudsecuritycompliance.v1.Audit.GetFrameworkAudit",
+          "service": {
+            "shortName": "Audit",
+            "fullName": "google.cloud.cloudsecuritycompliance.v1.Audit"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "cloudsecuritycompliance_v1_generated_CmEnrollmentService_UpdateCmEnrollment_sync",
+      "title": "UpdateCmEnrollmentRequestObject",
+      "description": "Snippet for UpdateCmEnrollment",
+      "file": "CmEnrollmentServiceClient.UpdateCmEnrollmentRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateCmEnrollment",
+        "fullName": "Google.Cloud.CloudSecurityCompliance.V1.CmEnrollmentServiceClient.UpdateCmEnrollment",
+        "parameters": [
+          {
+            "type": "Google.Cloud.CloudSecurityCompliance.V1.UpdateCmEnrollmentRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.CloudSecurityCompliance.V1.CmEnrollment",
+        "client": {
+          "shortName": "CmEnrollmentServiceClient",
+          "fullName": "Google.Cloud.CloudSecurityCompliance.V1.CmEnrollmentServiceClient"
+        },
+        "method": {
+          "shortName": "UpdateCmEnrollment",
+          "fullName": "google.cloud.cloudsecuritycompliance.v1.CmEnrollmentService.UpdateCmEnrollment",
+          "service": {
+            "shortName": "CmEnrollmentService",
+            "fullName": "google.cloud.cloudsecuritycompliance.v1.CmEnrollmentService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 46,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 44,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "cloudsecuritycompliance_v1_generated_CmEnrollmentService_UpdateCmEnrollment_async",
+      "title": "UpdateCmEnrollmentRequestObjectAsync",
+      "description": "Snippet for UpdateCmEnrollmentAsync",
+      "file": "CmEnrollmentServiceClient.UpdateCmEnrollmentRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateCmEnrollmentAsync",
+        "fullName": "Google.Cloud.CloudSecurityCompliance.V1.CmEnrollmentServiceClient.UpdateCmEnrollmentAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.CloudSecurityCompliance.V1.UpdateCmEnrollmentRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.CloudSecurityCompliance.V1.CmEnrollment>",
+        "client": {
+          "shortName": "CmEnrollmentServiceClient",
+          "fullName": "Google.Cloud.CloudSecurityCompliance.V1.CmEnrollmentServiceClient"
+        },
+        "method": {
+          "shortName": "UpdateCmEnrollment",
+          "fullName": "google.cloud.cloudsecuritycompliance.v1.CmEnrollmentService.UpdateCmEnrollment",
+          "service": {
+            "shortName": "CmEnrollmentService",
+            "fullName": "google.cloud.cloudsecuritycompliance.v1.CmEnrollmentService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 47,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 45,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "cloudsecuritycompliance_v1_generated_CmEnrollmentService_UpdateCmEnrollment_sync_flattened",
+      "title": "UpdateCmEnrollment",
+      "description": "Snippet for UpdateCmEnrollment",
+      "file": "CmEnrollmentServiceClient.UpdateCmEnrollmentSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateCmEnrollment",
+        "fullName": "Google.Cloud.CloudSecurityCompliance.V1.CmEnrollmentServiceClient.UpdateCmEnrollment",
+        "parameters": [
+          {
+            "type": "Google.Cloud.CloudSecurityCompliance.V1.CmEnrollment",
+            "name": "cmEnrollment"
+          },
+          {
+            "type": "Google.Protobuf.WellKnownTypes.FieldMask",
+            "name": "updateMask"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.CloudSecurityCompliance.V1.CmEnrollment",
+        "client": {
+          "shortName": "CmEnrollmentServiceClient",
+          "fullName": "Google.Cloud.CloudSecurityCompliance.V1.CmEnrollmentServiceClient"
+        },
+        "method": {
+          "shortName": "UpdateCmEnrollment",
+          "fullName": "google.cloud.cloudsecuritycompliance.v1.CmEnrollmentService.UpdateCmEnrollment",
+          "service": {
+            "shortName": "CmEnrollmentService",
+            "fullName": "google.cloud.cloudsecuritycompliance.v1.CmEnrollmentService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 43,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 41,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "cloudsecuritycompliance_v1_generated_CmEnrollmentService_UpdateCmEnrollment_async_flattened",
+      "title": "UpdateCmEnrollmentAsync",
+      "description": "Snippet for UpdateCmEnrollmentAsync",
+      "file": "CmEnrollmentServiceClient.UpdateCmEnrollmentAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateCmEnrollmentAsync",
+        "fullName": "Google.Cloud.CloudSecurityCompliance.V1.CmEnrollmentServiceClient.UpdateCmEnrollmentAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.CloudSecurityCompliance.V1.CmEnrollment",
+            "name": "cmEnrollment"
+          },
+          {
+            "type": "Google.Protobuf.WellKnownTypes.FieldMask",
+            "name": "updateMask"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.CloudSecurityCompliance.V1.CmEnrollment>",
+        "client": {
+          "shortName": "CmEnrollmentServiceClient",
+          "fullName": "Google.Cloud.CloudSecurityCompliance.V1.CmEnrollmentServiceClient"
+        },
+        "method": {
+          "shortName": "UpdateCmEnrollment",
+          "fullName": "google.cloud.cloudsecuritycompliance.v1.CmEnrollmentService.UpdateCmEnrollment",
+          "service": {
+            "shortName": "CmEnrollmentService",
+            "fullName": "google.cloud.cloudsecuritycompliance.v1.CmEnrollmentService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 44,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 42,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "cloudsecuritycompliance_v1_generated_CmEnrollmentService_CalculateEffectiveCmEnrollment_sync",
+      "title": "CalculateEffectiveCmEnrollmentRequestObject",
+      "description": "Snippet for CalculateEffectiveCmEnrollment",
+      "file": "CmEnrollmentServiceClient.CalculateEffectiveCmEnrollmentRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CalculateEffectiveCmEnrollment",
+        "fullName": "Google.Cloud.CloudSecurityCompliance.V1.CmEnrollmentServiceClient.CalculateEffectiveCmEnrollment",
+        "parameters": [
+          {
+            "type": "Google.Cloud.CloudSecurityCompliance.V1.CalculateEffectiveCmEnrollmentRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.CloudSecurityCompliance.V1.CalculateEffectiveCmEnrollmentResponse",
+        "client": {
+          "shortName": "CmEnrollmentServiceClient",
+          "fullName": "Google.Cloud.CloudSecurityCompliance.V1.CmEnrollmentServiceClient"
+        },
+        "method": {
+          "shortName": "CalculateEffectiveCmEnrollment",
+          "fullName": "google.cloud.cloudsecuritycompliance.v1.CmEnrollmentService.CalculateEffectiveCmEnrollment",
+          "service": {
+            "shortName": "CmEnrollmentService",
+            "fullName": "google.cloud.cloudsecuritycompliance.v1.CmEnrollmentService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 44,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 42,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "cloudsecuritycompliance_v1_generated_CmEnrollmentService_CalculateEffectiveCmEnrollment_async",
+      "title": "CalculateEffectiveCmEnrollmentRequestObjectAsync",
+      "description": "Snippet for CalculateEffectiveCmEnrollmentAsync",
+      "file": "CmEnrollmentServiceClient.CalculateEffectiveCmEnrollmentRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CalculateEffectiveCmEnrollmentAsync",
+        "fullName": "Google.Cloud.CloudSecurityCompliance.V1.CmEnrollmentServiceClient.CalculateEffectiveCmEnrollmentAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.CloudSecurityCompliance.V1.CalculateEffectiveCmEnrollmentRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.CloudSecurityCompliance.V1.CalculateEffectiveCmEnrollmentResponse>",
+        "client": {
+          "shortName": "CmEnrollmentServiceClient",
+          "fullName": "Google.Cloud.CloudSecurityCompliance.V1.CmEnrollmentServiceClient"
+        },
+        "method": {
+          "shortName": "CalculateEffectiveCmEnrollment",
+          "fullName": "google.cloud.cloudsecuritycompliance.v1.CmEnrollmentService.CalculateEffectiveCmEnrollment",
+          "service": {
+            "shortName": "CmEnrollmentService",
+            "fullName": "google.cloud.cloudsecuritycompliance.v1.CmEnrollmentService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 45,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 43,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "cloudsecuritycompliance_v1_generated_CmEnrollmentService_CalculateEffectiveCmEnrollment_sync_flattened",
+      "title": "CalculateEffectiveCmEnrollment",
+      "description": "Snippet for CalculateEffectiveCmEnrollment",
+      "file": "CmEnrollmentServiceClient.CalculateEffectiveCmEnrollmentSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CalculateEffectiveCmEnrollment",
+        "fullName": "Google.Cloud.CloudSecurityCompliance.V1.CmEnrollmentServiceClient.CalculateEffectiveCmEnrollment",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.CloudSecurityCompliance.V1.CalculateEffectiveCmEnrollmentResponse",
+        "client": {
+          "shortName": "CmEnrollmentServiceClient",
+          "fullName": "Google.Cloud.CloudSecurityCompliance.V1.CmEnrollmentServiceClient"
+        },
+        "method": {
+          "shortName": "CalculateEffectiveCmEnrollment",
+          "fullName": "google.cloud.cloudsecuritycompliance.v1.CmEnrollmentService.CalculateEffectiveCmEnrollment",
+          "service": {
+            "shortName": "CmEnrollmentService",
+            "fullName": "google.cloud.cloudsecuritycompliance.v1.CmEnrollmentService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "cloudsecuritycompliance_v1_generated_CmEnrollmentService_CalculateEffectiveCmEnrollment_async_flattened",
+      "title": "CalculateEffectiveCmEnrollmentAsync",
+      "description": "Snippet for CalculateEffectiveCmEnrollmentAsync",
+      "file": "CmEnrollmentServiceClient.CalculateEffectiveCmEnrollmentAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CalculateEffectiveCmEnrollmentAsync",
+        "fullName": "Google.Cloud.CloudSecurityCompliance.V1.CmEnrollmentServiceClient.CalculateEffectiveCmEnrollmentAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.CloudSecurityCompliance.V1.CalculateEffectiveCmEnrollmentResponse>",
+        "client": {
+          "shortName": "CmEnrollmentServiceClient",
+          "fullName": "Google.Cloud.CloudSecurityCompliance.V1.CmEnrollmentServiceClient"
+        },
+        "method": {
+          "shortName": "CalculateEffectiveCmEnrollment",
+          "fullName": "google.cloud.cloudsecuritycompliance.v1.CmEnrollmentService.CalculateEffectiveCmEnrollment",
+          "service": {
+            "shortName": "CmEnrollmentService",
+            "fullName": "google.cloud.cloudsecuritycompliance.v1.CmEnrollmentService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "cloudsecuritycompliance_v1_generated_CmEnrollmentService_CalculateEffectiveCmEnrollment_sync_flattened_resourceNames",
+      "title": "CalculateEffectiveCmEnrollmentResourceNames",
+      "description": "Snippet for CalculateEffectiveCmEnrollment",
+      "file": "CmEnrollmentServiceClient.CalculateEffectiveCmEnrollmentResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CalculateEffectiveCmEnrollment",
+        "fullName": "Google.Cloud.CloudSecurityCompliance.V1.CmEnrollmentServiceClient.CalculateEffectiveCmEnrollment",
+        "parameters": [
+          {
+            "type": "Google.Cloud.CloudSecurityCompliance.V1.CmEnrollmentName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.CloudSecurityCompliance.V1.CalculateEffectiveCmEnrollmentResponse",
+        "client": {
+          "shortName": "CmEnrollmentServiceClient",
+          "fullName": "Google.Cloud.CloudSecurityCompliance.V1.CmEnrollmentServiceClient"
+        },
+        "method": {
+          "shortName": "CalculateEffectiveCmEnrollment",
+          "fullName": "google.cloud.cloudsecuritycompliance.v1.CmEnrollmentService.CalculateEffectiveCmEnrollment",
+          "service": {
+            "shortName": "CmEnrollmentService",
+            "fullName": "google.cloud.cloudsecuritycompliance.v1.CmEnrollmentService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "cloudsecuritycompliance_v1_generated_CmEnrollmentService_CalculateEffectiveCmEnrollment_async_flattened_resourceNames",
+      "title": "CalculateEffectiveCmEnrollmentResourceNamesAsync",
+      "description": "Snippet for CalculateEffectiveCmEnrollmentAsync",
+      "file": "CmEnrollmentServiceClient.CalculateEffectiveCmEnrollmentResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CalculateEffectiveCmEnrollmentAsync",
+        "fullName": "Google.Cloud.CloudSecurityCompliance.V1.CmEnrollmentServiceClient.CalculateEffectiveCmEnrollmentAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.CloudSecurityCompliance.V1.CmEnrollmentName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.CloudSecurityCompliance.V1.CalculateEffectiveCmEnrollmentResponse>",
+        "client": {
+          "shortName": "CmEnrollmentServiceClient",
+          "fullName": "Google.Cloud.CloudSecurityCompliance.V1.CmEnrollmentServiceClient"
+        },
+        "method": {
+          "shortName": "CalculateEffectiveCmEnrollment",
+          "fullName": "google.cloud.cloudsecuritycompliance.v1.CmEnrollmentService.CalculateEffectiveCmEnrollment",
+          "service": {
+            "shortName": "CmEnrollmentService",
+            "fullName": "google.cloud.cloudsecuritycompliance.v1.CmEnrollmentService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
       "regionTag": "cloudsecuritycompliance_v1_generated_Config_ListFrameworks_sync",
       "title": "ListFrameworksRequestObject",
       "description": "Snippet for ListFrameworks",
@@ -1776,12 +3618,12 @@
       "segments": [
         {
           "start": 20,
-          "end": 44,
+          "end": 45,
           "type": "FULL"
         },
         {
           "start": 34,
-          "end": 42,
+          "end": 43,
           "type": "SHORT"
         }
       ]
@@ -1825,12 +3667,12 @@
       "segments": [
         {
           "start": 20,
-          "end": 45,
+          "end": 46,
           "type": "FULL"
         },
         {
           "start": 35,
-          "end": 43,
+          "end": 44,
           "type": "SHORT"
         }
       ]

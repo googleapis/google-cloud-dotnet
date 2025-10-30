@@ -56,7 +56,7 @@ namespace Google.Cloud.CloudSecurityCompliance.V1 {
             "EiMKEW1ham9yX3JldmlzaW9uX2lkGAIgASgDQgPgQQFIAIgBAUIUChJfbWFq",
             "b3JfcmV2aXNpb25faWQicQoJUGFyYW1ldGVyEhEKBG5hbWUYASABKAlCA+BB",
             "AhJRCg9wYXJhbWV0ZXJfdmFsdWUYAiABKAsyMy5nb29nbGUuY2xvdWQuY2xv",
-            "dWRzZWN1cml0eWNvbXBsaWFuY2UudjEuUGFyYW1WYWx1ZUID4EECIqIICgxD",
+            "dWRzZWN1cml0eWNvbXBsaWFuY2UudjEuUGFyYW1WYWx1ZUID4EECItoICgxD",
             "bG91ZENvbnRyb2wSFAoEbmFtZRgBIAEoCUIG4EEC4EEIEh4KEW1ham9yX3Jl",
             "dmlzaW9uX2lkGAIgASgDQgPgQQMSGAoLZGVzY3JpcHRpb24YBCABKAlCA+BB",
             "ARIZCgxkaXNwbGF5X25hbWUYBSABKAlCA+BBARJiChtzdXBwb3J0ZWRfZW5m",
@@ -76,113 +76,118 @@ namespace Google.Cloud.CloudSecurityCompliance.V1 {
             "A+BBARI0CgtjcmVhdGVfdGltZRgRIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5U",
             "aW1lc3RhbXBCA+BBAxJpCh9zdXBwb3J0ZWRfdGFyZ2V0X3Jlc291cmNlX3R5",
             "cGVzGBIgAygOMjsuZ29vZ2xlLmNsb3VkLmNsb3Vkc2VjdXJpdHljb21wbGlh",
-            "bmNlLnYxLlRhcmdldFJlc291cmNlVHlwZUID4EEBOqcB6kGjAQozY2xvdWRz",
-            "ZWN1cml0eWNvbXBsaWFuY2UuZ29vZ2xlYXBpcy5jb20vQ2xvdWRDb250cm9s",
-            "Ek9vcmdhbml6YXRpb25zL3tvcmdhbml6YXRpb259L2xvY2F0aW9ucy97bG9j",
-            "YXRpb259L2Nsb3VkQ29udHJvbHMve2Nsb3VkX2NvbnRyb2x9Kg1jbG91ZENv",
-            "bnRyb2xzMgxjbG91ZENvbnRyb2wijgUKDVBhcmFtZXRlclNwZWMSEQoEbmFt",
-            "ZRgBIAEoCUID4EECEhkKDGRpc3BsYXlfbmFtZRgCIAEoCUID4EEBEhgKC2Rl",
-            "c2NyaXB0aW9uGAMgASgJQgPgQQESGAoLaXNfcmVxdWlyZWQYBCABKAhCA+BB",
-            "AhJZCgp2YWx1ZV90eXBlGAUgASgOMkAuZ29vZ2xlLmNsb3VkLmNsb3Vkc2Vj",
-            "dXJpdHljb21wbGlhbmNlLnYxLlBhcmFtZXRlclNwZWMuVmFsdWVUeXBlQgPg",
-            "QQISTwoNZGVmYXVsdF92YWx1ZRgGIAEoCzIzLmdvb2dsZS5jbG91ZC5jbG91",
-            "ZHNlY3VyaXR5Y29tcGxpYW5jZS52MS5QYXJhbVZhbHVlQgPgQQESYwoSc3Vi",
-            "c3RpdHV0aW9uX3J1bGVzGAcgAygLMkIuZ29vZ2xlLmNsb3VkLmNsb3Vkc2Vj",
-            "dXJpdHljb21wbGlhbmNlLnYxLlBhcmFtZXRlclN1YnN0aXR1dGlvblJ1bGVC",
-            "A+BBARJTCg5zdWJfcGFyYW1ldGVycxgIIAMoCzI2Lmdvb2dsZS5jbG91ZC5j",
-            "bG91ZHNlY3VyaXR5Y29tcGxpYW5jZS52MS5QYXJhbWV0ZXJTcGVjQgPgQQES",
-            "TAoKdmFsaWRhdGlvbhgJIAEoCzIzLmdvb2dsZS5jbG91ZC5jbG91ZHNlY3Vy",
-            "aXR5Y29tcGxpYW5jZS52MS5WYWxpZGF0aW9uQgPgQQEiZwoJVmFsdWVUeXBl",
-            "EhoKFlZBTFVFX1RZUEVfVU5TUEVDSUZJRUQQABIKCgZTVFJJTkcQAxILCgdC",
-            "T09MRUFOEAQSDgoKU1RSSU5HTElTVBAFEgoKBk5VTUJFUhAGEgkKBU9ORU9G",
-            "EAcihgIKClZhbGlkYXRpb24SUAoOYWxsb3dlZF92YWx1ZXMYASABKAsyNi5n",
-            "b29nbGUuY2xvdWQuY2xvdWRzZWN1cml0eWNvbXBsaWFuY2UudjEuQWxsb3dl",
-            "ZFZhbHVlc0gAEkYKCWludF9yYW5nZRgCIAEoCzIxLmdvb2dsZS5jbG91ZC5j",
-            "bG91ZHNlY3VyaXR5Y29tcGxpYW5jZS52MS5JbnRSYW5nZUgAElAKDnJlZ2V4",
-            "cF9wYXR0ZXJuGAMgASgLMjYuZ29vZ2xlLmNsb3VkLmNsb3Vkc2VjdXJpdHlj",
-            "b21wbGlhbmNlLnYxLlJlZ2V4cFBhdHRlcm5IAEIMCgpjb25zdHJhaW50IlkK",
-            "DUFsbG93ZWRWYWx1ZXMSSAoGdmFsdWVzGAEgAygLMjMuZ29vZ2xlLmNsb3Vk",
-            "LmNsb3Vkc2VjdXJpdHljb21wbGlhbmNlLnYxLlBhcmFtVmFsdWVCA+BBAiIl",
-            "Cg1SZWdleHBQYXR0ZXJuEhQKB3BhdHRlcm4YASABKAlCA+BBAiIuCghJbnRS",
-            "YW5nZRIQCgNtaW4YASABKANCA+BBAhIQCgNtYXgYAiABKANCA+BBAiIhCgpT",
-            "dHJpbmdMaXN0EhMKBnZhbHVlcxgBIAMoCUID4EECIvcBCgpQYXJhbVZhbHVl",
-            "EhYKDHN0cmluZ192YWx1ZRgDIAEoCUgAEhQKCmJvb2xfdmFsdWUYBCABKAhI",
-            "ABJQChFzdHJpbmdfbGlzdF92YWx1ZRgFIAEoCzIzLmdvb2dsZS5jbG91ZC5j",
-            "bG91ZHNlY3VyaXR5Y29tcGxpYW5jZS52MS5TdHJpbmdMaXN0SAASFgoMbnVt",
-            "YmVyX3ZhbHVlGAYgASgBSAASSQoLb25lb2ZfdmFsdWUYByABKAsyMi5nb29n",
-            "bGUuY2xvdWQuY2xvdWRzZWN1cml0eWNvbXBsaWFuY2UudjEuUGFyYW1ldGVy",
-            "SABCBgoEa2luZCKKAgoZUGFyYW1ldGVyU3Vic3RpdHV0aW9uUnVsZRJtCh1w",
-            "bGFjZWhvbGRlcl9zdWJzdGl0dXRpb25fcnVsZRgBIAEoCzJELmdvb2dsZS5j",
-            "bG91ZC5jbG91ZHNlY3VyaXR5Y29tcGxpYW5jZS52MS5QbGFjZWhvbGRlclN1",
-            "YnN0aXR1dGlvblJ1bGVIABJpChthdHRyaWJ1dGVfc3Vic3RpdHV0aW9uX3J1",
-            "bGUYAiABKAsyQi5nb29nbGUuY2xvdWQuY2xvdWRzZWN1cml0eWNvbXBsaWFu",
-            "Y2UudjEuQXR0cmlidXRlU3Vic3RpdHV0aW9uUnVsZUgAQhMKEXN1YnN0aXR1",
-            "dGlvbl90eXBlIi4KGUF0dHJpYnV0ZVN1YnN0aXR1dGlvblJ1bGUSEQoJYXR0",
-            "cmlidXRlGAEgASgJIjAKG1BsYWNlaG9sZGVyU3Vic3RpdHV0aW9uUnVsZRIR",
-            "CglhdHRyaWJ1dGUYASABKAki3QEKBFJ1bGUSUAoOY2VsX2V4cHJlc3Npb24Y",
-            "ASABKAsyNi5nb29nbGUuY2xvdWQuY2xvdWRzZWN1cml0eWNvbXBsaWFuY2Uu",
-            "djEuQ0VMRXhwcmVzc2lvbkgAEhgKC2Rlc2NyaXB0aW9uGAogASgJQgPgQQES",
-            "VwoRcnVsZV9hY3Rpb25fdHlwZXMYECADKA4yNy5nb29nbGUuY2xvdWQuY2xv",
-            "dWRzZWN1cml0eWNvbXBsaWFuY2UudjEuUnVsZUFjdGlvblR5cGVCA+BBAkIQ",
-            "Cg5pbXBsZW1lbnRhdGlvbiKKAQoNQ0VMRXhwcmVzc2lvbhJUChVyZXNvdXJj",
-            "ZV90eXBlc192YWx1ZXMYAyABKAsyMy5nb29nbGUuY2xvdWQuY2xvdWRzZWN1",
-            "cml0eWNvbXBsaWFuY2UudjEuU3RyaW5nTGlzdEgAEhcKCmV4cHJlc3Npb24Y",
-            "ASABKAlCA+BBAkIKCghjcml0ZXJpYSKAAgoRT3BlcmF0aW9uTWV0YWRhdGES",
-            "NAoLY3JlYXRlX3RpbWUYASABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0",
-            "YW1wQgPgQQMSMQoIZW5kX3RpbWUYAiABKAsyGi5nb29nbGUucHJvdG9idWYu",
-            "VGltZXN0YW1wQgPgQQMSEwoGdGFyZ2V0GAMgASgJQgPgQQMSEQoEdmVyYhgE",
-            "IAEoCUID4EEDEhsKDnN0YXR1c19tZXNzYWdlGAUgASgJQgPgQQMSIwoWcmVx",
-            "dWVzdGVkX2NhbmNlbGxhdGlvbhgGIAEoCEID4EEDEhgKC2FwaV92ZXJzaW9u",
-            "GAcgASgJQgPgQQMqXQoPRW5mb3JjZW1lbnRNb2RlEiAKHEVORk9SQ0VNRU5U",
-            "X01PREVfVU5TUEVDSUZJRUQQABIOCgpQUkVWRU5USVZFEAESDQoJREVURUNU",
-            "SVZFEAISCQoFQVVESVQQAyqxAQoRRnJhbWV3b3JrQ2F0ZWdvcnkSIgoeRlJB",
-            "TUVXT1JLX0NBVEVHT1JZX1VOU1BFQ0lGSUVEEAASHQoZSU5EVVNUUllfREVG",
-            "SU5FRF9TVEFOREFSRBABEhUKEUFTU1VSRURfV09SS0xPQURTEAISEQoNREFU",
-            "QV9TRUNVUklUWRADEhkKFUdPT0dMRV9CRVNUX1BSQUNUSUNFUxAEEhQKEENV",
-            "U1RPTV9GUkFNRVdPUksQBSryBAoUQ2xvdWRDb250cm9sQ2F0ZWdvcnkSJgoi",
-            "Q0xPVURfQ09OVFJPTF9DQVRFR09SWV9VTlNQRUNJRklFRBAAEh4KGkNDX0NB",
-            "VEVHT1JZX0lORlJBU1RSVUNUVVJFEAESJwojQ0NfQ0FURUdPUllfQVJUSUZJ",
-            "Q0lBTF9JTlRFTExJR0VOQ0UQAhIhCh1DQ19DQVRFR09SWV9QSFlTSUNBTF9T",
-            "RUNVUklUWRADEh0KGUNDX0NBVEVHT1JZX0RBVEFfU0VDVVJJVFkQBBIgChxD",
-            "Q19DQVRFR09SWV9ORVRXT1JLX1NFQ1VSSVRZEAUSIwofQ0NfQ0FURUdPUllf",
-            "SU5DSURFTlRfTUFOQUdFTUVOVBAGEi4KKkNDX0NBVEVHT1JZX0lERU5USVRZ",
-            "X0FORF9BQ0NFU1NfTUFOQUdFTUVOVBAHEhoKFkNDX0NBVEVHT1JZX0VOQ1JZ",
-            "UFRJT04QCBIyCi5DQ19DQVRFR09SWV9MT0dTX01BTkFHRU1FTlRfQU5EX0lO",
-            "RlJBU1RSVUNUVVJFEAkSJgoiQ0NfQ0FURUdPUllfSFJfQURNSU5fQU5EX1BS",
-            "T0NFU1NFUxAKEjgKNENDX0NBVEVHT1JZX1RISVJEX1BBUlRZX0FORF9TVUJf",
-            "UFJPQ0VTU09SX01BTkFHRU1FTlQQCxIlCiFDQ19DQVRFR09SWV9MRUdBTF9B",
-            "TkRfRElTQ0xPU1VSRVMQDBIoCiRDQ19DQVRFR09SWV9WVUxORVJBQklMSVRZ",
-            "X01BTkFHRU1FTlQQDRIXChNDQ19DQVRFR09SWV9QUklWQUNZEA4SFAoQQ0Nf",
-            "Q0FURUdPUllfQkNEUhAPKkwKDUNsb3VkUHJvdmlkZXISHgoaQ0xPVURfUFJP",
-            "VklERVJfVU5TUEVDSUZJRUQQABIHCgNBV1MQARIJCgVBWlVSRRACEgcKA0dD",
-            "UBADKlEKCFNldmVyaXR5EhgKFFNFVkVSSVRZX1VOU1BFQ0lGSUVEEAASDAoI",
-            "Q1JJVElDQUwQARIICgRISUdIEAISCgoGTUVESVVNEAMSBwoDTE9XEAQqjwEK",
-            "DlJ1bGVBY3Rpb25UeXBlEiAKHFJVTEVfQUNUSU9OX1RZUEVfVU5TUEVDSUZJ",
-            "RUQQABIfChtSVUxFX0FDVElPTl9UWVBFX1BSRVZFTlRJVkUQARIeChpSVUxF",
-            "X0FDVElPTl9UWVBFX0RFVEVDVElWRRACEhoKFlJVTEVfQUNUSU9OX1RZUEVf",
-            "QVVESVQQAyrNAQoSVGFyZ2V0UmVzb3VyY2VUeXBlEiQKIFRBUkdFVF9SRVNP",
-            "VVJDRV9UWVBFX1VOU1BFQ0lGSUVEEAASIAocVEFSR0VUX1JFU09VUkNFX0NS",
-            "TV9UWVBFX09SRxABEiMKH1RBUkdFVF9SRVNPVVJDRV9DUk1fVFlQRV9GT0xE",
-            "RVIQAhIkCiBUQVJHRVRfUkVTT1VSQ0VfQ1JNX1RZUEVfUFJPSkVDVBADEiQK",
-            "IFRBUkdFVF9SRVNPVVJDRV9UWVBFX0FQUExJQ0FUSU9OEARClwMKK2NvbS5n",
-            "b29nbGUuY2xvdWQuY2xvdWRzZWN1cml0eWNvbXBsaWFuY2UudjFCC0NvbW1v",
-            "blByb3RvUAFaZWNsb3VkLmdvb2dsZS5jb20vZ28vY2xvdWRzZWN1cml0eWNv",
-            "bXBsaWFuY2UvYXBpdjEvY2xvdWRzZWN1cml0eWNvbXBsaWFuY2VwYjtjbG91",
-            "ZHNlY3VyaXR5Y29tcGxpYW5jZXBiqgInR29vZ2xlLkNsb3VkLkNsb3VkU2Vj",
-            "dXJpdHlDb21wbGlhbmNlLlYxygInR29vZ2xlXENsb3VkXENsb3VkU2VjdXJp",
-            "dHlDb21wbGlhbmNlXFYx6gIqR29vZ2xlOjpDbG91ZDo6Q2xvdWRTZWN1cml0",
-            "eUNvbXBsaWFuY2U6OlYx6kFwCjtjbG91ZHNlY3VyaXR5Y29tcGxpYW5jZS5n",
-            "b29nbGVhcGlzLmNvbS9Pcmdhbml6YXRpb25Mb2NhdGlvbhIxb3JnYW5pemF0",
-            "aW9ucy97b3JnYW5pemF0aW9ufS9sb2NhdGlvbnMve2xvY2F0aW9ufWIGcHJv",
-            "dG8z"));
+            "bmNlLnYxLlRhcmdldFJlc291cmNlVHlwZUID4EEBIjYKBFR5cGUSFAoQVFlQ",
+            "RV9VTlNQRUNJRklFRBAAEgoKBkNVU1RPTRABEgwKCEJVSUxUX0lOEAI6pwHq",
+            "QaMBCjNjbG91ZHNlY3VyaXR5Y29tcGxpYW5jZS5nb29nbGVhcGlzLmNvbS9D",
+            "bG91ZENvbnRyb2wST29yZ2FuaXphdGlvbnMve29yZ2FuaXphdGlvbn0vbG9j",
+            "YXRpb25zL3tsb2NhdGlvbn0vY2xvdWRDb250cm9scy97Y2xvdWRfY29udHJv",
+            "bH0qDWNsb3VkQ29udHJvbHMyDGNsb3VkQ29udHJvbCKOBQoNUGFyYW1ldGVy",
+            "U3BlYxIRCgRuYW1lGAEgASgJQgPgQQISGQoMZGlzcGxheV9uYW1lGAIgASgJ",
+            "QgPgQQESGAoLZGVzY3JpcHRpb24YAyABKAlCA+BBARIYCgtpc19yZXF1aXJl",
+            "ZBgEIAEoCEID4EECElkKCnZhbHVlX3R5cGUYBSABKA4yQC5nb29nbGUuY2xv",
+            "dWQuY2xvdWRzZWN1cml0eWNvbXBsaWFuY2UudjEuUGFyYW1ldGVyU3BlYy5W",
+            "YWx1ZVR5cGVCA+BBAhJPCg1kZWZhdWx0X3ZhbHVlGAYgASgLMjMuZ29vZ2xl",
+            "LmNsb3VkLmNsb3Vkc2VjdXJpdHljb21wbGlhbmNlLnYxLlBhcmFtVmFsdWVC",
+            "A+BBARJjChJzdWJzdGl0dXRpb25fcnVsZXMYByADKAsyQi5nb29nbGUuY2xv",
+            "dWQuY2xvdWRzZWN1cml0eWNvbXBsaWFuY2UudjEuUGFyYW1ldGVyU3Vic3Rp",
+            "dHV0aW9uUnVsZUID4EEBElMKDnN1Yl9wYXJhbWV0ZXJzGAggAygLMjYuZ29v",
+            "Z2xlLmNsb3VkLmNsb3Vkc2VjdXJpdHljb21wbGlhbmNlLnYxLlBhcmFtZXRl",
+            "clNwZWNCA+BBARJMCgp2YWxpZGF0aW9uGAkgASgLMjMuZ29vZ2xlLmNsb3Vk",
+            "LmNsb3Vkc2VjdXJpdHljb21wbGlhbmNlLnYxLlZhbGlkYXRpb25CA+BBASJn",
+            "CglWYWx1ZVR5cGUSGgoWVkFMVUVfVFlQRV9VTlNQRUNJRklFRBAAEgoKBlNU",
+            "UklORxADEgsKB0JPT0xFQU4QBBIOCgpTVFJJTkdMSVNUEAUSCgoGTlVNQkVS",
+            "EAYSCQoFT05FT0YQByKGAgoKVmFsaWRhdGlvbhJQCg5hbGxvd2VkX3ZhbHVl",
+            "cxgBIAEoCzI2Lmdvb2dsZS5jbG91ZC5jbG91ZHNlY3VyaXR5Y29tcGxpYW5j",
+            "ZS52MS5BbGxvd2VkVmFsdWVzSAASRgoJaW50X3JhbmdlGAIgASgLMjEuZ29v",
+            "Z2xlLmNsb3VkLmNsb3Vkc2VjdXJpdHljb21wbGlhbmNlLnYxLkludFJhbmdl",
+            "SAASUAoOcmVnZXhwX3BhdHRlcm4YAyABKAsyNi5nb29nbGUuY2xvdWQuY2xv",
+            "dWRzZWN1cml0eWNvbXBsaWFuY2UudjEuUmVnZXhwUGF0dGVybkgAQgwKCmNv",
+            "bnN0cmFpbnQiWQoNQWxsb3dlZFZhbHVlcxJICgZ2YWx1ZXMYASADKAsyMy5n",
+            "b29nbGUuY2xvdWQuY2xvdWRzZWN1cml0eWNvbXBsaWFuY2UudjEuUGFyYW1W",
+            "YWx1ZUID4EECIiUKDVJlZ2V4cFBhdHRlcm4SFAoHcGF0dGVybhgBIAEoCUID",
+            "4EECIi4KCEludFJhbmdlEhAKA21pbhgBIAEoA0ID4EECEhAKA21heBgCIAEo",
+            "A0ID4EECIiEKClN0cmluZ0xpc3QSEwoGdmFsdWVzGAEgAygJQgPgQQIi9wEK",
+            "ClBhcmFtVmFsdWUSFgoMc3RyaW5nX3ZhbHVlGAMgASgJSAASFAoKYm9vbF92",
+            "YWx1ZRgEIAEoCEgAElAKEXN0cmluZ19saXN0X3ZhbHVlGAUgASgLMjMuZ29v",
+            "Z2xlLmNsb3VkLmNsb3Vkc2VjdXJpdHljb21wbGlhbmNlLnYxLlN0cmluZ0xp",
+            "c3RIABIWCgxudW1iZXJfdmFsdWUYBiABKAFIABJJCgtvbmVvZl92YWx1ZRgH",
+            "IAEoCzIyLmdvb2dsZS5jbG91ZC5jbG91ZHNlY3VyaXR5Y29tcGxpYW5jZS52",
+            "MS5QYXJhbWV0ZXJIAEIGCgRraW5kIooCChlQYXJhbWV0ZXJTdWJzdGl0dXRp",
+            "b25SdWxlEm0KHXBsYWNlaG9sZGVyX3N1YnN0aXR1dGlvbl9ydWxlGAEgASgL",
+            "MkQuZ29vZ2xlLmNsb3VkLmNsb3Vkc2VjdXJpdHljb21wbGlhbmNlLnYxLlBs",
+            "YWNlaG9sZGVyU3Vic3RpdHV0aW9uUnVsZUgAEmkKG2F0dHJpYnV0ZV9zdWJz",
+            "dGl0dXRpb25fcnVsZRgCIAEoCzJCLmdvb2dsZS5jbG91ZC5jbG91ZHNlY3Vy",
+            "aXR5Y29tcGxpYW5jZS52MS5BdHRyaWJ1dGVTdWJzdGl0dXRpb25SdWxlSABC",
+            "EwoRc3Vic3RpdHV0aW9uX3R5cGUiLgoZQXR0cmlidXRlU3Vic3RpdHV0aW9u",
+            "UnVsZRIRCglhdHRyaWJ1dGUYASABKAkiMAobUGxhY2Vob2xkZXJTdWJzdGl0",
+            "dXRpb25SdWxlEhEKCWF0dHJpYnV0ZRgBIAEoCSLdAQoEUnVsZRJQCg5jZWxf",
+            "ZXhwcmVzc2lvbhgBIAEoCzI2Lmdvb2dsZS5jbG91ZC5jbG91ZHNlY3VyaXR5",
+            "Y29tcGxpYW5jZS52MS5DRUxFeHByZXNzaW9uSAASGAoLZGVzY3JpcHRpb24Y",
+            "CiABKAlCA+BBARJXChFydWxlX2FjdGlvbl90eXBlcxgQIAMoDjI3Lmdvb2ds",
+            "ZS5jbG91ZC5jbG91ZHNlY3VyaXR5Y29tcGxpYW5jZS52MS5SdWxlQWN0aW9u",
+            "VHlwZUID4EECQhAKDmltcGxlbWVudGF0aW9uIooBCg1DRUxFeHByZXNzaW9u",
+            "ElQKFXJlc291cmNlX3R5cGVzX3ZhbHVlcxgDIAEoCzIzLmdvb2dsZS5jbG91",
+            "ZC5jbG91ZHNlY3VyaXR5Y29tcGxpYW5jZS52MS5TdHJpbmdMaXN0SAASFwoK",
+            "ZXhwcmVzc2lvbhgBIAEoCUID4EECQgoKCGNyaXRlcmlhIoACChFPcGVyYXRp",
+            "b25NZXRhZGF0YRI0CgtjcmVhdGVfdGltZRgBIAEoCzIaLmdvb2dsZS5wcm90",
+            "b2J1Zi5UaW1lc3RhbXBCA+BBAxIxCghlbmRfdGltZRgCIAEoCzIaLmdvb2ds",
+            "ZS5wcm90b2J1Zi5UaW1lc3RhbXBCA+BBAxITCgZ0YXJnZXQYAyABKAlCA+BB",
+            "AxIRCgR2ZXJiGAQgASgJQgPgQQMSGwoOc3RhdHVzX21lc3NhZ2UYBSABKAlC",
+            "A+BBAxIjChZyZXF1ZXN0ZWRfY2FuY2VsbGF0aW9uGAYgASgIQgPgQQMSGAoL",
+            "YXBpX3ZlcnNpb24YByABKAlCA+BBAyI4Cg1Db250cm9sRmFtaWx5EhEKCWZh",
+            "bWlseV9pZBgBIAEoCRIUCgxkaXNwbGF5X25hbWUYAiABKAkqgwEKI1JlZ3Vs",
+            "YXRvcnlDb250cm9sUmVzcG9uc2liaWxpdHlUeXBlEjYKMlJFR1VMQVRPUllf",
+            "Q09OVFJPTF9SRVNQT05TSUJJTElUWV9UWVBFX1VOU1BFQ0lGSUVEEAASCgoG",
+            "R09PR0xFEAESDAoIQ1VTVE9NRVIQAhIKCgZTSEFSRUQQAypdCg9FbmZvcmNl",
+            "bWVudE1vZGUSIAocRU5GT1JDRU1FTlRfTU9ERV9VTlNQRUNJRklFRBAAEg4K",
+            "ClBSRVZFTlRJVkUQARINCglERVRFQ1RJVkUQAhIJCgVBVURJVBADKrEBChFG",
+            "cmFtZXdvcmtDYXRlZ29yeRIiCh5GUkFNRVdPUktfQ0FURUdPUllfVU5TUEVD",
+            "SUZJRUQQABIdChlJTkRVU1RSWV9ERUZJTkVEX1NUQU5EQVJEEAESFQoRQVNT",
+            "VVJFRF9XT1JLTE9BRFMQAhIRCg1EQVRBX1NFQ1VSSVRZEAMSGQoVR09PR0xF",
+            "X0JFU1RfUFJBQ1RJQ0VTEAQSFAoQQ1VTVE9NX0ZSQU1FV09SSxAFKvIEChRD",
+            "bG91ZENvbnRyb2xDYXRlZ29yeRImCiJDTE9VRF9DT05UUk9MX0NBVEVHT1JZ",
+            "X1VOU1BFQ0lGSUVEEAASHgoaQ0NfQ0FURUdPUllfSU5GUkFTVFJVQ1RVUkUQ",
+            "ARInCiNDQ19DQVRFR09SWV9BUlRJRklDSUFMX0lOVEVMTElHRU5DRRACEiEK",
+            "HUNDX0NBVEVHT1JZX1BIWVNJQ0FMX1NFQ1VSSVRZEAMSHQoZQ0NfQ0FURUdP",
+            "UllfREFUQV9TRUNVUklUWRAEEiAKHENDX0NBVEVHT1JZX05FVFdPUktfU0VD",
+            "VVJJVFkQBRIjCh9DQ19DQVRFR09SWV9JTkNJREVOVF9NQU5BR0VNRU5UEAYS",
+            "LgoqQ0NfQ0FURUdPUllfSURFTlRJVFlfQU5EX0FDQ0VTU19NQU5BR0VNRU5U",
+            "EAcSGgoWQ0NfQ0FURUdPUllfRU5DUllQVElPThAIEjIKLkNDX0NBVEVHT1JZ",
+            "X0xPR1NfTUFOQUdFTUVOVF9BTkRfSU5GUkFTVFJVQ1RVUkUQCRImCiJDQ19D",
+            "QVRFR09SWV9IUl9BRE1JTl9BTkRfUFJPQ0VTU0VTEAoSOAo0Q0NfQ0FURUdP",
+            "UllfVEhJUkRfUEFSVFlfQU5EX1NVQl9QUk9DRVNTT1JfTUFOQUdFTUVOVBAL",
+            "EiUKIUNDX0NBVEVHT1JZX0xFR0FMX0FORF9ESVNDTE9TVVJFUxAMEigKJEND",
+            "X0NBVEVHT1JZX1ZVTE5FUkFCSUxJVFlfTUFOQUdFTUVOVBANEhcKE0NDX0NB",
+            "VEVHT1JZX1BSSVZBQ1kQDhIUChBDQ19DQVRFR09SWV9CQ0RSEA8qTAoNQ2xv",
+            "dWRQcm92aWRlchIeChpDTE9VRF9QUk9WSURFUl9VTlNQRUNJRklFRBAAEgcK",
+            "A0FXUxABEgkKBUFaVVJFEAISBwoDR0NQEAMqUQoIU2V2ZXJpdHkSGAoUU0VW",
+            "RVJJVFlfVU5TUEVDSUZJRUQQABIMCghDUklUSUNBTBABEggKBEhJR0gQAhIK",
+            "CgZNRURJVU0QAxIHCgNMT1cQBCqPAQoOUnVsZUFjdGlvblR5cGUSIAocUlVM",
+            "RV9BQ1RJT05fVFlQRV9VTlNQRUNJRklFRBAAEh8KG1JVTEVfQUNUSU9OX1RZ",
+            "UEVfUFJFVkVOVElWRRABEh4KGlJVTEVfQUNUSU9OX1RZUEVfREVURUNUSVZF",
+            "EAISGgoWUlVMRV9BQ1RJT05fVFlQRV9BVURJVBADKs0BChJUYXJnZXRSZXNv",
+            "dXJjZVR5cGUSJAogVEFSR0VUX1JFU09VUkNFX1RZUEVfVU5TUEVDSUZJRUQQ",
+            "ABIgChxUQVJHRVRfUkVTT1VSQ0VfQ1JNX1RZUEVfT1JHEAESIwofVEFSR0VU",
+            "X1JFU09VUkNFX0NSTV9UWVBFX0ZPTERFUhACEiQKIFRBUkdFVF9SRVNPVVJD",
+            "RV9DUk1fVFlQRV9QUk9KRUNUEAMSJAogVEFSR0VUX1JFU09VUkNFX1RZUEVf",
+            "QVBQTElDQVRJT04QBEKXAworY29tLmdvb2dsZS5jbG91ZC5jbG91ZHNlY3Vy",
+            "aXR5Y29tcGxpYW5jZS52MUILQ29tbW9uUHJvdG9QAVplY2xvdWQuZ29vZ2xl",
+            "LmNvbS9nby9jbG91ZHNlY3VyaXR5Y29tcGxpYW5jZS9hcGl2MS9jbG91ZHNl",
+            "Y3VyaXR5Y29tcGxpYW5jZXBiO2Nsb3Vkc2VjdXJpdHljb21wbGlhbmNlcGKq",
+            "AidHb29nbGUuQ2xvdWQuQ2xvdWRTZWN1cml0eUNvbXBsaWFuY2UuVjHKAidH",
+            "b29nbGVcQ2xvdWRcQ2xvdWRTZWN1cml0eUNvbXBsaWFuY2VcVjHqAipHb29n",
+            "bGU6OkNsb3VkOjpDbG91ZFNlY3VyaXR5Q29tcGxpYW5jZTo6VjHqQXAKO2Ns",
+            "b3Vkc2VjdXJpdHljb21wbGlhbmNlLmdvb2dsZWFwaXMuY29tL09yZ2FuaXph",
+            "dGlvbkxvY2F0aW9uEjFvcmdhbml6YXRpb25zL3tvcmdhbml6YXRpb259L2xv",
+            "Y2F0aW9ucy97bG9jYXRpb259YgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
-          new pbr::GeneratedClrTypeInfo(new[] {typeof(global::Google.Cloud.CloudSecurityCompliance.V1.EnforcementMode), typeof(global::Google.Cloud.CloudSecurityCompliance.V1.FrameworkCategory), typeof(global::Google.Cloud.CloudSecurityCompliance.V1.CloudControlCategory), typeof(global::Google.Cloud.CloudSecurityCompliance.V1.CloudProvider), typeof(global::Google.Cloud.CloudSecurityCompliance.V1.Severity), typeof(global::Google.Cloud.CloudSecurityCompliance.V1.RuleActionType), typeof(global::Google.Cloud.CloudSecurityCompliance.V1.TargetResourceType), }, null, new pbr::GeneratedClrTypeInfo[] {
+          new pbr::GeneratedClrTypeInfo(new[] {typeof(global::Google.Cloud.CloudSecurityCompliance.V1.RegulatoryControlResponsibilityType), typeof(global::Google.Cloud.CloudSecurityCompliance.V1.EnforcementMode), typeof(global::Google.Cloud.CloudSecurityCompliance.V1.FrameworkCategory), typeof(global::Google.Cloud.CloudSecurityCompliance.V1.CloudControlCategory), typeof(global::Google.Cloud.CloudSecurityCompliance.V1.CloudProvider), typeof(global::Google.Cloud.CloudSecurityCompliance.V1.Severity), typeof(global::Google.Cloud.CloudSecurityCompliance.V1.RuleActionType), typeof(global::Google.Cloud.CloudSecurityCompliance.V1.TargetResourceType), }, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.CloudSecurityCompliance.V1.Framework), global::Google.Cloud.CloudSecurityCompliance.V1.Framework.Parser, new[]{ "Name", "MajorRevisionId", "DisplayName", "Description", "Type", "CloudControlDetails", "Category", "SupportedCloudProviders", "SupportedTargetResourceTypes", "SupportedEnforcementModes" }, null, new[]{ typeof(global::Google.Cloud.CloudSecurityCompliance.V1.Framework.Types.FrameworkType) }, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.CloudSecurityCompliance.V1.CloudControlDetails), global::Google.Cloud.CloudSecurityCompliance.V1.CloudControlDetails.Parser, new[]{ "Name", "MajorRevisionId", "Parameters" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.CloudSecurityCompliance.V1.FrameworkReference), global::Google.Cloud.CloudSecurityCompliance.V1.FrameworkReference.Parser, new[]{ "Framework", "MajorRevisionId" }, new[]{ "MajorRevisionId" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.CloudSecurityCompliance.V1.Parameter), global::Google.Cloud.CloudSecurityCompliance.V1.Parameter.Parser, new[]{ "Name", "ParameterValue" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.CloudSecurityCompliance.V1.CloudControl), global::Google.Cloud.CloudSecurityCompliance.V1.CloudControl.Parser, new[]{ "Name", "MajorRevisionId", "Description", "DisplayName", "SupportedEnforcementModes", "ParameterSpec", "Rules", "Severity", "FindingCategory", "SupportedCloudProviders", "RelatedFrameworks", "RemediationSteps", "Categories", "CreateTime", "SupportedTargetResourceTypes" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.CloudSecurityCompliance.V1.CloudControl), global::Google.Cloud.CloudSecurityCompliance.V1.CloudControl.Parser, new[]{ "Name", "MajorRevisionId", "Description", "DisplayName", "SupportedEnforcementModes", "ParameterSpec", "Rules", "Severity", "FindingCategory", "SupportedCloudProviders", "RelatedFrameworks", "RemediationSteps", "Categories", "CreateTime", "SupportedTargetResourceTypes" }, null, new[]{ typeof(global::Google.Cloud.CloudSecurityCompliance.V1.CloudControl.Types.Type) }, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.CloudSecurityCompliance.V1.ParameterSpec), global::Google.Cloud.CloudSecurityCompliance.V1.ParameterSpec.Parser, new[]{ "Name", "DisplayName", "Description", "IsRequired", "ValueType", "DefaultValue", "SubstitutionRules", "SubParameters", "Validation" }, null, new[]{ typeof(global::Google.Cloud.CloudSecurityCompliance.V1.ParameterSpec.Types.ValueType) }, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.CloudSecurityCompliance.V1.Validation), global::Google.Cloud.CloudSecurityCompliance.V1.Validation.Parser, new[]{ "AllowedValues", "IntRange", "RegexpPattern" }, new[]{ "Constraint" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.CloudSecurityCompliance.V1.AllowedValues), global::Google.Cloud.CloudSecurityCompliance.V1.AllowedValues.Parser, new[]{ "Values" }, null, null, null, null),
@@ -195,7 +200,8 @@ namespace Google.Cloud.CloudSecurityCompliance.V1 {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.CloudSecurityCompliance.V1.PlaceholderSubstitutionRule), global::Google.Cloud.CloudSecurityCompliance.V1.PlaceholderSubstitutionRule.Parser, new[]{ "Attribute" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.CloudSecurityCompliance.V1.Rule), global::Google.Cloud.CloudSecurityCompliance.V1.Rule.Parser, new[]{ "CelExpression", "Description", "RuleActionTypes" }, new[]{ "Implementation" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.CloudSecurityCompliance.V1.CELExpression), global::Google.Cloud.CloudSecurityCompliance.V1.CELExpression.Parser, new[]{ "ResourceTypesValues", "Expression" }, new[]{ "Criteria" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.CloudSecurityCompliance.V1.OperationMetadata), global::Google.Cloud.CloudSecurityCompliance.V1.OperationMetadata.Parser, new[]{ "CreateTime", "EndTime", "Target", "Verb", "StatusMessage", "RequestedCancellation", "ApiVersion" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.CloudSecurityCompliance.V1.OperationMetadata), global::Google.Cloud.CloudSecurityCompliance.V1.OperationMetadata.Parser, new[]{ "CreateTime", "EndTime", "Target", "Verb", "StatusMessage", "RequestedCancellation", "ApiVersion" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.CloudSecurityCompliance.V1.ControlFamily), global::Google.Cloud.CloudSecurityCompliance.V1.ControlFamily.Parser, new[]{ "FamilyId", "DisplayName" }, null, null, null, null)
           }));
     }
     #endregion
@@ -203,7 +209,29 @@ namespace Google.Cloud.CloudSecurityCompliance.V1 {
   }
   #region Enums
   /// <summary>
-  /// The enforcement mode of the cloud control.
+  /// The responsibility type for the regulatory control.
+  /// </summary>
+  public enum RegulatoryControlResponsibilityType {
+    /// <summary>
+    /// Default value. This value is unused.
+    /// </summary>
+    [pbr::OriginalName("REGULATORY_CONTROL_RESPONSIBILITY_TYPE_UNSPECIFIED")] Unspecified = 0,
+    /// <summary>
+    /// Google's responsibility.
+    /// </summary>
+    [pbr::OriginalName("GOOGLE")] Google = 1,
+    /// <summary>
+    /// Your responsibility.
+    /// </summary>
+    [pbr::OriginalName("CUSTOMER")] Customer = 2,
+    /// <summary>
+    /// Shared responsibility.
+    /// </summary>
+    [pbr::OriginalName("SHARED")] Shared = 3,
+  }
+
+  /// <summary>
+  /// The enforcement mode for the cloud control.
   /// </summary>
   public enum EnforcementMode {
     /// <summary>
@@ -211,21 +239,21 @@ namespace Google.Cloud.CloudSecurityCompliance.V1 {
     /// </summary>
     [pbr::OriginalName("ENFORCEMENT_MODE_UNSPECIFIED")] Unspecified = 0,
     /// <summary>
-    /// The cloud control is enforced to prevent resource non-compliance.
+    /// The cloud control is enforced to prevent non-compliance.
     /// </summary>
     [pbr::OriginalName("PREVENTIVE")] Preventive = 1,
     /// <summary>
-    /// The cloud control is enforced to detect resource non-compliance.
+    /// The cloud control is enforced to detect non-compliance.
     /// </summary>
     [pbr::OriginalName("DETECTIVE")] Detective = 2,
     /// <summary>
-    /// The cloud control is enforced to audit resource non-compliance.
+    /// The cloud control is enforced to audit for non-compliance.
     /// </summary>
     [pbr::OriginalName("AUDIT")] Audit = 3,
   }
 
   /// <summary>
-  /// The category of the framework.
+  /// The category for the framework.
   /// </summary>
   public enum FrameworkCategory {
     /// <summary>
@@ -233,29 +261,29 @@ namespace Google.Cloud.CloudSecurityCompliance.V1 {
     /// </summary>
     [pbr::OriginalName("FRAMEWORK_CATEGORY_UNSPECIFIED")] Unspecified = 0,
     /// <summary>
-    /// Standard framework
+    /// An industry-defined framework.
     /// </summary>
     [pbr::OriginalName("INDUSTRY_DEFINED_STANDARD")] IndustryDefinedStandard = 1,
     /// <summary>
-    /// Assured Workloads framework
+    /// An Assured Workloads framework.
     /// </summary>
     [pbr::OriginalName("ASSURED_WORKLOADS")] AssuredWorkloads = 2,
     /// <summary>
-    /// Data Security framework
+    /// A data security posture framework.
     /// </summary>
     [pbr::OriginalName("DATA_SECURITY")] DataSecurity = 3,
     /// <summary>
-    /// Google Best Practices framework
+    /// A Google's best practices framework.
     /// </summary>
     [pbr::OriginalName("GOOGLE_BEST_PRACTICES")] GoogleBestPractices = 4,
     /// <summary>
-    /// User created framework.
+    /// A user-created framework.
     /// </summary>
     [pbr::OriginalName("CUSTOM_FRAMEWORK")] CustomFramework = 5,
   }
 
   /// <summary>
-  /// The category of the cloud control.
+  /// The category for the cloud control.
   /// </summary>
   public enum CloudControlCategory {
     /// <summary>
@@ -263,69 +291,69 @@ namespace Google.Cloud.CloudSecurityCompliance.V1 {
     /// </summary>
     [pbr::OriginalName("CLOUD_CONTROL_CATEGORY_UNSPECIFIED")] Unspecified = 0,
     /// <summary>
-    /// Infrastructure
+    /// The infrastructure security category.
     /// </summary>
     [pbr::OriginalName("CC_CATEGORY_INFRASTRUCTURE")] CcCategoryInfrastructure = 1,
     /// <summary>
-    /// Artificial Intelligence
+    /// The artificial intelligence category.
     /// </summary>
     [pbr::OriginalName("CC_CATEGORY_ARTIFICIAL_INTELLIGENCE")] CcCategoryArtificialIntelligence = 2,
     /// <summary>
-    /// Physical Security
+    /// The physical security category.
     /// </summary>
     [pbr::OriginalName("CC_CATEGORY_PHYSICAL_SECURITY")] CcCategoryPhysicalSecurity = 3,
     /// <summary>
-    /// Data Security
+    /// The data security category.
     /// </summary>
     [pbr::OriginalName("CC_CATEGORY_DATA_SECURITY")] CcCategoryDataSecurity = 4,
     /// <summary>
-    /// Network Security
+    /// The network security category.
     /// </summary>
     [pbr::OriginalName("CC_CATEGORY_NETWORK_SECURITY")] CcCategoryNetworkSecurity = 5,
     /// <summary>
-    /// Incident Management
+    /// The incident management category.
     /// </summary>
     [pbr::OriginalName("CC_CATEGORY_INCIDENT_MANAGEMENT")] CcCategoryIncidentManagement = 6,
     /// <summary>
-    /// Identity &amp; Access Management
+    /// The identity and access management category.
     /// </summary>
     [pbr::OriginalName("CC_CATEGORY_IDENTITY_AND_ACCESS_MANAGEMENT")] CcCategoryIdentityAndAccessManagement = 7,
     /// <summary>
-    /// Encryption
+    /// The encryption category.
     /// </summary>
     [pbr::OriginalName("CC_CATEGORY_ENCRYPTION")] CcCategoryEncryption = 8,
     /// <summary>
-    /// Logs Management &amp; Infrastructure
+    /// The logs management and infrastructure category.
     /// </summary>
     [pbr::OriginalName("CC_CATEGORY_LOGS_MANAGEMENT_AND_INFRASTRUCTURE")] CcCategoryLogsManagementAndInfrastructure = 9,
     /// <summary>
-    /// HR, Admin &amp; Processes
+    /// The HR, admin, and processes category.
     /// </summary>
     [pbr::OriginalName("CC_CATEGORY_HR_ADMIN_AND_PROCESSES")] CcCategoryHrAdminAndProcesses = 10,
     /// <summary>
-    /// Third Party &amp; Sub-Processor Management
+    /// The third-party and sub-processor management category.
     /// </summary>
     [pbr::OriginalName("CC_CATEGORY_THIRD_PARTY_AND_SUB_PROCESSOR_MANAGEMENT")] CcCategoryThirdPartyAndSubProcessorManagement = 11,
     /// <summary>
-    /// Legal &amp; Disclosures
+    /// The legal and disclosures category.
     /// </summary>
     [pbr::OriginalName("CC_CATEGORY_LEGAL_AND_DISCLOSURES")] CcCategoryLegalAndDisclosures = 12,
     /// <summary>
-    /// Vulnerability Management
+    /// The vulnerability management category.
     /// </summary>
     [pbr::OriginalName("CC_CATEGORY_VULNERABILITY_MANAGEMENT")] CcCategoryVulnerabilityManagement = 13,
     /// <summary>
-    /// Privacy
+    /// The privacy category.
     /// </summary>
     [pbr::OriginalName("CC_CATEGORY_PRIVACY")] CcCategoryPrivacy = 14,
     /// <summary>
-    /// BCDR (Business Continuity and Disaster Recovery)
+    /// The business continuity and disaster recovery (BCDR) category.
     /// </summary>
     [pbr::OriginalName("CC_CATEGORY_BCDR")] CcCategoryBcdr = 15,
   }
 
   /// <summary>
-  /// The cloud platform.
+  /// The cloud provider that's associated with the cloud control.
   /// </summary>
   public enum CloudProvider {
     /// <summary>
@@ -351,12 +379,10 @@ namespace Google.Cloud.CloudSecurityCompliance.V1 {
   /// </summary>
   public enum Severity {
     /// <summary>
-    /// This value is used for findings when a source doesn't write a severity
-    /// value.
+    /// Default value. This value is unused.
     /// </summary>
     [pbr::OriginalName("SEVERITY_UNSPECIFIED")] Unspecified = 0,
     /// <summary>
-    /// Vulnerability:
     /// A critical vulnerability is easily discoverable by an external actor,
     /// exploitable, and results in the direct ability to execute arbitrary code,
     /// exfiltrate data, and otherwise gain additional access and privileges to
@@ -364,30 +390,26 @@ namespace Google.Cloud.CloudSecurityCompliance.V1 {
     /// unprotected user data and public SSH access with weak or no
     /// passwords.
     ///
-    /// Threat:
-    /// Indicates a threat that is able to access, modify, or delete data or
+    /// A critical threat is a threat that can access, modify, or delete data or
     /// execute unauthorized code within existing resources.
     /// </summary>
     [pbr::OriginalName("CRITICAL")] Critical = 1,
     /// <summary>
-    /// Vulnerability:
-    /// A high risk vulnerability can be easily discovered and exploited in
-    /// combination with other vulnerabilities in order to gain direct access and
+    /// A high-risk vulnerability can be easily discovered and exploited in
+    /// combination with other vulnerabilities to gain direct access and
     /// the ability to execute arbitrary code, exfiltrate data, and otherwise
     /// gain additional access and privileges to cloud resources and workloads.
     /// An example is a database with weak or no passwords that is only
     /// accessible internally. This database could easily be compromised by an
     /// actor that had access to the internal network.
     ///
-    /// Threat:
-    /// Indicates a threat that is able to create new computational resources in
-    /// an environment but not able to access data or execute code in existing
-    /// resources.
+    /// A high-risk threat is a threat that can create new computational
+    /// resources in an environment but can't access data or execute code in
+    /// existing resources.
     /// </summary>
     [pbr::OriginalName("HIGH")] High = 2,
     /// <summary>
-    /// Vulnerability:
-    /// A medium risk vulnerability could be used by an actor to gain access to
+    /// A medium-risk vulnerability can be used by an actor to gain access to
     /// resources or privileges that enable them to eventually (through multiple
     /// steps or a complex exploit) gain access and the ability to execute
     /// arbitrary code or exfiltrate data. An example is a service account with
@@ -395,21 +417,18 @@ namespace Google.Cloud.CloudSecurityCompliance.V1 {
     /// the service account, they could potentially use that access to manipulate
     /// a project the service account was not intended to.
     ///
-    /// Threat:
-    /// Indicates a threat that is able to cause operational impact but may not
+    /// A medium-risk threat can cause operational impact but might not
     /// access data or execute unauthorized code.
     /// </summary>
     [pbr::OriginalName("MEDIUM")] Medium = 3,
     /// <summary>
-    /// Vulnerability:
-    /// A low risk vulnerability hampers a security organization's ability to
+    /// A low-risk vulnerability hampers a security organization's ability to
     /// detect vulnerabilities or active threats in their deployment, or prevents
     /// the root cause investigation of security issues. An example is monitoring
     /// and logs being disabled for resource configurations and access.
     ///
-    /// Threat:
-    /// Indicates a threat that has obtained minimal access to an environment but
-    /// is not able to access data, execute code, or create resources.
+    /// A low-risk threat is a threat that has obtained minimal access to an
+    /// environment but can't access data, execute code, or create resources.
     /// </summary>
     [pbr::OriginalName("LOW")] Low = 4,
   }
@@ -423,22 +442,21 @@ namespace Google.Cloud.CloudSecurityCompliance.V1 {
     /// </summary>
     [pbr::OriginalName("RULE_ACTION_TYPE_UNSPECIFIED")] Unspecified = 0,
     /// <summary>
-    /// Preventative action type.
+    /// The rule is intended to prevent non-compliance.
     /// </summary>
     [pbr::OriginalName("RULE_ACTION_TYPE_PREVENTIVE")] Preventive = 1,
     /// <summary>
-    /// Detective action type.
+    /// The rule is intended to detect non-compliance.
     /// </summary>
     [pbr::OriginalName("RULE_ACTION_TYPE_DETECTIVE")] Detective = 2,
     /// <summary>
-    /// Audit action type.
+    /// The rule is intended to audit non-compliance.
     /// </summary>
     [pbr::OriginalName("RULE_ACTION_TYPE_AUDIT")] Audit = 3,
   }
 
   /// <summary>
-  /// TargetResourceType represents the type of resource that a control or
-  /// framework can be applied to.
+  /// The type of resource that a control or framework can be applied to.
   /// </summary>
   public enum TargetResourceType {
     /// <summary>
@@ -446,19 +464,19 @@ namespace Google.Cloud.CloudSecurityCompliance.V1 {
     /// </summary>
     [pbr::OriginalName("TARGET_RESOURCE_TYPE_UNSPECIFIED")] Unspecified = 0,
     /// <summary>
-    /// Target resource is an Organization.
+    /// The target resource is a Google Cloud organization.
     /// </summary>
     [pbr::OriginalName("TARGET_RESOURCE_CRM_TYPE_ORG")] TargetResourceCrmTypeOrg = 1,
     /// <summary>
-    /// Target resource is a Folder.
+    /// The target resource is a folder.
     /// </summary>
     [pbr::OriginalName("TARGET_RESOURCE_CRM_TYPE_FOLDER")] TargetResourceCrmTypeFolder = 2,
     /// <summary>
-    /// Target resource is a Project.
+    /// The target resource is a project.
     /// </summary>
     [pbr::OriginalName("TARGET_RESOURCE_CRM_TYPE_PROJECT")] TargetResourceCrmTypeProject = 3,
     /// <summary>
-    /// Target resource is an Application.
+    /// The target resource is an application in App Hub.
     /// </summary>
     [pbr::OriginalName("TARGET_RESOURCE_TYPE_APPLICATION")] Application = 4,
   }
@@ -467,11 +485,9 @@ namespace Google.Cloud.CloudSecurityCompliance.V1 {
 
   #region Messages
   /// <summary>
-  /// A Framework is a collection of CloudControls to address security and
-  /// compliance requirements. Frameworks can be used for prevention, detection,
-  /// and auditing. They can be either built-in, industry-standard frameworks
-  /// provided by GCP/AZURE/AWS (e.g., NIST, FedRAMP) or custom frameworks created
-  /// by users.
+  /// A framework is a collection of cloud controls and regulatory controls
+  /// that represent security best practices or industry-defined standards such as
+  /// FedRAMP or NIST.
   /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class Framework : pb::IMessage<Framework>
@@ -531,9 +547,9 @@ namespace Google.Cloud.CloudSecurityCompliance.V1 {
     public const int NameFieldNumber = 1;
     private string name_ = "";
     /// <summary>
-    /// Required. Identifier. The name of the framework.
-    /// Format:
-    /// organizations/{organization}/locations/{location}/frameworks/{framework_id}
+    /// Required. Identifier. The name of the framework, in the format
+    /// `organizations/{organization}/locations/{location}/frameworks/{framework_id}`.
+    /// The only supported location is `global`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -548,8 +564,8 @@ namespace Google.Cloud.CloudSecurityCompliance.V1 {
     public const int MajorRevisionIdFieldNumber = 2;
     private long majorRevisionId_;
     /// <summary>
-    /// Output only. Major revision of the framework incremented in ascending
-    /// order.
+    /// Output only. The major version of the framework, which is incremented in
+    /// ascending order.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -564,7 +580,7 @@ namespace Google.Cloud.CloudSecurityCompliance.V1 {
     public const int DisplayNameFieldNumber = 4;
     private string displayName_ = "";
     /// <summary>
-    /// Optional. Display name of the framework. The maximum length is 200
+    /// Optional. The friendly name of the framework. The maximum length is 200
     /// characters.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -596,7 +612,7 @@ namespace Google.Cloud.CloudSecurityCompliance.V1 {
     public const int TypeFieldNumber = 6;
     private global::Google.Cloud.CloudSecurityCompliance.V1.Framework.Types.FrameworkType type_ = global::Google.Cloud.CloudSecurityCompliance.V1.Framework.Types.FrameworkType.Unspecified;
     /// <summary>
-    /// Output only. The type of the framework. The default is TYPE_CUSTOM.
+    /// Output only. The type of framework.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -613,7 +629,7 @@ namespace Google.Cloud.CloudSecurityCompliance.V1 {
         = pb::FieldCodec.ForMessage(66, global::Google.Cloud.CloudSecurityCompliance.V1.CloudControlDetails.Parser);
     private readonly pbc::RepeatedField<global::Google.Cloud.CloudSecurityCompliance.V1.CloudControlDetails> cloudControlDetails_ = new pbc::RepeatedField<global::Google.Cloud.CloudSecurityCompliance.V1.CloudControlDetails>();
     /// <summary>
-    /// Optional. The details of the cloud controls directly added without any
+    /// Optional. The cloud control details that are directly added without any
     /// grouping in the framework.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -642,7 +658,7 @@ namespace Google.Cloud.CloudSecurityCompliance.V1 {
         = pb::FieldCodec.ForEnum(82, x => (int) x, x => (global::Google.Cloud.CloudSecurityCompliance.V1.CloudProvider) x);
     private readonly pbc::RepeatedField<global::Google.Cloud.CloudSecurityCompliance.V1.CloudProvider> supportedCloudProviders_ = new pbc::RepeatedField<global::Google.Cloud.CloudSecurityCompliance.V1.CloudProvider>();
     /// <summary>
-    /// Output only. cloud providers supported
+    /// Output only. The cloud providers that are supported by the framework.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -656,7 +672,7 @@ namespace Google.Cloud.CloudSecurityCompliance.V1 {
         = pb::FieldCodec.ForEnum(90, x => (int) x, x => (global::Google.Cloud.CloudSecurityCompliance.V1.TargetResourceType) x);
     private readonly pbc::RepeatedField<global::Google.Cloud.CloudSecurityCompliance.V1.TargetResourceType> supportedTargetResourceTypes_ = new pbc::RepeatedField<global::Google.Cloud.CloudSecurityCompliance.V1.TargetResourceType>();
     /// <summary>
-    /// Output only. target resource types supported by the Framework.
+    /// Output only. The target resource types that are supported by the framework.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -989,7 +1005,7 @@ namespace Google.Cloud.CloudSecurityCompliance.V1 {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static partial class Types {
       /// <summary>
-      /// The type of the framework.
+      /// The type of framework.
       /// </summary>
       public enum FrameworkType {
         /// <summary>
@@ -997,13 +1013,11 @@ namespace Google.Cloud.CloudSecurityCompliance.V1 {
         /// </summary>
         [pbr::OriginalName("FRAMEWORK_TYPE_UNSPECIFIED")] Unspecified = 0,
         /// <summary>
-        /// The framework is a built-in framework if it is created and managed by
-        /// GCP.
+        /// A framework that's provided and managed by Google.
         /// </summary>
         [pbr::OriginalName("BUILT_IN")] BuiltIn = 1,
         /// <summary>
-        /// The framework is a custom framework if it is created and managed by the
-        /// user.
+        /// A framework that's created and managed by you.
         /// </summary>
         [pbr::OriginalName("CUSTOM")] Custom = 2,
       }
@@ -1014,7 +1028,7 @@ namespace Google.Cloud.CloudSecurityCompliance.V1 {
   }
 
   /// <summary>
-  /// CloudControlDetails contains the details of a CloudControl.
+  /// The details of a cloud control.
   /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class CloudControlDetails : pb::IMessage<CloudControlDetails>
@@ -1067,9 +1081,9 @@ namespace Google.Cloud.CloudSecurityCompliance.V1 {
     public const int NameFieldNumber = 1;
     private string name_ = "";
     /// <summary>
-    /// Required. The name of the CloudControl in the format:
-    /// “organizations/{organization}/locations/{location}/
-    /// cloudControls/{cloud-control}”
+    /// Required. The name of the cloud control, in the format
+    /// `organizations/{organization}/locations/{location}/cloudControls/{cloud-control}`.
+    /// The only supported location is `global`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -1084,7 +1098,7 @@ namespace Google.Cloud.CloudSecurityCompliance.V1 {
     public const int MajorRevisionIdFieldNumber = 2;
     private long majorRevisionId_;
     /// <summary>
-    /// Required. Major revision of cloudcontrol
+    /// Required. The major version of the cloud control.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -1101,9 +1115,10 @@ namespace Google.Cloud.CloudSecurityCompliance.V1 {
         = pb::FieldCodec.ForMessage(34, global::Google.Cloud.CloudSecurityCompliance.V1.Parameter.Parser);
     private readonly pbc::RepeatedField<global::Google.Cloud.CloudSecurityCompliance.V1.Parameter> parameters_ = new pbc::RepeatedField<global::Google.Cloud.CloudSecurityCompliance.V1.Parameter>();
     /// <summary>
-    /// Optional. Parameters is a key-value pair that is required by the
-    /// CloudControl. The specification of these parameters will be present in
-    /// cloudcontrol.Eg: { "name": "location","value": "us-west-1"}.
+    /// Optional. Parameters are key-value pairs that let you provide your custom
+    /// location requirements, environment requirements, or other settings that are
+    /// relevant to the cloud control. An example parameter is
+    /// `{"name": "location","value": "us-west-1"}`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -1283,7 +1298,9 @@ namespace Google.Cloud.CloudSecurityCompliance.V1 {
   }
 
   /// <summary>
-  /// FrameworkReference contains the reference of a framework.
+  /// The reference of a framework, in the format
+  /// `organizations/{organization}/locations/{location}/frameworks/{framework}`.
+  /// The only supported location is `global`.
   /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class FrameworkReference : pb::IMessage<FrameworkReference>
@@ -1337,8 +1354,8 @@ namespace Google.Cloud.CloudSecurityCompliance.V1 {
     public const int FrameworkFieldNumber = 1;
     private string framework_ = "";
     /// <summary>
-    /// Required. In the format:
-    /// organizations/{org}/locations/{location}/frameworks/{framework}
+    /// Required. The major version of the framework. If not specified, the version
+    /// corresponds to the latest version of the framework.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -1355,8 +1372,8 @@ namespace Google.Cloud.CloudSecurityCompliance.V1 {
 
     private long majorRevisionId_;
     /// <summary>
-    /// Optional. Major revision id of the framework. If not specified, corresponds
-    /// to the latest revision of the framework.
+    /// Optional. The major version of the framework. If not specified, the version
+    /// corresponds to the latest version of the framework.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -1538,7 +1555,9 @@ namespace Google.Cloud.CloudSecurityCompliance.V1 {
   }
 
   /// <summary>
-  /// Parameters is a key-value pair.
+  /// Parameters are key-value pairs that let you provide your custom location
+  /// requirements, environment requirements, or other settings that are
+  /// relevant to the cloud control.
   /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class Parameter : pb::IMessage<Parameter>
@@ -1590,7 +1609,7 @@ namespace Google.Cloud.CloudSecurityCompliance.V1 {
     public const int NameFieldNumber = 1;
     private string name_ = "";
     /// <summary>
-    /// Required. The name of the parameter.
+    /// Required. The name or key of the parameter.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -1605,7 +1624,7 @@ namespace Google.Cloud.CloudSecurityCompliance.V1 {
     public const int ParameterValueFieldNumber = 2;
     private global::Google.Cloud.CloudSecurityCompliance.V1.ParamValue parameterValue_;
     /// <summary>
-    /// Required. The value of the parameter
+    /// Required. The value of the parameter.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -1783,12 +1802,8 @@ namespace Google.Cloud.CloudSecurityCompliance.V1 {
   }
 
   /// <summary>
-  /// A CloudControl is the fundamental unit encapsulating the rules
-  /// to meet a specific security or compliance intent. It can contain
-  /// various rule types (like Organization Policies, CEL expressions, etc.)
-  /// enabling different enforcement modes (Preventive, Detective, Audit).
-  /// CloudControls are often parameterized for reusability and can be either
-  /// BUILT_IN (provided by Google) or CUSTOM (defined by the user).
+  /// A cloud control is a set of rules and associated metadata that you can
+  /// use to define your organization's security or compliance intent.
   /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class CloudControl : pb::IMessage<CloudControl>
@@ -1853,9 +1868,9 @@ namespace Google.Cloud.CloudSecurityCompliance.V1 {
     public const int NameFieldNumber = 1;
     private string name_ = "";
     /// <summary>
-    /// Required. Identifier. The resource name of the cloud control.
-    /// Format:
-    /// organizations/{organization}/locations/{location}/cloudControls/{cloud_control_id}
+    /// Required. Identifier. The name of the cloud control, in the format
+    /// `organizations/{organization}/locations/{location}/cloudControls/{cloud_control_id}`.
+    /// The only supported location is `global`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -1870,8 +1885,8 @@ namespace Google.Cloud.CloudSecurityCompliance.V1 {
     public const int MajorRevisionIdFieldNumber = 2;
     private long majorRevisionId_;
     /// <summary>
-    /// Output only. Major revision of the cloud control incremented in ascending
-    /// order.
+    /// Output only. The major version of the cloud control, which is incremented
+    /// in ascending order.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -1902,7 +1917,7 @@ namespace Google.Cloud.CloudSecurityCompliance.V1 {
     public const int DisplayNameFieldNumber = 5;
     private string displayName_ = "";
     /// <summary>
-    /// Optional. The display name of the cloud control. The maximum length is 200
+    /// Optional. The friendly name of the cloud control. The maximum length is 200
     /// characters.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1920,8 +1935,7 @@ namespace Google.Cloud.CloudSecurityCompliance.V1 {
         = pb::FieldCodec.ForEnum(58, x => (int) x, x => (global::Google.Cloud.CloudSecurityCompliance.V1.EnforcementMode) x);
     private readonly pbc::RepeatedField<global::Google.Cloud.CloudSecurityCompliance.V1.EnforcementMode> supportedEnforcementModes_ = new pbc::RepeatedField<global::Google.Cloud.CloudSecurityCompliance.V1.EnforcementMode>();
     /// <summary>
-    /// Output only. The supported enforcement mode of the cloud control. Default
-    /// is DETECTIVE.
+    /// Output only. The supported enforcement modes for the cloud control.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -1935,7 +1949,7 @@ namespace Google.Cloud.CloudSecurityCompliance.V1 {
         = pb::FieldCodec.ForMessage(66, global::Google.Cloud.CloudSecurityCompliance.V1.ParameterSpec.Parser);
     private readonly pbc::RepeatedField<global::Google.Cloud.CloudSecurityCompliance.V1.ParameterSpec> parameterSpec_ = new pbc::RepeatedField<global::Google.Cloud.CloudSecurityCompliance.V1.ParameterSpec>();
     /// <summary>
-    /// Optional. The parameter spec of the cloud control.
+    /// Optional. The parameter specifications for the cloud control.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -1949,8 +1963,8 @@ namespace Google.Cloud.CloudSecurityCompliance.V1 {
         = pb::FieldCodec.ForMessage(74, global::Google.Cloud.CloudSecurityCompliance.V1.Rule.Parser);
     private readonly pbc::RepeatedField<global::Google.Cloud.CloudSecurityCompliance.V1.Rule> rules_ = new pbc::RepeatedField<global::Google.Cloud.CloudSecurityCompliance.V1.Rule>();
     /// <summary>
-    /// Optional. The Policy to be enforced to prevent/detect resource
-    /// non-compliance.
+    /// Optional. The rules that you can enforce to meet your security or
+    /// compliance intent.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -1962,7 +1976,8 @@ namespace Google.Cloud.CloudSecurityCompliance.V1 {
     public const int SeverityFieldNumber = 11;
     private global::Google.Cloud.CloudSecurityCompliance.V1.Severity severity_ = global::Google.Cloud.CloudSecurityCompliance.V1.Severity.Unspecified;
     /// <summary>
-    /// Optional. The severity of findings generated by the cloud control.
+    /// Optional. The severity of the findings that are generated by the cloud
+    /// control.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -1977,8 +1992,8 @@ namespace Google.Cloud.CloudSecurityCompliance.V1 {
     public const int FindingCategoryFieldNumber = 12;
     private string findingCategory_ = "";
     /// <summary>
-    /// Optional. The finding_category of the cloud control. The maximum length is
-    /// 255 characters.
+    /// Optional. The finding category for the cloud control findings. The maximum
+    /// length is 255 characters.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -1995,7 +2010,7 @@ namespace Google.Cloud.CloudSecurityCompliance.V1 {
         = pb::FieldCodec.ForEnum(106, x => (int) x, x => (global::Google.Cloud.CloudSecurityCompliance.V1.CloudProvider) x);
     private readonly pbc::RepeatedField<global::Google.Cloud.CloudSecurityCompliance.V1.CloudProvider> supportedCloudProviders_ = new pbc::RepeatedField<global::Google.Cloud.CloudSecurityCompliance.V1.CloudProvider>();
     /// <summary>
-    /// Optional. cloud providers supported
+    /// Optional. The supported cloud providers.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -2009,7 +2024,7 @@ namespace Google.Cloud.CloudSecurityCompliance.V1 {
         = pb::FieldCodec.ForString(114);
     private readonly pbc::RepeatedField<string> relatedFrameworks_ = new pbc::RepeatedField<string>();
     /// <summary>
-    /// Output only. The Frameworks that include this CloudControl
+    /// Output only. The frameworks that include this cloud control.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -2021,8 +2036,8 @@ namespace Google.Cloud.CloudSecurityCompliance.V1 {
     public const int RemediationStepsFieldNumber = 15;
     private string remediationSteps_ = "";
     /// <summary>
-    /// Optional. The remediation steps for the findings generated by the cloud
-    /// control. The maximum length is 400 characters.
+    /// Optional. The remediation steps for the cloud control findings. The
+    /// maximum length is 400 characters.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -2039,7 +2054,7 @@ namespace Google.Cloud.CloudSecurityCompliance.V1 {
         = pb::FieldCodec.ForEnum(130, x => (int) x, x => (global::Google.Cloud.CloudSecurityCompliance.V1.CloudControlCategory) x);
     private readonly pbc::RepeatedField<global::Google.Cloud.CloudSecurityCompliance.V1.CloudControlCategory> categories_ = new pbc::RepeatedField<global::Google.Cloud.CloudSecurityCompliance.V1.CloudControlCategory>();
     /// <summary>
-    /// Optional. The categories of the cloud control.
+    /// Optional. The categories for the cloud control.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -2051,9 +2066,9 @@ namespace Google.Cloud.CloudSecurityCompliance.V1 {
     public const int CreateTimeFieldNumber = 17;
     private global::Google.Protobuf.WellKnownTypes.Timestamp createTime_;
     /// <summary>
-    /// Output only. The last updated time of the cloud control.
-    /// The create_time is used because a new CC is created whenever we update an
-    /// existing CC.
+    /// Output only. The time that the cloud control was last updated.
+    /// `create_time` is used because a new cloud control is created
+    /// whenever an existing cloud control is updated.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -2070,7 +2085,8 @@ namespace Google.Cloud.CloudSecurityCompliance.V1 {
         = pb::FieldCodec.ForEnum(146, x => (int) x, x => (global::Google.Cloud.CloudSecurityCompliance.V1.TargetResourceType) x);
     private readonly pbc::RepeatedField<global::Google.Cloud.CloudSecurityCompliance.V1.TargetResourceType> supportedTargetResourceTypes_ = new pbc::RepeatedField<global::Google.Cloud.CloudSecurityCompliance.V1.TargetResourceType>();
     /// <summary>
-    /// Optional. target resource types supported by the CloudControl.
+    /// Optional. The target resource types that are supported by the cloud
+    /// control.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -2492,10 +2508,36 @@ namespace Google.Cloud.CloudSecurityCompliance.V1 {
     }
     #endif
 
+    #region Nested types
+    /// <summary>Container for nested types declared in the CloudControl message type.</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static partial class Types {
+      /// <summary>
+      /// The type of cloud control.
+      /// </summary>
+      public enum Type {
+        /// <summary>
+        /// Default value. This value is unused.
+        /// </summary>
+        [pbr::OriginalName("TYPE_UNSPECIFIED")] Unspecified = 0,
+        /// <summary>
+        /// A cloud control that's created and managed by you.
+        /// </summary>
+        [pbr::OriginalName("CUSTOM")] Custom = 1,
+        /// <summary>
+        /// A cloud control that's provided and managed by Google.
+        /// </summary>
+        [pbr::OriginalName("BUILT_IN")] BuiltIn = 2,
+      }
+
+    }
+    #endregion
+
   }
 
   /// <summary>
-  /// A parameter spec of the cloud control.
+  /// The parameter specification for the cloud control.
   /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class ParameterSpec : pb::IMessage<ParameterSpec>
@@ -2569,7 +2611,7 @@ namespace Google.Cloud.CloudSecurityCompliance.V1 {
     public const int DisplayNameFieldNumber = 2;
     private string displayName_ = "";
     /// <summary>
-    /// Optional. The display name of the parameter. The maximum length is 200
+    /// Optional. The friendly name of the parameter. The maximum length is 200
     /// characters.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -2601,7 +2643,7 @@ namespace Google.Cloud.CloudSecurityCompliance.V1 {
     public const int IsRequiredFieldNumber = 4;
     private bool isRequired_;
     /// <summary>
-    /// Required. if the parameter is required
+    /// Required. Whether the parameter is required.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -2616,7 +2658,7 @@ namespace Google.Cloud.CloudSecurityCompliance.V1 {
     public const int ValueTypeFieldNumber = 5;
     private global::Google.Cloud.CloudSecurityCompliance.V1.ParameterSpec.Types.ValueType valueType_ = global::Google.Cloud.CloudSecurityCompliance.V1.ParameterSpec.Types.ValueType.Unspecified;
     /// <summary>
-    /// Required. Parameter value type.
+    /// Required. The parameter value type.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -2648,7 +2690,7 @@ namespace Google.Cloud.CloudSecurityCompliance.V1 {
         = pb::FieldCodec.ForMessage(58, global::Google.Cloud.CloudSecurityCompliance.V1.ParameterSubstitutionRule.Parser);
     private readonly pbc::RepeatedField<global::Google.Cloud.CloudSecurityCompliance.V1.ParameterSubstitutionRule> substitutionRules_ = new pbc::RepeatedField<global::Google.Cloud.CloudSecurityCompliance.V1.ParameterSubstitutionRule>();
     /// <summary>
-    /// Optional. List of parameter substitutions.
+    /// Optional. The list of parameter substitutions.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -2662,7 +2704,7 @@ namespace Google.Cloud.CloudSecurityCompliance.V1 {
         = pb::FieldCodec.ForMessage(66, global::Google.Cloud.CloudSecurityCompliance.V1.ParameterSpec.Parser);
     private readonly pbc::RepeatedField<global::Google.Cloud.CloudSecurityCompliance.V1.ParameterSpec> subParameters_ = new pbc::RepeatedField<global::Google.Cloud.CloudSecurityCompliance.V1.ParameterSpec>();
     /// <summary>
-    /// Optional. ParameterSpec for oneof attributes.
+    /// Optional. The parameter specification for `oneOf` attributes.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -2674,7 +2716,7 @@ namespace Google.Cloud.CloudSecurityCompliance.V1 {
     public const int ValidationFieldNumber = 9;
     private global::Google.Cloud.CloudSecurityCompliance.V1.Validation validation_;
     /// <summary>
-    /// Optional. The allowed set of values for the parameter.
+    /// Optional. The permitted set of values for the parameter.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -3012,7 +3054,7 @@ namespace Google.Cloud.CloudSecurityCompliance.V1 {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static partial class Types {
       /// <summary>
-      /// The type of the parameter value.
+      /// The type of parameter value.
       /// </summary>
       public enum ValueType {
         /// <summary>
@@ -3020,23 +3062,23 @@ namespace Google.Cloud.CloudSecurityCompliance.V1 {
         /// </summary>
         [pbr::OriginalName("VALUE_TYPE_UNSPECIFIED")] Unspecified = 0,
         /// <summary>
-        /// String value.
+        /// A string value.
         /// </summary>
         [pbr::OriginalName("STRING")] String = 3,
         /// <summary>
-        /// Boolean value.
+        /// A boolean value.
         /// </summary>
         [pbr::OriginalName("BOOLEAN")] Boolean = 4,
         /// <summary>
-        /// String list value.
+        /// A string list value.
         /// </summary>
         [pbr::OriginalName("STRINGLIST")] Stringlist = 5,
         /// <summary>
-        /// Numeric value.
+        /// A numeric value.
         /// </summary>
         [pbr::OriginalName("NUMBER")] Number = 6,
         /// <summary>
-        /// OneOf value.
+        /// A oneOf value.
         /// </summary>
         [pbr::OriginalName("ONEOF")] Oneof = 7,
       }
@@ -3047,7 +3089,7 @@ namespace Google.Cloud.CloudSecurityCompliance.V1 {
   }
 
   /// <summary>
-  /// Validation of the parameter.
+  /// The validation of the parameter.
   /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class Validation : pb::IMessage<Validation>
@@ -3108,7 +3150,7 @@ namespace Google.Cloud.CloudSecurityCompliance.V1 {
     /// <summary>Field number for the "allowed_values" field.</summary>
     public const int AllowedValuesFieldNumber = 1;
     /// <summary>
-    /// Allowed set of values for the parameter.
+    /// The permitted set of values for the parameter.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -3123,7 +3165,7 @@ namespace Google.Cloud.CloudSecurityCompliance.V1 {
     /// <summary>Field number for the "int_range" field.</summary>
     public const int IntRangeFieldNumber = 2;
     /// <summary>
-    /// Allowed range for numeric parameters.
+    /// The permitted range for numeric parameters.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -3138,7 +3180,7 @@ namespace Google.Cloud.CloudSecurityCompliance.V1 {
     /// <summary>Field number for the "regexp_pattern" field.</summary>
     public const int RegexpPatternFieldNumber = 3;
     /// <summary>
-    /// Regular expression for string parameters.
+    /// The regular expression for string parameters.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -3398,7 +3440,7 @@ namespace Google.Cloud.CloudSecurityCompliance.V1 {
   }
 
   /// <summary>
-  /// Allowed set of values for the parameter.
+  /// The allowed set of values for the parameter.
   /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class AllowedValues : pb::IMessage<AllowedValues>
@@ -3451,7 +3493,7 @@ namespace Google.Cloud.CloudSecurityCompliance.V1 {
         = pb::FieldCodec.ForMessage(10, global::Google.Cloud.CloudSecurityCompliance.V1.ParamValue.Parser);
     private readonly pbc::RepeatedField<global::Google.Cloud.CloudSecurityCompliance.V1.ParamValue> values_ = new pbc::RepeatedField<global::Google.Cloud.CloudSecurityCompliance.V1.ParamValue>();
     /// <summary>
-    /// Required. List of allowed values for the parameter.
+    /// Required. The list of allowed values for the parameter.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -3583,7 +3625,7 @@ namespace Google.Cloud.CloudSecurityCompliance.V1 {
   }
 
   /// <summary>
-  /// Regular Expression Validator for parameter values.
+  /// The regular expression (regex) validator for parameter values.
   /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class RegexpPattern : pb::IMessage<RegexpPattern>
@@ -3634,7 +3676,7 @@ namespace Google.Cloud.CloudSecurityCompliance.V1 {
     public const int PatternFieldNumber = 1;
     private string pattern_ = "";
     /// <summary>
-    /// Required. Regex Pattern to match the value(s) of parameter.
+    /// Required. The regex pattern to match the values of the parameter with.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -3779,7 +3821,7 @@ namespace Google.Cloud.CloudSecurityCompliance.V1 {
   }
 
   /// <summary>
-  /// Number range for number parameters.
+  /// The number range for number parameters.
   /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class IntRange : pb::IMessage<IntRange>
@@ -3831,7 +3873,8 @@ namespace Google.Cloud.CloudSecurityCompliance.V1 {
     public const int MinFieldNumber = 1;
     private long min_;
     /// <summary>
-    /// Required. Minimum allowed value for the numeric parameter (inclusive).
+    /// Required. The minimum permitted value for the numeric parameter
+    /// (inclusive).
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -3846,7 +3889,8 @@ namespace Google.Cloud.CloudSecurityCompliance.V1 {
     public const int MaxFieldNumber = 2;
     private long max_;
     /// <summary>
-    /// Required. Maximum allowed value for the numeric parameter (inclusive).
+    /// Required. The maximum permitted value for the numeric parameter
+    /// (inclusive).
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -4015,7 +4059,7 @@ namespace Google.Cloud.CloudSecurityCompliance.V1 {
   }
 
   /// <summary>
-  /// A list of strings.
+  /// A list of strings for the parameter value.
   /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class StringList : pb::IMessage<StringList>
@@ -4200,7 +4244,7 @@ namespace Google.Cloud.CloudSecurityCompliance.V1 {
   }
 
   /// <summary>
-  /// Possible parameter value types.
+  /// The possible parameter value types.
   /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class ParamValue : pb::IMessage<ParamValue>
@@ -4267,7 +4311,7 @@ namespace Google.Cloud.CloudSecurityCompliance.V1 {
     /// <summary>Field number for the "string_value" field.</summary>
     public const int StringValueFieldNumber = 3;
     /// <summary>
-    /// Represents a string value.
+    /// A string value.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -4296,7 +4340,7 @@ namespace Google.Cloud.CloudSecurityCompliance.V1 {
     /// <summary>Field number for the "bool_value" field.</summary>
     public const int BoolValueFieldNumber = 4;
     /// <summary>
-    /// Represents a boolean value.
+    /// A boolean value.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -4325,7 +4369,7 @@ namespace Google.Cloud.CloudSecurityCompliance.V1 {
     /// <summary>Field number for the "string_list_value" field.</summary>
     public const int StringListValueFieldNumber = 5;
     /// <summary>
-    /// Represents a repeated string.
+    /// A repeated string.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -4340,7 +4384,7 @@ namespace Google.Cloud.CloudSecurityCompliance.V1 {
     /// <summary>Field number for the "number_value" field.</summary>
     public const int NumberValueFieldNumber = 6;
     /// <summary>
-    /// Represents a double value.
+    /// A double value.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -4369,7 +4413,7 @@ namespace Google.Cloud.CloudSecurityCompliance.V1 {
     /// <summary>Field number for the "oneof_value" field.</summary>
     public const int OneofValueFieldNumber = 7;
     /// <summary>
-    /// Represents sub-parameter values.
+    /// Sub-parameter values.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -4666,7 +4710,7 @@ namespace Google.Cloud.CloudSecurityCompliance.V1 {
   }
 
   /// <summary>
-  /// Parameter substitution rules.
+  /// The parameter substitution rules.
   /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class ParameterSubstitutionRule : pb::IMessage<ParameterSubstitutionRule>
@@ -4724,7 +4768,7 @@ namespace Google.Cloud.CloudSecurityCompliance.V1 {
     /// <summary>Field number for the "placeholder_substitution_rule" field.</summary>
     public const int PlaceholderSubstitutionRuleFieldNumber = 1;
     /// <summary>
-    /// Placeholder substitution rule.
+    /// The placeholder substitution rule.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -4739,7 +4783,7 @@ namespace Google.Cloud.CloudSecurityCompliance.V1 {
     /// <summary>Field number for the "attribute_substitution_rule" field.</summary>
     public const int AttributeSubstitutionRuleFieldNumber = 2;
     /// <summary>
-    /// Attribute substitution rule.
+    /// The attribute substitution rule.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -4961,7 +5005,7 @@ namespace Google.Cloud.CloudSecurityCompliance.V1 {
   }
 
   /// <summary>
-  /// Attribute at the given path is substituted entirely.
+  /// The attribute at the given path that's substituted entirely.
   /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class AttributeSubstitutionRule : pb::IMessage<AttributeSubstitutionRule>
@@ -5012,8 +5056,8 @@ namespace Google.Cloud.CloudSecurityCompliance.V1 {
     public const int AttributeFieldNumber = 1;
     private string attribute_ = "";
     /// <summary>
-    /// Fully qualified proto attribute path (in dot notation).
-    /// Example: rules[0].cel_expression.resource_types_values
+    /// The fully qualified proto attribute path, in dot notation.
+    /// For example: `rules[0].cel_expression.resource_types_values`
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -5158,7 +5202,7 @@ namespace Google.Cloud.CloudSecurityCompliance.V1 {
   }
 
   /// <summary>
-  /// Placeholder is substituted in the rendered string.
+  /// The placeholder that's substituted in the rendered string.
   /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class PlaceholderSubstitutionRule : pb::IMessage<PlaceholderSubstitutionRule>
@@ -5209,7 +5253,7 @@ namespace Google.Cloud.CloudSecurityCompliance.V1 {
     public const int AttributeFieldNumber = 1;
     private string attribute_ = "";
     /// <summary>
-    /// Fully qualified proto attribute path (e.g., dot notation)
+    /// The fully qualified proto attribute path, in dot notation.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -5354,7 +5398,7 @@ namespace Google.Cloud.CloudSecurityCompliance.V1 {
   }
 
   /// <summary>
-  /// A rule of the cloud control.
+  /// A rule in the cloud control.
   /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class Rule : pb::IMessage<Rule>
@@ -5411,7 +5455,7 @@ namespace Google.Cloud.CloudSecurityCompliance.V1 {
     /// <summary>Field number for the "cel_expression" field.</summary>
     public const int CelExpressionFieldNumber = 1;
     /// <summary>
-    /// Logic expression in CEL language.
+    /// The rule's logic expression in Common Expression Language (CEL).
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -5427,7 +5471,7 @@ namespace Google.Cloud.CloudSecurityCompliance.V1 {
     public const int DescriptionFieldNumber = 10;
     private string description_ = "";
     /// <summary>
-    /// Optional. Description of the Rule. The maximum length is 2000 characters.
+    /// Optional. The rule description. The maximum length is 2000 characters.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -5444,7 +5488,7 @@ namespace Google.Cloud.CloudSecurityCompliance.V1 {
         = pb::FieldCodec.ForEnum(130, x => (int) x, x => (global::Google.Cloud.CloudSecurityCompliance.V1.RuleActionType) x);
     private readonly pbc::RepeatedField<global::Google.Cloud.CloudSecurityCompliance.V1.RuleActionType> ruleActionTypes_ = new pbc::RepeatedField<global::Google.Cloud.CloudSecurityCompliance.V1.RuleActionType>();
     /// <summary>
-    /// Required. The functionality enabled by the Rule.
+    /// Required. The functionality that's enabled by the rule.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -5664,8 +5708,7 @@ namespace Google.Cloud.CloudSecurityCompliance.V1 {
   }
 
   /// <summary>
-  /// A [CEL
-  /// expression](https://cloud.google.com/certificate-authority-service/docs/using-cel).
+  /// A Common Expression Language (CEL) expression that's used to create a rule.
   /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class CELExpression : pb::IMessage<CELExpression>
@@ -5722,8 +5765,8 @@ namespace Google.Cloud.CloudSecurityCompliance.V1 {
     public const int ResourceTypesValuesFieldNumber = 3;
     /// <summary>
     /// The resource instance types on which this expression is defined.
-    /// Format will be of the form : `&lt;canonical service name>/&lt;type>`
-    /// Example: `compute.googleapis.com/Instance`.
+    /// The format is `&lt;SERVICE_NAME>/&lt;type>`.
+    /// For example: `compute.googleapis.com/Instance`
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -5739,8 +5782,9 @@ namespace Google.Cloud.CloudSecurityCompliance.V1 {
     public const int ExpressionFieldNumber = 1;
     private string expression_ = "";
     /// <summary>
-    /// Required. Logic expression in CEL language.
-    /// The max length of the condition is 1000 characters.
+    /// Required. The logical expression in CEL. The maximum length of the
+    /// condition is 1000 characters. For more information, see [CEL
+    /// expression](https://cloud.google.com/security-command-center/docs/compliance-manager-write-cel-expressions).
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -5947,7 +5991,7 @@ namespace Google.Cloud.CloudSecurityCompliance.V1 {
   }
 
   /// <summary>
-  /// Represents the metadata of the long-running operation.
+  /// The metadata for the long-running operation.
   /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class OperationMetadata : pb::IMessage<OperationMetadata>
@@ -6034,7 +6078,8 @@ namespace Google.Cloud.CloudSecurityCompliance.V1 {
     public const int TargetFieldNumber = 3;
     private string target_ = "";
     /// <summary>
-    /// Output only. Server-defined resource path for the target of the operation.
+    /// Output only. The server-defined resource path for the target of the
+    /// operation.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -6049,7 +6094,7 @@ namespace Google.Cloud.CloudSecurityCompliance.V1 {
     public const int VerbFieldNumber = 4;
     private string verb_ = "";
     /// <summary>
-    /// Output only. Name of the verb executed by the operation.
+    /// Output only. The name of the verb that was executed by the operation.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -6064,7 +6109,7 @@ namespace Google.Cloud.CloudSecurityCompliance.V1 {
     public const int StatusMessageFieldNumber = 5;
     private string statusMessage_ = "";
     /// <summary>
-    /// Output only. Human-readable status of the operation, if any.
+    /// Output only. The human-readable status of the operation, if any.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -6079,11 +6124,10 @@ namespace Google.Cloud.CloudSecurityCompliance.V1 {
     public const int RequestedCancellationFieldNumber = 6;
     private bool requestedCancellation_;
     /// <summary>
-    /// Output only. Identifies whether the user has requested cancellation
-    /// of the operation. Operations that have been cancelled successfully
-    /// have [Operation.error][] value with a
-    /// [google.rpc.Status.code][google.rpc.Status.code] of 1, corresponding to
-    /// `Code.CANCELLED`.
+    /// Output only. Identifies whether the user has requested that the operation
+    /// be cancelled. If an operation was cancelled successfully, then the field
+    /// [google.longrunning.Operation.error][google.longrunning.Operation.error]
+    /// contains the value [google.rpc.Code.CANCELLED][google.rpc.Code.CANCELLED].
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -6098,7 +6142,7 @@ namespace Google.Cloud.CloudSecurityCompliance.V1 {
     public const int ApiVersionFieldNumber = 7;
     private string apiVersion_ = "";
     /// <summary>
-    /// Output only. API version used to start the operation.
+    /// Output only. The API version that was used to start the operation.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -6395,6 +6439,242 @@ namespace Google.Cloud.CloudSecurityCompliance.V1 {
           }
           case 58: {
             ApiVersion = input.ReadString();
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+  }
+
+  /// <summary>
+  /// The regulatory family of the control.
+  /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+  public sealed partial class ControlFamily : pb::IMessage<ControlFamily>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<ControlFamily> _parser = new pb::MessageParser<ControlFamily>(() => new ControlFamily());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<ControlFamily> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Cloud.CloudSecurityCompliance.V1.CommonReflection.Descriptor.MessageTypes[18]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public ControlFamily() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public ControlFamily(ControlFamily other) : this() {
+      familyId_ = other.familyId_;
+      displayName_ = other.displayName_;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public ControlFamily Clone() {
+      return new ControlFamily(this);
+    }
+
+    /// <summary>Field number for the "family_id" field.</summary>
+    public const int FamilyIdFieldNumber = 1;
+    private string familyId_ = "";
+    /// <summary>
+    /// The identifier for the regulatory control family.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string FamilyId {
+      get { return familyId_; }
+      set {
+        familyId_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "display_name" field.</summary>
+    public const int DisplayNameFieldNumber = 2;
+    private string displayName_ = "";
+    /// <summary>
+    /// The friendly name for the regulatory control family.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string DisplayName {
+      get { return displayName_; }
+      set {
+        displayName_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as ControlFamily);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(ControlFamily other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (FamilyId != other.FamilyId) return false;
+      if (DisplayName != other.DisplayName) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (FamilyId.Length != 0) hash ^= FamilyId.GetHashCode();
+      if (DisplayName.Length != 0) hash ^= DisplayName.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (FamilyId.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(FamilyId);
+      }
+      if (DisplayName.Length != 0) {
+        output.WriteRawTag(18);
+        output.WriteString(DisplayName);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (FamilyId.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(FamilyId);
+      }
+      if (DisplayName.Length != 0) {
+        output.WriteRawTag(18);
+        output.WriteString(DisplayName);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      if (FamilyId.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(FamilyId);
+      }
+      if (DisplayName.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(DisplayName);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(ControlFamily other) {
+      if (other == null) {
+        return;
+      }
+      if (other.FamilyId.Length != 0) {
+        FamilyId = other.FamilyId;
+      }
+      if (other.DisplayName.Length != 0) {
+        DisplayName = other.DisplayName;
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            FamilyId = input.ReadString();
+            break;
+          }
+          case 18: {
+            DisplayName = input.ReadString();
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            FamilyId = input.ReadString();
+            break;
+          }
+          case 18: {
+            DisplayName = input.ReadString();
             break;
           }
         }
