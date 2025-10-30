@@ -3915,7 +3915,7 @@
             "generationAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
             "releaseAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
             "releaseTimestamp": "2025-10-14T17:41:48.596181075Z",
-            "lastGeneratedCommit": "9da837b53027792b642ef5240527217f2863c505",
+            "lastGeneratedCommit": "72e7439c8e7e9986cf1865e337fc7c64ca5bda1f",
             "lastReleasedCommit": "9da837b53027792b642ef5240527217f2863c505",
             "apiPaths": [
                 "google/spanner/admin/database/v1",
