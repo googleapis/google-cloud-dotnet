@@ -37,6 +37,7 @@ namespace GoogleCSharpSnippets
             GetCloudControlRequest request = new GetCloudControlRequest
             {
                 CloudControlName = CloudControlName.FromOrganizationLocationCloudControl("[ORGANIZATION]", "[LOCATION]", "[CLOUD_CONTROL]"),
+                MajorRevisionId = 0L,
             };
             // Make the request
             CloudControl response = configClient.GetCloudControl(request);

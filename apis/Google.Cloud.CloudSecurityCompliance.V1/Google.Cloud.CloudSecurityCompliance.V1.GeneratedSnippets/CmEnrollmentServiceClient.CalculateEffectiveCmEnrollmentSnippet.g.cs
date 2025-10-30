@@ -16,13 +16,12 @@
 
 namespace GoogleCSharpSnippets
 {
-    // [START cloudsecuritycompliance_v1_generated_Config_GetCloudControl_async]
+    // [START cloudsecuritycompliance_v1_generated_CmEnrollmentService_CalculateEffectiveCmEnrollment_sync_flattened]
     using Google.Cloud.CloudSecurityCompliance.V1;
-    using System.Threading.Tasks;
 
-    public sealed partial class GeneratedConfigClientSnippets
+    public sealed partial class GeneratedCmEnrollmentServiceClientSnippets
     {
-        /// <summary>Snippet for GetCloudControlAsync</summary>
+        /// <summary>Snippet for CalculateEffectiveCmEnrollment</summary>
         /// <remarks>
         /// This snippet has been automatically generated and should be regarded as a code template only.
         /// It will require modifications to work:
@@ -30,19 +29,15 @@ namespace GoogleCSharpSnippets
         /// - It may require specifying regional endpoints when creating the service client as shown in
         ///   https://cloud.google.com/dotnet/docs/reference/help/client-configuration#endpoint.
         /// </remarks>
-        public async Task GetCloudControlRequestObjectAsync()
+        public void CalculateEffectiveCmEnrollment()
         {
             // Create client
-            ConfigClient configClient = await ConfigClient.CreateAsync();
+            CmEnrollmentServiceClient cmEnrollmentServiceClient = CmEnrollmentServiceClient.Create();
             // Initialize request argument(s)
-            GetCloudControlRequest request = new GetCloudControlRequest
-            {
-                CloudControlName = CloudControlName.FromOrganizationLocationCloudControl("[ORGANIZATION]", "[LOCATION]", "[CLOUD_CONTROL]"),
-                MajorRevisionId = 0L,
-            };
+            string name = "organizations/[ORGANIZATION]/locations/[LOCATION]/cmEnrollment";
             // Make the request
-            CloudControl response = await configClient.GetCloudControlAsync(request);
+            CalculateEffectiveCmEnrollmentResponse response = cmEnrollmentServiceClient.CalculateEffectiveCmEnrollment(name);
         }
     }
-    // [END cloudsecuritycompliance_v1_generated_Config_GetCloudControl_async]
+    // [END cloudsecuritycompliance_v1_generated_CmEnrollmentService_CalculateEffectiveCmEnrollment_sync_flattened]
 }

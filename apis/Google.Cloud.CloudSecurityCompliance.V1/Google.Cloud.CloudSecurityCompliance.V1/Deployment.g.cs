@@ -216,11 +216,11 @@ namespace Google.Cloud.CloudSecurityCompliance.V1 {
   }
   #region Enums
   /// <summary>
-  /// DeploymentState represents the state of the Deployment resource.
+  /// The state of the deployment resource.
   /// </summary>
   public enum DeploymentState {
     /// <summary>
-    /// Unspecified. Invalid state.
+    /// Default value. This value is unused.
     /// </summary>
     [pbr::OriginalName("DEPLOYMENT_STATE_UNSPECIFIED")] Unspecified = 0,
     /// <summary>
@@ -228,17 +228,17 @@ namespace Google.Cloud.CloudSecurityCompliance.V1 {
     /// </summary>
     [pbr::OriginalName("DEPLOYMENT_STATE_VALIDATING")] Validating = 1,
     /// <summary>
-    /// Deployment is in CREATING state.
+    /// Deployment is being created.
     /// </summary>
     [pbr::OriginalName("DEPLOYMENT_STATE_CREATING")] Creating = 2,
     /// <summary>
-    /// Deployment is in DELETING state.
+    /// Deployment is being deleted.
     /// </summary>
     [pbr::OriginalName("DEPLOYMENT_STATE_DELETING")] Deleting = 3,
     /// <summary>
-    /// Deployment has failed. All the changes made by the deployment have been
-    /// successfully rolled back. A deployment in the FAILED state can be retried
-    /// or deleted.
+    /// Deployment has failed. All the changes made by the deployment were
+    /// successfully rolled back. You can retry or delete a deployment that's
+    /// in this state.
     /// </summary>
     [pbr::OriginalName("DEPLOYMENT_STATE_FAILED")] Failed = 4,
     /// <summary>
@@ -246,14 +246,14 @@ namespace Google.Cloud.CloudSecurityCompliance.V1 {
     /// </summary>
     [pbr::OriginalName("DEPLOYMENT_STATE_READY")] Ready = 5,
     /// <summary>
-    /// Deployment is partially deployed. All the Cloud Controls were not deployed
-    /// successfully. Retrying the operation will resume from the first failed
+    /// Deployment is partially deployed. All the cloud controls weren't deployed
+    /// successfully. Retrying the operation resumes from the first failed
     /// step.
     /// </summary>
     [pbr::OriginalName("DEPLOYMENT_STATE_PARTIALLY_DEPLOYED")] PartiallyDeployed = 6,
     /// <summary>
-    /// Deployment is partially deleted. All the Cloud Control Deployments were not
-    /// deleted successfully. Retrying the operation will resume from the first
+    /// Deployment is partially deleted. All the cloud control deployments weren't
+    /// deleted successfully. Retrying the operation resumes from the first
     /// failed step.
     /// </summary>
     [pbr::OriginalName("DEPLOYMENT_STATE_PARTIALLY_DELETED")] PartiallyDeleted = 7,
@@ -263,9 +263,9 @@ namespace Google.Cloud.CloudSecurityCompliance.V1 {
 
   #region Messages
   /// <summary>
-  /// FrameworkDeployment represents deployment of a Framework on a target
-  /// resource. Supported target resources are organizations/{organization},
-  /// folders/{folder}, and projects/{project}.
+  /// Framework deployments represent the assignment of a framework to a target
+  /// resource. Supported target resources are organizations, folders, and
+  /// projects.
   /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class FrameworkDeployment : pb::IMessage<FrameworkDeployment>
@@ -327,8 +327,9 @@ namespace Google.Cloud.CloudSecurityCompliance.V1 {
     public const int NameFieldNumber = 1;
     private string name_ = "";
     /// <summary>
-    /// Identifier. FrameworkDeployment name in the following format:
-    /// organizations/{organization}/locations/{location}/frameworkDeployments/{framework_deployment_id}
+    /// Identifier. The name of the framework deployment, in the format
+    /// `organizations/{organization}/locations/{location}/frameworkDeployments/{framework_deployment_id}`.
+    /// The only supported location is `global`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -343,9 +344,8 @@ namespace Google.Cloud.CloudSecurityCompliance.V1 {
     public const int TargetResourceConfigFieldNumber = 2;
     private global::Google.Cloud.CloudSecurityCompliance.V1.TargetResourceConfig targetResourceConfig_;
     /// <summary>
-    /// Required. The details of the target resource on which the Framework is to
-    /// be deployed. It can either be an existing target resource or a new target
-    /// resource to be created.
+    /// Required. The details of the target resource that you want to deploy the
+    /// framework to. You can specify an existing resource, or create a new one.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -360,9 +360,12 @@ namespace Google.Cloud.CloudSecurityCompliance.V1 {
     public const int ComputedTargetResourceFieldNumber = 3;
     private string computedTargetResource_ = "";
     /// <summary>
-    /// Output only. The resource on which the Framework is deployed based on the
-    /// provided TargetResourceConfig in the following format:
-    /// organizations/{organization}, folders/{folder} or projects/{project}
+    /// Output only. The target resource to deploy the framework to, in one  the
+    /// following formats:
+    ///
+    /// - `organizations/{organizationID}`
+    /// - `folders/{folderID}`
+    /// - `projects/{projectID}`
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -377,7 +380,7 @@ namespace Google.Cloud.CloudSecurityCompliance.V1 {
     public const int FrameworkFieldNumber = 4;
     private global::Google.Cloud.CloudSecurityCompliance.V1.FrameworkReference framework_;
     /// <summary>
-    /// Required. Reference to the framework to be deployed.
+    /// Required. A reference to the framework that you're deploying.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -392,7 +395,7 @@ namespace Google.Cloud.CloudSecurityCompliance.V1 {
     public const int DescriptionFieldNumber = 5;
     private string description_ = "";
     /// <summary>
-    /// Optional. User provided description of the Framework deployment
+    /// Optional. A user-provided description of the framework deployment.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -409,9 +412,8 @@ namespace Google.Cloud.CloudSecurityCompliance.V1 {
         = pb::FieldCodec.ForMessage(50, global::Google.Cloud.CloudSecurityCompliance.V1.CloudControlMetadata.Parser);
     private readonly pbc::RepeatedField<global::Google.Cloud.CloudSecurityCompliance.V1.CloudControlMetadata> cloudControlMetadata_ = new pbc::RepeatedField<global::Google.Cloud.CloudSecurityCompliance.V1.CloudControlMetadata>();
     /// <summary>
-    /// Required. Deployment mode and parameters for each of the Cloud Controls in
-    /// the framework. Every Cloud Control in the framework must have a
-    /// CloudControlMetadata.
+    /// Required. The deployment mode and parameters for each of the cloud controls
+    /// in the framework. Every cloud control in the framework includes metadata.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -423,7 +425,7 @@ namespace Google.Cloud.CloudSecurityCompliance.V1 {
     public const int DeploymentStateFieldNumber = 7;
     private global::Google.Cloud.CloudSecurityCompliance.V1.DeploymentState deploymentState_ = global::Google.Cloud.CloudSecurityCompliance.V1.DeploymentState.Unspecified;
     /// <summary>
-    /// Output only. State of the Framework Deployment
+    /// Output only. The state for the framework deployment.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -469,10 +471,10 @@ namespace Google.Cloud.CloudSecurityCompliance.V1 {
     private string etag_ = "";
     /// <summary>
     /// Optional. To prevent concurrent updates from overwriting each other, always
-    /// provide the `etag` when you update a FrameworkDeployment. You can also
-    /// provide the `etag` when you delete a FrameworkDeployment, to help
+    /// provide the `etag` when you update a framework deployment. You can also
+    /// provide the `etag` when you delete a framework deployment, to help
     /// ensure that you're deleting the intended version of the
-    /// FrameworkDeployment.
+    /// framework deployment.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -504,11 +506,15 @@ namespace Google.Cloud.CloudSecurityCompliance.V1 {
         = pb::FieldCodec.ForMessage(114, global::Google.Cloud.CloudSecurityCompliance.V1.CloudControlDeploymentReference.Parser);
     private readonly pbc::RepeatedField<global::Google.Cloud.CloudSecurityCompliance.V1.CloudControlDeploymentReference> cloudControlDeploymentReferences_ = new pbc::RepeatedField<global::Google.Cloud.CloudSecurityCompliance.V1.CloudControlDeploymentReference>();
     /// <summary>
-    /// Output only. The references to the cloud control deployments. It has all
-    /// the CloudControlDeployments which are either directly added in the
-    /// framework or through a CloudControlGroup. Example: If a framework
-    /// deployment deploys two cloud controls, cc-deployment-1 and cc-deployment-2,
-    /// then the cloud_control_deployment_references will be:
+    /// Output only. The references to the cloud control deployments. The reference
+    /// includes all the cloud control deployments that are in the framework or in
+    /// a cloud control group.
+    ///
+    /// For example, if a framework deployment deploys two
+    /// cloud controls, `cc-deployment-1` and `cc-deployment-2`, then the
+    /// references are:
+    ///
+    /// ```
     /// {
     ///  cloud_control_deployment_reference: {
     ///    cloud_control_deployment:
@@ -518,6 +524,7 @@ namespace Google.Cloud.CloudSecurityCompliance.V1 {
     ///   cloud_control_deployment:
     ///   "organizations/{organization}/locations/{location}/cloudControlDeployments/cc-deployment-2"
     ///  }
+    /// ```
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -939,9 +946,10 @@ namespace Google.Cloud.CloudSecurityCompliance.V1 {
   }
 
   /// <summary>
-  /// CloudControlDeployment represents deployment of a CloudControl on a target
-  /// resource. Supported target resources are organizations/{organization},
-  /// folders/{folder}, and projects/{project}.
+  /// A cloud control deployment represents the deployment of a particular cloud
+  /// control on a target resource. Supported target resources are
+  /// `organizations/{organizationID}`, `folders/{folderID}`, and
+  /// `projects/{projectID}`.
   /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class CloudControlDeployment : pb::IMessage<CloudControlDeployment>
@@ -1003,8 +1011,9 @@ namespace Google.Cloud.CloudSecurityCompliance.V1 {
     public const int NameFieldNumber = 1;
     private string name_ = "";
     /// <summary>
-    /// Identifier. CloudControlDeployment name in the following format:
-    /// organizations/{organization}/locations/{location}/cloudControlDeployments/{cloud_control_deployment_id}
+    /// Identifier. The name for the cloud control deployment, in the format
+    /// `organizations/{organization}/locations/{location}/cloudControlDeployments/{cloud_control_deployment_id}`.
+    /// The only supported location is `global`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -1019,9 +1028,8 @@ namespace Google.Cloud.CloudSecurityCompliance.V1 {
     public const int TargetResourceConfigFieldNumber = 2;
     private global::Google.Cloud.CloudSecurityCompliance.V1.TargetResourceConfig targetResourceConfig_;
     /// <summary>
-    /// Required. The details of the target resource on which the CloudControl is
-    /// to be deployed. It can either be an existing target resource or a new
-    /// target resource to be created.
+    /// Required. The details of the target resource that the cloud control is
+    /// deployed You can use an existing target resource or create a new target.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -1036,9 +1044,12 @@ namespace Google.Cloud.CloudSecurityCompliance.V1 {
     public const int TargetResourceFieldNumber = 3;
     private string targetResource_ = "";
     /// <summary>
-    /// Output only. The resource on which the CloudControl is deployed based on
-    /// the provided TargetResourceConfig in the following format:
-    /// organizations/{organization}, folders/{folder} or projects/{project}.
+    /// Output only. The resource that the cloud control is deployed on, in one of
+    /// the following formats:
+    ///
+    /// - `organizations/{organizationID}`
+    /// - `folders/{folderID}`
+    /// - `projects/{projectID}`
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -1053,7 +1064,7 @@ namespace Google.Cloud.CloudSecurityCompliance.V1 {
     public const int CloudControlMetadataFieldNumber = 4;
     private global::Google.Cloud.CloudSecurityCompliance.V1.CloudControlMetadata cloudControlMetadata_;
     /// <summary>
-    /// Required. Deployment mode and parameters for the Cloud Control.
+    /// Required. The deployment mode and parameters for the cloud control.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -1068,7 +1079,7 @@ namespace Google.Cloud.CloudSecurityCompliance.V1 {
     public const int DescriptionFieldNumber = 5;
     private string description_ = "";
     /// <summary>
-    /// Optional. User provided description of the CloudControl deployment
+    /// Optional. A friendly description for the cloud control deployment.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -1083,7 +1094,7 @@ namespace Google.Cloud.CloudSecurityCompliance.V1 {
     public const int DeploymentStateFieldNumber = 6;
     private global::Google.Cloud.CloudSecurityCompliance.V1.DeploymentState deploymentState_ = global::Google.Cloud.CloudSecurityCompliance.V1.DeploymentState.Unspecified;
     /// <summary>
-    /// Output only. State of the CloudControl deployment
+    /// Output only. The state of the cloud control deployment.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -1098,7 +1109,7 @@ namespace Google.Cloud.CloudSecurityCompliance.V1 {
     public const int CreateTimeFieldNumber = 7;
     private global::Google.Protobuf.WellKnownTypes.Timestamp createTime_;
     /// <summary>
-    /// Output only. The time at which the resource was created.
+    /// Output only. The time when the resource was created.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -1113,7 +1124,7 @@ namespace Google.Cloud.CloudSecurityCompliance.V1 {
     public const int UpdateTimeFieldNumber = 8;
     private global::Google.Protobuf.WellKnownTypes.Timestamp updateTime_;
     /// <summary>
-    /// Output only. The time at which the resource last updated.
+    /// Output only. The time when the resource was last updated.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -1128,11 +1139,11 @@ namespace Google.Cloud.CloudSecurityCompliance.V1 {
     public const int EtagFieldNumber = 9;
     private string etag_ = "";
     /// <summary>
-    /// Optional. To prevent concurrent updates from overwriting each other, always
-    /// provide the `etag` when you update a CloudControlDeployment. You can also
-    /// provide the `etag` when you delete a CloudControlDeployment, to help
+    /// Optional. To prevent concurrent updates from overwriting each other,
+    /// provide the `etag` when you update a cloud control deployment. You can also
+    /// provide the `etag` when you delete a cloud control deployment to help
     /// ensure that you're deleting the intended version of the
-    /// CloudControlDeployment.
+    /// deployment.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -1147,7 +1158,7 @@ namespace Google.Cloud.CloudSecurityCompliance.V1 {
     public const int ParameterSubstitutedCloudControlFieldNumber = 10;
     private global::Google.Cloud.CloudSecurityCompliance.V1.CloudControl parameterSubstitutedCloudControl_;
     /// <summary>
-    /// Output only. The CloudControl after substitution of given parameters.
+    /// Output only. The cloud control after the given parameters are substituted.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -1164,9 +1175,9 @@ namespace Google.Cloud.CloudSecurityCompliance.V1 {
         = pb::FieldCodec.ForMessage(90, global::Google.Cloud.CloudSecurityCompliance.V1.FrameworkDeploymentReference.Parser);
     private readonly pbc::RepeatedField<global::Google.Cloud.CloudSecurityCompliance.V1.FrameworkDeploymentReference> frameworkDeploymentReferences_ = new pbc::RepeatedField<global::Google.Cloud.CloudSecurityCompliance.V1.FrameworkDeploymentReference>();
     /// <summary>
-    /// Output only. The references to the Framework deployments that this Cloud
-    /// Control deployment is part of. A Cloud Control deployment can be part of
-    /// multiple Framework deployments.
+    /// Output only. The references to the framework deployments that this cloud
+    /// control deployment is part of. A cloud control deployment can be part of
+    /// multiple framework deployments.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -1622,8 +1633,8 @@ namespace Google.Cloud.CloudSecurityCompliance.V1 {
   }
 
   /// <summary>
-  /// TargetResourceConfig contains either the name of the target_resource or
-  /// contains the config to create a new target_resource.
+  /// The name of the target resource or the configuration that's required to
+  /// create a new target resource.
   /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class TargetResourceConfig : pb::IMessage<TargetResourceConfig>
@@ -1681,8 +1692,11 @@ namespace Google.Cloud.CloudSecurityCompliance.V1 {
     /// <summary>Field number for the "existing_target_resource" field.</summary>
     public const int ExistingTargetResourceFieldNumber = 1;
     /// <summary>
-    /// Optional. CRM node in format organizations/{organization},
-    /// folders/{folder}, or projects/{project}
+    /// Optional. The resource hierarchy node, in one of the following formats:
+    ///
+    /// - `organizations/{organizationID}`
+    /// - `folders/{folderID}`
+    /// - `projects/{projectID}`
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -1711,8 +1725,8 @@ namespace Google.Cloud.CloudSecurityCompliance.V1 {
     /// <summary>Field number for the "target_resource_creation_config" field.</summary>
     public const int TargetResourceCreationConfigFieldNumber = 2;
     /// <summary>
-    /// Optional. Config to create a new resource and use that as the
-    /// target_resource for deployment.
+    /// Optional. The details that are required to create a resource and use
+    /// that resource as the target resource for deployment.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -1921,8 +1935,7 @@ namespace Google.Cloud.CloudSecurityCompliance.V1 {
   }
 
   /// <summary>
-  /// TargetResourceCreationConfig contains the config to create a new resource to
-  /// be used as the target_resource of a deployment.
+  /// The configuration that's required to create a target resource.
   /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class TargetResourceCreationConfig : pb::IMessage<TargetResourceCreationConfig>
@@ -1980,8 +1993,7 @@ namespace Google.Cloud.CloudSecurityCompliance.V1 {
     /// <summary>Field number for the "folder_creation_config" field.</summary>
     public const int FolderCreationConfigFieldNumber = 1;
     /// <summary>
-    /// Optional. Config to create a new folder to be used as the target_resource
-    /// of a deployment.
+    /// Optional. The configuration that's required to create a folder.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -1996,8 +2008,7 @@ namespace Google.Cloud.CloudSecurityCompliance.V1 {
     /// <summary>Field number for the "project_creation_config" field.</summary>
     public const int ProjectCreationConfigFieldNumber = 2;
     /// <summary>
-    /// Optional. Config to create a new project to be used as the
-    /// target_resource of a deployment.
+    /// Optional. The configuration that's required to create a project.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -2219,8 +2230,8 @@ namespace Google.Cloud.CloudSecurityCompliance.V1 {
   }
 
   /// <summary>
-  /// FolderCreationConfig contains the config to create a new folder to be used
-  /// as the target_resource of a deployment.
+  /// The configuration that's required to create a folder to be used
+  /// as the target resource for a deployment.
   /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class FolderCreationConfig : pb::IMessage<FolderCreationConfig>
@@ -2272,8 +2283,8 @@ namespace Google.Cloud.CloudSecurityCompliance.V1 {
     public const int ParentFieldNumber = 1;
     private string parent_ = "";
     /// <summary>
-    /// Required. The parent of the folder to be created. It can be an
-    /// organizations/{org} or folders/{folder}
+    /// Required. The parent of the folder, in the format
+    /// `organizations/{organizationID}` or `folders/{folderID}`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -2288,7 +2299,7 @@ namespace Google.Cloud.CloudSecurityCompliance.V1 {
     public const int FolderDisplayNameFieldNumber = 2;
     private string folderDisplayName_ = "";
     /// <summary>
-    /// Required. Display name of the folder to be created
+    /// Required. The display name of the folder.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -2457,8 +2468,8 @@ namespace Google.Cloud.CloudSecurityCompliance.V1 {
   }
 
   /// <summary>
-  /// ProjectCreationConfig contains the config to create a new project to be used
-  /// as the target_resource of a deployment.
+  /// The configuration that's required to create a project to be used
+  /// as the target resource of a deployment.
   /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class ProjectCreationConfig : pb::IMessage<ProjectCreationConfig>
@@ -2511,7 +2522,8 @@ namespace Google.Cloud.CloudSecurityCompliance.V1 {
     public const int ParentFieldNumber = 1;
     private string parent_ = "";
     /// <summary>
-    /// Required. organizations/{org} or folders/{folder}
+    /// Required. The parent of the project, in the format
+    /// `organizations/{organizationID}` or `folders/{folderID}`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -2526,7 +2538,7 @@ namespace Google.Cloud.CloudSecurityCompliance.V1 {
     public const int ProjectDisplayNameFieldNumber = 2;
     private string projectDisplayName_ = "";
     /// <summary>
-    /// Required. Display name of the project to be created.
+    /// Required. The display name of the project.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -2541,7 +2553,7 @@ namespace Google.Cloud.CloudSecurityCompliance.V1 {
     public const int BillingAccountIdFieldNumber = 3;
     private string billingAccountId_ = "";
     /// <summary>
-    /// Required. Billing account id to be used for the project.
+    /// Required. The billing account ID for the project.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -2734,8 +2746,8 @@ namespace Google.Cloud.CloudSecurityCompliance.V1 {
   }
 
   /// <summary>
-  /// CloudControlMetadata contains the enforcement mode and parameters of a Cloud
-  /// Control Deployment.
+  /// The enforcement mode and parameters of a cloud
+  /// control deployment.
   /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class CloudControlMetadata : pb::IMessage<CloudControlMetadata>
@@ -2787,7 +2799,7 @@ namespace Google.Cloud.CloudSecurityCompliance.V1 {
     public const int CloudControlDetailsFieldNumber = 1;
     private global::Google.Cloud.CloudSecurityCompliance.V1.CloudControlDetails cloudControlDetails_;
     /// <summary>
-    /// Required. Cloud control name and parameters.
+    /// Required. The cloud control name and parameters.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -2802,7 +2814,7 @@ namespace Google.Cloud.CloudSecurityCompliance.V1 {
     public const int EnforcementModeFieldNumber = 2;
     private global::Google.Cloud.CloudSecurityCompliance.V1.EnforcementMode enforcementMode_ = global::Google.Cloud.CloudSecurityCompliance.V1.EnforcementMode.Unspecified;
     /// <summary>
-    /// Required. Enforcement mode of the cloud control
+    /// Required. The enforcement mode of the cloud control.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -2980,7 +2992,7 @@ namespace Google.Cloud.CloudSecurityCompliance.V1 {
   }
 
   /// <summary>
-  /// Request message for CreateFrameworkDeployment API.
+  /// The request message for [CreateFrameworkDeployment][].
   /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class CreateFrameworkDeploymentRequest : pb::IMessage<CreateFrameworkDeploymentRequest>
@@ -3033,9 +3045,9 @@ namespace Google.Cloud.CloudSecurityCompliance.V1 {
     public const int ParentFieldNumber = 1;
     private string parent_ = "";
     /// <summary>
-    /// Required. The parent resource of the FrameworkDeployment in the format:
-    /// organizations/{organization}/locations/{location}
-    /// Only global location is supported.
+    /// Required. The parent resource of the framework deployment in the format
+    /// `organizations/{organization}/locations/{location}`.
+    /// Only the global location is supported.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -3050,8 +3062,8 @@ namespace Google.Cloud.CloudSecurityCompliance.V1 {
     public const int FrameworkDeploymentIdFieldNumber = 2;
     private string frameworkDeploymentId_ = "";
     /// <summary>
-    /// Optional. User provided identifier. It should be unique in scope of a
-    /// parent. This is optional and if not provided, a random UUID will be
+    /// Optional. An identifier for the framework deployment that's unique in scope
+    /// of the parent. If you don't specify a value, then a random UUID is
     /// generated.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -3067,7 +3079,7 @@ namespace Google.Cloud.CloudSecurityCompliance.V1 {
     public const int FrameworkDeploymentFieldNumber = 3;
     private global::Google.Cloud.CloudSecurityCompliance.V1.FrameworkDeployment frameworkDeployment_;
     /// <summary>
-    /// Required. The FrameworkDeployment to be created.
+    /// Required. The framework deployment that you're creating.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -3269,7 +3281,7 @@ namespace Google.Cloud.CloudSecurityCompliance.V1 {
   }
 
   /// <summary>
-  /// Request message for DeleteFrameworkDeployment.
+  /// The request message for [DeleteFrameworkDeployment][].
   /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class DeleteFrameworkDeploymentRequest : pb::IMessage<DeleteFrameworkDeploymentRequest>
@@ -3321,9 +3333,10 @@ namespace Google.Cloud.CloudSecurityCompliance.V1 {
     public const int NameFieldNumber = 1;
     private string name_ = "";
     /// <summary>
-    /// Required. name of the FrameworkDeployment to be deleted in the following
-    /// format:
-    /// organizations/{organization}/locations/{location}/frameworkDeployments/{framework_deployment_id}
+    /// Required. The name of the framework deployment that you want to delete,
+    /// in the format
+    /// `organizations/{organization}/locations/{location}/frameworkDeployments/{framework_deployment_id}`.
+    /// The only supported location is `global`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -3342,7 +3355,7 @@ namespace Google.Cloud.CloudSecurityCompliance.V1 {
     ///
     /// If you provide this value, then it must match the existing value. If the
     /// values don't match, then the request fails with an
-    /// [ABORTED][google.rpc.Code.ABORTED] error.
+    /// [`ABORTED`][google.rpc.Code.ABORTED] error.
     ///
     /// If you omit this value, then the resource is deleted regardless of its
     /// current `etag` value.
@@ -3514,7 +3527,7 @@ namespace Google.Cloud.CloudSecurityCompliance.V1 {
   }
 
   /// <summary>
-  /// Request message for GetFrameworkDeployment.
+  /// The request message for [GetFrameworkDeployment][].
   /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class GetFrameworkDeploymentRequest : pb::IMessage<GetFrameworkDeploymentRequest>
@@ -3565,8 +3578,9 @@ namespace Google.Cloud.CloudSecurityCompliance.V1 {
     public const int NameFieldNumber = 1;
     private string name_ = "";
     /// <summary>
-    /// Required. FrameworkDeployment name in the following format:
-    /// organizations/{organization}/locations/{location}/frameworkDeployments/{framework_deployment_id}
+    /// Required. The name of the framework deployment, in the format
+    /// `organizations/{organization}/locations/{location}/frameworkDeployments/{framework_deployment_id}`.
+    /// The only supported location is `global`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -3711,7 +3725,7 @@ namespace Google.Cloud.CloudSecurityCompliance.V1 {
   }
 
   /// <summary>
-  /// Request message for ListFrameworkDeployments.
+  /// The request message for [ListFrameworkDeployments][].
   /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class ListFrameworkDeploymentsRequest : pb::IMessage<ListFrameworkDeploymentsRequest>
@@ -3766,9 +3780,9 @@ namespace Google.Cloud.CloudSecurityCompliance.V1 {
     public const int ParentFieldNumber = 1;
     private string parent_ = "";
     /// <summary>
-    /// Required. parent resource of the FrameworkDeployment in the format:
-    /// organizations/{organization}/locations/{location}
-    /// Only global location is supported.
+    /// Required. The parent resource of the framework deployment, in the format
+    /// `organizations/{organization}/locations/{location}`.
+    /// The only supported location is `global`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -3783,8 +3797,9 @@ namespace Google.Cloud.CloudSecurityCompliance.V1 {
     public const int PageSizeFieldNumber = 2;
     private int pageSize_;
     /// <summary>
-    /// Optional. Requested page size. Server may return fewer items than
-    /// requested. If unspecified, server will pick an appropriate default.
+    /// Optional. The requested page size. The server might return fewer items than
+    /// requested.
+    /// If unspecified, the server picks an appropriate default.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -3799,7 +3814,8 @@ namespace Google.Cloud.CloudSecurityCompliance.V1 {
     public const int PageTokenFieldNumber = 3;
     private string pageToken_ = "";
     /// <summary>
-    /// Optional. A token identifying a page of results the server should return.
+    /// Optional. A token that identifies a page of results the server should
+    /// return.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -3814,8 +3830,8 @@ namespace Google.Cloud.CloudSecurityCompliance.V1 {
     public const int FilterFieldNumber = 4;
     private string filter_ = "";
     /// <summary>
-    /// Optional. Filter to be applied on the resource, defined by EBNF grammar
-    /// https://google.aip.dev/assets/misc/ebnf-filtering.txt.
+    /// Optional. The filter to be applied on the resource, as defined by
+    /// [AIP-160: Filtering](https://google.aip.dev/160).
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -3830,7 +3846,13 @@ namespace Google.Cloud.CloudSecurityCompliance.V1 {
     public const int OrderByFieldNumber = 5;
     private string orderBy_ = "";
     /// <summary>
-    /// Optional. Sort results. Supported are "name", "name desc" or "" (unsorted).
+    /// Optional. The sort order for the results. The following values are
+    /// supported:
+    ///
+    /// * `name`
+    /// * `name desc`
+    ///
+    /// If you do not specify a value, then the results are not sorted.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -4071,7 +4093,7 @@ namespace Google.Cloud.CloudSecurityCompliance.V1 {
   }
 
   /// <summary>
-  /// Response message for ListFrameworkDeployments.
+  /// The response message for [ListFrameworkDeployments][].
   /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class ListFrameworkDeploymentsResponse : pb::IMessage<ListFrameworkDeploymentsResponse>
@@ -4125,7 +4147,7 @@ namespace Google.Cloud.CloudSecurityCompliance.V1 {
         = pb::FieldCodec.ForMessage(10, global::Google.Cloud.CloudSecurityCompliance.V1.FrameworkDeployment.Parser);
     private readonly pbc::RepeatedField<global::Google.Cloud.CloudSecurityCompliance.V1.FrameworkDeployment> frameworkDeployments_ = new pbc::RepeatedField<global::Google.Cloud.CloudSecurityCompliance.V1.FrameworkDeployment>();
     /// <summary>
-    /// The list of FrameworkDeployments.
+    /// The list of framework deployments.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -4137,7 +4159,8 @@ namespace Google.Cloud.CloudSecurityCompliance.V1 {
     public const int NextPageTokenFieldNumber = 2;
     private string nextPageToken_ = "";
     /// <summary>
-    /// A token identifying a page of results the server should return.
+    /// A token that identifies the next page of results that the server
+    /// should return.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -4296,7 +4319,7 @@ namespace Google.Cloud.CloudSecurityCompliance.V1 {
   }
 
   /// <summary>
-  /// Request message for GetCloudControlDeployment.
+  /// The request message for [GetCloudControlDeployment][].
   /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class GetCloudControlDeploymentRequest : pb::IMessage<GetCloudControlDeploymentRequest>
@@ -4347,8 +4370,9 @@ namespace Google.Cloud.CloudSecurityCompliance.V1 {
     public const int NameFieldNumber = 1;
     private string name_ = "";
     /// <summary>
-    /// Required. CloudControlDeployment name in the following format:
-    /// organizations/{organization}/locations/{location}/cloudControlDeployments/{cloud_control_deployment_id}
+    /// Required. The name for the cloud control deployment, in the format
+    /// `organizations/{organization}/locations/{location}/cloudControlDeployments/{cloud_control_deployment_id}`.
+    /// The only supported location is `global`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -4493,7 +4517,7 @@ namespace Google.Cloud.CloudSecurityCompliance.V1 {
   }
 
   /// <summary>
-  /// Request message for ListCloudControlDeployments.
+  /// The request message for [ListCloudControlDeployments][].
   /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class ListCloudControlDeploymentsRequest : pb::IMessage<ListCloudControlDeploymentsRequest>
@@ -4548,9 +4572,9 @@ namespace Google.Cloud.CloudSecurityCompliance.V1 {
     public const int ParentFieldNumber = 1;
     private string parent_ = "";
     /// <summary>
-    /// Required. parent resource of the CloudControlDeployment in the format:
-    /// organizations/{organization}/locations/{location}
-    /// Only global location is supported.
+    /// Required. The parent resource for the cloud control deployment, in the
+    /// format `organizations/{organization}/locations/{location}`. The only
+    /// supported location is `global`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -4565,8 +4589,9 @@ namespace Google.Cloud.CloudSecurityCompliance.V1 {
     public const int PageSizeFieldNumber = 2;
     private int pageSize_;
     /// <summary>
-    /// Optional. Requested page size. Server may return fewer items than
-    /// requested. If unspecified, server will pick an appropriate default.
+    /// Optional. The requested page size. The server might return fewer items than
+    /// you requested.
+    /// If unspecified, the server picks an appropriate default.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -4581,7 +4606,8 @@ namespace Google.Cloud.CloudSecurityCompliance.V1 {
     public const int PageTokenFieldNumber = 3;
     private string pageToken_ = "";
     /// <summary>
-    /// Optional. A token identifying a page of results the server should return.
+    /// Optional. A token that identifies the page of results that the server
+    /// should return.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -4596,8 +4622,8 @@ namespace Google.Cloud.CloudSecurityCompliance.V1 {
     public const int FilterFieldNumber = 4;
     private string filter_ = "";
     /// <summary>
-    /// Optional. Filter to be applied on the resource, defined by EBNF grammar
-    /// https://google.aip.dev/assets/misc/ebnf-filtering.txt.
+    /// Optional. The filter to apply on the resource, as defined by
+    /// [AIP-160: Filtering](https://google.aip.dev/160).
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -4612,7 +4638,13 @@ namespace Google.Cloud.CloudSecurityCompliance.V1 {
     public const int OrderByFieldNumber = 5;
     private string orderBy_ = "";
     /// <summary>
-    /// Optional. Sort results. Supported are "name", "name desc" or "" (unsorted).
+    /// Optional. The sort order for the results. The following values are
+    /// supported:
+    ///
+    /// * `name`
+    /// * `name desc`
+    ///
+    /// If you do not specify a value, then the results are not sorted.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -4853,7 +4885,7 @@ namespace Google.Cloud.CloudSecurityCompliance.V1 {
   }
 
   /// <summary>
-  /// Response message for ListCloudControlDeployments.
+  /// The response message for [ListCloudControlDeployments][].
   /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class ListCloudControlDeploymentsResponse : pb::IMessage<ListCloudControlDeploymentsResponse>
@@ -4907,7 +4939,7 @@ namespace Google.Cloud.CloudSecurityCompliance.V1 {
         = pb::FieldCodec.ForMessage(10, global::Google.Cloud.CloudSecurityCompliance.V1.CloudControlDeployment.Parser);
     private readonly pbc::RepeatedField<global::Google.Cloud.CloudSecurityCompliance.V1.CloudControlDeployment> cloudControlDeployments_ = new pbc::RepeatedField<global::Google.Cloud.CloudSecurityCompliance.V1.CloudControlDeployment>();
     /// <summary>
-    /// The list of CloudControlDeployments.
+    /// The list of cloud control deployments.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -4919,7 +4951,8 @@ namespace Google.Cloud.CloudSecurityCompliance.V1 {
     public const int NextPageTokenFieldNumber = 2;
     private string nextPageToken_ = "";
     /// <summary>
-    /// A token identifying a page of results the server should return.
+    /// A token that identifies the next page of results that the server
+    /// should return.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -5078,7 +5111,7 @@ namespace Google.Cloud.CloudSecurityCompliance.V1 {
   }
 
   /// <summary>
-  /// The reference to a CloudControlDeployment.
+  /// The reference to a cloud control deployment.
   /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class CloudControlDeploymentReference : pb::IMessage<CloudControlDeploymentReference>
@@ -5129,8 +5162,9 @@ namespace Google.Cloud.CloudSecurityCompliance.V1 {
     public const int CloudControlDeploymentFieldNumber = 1;
     private string cloudControlDeployment_ = "";
     /// <summary>
-    /// Output only. The name of the CloudControlDeployment. The format is:
-    /// organizations/{org}/locations/{location}/cloudControlDeployments/{cloud_control_deployment_id}
+    /// Output only. The name of the CloudControlDeployment. The format is
+    /// `organizations/{org}/locations/{location}/cloudControlDeployments/{cloud_control_deployment_id}`.
+    /// The only supported location is `global`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -5275,7 +5309,7 @@ namespace Google.Cloud.CloudSecurityCompliance.V1 {
   }
 
   /// <summary>
-  /// The reference to a FrameworkDeployment.
+  /// The reference to a framework deployment.
   /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class FrameworkDeploymentReference : pb::IMessage<FrameworkDeploymentReference>
@@ -5328,8 +5362,9 @@ namespace Google.Cloud.CloudSecurityCompliance.V1 {
     public const int FrameworkDeploymentFieldNumber = 1;
     private string frameworkDeployment_ = "";
     /// <summary>
-    /// Output only. The name of the FrameworkDeployment. The format is:
-    /// organizations/{org}/locations/{location}/frameworkDeployments/{framework_deployment_id}
+    /// Output only. The name of the framework deployment, in the format
+    /// `organizations/{org}/locations/{location}/frameworkDeployments/{framework_deployment_id}`.
+    /// The only supported location is `global`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -5344,12 +5379,18 @@ namespace Google.Cloud.CloudSecurityCompliance.V1 {
     public const int FrameworkReferenceFieldNumber = 2;
     private global::Google.Cloud.CloudSecurityCompliance.V1.FrameworkReference frameworkReference_;
     /// <summary>
-    /// Optional. The reference to the Framework that this deployment is for.
-    /// Example: {
+    /// Optional. The reference to the framework that this deployment is for.
+    /// For example:
+    ///
+    /// ```
+    /// {
     ///   framework:
     ///   "organizations/{org}/locations/{location}/frameworks/{framework}",
     ///   major_revision_id: 1
     /// }
+    /// ```
+    ///
+    /// The only supported location is `global`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -5364,7 +5405,7 @@ namespace Google.Cloud.CloudSecurityCompliance.V1 {
     public const int FrameworkDisplayNameFieldNumber = 3;
     private string frameworkDisplayName_ = "";
     /// <summary>
-    /// Optional. The display name of the Framework that this FrameworkDeployment
+    /// Optional. The display name of the framework that this framework deployment
     /// is for.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
