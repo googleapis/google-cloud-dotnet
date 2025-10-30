@@ -14,6 +14,7 @@
 
 using Google.Api.Gax;
 using Google.Cloud.Spanner.V1;
+using Google.Protobuf;
 using System;
 using System.Threading;
 using System.Threading.Tasks;
@@ -25,9 +26,10 @@ namespace Google.Cloud.Spanner.Data
         private readonly SpannerConnection _connection;
         private readonly IClock _clock;
         private readonly IScheduler _scheduler;
-        private readonly SpannerTransactionCreationOptions _creationOptions;
+        internal readonly SpannerTransactionCreationOptions _creationOptions; // internal for testing
         private readonly SpannerTransactionOptions _transactionOptions;
         private readonly RetriableTransactionOptions _retryOptions;
+        internal ByteString _prevTransactionId = ByteString.Empty; // initialize to empty ByteString to be in keeping with proto definition
 
         internal RetriableTransaction(
             SpannerConnection connection,
@@ -41,7 +43,7 @@ namespace Google.Cloud.Spanner.Data
             _scheduler = GaxPreconditions.CheckNotNull(scheduler, nameof(scheduler));
             if (creationOptions is null)
             {
-                _creationOptions = SpannerTransactionCreationOptions.ReadWrite;
+                _creationOptions = SpannerTransactionCreationOptions.ReadWrite.WithPreviousTransactionId(); // Need to create a SpannerTransactionCreationOption with a null prev txn id to start
             }
             else
             {
@@ -51,7 +53,7 @@ namespace Google.Cloud.Spanner.Data
                         && !creationOptions.IsPartitionedDml,
                     nameof(creationOptions),
                     "Retriable transactions must be read-write and may not be detached or partioned DML transactions.");
-                _creationOptions = creationOptions;
+                _creationOptions = creationOptions.WithPreviousTransactionId(); // Need to create a SpannerTransactionCreationOption with a null prev txn id to start
             }
             _transactionOptions = transactionOptions;
             _retryOptions = retryOptions ?? RetriableTransactionOptions.CreateDefault();
@@ -62,18 +64,9 @@ namespace Google.Cloud.Spanner.Data
             GaxPreconditions.CheckNotNull(asyncWork, nameof(asyncWork));
 
             // Managed Transaction will be initialized and subsequently modified by CommitAttempt.
-            //PooledSession session = null;
             ManagedTransaction managedTransaction = null;
 
             return await ExecuteWithRetryAsync(CommitAttempt, cancellationToken).ConfigureAwait(false);
-            //try
-            //{
-            //    return await ExecuteWithRetryAsync(CommitAttempt, cancellationToken).ConfigureAwait(false);
-            //}
-            //finally
-            //{
-            //    session?.Dispose();
-            //}
 
             async Task<TResult> CommitAttempt()
             {
@@ -86,8 +79,7 @@ namespace Google.Cloud.Spanner.Data
                         {
                             SpannerTransactionCreationOptions effectiveCreationOptions = _creationOptions;
 
-                            managedTransaction = _connection.AcquireManagedTransaction(_creationOptions, out effectiveCreationOptions);
-                            //session = await (session?.RefreshedOrNewAsync(cancellationToken) ?? _connection.AcquireSessionAsync(_creationOptions, cancellationToken, out effectiveCreationOptions)).ConfigureAwait(false);
+                            managedTransaction = _connection.AcquireManagedTransaction(_prevTransactionId != null ? _creationOptions.WithPreviousTransactionId(_prevTransactionId) : _creationOptions, out effectiveCreationOptions);
 
                             transaction = new SpannerTransaction(_connection, managedTransaction, effectiveCreationOptions, _transactionOptions, isRetriable: true);
 
@@ -110,6 +102,12 @@ namespace Google.Cloud.Spanner.Data
                                 // We don't want that or any other rollback exception to propagate,
                                 // it will not trigger the retry
                                 _connection.Logger.Warn("A rollback attempt failed on RetriableTransaction.RunAsync.CommitAttempt", e);
+                            }
+
+                            // Update the transaction Id so that the next retry attempt can set this on the TransactionOptions
+                            if(transaction.TransactionId?.Id != null)
+                            {
+                                _prevTransactionId = ByteString.FromBase64(transaction.TransactionId.Id);
                             }
 
                             // Throw, the retry helper will know when to retry.
