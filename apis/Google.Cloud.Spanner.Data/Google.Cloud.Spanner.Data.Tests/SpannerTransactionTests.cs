@@ -40,7 +40,7 @@ public class SpannerTransactionTests
     public void MaxCommitDelay_DefaultsToNull()
     {
         SpannerClient spannerClientMock = SpannerClientHelpers.CreateMockClient(Logger.DefaultLogger);
-        spannerClientMock.SetupBatchCreateSessionsAsync();
+        spannerClientMock.SetupMultiplexSessionCreationAsync();
         SpannerConnection connection = SpannerCommandTests.BuildSpannerConnection(spannerClientMock);
         SpannerTransaction transaction = connection.BeginTransaction();
 
@@ -51,7 +51,7 @@ public class SpannerTransactionTests
     public void MaxCommitDelay_Valid(TimeSpan? maxCommitDelay)
     {
         SpannerClient spannerClientMock = SpannerClientHelpers.CreateMockClient(Logger.DefaultLogger);
-        spannerClientMock.SetupBatchCreateSessionsAsync();
+        spannerClientMock.SetupMultiplexSessionCreationAsync();
         SpannerConnection connection = SpannerCommandTests.BuildSpannerConnection(spannerClientMock);
         SpannerTransaction transaction = connection.BeginTransaction();
 
@@ -63,7 +63,7 @@ public class SpannerTransactionTests
     public void MaxCommitDelay_Invalid(TimeSpan? maxCommitdelay)
     {
         SpannerClient spannerClientMock = SpannerClientHelpers.CreateMockClient(Logger.DefaultLogger);
-        spannerClientMock.SetupBatchCreateSessionsAsync();
+        spannerClientMock.SetupMultiplexSessionCreationAsync();
         SpannerConnection connection = SpannerCommandTests.BuildSpannerConnection(spannerClientMock);
         SpannerTransaction transaction = connection.BeginTransaction();
 
@@ -80,7 +80,7 @@ public class SpannerTransactionTests
         DisposeBehavior disposeBehavior = DisposeBehavior.CloseResources;
 
         SpannerClient spannerClientMock = SpannerClientHelpers.CreateMockClient(Logger.DefaultLogger);
-        spannerClientMock.SetupBatchCreateSessionsAsync();
+        spannerClientMock.SetupMultiplexSessionCreationAsync();
         SpannerConnection connection = SpannerCommandTests.BuildSpannerConnection(spannerClientMock);
         SpannerTransaction transaction = connection.BeginTransaction(SpannerTransactionCreationOptions.ReadWrite, new SpannerTransactionOptions
         {
@@ -106,7 +106,7 @@ public class SpannerTransactionTests
         SpannerConnectionStringBuilder builder = new SpannerConnectionStringBuilder();
         builder.IsolationLevel = System.Data.IsolationLevel.RepeatableRead;
 
-        SpannerClient spannerClientMock = SpannerClientHelpers.CreateMockClient(Logger.DefaultLogger).SetupBatchCreateSessionsAsync();
+        SpannerClient spannerClientMock = SpannerClientHelpers.CreateMockClient(Logger.DefaultLogger).SetupMultiplexSessionCreationAsync();
         SpannerConnection connection = SpannerCommandTests.BuildSpannerConnection(spannerClientMock, builder);
 
         SpannerTransaction transaction = connection.BeginTransaction(SpannerTransactionCreationOptions.ReadWrite, null);
@@ -120,7 +120,7 @@ public class SpannerTransactionTests
         SpannerConnectionStringBuilder builder = new SpannerConnectionStringBuilder();
         builder.IsolationLevel = System.Data.IsolationLevel.RepeatableRead;
 
-        SpannerClient spannerClientMock = SpannerClientHelpers.CreateMockClient(Logger.DefaultLogger).SetupBatchCreateSessionsAsync();
+        SpannerClient spannerClientMock = SpannerClientHelpers.CreateMockClient(Logger.DefaultLogger).SetupMultiplexSessionCreationAsync();
         SpannerConnection connection = SpannerCommandTests.BuildSpannerConnection(spannerClientMock, builder);
 
         SpannerTransaction transaction = connection.BeginTransaction(SpannerTransactionCreationOptions.ReadWrite.WithIsolationLevel(System.Data.IsolationLevel.Serializable), null);
