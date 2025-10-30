@@ -4614,6 +4614,7 @@
         "google/cloud/redis/cluster/v1beta1",
         "google/cloud/configdelivery/v1alpha",
         "google/cloud/geminidataanalytics/v1alpha",
-        "google/shopping/merchant/reports/v1alpha"
+        "google/shopping/merchant/reports/v1alpha",
+        "google/cloud/hypercomputecluster/v1beta"
     ]
 }
