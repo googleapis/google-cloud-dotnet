@@ -81,6 +81,14 @@ namespace Google.Cloud.NetworkManagement.V1 {
     static readonly grpc::Marshaller<global::Google.Cloud.NetworkManagement.V1.UpdateVpcFlowLogsConfigRequest> __Marshaller_google_cloud_networkmanagement_v1_UpdateVpcFlowLogsConfigRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.NetworkManagement.V1.UpdateVpcFlowLogsConfigRequest.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.NetworkManagement.V1.DeleteVpcFlowLogsConfigRequest> __Marshaller_google_cloud_networkmanagement_v1_DeleteVpcFlowLogsConfigRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.NetworkManagement.V1.DeleteVpcFlowLogsConfigRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.NetworkManagement.V1.QueryOrgVpcFlowLogsConfigsRequest> __Marshaller_google_cloud_networkmanagement_v1_QueryOrgVpcFlowLogsConfigsRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.NetworkManagement.V1.QueryOrgVpcFlowLogsConfigsRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.NetworkManagement.V1.QueryOrgVpcFlowLogsConfigsResponse> __Marshaller_google_cloud_networkmanagement_v1_QueryOrgVpcFlowLogsConfigsResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.NetworkManagement.V1.QueryOrgVpcFlowLogsConfigsResponse.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.NetworkManagement.V1.ShowEffectiveFlowLogsConfigsRequest> __Marshaller_google_cloud_networkmanagement_v1_ShowEffectiveFlowLogsConfigsRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.NetworkManagement.V1.ShowEffectiveFlowLogsConfigsRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.NetworkManagement.V1.ShowEffectiveFlowLogsConfigsResponse> __Marshaller_google_cloud_networkmanagement_v1_ShowEffectiveFlowLogsConfigsResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.NetworkManagement.V1.ShowEffectiveFlowLogsConfigsResponse.Parser));
 
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.NetworkManagement.V1.ListVpcFlowLogsConfigsRequest, global::Google.Cloud.NetworkManagement.V1.ListVpcFlowLogsConfigsResponse> __Method_ListVpcFlowLogsConfigs = new grpc::Method<global::Google.Cloud.NetworkManagement.V1.ListVpcFlowLogsConfigsRequest, global::Google.Cloud.NetworkManagement.V1.ListVpcFlowLogsConfigsResponse>(
@@ -122,6 +130,22 @@ namespace Google.Cloud.NetworkManagement.V1 {
         __Marshaller_google_cloud_networkmanagement_v1_DeleteVpcFlowLogsConfigRequest,
         __Marshaller_google_longrunning_Operation);
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.NetworkManagement.V1.QueryOrgVpcFlowLogsConfigsRequest, global::Google.Cloud.NetworkManagement.V1.QueryOrgVpcFlowLogsConfigsResponse> __Method_QueryOrgVpcFlowLogsConfigs = new grpc::Method<global::Google.Cloud.NetworkManagement.V1.QueryOrgVpcFlowLogsConfigsRequest, global::Google.Cloud.NetworkManagement.V1.QueryOrgVpcFlowLogsConfigsResponse>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "QueryOrgVpcFlowLogsConfigs",
+        __Marshaller_google_cloud_networkmanagement_v1_QueryOrgVpcFlowLogsConfigsRequest,
+        __Marshaller_google_cloud_networkmanagement_v1_QueryOrgVpcFlowLogsConfigsResponse);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.NetworkManagement.V1.ShowEffectiveFlowLogsConfigsRequest, global::Google.Cloud.NetworkManagement.V1.ShowEffectiveFlowLogsConfigsResponse> __Method_ShowEffectiveFlowLogsConfigs = new grpc::Method<global::Google.Cloud.NetworkManagement.V1.ShowEffectiveFlowLogsConfigsRequest, global::Google.Cloud.NetworkManagement.V1.ShowEffectiveFlowLogsConfigsResponse>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "ShowEffectiveFlowLogsConfigs",
+        __Marshaller_google_cloud_networkmanagement_v1_ShowEffectiveFlowLogsConfigsRequest,
+        __Marshaller_google_cloud_networkmanagement_v1_ShowEffectiveFlowLogsConfigsResponse);
+
     /// <summary>Service descriptor</summary>
     public static global::Google.Protobuf.Reflection.ServiceDescriptor Descriptor
     {
@@ -162,8 +186,8 @@ namespace Google.Cloud.NetworkManagement.V1 {
       /// ID is different), the creation fails.
       /// Notes:
       ///
-      ///   1. Creating a configuration with state=DISABLED will fail
-      ///   2. The following fields are not considered as `settings` for the purpose
+      ///   1. Creating a configuration with `state=DISABLED` will fail
+      ///   2. The following fields are not considered as settings for the purpose
       ///   of the check mentioned above, therefore - creating another configuration
       ///   with the same fields but different values for the following fields will
       ///   fail as well:
@@ -188,8 +212,8 @@ namespace Google.Cloud.NetworkManagement.V1 {
       /// ID is different), the creation fails.
       /// Notes:
       ///
-      ///   1. Updating a configuration with state=DISABLED will fail.
-      ///   2. The following fields are not considered as `settings` for the purpose
+      ///   1. Updating a configuration with `state=DISABLED` will fail.
+      ///   2. The following fields are not considered as settings for the purpose
       ///   of the check mentioned above, therefore - updating another configuration
       ///   with the same fields but different values for the following fields will
       ///   fail as well:
@@ -216,6 +240,32 @@ namespace Google.Cloud.NetworkManagement.V1 {
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.LongRunning.Operation> DeleteVpcFlowLogsConfig(global::Google.Cloud.NetworkManagement.V1.DeleteVpcFlowLogsConfigRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// QueryOrgVpcFlowLogsConfigs returns a list of all organization-level VPC
+      /// Flow Logs configurations applicable to the specified project.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.NetworkManagement.V1.QueryOrgVpcFlowLogsConfigsResponse> QueryOrgVpcFlowLogsConfigs(global::Google.Cloud.NetworkManagement.V1.QueryOrgVpcFlowLogsConfigsRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// ShowEffectiveFlowLogsConfigs returns a list of all VPC Flow Logs
+      /// configurations applicable to a specified resource.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.NetworkManagement.V1.ShowEffectiveFlowLogsConfigsResponse> ShowEffectiveFlowLogsConfigs(global::Google.Cloud.NetworkManagement.V1.ShowEffectiveFlowLogsConfigsRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
       }
@@ -351,8 +401,8 @@ namespace Google.Cloud.NetworkManagement.V1 {
       /// ID is different), the creation fails.
       /// Notes:
       ///
-      ///   1. Creating a configuration with state=DISABLED will fail
-      ///   2. The following fields are not considered as `settings` for the purpose
+      ///   1. Creating a configuration with `state=DISABLED` will fail
+      ///   2. The following fields are not considered as settings for the purpose
       ///   of the check mentioned above, therefore - creating another configuration
       ///   with the same fields but different values for the following fields will
       ///   fail as well:
@@ -378,8 +428,8 @@ namespace Google.Cloud.NetworkManagement.V1 {
       /// ID is different), the creation fails.
       /// Notes:
       ///
-      ///   1. Creating a configuration with state=DISABLED will fail
-      ///   2. The following fields are not considered as `settings` for the purpose
+      ///   1. Creating a configuration with `state=DISABLED` will fail
+      ///   2. The following fields are not considered as settings for the purpose
       ///   of the check mentioned above, therefore - creating another configuration
       ///   with the same fields but different values for the following fields will
       ///   fail as well:
@@ -403,8 +453,8 @@ namespace Google.Cloud.NetworkManagement.V1 {
       /// ID is different), the creation fails.
       /// Notes:
       ///
-      ///   1. Creating a configuration with state=DISABLED will fail
-      ///   2. The following fields are not considered as `settings` for the purpose
+      ///   1. Creating a configuration with `state=DISABLED` will fail
+      ///   2. The following fields are not considered as settings for the purpose
       ///   of the check mentioned above, therefore - creating another configuration
       ///   with the same fields but different values for the following fields will
       ///   fail as well:
@@ -430,8 +480,8 @@ namespace Google.Cloud.NetworkManagement.V1 {
       /// ID is different), the creation fails.
       /// Notes:
       ///
-      ///   1. Creating a configuration with state=DISABLED will fail
-      ///   2. The following fields are not considered as `settings` for the purpose
+      ///   1. Creating a configuration with `state=DISABLED` will fail
+      ///   2. The following fields are not considered as settings for the purpose
       ///   of the check mentioned above, therefore - creating another configuration
       ///   with the same fields but different values for the following fields will
       ///   fail as well:
@@ -455,8 +505,8 @@ namespace Google.Cloud.NetworkManagement.V1 {
       /// ID is different), the creation fails.
       /// Notes:
       ///
-      ///   1. Updating a configuration with state=DISABLED will fail.
-      ///   2. The following fields are not considered as `settings` for the purpose
+      ///   1. Updating a configuration with `state=DISABLED` will fail.
+      ///   2. The following fields are not considered as settings for the purpose
       ///   of the check mentioned above, therefore - updating another configuration
       ///   with the same fields but different values for the following fields will
       ///   fail as well:
@@ -482,8 +532,8 @@ namespace Google.Cloud.NetworkManagement.V1 {
       /// ID is different), the creation fails.
       /// Notes:
       ///
-      ///   1. Updating a configuration with state=DISABLED will fail.
-      ///   2. The following fields are not considered as `settings` for the purpose
+      ///   1. Updating a configuration with `state=DISABLED` will fail.
+      ///   2. The following fields are not considered as settings for the purpose
       ///   of the check mentioned above, therefore - updating another configuration
       ///   with the same fields but different values for the following fields will
       ///   fail as well:
@@ -507,8 +557,8 @@ namespace Google.Cloud.NetworkManagement.V1 {
       /// ID is different), the creation fails.
       /// Notes:
       ///
-      ///   1. Updating a configuration with state=DISABLED will fail.
-      ///   2. The following fields are not considered as `settings` for the purpose
+      ///   1. Updating a configuration with `state=DISABLED` will fail.
+      ///   2. The following fields are not considered as settings for the purpose
       ///   of the check mentioned above, therefore - updating another configuration
       ///   with the same fields but different values for the following fields will
       ///   fail as well:
@@ -534,8 +584,731 @@ namespace Google.Cloud.NetworkManagement.V1 {
       /// ID is different), the creation fails.
       /// Notes:
       ///
-      ///   1. Updating a configuration with state=DISABLED will fail.
-      ///   2. The following fields are not considered as `settings` for the purpose
+      ///   1. Updating a configuration with `state=DISABLED` will fail.
+      ///   2. The following fields are not considered as settings for the purpose
+      ///   of the check mentioned above, therefore - updating another configuration
+      ///   with the same fields but different values for the following fields will
+      ///   fail as well:
+      ///       * name
+      ///       * create_time
+      ///       * update_time
+      ///       * labels
+      ///       * description
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> UpdateVpcFlowLogsConfigAsync(global::Google.Cloud.NetworkManagement.V1.UpdateVpcFlowLogsConfigRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_UpdateVpcFlowLogsConfig, null, options, request);
+      }
+      /// <summary>
+      /// Deletes a specific `VpcFlowLogsConfig`.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.LongRunning.Operation DeleteVpcFlowLogsConfig(global::Google.Cloud.NetworkManagement.V1.DeleteVpcFlowLogsConfigRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return DeleteVpcFlowLogsConfig(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Deletes a specific `VpcFlowLogsConfig`.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.LongRunning.Operation DeleteVpcFlowLogsConfig(global::Google.Cloud.NetworkManagement.V1.DeleteVpcFlowLogsConfigRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_DeleteVpcFlowLogsConfig, null, options, request);
+      }
+      /// <summary>
+      /// Deletes a specific `VpcFlowLogsConfig`.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> DeleteVpcFlowLogsConfigAsync(global::Google.Cloud.NetworkManagement.V1.DeleteVpcFlowLogsConfigRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return DeleteVpcFlowLogsConfigAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Deletes a specific `VpcFlowLogsConfig`.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> DeleteVpcFlowLogsConfigAsync(global::Google.Cloud.NetworkManagement.V1.DeleteVpcFlowLogsConfigRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_DeleteVpcFlowLogsConfig, null, options, request);
+      }
+      /// <summary>
+      /// QueryOrgVpcFlowLogsConfigs returns a list of all organization-level VPC
+      /// Flow Logs configurations applicable to the specified project.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.NetworkManagement.V1.QueryOrgVpcFlowLogsConfigsResponse QueryOrgVpcFlowLogsConfigs(global::Google.Cloud.NetworkManagement.V1.QueryOrgVpcFlowLogsConfigsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return QueryOrgVpcFlowLogsConfigs(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// QueryOrgVpcFlowLogsConfigs returns a list of all organization-level VPC
+      /// Flow Logs configurations applicable to the specified project.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.NetworkManagement.V1.QueryOrgVpcFlowLogsConfigsResponse QueryOrgVpcFlowLogsConfigs(global::Google.Cloud.NetworkManagement.V1.QueryOrgVpcFlowLogsConfigsRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_QueryOrgVpcFlowLogsConfigs, null, options, request);
+      }
+      /// <summary>
+      /// QueryOrgVpcFlowLogsConfigs returns a list of all organization-level VPC
+      /// Flow Logs configurations applicable to the specified project.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.NetworkManagement.V1.QueryOrgVpcFlowLogsConfigsResponse> QueryOrgVpcFlowLogsConfigsAsync(global::Google.Cloud.NetworkManagement.V1.QueryOrgVpcFlowLogsConfigsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return QueryOrgVpcFlowLogsConfigsAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// QueryOrgVpcFlowLogsConfigs returns a list of all organization-level VPC
+      /// Flow Logs configurations applicable to the specified project.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.NetworkManagement.V1.QueryOrgVpcFlowLogsConfigsResponse> QueryOrgVpcFlowLogsConfigsAsync(global::Google.Cloud.NetworkManagement.V1.QueryOrgVpcFlowLogsConfigsRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_QueryOrgVpcFlowLogsConfigs, null, options, request);
+      }
+      /// <summary>
+      /// ShowEffectiveFlowLogsConfigs returns a list of all VPC Flow Logs
+      /// configurations applicable to a specified resource.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.NetworkManagement.V1.ShowEffectiveFlowLogsConfigsResponse ShowEffectiveFlowLogsConfigs(global::Google.Cloud.NetworkManagement.V1.ShowEffectiveFlowLogsConfigsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return ShowEffectiveFlowLogsConfigs(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// ShowEffectiveFlowLogsConfigs returns a list of all VPC Flow Logs
+      /// configurations applicable to a specified resource.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.NetworkManagement.V1.ShowEffectiveFlowLogsConfigsResponse ShowEffectiveFlowLogsConfigs(global::Google.Cloud.NetworkManagement.V1.ShowEffectiveFlowLogsConfigsRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_ShowEffectiveFlowLogsConfigs, null, options, request);
+      }
+      /// <summary>
+      /// ShowEffectiveFlowLogsConfigs returns a list of all VPC Flow Logs
+      /// configurations applicable to a specified resource.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.NetworkManagement.V1.ShowEffectiveFlowLogsConfigsResponse> ShowEffectiveFlowLogsConfigsAsync(global::Google.Cloud.NetworkManagement.V1.ShowEffectiveFlowLogsConfigsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return ShowEffectiveFlowLogsConfigsAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// ShowEffectiveFlowLogsConfigs returns a list of all VPC Flow Logs
+      /// configurations applicable to a specified resource.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.NetworkManagement.V1.ShowEffectiveFlowLogsConfigsResponse> ShowEffectiveFlowLogsConfigsAsync(global::Google.Cloud.NetworkManagement.V1.ShowEffectiveFlowLogsConfigsRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_ShowEffectiveFlowLogsConfigs, null, options, request);
+      }
+      /// <summary>Creates a new instance of client from given <c>ClientBaseConfiguration</c>.</summary>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      protected override VpcFlowLogsServiceClient NewInstance(ClientBaseConfiguration configuration)
+      {
+        return new VpcFlowLogsServiceClient(configuration);
+      }
+    }
+
+    /// <summary>Creates service definition that can be registered with a server</summary>
+    /// <param name="serviceImpl">An object implementing the server-side handling logic.</param>
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    public static grpc::ServerServiceDefinition BindService(VpcFlowLogsServiceBase serviceImpl)
+    {
+      return grpc::ServerServiceDefinition.CreateBuilder()
+          .AddMethod(__Method_ListVpcFlowLogsConfigs, serviceImpl.ListVpcFlowLogsConfigs)
+          .AddMethod(__Method_GetVpcFlowLogsConfig, serviceImpl.GetVpcFlowLogsConfig)
+          .AddMethod(__Method_CreateVpcFlowLogsConfig, serviceImpl.CreateVpcFlowLogsConfig)
+          .AddMethod(__Method_UpdateVpcFlowLogsConfig, serviceImpl.UpdateVpcFlowLogsConfig)
+          .AddMethod(__Method_DeleteVpcFlowLogsConfig, serviceImpl.DeleteVpcFlowLogsConfig)
+          .AddMethod(__Method_QueryOrgVpcFlowLogsConfigs, serviceImpl.QueryOrgVpcFlowLogsConfigs)
+          .AddMethod(__Method_ShowEffectiveFlowLogsConfigs, serviceImpl.ShowEffectiveFlowLogsConfigs).Build();
+    }
+
+    /// <summary>Register service method with a service binder with or without implementation. Useful when customizing the service binding logic.
+    /// Note: this method is part of an experimental API that can change or be removed without any prior notice.</summary>
+    /// <param name="serviceBinder">Service methods will be bound by calling <c>AddMethod</c> on this object.</param>
+    /// <param name="serviceImpl">An object implementing the server-side handling logic.</param>
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    public static void BindService(grpc::ServiceBinderBase serviceBinder, VpcFlowLogsServiceBase serviceImpl)
+    {
+      serviceBinder.AddMethod(__Method_ListVpcFlowLogsConfigs, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.NetworkManagement.V1.ListVpcFlowLogsConfigsRequest, global::Google.Cloud.NetworkManagement.V1.ListVpcFlowLogsConfigsResponse>(serviceImpl.ListVpcFlowLogsConfigs));
+      serviceBinder.AddMethod(__Method_GetVpcFlowLogsConfig, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.NetworkManagement.V1.GetVpcFlowLogsConfigRequest, global::Google.Cloud.NetworkManagement.V1.VpcFlowLogsConfig>(serviceImpl.GetVpcFlowLogsConfig));
+      serviceBinder.AddMethod(__Method_CreateVpcFlowLogsConfig, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.NetworkManagement.V1.CreateVpcFlowLogsConfigRequest, global::Google.LongRunning.Operation>(serviceImpl.CreateVpcFlowLogsConfig));
+      serviceBinder.AddMethod(__Method_UpdateVpcFlowLogsConfig, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.NetworkManagement.V1.UpdateVpcFlowLogsConfigRequest, global::Google.LongRunning.Operation>(serviceImpl.UpdateVpcFlowLogsConfig));
+      serviceBinder.AddMethod(__Method_DeleteVpcFlowLogsConfig, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.NetworkManagement.V1.DeleteVpcFlowLogsConfigRequest, global::Google.LongRunning.Operation>(serviceImpl.DeleteVpcFlowLogsConfig));
+      serviceBinder.AddMethod(__Method_QueryOrgVpcFlowLogsConfigs, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.NetworkManagement.V1.QueryOrgVpcFlowLogsConfigsRequest, global::Google.Cloud.NetworkManagement.V1.QueryOrgVpcFlowLogsConfigsResponse>(serviceImpl.QueryOrgVpcFlowLogsConfigs));
+      serviceBinder.AddMethod(__Method_ShowEffectiveFlowLogsConfigs, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.NetworkManagement.V1.ShowEffectiveFlowLogsConfigsRequest, global::Google.Cloud.NetworkManagement.V1.ShowEffectiveFlowLogsConfigsResponse>(serviceImpl.ShowEffectiveFlowLogsConfigs));
+    }
+
+  }
+  /// <summary>
+  /// The VPC Flow Logs organization service in the Google Cloud Network Management
+  /// API provides organization level configurations that generate Flow Logs. The
+  /// service and the configuration resources created using this service are
+  /// global.
+  /// </summary>
+  public static partial class OrganizationVpcFlowLogsService
+  {
+    static readonly string __ServiceName = "google.cloud.networkmanagement.v1.OrganizationVpcFlowLogsService";
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static void __Helper_SerializeMessage(global::Google.Protobuf.IMessage message, grpc::SerializationContext context)
+    {
+      #if !GRPC_DISABLE_PROTOBUF_BUFFER_SERIALIZATION
+      if (message is global::Google.Protobuf.IBufferMessage)
+      {
+        context.SetPayloadLength(message.CalculateSize());
+        global::Google.Protobuf.MessageExtensions.WriteTo(message, context.GetBufferWriter());
+        context.Complete();
+        return;
+      }
+      #endif
+      context.Complete(global::Google.Protobuf.MessageExtensions.ToByteArray(message));
+    }
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static class __Helper_MessageCache<T>
+    {
+      public static readonly bool IsBufferMessage = global::System.Reflection.IntrospectionExtensions.GetTypeInfo(typeof(global::Google.Protobuf.IBufferMessage)).IsAssignableFrom(typeof(T));
+    }
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static T __Helper_DeserializeMessage<T>(grpc::DeserializationContext context, global::Google.Protobuf.MessageParser<T> parser) where T : global::Google.Protobuf.IMessage<T>
+    {
+      #if !GRPC_DISABLE_PROTOBUF_BUFFER_SERIALIZATION
+      if (__Helper_MessageCache<T>.IsBufferMessage)
+      {
+        return parser.ParseFrom(context.PayloadAsReadOnlySequence());
+      }
+      #endif
+      return parser.ParseFrom(context.PayloadAsNewBuffer());
+    }
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.NetworkManagement.V1.ListVpcFlowLogsConfigsRequest> __Marshaller_google_cloud_networkmanagement_v1_ListVpcFlowLogsConfigsRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.NetworkManagement.V1.ListVpcFlowLogsConfigsRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.NetworkManagement.V1.ListVpcFlowLogsConfigsResponse> __Marshaller_google_cloud_networkmanagement_v1_ListVpcFlowLogsConfigsResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.NetworkManagement.V1.ListVpcFlowLogsConfigsResponse.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.NetworkManagement.V1.GetVpcFlowLogsConfigRequest> __Marshaller_google_cloud_networkmanagement_v1_GetVpcFlowLogsConfigRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.NetworkManagement.V1.GetVpcFlowLogsConfigRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.NetworkManagement.V1.VpcFlowLogsConfig> __Marshaller_google_cloud_networkmanagement_v1_VpcFlowLogsConfig = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.NetworkManagement.V1.VpcFlowLogsConfig.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.NetworkManagement.V1.CreateVpcFlowLogsConfigRequest> __Marshaller_google_cloud_networkmanagement_v1_CreateVpcFlowLogsConfigRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.NetworkManagement.V1.CreateVpcFlowLogsConfigRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.LongRunning.Operation> __Marshaller_google_longrunning_Operation = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.LongRunning.Operation.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.NetworkManagement.V1.UpdateVpcFlowLogsConfigRequest> __Marshaller_google_cloud_networkmanagement_v1_UpdateVpcFlowLogsConfigRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.NetworkManagement.V1.UpdateVpcFlowLogsConfigRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.NetworkManagement.V1.DeleteVpcFlowLogsConfigRequest> __Marshaller_google_cloud_networkmanagement_v1_DeleteVpcFlowLogsConfigRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.NetworkManagement.V1.DeleteVpcFlowLogsConfigRequest.Parser));
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.NetworkManagement.V1.ListVpcFlowLogsConfigsRequest, global::Google.Cloud.NetworkManagement.V1.ListVpcFlowLogsConfigsResponse> __Method_ListVpcFlowLogsConfigs = new grpc::Method<global::Google.Cloud.NetworkManagement.V1.ListVpcFlowLogsConfigsRequest, global::Google.Cloud.NetworkManagement.V1.ListVpcFlowLogsConfigsResponse>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "ListVpcFlowLogsConfigs",
+        __Marshaller_google_cloud_networkmanagement_v1_ListVpcFlowLogsConfigsRequest,
+        __Marshaller_google_cloud_networkmanagement_v1_ListVpcFlowLogsConfigsResponse);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.NetworkManagement.V1.GetVpcFlowLogsConfigRequest, global::Google.Cloud.NetworkManagement.V1.VpcFlowLogsConfig> __Method_GetVpcFlowLogsConfig = new grpc::Method<global::Google.Cloud.NetworkManagement.V1.GetVpcFlowLogsConfigRequest, global::Google.Cloud.NetworkManagement.V1.VpcFlowLogsConfig>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "GetVpcFlowLogsConfig",
+        __Marshaller_google_cloud_networkmanagement_v1_GetVpcFlowLogsConfigRequest,
+        __Marshaller_google_cloud_networkmanagement_v1_VpcFlowLogsConfig);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.NetworkManagement.V1.CreateVpcFlowLogsConfigRequest, global::Google.LongRunning.Operation> __Method_CreateVpcFlowLogsConfig = new grpc::Method<global::Google.Cloud.NetworkManagement.V1.CreateVpcFlowLogsConfigRequest, global::Google.LongRunning.Operation>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "CreateVpcFlowLogsConfig",
+        __Marshaller_google_cloud_networkmanagement_v1_CreateVpcFlowLogsConfigRequest,
+        __Marshaller_google_longrunning_Operation);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.NetworkManagement.V1.UpdateVpcFlowLogsConfigRequest, global::Google.LongRunning.Operation> __Method_UpdateVpcFlowLogsConfig = new grpc::Method<global::Google.Cloud.NetworkManagement.V1.UpdateVpcFlowLogsConfigRequest, global::Google.LongRunning.Operation>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "UpdateVpcFlowLogsConfig",
+        __Marshaller_google_cloud_networkmanagement_v1_UpdateVpcFlowLogsConfigRequest,
+        __Marshaller_google_longrunning_Operation);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.NetworkManagement.V1.DeleteVpcFlowLogsConfigRequest, global::Google.LongRunning.Operation> __Method_DeleteVpcFlowLogsConfig = new grpc::Method<global::Google.Cloud.NetworkManagement.V1.DeleteVpcFlowLogsConfigRequest, global::Google.LongRunning.Operation>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "DeleteVpcFlowLogsConfig",
+        __Marshaller_google_cloud_networkmanagement_v1_DeleteVpcFlowLogsConfigRequest,
+        __Marshaller_google_longrunning_Operation);
+
+    /// <summary>Service descriptor</summary>
+    public static global::Google.Protobuf.Reflection.ServiceDescriptor Descriptor
+    {
+      get { return global::Google.Cloud.NetworkManagement.V1.VpcFlowLogsReflection.Descriptor.Services[1]; }
+    }
+
+    /// <summary>Base class for server-side implementations of OrganizationVpcFlowLogsService</summary>
+    [grpc::BindServiceMethod(typeof(OrganizationVpcFlowLogsService), "BindService")]
+    public abstract partial class OrganizationVpcFlowLogsServiceBase
+    {
+      /// <summary>
+      /// Lists all `VpcFlowLogsConfigs` in a given organization.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.NetworkManagement.V1.ListVpcFlowLogsConfigsResponse> ListVpcFlowLogsConfigs(global::Google.Cloud.NetworkManagement.V1.ListVpcFlowLogsConfigsRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Gets the details of a specific `VpcFlowLogsConfig`.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.NetworkManagement.V1.VpcFlowLogsConfig> GetVpcFlowLogsConfig(global::Google.Cloud.NetworkManagement.V1.GetVpcFlowLogsConfigRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Creates a new `VpcFlowLogsConfig`.
+      /// If a configuration with the exact same settings already exists (even if the
+      /// ID is different), the creation fails.
+      /// Notes:
+      ///
+      ///   1. Creating a configuration with `state=DISABLED` will fail
+      ///   2. The following fields are not considered as settings for the purpose
+      ///   of the check mentioned above, therefore - creating another configuration
+      ///   with the same fields but different values for the following fields will
+      ///   fail as well:
+      ///       * name
+      ///       * create_time
+      ///       * update_time
+      ///       * labels
+      ///       * description
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.LongRunning.Operation> CreateVpcFlowLogsConfig(global::Google.Cloud.NetworkManagement.V1.CreateVpcFlowLogsConfigRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Updates an existing `VpcFlowLogsConfig`.
+      /// If a configuration with the exact same settings already exists (even if the
+      /// ID is different), the creation fails.
+      /// Notes:
+      ///
+      ///   1. Updating a configuration with `state=DISABLED` will fail
+      ///   2. The following fields are not considered as settings for the purpose
+      ///   of the check mentioned above, therefore - updating another configuration
+      ///   with the same fields but different values for the following fields will
+      ///   fail as well:
+      ///       * name
+      ///       * create_time
+      ///       * update_time
+      ///       * labels
+      ///       * description
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.LongRunning.Operation> UpdateVpcFlowLogsConfig(global::Google.Cloud.NetworkManagement.V1.UpdateVpcFlowLogsConfigRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Deletes a specific `VpcFlowLogsConfig`.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.LongRunning.Operation> DeleteVpcFlowLogsConfig(global::Google.Cloud.NetworkManagement.V1.DeleteVpcFlowLogsConfigRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+    }
+
+    /// <summary>Client for OrganizationVpcFlowLogsService</summary>
+    public partial class OrganizationVpcFlowLogsServiceClient : grpc::ClientBase<OrganizationVpcFlowLogsServiceClient>
+    {
+      /// <summary>Creates a new client for OrganizationVpcFlowLogsService</summary>
+      /// <param name="channel">The channel to use to make remote calls.</param>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public OrganizationVpcFlowLogsServiceClient(grpc::ChannelBase channel) : base(channel)
+      {
+      }
+      /// <summary>Creates a new client for OrganizationVpcFlowLogsService that uses a custom <c>CallInvoker</c>.</summary>
+      /// <param name="callInvoker">The callInvoker to use to make remote calls.</param>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public OrganizationVpcFlowLogsServiceClient(grpc::CallInvoker callInvoker) : base(callInvoker)
+      {
+      }
+      /// <summary>Protected parameterless constructor to allow creation of test doubles.</summary>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      protected OrganizationVpcFlowLogsServiceClient() : base()
+      {
+      }
+      /// <summary>Protected constructor to allow creation of configured clients.</summary>
+      /// <param name="configuration">The client configuration.</param>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      protected OrganizationVpcFlowLogsServiceClient(ClientBaseConfiguration configuration) : base(configuration)
+      {
+      }
+
+      /// <summary>
+      /// Lists all `VpcFlowLogsConfigs` in a given organization.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.NetworkManagement.V1.ListVpcFlowLogsConfigsResponse ListVpcFlowLogsConfigs(global::Google.Cloud.NetworkManagement.V1.ListVpcFlowLogsConfigsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return ListVpcFlowLogsConfigs(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Lists all `VpcFlowLogsConfigs` in a given organization.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.NetworkManagement.V1.ListVpcFlowLogsConfigsResponse ListVpcFlowLogsConfigs(global::Google.Cloud.NetworkManagement.V1.ListVpcFlowLogsConfigsRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_ListVpcFlowLogsConfigs, null, options, request);
+      }
+      /// <summary>
+      /// Lists all `VpcFlowLogsConfigs` in a given organization.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.NetworkManagement.V1.ListVpcFlowLogsConfigsResponse> ListVpcFlowLogsConfigsAsync(global::Google.Cloud.NetworkManagement.V1.ListVpcFlowLogsConfigsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return ListVpcFlowLogsConfigsAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Lists all `VpcFlowLogsConfigs` in a given organization.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.NetworkManagement.V1.ListVpcFlowLogsConfigsResponse> ListVpcFlowLogsConfigsAsync(global::Google.Cloud.NetworkManagement.V1.ListVpcFlowLogsConfigsRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_ListVpcFlowLogsConfigs, null, options, request);
+      }
+      /// <summary>
+      /// Gets the details of a specific `VpcFlowLogsConfig`.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.NetworkManagement.V1.VpcFlowLogsConfig GetVpcFlowLogsConfig(global::Google.Cloud.NetworkManagement.V1.GetVpcFlowLogsConfigRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return GetVpcFlowLogsConfig(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Gets the details of a specific `VpcFlowLogsConfig`.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.NetworkManagement.V1.VpcFlowLogsConfig GetVpcFlowLogsConfig(global::Google.Cloud.NetworkManagement.V1.GetVpcFlowLogsConfigRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_GetVpcFlowLogsConfig, null, options, request);
+      }
+      /// <summary>
+      /// Gets the details of a specific `VpcFlowLogsConfig`.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.NetworkManagement.V1.VpcFlowLogsConfig> GetVpcFlowLogsConfigAsync(global::Google.Cloud.NetworkManagement.V1.GetVpcFlowLogsConfigRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return GetVpcFlowLogsConfigAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Gets the details of a specific `VpcFlowLogsConfig`.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.NetworkManagement.V1.VpcFlowLogsConfig> GetVpcFlowLogsConfigAsync(global::Google.Cloud.NetworkManagement.V1.GetVpcFlowLogsConfigRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_GetVpcFlowLogsConfig, null, options, request);
+      }
+      /// <summary>
+      /// Creates a new `VpcFlowLogsConfig`.
+      /// If a configuration with the exact same settings already exists (even if the
+      /// ID is different), the creation fails.
+      /// Notes:
+      ///
+      ///   1. Creating a configuration with `state=DISABLED` will fail
+      ///   2. The following fields are not considered as settings for the purpose
+      ///   of the check mentioned above, therefore - creating another configuration
+      ///   with the same fields but different values for the following fields will
+      ///   fail as well:
+      ///       * name
+      ///       * create_time
+      ///       * update_time
+      ///       * labels
+      ///       * description
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.LongRunning.Operation CreateVpcFlowLogsConfig(global::Google.Cloud.NetworkManagement.V1.CreateVpcFlowLogsConfigRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return CreateVpcFlowLogsConfig(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Creates a new `VpcFlowLogsConfig`.
+      /// If a configuration with the exact same settings already exists (even if the
+      /// ID is different), the creation fails.
+      /// Notes:
+      ///
+      ///   1. Creating a configuration with `state=DISABLED` will fail
+      ///   2. The following fields are not considered as settings for the purpose
+      ///   of the check mentioned above, therefore - creating another configuration
+      ///   with the same fields but different values for the following fields will
+      ///   fail as well:
+      ///       * name
+      ///       * create_time
+      ///       * update_time
+      ///       * labels
+      ///       * description
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.LongRunning.Operation CreateVpcFlowLogsConfig(global::Google.Cloud.NetworkManagement.V1.CreateVpcFlowLogsConfigRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_CreateVpcFlowLogsConfig, null, options, request);
+      }
+      /// <summary>
+      /// Creates a new `VpcFlowLogsConfig`.
+      /// If a configuration with the exact same settings already exists (even if the
+      /// ID is different), the creation fails.
+      /// Notes:
+      ///
+      ///   1. Creating a configuration with `state=DISABLED` will fail
+      ///   2. The following fields are not considered as settings for the purpose
+      ///   of the check mentioned above, therefore - creating another configuration
+      ///   with the same fields but different values for the following fields will
+      ///   fail as well:
+      ///       * name
+      ///       * create_time
+      ///       * update_time
+      ///       * labels
+      ///       * description
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> CreateVpcFlowLogsConfigAsync(global::Google.Cloud.NetworkManagement.V1.CreateVpcFlowLogsConfigRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return CreateVpcFlowLogsConfigAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Creates a new `VpcFlowLogsConfig`.
+      /// If a configuration with the exact same settings already exists (even if the
+      /// ID is different), the creation fails.
+      /// Notes:
+      ///
+      ///   1. Creating a configuration with `state=DISABLED` will fail
+      ///   2. The following fields are not considered as settings for the purpose
+      ///   of the check mentioned above, therefore - creating another configuration
+      ///   with the same fields but different values for the following fields will
+      ///   fail as well:
+      ///       * name
+      ///       * create_time
+      ///       * update_time
+      ///       * labels
+      ///       * description
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> CreateVpcFlowLogsConfigAsync(global::Google.Cloud.NetworkManagement.V1.CreateVpcFlowLogsConfigRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_CreateVpcFlowLogsConfig, null, options, request);
+      }
+      /// <summary>
+      /// Updates an existing `VpcFlowLogsConfig`.
+      /// If a configuration with the exact same settings already exists (even if the
+      /// ID is different), the creation fails.
+      /// Notes:
+      ///
+      ///   1. Updating a configuration with `state=DISABLED` will fail
+      ///   2. The following fields are not considered as settings for the purpose
+      ///   of the check mentioned above, therefore - updating another configuration
+      ///   with the same fields but different values for the following fields will
+      ///   fail as well:
+      ///       * name
+      ///       * create_time
+      ///       * update_time
+      ///       * labels
+      ///       * description
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.LongRunning.Operation UpdateVpcFlowLogsConfig(global::Google.Cloud.NetworkManagement.V1.UpdateVpcFlowLogsConfigRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return UpdateVpcFlowLogsConfig(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Updates an existing `VpcFlowLogsConfig`.
+      /// If a configuration with the exact same settings already exists (even if the
+      /// ID is different), the creation fails.
+      /// Notes:
+      ///
+      ///   1. Updating a configuration with `state=DISABLED` will fail
+      ///   2. The following fields are not considered as settings for the purpose
+      ///   of the check mentioned above, therefore - updating another configuration
+      ///   with the same fields but different values for the following fields will
+      ///   fail as well:
+      ///       * name
+      ///       * create_time
+      ///       * update_time
+      ///       * labels
+      ///       * description
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.LongRunning.Operation UpdateVpcFlowLogsConfig(global::Google.Cloud.NetworkManagement.V1.UpdateVpcFlowLogsConfigRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_UpdateVpcFlowLogsConfig, null, options, request);
+      }
+      /// <summary>
+      /// Updates an existing `VpcFlowLogsConfig`.
+      /// If a configuration with the exact same settings already exists (even if the
+      /// ID is different), the creation fails.
+      /// Notes:
+      ///
+      ///   1. Updating a configuration with `state=DISABLED` will fail
+      ///   2. The following fields are not considered as settings for the purpose
+      ///   of the check mentioned above, therefore - updating another configuration
+      ///   with the same fields but different values for the following fields will
+      ///   fail as well:
+      ///       * name
+      ///       * create_time
+      ///       * update_time
+      ///       * labels
+      ///       * description
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> UpdateVpcFlowLogsConfigAsync(global::Google.Cloud.NetworkManagement.V1.UpdateVpcFlowLogsConfigRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return UpdateVpcFlowLogsConfigAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Updates an existing `VpcFlowLogsConfig`.
+      /// If a configuration with the exact same settings already exists (even if the
+      /// ID is different), the creation fails.
+      /// Notes:
+      ///
+      ///   1. Updating a configuration with `state=DISABLED` will fail
+      ///   2. The following fields are not considered as settings for the purpose
       ///   of the check mentioned above, therefore - updating another configuration
       ///   with the same fields but different values for the following fields will
       ///   fail as well:
@@ -603,16 +1376,16 @@ namespace Google.Cloud.NetworkManagement.V1 {
       }
       /// <summary>Creates a new instance of client from given <c>ClientBaseConfiguration</c>.</summary>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-      protected override VpcFlowLogsServiceClient NewInstance(ClientBaseConfiguration configuration)
+      protected override OrganizationVpcFlowLogsServiceClient NewInstance(ClientBaseConfiguration configuration)
       {
-        return new VpcFlowLogsServiceClient(configuration);
+        return new OrganizationVpcFlowLogsServiceClient(configuration);
       }
     }
 
     /// <summary>Creates service definition that can be registered with a server</summary>
     /// <param name="serviceImpl">An object implementing the server-side handling logic.</param>
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-    public static grpc::ServerServiceDefinition BindService(VpcFlowLogsServiceBase serviceImpl)
+    public static grpc::ServerServiceDefinition BindService(OrganizationVpcFlowLogsServiceBase serviceImpl)
     {
       return grpc::ServerServiceDefinition.CreateBuilder()
           .AddMethod(__Method_ListVpcFlowLogsConfigs, serviceImpl.ListVpcFlowLogsConfigs)
@@ -627,7 +1400,7 @@ namespace Google.Cloud.NetworkManagement.V1 {
     /// <param name="serviceBinder">Service methods will be bound by calling <c>AddMethod</c> on this object.</param>
     /// <param name="serviceImpl">An object implementing the server-side handling logic.</param>
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-    public static void BindService(grpc::ServiceBinderBase serviceBinder, VpcFlowLogsServiceBase serviceImpl)
+    public static void BindService(grpc::ServiceBinderBase serviceBinder, OrganizationVpcFlowLogsServiceBase serviceImpl)
     {
       serviceBinder.AddMethod(__Method_ListVpcFlowLogsConfigs, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.NetworkManagement.V1.ListVpcFlowLogsConfigsRequest, global::Google.Cloud.NetworkManagement.V1.ListVpcFlowLogsConfigsResponse>(serviceImpl.ListVpcFlowLogsConfigs));
       serviceBinder.AddMethod(__Method_GetVpcFlowLogsConfig, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.NetworkManagement.V1.GetVpcFlowLogsConfigRequest, global::Google.Cloud.NetworkManagement.V1.VpcFlowLogsConfig>(serviceImpl.GetVpcFlowLogsConfig));

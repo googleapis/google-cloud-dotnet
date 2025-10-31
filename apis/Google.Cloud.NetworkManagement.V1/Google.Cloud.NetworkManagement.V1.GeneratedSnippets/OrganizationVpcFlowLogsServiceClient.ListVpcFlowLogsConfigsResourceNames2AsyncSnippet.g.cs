@@ -16,15 +16,14 @@
 
 namespace GoogleCSharpSnippets
 {
-    // [START networkmanagement_v1_generated_VpcFlowLogsService_ListVpcFlowLogsConfigs_async_flattened_resourceNames]
+    // [START networkmanagement_v1_generated_OrganizationVpcFlowLogsService_ListVpcFlowLogsConfigs_async_flattened_resourceNames2]
     using Google.Api.Gax;
-    using Google.Api.Gax.ResourceNames;
     using Google.Cloud.NetworkManagement.V1;
     using System;
     using System.Linq;
     using System.Threading.Tasks;
 
-    public sealed partial class GeneratedVpcFlowLogsServiceClientSnippets
+    public sealed partial class GeneratedOrganizationVpcFlowLogsServiceClientSnippets
     {
         /// <summary>Snippet for ListVpcFlowLogsConfigsAsync</summary>
         /// <remarks>
@@ -34,14 +33,14 @@ namespace GoogleCSharpSnippets
         /// - It may require specifying regional endpoints when creating the service client as shown in
         ///   https://cloud.google.com/dotnet/docs/reference/help/client-configuration#endpoint.
         /// </remarks>
-        public async Task ListVpcFlowLogsConfigsResourceNamesAsync()
+        public async Task ListVpcFlowLogsConfigsResourceNames2Async()
         {
             // Create client
-            VpcFlowLogsServiceClient vpcFlowLogsServiceClient = await VpcFlowLogsServiceClient.CreateAsync();
+            OrganizationVpcFlowLogsServiceClient organizationVpcFlowLogsServiceClient = await OrganizationVpcFlowLogsServiceClient.CreateAsync();
             // Initialize request argument(s)
-            LocationName parent = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]");
+            OrganizationLocationName parent = OrganizationLocationName.FromOrganizationLocation("[ORGANIZATION]", "[LOCATION]");
             // Make the request
-            PagedAsyncEnumerable<ListVpcFlowLogsConfigsResponse, VpcFlowLogsConfig> response = vpcFlowLogsServiceClient.ListVpcFlowLogsConfigsAsync(parent);
+            PagedAsyncEnumerable<ListVpcFlowLogsConfigsResponse, VpcFlowLogsConfig> response = organizationVpcFlowLogsServiceClient.ListVpcFlowLogsConfigsAsync(parent);
 
             // Iterate over all response items, lazily performing RPCs as required
             await response.ForEachAsync((VpcFlowLogsConfig item) =>
@@ -76,5 +75,5 @@ namespace GoogleCSharpSnippets
             string nextPageToken = singlePage.NextPageToken;
         }
     }
-    // [END networkmanagement_v1_generated_VpcFlowLogsService_ListVpcFlowLogsConfigs_async_flattened_resourceNames]
+    // [END networkmanagement_v1_generated_OrganizationVpcFlowLogsService_ListVpcFlowLogsConfigs_async_flattened_resourceNames2]
 }

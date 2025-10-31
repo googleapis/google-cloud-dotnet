@@ -26,14 +26,14 @@ namespace GoogleCSharpSnippets
     using System.Threading.Tasks;
 
     /// <summary>Generated snippets.</summary>
-    public sealed class AllGeneratedVpcFlowLogsServiceClientSnippets
+    public sealed class AllGeneratedOrganizationVpcFlowLogsServiceClientSnippets
     {
         /// <summary>Snippet for ListVpcFlowLogsConfigs</summary>
         public void ListVpcFlowLogsConfigsRequestObject()
         {
             // Snippet: ListVpcFlowLogsConfigs(ListVpcFlowLogsConfigsRequest, CallSettings)
             // Create client
-            VpcFlowLogsServiceClient vpcFlowLogsServiceClient = VpcFlowLogsServiceClient.Create();
+            OrganizationVpcFlowLogsServiceClient organizationVpcFlowLogsServiceClient = OrganizationVpcFlowLogsServiceClient.Create();
             // Initialize request argument(s)
             ListVpcFlowLogsConfigsRequest request = new ListVpcFlowLogsConfigsRequest
             {
@@ -42,7 +42,7 @@ namespace GoogleCSharpSnippets
                 OrderBy = "",
             };
             // Make the request
-            PagedEnumerable<ListVpcFlowLogsConfigsResponse, VpcFlowLogsConfig> response = vpcFlowLogsServiceClient.ListVpcFlowLogsConfigs(request);
+            PagedEnumerable<ListVpcFlowLogsConfigsResponse, VpcFlowLogsConfig> response = organizationVpcFlowLogsServiceClient.ListVpcFlowLogsConfigs(request);
 
             // Iterate over all response items, lazily performing RPCs as required
             foreach (VpcFlowLogsConfig item in response)
@@ -83,7 +83,7 @@ namespace GoogleCSharpSnippets
         {
             // Snippet: ListVpcFlowLogsConfigsAsync(ListVpcFlowLogsConfigsRequest, CallSettings)
             // Create client
-            VpcFlowLogsServiceClient vpcFlowLogsServiceClient = await VpcFlowLogsServiceClient.CreateAsync();
+            OrganizationVpcFlowLogsServiceClient organizationVpcFlowLogsServiceClient = await OrganizationVpcFlowLogsServiceClient.CreateAsync();
             // Initialize request argument(s)
             ListVpcFlowLogsConfigsRequest request = new ListVpcFlowLogsConfigsRequest
             {
@@ -92,7 +92,7 @@ namespace GoogleCSharpSnippets
                 OrderBy = "",
             };
             // Make the request
-            PagedAsyncEnumerable<ListVpcFlowLogsConfigsResponse, VpcFlowLogsConfig> response = vpcFlowLogsServiceClient.ListVpcFlowLogsConfigsAsync(request);
+            PagedAsyncEnumerable<ListVpcFlowLogsConfigsResponse, VpcFlowLogsConfig> response = organizationVpcFlowLogsServiceClient.ListVpcFlowLogsConfigsAsync(request);
 
             // Iterate over all response items, lazily performing RPCs as required
             await response.ForEachAsync((VpcFlowLogsConfig item) =>
@@ -133,11 +133,11 @@ namespace GoogleCSharpSnippets
         {
             // Snippet: ListVpcFlowLogsConfigs(string, string, int?, CallSettings)
             // Create client
-            VpcFlowLogsServiceClient vpcFlowLogsServiceClient = VpcFlowLogsServiceClient.Create();
+            OrganizationVpcFlowLogsServiceClient organizationVpcFlowLogsServiceClient = OrganizationVpcFlowLogsServiceClient.Create();
             // Initialize request argument(s)
             string parent = "projects/[PROJECT]/locations/[LOCATION]";
             // Make the request
-            PagedEnumerable<ListVpcFlowLogsConfigsResponse, VpcFlowLogsConfig> response = vpcFlowLogsServiceClient.ListVpcFlowLogsConfigs(parent);
+            PagedEnumerable<ListVpcFlowLogsConfigsResponse, VpcFlowLogsConfig> response = organizationVpcFlowLogsServiceClient.ListVpcFlowLogsConfigs(parent);
 
             // Iterate over all response items, lazily performing RPCs as required
             foreach (VpcFlowLogsConfig item in response)
@@ -178,11 +178,11 @@ namespace GoogleCSharpSnippets
         {
             // Snippet: ListVpcFlowLogsConfigsAsync(string, string, int?, CallSettings)
             // Create client
-            VpcFlowLogsServiceClient vpcFlowLogsServiceClient = await VpcFlowLogsServiceClient.CreateAsync();
+            OrganizationVpcFlowLogsServiceClient organizationVpcFlowLogsServiceClient = await OrganizationVpcFlowLogsServiceClient.CreateAsync();
             // Initialize request argument(s)
             string parent = "projects/[PROJECT]/locations/[LOCATION]";
             // Make the request
-            PagedAsyncEnumerable<ListVpcFlowLogsConfigsResponse, VpcFlowLogsConfig> response = vpcFlowLogsServiceClient.ListVpcFlowLogsConfigsAsync(parent);
+            PagedAsyncEnumerable<ListVpcFlowLogsConfigsResponse, VpcFlowLogsConfig> response = organizationVpcFlowLogsServiceClient.ListVpcFlowLogsConfigsAsync(parent);
 
             // Iterate over all response items, lazily performing RPCs as required
             await response.ForEachAsync((VpcFlowLogsConfig item) =>
@@ -223,11 +223,11 @@ namespace GoogleCSharpSnippets
         {
             // Snippet: ListVpcFlowLogsConfigs(LocationName, string, int?, CallSettings)
             // Create client
-            VpcFlowLogsServiceClient vpcFlowLogsServiceClient = VpcFlowLogsServiceClient.Create();
+            OrganizationVpcFlowLogsServiceClient organizationVpcFlowLogsServiceClient = OrganizationVpcFlowLogsServiceClient.Create();
             // Initialize request argument(s)
             LocationName parent = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]");
             // Make the request
-            PagedEnumerable<ListVpcFlowLogsConfigsResponse, VpcFlowLogsConfig> response = vpcFlowLogsServiceClient.ListVpcFlowLogsConfigs(parent);
+            PagedEnumerable<ListVpcFlowLogsConfigsResponse, VpcFlowLogsConfig> response = organizationVpcFlowLogsServiceClient.ListVpcFlowLogsConfigs(parent);
 
             // Iterate over all response items, lazily performing RPCs as required
             foreach (VpcFlowLogsConfig item in response)
@@ -268,11 +268,11 @@ namespace GoogleCSharpSnippets
         {
             // Snippet: ListVpcFlowLogsConfigsAsync(LocationName, string, int?, CallSettings)
             // Create client
-            VpcFlowLogsServiceClient vpcFlowLogsServiceClient = await VpcFlowLogsServiceClient.CreateAsync();
+            OrganizationVpcFlowLogsServiceClient organizationVpcFlowLogsServiceClient = await OrganizationVpcFlowLogsServiceClient.CreateAsync();
             // Initialize request argument(s)
             LocationName parent = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]");
             // Make the request
-            PagedAsyncEnumerable<ListVpcFlowLogsConfigsResponse, VpcFlowLogsConfig> response = vpcFlowLogsServiceClient.ListVpcFlowLogsConfigsAsync(parent);
+            PagedAsyncEnumerable<ListVpcFlowLogsConfigsResponse, VpcFlowLogsConfig> response = organizationVpcFlowLogsServiceClient.ListVpcFlowLogsConfigsAsync(parent);
 
             // Iterate over all response items, lazily performing RPCs as required
             await response.ForEachAsync((VpcFlowLogsConfig item) =>
@@ -313,11 +313,11 @@ namespace GoogleCSharpSnippets
         {
             // Snippet: ListVpcFlowLogsConfigs(OrganizationLocationName, string, int?, CallSettings)
             // Create client
-            VpcFlowLogsServiceClient vpcFlowLogsServiceClient = VpcFlowLogsServiceClient.Create();
+            OrganizationVpcFlowLogsServiceClient organizationVpcFlowLogsServiceClient = OrganizationVpcFlowLogsServiceClient.Create();
             // Initialize request argument(s)
             OrganizationLocationName parent = OrganizationLocationName.FromOrganizationLocation("[ORGANIZATION]", "[LOCATION]");
             // Make the request
-            PagedEnumerable<ListVpcFlowLogsConfigsResponse, VpcFlowLogsConfig> response = vpcFlowLogsServiceClient.ListVpcFlowLogsConfigs(parent);
+            PagedEnumerable<ListVpcFlowLogsConfigsResponse, VpcFlowLogsConfig> response = organizationVpcFlowLogsServiceClient.ListVpcFlowLogsConfigs(parent);
 
             // Iterate over all response items, lazily performing RPCs as required
             foreach (VpcFlowLogsConfig item in response)
@@ -358,11 +358,11 @@ namespace GoogleCSharpSnippets
         {
             // Snippet: ListVpcFlowLogsConfigsAsync(OrganizationLocationName, string, int?, CallSettings)
             // Create client
-            VpcFlowLogsServiceClient vpcFlowLogsServiceClient = await VpcFlowLogsServiceClient.CreateAsync();
+            OrganizationVpcFlowLogsServiceClient organizationVpcFlowLogsServiceClient = await OrganizationVpcFlowLogsServiceClient.CreateAsync();
             // Initialize request argument(s)
             OrganizationLocationName parent = OrganizationLocationName.FromOrganizationLocation("[ORGANIZATION]", "[LOCATION]");
             // Make the request
-            PagedAsyncEnumerable<ListVpcFlowLogsConfigsResponse, VpcFlowLogsConfig> response = vpcFlowLogsServiceClient.ListVpcFlowLogsConfigsAsync(parent);
+            PagedAsyncEnumerable<ListVpcFlowLogsConfigsResponse, VpcFlowLogsConfig> response = organizationVpcFlowLogsServiceClient.ListVpcFlowLogsConfigsAsync(parent);
 
             // Iterate over all response items, lazily performing RPCs as required
             await response.ForEachAsync((VpcFlowLogsConfig item) =>
@@ -403,14 +403,14 @@ namespace GoogleCSharpSnippets
         {
             // Snippet: GetVpcFlowLogsConfig(GetVpcFlowLogsConfigRequest, CallSettings)
             // Create client
-            VpcFlowLogsServiceClient vpcFlowLogsServiceClient = VpcFlowLogsServiceClient.Create();
+            OrganizationVpcFlowLogsServiceClient organizationVpcFlowLogsServiceClient = OrganizationVpcFlowLogsServiceClient.Create();
             // Initialize request argument(s)
             GetVpcFlowLogsConfigRequest request = new GetVpcFlowLogsConfigRequest
             {
                 VpcFlowLogsConfigName = VpcFlowLogsConfigName.FromProjectLocationVpcFlowLogsConfig("[PROJECT]", "[LOCATION]", "[VPC_FLOW_LOGS_CONFIG]"),
             };
             // Make the request
-            VpcFlowLogsConfig response = vpcFlowLogsServiceClient.GetVpcFlowLogsConfig(request);
+            VpcFlowLogsConfig response = organizationVpcFlowLogsServiceClient.GetVpcFlowLogsConfig(request);
             // End snippet
         }
 
@@ -420,14 +420,14 @@ namespace GoogleCSharpSnippets
             // Snippet: GetVpcFlowLogsConfigAsync(GetVpcFlowLogsConfigRequest, CallSettings)
             // Additional: GetVpcFlowLogsConfigAsync(GetVpcFlowLogsConfigRequest, CancellationToken)
             // Create client
-            VpcFlowLogsServiceClient vpcFlowLogsServiceClient = await VpcFlowLogsServiceClient.CreateAsync();
+            OrganizationVpcFlowLogsServiceClient organizationVpcFlowLogsServiceClient = await OrganizationVpcFlowLogsServiceClient.CreateAsync();
             // Initialize request argument(s)
             GetVpcFlowLogsConfigRequest request = new GetVpcFlowLogsConfigRequest
             {
                 VpcFlowLogsConfigName = VpcFlowLogsConfigName.FromProjectLocationVpcFlowLogsConfig("[PROJECT]", "[LOCATION]", "[VPC_FLOW_LOGS_CONFIG]"),
             };
             // Make the request
-            VpcFlowLogsConfig response = await vpcFlowLogsServiceClient.GetVpcFlowLogsConfigAsync(request);
+            VpcFlowLogsConfig response = await organizationVpcFlowLogsServiceClient.GetVpcFlowLogsConfigAsync(request);
             // End snippet
         }
 
@@ -436,11 +436,11 @@ namespace GoogleCSharpSnippets
         {
             // Snippet: GetVpcFlowLogsConfig(string, CallSettings)
             // Create client
-            VpcFlowLogsServiceClient vpcFlowLogsServiceClient = VpcFlowLogsServiceClient.Create();
+            OrganizationVpcFlowLogsServiceClient organizationVpcFlowLogsServiceClient = OrganizationVpcFlowLogsServiceClient.Create();
             // Initialize request argument(s)
             string name = "projects/[PROJECT]/locations/[LOCATION]/vpcFlowLogsConfigs/[VPC_FLOW_LOGS_CONFIG]";
             // Make the request
-            VpcFlowLogsConfig response = vpcFlowLogsServiceClient.GetVpcFlowLogsConfig(name);
+            VpcFlowLogsConfig response = organizationVpcFlowLogsServiceClient.GetVpcFlowLogsConfig(name);
             // End snippet
         }
 
@@ -450,11 +450,11 @@ namespace GoogleCSharpSnippets
             // Snippet: GetVpcFlowLogsConfigAsync(string, CallSettings)
             // Additional: GetVpcFlowLogsConfigAsync(string, CancellationToken)
             // Create client
-            VpcFlowLogsServiceClient vpcFlowLogsServiceClient = await VpcFlowLogsServiceClient.CreateAsync();
+            OrganizationVpcFlowLogsServiceClient organizationVpcFlowLogsServiceClient = await OrganizationVpcFlowLogsServiceClient.CreateAsync();
             // Initialize request argument(s)
             string name = "projects/[PROJECT]/locations/[LOCATION]/vpcFlowLogsConfigs/[VPC_FLOW_LOGS_CONFIG]";
             // Make the request
-            VpcFlowLogsConfig response = await vpcFlowLogsServiceClient.GetVpcFlowLogsConfigAsync(name);
+            VpcFlowLogsConfig response = await organizationVpcFlowLogsServiceClient.GetVpcFlowLogsConfigAsync(name);
             // End snippet
         }
 
@@ -463,11 +463,11 @@ namespace GoogleCSharpSnippets
         {
             // Snippet: GetVpcFlowLogsConfig(VpcFlowLogsConfigName, CallSettings)
             // Create client
-            VpcFlowLogsServiceClient vpcFlowLogsServiceClient = VpcFlowLogsServiceClient.Create();
+            OrganizationVpcFlowLogsServiceClient organizationVpcFlowLogsServiceClient = OrganizationVpcFlowLogsServiceClient.Create();
             // Initialize request argument(s)
             VpcFlowLogsConfigName name = VpcFlowLogsConfigName.FromProjectLocationVpcFlowLogsConfig("[PROJECT]", "[LOCATION]", "[VPC_FLOW_LOGS_CONFIG]");
             // Make the request
-            VpcFlowLogsConfig response = vpcFlowLogsServiceClient.GetVpcFlowLogsConfig(name);
+            VpcFlowLogsConfig response = organizationVpcFlowLogsServiceClient.GetVpcFlowLogsConfig(name);
             // End snippet
         }
 
@@ -477,11 +477,11 @@ namespace GoogleCSharpSnippets
             // Snippet: GetVpcFlowLogsConfigAsync(VpcFlowLogsConfigName, CallSettings)
             // Additional: GetVpcFlowLogsConfigAsync(VpcFlowLogsConfigName, CancellationToken)
             // Create client
-            VpcFlowLogsServiceClient vpcFlowLogsServiceClient = await VpcFlowLogsServiceClient.CreateAsync();
+            OrganizationVpcFlowLogsServiceClient organizationVpcFlowLogsServiceClient = await OrganizationVpcFlowLogsServiceClient.CreateAsync();
             // Initialize request argument(s)
             VpcFlowLogsConfigName name = VpcFlowLogsConfigName.FromProjectLocationVpcFlowLogsConfig("[PROJECT]", "[LOCATION]", "[VPC_FLOW_LOGS_CONFIG]");
             // Make the request
-            VpcFlowLogsConfig response = await vpcFlowLogsServiceClient.GetVpcFlowLogsConfigAsync(name);
+            VpcFlowLogsConfig response = await organizationVpcFlowLogsServiceClient.GetVpcFlowLogsConfigAsync(name);
             // End snippet
         }
 
@@ -490,7 +490,7 @@ namespace GoogleCSharpSnippets
         {
             // Snippet: CreateVpcFlowLogsConfig(CreateVpcFlowLogsConfigRequest, CallSettings)
             // Create client
-            VpcFlowLogsServiceClient vpcFlowLogsServiceClient = VpcFlowLogsServiceClient.Create();
+            OrganizationVpcFlowLogsServiceClient organizationVpcFlowLogsServiceClient = OrganizationVpcFlowLogsServiceClient.Create();
             // Initialize request argument(s)
             CreateVpcFlowLogsConfigRequest request = new CreateVpcFlowLogsConfigRequest
             {
@@ -499,7 +499,7 @@ namespace GoogleCSharpSnippets
                 VpcFlowLogsConfig = new VpcFlowLogsConfig(),
             };
             // Make the request
-            Operation<VpcFlowLogsConfig, OperationMetadata> response = vpcFlowLogsServiceClient.CreateVpcFlowLogsConfig(request);
+            Operation<VpcFlowLogsConfig, OperationMetadata> response = organizationVpcFlowLogsServiceClient.CreateVpcFlowLogsConfig(request);
 
             // Poll until the returned long-running operation is complete
             Operation<VpcFlowLogsConfig, OperationMetadata> completedResponse = response.PollUntilCompleted();
@@ -509,7 +509,7 @@ namespace GoogleCSharpSnippets
             // Or get the name of the operation
             string operationName = response.Name;
             // This name can be stored, then the long-running operation retrieved later by name
-            Operation<VpcFlowLogsConfig, OperationMetadata> retrievedResponse = vpcFlowLogsServiceClient.PollOnceCreateVpcFlowLogsConfig(operationName);
+            Operation<VpcFlowLogsConfig, OperationMetadata> retrievedResponse = organizationVpcFlowLogsServiceClient.PollOnceCreateVpcFlowLogsConfig(operationName);
             // Check if the retrieved long-running operation has completed
             if (retrievedResponse.IsCompleted)
             {
@@ -525,7 +525,7 @@ namespace GoogleCSharpSnippets
             // Snippet: CreateVpcFlowLogsConfigAsync(CreateVpcFlowLogsConfigRequest, CallSettings)
             // Additional: CreateVpcFlowLogsConfigAsync(CreateVpcFlowLogsConfigRequest, CancellationToken)
             // Create client
-            VpcFlowLogsServiceClient vpcFlowLogsServiceClient = await VpcFlowLogsServiceClient.CreateAsync();
+            OrganizationVpcFlowLogsServiceClient organizationVpcFlowLogsServiceClient = await OrganizationVpcFlowLogsServiceClient.CreateAsync();
             // Initialize request argument(s)
             CreateVpcFlowLogsConfigRequest request = new CreateVpcFlowLogsConfigRequest
             {
@@ -534,7 +534,7 @@ namespace GoogleCSharpSnippets
                 VpcFlowLogsConfig = new VpcFlowLogsConfig(),
             };
             // Make the request
-            Operation<VpcFlowLogsConfig, OperationMetadata> response = await vpcFlowLogsServiceClient.CreateVpcFlowLogsConfigAsync(request);
+            Operation<VpcFlowLogsConfig, OperationMetadata> response = await organizationVpcFlowLogsServiceClient.CreateVpcFlowLogsConfigAsync(request);
 
             // Poll until the returned long-running operation is complete
             Operation<VpcFlowLogsConfig, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
@@ -544,7 +544,7 @@ namespace GoogleCSharpSnippets
             // Or get the name of the operation
             string operationName = response.Name;
             // This name can be stored, then the long-running operation retrieved later by name
-            Operation<VpcFlowLogsConfig, OperationMetadata> retrievedResponse = await vpcFlowLogsServiceClient.PollOnceCreateVpcFlowLogsConfigAsync(operationName);
+            Operation<VpcFlowLogsConfig, OperationMetadata> retrievedResponse = await organizationVpcFlowLogsServiceClient.PollOnceCreateVpcFlowLogsConfigAsync(operationName);
             // Check if the retrieved long-running operation has completed
             if (retrievedResponse.IsCompleted)
             {
@@ -559,13 +559,13 @@ namespace GoogleCSharpSnippets
         {
             // Snippet: CreateVpcFlowLogsConfig(string, VpcFlowLogsConfig, string, CallSettings)
             // Create client
-            VpcFlowLogsServiceClient vpcFlowLogsServiceClient = VpcFlowLogsServiceClient.Create();
+            OrganizationVpcFlowLogsServiceClient organizationVpcFlowLogsServiceClient = OrganizationVpcFlowLogsServiceClient.Create();
             // Initialize request argument(s)
             string parent = "projects/[PROJECT]/locations/[LOCATION]";
             VpcFlowLogsConfig vpcFlowLogsConfig = new VpcFlowLogsConfig();
             string vpcFlowLogsConfigId = "projects/[PROJECT]/locations/[LOCATION]/vpcFlowLogsConfigs/[VPC_FLOW_LOGS_CONFIG]";
             // Make the request
-            Operation<VpcFlowLogsConfig, OperationMetadata> response = vpcFlowLogsServiceClient.CreateVpcFlowLogsConfig(parent, vpcFlowLogsConfig, vpcFlowLogsConfigId);
+            Operation<VpcFlowLogsConfig, OperationMetadata> response = organizationVpcFlowLogsServiceClient.CreateVpcFlowLogsConfig(parent, vpcFlowLogsConfig, vpcFlowLogsConfigId);
 
             // Poll until the returned long-running operation is complete
             Operation<VpcFlowLogsConfig, OperationMetadata> completedResponse = response.PollUntilCompleted();
@@ -575,7 +575,7 @@ namespace GoogleCSharpSnippets
             // Or get the name of the operation
             string operationName = response.Name;
             // This name can be stored, then the long-running operation retrieved later by name
-            Operation<VpcFlowLogsConfig, OperationMetadata> retrievedResponse = vpcFlowLogsServiceClient.PollOnceCreateVpcFlowLogsConfig(operationName);
+            Operation<VpcFlowLogsConfig, OperationMetadata> retrievedResponse = organizationVpcFlowLogsServiceClient.PollOnceCreateVpcFlowLogsConfig(operationName);
             // Check if the retrieved long-running operation has completed
             if (retrievedResponse.IsCompleted)
             {
@@ -591,13 +591,13 @@ namespace GoogleCSharpSnippets
             // Snippet: CreateVpcFlowLogsConfigAsync(string, VpcFlowLogsConfig, string, CallSettings)
             // Additional: CreateVpcFlowLogsConfigAsync(string, VpcFlowLogsConfig, string, CancellationToken)
             // Create client
-            VpcFlowLogsServiceClient vpcFlowLogsServiceClient = await VpcFlowLogsServiceClient.CreateAsync();
+            OrganizationVpcFlowLogsServiceClient organizationVpcFlowLogsServiceClient = await OrganizationVpcFlowLogsServiceClient.CreateAsync();
             // Initialize request argument(s)
             string parent = "projects/[PROJECT]/locations/[LOCATION]";
             VpcFlowLogsConfig vpcFlowLogsConfig = new VpcFlowLogsConfig();
             string vpcFlowLogsConfigId = "projects/[PROJECT]/locations/[LOCATION]/vpcFlowLogsConfigs/[VPC_FLOW_LOGS_CONFIG]";
             // Make the request
-            Operation<VpcFlowLogsConfig, OperationMetadata> response = await vpcFlowLogsServiceClient.CreateVpcFlowLogsConfigAsync(parent, vpcFlowLogsConfig, vpcFlowLogsConfigId);
+            Operation<VpcFlowLogsConfig, OperationMetadata> response = await organizationVpcFlowLogsServiceClient.CreateVpcFlowLogsConfigAsync(parent, vpcFlowLogsConfig, vpcFlowLogsConfigId);
 
             // Poll until the returned long-running operation is complete
             Operation<VpcFlowLogsConfig, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
@@ -607,7 +607,7 @@ namespace GoogleCSharpSnippets
             // Or get the name of the operation
             string operationName = response.Name;
             // This name can be stored, then the long-running operation retrieved later by name
-            Operation<VpcFlowLogsConfig, OperationMetadata> retrievedResponse = await vpcFlowLogsServiceClient.PollOnceCreateVpcFlowLogsConfigAsync(operationName);
+            Operation<VpcFlowLogsConfig, OperationMetadata> retrievedResponse = await organizationVpcFlowLogsServiceClient.PollOnceCreateVpcFlowLogsConfigAsync(operationName);
             // Check if the retrieved long-running operation has completed
             if (retrievedResponse.IsCompleted)
             {
@@ -622,13 +622,13 @@ namespace GoogleCSharpSnippets
         {
             // Snippet: CreateVpcFlowLogsConfig(LocationName, VpcFlowLogsConfig, VpcFlowLogsConfigName, CallSettings)
             // Create client
-            VpcFlowLogsServiceClient vpcFlowLogsServiceClient = VpcFlowLogsServiceClient.Create();
+            OrganizationVpcFlowLogsServiceClient organizationVpcFlowLogsServiceClient = OrganizationVpcFlowLogsServiceClient.Create();
             // Initialize request argument(s)
             LocationName parent = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]");
             VpcFlowLogsConfig vpcFlowLogsConfig = new VpcFlowLogsConfig();
             VpcFlowLogsConfigName vpcFlowLogsConfigId = VpcFlowLogsConfigName.FromProjectLocationVpcFlowLogsConfig("[PROJECT]", "[LOCATION]", "[VPC_FLOW_LOGS_CONFIG]");
             // Make the request
-            Operation<VpcFlowLogsConfig, OperationMetadata> response = vpcFlowLogsServiceClient.CreateVpcFlowLogsConfig(parent, vpcFlowLogsConfig, vpcFlowLogsConfigId);
+            Operation<VpcFlowLogsConfig, OperationMetadata> response = organizationVpcFlowLogsServiceClient.CreateVpcFlowLogsConfig(parent, vpcFlowLogsConfig, vpcFlowLogsConfigId);
 
             // Poll until the returned long-running operation is complete
             Operation<VpcFlowLogsConfig, OperationMetadata> completedResponse = response.PollUntilCompleted();
@@ -638,7 +638,7 @@ namespace GoogleCSharpSnippets
             // Or get the name of the operation
             string operationName = response.Name;
             // This name can be stored, then the long-running operation retrieved later by name
-            Operation<VpcFlowLogsConfig, OperationMetadata> retrievedResponse = vpcFlowLogsServiceClient.PollOnceCreateVpcFlowLogsConfig(operationName);
+            Operation<VpcFlowLogsConfig, OperationMetadata> retrievedResponse = organizationVpcFlowLogsServiceClient.PollOnceCreateVpcFlowLogsConfig(operationName);
             // Check if the retrieved long-running operation has completed
             if (retrievedResponse.IsCompleted)
             {
@@ -654,13 +654,13 @@ namespace GoogleCSharpSnippets
             // Snippet: CreateVpcFlowLogsConfigAsync(LocationName, VpcFlowLogsConfig, VpcFlowLogsConfigName, CallSettings)
             // Additional: CreateVpcFlowLogsConfigAsync(LocationName, VpcFlowLogsConfig, VpcFlowLogsConfigName, CancellationToken)
             // Create client
-            VpcFlowLogsServiceClient vpcFlowLogsServiceClient = await VpcFlowLogsServiceClient.CreateAsync();
+            OrganizationVpcFlowLogsServiceClient organizationVpcFlowLogsServiceClient = await OrganizationVpcFlowLogsServiceClient.CreateAsync();
             // Initialize request argument(s)
             LocationName parent = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]");
             VpcFlowLogsConfig vpcFlowLogsConfig = new VpcFlowLogsConfig();
             VpcFlowLogsConfigName vpcFlowLogsConfigId = VpcFlowLogsConfigName.FromProjectLocationVpcFlowLogsConfig("[PROJECT]", "[LOCATION]", "[VPC_FLOW_LOGS_CONFIG]");
             // Make the request
-            Operation<VpcFlowLogsConfig, OperationMetadata> response = await vpcFlowLogsServiceClient.CreateVpcFlowLogsConfigAsync(parent, vpcFlowLogsConfig, vpcFlowLogsConfigId);
+            Operation<VpcFlowLogsConfig, OperationMetadata> response = await organizationVpcFlowLogsServiceClient.CreateVpcFlowLogsConfigAsync(parent, vpcFlowLogsConfig, vpcFlowLogsConfigId);
 
             // Poll until the returned long-running operation is complete
             Operation<VpcFlowLogsConfig, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
@@ -670,7 +670,7 @@ namespace GoogleCSharpSnippets
             // Or get the name of the operation
             string operationName = response.Name;
             // This name can be stored, then the long-running operation retrieved later by name
-            Operation<VpcFlowLogsConfig, OperationMetadata> retrievedResponse = await vpcFlowLogsServiceClient.PollOnceCreateVpcFlowLogsConfigAsync(operationName);
+            Operation<VpcFlowLogsConfig, OperationMetadata> retrievedResponse = await organizationVpcFlowLogsServiceClient.PollOnceCreateVpcFlowLogsConfigAsync(operationName);
             // Check if the retrieved long-running operation has completed
             if (retrievedResponse.IsCompleted)
             {
@@ -685,13 +685,13 @@ namespace GoogleCSharpSnippets
         {
             // Snippet: CreateVpcFlowLogsConfig(OrganizationLocationName, VpcFlowLogsConfig, VpcFlowLogsConfigName, CallSettings)
             // Create client
-            VpcFlowLogsServiceClient vpcFlowLogsServiceClient = VpcFlowLogsServiceClient.Create();
+            OrganizationVpcFlowLogsServiceClient organizationVpcFlowLogsServiceClient = OrganizationVpcFlowLogsServiceClient.Create();
             // Initialize request argument(s)
             OrganizationLocationName parent = OrganizationLocationName.FromOrganizationLocation("[ORGANIZATION]", "[LOCATION]");
             VpcFlowLogsConfig vpcFlowLogsConfig = new VpcFlowLogsConfig();
             VpcFlowLogsConfigName vpcFlowLogsConfigId = VpcFlowLogsConfigName.FromProjectLocationVpcFlowLogsConfig("[PROJECT]", "[LOCATION]", "[VPC_FLOW_LOGS_CONFIG]");
             // Make the request
-            Operation<VpcFlowLogsConfig, OperationMetadata> response = vpcFlowLogsServiceClient.CreateVpcFlowLogsConfig(parent, vpcFlowLogsConfig, vpcFlowLogsConfigId);
+            Operation<VpcFlowLogsConfig, OperationMetadata> response = organizationVpcFlowLogsServiceClient.CreateVpcFlowLogsConfig(parent, vpcFlowLogsConfig, vpcFlowLogsConfigId);
 
             // Poll until the returned long-running operation is complete
             Operation<VpcFlowLogsConfig, OperationMetadata> completedResponse = response.PollUntilCompleted();
@@ -701,7 +701,7 @@ namespace GoogleCSharpSnippets
             // Or get the name of the operation
             string operationName = response.Name;
             // This name can be stored, then the long-running operation retrieved later by name
-            Operation<VpcFlowLogsConfig, OperationMetadata> retrievedResponse = vpcFlowLogsServiceClient.PollOnceCreateVpcFlowLogsConfig(operationName);
+            Operation<VpcFlowLogsConfig, OperationMetadata> retrievedResponse = organizationVpcFlowLogsServiceClient.PollOnceCreateVpcFlowLogsConfig(operationName);
             // Check if the retrieved long-running operation has completed
             if (retrievedResponse.IsCompleted)
             {
@@ -717,13 +717,13 @@ namespace GoogleCSharpSnippets
             // Snippet: CreateVpcFlowLogsConfigAsync(OrganizationLocationName, VpcFlowLogsConfig, VpcFlowLogsConfigName, CallSettings)
             // Additional: CreateVpcFlowLogsConfigAsync(OrganizationLocationName, VpcFlowLogsConfig, VpcFlowLogsConfigName, CancellationToken)
             // Create client
-            VpcFlowLogsServiceClient vpcFlowLogsServiceClient = await VpcFlowLogsServiceClient.CreateAsync();
+            OrganizationVpcFlowLogsServiceClient organizationVpcFlowLogsServiceClient = await OrganizationVpcFlowLogsServiceClient.CreateAsync();
             // Initialize request argument(s)
             OrganizationLocationName parent = OrganizationLocationName.FromOrganizationLocation("[ORGANIZATION]", "[LOCATION]");
             VpcFlowLogsConfig vpcFlowLogsConfig = new VpcFlowLogsConfig();
             VpcFlowLogsConfigName vpcFlowLogsConfigId = VpcFlowLogsConfigName.FromProjectLocationVpcFlowLogsConfig("[PROJECT]", "[LOCATION]", "[VPC_FLOW_LOGS_CONFIG]");
             // Make the request
-            Operation<VpcFlowLogsConfig, OperationMetadata> response = await vpcFlowLogsServiceClient.CreateVpcFlowLogsConfigAsync(parent, vpcFlowLogsConfig, vpcFlowLogsConfigId);
+            Operation<VpcFlowLogsConfig, OperationMetadata> response = await organizationVpcFlowLogsServiceClient.CreateVpcFlowLogsConfigAsync(parent, vpcFlowLogsConfig, vpcFlowLogsConfigId);
 
             // Poll until the returned long-running operation is complete
             Operation<VpcFlowLogsConfig, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
@@ -733,7 +733,7 @@ namespace GoogleCSharpSnippets
             // Or get the name of the operation
             string operationName = response.Name;
             // This name can be stored, then the long-running operation retrieved later by name
-            Operation<VpcFlowLogsConfig, OperationMetadata> retrievedResponse = await vpcFlowLogsServiceClient.PollOnceCreateVpcFlowLogsConfigAsync(operationName);
+            Operation<VpcFlowLogsConfig, OperationMetadata> retrievedResponse = await organizationVpcFlowLogsServiceClient.PollOnceCreateVpcFlowLogsConfigAsync(operationName);
             // Check if the retrieved long-running operation has completed
             if (retrievedResponse.IsCompleted)
             {
@@ -748,7 +748,7 @@ namespace GoogleCSharpSnippets
         {
             // Snippet: UpdateVpcFlowLogsConfig(UpdateVpcFlowLogsConfigRequest, CallSettings)
             // Create client
-            VpcFlowLogsServiceClient vpcFlowLogsServiceClient = VpcFlowLogsServiceClient.Create();
+            OrganizationVpcFlowLogsServiceClient organizationVpcFlowLogsServiceClient = OrganizationVpcFlowLogsServiceClient.Create();
             // Initialize request argument(s)
             UpdateVpcFlowLogsConfigRequest request = new UpdateVpcFlowLogsConfigRequest
             {
@@ -756,7 +756,7 @@ namespace GoogleCSharpSnippets
                 VpcFlowLogsConfig = new VpcFlowLogsConfig(),
             };
             // Make the request
-            Operation<VpcFlowLogsConfig, OperationMetadata> response = vpcFlowLogsServiceClient.UpdateVpcFlowLogsConfig(request);
+            Operation<VpcFlowLogsConfig, OperationMetadata> response = organizationVpcFlowLogsServiceClient.UpdateVpcFlowLogsConfig(request);
 
             // Poll until the returned long-running operation is complete
             Operation<VpcFlowLogsConfig, OperationMetadata> completedResponse = response.PollUntilCompleted();
@@ -766,7 +766,7 @@ namespace GoogleCSharpSnippets
             // Or get the name of the operation
             string operationName = response.Name;
             // This name can be stored, then the long-running operation retrieved later by name
-            Operation<VpcFlowLogsConfig, OperationMetadata> retrievedResponse = vpcFlowLogsServiceClient.PollOnceUpdateVpcFlowLogsConfig(operationName);
+            Operation<VpcFlowLogsConfig, OperationMetadata> retrievedResponse = organizationVpcFlowLogsServiceClient.PollOnceUpdateVpcFlowLogsConfig(operationName);
             // Check if the retrieved long-running operation has completed
             if (retrievedResponse.IsCompleted)
             {
@@ -782,7 +782,7 @@ namespace GoogleCSharpSnippets
             // Snippet: UpdateVpcFlowLogsConfigAsync(UpdateVpcFlowLogsConfigRequest, CallSettings)
             // Additional: UpdateVpcFlowLogsConfigAsync(UpdateVpcFlowLogsConfigRequest, CancellationToken)
             // Create client
-            VpcFlowLogsServiceClient vpcFlowLogsServiceClient = await VpcFlowLogsServiceClient.CreateAsync();
+            OrganizationVpcFlowLogsServiceClient organizationVpcFlowLogsServiceClient = await OrganizationVpcFlowLogsServiceClient.CreateAsync();
             // Initialize request argument(s)
             UpdateVpcFlowLogsConfigRequest request = new UpdateVpcFlowLogsConfigRequest
             {
@@ -790,7 +790,7 @@ namespace GoogleCSharpSnippets
                 VpcFlowLogsConfig = new VpcFlowLogsConfig(),
             };
             // Make the request
-            Operation<VpcFlowLogsConfig, OperationMetadata> response = await vpcFlowLogsServiceClient.UpdateVpcFlowLogsConfigAsync(request);
+            Operation<VpcFlowLogsConfig, OperationMetadata> response = await organizationVpcFlowLogsServiceClient.UpdateVpcFlowLogsConfigAsync(request);
 
             // Poll until the returned long-running operation is complete
             Operation<VpcFlowLogsConfig, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
@@ -800,7 +800,7 @@ namespace GoogleCSharpSnippets
             // Or get the name of the operation
             string operationName = response.Name;
             // This name can be stored, then the long-running operation retrieved later by name
-            Operation<VpcFlowLogsConfig, OperationMetadata> retrievedResponse = await vpcFlowLogsServiceClient.PollOnceUpdateVpcFlowLogsConfigAsync(operationName);
+            Operation<VpcFlowLogsConfig, OperationMetadata> retrievedResponse = await organizationVpcFlowLogsServiceClient.PollOnceUpdateVpcFlowLogsConfigAsync(operationName);
             // Check if the retrieved long-running operation has completed
             if (retrievedResponse.IsCompleted)
             {
@@ -815,12 +815,12 @@ namespace GoogleCSharpSnippets
         {
             // Snippet: UpdateVpcFlowLogsConfig(VpcFlowLogsConfig, FieldMask, CallSettings)
             // Create client
-            VpcFlowLogsServiceClient vpcFlowLogsServiceClient = VpcFlowLogsServiceClient.Create();
+            OrganizationVpcFlowLogsServiceClient organizationVpcFlowLogsServiceClient = OrganizationVpcFlowLogsServiceClient.Create();
             // Initialize request argument(s)
             VpcFlowLogsConfig vpcFlowLogsConfig = new VpcFlowLogsConfig();
             FieldMask updateMask = new FieldMask();
             // Make the request
-            Operation<VpcFlowLogsConfig, OperationMetadata> response = vpcFlowLogsServiceClient.UpdateVpcFlowLogsConfig(vpcFlowLogsConfig, updateMask);
+            Operation<VpcFlowLogsConfig, OperationMetadata> response = organizationVpcFlowLogsServiceClient.UpdateVpcFlowLogsConfig(vpcFlowLogsConfig, updateMask);
 
             // Poll until the returned long-running operation is complete
             Operation<VpcFlowLogsConfig, OperationMetadata> completedResponse = response.PollUntilCompleted();
@@ -830,7 +830,7 @@ namespace GoogleCSharpSnippets
             // Or get the name of the operation
             string operationName = response.Name;
             // This name can be stored, then the long-running operation retrieved later by name
-            Operation<VpcFlowLogsConfig, OperationMetadata> retrievedResponse = vpcFlowLogsServiceClient.PollOnceUpdateVpcFlowLogsConfig(operationName);
+            Operation<VpcFlowLogsConfig, OperationMetadata> retrievedResponse = organizationVpcFlowLogsServiceClient.PollOnceUpdateVpcFlowLogsConfig(operationName);
             // Check if the retrieved long-running operation has completed
             if (retrievedResponse.IsCompleted)
             {
@@ -846,12 +846,12 @@ namespace GoogleCSharpSnippets
             // Snippet: UpdateVpcFlowLogsConfigAsync(VpcFlowLogsConfig, FieldMask, CallSettings)
             // Additional: UpdateVpcFlowLogsConfigAsync(VpcFlowLogsConfig, FieldMask, CancellationToken)
             // Create client
-            VpcFlowLogsServiceClient vpcFlowLogsServiceClient = await VpcFlowLogsServiceClient.CreateAsync();
+            OrganizationVpcFlowLogsServiceClient organizationVpcFlowLogsServiceClient = await OrganizationVpcFlowLogsServiceClient.CreateAsync();
             // Initialize request argument(s)
             VpcFlowLogsConfig vpcFlowLogsConfig = new VpcFlowLogsConfig();
             FieldMask updateMask = new FieldMask();
             // Make the request
-            Operation<VpcFlowLogsConfig, OperationMetadata> response = await vpcFlowLogsServiceClient.UpdateVpcFlowLogsConfigAsync(vpcFlowLogsConfig, updateMask);
+            Operation<VpcFlowLogsConfig, OperationMetadata> response = await organizationVpcFlowLogsServiceClient.UpdateVpcFlowLogsConfigAsync(vpcFlowLogsConfig, updateMask);
 
             // Poll until the returned long-running operation is complete
             Operation<VpcFlowLogsConfig, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
@@ -861,7 +861,7 @@ namespace GoogleCSharpSnippets
             // Or get the name of the operation
             string operationName = response.Name;
             // This name can be stored, then the long-running operation retrieved later by name
-            Operation<VpcFlowLogsConfig, OperationMetadata> retrievedResponse = await vpcFlowLogsServiceClient.PollOnceUpdateVpcFlowLogsConfigAsync(operationName);
+            Operation<VpcFlowLogsConfig, OperationMetadata> retrievedResponse = await organizationVpcFlowLogsServiceClient.PollOnceUpdateVpcFlowLogsConfigAsync(operationName);
             // Check if the retrieved long-running operation has completed
             if (retrievedResponse.IsCompleted)
             {
@@ -876,14 +876,14 @@ namespace GoogleCSharpSnippets
         {
             // Snippet: DeleteVpcFlowLogsConfig(DeleteVpcFlowLogsConfigRequest, CallSettings)
             // Create client
-            VpcFlowLogsServiceClient vpcFlowLogsServiceClient = VpcFlowLogsServiceClient.Create();
+            OrganizationVpcFlowLogsServiceClient organizationVpcFlowLogsServiceClient = OrganizationVpcFlowLogsServiceClient.Create();
             // Initialize request argument(s)
             DeleteVpcFlowLogsConfigRequest request = new DeleteVpcFlowLogsConfigRequest
             {
                 VpcFlowLogsConfigName = VpcFlowLogsConfigName.FromProjectLocationVpcFlowLogsConfig("[PROJECT]", "[LOCATION]", "[VPC_FLOW_LOGS_CONFIG]"),
             };
             // Make the request
-            Operation<Empty, OperationMetadata> response = vpcFlowLogsServiceClient.DeleteVpcFlowLogsConfig(request);
+            Operation<Empty, OperationMetadata> response = organizationVpcFlowLogsServiceClient.DeleteVpcFlowLogsConfig(request);
 
             // Poll until the returned long-running operation is complete
             Operation<Empty, OperationMetadata> completedResponse = response.PollUntilCompleted();
@@ -893,7 +893,7 @@ namespace GoogleCSharpSnippets
             // Or get the name of the operation
             string operationName = response.Name;
             // This name can be stored, then the long-running operation retrieved later by name
-            Operation<Empty, OperationMetadata> retrievedResponse = vpcFlowLogsServiceClient.PollOnceDeleteVpcFlowLogsConfig(operationName);
+            Operation<Empty, OperationMetadata> retrievedResponse = organizationVpcFlowLogsServiceClient.PollOnceDeleteVpcFlowLogsConfig(operationName);
             // Check if the retrieved long-running operation has completed
             if (retrievedResponse.IsCompleted)
             {
@@ -909,14 +909,14 @@ namespace GoogleCSharpSnippets
             // Snippet: DeleteVpcFlowLogsConfigAsync(DeleteVpcFlowLogsConfigRequest, CallSettings)
             // Additional: DeleteVpcFlowLogsConfigAsync(DeleteVpcFlowLogsConfigRequest, CancellationToken)
             // Create client
-            VpcFlowLogsServiceClient vpcFlowLogsServiceClient = await VpcFlowLogsServiceClient.CreateAsync();
+            OrganizationVpcFlowLogsServiceClient organizationVpcFlowLogsServiceClient = await OrganizationVpcFlowLogsServiceClient.CreateAsync();
             // Initialize request argument(s)
             DeleteVpcFlowLogsConfigRequest request = new DeleteVpcFlowLogsConfigRequest
             {
                 VpcFlowLogsConfigName = VpcFlowLogsConfigName.FromProjectLocationVpcFlowLogsConfig("[PROJECT]", "[LOCATION]", "[VPC_FLOW_LOGS_CONFIG]"),
             };
             // Make the request
-            Operation<Empty, OperationMetadata> response = await vpcFlowLogsServiceClient.DeleteVpcFlowLogsConfigAsync(request);
+            Operation<Empty, OperationMetadata> response = await organizationVpcFlowLogsServiceClient.DeleteVpcFlowLogsConfigAsync(request);
 
             // Poll until the returned long-running operation is complete
             Operation<Empty, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
@@ -926,7 +926,7 @@ namespace GoogleCSharpSnippets
             // Or get the name of the operation
             string operationName = response.Name;
             // This name can be stored, then the long-running operation retrieved later by name
-            Operation<Empty, OperationMetadata> retrievedResponse = await vpcFlowLogsServiceClient.PollOnceDeleteVpcFlowLogsConfigAsync(operationName);
+            Operation<Empty, OperationMetadata> retrievedResponse = await organizationVpcFlowLogsServiceClient.PollOnceDeleteVpcFlowLogsConfigAsync(operationName);
             // Check if the retrieved long-running operation has completed
             if (retrievedResponse.IsCompleted)
             {
@@ -941,11 +941,11 @@ namespace GoogleCSharpSnippets
         {
             // Snippet: DeleteVpcFlowLogsConfig(string, CallSettings)
             // Create client
-            VpcFlowLogsServiceClient vpcFlowLogsServiceClient = VpcFlowLogsServiceClient.Create();
+            OrganizationVpcFlowLogsServiceClient organizationVpcFlowLogsServiceClient = OrganizationVpcFlowLogsServiceClient.Create();
             // Initialize request argument(s)
             string name = "projects/[PROJECT]/locations/[LOCATION]/vpcFlowLogsConfigs/[VPC_FLOW_LOGS_CONFIG]";
             // Make the request
-            Operation<Empty, OperationMetadata> response = vpcFlowLogsServiceClient.DeleteVpcFlowLogsConfig(name);
+            Operation<Empty, OperationMetadata> response = organizationVpcFlowLogsServiceClient.DeleteVpcFlowLogsConfig(name);
 
             // Poll until the returned long-running operation is complete
             Operation<Empty, OperationMetadata> completedResponse = response.PollUntilCompleted();
@@ -955,7 +955,7 @@ namespace GoogleCSharpSnippets
             // Or get the name of the operation
             string operationName = response.Name;
             // This name can be stored, then the long-running operation retrieved later by name
-            Operation<Empty, OperationMetadata> retrievedResponse = vpcFlowLogsServiceClient.PollOnceDeleteVpcFlowLogsConfig(operationName);
+            Operation<Empty, OperationMetadata> retrievedResponse = organizationVpcFlowLogsServiceClient.PollOnceDeleteVpcFlowLogsConfig(operationName);
             // Check if the retrieved long-running operation has completed
             if (retrievedResponse.IsCompleted)
             {
@@ -971,11 +971,11 @@ namespace GoogleCSharpSnippets
             // Snippet: DeleteVpcFlowLogsConfigAsync(string, CallSettings)
             // Additional: DeleteVpcFlowLogsConfigAsync(string, CancellationToken)
             // Create client
-            VpcFlowLogsServiceClient vpcFlowLogsServiceClient = await VpcFlowLogsServiceClient.CreateAsync();
+            OrganizationVpcFlowLogsServiceClient organizationVpcFlowLogsServiceClient = await OrganizationVpcFlowLogsServiceClient.CreateAsync();
             // Initialize request argument(s)
             string name = "projects/[PROJECT]/locations/[LOCATION]/vpcFlowLogsConfigs/[VPC_FLOW_LOGS_CONFIG]";
             // Make the request
-            Operation<Empty, OperationMetadata> response = await vpcFlowLogsServiceClient.DeleteVpcFlowLogsConfigAsync(name);
+            Operation<Empty, OperationMetadata> response = await organizationVpcFlowLogsServiceClient.DeleteVpcFlowLogsConfigAsync(name);
 
             // Poll until the returned long-running operation is complete
             Operation<Empty, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
@@ -985,7 +985,7 @@ namespace GoogleCSharpSnippets
             // Or get the name of the operation
             string operationName = response.Name;
             // This name can be stored, then the long-running operation retrieved later by name
-            Operation<Empty, OperationMetadata> retrievedResponse = await vpcFlowLogsServiceClient.PollOnceDeleteVpcFlowLogsConfigAsync(operationName);
+            Operation<Empty, OperationMetadata> retrievedResponse = await organizationVpcFlowLogsServiceClient.PollOnceDeleteVpcFlowLogsConfigAsync(operationName);
             // Check if the retrieved long-running operation has completed
             if (retrievedResponse.IsCompleted)
             {
@@ -1000,11 +1000,11 @@ namespace GoogleCSharpSnippets
         {
             // Snippet: DeleteVpcFlowLogsConfig(VpcFlowLogsConfigName, CallSettings)
             // Create client
-            VpcFlowLogsServiceClient vpcFlowLogsServiceClient = VpcFlowLogsServiceClient.Create();
+            OrganizationVpcFlowLogsServiceClient organizationVpcFlowLogsServiceClient = OrganizationVpcFlowLogsServiceClient.Create();
             // Initialize request argument(s)
             VpcFlowLogsConfigName name = VpcFlowLogsConfigName.FromProjectLocationVpcFlowLogsConfig("[PROJECT]", "[LOCATION]", "[VPC_FLOW_LOGS_CONFIG]");
             // Make the request
-            Operation<Empty, OperationMetadata> response = vpcFlowLogsServiceClient.DeleteVpcFlowLogsConfig(name);
+            Operation<Empty, OperationMetadata> response = organizationVpcFlowLogsServiceClient.DeleteVpcFlowLogsConfig(name);
 
             // Poll until the returned long-running operation is complete
             Operation<Empty, OperationMetadata> completedResponse = response.PollUntilCompleted();
@@ -1014,7 +1014,7 @@ namespace GoogleCSharpSnippets
             // Or get the name of the operation
             string operationName = response.Name;
             // This name can be stored, then the long-running operation retrieved later by name
-            Operation<Empty, OperationMetadata> retrievedResponse = vpcFlowLogsServiceClient.PollOnceDeleteVpcFlowLogsConfig(operationName);
+            Operation<Empty, OperationMetadata> retrievedResponse = organizationVpcFlowLogsServiceClient.PollOnceDeleteVpcFlowLogsConfig(operationName);
             // Check if the retrieved long-running operation has completed
             if (retrievedResponse.IsCompleted)
             {
@@ -1030,11 +1030,11 @@ namespace GoogleCSharpSnippets
             // Snippet: DeleteVpcFlowLogsConfigAsync(VpcFlowLogsConfigName, CallSettings)
             // Additional: DeleteVpcFlowLogsConfigAsync(VpcFlowLogsConfigName, CancellationToken)
             // Create client
-            VpcFlowLogsServiceClient vpcFlowLogsServiceClient = await VpcFlowLogsServiceClient.CreateAsync();
+            OrganizationVpcFlowLogsServiceClient organizationVpcFlowLogsServiceClient = await OrganizationVpcFlowLogsServiceClient.CreateAsync();
             // Initialize request argument(s)
             VpcFlowLogsConfigName name = VpcFlowLogsConfigName.FromProjectLocationVpcFlowLogsConfig("[PROJECT]", "[LOCATION]", "[VPC_FLOW_LOGS_CONFIG]");
             // Make the request
-            Operation<Empty, OperationMetadata> response = await vpcFlowLogsServiceClient.DeleteVpcFlowLogsConfigAsync(name);
+            Operation<Empty, OperationMetadata> response = await organizationVpcFlowLogsServiceClient.DeleteVpcFlowLogsConfigAsync(name);
 
             // Poll until the returned long-running operation is complete
             Operation<Empty, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
@@ -1044,211 +1044,13 @@ namespace GoogleCSharpSnippets
             // Or get the name of the operation
             string operationName = response.Name;
             // This name can be stored, then the long-running operation retrieved later by name
-            Operation<Empty, OperationMetadata> retrievedResponse = await vpcFlowLogsServiceClient.PollOnceDeleteVpcFlowLogsConfigAsync(operationName);
+            Operation<Empty, OperationMetadata> retrievedResponse = await organizationVpcFlowLogsServiceClient.PollOnceDeleteVpcFlowLogsConfigAsync(operationName);
             // Check if the retrieved long-running operation has completed
             if (retrievedResponse.IsCompleted)
             {
                 // If it has completed, then access the result
                 Empty retrievedResult = retrievedResponse.Result;
             }
-            // End snippet
-        }
-
-        /// <summary>Snippet for QueryOrgVpcFlowLogsConfigs</summary>
-        public void QueryOrgVpcFlowLogsConfigsRequestObject()
-        {
-            // Snippet: QueryOrgVpcFlowLogsConfigs(QueryOrgVpcFlowLogsConfigsRequest, CallSettings)
-            // Create client
-            VpcFlowLogsServiceClient vpcFlowLogsServiceClient = VpcFlowLogsServiceClient.Create();
-            // Initialize request argument(s)
-            QueryOrgVpcFlowLogsConfigsRequest request = new QueryOrgVpcFlowLogsConfigsRequest
-            {
-                ParentAsLocationName = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
-                Filter = "",
-            };
-            // Make the request
-            PagedEnumerable<QueryOrgVpcFlowLogsConfigsResponse, VpcFlowLogsConfig> response = vpcFlowLogsServiceClient.QueryOrgVpcFlowLogsConfigs(request);
-
-            // Iterate over all response items, lazily performing RPCs as required
-            foreach (VpcFlowLogsConfig item in response)
-            {
-                // Do something with each item
-                Console.WriteLine(item);
-            }
-
-            // Or iterate over pages (of server-defined size), performing one RPC per page
-            foreach (QueryOrgVpcFlowLogsConfigsResponse page in response.AsRawResponses())
-            {
-                // Do something with each page of items
-                Console.WriteLine("A page of results:");
-                foreach (VpcFlowLogsConfig item in page)
-                {
-                    // Do something with each item
-                    Console.WriteLine(item);
-                }
-            }
-
-            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
-            int pageSize = 10;
-            Page<VpcFlowLogsConfig> singlePage = response.ReadPage(pageSize);
-            // Do something with the page of items
-            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
-            foreach (VpcFlowLogsConfig item in singlePage)
-            {
-                // Do something with each item
-                Console.WriteLine(item);
-            }
-            // Store the pageToken, for when the next page is required.
-            string nextPageToken = singlePage.NextPageToken;
-            // End snippet
-        }
-
-        /// <summary>Snippet for QueryOrgVpcFlowLogsConfigsAsync</summary>
-        public async Task QueryOrgVpcFlowLogsConfigsRequestObjectAsync()
-        {
-            // Snippet: QueryOrgVpcFlowLogsConfigsAsync(QueryOrgVpcFlowLogsConfigsRequest, CallSettings)
-            // Create client
-            VpcFlowLogsServiceClient vpcFlowLogsServiceClient = await VpcFlowLogsServiceClient.CreateAsync();
-            // Initialize request argument(s)
-            QueryOrgVpcFlowLogsConfigsRequest request = new QueryOrgVpcFlowLogsConfigsRequest
-            {
-                ParentAsLocationName = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
-                Filter = "",
-            };
-            // Make the request
-            PagedAsyncEnumerable<QueryOrgVpcFlowLogsConfigsResponse, VpcFlowLogsConfig> response = vpcFlowLogsServiceClient.QueryOrgVpcFlowLogsConfigsAsync(request);
-
-            // Iterate over all response items, lazily performing RPCs as required
-            await response.ForEachAsync((VpcFlowLogsConfig item) =>
-            {
-                // Do something with each item
-                Console.WriteLine(item);
-            });
-
-            // Or iterate over pages (of server-defined size), performing one RPC per page
-            await response.AsRawResponses().ForEachAsync((QueryOrgVpcFlowLogsConfigsResponse page) =>
-            {
-                // Do something with each page of items
-                Console.WriteLine("A page of results:");
-                foreach (VpcFlowLogsConfig item in page)
-                {
-                    // Do something with each item
-                    Console.WriteLine(item);
-                }
-            });
-
-            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
-            int pageSize = 10;
-            Page<VpcFlowLogsConfig> singlePage = await response.ReadPageAsync(pageSize);
-            // Do something with the page of items
-            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
-            foreach (VpcFlowLogsConfig item in singlePage)
-            {
-                // Do something with each item
-                Console.WriteLine(item);
-            }
-            // Store the pageToken, for when the next page is required.
-            string nextPageToken = singlePage.NextPageToken;
-            // End snippet
-        }
-
-        /// <summary>Snippet for ShowEffectiveFlowLogsConfigs</summary>
-        public void ShowEffectiveFlowLogsConfigsRequestObject()
-        {
-            // Snippet: ShowEffectiveFlowLogsConfigs(ShowEffectiveFlowLogsConfigsRequest, CallSettings)
-            // Create client
-            VpcFlowLogsServiceClient vpcFlowLogsServiceClient = VpcFlowLogsServiceClient.Create();
-            // Initialize request argument(s)
-            ShowEffectiveFlowLogsConfigsRequest request = new ShowEffectiveFlowLogsConfigsRequest
-            {
-                ParentAsLocationName = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
-                Resource = "",
-                Filter = "",
-            };
-            // Make the request
-            PagedEnumerable<ShowEffectiveFlowLogsConfigsResponse, EffectiveVpcFlowLogsConfig> response = vpcFlowLogsServiceClient.ShowEffectiveFlowLogsConfigs(request);
-
-            // Iterate over all response items, lazily performing RPCs as required
-            foreach (EffectiveVpcFlowLogsConfig item in response)
-            {
-                // Do something with each item
-                Console.WriteLine(item);
-            }
-
-            // Or iterate over pages (of server-defined size), performing one RPC per page
-            foreach (ShowEffectiveFlowLogsConfigsResponse page in response.AsRawResponses())
-            {
-                // Do something with each page of items
-                Console.WriteLine("A page of results:");
-                foreach (EffectiveVpcFlowLogsConfig item in page)
-                {
-                    // Do something with each item
-                    Console.WriteLine(item);
-                }
-            }
-
-            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
-            int pageSize = 10;
-            Page<EffectiveVpcFlowLogsConfig> singlePage = response.ReadPage(pageSize);
-            // Do something with the page of items
-            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
-            foreach (EffectiveVpcFlowLogsConfig item in singlePage)
-            {
-                // Do something with each item
-                Console.WriteLine(item);
-            }
-            // Store the pageToken, for when the next page is required.
-            string nextPageToken = singlePage.NextPageToken;
-            // End snippet
-        }
-
-        /// <summary>Snippet for ShowEffectiveFlowLogsConfigsAsync</summary>
-        public async Task ShowEffectiveFlowLogsConfigsRequestObjectAsync()
-        {
-            // Snippet: ShowEffectiveFlowLogsConfigsAsync(ShowEffectiveFlowLogsConfigsRequest, CallSettings)
-            // Create client
-            VpcFlowLogsServiceClient vpcFlowLogsServiceClient = await VpcFlowLogsServiceClient.CreateAsync();
-            // Initialize request argument(s)
-            ShowEffectiveFlowLogsConfigsRequest request = new ShowEffectiveFlowLogsConfigsRequest
-            {
-                ParentAsLocationName = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
-                Resource = "",
-                Filter = "",
-            };
-            // Make the request
-            PagedAsyncEnumerable<ShowEffectiveFlowLogsConfigsResponse, EffectiveVpcFlowLogsConfig> response = vpcFlowLogsServiceClient.ShowEffectiveFlowLogsConfigsAsync(request);
-
-            // Iterate over all response items, lazily performing RPCs as required
-            await response.ForEachAsync((EffectiveVpcFlowLogsConfig item) =>
-            {
-                // Do something with each item
-                Console.WriteLine(item);
-            });
-
-            // Or iterate over pages (of server-defined size), performing one RPC per page
-            await response.AsRawResponses().ForEachAsync((ShowEffectiveFlowLogsConfigsResponse page) =>
-            {
-                // Do something with each page of items
-                Console.WriteLine("A page of results:");
-                foreach (EffectiveVpcFlowLogsConfig item in page)
-                {
-                    // Do something with each item
-                    Console.WriteLine(item);
-                }
-            });
-
-            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
-            int pageSize = 10;
-            Page<EffectiveVpcFlowLogsConfig> singlePage = await response.ReadPageAsync(pageSize);
-            // Do something with the page of items
-            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
-            foreach (EffectiveVpcFlowLogsConfig item in singlePage)
-            {
-                // Do something with each item
-                Console.WriteLine(item);
-            }
-            // Store the pageToken, for when the next page is required.
-            string nextPageToken = singlePage.NextPageToken;
             // End snippet
         }
     }

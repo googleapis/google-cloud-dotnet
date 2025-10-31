@@ -56,47 +56,110 @@ namespace Google.Cloud.NetworkManagement.V1 {
             "KAsyNC5nb29nbGUuY2xvdWQubmV0d29ya21hbmFnZW1lbnQudjEuVnBjRmxv",
             "d0xvZ3NDb25maWdCA+BBAiJqCh5EZWxldGVWcGNGbG93TG9nc0NvbmZpZ1Jl",
             "cXVlc3QSSAoEbmFtZRgBIAEoCUI64EEC+kE0CjJuZXR3b3JrbWFuYWdlbWVu",
-            "dC5nb29nbGVhcGlzLmNvbS9WcGNGbG93TG9nc0NvbmZpZzLsCwoSVnBjRmxv",
-            "d0xvZ3NTZXJ2aWNlEuYBChZMaXN0VnBjRmxvd0xvZ3NDb25maWdzEkAuZ29v",
-            "Z2xlLmNsb3VkLm5ldHdvcmttYW5hZ2VtZW50LnYxLkxpc3RWcGNGbG93TG9n",
-            "c0NvbmZpZ3NSZXF1ZXN0GkEuZ29vZ2xlLmNsb3VkLm5ldHdvcmttYW5hZ2Vt",
-            "ZW50LnYxLkxpc3RWcGNGbG93TG9nc0NvbmZpZ3NSZXNwb25zZSJH2kEGcGFy",
-            "ZW50gtPkkwI4EjYvdjEve3BhcmVudD1wcm9qZWN0cy8qL2xvY2F0aW9ucy8q",
-            "fS92cGNGbG93TG9nc0NvbmZpZ3MS0wEKFEdldFZwY0Zsb3dMb2dzQ29uZmln",
-            "Ej4uZ29vZ2xlLmNsb3VkLm5ldHdvcmttYW5hZ2VtZW50LnYxLkdldFZwY0Zs",
-            "b3dMb2dzQ29uZmlnUmVxdWVzdBo0Lmdvb2dsZS5jbG91ZC5uZXR3b3JrbWFu",
-            "YWdlbWVudC52MS5WcGNGbG93TG9nc0NvbmZpZyJF2kEEbmFtZYLT5JMCOBI2",
-            "L3YxL3tuYW1lPXByb2plY3RzLyovbG9jYXRpb25zLyovdnBjRmxvd0xvZ3ND",
-            "b25maWdzLyp9EtMCChdDcmVhdGVWcGNGbG93TG9nc0NvbmZpZxJBLmdvb2ds",
-            "ZS5jbG91ZC5uZXR3b3JrbWFuYWdlbWVudC52MS5DcmVhdGVWcGNGbG93TG9n",
-            "c0NvbmZpZ1JlcXVlc3QaHS5nb29nbGUubG9uZ3J1bm5pbmcuT3BlcmF0aW9u",
-            "ItUBykFIChFWcGNGbG93TG9nc0NvbmZpZxIzZ29vZ2xlLmNsb3VkLm5ldHdv",
-            "cmttYW5hZ2VtZW50LnYxLk9wZXJhdGlvbk1ldGFkYXRh2kEzcGFyZW50LHZw",
-            "Y19mbG93X2xvZ3NfY29uZmlnLHZwY19mbG93X2xvZ3NfY29uZmlnX2lkgtPk",
-            "kwJOIjYvdjEve3BhcmVudD1wcm9qZWN0cy8qL2xvY2F0aW9ucy8qfS92cGNG",
-            "bG93TG9nc0NvbmZpZ3M6FHZwY19mbG93X2xvZ3NfY29uZmlnEtUCChdVcGRh",
-            "dGVWcGNGbG93TG9nc0NvbmZpZxJBLmdvb2dsZS5jbG91ZC5uZXR3b3JrbWFu",
-            "YWdlbWVudC52MS5VcGRhdGVWcGNGbG93TG9nc0NvbmZpZ1JlcXVlc3QaHS5n",
-            "b29nbGUubG9uZ3J1bm5pbmcuT3BlcmF0aW9uItcBykFIChFWcGNGbG93TG9n",
-            "c0NvbmZpZxIzZ29vZ2xlLmNsb3VkLm5ldHdvcmttYW5hZ2VtZW50LnYxLk9w",
-            "ZXJhdGlvbk1ldGFkYXRh2kEgdnBjX2Zsb3dfbG9nc19jb25maWcsdXBkYXRl",
-            "X21hc2uC0+STAmMySy92MS97dnBjX2Zsb3dfbG9nc19jb25maWcubmFtZT1w",
-            "cm9qZWN0cy8qL2xvY2F0aW9ucy8qL3ZwY0Zsb3dMb2dzQ29uZmlncy8qfToU",
-            "dnBjX2Zsb3dfbG9nc19jb25maWcSkgIKF0RlbGV0ZVZwY0Zsb3dMb2dzQ29u",
+            "dC5nb29nbGVhcGlzLmNvbS9WcGNGbG93TG9nc0NvbmZpZyK1AQohUXVlcnlP",
+            "cmdWcGNGbG93TG9nc0NvbmZpZ3NSZXF1ZXN0EkoKBnBhcmVudBgBIAEoCUI6",
+            "4EEC+kE0EjJuZXR3b3JrbWFuYWdlbWVudC5nb29nbGVhcGlzLmNvbS9WcGNG",
+            "bG93TG9nc0NvbmZpZxIWCglwYWdlX3NpemUYAiABKAVCA+BBARIXCgpwYWdl",
+            "X3Rva2VuGAMgASgJQgPgQQESEwoGZmlsdGVyGAQgASgJQgPgQQEipwEKIlF1",
+            "ZXJ5T3JnVnBjRmxvd0xvZ3NDb25maWdzUmVzcG9uc2USUwoVdnBjX2Zsb3df",
+            "bG9nc19jb25maWdzGAEgAygLMjQuZ29vZ2xlLmNsb3VkLm5ldHdvcmttYW5h",
+            "Z2VtZW50LnYxLlZwY0Zsb3dMb2dzQ29uZmlnEhcKD25leHRfcGFnZV90b2tl",
+            "bhgCIAEoCRITCgt1bnJlYWNoYWJsZRgDIAMoCSLOAQojU2hvd0VmZmVjdGl2",
+            "ZUZsb3dMb2dzQ29uZmlnc1JlcXVlc3QSSgoGcGFyZW50GAEgASgJQjrgQQL6",
+            "QTQSMm5ldHdvcmttYW5hZ2VtZW50Lmdvb2dsZWFwaXMuY29tL1ZwY0Zsb3dM",
+            "b2dzQ29uZmlnEhUKCHJlc291cmNlGAIgASgJQgPgQQISFgoJcGFnZV9zaXpl",
+            "GAMgASgFQgPgQQESFwoKcGFnZV90b2tlbhgEIAEoCUID4EEBEhMKBmZpbHRl",
+            "chgFIAEoCUID4EEBIrgBCiRTaG93RWZmZWN0aXZlRmxvd0xvZ3NDb25maWdz",
+            "UmVzcG9uc2USYgobZWZmZWN0aXZlX2Zsb3dfbG9nc19jb25maWdzGAEgAygL",
+            "Mj0uZ29vZ2xlLmNsb3VkLm5ldHdvcmttYW5hZ2VtZW50LnYxLkVmZmVjdGl2",
+            "ZVZwY0Zsb3dMb2dzQ29uZmlnEhcKD25leHRfcGFnZV90b2tlbhgCIAEoCRIT",
+            "Cgt1bnJlYWNoYWJsZRgDIAMoCTKCEAoSVnBjRmxvd0xvZ3NTZXJ2aWNlEuYB",
+            "ChZMaXN0VnBjRmxvd0xvZ3NDb25maWdzEkAuZ29vZ2xlLmNsb3VkLm5ldHdv",
+            "cmttYW5hZ2VtZW50LnYxLkxpc3RWcGNGbG93TG9nc0NvbmZpZ3NSZXF1ZXN0",
+            "GkEuZ29vZ2xlLmNsb3VkLm5ldHdvcmttYW5hZ2VtZW50LnYxLkxpc3RWcGNG",
+            "bG93TG9nc0NvbmZpZ3NSZXNwb25zZSJH2kEGcGFyZW50gtPkkwI4EjYvdjEv",
+            "e3BhcmVudD1wcm9qZWN0cy8qL2xvY2F0aW9ucy8qfS92cGNGbG93TG9nc0Nv",
+            "bmZpZ3MS0wEKFEdldFZwY0Zsb3dMb2dzQ29uZmlnEj4uZ29vZ2xlLmNsb3Vk",
+            "Lm5ldHdvcmttYW5hZ2VtZW50LnYxLkdldFZwY0Zsb3dMb2dzQ29uZmlnUmVx",
+            "dWVzdBo0Lmdvb2dsZS5jbG91ZC5uZXR3b3JrbWFuYWdlbWVudC52MS5WcGNG",
+            "bG93TG9nc0NvbmZpZyJF2kEEbmFtZYLT5JMCOBI2L3YxL3tuYW1lPXByb2pl",
+            "Y3RzLyovbG9jYXRpb25zLyovdnBjRmxvd0xvZ3NDb25maWdzLyp9EtMCChdD",
+            "cmVhdGVWcGNGbG93TG9nc0NvbmZpZxJBLmdvb2dsZS5jbG91ZC5uZXR3b3Jr",
+            "bWFuYWdlbWVudC52MS5DcmVhdGVWcGNGbG93TG9nc0NvbmZpZ1JlcXVlc3Qa",
+            "HS5nb29nbGUubG9uZ3J1bm5pbmcuT3BlcmF0aW9uItUBykFIChFWcGNGbG93",
+            "TG9nc0NvbmZpZxIzZ29vZ2xlLmNsb3VkLm5ldHdvcmttYW5hZ2VtZW50LnYx",
+            "Lk9wZXJhdGlvbk1ldGFkYXRh2kEzcGFyZW50LHZwY19mbG93X2xvZ3NfY29u",
+            "ZmlnLHZwY19mbG93X2xvZ3NfY29uZmlnX2lkgtPkkwJOIjYvdjEve3BhcmVu",
+            "dD1wcm9qZWN0cy8qL2xvY2F0aW9ucy8qfS92cGNGbG93TG9nc0NvbmZpZ3M6",
+            "FHZwY19mbG93X2xvZ3NfY29uZmlnEtUCChdVcGRhdGVWcGNGbG93TG9nc0Nv",
+            "bmZpZxJBLmdvb2dsZS5jbG91ZC5uZXR3b3JrbWFuYWdlbWVudC52MS5VcGRh",
+            "dGVWcGNGbG93TG9nc0NvbmZpZ1JlcXVlc3QaHS5nb29nbGUubG9uZ3J1bm5p",
+            "bmcuT3BlcmF0aW9uItcBykFIChFWcGNGbG93TG9nc0NvbmZpZxIzZ29vZ2xl",
+            "LmNsb3VkLm5ldHdvcmttYW5hZ2VtZW50LnYxLk9wZXJhdGlvbk1ldGFkYXRh",
+            "2kEgdnBjX2Zsb3dfbG9nc19jb25maWcsdXBkYXRlX21hc2uC0+STAmMySy92",
+            "MS97dnBjX2Zsb3dfbG9nc19jb25maWcubmFtZT1wcm9qZWN0cy8qL2xvY2F0",
+            "aW9ucy8qL3ZwY0Zsb3dMb2dzQ29uZmlncy8qfToUdnBjX2Zsb3dfbG9nc19j",
+            "b25maWcSkgIKF0RlbGV0ZVZwY0Zsb3dMb2dzQ29uZmlnEkEuZ29vZ2xlLmNs",
+            "b3VkLm5ldHdvcmttYW5hZ2VtZW50LnYxLkRlbGV0ZVZwY0Zsb3dMb2dzQ29u",
+            "ZmlnUmVxdWVzdBodLmdvb2dsZS5sb25ncnVubmluZy5PcGVyYXRpb24ilAHK",
+            "QUwKFWdvb2dsZS5wcm90b2J1Zi5FbXB0eRIzZ29vZ2xlLmNsb3VkLm5ldHdv",
+            "cmttYW5hZ2VtZW50LnYxLk9wZXJhdGlvbk1ldGFkYXRh2kEEbmFtZYLT5JMC",
+            "OCo2L3YxL3tuYW1lPXByb2plY3RzLyovbG9jYXRpb25zLyovdnBjRmxvd0xv",
+            "Z3NDb25maWdzLyp9EoQCChpRdWVyeU9yZ1ZwY0Zsb3dMb2dzQ29uZmlncxJE",
+            "Lmdvb2dsZS5jbG91ZC5uZXR3b3JrbWFuYWdlbWVudC52MS5RdWVyeU9yZ1Zw",
+            "Y0Zsb3dMb2dzQ29uZmlnc1JlcXVlc3QaRS5nb29nbGUuY2xvdWQubmV0d29y",
+            "a21hbmFnZW1lbnQudjEuUXVlcnlPcmdWcGNGbG93TG9nc0NvbmZpZ3NSZXNw",
+            "b25zZSJZgtPkkwJTElEvdjEve3BhcmVudD1wcm9qZWN0cy8qL2xvY2F0aW9u",
+            "cy8qfS92cGNGbG93TG9nc0NvbmZpZ3M6cXVlcnlPcmdWcGNGbG93TG9nc0Nv",
+            "bmZpZ3MSjAIKHFNob3dFZmZlY3RpdmVGbG93TG9nc0NvbmZpZ3MSRi5nb29n",
+            "bGUuY2xvdWQubmV0d29ya21hbmFnZW1lbnQudjEuU2hvd0VmZmVjdGl2ZUZs",
+            "b3dMb2dzQ29uZmlnc1JlcXVlc3QaRy5nb29nbGUuY2xvdWQubmV0d29ya21h",
+            "bmFnZW1lbnQudjEuU2hvd0VmZmVjdGl2ZUZsb3dMb2dzQ29uZmlnc1Jlc3Bv",
+            "bnNlIluC0+STAlUSUy92MS97cGFyZW50PXByb2plY3RzLyovbG9jYXRpb25z",
+            "Lyp9L3ZwY0Zsb3dMb2dzQ29uZmlnczpzaG93RWZmZWN0aXZlRmxvd0xvZ3ND",
+            "b25maWdzGlTKQSBuZXR3b3JrbWFuYWdlbWVudC5nb29nbGVhcGlzLmNvbdJB",
+            "Lmh0dHBzOi8vd3d3Lmdvb2dsZWFwaXMuY29tL2F1dGgvY2xvdWQtcGxhdGZv",
+            "cm0ykQwKHk9yZ2FuaXphdGlvblZwY0Zsb3dMb2dzU2VydmljZRLrAQoWTGlz",
+            "dFZwY0Zsb3dMb2dzQ29uZmlncxJALmdvb2dsZS5jbG91ZC5uZXR3b3JrbWFu",
+            "YWdlbWVudC52MS5MaXN0VnBjRmxvd0xvZ3NDb25maWdzUmVxdWVzdBpBLmdv",
+            "b2dsZS5jbG91ZC5uZXR3b3JrbWFuYWdlbWVudC52MS5MaXN0VnBjRmxvd0xv",
+            "Z3NDb25maWdzUmVzcG9uc2UiTNpBBnBhcmVudILT5JMCPRI7L3YxL3twYXJl",
+            "bnQ9b3JnYW5pemF0aW9ucy8qL2xvY2F0aW9ucy8qfS92cGNGbG93TG9nc0Nv",
+            "bmZpZ3MS2AEKFEdldFZwY0Zsb3dMb2dzQ29uZmlnEj4uZ29vZ2xlLmNsb3Vk",
+            "Lm5ldHdvcmttYW5hZ2VtZW50LnYxLkdldFZwY0Zsb3dMb2dzQ29uZmlnUmVx",
+            "dWVzdBo0Lmdvb2dsZS5jbG91ZC5uZXR3b3JrbWFuYWdlbWVudC52MS5WcGNG",
+            "bG93TG9nc0NvbmZpZyJK2kEEbmFtZYLT5JMCPRI7L3YxL3tuYW1lPW9yZ2Fu",
+            "aXphdGlvbnMvKi9sb2NhdGlvbnMvKi92cGNGbG93TG9nc0NvbmZpZ3MvKn0S",
+            "2AIKF0NyZWF0ZVZwY0Zsb3dMb2dzQ29uZmlnEkEuZ29vZ2xlLmNsb3VkLm5l",
+            "dHdvcmttYW5hZ2VtZW50LnYxLkNyZWF0ZVZwY0Zsb3dMb2dzQ29uZmlnUmVx",
+            "dWVzdBodLmdvb2dsZS5sb25ncnVubmluZy5PcGVyYXRpb24i2gHKQUgKEVZw",
+            "Y0Zsb3dMb2dzQ29uZmlnEjNnb29nbGUuY2xvdWQubmV0d29ya21hbmFnZW1l",
+            "bnQudjEuT3BlcmF0aW9uTWV0YWRhdGHaQTNwYXJlbnQsdnBjX2Zsb3dfbG9n",
+            "c19jb25maWcsdnBjX2Zsb3dfbG9nc19jb25maWdfaWSC0+STAlMiOy92MS97",
+            "cGFyZW50PW9yZ2FuaXphdGlvbnMvKi9sb2NhdGlvbnMvKn0vdnBjRmxvd0xv",
+            "Z3NDb25maWdzOhR2cGNfZmxvd19sb2dzX2NvbmZpZxLaAgoXVXBkYXRlVnBj",
+            "Rmxvd0xvZ3NDb25maWcSQS5nb29nbGUuY2xvdWQubmV0d29ya21hbmFnZW1l",
+            "bnQudjEuVXBkYXRlVnBjRmxvd0xvZ3NDb25maWdSZXF1ZXN0Gh0uZ29vZ2xl",
+            "LmxvbmdydW5uaW5nLk9wZXJhdGlvbiLcAcpBSAoRVnBjRmxvd0xvZ3NDb25m",
+            "aWcSM2dvb2dsZS5jbG91ZC5uZXR3b3JrbWFuYWdlbWVudC52MS5PcGVyYXRp",
+            "b25NZXRhZGF0YdpBIHZwY19mbG93X2xvZ3NfY29uZmlnLHVwZGF0ZV9tYXNr",
+            "gtPkkwJoMlAvdjEve3ZwY19mbG93X2xvZ3NfY29uZmlnLm5hbWU9b3JnYW5p",
+            "emF0aW9ucy8qL2xvY2F0aW9ucy8qL3ZwY0Zsb3dMb2dzQ29uZmlncy8qfToU",
+            "dnBjX2Zsb3dfbG9nc19jb25maWcSlwIKF0RlbGV0ZVZwY0Zsb3dMb2dzQ29u",
             "ZmlnEkEuZ29vZ2xlLmNsb3VkLm5ldHdvcmttYW5hZ2VtZW50LnYxLkRlbGV0",
             "ZVZwY0Zsb3dMb2dzQ29uZmlnUmVxdWVzdBodLmdvb2dsZS5sb25ncnVubmlu",
-            "Zy5PcGVyYXRpb24ilAHKQUwKFWdvb2dsZS5wcm90b2J1Zi5FbXB0eRIzZ29v",
+            "Zy5PcGVyYXRpb24imQHKQUwKFWdvb2dsZS5wcm90b2J1Zi5FbXB0eRIzZ29v",
             "Z2xlLmNsb3VkLm5ldHdvcmttYW5hZ2VtZW50LnYxLk9wZXJhdGlvbk1ldGFk",
-            "YXRh2kEEbmFtZYLT5JMCOCo2L3YxL3tuYW1lPXByb2plY3RzLyovbG9jYXRp",
-            "b25zLyovdnBjRmxvd0xvZ3NDb25maWdzLyp9GlTKQSBuZXR3b3JrbWFuYWdl",
-            "bWVudC5nb29nbGVhcGlzLmNvbdJBLmh0dHBzOi8vd3d3Lmdvb2dsZWFwaXMu",
-            "Y29tL2F1dGgvY2xvdWQtcGxhdGZvcm1C/wEKJWNvbS5nb29nbGUuY2xvdWQu",
-            "bmV0d29ya21hbmFnZW1lbnQudjFCEFZwY0Zsb3dMb2dzUHJvdG9QAVpTY2xv",
-            "dWQuZ29vZ2xlLmNvbS9nby9uZXR3b3JrbWFuYWdlbWVudC9hcGl2MS9uZXR3",
-            "b3JrbWFuYWdlbWVudHBiO25ldHdvcmttYW5hZ2VtZW50cGKqAiFHb29nbGUu",
-            "Q2xvdWQuTmV0d29ya01hbmFnZW1lbnQuVjHKAiFHb29nbGVcQ2xvdWRcTmV0",
-            "d29ya01hbmFnZW1lbnRcVjHqAiRHb29nbGU6OkNsb3VkOjpOZXR3b3JrTWFu",
-            "YWdlbWVudDo6VjFiBnByb3RvMw=="));
+            "YXRh2kEEbmFtZYLT5JMCPSo7L3YxL3tuYW1lPW9yZ2FuaXphdGlvbnMvKi9s",
+            "b2NhdGlvbnMvKi92cGNGbG93TG9nc0NvbmZpZ3MvKn0aVMpBIG5ldHdvcmtt",
+            "YW5hZ2VtZW50Lmdvb2dsZWFwaXMuY29t0kEuaHR0cHM6Ly93d3cuZ29vZ2xl",
+            "YXBpcy5jb20vYXV0aC9jbG91ZC1wbGF0Zm9ybUL/AQolY29tLmdvb2dsZS5j",
+            "bG91ZC5uZXR3b3JrbWFuYWdlbWVudC52MUIQVnBjRmxvd0xvZ3NQcm90b1AB",
+            "WlNjbG91ZC5nb29nbGUuY29tL2dvL25ldHdvcmttYW5hZ2VtZW50L2FwaXYx",
+            "L25ldHdvcmttYW5hZ2VtZW50cGI7bmV0d29ya21hbmFnZW1lbnRwYqoCIUdv",
+            "b2dsZS5DbG91ZC5OZXR3b3JrTWFuYWdlbWVudC5WMcoCIUdvb2dsZVxDbG91",
+            "ZFxOZXR3b3JrTWFuYWdlbWVudFxWMeoCJEdvb2dsZTo6Q2xvdWQ6Ok5ldHdv",
+            "cmtNYW5hZ2VtZW50OjpWMWIGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Api.ClientReflection.Descriptor, global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Cloud.NetworkManagement.V1.ReachabilityReflection.Descriptor, global::Google.Cloud.NetworkManagement.V1.VpcFlowLogsConfigReflection.Descriptor, global::Google.LongRunning.OperationsReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.EmptyReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.FieldMaskReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
@@ -105,7 +168,11 @@ namespace Google.Cloud.NetworkManagement.V1 {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.NetworkManagement.V1.GetVpcFlowLogsConfigRequest), global::Google.Cloud.NetworkManagement.V1.GetVpcFlowLogsConfigRequest.Parser, new[]{ "Name" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.NetworkManagement.V1.CreateVpcFlowLogsConfigRequest), global::Google.Cloud.NetworkManagement.V1.CreateVpcFlowLogsConfigRequest.Parser, new[]{ "Parent", "VpcFlowLogsConfigId", "VpcFlowLogsConfig" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.NetworkManagement.V1.UpdateVpcFlowLogsConfigRequest), global::Google.Cloud.NetworkManagement.V1.UpdateVpcFlowLogsConfigRequest.Parser, new[]{ "UpdateMask", "VpcFlowLogsConfig" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.NetworkManagement.V1.DeleteVpcFlowLogsConfigRequest), global::Google.Cloud.NetworkManagement.V1.DeleteVpcFlowLogsConfigRequest.Parser, new[]{ "Name" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.NetworkManagement.V1.DeleteVpcFlowLogsConfigRequest), global::Google.Cloud.NetworkManagement.V1.DeleteVpcFlowLogsConfigRequest.Parser, new[]{ "Name" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.NetworkManagement.V1.QueryOrgVpcFlowLogsConfigsRequest), global::Google.Cloud.NetworkManagement.V1.QueryOrgVpcFlowLogsConfigsRequest.Parser, new[]{ "Parent", "PageSize", "PageToken", "Filter" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.NetworkManagement.V1.QueryOrgVpcFlowLogsConfigsResponse), global::Google.Cloud.NetworkManagement.V1.QueryOrgVpcFlowLogsConfigsResponse.Parser, new[]{ "VpcFlowLogsConfigs", "NextPageToken", "Unreachable" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.NetworkManagement.V1.ShowEffectiveFlowLogsConfigsRequest), global::Google.Cloud.NetworkManagement.V1.ShowEffectiveFlowLogsConfigsRequest.Parser, new[]{ "Parent", "Resource", "PageSize", "PageToken", "Filter" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.NetworkManagement.V1.ShowEffectiveFlowLogsConfigsResponse), global::Google.Cloud.NetworkManagement.V1.ShowEffectiveFlowLogsConfigsResponse.Parser, new[]{ "EffectiveFlowLogsConfigs", "NextPageToken", "Unreachable" }, null, null, null, null)
           }));
     }
     #endregion
@@ -168,8 +235,13 @@ namespace Google.Cloud.NetworkManagement.V1 {
     public const int ParentFieldNumber = 1;
     private string parent_ = "";
     /// <summary>
-    /// Required. The parent resource of the VpcFlowLogsConfig:
-    ///     `projects/{project_id}/locations/global`
+    /// Required. The parent resource of the VpcFlowLogsConfig,
+    /// in one of the following formats:
+    ///
+    /// - For project-level resourcs: `projects/{project_id}/locations/global`
+    ///
+    /// - For organization-level resources:
+    /// `organizations/{organization_id}/locations/global`
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -778,8 +850,14 @@ namespace Google.Cloud.NetworkManagement.V1 {
     public const int NameFieldNumber = 1;
     private string name_ = "";
     /// <summary>
-    /// Required. `VpcFlowLogsConfig` resource name using the form:
-    ///     `projects/{project_id}/locations/global/vpcFlowLogsConfigs/{vpc_flow_logs_config}`
+    /// Required. The resource name of the VpcFlowLogsConfig,
+    /// in one of the following formats:
+    ///
+    /// - For project-level resources:
+    /// `projects/{project_id}/locations/global/vpcFlowLogsConfigs/{vpc_flow_logs_config_id}`
+    ///
+    /// - For organization-level resources:
+    /// `organizations/{organization_id}/locations/global/vpcFlowLogsConfigs/{vpc_flow_logs_config_id}`
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -977,8 +1055,13 @@ namespace Google.Cloud.NetworkManagement.V1 {
     public const int ParentFieldNumber = 1;
     private string parent_ = "";
     /// <summary>
-    /// Required. The parent resource of the VPC Flow Logs configuration to create:
-    ///     `projects/{project_id}/locations/global`
+    /// Required. The parent resource of the VpcFlowLogsConfig to create,
+    /// in one of the following formats:
+    ///
+    /// - For project-level resources: `projects/{project_id}/locations/global`
+    ///
+    /// - For organization-level resources:
+    /// `organizations/{organization_id}/locations/global`
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -1264,6 +1347,12 @@ namespace Google.Cloud.NetworkManagement.V1 {
     /// <summary>
     /// Required. Mask of fields to update. At least one path must be supplied in
     /// this field.
+    /// For example, to change the state of the configuration to ENABLED, specify
+    ///   `update_mask` = `"state"`, and the `vpc_flow_logs_config` would be:
+    ///   `vpc_flow_logs_config = {
+    ///     name =
+    ///     "projects/my-project/locations/global/vpcFlowLogsConfigs/my-config"
+    ///     state = "ENABLED" }`
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -1516,8 +1605,14 @@ namespace Google.Cloud.NetworkManagement.V1 {
     public const int NameFieldNumber = 1;
     private string name_ = "";
     /// <summary>
-    /// Required. `VpcFlowLogsConfig` resource name using the form:
-    ///     `projects/{project_id}/locations/global/vpcFlowLogsConfigs/{vpc_flow_logs_config}`
+    /// Required. The resource name of the VpcFlowLogsConfig,
+    /// in one of the following formats:
+    ///
+    /// - For a project-level resource:
+    /// `projects/{project_id}/locations/global/vpcFlowLogsConfigs/{vpc_flow_logs_config_id}`
+    ///
+    /// - For an organization-level resource:
+    /// `organizations/{organization_id}/locations/global/vpcFlowLogsConfigs/{vpc_flow_logs_config_id}`
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -1652,6 +1747,1198 @@ namespace Google.Cloud.NetworkManagement.V1 {
             break;
           case 10: {
             Name = input.ReadString();
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+  }
+
+  /// <summary>
+  /// Request for the `QueryOrgVpcFlowLogsConfigs` method.
+  /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+  public sealed partial class QueryOrgVpcFlowLogsConfigsRequest : pb::IMessage<QueryOrgVpcFlowLogsConfigsRequest>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<QueryOrgVpcFlowLogsConfigsRequest> _parser = new pb::MessageParser<QueryOrgVpcFlowLogsConfigsRequest>(() => new QueryOrgVpcFlowLogsConfigsRequest());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<QueryOrgVpcFlowLogsConfigsRequest> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Cloud.NetworkManagement.V1.VpcFlowLogsReflection.Descriptor.MessageTypes[6]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public QueryOrgVpcFlowLogsConfigsRequest() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public QueryOrgVpcFlowLogsConfigsRequest(QueryOrgVpcFlowLogsConfigsRequest other) : this() {
+      parent_ = other.parent_;
+      pageSize_ = other.pageSize_;
+      pageToken_ = other.pageToken_;
+      filter_ = other.filter_;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public QueryOrgVpcFlowLogsConfigsRequest Clone() {
+      return new QueryOrgVpcFlowLogsConfigsRequest(this);
+    }
+
+    /// <summary>Field number for the "parent" field.</summary>
+    public const int ParentFieldNumber = 1;
+    private string parent_ = "";
+    /// <summary>
+    /// Required. The parent resource of the VpcFlowLogsConfig, specified in
+    /// the following format: `projects/{project_id}/locations/global`
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string Parent {
+      get { return parent_; }
+      set {
+        parent_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "page_size" field.</summary>
+    public const int PageSizeFieldNumber = 2;
+    private int pageSize_;
+    /// <summary>
+    /// Optional. Number of `VpcFlowLogsConfigs` to return.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int PageSize {
+      get { return pageSize_; }
+      set {
+        pageSize_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "page_token" field.</summary>
+    public const int PageTokenFieldNumber = 3;
+    private string pageToken_ = "";
+    /// <summary>
+    /// Optional. Page token from an earlier query, as returned in
+    /// `next_page_token`.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string PageToken {
+      get { return pageToken_; }
+      set {
+        pageToken_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "filter" field.</summary>
+    public const int FilterFieldNumber = 4;
+    private string filter_ = "";
+    /// <summary>
+    /// Optional. Lists the `VpcFlowLogsConfigs` that match the filter expression.
+    /// A filter expression must use the supported [CEL logic operators]
+    /// (https://cloud.google.com/vpc/docs/about-flow-logs-records#supported_cel_logic_operators).
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string Filter {
+      get { return filter_; }
+      set {
+        filter_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as QueryOrgVpcFlowLogsConfigsRequest);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(QueryOrgVpcFlowLogsConfigsRequest other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (Parent != other.Parent) return false;
+      if (PageSize != other.PageSize) return false;
+      if (PageToken != other.PageToken) return false;
+      if (Filter != other.Filter) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (Parent.Length != 0) hash ^= Parent.GetHashCode();
+      if (PageSize != 0) hash ^= PageSize.GetHashCode();
+      if (PageToken.Length != 0) hash ^= PageToken.GetHashCode();
+      if (Filter.Length != 0) hash ^= Filter.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (Parent.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(Parent);
+      }
+      if (PageSize != 0) {
+        output.WriteRawTag(16);
+        output.WriteInt32(PageSize);
+      }
+      if (PageToken.Length != 0) {
+        output.WriteRawTag(26);
+        output.WriteString(PageToken);
+      }
+      if (Filter.Length != 0) {
+        output.WriteRawTag(34);
+        output.WriteString(Filter);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (Parent.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(Parent);
+      }
+      if (PageSize != 0) {
+        output.WriteRawTag(16);
+        output.WriteInt32(PageSize);
+      }
+      if (PageToken.Length != 0) {
+        output.WriteRawTag(26);
+        output.WriteString(PageToken);
+      }
+      if (Filter.Length != 0) {
+        output.WriteRawTag(34);
+        output.WriteString(Filter);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      if (Parent.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Parent);
+      }
+      if (PageSize != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeInt32Size(PageSize);
+      }
+      if (PageToken.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(PageToken);
+      }
+      if (Filter.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Filter);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(QueryOrgVpcFlowLogsConfigsRequest other) {
+      if (other == null) {
+        return;
+      }
+      if (other.Parent.Length != 0) {
+        Parent = other.Parent;
+      }
+      if (other.PageSize != 0) {
+        PageSize = other.PageSize;
+      }
+      if (other.PageToken.Length != 0) {
+        PageToken = other.PageToken;
+      }
+      if (other.Filter.Length != 0) {
+        Filter = other.Filter;
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            Parent = input.ReadString();
+            break;
+          }
+          case 16: {
+            PageSize = input.ReadInt32();
+            break;
+          }
+          case 26: {
+            PageToken = input.ReadString();
+            break;
+          }
+          case 34: {
+            Filter = input.ReadString();
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            Parent = input.ReadString();
+            break;
+          }
+          case 16: {
+            PageSize = input.ReadInt32();
+            break;
+          }
+          case 26: {
+            PageToken = input.ReadString();
+            break;
+          }
+          case 34: {
+            Filter = input.ReadString();
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+  }
+
+  /// <summary>
+  /// Response for the `QueryVpcFlowLogsConfigs` method.
+  /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+  public sealed partial class QueryOrgVpcFlowLogsConfigsResponse : pb::IMessage<QueryOrgVpcFlowLogsConfigsResponse>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<QueryOrgVpcFlowLogsConfigsResponse> _parser = new pb::MessageParser<QueryOrgVpcFlowLogsConfigsResponse>(() => new QueryOrgVpcFlowLogsConfigsResponse());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<QueryOrgVpcFlowLogsConfigsResponse> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Cloud.NetworkManagement.V1.VpcFlowLogsReflection.Descriptor.MessageTypes[7]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public QueryOrgVpcFlowLogsConfigsResponse() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public QueryOrgVpcFlowLogsConfigsResponse(QueryOrgVpcFlowLogsConfigsResponse other) : this() {
+      vpcFlowLogsConfigs_ = other.vpcFlowLogsConfigs_.Clone();
+      nextPageToken_ = other.nextPageToken_;
+      unreachable_ = other.unreachable_.Clone();
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public QueryOrgVpcFlowLogsConfigsResponse Clone() {
+      return new QueryOrgVpcFlowLogsConfigsResponse(this);
+    }
+
+    /// <summary>Field number for the "vpc_flow_logs_configs" field.</summary>
+    public const int VpcFlowLogsConfigsFieldNumber = 1;
+    private static readonly pb::FieldCodec<global::Google.Cloud.NetworkManagement.V1.VpcFlowLogsConfig> _repeated_vpcFlowLogsConfigs_codec
+        = pb::FieldCodec.ForMessage(10, global::Google.Cloud.NetworkManagement.V1.VpcFlowLogsConfig.Parser);
+    private readonly pbc::RepeatedField<global::Google.Cloud.NetworkManagement.V1.VpcFlowLogsConfig> vpcFlowLogsConfigs_ = new pbc::RepeatedField<global::Google.Cloud.NetworkManagement.V1.VpcFlowLogsConfig>();
+    /// <summary>
+    /// List of VPC Flow Log configurations.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pbc::RepeatedField<global::Google.Cloud.NetworkManagement.V1.VpcFlowLogsConfig> VpcFlowLogsConfigs {
+      get { return vpcFlowLogsConfigs_; }
+    }
+
+    /// <summary>Field number for the "next_page_token" field.</summary>
+    public const int NextPageTokenFieldNumber = 2;
+    private string nextPageToken_ = "";
+    /// <summary>
+    /// Page token to fetch the next set of configurations.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string NextPageToken {
+      get { return nextPageToken_; }
+      set {
+        nextPageToken_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "unreachable" field.</summary>
+    public const int UnreachableFieldNumber = 3;
+    private static readonly pb::FieldCodec<string> _repeated_unreachable_codec
+        = pb::FieldCodec.ForString(26);
+    private readonly pbc::RepeatedField<string> unreachable_ = new pbc::RepeatedField<string>();
+    /// <summary>
+    /// Locations that could not be reached (when querying all locations with `-`).
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pbc::RepeatedField<string> Unreachable {
+      get { return unreachable_; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as QueryOrgVpcFlowLogsConfigsResponse);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(QueryOrgVpcFlowLogsConfigsResponse other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if(!vpcFlowLogsConfigs_.Equals(other.vpcFlowLogsConfigs_)) return false;
+      if (NextPageToken != other.NextPageToken) return false;
+      if(!unreachable_.Equals(other.unreachable_)) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      hash ^= vpcFlowLogsConfigs_.GetHashCode();
+      if (NextPageToken.Length != 0) hash ^= NextPageToken.GetHashCode();
+      hash ^= unreachable_.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      vpcFlowLogsConfigs_.WriteTo(output, _repeated_vpcFlowLogsConfigs_codec);
+      if (NextPageToken.Length != 0) {
+        output.WriteRawTag(18);
+        output.WriteString(NextPageToken);
+      }
+      unreachable_.WriteTo(output, _repeated_unreachable_codec);
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      vpcFlowLogsConfigs_.WriteTo(ref output, _repeated_vpcFlowLogsConfigs_codec);
+      if (NextPageToken.Length != 0) {
+        output.WriteRawTag(18);
+        output.WriteString(NextPageToken);
+      }
+      unreachable_.WriteTo(ref output, _repeated_unreachable_codec);
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      size += vpcFlowLogsConfigs_.CalculateSize(_repeated_vpcFlowLogsConfigs_codec);
+      if (NextPageToken.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(NextPageToken);
+      }
+      size += unreachable_.CalculateSize(_repeated_unreachable_codec);
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(QueryOrgVpcFlowLogsConfigsResponse other) {
+      if (other == null) {
+        return;
+      }
+      vpcFlowLogsConfigs_.Add(other.vpcFlowLogsConfigs_);
+      if (other.NextPageToken.Length != 0) {
+        NextPageToken = other.NextPageToken;
+      }
+      unreachable_.Add(other.unreachable_);
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            vpcFlowLogsConfigs_.AddEntriesFrom(input, _repeated_vpcFlowLogsConfigs_codec);
+            break;
+          }
+          case 18: {
+            NextPageToken = input.ReadString();
+            break;
+          }
+          case 26: {
+            unreachable_.AddEntriesFrom(input, _repeated_unreachable_codec);
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            vpcFlowLogsConfigs_.AddEntriesFrom(ref input, _repeated_vpcFlowLogsConfigs_codec);
+            break;
+          }
+          case 18: {
+            NextPageToken = input.ReadString();
+            break;
+          }
+          case 26: {
+            unreachable_.AddEntriesFrom(ref input, _repeated_unreachable_codec);
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+  }
+
+  /// <summary>
+  /// Request for the `ShowEffectiveFlowLogsConfigs` method.
+  /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+  public sealed partial class ShowEffectiveFlowLogsConfigsRequest : pb::IMessage<ShowEffectiveFlowLogsConfigsRequest>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<ShowEffectiveFlowLogsConfigsRequest> _parser = new pb::MessageParser<ShowEffectiveFlowLogsConfigsRequest>(() => new ShowEffectiveFlowLogsConfigsRequest());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<ShowEffectiveFlowLogsConfigsRequest> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Cloud.NetworkManagement.V1.VpcFlowLogsReflection.Descriptor.MessageTypes[8]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public ShowEffectiveFlowLogsConfigsRequest() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public ShowEffectiveFlowLogsConfigsRequest(ShowEffectiveFlowLogsConfigsRequest other) : this() {
+      parent_ = other.parent_;
+      resource_ = other.resource_;
+      pageSize_ = other.pageSize_;
+      pageToken_ = other.pageToken_;
+      filter_ = other.filter_;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public ShowEffectiveFlowLogsConfigsRequest Clone() {
+      return new ShowEffectiveFlowLogsConfigsRequest(this);
+    }
+
+    /// <summary>Field number for the "parent" field.</summary>
+    public const int ParentFieldNumber = 1;
+    private string parent_ = "";
+    /// <summary>
+    /// Required. The parent resource of the VpcFlowLogsConfig, specified in
+    /// the following format: `projects/{project_id}/locations/global`
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string Parent {
+      get { return parent_; }
+      set {
+        parent_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "resource" field.</summary>
+    public const int ResourceFieldNumber = 2;
+    private string resource_ = "";
+    /// <summary>
+    /// Required. The resource to get the effective VPC Flow Logs configuration
+    /// for. The resource must belong to the same project as the parent. The
+    /// resource must be a network, subnetwork, interconnect attachment, VPN
+    /// tunnel, or a project.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string Resource {
+      get { return resource_; }
+      set {
+        resource_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "page_size" field.</summary>
+    public const int PageSizeFieldNumber = 3;
+    private int pageSize_;
+    /// <summary>
+    /// Optional. Number of `EffectiveVpcFlowLogsConfigs` to return. Default is 30.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int PageSize {
+      get { return pageSize_; }
+      set {
+        pageSize_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "page_token" field.</summary>
+    public const int PageTokenFieldNumber = 4;
+    private string pageToken_ = "";
+    /// <summary>
+    /// Optional. Page token from an earlier query, as returned in
+    /// `next_page_token`.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string PageToken {
+      get { return pageToken_; }
+      set {
+        pageToken_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "filter" field.</summary>
+    public const int FilterFieldNumber = 5;
+    private string filter_ = "";
+    /// <summary>
+    /// Optional. Lists the `EffectiveVpcFlowLogsConfigs` that match the filter
+    /// expression. A filter expression must use the supported [CEL logic
+    /// operators]
+    /// (https://cloud.google.com/vpc/docs/about-flow-logs-records#supported_cel_logic_operators).
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string Filter {
+      get { return filter_; }
+      set {
+        filter_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as ShowEffectiveFlowLogsConfigsRequest);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(ShowEffectiveFlowLogsConfigsRequest other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (Parent != other.Parent) return false;
+      if (Resource != other.Resource) return false;
+      if (PageSize != other.PageSize) return false;
+      if (PageToken != other.PageToken) return false;
+      if (Filter != other.Filter) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (Parent.Length != 0) hash ^= Parent.GetHashCode();
+      if (Resource.Length != 0) hash ^= Resource.GetHashCode();
+      if (PageSize != 0) hash ^= PageSize.GetHashCode();
+      if (PageToken.Length != 0) hash ^= PageToken.GetHashCode();
+      if (Filter.Length != 0) hash ^= Filter.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (Parent.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(Parent);
+      }
+      if (Resource.Length != 0) {
+        output.WriteRawTag(18);
+        output.WriteString(Resource);
+      }
+      if (PageSize != 0) {
+        output.WriteRawTag(24);
+        output.WriteInt32(PageSize);
+      }
+      if (PageToken.Length != 0) {
+        output.WriteRawTag(34);
+        output.WriteString(PageToken);
+      }
+      if (Filter.Length != 0) {
+        output.WriteRawTag(42);
+        output.WriteString(Filter);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (Parent.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(Parent);
+      }
+      if (Resource.Length != 0) {
+        output.WriteRawTag(18);
+        output.WriteString(Resource);
+      }
+      if (PageSize != 0) {
+        output.WriteRawTag(24);
+        output.WriteInt32(PageSize);
+      }
+      if (PageToken.Length != 0) {
+        output.WriteRawTag(34);
+        output.WriteString(PageToken);
+      }
+      if (Filter.Length != 0) {
+        output.WriteRawTag(42);
+        output.WriteString(Filter);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      if (Parent.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Parent);
+      }
+      if (Resource.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Resource);
+      }
+      if (PageSize != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeInt32Size(PageSize);
+      }
+      if (PageToken.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(PageToken);
+      }
+      if (Filter.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Filter);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(ShowEffectiveFlowLogsConfigsRequest other) {
+      if (other == null) {
+        return;
+      }
+      if (other.Parent.Length != 0) {
+        Parent = other.Parent;
+      }
+      if (other.Resource.Length != 0) {
+        Resource = other.Resource;
+      }
+      if (other.PageSize != 0) {
+        PageSize = other.PageSize;
+      }
+      if (other.PageToken.Length != 0) {
+        PageToken = other.PageToken;
+      }
+      if (other.Filter.Length != 0) {
+        Filter = other.Filter;
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            Parent = input.ReadString();
+            break;
+          }
+          case 18: {
+            Resource = input.ReadString();
+            break;
+          }
+          case 24: {
+            PageSize = input.ReadInt32();
+            break;
+          }
+          case 34: {
+            PageToken = input.ReadString();
+            break;
+          }
+          case 42: {
+            Filter = input.ReadString();
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            Parent = input.ReadString();
+            break;
+          }
+          case 18: {
+            Resource = input.ReadString();
+            break;
+          }
+          case 24: {
+            PageSize = input.ReadInt32();
+            break;
+          }
+          case 34: {
+            PageToken = input.ReadString();
+            break;
+          }
+          case 42: {
+            Filter = input.ReadString();
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+  }
+
+  /// <summary>
+  /// Response for the `ShowEffectiveFlowLogsConfigs` method.
+  /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+  public sealed partial class ShowEffectiveFlowLogsConfigsResponse : pb::IMessage<ShowEffectiveFlowLogsConfigsResponse>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<ShowEffectiveFlowLogsConfigsResponse> _parser = new pb::MessageParser<ShowEffectiveFlowLogsConfigsResponse>(() => new ShowEffectiveFlowLogsConfigsResponse());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<ShowEffectiveFlowLogsConfigsResponse> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Cloud.NetworkManagement.V1.VpcFlowLogsReflection.Descriptor.MessageTypes[9]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public ShowEffectiveFlowLogsConfigsResponse() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public ShowEffectiveFlowLogsConfigsResponse(ShowEffectiveFlowLogsConfigsResponse other) : this() {
+      effectiveFlowLogsConfigs_ = other.effectiveFlowLogsConfigs_.Clone();
+      nextPageToken_ = other.nextPageToken_;
+      unreachable_ = other.unreachable_.Clone();
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public ShowEffectiveFlowLogsConfigsResponse Clone() {
+      return new ShowEffectiveFlowLogsConfigsResponse(this);
+    }
+
+    /// <summary>Field number for the "effective_flow_logs_configs" field.</summary>
+    public const int EffectiveFlowLogsConfigsFieldNumber = 1;
+    private static readonly pb::FieldCodec<global::Google.Cloud.NetworkManagement.V1.EffectiveVpcFlowLogsConfig> _repeated_effectiveFlowLogsConfigs_codec
+        = pb::FieldCodec.ForMessage(10, global::Google.Cloud.NetworkManagement.V1.EffectiveVpcFlowLogsConfig.Parser);
+    private readonly pbc::RepeatedField<global::Google.Cloud.NetworkManagement.V1.EffectiveVpcFlowLogsConfig> effectiveFlowLogsConfigs_ = new pbc::RepeatedField<global::Google.Cloud.NetworkManagement.V1.EffectiveVpcFlowLogsConfig>();
+    /// <summary>
+    /// List of Effective Vpc Flow Logs configurations.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pbc::RepeatedField<global::Google.Cloud.NetworkManagement.V1.EffectiveVpcFlowLogsConfig> EffectiveFlowLogsConfigs {
+      get { return effectiveFlowLogsConfigs_; }
+    }
+
+    /// <summary>Field number for the "next_page_token" field.</summary>
+    public const int NextPageTokenFieldNumber = 2;
+    private string nextPageToken_ = "";
+    /// <summary>
+    /// Page token to fetch the next set of configurations.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string NextPageToken {
+      get { return nextPageToken_; }
+      set {
+        nextPageToken_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "unreachable" field.</summary>
+    public const int UnreachableFieldNumber = 3;
+    private static readonly pb::FieldCodec<string> _repeated_unreachable_codec
+        = pb::FieldCodec.ForString(26);
+    private readonly pbc::RepeatedField<string> unreachable_ = new pbc::RepeatedField<string>();
+    /// <summary>
+    /// Locations that could not be reached (when querying all locations with `-`).
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pbc::RepeatedField<string> Unreachable {
+      get { return unreachable_; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as ShowEffectiveFlowLogsConfigsResponse);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(ShowEffectiveFlowLogsConfigsResponse other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if(!effectiveFlowLogsConfigs_.Equals(other.effectiveFlowLogsConfigs_)) return false;
+      if (NextPageToken != other.NextPageToken) return false;
+      if(!unreachable_.Equals(other.unreachable_)) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      hash ^= effectiveFlowLogsConfigs_.GetHashCode();
+      if (NextPageToken.Length != 0) hash ^= NextPageToken.GetHashCode();
+      hash ^= unreachable_.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      effectiveFlowLogsConfigs_.WriteTo(output, _repeated_effectiveFlowLogsConfigs_codec);
+      if (NextPageToken.Length != 0) {
+        output.WriteRawTag(18);
+        output.WriteString(NextPageToken);
+      }
+      unreachable_.WriteTo(output, _repeated_unreachable_codec);
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      effectiveFlowLogsConfigs_.WriteTo(ref output, _repeated_effectiveFlowLogsConfigs_codec);
+      if (NextPageToken.Length != 0) {
+        output.WriteRawTag(18);
+        output.WriteString(NextPageToken);
+      }
+      unreachable_.WriteTo(ref output, _repeated_unreachable_codec);
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      size += effectiveFlowLogsConfigs_.CalculateSize(_repeated_effectiveFlowLogsConfigs_codec);
+      if (NextPageToken.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(NextPageToken);
+      }
+      size += unreachable_.CalculateSize(_repeated_unreachable_codec);
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(ShowEffectiveFlowLogsConfigsResponse other) {
+      if (other == null) {
+        return;
+      }
+      effectiveFlowLogsConfigs_.Add(other.effectiveFlowLogsConfigs_);
+      if (other.NextPageToken.Length != 0) {
+        NextPageToken = other.NextPageToken;
+      }
+      unreachable_.Add(other.unreachable_);
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            effectiveFlowLogsConfigs_.AddEntriesFrom(input, _repeated_effectiveFlowLogsConfigs_codec);
+            break;
+          }
+          case 18: {
+            NextPageToken = input.ReadString();
+            break;
+          }
+          case 26: {
+            unreachable_.AddEntriesFrom(input, _repeated_unreachable_codec);
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            effectiveFlowLogsConfigs_.AddEntriesFrom(ref input, _repeated_effectiveFlowLogsConfigs_codec);
+            break;
+          }
+          case 18: {
+            NextPageToken = input.ReadString();
+            break;
+          }
+          case 26: {
+            unreachable_.AddEntriesFrom(ref input, _repeated_unreachable_codec);
             break;
           }
         }

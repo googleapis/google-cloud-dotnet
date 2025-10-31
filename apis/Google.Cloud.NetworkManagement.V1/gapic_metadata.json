@@ -5,6 +5,45 @@
   "protoPackage": "google.cloud.networkmanagement.v1",
   "libraryPackage": "Google.Cloud.NetworkManagement.V1",
   "services": {
+    "OrganizationVpcFlowLogsService": {
+      "clients": {
+        "grpc": {
+          "libraryClient": "OrganizationVpcFlowLogsServiceClient",
+          "rpcs": {
+            "CreateVpcFlowLogsConfig": {
+              "methods": [
+                "CreateVpcFlowLogsConfig",
+                "CreateVpcFlowLogsConfigAsync"
+              ]
+            },
+            "DeleteVpcFlowLogsConfig": {
+              "methods": [
+                "DeleteVpcFlowLogsConfig",
+                "DeleteVpcFlowLogsConfigAsync"
+              ]
+            },
+            "GetVpcFlowLogsConfig": {
+              "methods": [
+                "GetVpcFlowLogsConfig",
+                "GetVpcFlowLogsConfigAsync"
+              ]
+            },
+            "ListVpcFlowLogsConfigs": {
+              "methods": [
+                "ListVpcFlowLogsConfigs",
+                "ListVpcFlowLogsConfigsAsync"
+              ]
+            },
+            "UpdateVpcFlowLogsConfig": {
+              "methods": [
+                "UpdateVpcFlowLogsConfig",
+                "UpdateVpcFlowLogsConfigAsync"
+              ]
+            }
+          }
+        }
+      }
+    },
     "ReachabilityService": {
       "clients": {
         "grpc": {
@@ -77,6 +116,18 @@
               "methods": [
                 "ListVpcFlowLogsConfigs",
                 "ListVpcFlowLogsConfigsAsync"
+              ]
+            },
+            "QueryOrgVpcFlowLogsConfigs": {
+              "methods": [
+                "QueryOrgVpcFlowLogsConfigs",
+                "QueryOrgVpcFlowLogsConfigsAsync"
+              ]
+            },
+            "ShowEffectiveFlowLogsConfigs": {
+              "methods": [
+                "ShowEffectiveFlowLogsConfigs",
+                "ShowEffectiveFlowLogsConfigsAsync"
               ]
             },
             "UpdateVpcFlowLogsConfig": {

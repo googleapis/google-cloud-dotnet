@@ -16,13 +16,12 @@
 
 namespace GoogleCSharpSnippets
 {
-    // [START networkmanagement_v1_generated_VpcFlowLogsService_CreateVpcFlowLogsConfig_async_flattened_resourceNames]
-    using Google.Api.Gax.ResourceNames;
+    // [START networkmanagement_v1_generated_OrganizationVpcFlowLogsService_CreateVpcFlowLogsConfig_async_flattened_resourceNames2]
     using Google.Cloud.NetworkManagement.V1;
     using Google.LongRunning;
     using System.Threading.Tasks;
 
-    public sealed partial class GeneratedVpcFlowLogsServiceClientSnippets
+    public sealed partial class GeneratedOrganizationVpcFlowLogsServiceClientSnippets
     {
         /// <summary>Snippet for CreateVpcFlowLogsConfigAsync</summary>
         /// <remarks>
@@ -32,16 +31,16 @@ namespace GoogleCSharpSnippets
         /// - It may require specifying regional endpoints when creating the service client as shown in
         ///   https://cloud.google.com/dotnet/docs/reference/help/client-configuration#endpoint.
         /// </remarks>
-        public async Task CreateVpcFlowLogsConfigResourceNamesAsync()
+        public async Task CreateVpcFlowLogsConfigResourceNames2Async()
         {
             // Create client
-            VpcFlowLogsServiceClient vpcFlowLogsServiceClient = await VpcFlowLogsServiceClient.CreateAsync();
+            OrganizationVpcFlowLogsServiceClient organizationVpcFlowLogsServiceClient = await OrganizationVpcFlowLogsServiceClient.CreateAsync();
             // Initialize request argument(s)
-            LocationName parent = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]");
+            OrganizationLocationName parent = OrganizationLocationName.FromOrganizationLocation("[ORGANIZATION]", "[LOCATION]");
             VpcFlowLogsConfig vpcFlowLogsConfig = new VpcFlowLogsConfig();
             VpcFlowLogsConfigName vpcFlowLogsConfigId = VpcFlowLogsConfigName.FromProjectLocationVpcFlowLogsConfig("[PROJECT]", "[LOCATION]", "[VPC_FLOW_LOGS_CONFIG]");
             // Make the request
-            Operation<VpcFlowLogsConfig, OperationMetadata> response = await vpcFlowLogsServiceClient.CreateVpcFlowLogsConfigAsync(parent, vpcFlowLogsConfig, vpcFlowLogsConfigId);
+            Operation<VpcFlowLogsConfig, OperationMetadata> response = await organizationVpcFlowLogsServiceClient.CreateVpcFlowLogsConfigAsync(parent, vpcFlowLogsConfig, vpcFlowLogsConfigId);
 
             // Poll until the returned long-running operation is complete
             Operation<VpcFlowLogsConfig, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
@@ -51,7 +50,7 @@ namespace GoogleCSharpSnippets
             // Or get the name of the operation
             string operationName = response.Name;
             // This name can be stored, then the long-running operation retrieved later by name
-            Operation<VpcFlowLogsConfig, OperationMetadata> retrievedResponse = await vpcFlowLogsServiceClient.PollOnceCreateVpcFlowLogsConfigAsync(operationName);
+            Operation<VpcFlowLogsConfig, OperationMetadata> retrievedResponse = await organizationVpcFlowLogsServiceClient.PollOnceCreateVpcFlowLogsConfigAsync(operationName);
             // Check if the retrieved long-running operation has completed
             if (retrievedResponse.IsCompleted)
             {
@@ -60,5 +59,5 @@ namespace GoogleCSharpSnippets
             }
         }
     }
-    // [END networkmanagement_v1_generated_VpcFlowLogsService_CreateVpcFlowLogsConfig_async_flattened_resourceNames]
+    // [END networkmanagement_v1_generated_OrganizationVpcFlowLogsService_CreateVpcFlowLogsConfig_async_flattened_resourceNames2]
 }

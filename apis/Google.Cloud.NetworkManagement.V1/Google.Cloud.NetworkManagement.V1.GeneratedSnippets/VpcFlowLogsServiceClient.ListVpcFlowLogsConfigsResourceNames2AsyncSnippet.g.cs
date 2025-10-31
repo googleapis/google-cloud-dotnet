@@ -16,15 +16,16 @@
 
 namespace GoogleCSharpSnippets
 {
-    // [START networkmanagement_v1_generated_VpcFlowLogsService_ListVpcFlowLogsConfigs_sync_flattened_resourceNames]
+    // [START networkmanagement_v1_generated_VpcFlowLogsService_ListVpcFlowLogsConfigs_async_flattened_resourceNames2]
     using Google.Api.Gax;
-    using Google.Api.Gax.ResourceNames;
     using Google.Cloud.NetworkManagement.V1;
     using System;
+    using System.Linq;
+    using System.Threading.Tasks;
 
     public sealed partial class GeneratedVpcFlowLogsServiceClientSnippets
     {
-        /// <summary>Snippet for ListVpcFlowLogsConfigs</summary>
+        /// <summary>Snippet for ListVpcFlowLogsConfigsAsync</summary>
         /// <remarks>
         /// This snippet has been automatically generated and should be regarded as a code template only.
         /// It will require modifications to work:
@@ -32,24 +33,24 @@ namespace GoogleCSharpSnippets
         /// - It may require specifying regional endpoints when creating the service client as shown in
         ///   https://cloud.google.com/dotnet/docs/reference/help/client-configuration#endpoint.
         /// </remarks>
-        public void ListVpcFlowLogsConfigsResourceNames()
+        public async Task ListVpcFlowLogsConfigsResourceNames2Async()
         {
             // Create client
-            VpcFlowLogsServiceClient vpcFlowLogsServiceClient = VpcFlowLogsServiceClient.Create();
+            VpcFlowLogsServiceClient vpcFlowLogsServiceClient = await VpcFlowLogsServiceClient.CreateAsync();
             // Initialize request argument(s)
-            LocationName parent = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]");
+            OrganizationLocationName parent = OrganizationLocationName.FromOrganizationLocation("[ORGANIZATION]", "[LOCATION]");
             // Make the request
-            PagedEnumerable<ListVpcFlowLogsConfigsResponse, VpcFlowLogsConfig> response = vpcFlowLogsServiceClient.ListVpcFlowLogsConfigs(parent);
+            PagedAsyncEnumerable<ListVpcFlowLogsConfigsResponse, VpcFlowLogsConfig> response = vpcFlowLogsServiceClient.ListVpcFlowLogsConfigsAsync(parent);
 
             // Iterate over all response items, lazily performing RPCs as required
-            foreach (VpcFlowLogsConfig item in response)
+            await response.ForEachAsync((VpcFlowLogsConfig item) =>
             {
                 // Do something with each item
                 Console.WriteLine(item);
-            }
+            });
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            foreach (ListVpcFlowLogsConfigsResponse page in response.AsRawResponses())
+            await response.AsRawResponses().ForEachAsync((ListVpcFlowLogsConfigsResponse page) =>
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
@@ -58,11 +59,11 @@ namespace GoogleCSharpSnippets
                     // Do something with each item
                     Console.WriteLine(item);
                 }
-            }
+            });
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
-            Page<VpcFlowLogsConfig> singlePage = response.ReadPage(pageSize);
+            Page<VpcFlowLogsConfig> singlePage = await response.ReadPageAsync(pageSize);
             // Do something with the page of items
             Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
             foreach (VpcFlowLogsConfig item in singlePage)
@@ -74,5 +75,5 @@ namespace GoogleCSharpSnippets
             string nextPageToken = singlePage.NextPageToken;
         }
     }
-    // [END networkmanagement_v1_generated_VpcFlowLogsService_ListVpcFlowLogsConfigs_sync_flattened_resourceNames]
+    // [END networkmanagement_v1_generated_VpcFlowLogsService_ListVpcFlowLogsConfigs_async_flattened_resourceNames2]
 }
