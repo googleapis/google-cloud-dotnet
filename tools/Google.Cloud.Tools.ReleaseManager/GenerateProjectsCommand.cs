@@ -56,7 +56,7 @@ namespace Google.Cloud.Tools.ReleaseManager
                 {
                     continue;
                 }
-                var projectDependencies = api.Dependencies.Where(d => d.Value == NonSourceGenerator.ProjectVersionValue).Select(d => d.Key).ToList();
+                var projectDependencies = api.Dependencies.Where(d => d.Value == ApiMetadata.ProjectVersionValue).Select(d => d.Key).ToList();
                 if (projectDependencies.Count == 0)
                 {
                     continue;
