@@ -172,6 +172,45 @@
           }
         }
       }
+    },
+    "Monitoring": {
+      "clients": {
+        "grpc": {
+          "libraryClient": "MonitoringClient",
+          "rpcs": {
+            "AggregateFrameworkComplianceReport": {
+              "methods": [
+                "AggregateFrameworkComplianceReport",
+                "AggregateFrameworkComplianceReportAsync"
+              ]
+            },
+            "FetchFrameworkComplianceReport": {
+              "methods": [
+                "FetchFrameworkComplianceReport",
+                "FetchFrameworkComplianceReportAsync"
+              ]
+            },
+            "ListControlComplianceSummaries": {
+              "methods": [
+                "ListControlComplianceSummaries",
+                "ListControlComplianceSummariesAsync"
+              ]
+            },
+            "ListFindingSummaries": {
+              "methods": [
+                "ListFindingSummaries",
+                "ListFindingSummariesAsync"
+              ]
+            },
+            "ListFrameworkComplianceSummaries": {
+              "methods": [
+                "ListFrameworkComplianceSummaries",
+                "ListFrameworkComplianceSummariesAsync"
+              ]
+            }
+          }
+        }
+      }
     }
   }
 }
