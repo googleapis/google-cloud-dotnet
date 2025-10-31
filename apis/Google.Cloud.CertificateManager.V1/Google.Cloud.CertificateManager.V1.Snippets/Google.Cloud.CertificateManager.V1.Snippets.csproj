@@ -4,7 +4,7 @@
     <TargetFrameworks>net8.0;net462</TargetFrameworks>
     <TargetFrameworks Condition=" '$(OS)' != 'Windows_NT' ">net8.0</TargetFrameworks>
     <IsPackable>false</IsPackable>
-    <NoWarn>1701;1702;1705;xUnit2004;xUnit2013</NoWarn>
+    <NoWarn>$(NoWarn);1701;1702;1705;xUnit2004;xUnit2013</NoWarn>
   </PropertyGroup>
   <ItemGroup>
     <ProjectReference Include="..\Google.Cloud.CertificateManager.V1\Google.Cloud.CertificateManager.V1.csproj" />
