@@ -13,8 +13,6 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Google.Cloud.VertexAI.Exten
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Google.Cloud.ClientTesting", "..\..\tools\Google.Cloud.ClientTesting\Google.Cloud.ClientTesting.csproj", "{29974B0C-A7B0-8CA8-AE32-99F622C89044}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Google.Cloud.AIPlatform.V1", "..\Google.Cloud.AIPlatform.V1\Google.Cloud.AIPlatform.V1\Google.Cloud.AIPlatform.V1.csproj", "{A0D9F027-2791-C8FA-DBBB-900430EF1759}"
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -41,10 +39,6 @@ Global
 		{29974B0C-A7B0-8CA8-AE32-99F622C89044}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{29974B0C-A7B0-8CA8-AE32-99F622C89044}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{29974B0C-A7B0-8CA8-AE32-99F622C89044}.Release|Any CPU.Build.0 = Release|Any CPU
-		{A0D9F027-2791-C8FA-DBBB-900430EF1759}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{A0D9F027-2791-C8FA-DBBB-900430EF1759}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{A0D9F027-2791-C8FA-DBBB-900430EF1759}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{A0D9F027-2791-C8FA-DBBB-900430EF1759}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
