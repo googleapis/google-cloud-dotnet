@@ -15,6 +15,7 @@
 using Newtonsoft.Json;
 using System.Collections.Generic;
 using System.IO;
+using System.Linq;
 
 namespace Google.Cloud.Tools.Common;
 
@@ -24,6 +25,9 @@ namespace Google.Cloud.Tools.Common;
 // (We'll use strings for automation levels for simplicity for now.)
 public class PipelineState
 {
+    public const string AutomationLevelAutomatic = "AUTOMATION_LEVEL_AUTOMATIC";
+    public const string AutomationLevelBlocked = "AUTOMATION_LEVEL_BLOCKED";
+
     [JsonProperty("imageTag")]
     public string ImageTag { get; set; }
 
@@ -36,7 +40,15 @@ public class PipelineState
     [JsonProperty("ignoredApiPaths")]
     public List<string> IgnoredApiPaths { get; } = new();
 
+    /// <summary>
+    /// The path to the state file relative to the generator-input directory.
+    /// </summary>
     private const string StateFile = "pipeline-state.json";
+
+    /// <summary>
+    /// The path to the state file relative to repository root.
+    /// </summary>
+    public const string PathInRepository = $"{RootLayout.GeneratorInputName}/{StateFile}";
 
     private static string GetStatePath(RootLayout layout) => Path.Combine(layout.GeneratorInput, StateFile);
     public static PipelineState Load(RootLayout layout) => FromJson(File.ReadAllText(GetStatePath(layout)));
@@ -55,7 +67,18 @@ public class PipelineState
     /// </summary>
     /// <param name="json">The JSON containing the pipeline state.</param>
     /// <returns>The pipeline state.</returns>
-    private static PipelineState FromJson(string json) => JsonConvert.DeserializeObject<PipelineState>(json);
+    public static PipelineState FromJson(string json) => JsonConvert.DeserializeObject<PipelineState>(json);
+
+    /// <summary>
+    /// Returns the library that the given <see cref="ApiMetadata"/> belongs
+    /// to. (The library may be a package group.)
+    /// </summary>
+    public LibraryState GetLibrary(ApiMetadata api) => GetLibrary(api.PackageGroup?.Id ?? api.Id);
+
+    /// <summary>
+    /// Returns the library with the given ID.
+    /// </summary>
+    public LibraryState GetLibrary(string libraryId) => Libraries.Single(candidate => candidate.Id == libraryId);
 }
 
 public class LibraryState
