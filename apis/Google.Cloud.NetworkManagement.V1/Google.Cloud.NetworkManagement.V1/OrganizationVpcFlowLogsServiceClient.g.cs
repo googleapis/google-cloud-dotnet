@@ -25,7 +25,6 @@ using grpcinter = Grpc.Core.Interceptors;
 using lro = Google.LongRunning;
 using mel = Microsoft.Extensions.Logging;
 using proto = Google.Protobuf;
-using sc = System.Collections;
 using scg = System.Collections.Generic;
 using sco = System.Collections.ObjectModel;
 using st = System.Threading;
@@ -35,19 +34,21 @@ using wkt = Google.Protobuf.WellKnownTypes;
 
 namespace Google.Cloud.NetworkManagement.V1
 {
-    /// <summary>Settings for <see cref="VpcFlowLogsServiceClient"/> instances.</summary>
-    public sealed partial class VpcFlowLogsServiceSettings : gaxgrpc::ServiceSettingsBase
+    /// <summary>Settings for <see cref="OrganizationVpcFlowLogsServiceClient"/> instances.</summary>
+    public sealed partial class OrganizationVpcFlowLogsServiceSettings : gaxgrpc::ServiceSettingsBase
     {
-        /// <summary>Get a new instance of the default <see cref="VpcFlowLogsServiceSettings"/>.</summary>
-        /// <returns>A new instance of the default <see cref="VpcFlowLogsServiceSettings"/>.</returns>
-        public static VpcFlowLogsServiceSettings GetDefault() => new VpcFlowLogsServiceSettings();
+        /// <summary>Get a new instance of the default <see cref="OrganizationVpcFlowLogsServiceSettings"/>.</summary>
+        /// <returns>A new instance of the default <see cref="OrganizationVpcFlowLogsServiceSettings"/>.</returns>
+        public static OrganizationVpcFlowLogsServiceSettings GetDefault() => new OrganizationVpcFlowLogsServiceSettings();
 
-        /// <summary>Constructs a new <see cref="VpcFlowLogsServiceSettings"/> object with default settings.</summary>
-        public VpcFlowLogsServiceSettings()
+        /// <summary>
+        /// Constructs a new <see cref="OrganizationVpcFlowLogsServiceSettings"/> object with default settings.
+        /// </summary>
+        public OrganizationVpcFlowLogsServiceSettings()
         {
         }
 
-        private VpcFlowLogsServiceSettings(VpcFlowLogsServiceSettings existing) : base(existing)
+        private OrganizationVpcFlowLogsServiceSettings(OrganizationVpcFlowLogsServiceSettings existing) : base(existing)
         {
             gax::GaxPreconditions.CheckNotNull(existing, nameof(existing));
             ListVpcFlowLogsConfigsSettings = existing.ListVpcFlowLogsConfigsSettings;
@@ -58,19 +59,17 @@ namespace Google.Cloud.NetworkManagement.V1
             UpdateVpcFlowLogsConfigOperationsSettings = existing.UpdateVpcFlowLogsConfigOperationsSettings.Clone();
             DeleteVpcFlowLogsConfigSettings = existing.DeleteVpcFlowLogsConfigSettings;
             DeleteVpcFlowLogsConfigOperationsSettings = existing.DeleteVpcFlowLogsConfigOperationsSettings.Clone();
-            QueryOrgVpcFlowLogsConfigsSettings = existing.QueryOrgVpcFlowLogsConfigsSettings;
-            ShowEffectiveFlowLogsConfigsSettings = existing.ShowEffectiveFlowLogsConfigsSettings;
             LocationsSettings = existing.LocationsSettings;
             IAMPolicySettings = existing.IAMPolicySettings;
             OnCopy(existing);
         }
 
-        partial void OnCopy(VpcFlowLogsServiceSettings existing);
+        partial void OnCopy(OrganizationVpcFlowLogsServiceSettings existing);
 
         /// <summary>
         /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
-        /// <c>VpcFlowLogsServiceClient.ListVpcFlowLogsConfigs</c> and
-        /// <c>VpcFlowLogsServiceClient.ListVpcFlowLogsConfigsAsync</c>.
+        /// <c>OrganizationVpcFlowLogsServiceClient.ListVpcFlowLogsConfigs</c> and
+        /// <c>OrganizationVpcFlowLogsServiceClient.ListVpcFlowLogsConfigsAsync</c>.
         /// </summary>
         /// <remarks>
         /// <list type="bullet">
@@ -82,8 +81,8 @@ namespace Google.Cloud.NetworkManagement.V1
 
         /// <summary>
         /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
-        /// <c>VpcFlowLogsServiceClient.GetVpcFlowLogsConfig</c> and
-        /// <c>VpcFlowLogsServiceClient.GetVpcFlowLogsConfigAsync</c>.
+        /// <c>OrganizationVpcFlowLogsServiceClient.GetVpcFlowLogsConfig</c> and
+        /// <c>OrganizationVpcFlowLogsServiceClient.GetVpcFlowLogsConfigAsync</c>.
         /// </summary>
         /// <remarks>
         /// <list type="bullet">
@@ -95,8 +94,8 @@ namespace Google.Cloud.NetworkManagement.V1
 
         /// <summary>
         /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
-        /// <c>VpcFlowLogsServiceClient.CreateVpcFlowLogsConfig</c> and
-        /// <c>VpcFlowLogsServiceClient.CreateVpcFlowLogsConfigAsync</c>.
+        /// <c>OrganizationVpcFlowLogsServiceClient.CreateVpcFlowLogsConfig</c> and
+        /// <c>OrganizationVpcFlowLogsServiceClient.CreateVpcFlowLogsConfigAsync</c>.
         /// </summary>
         /// <remarks>
         /// <list type="bullet">
@@ -107,8 +106,8 @@ namespace Google.Cloud.NetworkManagement.V1
         public gaxgrpc::CallSettings CreateVpcFlowLogsConfigSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
 
         /// <summary>
-        /// Long Running Operation settings for calls to <c>VpcFlowLogsServiceClient.CreateVpcFlowLogsConfig</c> and
-        /// <c>VpcFlowLogsServiceClient.CreateVpcFlowLogsConfigAsync</c>.
+        /// Long Running Operation settings for calls to <c>OrganizationVpcFlowLogsServiceClient.CreateVpcFlowLogsConfig</c>
+        ///  and <c>OrganizationVpcFlowLogsServiceClient.CreateVpcFlowLogsConfigAsync</c>.
         /// </summary>
         /// <remarks>
         /// Uses default <see cref="gax::PollSettings"/> of:
@@ -126,8 +125,8 @@ namespace Google.Cloud.NetworkManagement.V1
 
         /// <summary>
         /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
-        /// <c>VpcFlowLogsServiceClient.UpdateVpcFlowLogsConfig</c> and
-        /// <c>VpcFlowLogsServiceClient.UpdateVpcFlowLogsConfigAsync</c>.
+        /// <c>OrganizationVpcFlowLogsServiceClient.UpdateVpcFlowLogsConfig</c> and
+        /// <c>OrganizationVpcFlowLogsServiceClient.UpdateVpcFlowLogsConfigAsync</c>.
         /// </summary>
         /// <remarks>
         /// <list type="bullet">
@@ -138,8 +137,8 @@ namespace Google.Cloud.NetworkManagement.V1
         public gaxgrpc::CallSettings UpdateVpcFlowLogsConfigSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
 
         /// <summary>
-        /// Long Running Operation settings for calls to <c>VpcFlowLogsServiceClient.UpdateVpcFlowLogsConfig</c> and
-        /// <c>VpcFlowLogsServiceClient.UpdateVpcFlowLogsConfigAsync</c>.
+        /// Long Running Operation settings for calls to <c>OrganizationVpcFlowLogsServiceClient.UpdateVpcFlowLogsConfig</c>
+        ///  and <c>OrganizationVpcFlowLogsServiceClient.UpdateVpcFlowLogsConfigAsync</c>.
         /// </summary>
         /// <remarks>
         /// Uses default <see cref="gax::PollSettings"/> of:
@@ -157,8 +156,8 @@ namespace Google.Cloud.NetworkManagement.V1
 
         /// <summary>
         /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
-        /// <c>VpcFlowLogsServiceClient.DeleteVpcFlowLogsConfig</c> and
-        /// <c>VpcFlowLogsServiceClient.DeleteVpcFlowLogsConfigAsync</c>.
+        /// <c>OrganizationVpcFlowLogsServiceClient.DeleteVpcFlowLogsConfig</c> and
+        /// <c>OrganizationVpcFlowLogsServiceClient.DeleteVpcFlowLogsConfigAsync</c>.
         /// </summary>
         /// <remarks>
         /// <list type="bullet">
@@ -169,8 +168,8 @@ namespace Google.Cloud.NetworkManagement.V1
         public gaxgrpc::CallSettings DeleteVpcFlowLogsConfigSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
 
         /// <summary>
-        /// Long Running Operation settings for calls to <c>VpcFlowLogsServiceClient.DeleteVpcFlowLogsConfig</c> and
-        /// <c>VpcFlowLogsServiceClient.DeleteVpcFlowLogsConfigAsync</c>.
+        /// Long Running Operation settings for calls to <c>OrganizationVpcFlowLogsServiceClient.DeleteVpcFlowLogsConfig</c>
+        ///  and <c>OrganizationVpcFlowLogsServiceClient.DeleteVpcFlowLogsConfigAsync</c>.
         /// </summary>
         /// <remarks>
         /// Uses default <see cref="gax::PollSettings"/> of:
@@ -187,32 +186,6 @@ namespace Google.Cloud.NetworkManagement.V1
         };
 
         /// <summary>
-        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
-        /// <c>VpcFlowLogsServiceClient.QueryOrgVpcFlowLogsConfigs</c> and
-        /// <c>VpcFlowLogsServiceClient.QueryOrgVpcFlowLogsConfigsAsync</c>.
-        /// </summary>
-        /// <remarks>
-        /// <list type="bullet">
-        /// <item><description>This call will not be retried.</description></item>
-        /// <item><description>No timeout is applied.</description></item>
-        /// </list>
-        /// </remarks>
-        public gaxgrpc::CallSettings QueryOrgVpcFlowLogsConfigsSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
-
-        /// <summary>
-        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
-        /// <c>VpcFlowLogsServiceClient.ShowEffectiveFlowLogsConfigs</c> and
-        /// <c>VpcFlowLogsServiceClient.ShowEffectiveFlowLogsConfigsAsync</c>.
-        /// </summary>
-        /// <remarks>
-        /// <list type="bullet">
-        /// <item><description>This call will not be retried.</description></item>
-        /// <item><description>No timeout is applied.</description></item>
-        /// </list>
-        /// </remarks>
-        public gaxgrpc::CallSettings ShowEffectiveFlowLogsConfigsSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
-
-        /// <summary>
         /// The settings to use for the <see cref="gcl::LocationsClient"/> associated with the client.
         /// </summary>
         public gcl::LocationsSettings LocationsSettings { get; set; } = gcl::LocationsSettings.GetDefault();
@@ -223,79 +196,80 @@ namespace Google.Cloud.NetworkManagement.V1
         public gciv::IAMPolicySettings IAMPolicySettings { get; set; } = gciv::IAMPolicySettings.GetDefault();
 
         /// <summary>Creates a deep clone of this object, with all the same property values.</summary>
-        /// <returns>A deep clone of this <see cref="VpcFlowLogsServiceSettings"/> object.</returns>
-        public VpcFlowLogsServiceSettings Clone() => new VpcFlowLogsServiceSettings(this);
+        /// <returns>A deep clone of this <see cref="OrganizationVpcFlowLogsServiceSettings"/> object.</returns>
+        public OrganizationVpcFlowLogsServiceSettings Clone() => new OrganizationVpcFlowLogsServiceSettings(this);
     }
 
     /// <summary>
-    /// Builder class for <see cref="VpcFlowLogsServiceClient"/> to provide simple configuration of credentials,
-    /// endpoint etc.
+    /// Builder class for <see cref="OrganizationVpcFlowLogsServiceClient"/> to provide simple configuration of
+    /// credentials, endpoint etc.
     /// </summary>
-    public sealed partial class VpcFlowLogsServiceClientBuilder : gaxgrpc::ClientBuilderBase<VpcFlowLogsServiceClient>
+    public sealed partial class OrganizationVpcFlowLogsServiceClientBuilder : gaxgrpc::ClientBuilderBase<OrganizationVpcFlowLogsServiceClient>
     {
         /// <summary>The settings to use for RPCs, or <c>null</c> for the default settings.</summary>
-        public VpcFlowLogsServiceSettings Settings { get; set; }
+        public OrganizationVpcFlowLogsServiceSettings Settings { get; set; }
 
         /// <summary>Creates a new builder with default settings.</summary>
-        public VpcFlowLogsServiceClientBuilder() : base(VpcFlowLogsServiceClient.ServiceMetadata)
+        public OrganizationVpcFlowLogsServiceClientBuilder() : base(OrganizationVpcFlowLogsServiceClient.ServiceMetadata)
         {
         }
 
-        partial void InterceptBuild(ref VpcFlowLogsServiceClient client);
+        partial void InterceptBuild(ref OrganizationVpcFlowLogsServiceClient client);
 
-        partial void InterceptBuildAsync(st::CancellationToken cancellationToken, ref stt::Task<VpcFlowLogsServiceClient> task);
+        partial void InterceptBuildAsync(st::CancellationToken cancellationToken, ref stt::Task<OrganizationVpcFlowLogsServiceClient> task);
 
         /// <summary>Builds the resulting client.</summary>
-        public override VpcFlowLogsServiceClient Build()
+        public override OrganizationVpcFlowLogsServiceClient Build()
         {
-            VpcFlowLogsServiceClient client = null;
+            OrganizationVpcFlowLogsServiceClient client = null;
             InterceptBuild(ref client);
             return client ?? BuildImpl();
         }
 
         /// <summary>Builds the resulting client asynchronously.</summary>
-        public override stt::Task<VpcFlowLogsServiceClient> BuildAsync(st::CancellationToken cancellationToken = default)
+        public override stt::Task<OrganizationVpcFlowLogsServiceClient> BuildAsync(st::CancellationToken cancellationToken = default)
         {
-            stt::Task<VpcFlowLogsServiceClient> task = null;
+            stt::Task<OrganizationVpcFlowLogsServiceClient> task = null;
             InterceptBuildAsync(cancellationToken, ref task);
             return task ?? BuildAsyncImpl(cancellationToken);
         }
 
-        private VpcFlowLogsServiceClient BuildImpl()
+        private OrganizationVpcFlowLogsServiceClient BuildImpl()
         {
             Validate();
             grpccore::CallInvoker callInvoker = CreateCallInvoker();
-            return VpcFlowLogsServiceClient.Create(callInvoker, GetEffectiveSettings(Settings?.Clone()), Logger);
+            return OrganizationVpcFlowLogsServiceClient.Create(callInvoker, GetEffectiveSettings(Settings?.Clone()), Logger);
         }
 
-        private async stt::Task<VpcFlowLogsServiceClient> BuildAsyncImpl(st::CancellationToken cancellationToken)
+        private async stt::Task<OrganizationVpcFlowLogsServiceClient> BuildAsyncImpl(st::CancellationToken cancellationToken)
         {
             Validate();
             grpccore::CallInvoker callInvoker = await CreateCallInvokerAsync(cancellationToken).ConfigureAwait(false);
-            return VpcFlowLogsServiceClient.Create(callInvoker, GetEffectiveSettings(Settings?.Clone()), Logger);
+            return OrganizationVpcFlowLogsServiceClient.Create(callInvoker, GetEffectiveSettings(Settings?.Clone()), Logger);
         }
 
         /// <summary>Returns the channel pool to use when no other options are specified.</summary>
-        protected override gaxgrpc::ChannelPool GetChannelPool() => VpcFlowLogsServiceClient.ChannelPool;
+        protected override gaxgrpc::ChannelPool GetChannelPool() => OrganizationVpcFlowLogsServiceClient.ChannelPool;
     }
 
-    /// <summary>VpcFlowLogsService client wrapper, for convenient use.</summary>
+    /// <summary>OrganizationVpcFlowLogsService client wrapper, for convenient use.</summary>
     /// <remarks>
-    /// The VPC Flow Logs service in the Google Cloud Network Management API provides
-    /// configurations that generate Flow Logs. The service and the configuration
-    /// resources created using this service are global.
+    /// The VPC Flow Logs organization service in the Google Cloud Network Management
+    /// API provides organization level configurations that generate Flow Logs. The
+    /// service and the configuration resources created using this service are
+    /// global.
     /// </remarks>
-    public abstract partial class VpcFlowLogsServiceClient
+    public abstract partial class OrganizationVpcFlowLogsServiceClient
     {
         /// <summary>
-        /// The default endpoint for the VpcFlowLogsService service, which is a host of
+        /// The default endpoint for the OrganizationVpcFlowLogsService service, which is a host of
         /// "networkmanagement.googleapis.com" and a port of 443.
         /// </summary>
         public static string DefaultEndpoint { get; } = "networkmanagement.googleapis.com:443";
 
-        /// <summary>The default VpcFlowLogsService scopes.</summary>
+        /// <summary>The default OrganizationVpcFlowLogsService scopes.</summary>
         /// <remarks>
-        /// The default VpcFlowLogsService scopes are:
+        /// The default OrganizationVpcFlowLogsService scopes are:
         /// <list type="bullet">
         /// <item><description>https://www.googleapis.com/auth/cloud-platform</description></item>
         /// </list>
@@ -306,41 +280,42 @@ namespace Google.Cloud.NetworkManagement.V1
         });
 
         /// <summary>The service metadata associated with this client type.</summary>
-        public static gaxgrpc::ServiceMetadata ServiceMetadata { get; } = new gaxgrpc::ServiceMetadata(VpcFlowLogsService.Descriptor, DefaultEndpoint, DefaultScopes, true, gax::ApiTransports.Grpc | gax::ApiTransports.Rest, PackageApiMetadata.ApiMetadata);
+        public static gaxgrpc::ServiceMetadata ServiceMetadata { get; } = new gaxgrpc::ServiceMetadata(OrganizationVpcFlowLogsService.Descriptor, DefaultEndpoint, DefaultScopes, true, gax::ApiTransports.Grpc | gax::ApiTransports.Rest, PackageApiMetadata.ApiMetadata);
 
         internal static gaxgrpc::ChannelPool ChannelPool { get; } = new gaxgrpc::ChannelPool(ServiceMetadata);
 
         /// <summary>
-        /// Asynchronously creates a <see cref="VpcFlowLogsServiceClient"/> using the default credentials, endpoint and
-        /// settings. To specify custom credentials or other settings, use <see cref="VpcFlowLogsServiceClientBuilder"/>
-        /// .
+        /// Asynchronously creates a <see cref="OrganizationVpcFlowLogsServiceClient"/> using the default credentials,
+        /// endpoint and settings. To specify custom credentials or other settings, use
+        /// <see cref="OrganizationVpcFlowLogsServiceClientBuilder"/>.
         /// </summary>
         /// <param name="cancellationToken">
         /// The <see cref="st::CancellationToken"/> to use while creating the client.
         /// </param>
-        /// <returns>The task representing the created <see cref="VpcFlowLogsServiceClient"/>.</returns>
-        public static stt::Task<VpcFlowLogsServiceClient> CreateAsync(st::CancellationToken cancellationToken = default) =>
-            new VpcFlowLogsServiceClientBuilder().BuildAsync(cancellationToken);
+        /// <returns>The task representing the created <see cref="OrganizationVpcFlowLogsServiceClient"/>.</returns>
+        public static stt::Task<OrganizationVpcFlowLogsServiceClient> CreateAsync(st::CancellationToken cancellationToken = default) =>
+            new OrganizationVpcFlowLogsServiceClientBuilder().BuildAsync(cancellationToken);
 
         /// <summary>
-        /// Synchronously creates a <see cref="VpcFlowLogsServiceClient"/> using the default credentials, endpoint and
-        /// settings. To specify custom credentials or other settings, use <see cref="VpcFlowLogsServiceClientBuilder"/>
-        /// .
+        /// Synchronously creates a <see cref="OrganizationVpcFlowLogsServiceClient"/> using the default credentials,
+        /// endpoint and settings. To specify custom credentials or other settings, use
+        /// <see cref="OrganizationVpcFlowLogsServiceClientBuilder"/>.
         /// </summary>
-        /// <returns>The created <see cref="VpcFlowLogsServiceClient"/>.</returns>
-        public static VpcFlowLogsServiceClient Create() => new VpcFlowLogsServiceClientBuilder().Build();
+        /// <returns>The created <see cref="OrganizationVpcFlowLogsServiceClient"/>.</returns>
+        public static OrganizationVpcFlowLogsServiceClient Create() =>
+            new OrganizationVpcFlowLogsServiceClientBuilder().Build();
 
         /// <summary>
-        /// Creates a <see cref="VpcFlowLogsServiceClient"/> which uses the specified call invoker for remote
-        /// operations.
+        /// Creates a <see cref="OrganizationVpcFlowLogsServiceClient"/> which uses the specified call invoker for
+        /// remote operations.
         /// </summary>
         /// <param name="callInvoker">
         /// The <see cref="grpccore::CallInvoker"/> for remote operations. Must not be null.
         /// </param>
-        /// <param name="settings">Optional <see cref="VpcFlowLogsServiceSettings"/>.</param>
+        /// <param name="settings">Optional <see cref="OrganizationVpcFlowLogsServiceSettings"/>.</param>
         /// <param name="logger">Optional <see cref="mel::ILogger"/>.</param>
-        /// <returns>The created <see cref="VpcFlowLogsServiceClient"/>.</returns>
-        internal static VpcFlowLogsServiceClient Create(grpccore::CallInvoker callInvoker, VpcFlowLogsServiceSettings settings = null, mel::ILogger logger = null)
+        /// <returns>The created <see cref="OrganizationVpcFlowLogsServiceClient"/>.</returns>
+        internal static OrganizationVpcFlowLogsServiceClient Create(grpccore::CallInvoker callInvoker, OrganizationVpcFlowLogsServiceSettings settings = null, mel::ILogger logger = null)
         {
             gax::GaxPreconditions.CheckNotNull(callInvoker, nameof(callInvoker));
             grpcinter::Interceptor interceptor = settings?.Interceptor;
@@ -348,8 +323,8 @@ namespace Google.Cloud.NetworkManagement.V1
             {
                 callInvoker = grpcinter::CallInvokerExtensions.Intercept(callInvoker, interceptor);
             }
-            VpcFlowLogsService.VpcFlowLogsServiceClient grpcClient = new VpcFlowLogsService.VpcFlowLogsServiceClient(callInvoker);
-            return new VpcFlowLogsServiceClientImpl(grpcClient, settings, logger);
+            OrganizationVpcFlowLogsService.OrganizationVpcFlowLogsServiceClient grpcClient = new OrganizationVpcFlowLogsService.OrganizationVpcFlowLogsServiceClient(callInvoker);
+            return new OrganizationVpcFlowLogsServiceClientImpl(grpcClient, settings, logger);
         }
 
         /// <summary>
@@ -365,8 +340,8 @@ namespace Google.Cloud.NetworkManagement.V1
         /// <returns>A task representing the asynchronous shutdown operation.</returns>
         public static stt::Task ShutdownDefaultChannelsAsync() => ChannelPool.ShutdownChannelsAsync();
 
-        /// <summary>The underlying gRPC VpcFlowLogsService client</summary>
-        public virtual VpcFlowLogsService.VpcFlowLogsServiceClient GrpcClient => throw new sys::NotImplementedException();
+        /// <summary>The underlying gRPC OrganizationVpcFlowLogsService client</summary>
+        public virtual OrganizationVpcFlowLogsService.OrganizationVpcFlowLogsServiceClient GrpcClient => throw new sys::NotImplementedException();
 
         /// <summary>The <see cref="gcl::LocationsClient"/> associated with this client.</summary>
         public virtual gcl::LocationsClient LocationsClient => throw new sys::NotImplementedException();
@@ -375,7 +350,7 @@ namespace Google.Cloud.NetworkManagement.V1
         public virtual gciv::IAMPolicyClient IAMPolicyClient => throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Lists all `VpcFlowLogsConfigs` in a given project.
+        /// Lists all `VpcFlowLogsConfigs` in a given organization.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -384,7 +359,7 @@ namespace Google.Cloud.NetworkManagement.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Lists all `VpcFlowLogsConfigs` in a given project.
+        /// Lists all `VpcFlowLogsConfigs` in a given organization.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -393,7 +368,7 @@ namespace Google.Cloud.NetworkManagement.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Lists all `VpcFlowLogsConfigs` in a given project.
+        /// Lists all `VpcFlowLogsConfigs` in a given organization.
         /// </summary>
         /// <param name="parent">
         /// Required. The parent resource of the VpcFlowLogsConfig,
@@ -432,7 +407,7 @@ namespace Google.Cloud.NetworkManagement.V1
         }
 
         /// <summary>
-        /// Lists all `VpcFlowLogsConfigs` in a given project.
+        /// Lists all `VpcFlowLogsConfigs` in a given organization.
         /// </summary>
         /// <param name="parent">
         /// Required. The parent resource of the VpcFlowLogsConfig,
@@ -471,7 +446,7 @@ namespace Google.Cloud.NetworkManagement.V1
         }
 
         /// <summary>
-        /// Lists all `VpcFlowLogsConfigs` in a given project.
+        /// Lists all `VpcFlowLogsConfigs` in a given organization.
         /// </summary>
         /// <param name="parent">
         /// Required. The parent resource of the VpcFlowLogsConfig,
@@ -510,7 +485,7 @@ namespace Google.Cloud.NetworkManagement.V1
         }
 
         /// <summary>
-        /// Lists all `VpcFlowLogsConfigs` in a given project.
+        /// Lists all `VpcFlowLogsConfigs` in a given organization.
         /// </summary>
         /// <param name="parent">
         /// Required. The parent resource of the VpcFlowLogsConfig,
@@ -549,7 +524,7 @@ namespace Google.Cloud.NetworkManagement.V1
         }
 
         /// <summary>
-        /// Lists all `VpcFlowLogsConfigs` in a given project.
+        /// Lists all `VpcFlowLogsConfigs` in a given organization.
         /// </summary>
         /// <param name="parent">
         /// Required. The parent resource of the VpcFlowLogsConfig,
@@ -588,7 +563,7 @@ namespace Google.Cloud.NetworkManagement.V1
         }
 
         /// <summary>
-        /// Lists all `VpcFlowLogsConfigs` in a given project.
+        /// Lists all `VpcFlowLogsConfigs` in a given organization.
         /// </summary>
         /// <param name="parent">
         /// Required. The parent resource of the VpcFlowLogsConfig,
@@ -1238,7 +1213,7 @@ namespace Google.Cloud.NetworkManagement.V1
         /// ID is different), the creation fails.
         /// Notes:
         /// 
-        /// 1. Updating a configuration with `state=DISABLED` will fail.
+        /// 1. Updating a configuration with `state=DISABLED` will fail
         /// 2. The following fields are not considered as settings for the purpose
         /// of the check mentioned above, therefore - updating another configuration
         /// with the same fields but different values for the following fields will
@@ -1261,7 +1236,7 @@ namespace Google.Cloud.NetworkManagement.V1
         /// ID is different), the creation fails.
         /// Notes:
         /// 
-        /// 1. Updating a configuration with `state=DISABLED` will fail.
+        /// 1. Updating a configuration with `state=DISABLED` will fail
         /// 2. The following fields are not considered as settings for the purpose
         /// of the check mentioned above, therefore - updating another configuration
         /// with the same fields but different values for the following fields will
@@ -1284,7 +1259,7 @@ namespace Google.Cloud.NetworkManagement.V1
         /// ID is different), the creation fails.
         /// Notes:
         /// 
-        /// 1. Updating a configuration with `state=DISABLED` will fail.
+        /// 1. Updating a configuration with `state=DISABLED` will fail
         /// 2. The following fields are not considered as settings for the purpose
         /// of the check mentioned above, therefore - updating another configuration
         /// with the same fields but different values for the following fields will
@@ -1334,7 +1309,7 @@ namespace Google.Cloud.NetworkManagement.V1
         /// ID is different), the creation fails.
         /// Notes:
         /// 
-        /// 1. Updating a configuration with `state=DISABLED` will fail.
+        /// 1. Updating a configuration with `state=DISABLED` will fail
         /// 2. The following fields are not considered as settings for the purpose
         /// of the check mentioned above, therefore - updating another configuration
         /// with the same fields but different values for the following fields will
@@ -1373,7 +1348,7 @@ namespace Google.Cloud.NetworkManagement.V1
         /// ID is different), the creation fails.
         /// Notes:
         /// 
-        /// 1. Updating a configuration with `state=DISABLED` will fail.
+        /// 1. Updating a configuration with `state=DISABLED` will fail
         /// 2. The following fields are not considered as settings for the purpose
         /// of the check mentioned above, therefore - updating another configuration
         /// with the same fields but different values for the following fields will
@@ -1412,7 +1387,7 @@ namespace Google.Cloud.NetworkManagement.V1
         /// ID is different), the creation fails.
         /// Notes:
         /// 
-        /// 1. Updating a configuration with `state=DISABLED` will fail.
+        /// 1. Updating a configuration with `state=DISABLED` will fail
         /// 2. The following fields are not considered as settings for the purpose
         /// of the check mentioned above, therefore - updating another configuration
         /// with the same fields but different values for the following fields will
@@ -1614,55 +1589,16 @@ namespace Google.Cloud.NetworkManagement.V1
         /// <returns>A Task containing the RPC response.</returns>
         public virtual stt::Task<lro::Operation<wkt::Empty, OperationMetadata>> DeleteVpcFlowLogsConfigAsync(VpcFlowLogsConfigName name, st::CancellationToken cancellationToken) =>
             DeleteVpcFlowLogsConfigAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
-
-        /// <summary>
-        /// QueryOrgVpcFlowLogsConfigs returns a list of all organization-level VPC
-        /// Flow Logs configurations applicable to the specified project.
-        /// </summary>
-        /// <param name="request">The request object containing all of the parameters for the API call.</param>
-        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
-        /// <returns>A pageable sequence of <see cref="VpcFlowLogsConfig"/> resources.</returns>
-        public virtual gax::PagedEnumerable<QueryOrgVpcFlowLogsConfigsResponse, VpcFlowLogsConfig> QueryOrgVpcFlowLogsConfigs(QueryOrgVpcFlowLogsConfigsRequest request, gaxgrpc::CallSettings callSettings = null) =>
-            throw new sys::NotImplementedException();
-
-        /// <summary>
-        /// QueryOrgVpcFlowLogsConfigs returns a list of all organization-level VPC
-        /// Flow Logs configurations applicable to the specified project.
-        /// </summary>
-        /// <param name="request">The request object containing all of the parameters for the API call.</param>
-        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
-        /// <returns>A pageable asynchronous sequence of <see cref="VpcFlowLogsConfig"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<QueryOrgVpcFlowLogsConfigsResponse, VpcFlowLogsConfig> QueryOrgVpcFlowLogsConfigsAsync(QueryOrgVpcFlowLogsConfigsRequest request, gaxgrpc::CallSettings callSettings = null) =>
-            throw new sys::NotImplementedException();
-
-        /// <summary>
-        /// ShowEffectiveFlowLogsConfigs returns a list of all VPC Flow Logs
-        /// configurations applicable to a specified resource.
-        /// </summary>
-        /// <param name="request">The request object containing all of the parameters for the API call.</param>
-        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
-        /// <returns>A pageable sequence of <see cref="EffectiveVpcFlowLogsConfig"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ShowEffectiveFlowLogsConfigsResponse, EffectiveVpcFlowLogsConfig> ShowEffectiveFlowLogsConfigs(ShowEffectiveFlowLogsConfigsRequest request, gaxgrpc::CallSettings callSettings = null) =>
-            throw new sys::NotImplementedException();
-
-        /// <summary>
-        /// ShowEffectiveFlowLogsConfigs returns a list of all VPC Flow Logs
-        /// configurations applicable to a specified resource.
-        /// </summary>
-        /// <param name="request">The request object containing all of the parameters for the API call.</param>
-        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
-        /// <returns>A pageable asynchronous sequence of <see cref="EffectiveVpcFlowLogsConfig"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ShowEffectiveFlowLogsConfigsResponse, EffectiveVpcFlowLogsConfig> ShowEffectiveFlowLogsConfigsAsync(ShowEffectiveFlowLogsConfigsRequest request, gaxgrpc::CallSettings callSettings = null) =>
-            throw new sys::NotImplementedException();
     }
 
-    /// <summary>VpcFlowLogsService client wrapper implementation, for convenient use.</summary>
+    /// <summary>OrganizationVpcFlowLogsService client wrapper implementation, for convenient use.</summary>
     /// <remarks>
-    /// The VPC Flow Logs service in the Google Cloud Network Management API provides
-    /// configurations that generate Flow Logs. The service and the configuration
-    /// resources created using this service are global.
+    /// The VPC Flow Logs organization service in the Google Cloud Network Management
+    /// API provides organization level configurations that generate Flow Logs. The
+    /// service and the configuration resources created using this service are
+    /// global.
     /// </remarks>
-    public sealed partial class VpcFlowLogsServiceClientImpl : VpcFlowLogsServiceClient
+    public sealed partial class OrganizationVpcFlowLogsServiceClientImpl : OrganizationVpcFlowLogsServiceClient
     {
         private readonly gaxgrpc::ApiCall<ListVpcFlowLogsConfigsRequest, ListVpcFlowLogsConfigsResponse> _callListVpcFlowLogsConfigs;
 
@@ -1674,20 +1610,19 @@ namespace Google.Cloud.NetworkManagement.V1
 
         private readonly gaxgrpc::ApiCall<DeleteVpcFlowLogsConfigRequest, lro::Operation> _callDeleteVpcFlowLogsConfig;
 
-        private readonly gaxgrpc::ApiCall<QueryOrgVpcFlowLogsConfigsRequest, QueryOrgVpcFlowLogsConfigsResponse> _callQueryOrgVpcFlowLogsConfigs;
-
-        private readonly gaxgrpc::ApiCall<ShowEffectiveFlowLogsConfigsRequest, ShowEffectiveFlowLogsConfigsResponse> _callShowEffectiveFlowLogsConfigs;
-
         /// <summary>
-        /// Constructs a client wrapper for the VpcFlowLogsService service, with the specified gRPC client and settings.
+        /// Constructs a client wrapper for the OrganizationVpcFlowLogsService service, with the specified gRPC client
+        /// and settings.
         /// </summary>
         /// <param name="grpcClient">The underlying gRPC client.</param>
-        /// <param name="settings">The base <see cref="VpcFlowLogsServiceSettings"/> used within this client.</param>
+        /// <param name="settings">
+        /// The base <see cref="OrganizationVpcFlowLogsServiceSettings"/> used within this client.
+        /// </param>
         /// <param name="logger">Optional <see cref="mel::ILogger"/> to use within this client.</param>
-        public VpcFlowLogsServiceClientImpl(VpcFlowLogsService.VpcFlowLogsServiceClient grpcClient, VpcFlowLogsServiceSettings settings, mel::ILogger logger)
+        public OrganizationVpcFlowLogsServiceClientImpl(OrganizationVpcFlowLogsService.OrganizationVpcFlowLogsServiceClient grpcClient, OrganizationVpcFlowLogsServiceSettings settings, mel::ILogger logger)
         {
             GrpcClient = grpcClient;
-            VpcFlowLogsServiceSettings effectiveSettings = settings ?? VpcFlowLogsServiceSettings.GetDefault();
+            OrganizationVpcFlowLogsServiceSettings effectiveSettings = settings ?? OrganizationVpcFlowLogsServiceSettings.GetDefault();
             gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(new gaxgrpc::ClientHelper.Options
             {
                 Settings = effectiveSettings,
@@ -1713,12 +1648,6 @@ namespace Google.Cloud.NetworkManagement.V1
             _callDeleteVpcFlowLogsConfig = clientHelper.BuildApiCall<DeleteVpcFlowLogsConfigRequest, lro::Operation>("DeleteVpcFlowLogsConfig", grpcClient.DeleteVpcFlowLogsConfigAsync, grpcClient.DeleteVpcFlowLogsConfig, effectiveSettings.DeleteVpcFlowLogsConfigSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callDeleteVpcFlowLogsConfig);
             Modify_DeleteVpcFlowLogsConfigApiCall(ref _callDeleteVpcFlowLogsConfig);
-            _callQueryOrgVpcFlowLogsConfigs = clientHelper.BuildApiCall<QueryOrgVpcFlowLogsConfigsRequest, QueryOrgVpcFlowLogsConfigsResponse>("QueryOrgVpcFlowLogsConfigs", grpcClient.QueryOrgVpcFlowLogsConfigsAsync, grpcClient.QueryOrgVpcFlowLogsConfigs, effectiveSettings.QueryOrgVpcFlowLogsConfigsSettings).WithGoogleRequestParam("parent", request => request.Parent);
-            Modify_ApiCall(ref _callQueryOrgVpcFlowLogsConfigs);
-            Modify_QueryOrgVpcFlowLogsConfigsApiCall(ref _callQueryOrgVpcFlowLogsConfigs);
-            _callShowEffectiveFlowLogsConfigs = clientHelper.BuildApiCall<ShowEffectiveFlowLogsConfigsRequest, ShowEffectiveFlowLogsConfigsResponse>("ShowEffectiveFlowLogsConfigs", grpcClient.ShowEffectiveFlowLogsConfigsAsync, grpcClient.ShowEffectiveFlowLogsConfigs, effectiveSettings.ShowEffectiveFlowLogsConfigsSettings).WithGoogleRequestParam("parent", request => request.Parent);
-            Modify_ApiCall(ref _callShowEffectiveFlowLogsConfigs);
-            Modify_ShowEffectiveFlowLogsConfigsApiCall(ref _callShowEffectiveFlowLogsConfigs);
             OnConstruction(grpcClient, effectiveSettings, clientHelper);
         }
 
@@ -1734,14 +1663,10 @@ namespace Google.Cloud.NetworkManagement.V1
 
         partial void Modify_DeleteVpcFlowLogsConfigApiCall(ref gaxgrpc::ApiCall<DeleteVpcFlowLogsConfigRequest, lro::Operation> call);
 
-        partial void Modify_QueryOrgVpcFlowLogsConfigsApiCall(ref gaxgrpc::ApiCall<QueryOrgVpcFlowLogsConfigsRequest, QueryOrgVpcFlowLogsConfigsResponse> call);
+        partial void OnConstruction(OrganizationVpcFlowLogsService.OrganizationVpcFlowLogsServiceClient grpcClient, OrganizationVpcFlowLogsServiceSettings effectiveSettings, gaxgrpc::ClientHelper clientHelper);
 
-        partial void Modify_ShowEffectiveFlowLogsConfigsApiCall(ref gaxgrpc::ApiCall<ShowEffectiveFlowLogsConfigsRequest, ShowEffectiveFlowLogsConfigsResponse> call);
-
-        partial void OnConstruction(VpcFlowLogsService.VpcFlowLogsServiceClient grpcClient, VpcFlowLogsServiceSettings effectiveSettings, gaxgrpc::ClientHelper clientHelper);
-
-        /// <summary>The underlying gRPC VpcFlowLogsService client</summary>
-        public override VpcFlowLogsService.VpcFlowLogsServiceClient GrpcClient { get; }
+        /// <summary>The underlying gRPC OrganizationVpcFlowLogsService client</summary>
+        public override OrganizationVpcFlowLogsService.OrganizationVpcFlowLogsServiceClient GrpcClient { get; }
 
         /// <summary>The <see cref="gcl::LocationsClient"/> associated with this client.</summary>
         public override gcl::LocationsClient LocationsClient { get; }
@@ -1759,12 +1684,8 @@ namespace Google.Cloud.NetworkManagement.V1
 
         partial void Modify_DeleteVpcFlowLogsConfigRequest(ref DeleteVpcFlowLogsConfigRequest request, ref gaxgrpc::CallSettings settings);
 
-        partial void Modify_QueryOrgVpcFlowLogsConfigsRequest(ref QueryOrgVpcFlowLogsConfigsRequest request, ref gaxgrpc::CallSettings settings);
-
-        partial void Modify_ShowEffectiveFlowLogsConfigsRequest(ref ShowEffectiveFlowLogsConfigsRequest request, ref gaxgrpc::CallSettings settings);
-
         /// <summary>
-        /// Lists all `VpcFlowLogsConfigs` in a given project.
+        /// Lists all `VpcFlowLogsConfigs` in a given organization.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1776,7 +1697,7 @@ namespace Google.Cloud.NetworkManagement.V1
         }
 
         /// <summary>
-        /// Lists all `VpcFlowLogsConfigs` in a given project.
+        /// Lists all `VpcFlowLogsConfigs` in a given organization.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1875,7 +1796,7 @@ namespace Google.Cloud.NetworkManagement.V1
         /// ID is different), the creation fails.
         /// Notes:
         /// 
-        /// 1. Updating a configuration with `state=DISABLED` will fail.
+        /// 1. Updating a configuration with `state=DISABLED` will fail
         /// 2. The following fields are not considered as settings for the purpose
         /// of the check mentioned above, therefore - updating another configuration
         /// with the same fields but different values for the following fields will
@@ -1901,7 +1822,7 @@ namespace Google.Cloud.NetworkManagement.V1
         /// ID is different), the creation fails.
         /// Notes:
         /// 
-        /// 1. Updating a configuration with `state=DISABLED` will fail.
+        /// 1. Updating a configuration with `state=DISABLED` will fail
         /// 2. The following fields are not considered as settings for the purpose
         /// of the check mentioned above, therefore - updating another configuration
         /// with the same fields but different values for the following fields will
@@ -1947,99 +1868,15 @@ namespace Google.Cloud.NetworkManagement.V1
             Modify_DeleteVpcFlowLogsConfigRequest(ref request, ref callSettings);
             return new lro::Operation<wkt::Empty, OperationMetadata>(await _callDeleteVpcFlowLogsConfig.Async(request, callSettings).ConfigureAwait(false), DeleteVpcFlowLogsConfigOperationsClient);
         }
-
-        /// <summary>
-        /// QueryOrgVpcFlowLogsConfigs returns a list of all organization-level VPC
-        /// Flow Logs configurations applicable to the specified project.
-        /// </summary>
-        /// <param name="request">The request object containing all of the parameters for the API call.</param>
-        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
-        /// <returns>A pageable sequence of <see cref="VpcFlowLogsConfig"/> resources.</returns>
-        public override gax::PagedEnumerable<QueryOrgVpcFlowLogsConfigsResponse, VpcFlowLogsConfig> QueryOrgVpcFlowLogsConfigs(QueryOrgVpcFlowLogsConfigsRequest request, gaxgrpc::CallSettings callSettings = null)
-        {
-            Modify_QueryOrgVpcFlowLogsConfigsRequest(ref request, ref callSettings);
-            return new gaxgrpc::GrpcPagedEnumerable<QueryOrgVpcFlowLogsConfigsRequest, QueryOrgVpcFlowLogsConfigsResponse, VpcFlowLogsConfig>(_callQueryOrgVpcFlowLogsConfigs, request, callSettings);
-        }
-
-        /// <summary>
-        /// QueryOrgVpcFlowLogsConfigs returns a list of all organization-level VPC
-        /// Flow Logs configurations applicable to the specified project.
-        /// </summary>
-        /// <param name="request">The request object containing all of the parameters for the API call.</param>
-        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
-        /// <returns>A pageable asynchronous sequence of <see cref="VpcFlowLogsConfig"/> resources.</returns>
-        public override gax::PagedAsyncEnumerable<QueryOrgVpcFlowLogsConfigsResponse, VpcFlowLogsConfig> QueryOrgVpcFlowLogsConfigsAsync(QueryOrgVpcFlowLogsConfigsRequest request, gaxgrpc::CallSettings callSettings = null)
-        {
-            Modify_QueryOrgVpcFlowLogsConfigsRequest(ref request, ref callSettings);
-            return new gaxgrpc::GrpcPagedAsyncEnumerable<QueryOrgVpcFlowLogsConfigsRequest, QueryOrgVpcFlowLogsConfigsResponse, VpcFlowLogsConfig>(_callQueryOrgVpcFlowLogsConfigs, request, callSettings);
-        }
-
-        /// <summary>
-        /// ShowEffectiveFlowLogsConfigs returns a list of all VPC Flow Logs
-        /// configurations applicable to a specified resource.
-        /// </summary>
-        /// <param name="request">The request object containing all of the parameters for the API call.</param>
-        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
-        /// <returns>A pageable sequence of <see cref="EffectiveVpcFlowLogsConfig"/> resources.</returns>
-        public override gax::PagedEnumerable<ShowEffectiveFlowLogsConfigsResponse, EffectiveVpcFlowLogsConfig> ShowEffectiveFlowLogsConfigs(ShowEffectiveFlowLogsConfigsRequest request, gaxgrpc::CallSettings callSettings = null)
-        {
-            Modify_ShowEffectiveFlowLogsConfigsRequest(ref request, ref callSettings);
-            return new gaxgrpc::GrpcPagedEnumerable<ShowEffectiveFlowLogsConfigsRequest, ShowEffectiveFlowLogsConfigsResponse, EffectiveVpcFlowLogsConfig>(_callShowEffectiveFlowLogsConfigs, request, callSettings);
-        }
-
-        /// <summary>
-        /// ShowEffectiveFlowLogsConfigs returns a list of all VPC Flow Logs
-        /// configurations applicable to a specified resource.
-        /// </summary>
-        /// <param name="request">The request object containing all of the parameters for the API call.</param>
-        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
-        /// <returns>A pageable asynchronous sequence of <see cref="EffectiveVpcFlowLogsConfig"/> resources.</returns>
-        public override gax::PagedAsyncEnumerable<ShowEffectiveFlowLogsConfigsResponse, EffectiveVpcFlowLogsConfig> ShowEffectiveFlowLogsConfigsAsync(ShowEffectiveFlowLogsConfigsRequest request, gaxgrpc::CallSettings callSettings = null)
-        {
-            Modify_ShowEffectiveFlowLogsConfigsRequest(ref request, ref callSettings);
-            return new gaxgrpc::GrpcPagedAsyncEnumerable<ShowEffectiveFlowLogsConfigsRequest, ShowEffectiveFlowLogsConfigsResponse, EffectiveVpcFlowLogsConfig>(_callShowEffectiveFlowLogsConfigs, request, callSettings);
-        }
     }
 
     public partial class ListVpcFlowLogsConfigsRequest : gaxgrpc::IPageRequest
     {
     }
 
-    public partial class QueryOrgVpcFlowLogsConfigsRequest : gaxgrpc::IPageRequest
+    public static partial class OrganizationVpcFlowLogsService
     {
-    }
-
-    public partial class ShowEffectiveFlowLogsConfigsRequest : gaxgrpc::IPageRequest
-    {
-    }
-
-    public partial class ListVpcFlowLogsConfigsResponse : gaxgrpc::IPageResponse<VpcFlowLogsConfig>
-    {
-        /// <summary>Returns an enumerator that iterates through the resources in this response.</summary>
-        public scg::IEnumerator<VpcFlowLogsConfig> GetEnumerator() => VpcFlowLogsConfigs.GetEnumerator();
-
-        sc::IEnumerator sc::IEnumerable.GetEnumerator() => GetEnumerator();
-    }
-
-    public partial class QueryOrgVpcFlowLogsConfigsResponse : gaxgrpc::IPageResponse<VpcFlowLogsConfig>
-    {
-        /// <summary>Returns an enumerator that iterates through the resources in this response.</summary>
-        public scg::IEnumerator<VpcFlowLogsConfig> GetEnumerator() => VpcFlowLogsConfigs.GetEnumerator();
-
-        sc::IEnumerator sc::IEnumerable.GetEnumerator() => GetEnumerator();
-    }
-
-    public partial class ShowEffectiveFlowLogsConfigsResponse : gaxgrpc::IPageResponse<EffectiveVpcFlowLogsConfig>
-    {
-        /// <summary>Returns an enumerator that iterates through the resources in this response.</summary>
-        public scg::IEnumerator<EffectiveVpcFlowLogsConfig> GetEnumerator() => EffectiveFlowLogsConfigs.GetEnumerator();
-
-        sc::IEnumerator sc::IEnumerable.GetEnumerator() => GetEnumerator();
-    }
-
-    public static partial class VpcFlowLogsService
-    {
-        public partial class VpcFlowLogsServiceClient
+        public partial class OrganizationVpcFlowLogsServiceClient
         {
             /// <summary>
             /// Creates a new instance of <see cref="lro::Operations.OperationsClient"/> using the same call invoker as
@@ -2051,9 +1888,9 @@ namespace Google.Cloud.NetworkManagement.V1
         }
     }
 
-    public static partial class VpcFlowLogsService
+    public static partial class OrganizationVpcFlowLogsService
     {
-        public partial class VpcFlowLogsServiceClient
+        public partial class OrganizationVpcFlowLogsServiceClient
         {
             /// <summary>
             /// Creates a new instance of <see cref="gcl::Locations.LocationsClient"/> using the same call invoker as

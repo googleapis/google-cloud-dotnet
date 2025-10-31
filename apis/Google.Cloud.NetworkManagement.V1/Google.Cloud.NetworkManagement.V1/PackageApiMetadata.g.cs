@@ -35,13 +35,13 @@ namespace Google.Cloud.NetworkManagement.V1
             {
                 {
                     "google.cloud.location.Locations.GetLocation",
-                    // { "get": "/v1/{name=projects/*/locations/*}" }
-                    proto::ByteString.FromBase64("EiEvdjEve25hbWU9cHJvamVjdHMvKi9sb2NhdGlvbnMvKn0=")
+                    // { "get": "/v1/{name=projects/*/locations/*}", "additionalBindings": [ { "get": "/v1/{name=organizations/*/locations/*}" } ] }
+                    proto::ByteString.FromBase64("EiEvdjEve25hbWU9cHJvamVjdHMvKi9sb2NhdGlvbnMvKn1aKBImL3YxL3tuYW1lPW9yZ2FuaXphdGlvbnMvKi9sb2NhdGlvbnMvKn0=")
                 },
                 {
                     "google.cloud.location.Locations.ListLocations",
-                    // { "get": "/v1/{name=projects/*}/locations" }
-                    proto::ByteString.FromBase64("Eh8vdjEve25hbWU9cHJvamVjdHMvKn0vbG9jYXRpb25z")
+                    // { "get": "/v1/{name=projects/*}/locations", "additionalBindings": [ { "get": "/v1/{name=organizations/*}/locations" } ] }
+                    proto::ByteString.FromBase64("Eh8vdjEve25hbWU9cHJvamVjdHMvKn0vbG9jYXRpb25zWiYSJC92MS97bmFtZT1vcmdhbml6YXRpb25zLyp9L2xvY2F0aW9ucw==")
                 },
                 {
                     "google.iam.v1.IAMPolicy.GetIamPolicy",
@@ -60,23 +60,23 @@ namespace Google.Cloud.NetworkManagement.V1
                 },
                 {
                     "google.longrunning.Operations.CancelOperation",
-                    // { "post": "/v1/{name=projects/*/locations/global/operations/*}:cancel", "body": "*" }
-                    proto::ByteString.FromBase64("IjovdjEve25hbWU9cHJvamVjdHMvKi9sb2NhdGlvbnMvZ2xvYmFsL29wZXJhdGlvbnMvKn06Y2FuY2VsOgEq")
+                    // { "post": "/v1/{name=projects/*/locations/global/operations/*}:cancel", "body": "*", "additionalBindings": [ { "post": "/v1/{name=organizations/*/locations/*/operations/*}:cancel", "body": "*" } ] }
+                    proto::ByteString.FromBase64("IjovdjEve25hbWU9cHJvamVjdHMvKi9sb2NhdGlvbnMvZ2xvYmFsL29wZXJhdGlvbnMvKn06Y2FuY2VsOgEqWj8iOi92MS97bmFtZT1vcmdhbml6YXRpb25zLyovbG9jYXRpb25zLyovb3BlcmF0aW9ucy8qfTpjYW5jZWw6ASo=")
                 },
                 {
                     "google.longrunning.Operations.DeleteOperation",
-                    // { "delete": "/v1/{name=projects/*/locations/global/operations/*}" }
-                    proto::ByteString.FromBase64("KjMvdjEve25hbWU9cHJvamVjdHMvKi9sb2NhdGlvbnMvZ2xvYmFsL29wZXJhdGlvbnMvKn0=")
+                    // { "delete": "/v1/{name=projects/*/locations/global/operations/*}", "additionalBindings": [ { "delete": "/v1/{name=organizations/*/locations/*/operations/*}" } ] }
+                    proto::ByteString.FromBase64("KjMvdjEve25hbWU9cHJvamVjdHMvKi9sb2NhdGlvbnMvZ2xvYmFsL29wZXJhdGlvbnMvKn1aNSozL3YxL3tuYW1lPW9yZ2FuaXphdGlvbnMvKi9sb2NhdGlvbnMvKi9vcGVyYXRpb25zLyp9")
                 },
                 {
                     "google.longrunning.Operations.GetOperation",
-                    // { "get": "/v1/{name=projects/*/locations/global/operations/*}" }
-                    proto::ByteString.FromBase64("EjMvdjEve25hbWU9cHJvamVjdHMvKi9sb2NhdGlvbnMvZ2xvYmFsL29wZXJhdGlvbnMvKn0=")
+                    // { "get": "/v1/{name=projects/*/locations/global/operations/*}", "additionalBindings": [ { "get": "/v1/{name=organizations/*/locations/*/operations/*}" } ] }
+                    proto::ByteString.FromBase64("EjMvdjEve25hbWU9cHJvamVjdHMvKi9sb2NhdGlvbnMvZ2xvYmFsL29wZXJhdGlvbnMvKn1aNRIzL3YxL3tuYW1lPW9yZ2FuaXphdGlvbnMvKi9sb2NhdGlvbnMvKi9vcGVyYXRpb25zLyp9")
                 },
                 {
                     "google.longrunning.Operations.ListOperations",
-                    // { "get": "/v1/{name=projects/*/locations/global}/operations" }
-                    proto::ByteString.FromBase64("EjEvdjEve25hbWU9cHJvamVjdHMvKi9sb2NhdGlvbnMvZ2xvYmFsfS9vcGVyYXRpb25z")
+                    // { "get": "/v1/{name=projects/*/locations/global}/operations", "additionalBindings": [ { "get": "/v1/{name=organizations/*/locations/*}/operations" } ] }
+                    proto::ByteString.FromBase64("EjEvdjEve25hbWU9cHJvamVjdHMvKi9sb2NhdGlvbnMvZ2xvYmFsfS9vcGVyYXRpb25zWjMSMS92MS97bmFtZT1vcmdhbml6YXRpb25zLyovbG9jYXRpb25zLyp9L29wZXJhdGlvbnM=")
                 },
             });
 

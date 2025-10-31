@@ -11,6 +11,1640 @@
   },
   "snippets": [
     {
+      "regionTag": "networkmanagement_v1_generated_OrganizationVpcFlowLogsService_ListVpcFlowLogsConfigs_sync",
+      "title": "ListVpcFlowLogsConfigsRequestObject",
+      "description": "Snippet for ListVpcFlowLogsConfigs",
+      "file": "OrganizationVpcFlowLogsServiceClient.ListVpcFlowLogsConfigsRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListVpcFlowLogsConfigs",
+        "fullName": "Google.Cloud.NetworkManagement.V1.OrganizationVpcFlowLogsServiceClient.ListVpcFlowLogsConfigs",
+        "parameters": [
+          {
+            "type": "Google.Cloud.NetworkManagement.V1.ListVpcFlowLogsConfigsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.NetworkManagement.V1.ListVpcFlowLogsConfigsResponse, Google.Cloud.NetworkManagement.V1.VpcFlowLogsConfig>",
+        "client": {
+          "shortName": "OrganizationVpcFlowLogsServiceClient",
+          "fullName": "Google.Cloud.NetworkManagement.V1.OrganizationVpcFlowLogsServiceClient"
+        },
+        "method": {
+          "shortName": "ListVpcFlowLogsConfigs",
+          "fullName": "google.cloud.networkmanagement.v1.OrganizationVpcFlowLogsService.ListVpcFlowLogsConfigs",
+          "service": {
+            "shortName": "OrganizationVpcFlowLogsService",
+            "fullName": "google.cloud.networkmanagement.v1.OrganizationVpcFlowLogsService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 81,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 79,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "networkmanagement_v1_generated_OrganizationVpcFlowLogsService_ListVpcFlowLogsConfigs_async",
+      "title": "ListVpcFlowLogsConfigsRequestObjectAsync",
+      "description": "Snippet for ListVpcFlowLogsConfigsAsync",
+      "file": "OrganizationVpcFlowLogsServiceClient.ListVpcFlowLogsConfigsRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListVpcFlowLogsConfigsAsync",
+        "fullName": "Google.Cloud.NetworkManagement.V1.OrganizationVpcFlowLogsServiceClient.ListVpcFlowLogsConfigsAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.NetworkManagement.V1.ListVpcFlowLogsConfigsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.NetworkManagement.V1.ListVpcFlowLogsConfigsResponse, Google.Cloud.NetworkManagement.V1.VpcFlowLogsConfig>",
+        "client": {
+          "shortName": "OrganizationVpcFlowLogsServiceClient",
+          "fullName": "Google.Cloud.NetworkManagement.V1.OrganizationVpcFlowLogsServiceClient"
+        },
+        "method": {
+          "shortName": "ListVpcFlowLogsConfigs",
+          "fullName": "google.cloud.networkmanagement.v1.OrganizationVpcFlowLogsService.ListVpcFlowLogsConfigs",
+          "service": {
+            "shortName": "OrganizationVpcFlowLogsService",
+            "fullName": "google.cloud.networkmanagement.v1.OrganizationVpcFlowLogsService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 83,
+          "type": "FULL"
+        },
+        {
+          "start": 39,
+          "end": 81,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "networkmanagement_v1_generated_OrganizationVpcFlowLogsService_ListVpcFlowLogsConfigs_sync_flattened",
+      "title": "ListVpcFlowLogsConfigs",
+      "description": "Snippet for ListVpcFlowLogsConfigs",
+      "file": "OrganizationVpcFlowLogsServiceClient.ListVpcFlowLogsConfigsSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListVpcFlowLogsConfigs",
+        "fullName": "Google.Cloud.NetworkManagement.V1.OrganizationVpcFlowLogsServiceClient.ListVpcFlowLogsConfigs",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.NetworkManagement.V1.ListVpcFlowLogsConfigsResponse, Google.Cloud.NetworkManagement.V1.VpcFlowLogsConfig>",
+        "client": {
+          "shortName": "OrganizationVpcFlowLogsServiceClient",
+          "fullName": "Google.Cloud.NetworkManagement.V1.OrganizationVpcFlowLogsServiceClient"
+        },
+        "method": {
+          "shortName": "ListVpcFlowLogsConfigs",
+          "fullName": "google.cloud.networkmanagement.v1.OrganizationVpcFlowLogsService.ListVpcFlowLogsConfigs",
+          "service": {
+            "shortName": "OrganizationVpcFlowLogsService",
+            "fullName": "google.cloud.networkmanagement.v1.OrganizationVpcFlowLogsService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 75,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 73,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "networkmanagement_v1_generated_OrganizationVpcFlowLogsService_ListVpcFlowLogsConfigs_async_flattened",
+      "title": "ListVpcFlowLogsConfigsAsync",
+      "description": "Snippet for ListVpcFlowLogsConfigsAsync",
+      "file": "OrganizationVpcFlowLogsServiceClient.ListVpcFlowLogsConfigsAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListVpcFlowLogsConfigsAsync",
+        "fullName": "Google.Cloud.NetworkManagement.V1.OrganizationVpcFlowLogsServiceClient.ListVpcFlowLogsConfigsAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.NetworkManagement.V1.ListVpcFlowLogsConfigsResponse, Google.Cloud.NetworkManagement.V1.VpcFlowLogsConfig>",
+        "client": {
+          "shortName": "OrganizationVpcFlowLogsServiceClient",
+          "fullName": "Google.Cloud.NetworkManagement.V1.OrganizationVpcFlowLogsServiceClient"
+        },
+        "method": {
+          "shortName": "ListVpcFlowLogsConfigs",
+          "fullName": "google.cloud.networkmanagement.v1.OrganizationVpcFlowLogsService.ListVpcFlowLogsConfigs",
+          "service": {
+            "shortName": "OrganizationVpcFlowLogsService",
+            "fullName": "google.cloud.networkmanagement.v1.OrganizationVpcFlowLogsService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 77,
+          "type": "FULL"
+        },
+        {
+          "start": 38,
+          "end": 75,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "networkmanagement_v1_generated_OrganizationVpcFlowLogsService_ListVpcFlowLogsConfigs_sync_flattened_resourceNames1",
+      "title": "ListVpcFlowLogsConfigsResourceNames1",
+      "description": "Snippet for ListVpcFlowLogsConfigs",
+      "file": "OrganizationVpcFlowLogsServiceClient.ListVpcFlowLogsConfigsResourceNames1Snippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListVpcFlowLogsConfigs",
+        "fullName": "Google.Cloud.NetworkManagement.V1.OrganizationVpcFlowLogsServiceClient.ListVpcFlowLogsConfigs",
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.LocationName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.NetworkManagement.V1.ListVpcFlowLogsConfigsResponse, Google.Cloud.NetworkManagement.V1.VpcFlowLogsConfig>",
+        "client": {
+          "shortName": "OrganizationVpcFlowLogsServiceClient",
+          "fullName": "Google.Cloud.NetworkManagement.V1.OrganizationVpcFlowLogsServiceClient"
+        },
+        "method": {
+          "shortName": "ListVpcFlowLogsConfigs",
+          "fullName": "google.cloud.networkmanagement.v1.OrganizationVpcFlowLogsService.ListVpcFlowLogsConfigs",
+          "service": {
+            "shortName": "OrganizationVpcFlowLogsService",
+            "fullName": "google.cloud.networkmanagement.v1.OrganizationVpcFlowLogsService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 76,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 74,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "networkmanagement_v1_generated_OrganizationVpcFlowLogsService_ListVpcFlowLogsConfigs_async_flattened_resourceNames1",
+      "title": "ListVpcFlowLogsConfigsResourceNames1Async",
+      "description": "Snippet for ListVpcFlowLogsConfigsAsync",
+      "file": "OrganizationVpcFlowLogsServiceClient.ListVpcFlowLogsConfigsResourceNames1AsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListVpcFlowLogsConfigsAsync",
+        "fullName": "Google.Cloud.NetworkManagement.V1.OrganizationVpcFlowLogsServiceClient.ListVpcFlowLogsConfigsAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.LocationName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.NetworkManagement.V1.ListVpcFlowLogsConfigsResponse, Google.Cloud.NetworkManagement.V1.VpcFlowLogsConfig>",
+        "client": {
+          "shortName": "OrganizationVpcFlowLogsServiceClient",
+          "fullName": "Google.Cloud.NetworkManagement.V1.OrganizationVpcFlowLogsServiceClient"
+        },
+        "method": {
+          "shortName": "ListVpcFlowLogsConfigs",
+          "fullName": "google.cloud.networkmanagement.v1.OrganizationVpcFlowLogsService.ListVpcFlowLogsConfigs",
+          "service": {
+            "shortName": "OrganizationVpcFlowLogsService",
+            "fullName": "google.cloud.networkmanagement.v1.OrganizationVpcFlowLogsService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 78,
+          "type": "FULL"
+        },
+        {
+          "start": 39,
+          "end": 76,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "networkmanagement_v1_generated_OrganizationVpcFlowLogsService_ListVpcFlowLogsConfigs_sync_flattened_resourceNames2",
+      "title": "ListVpcFlowLogsConfigsResourceNames2",
+      "description": "Snippet for ListVpcFlowLogsConfigs",
+      "file": "OrganizationVpcFlowLogsServiceClient.ListVpcFlowLogsConfigsResourceNames2Snippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListVpcFlowLogsConfigs",
+        "fullName": "Google.Cloud.NetworkManagement.V1.OrganizationVpcFlowLogsServiceClient.ListVpcFlowLogsConfigs",
+        "parameters": [
+          {
+            "type": "Google.Cloud.NetworkManagement.V1.OrganizationLocationName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.NetworkManagement.V1.ListVpcFlowLogsConfigsResponse, Google.Cloud.NetworkManagement.V1.VpcFlowLogsConfig>",
+        "client": {
+          "shortName": "OrganizationVpcFlowLogsServiceClient",
+          "fullName": "Google.Cloud.NetworkManagement.V1.OrganizationVpcFlowLogsServiceClient"
+        },
+        "method": {
+          "shortName": "ListVpcFlowLogsConfigs",
+          "fullName": "google.cloud.networkmanagement.v1.OrganizationVpcFlowLogsService.ListVpcFlowLogsConfigs",
+          "service": {
+            "shortName": "OrganizationVpcFlowLogsService",
+            "fullName": "google.cloud.networkmanagement.v1.OrganizationVpcFlowLogsService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 75,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 73,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "networkmanagement_v1_generated_OrganizationVpcFlowLogsService_ListVpcFlowLogsConfigs_async_flattened_resourceNames2",
+      "title": "ListVpcFlowLogsConfigsResourceNames2Async",
+      "description": "Snippet for ListVpcFlowLogsConfigsAsync",
+      "file": "OrganizationVpcFlowLogsServiceClient.ListVpcFlowLogsConfigsResourceNames2AsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListVpcFlowLogsConfigsAsync",
+        "fullName": "Google.Cloud.NetworkManagement.V1.OrganizationVpcFlowLogsServiceClient.ListVpcFlowLogsConfigsAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.NetworkManagement.V1.OrganizationLocationName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.NetworkManagement.V1.ListVpcFlowLogsConfigsResponse, Google.Cloud.NetworkManagement.V1.VpcFlowLogsConfig>",
+        "client": {
+          "shortName": "OrganizationVpcFlowLogsServiceClient",
+          "fullName": "Google.Cloud.NetworkManagement.V1.OrganizationVpcFlowLogsServiceClient"
+        },
+        "method": {
+          "shortName": "ListVpcFlowLogsConfigs",
+          "fullName": "google.cloud.networkmanagement.v1.OrganizationVpcFlowLogsService.ListVpcFlowLogsConfigs",
+          "service": {
+            "shortName": "OrganizationVpcFlowLogsService",
+            "fullName": "google.cloud.networkmanagement.v1.OrganizationVpcFlowLogsService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 77,
+          "type": "FULL"
+        },
+        {
+          "start": 38,
+          "end": 75,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "networkmanagement_v1_generated_OrganizationVpcFlowLogsService_GetVpcFlowLogsConfig_sync",
+      "title": "GetVpcFlowLogsConfigRequestObject",
+      "description": "Snippet for GetVpcFlowLogsConfig",
+      "file": "OrganizationVpcFlowLogsServiceClient.GetVpcFlowLogsConfigRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetVpcFlowLogsConfig",
+        "fullName": "Google.Cloud.NetworkManagement.V1.OrganizationVpcFlowLogsServiceClient.GetVpcFlowLogsConfig",
+        "parameters": [
+          {
+            "type": "Google.Cloud.NetworkManagement.V1.GetVpcFlowLogsConfigRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.NetworkManagement.V1.VpcFlowLogsConfig",
+        "client": {
+          "shortName": "OrganizationVpcFlowLogsServiceClient",
+          "fullName": "Google.Cloud.NetworkManagement.V1.OrganizationVpcFlowLogsServiceClient"
+        },
+        "method": {
+          "shortName": "GetVpcFlowLogsConfig",
+          "fullName": "google.cloud.networkmanagement.v1.OrganizationVpcFlowLogsService.GetVpcFlowLogsConfig",
+          "service": {
+            "shortName": "OrganizationVpcFlowLogsService",
+            "fullName": "google.cloud.networkmanagement.v1.OrganizationVpcFlowLogsService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 44,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 42,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "networkmanagement_v1_generated_OrganizationVpcFlowLogsService_GetVpcFlowLogsConfig_async",
+      "title": "GetVpcFlowLogsConfigRequestObjectAsync",
+      "description": "Snippet for GetVpcFlowLogsConfigAsync",
+      "file": "OrganizationVpcFlowLogsServiceClient.GetVpcFlowLogsConfigRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetVpcFlowLogsConfigAsync",
+        "fullName": "Google.Cloud.NetworkManagement.V1.OrganizationVpcFlowLogsServiceClient.GetVpcFlowLogsConfigAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.NetworkManagement.V1.GetVpcFlowLogsConfigRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.NetworkManagement.V1.VpcFlowLogsConfig>",
+        "client": {
+          "shortName": "OrganizationVpcFlowLogsServiceClient",
+          "fullName": "Google.Cloud.NetworkManagement.V1.OrganizationVpcFlowLogsServiceClient"
+        },
+        "method": {
+          "shortName": "GetVpcFlowLogsConfig",
+          "fullName": "google.cloud.networkmanagement.v1.OrganizationVpcFlowLogsService.GetVpcFlowLogsConfig",
+          "service": {
+            "shortName": "OrganizationVpcFlowLogsService",
+            "fullName": "google.cloud.networkmanagement.v1.OrganizationVpcFlowLogsService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 45,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 43,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "networkmanagement_v1_generated_OrganizationVpcFlowLogsService_GetVpcFlowLogsConfig_sync_flattened",
+      "title": "GetVpcFlowLogsConfig",
+      "description": "Snippet for GetVpcFlowLogsConfig",
+      "file": "OrganizationVpcFlowLogsServiceClient.GetVpcFlowLogsConfigSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetVpcFlowLogsConfig",
+        "fullName": "Google.Cloud.NetworkManagement.V1.OrganizationVpcFlowLogsServiceClient.GetVpcFlowLogsConfig",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.NetworkManagement.V1.VpcFlowLogsConfig",
+        "client": {
+          "shortName": "OrganizationVpcFlowLogsServiceClient",
+          "fullName": "Google.Cloud.NetworkManagement.V1.OrganizationVpcFlowLogsServiceClient"
+        },
+        "method": {
+          "shortName": "GetVpcFlowLogsConfig",
+          "fullName": "google.cloud.networkmanagement.v1.OrganizationVpcFlowLogsService.GetVpcFlowLogsConfig",
+          "service": {
+            "shortName": "OrganizationVpcFlowLogsService",
+            "fullName": "google.cloud.networkmanagement.v1.OrganizationVpcFlowLogsService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "networkmanagement_v1_generated_OrganizationVpcFlowLogsService_GetVpcFlowLogsConfig_async_flattened",
+      "title": "GetVpcFlowLogsConfigAsync",
+      "description": "Snippet for GetVpcFlowLogsConfigAsync",
+      "file": "OrganizationVpcFlowLogsServiceClient.GetVpcFlowLogsConfigAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetVpcFlowLogsConfigAsync",
+        "fullName": "Google.Cloud.NetworkManagement.V1.OrganizationVpcFlowLogsServiceClient.GetVpcFlowLogsConfigAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.NetworkManagement.V1.VpcFlowLogsConfig>",
+        "client": {
+          "shortName": "OrganizationVpcFlowLogsServiceClient",
+          "fullName": "Google.Cloud.NetworkManagement.V1.OrganizationVpcFlowLogsServiceClient"
+        },
+        "method": {
+          "shortName": "GetVpcFlowLogsConfig",
+          "fullName": "google.cloud.networkmanagement.v1.OrganizationVpcFlowLogsService.GetVpcFlowLogsConfig",
+          "service": {
+            "shortName": "OrganizationVpcFlowLogsService",
+            "fullName": "google.cloud.networkmanagement.v1.OrganizationVpcFlowLogsService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "networkmanagement_v1_generated_OrganizationVpcFlowLogsService_GetVpcFlowLogsConfig_sync_flattened_resourceNames",
+      "title": "GetVpcFlowLogsConfigResourceNames",
+      "description": "Snippet for GetVpcFlowLogsConfig",
+      "file": "OrganizationVpcFlowLogsServiceClient.GetVpcFlowLogsConfigResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetVpcFlowLogsConfig",
+        "fullName": "Google.Cloud.NetworkManagement.V1.OrganizationVpcFlowLogsServiceClient.GetVpcFlowLogsConfig",
+        "parameters": [
+          {
+            "type": "Google.Cloud.NetworkManagement.V1.VpcFlowLogsConfigName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.NetworkManagement.V1.VpcFlowLogsConfig",
+        "client": {
+          "shortName": "OrganizationVpcFlowLogsServiceClient",
+          "fullName": "Google.Cloud.NetworkManagement.V1.OrganizationVpcFlowLogsServiceClient"
+        },
+        "method": {
+          "shortName": "GetVpcFlowLogsConfig",
+          "fullName": "google.cloud.networkmanagement.v1.OrganizationVpcFlowLogsService.GetVpcFlowLogsConfig",
+          "service": {
+            "shortName": "OrganizationVpcFlowLogsService",
+            "fullName": "google.cloud.networkmanagement.v1.OrganizationVpcFlowLogsService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "networkmanagement_v1_generated_OrganizationVpcFlowLogsService_GetVpcFlowLogsConfig_async_flattened_resourceNames",
+      "title": "GetVpcFlowLogsConfigResourceNamesAsync",
+      "description": "Snippet for GetVpcFlowLogsConfigAsync",
+      "file": "OrganizationVpcFlowLogsServiceClient.GetVpcFlowLogsConfigResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetVpcFlowLogsConfigAsync",
+        "fullName": "Google.Cloud.NetworkManagement.V1.OrganizationVpcFlowLogsServiceClient.GetVpcFlowLogsConfigAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.NetworkManagement.V1.VpcFlowLogsConfigName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.NetworkManagement.V1.VpcFlowLogsConfig>",
+        "client": {
+          "shortName": "OrganizationVpcFlowLogsServiceClient",
+          "fullName": "Google.Cloud.NetworkManagement.V1.OrganizationVpcFlowLogsServiceClient"
+        },
+        "method": {
+          "shortName": "GetVpcFlowLogsConfig",
+          "fullName": "google.cloud.networkmanagement.v1.OrganizationVpcFlowLogsService.GetVpcFlowLogsConfig",
+          "service": {
+            "shortName": "OrganizationVpcFlowLogsService",
+            "fullName": "google.cloud.networkmanagement.v1.OrganizationVpcFlowLogsService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "networkmanagement_v1_generated_OrganizationVpcFlowLogsService_CreateVpcFlowLogsConfig_sync",
+      "title": "CreateVpcFlowLogsConfigRequestObject",
+      "description": "Snippet for CreateVpcFlowLogsConfig",
+      "file": "OrganizationVpcFlowLogsServiceClient.CreateVpcFlowLogsConfigRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateVpcFlowLogsConfig",
+        "fullName": "Google.Cloud.NetworkManagement.V1.OrganizationVpcFlowLogsServiceClient.CreateVpcFlowLogsConfig",
+        "parameters": [
+          {
+            "type": "Google.Cloud.NetworkManagement.V1.CreateVpcFlowLogsConfigRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.NetworkManagement.V1.VpcFlowLogsConfig, Google.Cloud.NetworkManagement.V1.OperationMetadata>",
+        "client": {
+          "shortName": "OrganizationVpcFlowLogsServiceClient",
+          "fullName": "Google.Cloud.NetworkManagement.V1.OrganizationVpcFlowLogsServiceClient"
+        },
+        "method": {
+          "shortName": "CreateVpcFlowLogsConfig",
+          "fullName": "google.cloud.networkmanagement.v1.OrganizationVpcFlowLogsService.CreateVpcFlowLogsConfig",
+          "service": {
+            "shortName": "OrganizationVpcFlowLogsService",
+            "fullName": "google.cloud.networkmanagement.v1.OrganizationVpcFlowLogsService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 64,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 62,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "networkmanagement_v1_generated_OrganizationVpcFlowLogsService_CreateVpcFlowLogsConfig_async",
+      "title": "CreateVpcFlowLogsConfigRequestObjectAsync",
+      "description": "Snippet for CreateVpcFlowLogsConfigAsync",
+      "file": "OrganizationVpcFlowLogsServiceClient.CreateVpcFlowLogsConfigRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateVpcFlowLogsConfigAsync",
+        "fullName": "Google.Cloud.NetworkManagement.V1.OrganizationVpcFlowLogsServiceClient.CreateVpcFlowLogsConfigAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.NetworkManagement.V1.CreateVpcFlowLogsConfigRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.NetworkManagement.V1.VpcFlowLogsConfig, Google.Cloud.NetworkManagement.V1.OperationMetadata>>",
+        "client": {
+          "shortName": "OrganizationVpcFlowLogsServiceClient",
+          "fullName": "Google.Cloud.NetworkManagement.V1.OrganizationVpcFlowLogsServiceClient"
+        },
+        "method": {
+          "shortName": "CreateVpcFlowLogsConfig",
+          "fullName": "google.cloud.networkmanagement.v1.OrganizationVpcFlowLogsService.CreateVpcFlowLogsConfig",
+          "service": {
+            "shortName": "OrganizationVpcFlowLogsService",
+            "fullName": "google.cloud.networkmanagement.v1.OrganizationVpcFlowLogsService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 65,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 63,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "networkmanagement_v1_generated_OrganizationVpcFlowLogsService_CreateVpcFlowLogsConfig_sync_flattened",
+      "title": "CreateVpcFlowLogsConfig",
+      "description": "Snippet for CreateVpcFlowLogsConfig",
+      "file": "OrganizationVpcFlowLogsServiceClient.CreateVpcFlowLogsConfigSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateVpcFlowLogsConfig",
+        "fullName": "Google.Cloud.NetworkManagement.V1.OrganizationVpcFlowLogsServiceClient.CreateVpcFlowLogsConfig",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.NetworkManagement.V1.VpcFlowLogsConfig",
+            "name": "vpcFlowLogsConfig"
+          },
+          {
+            "type": "System.String",
+            "name": "vpcFlowLogsConfigId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.NetworkManagement.V1.VpcFlowLogsConfig, Google.Cloud.NetworkManagement.V1.OperationMetadata>",
+        "client": {
+          "shortName": "OrganizationVpcFlowLogsServiceClient",
+          "fullName": "Google.Cloud.NetworkManagement.V1.OrganizationVpcFlowLogsServiceClient"
+        },
+        "method": {
+          "shortName": "CreateVpcFlowLogsConfig",
+          "fullName": "google.cloud.networkmanagement.v1.OrganizationVpcFlowLogsService.CreateVpcFlowLogsConfig",
+          "service": {
+            "shortName": "OrganizationVpcFlowLogsService",
+            "fullName": "google.cloud.networkmanagement.v1.OrganizationVpcFlowLogsService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 60,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 58,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "networkmanagement_v1_generated_OrganizationVpcFlowLogsService_CreateVpcFlowLogsConfig_async_flattened",
+      "title": "CreateVpcFlowLogsConfigAsync",
+      "description": "Snippet for CreateVpcFlowLogsConfigAsync",
+      "file": "OrganizationVpcFlowLogsServiceClient.CreateVpcFlowLogsConfigAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateVpcFlowLogsConfigAsync",
+        "fullName": "Google.Cloud.NetworkManagement.V1.OrganizationVpcFlowLogsServiceClient.CreateVpcFlowLogsConfigAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.NetworkManagement.V1.VpcFlowLogsConfig",
+            "name": "vpcFlowLogsConfig"
+          },
+          {
+            "type": "System.String",
+            "name": "vpcFlowLogsConfigId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.NetworkManagement.V1.VpcFlowLogsConfig, Google.Cloud.NetworkManagement.V1.OperationMetadata>>",
+        "client": {
+          "shortName": "OrganizationVpcFlowLogsServiceClient",
+          "fullName": "Google.Cloud.NetworkManagement.V1.OrganizationVpcFlowLogsServiceClient"
+        },
+        "method": {
+          "shortName": "CreateVpcFlowLogsConfig",
+          "fullName": "google.cloud.networkmanagement.v1.OrganizationVpcFlowLogsService.CreateVpcFlowLogsConfig",
+          "service": {
+            "shortName": "OrganizationVpcFlowLogsService",
+            "fullName": "google.cloud.networkmanagement.v1.OrganizationVpcFlowLogsService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 61,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 59,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "networkmanagement_v1_generated_OrganizationVpcFlowLogsService_CreateVpcFlowLogsConfig_sync_flattened_resourceNames1",
+      "title": "CreateVpcFlowLogsConfigResourceNames1",
+      "description": "Snippet for CreateVpcFlowLogsConfig",
+      "file": "OrganizationVpcFlowLogsServiceClient.CreateVpcFlowLogsConfigResourceNames1Snippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateVpcFlowLogsConfig",
+        "fullName": "Google.Cloud.NetworkManagement.V1.OrganizationVpcFlowLogsServiceClient.CreateVpcFlowLogsConfig",
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.LocationName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.NetworkManagement.V1.VpcFlowLogsConfig",
+            "name": "vpcFlowLogsConfig"
+          },
+          {
+            "type": "Google.Cloud.NetworkManagement.V1.VpcFlowLogsConfigName",
+            "name": "vpcFlowLogsConfigId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.NetworkManagement.V1.VpcFlowLogsConfig, Google.Cloud.NetworkManagement.V1.OperationMetadata>",
+        "client": {
+          "shortName": "OrganizationVpcFlowLogsServiceClient",
+          "fullName": "Google.Cloud.NetworkManagement.V1.OrganizationVpcFlowLogsServiceClient"
+        },
+        "method": {
+          "shortName": "CreateVpcFlowLogsConfig",
+          "fullName": "google.cloud.networkmanagement.v1.OrganizationVpcFlowLogsService.CreateVpcFlowLogsConfig",
+          "service": {
+            "shortName": "OrganizationVpcFlowLogsService",
+            "fullName": "google.cloud.networkmanagement.v1.OrganizationVpcFlowLogsService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 61,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 59,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "networkmanagement_v1_generated_OrganizationVpcFlowLogsService_CreateVpcFlowLogsConfig_async_flattened_resourceNames1",
+      "title": "CreateVpcFlowLogsConfigResourceNames1Async",
+      "description": "Snippet for CreateVpcFlowLogsConfigAsync",
+      "file": "OrganizationVpcFlowLogsServiceClient.CreateVpcFlowLogsConfigResourceNames1AsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateVpcFlowLogsConfigAsync",
+        "fullName": "Google.Cloud.NetworkManagement.V1.OrganizationVpcFlowLogsServiceClient.CreateVpcFlowLogsConfigAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.LocationName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.NetworkManagement.V1.VpcFlowLogsConfig",
+            "name": "vpcFlowLogsConfig"
+          },
+          {
+            "type": "Google.Cloud.NetworkManagement.V1.VpcFlowLogsConfigName",
+            "name": "vpcFlowLogsConfigId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.NetworkManagement.V1.VpcFlowLogsConfig, Google.Cloud.NetworkManagement.V1.OperationMetadata>>",
+        "client": {
+          "shortName": "OrganizationVpcFlowLogsServiceClient",
+          "fullName": "Google.Cloud.NetworkManagement.V1.OrganizationVpcFlowLogsServiceClient"
+        },
+        "method": {
+          "shortName": "CreateVpcFlowLogsConfig",
+          "fullName": "google.cloud.networkmanagement.v1.OrganizationVpcFlowLogsService.CreateVpcFlowLogsConfig",
+          "service": {
+            "shortName": "OrganizationVpcFlowLogsService",
+            "fullName": "google.cloud.networkmanagement.v1.OrganizationVpcFlowLogsService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 62,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 60,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "networkmanagement_v1_generated_OrganizationVpcFlowLogsService_CreateVpcFlowLogsConfig_sync_flattened_resourceNames2",
+      "title": "CreateVpcFlowLogsConfigResourceNames2",
+      "description": "Snippet for CreateVpcFlowLogsConfig",
+      "file": "OrganizationVpcFlowLogsServiceClient.CreateVpcFlowLogsConfigResourceNames2Snippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateVpcFlowLogsConfig",
+        "fullName": "Google.Cloud.NetworkManagement.V1.OrganizationVpcFlowLogsServiceClient.CreateVpcFlowLogsConfig",
+        "parameters": [
+          {
+            "type": "Google.Cloud.NetworkManagement.V1.OrganizationLocationName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.NetworkManagement.V1.VpcFlowLogsConfig",
+            "name": "vpcFlowLogsConfig"
+          },
+          {
+            "type": "Google.Cloud.NetworkManagement.V1.VpcFlowLogsConfigName",
+            "name": "vpcFlowLogsConfigId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.NetworkManagement.V1.VpcFlowLogsConfig, Google.Cloud.NetworkManagement.V1.OperationMetadata>",
+        "client": {
+          "shortName": "OrganizationVpcFlowLogsServiceClient",
+          "fullName": "Google.Cloud.NetworkManagement.V1.OrganizationVpcFlowLogsServiceClient"
+        },
+        "method": {
+          "shortName": "CreateVpcFlowLogsConfig",
+          "fullName": "google.cloud.networkmanagement.v1.OrganizationVpcFlowLogsService.CreateVpcFlowLogsConfig",
+          "service": {
+            "shortName": "OrganizationVpcFlowLogsService",
+            "fullName": "google.cloud.networkmanagement.v1.OrganizationVpcFlowLogsService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 60,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 58,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "networkmanagement_v1_generated_OrganizationVpcFlowLogsService_CreateVpcFlowLogsConfig_async_flattened_resourceNames2",
+      "title": "CreateVpcFlowLogsConfigResourceNames2Async",
+      "description": "Snippet for CreateVpcFlowLogsConfigAsync",
+      "file": "OrganizationVpcFlowLogsServiceClient.CreateVpcFlowLogsConfigResourceNames2AsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateVpcFlowLogsConfigAsync",
+        "fullName": "Google.Cloud.NetworkManagement.V1.OrganizationVpcFlowLogsServiceClient.CreateVpcFlowLogsConfigAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.NetworkManagement.V1.OrganizationLocationName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.NetworkManagement.V1.VpcFlowLogsConfig",
+            "name": "vpcFlowLogsConfig"
+          },
+          {
+            "type": "Google.Cloud.NetworkManagement.V1.VpcFlowLogsConfigName",
+            "name": "vpcFlowLogsConfigId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.NetworkManagement.V1.VpcFlowLogsConfig, Google.Cloud.NetworkManagement.V1.OperationMetadata>>",
+        "client": {
+          "shortName": "OrganizationVpcFlowLogsServiceClient",
+          "fullName": "Google.Cloud.NetworkManagement.V1.OrganizationVpcFlowLogsServiceClient"
+        },
+        "method": {
+          "shortName": "CreateVpcFlowLogsConfig",
+          "fullName": "google.cloud.networkmanagement.v1.OrganizationVpcFlowLogsService.CreateVpcFlowLogsConfig",
+          "service": {
+            "shortName": "OrganizationVpcFlowLogsService",
+            "fullName": "google.cloud.networkmanagement.v1.OrganizationVpcFlowLogsService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 61,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 59,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "networkmanagement_v1_generated_OrganizationVpcFlowLogsService_UpdateVpcFlowLogsConfig_sync",
+      "title": "UpdateVpcFlowLogsConfigRequestObject",
+      "description": "Snippet for UpdateVpcFlowLogsConfig",
+      "file": "OrganizationVpcFlowLogsServiceClient.UpdateVpcFlowLogsConfigRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateVpcFlowLogsConfig",
+        "fullName": "Google.Cloud.NetworkManagement.V1.OrganizationVpcFlowLogsServiceClient.UpdateVpcFlowLogsConfig",
+        "parameters": [
+          {
+            "type": "Google.Cloud.NetworkManagement.V1.UpdateVpcFlowLogsConfigRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.NetworkManagement.V1.VpcFlowLogsConfig, Google.Cloud.NetworkManagement.V1.OperationMetadata>",
+        "client": {
+          "shortName": "OrganizationVpcFlowLogsServiceClient",
+          "fullName": "Google.Cloud.NetworkManagement.V1.OrganizationVpcFlowLogsServiceClient"
+        },
+        "method": {
+          "shortName": "UpdateVpcFlowLogsConfig",
+          "fullName": "google.cloud.networkmanagement.v1.OrganizationVpcFlowLogsService.UpdateVpcFlowLogsConfig",
+          "service": {
+            "shortName": "OrganizationVpcFlowLogsService",
+            "fullName": "google.cloud.networkmanagement.v1.OrganizationVpcFlowLogsService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 63,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 61,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "networkmanagement_v1_generated_OrganizationVpcFlowLogsService_UpdateVpcFlowLogsConfig_async",
+      "title": "UpdateVpcFlowLogsConfigRequestObjectAsync",
+      "description": "Snippet for UpdateVpcFlowLogsConfigAsync",
+      "file": "OrganizationVpcFlowLogsServiceClient.UpdateVpcFlowLogsConfigRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateVpcFlowLogsConfigAsync",
+        "fullName": "Google.Cloud.NetworkManagement.V1.OrganizationVpcFlowLogsServiceClient.UpdateVpcFlowLogsConfigAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.NetworkManagement.V1.UpdateVpcFlowLogsConfigRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.NetworkManagement.V1.VpcFlowLogsConfig, Google.Cloud.NetworkManagement.V1.OperationMetadata>>",
+        "client": {
+          "shortName": "OrganizationVpcFlowLogsServiceClient",
+          "fullName": "Google.Cloud.NetworkManagement.V1.OrganizationVpcFlowLogsServiceClient"
+        },
+        "method": {
+          "shortName": "UpdateVpcFlowLogsConfig",
+          "fullName": "google.cloud.networkmanagement.v1.OrganizationVpcFlowLogsService.UpdateVpcFlowLogsConfig",
+          "service": {
+            "shortName": "OrganizationVpcFlowLogsService",
+            "fullName": "google.cloud.networkmanagement.v1.OrganizationVpcFlowLogsService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 64,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 62,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "networkmanagement_v1_generated_OrganizationVpcFlowLogsService_UpdateVpcFlowLogsConfig_sync_flattened",
+      "title": "UpdateVpcFlowLogsConfig",
+      "description": "Snippet for UpdateVpcFlowLogsConfig",
+      "file": "OrganizationVpcFlowLogsServiceClient.UpdateVpcFlowLogsConfigSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateVpcFlowLogsConfig",
+        "fullName": "Google.Cloud.NetworkManagement.V1.OrganizationVpcFlowLogsServiceClient.UpdateVpcFlowLogsConfig",
+        "parameters": [
+          {
+            "type": "Google.Cloud.NetworkManagement.V1.VpcFlowLogsConfig",
+            "name": "vpcFlowLogsConfig"
+          },
+          {
+            "type": "Google.Protobuf.WellKnownTypes.FieldMask",
+            "name": "updateMask"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.NetworkManagement.V1.VpcFlowLogsConfig, Google.Cloud.NetworkManagement.V1.OperationMetadata>",
+        "client": {
+          "shortName": "OrganizationVpcFlowLogsServiceClient",
+          "fullName": "Google.Cloud.NetworkManagement.V1.OrganizationVpcFlowLogsServiceClient"
+        },
+        "method": {
+          "shortName": "UpdateVpcFlowLogsConfig",
+          "fullName": "google.cloud.networkmanagement.v1.OrganizationVpcFlowLogsService.UpdateVpcFlowLogsConfig",
+          "service": {
+            "shortName": "OrganizationVpcFlowLogsService",
+            "fullName": "google.cloud.networkmanagement.v1.OrganizationVpcFlowLogsService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 60,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 58,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "networkmanagement_v1_generated_OrganizationVpcFlowLogsService_UpdateVpcFlowLogsConfig_async_flattened",
+      "title": "UpdateVpcFlowLogsConfigAsync",
+      "description": "Snippet for UpdateVpcFlowLogsConfigAsync",
+      "file": "OrganizationVpcFlowLogsServiceClient.UpdateVpcFlowLogsConfigAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateVpcFlowLogsConfigAsync",
+        "fullName": "Google.Cloud.NetworkManagement.V1.OrganizationVpcFlowLogsServiceClient.UpdateVpcFlowLogsConfigAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.NetworkManagement.V1.VpcFlowLogsConfig",
+            "name": "vpcFlowLogsConfig"
+          },
+          {
+            "type": "Google.Protobuf.WellKnownTypes.FieldMask",
+            "name": "updateMask"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.NetworkManagement.V1.VpcFlowLogsConfig, Google.Cloud.NetworkManagement.V1.OperationMetadata>>",
+        "client": {
+          "shortName": "OrganizationVpcFlowLogsServiceClient",
+          "fullName": "Google.Cloud.NetworkManagement.V1.OrganizationVpcFlowLogsServiceClient"
+        },
+        "method": {
+          "shortName": "UpdateVpcFlowLogsConfig",
+          "fullName": "google.cloud.networkmanagement.v1.OrganizationVpcFlowLogsService.UpdateVpcFlowLogsConfig",
+          "service": {
+            "shortName": "OrganizationVpcFlowLogsService",
+            "fullName": "google.cloud.networkmanagement.v1.OrganizationVpcFlowLogsService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 61,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 59,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "networkmanagement_v1_generated_OrganizationVpcFlowLogsService_DeleteVpcFlowLogsConfig_sync",
+      "title": "DeleteVpcFlowLogsConfigRequestObject",
+      "description": "Snippet for DeleteVpcFlowLogsConfig",
+      "file": "OrganizationVpcFlowLogsServiceClient.DeleteVpcFlowLogsConfigRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteVpcFlowLogsConfig",
+        "fullName": "Google.Cloud.NetworkManagement.V1.OrganizationVpcFlowLogsServiceClient.DeleteVpcFlowLogsConfig",
+        "parameters": [
+          {
+            "type": "Google.Cloud.NetworkManagement.V1.DeleteVpcFlowLogsConfigRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.NetworkManagement.V1.OperationMetadata>",
+        "client": {
+          "shortName": "OrganizationVpcFlowLogsServiceClient",
+          "fullName": "Google.Cloud.NetworkManagement.V1.OrganizationVpcFlowLogsServiceClient"
+        },
+        "method": {
+          "shortName": "DeleteVpcFlowLogsConfig",
+          "fullName": "google.cloud.networkmanagement.v1.OrganizationVpcFlowLogsService.DeleteVpcFlowLogsConfig",
+          "service": {
+            "shortName": "OrganizationVpcFlowLogsService",
+            "fullName": "google.cloud.networkmanagement.v1.OrganizationVpcFlowLogsService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 62,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 60,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "networkmanagement_v1_generated_OrganizationVpcFlowLogsService_DeleteVpcFlowLogsConfig_async",
+      "title": "DeleteVpcFlowLogsConfigRequestObjectAsync",
+      "description": "Snippet for DeleteVpcFlowLogsConfigAsync",
+      "file": "OrganizationVpcFlowLogsServiceClient.DeleteVpcFlowLogsConfigRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteVpcFlowLogsConfigAsync",
+        "fullName": "Google.Cloud.NetworkManagement.V1.OrganizationVpcFlowLogsServiceClient.DeleteVpcFlowLogsConfigAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.NetworkManagement.V1.DeleteVpcFlowLogsConfigRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.NetworkManagement.V1.OperationMetadata>>",
+        "client": {
+          "shortName": "OrganizationVpcFlowLogsServiceClient",
+          "fullName": "Google.Cloud.NetworkManagement.V1.OrganizationVpcFlowLogsServiceClient"
+        },
+        "method": {
+          "shortName": "DeleteVpcFlowLogsConfig",
+          "fullName": "google.cloud.networkmanagement.v1.OrganizationVpcFlowLogsService.DeleteVpcFlowLogsConfig",
+          "service": {
+            "shortName": "OrganizationVpcFlowLogsService",
+            "fullName": "google.cloud.networkmanagement.v1.OrganizationVpcFlowLogsService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 63,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 61,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "networkmanagement_v1_generated_OrganizationVpcFlowLogsService_DeleteVpcFlowLogsConfig_sync_flattened",
+      "title": "DeleteVpcFlowLogsConfig",
+      "description": "Snippet for DeleteVpcFlowLogsConfig",
+      "file": "OrganizationVpcFlowLogsServiceClient.DeleteVpcFlowLogsConfigSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteVpcFlowLogsConfig",
+        "fullName": "Google.Cloud.NetworkManagement.V1.OrganizationVpcFlowLogsServiceClient.DeleteVpcFlowLogsConfig",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.NetworkManagement.V1.OperationMetadata>",
+        "client": {
+          "shortName": "OrganizationVpcFlowLogsServiceClient",
+          "fullName": "Google.Cloud.NetworkManagement.V1.OrganizationVpcFlowLogsServiceClient"
+        },
+        "method": {
+          "shortName": "DeleteVpcFlowLogsConfig",
+          "fullName": "google.cloud.networkmanagement.v1.OrganizationVpcFlowLogsService.DeleteVpcFlowLogsConfig",
+          "service": {
+            "shortName": "OrganizationVpcFlowLogsService",
+            "fullName": "google.cloud.networkmanagement.v1.OrganizationVpcFlowLogsService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 59,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 57,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "networkmanagement_v1_generated_OrganizationVpcFlowLogsService_DeleteVpcFlowLogsConfig_async_flattened",
+      "title": "DeleteVpcFlowLogsConfigAsync",
+      "description": "Snippet for DeleteVpcFlowLogsConfigAsync",
+      "file": "OrganizationVpcFlowLogsServiceClient.DeleteVpcFlowLogsConfigAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteVpcFlowLogsConfigAsync",
+        "fullName": "Google.Cloud.NetworkManagement.V1.OrganizationVpcFlowLogsServiceClient.DeleteVpcFlowLogsConfigAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.NetworkManagement.V1.OperationMetadata>>",
+        "client": {
+          "shortName": "OrganizationVpcFlowLogsServiceClient",
+          "fullName": "Google.Cloud.NetworkManagement.V1.OrganizationVpcFlowLogsServiceClient"
+        },
+        "method": {
+          "shortName": "DeleteVpcFlowLogsConfig",
+          "fullName": "google.cloud.networkmanagement.v1.OrganizationVpcFlowLogsService.DeleteVpcFlowLogsConfig",
+          "service": {
+            "shortName": "OrganizationVpcFlowLogsService",
+            "fullName": "google.cloud.networkmanagement.v1.OrganizationVpcFlowLogsService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 60,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 58,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "networkmanagement_v1_generated_OrganizationVpcFlowLogsService_DeleteVpcFlowLogsConfig_sync_flattened_resourceNames",
+      "title": "DeleteVpcFlowLogsConfigResourceNames",
+      "description": "Snippet for DeleteVpcFlowLogsConfig",
+      "file": "OrganizationVpcFlowLogsServiceClient.DeleteVpcFlowLogsConfigResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteVpcFlowLogsConfig",
+        "fullName": "Google.Cloud.NetworkManagement.V1.OrganizationVpcFlowLogsServiceClient.DeleteVpcFlowLogsConfig",
+        "parameters": [
+          {
+            "type": "Google.Cloud.NetworkManagement.V1.VpcFlowLogsConfigName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.NetworkManagement.V1.OperationMetadata>",
+        "client": {
+          "shortName": "OrganizationVpcFlowLogsServiceClient",
+          "fullName": "Google.Cloud.NetworkManagement.V1.OrganizationVpcFlowLogsServiceClient"
+        },
+        "method": {
+          "shortName": "DeleteVpcFlowLogsConfig",
+          "fullName": "google.cloud.networkmanagement.v1.OrganizationVpcFlowLogsService.DeleteVpcFlowLogsConfig",
+          "service": {
+            "shortName": "OrganizationVpcFlowLogsService",
+            "fullName": "google.cloud.networkmanagement.v1.OrganizationVpcFlowLogsService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 59,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 57,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "networkmanagement_v1_generated_OrganizationVpcFlowLogsService_DeleteVpcFlowLogsConfig_async_flattened_resourceNames",
+      "title": "DeleteVpcFlowLogsConfigResourceNamesAsync",
+      "description": "Snippet for DeleteVpcFlowLogsConfigAsync",
+      "file": "OrganizationVpcFlowLogsServiceClient.DeleteVpcFlowLogsConfigResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteVpcFlowLogsConfigAsync",
+        "fullName": "Google.Cloud.NetworkManagement.V1.OrganizationVpcFlowLogsServiceClient.DeleteVpcFlowLogsConfigAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.NetworkManagement.V1.VpcFlowLogsConfigName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.NetworkManagement.V1.OperationMetadata>>",
+        "client": {
+          "shortName": "OrganizationVpcFlowLogsServiceClient",
+          "fullName": "Google.Cloud.NetworkManagement.V1.OrganizationVpcFlowLogsServiceClient"
+        },
+        "method": {
+          "shortName": "DeleteVpcFlowLogsConfig",
+          "fullName": "google.cloud.networkmanagement.v1.OrganizationVpcFlowLogsService.DeleteVpcFlowLogsConfig",
+          "service": {
+            "shortName": "OrganizationVpcFlowLogsService",
+            "fullName": "google.cloud.networkmanagement.v1.OrganizationVpcFlowLogsService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 60,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 58,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
       "regionTag": "networkmanagement_v1_generated_ReachabilityService_ListConnectivityTests_sync",
       "title": "ListConnectivityTestsRequestObject",
       "description": "Snippet for ListConnectivityTests",
@@ -1728,10 +3362,10 @@
       ]
     },
     {
-      "regionTag": "networkmanagement_v1_generated_VpcFlowLogsService_ListVpcFlowLogsConfigs_sync_flattened_resourceNames",
-      "title": "ListVpcFlowLogsConfigsResourceNames",
+      "regionTag": "networkmanagement_v1_generated_VpcFlowLogsService_ListVpcFlowLogsConfigs_sync_flattened_resourceNames1",
+      "title": "ListVpcFlowLogsConfigsResourceNames1",
       "description": "Snippet for ListVpcFlowLogsConfigs",
-      "file": "VpcFlowLogsServiceClient.ListVpcFlowLogsConfigsResourceNamesSnippet.g.cs",
+      "file": "VpcFlowLogsServiceClient.ListVpcFlowLogsConfigsResourceNames1Snippet.g.cs",
       "language": "C_SHARP",
       "clientMethod": {
         "shortName": "ListVpcFlowLogsConfigs",
@@ -1783,10 +3417,10 @@
       ]
     },
     {
-      "regionTag": "networkmanagement_v1_generated_VpcFlowLogsService_ListVpcFlowLogsConfigs_async_flattened_resourceNames",
-      "title": "ListVpcFlowLogsConfigsResourceNamesAsync",
+      "regionTag": "networkmanagement_v1_generated_VpcFlowLogsService_ListVpcFlowLogsConfigs_async_flattened_resourceNames1",
+      "title": "ListVpcFlowLogsConfigsResourceNames1Async",
       "description": "Snippet for ListVpcFlowLogsConfigsAsync",
-      "file": "VpcFlowLogsServiceClient.ListVpcFlowLogsConfigsResourceNamesAsyncSnippet.g.cs",
+      "file": "VpcFlowLogsServiceClient.ListVpcFlowLogsConfigsResourceNames1AsyncSnippet.g.cs",
       "language": "C_SHARP",
       "clientMethod": {
         "shortName": "ListVpcFlowLogsConfigsAsync",
@@ -1834,6 +3468,117 @@
         {
           "start": 39,
           "end": 76,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "networkmanagement_v1_generated_VpcFlowLogsService_ListVpcFlowLogsConfigs_sync_flattened_resourceNames2",
+      "title": "ListVpcFlowLogsConfigsResourceNames2",
+      "description": "Snippet for ListVpcFlowLogsConfigs",
+      "file": "VpcFlowLogsServiceClient.ListVpcFlowLogsConfigsResourceNames2Snippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListVpcFlowLogsConfigs",
+        "fullName": "Google.Cloud.NetworkManagement.V1.VpcFlowLogsServiceClient.ListVpcFlowLogsConfigs",
+        "parameters": [
+          {
+            "type": "Google.Cloud.NetworkManagement.V1.OrganizationLocationName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.NetworkManagement.V1.ListVpcFlowLogsConfigsResponse, Google.Cloud.NetworkManagement.V1.VpcFlowLogsConfig>",
+        "client": {
+          "shortName": "VpcFlowLogsServiceClient",
+          "fullName": "Google.Cloud.NetworkManagement.V1.VpcFlowLogsServiceClient"
+        },
+        "method": {
+          "shortName": "ListVpcFlowLogsConfigs",
+          "fullName": "google.cloud.networkmanagement.v1.VpcFlowLogsService.ListVpcFlowLogsConfigs",
+          "service": {
+            "shortName": "VpcFlowLogsService",
+            "fullName": "google.cloud.networkmanagement.v1.VpcFlowLogsService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 75,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 73,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "networkmanagement_v1_generated_VpcFlowLogsService_ListVpcFlowLogsConfigs_async_flattened_resourceNames2",
+      "title": "ListVpcFlowLogsConfigsResourceNames2Async",
+      "description": "Snippet for ListVpcFlowLogsConfigsAsync",
+      "file": "VpcFlowLogsServiceClient.ListVpcFlowLogsConfigsResourceNames2AsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListVpcFlowLogsConfigsAsync",
+        "fullName": "Google.Cloud.NetworkManagement.V1.VpcFlowLogsServiceClient.ListVpcFlowLogsConfigsAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.NetworkManagement.V1.OrganizationLocationName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.NetworkManagement.V1.ListVpcFlowLogsConfigsResponse, Google.Cloud.NetworkManagement.V1.VpcFlowLogsConfig>",
+        "client": {
+          "shortName": "VpcFlowLogsServiceClient",
+          "fullName": "Google.Cloud.NetworkManagement.V1.VpcFlowLogsServiceClient"
+        },
+        "method": {
+          "shortName": "ListVpcFlowLogsConfigs",
+          "fullName": "google.cloud.networkmanagement.v1.VpcFlowLogsService.ListVpcFlowLogsConfigs",
+          "service": {
+            "shortName": "VpcFlowLogsService",
+            "fullName": "google.cloud.networkmanagement.v1.VpcFlowLogsService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 77,
+          "type": "FULL"
+        },
+        {
+          "start": 38,
+          "end": 75,
           "type": "SHORT"
         }
       ]
@@ -2334,10 +4079,10 @@
       ]
     },
     {
-      "regionTag": "networkmanagement_v1_generated_VpcFlowLogsService_CreateVpcFlowLogsConfig_sync_flattened_resourceNames",
-      "title": "CreateVpcFlowLogsConfigResourceNames",
+      "regionTag": "networkmanagement_v1_generated_VpcFlowLogsService_CreateVpcFlowLogsConfig_sync_flattened_resourceNames1",
+      "title": "CreateVpcFlowLogsConfigResourceNames1",
       "description": "Snippet for CreateVpcFlowLogsConfig",
-      "file": "VpcFlowLogsServiceClient.CreateVpcFlowLogsConfigResourceNamesSnippet.g.cs",
+      "file": "VpcFlowLogsServiceClient.CreateVpcFlowLogsConfigResourceNames1Snippet.g.cs",
       "language": "C_SHARP",
       "clientMethod": {
         "shortName": "CreateVpcFlowLogsConfig",
@@ -2389,10 +4134,10 @@
       ]
     },
     {
-      "regionTag": "networkmanagement_v1_generated_VpcFlowLogsService_CreateVpcFlowLogsConfig_async_flattened_resourceNames",
-      "title": "CreateVpcFlowLogsConfigResourceNamesAsync",
+      "regionTag": "networkmanagement_v1_generated_VpcFlowLogsService_CreateVpcFlowLogsConfig_async_flattened_resourceNames1",
+      "title": "CreateVpcFlowLogsConfigResourceNames1Async",
       "description": "Snippet for CreateVpcFlowLogsConfigAsync",
-      "file": "VpcFlowLogsServiceClient.CreateVpcFlowLogsConfigResourceNamesAsyncSnippet.g.cs",
+      "file": "VpcFlowLogsServiceClient.CreateVpcFlowLogsConfigResourceNames1AsyncSnippet.g.cs",
       "language": "C_SHARP",
       "clientMethod": {
         "shortName": "CreateVpcFlowLogsConfigAsync",
@@ -2440,6 +4185,117 @@
         {
           "start": 37,
           "end": 60,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "networkmanagement_v1_generated_VpcFlowLogsService_CreateVpcFlowLogsConfig_sync_flattened_resourceNames2",
+      "title": "CreateVpcFlowLogsConfigResourceNames2",
+      "description": "Snippet for CreateVpcFlowLogsConfig",
+      "file": "VpcFlowLogsServiceClient.CreateVpcFlowLogsConfigResourceNames2Snippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateVpcFlowLogsConfig",
+        "fullName": "Google.Cloud.NetworkManagement.V1.VpcFlowLogsServiceClient.CreateVpcFlowLogsConfig",
+        "parameters": [
+          {
+            "type": "Google.Cloud.NetworkManagement.V1.OrganizationLocationName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.NetworkManagement.V1.VpcFlowLogsConfig",
+            "name": "vpcFlowLogsConfig"
+          },
+          {
+            "type": "Google.Cloud.NetworkManagement.V1.VpcFlowLogsConfigName",
+            "name": "vpcFlowLogsConfigId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.NetworkManagement.V1.VpcFlowLogsConfig, Google.Cloud.NetworkManagement.V1.OperationMetadata>",
+        "client": {
+          "shortName": "VpcFlowLogsServiceClient",
+          "fullName": "Google.Cloud.NetworkManagement.V1.VpcFlowLogsServiceClient"
+        },
+        "method": {
+          "shortName": "CreateVpcFlowLogsConfig",
+          "fullName": "google.cloud.networkmanagement.v1.VpcFlowLogsService.CreateVpcFlowLogsConfig",
+          "service": {
+            "shortName": "VpcFlowLogsService",
+            "fullName": "google.cloud.networkmanagement.v1.VpcFlowLogsService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 60,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 58,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "networkmanagement_v1_generated_VpcFlowLogsService_CreateVpcFlowLogsConfig_async_flattened_resourceNames2",
+      "title": "CreateVpcFlowLogsConfigResourceNames2Async",
+      "description": "Snippet for CreateVpcFlowLogsConfigAsync",
+      "file": "VpcFlowLogsServiceClient.CreateVpcFlowLogsConfigResourceNames2AsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateVpcFlowLogsConfigAsync",
+        "fullName": "Google.Cloud.NetworkManagement.V1.VpcFlowLogsServiceClient.CreateVpcFlowLogsConfigAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.NetworkManagement.V1.OrganizationLocationName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.NetworkManagement.V1.VpcFlowLogsConfig",
+            "name": "vpcFlowLogsConfig"
+          },
+          {
+            "type": "Google.Cloud.NetworkManagement.V1.VpcFlowLogsConfigName",
+            "name": "vpcFlowLogsConfigId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.NetworkManagement.V1.VpcFlowLogsConfig, Google.Cloud.NetworkManagement.V1.OperationMetadata>>",
+        "client": {
+          "shortName": "VpcFlowLogsServiceClient",
+          "fullName": "Google.Cloud.NetworkManagement.V1.VpcFlowLogsServiceClient"
+        },
+        "method": {
+          "shortName": "CreateVpcFlowLogsConfig",
+          "fullName": "google.cloud.networkmanagement.v1.VpcFlowLogsService.CreateVpcFlowLogsConfig",
+          "service": {
+            "shortName": "VpcFlowLogsService",
+            "fullName": "google.cloud.networkmanagement.v1.VpcFlowLogsService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 61,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 59,
           "type": "SHORT"
         }
       ]
@@ -2927,6 +4783,200 @@
         {
           "start": 37,
           "end": 58,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "networkmanagement_v1_generated_VpcFlowLogsService_QueryOrgVpcFlowLogsConfigs_sync",
+      "title": "QueryOrgVpcFlowLogsConfigsRequestObject",
+      "description": "Snippet for QueryOrgVpcFlowLogsConfigs",
+      "file": "VpcFlowLogsServiceClient.QueryOrgVpcFlowLogsConfigsRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "QueryOrgVpcFlowLogsConfigs",
+        "fullName": "Google.Cloud.NetworkManagement.V1.VpcFlowLogsServiceClient.QueryOrgVpcFlowLogsConfigs",
+        "parameters": [
+          {
+            "type": "Google.Cloud.NetworkManagement.V1.QueryOrgVpcFlowLogsConfigsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.NetworkManagement.V1.QueryOrgVpcFlowLogsConfigsResponse, Google.Cloud.NetworkManagement.V1.VpcFlowLogsConfig>",
+        "client": {
+          "shortName": "VpcFlowLogsServiceClient",
+          "fullName": "Google.Cloud.NetworkManagement.V1.VpcFlowLogsServiceClient"
+        },
+        "method": {
+          "shortName": "QueryOrgVpcFlowLogsConfigs",
+          "fullName": "google.cloud.networkmanagement.v1.VpcFlowLogsService.QueryOrgVpcFlowLogsConfigs",
+          "service": {
+            "shortName": "VpcFlowLogsService",
+            "fullName": "google.cloud.networkmanagement.v1.VpcFlowLogsService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 80,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 78,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "networkmanagement_v1_generated_VpcFlowLogsService_QueryOrgVpcFlowLogsConfigs_async",
+      "title": "QueryOrgVpcFlowLogsConfigsRequestObjectAsync",
+      "description": "Snippet for QueryOrgVpcFlowLogsConfigsAsync",
+      "file": "VpcFlowLogsServiceClient.QueryOrgVpcFlowLogsConfigsRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "QueryOrgVpcFlowLogsConfigsAsync",
+        "fullName": "Google.Cloud.NetworkManagement.V1.VpcFlowLogsServiceClient.QueryOrgVpcFlowLogsConfigsAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.NetworkManagement.V1.QueryOrgVpcFlowLogsConfigsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.NetworkManagement.V1.QueryOrgVpcFlowLogsConfigsResponse, Google.Cloud.NetworkManagement.V1.VpcFlowLogsConfig>",
+        "client": {
+          "shortName": "VpcFlowLogsServiceClient",
+          "fullName": "Google.Cloud.NetworkManagement.V1.VpcFlowLogsServiceClient"
+        },
+        "method": {
+          "shortName": "QueryOrgVpcFlowLogsConfigs",
+          "fullName": "google.cloud.networkmanagement.v1.VpcFlowLogsService.QueryOrgVpcFlowLogsConfigs",
+          "service": {
+            "shortName": "VpcFlowLogsService",
+            "fullName": "google.cloud.networkmanagement.v1.VpcFlowLogsService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 82,
+          "type": "FULL"
+        },
+        {
+          "start": 39,
+          "end": 80,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "networkmanagement_v1_generated_VpcFlowLogsService_ShowEffectiveFlowLogsConfigs_sync",
+      "title": "ShowEffectiveFlowLogsConfigsRequestObject",
+      "description": "Snippet for ShowEffectiveFlowLogsConfigs",
+      "file": "VpcFlowLogsServiceClient.ShowEffectiveFlowLogsConfigsRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ShowEffectiveFlowLogsConfigs",
+        "fullName": "Google.Cloud.NetworkManagement.V1.VpcFlowLogsServiceClient.ShowEffectiveFlowLogsConfigs",
+        "parameters": [
+          {
+            "type": "Google.Cloud.NetworkManagement.V1.ShowEffectiveFlowLogsConfigsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.NetworkManagement.V1.ShowEffectiveFlowLogsConfigsResponse, Google.Cloud.NetworkManagement.V1.EffectiveVpcFlowLogsConfig>",
+        "client": {
+          "shortName": "VpcFlowLogsServiceClient",
+          "fullName": "Google.Cloud.NetworkManagement.V1.VpcFlowLogsServiceClient"
+        },
+        "method": {
+          "shortName": "ShowEffectiveFlowLogsConfigs",
+          "fullName": "google.cloud.networkmanagement.v1.VpcFlowLogsService.ShowEffectiveFlowLogsConfigs",
+          "service": {
+            "shortName": "VpcFlowLogsService",
+            "fullName": "google.cloud.networkmanagement.v1.VpcFlowLogsService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 81,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 79,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "networkmanagement_v1_generated_VpcFlowLogsService_ShowEffectiveFlowLogsConfigs_async",
+      "title": "ShowEffectiveFlowLogsConfigsRequestObjectAsync",
+      "description": "Snippet for ShowEffectiveFlowLogsConfigsAsync",
+      "file": "VpcFlowLogsServiceClient.ShowEffectiveFlowLogsConfigsRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ShowEffectiveFlowLogsConfigsAsync",
+        "fullName": "Google.Cloud.NetworkManagement.V1.VpcFlowLogsServiceClient.ShowEffectiveFlowLogsConfigsAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.NetworkManagement.V1.ShowEffectiveFlowLogsConfigsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.NetworkManagement.V1.ShowEffectiveFlowLogsConfigsResponse, Google.Cloud.NetworkManagement.V1.EffectiveVpcFlowLogsConfig>",
+        "client": {
+          "shortName": "VpcFlowLogsServiceClient",
+          "fullName": "Google.Cloud.NetworkManagement.V1.VpcFlowLogsServiceClient"
+        },
+        "method": {
+          "shortName": "ShowEffectiveFlowLogsConfigs",
+          "fullName": "google.cloud.networkmanagement.v1.VpcFlowLogsService.ShowEffectiveFlowLogsConfigs",
+          "service": {
+            "shortName": "VpcFlowLogsService",
+            "fullName": "google.cloud.networkmanagement.v1.VpcFlowLogsService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 83,
+          "type": "FULL"
+        },
+        {
+          "start": 39,
+          "end": 81,
           "type": "SHORT"
         }
       ]
