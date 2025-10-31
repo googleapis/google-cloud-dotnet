@@ -61,28 +61,27 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
             "dGUYAyABKAhCA+BBARIYCgtpbnRlcnJ1cHRlZBgEIAEoCEID4EEBEiIKFWxv",
             "bmdfcnVubmluZ190b29sX2lkcxgFIAMoCUID4EEBEhMKBmJyYW5jaBgGIAEo",
             "CUID4EEBEjAKD2N1c3RvbV9tZXRhZGF0YRgHIAEoCzIXLmdvb2dsZS5wcm90",
-            "b2J1Zi5TdHJ1Y3QiiAMKDEV2ZW50QWN0aW9ucxIfChJza2lwX3N1bW1hcml6",
+            "b2J1Zi5TdHJ1Y3Qi6QIKDEV2ZW50QWN0aW9ucxIfChJza2lwX3N1bW1hcml6",
             "YXRpb24YASABKAhCA+BBARIxCgtzdGF0ZV9kZWx0YRgCIAEoCzIXLmdvb2ds",
             "ZS5wcm90b2J1Zi5TdHJ1Y3RCA+BBARJdCg5hcnRpZmFjdF9kZWx0YRgDIAMo",
             "CzJALmdvb2dsZS5jbG91ZC5haXBsYXRmb3JtLnYxYmV0YTEuRXZlbnRBY3Rp",
-            "b25zLkFydGlmYWN0RGVsdGFFbnRyeUID4EEBEh0KEXRyYW5zZmVyX3RvX2Fn",
-            "ZW50GAUgASgIQgIYARIVCghlc2NhbGF0ZRgGIAEoCEID4EEBEjwKFnJlcXVl",
-            "c3RlZF9hdXRoX2NvbmZpZ3MYByABKAsyFy5nb29nbGUucHJvdG9idWYuU3Ry",
-            "dWN0QgPgQQESGwoOdHJhbnNmZXJfYWdlbnQYCCABKAlCA+BBARo0ChJBcnRp",
-            "ZmFjdERlbHRhRW50cnkSCwoDa2V5GAEgASgJEg0KBXZhbHVlGAIgASgFOgI4",
-            "AULjAQojY29tLmdvb2dsZS5jbG91ZC5haXBsYXRmb3JtLnYxYmV0YTFCDFNl",
-            "c3Npb25Qcm90b1ABWkNjbG91ZC5nb29nbGUuY29tL2dvL2FpcGxhdGZvcm0v",
-            "YXBpdjFiZXRhMS9haXBsYXRmb3JtcGI7YWlwbGF0Zm9ybXBiqgIfR29vZ2xl",
-            "LkNsb3VkLkFJUGxhdGZvcm0uVjFCZXRhMcoCH0dvb2dsZVxDbG91ZFxBSVBs",
-            "YXRmb3JtXFYxYmV0YTHqAiJHb29nbGU6OkNsb3VkOjpBSVBsYXRmb3JtOjpW",
-            "MWJldGExYgZwcm90bzM="));
+            "b25zLkFydGlmYWN0RGVsdGFFbnRyeUID4EEBEhUKCGVzY2FsYXRlGAYgASgI",
+            "QgPgQQESPAoWcmVxdWVzdGVkX2F1dGhfY29uZmlncxgHIAEoCzIXLmdvb2ds",
+            "ZS5wcm90b2J1Zi5TdHJ1Y3RCA+BBARIbCg50cmFuc2Zlcl9hZ2VudBgIIAEo",
+            "CUID4EEBGjQKEkFydGlmYWN0RGVsdGFFbnRyeRILCgNrZXkYASABKAkSDQoF",
+            "dmFsdWUYAiABKAU6AjgBQuMBCiNjb20uZ29vZ2xlLmNsb3VkLmFpcGxhdGZv",
+            "cm0udjFiZXRhMUIMU2Vzc2lvblByb3RvUAFaQ2Nsb3VkLmdvb2dsZS5jb20v",
+            "Z28vYWlwbGF0Zm9ybS9hcGl2MWJldGExL2FpcGxhdGZvcm1wYjthaXBsYXRm",
+            "b3JtcGKqAh9Hb29nbGUuQ2xvdWQuQUlQbGF0Zm9ybS5WMUJldGExygIfR29v",
+            "Z2xlXENsb3VkXEFJUGxhdGZvcm1cVjFiZXRhMeoCIkdvb2dsZTo6Q2xvdWQ6",
+            "OkFJUGxhdGZvcm06OlYxYmV0YTFiBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Cloud.AIPlatform.V1Beta1.ContentReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.DurationReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.StructReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1Beta1.Session), global::Google.Cloud.AIPlatform.V1Beta1.Session.Parser, new[]{ "ExpireTime", "Ttl", "Name", "CreateTime", "UpdateTime", "DisplayName", "SessionState", "UserId" }, new[]{ "Expiration" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1Beta1.SessionEvent), global::Google.Cloud.AIPlatform.V1Beta1.SessionEvent.Parser, new[]{ "Name", "Author", "Content", "InvocationId", "Actions", "Timestamp", "ErrorCode", "ErrorMessage", "EventMetadata" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1Beta1.EventMetadata), global::Google.Cloud.AIPlatform.V1Beta1.EventMetadata.Parser, new[]{ "GroundingMetadata", "Partial", "TurnComplete", "Interrupted", "LongRunningToolIds", "Branch", "CustomMetadata" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1Beta1.EventActions), global::Google.Cloud.AIPlatform.V1Beta1.EventActions.Parser, new[]{ "SkipSummarization", "StateDelta", "ArtifactDelta", "TransferToAgent", "Escalate", "RequestedAuthConfigs", "TransferAgent" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { null, })
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1Beta1.EventActions), global::Google.Cloud.AIPlatform.V1Beta1.EventActions.Parser, new[]{ "SkipSummarization", "StateDelta", "ArtifactDelta", "Escalate", "RequestedAuthConfigs", "TransferAgent" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { null, })
           }));
     }
     #endregion
@@ -1702,7 +1701,6 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
       skipSummarization_ = other.skipSummarization_;
       stateDelta_ = other.stateDelta_ != null ? other.stateDelta_.Clone() : null;
       artifactDelta_ = other.artifactDelta_.Clone();
-      transferToAgent_ = other.transferToAgent_;
       escalate_ = other.escalate_;
       requestedAuthConfigs_ = other.requestedAuthConfigs_ != null ? other.requestedAuthConfigs_.Clone() : null;
       transferAgent_ = other.transferAgent_;
@@ -1760,22 +1758,6 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public pbc::MapField<string, int> ArtifactDelta {
       get { return artifactDelta_; }
-    }
-
-    /// <summary>Field number for the "transfer_to_agent" field.</summary>
-    public const int TransferToAgentFieldNumber = 5;
-    private bool transferToAgent_;
-    /// <summary>
-    /// Deprecated. If set, the event transfers to the specified agent.
-    /// </summary>
-    [global::System.ObsoleteAttribute]
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public bool TransferToAgent {
-      get { return transferToAgent_; }
-      set {
-        transferToAgent_ = value;
-      }
     }
 
     /// <summary>Field number for the "escalate" field.</summary>
@@ -1844,7 +1826,6 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
       if (SkipSummarization != other.SkipSummarization) return false;
       if (!object.Equals(StateDelta, other.StateDelta)) return false;
       if (!ArtifactDelta.Equals(other.ArtifactDelta)) return false;
-      if (TransferToAgent != other.TransferToAgent) return false;
       if (Escalate != other.Escalate) return false;
       if (!object.Equals(RequestedAuthConfigs, other.RequestedAuthConfigs)) return false;
       if (TransferAgent != other.TransferAgent) return false;
@@ -1858,7 +1839,6 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
       if (SkipSummarization != false) hash ^= SkipSummarization.GetHashCode();
       if (stateDelta_ != null) hash ^= StateDelta.GetHashCode();
       hash ^= ArtifactDelta.GetHashCode();
-      if (TransferToAgent != false) hash ^= TransferToAgent.GetHashCode();
       if (Escalate != false) hash ^= Escalate.GetHashCode();
       if (requestedAuthConfigs_ != null) hash ^= RequestedAuthConfigs.GetHashCode();
       if (TransferAgent.Length != 0) hash ^= TransferAgent.GetHashCode();
@@ -1889,10 +1869,6 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
         output.WriteMessage(StateDelta);
       }
       artifactDelta_.WriteTo(output, _map_artifactDelta_codec);
-      if (TransferToAgent != false) {
-        output.WriteRawTag(40);
-        output.WriteBool(TransferToAgent);
-      }
       if (Escalate != false) {
         output.WriteRawTag(48);
         output.WriteBool(Escalate);
@@ -1924,10 +1900,6 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
         output.WriteMessage(StateDelta);
       }
       artifactDelta_.WriteTo(ref output, _map_artifactDelta_codec);
-      if (TransferToAgent != false) {
-        output.WriteRawTag(40);
-        output.WriteBool(TransferToAgent);
-      }
       if (Escalate != false) {
         output.WriteRawTag(48);
         output.WriteBool(Escalate);
@@ -1957,9 +1929,6 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(StateDelta);
       }
       size += artifactDelta_.CalculateSize(_map_artifactDelta_codec);
-      if (TransferToAgent != false) {
-        size += 1 + 1;
-      }
       if (Escalate != false) {
         size += 1 + 1;
       }
@@ -1991,9 +1960,6 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
         StateDelta.MergeFrom(other.StateDelta);
       }
       artifactDelta_.MergeFrom(other.artifactDelta_);
-      if (other.TransferToAgent != false) {
-        TransferToAgent = other.TransferToAgent;
-      }
       if (other.Escalate != false) {
         Escalate = other.Escalate;
       }
@@ -2034,10 +2000,6 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
           }
           case 26: {
             artifactDelta_.AddEntriesFrom(input, _map_artifactDelta_codec);
-            break;
-          }
-          case 40: {
-            TransferToAgent = input.ReadBool();
             break;
           }
           case 48: {
@@ -2083,10 +2045,6 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
           }
           case 26: {
             artifactDelta_.AddEntriesFrom(ref input, _map_artifactDelta_codec);
-            break;
-          }
-          case 40: {
-            TransferToAgent = input.ReadBool();
             break;
           }
           case 48: {
