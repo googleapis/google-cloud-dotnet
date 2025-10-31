@@ -49,10 +49,13 @@ namespace Google.Ads.MarketingPlatform.Admin.V1Alpha
         {
             gax::GaxPreconditions.CheckNotNull(existing, nameof(existing));
             GetOrganizationSettings = existing.GetOrganizationSettings;
+            ListOrganizationsSettings = existing.ListOrganizationsSettings;
+            FindSalesPartnerManagedClientsSettings = existing.FindSalesPartnerManagedClientsSettings;
             ListAnalyticsAccountLinksSettings = existing.ListAnalyticsAccountLinksSettings;
             CreateAnalyticsAccountLinkSettings = existing.CreateAnalyticsAccountLinkSettings;
             DeleteAnalyticsAccountLinkSettings = existing.DeleteAnalyticsAccountLinkSettings;
             SetPropertyServiceLevelSettings = existing.SetPropertyServiceLevelSettings;
+            ReportPropertyUsageSettings = existing.ReportPropertyUsageSettings;
             OnCopy(existing);
         }
 
@@ -79,6 +82,50 @@ namespace Google.Ads.MarketingPlatform.Admin.V1Alpha
         /// </list>
         /// </remarks>
         public gaxgrpc::CallSettings GetOrganizationSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 5, initialBackoff: sys::TimeSpan.FromMilliseconds(1000), maxBackoff: sys::TimeSpan.FromMilliseconds(60000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Unavailable, grpccore::StatusCode.Unknown)));
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>MarketingplatformAdminServiceClient.ListOrganizations</c> and
+        /// <c>MarketingplatformAdminServiceClient.ListOrganizationsAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>Initial retry delay: 1000 milliseconds.</description></item>
+        /// <item><description>Retry delay multiplier: 1.3</description></item>
+        /// <item><description>Retry maximum delay: 60000 milliseconds.</description></item>
+        /// <item><description>Maximum attempts: 5</description></item>
+        /// <item>
+        /// <description>
+        /// Retriable status codes: <see cref="grpccore::StatusCode.Unavailable"/>,
+        /// <see cref="grpccore::StatusCode.Unknown"/>.
+        /// </description>
+        /// </item>
+        /// <item><description>Timeout: 60 seconds.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings ListOrganizationsSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 5, initialBackoff: sys::TimeSpan.FromMilliseconds(1000), maxBackoff: sys::TimeSpan.FromMilliseconds(60000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Unavailable, grpccore::StatusCode.Unknown)));
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>MarketingplatformAdminServiceClient.FindSalesPartnerManagedClients</c> and
+        /// <c>MarketingplatformAdminServiceClient.FindSalesPartnerManagedClientsAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>Initial retry delay: 1000 milliseconds.</description></item>
+        /// <item><description>Retry delay multiplier: 1.3</description></item>
+        /// <item><description>Retry maximum delay: 60000 milliseconds.</description></item>
+        /// <item><description>Maximum attempts: 5</description></item>
+        /// <item>
+        /// <description>
+        /// Retriable status codes: <see cref="grpccore::StatusCode.Unavailable"/>,
+        /// <see cref="grpccore::StatusCode.Unknown"/>.
+        /// </description>
+        /// </item>
+        /// <item><description>Timeout: 60 seconds.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings FindSalesPartnerManagedClientsSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 5, initialBackoff: sys::TimeSpan.FromMilliseconds(1000), maxBackoff: sys::TimeSpan.FromMilliseconds(60000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Unavailable, grpccore::StatusCode.Unknown)));
 
         /// <summary>
         /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
@@ -167,6 +214,28 @@ namespace Google.Ads.MarketingPlatform.Admin.V1Alpha
         /// </list>
         /// </remarks>
         public gaxgrpc::CallSettings SetPropertyServiceLevelSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 5, initialBackoff: sys::TimeSpan.FromMilliseconds(1000), maxBackoff: sys::TimeSpan.FromMilliseconds(60000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Unavailable, grpccore::StatusCode.Unknown)));
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>MarketingplatformAdminServiceClient.ReportPropertyUsage</c> and
+        /// <c>MarketingplatformAdminServiceClient.ReportPropertyUsageAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>Initial retry delay: 1000 milliseconds.</description></item>
+        /// <item><description>Retry delay multiplier: 1.3</description></item>
+        /// <item><description>Retry maximum delay: 60000 milliseconds.</description></item>
+        /// <item><description>Maximum attempts: 5</description></item>
+        /// <item>
+        /// <description>
+        /// Retriable status codes: <see cref="grpccore::StatusCode.Unavailable"/>,
+        /// <see cref="grpccore::StatusCode.Unknown"/>.
+        /// </description>
+        /// </item>
+        /// <item><description>Timeout: 60 seconds.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings ReportPropertyUsageSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 5, initialBackoff: sys::TimeSpan.FromMilliseconds(1000), maxBackoff: sys::TimeSpan.FromMilliseconds(60000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Unavailable, grpccore::StatusCode.Unknown)));
 
         /// <summary>Creates a deep clone of this object, with all the same property values.</summary>
         /// <returns>A deep clone of this <see cref="MarketingplatformAdminServiceSettings"/> object.</returns>
@@ -429,6 +498,60 @@ namespace Google.Ads.MarketingPlatform.Admin.V1Alpha
         /// <returns>A Task containing the RPC response.</returns>
         public virtual stt::Task<Organization> GetOrganizationAsync(OrganizationName name, st::CancellationToken cancellationToken) =>
             GetOrganizationAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Returns a list of organizations that the user has access to.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="Organization"/> resources.</returns>
+        public virtual gax::PagedEnumerable<ListOrganizationsResponse, Organization> ListOrganizations(ListOrganizationsRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Returns a list of organizations that the user has access to.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="Organization"/> resources.</returns>
+        public virtual gax::PagedAsyncEnumerable<ListOrganizationsResponse, Organization> ListOrganizationsAsync(ListOrganizationsRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Returns a list of clients managed by the sales partner organization.
+        /// 
+        /// User needs to be an OrgAdmin/BillingAdmin on the sales partner organization
+        /// in order to view the end clients.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual FindSalesPartnerManagedClientsResponse FindSalesPartnerManagedClients(FindSalesPartnerManagedClientsRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Returns a list of clients managed by the sales partner organization.
+        /// 
+        /// User needs to be an OrgAdmin/BillingAdmin on the sales partner organization
+        /// in order to view the end clients.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<FindSalesPartnerManagedClientsResponse> FindSalesPartnerManagedClientsAsync(FindSalesPartnerManagedClientsRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Returns a list of clients managed by the sales partner organization.
+        /// 
+        /// User needs to be an OrgAdmin/BillingAdmin on the sales partner organization
+        /// in order to view the end clients.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<FindSalesPartnerManagedClientsResponse> FindSalesPartnerManagedClientsAsync(FindSalesPartnerManagedClientsRequest request, st::CancellationToken cancellationToken) =>
+            FindSalesPartnerManagedClientsAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
         /// Lists the Google Analytics accounts link to the specified Google Marketing
@@ -992,6 +1115,132 @@ namespace Google.Ads.MarketingPlatform.Admin.V1Alpha
         /// <returns>A Task containing the RPC response.</returns>
         public virtual stt::Task<SetPropertyServiceLevelResponse> SetPropertyServiceLevelAsync(string analyticsAccountLink, st::CancellationToken cancellationToken) =>
             SetPropertyServiceLevelAsync(analyticsAccountLink, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Get the usage and billing data for properties within the organization for
+        /// the specified month.
+        /// 
+        /// Per direct client org, user needs to be OrgAdmin/BillingAdmin on the
+        /// organization in order to view the billing and usage data.
+        /// 
+        /// Per sales partner client org, user needs to be OrgAdmin/BillingAdmin on
+        /// the sales partner org in order to view the billing and usage data, or
+        /// OrgAdmin/BillingAdmin on the sales partner client org in order to view the
+        /// usage data only.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual ReportPropertyUsageResponse ReportPropertyUsage(ReportPropertyUsageRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Get the usage and billing data for properties within the organization for
+        /// the specified month.
+        /// 
+        /// Per direct client org, user needs to be OrgAdmin/BillingAdmin on the
+        /// organization in order to view the billing and usage data.
+        /// 
+        /// Per sales partner client org, user needs to be OrgAdmin/BillingAdmin on
+        /// the sales partner org in order to view the billing and usage data, or
+        /// OrgAdmin/BillingAdmin on the sales partner client org in order to view the
+        /// usage data only.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<ReportPropertyUsageResponse> ReportPropertyUsageAsync(ReportPropertyUsageRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Get the usage and billing data for properties within the organization for
+        /// the specified month.
+        /// 
+        /// Per direct client org, user needs to be OrgAdmin/BillingAdmin on the
+        /// organization in order to view the billing and usage data.
+        /// 
+        /// Per sales partner client org, user needs to be OrgAdmin/BillingAdmin on
+        /// the sales partner org in order to view the billing and usage data, or
+        /// OrgAdmin/BillingAdmin on the sales partner client org in order to view the
+        /// usage data only.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<ReportPropertyUsageResponse> ReportPropertyUsageAsync(ReportPropertyUsageRequest request, st::CancellationToken cancellationToken) =>
+            ReportPropertyUsageAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Get the usage and billing data for properties within the organization for
+        /// the specified month.
+        /// 
+        /// Per direct client org, user needs to be OrgAdmin/BillingAdmin on the
+        /// organization in order to view the billing and usage data.
+        /// 
+        /// Per sales partner client org, user needs to be OrgAdmin/BillingAdmin on
+        /// the sales partner org in order to view the billing and usage data, or
+        /// OrgAdmin/BillingAdmin on the sales partner client org in order to view the
+        /// usage data only.
+        /// </summary>
+        /// <param name="organization">
+        /// Required. Specifies the organization whose property usage will be listed.
+        /// 
+        /// Format: organizations/{org_id}
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual ReportPropertyUsageResponse ReportPropertyUsage(string organization, gaxgrpc::CallSettings callSettings = null) =>
+            ReportPropertyUsage(new ReportPropertyUsageRequest
+            {
+                Organization = gax::GaxPreconditions.CheckNotNullOrEmpty(organization, nameof(organization)),
+            }, callSettings);
+
+        /// <summary>
+        /// Get the usage and billing data for properties within the organization for
+        /// the specified month.
+        /// 
+        /// Per direct client org, user needs to be OrgAdmin/BillingAdmin on the
+        /// organization in order to view the billing and usage data.
+        /// 
+        /// Per sales partner client org, user needs to be OrgAdmin/BillingAdmin on
+        /// the sales partner org in order to view the billing and usage data, or
+        /// OrgAdmin/BillingAdmin on the sales partner client org in order to view the
+        /// usage data only.
+        /// </summary>
+        /// <param name="organization">
+        /// Required. Specifies the organization whose property usage will be listed.
+        /// 
+        /// Format: organizations/{org_id}
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<ReportPropertyUsageResponse> ReportPropertyUsageAsync(string organization, gaxgrpc::CallSettings callSettings = null) =>
+            ReportPropertyUsageAsync(new ReportPropertyUsageRequest
+            {
+                Organization = gax::GaxPreconditions.CheckNotNullOrEmpty(organization, nameof(organization)),
+            }, callSettings);
+
+        /// <summary>
+        /// Get the usage and billing data for properties within the organization for
+        /// the specified month.
+        /// 
+        /// Per direct client org, user needs to be OrgAdmin/BillingAdmin on the
+        /// organization in order to view the billing and usage data.
+        /// 
+        /// Per sales partner client org, user needs to be OrgAdmin/BillingAdmin on
+        /// the sales partner org in order to view the billing and usage data, or
+        /// OrgAdmin/BillingAdmin on the sales partner client org in order to view the
+        /// usage data only.
+        /// </summary>
+        /// <param name="organization">
+        /// Required. Specifies the organization whose property usage will be listed.
+        /// 
+        /// Format: organizations/{org_id}
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<ReportPropertyUsageResponse> ReportPropertyUsageAsync(string organization, st::CancellationToken cancellationToken) =>
+            ReportPropertyUsageAsync(organization, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
     }
 
     /// <summary>MarketingplatformAdminService client wrapper implementation, for convenient use.</summary>
@@ -1002,6 +1251,10 @@ namespace Google.Ads.MarketingPlatform.Admin.V1Alpha
     {
         private readonly gaxgrpc::ApiCall<GetOrganizationRequest, Organization> _callGetOrganization;
 
+        private readonly gaxgrpc::ApiCall<ListOrganizationsRequest, ListOrganizationsResponse> _callListOrganizations;
+
+        private readonly gaxgrpc::ApiCall<FindSalesPartnerManagedClientsRequest, FindSalesPartnerManagedClientsResponse> _callFindSalesPartnerManagedClients;
+
         private readonly gaxgrpc::ApiCall<ListAnalyticsAccountLinksRequest, ListAnalyticsAccountLinksResponse> _callListAnalyticsAccountLinks;
 
         private readonly gaxgrpc::ApiCall<CreateAnalyticsAccountLinkRequest, AnalyticsAccountLink> _callCreateAnalyticsAccountLink;
@@ -1009,6 +1262,8 @@ namespace Google.Ads.MarketingPlatform.Admin.V1Alpha
         private readonly gaxgrpc::ApiCall<DeleteAnalyticsAccountLinkRequest, wkt::Empty> _callDeleteAnalyticsAccountLink;
 
         private readonly gaxgrpc::ApiCall<SetPropertyServiceLevelRequest, SetPropertyServiceLevelResponse> _callSetPropertyServiceLevel;
+
+        private readonly gaxgrpc::ApiCall<ReportPropertyUsageRequest, ReportPropertyUsageResponse> _callReportPropertyUsage;
 
         /// <summary>
         /// Constructs a client wrapper for the MarketingplatformAdminService service, with the specified gRPC client
@@ -1031,6 +1286,12 @@ namespace Google.Ads.MarketingPlatform.Admin.V1Alpha
             _callGetOrganization = clientHelper.BuildApiCall<GetOrganizationRequest, Organization>("GetOrganization", grpcClient.GetOrganizationAsync, grpcClient.GetOrganization, effectiveSettings.GetOrganizationSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callGetOrganization);
             Modify_GetOrganizationApiCall(ref _callGetOrganization);
+            _callListOrganizations = clientHelper.BuildApiCall<ListOrganizationsRequest, ListOrganizationsResponse>("ListOrganizations", grpcClient.ListOrganizationsAsync, grpcClient.ListOrganizations, effectiveSettings.ListOrganizationsSettings);
+            Modify_ApiCall(ref _callListOrganizations);
+            Modify_ListOrganizationsApiCall(ref _callListOrganizations);
+            _callFindSalesPartnerManagedClients = clientHelper.BuildApiCall<FindSalesPartnerManagedClientsRequest, FindSalesPartnerManagedClientsResponse>("FindSalesPartnerManagedClients", grpcClient.FindSalesPartnerManagedClientsAsync, grpcClient.FindSalesPartnerManagedClients, effectiveSettings.FindSalesPartnerManagedClientsSettings).WithGoogleRequestParam("organization", request => request.Organization);
+            Modify_ApiCall(ref _callFindSalesPartnerManagedClients);
+            Modify_FindSalesPartnerManagedClientsApiCall(ref _callFindSalesPartnerManagedClients);
             _callListAnalyticsAccountLinks = clientHelper.BuildApiCall<ListAnalyticsAccountLinksRequest, ListAnalyticsAccountLinksResponse>("ListAnalyticsAccountLinks", grpcClient.ListAnalyticsAccountLinksAsync, grpcClient.ListAnalyticsAccountLinks, effectiveSettings.ListAnalyticsAccountLinksSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callListAnalyticsAccountLinks);
             Modify_ListAnalyticsAccountLinksApiCall(ref _callListAnalyticsAccountLinks);
@@ -1043,12 +1304,19 @@ namespace Google.Ads.MarketingPlatform.Admin.V1Alpha
             _callSetPropertyServiceLevel = clientHelper.BuildApiCall<SetPropertyServiceLevelRequest, SetPropertyServiceLevelResponse>("SetPropertyServiceLevel", grpcClient.SetPropertyServiceLevelAsync, grpcClient.SetPropertyServiceLevel, effectiveSettings.SetPropertyServiceLevelSettings).WithGoogleRequestParam("analytics_account_link", request => request.AnalyticsAccountLink);
             Modify_ApiCall(ref _callSetPropertyServiceLevel);
             Modify_SetPropertyServiceLevelApiCall(ref _callSetPropertyServiceLevel);
+            _callReportPropertyUsage = clientHelper.BuildApiCall<ReportPropertyUsageRequest, ReportPropertyUsageResponse>("ReportPropertyUsage", grpcClient.ReportPropertyUsageAsync, grpcClient.ReportPropertyUsage, effectiveSettings.ReportPropertyUsageSettings).WithGoogleRequestParam("organization", request => request.Organization);
+            Modify_ApiCall(ref _callReportPropertyUsage);
+            Modify_ReportPropertyUsageApiCall(ref _callReportPropertyUsage);
             OnConstruction(grpcClient, effectiveSettings, clientHelper);
         }
 
         partial void Modify_ApiCall<TRequest, TResponse>(ref gaxgrpc::ApiCall<TRequest, TResponse> call) where TRequest : class, proto::IMessage<TRequest> where TResponse : class, proto::IMessage<TResponse>;
 
         partial void Modify_GetOrganizationApiCall(ref gaxgrpc::ApiCall<GetOrganizationRequest, Organization> call);
+
+        partial void Modify_ListOrganizationsApiCall(ref gaxgrpc::ApiCall<ListOrganizationsRequest, ListOrganizationsResponse> call);
+
+        partial void Modify_FindSalesPartnerManagedClientsApiCall(ref gaxgrpc::ApiCall<FindSalesPartnerManagedClientsRequest, FindSalesPartnerManagedClientsResponse> call);
 
         partial void Modify_ListAnalyticsAccountLinksApiCall(ref gaxgrpc::ApiCall<ListAnalyticsAccountLinksRequest, ListAnalyticsAccountLinksResponse> call);
 
@@ -1058,12 +1326,18 @@ namespace Google.Ads.MarketingPlatform.Admin.V1Alpha
 
         partial void Modify_SetPropertyServiceLevelApiCall(ref gaxgrpc::ApiCall<SetPropertyServiceLevelRequest, SetPropertyServiceLevelResponse> call);
 
+        partial void Modify_ReportPropertyUsageApiCall(ref gaxgrpc::ApiCall<ReportPropertyUsageRequest, ReportPropertyUsageResponse> call);
+
         partial void OnConstruction(MarketingplatformAdminService.MarketingplatformAdminServiceClient grpcClient, MarketingplatformAdminServiceSettings effectiveSettings, gaxgrpc::ClientHelper clientHelper);
 
         /// <summary>The underlying gRPC MarketingplatformAdminService client</summary>
         public override MarketingplatformAdminService.MarketingplatformAdminServiceClient GrpcClient { get; }
 
         partial void Modify_GetOrganizationRequest(ref GetOrganizationRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_ListOrganizationsRequest(ref ListOrganizationsRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_FindSalesPartnerManagedClientsRequest(ref FindSalesPartnerManagedClientsRequest request, ref gaxgrpc::CallSettings settings);
 
         partial void Modify_ListAnalyticsAccountLinksRequest(ref ListAnalyticsAccountLinksRequest request, ref gaxgrpc::CallSettings settings);
 
@@ -1072,6 +1346,8 @@ namespace Google.Ads.MarketingPlatform.Admin.V1Alpha
         partial void Modify_DeleteAnalyticsAccountLinkRequest(ref DeleteAnalyticsAccountLinkRequest request, ref gaxgrpc::CallSettings settings);
 
         partial void Modify_SetPropertyServiceLevelRequest(ref SetPropertyServiceLevelRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_ReportPropertyUsageRequest(ref ReportPropertyUsageRequest request, ref gaxgrpc::CallSettings settings);
 
         /// <summary>
         /// Lookup for a single organization.
@@ -1095,6 +1371,60 @@ namespace Google.Ads.MarketingPlatform.Admin.V1Alpha
         {
             Modify_GetOrganizationRequest(ref request, ref callSettings);
             return _callGetOrganization.Async(request, callSettings);
+        }
+
+        /// <summary>
+        /// Returns a list of organizations that the user has access to.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="Organization"/> resources.</returns>
+        public override gax::PagedEnumerable<ListOrganizationsResponse, Organization> ListOrganizations(ListOrganizationsRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_ListOrganizationsRequest(ref request, ref callSettings);
+            return new gaxgrpc::GrpcPagedEnumerable<ListOrganizationsRequest, ListOrganizationsResponse, Organization>(_callListOrganizations, request, callSettings);
+        }
+
+        /// <summary>
+        /// Returns a list of organizations that the user has access to.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="Organization"/> resources.</returns>
+        public override gax::PagedAsyncEnumerable<ListOrganizationsResponse, Organization> ListOrganizationsAsync(ListOrganizationsRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_ListOrganizationsRequest(ref request, ref callSettings);
+            return new gaxgrpc::GrpcPagedAsyncEnumerable<ListOrganizationsRequest, ListOrganizationsResponse, Organization>(_callListOrganizations, request, callSettings);
+        }
+
+        /// <summary>
+        /// Returns a list of clients managed by the sales partner organization.
+        /// 
+        /// User needs to be an OrgAdmin/BillingAdmin on the sales partner organization
+        /// in order to view the end clients.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override FindSalesPartnerManagedClientsResponse FindSalesPartnerManagedClients(FindSalesPartnerManagedClientsRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_FindSalesPartnerManagedClientsRequest(ref request, ref callSettings);
+            return _callFindSalesPartnerManagedClients.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Returns a list of clients managed by the sales partner organization.
+        /// 
+        /// User needs to be an OrgAdmin/BillingAdmin on the sales partner organization
+        /// in order to view the end clients.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override stt::Task<FindSalesPartnerManagedClientsResponse> FindSalesPartnerManagedClientsAsync(FindSalesPartnerManagedClientsRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_FindSalesPartnerManagedClientsRequest(ref request, ref callSettings);
+            return _callFindSalesPartnerManagedClients.Async(request, callSettings);
         }
 
         /// <summary>
@@ -1212,10 +1542,64 @@ namespace Google.Ads.MarketingPlatform.Admin.V1Alpha
             Modify_SetPropertyServiceLevelRequest(ref request, ref callSettings);
             return _callSetPropertyServiceLevel.Async(request, callSettings);
         }
+
+        /// <summary>
+        /// Get the usage and billing data for properties within the organization for
+        /// the specified month.
+        /// 
+        /// Per direct client org, user needs to be OrgAdmin/BillingAdmin on the
+        /// organization in order to view the billing and usage data.
+        /// 
+        /// Per sales partner client org, user needs to be OrgAdmin/BillingAdmin on
+        /// the sales partner org in order to view the billing and usage data, or
+        /// OrgAdmin/BillingAdmin on the sales partner client org in order to view the
+        /// usage data only.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override ReportPropertyUsageResponse ReportPropertyUsage(ReportPropertyUsageRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_ReportPropertyUsageRequest(ref request, ref callSettings);
+            return _callReportPropertyUsage.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Get the usage and billing data for properties within the organization for
+        /// the specified month.
+        /// 
+        /// Per direct client org, user needs to be OrgAdmin/BillingAdmin on the
+        /// organization in order to view the billing and usage data.
+        /// 
+        /// Per sales partner client org, user needs to be OrgAdmin/BillingAdmin on
+        /// the sales partner org in order to view the billing and usage data, or
+        /// OrgAdmin/BillingAdmin on the sales partner client org in order to view the
+        /// usage data only.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override stt::Task<ReportPropertyUsageResponse> ReportPropertyUsageAsync(ReportPropertyUsageRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_ReportPropertyUsageRequest(ref request, ref callSettings);
+            return _callReportPropertyUsage.Async(request, callSettings);
+        }
+    }
+
+    public partial class ListOrganizationsRequest : gaxgrpc::IPageRequest
+    {
     }
 
     public partial class ListAnalyticsAccountLinksRequest : gaxgrpc::IPageRequest
     {
+    }
+
+    public partial class ListOrganizationsResponse : gaxgrpc::IPageResponse<Organization>
+    {
+        /// <summary>Returns an enumerator that iterates through the resources in this response.</summary>
+        public scg::IEnumerator<Organization> GetEnumerator() => Organizations.GetEnumerator();
+
+        sc::IEnumerator sc::IEnumerable.GetEnumerator() => GetEnumerator();
     }
 
     public partial class ListAnalyticsAccountLinksResponse : gaxgrpc::IPageResponse<AnalyticsAccountLink>

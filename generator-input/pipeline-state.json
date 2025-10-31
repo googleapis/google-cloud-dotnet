@@ -22,7 +22,7 @@
             "generationAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
             "releaseAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
             "releaseTimestamp": "2024-09-19T07:02:24Z",
-            "lastGeneratedCommit": "4cedfdd1048b308b91de0c235bf60f5d8be4f951",
+            "lastGeneratedCommit": "6a3acb370bf4930823bea7486e54591c6e63e12b",
             "apiPaths": [
                 "google/marketingplatform/admin/v1alpha"
             ],

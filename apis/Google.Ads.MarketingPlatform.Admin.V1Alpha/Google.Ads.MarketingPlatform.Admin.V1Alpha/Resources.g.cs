@@ -44,18 +44,25 @@ namespace Google.Ads.MarketingPlatform.Admin.V1Alpha {
             "aW5rKpABChVMaW5rVmVyaWZpY2F0aW9uU3RhdGUSJwojTElOS19WRVJJRklD",
             "QVRJT05fU1RBVEVfVU5TUEVDSUZJRUQQABIkCiBMSU5LX1ZFUklGSUNBVElP",
             "Tl9TVEFURV9WRVJJRklFRBABEigKJExJTktfVkVSSUZJQ0FUSU9OX1NUQVRF",
-            "X05PVF9WRVJJRklFRBACQtgCCi5jb20uZ29vZ2xlLmFkcy5tYXJrZXRpbmdw",
-            "bGF0Zm9ybS5hZG1pbi52MWFscGhhQg5SZXNvdXJjZXNQcm90b1ABWktnb29n",
-            "bGUuZ29sYW5nLm9yZy9nZW5wcm90by9nb29nbGVhcGlzL21hcmtldGluZ3Bs",
-            "YXRmb3JtL2FkbWluL3YxYWxwaGE7YWRtaW6qAipHb29nbGUuQWRzLk1hcmtl",
-            "dGluZ1BsYXRmb3JtLkFkbWluLlYxQWxwaGHKAipHb29nbGVcQWRzXE1hcmtl",
-            "dGluZ1BsYXRmb3JtXEFkbWluXFYxYWxwaGHqAi5Hb29nbGU6OkFkczo6TWFy",
-            "a2V0aW5nUGxhdGZvcm06OkFkbWluOjpWMWFscGhh6kE7CiVhbmFseXRpY3Nh",
-            "ZG1pbi5nb29nbGVhcGlzLmNvbS9BY2NvdW50EhJhY2NvdW50cy97YWNjb3Vu",
-            "dH1iBnByb3RvMw=="));
+            "X05PVF9WRVJJRklFRBACKocBChVBbmFseXRpY3NTZXJ2aWNlTGV2ZWwSJwoj",
+            "QU5BTFlUSUNTX1NFUlZJQ0VfTEVWRUxfVU5TUEVDSUZJRUQQABIkCiBBTkFM",
+            "WVRJQ1NfU0VSVklDRV9MRVZFTF9TVEFOREFSRBABEh8KG0FOQUxZVElDU19T",
+            "RVJWSUNFX0xFVkVMXzM2MBACKrMBChVBbmFseXRpY3NQcm9wZXJ0eVR5cGUS",
+            "JwojQU5BTFlUSUNTX1BST1BFUlRZX1RZUEVfVU5TUEVDSUZJRUQQABIkCiBB",
+            "TkFMWVRJQ1NfUFJPUEVSVFlfVFlQRV9PUkRJTkFSWRABEicKI0FOQUxZVElD",
+            "U19QUk9QRVJUWV9UWVBFX1NVQlBST1BFUlRZEAISIgoeQU5BTFlUSUNTX1BS",
+            "T1BFUlRZX1RZUEVfUk9MTFVQEANC2AIKLmNvbS5nb29nbGUuYWRzLm1hcmtl",
+            "dGluZ3BsYXRmb3JtLmFkbWluLnYxYWxwaGFCDlJlc291cmNlc1Byb3RvUAFa",
+            "S2dvb2dsZS5nb2xhbmcub3JnL2dlbnByb3RvL2dvb2dsZWFwaXMvbWFya2V0",
+            "aW5ncGxhdGZvcm0vYWRtaW4vdjFhbHBoYTthZG1pbqoCKkdvb2dsZS5BZHMu",
+            "TWFya2V0aW5nUGxhdGZvcm0uQWRtaW4uVjFBbHBoYcoCKkdvb2dsZVxBZHNc",
+            "TWFya2V0aW5nUGxhdGZvcm1cQWRtaW5cVjFhbHBoYeoCLkdvb2dsZTo6QWRz",
+            "OjpNYXJrZXRpbmdQbGF0Zm9ybTo6QWRtaW46OlYxYWxwaGHqQTsKJWFuYWx5",
+            "dGljc2FkbWluLmdvb2dsZWFwaXMuY29tL0FjY291bnQSEmFjY291bnRzL3th",
+            "Y2NvdW50fWIGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, },
-          new pbr::GeneratedClrTypeInfo(new[] {typeof(global::Google.Ads.MarketingPlatform.Admin.V1Alpha.LinkVerificationState), }, null, new pbr::GeneratedClrTypeInfo[] {
+          new pbr::GeneratedClrTypeInfo(new[] {typeof(global::Google.Ads.MarketingPlatform.Admin.V1Alpha.LinkVerificationState), typeof(global::Google.Ads.MarketingPlatform.Admin.V1Alpha.AnalyticsServiceLevel), typeof(global::Google.Ads.MarketingPlatform.Admin.V1Alpha.AnalyticsPropertyType), }, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Ads.MarketingPlatform.Admin.V1Alpha.Organization), global::Google.Ads.MarketingPlatform.Admin.V1Alpha.Organization.Parser, new[]{ "Name", "DisplayName" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Ads.MarketingPlatform.Admin.V1Alpha.AnalyticsAccountLink), global::Google.Ads.MarketingPlatform.Admin.V1Alpha.AnalyticsAccountLink.Parser, new[]{ "Name", "AnalyticsAccount", "DisplayName", "LinkVerificationState" }, null, null, null, null)
           }));
@@ -82,6 +89,46 @@ namespace Google.Ads.MarketingPlatform.Admin.V1Alpha {
     /// admin.
     /// </summary>
     [pbr::OriginalName("LINK_VERIFICATION_STATE_NOT_VERIFIED")] NotVerified = 2,
+  }
+
+  /// <summary>
+  /// Various levels of service for Google Analytics.
+  /// </summary>
+  public enum AnalyticsServiceLevel {
+    /// <summary>
+    /// Service level unspecified.
+    /// </summary>
+    [pbr::OriginalName("ANALYTICS_SERVICE_LEVEL_UNSPECIFIED")] Unspecified = 0,
+    /// <summary>
+    /// The standard version of Google Analytics.
+    /// </summary>
+    [pbr::OriginalName("ANALYTICS_SERVICE_LEVEL_STANDARD")] Standard = 1,
+    /// <summary>
+    /// The premium version of Google Analytics.
+    /// </summary>
+    [pbr::OriginalName("ANALYTICS_SERVICE_LEVEL_360")] _360 = 2,
+  }
+
+  /// <summary>
+  /// Types of the Google Analytics Property.
+  /// </summary>
+  public enum AnalyticsPropertyType {
+    /// <summary>
+    /// Unknown or unspecified property type
+    /// </summary>
+    [pbr::OriginalName("ANALYTICS_PROPERTY_TYPE_UNSPECIFIED")] Unspecified = 0,
+    /// <summary>
+    /// Ordinary Google Analytics property
+    /// </summary>
+    [pbr::OriginalName("ANALYTICS_PROPERTY_TYPE_ORDINARY")] Ordinary = 1,
+    /// <summary>
+    /// Google Analytics subproperty
+    /// </summary>
+    [pbr::OriginalName("ANALYTICS_PROPERTY_TYPE_SUBPROPERTY")] Subproperty = 2,
+    /// <summary>
+    /// Google Analytics rollup property
+    /// </summary>
+    [pbr::OriginalName("ANALYTICS_PROPERTY_TYPE_ROLLUP")] Rollup = 3,
   }
 
   #endregion
