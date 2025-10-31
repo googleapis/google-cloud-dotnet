@@ -71,6 +71,7 @@ namespace Google.Cloud.CloudSecurityCompliance.V1
             yield return CommonReflection.Descriptor;
             yield return ConfigReflection.Descriptor;
             yield return DeploymentReflection.Descriptor;
+            yield return MonitoringReflection.Descriptor;
             yield return gcl::LocationsReflection.Descriptor;
             yield return lro::OperationsReflection.Descriptor;
         }

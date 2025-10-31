@@ -6487,6 +6487,1981 @@
           "type": "SHORT"
         }
       ]
+    },
+    {
+      "regionTag": "cloudsecuritycompliance_v1_generated_Monitoring_ListFrameworkComplianceSummaries_sync",
+      "title": "ListFrameworkComplianceSummariesRequestObject",
+      "description": "Snippet for ListFrameworkComplianceSummaries",
+      "file": "MonitoringClient.ListFrameworkComplianceSummariesRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListFrameworkComplianceSummaries",
+        "fullName": "Google.Cloud.CloudSecurityCompliance.V1.MonitoringClient.ListFrameworkComplianceSummaries",
+        "parameters": [
+          {
+            "type": "Google.Cloud.CloudSecurityCompliance.V1.ListFrameworkComplianceSummariesRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.CloudSecurityCompliance.V1.ListFrameworkComplianceSummariesResponse, Google.Cloud.CloudSecurityCompliance.V1.FrameworkComplianceSummary>",
+        "client": {
+          "shortName": "MonitoringClient",
+          "fullName": "Google.Cloud.CloudSecurityCompliance.V1.MonitoringClient"
+        },
+        "method": {
+          "shortName": "ListFrameworkComplianceSummaries",
+          "fullName": "google.cloud.cloudsecuritycompliance.v1.Monitoring.ListFrameworkComplianceSummaries",
+          "service": {
+            "shortName": "Monitoring",
+            "fullName": "google.cloud.cloudsecuritycompliance.v1.Monitoring"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 80,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 78,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "cloudsecuritycompliance_v1_generated_Monitoring_ListFrameworkComplianceSummaries_async",
+      "title": "ListFrameworkComplianceSummariesRequestObjectAsync",
+      "description": "Snippet for ListFrameworkComplianceSummariesAsync",
+      "file": "MonitoringClient.ListFrameworkComplianceSummariesRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListFrameworkComplianceSummariesAsync",
+        "fullName": "Google.Cloud.CloudSecurityCompliance.V1.MonitoringClient.ListFrameworkComplianceSummariesAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.CloudSecurityCompliance.V1.ListFrameworkComplianceSummariesRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.CloudSecurityCompliance.V1.ListFrameworkComplianceSummariesResponse, Google.Cloud.CloudSecurityCompliance.V1.FrameworkComplianceSummary>",
+        "client": {
+          "shortName": "MonitoringClient",
+          "fullName": "Google.Cloud.CloudSecurityCompliance.V1.MonitoringClient"
+        },
+        "method": {
+          "shortName": "ListFrameworkComplianceSummaries",
+          "fullName": "google.cloud.cloudsecuritycompliance.v1.Monitoring.ListFrameworkComplianceSummaries",
+          "service": {
+            "shortName": "Monitoring",
+            "fullName": "google.cloud.cloudsecuritycompliance.v1.Monitoring"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 82,
+          "type": "FULL"
+        },
+        {
+          "start": 39,
+          "end": 80,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "cloudsecuritycompliance_v1_generated_Monitoring_ListFrameworkComplianceSummaries_sync_flattened",
+      "title": "ListFrameworkComplianceSummaries",
+      "description": "Snippet for ListFrameworkComplianceSummaries",
+      "file": "MonitoringClient.ListFrameworkComplianceSummariesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListFrameworkComplianceSummaries",
+        "fullName": "Google.Cloud.CloudSecurityCompliance.V1.MonitoringClient.ListFrameworkComplianceSummaries",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.CloudSecurityCompliance.V1.ListFrameworkComplianceSummariesResponse, Google.Cloud.CloudSecurityCompliance.V1.FrameworkComplianceSummary>",
+        "client": {
+          "shortName": "MonitoringClient",
+          "fullName": "Google.Cloud.CloudSecurityCompliance.V1.MonitoringClient"
+        },
+        "method": {
+          "shortName": "ListFrameworkComplianceSummaries",
+          "fullName": "google.cloud.cloudsecuritycompliance.v1.Monitoring.ListFrameworkComplianceSummaries",
+          "service": {
+            "shortName": "Monitoring",
+            "fullName": "google.cloud.cloudsecuritycompliance.v1.Monitoring"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 75,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 73,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "cloudsecuritycompliance_v1_generated_Monitoring_ListFrameworkComplianceSummaries_async_flattened",
+      "title": "ListFrameworkComplianceSummariesAsync",
+      "description": "Snippet for ListFrameworkComplianceSummariesAsync",
+      "file": "MonitoringClient.ListFrameworkComplianceSummariesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListFrameworkComplianceSummariesAsync",
+        "fullName": "Google.Cloud.CloudSecurityCompliance.V1.MonitoringClient.ListFrameworkComplianceSummariesAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.CloudSecurityCompliance.V1.ListFrameworkComplianceSummariesResponse, Google.Cloud.CloudSecurityCompliance.V1.FrameworkComplianceSummary>",
+        "client": {
+          "shortName": "MonitoringClient",
+          "fullName": "Google.Cloud.CloudSecurityCompliance.V1.MonitoringClient"
+        },
+        "method": {
+          "shortName": "ListFrameworkComplianceSummaries",
+          "fullName": "google.cloud.cloudsecuritycompliance.v1.Monitoring.ListFrameworkComplianceSummaries",
+          "service": {
+            "shortName": "Monitoring",
+            "fullName": "google.cloud.cloudsecuritycompliance.v1.Monitoring"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 77,
+          "type": "FULL"
+        },
+        {
+          "start": 38,
+          "end": 75,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "cloudsecuritycompliance_v1_generated_Monitoring_ListFrameworkComplianceSummaries_sync_flattened_resourceNames1",
+      "title": "ListFrameworkComplianceSummariesResourceNames1",
+      "description": "Snippet for ListFrameworkComplianceSummaries",
+      "file": "MonitoringClient.ListFrameworkComplianceSummariesResourceNames1Snippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListFrameworkComplianceSummaries",
+        "fullName": "Google.Cloud.CloudSecurityCompliance.V1.MonitoringClient.ListFrameworkComplianceSummaries",
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.LocationName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.CloudSecurityCompliance.V1.ListFrameworkComplianceSummariesResponse, Google.Cloud.CloudSecurityCompliance.V1.FrameworkComplianceSummary>",
+        "client": {
+          "shortName": "MonitoringClient",
+          "fullName": "Google.Cloud.CloudSecurityCompliance.V1.MonitoringClient"
+        },
+        "method": {
+          "shortName": "ListFrameworkComplianceSummaries",
+          "fullName": "google.cloud.cloudsecuritycompliance.v1.Monitoring.ListFrameworkComplianceSummaries",
+          "service": {
+            "shortName": "Monitoring",
+            "fullName": "google.cloud.cloudsecuritycompliance.v1.Monitoring"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 76,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 74,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "cloudsecuritycompliance_v1_generated_Monitoring_ListFrameworkComplianceSummaries_async_flattened_resourceNames1",
+      "title": "ListFrameworkComplianceSummariesResourceNames1Async",
+      "description": "Snippet for ListFrameworkComplianceSummariesAsync",
+      "file": "MonitoringClient.ListFrameworkComplianceSummariesResourceNames1AsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListFrameworkComplianceSummariesAsync",
+        "fullName": "Google.Cloud.CloudSecurityCompliance.V1.MonitoringClient.ListFrameworkComplianceSummariesAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.LocationName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.CloudSecurityCompliance.V1.ListFrameworkComplianceSummariesResponse, Google.Cloud.CloudSecurityCompliance.V1.FrameworkComplianceSummary>",
+        "client": {
+          "shortName": "MonitoringClient",
+          "fullName": "Google.Cloud.CloudSecurityCompliance.V1.MonitoringClient"
+        },
+        "method": {
+          "shortName": "ListFrameworkComplianceSummaries",
+          "fullName": "google.cloud.cloudsecuritycompliance.v1.Monitoring.ListFrameworkComplianceSummaries",
+          "service": {
+            "shortName": "Monitoring",
+            "fullName": "google.cloud.cloudsecuritycompliance.v1.Monitoring"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 78,
+          "type": "FULL"
+        },
+        {
+          "start": 39,
+          "end": 76,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "cloudsecuritycompliance_v1_generated_Monitoring_ListFrameworkComplianceSummaries_sync_flattened_resourceNames2",
+      "title": "ListFrameworkComplianceSummariesResourceNames2",
+      "description": "Snippet for ListFrameworkComplianceSummaries",
+      "file": "MonitoringClient.ListFrameworkComplianceSummariesResourceNames2Snippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListFrameworkComplianceSummaries",
+        "fullName": "Google.Cloud.CloudSecurityCompliance.V1.MonitoringClient.ListFrameworkComplianceSummaries",
+        "parameters": [
+          {
+            "type": "Google.Cloud.CloudSecurityCompliance.V1.FolderLocationName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.CloudSecurityCompliance.V1.ListFrameworkComplianceSummariesResponse, Google.Cloud.CloudSecurityCompliance.V1.FrameworkComplianceSummary>",
+        "client": {
+          "shortName": "MonitoringClient",
+          "fullName": "Google.Cloud.CloudSecurityCompliance.V1.MonitoringClient"
+        },
+        "method": {
+          "shortName": "ListFrameworkComplianceSummaries",
+          "fullName": "google.cloud.cloudsecuritycompliance.v1.Monitoring.ListFrameworkComplianceSummaries",
+          "service": {
+            "shortName": "Monitoring",
+            "fullName": "google.cloud.cloudsecuritycompliance.v1.Monitoring"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 75,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 73,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "cloudsecuritycompliance_v1_generated_Monitoring_ListFrameworkComplianceSummaries_async_flattened_resourceNames2",
+      "title": "ListFrameworkComplianceSummariesResourceNames2Async",
+      "description": "Snippet for ListFrameworkComplianceSummariesAsync",
+      "file": "MonitoringClient.ListFrameworkComplianceSummariesResourceNames2AsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListFrameworkComplianceSummariesAsync",
+        "fullName": "Google.Cloud.CloudSecurityCompliance.V1.MonitoringClient.ListFrameworkComplianceSummariesAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.CloudSecurityCompliance.V1.FolderLocationName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.CloudSecurityCompliance.V1.ListFrameworkComplianceSummariesResponse, Google.Cloud.CloudSecurityCompliance.V1.FrameworkComplianceSummary>",
+        "client": {
+          "shortName": "MonitoringClient",
+          "fullName": "Google.Cloud.CloudSecurityCompliance.V1.MonitoringClient"
+        },
+        "method": {
+          "shortName": "ListFrameworkComplianceSummaries",
+          "fullName": "google.cloud.cloudsecuritycompliance.v1.Monitoring.ListFrameworkComplianceSummaries",
+          "service": {
+            "shortName": "Monitoring",
+            "fullName": "google.cloud.cloudsecuritycompliance.v1.Monitoring"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 77,
+          "type": "FULL"
+        },
+        {
+          "start": 38,
+          "end": 75,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "cloudsecuritycompliance_v1_generated_Monitoring_ListFrameworkComplianceSummaries_sync_flattened_resourceNames3",
+      "title": "ListFrameworkComplianceSummariesResourceNames3",
+      "description": "Snippet for ListFrameworkComplianceSummaries",
+      "file": "MonitoringClient.ListFrameworkComplianceSummariesResourceNames3Snippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListFrameworkComplianceSummaries",
+        "fullName": "Google.Cloud.CloudSecurityCompliance.V1.MonitoringClient.ListFrameworkComplianceSummaries",
+        "parameters": [
+          {
+            "type": "Google.Cloud.CloudSecurityCompliance.V1.OrganizationLocationName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.CloudSecurityCompliance.V1.ListFrameworkComplianceSummariesResponse, Google.Cloud.CloudSecurityCompliance.V1.FrameworkComplianceSummary>",
+        "client": {
+          "shortName": "MonitoringClient",
+          "fullName": "Google.Cloud.CloudSecurityCompliance.V1.MonitoringClient"
+        },
+        "method": {
+          "shortName": "ListFrameworkComplianceSummaries",
+          "fullName": "google.cloud.cloudsecuritycompliance.v1.Monitoring.ListFrameworkComplianceSummaries",
+          "service": {
+            "shortName": "Monitoring",
+            "fullName": "google.cloud.cloudsecuritycompliance.v1.Monitoring"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 75,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 73,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "cloudsecuritycompliance_v1_generated_Monitoring_ListFrameworkComplianceSummaries_async_flattened_resourceNames3",
+      "title": "ListFrameworkComplianceSummariesResourceNames3Async",
+      "description": "Snippet for ListFrameworkComplianceSummariesAsync",
+      "file": "MonitoringClient.ListFrameworkComplianceSummariesResourceNames3AsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListFrameworkComplianceSummariesAsync",
+        "fullName": "Google.Cloud.CloudSecurityCompliance.V1.MonitoringClient.ListFrameworkComplianceSummariesAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.CloudSecurityCompliance.V1.OrganizationLocationName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.CloudSecurityCompliance.V1.ListFrameworkComplianceSummariesResponse, Google.Cloud.CloudSecurityCompliance.V1.FrameworkComplianceSummary>",
+        "client": {
+          "shortName": "MonitoringClient",
+          "fullName": "Google.Cloud.CloudSecurityCompliance.V1.MonitoringClient"
+        },
+        "method": {
+          "shortName": "ListFrameworkComplianceSummaries",
+          "fullName": "google.cloud.cloudsecuritycompliance.v1.Monitoring.ListFrameworkComplianceSummaries",
+          "service": {
+            "shortName": "Monitoring",
+            "fullName": "google.cloud.cloudsecuritycompliance.v1.Monitoring"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 77,
+          "type": "FULL"
+        },
+        {
+          "start": 38,
+          "end": 75,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "cloudsecuritycompliance_v1_generated_Monitoring_ListFindingSummaries_sync",
+      "title": "ListFindingSummariesRequestObject",
+      "description": "Snippet for ListFindingSummaries",
+      "file": "MonitoringClient.ListFindingSummariesRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListFindingSummaries",
+        "fullName": "Google.Cloud.CloudSecurityCompliance.V1.MonitoringClient.ListFindingSummaries",
+        "parameters": [
+          {
+            "type": "Google.Cloud.CloudSecurityCompliance.V1.ListFindingSummariesRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.CloudSecurityCompliance.V1.ListFindingSummariesResponse, Google.Cloud.CloudSecurityCompliance.V1.FindingSummary>",
+        "client": {
+          "shortName": "MonitoringClient",
+          "fullName": "Google.Cloud.CloudSecurityCompliance.V1.MonitoringClient"
+        },
+        "method": {
+          "shortName": "ListFindingSummaries",
+          "fullName": "google.cloud.cloudsecuritycompliance.v1.Monitoring.ListFindingSummaries",
+          "service": {
+            "shortName": "Monitoring",
+            "fullName": "google.cloud.cloudsecuritycompliance.v1.Monitoring"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 80,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 78,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "cloudsecuritycompliance_v1_generated_Monitoring_ListFindingSummaries_async",
+      "title": "ListFindingSummariesRequestObjectAsync",
+      "description": "Snippet for ListFindingSummariesAsync",
+      "file": "MonitoringClient.ListFindingSummariesRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListFindingSummariesAsync",
+        "fullName": "Google.Cloud.CloudSecurityCompliance.V1.MonitoringClient.ListFindingSummariesAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.CloudSecurityCompliance.V1.ListFindingSummariesRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.CloudSecurityCompliance.V1.ListFindingSummariesResponse, Google.Cloud.CloudSecurityCompliance.V1.FindingSummary>",
+        "client": {
+          "shortName": "MonitoringClient",
+          "fullName": "Google.Cloud.CloudSecurityCompliance.V1.MonitoringClient"
+        },
+        "method": {
+          "shortName": "ListFindingSummaries",
+          "fullName": "google.cloud.cloudsecuritycompliance.v1.Monitoring.ListFindingSummaries",
+          "service": {
+            "shortName": "Monitoring",
+            "fullName": "google.cloud.cloudsecuritycompliance.v1.Monitoring"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 82,
+          "type": "FULL"
+        },
+        {
+          "start": 39,
+          "end": 80,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "cloudsecuritycompliance_v1_generated_Monitoring_ListFindingSummaries_sync_flattened",
+      "title": "ListFindingSummaries",
+      "description": "Snippet for ListFindingSummaries",
+      "file": "MonitoringClient.ListFindingSummariesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListFindingSummaries",
+        "fullName": "Google.Cloud.CloudSecurityCompliance.V1.MonitoringClient.ListFindingSummaries",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.CloudSecurityCompliance.V1.ListFindingSummariesResponse, Google.Cloud.CloudSecurityCompliance.V1.FindingSummary>",
+        "client": {
+          "shortName": "MonitoringClient",
+          "fullName": "Google.Cloud.CloudSecurityCompliance.V1.MonitoringClient"
+        },
+        "method": {
+          "shortName": "ListFindingSummaries",
+          "fullName": "google.cloud.cloudsecuritycompliance.v1.Monitoring.ListFindingSummaries",
+          "service": {
+            "shortName": "Monitoring",
+            "fullName": "google.cloud.cloudsecuritycompliance.v1.Monitoring"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 75,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 73,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "cloudsecuritycompliance_v1_generated_Monitoring_ListFindingSummaries_async_flattened",
+      "title": "ListFindingSummariesAsync",
+      "description": "Snippet for ListFindingSummariesAsync",
+      "file": "MonitoringClient.ListFindingSummariesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListFindingSummariesAsync",
+        "fullName": "Google.Cloud.CloudSecurityCompliance.V1.MonitoringClient.ListFindingSummariesAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.CloudSecurityCompliance.V1.ListFindingSummariesResponse, Google.Cloud.CloudSecurityCompliance.V1.FindingSummary>",
+        "client": {
+          "shortName": "MonitoringClient",
+          "fullName": "Google.Cloud.CloudSecurityCompliance.V1.MonitoringClient"
+        },
+        "method": {
+          "shortName": "ListFindingSummaries",
+          "fullName": "google.cloud.cloudsecuritycompliance.v1.Monitoring.ListFindingSummaries",
+          "service": {
+            "shortName": "Monitoring",
+            "fullName": "google.cloud.cloudsecuritycompliance.v1.Monitoring"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 77,
+          "type": "FULL"
+        },
+        {
+          "start": 38,
+          "end": 75,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "cloudsecuritycompliance_v1_generated_Monitoring_ListFindingSummaries_sync_flattened_resourceNames1",
+      "title": "ListFindingSummariesResourceNames1",
+      "description": "Snippet for ListFindingSummaries",
+      "file": "MonitoringClient.ListFindingSummariesResourceNames1Snippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListFindingSummaries",
+        "fullName": "Google.Cloud.CloudSecurityCompliance.V1.MonitoringClient.ListFindingSummaries",
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.LocationName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.CloudSecurityCompliance.V1.ListFindingSummariesResponse, Google.Cloud.CloudSecurityCompliance.V1.FindingSummary>",
+        "client": {
+          "shortName": "MonitoringClient",
+          "fullName": "Google.Cloud.CloudSecurityCompliance.V1.MonitoringClient"
+        },
+        "method": {
+          "shortName": "ListFindingSummaries",
+          "fullName": "google.cloud.cloudsecuritycompliance.v1.Monitoring.ListFindingSummaries",
+          "service": {
+            "shortName": "Monitoring",
+            "fullName": "google.cloud.cloudsecuritycompliance.v1.Monitoring"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 76,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 74,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "cloudsecuritycompliance_v1_generated_Monitoring_ListFindingSummaries_async_flattened_resourceNames1",
+      "title": "ListFindingSummariesResourceNames1Async",
+      "description": "Snippet for ListFindingSummariesAsync",
+      "file": "MonitoringClient.ListFindingSummariesResourceNames1AsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListFindingSummariesAsync",
+        "fullName": "Google.Cloud.CloudSecurityCompliance.V1.MonitoringClient.ListFindingSummariesAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.LocationName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.CloudSecurityCompliance.V1.ListFindingSummariesResponse, Google.Cloud.CloudSecurityCompliance.V1.FindingSummary>",
+        "client": {
+          "shortName": "MonitoringClient",
+          "fullName": "Google.Cloud.CloudSecurityCompliance.V1.MonitoringClient"
+        },
+        "method": {
+          "shortName": "ListFindingSummaries",
+          "fullName": "google.cloud.cloudsecuritycompliance.v1.Monitoring.ListFindingSummaries",
+          "service": {
+            "shortName": "Monitoring",
+            "fullName": "google.cloud.cloudsecuritycompliance.v1.Monitoring"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 78,
+          "type": "FULL"
+        },
+        {
+          "start": 39,
+          "end": 76,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "cloudsecuritycompliance_v1_generated_Monitoring_ListFindingSummaries_sync_flattened_resourceNames2",
+      "title": "ListFindingSummariesResourceNames2",
+      "description": "Snippet for ListFindingSummaries",
+      "file": "MonitoringClient.ListFindingSummariesResourceNames2Snippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListFindingSummaries",
+        "fullName": "Google.Cloud.CloudSecurityCompliance.V1.MonitoringClient.ListFindingSummaries",
+        "parameters": [
+          {
+            "type": "Google.Cloud.CloudSecurityCompliance.V1.FolderLocationName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.CloudSecurityCompliance.V1.ListFindingSummariesResponse, Google.Cloud.CloudSecurityCompliance.V1.FindingSummary>",
+        "client": {
+          "shortName": "MonitoringClient",
+          "fullName": "Google.Cloud.CloudSecurityCompliance.V1.MonitoringClient"
+        },
+        "method": {
+          "shortName": "ListFindingSummaries",
+          "fullName": "google.cloud.cloudsecuritycompliance.v1.Monitoring.ListFindingSummaries",
+          "service": {
+            "shortName": "Monitoring",
+            "fullName": "google.cloud.cloudsecuritycompliance.v1.Monitoring"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 75,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 73,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "cloudsecuritycompliance_v1_generated_Monitoring_ListFindingSummaries_async_flattened_resourceNames2",
+      "title": "ListFindingSummariesResourceNames2Async",
+      "description": "Snippet for ListFindingSummariesAsync",
+      "file": "MonitoringClient.ListFindingSummariesResourceNames2AsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListFindingSummariesAsync",
+        "fullName": "Google.Cloud.CloudSecurityCompliance.V1.MonitoringClient.ListFindingSummariesAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.CloudSecurityCompliance.V1.FolderLocationName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.CloudSecurityCompliance.V1.ListFindingSummariesResponse, Google.Cloud.CloudSecurityCompliance.V1.FindingSummary>",
+        "client": {
+          "shortName": "MonitoringClient",
+          "fullName": "Google.Cloud.CloudSecurityCompliance.V1.MonitoringClient"
+        },
+        "method": {
+          "shortName": "ListFindingSummaries",
+          "fullName": "google.cloud.cloudsecuritycompliance.v1.Monitoring.ListFindingSummaries",
+          "service": {
+            "shortName": "Monitoring",
+            "fullName": "google.cloud.cloudsecuritycompliance.v1.Monitoring"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 77,
+          "type": "FULL"
+        },
+        {
+          "start": 38,
+          "end": 75,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "cloudsecuritycompliance_v1_generated_Monitoring_ListFindingSummaries_sync_flattened_resourceNames3",
+      "title": "ListFindingSummariesResourceNames3",
+      "description": "Snippet for ListFindingSummaries",
+      "file": "MonitoringClient.ListFindingSummariesResourceNames3Snippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListFindingSummaries",
+        "fullName": "Google.Cloud.CloudSecurityCompliance.V1.MonitoringClient.ListFindingSummaries",
+        "parameters": [
+          {
+            "type": "Google.Cloud.CloudSecurityCompliance.V1.OrganizationLocationName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.CloudSecurityCompliance.V1.ListFindingSummariesResponse, Google.Cloud.CloudSecurityCompliance.V1.FindingSummary>",
+        "client": {
+          "shortName": "MonitoringClient",
+          "fullName": "Google.Cloud.CloudSecurityCompliance.V1.MonitoringClient"
+        },
+        "method": {
+          "shortName": "ListFindingSummaries",
+          "fullName": "google.cloud.cloudsecuritycompliance.v1.Monitoring.ListFindingSummaries",
+          "service": {
+            "shortName": "Monitoring",
+            "fullName": "google.cloud.cloudsecuritycompliance.v1.Monitoring"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 75,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 73,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "cloudsecuritycompliance_v1_generated_Monitoring_ListFindingSummaries_async_flattened_resourceNames3",
+      "title": "ListFindingSummariesResourceNames3Async",
+      "description": "Snippet for ListFindingSummariesAsync",
+      "file": "MonitoringClient.ListFindingSummariesResourceNames3AsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListFindingSummariesAsync",
+        "fullName": "Google.Cloud.CloudSecurityCompliance.V1.MonitoringClient.ListFindingSummariesAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.CloudSecurityCompliance.V1.OrganizationLocationName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.CloudSecurityCompliance.V1.ListFindingSummariesResponse, Google.Cloud.CloudSecurityCompliance.V1.FindingSummary>",
+        "client": {
+          "shortName": "MonitoringClient",
+          "fullName": "Google.Cloud.CloudSecurityCompliance.V1.MonitoringClient"
+        },
+        "method": {
+          "shortName": "ListFindingSummaries",
+          "fullName": "google.cloud.cloudsecuritycompliance.v1.Monitoring.ListFindingSummaries",
+          "service": {
+            "shortName": "Monitoring",
+            "fullName": "google.cloud.cloudsecuritycompliance.v1.Monitoring"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 77,
+          "type": "FULL"
+        },
+        {
+          "start": 38,
+          "end": 75,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "cloudsecuritycompliance_v1_generated_Monitoring_FetchFrameworkComplianceReport_sync",
+      "title": "FetchFrameworkComplianceReportRequestObject",
+      "description": "Snippet for FetchFrameworkComplianceReport",
+      "file": "MonitoringClient.FetchFrameworkComplianceReportRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "FetchFrameworkComplianceReport",
+        "fullName": "Google.Cloud.CloudSecurityCompliance.V1.MonitoringClient.FetchFrameworkComplianceReport",
+        "parameters": [
+          {
+            "type": "Google.Cloud.CloudSecurityCompliance.V1.FetchFrameworkComplianceReportRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.CloudSecurityCompliance.V1.FrameworkComplianceReport",
+        "client": {
+          "shortName": "MonitoringClient",
+          "fullName": "Google.Cloud.CloudSecurityCompliance.V1.MonitoringClient"
+        },
+        "method": {
+          "shortName": "FetchFrameworkComplianceReport",
+          "fullName": "google.cloud.cloudsecuritycompliance.v1.Monitoring.FetchFrameworkComplianceReport",
+          "service": {
+            "shortName": "Monitoring",
+            "fullName": "google.cloud.cloudsecuritycompliance.v1.Monitoring"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 46,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 44,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "cloudsecuritycompliance_v1_generated_Monitoring_FetchFrameworkComplianceReport_async",
+      "title": "FetchFrameworkComplianceReportRequestObjectAsync",
+      "description": "Snippet for FetchFrameworkComplianceReportAsync",
+      "file": "MonitoringClient.FetchFrameworkComplianceReportRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "FetchFrameworkComplianceReportAsync",
+        "fullName": "Google.Cloud.CloudSecurityCompliance.V1.MonitoringClient.FetchFrameworkComplianceReportAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.CloudSecurityCompliance.V1.FetchFrameworkComplianceReportRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.CloudSecurityCompliance.V1.FrameworkComplianceReport>",
+        "client": {
+          "shortName": "MonitoringClient",
+          "fullName": "Google.Cloud.CloudSecurityCompliance.V1.MonitoringClient"
+        },
+        "method": {
+          "shortName": "FetchFrameworkComplianceReport",
+          "fullName": "google.cloud.cloudsecuritycompliance.v1.Monitoring.FetchFrameworkComplianceReport",
+          "service": {
+            "shortName": "Monitoring",
+            "fullName": "google.cloud.cloudsecuritycompliance.v1.Monitoring"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 47,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 45,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "cloudsecuritycompliance_v1_generated_Monitoring_FetchFrameworkComplianceReport_sync_flattened",
+      "title": "FetchFrameworkComplianceReport",
+      "description": "Snippet for FetchFrameworkComplianceReport",
+      "file": "MonitoringClient.FetchFrameworkComplianceReportSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "FetchFrameworkComplianceReport",
+        "fullName": "Google.Cloud.CloudSecurityCompliance.V1.MonitoringClient.FetchFrameworkComplianceReport",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.CloudSecurityCompliance.V1.FrameworkComplianceReport",
+        "client": {
+          "shortName": "MonitoringClient",
+          "fullName": "Google.Cloud.CloudSecurityCompliance.V1.MonitoringClient"
+        },
+        "method": {
+          "shortName": "FetchFrameworkComplianceReport",
+          "fullName": "google.cloud.cloudsecuritycompliance.v1.Monitoring.FetchFrameworkComplianceReport",
+          "service": {
+            "shortName": "Monitoring",
+            "fullName": "google.cloud.cloudsecuritycompliance.v1.Monitoring"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "cloudsecuritycompliance_v1_generated_Monitoring_FetchFrameworkComplianceReport_async_flattened",
+      "title": "FetchFrameworkComplianceReportAsync",
+      "description": "Snippet for FetchFrameworkComplianceReportAsync",
+      "file": "MonitoringClient.FetchFrameworkComplianceReportAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "FetchFrameworkComplianceReportAsync",
+        "fullName": "Google.Cloud.CloudSecurityCompliance.V1.MonitoringClient.FetchFrameworkComplianceReportAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.CloudSecurityCompliance.V1.FrameworkComplianceReport>",
+        "client": {
+          "shortName": "MonitoringClient",
+          "fullName": "Google.Cloud.CloudSecurityCompliance.V1.MonitoringClient"
+        },
+        "method": {
+          "shortName": "FetchFrameworkComplianceReport",
+          "fullName": "google.cloud.cloudsecuritycompliance.v1.Monitoring.FetchFrameworkComplianceReport",
+          "service": {
+            "shortName": "Monitoring",
+            "fullName": "google.cloud.cloudsecuritycompliance.v1.Monitoring"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "cloudsecuritycompliance_v1_generated_Monitoring_FetchFrameworkComplianceReport_sync_flattened_resourceNames",
+      "title": "FetchFrameworkComplianceReportResourceNames",
+      "description": "Snippet for FetchFrameworkComplianceReport",
+      "file": "MonitoringClient.FetchFrameworkComplianceReportResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "FetchFrameworkComplianceReport",
+        "fullName": "Google.Cloud.CloudSecurityCompliance.V1.MonitoringClient.FetchFrameworkComplianceReport",
+        "parameters": [
+          {
+            "type": "Google.Cloud.CloudSecurityCompliance.V1.FrameworkComplianceReportName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.CloudSecurityCompliance.V1.FrameworkComplianceReport",
+        "client": {
+          "shortName": "MonitoringClient",
+          "fullName": "Google.Cloud.CloudSecurityCompliance.V1.MonitoringClient"
+        },
+        "method": {
+          "shortName": "FetchFrameworkComplianceReport",
+          "fullName": "google.cloud.cloudsecuritycompliance.v1.Monitoring.FetchFrameworkComplianceReport",
+          "service": {
+            "shortName": "Monitoring",
+            "fullName": "google.cloud.cloudsecuritycompliance.v1.Monitoring"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "cloudsecuritycompliance_v1_generated_Monitoring_FetchFrameworkComplianceReport_async_flattened_resourceNames",
+      "title": "FetchFrameworkComplianceReportResourceNamesAsync",
+      "description": "Snippet for FetchFrameworkComplianceReportAsync",
+      "file": "MonitoringClient.FetchFrameworkComplianceReportResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "FetchFrameworkComplianceReportAsync",
+        "fullName": "Google.Cloud.CloudSecurityCompliance.V1.MonitoringClient.FetchFrameworkComplianceReportAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.CloudSecurityCompliance.V1.FrameworkComplianceReportName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.CloudSecurityCompliance.V1.FrameworkComplianceReport>",
+        "client": {
+          "shortName": "MonitoringClient",
+          "fullName": "Google.Cloud.CloudSecurityCompliance.V1.MonitoringClient"
+        },
+        "method": {
+          "shortName": "FetchFrameworkComplianceReport",
+          "fullName": "google.cloud.cloudsecuritycompliance.v1.Monitoring.FetchFrameworkComplianceReport",
+          "service": {
+            "shortName": "Monitoring",
+            "fullName": "google.cloud.cloudsecuritycompliance.v1.Monitoring"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "cloudsecuritycompliance_v1_generated_Monitoring_ListControlComplianceSummaries_sync",
+      "title": "ListControlComplianceSummariesRequestObject",
+      "description": "Snippet for ListControlComplianceSummaries",
+      "file": "MonitoringClient.ListControlComplianceSummariesRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListControlComplianceSummaries",
+        "fullName": "Google.Cloud.CloudSecurityCompliance.V1.MonitoringClient.ListControlComplianceSummaries",
+        "parameters": [
+          {
+            "type": "Google.Cloud.CloudSecurityCompliance.V1.ListControlComplianceSummariesRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.CloudSecurityCompliance.V1.ListControlComplianceSummariesResponse, Google.Cloud.CloudSecurityCompliance.V1.ControlComplianceSummary>",
+        "client": {
+          "shortName": "MonitoringClient",
+          "fullName": "Google.Cloud.CloudSecurityCompliance.V1.MonitoringClient"
+        },
+        "method": {
+          "shortName": "ListControlComplianceSummaries",
+          "fullName": "google.cloud.cloudsecuritycompliance.v1.Monitoring.ListControlComplianceSummaries",
+          "service": {
+            "shortName": "Monitoring",
+            "fullName": "google.cloud.cloudsecuritycompliance.v1.Monitoring"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 79,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 77,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "cloudsecuritycompliance_v1_generated_Monitoring_ListControlComplianceSummaries_async",
+      "title": "ListControlComplianceSummariesRequestObjectAsync",
+      "description": "Snippet for ListControlComplianceSummariesAsync",
+      "file": "MonitoringClient.ListControlComplianceSummariesRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListControlComplianceSummariesAsync",
+        "fullName": "Google.Cloud.CloudSecurityCompliance.V1.MonitoringClient.ListControlComplianceSummariesAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.CloudSecurityCompliance.V1.ListControlComplianceSummariesRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.CloudSecurityCompliance.V1.ListControlComplianceSummariesResponse, Google.Cloud.CloudSecurityCompliance.V1.ControlComplianceSummary>",
+        "client": {
+          "shortName": "MonitoringClient",
+          "fullName": "Google.Cloud.CloudSecurityCompliance.V1.MonitoringClient"
+        },
+        "method": {
+          "shortName": "ListControlComplianceSummaries",
+          "fullName": "google.cloud.cloudsecuritycompliance.v1.Monitoring.ListControlComplianceSummaries",
+          "service": {
+            "shortName": "Monitoring",
+            "fullName": "google.cloud.cloudsecuritycompliance.v1.Monitoring"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 81,
+          "type": "FULL"
+        },
+        {
+          "start": 38,
+          "end": 79,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "cloudsecuritycompliance_v1_generated_Monitoring_ListControlComplianceSummaries_sync_flattened",
+      "title": "ListControlComplianceSummaries",
+      "description": "Snippet for ListControlComplianceSummaries",
+      "file": "MonitoringClient.ListControlComplianceSummariesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListControlComplianceSummaries",
+        "fullName": "Google.Cloud.CloudSecurityCompliance.V1.MonitoringClient.ListControlComplianceSummaries",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.CloudSecurityCompliance.V1.ListControlComplianceSummariesResponse, Google.Cloud.CloudSecurityCompliance.V1.ControlComplianceSummary>",
+        "client": {
+          "shortName": "MonitoringClient",
+          "fullName": "Google.Cloud.CloudSecurityCompliance.V1.MonitoringClient"
+        },
+        "method": {
+          "shortName": "ListControlComplianceSummaries",
+          "fullName": "google.cloud.cloudsecuritycompliance.v1.Monitoring.ListControlComplianceSummaries",
+          "service": {
+            "shortName": "Monitoring",
+            "fullName": "google.cloud.cloudsecuritycompliance.v1.Monitoring"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 75,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 73,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "cloudsecuritycompliance_v1_generated_Monitoring_ListControlComplianceSummaries_async_flattened",
+      "title": "ListControlComplianceSummariesAsync",
+      "description": "Snippet for ListControlComplianceSummariesAsync",
+      "file": "MonitoringClient.ListControlComplianceSummariesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListControlComplianceSummariesAsync",
+        "fullName": "Google.Cloud.CloudSecurityCompliance.V1.MonitoringClient.ListControlComplianceSummariesAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.CloudSecurityCompliance.V1.ListControlComplianceSummariesResponse, Google.Cloud.CloudSecurityCompliance.V1.ControlComplianceSummary>",
+        "client": {
+          "shortName": "MonitoringClient",
+          "fullName": "Google.Cloud.CloudSecurityCompliance.V1.MonitoringClient"
+        },
+        "method": {
+          "shortName": "ListControlComplianceSummaries",
+          "fullName": "google.cloud.cloudsecuritycompliance.v1.Monitoring.ListControlComplianceSummaries",
+          "service": {
+            "shortName": "Monitoring",
+            "fullName": "google.cloud.cloudsecuritycompliance.v1.Monitoring"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 77,
+          "type": "FULL"
+        },
+        {
+          "start": 38,
+          "end": 75,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "cloudsecuritycompliance_v1_generated_Monitoring_ListControlComplianceSummaries_sync_flattened_resourceNames",
+      "title": "ListControlComplianceSummariesResourceNames",
+      "description": "Snippet for ListControlComplianceSummaries",
+      "file": "MonitoringClient.ListControlComplianceSummariesResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListControlComplianceSummaries",
+        "fullName": "Google.Cloud.CloudSecurityCompliance.V1.MonitoringClient.ListControlComplianceSummaries",
+        "parameters": [
+          {
+            "type": "Google.Cloud.CloudSecurityCompliance.V1.FrameworkComplianceReportName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.CloudSecurityCompliance.V1.ListControlComplianceSummariesResponse, Google.Cloud.CloudSecurityCompliance.V1.ControlComplianceSummary>",
+        "client": {
+          "shortName": "MonitoringClient",
+          "fullName": "Google.Cloud.CloudSecurityCompliance.V1.MonitoringClient"
+        },
+        "method": {
+          "shortName": "ListControlComplianceSummaries",
+          "fullName": "google.cloud.cloudsecuritycompliance.v1.Monitoring.ListControlComplianceSummaries",
+          "service": {
+            "shortName": "Monitoring",
+            "fullName": "google.cloud.cloudsecuritycompliance.v1.Monitoring"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 75,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 73,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "cloudsecuritycompliance_v1_generated_Monitoring_ListControlComplianceSummaries_async_flattened_resourceNames",
+      "title": "ListControlComplianceSummariesResourceNamesAsync",
+      "description": "Snippet for ListControlComplianceSummariesAsync",
+      "file": "MonitoringClient.ListControlComplianceSummariesResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListControlComplianceSummariesAsync",
+        "fullName": "Google.Cloud.CloudSecurityCompliance.V1.MonitoringClient.ListControlComplianceSummariesAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.CloudSecurityCompliance.V1.FrameworkComplianceReportName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.CloudSecurityCompliance.V1.ListControlComplianceSummariesResponse, Google.Cloud.CloudSecurityCompliance.V1.ControlComplianceSummary>",
+        "client": {
+          "shortName": "MonitoringClient",
+          "fullName": "Google.Cloud.CloudSecurityCompliance.V1.MonitoringClient"
+        },
+        "method": {
+          "shortName": "ListControlComplianceSummaries",
+          "fullName": "google.cloud.cloudsecuritycompliance.v1.Monitoring.ListControlComplianceSummaries",
+          "service": {
+            "shortName": "Monitoring",
+            "fullName": "google.cloud.cloudsecuritycompliance.v1.Monitoring"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 77,
+          "type": "FULL"
+        },
+        {
+          "start": 38,
+          "end": 75,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "cloudsecuritycompliance_v1_generated_Monitoring_AggregateFrameworkComplianceReport_sync",
+      "title": "AggregateFrameworkComplianceReportRequestObject",
+      "description": "Snippet for AggregateFrameworkComplianceReport",
+      "file": "MonitoringClient.AggregateFrameworkComplianceReportRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "AggregateFrameworkComplianceReport",
+        "fullName": "Google.Cloud.CloudSecurityCompliance.V1.MonitoringClient.AggregateFrameworkComplianceReport",
+        "parameters": [
+          {
+            "type": "Google.Cloud.CloudSecurityCompliance.V1.AggregateFrameworkComplianceReportRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.CloudSecurityCompliance.V1.AggregateFrameworkComplianceReportResponse",
+        "client": {
+          "shortName": "MonitoringClient",
+          "fullName": "Google.Cloud.CloudSecurityCompliance.V1.MonitoringClient"
+        },
+        "method": {
+          "shortName": "AggregateFrameworkComplianceReport",
+          "fullName": "google.cloud.cloudsecuritycompliance.v1.Monitoring.AggregateFrameworkComplianceReport",
+          "service": {
+            "shortName": "Monitoring",
+            "fullName": "google.cloud.cloudsecuritycompliance.v1.Monitoring"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 47,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 45,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "cloudsecuritycompliance_v1_generated_Monitoring_AggregateFrameworkComplianceReport_async",
+      "title": "AggregateFrameworkComplianceReportRequestObjectAsync",
+      "description": "Snippet for AggregateFrameworkComplianceReportAsync",
+      "file": "MonitoringClient.AggregateFrameworkComplianceReportRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "AggregateFrameworkComplianceReportAsync",
+        "fullName": "Google.Cloud.CloudSecurityCompliance.V1.MonitoringClient.AggregateFrameworkComplianceReportAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.CloudSecurityCompliance.V1.AggregateFrameworkComplianceReportRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.CloudSecurityCompliance.V1.AggregateFrameworkComplianceReportResponse>",
+        "client": {
+          "shortName": "MonitoringClient",
+          "fullName": "Google.Cloud.CloudSecurityCompliance.V1.MonitoringClient"
+        },
+        "method": {
+          "shortName": "AggregateFrameworkComplianceReport",
+          "fullName": "google.cloud.cloudsecuritycompliance.v1.Monitoring.AggregateFrameworkComplianceReport",
+          "service": {
+            "shortName": "Monitoring",
+            "fullName": "google.cloud.cloudsecuritycompliance.v1.Monitoring"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 48,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 46,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "cloudsecuritycompliance_v1_generated_Monitoring_AggregateFrameworkComplianceReport_sync_flattened",
+      "title": "AggregateFrameworkComplianceReport",
+      "description": "Snippet for AggregateFrameworkComplianceReport",
+      "file": "MonitoringClient.AggregateFrameworkComplianceReportSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "AggregateFrameworkComplianceReport",
+        "fullName": "Google.Cloud.CloudSecurityCompliance.V1.MonitoringClient.AggregateFrameworkComplianceReport",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.CloudSecurityCompliance.V1.AggregateFrameworkComplianceReportResponse",
+        "client": {
+          "shortName": "MonitoringClient",
+          "fullName": "Google.Cloud.CloudSecurityCompliance.V1.MonitoringClient"
+        },
+        "method": {
+          "shortName": "AggregateFrameworkComplianceReport",
+          "fullName": "google.cloud.cloudsecuritycompliance.v1.Monitoring.AggregateFrameworkComplianceReport",
+          "service": {
+            "shortName": "Monitoring",
+            "fullName": "google.cloud.cloudsecuritycompliance.v1.Monitoring"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "cloudsecuritycompliance_v1_generated_Monitoring_AggregateFrameworkComplianceReport_async_flattened",
+      "title": "AggregateFrameworkComplianceReportAsync",
+      "description": "Snippet for AggregateFrameworkComplianceReportAsync",
+      "file": "MonitoringClient.AggregateFrameworkComplianceReportAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "AggregateFrameworkComplianceReportAsync",
+        "fullName": "Google.Cloud.CloudSecurityCompliance.V1.MonitoringClient.AggregateFrameworkComplianceReportAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.CloudSecurityCompliance.V1.AggregateFrameworkComplianceReportResponse>",
+        "client": {
+          "shortName": "MonitoringClient",
+          "fullName": "Google.Cloud.CloudSecurityCompliance.V1.MonitoringClient"
+        },
+        "method": {
+          "shortName": "AggregateFrameworkComplianceReport",
+          "fullName": "google.cloud.cloudsecuritycompliance.v1.Monitoring.AggregateFrameworkComplianceReport",
+          "service": {
+            "shortName": "Monitoring",
+            "fullName": "google.cloud.cloudsecuritycompliance.v1.Monitoring"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "cloudsecuritycompliance_v1_generated_Monitoring_AggregateFrameworkComplianceReport_sync_flattened_resourceNames",
+      "title": "AggregateFrameworkComplianceReportResourceNames",
+      "description": "Snippet for AggregateFrameworkComplianceReport",
+      "file": "MonitoringClient.AggregateFrameworkComplianceReportResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "AggregateFrameworkComplianceReport",
+        "fullName": "Google.Cloud.CloudSecurityCompliance.V1.MonitoringClient.AggregateFrameworkComplianceReport",
+        "parameters": [
+          {
+            "type": "Google.Cloud.CloudSecurityCompliance.V1.FrameworkComplianceReportName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.CloudSecurityCompliance.V1.AggregateFrameworkComplianceReportResponse",
+        "client": {
+          "shortName": "MonitoringClient",
+          "fullName": "Google.Cloud.CloudSecurityCompliance.V1.MonitoringClient"
+        },
+        "method": {
+          "shortName": "AggregateFrameworkComplianceReport",
+          "fullName": "google.cloud.cloudsecuritycompliance.v1.Monitoring.AggregateFrameworkComplianceReport",
+          "service": {
+            "shortName": "Monitoring",
+            "fullName": "google.cloud.cloudsecuritycompliance.v1.Monitoring"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "cloudsecuritycompliance_v1_generated_Monitoring_AggregateFrameworkComplianceReport_async_flattened_resourceNames",
+      "title": "AggregateFrameworkComplianceReportResourceNamesAsync",
+      "description": "Snippet for AggregateFrameworkComplianceReportAsync",
+      "file": "MonitoringClient.AggregateFrameworkComplianceReportResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "AggregateFrameworkComplianceReportAsync",
+        "fullName": "Google.Cloud.CloudSecurityCompliance.V1.MonitoringClient.AggregateFrameworkComplianceReportAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.CloudSecurityCompliance.V1.FrameworkComplianceReportName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.CloudSecurityCompliance.V1.AggregateFrameworkComplianceReportResponse>",
+        "client": {
+          "shortName": "MonitoringClient",
+          "fullName": "Google.Cloud.CloudSecurityCompliance.V1.MonitoringClient"
+        },
+        "method": {
+          "shortName": "AggregateFrameworkComplianceReport",
+          "fullName": "google.cloud.cloudsecuritycompliance.v1.Monitoring.AggregateFrameworkComplianceReport",
+          "service": {
+            "shortName": "Monitoring",
+            "fullName": "google.cloud.cloudsecuritycompliance.v1.Monitoring"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
     }
   ]
 }
