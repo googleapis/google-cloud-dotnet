@@ -239,6 +239,18 @@ namespace Google.Ads.MarketingPlatform.Admin.V1Alpha
         }
     }
 
+    public partial class FindSalesPartnerManagedClientsRequest
+    {
+        /// <summary>
+        /// <see cref="OrganizationName"/>-typed view over the <see cref="Organization"/> resource name property.
+        /// </summary>
+        public OrganizationName OrganizationAsOrganizationName
+        {
+            get => string.IsNullOrEmpty(Organization) ? null : OrganizationName.Parse(Organization, allowUnparsed: true);
+            set => Organization = value?.ToString() ?? "";
+        }
+    }
+
     public partial class ListAnalyticsAccountLinksRequest
     {
         /// <summary>

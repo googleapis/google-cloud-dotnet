@@ -298,6 +298,200 @@
       ]
     },
     {
+      "regionTag": "marketingplatformadmin_v1alpha_generated_MarketingplatformAdminService_ListOrganizations_sync",
+      "title": "ListOrganizationsRequestObject",
+      "description": "Snippet for ListOrganizations",
+      "file": "MarketingplatformAdminServiceClient.ListOrganizationsRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListOrganizations",
+        "fullName": "Google.Ads.MarketingPlatform.Admin.V1Alpha.MarketingplatformAdminServiceClient.ListOrganizations",
+        "parameters": [
+          {
+            "type": "Google.Ads.MarketingPlatform.Admin.V1Alpha.ListOrganizationsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Ads.MarketingPlatform.Admin.V1Alpha.ListOrganizationsResponse, Google.Ads.MarketingPlatform.Admin.V1Alpha.Organization>",
+        "client": {
+          "shortName": "MarketingplatformAdminServiceClient",
+          "fullName": "Google.Ads.MarketingPlatform.Admin.V1Alpha.MarketingplatformAdminServiceClient"
+        },
+        "method": {
+          "shortName": "ListOrganizations",
+          "fullName": "google.marketingplatform.admin.v1alpha.MarketingplatformAdminService.ListOrganizations",
+          "service": {
+            "shortName": "MarketingplatformAdminService",
+            "fullName": "google.marketingplatform.admin.v1alpha.MarketingplatformAdminService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 75,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 73,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "marketingplatformadmin_v1alpha_generated_MarketingplatformAdminService_ListOrganizations_async",
+      "title": "ListOrganizationsRequestObjectAsync",
+      "description": "Snippet for ListOrganizationsAsync",
+      "file": "MarketingplatformAdminServiceClient.ListOrganizationsRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListOrganizationsAsync",
+        "fullName": "Google.Ads.MarketingPlatform.Admin.V1Alpha.MarketingplatformAdminServiceClient.ListOrganizationsAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Ads.MarketingPlatform.Admin.V1Alpha.ListOrganizationsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Ads.MarketingPlatform.Admin.V1Alpha.ListOrganizationsResponse, Google.Ads.MarketingPlatform.Admin.V1Alpha.Organization>",
+        "client": {
+          "shortName": "MarketingplatformAdminServiceClient",
+          "fullName": "Google.Ads.MarketingPlatform.Admin.V1Alpha.MarketingplatformAdminServiceClient"
+        },
+        "method": {
+          "shortName": "ListOrganizations",
+          "fullName": "google.marketingplatform.admin.v1alpha.MarketingplatformAdminService.ListOrganizations",
+          "service": {
+            "shortName": "MarketingplatformAdminService",
+            "fullName": "google.marketingplatform.admin.v1alpha.MarketingplatformAdminService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 77,
+          "type": "FULL"
+        },
+        {
+          "start": 38,
+          "end": 75,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "marketingplatformadmin_v1alpha_generated_MarketingplatformAdminService_FindSalesPartnerManagedClients_sync",
+      "title": "FindSalesPartnerManagedClientsRequestObject",
+      "description": "Snippet for FindSalesPartnerManagedClients",
+      "file": "MarketingplatformAdminServiceClient.FindSalesPartnerManagedClientsRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "FindSalesPartnerManagedClients",
+        "fullName": "Google.Ads.MarketingPlatform.Admin.V1Alpha.MarketingplatformAdminServiceClient.FindSalesPartnerManagedClients",
+        "parameters": [
+          {
+            "type": "Google.Ads.MarketingPlatform.Admin.V1Alpha.FindSalesPartnerManagedClientsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Ads.MarketingPlatform.Admin.V1Alpha.FindSalesPartnerManagedClientsResponse",
+        "client": {
+          "shortName": "MarketingplatformAdminServiceClient",
+          "fullName": "Google.Ads.MarketingPlatform.Admin.V1Alpha.MarketingplatformAdminServiceClient"
+        },
+        "method": {
+          "shortName": "FindSalesPartnerManagedClients",
+          "fullName": "google.marketingplatform.admin.v1alpha.MarketingplatformAdminService.FindSalesPartnerManagedClients",
+          "service": {
+            "shortName": "MarketingplatformAdminService",
+            "fullName": "google.marketingplatform.admin.v1alpha.MarketingplatformAdminService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 45,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 43,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "marketingplatformadmin_v1alpha_generated_MarketingplatformAdminService_FindSalesPartnerManagedClients_async",
+      "title": "FindSalesPartnerManagedClientsRequestObjectAsync",
+      "description": "Snippet for FindSalesPartnerManagedClientsAsync",
+      "file": "MarketingplatformAdminServiceClient.FindSalesPartnerManagedClientsRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "FindSalesPartnerManagedClientsAsync",
+        "fullName": "Google.Ads.MarketingPlatform.Admin.V1Alpha.MarketingplatformAdminServiceClient.FindSalesPartnerManagedClientsAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Ads.MarketingPlatform.Admin.V1Alpha.FindSalesPartnerManagedClientsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Ads.MarketingPlatform.Admin.V1Alpha.FindSalesPartnerManagedClientsResponse>",
+        "client": {
+          "shortName": "MarketingplatformAdminServiceClient",
+          "fullName": "Google.Ads.MarketingPlatform.Admin.V1Alpha.MarketingplatformAdminServiceClient"
+        },
+        "method": {
+          "shortName": "FindSalesPartnerManagedClients",
+          "fullName": "google.marketingplatform.admin.v1alpha.MarketingplatformAdminService.FindSalesPartnerManagedClients",
+          "service": {
+            "shortName": "MarketingplatformAdminService",
+            "fullName": "google.marketingplatform.admin.v1alpha.MarketingplatformAdminService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 46,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 44,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
       "regionTag": "marketingplatformadmin_v1alpha_generated_MarketingplatformAdminService_ListAnalyticsAccountLinks_sync",
       "title": "ListAnalyticsAccountLinksRequestObject",
       "description": "Snippet for ListAnalyticsAccountLinks",
@@ -1375,6 +1569,198 @@
         "method": {
           "shortName": "SetPropertyServiceLevel",
           "fullName": "google.marketingplatform.admin.v1alpha.MarketingplatformAdminService.SetPropertyServiceLevel",
+          "service": {
+            "shortName": "MarketingplatformAdminService",
+            "fullName": "google.marketingplatform.admin.v1alpha.MarketingplatformAdminService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "marketingplatformadmin_v1alpha_generated_MarketingplatformAdminService_ReportPropertyUsage_sync",
+      "title": "ReportPropertyUsageRequestObject",
+      "description": "Snippet for ReportPropertyUsage",
+      "file": "MarketingplatformAdminServiceClient.ReportPropertyUsageRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ReportPropertyUsage",
+        "fullName": "Google.Ads.MarketingPlatform.Admin.V1Alpha.MarketingplatformAdminServiceClient.ReportPropertyUsage",
+        "parameters": [
+          {
+            "type": "Google.Ads.MarketingPlatform.Admin.V1Alpha.ReportPropertyUsageRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Ads.MarketingPlatform.Admin.V1Alpha.ReportPropertyUsageResponse",
+        "client": {
+          "shortName": "MarketingplatformAdminServiceClient",
+          "fullName": "Google.Ads.MarketingPlatform.Admin.V1Alpha.MarketingplatformAdminServiceClient"
+        },
+        "method": {
+          "shortName": "ReportPropertyUsage",
+          "fullName": "google.marketingplatform.admin.v1alpha.MarketingplatformAdminService.ReportPropertyUsage",
+          "service": {
+            "shortName": "MarketingplatformAdminService",
+            "fullName": "google.marketingplatform.admin.v1alpha.MarketingplatformAdminService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 45,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 43,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "marketingplatformadmin_v1alpha_generated_MarketingplatformAdminService_ReportPropertyUsage_async",
+      "title": "ReportPropertyUsageRequestObjectAsync",
+      "description": "Snippet for ReportPropertyUsageAsync",
+      "file": "MarketingplatformAdminServiceClient.ReportPropertyUsageRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ReportPropertyUsageAsync",
+        "fullName": "Google.Ads.MarketingPlatform.Admin.V1Alpha.MarketingplatformAdminServiceClient.ReportPropertyUsageAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Ads.MarketingPlatform.Admin.V1Alpha.ReportPropertyUsageRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Ads.MarketingPlatform.Admin.V1Alpha.ReportPropertyUsageResponse>",
+        "client": {
+          "shortName": "MarketingplatformAdminServiceClient",
+          "fullName": "Google.Ads.MarketingPlatform.Admin.V1Alpha.MarketingplatformAdminServiceClient"
+        },
+        "method": {
+          "shortName": "ReportPropertyUsage",
+          "fullName": "google.marketingplatform.admin.v1alpha.MarketingplatformAdminService.ReportPropertyUsage",
+          "service": {
+            "shortName": "MarketingplatformAdminService",
+            "fullName": "google.marketingplatform.admin.v1alpha.MarketingplatformAdminService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 46,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 44,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "marketingplatformadmin_v1alpha_generated_MarketingplatformAdminService_ReportPropertyUsage_sync_flattened",
+      "title": "ReportPropertyUsage",
+      "description": "Snippet for ReportPropertyUsage",
+      "file": "MarketingplatformAdminServiceClient.ReportPropertyUsageSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ReportPropertyUsage",
+        "fullName": "Google.Ads.MarketingPlatform.Admin.V1Alpha.MarketingplatformAdminServiceClient.ReportPropertyUsage",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "organization"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Ads.MarketingPlatform.Admin.V1Alpha.ReportPropertyUsageResponse",
+        "client": {
+          "shortName": "MarketingplatformAdminServiceClient",
+          "fullName": "Google.Ads.MarketingPlatform.Admin.V1Alpha.MarketingplatformAdminServiceClient"
+        },
+        "method": {
+          "shortName": "ReportPropertyUsage",
+          "fullName": "google.marketingplatform.admin.v1alpha.MarketingplatformAdminService.ReportPropertyUsage",
+          "service": {
+            "shortName": "MarketingplatformAdminService",
+            "fullName": "google.marketingplatform.admin.v1alpha.MarketingplatformAdminService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "marketingplatformadmin_v1alpha_generated_MarketingplatformAdminService_ReportPropertyUsage_async_flattened",
+      "title": "ReportPropertyUsageAsync",
+      "description": "Snippet for ReportPropertyUsageAsync",
+      "file": "MarketingplatformAdminServiceClient.ReportPropertyUsageAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ReportPropertyUsageAsync",
+        "fullName": "Google.Ads.MarketingPlatform.Admin.V1Alpha.MarketingplatformAdminServiceClient.ReportPropertyUsageAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "organization"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Ads.MarketingPlatform.Admin.V1Alpha.ReportPropertyUsageResponse>",
+        "client": {
+          "shortName": "MarketingplatformAdminServiceClient",
+          "fullName": "Google.Ads.MarketingPlatform.Admin.V1Alpha.MarketingplatformAdminServiceClient"
+        },
+        "method": {
+          "shortName": "ReportPropertyUsage",
+          "fullName": "google.marketingplatform.admin.v1alpha.MarketingplatformAdminService.ReportPropertyUsage",
           "service": {
             "shortName": "MarketingplatformAdminService",
             "fullName": "google.marketingplatform.admin.v1alpha.MarketingplatformAdminService"
