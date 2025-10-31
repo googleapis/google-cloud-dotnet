@@ -6035,8 +6035,11 @@
         "AI Extensions"
       ],
       "dependencies": {
-        "Google.Cloud.AIPlatform.V1": "project",
-        "Microsoft.Extensions.AI": "default"
+        "Google.Cloud.AIPlatform.V1": "3.54.0",
+        "Microsoft.Extensions.AI.Abstractions": "default"
+      },
+      "testDependencies": {
+        "Microsoft.Bcl.AsyncInterfaces": "default"
       },
       "projects": [
         "IntegrationTests",
