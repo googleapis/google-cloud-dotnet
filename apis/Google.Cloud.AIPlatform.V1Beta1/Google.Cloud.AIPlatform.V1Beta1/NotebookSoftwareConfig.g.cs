@@ -62,6 +62,9 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
 
   }
   #region Messages
+  /// <summary>
+  /// Post-startup script config.
+  /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class PostStartupScriptConfig : pb::IMessage<PostStartupScriptConfig>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -112,6 +115,9 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
     /// <summary>Field number for the "post_startup_script" field.</summary>
     public const int PostStartupScriptFieldNumber = 1;
     private string postStartupScript_ = "";
+    /// <summary>
+    /// Optional. Post-startup script to run after runtime is started.
+    /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string PostStartupScript {
@@ -124,6 +130,10 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
     /// <summary>Field number for the "post_startup_script_url" field.</summary>
     public const int PostStartupScriptUrlFieldNumber = 2;
     private string postStartupScriptUrl_ = "";
+    /// <summary>
+    /// Optional. Post-startup script url to download. Example:
+    /// https://bucket/script.sh
+    /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string PostStartupScriptUrl {
@@ -136,6 +146,10 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
     /// <summary>Field number for the "post_startup_script_behavior" field.</summary>
     public const int PostStartupScriptBehaviorFieldNumber = 3;
     private global::Google.Cloud.AIPlatform.V1Beta1.PostStartupScriptConfig.Types.PostStartupScriptBehavior postStartupScriptBehavior_ = global::Google.Cloud.AIPlatform.V1Beta1.PostStartupScriptConfig.Types.PostStartupScriptBehavior.Unspecified;
+    /// <summary>
+    /// Optional. Post-startup script behavior that defines download and execution
+    /// behavior.
+    /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Cloud.AIPlatform.V1Beta1.PostStartupScriptConfig.Types.PostStartupScriptBehavior PostStartupScriptBehavior {
@@ -329,10 +343,26 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static partial class Types {
+      /// <summary>
+      /// Represents a notebook runtime post-startup script behavior.
+      /// </summary>
       public enum PostStartupScriptBehavior {
+        /// <summary>
+        /// Unspecified post-startup script behavior.
+        /// </summary>
         [pbr::OriginalName("POST_STARTUP_SCRIPT_BEHAVIOR_UNSPECIFIED")] Unspecified = 0,
+        /// <summary>
+        /// Run the post-startup script only once, during runtime creation.
+        /// </summary>
         [pbr::OriginalName("RUN_ONCE")] RunOnce = 1,
+        /// <summary>
+        /// Run the post-startup script after every start.
+        /// </summary>
         [pbr::OriginalName("RUN_EVERY_START")] RunEveryStart = 2,
+        /// <summary>
+        /// After every start, download the post-startup script from its source and
+        /// run it.
+        /// </summary>
         [pbr::OriginalName("DOWNLOAD_AND_RUN_EVERY_START")] DownloadAndRunEveryStart = 3,
       }
 
@@ -669,6 +699,9 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
     /// <summary>Field number for the "post_startup_script_config" field.</summary>
     public const int PostStartupScriptConfigFieldNumber = 2;
     private global::Google.Cloud.AIPlatform.V1Beta1.PostStartupScriptConfig postStartupScriptConfig_;
+    /// <summary>
+    /// Optional. Post-startup script config.
+    /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Cloud.AIPlatform.V1Beta1.PostStartupScriptConfig PostStartupScriptConfig {
