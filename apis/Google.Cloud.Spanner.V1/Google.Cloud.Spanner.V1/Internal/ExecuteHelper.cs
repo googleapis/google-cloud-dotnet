@@ -57,6 +57,21 @@ namespace Google.Cloud.Spanner.V1.Internal
             }
         }
 
+        /// <summary>
+        /// Waits for <paramref name="task"/> to complete, handling session expiry by marking the session appropriately.
+        /// </summary>
+        internal static async ValueTask<bool> WithSessionExpiryChecking(this ValueTask<bool> task, Session session)
+        {
+            try
+            {
+                return await task.ConfigureAwait(false);
+            }
+            catch (RpcException ex) when (ex.CheckForSessionExpiredError(session))
+            {
+                throw;
+            }
+        }
+
         private static bool CheckForSessionExpiredError(this RpcException rpcException, Session session)
         {
             if (rpcException.IsSessionExpiredError())
