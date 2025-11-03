@@ -1233,7 +1233,7 @@
       ],
       "dependencies": {
         "Google.Api.Gax": "default",
-        "Google.Protobuf": "3.25.0"
+        "Google.Protobuf": "default"
       }
     },
     {
