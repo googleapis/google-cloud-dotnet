@@ -221,7 +221,7 @@
     },
     {
       "id": "Google.Apps.Meet.V2Beta",
-      "version": "1.0.0-beta07",
+      "version": "1.0.0-beta08",
       "type": "grpc",
       "productName": "Google Meet",
       "productUrl": "https://developers.google.com/meet/api/guides/overview",
