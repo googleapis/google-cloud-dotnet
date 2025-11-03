@@ -1225,7 +1225,7 @@
     {
       "id": "Google.Cloud.Bigtable.Common.V2",
       "type": "other",
-      "version": "3.2.0",
+      "version": "3.3.0",
       "description": "Common code used by Bigtable V2 APIs",
       "shortName": "bigtable",
       "tags": [
