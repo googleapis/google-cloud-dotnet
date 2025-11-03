@@ -183,11 +183,12 @@
         },
         {
             "id": "Google.Cloud.AccessApproval.V1",
-            "currentVersion": "2.5.0",
+            "currentVersion": "2.6.0",
             "generationAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
             "releaseAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
-            "releaseTimestamp": "2024-05-13T18:02:16Z",
+            "releaseTimestamp": "2025-11-03T18:32:47.341087934Z",
             "lastGeneratedCommit": "222764e0853283787ba2203de6b3f57bf05b6bc5",
+            "lastReleasedCommit": "222764e0853283787ba2203de6b3f57bf05b6bc5",
             "apiPaths": [
                 "google/cloud/accessapproval/v1"
             ],
