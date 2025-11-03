@@ -2336,11 +2336,12 @@
         },
         {
             "id": "Google.Cloud.OrgPolicy.V1",
-            "currentVersion": "3.2.0",
+            "currentVersion": "3.3.0",
             "generationAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
             "releaseAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
-            "releaseTimestamp": "2024-03-27T04:50:17Z",
+            "releaseTimestamp": "2025-11-03T19:18:01.820372186Z",
             "lastGeneratedCommit": "36533b09a6b383f3c30d13c3c26092154ecf5388",
+            "lastReleasedCommit": "36533b09a6b383f3c30d13c3c26092154ecf5388",
             "apiPaths": [
                 "google/cloud/orgpolicy/v1"
             ],
