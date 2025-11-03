@@ -482,11 +482,12 @@
         },
         {
             "id": "Google.Cloud.Audit",
-            "currentVersion": "2.5.0",
+            "currentVersion": "2.6.0",
             "generationAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
             "releaseAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
-            "releaseTimestamp": "2025-03-11T07:04:26Z",
+            "releaseTimestamp": "2025-11-03T18:56:33.811424037Z",
             "lastGeneratedCommit": "6e4f2a51f70f16e8102c59e93e930f0df0a0f768",
+            "lastReleasedCommit": "6e4f2a51f70f16e8102c59e93e930f0df0a0f768",
             "apiPaths": [
                 "google/cloud/audit"
             ],
