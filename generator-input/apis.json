@@ -940,7 +940,7 @@
     },
     {
       "id": "Google.Cloud.BeyondCorp.ClientGateways.V1",
-      "version": "1.3.0",
+      "version": "1.4.0",
       "type": "grpc",
       "productName": "BeyondCorp Client Gateways",
       "productUrl": "https://cloud.google.com/beyondcorp-enterprise",

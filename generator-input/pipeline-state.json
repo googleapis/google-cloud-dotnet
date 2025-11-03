@@ -617,11 +617,12 @@
         },
         {
             "id": "Google.Cloud.BeyondCorp.ClientGateways.V1",
-            "currentVersion": "1.3.0",
+            "currentVersion": "1.4.0",
             "generationAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
             "releaseAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
-            "releaseTimestamp": "2024-05-13T18:00:40Z",
+            "releaseTimestamp": "2025-11-03T19:07:03.730766874Z",
             "lastGeneratedCommit": "3021374c68bbc640c1f75bfffcadbd5c279811ee",
+            "lastReleasedCommit": "3021374c68bbc640c1f75bfffcadbd5c279811ee",
             "apiPaths": [
                 "google/cloud/beyondcorp/clientgateways/v1"
             ],
