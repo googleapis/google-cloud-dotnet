@@ -303,12 +303,12 @@
         },
         {
             "id": "Google.Cloud.ApiHub.V1",
-            "currentVersion": "1.1.0",
+            "currentVersion": "1.2.0",
             "generationAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
             "releaseAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
-            "releaseTimestamp": "2025-09-16T07:57:06.918863261Z",
+            "releaseTimestamp": "2025-11-03T18:45:24.766538249Z",
             "lastGeneratedCommit": "4d3b3a5470a3514b71cedd0119d14d3b7d17db7e",
-            "lastReleasedCommit": "748ffeec58bab5d70a4dbc89e1b34702c97d12ef",
+            "lastReleasedCommit": "4d3b3a5470a3514b71cedd0119d14d3b7d17db7e",
             "apiPaths": [
                 "google/cloud/apihub/v1"
             ],
