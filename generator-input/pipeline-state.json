@@ -3476,10 +3476,10 @@
         },
         {
             "id": "Google.Cloud.Workflows.Common.V1Beta",
-            "currentVersion": "2.0.0-beta04",
+            "currentVersion": "2.0.0-beta05",
             "generationAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
             "releaseAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
-            "releaseTimestamp": "2024-03-26T19:52:48Z",
+            "releaseTimestamp": "2025-11-03T16:57:19.899476087Z",
             "sourcePaths": [
                 "apis/Google.Cloud.Workflows.Common.V1Beta/Google.Cloud.Workflows.Common.V1Beta"
             ]

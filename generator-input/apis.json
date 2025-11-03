@@ -6349,7 +6349,7 @@
     {
       "id": "Google.Cloud.Workflows.Common.V1Beta",
       "type": "other",
-      "version": "2.0.0-beta04",
+      "version": "2.0.0-beta05",
       "description": "Common resource names used by all Workflows V1Beta APIs",
       "tags": [
         "Spanner"
