@@ -896,7 +896,7 @@
     },
     {
       "id": "Google.Cloud.BeyondCorp.AppConnectors.V1",
-      "version": "1.3.0",
+      "version": "1.4.0",
       "type": "grpc",
       "productName": "BeyondCorp AppConnectors",
       "productUrl": "https://cloud.google.com/beyondcorp-enterprise",
