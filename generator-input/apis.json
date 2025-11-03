@@ -1657,7 +1657,7 @@
     },
     {
       "id": "Google.Cloud.Common",
-      "version": "2.2.0",
+      "version": "2.3.0",
       "type": "other",
       "description": "Common protos for Cloud APIs.",
       "tags": [],
