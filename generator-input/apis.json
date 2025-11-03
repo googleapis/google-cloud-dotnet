@@ -804,7 +804,7 @@
     },
     {
       "id": "Google.Cloud.BareMetalSolution.V2",
-      "version": "1.7.0",
+      "version": "1.8.0",
       "type": "grpc",
       "productName": "Bare Metal Solution",
       "productUrl": "https://cloud.google.com/bare-metal/",
