@@ -2364,11 +2364,12 @@
         },
         {
             "id": "Google.Cloud.OsLogin.Common",
-            "currentVersion": "3.3.0",
+            "currentVersion": "3.4.0",
             "generationAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
             "releaseAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
-            "releaseTimestamp": "2024-03-27T04:42:19Z",
+            "releaseTimestamp": "2025-11-03T16:55:05.859075439Z",
             "lastGeneratedCommit": "6e4f2a51f70f16e8102c59e93e930f0df0a0f768",
+            "lastReleasedCommit": "6e4f2a51f70f16e8102c59e93e930f0df0a0f768",
             "apiPaths": [
                 "google/cloud/oslogin/common"
             ],

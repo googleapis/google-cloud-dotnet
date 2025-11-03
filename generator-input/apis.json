@@ -4326,7 +4326,7 @@
       "id": "Google.Cloud.OsLogin.Common",
       "generator": "micro",
       "protoPath": "google/cloud/oslogin/common",
-      "version": "3.3.0",
+      "version": "3.4.0",
       "type": "other",
       "description": "Version-agnostic types for the Google OS Login API.",
       "tags": [
