@@ -467,11 +467,12 @@
         },
         {
             "id": "Google.Cloud.AssuredWorkloads.V1Beta1",
-            "currentVersion": "2.0.0-beta08",
+            "currentVersion": "2.0.0-beta09",
             "generationAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
             "releaseAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
-            "releaseTimestamp": "2024-05-08T16:44:32Z",
+            "releaseTimestamp": "2025-11-03T18:55:35.747458735Z",
             "lastGeneratedCommit": "3021374c68bbc640c1f75bfffcadbd5c279811ee",
+            "lastReleasedCommit": "3021374c68bbc640c1f75bfffcadbd5c279811ee",
             "apiPaths": [
                 "google/cloud/assuredworkloads/v1beta1"
             ],
