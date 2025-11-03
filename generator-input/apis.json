@@ -3572,7 +3572,7 @@
       "protoPath": "google/logging/v2",
       "productName": "Google Cloud Logging",
       "productUrl": "https://cloud.google.com/logging/",
-      "version": "4.4.0",
+      "version": "4.5.0",
       "type": "grpc",
       "description": "Recommended Google client library to access the Google Cloud Logging API, which writes log entries and manages your logs, log sinks, and logs-based metrics.",
       "tags": [
