@@ -1,5 +1,11 @@
 # Version history
 
+## Version 5.5.0, released 2025-11-03
+
+### New features
+
+- Exposing AutoscalingConfig in InstancePartition
+
 ## Version 5.4.0, released 2025-10-14
 
 ### New features
