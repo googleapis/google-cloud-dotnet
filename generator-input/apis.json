@@ -3186,7 +3186,7 @@
     },
     {
       "id": "Google.Cloud.Iam.V2",
-      "version": "1.3.0",
+      "version": "1.4.0",
       "type": "grpc",
       "productName": "Google Cloud Identity and Access Management (IAM)",
       "productUrl": "https://cloud.google.com/iam/",
