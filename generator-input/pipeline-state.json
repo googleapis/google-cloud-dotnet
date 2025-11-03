@@ -318,11 +318,12 @@
         },
         {
             "id": "Google.Cloud.ApiKeys.V2",
-            "currentVersion": "1.4.0",
+            "currentVersion": "1.5.0",
             "generationAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
             "releaseAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
-            "releaseTimestamp": "2024-05-13T18:12:16Z",
+            "releaseTimestamp": "2025-11-03T18:46:06.989863968Z",
             "lastGeneratedCommit": "d03cc133141975f28a66554ddbd5c0e871946044",
+            "lastReleasedCommit": "d03cc133141975f28a66554ddbd5c0e871946044",
             "apiPaths": [
                 "google/api/apikeys/v2"
             ],
