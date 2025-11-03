@@ -18,11 +18,12 @@
         },
         {
             "id": "Google.Ads.MarketingPlatform.Admin.V1Alpha",
-            "currentVersion": "1.0.0-alpha01",
+            "currentVersion": "1.0.0-alpha02",
             "generationAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
             "releaseAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
-            "releaseTimestamp": "2024-09-19T07:02:24Z",
+            "releaseTimestamp": "2025-11-03T14:05:38.100302422Z",
             "lastGeneratedCommit": "6a3acb370bf4930823bea7486e54591c6e63e12b",
+            "lastReleasedCommit": "6a3acb370bf4930823bea7486e54591c6e63e12b",
             "apiPaths": [
                 "google/marketingplatform/admin/v1alpha"
             ],
