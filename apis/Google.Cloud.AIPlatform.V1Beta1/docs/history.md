@@ -1,5 +1,16 @@
 # Version history
 
+## Version 1.0.0-beta59, released 2025-11-03
+
+### Bug fixes
+
+- An existing field `transfer_to_agent` is removed from message `.google.cloud.aiplatform.v1beta1.EventActions`
+
+### Documentation improvements
+
+- Remove comments for a non public feature
+- Fix idle_scaledown_period minimum from 3600 to 300 (5 minutes)
+
 ## Version 1.0.0-beta58, released 2025-10-28
 
 ### Bug fixes
