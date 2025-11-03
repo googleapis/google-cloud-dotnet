@@ -574,7 +574,7 @@
     },
     {
       "id": "Google.Cloud.AppEngine.V1",
-      "version": "2.4.0",
+      "version": "2.5.0",
       "type": "grpc",
       "productName": "App Engine",
       "productUrl": "https://cloud.google.com/appengine",
