@@ -63,11 +63,12 @@
         },
         {
             "id": "Google.Analytics.Data.V1Beta",
-            "currentVersion": "2.0.0-beta09",
+            "currentVersion": "2.0.0-beta10",
             "generationAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
             "releaseAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
-            "releaseTimestamp": "2024-12-05T08:20:20Z",
+            "releaseTimestamp": "2025-11-03T18:25:54.293312894Z",
             "lastGeneratedCommit": "bab01b38ef7a0f3a756d38862d37e4380ff85753",
+            "lastReleasedCommit": "bab01b38ef7a0f3a756d38862d37e4380ff85753",
             "apiPaths": [
                 "google/analytics/data/v1beta"
             ],
