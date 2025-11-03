@@ -4527,12 +4527,12 @@
         },
         {
             "id": "Google.Cloud.CloudSecurityCompliance.V1",
-            "currentVersion": "1.0.0-beta02",
+            "currentVersion": "1.0.0-beta03",
             "generationAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
             "releaseAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
-            "releaseTimestamp": "2025-09-24T08:02:13.433503986Z",
+            "releaseTimestamp": "2025-11-03T14:36:42.521636771Z",
             "lastGeneratedCommit": "86356ccc532754bc792df92e6e438e6c2de7a6ed",
-            "lastReleasedCommit": "e9078581209139d142aad60322b6e09f565eae41",
+            "lastReleasedCommit": "86356ccc532754bc792df92e6e438e6c2de7a6ed",
             "apiPaths": [
                 "google/cloud/cloudsecuritycompliance/v1"
             ],
