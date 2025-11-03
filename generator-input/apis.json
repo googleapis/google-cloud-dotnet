@@ -511,7 +511,7 @@
     },
     {
       "id": "Google.Cloud.ApigeeConnect.V1",
-      "version": "2.4.0",
+      "version": "2.5.0",
       "type": "grpc",
       "productName": "Apigee Connect",
       "productUrl": "https://cloud.google.com/apigee/docs/hybrid/v1.4/apigee-connect",
