@@ -378,11 +378,12 @@
         },
         {
             "id": "Google.Cloud.AppEngine.V1",
-            "currentVersion": "2.4.0",
+            "currentVersion": "2.5.0",
             "generationAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
             "releaseAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
-            "releaseTimestamp": "2024-05-13T18:04:22Z",
+            "releaseTimestamp": "2025-11-03T18:50:30.214234283Z",
             "lastGeneratedCommit": "d03cc133141975f28a66554ddbd5c0e871946044",
+            "lastReleasedCommit": "d03cc133141975f28a66554ddbd5c0e871946044",
             "apiPaths": [
                 "google/appengine/v1"
             ],
