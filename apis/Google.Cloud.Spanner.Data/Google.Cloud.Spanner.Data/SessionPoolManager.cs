@@ -49,7 +49,7 @@ namespace Google.Cloud.Spanner.Data
         /// is specified on construction.
         /// </summary>
         public static SessionPoolManager Default { get; } =
-            new SessionPoolManager(new SessionPoolOptions(), CreateDefaultSpannerSettings(), Logger.DefaultLogger, CreateClientAsync);
+            new SessionPoolManager(new ManagedSessionOptions(), CreateDefaultSpannerSettings(), Logger.DefaultLogger, CreateClientAsync);
 
         private readonly Func<SpannerClientCreationOptions, SpannerSettings, Task<SpannerClient>> _clientFactory;
 
@@ -161,6 +161,12 @@ namespace Google.Cloud.Spanner.Data
         {
             SessionPoolSegmentKey segmentKey = SessionPoolSegmentKey.Create(dbName).WithDatabaseRole(dbRole);
             GaxPreconditions.CheckNotNull(options, nameof(options));
+            Logger.Warn($"Checking existance of mux in dictionary {segmentKey}, {_targetedMuxSessions.ContainsKey((options, segmentKey))}");
+            if(!string.IsNullOrEmpty(Environment.GetEnvironmentVariable("SPANNER_EMULATOR_HOST")) && _targetedMuxSessions.ContainsKey((options, segmentKey)))
+            {
+                _targetedMuxSessions[(options, segmentKey)] = CreateMultiplexSessionAsync();
+            }
+
             var muxSession = _targetedMuxSessions.GetOrAdd((options, segmentKey), CreateMultiplexSessionAsync());
             return muxSession;
 

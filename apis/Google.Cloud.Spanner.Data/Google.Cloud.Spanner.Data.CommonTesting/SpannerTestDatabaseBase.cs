@@ -185,8 +185,10 @@ public abstract class SpannerTestDatabaseBase
 
     public async Task<ManagedSession> GetManagedSession()
     {
-        if (_multiplexSession != null)
+        if (_multiplexSession != null && GetEnvironmentVariableOrDefault("SPANNER_EMULATOR_HOST", null) == null)
         {
+            // Only return the same multiplex session if we are NOT testing on the emulator
+            // The emulator does not handle concurrent transactions on a single multiplex session well
             return _multiplexSession;
         }
 
