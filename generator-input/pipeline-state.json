@@ -3556,11 +3556,12 @@
         },
         {
             "id": "Google.Geo.Type",
-            "currentVersion": "1.2.0",
+            "currentVersion": "1.3.0",
             "generationAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
             "releaseAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
-            "releaseTimestamp": "2024-03-27T08:28:16Z",
+            "releaseTimestamp": "2025-11-03T16:57:51.184379046Z",
             "lastGeneratedCommit": "9415ba048aa587b1b2df2b96fc00aa009c831597",
+            "lastReleasedCommit": "9415ba048aa587b1b2df2b96fc00aa009c831597",
             "apiPaths": [
                 "google/geo/type"
             ],
