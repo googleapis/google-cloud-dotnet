@@ -3275,11 +3275,12 @@
         },
         {
             "id": "Google.Cloud.Trace.V1",
-            "currentVersion": "3.4.0",
+            "currentVersion": "3.5.0",
             "generationAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
             "releaseAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
-            "releaseTimestamp": "2024-05-14T07:50:18Z",
+            "releaseTimestamp": "2025-11-03T19:21:19.033937981Z",
             "lastGeneratedCommit": "9215671dbc32a2bb26be3fe0678f7942ca12b365",
+            "lastReleasedCommit": "9215671dbc32a2bb26be3fe0678f7942ca12b365",
             "apiPaths": [
                 "google/devtools/cloudtrace/v1"
             ],
