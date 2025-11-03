@@ -1762,11 +1762,12 @@
         },
         {
             "id": "Google.Cloud.Iam.V1",
-            "currentVersion": "3.4.0",
+            "currentVersion": "3.5.0",
             "generationAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
             "releaseAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
-            "releaseTimestamp": "2024-12-06T08:16:24Z",
+            "releaseTimestamp": "2025-11-03T16:52:54.412423105Z",
             "lastGeneratedCommit": "c1c2f3e01e494b6fa004ff543cec2a8d84120717",
+            "lastReleasedCommit": "c1c2f3e01e494b6fa004ff543cec2a8d84120717",
             "apiPaths": [
                 "google/iam/v1"
             ],
