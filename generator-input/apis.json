@@ -6511,7 +6511,7 @@
       "packageOwner": "google-cloud",
       "generator": "proto",
       "protoPath": "google/identity/accesscontextmanager/type",
-      "version": "2.2.0",
+      "version": "2.3.0",
       "type": "other",
       "description": "Version-agnostic types for the Google Identity Access Context Manager API.",
       "tags": [
