@@ -48,11 +48,12 @@
         },
         {
             "id": "Google.Analytics.Admin.V1Beta",
-            "currentVersion": "1.0.0-beta09",
+            "currentVersion": "1.0.0-beta10",
             "generationAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
             "releaseAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
-            "releaseTimestamp": "2025-02-03T17:52:26Z",
+            "releaseTimestamp": "2025-11-03T18:25:23.556975044Z",
             "lastGeneratedCommit": "d9a16f2feec3d0f03899e48007a02ce154fc919d",
+            "lastReleasedCommit": "d9a16f2feec3d0f03899e48007a02ce154fc919d",
             "apiPaths": [
                 "google/analytics/admin/v1beta"
             ],
