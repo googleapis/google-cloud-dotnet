@@ -198,11 +198,12 @@
         },
         {
             "id": "Google.Cloud.AdvisoryNotifications.V1",
-            "currentVersion": "1.7.0",
+            "currentVersion": "1.8.0",
             "generationAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
             "releaseAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
-            "releaseTimestamp": "2024-05-13T18:04:17Z",
+            "releaseTimestamp": "2025-11-03T18:33:22.621352106Z",
             "lastGeneratedCommit": "d03cc133141975f28a66554ddbd5c0e871946044",
+            "lastReleasedCommit": "d03cc133141975f28a66554ddbd5c0e871946044",
             "apiPaths": [
                 "google/cloud/advisorynotifications/v1"
             ],

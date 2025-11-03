@@ -293,7 +293,7 @@
     },
     {
       "id": "Google.Cloud.AdvisoryNotifications.V1",
-      "version": "1.7.0",
+      "version": "1.8.0",
       "type": "grpc",
       "productName": "Advisory Notifications",
       "productUrl": "https://cloud.google.com/advisory-notifications/docs/overview",
