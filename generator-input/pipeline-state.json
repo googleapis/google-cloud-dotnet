@@ -1978,11 +1978,12 @@
         },
         {
             "id": "Google.Cloud.Logging.V2",
-            "currentVersion": "4.4.0",
+            "currentVersion": "4.5.0",
             "generationAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
             "releaseAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
-            "releaseTimestamp": "2024-05-14T07:08:31Z",
+            "releaseTimestamp": "2025-11-03T19:15:22.323654262Z",
             "lastGeneratedCommit": "4b1fe4dbb4156c42e9d09c294d74f36c7a3fc4ac",
+            "lastReleasedCommit": "4b1fe4dbb4156c42e9d09c294d74f36c7a3fc4ac",
             "apiPaths": [
                 "google/logging/v2"
             ],
