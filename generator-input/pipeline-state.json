@@ -123,11 +123,12 @@
         },
         {
             "id": "Google.Apps.Meet.V2",
-            "currentVersion": "1.0.0-beta05",
+            "currentVersion": "1.0.0-beta06",
             "generationAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
             "releaseAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
-            "releaseTimestamp": "2025-02-03T18:02:22Z",
+            "releaseTimestamp": "2025-11-03T18:29:42.670326361Z",
             "lastGeneratedCommit": "d03cc133141975f28a66554ddbd5c0e871946044",
+            "lastReleasedCommit": "d03cc133141975f28a66554ddbd5c0e871946044",
             "apiPaths": [
                 "google/apps/meet/v2"
             ],

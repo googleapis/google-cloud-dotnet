@@ -1,5 +1,11 @@
 # Version history
 
+## Version 1.0.0-beta06, released 2025-11-03
+
+### New features
+
+- Update dependencies
+
 ## Version 1.0.0-beta05, released 2025-02-03
 
 ### New features
