@@ -33,12 +33,12 @@
         },
         {
             "id": "Google.Analytics.Admin.V1Alpha",
-            "currentVersion": "2.0.0-alpha27",
+            "currentVersion": "2.0.0-alpha28",
             "generationAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
             "releaseAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
-            "releaseTimestamp": "2025-08-20T07:25:06.175063153Z",
+            "releaseTimestamp": "2025-11-03T18:24:48.241521917Z",
             "lastGeneratedCommit": "9070e63a1f574261c153ef6e94afc55677200337",
-            "lastReleasedCommit": "2032c33b2df0fd3b2dc9bfcb6fc747e139a0d87d",
+            "lastReleasedCommit": "9070e63a1f574261c153ef6e94afc55677200337",
             "apiPaths": [
                 "google/analytics/admin/v1alpha"
             ],
