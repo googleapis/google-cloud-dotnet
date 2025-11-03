@@ -1,5 +1,15 @@
 # Version history
 
+## Version 3.5.0, released 2025-11-03
+
+### New features
+
+- Update dependencies
+
+### Documentation improvements
+
+- Update io.proto to use markdown headings instead of HTML, remove some unused HTML from markdown
+
 ## Version 3.4.0, released 2024-05-13
 
 ### New features
