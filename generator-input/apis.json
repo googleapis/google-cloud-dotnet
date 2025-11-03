@@ -145,7 +145,7 @@
         "gsuite"
       ],
       "dependencies": {
-        "Google.Apps.Card.V1": "1.0.0-beta01"
+        "Google.Apps.Card.V1": "1.0.0-beta02"
       },
       "generator": "micro",
       "protoPath": "google/chat/v1",
