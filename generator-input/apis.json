@@ -3555,7 +3555,7 @@
       "id": "Google.Cloud.Logging.Type",
       "generator": "proto",
       "protoPath": "google/logging/type",
-      "version": "4.2.0",
+      "version": "4.3.0",
       "type": "other",
       "description": "Version-agnostic types for the Google Cloud Logging API.",
       "tags": [

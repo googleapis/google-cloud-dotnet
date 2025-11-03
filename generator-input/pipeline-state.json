@@ -1935,11 +1935,12 @@
         },
         {
             "id": "Google.Cloud.Logging.Type",
-            "currentVersion": "4.2.0",
+            "currentVersion": "4.3.0",
             "generationAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
             "releaseAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
-            "releaseTimestamp": "2024-03-26T23:48:18Z",
+            "releaseTimestamp": "2025-11-03T16:54:01.026743921Z",
             "lastGeneratedCommit": "ada88fe8801a840b197706a8068fee1ca45b0f6f",
+            "lastReleasedCommit": "ada88fe8801a840b197706a8068fee1ca45b0f6f",
             "apiPaths": [
                 "google/logging/type"
             ],
