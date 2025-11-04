@@ -25,18 +25,19 @@ namespace Google.Cloud.AIPlatform.V1 {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "CjFnb29nbGUvY2xvdWQvYWlwbGF0Zm9ybS92MS9kZXBsb3ltZW50X3N0YWdl",
-            "LnByb3RvEhpnb29nbGUuY2xvdWQuYWlwbGF0Zm9ybS52MSqBAgoPRGVwbG95",
+            "LnByb3RvEhpnb29nbGUuY2xvdWQuYWlwbGF0Zm9ybS52MSqyAgoPRGVwbG95",
             "bWVudFN0YWdlEiAKHERFUExPWU1FTlRfU1RBR0VfVU5TUEVDSUZJRUQQABIX",
             "ChNTVEFSVElOR19ERVBMT1lNRU5UEAUSEwoPUFJFUEFSSU5HX01PREVMEAYS",
             "HAoYQ1JFQVRJTkdfU0VSVklOR19DTFVTVEVSEAcSGwoXQURESU5HX05PREVT",
             "X1RPX0NMVVNURVIQCBIbChdHRVRUSU5HX0NPTlRBSU5FUl9JTUFHRRAJEhkK",
             "FVNUQVJUSU5HX01PREVMX1NFUlZFUhADEhAKDEZJTklTSElOR19VUBAEEhkK",
-            "FURFUExPWU1FTlRfVEVSTUlOQVRFRBAKQtIBCh5jb20uZ29vZ2xlLmNsb3Vk",
-            "LmFpcGxhdGZvcm0udjFCFERlcGxveW1lbnRTdGFnZVByb3RvUAFaPmNsb3Vk",
-            "Lmdvb2dsZS5jb20vZ28vYWlwbGF0Zm9ybS9hcGl2MS9haXBsYXRmb3JtcGI7",
-            "YWlwbGF0Zm9ybXBiqgIaR29vZ2xlLkNsb3VkLkFJUGxhdGZvcm0uVjHKAhpH",
-            "b29nbGVcQ2xvdWRcQUlQbGF0Zm9ybVxWMeoCHUdvb2dsZTo6Q2xvdWQ6OkFJ",
-            "UGxhdGZvcm06OlYxYgZwcm90bzM="));
+            "FURFUExPWU1FTlRfVEVSTUlOQVRFRBAKEhkKFVNVQ0NFU1NGVUxMWV9ERVBM",
+            "T1lFRBALEhQKEEZBSUxFRF9UT19ERVBMT1kQDELSAQoeY29tLmdvb2dsZS5j",
+            "bG91ZC5haXBsYXRmb3JtLnYxQhREZXBsb3ltZW50U3RhZ2VQcm90b1ABWj5j",
+            "bG91ZC5nb29nbGUuY29tL2dvL2FpcGxhdGZvcm0vYXBpdjEvYWlwbGF0Zm9y",
+            "bXBiO2FpcGxhdGZvcm1wYqoCGkdvb2dsZS5DbG91ZC5BSVBsYXRmb3JtLlYx",
+            "ygIaR29vZ2xlXENsb3VkXEFJUGxhdGZvcm1cVjHqAh1Hb29nbGU6OkNsb3Vk",
+            "OjpBSVBsYXRmb3JtOjpWMWIGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(new[] {typeof(global::Google.Cloud.AIPlatform.V1.DeploymentStage), }, null, null));
@@ -85,6 +86,14 @@ namespace Google.Cloud.AIPlatform.V1 {
     /// The deployment has terminated.
     /// </summary>
     [pbr::OriginalName("DEPLOYMENT_TERMINATED")] DeploymentTerminated = 10,
+    /// <summary>
+    /// The deployment has succeeded.
+    /// </summary>
+    [pbr::OriginalName("SUCCESSFULLY_DEPLOYED")] SuccessfullyDeployed = 11,
+    /// <summary>
+    /// The deployment has failed.
+    /// </summary>
+    [pbr::OriginalName("FAILED_TO_DEPLOY")] FailedToDeploy = 12,
   }
 
   #endregion
