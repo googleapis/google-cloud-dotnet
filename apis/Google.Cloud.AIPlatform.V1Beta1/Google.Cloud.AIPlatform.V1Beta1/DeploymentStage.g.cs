@@ -26,18 +26,19 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
           string.Concat(
             "CjZnb29nbGUvY2xvdWQvYWlwbGF0Zm9ybS92MWJldGExL2RlcGxveW1lbnRf",
             "c3RhZ2UucHJvdG8SH2dvb2dsZS5jbG91ZC5haXBsYXRmb3JtLnYxYmV0YTEq",
-            "gQIKD0RlcGxveW1lbnRTdGFnZRIgChxERVBMT1lNRU5UX1NUQUdFX1VOU1BF",
+            "sgIKD0RlcGxveW1lbnRTdGFnZRIgChxERVBMT1lNRU5UX1NUQUdFX1VOU1BF",
             "Q0lGSUVEEAASFwoTU1RBUlRJTkdfREVQTE9ZTUVOVBAFEhMKD1BSRVBBUklO",
             "R19NT0RFTBAGEhwKGENSRUFUSU5HX1NFUlZJTkdfQ0xVU1RFUhAHEhsKF0FE",
             "RElOR19OT0RFU19UT19DTFVTVEVSEAgSGwoXR0VUVElOR19DT05UQUlORVJf",
             "SU1BR0UQCRIZChVTVEFSVElOR19NT0RFTF9TRVJWRVIQAxIQCgxGSU5JU0hJ",
-            "TkdfVVAQBBIZChVERVBMT1lNRU5UX1RFUk1JTkFURUQQCkLrAQojY29tLmdv",
-            "b2dsZS5jbG91ZC5haXBsYXRmb3JtLnYxYmV0YTFCFERlcGxveW1lbnRTdGFn",
-            "ZVByb3RvUAFaQ2Nsb3VkLmdvb2dsZS5jb20vZ28vYWlwbGF0Zm9ybS9hcGl2",
-            "MWJldGExL2FpcGxhdGZvcm1wYjthaXBsYXRmb3JtcGKqAh9Hb29nbGUuQ2xv",
-            "dWQuQUlQbGF0Zm9ybS5WMUJldGExygIfR29vZ2xlXENsb3VkXEFJUGxhdGZv",
-            "cm1cVjFiZXRhMeoCIkdvb2dsZTo6Q2xvdWQ6OkFJUGxhdGZvcm06OlYxYmV0",
-            "YTFiBnByb3RvMw=="));
+            "TkdfVVAQBBIZChVERVBMT1lNRU5UX1RFUk1JTkFURUQQChIZChVTVUNDRVNT",
+            "RlVMTFlfREVQTE9ZRUQQCxIUChBGQUlMRURfVE9fREVQTE9ZEAxC6wEKI2Nv",
+            "bS5nb29nbGUuY2xvdWQuYWlwbGF0Zm9ybS52MWJldGExQhREZXBsb3ltZW50",
+            "U3RhZ2VQcm90b1ABWkNjbG91ZC5nb29nbGUuY29tL2dvL2FpcGxhdGZvcm0v",
+            "YXBpdjFiZXRhMS9haXBsYXRmb3JtcGI7YWlwbGF0Zm9ybXBiqgIfR29vZ2xl",
+            "LkNsb3VkLkFJUGxhdGZvcm0uVjFCZXRhMcoCH0dvb2dsZVxDbG91ZFxBSVBs",
+            "YXRmb3JtXFYxYmV0YTHqAiJHb29nbGU6OkNsb3VkOjpBSVBsYXRmb3JtOjpW",
+            "MWJldGExYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(new[] {typeof(global::Google.Cloud.AIPlatform.V1Beta1.DeploymentStage), }, null, null));
@@ -86,6 +87,14 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
     /// The deployment has terminated.
     /// </summary>
     [pbr::OriginalName("DEPLOYMENT_TERMINATED")] DeploymentTerminated = 10,
+    /// <summary>
+    /// The deployment has succeeded.
+    /// </summary>
+    [pbr::OriginalName("SUCCESSFULLY_DEPLOYED")] SuccessfullyDeployed = 11,
+    /// <summary>
+    /// The deployment has failed.
+    /// </summary>
+    [pbr::OriginalName("FAILED_TO_DEPLOY")] FailedToDeploy = 12,
   }
 
   #endregion
