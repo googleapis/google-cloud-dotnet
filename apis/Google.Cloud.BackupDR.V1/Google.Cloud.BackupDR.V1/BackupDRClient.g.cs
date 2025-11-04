@@ -70,6 +70,7 @@ namespace Google.Cloud.BackupDR.V1
             UpdateDataSourceSettings = existing.UpdateDataSourceSettings;
             UpdateDataSourceOperationsSettings = existing.UpdateDataSourceOperationsSettings.Clone();
             ListBackupsSettings = existing.ListBackupsSettings;
+            FetchBackupsForResourceTypeSettings = existing.FetchBackupsForResourceTypeSettings;
             GetBackupSettings = existing.GetBackupSettings;
             UpdateBackupSettings = existing.UpdateBackupSettings;
             UpdateBackupOperationsSettings = existing.UpdateBackupOperationsSettings.Clone();
@@ -99,6 +100,7 @@ namespace Google.Cloud.BackupDR.V1
             TriggerBackupSettings = existing.TriggerBackupSettings;
             TriggerBackupOperationsSettings = existing.TriggerBackupOperationsSettings.Clone();
             GetDataSourceReferenceSettings = existing.GetDataSourceReferenceSettings;
+            ListDataSourceReferencesSettings = existing.ListDataSourceReferencesSettings;
             FetchDataSourceReferencesForResourceTypeSettings = existing.FetchDataSourceReferencesForResourceTypeSettings;
             InitializeServiceSettings = existing.InitializeServiceSettings;
             InitializeServiceOperationsSettings = existing.InitializeServiceOperationsSettings.Clone();
@@ -444,6 +446,19 @@ namespace Google.Cloud.BackupDR.V1
         /// </list>
         /// </remarks>
         public gaxgrpc::CallSettings ListBackupsSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 5, initialBackoff: sys::TimeSpan.FromMilliseconds(1000), maxBackoff: sys::TimeSpan.FromMilliseconds(10000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Unavailable)));
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>BackupDRClient.FetchBackupsForResourceType</c> and <c>BackupDRClient.FetchBackupsForResourceTypeAsync</c>
+        /// .
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>No timeout is applied.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings FetchBackupsForResourceTypeSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
 
         /// <summary>
         /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to <c>BackupDRClient.GetBackup</c>
@@ -862,6 +877,18 @@ namespace Google.Cloud.BackupDR.V1
         /// </list>
         /// </remarks>
         public gaxgrpc::CallSettings GetDataSourceReferenceSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>BackupDRClient.ListDataSourceReferences</c> and <c>BackupDRClient.ListDataSourceReferencesAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>No timeout is applied.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings ListDataSourceReferencesSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
 
         /// <summary>
         /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
@@ -3144,6 +3171,184 @@ namespace Google.Cloud.BackupDR.V1
                 request.PageSize = pageSize.Value;
             }
             return ListBackupsAsync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Fetch Backups for a given resource type.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="Backup"/> resources.</returns>
+        public virtual gax::PagedEnumerable<FetchBackupsForResourceTypeResponse, Backup> FetchBackupsForResourceType(FetchBackupsForResourceTypeRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Fetch Backups for a given resource type.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="Backup"/> resources.</returns>
+        public virtual gax::PagedAsyncEnumerable<FetchBackupsForResourceTypeResponse, Backup> FetchBackupsForResourceTypeAsync(FetchBackupsForResourceTypeRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Fetch Backups for a given resource type.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. Datasources are the parent resource for the backups.
+        /// Format:
+        /// projects/{project}/locations/{location}/backupVaults/{backupVaultId}/dataSources/{datasourceId}
+        /// </param>
+        /// <param name="resourceType">
+        /// Required. The type of the GCP resource.
+        /// Ex: sqladmin.googleapis.com/Instance
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="Backup"/> resources.</returns>
+        public virtual gax::PagedEnumerable<FetchBackupsForResourceTypeResponse, Backup> FetchBackupsForResourceType(string parent, string resourceType, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            FetchBackupsForResourceTypeRequest request = new FetchBackupsForResourceTypeRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+                ResourceType = gax::GaxPreconditions.CheckNotNullOrEmpty(resourceType, nameof(resourceType)),
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return FetchBackupsForResourceType(request, callSettings);
+        }
+
+        /// <summary>
+        /// Fetch Backups for a given resource type.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. Datasources are the parent resource for the backups.
+        /// Format:
+        /// projects/{project}/locations/{location}/backupVaults/{backupVaultId}/dataSources/{datasourceId}
+        /// </param>
+        /// <param name="resourceType">
+        /// Required. The type of the GCP resource.
+        /// Ex: sqladmin.googleapis.com/Instance
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="Backup"/> resources.</returns>
+        public virtual gax::PagedAsyncEnumerable<FetchBackupsForResourceTypeResponse, Backup> FetchBackupsForResourceTypeAsync(string parent, string resourceType, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            FetchBackupsForResourceTypeRequest request = new FetchBackupsForResourceTypeRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+                ResourceType = gax::GaxPreconditions.CheckNotNullOrEmpty(resourceType, nameof(resourceType)),
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return FetchBackupsForResourceTypeAsync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Fetch Backups for a given resource type.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. Datasources are the parent resource for the backups.
+        /// Format:
+        /// projects/{project}/locations/{location}/backupVaults/{backupVaultId}/dataSources/{datasourceId}
+        /// </param>
+        /// <param name="resourceType">
+        /// Required. The type of the GCP resource.
+        /// Ex: sqladmin.googleapis.com/Instance
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="Backup"/> resources.</returns>
+        public virtual gax::PagedEnumerable<FetchBackupsForResourceTypeResponse, Backup> FetchBackupsForResourceType(DataSourceName parent, string resourceType, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            FetchBackupsForResourceTypeRequest request = new FetchBackupsForResourceTypeRequest
+            {
+                ParentAsDataSourceName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                ResourceType = gax::GaxPreconditions.CheckNotNullOrEmpty(resourceType, nameof(resourceType)),
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return FetchBackupsForResourceType(request, callSettings);
+        }
+
+        /// <summary>
+        /// Fetch Backups for a given resource type.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. Datasources are the parent resource for the backups.
+        /// Format:
+        /// projects/{project}/locations/{location}/backupVaults/{backupVaultId}/dataSources/{datasourceId}
+        /// </param>
+        /// <param name="resourceType">
+        /// Required. The type of the GCP resource.
+        /// Ex: sqladmin.googleapis.com/Instance
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="Backup"/> resources.</returns>
+        public virtual gax::PagedAsyncEnumerable<FetchBackupsForResourceTypeResponse, Backup> FetchBackupsForResourceTypeAsync(DataSourceName parent, string resourceType, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            FetchBackupsForResourceTypeRequest request = new FetchBackupsForResourceTypeRequest
+            {
+                ParentAsDataSourceName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                ResourceType = gax::GaxPreconditions.CheckNotNullOrEmpty(resourceType, nameof(resourceType)),
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return FetchBackupsForResourceTypeAsync(request, callSettings);
         }
 
         /// <summary>
@@ -5866,6 +6071,160 @@ namespace Google.Cloud.BackupDR.V1
             GetDataSourceReferenceAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
+        /// Lists DataSourceReferences for a given project and location.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="DataSourceReference"/> resources.</returns>
+        public virtual gax::PagedEnumerable<ListDataSourceReferencesResponse, DataSourceReference> ListDataSourceReferences(ListDataSourceReferencesRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Lists DataSourceReferences for a given project and location.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="DataSourceReference"/> resources.</returns>
+        public virtual gax::PagedAsyncEnumerable<ListDataSourceReferencesResponse, DataSourceReference> ListDataSourceReferencesAsync(ListDataSourceReferencesRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Lists DataSourceReferences for a given project and location.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent resource name.
+        /// Format: projects/{project}/locations/{location}
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="DataSourceReference"/> resources.</returns>
+        public virtual gax::PagedEnumerable<ListDataSourceReferencesResponse, DataSourceReference> ListDataSourceReferences(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListDataSourceReferencesRequest request = new ListDataSourceReferencesRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListDataSourceReferences(request, callSettings);
+        }
+
+        /// <summary>
+        /// Lists DataSourceReferences for a given project and location.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent resource name.
+        /// Format: projects/{project}/locations/{location}
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="DataSourceReference"/> resources.</returns>
+        public virtual gax::PagedAsyncEnumerable<ListDataSourceReferencesResponse, DataSourceReference> ListDataSourceReferencesAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListDataSourceReferencesRequest request = new ListDataSourceReferencesRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListDataSourceReferencesAsync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Lists DataSourceReferences for a given project and location.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent resource name.
+        /// Format: projects/{project}/locations/{location}
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="DataSourceReference"/> resources.</returns>
+        public virtual gax::PagedEnumerable<ListDataSourceReferencesResponse, DataSourceReference> ListDataSourceReferences(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListDataSourceReferencesRequest request = new ListDataSourceReferencesRequest
+            {
+                ParentAsLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListDataSourceReferences(request, callSettings);
+        }
+
+        /// <summary>
+        /// Lists DataSourceReferences for a given project and location.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent resource name.
+        /// Format: projects/{project}/locations/{location}
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="DataSourceReference"/> resources.</returns>
+        public virtual gax::PagedAsyncEnumerable<ListDataSourceReferencesResponse, DataSourceReference> ListDataSourceReferencesAsync(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListDataSourceReferencesRequest request = new ListDataSourceReferencesRequest
+            {
+                ParentAsLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListDataSourceReferencesAsync(request, callSettings);
+        }
+
+        /// <summary>
         /// Fetch DataSourceReferences for a given project, location and resource type.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
@@ -6128,6 +6487,8 @@ namespace Google.Cloud.BackupDR.V1
 
         private readonly gaxgrpc::ApiCall<ListBackupsRequest, ListBackupsResponse> _callListBackups;
 
+        private readonly gaxgrpc::ApiCall<FetchBackupsForResourceTypeRequest, FetchBackupsForResourceTypeResponse> _callFetchBackupsForResourceType;
+
         private readonly gaxgrpc::ApiCall<GetBackupRequest, Backup> _callGetBackup;
 
         private readonly gaxgrpc::ApiCall<UpdateBackupRequest, lro::Operation> _callUpdateBackup;
@@ -6165,6 +6526,8 @@ namespace Google.Cloud.BackupDR.V1
         private readonly gaxgrpc::ApiCall<TriggerBackupRequest, lro::Operation> _callTriggerBackup;
 
         private readonly gaxgrpc::ApiCall<GetDataSourceReferenceRequest, DataSourceReference> _callGetDataSourceReference;
+
+        private readonly gaxgrpc::ApiCall<ListDataSourceReferencesRequest, ListDataSourceReferencesResponse> _callListDataSourceReferences;
 
         private readonly gaxgrpc::ApiCall<FetchDataSourceReferencesForResourceTypeRequest, FetchDataSourceReferencesForResourceTypeResponse> _callFetchDataSourceReferencesForResourceType;
 
@@ -6246,6 +6609,9 @@ namespace Google.Cloud.BackupDR.V1
             _callListBackups = clientHelper.BuildApiCall<ListBackupsRequest, ListBackupsResponse>("ListBackups", grpcClient.ListBackupsAsync, grpcClient.ListBackups, effectiveSettings.ListBackupsSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callListBackups);
             Modify_ListBackupsApiCall(ref _callListBackups);
+            _callFetchBackupsForResourceType = clientHelper.BuildApiCall<FetchBackupsForResourceTypeRequest, FetchBackupsForResourceTypeResponse>("FetchBackupsForResourceType", grpcClient.FetchBackupsForResourceTypeAsync, grpcClient.FetchBackupsForResourceType, effectiveSettings.FetchBackupsForResourceTypeSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            Modify_ApiCall(ref _callFetchBackupsForResourceType);
+            Modify_FetchBackupsForResourceTypeApiCall(ref _callFetchBackupsForResourceType);
             _callGetBackup = clientHelper.BuildApiCall<GetBackupRequest, Backup>("GetBackup", grpcClient.GetBackupAsync, grpcClient.GetBackup, effectiveSettings.GetBackupSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callGetBackup);
             Modify_GetBackupApiCall(ref _callGetBackup);
@@ -6303,6 +6669,9 @@ namespace Google.Cloud.BackupDR.V1
             _callGetDataSourceReference = clientHelper.BuildApiCall<GetDataSourceReferenceRequest, DataSourceReference>("GetDataSourceReference", grpcClient.GetDataSourceReferenceAsync, grpcClient.GetDataSourceReference, effectiveSettings.GetDataSourceReferenceSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callGetDataSourceReference);
             Modify_GetDataSourceReferenceApiCall(ref _callGetDataSourceReference);
+            _callListDataSourceReferences = clientHelper.BuildApiCall<ListDataSourceReferencesRequest, ListDataSourceReferencesResponse>("ListDataSourceReferences", grpcClient.ListDataSourceReferencesAsync, grpcClient.ListDataSourceReferences, effectiveSettings.ListDataSourceReferencesSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            Modify_ApiCall(ref _callListDataSourceReferences);
+            Modify_ListDataSourceReferencesApiCall(ref _callListDataSourceReferences);
             _callFetchDataSourceReferencesForResourceType = clientHelper.BuildApiCall<FetchDataSourceReferencesForResourceTypeRequest, FetchDataSourceReferencesForResourceTypeResponse>("FetchDataSourceReferencesForResourceType", grpcClient.FetchDataSourceReferencesForResourceTypeAsync, grpcClient.FetchDataSourceReferencesForResourceType, effectiveSettings.FetchDataSourceReferencesForResourceTypeSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callFetchDataSourceReferencesForResourceType);
             Modify_FetchDataSourceReferencesForResourceTypeApiCall(ref _callFetchDataSourceReferencesForResourceType);
@@ -6342,6 +6711,8 @@ namespace Google.Cloud.BackupDR.V1
 
         partial void Modify_ListBackupsApiCall(ref gaxgrpc::ApiCall<ListBackupsRequest, ListBackupsResponse> call);
 
+        partial void Modify_FetchBackupsForResourceTypeApiCall(ref gaxgrpc::ApiCall<FetchBackupsForResourceTypeRequest, FetchBackupsForResourceTypeResponse> call);
+
         partial void Modify_GetBackupApiCall(ref gaxgrpc::ApiCall<GetBackupRequest, Backup> call);
 
         partial void Modify_UpdateBackupApiCall(ref gaxgrpc::ApiCall<UpdateBackupRequest, lro::Operation> call);
@@ -6379,6 +6750,8 @@ namespace Google.Cloud.BackupDR.V1
         partial void Modify_TriggerBackupApiCall(ref gaxgrpc::ApiCall<TriggerBackupRequest, lro::Operation> call);
 
         partial void Modify_GetDataSourceReferenceApiCall(ref gaxgrpc::ApiCall<GetDataSourceReferenceRequest, DataSourceReference> call);
+
+        partial void Modify_ListDataSourceReferencesApiCall(ref gaxgrpc::ApiCall<ListDataSourceReferencesRequest, ListDataSourceReferencesResponse> call);
 
         partial void Modify_FetchDataSourceReferencesForResourceTypeApiCall(ref gaxgrpc::ApiCall<FetchDataSourceReferencesForResourceTypeRequest, FetchDataSourceReferencesForResourceTypeResponse> call);
 
@@ -6423,6 +6796,8 @@ namespace Google.Cloud.BackupDR.V1
 
         partial void Modify_ListBackupsRequest(ref ListBackupsRequest request, ref gaxgrpc::CallSettings settings);
 
+        partial void Modify_FetchBackupsForResourceTypeRequest(ref FetchBackupsForResourceTypeRequest request, ref gaxgrpc::CallSettings settings);
+
         partial void Modify_GetBackupRequest(ref GetBackupRequest request, ref gaxgrpc::CallSettings settings);
 
         partial void Modify_UpdateBackupRequest(ref UpdateBackupRequest request, ref gaxgrpc::CallSettings settings);
@@ -6460,6 +6835,8 @@ namespace Google.Cloud.BackupDR.V1
         partial void Modify_TriggerBackupRequest(ref TriggerBackupRequest request, ref gaxgrpc::CallSettings settings);
 
         partial void Modify_GetDataSourceReferenceRequest(ref GetDataSourceReferenceRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_ListDataSourceReferencesRequest(ref ListDataSourceReferencesRequest request, ref gaxgrpc::CallSettings settings);
 
         partial void Modify_FetchDataSourceReferencesForResourceTypeRequest(ref FetchDataSourceReferencesForResourceTypeRequest request, ref gaxgrpc::CallSettings settings);
 
@@ -6821,6 +7198,30 @@ namespace Google.Cloud.BackupDR.V1
         {
             Modify_ListBackupsRequest(ref request, ref callSettings);
             return new gaxgrpc::GrpcPagedAsyncEnumerable<ListBackupsRequest, ListBackupsResponse, Backup>(_callListBackups, request, callSettings);
+        }
+
+        /// <summary>
+        /// Fetch Backups for a given resource type.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="Backup"/> resources.</returns>
+        public override gax::PagedEnumerable<FetchBackupsForResourceTypeResponse, Backup> FetchBackupsForResourceType(FetchBackupsForResourceTypeRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_FetchBackupsForResourceTypeRequest(ref request, ref callSettings);
+            return new gaxgrpc::GrpcPagedEnumerable<FetchBackupsForResourceTypeRequest, FetchBackupsForResourceTypeResponse, Backup>(_callFetchBackupsForResourceType, request, callSettings);
+        }
+
+        /// <summary>
+        /// Fetch Backups for a given resource type.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="Backup"/> resources.</returns>
+        public override gax::PagedAsyncEnumerable<FetchBackupsForResourceTypeResponse, Backup> FetchBackupsForResourceTypeAsync(FetchBackupsForResourceTypeRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_FetchBackupsForResourceTypeRequest(ref request, ref callSettings);
+            return new gaxgrpc::GrpcPagedAsyncEnumerable<FetchBackupsForResourceTypeRequest, FetchBackupsForResourceTypeResponse, Backup>(_callFetchBackupsForResourceType, request, callSettings);
         }
 
         /// <summary>
@@ -7310,6 +7711,30 @@ namespace Google.Cloud.BackupDR.V1
         }
 
         /// <summary>
+        /// Lists DataSourceReferences for a given project and location.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="DataSourceReference"/> resources.</returns>
+        public override gax::PagedEnumerable<ListDataSourceReferencesResponse, DataSourceReference> ListDataSourceReferences(ListDataSourceReferencesRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_ListDataSourceReferencesRequest(ref request, ref callSettings);
+            return new gaxgrpc::GrpcPagedEnumerable<ListDataSourceReferencesRequest, ListDataSourceReferencesResponse, DataSourceReference>(_callListDataSourceReferences, request, callSettings);
+        }
+
+        /// <summary>
+        /// Lists DataSourceReferences for a given project and location.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="DataSourceReference"/> resources.</returns>
+        public override gax::PagedAsyncEnumerable<ListDataSourceReferencesResponse, DataSourceReference> ListDataSourceReferencesAsync(ListDataSourceReferencesRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_ListDataSourceReferencesRequest(ref request, ref callSettings);
+            return new gaxgrpc::GrpcPagedAsyncEnumerable<ListDataSourceReferencesRequest, ListDataSourceReferencesResponse, DataSourceReference>(_callListDataSourceReferences, request, callSettings);
+        }
+
+        /// <summary>
         /// Fetch DataSourceReferences for a given project, location and resource type.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
@@ -7381,6 +7806,10 @@ namespace Google.Cloud.BackupDR.V1
     {
     }
 
+    public partial class FetchBackupsForResourceTypeRequest : gaxgrpc::IPageRequest
+    {
+    }
+
     public partial class ListBackupPlansRequest : gaxgrpc::IPageRequest
     {
     }
@@ -7394,6 +7823,10 @@ namespace Google.Cloud.BackupDR.V1
     }
 
     public partial class FetchBackupPlanAssociationsForResourceTypeRequest : gaxgrpc::IPageRequest
+    {
+    }
+
+    public partial class ListDataSourceReferencesRequest : gaxgrpc::IPageRequest
     {
     }
 
@@ -7441,6 +7874,14 @@ namespace Google.Cloud.BackupDR.V1
         sc::IEnumerator sc::IEnumerable.GetEnumerator() => GetEnumerator();
     }
 
+    public partial class FetchBackupsForResourceTypeResponse : gaxgrpc::IPageResponse<Backup>
+    {
+        /// <summary>Returns an enumerator that iterates through the resources in this response.</summary>
+        public scg::IEnumerator<Backup> GetEnumerator() => Backups.GetEnumerator();
+
+        sc::IEnumerator sc::IEnumerable.GetEnumerator() => GetEnumerator();
+    }
+
     public partial class ListBackupPlansResponse : gaxgrpc::IPageResponse<BackupPlan>
     {
         /// <summary>Returns an enumerator that iterates through the resources in this response.</summary>
@@ -7469,6 +7910,14 @@ namespace Google.Cloud.BackupDR.V1
     {
         /// <summary>Returns an enumerator that iterates through the resources in this response.</summary>
         public scg::IEnumerator<BackupPlanAssociation> GetEnumerator() => BackupPlanAssociations.GetEnumerator();
+
+        sc::IEnumerator sc::IEnumerable.GetEnumerator() => GetEnumerator();
+    }
+
+    public partial class ListDataSourceReferencesResponse : gaxgrpc::IPageResponse<DataSourceReference>
+    {
+        /// <summary>Returns an enumerator that iterates through the resources in this response.</summary>
+        public scg::IEnumerator<DataSourceReference> GetEnumerator() => DataSourceReferences.GetEnumerator();
 
         sc::IEnumerator sc::IEnumerable.GetEnumerator() => GetEnumerator();
     }
