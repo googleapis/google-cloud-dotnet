@@ -1,4 +1,5 @@
 {
+  "maxPullRequestCommits": 20,
   "commands": {
     "build-library": {
       "environmentVariables": [
