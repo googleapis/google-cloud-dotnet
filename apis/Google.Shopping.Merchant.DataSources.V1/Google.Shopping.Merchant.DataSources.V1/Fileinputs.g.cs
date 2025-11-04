@@ -927,21 +927,11 @@ namespace Google.Shopping.Merchant.DataSources.V1 {
         public static partial class Types {
           /// <summary>
           /// The required fields vary based on the frequency of fetching. For a
-          /// monthly
-          /// fetch schedule,
-          /// `day of
-          /// month`
-          /// and
-          /// [hour of
-          /// day][https://developers.google.com/merchant/api/reference/rest/datasources_v1beta/accounts.dataSources#timeofday]
-          /// are required. For a weekly fetch schedule,
-          /// [day of
-          /// week][https://developers.google.com/merchant/api/reference/rest/datasources_v1beta/accounts.dataSources#dayofweek]
-          /// and [hour of
-          /// day][https://developers.google.com/merchant/api/reference/rest/datasources_v1beta/accounts.dataSources#timeofday]
-          /// are required. For a daily fetch schedule, only an [hour of
-          /// day][https://developers.google.com/merchant/api/reference/rest/datasources_v1beta/accounts.dataSources#timeofday]
-          /// is required.
+          /// monthly fetch schedule, `day of month` and [hour of
+          /// day](../Shared.Types/TimeOfDay) are required. For a weekly fetch
+          /// schedule, [day of week](../Shared.Types/DayOfWeek) and [hour of
+          /// day](../Shared.Types/TimeOfDay) are required. For a daily fetch schedule,
+          /// only an [hour of day](../Shared.Types/TimeOfDay) is required.
           /// </summary>
           public enum Frequency {
             /// <summary>
