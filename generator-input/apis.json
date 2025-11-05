@@ -1552,7 +1552,7 @@
     },
     {
       "id": "Google.Cloud.CloudDms.V1",
-      "version": "2.5.0",
+      "version": "2.6.0",
       "type": "grpc",
       "productName": "Database Migration",
       "productUrl": "https://cloud.google.com/database-migration",
