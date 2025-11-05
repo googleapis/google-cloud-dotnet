@@ -847,11 +847,12 @@
         },
         {
             "id": "Google.Cloud.Billing.Budgets.V1Beta1",
-            "currentVersion": "2.0.0-beta06",
+            "currentVersion": "2.0.0-beta07",
             "generationAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
             "releaseAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
-            "releaseTimestamp": "2024-05-08T16:44:28Z",
+            "releaseTimestamp": "2025-11-05T08:53:13.950752936Z",
             "lastGeneratedCommit": "3021374c68bbc640c1f75bfffcadbd5c279811ee",
+            "lastReleasedCommit": "3021374c68bbc640c1f75bfffcadbd5c279811ee",
             "apiPaths": [
                 "google/cloud/billing/budgets/v1beta1"
             ],
