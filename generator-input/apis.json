@@ -1942,7 +1942,7 @@
     },
     {
       "id": "Google.Cloud.Dataflow.V1Beta3",
-      "version": "2.0.0-beta08",
+      "version": "2.0.0-beta09",
       "type": "grpc",
       "productName": "Dataflow",
       "productUrl": "https://cloud.google.com/dataflow/docs/",
