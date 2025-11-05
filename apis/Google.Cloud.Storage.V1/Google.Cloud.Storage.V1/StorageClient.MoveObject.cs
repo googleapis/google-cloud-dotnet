@@ -22,7 +22,7 @@ namespace Google.Cloud.Storage.V1;
 public abstract partial class StorageClient
 {
     /// <summary>
-    /// Moves an object within a bucket with hierarchical namespace enabled. This method uses the
+    /// Moves an object within a bucket. This method uses the
     /// <c>moveObject</c> underlying API operation for more flexibility and reliability.
     /// </summary>
     /// <param name="sourceBucket">Name of the bucket containing the object to move. Must not be null.</param>
@@ -41,7 +41,7 @@ public abstract partial class StorageClient
     }
 
     /// <summary>
-    /// Moves an object within a bucket with hierarchical namespace enabled. This method uses the
+    /// Moves an object within a bucket. This method uses the
     /// <c>moveObject</c> underlying API operation for more flexibility and reliability.
     /// </summary>
     /// <param name="sourceBucket">Name of the bucket containing the object to move. Must not be null.</param>

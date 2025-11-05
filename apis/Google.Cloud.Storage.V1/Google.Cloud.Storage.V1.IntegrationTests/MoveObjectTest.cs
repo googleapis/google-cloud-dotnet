@@ -14,7 +14,6 @@
 
 using Google.Cloud.ClientTesting;
 using System.IO;
-using System.Linq;
 using System.Net;
 using System.Threading.Tasks;
 using Xunit;
@@ -35,7 +34,7 @@ public class MoveObjectTest
     public MoveObjectTest(StorageFixture fixture)
     {
         _fixture = fixture;
-        _bucket = _fixture.HnsBucket;
+        _bucket = _fixture.InitiallyEmptyBucket;
         _originName = IdGenerator.FromGuid();
         _destinationName = IdGenerator.FromGuid();
         _contentType = "application/octet-stream";
