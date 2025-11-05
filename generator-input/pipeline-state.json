@@ -1622,11 +1622,12 @@
         },
         {
             "id": "Google.Cloud.Filestore.V1",
-            "currentVersion": "2.7.0",
+            "currentVersion": "2.8.0",
             "generationAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
             "releaseAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
-            "releaseTimestamp": "2025-03-10T18:26:34Z",
+            "releaseTimestamp": "2025-11-05T17:02:20.722119466Z",
             "lastGeneratedCommit": "d4a9eb5869a1698d8887a68dd17e5bda9ec802d3",
+            "lastReleasedCommit": "d4a9eb5869a1698d8887a68dd17e5bda9ec802d3",
             "apiPaths": [
                 "google/cloud/filestore/v1"
             ],
