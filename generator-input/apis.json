@@ -1379,7 +1379,7 @@
     },
     {
       "id": "Google.Cloud.CapacityPlanner.V1Beta",
-      "version": "1.0.0-beta01",
+      "version": "1.0.0-beta02",
       "type": "grpc",
       "productName": "Capacity Planner",
       "productUrl": "https://cloud.google.com/capacity-planner/docs",
