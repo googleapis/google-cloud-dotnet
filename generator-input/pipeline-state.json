@@ -1727,12 +1727,12 @@
         },
         {
             "id": "Google.Cloud.GkeBackup.V1",
-            "currentVersion": "2.8.0",
+            "currentVersion": "2.9.0",
             "generationAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
             "releaseAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
-            "releaseTimestamp": "2025-05-15T20:23:10.174484021Z",
+            "releaseTimestamp": "2025-11-05T17:07:21.442175652Z",
             "lastGeneratedCommit": "36533b09a6b383f3c30d13c3c26092154ecf5388",
-            "lastReleasedCommit": "8a3ddf03e414a88ce9f23e3edeca825e1c63fa2d",
+            "lastReleasedCommit": "36533b09a6b383f3c30d13c3c26092154ecf5388",
             "apiPaths": [
                 "google/cloud/gkebackup/v1"
             ],
