@@ -966,12 +966,12 @@
         },
         {
             "id": "Google.Cloud.CloudControlsPartner.V1",
-            "currentVersion": "1.2.0",
+            "currentVersion": "1.3.0",
             "generationAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
             "releaseAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
-            "releaseTimestamp": "2025-05-06T16:09:36.280965901Z",
+            "releaseTimestamp": "2025-11-05T08:59:42.672641144Z",
             "lastGeneratedCommit": "3021374c68bbc640c1f75bfffcadbd5c279811ee",
-            "lastReleasedCommit": "7ab5d0f5e87ed25778eeb8318e89cdad4d67ed6c",
+            "lastReleasedCommit": "3021374c68bbc640c1f75bfffcadbd5c279811ee",
             "apiPaths": [
                 "google/cloud/cloudcontrolspartner/v1"
             ],
