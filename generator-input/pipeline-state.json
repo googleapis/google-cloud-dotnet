@@ -1367,12 +1367,12 @@
         },
         {
             "id": "Google.Cloud.DeveloperConnect.V1",
-            "currentVersion": "1.0.0-beta02",
+            "currentVersion": "1.0.0-beta03",
             "generationAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
             "releaseAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
-            "releaseTimestamp": "2025-06-25T07:33:42.827088511Z",
+            "releaseTimestamp": "2025-11-05T16:42:37.931491888Z",
             "lastGeneratedCommit": "888ae95dd6125f754650d55410b8c117b618a268",
-            "lastReleasedCommit": "3a483200a389304121fb01c11f31225cf07b02a9",
+            "lastReleasedCommit": "888ae95dd6125f754650d55410b8c117b618a268",
             "apiPaths": [
                 "google/cloud/developerconnect/v1"
             ],
