@@ -4411,12 +4411,12 @@
         },
         {
             "id": "Google.Shopping.Merchant.DataSources.V1",
-            "currentVersion": "1.0.0",
+            "currentVersion": "1.1.0",
             "generationAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
             "releaseAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
-            "releaseTimestamp": "2025-08-05T07:31:30.896215626Z",
+            "releaseTimestamp": "2025-11-05T09:35:58.870514126Z",
             "lastGeneratedCommit": "97763d6efb2d35474e0363c254ee6994837a08fa",
-            "lastReleasedCommit": "da8916b715b0ddc3f9592777ceaa63a2f9d1a4c7",
+            "lastReleasedCommit": "97763d6efb2d35474e0363c254ee6994837a08fa",
             "apiPaths": [
                 "google/shopping/merchant/datasources/v1"
             ],
