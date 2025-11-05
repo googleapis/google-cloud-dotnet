@@ -707,11 +707,12 @@
         },
         {
             "id": "Google.Cloud.BigQuery.DataTransfer.V1",
-            "currentVersion": "4.10.0",
+            "currentVersion": "4.11.0",
             "generationAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
             "releaseAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
-            "releaseTimestamp": "2024-10-08T22:10:31Z",
+            "releaseTimestamp": "2025-11-05T08:46:26.441639792Z",
             "lastGeneratedCommit": "4823efd0b9944891ec5c387104dcc2ec401307a8",
+            "lastReleasedCommit": "4823efd0b9944891ec5c387104dcc2ec401307a8",
             "apiPaths": [
                 "google/cloud/bigquery/datatransfer/v1"
             ],
