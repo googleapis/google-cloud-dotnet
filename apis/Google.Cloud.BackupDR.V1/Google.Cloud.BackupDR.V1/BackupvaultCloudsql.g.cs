@@ -32,36 +32,39 @@ namespace Google.Cloud.BackupDR.V1 {
             "KAlCKOBBA/pBIgogc3FsYWRtaW4uZ29vZ2xlYXBpcy5jb20vSW5zdGFuY2US",
             "JwoaZGF0YWJhc2VfaW5zdGFsbGVkX3ZlcnNpb24YAiABKAlCA+BBAxI9ChRp",
             "bnN0YW5jZV9jcmVhdGVfdGltZRgDIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5U",
-            "aW1lc3RhbXBCA+BBAxIaCg1pbnN0YW5jZV90aWVyGAUgASgJQgPgQQMixQEK",
+            "aW1lc3RhbXBCA+BBAxIaCg1pbnN0YW5jZV90aWVyGAUgASgJQgPgQQMiwwIK",
             "IENsb3VkU3FsSW5zdGFuY2VCYWNrdXBQcm9wZXJ0aWVzEicKGmRhdGFiYXNl",
             "X2luc3RhbGxlZF92ZXJzaW9uGAIgASgJQgPgQQMSGQoMZmluYWxfYmFja3Vw",
             "GAMgASgIQgPgQQMSQQoPc291cmNlX2luc3RhbmNlGAQgASgJQijgQQP6QSIK",
-            "IHNxbGFkbWluLmdvb2dsZWFwaXMuY29tL0luc3RhbmNlEhoKDWluc3RhbmNl",
-            "X3RpZXIYBiABKAlCA+BBAyLrAQotQ2xvdWRTcWxJbnN0YW5jZURhdGFTb3Vy",
-            "Y2VSZWZlcmVuY2VQcm9wZXJ0aWVzEjYKBG5hbWUYASABKAlCKOBBA/pBIgog",
-            "c3FsYWRtaW4uZ29vZ2xlYXBpcy5jb20vSW5zdGFuY2USJwoaZGF0YWJhc2Vf",
-            "aW5zdGFsbGVkX3ZlcnNpb24YAiABKAlCA+BBAxI9ChRpbnN0YW5jZV9jcmVh",
-            "dGVfdGltZRgDIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXBCA+BB",
-            "AxIaCg1pbnN0YW5jZV90aWVyGAUgASgJQgPgQQMizQEKJENsb3VkU3FsSW5z",
-            "dGFuY2VJbml0aWFsaXphdGlvbkNvbmZpZxJcCgdlZGl0aW9uGAEgASgOMkYu",
-            "Z29vZ2xlLmNsb3VkLmJhY2t1cGRyLnYxLkNsb3VkU3FsSW5zdGFuY2VJbml0",
-            "aWFsaXphdGlvbkNvbmZpZy5FZGl0aW9uQgPgQQIiRwoHRWRpdGlvbhIXChNF",
-            "RElUSU9OX1VOU1BFQ0lGSUVEEAASDgoKRU5URVJQUklTRRABEhMKD0VOVEVS",
-            "UFJJU0VfUExVUxACInAKL0Nsb3VkU3FsSW5zdGFuY2VCYWNrdXBQbGFuQXNz",
-            "b2NpYXRpb25Qcm9wZXJ0aWVzEj0KFGluc3RhbmNlX2NyZWF0ZV90aW1lGAEg",
-            "ASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcEID4EEDQpYCChxjb20u",
-            "Z29vZ2xlLmNsb3VkLmJhY2t1cGRyLnYxQhhCYWNrdXB2YXVsdENsb3VkU3Fs",
-            "UHJvdG9QAVo4Y2xvdWQuZ29vZ2xlLmNvbS9nby9iYWNrdXBkci9hcGl2MS9i",
-            "YWNrdXBkcnBiO2JhY2t1cGRycGKqAhhHb29nbGUuQ2xvdWQuQmFja3VwRFIu",
-            "VjHKAhhHb29nbGVcQ2xvdWRcQmFja3VwRFJcVjHqAhtHb29nbGU6OkNsb3Vk",
-            "OjpCYWNrdXBEUjo6VjHqQUsKIHNxbGFkbWluLmdvb2dsZWFwaXMuY29tL0lu",
-            "c3RhbmNlEidwcm9qZWN0cy97cHJvamVjdH0vaW5zdGFuY2VzL3tpbnN0YW5j",
-            "ZX1iBnByb3RvMw=="));
+            "IHNxbGFkbWluLmdvb2dsZWFwaXMuY29tL0luc3RhbmNlEj0KFGluc3RhbmNl",
+            "X2NyZWF0ZV90aW1lGAUgASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFt",
+            "cEID4EEDEhoKDWluc3RhbmNlX3RpZXIYBiABKAlCA+BBAxI9ChRpbnN0YW5j",
+            "ZV9kZWxldGVfdGltZRgIIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3Rh",
+            "bXBCA+BBAyLrAQotQ2xvdWRTcWxJbnN0YW5jZURhdGFTb3VyY2VSZWZlcmVu",
+            "Y2VQcm9wZXJ0aWVzEjYKBG5hbWUYASABKAlCKOBBA/pBIgogc3FsYWRtaW4u",
+            "Z29vZ2xlYXBpcy5jb20vSW5zdGFuY2USJwoaZGF0YWJhc2VfaW5zdGFsbGVk",
+            "X3ZlcnNpb24YAiABKAlCA+BBAxI9ChRpbnN0YW5jZV9jcmVhdGVfdGltZRgD",
+            "IAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXBCA+BBAxIaCg1pbnN0",
+            "YW5jZV90aWVyGAUgASgJQgPgQQMizQEKJENsb3VkU3FsSW5zdGFuY2VJbml0",
+            "aWFsaXphdGlvbkNvbmZpZxJcCgdlZGl0aW9uGAEgASgOMkYuZ29vZ2xlLmNs",
+            "b3VkLmJhY2t1cGRyLnYxLkNsb3VkU3FsSW5zdGFuY2VJbml0aWFsaXphdGlv",
+            "bkNvbmZpZy5FZGl0aW9uQgPgQQIiRwoHRWRpdGlvbhIXChNFRElUSU9OX1VO",
+            "U1BFQ0lGSUVEEAASDgoKRU5URVJQUklTRRABEhMKD0VOVEVSUFJJU0VfUExV",
+            "UxACInAKL0Nsb3VkU3FsSW5zdGFuY2VCYWNrdXBQbGFuQXNzb2NpYXRpb25Q",
+            "cm9wZXJ0aWVzEj0KFGluc3RhbmNlX2NyZWF0ZV90aW1lGAEgASgLMhouZ29v",
+            "Z2xlLnByb3RvYnVmLlRpbWVzdGFtcEID4EEDQpYCChxjb20uZ29vZ2xlLmNs",
+            "b3VkLmJhY2t1cGRyLnYxQhhCYWNrdXB2YXVsdENsb3VkU3FsUHJvdG9QAVo4",
+            "Y2xvdWQuZ29vZ2xlLmNvbS9nby9iYWNrdXBkci9hcGl2MS9iYWNrdXBkcnBi",
+            "O2JhY2t1cGRycGKqAhhHb29nbGUuQ2xvdWQuQmFja3VwRFIuVjHKAhhHb29n",
+            "bGVcQ2xvdWRcQmFja3VwRFJcVjHqAhtHb29nbGU6OkNsb3VkOjpCYWNrdXBE",
+            "Ujo6VjHqQUsKIHNxbGFkbWluLmdvb2dsZWFwaXMuY29tL0luc3RhbmNlEidw",
+            "cm9qZWN0cy97cHJvamVjdH0vaW5zdGFuY2VzL3tpbnN0YW5jZX1iBnByb3Rv",
+            "Mw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.BackupDR.V1.CloudSqlInstanceDataSourceProperties), global::Google.Cloud.BackupDR.V1.CloudSqlInstanceDataSourceProperties.Parser, new[]{ "Name", "DatabaseInstalledVersion", "InstanceCreateTime", "InstanceTier" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.BackupDR.V1.CloudSqlInstanceBackupProperties), global::Google.Cloud.BackupDR.V1.CloudSqlInstanceBackupProperties.Parser, new[]{ "DatabaseInstalledVersion", "FinalBackup", "SourceInstance", "InstanceTier" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.BackupDR.V1.CloudSqlInstanceBackupProperties), global::Google.Cloud.BackupDR.V1.CloudSqlInstanceBackupProperties.Parser, new[]{ "DatabaseInstalledVersion", "FinalBackup", "SourceInstance", "InstanceCreateTime", "InstanceTier", "InstanceDeleteTime" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.BackupDR.V1.CloudSqlInstanceDataSourceReferenceProperties), global::Google.Cloud.BackupDR.V1.CloudSqlInstanceDataSourceReferenceProperties.Parser, new[]{ "Name", "DatabaseInstalledVersion", "InstanceCreateTime", "InstanceTier" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.BackupDR.V1.CloudSqlInstanceInitializationConfig), global::Google.Cloud.BackupDR.V1.CloudSqlInstanceInitializationConfig.Parser, new[]{ "Edition" }, null, new[]{ typeof(global::Google.Cloud.BackupDR.V1.CloudSqlInstanceInitializationConfig.Types.Edition) }, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.BackupDR.V1.CloudSqlInstanceBackupPlanAssociationProperties), global::Google.Cloud.BackupDR.V1.CloudSqlInstanceBackupPlanAssociationProperties.Parser, new[]{ "InstanceCreateTime" }, null, null, null, null)
@@ -442,7 +445,9 @@ namespace Google.Cloud.BackupDR.V1 {
       databaseInstalledVersion_ = other.databaseInstalledVersion_;
       finalBackup_ = other.finalBackup_;
       sourceInstance_ = other.sourceInstance_;
+      instanceCreateTime_ = other.instanceCreateTime_ != null ? other.instanceCreateTime_.Clone() : null;
       instanceTier_ = other.instanceTier_;
+      instanceDeleteTime_ = other.instanceDeleteTime_ != null ? other.instanceDeleteTime_.Clone() : null;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -500,6 +505,21 @@ namespace Google.Cloud.BackupDR.V1 {
       }
     }
 
+    /// <summary>Field number for the "instance_create_time" field.</summary>
+    public const int InstanceCreateTimeFieldNumber = 5;
+    private global::Google.Protobuf.WellKnownTypes.Timestamp instanceCreateTime_;
+    /// <summary>
+    /// Output only. The instance creation timestamp.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Protobuf.WellKnownTypes.Timestamp InstanceCreateTime {
+      get { return instanceCreateTime_; }
+      set {
+        instanceCreateTime_ = value;
+      }
+    }
+
     /// <summary>Field number for the "instance_tier" field.</summary>
     public const int InstanceTierFieldNumber = 6;
     private string instanceTier_ = "";
@@ -513,6 +533,21 @@ namespace Google.Cloud.BackupDR.V1 {
       get { return instanceTier_; }
       set {
         instanceTier_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "instance_delete_time" field.</summary>
+    public const int InstanceDeleteTimeFieldNumber = 8;
+    private global::Google.Protobuf.WellKnownTypes.Timestamp instanceDeleteTime_;
+    /// <summary>
+    /// Output only. The instance delete timestamp.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Protobuf.WellKnownTypes.Timestamp InstanceDeleteTime {
+      get { return instanceDeleteTime_; }
+      set {
+        instanceDeleteTime_ = value;
       }
     }
 
@@ -534,7 +569,9 @@ namespace Google.Cloud.BackupDR.V1 {
       if (DatabaseInstalledVersion != other.DatabaseInstalledVersion) return false;
       if (FinalBackup != other.FinalBackup) return false;
       if (SourceInstance != other.SourceInstance) return false;
+      if (!object.Equals(InstanceCreateTime, other.InstanceCreateTime)) return false;
       if (InstanceTier != other.InstanceTier) return false;
+      if (!object.Equals(InstanceDeleteTime, other.InstanceDeleteTime)) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -545,7 +582,9 @@ namespace Google.Cloud.BackupDR.V1 {
       if (DatabaseInstalledVersion.Length != 0) hash ^= DatabaseInstalledVersion.GetHashCode();
       if (FinalBackup != false) hash ^= FinalBackup.GetHashCode();
       if (SourceInstance.Length != 0) hash ^= SourceInstance.GetHashCode();
+      if (instanceCreateTime_ != null) hash ^= InstanceCreateTime.GetHashCode();
       if (InstanceTier.Length != 0) hash ^= InstanceTier.GetHashCode();
+      if (instanceDeleteTime_ != null) hash ^= InstanceDeleteTime.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -576,9 +615,17 @@ namespace Google.Cloud.BackupDR.V1 {
         output.WriteRawTag(34);
         output.WriteString(SourceInstance);
       }
+      if (instanceCreateTime_ != null) {
+        output.WriteRawTag(42);
+        output.WriteMessage(InstanceCreateTime);
+      }
       if (InstanceTier.Length != 0) {
         output.WriteRawTag(50);
         output.WriteString(InstanceTier);
+      }
+      if (instanceDeleteTime_ != null) {
+        output.WriteRawTag(66);
+        output.WriteMessage(InstanceDeleteTime);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
@@ -602,9 +649,17 @@ namespace Google.Cloud.BackupDR.V1 {
         output.WriteRawTag(34);
         output.WriteString(SourceInstance);
       }
+      if (instanceCreateTime_ != null) {
+        output.WriteRawTag(42);
+        output.WriteMessage(InstanceCreateTime);
+      }
       if (InstanceTier.Length != 0) {
         output.WriteRawTag(50);
         output.WriteString(InstanceTier);
+      }
+      if (instanceDeleteTime_ != null) {
+        output.WriteRawTag(66);
+        output.WriteMessage(InstanceDeleteTime);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
@@ -625,8 +680,14 @@ namespace Google.Cloud.BackupDR.V1 {
       if (SourceInstance.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(SourceInstance);
       }
+      if (instanceCreateTime_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(InstanceCreateTime);
+      }
       if (InstanceTier.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(InstanceTier);
+      }
+      if (instanceDeleteTime_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(InstanceDeleteTime);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -649,8 +710,20 @@ namespace Google.Cloud.BackupDR.V1 {
       if (other.SourceInstance.Length != 0) {
         SourceInstance = other.SourceInstance;
       }
+      if (other.instanceCreateTime_ != null) {
+        if (instanceCreateTime_ == null) {
+          InstanceCreateTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+        }
+        InstanceCreateTime.MergeFrom(other.InstanceCreateTime);
+      }
       if (other.InstanceTier.Length != 0) {
         InstanceTier = other.InstanceTier;
+      }
+      if (other.instanceDeleteTime_ != null) {
+        if (instanceDeleteTime_ == null) {
+          InstanceDeleteTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+        }
+        InstanceDeleteTime.MergeFrom(other.InstanceDeleteTime);
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -679,8 +752,22 @@ namespace Google.Cloud.BackupDR.V1 {
             SourceInstance = input.ReadString();
             break;
           }
+          case 42: {
+            if (instanceCreateTime_ == null) {
+              InstanceCreateTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+            }
+            input.ReadMessage(InstanceCreateTime);
+            break;
+          }
           case 50: {
             InstanceTier = input.ReadString();
+            break;
+          }
+          case 66: {
+            if (instanceDeleteTime_ == null) {
+              InstanceDeleteTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+            }
+            input.ReadMessage(InstanceDeleteTime);
             break;
           }
         }
@@ -710,8 +797,22 @@ namespace Google.Cloud.BackupDR.V1 {
             SourceInstance = input.ReadString();
             break;
           }
+          case 42: {
+            if (instanceCreateTime_ == null) {
+              InstanceCreateTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+            }
+            input.ReadMessage(InstanceCreateTime);
+            break;
+          }
           case 50: {
             InstanceTier = input.ReadString();
+            break;
+          }
+          case 66: {
+            if (instanceDeleteTime_ == null) {
+              InstanceDeleteTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+            }
+            input.ReadMessage(InstanceDeleteTime);
             break;
           }
         }

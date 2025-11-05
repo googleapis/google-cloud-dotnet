@@ -2739,6 +2739,294 @@ namespace GoogleCSharpSnippets
             // End snippet
         }
 
+        /// <summary>Snippet for FetchBackupsForResourceType</summary>
+        public void FetchBackupsForResourceTypeRequestObject()
+        {
+            // Snippet: FetchBackupsForResourceType(FetchBackupsForResourceTypeRequest, CallSettings)
+            // Create client
+            BackupDRClient backupDRClient = BackupDRClient.Create();
+            // Initialize request argument(s)
+            FetchBackupsForResourceTypeRequest request = new FetchBackupsForResourceTypeRequest
+            {
+                ParentAsDataSourceName = DataSourceName.FromProjectLocationBackupvaultDatasource("[PROJECT]", "[LOCATION]", "[BACKUPVAULT]", "[DATASOURCE]"),
+                ResourceType = "",
+                Filter = "",
+                OrderBy = "",
+                View = BackupView.Unspecified,
+            };
+            // Make the request
+            PagedEnumerable<FetchBackupsForResourceTypeResponse, Backup> response = backupDRClient.FetchBackupsForResourceType(request);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            foreach (Backup item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (FetchBackupsForResourceTypeResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (Backup item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<Backup> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (Backup item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for FetchBackupsForResourceTypeAsync</summary>
+        public async Task FetchBackupsForResourceTypeRequestObjectAsync()
+        {
+            // Snippet: FetchBackupsForResourceTypeAsync(FetchBackupsForResourceTypeRequest, CallSettings)
+            // Create client
+            BackupDRClient backupDRClient = await BackupDRClient.CreateAsync();
+            // Initialize request argument(s)
+            FetchBackupsForResourceTypeRequest request = new FetchBackupsForResourceTypeRequest
+            {
+                ParentAsDataSourceName = DataSourceName.FromProjectLocationBackupvaultDatasource("[PROJECT]", "[LOCATION]", "[BACKUPVAULT]", "[DATASOURCE]"),
+                ResourceType = "",
+                Filter = "",
+                OrderBy = "",
+                View = BackupView.Unspecified,
+            };
+            // Make the request
+            PagedAsyncEnumerable<FetchBackupsForResourceTypeResponse, Backup> response = backupDRClient.FetchBackupsForResourceTypeAsync(request);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            await response.ForEachAsync((Backup item) =>
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            });
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await response.AsRawResponses().ForEachAsync((FetchBackupsForResourceTypeResponse page) =>
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (Backup item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            });
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<Backup> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (Backup item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for FetchBackupsForResourceType</summary>
+        public void FetchBackupsForResourceType()
+        {
+            // Snippet: FetchBackupsForResourceType(string, string, string, int?, CallSettings)
+            // Create client
+            BackupDRClient backupDRClient = BackupDRClient.Create();
+            // Initialize request argument(s)
+            string parent = "projects/[PROJECT]/locations/[LOCATION]/backupVaults/[BACKUPVAULT]/dataSources/[DATASOURCE]";
+            string resourceType = "";
+            // Make the request
+            PagedEnumerable<FetchBackupsForResourceTypeResponse, Backup> response = backupDRClient.FetchBackupsForResourceType(parent, resourceType);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            foreach (Backup item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (FetchBackupsForResourceTypeResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (Backup item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<Backup> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (Backup item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for FetchBackupsForResourceTypeAsync</summary>
+        public async Task FetchBackupsForResourceTypeAsync()
+        {
+            // Snippet: FetchBackupsForResourceTypeAsync(string, string, string, int?, CallSettings)
+            // Create client
+            BackupDRClient backupDRClient = await BackupDRClient.CreateAsync();
+            // Initialize request argument(s)
+            string parent = "projects/[PROJECT]/locations/[LOCATION]/backupVaults/[BACKUPVAULT]/dataSources/[DATASOURCE]";
+            string resourceType = "";
+            // Make the request
+            PagedAsyncEnumerable<FetchBackupsForResourceTypeResponse, Backup> response = backupDRClient.FetchBackupsForResourceTypeAsync(parent, resourceType);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            await response.ForEachAsync((Backup item) =>
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            });
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await response.AsRawResponses().ForEachAsync((FetchBackupsForResourceTypeResponse page) =>
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (Backup item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            });
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<Backup> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (Backup item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for FetchBackupsForResourceType</summary>
+        public void FetchBackupsForResourceTypeResourceNames()
+        {
+            // Snippet: FetchBackupsForResourceType(DataSourceName, string, string, int?, CallSettings)
+            // Create client
+            BackupDRClient backupDRClient = BackupDRClient.Create();
+            // Initialize request argument(s)
+            DataSourceName parent = DataSourceName.FromProjectLocationBackupvaultDatasource("[PROJECT]", "[LOCATION]", "[BACKUPVAULT]", "[DATASOURCE]");
+            string resourceType = "";
+            // Make the request
+            PagedEnumerable<FetchBackupsForResourceTypeResponse, Backup> response = backupDRClient.FetchBackupsForResourceType(parent, resourceType);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            foreach (Backup item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (FetchBackupsForResourceTypeResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (Backup item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<Backup> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (Backup item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for FetchBackupsForResourceTypeAsync</summary>
+        public async Task FetchBackupsForResourceTypeResourceNamesAsync()
+        {
+            // Snippet: FetchBackupsForResourceTypeAsync(DataSourceName, string, string, int?, CallSettings)
+            // Create client
+            BackupDRClient backupDRClient = await BackupDRClient.CreateAsync();
+            // Initialize request argument(s)
+            DataSourceName parent = DataSourceName.FromProjectLocationBackupvaultDatasource("[PROJECT]", "[LOCATION]", "[BACKUPVAULT]", "[DATASOURCE]");
+            string resourceType = "";
+            // Make the request
+            PagedAsyncEnumerable<FetchBackupsForResourceTypeResponse, Backup> response = backupDRClient.FetchBackupsForResourceTypeAsync(parent, resourceType);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            await response.ForEachAsync((Backup item) =>
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            });
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await response.AsRawResponses().ForEachAsync((FetchBackupsForResourceTypeResponse page) =>
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (Backup item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            });
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<Backup> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (Backup item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
         /// <summary>Snippet for GetBackup</summary>
         public void GetBackupRequestObject()
         {
@@ -6012,6 +6300,286 @@ namespace GoogleCSharpSnippets
             DataSourceReferenceName name = DataSourceReferenceName.FromProjectLocationDataSourceReference("[PROJECT]", "[LOCATION]", "[DATA_SOURCE_REFERENCE]");
             // Make the request
             DataSourceReference response = await backupDRClient.GetDataSourceReferenceAsync(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListDataSourceReferences</summary>
+        public void ListDataSourceReferencesRequestObject()
+        {
+            // Snippet: ListDataSourceReferences(ListDataSourceReferencesRequest, CallSettings)
+            // Create client
+            BackupDRClient backupDRClient = BackupDRClient.Create();
+            // Initialize request argument(s)
+            ListDataSourceReferencesRequest request = new ListDataSourceReferencesRequest
+            {
+                ParentAsLocationName = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
+                Filter = "",
+                OrderBy = "",
+            };
+            // Make the request
+            PagedEnumerable<ListDataSourceReferencesResponse, DataSourceReference> response = backupDRClient.ListDataSourceReferences(request);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            foreach (DataSourceReference item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (ListDataSourceReferencesResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (DataSourceReference item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<DataSourceReference> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (DataSourceReference item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListDataSourceReferencesAsync</summary>
+        public async Task ListDataSourceReferencesRequestObjectAsync()
+        {
+            // Snippet: ListDataSourceReferencesAsync(ListDataSourceReferencesRequest, CallSettings)
+            // Create client
+            BackupDRClient backupDRClient = await BackupDRClient.CreateAsync();
+            // Initialize request argument(s)
+            ListDataSourceReferencesRequest request = new ListDataSourceReferencesRequest
+            {
+                ParentAsLocationName = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
+                Filter = "",
+                OrderBy = "",
+            };
+            // Make the request
+            PagedAsyncEnumerable<ListDataSourceReferencesResponse, DataSourceReference> response = backupDRClient.ListDataSourceReferencesAsync(request);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            await response.ForEachAsync((DataSourceReference item) =>
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            });
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await response.AsRawResponses().ForEachAsync((ListDataSourceReferencesResponse page) =>
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (DataSourceReference item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            });
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<DataSourceReference> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (DataSourceReference item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListDataSourceReferences</summary>
+        public void ListDataSourceReferences()
+        {
+            // Snippet: ListDataSourceReferences(string, string, int?, CallSettings)
+            // Create client
+            BackupDRClient backupDRClient = BackupDRClient.Create();
+            // Initialize request argument(s)
+            string parent = "projects/[PROJECT]/locations/[LOCATION]";
+            // Make the request
+            PagedEnumerable<ListDataSourceReferencesResponse, DataSourceReference> response = backupDRClient.ListDataSourceReferences(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            foreach (DataSourceReference item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (ListDataSourceReferencesResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (DataSourceReference item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<DataSourceReference> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (DataSourceReference item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListDataSourceReferencesAsync</summary>
+        public async Task ListDataSourceReferencesAsync()
+        {
+            // Snippet: ListDataSourceReferencesAsync(string, string, int?, CallSettings)
+            // Create client
+            BackupDRClient backupDRClient = await BackupDRClient.CreateAsync();
+            // Initialize request argument(s)
+            string parent = "projects/[PROJECT]/locations/[LOCATION]";
+            // Make the request
+            PagedAsyncEnumerable<ListDataSourceReferencesResponse, DataSourceReference> response = backupDRClient.ListDataSourceReferencesAsync(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            await response.ForEachAsync((DataSourceReference item) =>
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            });
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await response.AsRawResponses().ForEachAsync((ListDataSourceReferencesResponse page) =>
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (DataSourceReference item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            });
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<DataSourceReference> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (DataSourceReference item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListDataSourceReferences</summary>
+        public void ListDataSourceReferencesResourceNames()
+        {
+            // Snippet: ListDataSourceReferences(LocationName, string, int?, CallSettings)
+            // Create client
+            BackupDRClient backupDRClient = BackupDRClient.Create();
+            // Initialize request argument(s)
+            LocationName parent = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]");
+            // Make the request
+            PagedEnumerable<ListDataSourceReferencesResponse, DataSourceReference> response = backupDRClient.ListDataSourceReferences(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            foreach (DataSourceReference item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (ListDataSourceReferencesResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (DataSourceReference item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<DataSourceReference> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (DataSourceReference item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListDataSourceReferencesAsync</summary>
+        public async Task ListDataSourceReferencesResourceNamesAsync()
+        {
+            // Snippet: ListDataSourceReferencesAsync(LocationName, string, int?, CallSettings)
+            // Create client
+            BackupDRClient backupDRClient = await BackupDRClient.CreateAsync();
+            // Initialize request argument(s)
+            LocationName parent = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]");
+            // Make the request
+            PagedAsyncEnumerable<ListDataSourceReferencesResponse, DataSourceReference> response = backupDRClient.ListDataSourceReferencesAsync(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            await response.ForEachAsync((DataSourceReference item) =>
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            });
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await response.AsRawResponses().ForEachAsync((ListDataSourceReferencesResponse page) =>
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (DataSourceReference item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            });
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<DataSourceReference> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (DataSourceReference item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
             // End snippet
         }
 

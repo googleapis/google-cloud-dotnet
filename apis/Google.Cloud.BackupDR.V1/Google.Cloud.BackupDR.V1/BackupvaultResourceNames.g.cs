@@ -947,6 +947,18 @@ namespace Google.Cloud.BackupDR.V1
         }
     }
 
+    public partial class FetchBackupsForResourceTypeRequest
+    {
+        /// <summary>
+        /// <see cref="DataSourceName"/>-typed view over the <see cref="Parent"/> resource name property.
+        /// </summary>
+        public DataSourceName ParentAsDataSourceName
+        {
+            get => string.IsNullOrEmpty(Parent) ? null : DataSourceName.Parse(Parent, allowUnparsed: true);
+            set => Parent = value?.ToString() ?? "";
+        }
+    }
+
     public partial class GetBackupVaultRequest
     {
         /// <summary>

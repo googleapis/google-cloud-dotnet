@@ -29,7 +29,7 @@ namespace Google.Cloud.BackupDR.V1 {
             "L2ZpZWxkX2JlaGF2aW9yLnByb3RvGhlnb29nbGUvYXBpL3Jlc291cmNlLnBy",
             "b3RvGipnb29nbGUvY2xvdWQvYmFja3VwZHIvdjEvYmFja3VwdmF1bHQucHJv",
             "dG8aM2dvb2dsZS9jbG91ZC9iYWNrdXBkci92MS9iYWNrdXB2YXVsdF9jbG91",
-            "ZHNxbC5wcm90bxofZ29vZ2xlL3Byb3RvYnVmL3RpbWVzdGFtcC5wcm90byKa",
+            "ZHNxbC5wcm90bxofZ29vZ2xlL3Byb3RvYnVmL3RpbWVzdGFtcC5wcm90byLX",
             "BQoTRGF0YVNvdXJjZVJlZmVyZW5jZRIRCgRuYW1lGAEgASgJQgPgQQgSPwoL",
             "ZGF0YV9zb3VyY2UYAiABKAlCKuBBA/pBJAoiYmFja3VwZHIuZ29vZ2xlYXBp",
             "cy5jb20vRGF0YVNvdXJjZRI0CgtjcmVhdGVfdGltZRgDIAEoCzIaLmdvb2ds",
@@ -40,44 +40,55 @@ namespace Google.Cloud.BackupDR.V1 {
             "bmZpZ19pbmZvGAYgASgLMjQuZ29vZ2xlLmNsb3VkLmJhY2t1cGRyLnYxLkRh",
             "dGFTb3VyY2VCYWNrdXBDb25maWdJbmZvQgPgQQMSXwodZGF0YV9zb3VyY2Vf",
             "Z2NwX3Jlc291cmNlX2luZm8YByABKAsyMy5nb29nbGUuY2xvdWQuYmFja3Vw",
-            "ZHIudjEuRGF0YVNvdXJjZUdjcFJlc291cmNlSW5mb0ID4EEDOrIB6kGuAQor",
-            "YmFja3VwZHIuZ29vZ2xlYXBpcy5jb20vRGF0YVNvdXJjZVJlZmVyZW5jZRJU",
-            "cHJvamVjdHMve3Byb2plY3R9L2xvY2F0aW9ucy97bG9jYXRpb259L2RhdGFT",
-            "b3VyY2VSZWZlcmVuY2VzL3tkYXRhX3NvdXJjZV9yZWZlcmVuY2V9KhRkYXRh",
-            "U291cmNlUmVmZXJlbmNlczITZGF0YVNvdXJjZVJlZmVyZW5jZSLKAQoaRGF0",
-            "YVNvdXJjZUJhY2t1cENvbmZpZ0luZm8SWgoRbGFzdF9iYWNrdXBfc3RhdGUY",
-            "ASABKA4yOi5nb29nbGUuY2xvdWQuYmFja3VwZHIudjEuQmFja3VwQ29uZmln",
-            "SW5mby5MYXN0QmFja3VwU3RhdGVCA+BBAxJQCidsYXN0X3N1Y2Nlc3NmdWxf",
-            "YmFja3VwX2NvbnNpc3RlbmN5X3RpbWUYAiABKAsyGi5nb29nbGUucHJvdG9i",
-            "dWYuVGltZXN0YW1wQgPgQQMi8gEKGURhdGFTb3VyY2VHY3BSZXNvdXJjZUlu",
-            "Zm8SHQoQZ2NwX3Jlc291cmNlbmFtZRgBIAEoCUID4EEDEhEKBHR5cGUYAiAB",
-            "KAlCA+BBAxIVCghsb2NhdGlvbhgDIAEoCUID4EEDEnUKHWNsb3VkX3NxbF9p",
-            "bnN0YW5jZV9wcm9wZXJ0aWVzGAQgASgLMkcuZ29vZ2xlLmNsb3VkLmJhY2t1",
-            "cGRyLnYxLkNsb3VkU3FsSW5zdGFuY2VEYXRhU291cmNlUmVmZXJlbmNlUHJv",
-            "cGVydGllc0ID4EEDSABCFQoTcmVzb3VyY2VfcHJvcGVydGllcyJiCh1HZXRE",
-            "YXRhU291cmNlUmVmZXJlbmNlUmVxdWVzdBJBCgRuYW1lGAEgASgJQjPgQQL6",
-            "QS0KK2JhY2t1cGRyLmdvb2dsZWFwaXMuY29tL0RhdGFTb3VyY2VSZWZlcmVu",
-            "Y2Ui7wEKL0ZldGNoRGF0YVNvdXJjZVJlZmVyZW5jZXNGb3JSZXNvdXJjZVR5",
-            "cGVSZXF1ZXN0EkMKBnBhcmVudBgBIAEoCUIz4EEC+kEtEitiYWNrdXBkci5n",
-            "b29nbGVhcGlzLmNvbS9EYXRhU291cmNlUmVmZXJlbmNlEhoKDXJlc291cmNl",
-            "X3R5cGUYAiABKAlCA+BBAhIWCglwYWdlX3NpemUYAyABKAVCA+BBARIXCgpw",
-            "YWdlX3Rva2VuGAQgASgJQgPgQQESEwoGZmlsdGVyGAUgASgJQgPgQQESFQoI",
-            "b3JkZXJfYnkYBiABKAlCA+BBASKaAQowRmV0Y2hEYXRhU291cmNlUmVmZXJl",
-            "bmNlc0ZvclJlc291cmNlVHlwZVJlc3BvbnNlEk0KFmRhdGFfc291cmNlX3Jl",
-            "ZmVyZW5jZXMYASADKAsyLS5nb29nbGUuY2xvdWQuYmFja3VwZHIudjEuRGF0",
-            "YVNvdXJjZVJlZmVyZW5jZRIXCg9uZXh0X3BhZ2VfdG9rZW4YAiABKAlCyAEK",
-            "HGNvbS5nb29nbGUuY2xvdWQuYmFja3VwZHIudjFCGERhdGFTb3VyY2VSZWZl",
-            "cmVuY2VQcm90b1ABWjhjbG91ZC5nb29nbGUuY29tL2dvL2JhY2t1cGRyL2Fw",
-            "aXYxL2JhY2t1cGRycGI7YmFja3VwZHJwYqoCGEdvb2dsZS5DbG91ZC5CYWNr",
-            "dXBEUi5WMcoCGEdvb2dsZVxDbG91ZFxCYWNrdXBEUlxWMeoCG0dvb2dsZTo6",
-            "Q2xvdWQ6OkJhY2t1cERSOjpWMWIGcHJvdG8z"));
+            "ZHIudjEuRGF0YVNvdXJjZUdjcFJlc291cmNlSW5mb0ID4EEDEiQKEnRvdGFs",
+            "X3N0b3JlZF9ieXRlcxgIIAEoA0ID4EEDSACIAQE6sgHqQa4BCitiYWNrdXBk",
+            "ci5nb29nbGVhcGlzLmNvbS9EYXRhU291cmNlUmVmZXJlbmNlElRwcm9qZWN0",
+            "cy97cHJvamVjdH0vbG9jYXRpb25zL3tsb2NhdGlvbn0vZGF0YVNvdXJjZVJl",
+            "ZmVyZW5jZXMve2RhdGFfc291cmNlX3JlZmVyZW5jZX0qFGRhdGFTb3VyY2VS",
+            "ZWZlcmVuY2VzMhNkYXRhU291cmNlUmVmZXJlbmNlQhUKE190b3RhbF9zdG9y",
+            "ZWRfYnl0ZXMiygEKGkRhdGFTb3VyY2VCYWNrdXBDb25maWdJbmZvEloKEWxh",
+            "c3RfYmFja3VwX3N0YXRlGAEgASgOMjouZ29vZ2xlLmNsb3VkLmJhY2t1cGRy",
+            "LnYxLkJhY2t1cENvbmZpZ0luZm8uTGFzdEJhY2t1cFN0YXRlQgPgQQMSUAon",
+            "bGFzdF9zdWNjZXNzZnVsX2JhY2t1cF9jb25zaXN0ZW5jeV90aW1lGAIgASgL",
+            "MhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcEID4EEDIvIBChlEYXRhU291",
+            "cmNlR2NwUmVzb3VyY2VJbmZvEh0KEGdjcF9yZXNvdXJjZW5hbWUYASABKAlC",
+            "A+BBAxIRCgR0eXBlGAIgASgJQgPgQQMSFQoIbG9jYXRpb24YAyABKAlCA+BB",
+            "AxJ1Ch1jbG91ZF9zcWxfaW5zdGFuY2VfcHJvcGVydGllcxgEIAEoCzJHLmdv",
+            "b2dsZS5jbG91ZC5iYWNrdXBkci52MS5DbG91ZFNxbEluc3RhbmNlRGF0YVNv",
+            "dXJjZVJlZmVyZW5jZVByb3BlcnRpZXNCA+BBA0gAQhUKE3Jlc291cmNlX3By",
+            "b3BlcnRpZXMiYgodR2V0RGF0YVNvdXJjZVJlZmVyZW5jZVJlcXVlc3QSQQoE",
+            "bmFtZRgBIAEoCUIz4EEC+kEtCitiYWNrdXBkci5nb29nbGVhcGlzLmNvbS9E",
+            "YXRhU291cmNlUmVmZXJlbmNlIsMBCh9MaXN0RGF0YVNvdXJjZVJlZmVyZW5j",
+            "ZXNSZXF1ZXN0EkMKBnBhcmVudBgBIAEoCUIz4EEC+kEtEitiYWNrdXBkci5n",
+            "b29nbGVhcGlzLmNvbS9EYXRhU291cmNlUmVmZXJlbmNlEhYKCXBhZ2Vfc2l6",
+            "ZRgCIAEoBUID4EEBEhcKCnBhZ2VfdG9rZW4YAyABKAlCA+BBARITCgZmaWx0",
+            "ZXIYBCABKAlCA+BBARIVCghvcmRlcl9ieRgFIAEoCUID4EEBIooBCiBMaXN0",
+            "RGF0YVNvdXJjZVJlZmVyZW5jZXNSZXNwb25zZRJNChZkYXRhX3NvdXJjZV9y",
+            "ZWZlcmVuY2VzGAEgAygLMi0uZ29vZ2xlLmNsb3VkLmJhY2t1cGRyLnYxLkRh",
+            "dGFTb3VyY2VSZWZlcmVuY2USFwoPbmV4dF9wYWdlX3Rva2VuGAIgASgJIu8B",
+            "Ci9GZXRjaERhdGFTb3VyY2VSZWZlcmVuY2VzRm9yUmVzb3VyY2VUeXBlUmVx",
+            "dWVzdBJDCgZwYXJlbnQYASABKAlCM+BBAvpBLRIrYmFja3VwZHIuZ29vZ2xl",
+            "YXBpcy5jb20vRGF0YVNvdXJjZVJlZmVyZW5jZRIaCg1yZXNvdXJjZV90eXBl",
+            "GAIgASgJQgPgQQISFgoJcGFnZV9zaXplGAMgASgFQgPgQQESFwoKcGFnZV90",
+            "b2tlbhgEIAEoCUID4EEBEhMKBmZpbHRlchgFIAEoCUID4EEBEhUKCG9yZGVy",
+            "X2J5GAYgASgJQgPgQQEimgEKMEZldGNoRGF0YVNvdXJjZVJlZmVyZW5jZXNG",
+            "b3JSZXNvdXJjZVR5cGVSZXNwb25zZRJNChZkYXRhX3NvdXJjZV9yZWZlcmVu",
+            "Y2VzGAEgAygLMi0uZ29vZ2xlLmNsb3VkLmJhY2t1cGRyLnYxLkRhdGFTb3Vy",
+            "Y2VSZWZlcmVuY2USFwoPbmV4dF9wYWdlX3Rva2VuGAIgASgJQsgBChxjb20u",
+            "Z29vZ2xlLmNsb3VkLmJhY2t1cGRyLnYxQhhEYXRhU291cmNlUmVmZXJlbmNl",
+            "UHJvdG9QAVo4Y2xvdWQuZ29vZ2xlLmNvbS9nby9iYWNrdXBkci9hcGl2MS9i",
+            "YWNrdXBkcnBiO2JhY2t1cGRycGKqAhhHb29nbGUuQ2xvdWQuQmFja3VwRFIu",
+            "VjHKAhhHb29nbGVcQ2xvdWRcQmFja3VwRFJcVjHqAhtHb29nbGU6OkNsb3Vk",
+            "OjpCYWNrdXBEUjo6VjFiBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Cloud.BackupDR.V1.BackupvaultReflection.Descriptor, global::Google.Cloud.BackupDR.V1.BackupvaultCloudsqlReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.BackupDR.V1.DataSourceReference), global::Google.Cloud.BackupDR.V1.DataSourceReference.Parser, new[]{ "Name", "DataSource", "CreateTime", "DataSourceBackupConfigState", "DataSourceBackupCount", "DataSourceBackupConfigInfo", "DataSourceGcpResourceInfo" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.BackupDR.V1.DataSourceReference), global::Google.Cloud.BackupDR.V1.DataSourceReference.Parser, new[]{ "Name", "DataSource", "CreateTime", "DataSourceBackupConfigState", "DataSourceBackupCount", "DataSourceBackupConfigInfo", "DataSourceGcpResourceInfo", "TotalStoredBytes" }, new[]{ "TotalStoredBytes" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.BackupDR.V1.DataSourceBackupConfigInfo), global::Google.Cloud.BackupDR.V1.DataSourceBackupConfigInfo.Parser, new[]{ "LastBackupState", "LastSuccessfulBackupConsistencyTime" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.BackupDR.V1.DataSourceGcpResourceInfo), global::Google.Cloud.BackupDR.V1.DataSourceGcpResourceInfo.Parser, new[]{ "GcpResourcename", "Type", "Location", "CloudSqlInstanceProperties" }, new[]{ "ResourceProperties" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.BackupDR.V1.GetDataSourceReferenceRequest), global::Google.Cloud.BackupDR.V1.GetDataSourceReferenceRequest.Parser, new[]{ "Name" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.BackupDR.V1.ListDataSourceReferencesRequest), global::Google.Cloud.BackupDR.V1.ListDataSourceReferencesRequest.Parser, new[]{ "Parent", "PageSize", "PageToken", "Filter", "OrderBy" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.BackupDR.V1.ListDataSourceReferencesResponse), global::Google.Cloud.BackupDR.V1.ListDataSourceReferencesResponse.Parser, new[]{ "DataSourceReferences", "NextPageToken" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.BackupDR.V1.FetchDataSourceReferencesForResourceTypeRequest), global::Google.Cloud.BackupDR.V1.FetchDataSourceReferencesForResourceTypeRequest.Parser, new[]{ "Parent", "ResourceType", "PageSize", "PageToken", "Filter", "OrderBy" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.BackupDR.V1.FetchDataSourceReferencesForResourceTypeResponse), global::Google.Cloud.BackupDR.V1.FetchDataSourceReferencesForResourceTypeResponse.Parser, new[]{ "DataSourceReferences", "NextPageToken" }, null, null, null, null)
           }));
@@ -97,6 +108,7 @@ namespace Google.Cloud.BackupDR.V1 {
   {
     private static readonly pb::MessageParser<DataSourceReference> _parser = new pb::MessageParser<DataSourceReference>(() => new DataSourceReference());
     private pb::UnknownFieldSet _unknownFields;
+    private int _hasBits0;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pb::MessageParser<DataSourceReference> Parser { get { return _parser; } }
@@ -124,6 +136,7 @@ namespace Google.Cloud.BackupDR.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public DataSourceReference(DataSourceReference other) : this() {
+      _hasBits0 = other._hasBits0;
       name_ = other.name_;
       dataSource_ = other.dataSource_;
       createTime_ = other.createTime_ != null ? other.createTime_.Clone() : null;
@@ -131,6 +144,7 @@ namespace Google.Cloud.BackupDR.V1 {
       dataSourceBackupCount_ = other.dataSourceBackupCount_;
       dataSourceBackupConfigInfo_ = other.dataSourceBackupConfigInfo_ != null ? other.dataSourceBackupConfigInfo_.Clone() : null;
       dataSourceGcpResourceInfo_ = other.dataSourceGcpResourceInfo_ != null ? other.dataSourceGcpResourceInfo_.Clone() : null;
+      totalStoredBytes_ = other.totalStoredBytes_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -249,6 +263,37 @@ namespace Google.Cloud.BackupDR.V1 {
       }
     }
 
+    /// <summary>Field number for the "total_stored_bytes" field.</summary>
+    public const int TotalStoredBytesFieldNumber = 8;
+    private readonly static long TotalStoredBytesDefaultValue = 0L;
+
+    private long totalStoredBytes_;
+    /// <summary>
+    /// Output only. Total size of the storage used by all backup resources for the
+    /// referenced datasource.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public long TotalStoredBytes {
+      get { if ((_hasBits0 & 1) != 0) { return totalStoredBytes_; } else { return TotalStoredBytesDefaultValue; } }
+      set {
+        _hasBits0 |= 1;
+        totalStoredBytes_ = value;
+      }
+    }
+    /// <summary>Gets whether the "total_stored_bytes" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasTotalStoredBytes {
+      get { return (_hasBits0 & 1) != 0; }
+    }
+    /// <summary>Clears the value of the "total_stored_bytes" field</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearTotalStoredBytes() {
+      _hasBits0 &= ~1;
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
@@ -271,6 +316,7 @@ namespace Google.Cloud.BackupDR.V1 {
       if (DataSourceBackupCount != other.DataSourceBackupCount) return false;
       if (!object.Equals(DataSourceBackupConfigInfo, other.DataSourceBackupConfigInfo)) return false;
       if (!object.Equals(DataSourceGcpResourceInfo, other.DataSourceGcpResourceInfo)) return false;
+      if (TotalStoredBytes != other.TotalStoredBytes) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -285,6 +331,7 @@ namespace Google.Cloud.BackupDR.V1 {
       if (DataSourceBackupCount != 0L) hash ^= DataSourceBackupCount.GetHashCode();
       if (dataSourceBackupConfigInfo_ != null) hash ^= DataSourceBackupConfigInfo.GetHashCode();
       if (dataSourceGcpResourceInfo_ != null) hash ^= DataSourceGcpResourceInfo.GetHashCode();
+      if (HasTotalStoredBytes) hash ^= TotalStoredBytes.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -331,6 +378,10 @@ namespace Google.Cloud.BackupDR.V1 {
         output.WriteRawTag(58);
         output.WriteMessage(DataSourceGcpResourceInfo);
       }
+      if (HasTotalStoredBytes) {
+        output.WriteRawTag(64);
+        output.WriteInt64(TotalStoredBytes);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -369,6 +420,10 @@ namespace Google.Cloud.BackupDR.V1 {
         output.WriteRawTag(58);
         output.WriteMessage(DataSourceGcpResourceInfo);
       }
+      if (HasTotalStoredBytes) {
+        output.WriteRawTag(64);
+        output.WriteInt64(TotalStoredBytes);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -399,6 +454,9 @@ namespace Google.Cloud.BackupDR.V1 {
       }
       if (dataSourceGcpResourceInfo_ != null) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(DataSourceGcpResourceInfo);
+      }
+      if (HasTotalStoredBytes) {
+        size += 1 + pb::CodedOutputStream.ComputeInt64Size(TotalStoredBytes);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -441,6 +499,9 @@ namespace Google.Cloud.BackupDR.V1 {
           DataSourceGcpResourceInfo = new global::Google.Cloud.BackupDR.V1.DataSourceGcpResourceInfo();
         }
         DataSourceGcpResourceInfo.MergeFrom(other.DataSourceGcpResourceInfo);
+      }
+      if (other.HasTotalStoredBytes) {
+        TotalStoredBytes = other.TotalStoredBytes;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -494,6 +555,10 @@ namespace Google.Cloud.BackupDR.V1 {
             input.ReadMessage(DataSourceGcpResourceInfo);
             break;
           }
+          case 64: {
+            TotalStoredBytes = input.ReadInt64();
+            break;
+          }
         }
       }
     #endif
@@ -544,6 +609,10 @@ namespace Google.Cloud.BackupDR.V1 {
               DataSourceGcpResourceInfo = new global::Google.Cloud.BackupDR.V1.DataSourceGcpResourceInfo();
             }
             input.ReadMessage(DataSourceGcpResourceInfo);
+            break;
+          }
+          case 64: {
+            TotalStoredBytes = input.ReadInt64();
             break;
           }
         }
@@ -1359,6 +1428,610 @@ namespace Google.Cloud.BackupDR.V1 {
   }
 
   /// <summary>
+  /// Request for the ListDataSourceReferences method.
+  /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+  public sealed partial class ListDataSourceReferencesRequest : pb::IMessage<ListDataSourceReferencesRequest>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<ListDataSourceReferencesRequest> _parser = new pb::MessageParser<ListDataSourceReferencesRequest>(() => new ListDataSourceReferencesRequest());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<ListDataSourceReferencesRequest> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Cloud.BackupDR.V1.DatasourcereferenceReflection.Descriptor.MessageTypes[4]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public ListDataSourceReferencesRequest() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public ListDataSourceReferencesRequest(ListDataSourceReferencesRequest other) : this() {
+      parent_ = other.parent_;
+      pageSize_ = other.pageSize_;
+      pageToken_ = other.pageToken_;
+      filter_ = other.filter_;
+      orderBy_ = other.orderBy_;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public ListDataSourceReferencesRequest Clone() {
+      return new ListDataSourceReferencesRequest(this);
+    }
+
+    /// <summary>Field number for the "parent" field.</summary>
+    public const int ParentFieldNumber = 1;
+    private string parent_ = "";
+    /// <summary>
+    /// Required. The parent resource name.
+    /// Format: projects/{project}/locations/{location}
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string Parent {
+      get { return parent_; }
+      set {
+        parent_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "page_size" field.</summary>
+    public const int PageSizeFieldNumber = 2;
+    private int pageSize_;
+    /// <summary>
+    /// Optional. The maximum number of DataSourceReferences to return. The service
+    /// may return fewer than this value. If unspecified, at most 50
+    /// DataSourceReferences will be returned. The maximum value is 100; values
+    /// above 100 will be coerced to 100.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int PageSize {
+      get { return pageSize_; }
+      set {
+        pageSize_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "page_token" field.</summary>
+    public const int PageTokenFieldNumber = 3;
+    private string pageToken_ = "";
+    /// <summary>
+    /// Optional. A page token, received from a previous `ListDataSourceReferences`
+    /// call. Provide this to retrieve the subsequent page.
+    ///
+    /// When paginating, all other parameters provided to
+    /// `ListDataSourceReferences` must match the call that provided the page
+    /// token.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string PageToken {
+      get { return pageToken_; }
+      set {
+        pageToken_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "filter" field.</summary>
+    public const int FilterFieldNumber = 4;
+    private string filter_ = "";
+    /// <summary>
+    /// Optional. A filter expression that filters the results listed in the
+    /// response. The expression must specify the field name, a comparison
+    /// operator, and the value that you want to use for filtering.
+    ///
+    /// The following field and operator combinations are supported:
+    ///
+    /// * data_source_gcp_resource_info.gcp_resourcename with `=`, `!=`
+    /// * data_source_gcp_resource_info.type with `=`, `!=`
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string Filter {
+      get { return filter_; }
+      set {
+        filter_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "order_by" field.</summary>
+    public const int OrderByFieldNumber = 5;
+    private string orderBy_ = "";
+    /// <summary>
+    /// Optional. A comma-separated list of fields to order by, sorted in ascending
+    /// order. Use "desc" after a field name for descending.
+    ///
+    /// Supported fields:
+    ///
+    /// * data_source
+    /// * data_source_gcp_resource_info.gcp_resourcename
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string OrderBy {
+      get { return orderBy_; }
+      set {
+        orderBy_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as ListDataSourceReferencesRequest);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(ListDataSourceReferencesRequest other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (Parent != other.Parent) return false;
+      if (PageSize != other.PageSize) return false;
+      if (PageToken != other.PageToken) return false;
+      if (Filter != other.Filter) return false;
+      if (OrderBy != other.OrderBy) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (Parent.Length != 0) hash ^= Parent.GetHashCode();
+      if (PageSize != 0) hash ^= PageSize.GetHashCode();
+      if (PageToken.Length != 0) hash ^= PageToken.GetHashCode();
+      if (Filter.Length != 0) hash ^= Filter.GetHashCode();
+      if (OrderBy.Length != 0) hash ^= OrderBy.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (Parent.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(Parent);
+      }
+      if (PageSize != 0) {
+        output.WriteRawTag(16);
+        output.WriteInt32(PageSize);
+      }
+      if (PageToken.Length != 0) {
+        output.WriteRawTag(26);
+        output.WriteString(PageToken);
+      }
+      if (Filter.Length != 0) {
+        output.WriteRawTag(34);
+        output.WriteString(Filter);
+      }
+      if (OrderBy.Length != 0) {
+        output.WriteRawTag(42);
+        output.WriteString(OrderBy);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (Parent.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(Parent);
+      }
+      if (PageSize != 0) {
+        output.WriteRawTag(16);
+        output.WriteInt32(PageSize);
+      }
+      if (PageToken.Length != 0) {
+        output.WriteRawTag(26);
+        output.WriteString(PageToken);
+      }
+      if (Filter.Length != 0) {
+        output.WriteRawTag(34);
+        output.WriteString(Filter);
+      }
+      if (OrderBy.Length != 0) {
+        output.WriteRawTag(42);
+        output.WriteString(OrderBy);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      if (Parent.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Parent);
+      }
+      if (PageSize != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeInt32Size(PageSize);
+      }
+      if (PageToken.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(PageToken);
+      }
+      if (Filter.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Filter);
+      }
+      if (OrderBy.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(OrderBy);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(ListDataSourceReferencesRequest other) {
+      if (other == null) {
+        return;
+      }
+      if (other.Parent.Length != 0) {
+        Parent = other.Parent;
+      }
+      if (other.PageSize != 0) {
+        PageSize = other.PageSize;
+      }
+      if (other.PageToken.Length != 0) {
+        PageToken = other.PageToken;
+      }
+      if (other.Filter.Length != 0) {
+        Filter = other.Filter;
+      }
+      if (other.OrderBy.Length != 0) {
+        OrderBy = other.OrderBy;
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            Parent = input.ReadString();
+            break;
+          }
+          case 16: {
+            PageSize = input.ReadInt32();
+            break;
+          }
+          case 26: {
+            PageToken = input.ReadString();
+            break;
+          }
+          case 34: {
+            Filter = input.ReadString();
+            break;
+          }
+          case 42: {
+            OrderBy = input.ReadString();
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            Parent = input.ReadString();
+            break;
+          }
+          case 16: {
+            PageSize = input.ReadInt32();
+            break;
+          }
+          case 26: {
+            PageToken = input.ReadString();
+            break;
+          }
+          case 34: {
+            Filter = input.ReadString();
+            break;
+          }
+          case 42: {
+            OrderBy = input.ReadString();
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+  }
+
+  /// <summary>
+  /// Response for the ListDataSourceReferences method.
+  /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+  public sealed partial class ListDataSourceReferencesResponse : pb::IMessage<ListDataSourceReferencesResponse>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<ListDataSourceReferencesResponse> _parser = new pb::MessageParser<ListDataSourceReferencesResponse>(() => new ListDataSourceReferencesResponse());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<ListDataSourceReferencesResponse> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Cloud.BackupDR.V1.DatasourcereferenceReflection.Descriptor.MessageTypes[5]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public ListDataSourceReferencesResponse() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public ListDataSourceReferencesResponse(ListDataSourceReferencesResponse other) : this() {
+      dataSourceReferences_ = other.dataSourceReferences_.Clone();
+      nextPageToken_ = other.nextPageToken_;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public ListDataSourceReferencesResponse Clone() {
+      return new ListDataSourceReferencesResponse(this);
+    }
+
+    /// <summary>Field number for the "data_source_references" field.</summary>
+    public const int DataSourceReferencesFieldNumber = 1;
+    private static readonly pb::FieldCodec<global::Google.Cloud.BackupDR.V1.DataSourceReference> _repeated_dataSourceReferences_codec
+        = pb::FieldCodec.ForMessage(10, global::Google.Cloud.BackupDR.V1.DataSourceReference.Parser);
+    private readonly pbc::RepeatedField<global::Google.Cloud.BackupDR.V1.DataSourceReference> dataSourceReferences_ = new pbc::RepeatedField<global::Google.Cloud.BackupDR.V1.DataSourceReference>();
+    /// <summary>
+    /// The DataSourceReferences from the specified parent.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pbc::RepeatedField<global::Google.Cloud.BackupDR.V1.DataSourceReference> DataSourceReferences {
+      get { return dataSourceReferences_; }
+    }
+
+    /// <summary>Field number for the "next_page_token" field.</summary>
+    public const int NextPageTokenFieldNumber = 2;
+    private string nextPageToken_ = "";
+    /// <summary>
+    /// A token, which can be sent as `page_token` to retrieve the next page.
+    /// If this field is omitted, there are no subsequent pages.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string NextPageToken {
+      get { return nextPageToken_; }
+      set {
+        nextPageToken_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as ListDataSourceReferencesResponse);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(ListDataSourceReferencesResponse other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if(!dataSourceReferences_.Equals(other.dataSourceReferences_)) return false;
+      if (NextPageToken != other.NextPageToken) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      hash ^= dataSourceReferences_.GetHashCode();
+      if (NextPageToken.Length != 0) hash ^= NextPageToken.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      dataSourceReferences_.WriteTo(output, _repeated_dataSourceReferences_codec);
+      if (NextPageToken.Length != 0) {
+        output.WriteRawTag(18);
+        output.WriteString(NextPageToken);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      dataSourceReferences_.WriteTo(ref output, _repeated_dataSourceReferences_codec);
+      if (NextPageToken.Length != 0) {
+        output.WriteRawTag(18);
+        output.WriteString(NextPageToken);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      size += dataSourceReferences_.CalculateSize(_repeated_dataSourceReferences_codec);
+      if (NextPageToken.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(NextPageToken);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(ListDataSourceReferencesResponse other) {
+      if (other == null) {
+        return;
+      }
+      dataSourceReferences_.Add(other.dataSourceReferences_);
+      if (other.NextPageToken.Length != 0) {
+        NextPageToken = other.NextPageToken;
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            dataSourceReferences_.AddEntriesFrom(input, _repeated_dataSourceReferences_codec);
+            break;
+          }
+          case 18: {
+            NextPageToken = input.ReadString();
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            dataSourceReferences_.AddEntriesFrom(ref input, _repeated_dataSourceReferences_codec);
+            break;
+          }
+          case 18: {
+            NextPageToken = input.ReadString();
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+  }
+
+  /// <summary>
   /// Request for the FetchDataSourceReferencesForResourceType method.
   /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
@@ -1376,7 +2049,7 @@ namespace Google.Cloud.BackupDR.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.BackupDR.V1.DatasourcereferenceReflection.Descriptor.MessageTypes[4]; }
+      get { return global::Google.Cloud.BackupDR.V1.DatasourcereferenceReflection.Descriptor.MessageTypes[6]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1799,7 +2472,7 @@ namespace Google.Cloud.BackupDR.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.BackupDR.V1.DatasourcereferenceReflection.Descriptor.MessageTypes[5]; }
+      get { return global::Google.Cloud.BackupDR.V1.DatasourcereferenceReflection.Descriptor.MessageTypes[7]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]

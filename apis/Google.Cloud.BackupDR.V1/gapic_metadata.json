@@ -70,6 +70,12 @@
                 "FetchBackupPlanAssociationsForResourceTypeAsync"
               ]
             },
+            "FetchBackupsForResourceType": {
+              "methods": [
+                "FetchBackupsForResourceType",
+                "FetchBackupsForResourceTypeAsync"
+              ]
+            },
             "FetchDataSourceReferencesForResourceType": {
               "methods": [
                 "FetchDataSourceReferencesForResourceType",
@@ -164,6 +170,12 @@
               "methods": [
                 "ListBackups",
                 "ListBackupsAsync"
+              ]
+            },
+            "ListDataSourceReferences": {
+              "methods": [
+                "ListDataSourceReferences",
+                "ListDataSourceReferencesAsync"
               ]
             },
             "ListDataSources": {
