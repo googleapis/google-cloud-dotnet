@@ -1427,10 +1427,10 @@
         },
         {
             "id": "Google.Cloud.DiscoveryEngine.V1",
-            "currentVersion": "1.11.0",
+            "currentVersion": "1.12.0",
             "generationAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
             "releaseAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
-            "releaseTimestamp": "2025-10-20T15:58:51.342055193Z",
+            "releaseTimestamp": "2025-11-05T16:46:19.125687858Z",
             "lastGeneratedCommit": "b153a9181ce3a5e76009ab69988889cc91fa4530",
             "lastReleasedCommit": "b153a9181ce3a5e76009ab69988889cc91fa4530",
             "apiPaths": [
