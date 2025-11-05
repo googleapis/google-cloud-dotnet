@@ -1146,11 +1146,12 @@
         },
         {
             "id": "Google.Cloud.ContactCenterInsights.V1",
-            "currentVersion": "2.19.0",
+            "currentVersion": "2.20.0",
             "generationAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
             "releaseAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
-            "releaseTimestamp": "2025-01-06T17:50:26Z",
+            "releaseTimestamp": "2025-11-05T09:13:19.665615023Z",
             "lastGeneratedCommit": "888ae95dd6125f754650d55410b8c117b618a268",
+            "lastReleasedCommit": "888ae95dd6125f754650d55410b8c117b618a268",
             "apiPaths": [
                 "google/cloud/contactcenterinsights/v1"
             ],
