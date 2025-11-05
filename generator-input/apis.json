@@ -1091,7 +1091,7 @@
     },
     {
       "id": "Google.Cloud.BigQuery.Logging.V1",
-      "version": "1.3.0",
+      "version": "1.4.0",
       "productName": "BigQuery Audit Data Logging",
       "productUrl": "https://cloud.google.com/bigquery",
       "type": "other",
