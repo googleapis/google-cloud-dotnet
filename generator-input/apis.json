@@ -2570,7 +2570,7 @@
     },
     {
       "id": "Google.Cloud.EdgeNetwork.V1",
-      "version": "1.5.0",
+      "version": "1.6.0",
       "type": "grpc",
       "productName": "Distributed Cloud Edge Network",
       "productUrl": "https://cloud.google.com/distributed-cloud/edge/latest/docs/overview",
