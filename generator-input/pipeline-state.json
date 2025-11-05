@@ -2178,11 +2178,12 @@
         },
         {
             "id": "Google.Cloud.Metastore.V1Beta",
-            "currentVersion": "2.0.0-beta11",
+            "currentVersion": "2.0.0-beta12",
             "generationAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
             "releaseAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
-            "releaseTimestamp": "2024-06-05T07:08:25Z",
+            "releaseTimestamp": "2025-11-05T21:57:27.166997955Z",
             "lastGeneratedCommit": "1e5fa274b16c97c686ed68f2fc95c841ba7d4362",
+            "lastReleasedCommit": "1e5fa274b16c97c686ed68f2fc95c841ba7d4362",
             "apiPaths": [
                 "google/cloud/metastore/v1beta"
             ],
