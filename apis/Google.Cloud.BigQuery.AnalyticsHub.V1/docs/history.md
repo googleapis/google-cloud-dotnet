@@ -1,5 +1,12 @@
 # Version history
 
+## Version 1.12.0, released 2025-11-05
+
+### New features
+
+- Add Stored Procedure Sharing support for analyticshub listings
+- Add tags support for Pub/Sub subscriptions
+
 ## Version 1.11.0, released 2025-11-03
 
 ### New features
