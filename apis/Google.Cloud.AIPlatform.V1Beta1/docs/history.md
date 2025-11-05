@@ -1,5 +1,16 @@
 # Version history
 
+## Version 1.0.0-beta61, released 2025-11-05
+
+### New features
+
+- Add new fields `SUCCESSFULLY_DEPLOYED` and `FAILED_TO_DEPLOY` to `DeploymentStage`
+- Add order_by to list_events
+
+### Documentation improvements
+
+- A comment for field `filter` in message `.google.cloud.aiplatform.v1beta1.ListSessionsRequest` is changed
+
 ## Version 1.0.0-beta60, released 2025-11-03
 
 ### New features
