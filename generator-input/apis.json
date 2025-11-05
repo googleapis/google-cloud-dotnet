@@ -1049,7 +1049,7 @@
     },
     {
       "id": "Google.Cloud.BigQuery.DataPolicies.V1Beta1",
-      "version": "1.0.0-beta04",
+      "version": "1.0.0-beta05",
       "type": "grpc",
       "productName": "BigQuery Data Policy",
       "productUrl": "https://cloud.google.com/bigquery/docs/data-governance",
