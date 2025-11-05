@@ -16,6 +16,12 @@
                 "CreateAuthzExtensionAsync"
               ]
             },
+            "CreateLbEdgeExtension": {
+              "methods": [
+                "CreateLbEdgeExtension",
+                "CreateLbEdgeExtensionAsync"
+              ]
+            },
             "CreateLbRouteExtension": {
               "methods": [
                 "CreateLbRouteExtension",
@@ -32,6 +38,12 @@
               "methods": [
                 "DeleteAuthzExtension",
                 "DeleteAuthzExtensionAsync"
+              ]
+            },
+            "DeleteLbEdgeExtension": {
+              "methods": [
+                "DeleteLbEdgeExtension",
+                "DeleteLbEdgeExtensionAsync"
               ]
             },
             "DeleteLbRouteExtension": {
@@ -52,6 +64,12 @@
                 "GetAuthzExtensionAsync"
               ]
             },
+            "GetLbEdgeExtension": {
+              "methods": [
+                "GetLbEdgeExtension",
+                "GetLbEdgeExtensionAsync"
+              ]
+            },
             "GetLbRouteExtension": {
               "methods": [
                 "GetLbRouteExtension",
@@ -70,6 +88,12 @@
                 "ListAuthzExtensionsAsync"
               ]
             },
+            "ListLbEdgeExtensions": {
+              "methods": [
+                "ListLbEdgeExtensions",
+                "ListLbEdgeExtensionsAsync"
+              ]
+            },
             "ListLbRouteExtensions": {
               "methods": [
                 "ListLbRouteExtensions",
@@ -86,6 +110,12 @@
               "methods": [
                 "UpdateAuthzExtension",
                 "UpdateAuthzExtensionAsync"
+              ]
+            },
+            "UpdateLbEdgeExtension": {
+              "methods": [
+                "UpdateLbEdgeExtension",
+                "UpdateLbEdgeExtensionAsync"
               ]
             },
             "UpdateLbRouteExtension": {

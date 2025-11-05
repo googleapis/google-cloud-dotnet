@@ -94,6 +94,20 @@ namespace Google.Cloud.NetworkServices.V1 {
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.NetworkServices.V1.DeleteLbRouteExtensionRequest> __Marshaller_google_cloud_networkservices_v1_DeleteLbRouteExtensionRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.NetworkServices.V1.DeleteLbRouteExtensionRequest.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.NetworkServices.V1.ListLbEdgeExtensionsRequest> __Marshaller_google_cloud_networkservices_v1_ListLbEdgeExtensionsRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.NetworkServices.V1.ListLbEdgeExtensionsRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.NetworkServices.V1.ListLbEdgeExtensionsResponse> __Marshaller_google_cloud_networkservices_v1_ListLbEdgeExtensionsResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.NetworkServices.V1.ListLbEdgeExtensionsResponse.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.NetworkServices.V1.GetLbEdgeExtensionRequest> __Marshaller_google_cloud_networkservices_v1_GetLbEdgeExtensionRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.NetworkServices.V1.GetLbEdgeExtensionRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.NetworkServices.V1.LbEdgeExtension> __Marshaller_google_cloud_networkservices_v1_LbEdgeExtension = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.NetworkServices.V1.LbEdgeExtension.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.NetworkServices.V1.CreateLbEdgeExtensionRequest> __Marshaller_google_cloud_networkservices_v1_CreateLbEdgeExtensionRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.NetworkServices.V1.CreateLbEdgeExtensionRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.NetworkServices.V1.UpdateLbEdgeExtensionRequest> __Marshaller_google_cloud_networkservices_v1_UpdateLbEdgeExtensionRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.NetworkServices.V1.UpdateLbEdgeExtensionRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.NetworkServices.V1.DeleteLbEdgeExtensionRequest> __Marshaller_google_cloud_networkservices_v1_DeleteLbEdgeExtensionRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.NetworkServices.V1.DeleteLbEdgeExtensionRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.NetworkServices.V1.ListAuthzExtensionsRequest> __Marshaller_google_cloud_networkservices_v1_ListAuthzExtensionsRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.NetworkServices.V1.ListAuthzExtensionsRequest.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.NetworkServices.V1.ListAuthzExtensionsResponse> __Marshaller_google_cloud_networkservices_v1_ListAuthzExtensionsResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.NetworkServices.V1.ListAuthzExtensionsResponse.Parser));
@@ -186,6 +200,46 @@ namespace Google.Cloud.NetworkServices.V1 {
         __ServiceName,
         "DeleteLbRouteExtension",
         __Marshaller_google_cloud_networkservices_v1_DeleteLbRouteExtensionRequest,
+        __Marshaller_google_longrunning_Operation);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.NetworkServices.V1.ListLbEdgeExtensionsRequest, global::Google.Cloud.NetworkServices.V1.ListLbEdgeExtensionsResponse> __Method_ListLbEdgeExtensions = new grpc::Method<global::Google.Cloud.NetworkServices.V1.ListLbEdgeExtensionsRequest, global::Google.Cloud.NetworkServices.V1.ListLbEdgeExtensionsResponse>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "ListLbEdgeExtensions",
+        __Marshaller_google_cloud_networkservices_v1_ListLbEdgeExtensionsRequest,
+        __Marshaller_google_cloud_networkservices_v1_ListLbEdgeExtensionsResponse);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.NetworkServices.V1.GetLbEdgeExtensionRequest, global::Google.Cloud.NetworkServices.V1.LbEdgeExtension> __Method_GetLbEdgeExtension = new grpc::Method<global::Google.Cloud.NetworkServices.V1.GetLbEdgeExtensionRequest, global::Google.Cloud.NetworkServices.V1.LbEdgeExtension>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "GetLbEdgeExtension",
+        __Marshaller_google_cloud_networkservices_v1_GetLbEdgeExtensionRequest,
+        __Marshaller_google_cloud_networkservices_v1_LbEdgeExtension);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.NetworkServices.V1.CreateLbEdgeExtensionRequest, global::Google.LongRunning.Operation> __Method_CreateLbEdgeExtension = new grpc::Method<global::Google.Cloud.NetworkServices.V1.CreateLbEdgeExtensionRequest, global::Google.LongRunning.Operation>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "CreateLbEdgeExtension",
+        __Marshaller_google_cloud_networkservices_v1_CreateLbEdgeExtensionRequest,
+        __Marshaller_google_longrunning_Operation);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.NetworkServices.V1.UpdateLbEdgeExtensionRequest, global::Google.LongRunning.Operation> __Method_UpdateLbEdgeExtension = new grpc::Method<global::Google.Cloud.NetworkServices.V1.UpdateLbEdgeExtensionRequest, global::Google.LongRunning.Operation>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "UpdateLbEdgeExtension",
+        __Marshaller_google_cloud_networkservices_v1_UpdateLbEdgeExtensionRequest,
+        __Marshaller_google_longrunning_Operation);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.NetworkServices.V1.DeleteLbEdgeExtensionRequest, global::Google.LongRunning.Operation> __Method_DeleteLbEdgeExtension = new grpc::Method<global::Google.Cloud.NetworkServices.V1.DeleteLbEdgeExtensionRequest, global::Google.LongRunning.Operation>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "DeleteLbEdgeExtension",
+        __Marshaller_google_cloud_networkservices_v1_DeleteLbEdgeExtensionRequest,
         __Marshaller_google_longrunning_Operation);
 
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
@@ -355,6 +409,66 @@ namespace Google.Cloud.NetworkServices.V1 {
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.LongRunning.Operation> DeleteLbRouteExtension(global::Google.Cloud.NetworkServices.V1.DeleteLbRouteExtensionRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Lists `LbEdgeExtension` resources in a given project and location.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.NetworkServices.V1.ListLbEdgeExtensionsResponse> ListLbEdgeExtensions(global::Google.Cloud.NetworkServices.V1.ListLbEdgeExtensionsRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Gets details of the specified `LbEdgeExtension` resource.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.NetworkServices.V1.LbEdgeExtension> GetLbEdgeExtension(global::Google.Cloud.NetworkServices.V1.GetLbEdgeExtensionRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Creates a new `LbEdgeExtension` resource in a given project and location.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.LongRunning.Operation> CreateLbEdgeExtension(global::Google.Cloud.NetworkServices.V1.CreateLbEdgeExtensionRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Updates the parameters of the specified `LbEdgeExtension` resource.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.LongRunning.Operation> UpdateLbEdgeExtension(global::Google.Cloud.NetworkServices.V1.UpdateLbEdgeExtensionRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Deletes the specified `LbEdgeExtension` resource.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.LongRunning.Operation> DeleteLbEdgeExtension(global::Google.Cloud.NetworkServices.V1.DeleteLbEdgeExtensionRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
       }
@@ -935,6 +1049,246 @@ namespace Google.Cloud.NetworkServices.V1 {
         return CallInvoker.AsyncUnaryCall(__Method_DeleteLbRouteExtension, null, options, request);
       }
       /// <summary>
+      /// Lists `LbEdgeExtension` resources in a given project and location.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.NetworkServices.V1.ListLbEdgeExtensionsResponse ListLbEdgeExtensions(global::Google.Cloud.NetworkServices.V1.ListLbEdgeExtensionsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return ListLbEdgeExtensions(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Lists `LbEdgeExtension` resources in a given project and location.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.NetworkServices.V1.ListLbEdgeExtensionsResponse ListLbEdgeExtensions(global::Google.Cloud.NetworkServices.V1.ListLbEdgeExtensionsRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_ListLbEdgeExtensions, null, options, request);
+      }
+      /// <summary>
+      /// Lists `LbEdgeExtension` resources in a given project and location.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.NetworkServices.V1.ListLbEdgeExtensionsResponse> ListLbEdgeExtensionsAsync(global::Google.Cloud.NetworkServices.V1.ListLbEdgeExtensionsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return ListLbEdgeExtensionsAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Lists `LbEdgeExtension` resources in a given project and location.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.NetworkServices.V1.ListLbEdgeExtensionsResponse> ListLbEdgeExtensionsAsync(global::Google.Cloud.NetworkServices.V1.ListLbEdgeExtensionsRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_ListLbEdgeExtensions, null, options, request);
+      }
+      /// <summary>
+      /// Gets details of the specified `LbEdgeExtension` resource.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.NetworkServices.V1.LbEdgeExtension GetLbEdgeExtension(global::Google.Cloud.NetworkServices.V1.GetLbEdgeExtensionRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return GetLbEdgeExtension(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Gets details of the specified `LbEdgeExtension` resource.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.NetworkServices.V1.LbEdgeExtension GetLbEdgeExtension(global::Google.Cloud.NetworkServices.V1.GetLbEdgeExtensionRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_GetLbEdgeExtension, null, options, request);
+      }
+      /// <summary>
+      /// Gets details of the specified `LbEdgeExtension` resource.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.NetworkServices.V1.LbEdgeExtension> GetLbEdgeExtensionAsync(global::Google.Cloud.NetworkServices.V1.GetLbEdgeExtensionRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return GetLbEdgeExtensionAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Gets details of the specified `LbEdgeExtension` resource.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.NetworkServices.V1.LbEdgeExtension> GetLbEdgeExtensionAsync(global::Google.Cloud.NetworkServices.V1.GetLbEdgeExtensionRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_GetLbEdgeExtension, null, options, request);
+      }
+      /// <summary>
+      /// Creates a new `LbEdgeExtension` resource in a given project and location.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.LongRunning.Operation CreateLbEdgeExtension(global::Google.Cloud.NetworkServices.V1.CreateLbEdgeExtensionRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return CreateLbEdgeExtension(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Creates a new `LbEdgeExtension` resource in a given project and location.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.LongRunning.Operation CreateLbEdgeExtension(global::Google.Cloud.NetworkServices.V1.CreateLbEdgeExtensionRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_CreateLbEdgeExtension, null, options, request);
+      }
+      /// <summary>
+      /// Creates a new `LbEdgeExtension` resource in a given project and location.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> CreateLbEdgeExtensionAsync(global::Google.Cloud.NetworkServices.V1.CreateLbEdgeExtensionRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return CreateLbEdgeExtensionAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Creates a new `LbEdgeExtension` resource in a given project and location.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> CreateLbEdgeExtensionAsync(global::Google.Cloud.NetworkServices.V1.CreateLbEdgeExtensionRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_CreateLbEdgeExtension, null, options, request);
+      }
+      /// <summary>
+      /// Updates the parameters of the specified `LbEdgeExtension` resource.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.LongRunning.Operation UpdateLbEdgeExtension(global::Google.Cloud.NetworkServices.V1.UpdateLbEdgeExtensionRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return UpdateLbEdgeExtension(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Updates the parameters of the specified `LbEdgeExtension` resource.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.LongRunning.Operation UpdateLbEdgeExtension(global::Google.Cloud.NetworkServices.V1.UpdateLbEdgeExtensionRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_UpdateLbEdgeExtension, null, options, request);
+      }
+      /// <summary>
+      /// Updates the parameters of the specified `LbEdgeExtension` resource.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> UpdateLbEdgeExtensionAsync(global::Google.Cloud.NetworkServices.V1.UpdateLbEdgeExtensionRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return UpdateLbEdgeExtensionAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Updates the parameters of the specified `LbEdgeExtension` resource.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> UpdateLbEdgeExtensionAsync(global::Google.Cloud.NetworkServices.V1.UpdateLbEdgeExtensionRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_UpdateLbEdgeExtension, null, options, request);
+      }
+      /// <summary>
+      /// Deletes the specified `LbEdgeExtension` resource.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.LongRunning.Operation DeleteLbEdgeExtension(global::Google.Cloud.NetworkServices.V1.DeleteLbEdgeExtensionRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return DeleteLbEdgeExtension(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Deletes the specified `LbEdgeExtension` resource.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.LongRunning.Operation DeleteLbEdgeExtension(global::Google.Cloud.NetworkServices.V1.DeleteLbEdgeExtensionRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_DeleteLbEdgeExtension, null, options, request);
+      }
+      /// <summary>
+      /// Deletes the specified `LbEdgeExtension` resource.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> DeleteLbEdgeExtensionAsync(global::Google.Cloud.NetworkServices.V1.DeleteLbEdgeExtensionRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return DeleteLbEdgeExtensionAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Deletes the specified `LbEdgeExtension` resource.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> DeleteLbEdgeExtensionAsync(global::Google.Cloud.NetworkServices.V1.DeleteLbEdgeExtensionRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_DeleteLbEdgeExtension, null, options, request);
+      }
+      /// <summary>
       /// Lists `AuthzExtension` resources in a given project and location.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
@@ -1206,6 +1560,11 @@ namespace Google.Cloud.NetworkServices.V1 {
           .AddMethod(__Method_CreateLbRouteExtension, serviceImpl.CreateLbRouteExtension)
           .AddMethod(__Method_UpdateLbRouteExtension, serviceImpl.UpdateLbRouteExtension)
           .AddMethod(__Method_DeleteLbRouteExtension, serviceImpl.DeleteLbRouteExtension)
+          .AddMethod(__Method_ListLbEdgeExtensions, serviceImpl.ListLbEdgeExtensions)
+          .AddMethod(__Method_GetLbEdgeExtension, serviceImpl.GetLbEdgeExtension)
+          .AddMethod(__Method_CreateLbEdgeExtension, serviceImpl.CreateLbEdgeExtension)
+          .AddMethod(__Method_UpdateLbEdgeExtension, serviceImpl.UpdateLbEdgeExtension)
+          .AddMethod(__Method_DeleteLbEdgeExtension, serviceImpl.DeleteLbEdgeExtension)
           .AddMethod(__Method_ListAuthzExtensions, serviceImpl.ListAuthzExtensions)
           .AddMethod(__Method_GetAuthzExtension, serviceImpl.GetAuthzExtension)
           .AddMethod(__Method_CreateAuthzExtension, serviceImpl.CreateAuthzExtension)
@@ -1230,6 +1589,11 @@ namespace Google.Cloud.NetworkServices.V1 {
       serviceBinder.AddMethod(__Method_CreateLbRouteExtension, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.NetworkServices.V1.CreateLbRouteExtensionRequest, global::Google.LongRunning.Operation>(serviceImpl.CreateLbRouteExtension));
       serviceBinder.AddMethod(__Method_UpdateLbRouteExtension, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.NetworkServices.V1.UpdateLbRouteExtensionRequest, global::Google.LongRunning.Operation>(serviceImpl.UpdateLbRouteExtension));
       serviceBinder.AddMethod(__Method_DeleteLbRouteExtension, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.NetworkServices.V1.DeleteLbRouteExtensionRequest, global::Google.LongRunning.Operation>(serviceImpl.DeleteLbRouteExtension));
+      serviceBinder.AddMethod(__Method_ListLbEdgeExtensions, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.NetworkServices.V1.ListLbEdgeExtensionsRequest, global::Google.Cloud.NetworkServices.V1.ListLbEdgeExtensionsResponse>(serviceImpl.ListLbEdgeExtensions));
+      serviceBinder.AddMethod(__Method_GetLbEdgeExtension, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.NetworkServices.V1.GetLbEdgeExtensionRequest, global::Google.Cloud.NetworkServices.V1.LbEdgeExtension>(serviceImpl.GetLbEdgeExtension));
+      serviceBinder.AddMethod(__Method_CreateLbEdgeExtension, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.NetworkServices.V1.CreateLbEdgeExtensionRequest, global::Google.LongRunning.Operation>(serviceImpl.CreateLbEdgeExtension));
+      serviceBinder.AddMethod(__Method_UpdateLbEdgeExtension, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.NetworkServices.V1.UpdateLbEdgeExtensionRequest, global::Google.LongRunning.Operation>(serviceImpl.UpdateLbEdgeExtension));
+      serviceBinder.AddMethod(__Method_DeleteLbEdgeExtension, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.NetworkServices.V1.DeleteLbEdgeExtensionRequest, global::Google.LongRunning.Operation>(serviceImpl.DeleteLbEdgeExtension));
       serviceBinder.AddMethod(__Method_ListAuthzExtensions, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.NetworkServices.V1.ListAuthzExtensionsRequest, global::Google.Cloud.NetworkServices.V1.ListAuthzExtensionsResponse>(serviceImpl.ListAuthzExtensions));
       serviceBinder.AddMethod(__Method_GetAuthzExtension, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.NetworkServices.V1.GetAuthzExtensionRequest, global::Google.Cloud.NetworkServices.V1.AuthzExtension>(serviceImpl.GetAuthzExtension));
       serviceBinder.AddMethod(__Method_CreateAuthzExtension, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.NetworkServices.V1.CreateAuthzExtensionRequest, global::Google.LongRunning.Operation>(serviceImpl.CreateAuthzExtension));

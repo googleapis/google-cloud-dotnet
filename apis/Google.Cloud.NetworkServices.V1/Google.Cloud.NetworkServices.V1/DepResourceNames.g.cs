@@ -556,6 +556,269 @@ namespace Google.Cloud.NetworkServices.V1
         public static bool operator !=(LbRouteExtensionName a, LbRouteExtensionName b) => !(a == b);
     }
 
+    /// <summary>Resource name for the <c>LbEdgeExtension</c> resource.</summary>
+    public sealed partial class LbEdgeExtensionName : gax::IResourceName, sys::IEquatable<LbEdgeExtensionName>
+    {
+        /// <summary>The possible contents of <see cref="LbEdgeExtensionName"/>.</summary>
+        public enum ResourceNameType
+        {
+            /// <summary>An unparsed resource name.</summary>
+            Unparsed = 0,
+
+            /// <summary>
+            /// A resource name with pattern
+            /// <c>projects/{project}/locations/{location}/lbEdgeExtensions/{lb_edge_extension}</c>.
+            /// </summary>
+            ProjectLocationLbEdgeExtension = 1,
+        }
+
+        private static gax::PathTemplate s_projectLocationLbEdgeExtension = new gax::PathTemplate("projects/{project}/locations/{location}/lbEdgeExtensions/{lb_edge_extension}");
+
+        /// <summary>Creates a <see cref="LbEdgeExtensionName"/> containing an unparsed resource name.</summary>
+        /// <param name="unparsedResourceName">The unparsed resource name. Must not be <c>null</c>.</param>
+        /// <returns>
+        /// A new instance of <see cref="LbEdgeExtensionName"/> containing the provided
+        /// <paramref name="unparsedResourceName"/>.
+        /// </returns>
+        public static LbEdgeExtensionName FromUnparsed(gax::UnparsedResourceName unparsedResourceName) =>
+            new LbEdgeExtensionName(ResourceNameType.Unparsed, gax::GaxPreconditions.CheckNotNull(unparsedResourceName, nameof(unparsedResourceName)));
+
+        /// <summary>
+        /// Creates a <see cref="LbEdgeExtensionName"/> with the pattern
+        /// <c>projects/{project}/locations/{location}/lbEdgeExtensions/{lb_edge_extension}</c>.
+        /// </summary>
+        /// <param name="projectId">The <c>Project</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="locationId">The <c>Location</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="lbEdgeExtensionId">The <c>LbEdgeExtension</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <returns>A new instance of <see cref="LbEdgeExtensionName"/> constructed from the provided ids.</returns>
+        public static LbEdgeExtensionName FromProjectLocationLbEdgeExtension(string projectId, string locationId, string lbEdgeExtensionId) =>
+            new LbEdgeExtensionName(ResourceNameType.ProjectLocationLbEdgeExtension, projectId: gax::GaxPreconditions.CheckNotNullOrEmpty(projectId, nameof(projectId)), locationId: gax::GaxPreconditions.CheckNotNullOrEmpty(locationId, nameof(locationId)), lbEdgeExtensionId: gax::GaxPreconditions.CheckNotNullOrEmpty(lbEdgeExtensionId, nameof(lbEdgeExtensionId)));
+
+        /// <summary>
+        /// Formats the IDs into the string representation of this <see cref="LbEdgeExtensionName"/> with pattern
+        /// <c>projects/{project}/locations/{location}/lbEdgeExtensions/{lb_edge_extension}</c>.
+        /// </summary>
+        /// <param name="projectId">The <c>Project</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="locationId">The <c>Location</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="lbEdgeExtensionId">The <c>LbEdgeExtension</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <returns>
+        /// The string representation of this <see cref="LbEdgeExtensionName"/> with pattern
+        /// <c>projects/{project}/locations/{location}/lbEdgeExtensions/{lb_edge_extension}</c>.
+        /// </returns>
+        public static string Format(string projectId, string locationId, string lbEdgeExtensionId) =>
+            FormatProjectLocationLbEdgeExtension(projectId, locationId, lbEdgeExtensionId);
+
+        /// <summary>
+        /// Formats the IDs into the string representation of this <see cref="LbEdgeExtensionName"/> with pattern
+        /// <c>projects/{project}/locations/{location}/lbEdgeExtensions/{lb_edge_extension}</c>.
+        /// </summary>
+        /// <param name="projectId">The <c>Project</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="locationId">The <c>Location</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="lbEdgeExtensionId">The <c>LbEdgeExtension</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <returns>
+        /// The string representation of this <see cref="LbEdgeExtensionName"/> with pattern
+        /// <c>projects/{project}/locations/{location}/lbEdgeExtensions/{lb_edge_extension}</c>.
+        /// </returns>
+        public static string FormatProjectLocationLbEdgeExtension(string projectId, string locationId, string lbEdgeExtensionId) =>
+            s_projectLocationLbEdgeExtension.Expand(gax::GaxPreconditions.CheckNotNullOrEmpty(projectId, nameof(projectId)), gax::GaxPreconditions.CheckNotNullOrEmpty(locationId, nameof(locationId)), gax::GaxPreconditions.CheckNotNullOrEmpty(lbEdgeExtensionId, nameof(lbEdgeExtensionId)));
+
+        /// <summary>
+        /// Parses the given resource name string into a new <see cref="LbEdgeExtensionName"/> instance.
+        /// </summary>
+        /// <remarks>
+        /// To parse successfully, the resource name must be formatted as one of the following:
+        /// <list type="bullet">
+        /// <item>
+        /// <description>
+        /// <c>projects/{project}/locations/{location}/lbEdgeExtensions/{lb_edge_extension}</c>
+        /// </description>
+        /// </item>
+        /// </list>
+        /// </remarks>
+        /// <param name="lbEdgeExtensionName">The resource name in string form. Must not be <c>null</c>.</param>
+        /// <returns>The parsed <see cref="LbEdgeExtensionName"/> if successful.</returns>
+        public static LbEdgeExtensionName Parse(string lbEdgeExtensionName) => Parse(lbEdgeExtensionName, false);
+
+        /// <summary>
+        /// Parses the given resource name string into a new <see cref="LbEdgeExtensionName"/> instance; optionally
+        /// allowing an unparseable resource name.
+        /// </summary>
+        /// <remarks>
+        /// To parse successfully, the resource name must be formatted as one of the following:
+        /// <list type="bullet">
+        /// <item>
+        /// <description>
+        /// <c>projects/{project}/locations/{location}/lbEdgeExtensions/{lb_edge_extension}</c>
+        /// </description>
+        /// </item>
+        /// </list>
+        /// Or may be in any format if <paramref name="allowUnparsed"/> is <c>true</c>.
+        /// </remarks>
+        /// <param name="lbEdgeExtensionName">The resource name in string form. Must not be <c>null</c>.</param>
+        /// <param name="allowUnparsed">
+        /// If <c>true</c> will successfully store an unparseable resource name into the <see cref="UnparsedResource"/>
+        /// property; otherwise will throw an <see cref="sys::ArgumentException"/> if an unparseable resource name is
+        /// specified.
+        /// </param>
+        /// <returns>The parsed <see cref="LbEdgeExtensionName"/> if successful.</returns>
+        public static LbEdgeExtensionName Parse(string lbEdgeExtensionName, bool allowUnparsed) =>
+            TryParse(lbEdgeExtensionName, allowUnparsed, out LbEdgeExtensionName result) ? result : throw new sys::ArgumentException("The given resource-name matches no pattern.");
+
+        /// <summary>
+        /// Tries to parse the given resource name string into a new <see cref="LbEdgeExtensionName"/> instance.
+        /// </summary>
+        /// <remarks>
+        /// To parse successfully, the resource name must be formatted as one of the following:
+        /// <list type="bullet">
+        /// <item>
+        /// <description>
+        /// <c>projects/{project}/locations/{location}/lbEdgeExtensions/{lb_edge_extension}</c>
+        /// </description>
+        /// </item>
+        /// </list>
+        /// </remarks>
+        /// <param name="lbEdgeExtensionName">The resource name in string form. Must not be <c>null</c>.</param>
+        /// <param name="result">
+        /// When this method returns, the parsed <see cref="LbEdgeExtensionName"/>, or <c>null</c> if parsing failed.
+        /// </param>
+        /// <returns><c>true</c> if the name was parsed successfully; <c>false</c> otherwise.</returns>
+        public static bool TryParse(string lbEdgeExtensionName, out LbEdgeExtensionName result) =>
+            TryParse(lbEdgeExtensionName, false, out result);
+
+        /// <summary>
+        /// Tries to parse the given resource name string into a new <see cref="LbEdgeExtensionName"/> instance;
+        /// optionally allowing an unparseable resource name.
+        /// </summary>
+        /// <remarks>
+        /// To parse successfully, the resource name must be formatted as one of the following:
+        /// <list type="bullet">
+        /// <item>
+        /// <description>
+        /// <c>projects/{project}/locations/{location}/lbEdgeExtensions/{lb_edge_extension}</c>
+        /// </description>
+        /// </item>
+        /// </list>
+        /// Or may be in any format if <paramref name="allowUnparsed"/> is <c>true</c>.
+        /// </remarks>
+        /// <param name="lbEdgeExtensionName">The resource name in string form. Must not be <c>null</c>.</param>
+        /// <param name="allowUnparsed">
+        /// If <c>true</c> will successfully store an unparseable resource name into the <see cref="UnparsedResource"/>
+        /// property; otherwise will throw an <see cref="sys::ArgumentException"/> if an unparseable resource name is
+        /// specified.
+        /// </param>
+        /// <param name="result">
+        /// When this method returns, the parsed <see cref="LbEdgeExtensionName"/>, or <c>null</c> if parsing failed.
+        /// </param>
+        /// <returns><c>true</c> if the name was parsed successfully; <c>false</c> otherwise.</returns>
+        public static bool TryParse(string lbEdgeExtensionName, bool allowUnparsed, out LbEdgeExtensionName result)
+        {
+            gax::GaxPreconditions.CheckNotNull(lbEdgeExtensionName, nameof(lbEdgeExtensionName));
+            gax::TemplatedResourceName resourceName;
+            if (s_projectLocationLbEdgeExtension.TryParseName(lbEdgeExtensionName, out resourceName))
+            {
+                result = FromProjectLocationLbEdgeExtension(resourceName[0], resourceName[1], resourceName[2]);
+                return true;
+            }
+            if (allowUnparsed)
+            {
+                if (gax::UnparsedResourceName.TryParse(lbEdgeExtensionName, out gax::UnparsedResourceName unparsedResourceName))
+                {
+                    result = FromUnparsed(unparsedResourceName);
+                    return true;
+                }
+            }
+            result = null;
+            return false;
+        }
+
+        private LbEdgeExtensionName(ResourceNameType type, gax::UnparsedResourceName unparsedResourceName = null, string lbEdgeExtensionId = null, string locationId = null, string projectId = null)
+        {
+            Type = type;
+            UnparsedResource = unparsedResourceName;
+            LbEdgeExtensionId = lbEdgeExtensionId;
+            LocationId = locationId;
+            ProjectId = projectId;
+        }
+
+        /// <summary>
+        /// Constructs a new instance of a <see cref="LbEdgeExtensionName"/> class from the component parts of pattern
+        /// <c>projects/{project}/locations/{location}/lbEdgeExtensions/{lb_edge_extension}</c>
+        /// </summary>
+        /// <param name="projectId">The <c>Project</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="locationId">The <c>Location</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="lbEdgeExtensionId">The <c>LbEdgeExtension</c> ID. Must not be <c>null</c> or empty.</param>
+        public LbEdgeExtensionName(string projectId, string locationId, string lbEdgeExtensionId) : this(ResourceNameType.ProjectLocationLbEdgeExtension, projectId: gax::GaxPreconditions.CheckNotNullOrEmpty(projectId, nameof(projectId)), locationId: gax::GaxPreconditions.CheckNotNullOrEmpty(locationId, nameof(locationId)), lbEdgeExtensionId: gax::GaxPreconditions.CheckNotNullOrEmpty(lbEdgeExtensionId, nameof(lbEdgeExtensionId)))
+        {
+        }
+
+        /// <summary>The <see cref="ResourceNameType"/> of the contained resource name.</summary>
+        public ResourceNameType Type { get; }
+
+        /// <summary>
+        /// The contained <see cref="gax::UnparsedResourceName"/>. Only non-<c>null</c> if this instance contains an
+        /// unparsed resource name.
+        /// </summary>
+        public gax::UnparsedResourceName UnparsedResource { get; }
+
+        /// <summary>
+        /// The <c>LbEdgeExtension</c> ID. Will not be <c>null</c>, unless this instance contains an unparsed resource
+        /// name.
+        /// </summary>
+        public string LbEdgeExtensionId { get; }
+
+        /// <summary>
+        /// The <c>Location</c> ID. Will not be <c>null</c>, unless this instance contains an unparsed resource name.
+        /// </summary>
+        public string LocationId { get; }
+
+        /// <summary>
+        /// The <c>Project</c> ID. Will not be <c>null</c>, unless this instance contains an unparsed resource name.
+        /// </summary>
+        public string ProjectId { get; }
+
+        /// <summary>Whether this instance contains a resource name with a known pattern.</summary>
+        public bool IsKnownPattern => Type != ResourceNameType.Unparsed;
+
+        /// <summary>The string representation of the resource name.</summary>
+        /// <returns>The string representation of the resource name.</returns>
+        public override string ToString()
+        {
+            switch (Type)
+            {
+                case ResourceNameType.Unparsed: return UnparsedResource.ToString();
+                case ResourceNameType.ProjectLocationLbEdgeExtension: return s_projectLocationLbEdgeExtension.Expand(ProjectId, LocationId, LbEdgeExtensionId);
+                default: throw new sys::InvalidOperationException("Unrecognized resource-type.");
+            }
+        }
+
+        /// <summary>Returns a hash code for this resource name.</summary>
+        public override int GetHashCode() => ToString().GetHashCode();
+
+        /// <inheritdoc/>
+        public override bool Equals(object obj) => Equals(obj as LbEdgeExtensionName);
+
+        /// <inheritdoc/>
+        public bool Equals(LbEdgeExtensionName other) => ToString() == other?.ToString();
+
+        /// <summary>Determines whether two specified resource names have the same value.</summary>
+        /// <param name="a">The first resource name to compare, or null.</param>
+        /// <param name="b">The second resource name to compare, or null.</param>
+        /// <returns>
+        /// true if the value of <paramref name="a"/> is the same as the value of <paramref name="b"/>; otherwise,
+        /// false.
+        /// </returns>
+        public static bool operator ==(LbEdgeExtensionName a, LbEdgeExtensionName b) => ReferenceEquals(a, b) || (a?.Equals(b) ?? false);
+
+        /// <summary>Determines whether two specified resource names have different values.</summary>
+        /// <param name="a">The first resource name to compare, or null.</param>
+        /// <param name="b">The second resource name to compare, or null.</param>
+        /// <returns>
+        /// true if the value of <paramref name="a"/> is different from the value of <paramref name="b"/>; otherwise,
+        /// false.
+        /// </returns>
+        public static bool operator !=(LbEdgeExtensionName a, LbEdgeExtensionName b) => !(a == b);
+    }
+
     /// <summary>Resource name for the <c>AuthzExtension</c> resource.</summary>
     public sealed partial class AuthzExtensionName : gax::IResourceName, sys::IEquatable<AuthzExtensionName>
     {
@@ -927,6 +1190,66 @@ namespace Google.Cloud.NetworkServices.V1
         public gcnv::LbRouteExtensionName LbRouteExtensionName
         {
             get => string.IsNullOrEmpty(Name) ? null : gcnv::LbRouteExtensionName.Parse(Name, allowUnparsed: true);
+            set => Name = value?.ToString() ?? "";
+        }
+    }
+
+    public partial class LbEdgeExtension
+    {
+        /// <summary>
+        /// <see cref="gcnv::LbEdgeExtensionName"/>-typed view over the <see cref="Name"/> resource name property.
+        /// </summary>
+        public gcnv::LbEdgeExtensionName LbEdgeExtensionName
+        {
+            get => string.IsNullOrEmpty(Name) ? null : gcnv::LbEdgeExtensionName.Parse(Name, allowUnparsed: true);
+            set => Name = value?.ToString() ?? "";
+        }
+    }
+
+    public partial class ListLbEdgeExtensionsRequest
+    {
+        /// <summary>
+        /// <see cref="gagr::LocationName"/>-typed view over the <see cref="Parent"/> resource name property.
+        /// </summary>
+        public gagr::LocationName ParentAsLocationName
+        {
+            get => string.IsNullOrEmpty(Parent) ? null : gagr::LocationName.Parse(Parent, allowUnparsed: true);
+            set => Parent = value?.ToString() ?? "";
+        }
+    }
+
+    public partial class GetLbEdgeExtensionRequest
+    {
+        /// <summary>
+        /// <see cref="gcnv::LbEdgeExtensionName"/>-typed view over the <see cref="Name"/> resource name property.
+        /// </summary>
+        public gcnv::LbEdgeExtensionName LbEdgeExtensionName
+        {
+            get => string.IsNullOrEmpty(Name) ? null : gcnv::LbEdgeExtensionName.Parse(Name, allowUnparsed: true);
+            set => Name = value?.ToString() ?? "";
+        }
+    }
+
+    public partial class CreateLbEdgeExtensionRequest
+    {
+        /// <summary>
+        /// <see cref="gagr::LocationName"/>-typed view over the <see cref="Parent"/> resource name property.
+        /// </summary>
+        public gagr::LocationName ParentAsLocationName
+        {
+            get => string.IsNullOrEmpty(Parent) ? null : gagr::LocationName.Parse(Parent, allowUnparsed: true);
+            set => Parent = value?.ToString() ?? "";
+        }
+    }
+
+    public partial class DeleteLbEdgeExtensionRequest
+    {
+        /// <summary>
+        /// <see cref="gcnv::LbEdgeExtensionName"/>-typed view over the <see cref="Name"/> resource name property.
+        /// </summary>
+        public gcnv::LbEdgeExtensionName LbEdgeExtensionName
+        {
+            get => string.IsNullOrEmpty(Name) ? null : gcnv::LbEdgeExtensionName.Parse(Name, allowUnparsed: true);
             set => Name = value?.ToString() ?? "";
         }
     }
