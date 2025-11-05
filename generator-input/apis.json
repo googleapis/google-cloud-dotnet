@@ -3305,7 +3305,7 @@
     },
     {
       "id": "Google.Cloud.Kms.Inventory.V1",
-      "version": "1.4.0",
+      "version": "1.5.0",
       "type": "grpc",
       "productName": "KMS Inventory",
       "productUrl": "https://cloud.google.com/kms/docs/",
