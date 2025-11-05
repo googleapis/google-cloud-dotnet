@@ -1006,7 +1006,7 @@
     },
     {
       "id": "Google.Cloud.BigQuery.DataExchange.V1Beta1",
-      "version": "2.0.0-beta06",
+      "version": "2.0.0-beta07",
       "type": "grpc",
       "productName": "Analytics Hub",
       "productUrl": "https://cloud.google.com/analytics-hub",

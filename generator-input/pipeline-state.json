@@ -662,11 +662,12 @@
         },
         {
             "id": "Google.Cloud.BigQuery.DataExchange.V1Beta1",
-            "currentVersion": "2.0.0-beta06",
+            "currentVersion": "2.0.0-beta07",
             "generationAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
             "releaseAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
-            "releaseTimestamp": "2024-06-05T06:54:25Z",
+            "releaseTimestamp": "2025-11-05T08:44:00.501166921Z",
             "lastGeneratedCommit": "4823efd0b9944891ec5c387104dcc2ec401307a8",
+            "lastReleasedCommit": "4823efd0b9944891ec5c387104dcc2ec401307a8",
             "apiPaths": [
                 "google/cloud/bigquery/dataexchange/v1beta1"
             ],
