@@ -39,6 +39,7 @@ internal class IntegrationTestLibraryCommand : IContainerCommand
         var rootLayout = RootLayout.ForRepositoryRoot(repoRoot);
         var catalog = ApiCatalog.Load(rootLayout);
         var apis = options.GetApisFromLibraryId(catalog);
+        Console.WriteLine($"{DateTime.UtcNow:yyyy-MM-dd'T'HH:mm:ss.fff}Z Starting integration tests for {options.LibraryId}");
         for (int attempt = 1; true; attempt++)
         {
             var args = attempt == 1 ? apis.Select(api => api.Id).ToList() : new List<string> { "--retry" };
@@ -56,6 +57,7 @@ internal class IntegrationTestLibraryCommand : IContainerCommand
                 Console.WriteLine($"Failure running integration tests on attempt {attempt}. (Max attempts = {MaxAttempts})");
             }
         }
+        Console.WriteLine($"{DateTime.UtcNow:yyyy-MM-dd'T'HH:mm:ss.fff}Z Completed integration tests for {options.LibraryId}");
         return 0;
     }
 
