@@ -2103,11 +2103,12 @@
         },
         {
             "id": "Google.Cloud.Memcache.V1Beta2",
-            "currentVersion": "2.0.0-beta06",
+            "currentVersion": "2.0.0-beta07",
             "generationAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
             "releaseAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
-            "releaseTimestamp": "2024-05-14T07:10:21Z",
+            "releaseTimestamp": "2025-11-05T21:51:43.599748517Z",
             "lastGeneratedCommit": "36533b09a6b383f3c30d13c3c26092154ecf5388",
+            "lastReleasedCommit": "36533b09a6b383f3c30d13c3c26092154ecf5388",
             "apiPaths": [
                 "google/cloud/memcache/v1beta2"
             ],
