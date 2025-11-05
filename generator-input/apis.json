@@ -1269,7 +1269,7 @@
     },
     {
       "id": "Google.Cloud.Billing.Budgets.V1",
-      "version": "2.6.0",
+      "version": "2.7.0",
       "type": "grpc",
       "productName": "Cloud Billing Budget",
       "productUrl": "https://cloud.google.com/billing/docs/how-to/budget-api-overview",
