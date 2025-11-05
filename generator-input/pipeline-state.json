@@ -1818,11 +1818,12 @@
         },
         {
             "id": "Google.Cloud.Iam.Credentials.V1",
-            "currentVersion": "2.4.0",
+            "currentVersion": "2.5.0",
             "generationAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
             "releaseAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
-            "releaseTimestamp": "2024-05-14T07:12:16Z",
+            "releaseTimestamp": "2025-11-05T21:38:07.708700356Z",
             "lastGeneratedCommit": "c1c2f3e01e494b6fa004ff543cec2a8d84120717",
+            "lastReleasedCommit": "c1c2f3e01e494b6fa004ff543cec2a8d84120717",
             "apiPaths": [
                 "google/iam/credentials/v1"
             ],
