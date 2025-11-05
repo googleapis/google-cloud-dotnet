@@ -1742,11 +1742,12 @@
         },
         {
             "id": "Google.Cloud.GkeConnect.Gateway.V1",
-            "currentVersion": "1.0.0",
+            "currentVersion": "1.1.0",
             "generationAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
             "releaseAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
-            "releaseTimestamp": "2024-12-05T19:00:31Z",
+            "releaseTimestamp": "2025-11-05T17:08:45.914717573Z",
             "lastGeneratedCommit": "d9a16f2feec3d0f03899e48007a02ce154fc919d",
+            "lastReleasedCommit": "d9a16f2feec3d0f03899e48007a02ce154fc919d",
             "apiPaths": [
                 "google/cloud/gkeconnect/gateway/v1"
             ],
