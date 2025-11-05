@@ -4143,11 +4143,12 @@
         },
         {
             "id": "Google.Cloud.DeviceStreaming.V1",
-            "currentVersion": "1.0.0-beta01",
+            "currentVersion": "1.0.0-beta02",
             "generationAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
             "releaseAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
-            "releaseTimestamp": "2025-04-24T07:40:56Z",
+            "releaseTimestamp": "2025-11-05T17:26:27.439320482Z",
             "lastGeneratedCommit": "888ae95dd6125f754650d55410b8c117b618a268",
+            "lastReleasedCommit": "888ae95dd6125f754650d55410b8c117b618a268",
             "apiPaths": [
                 "google/cloud/devicestreaming/v1"
             ],
