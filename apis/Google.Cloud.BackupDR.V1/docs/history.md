@@ -1,5 +1,14 @@
 # Version history
 
+## Version 2.4.0, released 2025-11-05
+
+### New features
+
+- Adding `FetchBackupsForResourceType` API
+- Adding `ListDataSourceReferences` API
+- Adding `source_resource` fields to Backup resource
+- Adding new workload specific fields for Cloud SQL
+
 ## Version 2.3.0, released 2025-11-03
 
 ### New features
