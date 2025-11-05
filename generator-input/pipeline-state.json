@@ -2283,11 +2283,12 @@
         },
         {
             "id": "Google.Cloud.NetworkSecurity.V1Beta1",
-            "currentVersion": "2.0.0-beta06",
+            "currentVersion": "2.0.0-beta07",
             "generationAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
             "releaseAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
-            "releaseTimestamp": "2024-05-14T07:22:16Z",
+            "releaseTimestamp": "2025-11-05T22:06:33.207408439Z",
             "lastGeneratedCommit": "6821943108fe3284f483defc9b60774a3752de2b",
+            "lastReleasedCommit": "6821943108fe3284f483defc9b60774a3752de2b",
             "apiPaths": [
                 "google/cloud/networksecurity/v1beta1"
             ],
