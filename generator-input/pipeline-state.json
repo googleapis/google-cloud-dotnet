@@ -1923,11 +1923,12 @@
         },
         {
             "id": "Google.Cloud.Language.V1",
-            "currentVersion": "3.7.0",
+            "currentVersion": "3.8.0",
             "generationAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
             "releaseAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
-            "releaseTimestamp": "2024-05-14T07:04:24Z",
+            "releaseTimestamp": "2025-11-05T21:41:38.393311368Z",
             "lastGeneratedCommit": "9070e63a1f574261c153ef6e94afc55677200337",
+            "lastReleasedCommit": "9070e63a1f574261c153ef6e94afc55677200337",
             "apiPaths": [
                 "google/cloud/language/v1"
             ],
