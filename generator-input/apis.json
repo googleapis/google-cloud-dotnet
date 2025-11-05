@@ -994,7 +994,7 @@
         "connection"
       ],
       "dependencies": {
-        "Google.Cloud.Iam.V1": "3.4.0"
+        "Google.Cloud.Iam.V1": "3.5.0"
       },
       "generator": "micro",
       "protoPath": "google/cloud/bigquery/connection/v1",
@@ -1016,8 +1016,8 @@
         "analytics"
       ],
       "dependencies": {
-        "Google.Cloud.Iam.V1": "3.4.0",
-        "Google.Cloud.Location": "2.3.0"
+        "Google.Cloud.Iam.V1": "3.5.0",
+        "Google.Cloud.Location": "2.4.0"
       },
       "generator": "micro",
       "protoPath": "google/cloud/bigquery/dataexchange/v1beta1",
@@ -1037,7 +1037,7 @@
         "policies"
       ],
       "dependencies": {
-        "Google.Cloud.Iam.V1": "3.4.0"
+        "Google.Cloud.Iam.V1": "3.5.0"
       },
       "generator": "micro",
       "protoPath": "google/cloud/bigquery/datapolicies/v1",
@@ -1059,7 +1059,7 @@
         "policies"
       ],
       "dependencies": {
-        "Google.Cloud.Iam.V1": "3.4.0"
+        "Google.Cloud.Iam.V1": "3.5.0"
       },
       "generator": "micro",
       "protoPath": "google/cloud/bigquery/datapolicies/v1beta1",
@@ -1077,7 +1077,7 @@
       "type": "grpc",
       "description": "Recommended Google client library to access the BigQuery Data Transfer API, which transfers data from partner SaaS applications to Google BigQuery on a scheduled, managed basis.",
       "dependencies": {
-        "Google.Cloud.Location": "2.3.0"
+        "Google.Cloud.Location": "2.4.0"
       },
       "tags": [
         "BigQuery",
@@ -1101,7 +1101,7 @@
         "logs"
       ],
       "dependencies": {
-        "Google.Cloud.Iam.V1": "3.4.0"
+        "Google.Cloud.Iam.V1": "3.5.0"
       },
       "generator": "proto",
       "protoPath": "google/cloud/bigquery/logging/v1"
@@ -1137,7 +1137,7 @@
         "Reservation"
       ],
       "dependencies": {
-        "Google.Cloud.Iam.V1": "3.4.0"
+        "Google.Cloud.Iam.V1": "3.5.0"
       },
       "generator": "micro",
       "protoPath": "google/cloud/bigquery/reservation/v1",
@@ -1207,9 +1207,9 @@
         "Bigtable"
       ],
       "dependencies": {
-        "Google.Cloud.Bigtable.Common.V2": "3.2.0",
-        "Google.Cloud.Iam.V1": "3.4.0",
-        "Google.LongRunning": "3.4.0"
+        "Google.Cloud.Bigtable.Common.V2": "3.3.0",
+        "Google.Cloud.Iam.V1": "3.5.0",
+        "Google.LongRunning": "3.5.0"
       },
       "testDependencies": {
         "Google.Api.Gax.Grpc.Testing": "default"
@@ -1251,7 +1251,7 @@
         "Bigtable"
       ],
       "dependencies": {
-        "Google.Cloud.Bigtable.Common.V2": "3.2.0"
+        "Google.Cloud.Bigtable.Common.V2": "3.3.0"
       },
       "testDependencies": {
         "Google.Api.Gax.Grpc.Testing": "default",
@@ -1318,7 +1318,7 @@
       "type": "grpc",
       "description": "Recommended Google client library to access the Google Cloud Billing API, which allows you to define a budget plan and the rules to execute as spend is tracked against that plan.",
       "dependencies": {
-        "Google.Cloud.Iam.V1": "3.4.0"
+        "Google.Cloud.Iam.V1": "3.5.0"
       },
       "tags": [
         "Billing"
@@ -1386,7 +1386,7 @@
       "description": "Provides programmatic access to Capacity Planner features.",
       "tags": [],
       "dependencies": {
-        "Google.LongRunning": "3.4.0"
+        "Google.LongRunning": "3.5.0"
       },
       "generator": "micro",
       "protoPath": "google/cloud/capacityplanner/v1beta",
@@ -1409,8 +1409,8 @@
         "certificates"
       ],
       "dependencies": {
-        "Google.Cloud.Location": "2.3.0",
-        "Google.LongRunning": "3.4.0"
+        "Google.Cloud.Location": "2.4.0",
+        "Google.LongRunning": "3.5.0"
       },
       "generator": "micro",
       "protoPath": "google/cloud/certificatemanager/v1",
@@ -1432,7 +1432,7 @@
         "reseller"
       ],
       "dependencies": {
-        "Google.LongRunning": "3.4.0"
+        "Google.LongRunning": "3.5.0"
       },
       "generator": "micro",
       "protoPath": "google/cloud/channel/v1",
@@ -1454,7 +1454,7 @@
         "security"
       ],
       "dependencies": {
-        "Google.LongRunning": "3.4.0"
+        "Google.LongRunning": "3.5.0"
       },
       "generator": "micro",
       "protoPath": "google/cloud/chronicle/v1",
@@ -1476,7 +1476,7 @@
         "cloudbuild"
       ],
       "dependencies": {
-        "Google.LongRunning": "3.4.0"
+        "Google.LongRunning": "3.5.0"
       },
       "generator": "micro",
       "protoPath": "google/devtools/cloudbuild/v1",
@@ -1497,9 +1497,9 @@
         "cloudbuild"
       ],
       "dependencies": {
-        "Google.Cloud.Iam.V1": "3.4.0",
-        "Google.Cloud.Location": "2.3.0",
-        "Google.LongRunning": "3.4.0"
+        "Google.Cloud.Iam.V1": "3.5.0",
+        "Google.Cloud.Location": "2.4.0",
+        "Google.LongRunning": "3.5.0"
       },
       "generator": "micro",
       "protoPath": "google/devtools/cloudbuild/v2",
@@ -1562,9 +1562,9 @@
         "migration"
       ],
       "dependencies": {
-        "Google.Cloud.Iam.V1": "3.4.0",
-        "Google.Cloud.Location": "2.3.0",
-        "Google.LongRunning": "3.4.0"
+        "Google.Cloud.Iam.V1": "3.5.0",
+        "Google.Cloud.Location": "2.4.0",
+        "Google.LongRunning": "3.5.0"
       },
       "generator": "micro",
       "protoPath": "google/cloud/clouddms/v1",
@@ -1623,8 +1623,8 @@
       "description": "Recommended Google client library to access the Google Cloud Security Compliance API, which helps ensure that your Google Cloud infrastructure, workloads, and data meet the security and regulatory requirements of your organization.",
       "tags": [],
       "dependencies": {
-        "Google.Cloud.Location": "2.3.0",
-        "Google.LongRunning": "3.4.0"
+        "Google.Cloud.Location": "2.4.0",
+        "Google.LongRunning": "3.5.0"
       },
       "generator": "micro",
       "protoPath": "google/cloud/cloudsecuritycompliance/v1",
@@ -1645,7 +1645,7 @@
         "marketplace"
       ],
       "dependencies": {
-        "Google.LongRunning": "3.4.0"
+        "Google.LongRunning": "3.5.0"
       },
       "generator": "micro",
       "protoPath": "google/cloud/commerce/consumer/procurement/v1",
@@ -1678,7 +1678,7 @@
         "compute"
       ],
       "dependencies": {
-        "Google.LongRunning": "3.4.0"
+        "Google.LongRunning": "3.5.0"
       },
       "generator": "micro",
       "protoPath": "google/cloud/compute/v1",
@@ -1705,7 +1705,7 @@
         "privacy"
       ],
       "dependencies": {
-        "Google.Cloud.Location": "2.3.0"
+        "Google.Cloud.Location": "2.4.0"
       },
       "generator": "micro",
       "protoPath": "google/cloud/confidentialcomputing/v1",
@@ -1729,7 +1729,7 @@
         "privacy"
       ],
       "dependencies": {
-        "Google.Cloud.Location": "2.3.0"
+        "Google.Cloud.Location": "2.4.0"
       },
       "generator": "micro",
       "protoPath": "google/cloud/confidentialcomputing/v1alpha1",
@@ -1752,9 +1752,9 @@
         "resources"
       ],
       "dependencies": {
-        "Google.Cloud.Iam.V1": "3.4.0",
-        "Google.Cloud.Location": "2.3.0",
-        "Google.LongRunning": "3.4.0"
+        "Google.Cloud.Iam.V1": "3.5.0",
+        "Google.Cloud.Location": "2.4.0",
+        "Google.LongRunning": "3.5.0"
       },
       "generator": "micro",
       "protoPath": "google/cloud/config/v1",
@@ -1817,9 +1817,9 @@
         "integration"
       ],
       "dependencies": {
-        "Google.Cloud.Iam.V1": "3.4.0",
-        "Google.Cloud.Location": "2.3.0",
-        "Google.LongRunning": "3.4.0"
+        "Google.Cloud.Iam.V1": "3.5.0",
+        "Google.Cloud.Location": "2.4.0",
+        "Google.LongRunning": "3.5.0"
       },
       "generator": "micro",
       "protoPath": "google/cloud/connectors/v1",
@@ -1842,8 +1842,8 @@
         "feedback"
       ],
       "dependencies": {
-        "Google.Cloud.Iam.V1": "3.4.0",
-        "Google.LongRunning": "3.4.0"
+        "Google.Cloud.Iam.V1": "3.5.0",
+        "Google.LongRunning": "3.5.0"
       },
       "generator": "micro",
       "protoPath": "google/cloud/contactcenterinsights/v1",
@@ -1885,7 +1885,7 @@
         "data"
       ],
       "dependencies": {
-        "Google.LongRunning": "3.4.0"
+        "Google.LongRunning": "3.5.0"
       },
       "generator": "micro",
       "protoPath": "google/cloud/datacatalog/lineage/v1",
@@ -1909,8 +1909,8 @@
         "metadata"
       ],
       "dependencies": {
-        "Google.Cloud.Iam.V1": "3.4.0",
-        "Google.LongRunning": "3.4.0"
+        "Google.Cloud.Iam.V1": "3.5.0",
+        "Google.LongRunning": "3.5.0"
       },
       "shortName": "datacatalog",
       "serviceConfigFile": "datacatalog_v1.yaml",
@@ -1930,7 +1930,7 @@
         "data"
       ],
       "dependencies": {
-        "Google.LongRunning": "3.4.0"
+        "Google.LongRunning": "3.5.0"
       },
       "generator": "micro",
       "protoPath": "google/cloud/datafusion/v1",
@@ -1975,8 +1975,8 @@
         "versioning"
       ],
       "dependencies": {
-        "Google.Cloud.Iam.V1": "3.4.0",
-        "Google.Cloud.Location": "2.3.0"
+        "Google.Cloud.Iam.V1": "3.5.0",
+        "Google.Cloud.Location": "2.4.0"
       },
       "generator": "micro",
       "protoPath": "google/cloud/dataform/v1",
@@ -2000,8 +2000,8 @@
         "dataform"
       ],
       "dependencies": {
-        "Google.Cloud.Iam.V1": "3.4.0",
-        "Google.Cloud.Location": "2.3.0"
+        "Google.Cloud.Iam.V1": "3.5.0",
+        "Google.Cloud.Location": "2.4.0"
       },
       "generator": "micro",
       "protoPath": "google/cloud/dataform/v1beta1",
@@ -2023,9 +2023,9 @@
         "dataplex"
       ],
       "dependencies": {
-        "Google.Cloud.Iam.V1": "3.4.0",
-        "Google.Cloud.Location": "2.3.0",
-        "Google.LongRunning": "3.4.0"
+        "Google.Cloud.Iam.V1": "3.5.0",
+        "Google.Cloud.Location": "2.4.0",
+        "Google.LongRunning": "3.5.0"
       },
       "generator": "micro",
       "protoPath": "google/cloud/dataplex/v1",
@@ -2049,8 +2049,8 @@
         "Hadoop"
       ],
       "dependencies": {
-        "Google.Cloud.Iam.V1": "3.4.0",
-        "Google.LongRunning": "3.4.0"
+        "Google.Cloud.Iam.V1": "3.5.0",
+        "Google.LongRunning": "3.5.0"
       },
       "shortName": "dataproc",
       "serviceConfigFile": "dataproc_v1.yaml",
@@ -2069,7 +2069,7 @@
         "admin"
       ],
       "dependencies": {
-        "Google.LongRunning": "3.4.0"
+        "Google.LongRunning": "3.5.0"
       },
       "generator": "micro",
       "protoPath": "google/datastore/admin/v1",
@@ -2093,7 +2093,7 @@
         "Datastore"
       ],
       "dependencies": {
-        "Google.LongRunning": "3.4.0",
+        "Google.LongRunning": "3.5.0",
         "System.Linq.Async": "default"
       },
       "testDependencies": {
@@ -6535,9 +6535,9 @@
         "identity"
       ],
       "dependencies": {
-        "Google.Cloud.Iam.V1": "3.4.0",
-        "Google.Identity.AccessContextManager.Type": "2.2.0",
-        "Google.LongRunning": "3.4.0"
+        "Google.Cloud.Iam.V1": "3.5.0",
+        "Google.Identity.AccessContextManager.Type": "2.3.0",
+        "Google.LongRunning": "3.5.0"
       },
       "shortName": "accesscontextmanager",
       "serviceConfigFile": "accesscontextmanager_v1.yaml",
