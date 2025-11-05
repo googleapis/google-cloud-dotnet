@@ -1281,11 +1281,12 @@
         },
         {
             "id": "Google.Cloud.Datastore.Admin.V1",
-            "currentVersion": "2.4.0",
+            "currentVersion": "2.5.0",
             "generationAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
             "releaseAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
-            "releaseTimestamp": "2024-05-13T17:12:17Z",
+            "releaseTimestamp": "2025-11-05T09:22:17.494794592Z",
             "lastGeneratedCommit": "4823efd0b9944891ec5c387104dcc2ec401307a8",
+            "lastReleasedCommit": "4823efd0b9944891ec5c387104dcc2ec401307a8",
             "apiPaths": [
                 "google/datastore/admin/v1"
             ],
