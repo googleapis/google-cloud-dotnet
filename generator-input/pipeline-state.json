@@ -2003,10 +2003,10 @@
         },
         {
             "id": "Google.Cloud.Logging.NLog",
-            "currentVersion": "5.2.0",
+            "currentVersion": "5.3.0",
             "generationAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
             "releaseAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
-            "releaseTimestamp": "2024-09-26T08:16:33Z",
+            "releaseTimestamp": "2025-11-05T21:48:03.057216168Z",
             "sourcePaths": [
                 "apis/Google.Cloud.Logging.NLog/Google.Cloud.Logging.NLog"
             ]
@@ -2043,11 +2043,12 @@
         },
         {
             "id": "Google.Cloud.ManagedIdentities.V1",
-            "currentVersion": "3.3.0",
+            "currentVersion": "3.4.0",
             "generationAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
             "releaseAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
-            "releaseTimestamp": "2024-05-14T07:06:21Z",
+            "releaseTimestamp": "2025-11-05T21:49:03.252404785Z",
             "lastGeneratedCommit": "36533b09a6b383f3c30d13c3c26092154ecf5388",
+            "lastReleasedCommit": "36533b09a6b383f3c30d13c3c26092154ecf5388",
             "apiPaths": [
                 "google/cloud/managedidentities/v1"
             ],
