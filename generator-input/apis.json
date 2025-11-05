@@ -4127,7 +4127,7 @@
     },
     {
       "id": "Google.Cloud.Notebooks.V1Beta1",
-      "version": "2.0.0-beta05",
+      "version": "2.0.0-beta06",
       "type": "grpc",
       "productName": "Vertex AI Notebooks",
       "productUrl": "https://cloud.google.com/vertex-ai-notebooks",
