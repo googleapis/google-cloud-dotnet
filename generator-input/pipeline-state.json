@@ -2208,11 +2208,12 @@
         },
         {
             "id": "Google.Cloud.Monitoring.V3",
-            "currentVersion": "3.15.0",
+            "currentVersion": "3.16.0",
             "generationAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
             "releaseAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
-            "releaseTimestamp": "2025-02-03T18:00:37Z",
+            "releaseTimestamp": "2025-11-05T21:59:20.685115591Z",
             "lastGeneratedCommit": "c1c2f3e01e494b6fa004ff543cec2a8d84120717",
+            "lastReleasedCommit": "c1c2f3e01e494b6fa004ff543cec2a8d84120717",
             "apiPaths": [
                 "google/monitoring/v3"
             ],
