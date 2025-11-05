@@ -4664,12 +4664,12 @@
         },
         {
             "id": "Google.Cloud.LocationFinder.V1",
-            "currentVersion": "1.0.0-beta01",
+            "currentVersion": "1.0.0-beta02",
             "generationAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
             "releaseAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
-            "releaseTimestamp": "2025-09-16T16:40:44.860598614Z",
+            "releaseTimestamp": "2025-11-05T22:22:08.690652417Z",
             "lastGeneratedCommit": "ac02e45c23e8f55b81fd1425190dd7d4e11390f7",
-            "lastReleasedCommit": "60e1300d4a0b60b85b3df167ddc4062ac7cc4f44",
+            "lastReleasedCommit": "ac02e45c23e8f55b81fd1425190dd7d4e11390f7",
             "apiPaths": [
                 "google/cloud/locationfinder/v1"
             ],
