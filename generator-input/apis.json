@@ -3140,7 +3140,7 @@
     },
     {
       "id": "Google.Cloud.Iam.Credentials.V1",
-      "version": "2.4.0",
+      "version": "2.5.0",
       "type": "grpc",
       "productName": "IAM Service Account Credentials",
       "productUrl": "https://cloud.google.com/iam/docs/reference/credentials/rest",
