@@ -1757,10 +1757,10 @@
         },
         {
             "id": "Google.Cloud.GkeHub.V1Beta1",
-            "currentVersion": "2.0.0-beta08",
+            "currentVersion": "2.0.0-beta09",
             "generationAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
             "releaseAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
-            "releaseTimestamp": "2025-09-16T08:16:56.341437673Z",
+            "releaseTimestamp": "2025-11-05T17:09:14.208694097Z",
             "lastGeneratedCommit": "780e61218fe286ed17026ce9e3672d1998389b05",
             "lastReleasedCommit": "780e61218fe286ed17026ce9e3672d1998389b05",
             "apiPaths": [
