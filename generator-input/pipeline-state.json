@@ -862,11 +862,12 @@
         },
         {
             "id": "Google.Cloud.Billing.V1",
-            "currentVersion": "3.9.0",
+            "currentVersion": "3.10.0",
             "generationAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
             "releaseAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
-            "releaseTimestamp": "2024-12-06T08:14:20Z",
+            "releaseTimestamp": "2025-11-05T08:53:46.528480330Z",
             "lastGeneratedCommit": "3021374c68bbc640c1f75bfffcadbd5c279811ee",
+            "lastReleasedCommit": "3021374c68bbc640c1f75bfffcadbd5c279811ee",
             "apiPaths": [
                 "google/cloud/billing/v1"
             ],
