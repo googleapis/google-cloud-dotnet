@@ -777,11 +777,12 @@
         },
         {
             "id": "Google.Cloud.BigQuery.Storage.V1",
-            "currentVersion": "3.17.0",
+            "currentVersion": "3.18.0",
             "generationAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
             "releaseAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
-            "releaseTimestamp": "2024-10-14T16:10:26Z",
+            "releaseTimestamp": "2025-11-05T08:49:53.081721205Z",
             "lastGeneratedCommit": "4823efd0b9944891ec5c387104dcc2ec401307a8",
+            "lastReleasedCommit": "4823efd0b9944891ec5c387104dcc2ec401307a8",
             "apiPaths": [
                 "google/cloud/bigquery/storage/v1"
             ],
