@@ -1717,7 +1717,7 @@
     },
     {
       "id": "Google.Cloud.ConfidentialComputing.V1Alpha1",
-      "version": "1.0.0-alpha05",
+      "version": "1.0.0-alpha06",
       "type": "grpc",
       "productName": "Confidential Computing",
       "productUrl": "https://cloud.google.com/confidential-computing",
