@@ -6527,7 +6527,7 @@
       "generator": "micro",
       "type": "grpc",
       "protoPath": "google/identity/accesscontextmanager/v1",
-      "version": "2.5.0",
+      "version": "2.6.0",
       "productName": "Identity Access Context Manager",
       "productUrl": "https://cloud.google.com/access-context-manager/docs",
       "description": "Recommended Google client library to access the Identity Access Context Manager API V1.",

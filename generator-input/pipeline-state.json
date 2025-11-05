@@ -3643,11 +3643,12 @@
         },
         {
             "id": "Google.Identity.AccessContextManager.V1",
-            "currentVersion": "2.5.0",
+            "currentVersion": "2.6.0",
             "generationAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
             "releaseAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
-            "releaseTimestamp": "2024-05-14T15:42:21Z",
+            "releaseTimestamp": "2025-11-05T09:32:40.905500762Z",
             "lastGeneratedCommit": "a53e1e09d16d311ff6064d237abed3ddd7a5d1fe",
+            "lastReleasedCommit": "a53e1e09d16d311ff6064d237abed3ddd7a5d1fe",
             "apiPaths": [
                 "google/identity/accesscontextmanager/v1"
             ],
