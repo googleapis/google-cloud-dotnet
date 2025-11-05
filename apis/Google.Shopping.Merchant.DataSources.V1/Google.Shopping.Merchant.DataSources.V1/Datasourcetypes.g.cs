@@ -27,52 +27,51 @@ namespace Google.Shopping.Merchant.DataSources.V1 {
             "Cj1nb29nbGUvc2hvcHBpbmcvbWVyY2hhbnQvZGF0YXNvdXJjZXMvdjEvZGF0",
             "YXNvdXJjZXR5cGVzLnByb3RvEidnb29nbGUuc2hvcHBpbmcubWVyY2hhbnQu",
             "ZGF0YXNvdXJjZXMudjEaH2dvb2dsZS9hcGkvZmllbGRfYmVoYXZpb3IucHJv",
-            "dG8aIGdvb2dsZS9zaG9wcGluZy90eXBlL3R5cGVzLnByb3RvIp0GChhQcmlt",
+            "dG8aIGdvb2dsZS9zaG9wcGluZy90eXBlL3R5cGVzLnByb3RvIvkFChhQcmlt",
             "YXJ5UHJvZHVjdERhdGFTb3VyY2USHAoMbGVnYWN5X2xvY2FsGAsgASgIQgbg",
             "QQHgQQUSHwoKZmVlZF9sYWJlbBgEIAEoCUIG4EEB4EEFSACIAQESJQoQY29u",
             "dGVudF9sYW5ndWFnZRgFIAEoCUIG4EEB4EEFSAGIAQESFgoJY291bnRyaWVz",
             "GAYgAygJQgPgQQESaAoMZGVmYXVsdF9ydWxlGAcgASgLMk0uZ29vZ2xlLnNo",
             "b3BwaW5nLm1lcmNoYW50LmRhdGFzb3VyY2VzLnYxLlByaW1hcnlQcm9kdWN0",
-            "RGF0YVNvdXJjZS5EZWZhdWx0UnVsZUID4EEBEiIKFWNvbnRhaW5zX2N1c3Rv",
-            "bV9ydWxlcxgJIAEoCEID4EEDEmgKDGRlc3RpbmF0aW9ucxgKIAMoCzJNLmdv",
-            "b2dsZS5zaG9wcGluZy5tZXJjaGFudC5kYXRhc291cmNlcy52MS5QcmltYXJ5",
-            "UHJvZHVjdERhdGFTb3VyY2UuRGVzdGluYXRpb25CA+BBARpwCgtEZWZhdWx0",
-            "UnVsZRJhChZ0YWtlX2Zyb21fZGF0YV9zb3VyY2VzGAEgAygLMjwuZ29vZ2xl",
-            "LnNob3BwaW5nLm1lcmNoYW50LmRhdGFzb3VyY2VzLnYxLkRhdGFTb3VyY2VS",
-            "ZWZlcmVuY2VCA+BBAhr0AQoLRGVzdGluYXRpb24SRgoLZGVzdGluYXRpb24Y",
-            "ASABKA4yMS5nb29nbGUuc2hvcHBpbmcudHlwZS5EZXN0aW5hdGlvbi5EZXN0",
-            "aW5hdGlvbkVudW0SYgoFc3RhdGUYAiABKA4yUy5nb29nbGUuc2hvcHBpbmcu",
-            "bWVyY2hhbnQuZGF0YXNvdXJjZXMudjEuUHJpbWFyeVByb2R1Y3REYXRhU291",
-            "cmNlLkRlc3RpbmF0aW9uLlN0YXRlIjkKBVN0YXRlEhUKEVNUQVRFX1VOU1BF",
-            "Q0lGSUVEEAASCwoHRU5BQkxFRBABEgwKCERJU0FCTEVEEAJCDQoLX2ZlZWRf",
-            "bGFiZWxCEwoRX2NvbnRlbnRfbGFuZ3VhZ2Ui+AEKHVN1cHBsZW1lbnRhbFBy",
-            "b2R1Y3REYXRhU291cmNlEh8KCmZlZWRfbGFiZWwYBCABKAlCBuBBAeBBBUgA",
-            "iAEBEiUKEGNvbnRlbnRfbGFuZ3VhZ2UYBSABKAlCBuBBAeBBBUgBiAEBEmsK",
-            "IHJlZmVyZW5jaW5nX3ByaW1hcnlfZGF0YV9zb3VyY2VzGAcgAygLMjwuZ29v",
-            "Z2xlLnNob3BwaW5nLm1lcmNoYW50LmRhdGFzb3VyY2VzLnYxLkRhdGFTb3Vy",
-            "Y2VSZWZlcmVuY2VCA+BBA0INCgtfZmVlZF9sYWJlbEITChFfY29udGVudF9s",
-            "YW5ndWFnZSJYChhMb2NhbEludmVudG9yeURhdGFTb3VyY2USGgoKZmVlZF9s",
-            "YWJlbBgEIAEoCUIG4EEC4EEFEiAKEGNvbnRlbnRfbGFuZ3VhZ2UYBSABKAlC",
-            "BuBBAuBBBSJbChtSZWdpb25hbEludmVudG9yeURhdGFTb3VyY2USGgoKZmVl",
-            "ZF9sYWJlbBgEIAEoCUIG4EEC4EEFEiAKEGNvbnRlbnRfbGFuZ3VhZ2UYBSAB",
-            "KAlCBuBBAuBBBSJXChNQcm9tb3Rpb25EYXRhU291cmNlEh4KDnRhcmdldF9j",
-            "b3VudHJ5GAEgASgJQgbgQQLgQQUSIAoQY29udGVudF9sYW5ndWFnZRgCIAEo",
-            "CUIG4EEC4EEFIhkKF1Byb2R1Y3RSZXZpZXdEYXRhU291cmNlIhoKGE1lcmNo",
-            "YW50UmV2aWV3RGF0YVNvdXJjZSKOAQoTRGF0YVNvdXJjZVJlZmVyZW5jZRIO",
-            "CgRzZWxmGAEgASgISAASJwoYcHJpbWFyeV9kYXRhX3NvdXJjZV9uYW1lGAMg",
-            "ASgJQgPgQQFIABIsCh1zdXBwbGVtZW50YWxfZGF0YV9zb3VyY2VfbmFtZRgC",
-            "IAEoCUID4EEBSABCEAoOZGF0YV9zb3VyY2VfaWRCnAIKK2NvbS5nb29nbGUu",
-            "c2hvcHBpbmcubWVyY2hhbnQuZGF0YXNvdXJjZXMudjFCFERhdGFzb3VyY2V0",
-            "eXBlc1Byb3RvUAFaU2Nsb3VkLmdvb2dsZS5jb20vZ28vc2hvcHBpbmcvbWVy",
-            "Y2hhbnQvZGF0YXNvdXJjZXMvYXBpdjEvZGF0YXNvdXJjZXNwYjtkYXRhc291",
-            "cmNlc3BiqgInR29vZ2xlLlNob3BwaW5nLk1lcmNoYW50LkRhdGFTb3VyY2Vz",
-            "LlYxygInR29vZ2xlXFNob3BwaW5nXE1lcmNoYW50XERhdGFTb3VyY2VzXFYx",
-            "6gIrR29vZ2xlOjpTaG9wcGluZzo6TWVyY2hhbnQ6OkRhdGFTb3VyY2VzOjpW",
-            "MWIGcHJvdG8z"));
+            "RGF0YVNvdXJjZS5EZWZhdWx0UnVsZUID4EEBEmgKDGRlc3RpbmF0aW9ucxgK",
+            "IAMoCzJNLmdvb2dsZS5zaG9wcGluZy5tZXJjaGFudC5kYXRhc291cmNlcy52",
+            "MS5QcmltYXJ5UHJvZHVjdERhdGFTb3VyY2UuRGVzdGluYXRpb25CA+BBARpw",
+            "CgtEZWZhdWx0UnVsZRJhChZ0YWtlX2Zyb21fZGF0YV9zb3VyY2VzGAEgAygL",
+            "MjwuZ29vZ2xlLnNob3BwaW5nLm1lcmNoYW50LmRhdGFzb3VyY2VzLnYxLkRh",
+            "dGFTb3VyY2VSZWZlcmVuY2VCA+BBAhr0AQoLRGVzdGluYXRpb24SRgoLZGVz",
+            "dGluYXRpb24YASABKA4yMS5nb29nbGUuc2hvcHBpbmcudHlwZS5EZXN0aW5h",
+            "dGlvbi5EZXN0aW5hdGlvbkVudW0SYgoFc3RhdGUYAiABKA4yUy5nb29nbGUu",
+            "c2hvcHBpbmcubWVyY2hhbnQuZGF0YXNvdXJjZXMudjEuUHJpbWFyeVByb2R1",
+            "Y3REYXRhU291cmNlLkRlc3RpbmF0aW9uLlN0YXRlIjkKBVN0YXRlEhUKEVNU",
+            "QVRFX1VOU1BFQ0lGSUVEEAASCwoHRU5BQkxFRBABEgwKCERJU0FCTEVEEAJC",
+            "DQoLX2ZlZWRfbGFiZWxCEwoRX2NvbnRlbnRfbGFuZ3VhZ2Ui+AEKHVN1cHBs",
+            "ZW1lbnRhbFByb2R1Y3REYXRhU291cmNlEh8KCmZlZWRfbGFiZWwYBCABKAlC",
+            "BuBBAeBBBUgAiAEBEiUKEGNvbnRlbnRfbGFuZ3VhZ2UYBSABKAlCBuBBAeBB",
+            "BUgBiAEBEmsKIHJlZmVyZW5jaW5nX3ByaW1hcnlfZGF0YV9zb3VyY2VzGAcg",
+            "AygLMjwuZ29vZ2xlLnNob3BwaW5nLm1lcmNoYW50LmRhdGFzb3VyY2VzLnYx",
+            "LkRhdGFTb3VyY2VSZWZlcmVuY2VCA+BBA0INCgtfZmVlZF9sYWJlbEITChFf",
+            "Y29udGVudF9sYW5ndWFnZSJYChhMb2NhbEludmVudG9yeURhdGFTb3VyY2US",
+            "GgoKZmVlZF9sYWJlbBgEIAEoCUIG4EEC4EEFEiAKEGNvbnRlbnRfbGFuZ3Vh",
+            "Z2UYBSABKAlCBuBBAuBBBSJbChtSZWdpb25hbEludmVudG9yeURhdGFTb3Vy",
+            "Y2USGgoKZmVlZF9sYWJlbBgEIAEoCUIG4EEC4EEFEiAKEGNvbnRlbnRfbGFu",
+            "Z3VhZ2UYBSABKAlCBuBBAuBBBSJXChNQcm9tb3Rpb25EYXRhU291cmNlEh4K",
+            "DnRhcmdldF9jb3VudHJ5GAEgASgJQgbgQQLgQQUSIAoQY29udGVudF9sYW5n",
+            "dWFnZRgCIAEoCUIG4EEC4EEFIhkKF1Byb2R1Y3RSZXZpZXdEYXRhU291cmNl",
+            "IhoKGE1lcmNoYW50UmV2aWV3RGF0YVNvdXJjZSKOAQoTRGF0YVNvdXJjZVJl",
+            "ZmVyZW5jZRIOCgRzZWxmGAEgASgISAASJwoYcHJpbWFyeV9kYXRhX3NvdXJj",
+            "ZV9uYW1lGAMgASgJQgPgQQFIABIsCh1zdXBwbGVtZW50YWxfZGF0YV9zb3Vy",
+            "Y2VfbmFtZRgCIAEoCUID4EEBSABCEAoOZGF0YV9zb3VyY2VfaWRCnAIKK2Nv",
+            "bS5nb29nbGUuc2hvcHBpbmcubWVyY2hhbnQuZGF0YXNvdXJjZXMudjFCFERh",
+            "dGFzb3VyY2V0eXBlc1Byb3RvUAFaU2Nsb3VkLmdvb2dsZS5jb20vZ28vc2hv",
+            "cHBpbmcvbWVyY2hhbnQvZGF0YXNvdXJjZXMvYXBpdjEvZGF0YXNvdXJjZXNw",
+            "YjtkYXRhc291cmNlc3BiqgInR29vZ2xlLlNob3BwaW5nLk1lcmNoYW50LkRh",
+            "dGFTb3VyY2VzLlYxygInR29vZ2xlXFNob3BwaW5nXE1lcmNoYW50XERhdGFT",
+            "b3VyY2VzXFYx6gIrR29vZ2xlOjpTaG9wcGluZzo6TWVyY2hhbnQ6OkRhdGFT",
+            "b3VyY2VzOjpWMWIGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Shopping.Type.TypesReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Shopping.Merchant.DataSources.V1.PrimaryProductDataSource), global::Google.Shopping.Merchant.DataSources.V1.PrimaryProductDataSource.Parser, new[]{ "LegacyLocal", "FeedLabel", "ContentLanguage", "Countries", "DefaultRule", "ContainsCustomRules", "Destinations" }, new[]{ "FeedLabel", "ContentLanguage" }, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Shopping.Merchant.DataSources.V1.PrimaryProductDataSource.Types.DefaultRule), global::Google.Shopping.Merchant.DataSources.V1.PrimaryProductDataSource.Types.DefaultRule.Parser, new[]{ "TakeFromDataSources" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Shopping.Merchant.DataSources.V1.PrimaryProductDataSource), global::Google.Shopping.Merchant.DataSources.V1.PrimaryProductDataSource.Parser, new[]{ "LegacyLocal", "FeedLabel", "ContentLanguage", "Countries", "DefaultRule", "Destinations" }, new[]{ "FeedLabel", "ContentLanguage" }, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Shopping.Merchant.DataSources.V1.PrimaryProductDataSource.Types.DefaultRule), global::Google.Shopping.Merchant.DataSources.V1.PrimaryProductDataSource.Types.DefaultRule.Parser, new[]{ "TakeFromDataSources" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Shopping.Merchant.DataSources.V1.PrimaryProductDataSource.Types.Destination), global::Google.Shopping.Merchant.DataSources.V1.PrimaryProductDataSource.Types.Destination.Parser, new[]{ "Destination_", "State" }, null, new[]{ typeof(global::Google.Shopping.Merchant.DataSources.V1.PrimaryProductDataSource.Types.Destination.Types.State) }, null, null)}),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Shopping.Merchant.DataSources.V1.SupplementalProductDataSource), global::Google.Shopping.Merchant.DataSources.V1.SupplementalProductDataSource.Parser, new[]{ "FeedLabel", "ContentLanguage", "ReferencingPrimaryDataSources" }, new[]{ "FeedLabel", "ContentLanguage" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Shopping.Merchant.DataSources.V1.LocalInventoryDataSource), global::Google.Shopping.Merchant.DataSources.V1.LocalInventoryDataSource.Parser, new[]{ "FeedLabel", "ContentLanguage" }, null, null, null, null),
@@ -130,7 +129,6 @@ namespace Google.Shopping.Merchant.DataSources.V1 {
       contentLanguage_ = other.contentLanguage_;
       countries_ = other.countries_.Clone();
       defaultRule_ = other.defaultRule_ != null ? other.defaultRule_.Clone() : null;
-      containsCustomRules_ = other.containsCustomRules_;
       destinations_ = other.destinations_.Clone();
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
@@ -272,23 +270,6 @@ namespace Google.Shopping.Merchant.DataSources.V1 {
       }
     }
 
-    /// <summary>Field number for the "contains_custom_rules" field.</summary>
-    public const int ContainsCustomRulesFieldNumber = 9;
-    private bool containsCustomRules_;
-    /// <summary>
-    /// Output only. The existing data source setup contains at least one custom
-    /// (non-default) rule and therefore its management through the
-    /// `default_rule_data_sources` field should be treated with caution.
-    /// </summary>
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public bool ContainsCustomRules {
-      get { return containsCustomRules_; }
-      set {
-        containsCustomRules_ = value;
-      }
-    }
-
     /// <summary>Field number for the "destinations" field.</summary>
     public const int DestinationsFieldNumber = 10;
     private static readonly pb::FieldCodec<global::Google.Shopping.Merchant.DataSources.V1.PrimaryProductDataSource.Types.Destination> _repeated_destinations_codec
@@ -339,7 +320,6 @@ namespace Google.Shopping.Merchant.DataSources.V1 {
       if (ContentLanguage != other.ContentLanguage) return false;
       if(!countries_.Equals(other.countries_)) return false;
       if (!object.Equals(DefaultRule, other.DefaultRule)) return false;
-      if (ContainsCustomRules != other.ContainsCustomRules) return false;
       if(!destinations_.Equals(other.destinations_)) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
@@ -353,7 +333,6 @@ namespace Google.Shopping.Merchant.DataSources.V1 {
       if (HasContentLanguage) hash ^= ContentLanguage.GetHashCode();
       hash ^= countries_.GetHashCode();
       if (defaultRule_ != null) hash ^= DefaultRule.GetHashCode();
-      if (ContainsCustomRules != false) hash ^= ContainsCustomRules.GetHashCode();
       hash ^= destinations_.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
@@ -386,10 +365,6 @@ namespace Google.Shopping.Merchant.DataSources.V1 {
         output.WriteRawTag(58);
         output.WriteMessage(DefaultRule);
       }
-      if (ContainsCustomRules != false) {
-        output.WriteRawTag(72);
-        output.WriteBool(ContainsCustomRules);
-      }
       destinations_.WriteTo(output, _repeated_destinations_codec);
       if (LegacyLocal != false) {
         output.WriteRawTag(88);
@@ -417,10 +392,6 @@ namespace Google.Shopping.Merchant.DataSources.V1 {
       if (defaultRule_ != null) {
         output.WriteRawTag(58);
         output.WriteMessage(DefaultRule);
-      }
-      if (ContainsCustomRules != false) {
-        output.WriteRawTag(72);
-        output.WriteBool(ContainsCustomRules);
       }
       destinations_.WriteTo(ref output, _repeated_destinations_codec);
       if (LegacyLocal != false) {
@@ -450,9 +421,6 @@ namespace Google.Shopping.Merchant.DataSources.V1 {
       if (defaultRule_ != null) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(DefaultRule);
       }
-      if (ContainsCustomRules != false) {
-        size += 1 + 1;
-      }
       size += destinations_.CalculateSize(_repeated_destinations_codec);
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -481,9 +449,6 @@ namespace Google.Shopping.Merchant.DataSources.V1 {
           DefaultRule = new global::Google.Shopping.Merchant.DataSources.V1.PrimaryProductDataSource.Types.DefaultRule();
         }
         DefaultRule.MergeFrom(other.DefaultRule);
-      }
-      if (other.ContainsCustomRules != false) {
-        ContainsCustomRules = other.ContainsCustomRules;
       }
       destinations_.Add(other.destinations_);
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
@@ -518,10 +483,6 @@ namespace Google.Shopping.Merchant.DataSources.V1 {
               DefaultRule = new global::Google.Shopping.Merchant.DataSources.V1.PrimaryProductDataSource.Types.DefaultRule();
             }
             input.ReadMessage(DefaultRule);
-            break;
-          }
-          case 72: {
-            ContainsCustomRules = input.ReadBool();
             break;
           }
           case 82: {
@@ -564,10 +525,6 @@ namespace Google.Shopping.Merchant.DataSources.V1 {
               DefaultRule = new global::Google.Shopping.Merchant.DataSources.V1.PrimaryProductDataSource.Types.DefaultRule();
             }
             input.ReadMessage(DefaultRule);
-            break;
-          }
-          case 72: {
-            ContainsCustomRules = input.ReadBool();
             break;
           }
           case 82: {
