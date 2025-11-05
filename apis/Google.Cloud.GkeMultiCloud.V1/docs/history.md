@@ -1,5 +1,15 @@
 # Version history
 
+## Version 2.9.0, released 2025-11-05
+
+### New features
+
+- Update dependencies
+
+### Documentation improvements
+
+- Fix comments of existing field
+
 ## Version 2.8.0, released 2025-01-06
 
 ### New features
