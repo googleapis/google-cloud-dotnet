@@ -4591,10 +4591,10 @@
         },
         {
             "id": "Google.Cloud.CloudSecurityCompliance.V1",
-            "currentVersion": "1.0.0-beta03",
+            "currentVersion": "1.0.0-beta04",
             "generationAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
             "releaseAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
-            "releaseTimestamp": "2025-11-03T14:36:42.521636771Z",
+            "releaseTimestamp": "2025-11-05T09:36:34.096141348Z",
             "lastGeneratedCommit": "86356ccc532754bc792df92e6e438e6c2de7a6ed",
             "lastReleasedCommit": "86356ccc532754bc792df92e6e438e6c2de7a6ed",
             "apiPaths": [
