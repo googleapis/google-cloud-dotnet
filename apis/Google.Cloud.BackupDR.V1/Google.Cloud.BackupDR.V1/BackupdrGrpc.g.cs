@@ -110,6 +110,10 @@ namespace Google.Cloud.BackupDR.V1 {
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.BackupDR.V1.ListBackupsResponse> __Marshaller_google_cloud_backupdr_v1_ListBackupsResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.BackupDR.V1.ListBackupsResponse.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.BackupDR.V1.FetchBackupsForResourceTypeRequest> __Marshaller_google_cloud_backupdr_v1_FetchBackupsForResourceTypeRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.BackupDR.V1.FetchBackupsForResourceTypeRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.BackupDR.V1.FetchBackupsForResourceTypeResponse> __Marshaller_google_cloud_backupdr_v1_FetchBackupsForResourceTypeResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.BackupDR.V1.FetchBackupsForResourceTypeResponse.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.BackupDR.V1.GetBackupRequest> __Marshaller_google_cloud_backupdr_v1_GetBackupRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.BackupDR.V1.GetBackupRequest.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.BackupDR.V1.Backup> __Marshaller_google_cloud_backupdr_v1_Backup = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.BackupDR.V1.Backup.Parser));
@@ -165,6 +169,10 @@ namespace Google.Cloud.BackupDR.V1 {
     static readonly grpc::Marshaller<global::Google.Cloud.BackupDR.V1.GetDataSourceReferenceRequest> __Marshaller_google_cloud_backupdr_v1_GetDataSourceReferenceRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.BackupDR.V1.GetDataSourceReferenceRequest.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.BackupDR.V1.DataSourceReference> __Marshaller_google_cloud_backupdr_v1_DataSourceReference = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.BackupDR.V1.DataSourceReference.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.BackupDR.V1.ListDataSourceReferencesRequest> __Marshaller_google_cloud_backupdr_v1_ListDataSourceReferencesRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.BackupDR.V1.ListDataSourceReferencesRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.BackupDR.V1.ListDataSourceReferencesResponse> __Marshaller_google_cloud_backupdr_v1_ListDataSourceReferencesResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.BackupDR.V1.ListDataSourceReferencesResponse.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.BackupDR.V1.FetchDataSourceReferencesForResourceTypeRequest> __Marshaller_google_cloud_backupdr_v1_FetchDataSourceReferencesForResourceTypeRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.BackupDR.V1.FetchDataSourceReferencesForResourceTypeRequest.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
@@ -283,6 +291,14 @@ namespace Google.Cloud.BackupDR.V1 {
         "ListBackups",
         __Marshaller_google_cloud_backupdr_v1_ListBackupsRequest,
         __Marshaller_google_cloud_backupdr_v1_ListBackupsResponse);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.BackupDR.V1.FetchBackupsForResourceTypeRequest, global::Google.Cloud.BackupDR.V1.FetchBackupsForResourceTypeResponse> __Method_FetchBackupsForResourceType = new grpc::Method<global::Google.Cloud.BackupDR.V1.FetchBackupsForResourceTypeRequest, global::Google.Cloud.BackupDR.V1.FetchBackupsForResourceTypeResponse>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "FetchBackupsForResourceType",
+        __Marshaller_google_cloud_backupdr_v1_FetchBackupsForResourceTypeRequest,
+        __Marshaller_google_cloud_backupdr_v1_FetchBackupsForResourceTypeResponse);
 
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.BackupDR.V1.GetBackupRequest, global::Google.Cloud.BackupDR.V1.Backup> __Method_GetBackup = new grpc::Method<global::Google.Cloud.BackupDR.V1.GetBackupRequest, global::Google.Cloud.BackupDR.V1.Backup>(
@@ -435,6 +451,14 @@ namespace Google.Cloud.BackupDR.V1 {
         "GetDataSourceReference",
         __Marshaller_google_cloud_backupdr_v1_GetDataSourceReferenceRequest,
         __Marshaller_google_cloud_backupdr_v1_DataSourceReference);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.BackupDR.V1.ListDataSourceReferencesRequest, global::Google.Cloud.BackupDR.V1.ListDataSourceReferencesResponse> __Method_ListDataSourceReferences = new grpc::Method<global::Google.Cloud.BackupDR.V1.ListDataSourceReferencesRequest, global::Google.Cloud.BackupDR.V1.ListDataSourceReferencesResponse>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "ListDataSourceReferences",
+        __Marshaller_google_cloud_backupdr_v1_ListDataSourceReferencesRequest,
+        __Marshaller_google_cloud_backupdr_v1_ListDataSourceReferencesResponse);
 
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.BackupDR.V1.FetchDataSourceReferencesForResourceTypeRequest, global::Google.Cloud.BackupDR.V1.FetchDataSourceReferencesForResourceTypeResponse> __Method_FetchDataSourceReferencesForResourceType = new grpc::Method<global::Google.Cloud.BackupDR.V1.FetchDataSourceReferencesForResourceTypeRequest, global::Google.Cloud.BackupDR.V1.FetchDataSourceReferencesForResourceTypeResponse>(
@@ -628,6 +652,18 @@ namespace Google.Cloud.BackupDR.V1 {
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.BackupDR.V1.ListBackupsResponse> ListBackups(global::Google.Cloud.BackupDR.V1.ListBackupsRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Fetch Backups for a given resource type.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.BackupDR.V1.FetchBackupsForResourceTypeResponse> FetchBackupsForResourceType(global::Google.Cloud.BackupDR.V1.FetchBackupsForResourceTypeRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
       }
@@ -856,6 +892,18 @@ namespace Google.Cloud.BackupDR.V1 {
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.BackupDR.V1.DataSourceReference> GetDataSourceReference(global::Google.Cloud.BackupDR.V1.GetDataSourceReferenceRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Lists DataSourceReferences for a given project and location.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.BackupDR.V1.ListDataSourceReferencesResponse> ListDataSourceReferences(global::Google.Cloud.BackupDR.V1.ListDataSourceReferencesRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
       }
@@ -1592,6 +1640,54 @@ namespace Google.Cloud.BackupDR.V1 {
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.BackupDR.V1.ListBackupsResponse> ListBackupsAsync(global::Google.Cloud.BackupDR.V1.ListBackupsRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_ListBackups, null, options, request);
+      }
+      /// <summary>
+      /// Fetch Backups for a given resource type.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.BackupDR.V1.FetchBackupsForResourceTypeResponse FetchBackupsForResourceType(global::Google.Cloud.BackupDR.V1.FetchBackupsForResourceTypeRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return FetchBackupsForResourceType(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Fetch Backups for a given resource type.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.BackupDR.V1.FetchBackupsForResourceTypeResponse FetchBackupsForResourceType(global::Google.Cloud.BackupDR.V1.FetchBackupsForResourceTypeRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_FetchBackupsForResourceType, null, options, request);
+      }
+      /// <summary>
+      /// Fetch Backups for a given resource type.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.BackupDR.V1.FetchBackupsForResourceTypeResponse> FetchBackupsForResourceTypeAsync(global::Google.Cloud.BackupDR.V1.FetchBackupsForResourceTypeRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return FetchBackupsForResourceTypeAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Fetch Backups for a given resource type.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.BackupDR.V1.FetchBackupsForResourceTypeResponse> FetchBackupsForResourceTypeAsync(global::Google.Cloud.BackupDR.V1.FetchBackupsForResourceTypeRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_FetchBackupsForResourceType, null, options, request);
       }
       /// <summary>
       /// Gets details of a Backup.
@@ -2506,6 +2602,54 @@ namespace Google.Cloud.BackupDR.V1 {
         return CallInvoker.AsyncUnaryCall(__Method_GetDataSourceReference, null, options, request);
       }
       /// <summary>
+      /// Lists DataSourceReferences for a given project and location.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.BackupDR.V1.ListDataSourceReferencesResponse ListDataSourceReferences(global::Google.Cloud.BackupDR.V1.ListDataSourceReferencesRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return ListDataSourceReferences(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Lists DataSourceReferences for a given project and location.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.BackupDR.V1.ListDataSourceReferencesResponse ListDataSourceReferences(global::Google.Cloud.BackupDR.V1.ListDataSourceReferencesRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_ListDataSourceReferences, null, options, request);
+      }
+      /// <summary>
+      /// Lists DataSourceReferences for a given project and location.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.BackupDR.V1.ListDataSourceReferencesResponse> ListDataSourceReferencesAsync(global::Google.Cloud.BackupDR.V1.ListDataSourceReferencesRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return ListDataSourceReferencesAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Lists DataSourceReferences for a given project and location.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.BackupDR.V1.ListDataSourceReferencesResponse> ListDataSourceReferencesAsync(global::Google.Cloud.BackupDR.V1.ListDataSourceReferencesRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_ListDataSourceReferences, null, options, request);
+      }
+      /// <summary>
       /// Fetch DataSourceReferences for a given project, location and resource type.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
@@ -2629,6 +2773,7 @@ namespace Google.Cloud.BackupDR.V1 {
           .AddMethod(__Method_GetDataSource, serviceImpl.GetDataSource)
           .AddMethod(__Method_UpdateDataSource, serviceImpl.UpdateDataSource)
           .AddMethod(__Method_ListBackups, serviceImpl.ListBackups)
+          .AddMethod(__Method_FetchBackupsForResourceType, serviceImpl.FetchBackupsForResourceType)
           .AddMethod(__Method_GetBackup, serviceImpl.GetBackup)
           .AddMethod(__Method_UpdateBackup, serviceImpl.UpdateBackup)
           .AddMethod(__Method_DeleteBackup, serviceImpl.DeleteBackup)
@@ -2648,6 +2793,7 @@ namespace Google.Cloud.BackupDR.V1 {
           .AddMethod(__Method_DeleteBackupPlanAssociation, serviceImpl.DeleteBackupPlanAssociation)
           .AddMethod(__Method_TriggerBackup, serviceImpl.TriggerBackup)
           .AddMethod(__Method_GetDataSourceReference, serviceImpl.GetDataSourceReference)
+          .AddMethod(__Method_ListDataSourceReferences, serviceImpl.ListDataSourceReferences)
           .AddMethod(__Method_FetchDataSourceReferencesForResourceType, serviceImpl.FetchDataSourceReferencesForResourceType)
           .AddMethod(__Method_InitializeService, serviceImpl.InitializeService).Build();
     }
@@ -2673,6 +2819,7 @@ namespace Google.Cloud.BackupDR.V1 {
       serviceBinder.AddMethod(__Method_GetDataSource, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.BackupDR.V1.GetDataSourceRequest, global::Google.Cloud.BackupDR.V1.DataSource>(serviceImpl.GetDataSource));
       serviceBinder.AddMethod(__Method_UpdateDataSource, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.BackupDR.V1.UpdateDataSourceRequest, global::Google.LongRunning.Operation>(serviceImpl.UpdateDataSource));
       serviceBinder.AddMethod(__Method_ListBackups, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.BackupDR.V1.ListBackupsRequest, global::Google.Cloud.BackupDR.V1.ListBackupsResponse>(serviceImpl.ListBackups));
+      serviceBinder.AddMethod(__Method_FetchBackupsForResourceType, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.BackupDR.V1.FetchBackupsForResourceTypeRequest, global::Google.Cloud.BackupDR.V1.FetchBackupsForResourceTypeResponse>(serviceImpl.FetchBackupsForResourceType));
       serviceBinder.AddMethod(__Method_GetBackup, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.BackupDR.V1.GetBackupRequest, global::Google.Cloud.BackupDR.V1.Backup>(serviceImpl.GetBackup));
       serviceBinder.AddMethod(__Method_UpdateBackup, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.BackupDR.V1.UpdateBackupRequest, global::Google.LongRunning.Operation>(serviceImpl.UpdateBackup));
       serviceBinder.AddMethod(__Method_DeleteBackup, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.BackupDR.V1.DeleteBackupRequest, global::Google.LongRunning.Operation>(serviceImpl.DeleteBackup));
@@ -2692,6 +2839,7 @@ namespace Google.Cloud.BackupDR.V1 {
       serviceBinder.AddMethod(__Method_DeleteBackupPlanAssociation, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.BackupDR.V1.DeleteBackupPlanAssociationRequest, global::Google.LongRunning.Operation>(serviceImpl.DeleteBackupPlanAssociation));
       serviceBinder.AddMethod(__Method_TriggerBackup, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.BackupDR.V1.TriggerBackupRequest, global::Google.LongRunning.Operation>(serviceImpl.TriggerBackup));
       serviceBinder.AddMethod(__Method_GetDataSourceReference, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.BackupDR.V1.GetDataSourceReferenceRequest, global::Google.Cloud.BackupDR.V1.DataSourceReference>(serviceImpl.GetDataSourceReference));
+      serviceBinder.AddMethod(__Method_ListDataSourceReferences, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.BackupDR.V1.ListDataSourceReferencesRequest, global::Google.Cloud.BackupDR.V1.ListDataSourceReferencesResponse>(serviceImpl.ListDataSourceReferences));
       serviceBinder.AddMethod(__Method_FetchDataSourceReferencesForResourceType, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.BackupDR.V1.FetchDataSourceReferencesForResourceTypeRequest, global::Google.Cloud.BackupDR.V1.FetchDataSourceReferencesForResourceTypeResponse>(serviceImpl.FetchDataSourceReferencesForResourceType));
       serviceBinder.AddMethod(__Method_InitializeService, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.BackupDR.V1.InitializeServiceRequest, global::Google.LongRunning.Operation>(serviceImpl.InitializeService));
     }
