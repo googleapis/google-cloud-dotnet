@@ -1,5 +1,17 @@
 # Version history
 
+## Version 3.12.0, released 2025-11-05
+
+### New features
+
+- Allow publishing Data Profile scan results to the Dataplex Catalog
+- Add GetIamPolicy method for DataProduct resources
+- Update dependencies
+
+### Documentation improvements
+
+- Update documentation for Catalog SearchEntries filter options, including `parent_entry` and wildcard usage
+
 ## Version 3.11.0, released 2025-10-24
 
 ### New features
