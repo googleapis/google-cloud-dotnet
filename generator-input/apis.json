@@ -3863,7 +3863,7 @@
     },
     {
       "id": "Google.Cloud.MigrationCenter.V1",
-      "version": "1.4.0",
+      "version": "1.5.0",
       "type": "grpc",
       "productName": "Migration Center",
       "productUrl": "https://cloud.google.com/migration-center/docs/migration-center-overview",
