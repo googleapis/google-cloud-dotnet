@@ -2528,7 +2528,7 @@
     },
     {
       "id": "Google.Cloud.Domains.V1",
-      "version": "2.4.0",
+      "version": "2.5.0",
       "type": "grpc",
       "productName": "Cloud Domains",
       "productUrl": "https://cloud.google.com/domains/",
