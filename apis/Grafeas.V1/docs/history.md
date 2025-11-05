@@ -1,5 +1,11 @@
 # Version history
 
+## Version 3.11.0, released 2025-11-05
+
+### New features
+
+- Update dependencies
+
 ## Version 3.10.0, released 2025-05-08
 
 Same code as 3.9.0, just a re-release to fix process issues.
