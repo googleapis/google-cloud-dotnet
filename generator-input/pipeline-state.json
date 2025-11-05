@@ -692,11 +692,12 @@
         },
         {
             "id": "Google.Cloud.BigQuery.DataPolicies.V1Beta1",
-            "currentVersion": "1.0.0-beta04",
+            "currentVersion": "1.0.0-beta05",
             "generationAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
             "releaseAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
-            "releaseTimestamp": "2024-05-08T16:42:21Z",
+            "releaseTimestamp": "2025-11-05T08:45:18.266770043Z",
             "lastGeneratedCommit": "4823efd0b9944891ec5c387104dcc2ec401307a8",
+            "lastReleasedCommit": "4823efd0b9944891ec5c387104dcc2ec401307a8",
             "apiPaths": [
                 "google/cloud/bigquery/datapolicies/v1beta1"
             ],
