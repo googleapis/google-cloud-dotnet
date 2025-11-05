@@ -1517,11 +1517,12 @@
         },
         {
             "id": "Google.Cloud.Domains.V1Beta1",
-            "currentVersion": "2.0.0-beta05",
+            "currentVersion": "2.0.0-beta06",
             "generationAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
             "releaseAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
-            "releaseTimestamp": "2024-05-14T07:00:32Z",
+            "releaseTimestamp": "2025-11-05T16:54:11.325979723Z",
             "lastGeneratedCommit": "888ae95dd6125f754650d55410b8c117b618a268",
+            "lastReleasedCommit": "888ae95dd6125f754650d55410b8c117b618a268",
             "apiPaths": [
                 "google/cloud/domains/v1beta1"
             ],
