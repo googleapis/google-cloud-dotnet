@@ -1026,10 +1026,10 @@
         },
         {
             "id": "Google.Cloud.CloudQuotas.V1Beta",
-            "currentVersion": "1.0.0-beta02",
+            "currentVersion": "1.0.0-beta03",
             "generationAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
             "releaseAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
-            "releaseTimestamp": "2025-06-13T07:43:10.574919181Z",
+            "releaseTimestamp": "2025-11-05T09:02:52.204564823Z",
             "lastGeneratedCommit": "818eab111d50df57f4b09b7044f72c039c556d42",
             "lastReleasedCommit": "818eab111d50df57f4b09b7044f72c039c556d42",
             "apiPaths": [
