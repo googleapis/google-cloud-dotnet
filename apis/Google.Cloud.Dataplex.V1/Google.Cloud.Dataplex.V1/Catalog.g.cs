@@ -12717,14 +12717,17 @@ namespace Google.Cloud.Dataplex.V1 {
     ///
     /// * entry_type
     /// * entry_source.display_name
+    /// * parent_entry
     ///
     /// The comparison operators are =, !=, &lt;, >, &lt;=, >=. The service compares
     /// strings according to lexical order.
     ///
     /// You can use the logical operators AND, OR, NOT in the filter.
     ///
-    /// You can use Wildcard "*", but for entry_type you need to provide the
-    /// full project id or number.
+    /// You can use Wildcard "*", but for entry_type and parent_entry you need to
+    /// provide the full project id or number.
+    ///
+    /// You cannot use parent_entry in conjunction with other fields.
     ///
     /// Example filter expressions:
     ///
@@ -12733,6 +12736,7 @@ namespace Google.Cloud.Dataplex.V1 {
     /// * "entry_type=projects/example-project/locations/us/entryTypes/a* OR
     /// entry_type=projects/another-project/locations/*"
     /// * "NOT entry_source.display_name=AnotherExampleDisplayName"
+    /// * "parent_entry=projects/example-project/locations/us/entryGroups/example-entry-group/entries/example-entry"
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]

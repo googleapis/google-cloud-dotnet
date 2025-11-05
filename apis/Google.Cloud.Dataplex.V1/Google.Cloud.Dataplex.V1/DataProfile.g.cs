@@ -26,71 +26,75 @@ namespace Google.Cloud.Dataplex.V1 {
           string.Concat(
             "Citnb29nbGUvY2xvdWQvZGF0YXBsZXgvdjEvZGF0YV9wcm9maWxlLnByb3Rv",
             "Ehhnb29nbGUuY2xvdWQuZGF0YXBsZXgudjEaH2dvb2dsZS9hcGkvZmllbGRf",
-            "YmVoYXZpb3IucHJvdG8aKWdvb2dsZS9jbG91ZC9kYXRhcGxleC92MS9wcm9j",
-            "ZXNzaW5nLnByb3RvIqgECg9EYXRhUHJvZmlsZVNwZWMSHQoQc2FtcGxpbmdf",
-            "cGVyY2VudBgCIAEoAkID4EEBEhcKCnJvd19maWx0ZXIYAyABKAlCA+BBARJZ",
-            "ChFwb3N0X3NjYW5fYWN0aW9ucxgEIAEoCzI5Lmdvb2dsZS5jbG91ZC5kYXRh",
-            "cGxleC52MS5EYXRhUHJvZmlsZVNwZWMuUG9zdFNjYW5BY3Rpb25zQgPgQQES",
-            "VQoOaW5jbHVkZV9maWVsZHMYBSABKAsyOC5nb29nbGUuY2xvdWQuZGF0YXBs",
-            "ZXgudjEuRGF0YVByb2ZpbGVTcGVjLlNlbGVjdGVkRmllbGRzQgPgQQESVQoO",
-            "ZXhjbHVkZV9maWVsZHMYBiABKAsyOC5nb29nbGUuY2xvdWQuZGF0YXBsZXgu",
-            "djEuRGF0YVByb2ZpbGVTcGVjLlNlbGVjdGVkRmllbGRzQgPgQQEapwEKD1Bv",
+            "YmVoYXZpb3IucHJvdG8aL2dvb2dsZS9jbG91ZC9kYXRhcGxleC92MS9kYXRh",
+            "c2NhbnNfY29tbW9uLnByb3RvGilnb29nbGUvY2xvdWQvZGF0YXBsZXgvdjEv",
+            "cHJvY2Vzc2luZy5wcm90byLRBAoPRGF0YVByb2ZpbGVTcGVjEh0KEHNhbXBs",
+            "aW5nX3BlcmNlbnQYAiABKAJCA+BBARIXCgpyb3dfZmlsdGVyGAMgASgJQgPg",
+            "QQESWQoRcG9zdF9zY2FuX2FjdGlvbnMYBCABKAsyOS5nb29nbGUuY2xvdWQu",
+            "ZGF0YXBsZXgudjEuRGF0YVByb2ZpbGVTcGVjLlBvc3RTY2FuQWN0aW9uc0ID",
+            "4EEBElUKDmluY2x1ZGVfZmllbGRzGAUgASgLMjguZ29vZ2xlLmNsb3VkLmRh",
+            "dGFwbGV4LnYxLkRhdGFQcm9maWxlU3BlYy5TZWxlY3RlZEZpZWxkc0ID4EEB",
+            "ElUKDmV4Y2x1ZGVfZmllbGRzGAYgASgLMjguZ29vZ2xlLmNsb3VkLmRhdGFw",
+            "bGV4LnYxLkRhdGFQcm9maWxlU3BlYy5TZWxlY3RlZEZpZWxkc0ID4EEBEicK",
+            "GmNhdGFsb2dfcHVibGlzaGluZ19lbmFibGVkGAggASgIQgPgQQEapwEKD1Bv",
             "c3RTY2FuQWN0aW9ucxJmCg9iaWdxdWVyeV9leHBvcnQYASABKAsySC5nb29n",
             "bGUuY2xvdWQuZGF0YXBsZXgudjEuRGF0YVByb2ZpbGVTcGVjLlBvc3RTY2Fu",
             "QWN0aW9ucy5CaWdRdWVyeUV4cG9ydEID4EEBGiwKDkJpZ1F1ZXJ5RXhwb3J0",
             "EhoKDXJlc3VsdHNfdGFibGUYASABKAlCA+BBARoqCg5TZWxlY3RlZEZpZWxk",
-            "cxIYCgtmaWVsZF9uYW1lcxgBIAMoCUID4EEBIu0OChFEYXRhUHJvZmlsZVJl",
+            "cxIYCgtmaWVsZF9uYW1lcxgBIAMoCUID4EEBItAPChFEYXRhUHJvZmlsZVJl",
             "c3VsdBIWCglyb3dfY291bnQYAyABKANCA+BBAxJJCgdwcm9maWxlGAQgASgL",
             "MjMuZ29vZ2xlLmNsb3VkLmRhdGFwbGV4LnYxLkRhdGFQcm9maWxlUmVzdWx0",
             "LlByb2ZpbGVCA+BBAxJACgxzY2FubmVkX2RhdGEYBSABKAsyJS5nb29nbGUu",
             "Y2xvdWQuZGF0YXBsZXgudjEuU2Nhbm5lZERhdGFCA+BBAxJoChhwb3N0X3Nj",
             "YW5fYWN0aW9uc19yZXN1bHQYBiABKAsyQS5nb29nbGUuY2xvdWQuZGF0YXBs",
             "ZXgudjEuRGF0YVByb2ZpbGVSZXN1bHQuUG9zdFNjYW5BY3Rpb25zUmVzdWx0",
-            "QgPgQQMayAkKB1Byb2ZpbGUSTgoGZmllbGRzGAIgAygLMjkuZ29vZ2xlLmNs",
-            "b3VkLmRhdGFwbGV4LnYxLkRhdGFQcm9maWxlUmVzdWx0LlByb2ZpbGUuRmll",
-            "bGRCA+BBAxrsCAoFRmllbGQSEQoEbmFtZRgBIAEoCUID4EEDEhEKBHR5cGUY",
-            "AiABKAlCA+BBAxIRCgRtb2RlGAMgASgJQgPgQQMSWwoHcHJvZmlsZRgEIAEo",
-            "CzJFLmdvb2dsZS5jbG91ZC5kYXRhcGxleC52MS5EYXRhUHJvZmlsZVJlc3Vs",
-            "dC5Qcm9maWxlLkZpZWxkLlByb2ZpbGVJbmZvQgPgQQMazAcKC1Byb2ZpbGVJ",
-            "bmZvEhcKCm51bGxfcmF0aW8YAiABKAFCA+BBAxIbCg5kaXN0aW5jdF9yYXRp",
-            "bxgDIAEoAUID4EEDEmoKDHRvcF9uX3ZhbHVlcxgEIAMoCzJPLmdvb2dsZS5j",
-            "bG91ZC5kYXRhcGxleC52MS5EYXRhUHJvZmlsZVJlc3VsdC5Qcm9maWxlLkZp",
-            "ZWxkLlByb2ZpbGVJbmZvLlRvcE5WYWx1ZUID4EEDEm8KDnN0cmluZ19wcm9m",
-            "aWxlGGUgASgLMlUuZ29vZ2xlLmNsb3VkLmRhdGFwbGV4LnYxLkRhdGFQcm9m",
-            "aWxlUmVzdWx0LlByb2ZpbGUuRmllbGQuUHJvZmlsZUluZm8uU3RyaW5nRmll",
-            "bGRJbmZvSAAScQoPaW50ZWdlcl9wcm9maWxlGGYgASgLMlYuZ29vZ2xlLmNs",
-            "b3VkLmRhdGFwbGV4LnYxLkRhdGFQcm9maWxlUmVzdWx0LlByb2ZpbGUuRmll",
-            "bGQuUHJvZmlsZUluZm8uSW50ZWdlckZpZWxkSW5mb0gAEm8KDmRvdWJsZV9w",
-            "cm9maWxlGGcgASgLMlUuZ29vZ2xlLmNsb3VkLmRhdGFwbGV4LnYxLkRhdGFQ",
-            "cm9maWxlUmVzdWx0LlByb2ZpbGUuRmllbGQuUHJvZmlsZUluZm8uRG91Ymxl",
-            "RmllbGRJbmZvSAAaYAoPU3RyaW5nRmllbGRJbmZvEhcKCm1pbl9sZW5ndGgY",
-            "ASABKANCA+BBAxIXCgptYXhfbGVuZ3RoGAIgASgDQgPgQQMSGwoOYXZlcmFn",
-            "ZV9sZW5ndGgYAyABKAFCA+BBAxqFAQoQSW50ZWdlckZpZWxkSW5mbxIUCgdh",
-            "dmVyYWdlGAEgASgBQgPgQQMSHwoSc3RhbmRhcmRfZGV2aWF0aW9uGAMgASgB",
-            "QgPgQQMSEAoDbWluGAQgASgDQgPgQQMSFgoJcXVhcnRpbGVzGAYgAygDQgPg",
-            "QQMSEAoDbWF4GAUgASgDQgPgQQMahAEKD0RvdWJsZUZpZWxkSW5mbxIUCgdh",
-            "dmVyYWdlGAEgASgBQgPgQQMSHwoSc3RhbmRhcmRfZGV2aWF0aW9uGAMgASgB",
-            "QgPgQQMSEAoDbWluGAQgASgBQgPgQQMSFgoJcXVhcnRpbGVzGAYgAygBQgPg",
-            "QQMSEAoDbWF4GAUgASgBQgPgQQMaRwoJVG9wTlZhbHVlEhIKBXZhbHVlGAEg",
-            "ASgJQgPgQQMSEgoFY291bnQYAiABKANCA+BBAxISCgVyYXRpbxgDIAEoAUID",
-            "4EEDQgwKCmZpZWxkX2luZm8a/QIKFVBvc3RTY2FuQWN0aW9uc1Jlc3VsdBJ7",
-            "ChZiaWdxdWVyeV9leHBvcnRfcmVzdWx0GAEgASgLMlYuZ29vZ2xlLmNsb3Vk",
-            "LmRhdGFwbGV4LnYxLkRhdGFQcm9maWxlUmVzdWx0LlBvc3RTY2FuQWN0aW9u",
-            "c1Jlc3VsdC5CaWdRdWVyeUV4cG9ydFJlc3VsdEID4EEDGuYBChRCaWdRdWVy",
-            "eUV4cG9ydFJlc3VsdBJwCgVzdGF0ZRgBIAEoDjJcLmdvb2dsZS5jbG91ZC5k",
-            "YXRhcGxleC52MS5EYXRhUHJvZmlsZVJlc3VsdC5Qb3N0U2NhbkFjdGlvbnNS",
-            "ZXN1bHQuQmlnUXVlcnlFeHBvcnRSZXN1bHQuU3RhdGVCA+BBAxIUCgdtZXNz",
-            "YWdlGAIgASgJQgPgQQMiRgoFU3RhdGUSFQoRU1RBVEVfVU5TUEVDSUZJRUQQ",
-            "ABINCglTVUNDRUVERUQQARIKCgZGQUlMRUQQAhILCgdTS0lQUEVEEANCbAoc",
-            "Y29tLmdvb2dsZS5jbG91ZC5kYXRhcGxleC52MUIQRGF0YVByb2ZpbGVQcm90",
-            "b1ABWjhjbG91ZC5nb29nbGUuY29tL2dvL2RhdGFwbGV4L2FwaXYxL2RhdGFw",
-            "bGV4cGI7ZGF0YXBsZXhwYmIGcHJvdG8z"));
+            "QgPgQQMSYQoZY2F0YWxvZ19wdWJsaXNoaW5nX3N0YXR1cxgHIAEoCzI5Lmdv",
+            "b2dsZS5jbG91ZC5kYXRhcGxleC52MS5EYXRhU2NhbkNhdGFsb2dQdWJsaXNo",
+            "aW5nU3RhdHVzQgPgQQMayAkKB1Byb2ZpbGUSTgoGZmllbGRzGAIgAygLMjku",
+            "Z29vZ2xlLmNsb3VkLmRhdGFwbGV4LnYxLkRhdGFQcm9maWxlUmVzdWx0LlBy",
+            "b2ZpbGUuRmllbGRCA+BBAxrsCAoFRmllbGQSEQoEbmFtZRgBIAEoCUID4EED",
+            "EhEKBHR5cGUYAiABKAlCA+BBAxIRCgRtb2RlGAMgASgJQgPgQQMSWwoHcHJv",
+            "ZmlsZRgEIAEoCzJFLmdvb2dsZS5jbG91ZC5kYXRhcGxleC52MS5EYXRhUHJv",
+            "ZmlsZVJlc3VsdC5Qcm9maWxlLkZpZWxkLlByb2ZpbGVJbmZvQgPgQQMazAcK",
+            "C1Byb2ZpbGVJbmZvEhcKCm51bGxfcmF0aW8YAiABKAFCA+BBAxIbCg5kaXN0",
+            "aW5jdF9yYXRpbxgDIAEoAUID4EEDEmoKDHRvcF9uX3ZhbHVlcxgEIAMoCzJP",
+            "Lmdvb2dsZS5jbG91ZC5kYXRhcGxleC52MS5EYXRhUHJvZmlsZVJlc3VsdC5Q",
+            "cm9maWxlLkZpZWxkLlByb2ZpbGVJbmZvLlRvcE5WYWx1ZUID4EEDEm8KDnN0",
+            "cmluZ19wcm9maWxlGGUgASgLMlUuZ29vZ2xlLmNsb3VkLmRhdGFwbGV4LnYx",
+            "LkRhdGFQcm9maWxlUmVzdWx0LlByb2ZpbGUuRmllbGQuUHJvZmlsZUluZm8u",
+            "U3RyaW5nRmllbGRJbmZvSAAScQoPaW50ZWdlcl9wcm9maWxlGGYgASgLMlYu",
+            "Z29vZ2xlLmNsb3VkLmRhdGFwbGV4LnYxLkRhdGFQcm9maWxlUmVzdWx0LlBy",
+            "b2ZpbGUuRmllbGQuUHJvZmlsZUluZm8uSW50ZWdlckZpZWxkSW5mb0gAEm8K",
+            "DmRvdWJsZV9wcm9maWxlGGcgASgLMlUuZ29vZ2xlLmNsb3VkLmRhdGFwbGV4",
+            "LnYxLkRhdGFQcm9maWxlUmVzdWx0LlByb2ZpbGUuRmllbGQuUHJvZmlsZUlu",
+            "Zm8uRG91YmxlRmllbGRJbmZvSAAaYAoPU3RyaW5nRmllbGRJbmZvEhcKCm1p",
+            "bl9sZW5ndGgYASABKANCA+BBAxIXCgptYXhfbGVuZ3RoGAIgASgDQgPgQQMS",
+            "GwoOYXZlcmFnZV9sZW5ndGgYAyABKAFCA+BBAxqFAQoQSW50ZWdlckZpZWxk",
+            "SW5mbxIUCgdhdmVyYWdlGAEgASgBQgPgQQMSHwoSc3RhbmRhcmRfZGV2aWF0",
+            "aW9uGAMgASgBQgPgQQMSEAoDbWluGAQgASgDQgPgQQMSFgoJcXVhcnRpbGVz",
+            "GAYgAygDQgPgQQMSEAoDbWF4GAUgASgDQgPgQQMahAEKD0RvdWJsZUZpZWxk",
+            "SW5mbxIUCgdhdmVyYWdlGAEgASgBQgPgQQMSHwoSc3RhbmRhcmRfZGV2aWF0",
+            "aW9uGAMgASgBQgPgQQMSEAoDbWluGAQgASgBQgPgQQMSFgoJcXVhcnRpbGVz",
+            "GAYgAygBQgPgQQMSEAoDbWF4GAUgASgBQgPgQQMaRwoJVG9wTlZhbHVlEhIK",
+            "BXZhbHVlGAEgASgJQgPgQQMSEgoFY291bnQYAiABKANCA+BBAxISCgVyYXRp",
+            "bxgDIAEoAUID4EEDQgwKCmZpZWxkX2luZm8a/QIKFVBvc3RTY2FuQWN0aW9u",
+            "c1Jlc3VsdBJ7ChZiaWdxdWVyeV9leHBvcnRfcmVzdWx0GAEgASgLMlYuZ29v",
+            "Z2xlLmNsb3VkLmRhdGFwbGV4LnYxLkRhdGFQcm9maWxlUmVzdWx0LlBvc3RT",
+            "Y2FuQWN0aW9uc1Jlc3VsdC5CaWdRdWVyeUV4cG9ydFJlc3VsdEID4EEDGuYB",
+            "ChRCaWdRdWVyeUV4cG9ydFJlc3VsdBJwCgVzdGF0ZRgBIAEoDjJcLmdvb2ds",
+            "ZS5jbG91ZC5kYXRhcGxleC52MS5EYXRhUHJvZmlsZVJlc3VsdC5Qb3N0U2Nh",
+            "bkFjdGlvbnNSZXN1bHQuQmlnUXVlcnlFeHBvcnRSZXN1bHQuU3RhdGVCA+BB",
+            "AxIUCgdtZXNzYWdlGAIgASgJQgPgQQMiRgoFU3RhdGUSFQoRU1RBVEVfVU5T",
+            "UEVDSUZJRUQQABINCglTVUNDRUVERUQQARIKCgZGQUlMRUQQAhILCgdTS0lQ",
+            "UEVEEANCbAocY29tLmdvb2dsZS5jbG91ZC5kYXRhcGxleC52MUIQRGF0YVBy",
+            "b2ZpbGVQcm90b1ABWjhjbG91ZC5nb29nbGUuY29tL2dvL2RhdGFwbGV4L2Fw",
+            "aXYxL2RhdGFwbGV4cGI7ZGF0YXBsZXhwYmIGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Cloud.Dataplex.V1.ProcessingReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Cloud.Dataplex.V1.DatascansCommonReflection.Descriptor, global::Google.Cloud.Dataplex.V1.ProcessingReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dataplex.V1.DataProfileSpec), global::Google.Cloud.Dataplex.V1.DataProfileSpec.Parser, new[]{ "SamplingPercent", "RowFilter", "PostScanActions", "IncludeFields", "ExcludeFields" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dataplex.V1.DataProfileSpec.Types.PostScanActions), global::Google.Cloud.Dataplex.V1.DataProfileSpec.Types.PostScanActions.Parser, new[]{ "BigqueryExport" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dataplex.V1.DataProfileSpec.Types.PostScanActions.Types.BigQueryExport), global::Google.Cloud.Dataplex.V1.DataProfileSpec.Types.PostScanActions.Types.BigQueryExport.Parser, new[]{ "ResultsTable" }, null, null, null, null)}),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dataplex.V1.DataProfileSpec), global::Google.Cloud.Dataplex.V1.DataProfileSpec.Parser, new[]{ "SamplingPercent", "RowFilter", "PostScanActions", "IncludeFields", "ExcludeFields", "CatalogPublishingEnabled" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dataplex.V1.DataProfileSpec.Types.PostScanActions), global::Google.Cloud.Dataplex.V1.DataProfileSpec.Types.PostScanActions.Parser, new[]{ "BigqueryExport" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dataplex.V1.DataProfileSpec.Types.PostScanActions.Types.BigQueryExport), global::Google.Cloud.Dataplex.V1.DataProfileSpec.Types.PostScanActions.Types.BigQueryExport.Parser, new[]{ "ResultsTable" }, null, null, null, null)}),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dataplex.V1.DataProfileSpec.Types.SelectedFields), global::Google.Cloud.Dataplex.V1.DataProfileSpec.Types.SelectedFields.Parser, new[]{ "FieldNames" }, null, null, null, null)}),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dataplex.V1.DataProfileResult), global::Google.Cloud.Dataplex.V1.DataProfileResult.Parser, new[]{ "RowCount", "Profile", "ScannedData", "PostScanActionsResult" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dataplex.V1.DataProfileResult.Types.Profile), global::Google.Cloud.Dataplex.V1.DataProfileResult.Types.Profile.Parser, new[]{ "Fields" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dataplex.V1.DataProfileResult.Types.Profile.Types.Field), global::Google.Cloud.Dataplex.V1.DataProfileResult.Types.Profile.Types.Field.Parser, new[]{ "Name", "Type", "Mode", "Profile" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dataplex.V1.DataProfileResult.Types.Profile.Types.Field.Types.ProfileInfo), global::Google.Cloud.Dataplex.V1.DataProfileResult.Types.Profile.Types.Field.Types.ProfileInfo.Parser, new[]{ "NullRatio", "DistinctRatio", "TopNValues", "StringProfile", "IntegerProfile", "DoubleProfile" }, new[]{ "FieldInfo" }, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dataplex.V1.DataProfileResult.Types.Profile.Types.Field.Types.ProfileInfo.Types.StringFieldInfo), global::Google.Cloud.Dataplex.V1.DataProfileResult.Types.Profile.Types.Field.Types.ProfileInfo.Types.StringFieldInfo.Parser, new[]{ "MinLength", "MaxLength", "AverageLength" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dataplex.V1.DataProfileResult), global::Google.Cloud.Dataplex.V1.DataProfileResult.Parser, new[]{ "RowCount", "Profile", "ScannedData", "PostScanActionsResult", "CatalogPublishingStatus" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dataplex.V1.DataProfileResult.Types.Profile), global::Google.Cloud.Dataplex.V1.DataProfileResult.Types.Profile.Parser, new[]{ "Fields" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dataplex.V1.DataProfileResult.Types.Profile.Types.Field), global::Google.Cloud.Dataplex.V1.DataProfileResult.Types.Profile.Types.Field.Parser, new[]{ "Name", "Type", "Mode", "Profile" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dataplex.V1.DataProfileResult.Types.Profile.Types.Field.Types.ProfileInfo), global::Google.Cloud.Dataplex.V1.DataProfileResult.Types.Profile.Types.Field.Types.ProfileInfo.Parser, new[]{ "NullRatio", "DistinctRatio", "TopNValues", "StringProfile", "IntegerProfile", "DoubleProfile" }, new[]{ "FieldInfo" }, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dataplex.V1.DataProfileResult.Types.Profile.Types.Field.Types.ProfileInfo.Types.StringFieldInfo), global::Google.Cloud.Dataplex.V1.DataProfileResult.Types.Profile.Types.Field.Types.ProfileInfo.Types.StringFieldInfo.Parser, new[]{ "MinLength", "MaxLength", "AverageLength" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dataplex.V1.DataProfileResult.Types.Profile.Types.Field.Types.ProfileInfo.Types.IntegerFieldInfo), global::Google.Cloud.Dataplex.V1.DataProfileResult.Types.Profile.Types.Field.Types.ProfileInfo.Types.IntegerFieldInfo.Parser, new[]{ "Average", "StandardDeviation", "Min", "Quartiles", "Max" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dataplex.V1.DataProfileResult.Types.Profile.Types.Field.Types.ProfileInfo.Types.DoubleFieldInfo), global::Google.Cloud.Dataplex.V1.DataProfileResult.Types.Profile.Types.Field.Types.ProfileInfo.Types.DoubleFieldInfo.Parser, new[]{ "Average", "StandardDeviation", "Min", "Quartiles", "Max" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dataplex.V1.DataProfileResult.Types.Profile.Types.Field.Types.ProfileInfo.Types.TopNValue), global::Google.Cloud.Dataplex.V1.DataProfileResult.Types.Profile.Types.Field.Types.ProfileInfo.Types.TopNValue.Parser, new[]{ "Value", "Count", "Ratio" }, null, null, null, null)})})}),
@@ -144,6 +148,7 @@ namespace Google.Cloud.Dataplex.V1 {
       postScanActions_ = other.postScanActions_ != null ? other.postScanActions_.Clone() : null;
       includeFields_ = other.includeFields_ != null ? other.includeFields_.Clone() : null;
       excludeFields_ = other.excludeFields_ != null ? other.excludeFields_.Clone() : null;
+      catalogPublishingEnabled_ = other.catalogPublishingEnabled_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -243,6 +248,22 @@ namespace Google.Cloud.Dataplex.V1 {
       }
     }
 
+    /// <summary>Field number for the "catalog_publishing_enabled" field.</summary>
+    public const int CatalogPublishingEnabledFieldNumber = 8;
+    private bool catalogPublishingEnabled_;
+    /// <summary>
+    /// Optional. If set, the latest DataScan job result will be published as
+    /// Dataplex Universal Catalog metadata.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool CatalogPublishingEnabled {
+      get { return catalogPublishingEnabled_; }
+      set {
+        catalogPublishingEnabled_ = value;
+      }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
@@ -263,6 +284,7 @@ namespace Google.Cloud.Dataplex.V1 {
       if (!object.Equals(PostScanActions, other.PostScanActions)) return false;
       if (!object.Equals(IncludeFields, other.IncludeFields)) return false;
       if (!object.Equals(ExcludeFields, other.ExcludeFields)) return false;
+      if (CatalogPublishingEnabled != other.CatalogPublishingEnabled) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -275,6 +297,7 @@ namespace Google.Cloud.Dataplex.V1 {
       if (postScanActions_ != null) hash ^= PostScanActions.GetHashCode();
       if (includeFields_ != null) hash ^= IncludeFields.GetHashCode();
       if (excludeFields_ != null) hash ^= ExcludeFields.GetHashCode();
+      if (CatalogPublishingEnabled != false) hash ^= CatalogPublishingEnabled.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -313,6 +336,10 @@ namespace Google.Cloud.Dataplex.V1 {
         output.WriteRawTag(50);
         output.WriteMessage(ExcludeFields);
       }
+      if (CatalogPublishingEnabled != false) {
+        output.WriteRawTag(64);
+        output.WriteBool(CatalogPublishingEnabled);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -343,6 +370,10 @@ namespace Google.Cloud.Dataplex.V1 {
         output.WriteRawTag(50);
         output.WriteMessage(ExcludeFields);
       }
+      if (CatalogPublishingEnabled != false) {
+        output.WriteRawTag(64);
+        output.WriteBool(CatalogPublishingEnabled);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -367,6 +398,9 @@ namespace Google.Cloud.Dataplex.V1 {
       }
       if (excludeFields_ != null) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(ExcludeFields);
+      }
+      if (CatalogPublishingEnabled != false) {
+        size += 1 + 1;
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -403,6 +437,9 @@ namespace Google.Cloud.Dataplex.V1 {
           ExcludeFields = new global::Google.Cloud.Dataplex.V1.DataProfileSpec.Types.SelectedFields();
         }
         ExcludeFields.MergeFrom(other.ExcludeFields);
+      }
+      if (other.CatalogPublishingEnabled != false) {
+        CatalogPublishingEnabled = other.CatalogPublishingEnabled;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -448,6 +485,10 @@ namespace Google.Cloud.Dataplex.V1 {
             input.ReadMessage(ExcludeFields);
             break;
           }
+          case 64: {
+            CatalogPublishingEnabled = input.ReadBool();
+            break;
+          }
         }
       }
     #endif
@@ -490,6 +531,10 @@ namespace Google.Cloud.Dataplex.V1 {
               ExcludeFields = new global::Google.Cloud.Dataplex.V1.DataProfileSpec.Types.SelectedFields();
             }
             input.ReadMessage(ExcludeFields);
+            break;
+          }
+          case 64: {
+            CatalogPublishingEnabled = input.ReadBool();
             break;
           }
         }
@@ -1153,6 +1198,7 @@ namespace Google.Cloud.Dataplex.V1 {
       profile_ = other.profile_ != null ? other.profile_.Clone() : null;
       scannedData_ = other.scannedData_ != null ? other.scannedData_.Clone() : null;
       postScanActionsResult_ = other.postScanActionsResult_ != null ? other.postScanActionsResult_.Clone() : null;
+      catalogPublishingStatus_ = other.catalogPublishingStatus_ != null ? other.catalogPublishingStatus_.Clone() : null;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -1222,6 +1268,22 @@ namespace Google.Cloud.Dataplex.V1 {
       }
     }
 
+    /// <summary>Field number for the "catalog_publishing_status" field.</summary>
+    public const int CatalogPublishingStatusFieldNumber = 7;
+    private global::Google.Cloud.Dataplex.V1.DataScanCatalogPublishingStatus catalogPublishingStatus_;
+    /// <summary>
+    /// Output only. The status of publishing the data scan as Dataplex Universal
+    /// Catalog metadata.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Cloud.Dataplex.V1.DataScanCatalogPublishingStatus CatalogPublishingStatus {
+      get { return catalogPublishingStatus_; }
+      set {
+        catalogPublishingStatus_ = value;
+      }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
@@ -1241,6 +1303,7 @@ namespace Google.Cloud.Dataplex.V1 {
       if (!object.Equals(Profile, other.Profile)) return false;
       if (!object.Equals(ScannedData, other.ScannedData)) return false;
       if (!object.Equals(PostScanActionsResult, other.PostScanActionsResult)) return false;
+      if (!object.Equals(CatalogPublishingStatus, other.CatalogPublishingStatus)) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -1252,6 +1315,7 @@ namespace Google.Cloud.Dataplex.V1 {
       if (profile_ != null) hash ^= Profile.GetHashCode();
       if (scannedData_ != null) hash ^= ScannedData.GetHashCode();
       if (postScanActionsResult_ != null) hash ^= PostScanActionsResult.GetHashCode();
+      if (catalogPublishingStatus_ != null) hash ^= CatalogPublishingStatus.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -1286,6 +1350,10 @@ namespace Google.Cloud.Dataplex.V1 {
         output.WriteRawTag(50);
         output.WriteMessage(PostScanActionsResult);
       }
+      if (catalogPublishingStatus_ != null) {
+        output.WriteRawTag(58);
+        output.WriteMessage(CatalogPublishingStatus);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -1312,6 +1380,10 @@ namespace Google.Cloud.Dataplex.V1 {
         output.WriteRawTag(50);
         output.WriteMessage(PostScanActionsResult);
       }
+      if (catalogPublishingStatus_ != null) {
+        output.WriteRawTag(58);
+        output.WriteMessage(CatalogPublishingStatus);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -1333,6 +1405,9 @@ namespace Google.Cloud.Dataplex.V1 {
       }
       if (postScanActionsResult_ != null) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(PostScanActionsResult);
+      }
+      if (catalogPublishingStatus_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(CatalogPublishingStatus);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -1366,6 +1441,12 @@ namespace Google.Cloud.Dataplex.V1 {
           PostScanActionsResult = new global::Google.Cloud.Dataplex.V1.DataProfileResult.Types.PostScanActionsResult();
         }
         PostScanActionsResult.MergeFrom(other.PostScanActionsResult);
+      }
+      if (other.catalogPublishingStatus_ != null) {
+        if (catalogPublishingStatus_ == null) {
+          CatalogPublishingStatus = new global::Google.Cloud.Dataplex.V1.DataScanCatalogPublishingStatus();
+        }
+        CatalogPublishingStatus.MergeFrom(other.CatalogPublishingStatus);
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -1407,6 +1488,13 @@ namespace Google.Cloud.Dataplex.V1 {
             input.ReadMessage(PostScanActionsResult);
             break;
           }
+          case 58: {
+            if (catalogPublishingStatus_ == null) {
+              CatalogPublishingStatus = new global::Google.Cloud.Dataplex.V1.DataScanCatalogPublishingStatus();
+            }
+            input.ReadMessage(CatalogPublishingStatus);
+            break;
+          }
         }
       }
     #endif
@@ -1445,6 +1533,13 @@ namespace Google.Cloud.Dataplex.V1 {
               PostScanActionsResult = new global::Google.Cloud.Dataplex.V1.DataProfileResult.Types.PostScanActionsResult();
             }
             input.ReadMessage(PostScanActionsResult);
+            break;
+          }
+          case 58: {
+            if (catalogPublishingStatus_ == null) {
+              CatalogPublishingStatus = new global::Google.Cloud.Dataplex.V1.DataScanCatalogPublishingStatus();
+            }
+            input.ReadMessage(CatalogPublishingStatus);
             break;
           }
         }
