@@ -1,5 +1,11 @@
 # Version history
 
+## Version 3.56.0, released 2025-11-05
+
+### New features
+
+- Add new fields `SUCCESSFULLY_DEPLOYED` and `FAILED_TO_DEPLOY` to `DeploymentStage`
+
 ## Version 3.55.0, released 2025-11-03
 
 ### New features
