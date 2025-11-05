@@ -1682,11 +1682,12 @@
         },
         {
             "id": "Google.Cloud.Functions.V2Beta",
-            "currentVersion": "1.0.0-beta07",
+            "currentVersion": "1.0.0-beta08",
             "generationAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
             "releaseAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
-            "releaseTimestamp": "2024-08-13T16:06:11Z",
+            "releaseTimestamp": "2025-11-05T17:04:38.139751550Z",
             "lastGeneratedCommit": "36533b09a6b383f3c30d13c3c26092154ecf5388",
+            "lastReleasedCommit": "36533b09a6b383f3c30d13c3c26092154ecf5388",
             "apiPaths": [
                 "google/cloud/functions/v2beta"
             ],
