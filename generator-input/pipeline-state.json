@@ -1592,11 +1592,12 @@
         },
         {
             "id": "Google.Cloud.Eventarc.Publishing.V1",
-            "currentVersion": "2.0.0-beta07",
+            "currentVersion": "2.0.0-beta08",
             "generationAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
             "releaseAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
-            "releaseTimestamp": "2024-10-30T16:54:24Z",
+            "releaseTimestamp": "2025-11-05T17:00:09.722822273Z",
             "lastGeneratedCommit": "3d9a46d77218aa1cf200f732ff39960a0e3f3d9e",
+            "lastReleasedCommit": "3d9a46d77218aa1cf200f732ff39960a0e3f3d9e",
             "apiPaths": [
                 "google/cloud/eventarc/publishing/v1"
             ],
