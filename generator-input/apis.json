@@ -1805,7 +1805,7 @@
     },
     {
       "id": "Google.Cloud.Connectors.V1",
-      "version": "1.3.0",
+      "version": "1.4.0",
       "type": "grpc",
       "productName": "Integration Connectors",
       "productUrl": "https://cloud.google.com/integration-connectors/docs",
