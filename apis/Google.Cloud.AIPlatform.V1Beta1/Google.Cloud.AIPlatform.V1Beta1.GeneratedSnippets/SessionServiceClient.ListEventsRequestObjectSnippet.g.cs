@@ -40,6 +40,7 @@ namespace GoogleCSharpSnippets
             {
                 ParentAsSessionName = SessionName.FromProjectLocationReasoningEngineSession("[PROJECT]", "[LOCATION]", "[REASONING_ENGINE]", "[SESSION]"),
                 Filter = "",
+                OrderBy = "",
             };
             // Make the request
             PagedEnumerable<ListEventsResponse, SessionEvent> response = sessionServiceClient.ListEvents(request);
