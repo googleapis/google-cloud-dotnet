@@ -1344,7 +1344,7 @@
         "kubernetes"
       ],
       "dependencies": {
-        "Grafeas.V1": "3.10.0"
+        "Grafeas.V1": "3.11.0"
       },
       "generator": "micro",
       "protoPath": "google/cloud/binaryauthorization/v1",
@@ -3129,7 +3129,7 @@
         "admin"
       ],
       "dependencies": {
-        "Google.Cloud.Iam.V1": "3.4.0"
+        "Google.Cloud.Iam.V1": "3.5.0"
       },
       "generator": "micro",
       "protoPath": "google/iam/admin/v1",
@@ -3220,8 +3220,8 @@
         "Access"
       ],
       "dependencies": {
-        "Google.Cloud.Location": "2.3.0",
-        "Google.LongRunning": "3.4.0"
+        "Google.Cloud.Location": "2.4.0",
+        "Google.LongRunning": "3.5.0"
       },
       "generator": "micro",
       "protoPath": "google/iam/v3",
@@ -3244,8 +3244,8 @@
         "Access"
       ],
       "dependencies": {
-        "Google.Cloud.Location": "2.3.0",
-        "Google.LongRunning": "3.4.0"
+        "Google.Cloud.Location": "2.4.0",
+        "Google.LongRunning": "3.5.0"
       },
       "generator": "micro",
       "protoPath": "google/iam/v3beta",
@@ -3268,7 +3268,7 @@
         "access"
       ],
       "dependencies": {
-        "Google.Cloud.Iam.V1": "3.4.0"
+        "Google.Cloud.Iam.V1": "3.5.0"
       },
       "generator": "micro",
       "protoPath": "google/cloud/iap/v1",
@@ -3293,7 +3293,7 @@
         "threats"
       ],
       "dependencies": {
-        "Google.LongRunning": "3.4.0"
+        "Google.LongRunning": "3.5.0"
       },
       "generator": "micro",
       "protoPath": "google/cloud/ids/v1",
@@ -3316,7 +3316,7 @@
         "cryptography"
       ],
       "dependencies": {
-        "Google.Cloud.Kms.V1": "3.19.0"
+        "Google.Cloud.Kms.V1": "3.20.0"
       },
       "generator": "micro",
       "protoPath": "google/cloud/kms/inventory/v1",
@@ -3425,8 +3425,8 @@
         "life sciences"
       ],
       "dependencies": {
-        "Google.Cloud.Location": "2.3.0",
-        "Google.LongRunning": "3.4.0"
+        "Google.Cloud.Location": "2.4.0",
+        "Google.LongRunning": "3.5.0"
       },
       "generator": "micro",
       "protoPath": "google/cloud/lifesciences/v2beta",
@@ -3465,7 +3465,7 @@
       "description": "Recommended Google client library to access the Google Cloud Location Finder API, which offers a repository of all Google Cloud and Google Distributed Cloud locations, as well as cloud locations for other cloud providers.",
       "tags": [],
       "dependencies": {
-        "Google.Cloud.Location": "2.3.0"
+        "Google.Cloud.Location": "2.4.0"
       },
       "generator": "micro",
       "protoPath": "google/cloud/locationfinder/v1",
@@ -3488,8 +3488,8 @@
       ],
       "dependencies": {
         "Google.Api.Gax.Grpc": "default",
-        "Google.Cloud.DevTools.Common": "3.2.0",
-        "Google.Cloud.Logging.V2": "4.4.0",
+        "Google.Cloud.DevTools.Common": "3.3.0",
+        "Google.Cloud.Logging.V2": "4.5.0",
         "Grpc.Core": "default",
         "log4net": "default"
       },
@@ -3537,8 +3537,8 @@
       ],
       "dependencies": {
         "Google.Api.Gax.Grpc": "default",
-        "Google.Cloud.DevTools.Common": "3.2.0",
-        "Google.Cloud.Logging.V2": "4.4.0",
+        "Google.Cloud.DevTools.Common": "3.3.0",
+        "Google.Cloud.Logging.V2": "4.5.0",
         "Grpc.Core": "default",
         "NLog": "default"
       },
@@ -3603,8 +3603,8 @@
         "distributed"
       ],
       "dependencies": {
-        "Google.Cloud.Location": "2.3.0",
-        "Google.LongRunning": "3.4.0"
+        "Google.Cloud.Location": "2.4.0",
+        "Google.LongRunning": "3.5.0"
       },
       "generator": "micro",
       "protoPath": "google/cloud/lustre/v1",
@@ -3623,7 +3623,7 @@
       "description": "The Maintenance API (v1beta) provides a centralized view of planned disruptive maintenance events across supported Google Cloud products. It offers users visibility into upcoming, ongoing, and completed maintenance, along with controls to manage certain maintenance activities, such as mainteance windows, rescheduling, and on-demand updates.",
       "tags": [],
       "dependencies": {
-        "Google.Cloud.Location": "2.3.0"
+        "Google.Cloud.Location": "2.4.0"
       },
       "generator": "micro",
       "protoPath": "google/cloud/maintenance/api/v1beta",
@@ -3648,7 +3648,7 @@
         "Active Directory"
       ],
       "dependencies": {
-        "Google.LongRunning": "3.4.0"
+        "Google.LongRunning": "3.5.0"
       },
       "shortName": "managedidentities",
       "serviceConfigFile": "managedidentities_v1.yaml",
@@ -3667,8 +3667,8 @@
         "bigquery"
       ],
       "dependencies": {
-        "Google.Cloud.Location": "2.3.0",
-        "Google.LongRunning": "3.4.0"
+        "Google.Cloud.Location": "2.4.0",
+        "Google.LongRunning": "3.5.0"
       },
       "generator": "micro",
       "protoPath": "google/cloud/managedkafka/v1",
@@ -3711,8 +3711,8 @@
         "Memorystore"
       ],
       "dependencies": {
-        "Google.Cloud.Location": "2.3.0",
-        "Google.LongRunning": "3.4.0"
+        "Google.Cloud.Location": "2.4.0",
+        "Google.LongRunning": "3.5.0"
       },
       "generator": "micro",
       "protoPath": "google/cloud/memcache/v1",
@@ -3732,8 +3732,8 @@
       "type": "grpc",
       "description": "Recommended Google client library to administer Cloud Memorystore for Memcached (v1beta2).",
       "dependencies": {
-        "Google.Cloud.Location": "2.3.0",
-        "Google.LongRunning": "3.4.0"
+        "Google.Cloud.Location": "2.4.0",
+        "Google.LongRunning": "3.5.0"
       },
       "tags": [
         "Redis",
@@ -3758,8 +3758,8 @@
         "Cache"
       ],
       "dependencies": {
-        "Google.Cloud.Location": "2.3.0",
-        "Google.LongRunning": "3.4.0"
+        "Google.Cloud.Location": "2.4.0",
+        "Google.LongRunning": "3.5.0"
       },
       "generator": "micro",
       "protoPath": "google/cloud/memorystore/v1",
@@ -3778,8 +3778,8 @@
       "description": "Recommended Google client library to administer Cloud Memorystore (v1beta), a fully-managed database service that provides a managed version of popular open source caching solutions.",
       "tags": [],
       "dependencies": {
-        "Google.Cloud.Location": "2.3.0",
-        "Google.LongRunning": "3.4.0"
+        "Google.Cloud.Location": "2.4.0",
+        "Google.LongRunning": "3.5.0"
       },
       "generator": "micro",
       "protoPath": "google/cloud/memorystore/v1beta",
@@ -3801,9 +3801,9 @@
         "metastore"
       ],
       "dependencies": {
-        "Google.Cloud.Iam.V1": "3.4.0",
-        "Google.Cloud.Location": "2.3.0",
-        "Google.LongRunning": "3.4.0"
+        "Google.Cloud.Iam.V1": "3.5.0",
+        "Google.Cloud.Location": "2.4.0",
+        "Google.LongRunning": "3.5.0"
       },
       "generator": "micro",
       "protoPath": "google/cloud/metastore/v1",
@@ -3825,9 +3825,9 @@
         "metastore"
       ],
       "dependencies": {
-        "Google.Cloud.Iam.V1": "3.4.0",
-        "Google.Cloud.Location": "2.3.0",
-        "Google.LongRunning": "3.4.0"
+        "Google.Cloud.Iam.V1": "3.5.0",
+        "Google.Cloud.Location": "2.4.0",
+        "Google.LongRunning": "3.5.0"
       },
       "generator": "micro",
       "protoPath": "google/cloud/metastore/v1alpha",
@@ -3849,9 +3849,9 @@
         "metastore"
       ],
       "dependencies": {
-        "Google.Cloud.Iam.V1": "3.4.0",
-        "Google.Cloud.Location": "2.3.0",
-        "Google.LongRunning": "3.4.0"
+        "Google.Cloud.Iam.V1": "3.5.0",
+        "Google.Cloud.Location": "2.4.0",
+        "Google.LongRunning": "3.5.0"
       },
       "generator": "micro",
       "protoPath": "google/cloud/metastore/v1beta",
@@ -3872,8 +3872,8 @@
         "migration"
       ],
       "dependencies": {
-        "Google.Cloud.Location": "2.3.0",
-        "Google.LongRunning": "3.4.0"
+        "Google.Cloud.Location": "2.4.0",
+        "Google.LongRunning": "3.5.0"
       },
       "generator": "micro",
       "protoPath": "google/cloud/migrationcenter/v1",
@@ -3896,7 +3896,7 @@
         "llm"
       ],
       "dependencies": {
-        "Google.Cloud.Location": "2.3.0"
+        "Google.Cloud.Location": "2.4.0"
       },
       "generator": "micro",
       "protoPath": "google/cloud/modelarmor/v1",
@@ -3920,7 +3920,7 @@
         "llm"
       ],
       "dependencies": {
-        "Google.Cloud.Location": "2.3.0"
+        "Google.Cloud.Location": "2.4.0"
       },
       "generator": "micro",
       "protoPath": "google/cloud/modelarmor/v1beta",
@@ -3944,7 +3944,7 @@
         "Stackdriver"
       ],
       "dependencies": {
-        "Google.LongRunning": "3.4.0"
+        "Google.LongRunning": "3.5.0"
       },
       "shortName": "monitoring",
       "serviceConfigFile": "monitoring.yaml",
@@ -3964,8 +3964,8 @@
         "availability"
       ],
       "dependencies": {
-        "Google.Cloud.Location": "2.3.0",
-        "Google.LongRunning": "3.4.0"
+        "Google.Cloud.Location": "2.4.0",
+        "Google.LongRunning": "3.5.0"
       },
       "generator": "micro",
       "protoPath": "google/cloud/netapp/v1",
@@ -3988,9 +3988,9 @@
         "vpc"
       ],
       "dependencies": {
-        "Google.Cloud.Iam.V1": "3.4.0",
-        "Google.Cloud.Location": "2.3.0",
-        "Google.LongRunning": "3.4.0"
+        "Google.Cloud.Iam.V1": "3.5.0",
+        "Google.Cloud.Location": "2.4.0",
+        "Google.LongRunning": "3.5.0"
       },
       "generator": "micro",
       "protoPath": "google/cloud/networkconnectivity/v1",
@@ -4011,7 +4011,7 @@
         "connectivity"
       ],
       "dependencies": {
-        "Google.LongRunning": "3.4.0"
+        "Google.LongRunning": "3.5.0"
       },
       "generator": "micro",
       "protoPath": "google/cloud/networkconnectivity/v1alpha1",
@@ -4036,9 +4036,9 @@
         "diagnostics"
       ],
       "dependencies": {
-        "Google.Cloud.Iam.V1": "3.4.0",
-        "Google.Cloud.Location": "2.3.0",
-        "Google.LongRunning": "3.4.0"
+        "Google.Cloud.Iam.V1": "3.5.0",
+        "Google.Cloud.Location": "2.4.0",
+        "Google.LongRunning": "3.5.0"
       },
       "generator": "micro",
       "protoPath": "google/cloud/networkmanagement/v1",
@@ -4066,9 +4066,9 @@
         "mesh"
       ],
       "dependencies": {
-        "Google.Cloud.Iam.V1": "3.4.0",
-        "Google.Cloud.Location": "2.3.0",
-        "Google.LongRunning": "3.4.0"
+        "Google.Cloud.Iam.V1": "3.5.0",
+        "Google.Cloud.Location": "2.4.0",
+        "Google.LongRunning": "3.5.0"
       },
       "generator": "micro",
       "protoPath": "google/cloud/networksecurity/v1beta1",
@@ -4089,9 +4089,9 @@
         "networks"
       ],
       "dependencies": {
-        "Google.Cloud.Iam.V1": "3.4.0",
-        "Google.Cloud.Location": "2.3.0",
-        "Google.LongRunning": "3.4.0"
+        "Google.Cloud.Iam.V1": "3.5.0",
+        "Google.Cloud.Location": "2.4.0",
+        "Google.LongRunning": "3.5.0"
       },
       "generator": "micro",
       "protoPath": "google/cloud/networkservices/v1",
@@ -4113,9 +4113,9 @@
         "notebooks"
       ],
       "dependencies": {
-        "Google.Cloud.Iam.V1": "3.4.0",
-        "Google.Cloud.Location": "2.3.0",
-        "Google.LongRunning": "3.4.0"
+        "Google.Cloud.Iam.V1": "3.5.0",
+        "Google.Cloud.Location": "2.4.0",
+        "Google.LongRunning": "3.5.0"
       },
       "generator": "micro",
       "protoPath": "google/cloud/notebooks/v1",
@@ -4137,9 +4137,9 @@
         "notebooks"
       ],
       "dependencies": {
-        "Google.Cloud.Iam.V1": "3.4.0",
-        "Google.Cloud.Location": "2.3.0",
-        "Google.LongRunning": "3.4.0"
+        "Google.Cloud.Iam.V1": "3.5.0",
+        "Google.Cloud.Location": "2.4.0",
+        "Google.LongRunning": "3.5.0"
       },
       "generator": "micro",
       "protoPath": "google/cloud/notebooks/v1beta1",
@@ -4160,9 +4160,9 @@
         "notebooks"
       ],
       "dependencies": {
-        "Google.Cloud.Iam.V1": "3.4.0",
-        "Google.Cloud.Location": "2.3.0",
-        "Google.LongRunning": "3.4.0"
+        "Google.Cloud.Iam.V1": "3.5.0",
+        "Google.Cloud.Location": "2.4.0",
+        "Google.LongRunning": "3.5.0"
       },
       "generator": "micro",
       "protoPath": "google/cloud/notebooks/v2",
@@ -4181,7 +4181,7 @@
         "optimization"
       ],
       "dependencies": {
-        "Google.LongRunning": "3.4.0"
+        "Google.LongRunning": "3.5.0"
       },
       "generator": "micro",
       "protoPath": "google/cloud/optimization/v1",

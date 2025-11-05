@@ -10,8 +10,8 @@
   <ItemGroup>
     <PackageReference Include="ConfigureAwaitChecker.Analyzer" PrivateAssets="All" />
     <PackageReference Include="Google.Api.Gax.Grpc" />
-    <PackageReference Include="Google.Cloud.DevTools.Common" VersionOverride="[3.2.0, 4.0.0)" />
-    <PackageReference Include="Google.Cloud.Logging.V2" VersionOverride="[4.4.0, 5.0.0)" />
+    <PackageReference Include="Google.Cloud.DevTools.Common" VersionOverride="[3.3.0, 4.0.0)" />
+    <PackageReference Include="Google.Cloud.Logging.V2" VersionOverride="[4.5.0, 5.0.0)" />
     <PackageReference Include="Grpc.Core" PrivateAssets="None" Condition="'$(TargetFramework)'=='net462'" />
     <PackageReference Include="log4net" />
   </ItemGroup>
