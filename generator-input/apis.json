@@ -1595,7 +1595,7 @@
     },
     {
       "id": "Google.Cloud.CloudQuotas.V1Beta",
-      "version": "1.0.0-beta02",
+      "version": "1.0.0-beta03",
       "type": "grpc",
       "productName": "Cloud Quotas",
       "productUrl": "https://cloud.google.com/docs/quotas/api-overview",
