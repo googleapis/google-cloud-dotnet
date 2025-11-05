@@ -2903,7 +2903,7 @@
     },
     {
       "id": "Google.Cloud.GSuiteAddOns.V1",
-      "version": "2.4.0",
+      "version": "2.5.0",
       "type": "grpc",
       "productName": "Google Workspace Add-ons",
       "productUrl": "https://developers.google.com/gsuite/add-ons/overview",

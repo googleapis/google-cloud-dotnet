@@ -1697,11 +1697,12 @@
         },
         {
             "id": "Google.Cloud.GSuiteAddOns.V1",
-            "currentVersion": "2.4.0",
+            "currentVersion": "2.5.0",
             "generationAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
             "releaseAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
-            "releaseTimestamp": "2024-05-14T06:58:17Z",
+            "releaseTimestamp": "2025-11-05T17:06:09.896031902Z",
             "lastGeneratedCommit": "36533b09a6b383f3c30d13c3c26092154ecf5388",
+            "lastReleasedCommit": "36533b09a6b383f3c30d13c3c26092154ecf5388",
             "apiPaths": [
                 "google/cloud/gsuiteaddons/v1"
             ],
