@@ -66,6 +66,14 @@ namespace Google.Cloud.NetworkServices.V1
             UpdateLbRouteExtensionOperationsSettings = existing.UpdateLbRouteExtensionOperationsSettings.Clone();
             DeleteLbRouteExtensionSettings = existing.DeleteLbRouteExtensionSettings;
             DeleteLbRouteExtensionOperationsSettings = existing.DeleteLbRouteExtensionOperationsSettings.Clone();
+            ListLbEdgeExtensionsSettings = existing.ListLbEdgeExtensionsSettings;
+            GetLbEdgeExtensionSettings = existing.GetLbEdgeExtensionSettings;
+            CreateLbEdgeExtensionSettings = existing.CreateLbEdgeExtensionSettings;
+            CreateLbEdgeExtensionOperationsSettings = existing.CreateLbEdgeExtensionOperationsSettings.Clone();
+            UpdateLbEdgeExtensionSettings = existing.UpdateLbEdgeExtensionSettings;
+            UpdateLbEdgeExtensionOperationsSettings = existing.UpdateLbEdgeExtensionOperationsSettings.Clone();
+            DeleteLbEdgeExtensionSettings = existing.DeleteLbEdgeExtensionSettings;
+            DeleteLbEdgeExtensionOperationsSettings = existing.DeleteLbEdgeExtensionOperationsSettings.Clone();
             ListAuthzExtensionsSettings = existing.ListAuthzExtensionsSettings;
             GetAuthzExtensionSettings = existing.GetAuthzExtensionSettings;
             CreateAuthzExtensionSettings = existing.CreateAuthzExtensionSettings;
@@ -305,6 +313,120 @@ namespace Google.Cloud.NetworkServices.V1
         /// </list>
         /// </remarks>
         public lro::OperationsSettings DeleteLbRouteExtensionOperationsSettings { get; set; } = new lro::OperationsSettings
+        {
+            DefaultPollSettings = new gax::PollSettings(gax::Expiration.FromTimeout(sys::TimeSpan.FromHours(24)), sys::TimeSpan.FromSeconds(20), 1.5, sys::TimeSpan.FromSeconds(45)),
+        };
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>DepServiceClient.ListLbEdgeExtensions</c> and <c>DepServiceClient.ListLbEdgeExtensionsAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>Timeout: 60 seconds.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings ListLbEdgeExtensionsSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000)));
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>DepServiceClient.GetLbEdgeExtension</c> and <c>DepServiceClient.GetLbEdgeExtensionAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>Timeout: 60 seconds.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings GetLbEdgeExtensionSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000)));
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>DepServiceClient.CreateLbEdgeExtension</c> and <c>DepServiceClient.CreateLbEdgeExtensionAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>Timeout: 60 seconds.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings CreateLbEdgeExtensionSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000)));
+
+        /// <summary>
+        /// Long Running Operation settings for calls to <c>DepServiceClient.CreateLbEdgeExtension</c> and
+        /// <c>DepServiceClient.CreateLbEdgeExtensionAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// Uses default <see cref="gax::PollSettings"/> of:
+        /// <list type="bullet">
+        /// <item><description>Initial delay: 20 seconds.</description></item>
+        /// <item><description>Delay multiplier: 1.5</description></item>
+        /// <item><description>Maximum delay: 45 seconds.</description></item>
+        /// <item><description>Total timeout: 24 hours.</description></item>
+        /// </list>
+        /// </remarks>
+        public lro::OperationsSettings CreateLbEdgeExtensionOperationsSettings { get; set; } = new lro::OperationsSettings
+        {
+            DefaultPollSettings = new gax::PollSettings(gax::Expiration.FromTimeout(sys::TimeSpan.FromHours(24)), sys::TimeSpan.FromSeconds(20), 1.5, sys::TimeSpan.FromSeconds(45)),
+        };
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>DepServiceClient.UpdateLbEdgeExtension</c> and <c>DepServiceClient.UpdateLbEdgeExtensionAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>Timeout: 60 seconds.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings UpdateLbEdgeExtensionSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000)));
+
+        /// <summary>
+        /// Long Running Operation settings for calls to <c>DepServiceClient.UpdateLbEdgeExtension</c> and
+        /// <c>DepServiceClient.UpdateLbEdgeExtensionAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// Uses default <see cref="gax::PollSettings"/> of:
+        /// <list type="bullet">
+        /// <item><description>Initial delay: 20 seconds.</description></item>
+        /// <item><description>Delay multiplier: 1.5</description></item>
+        /// <item><description>Maximum delay: 45 seconds.</description></item>
+        /// <item><description>Total timeout: 24 hours.</description></item>
+        /// </list>
+        /// </remarks>
+        public lro::OperationsSettings UpdateLbEdgeExtensionOperationsSettings { get; set; } = new lro::OperationsSettings
+        {
+            DefaultPollSettings = new gax::PollSettings(gax::Expiration.FromTimeout(sys::TimeSpan.FromHours(24)), sys::TimeSpan.FromSeconds(20), 1.5, sys::TimeSpan.FromSeconds(45)),
+        };
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>DepServiceClient.DeleteLbEdgeExtension</c> and <c>DepServiceClient.DeleteLbEdgeExtensionAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>Timeout: 60 seconds.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings DeleteLbEdgeExtensionSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000)));
+
+        /// <summary>
+        /// Long Running Operation settings for calls to <c>DepServiceClient.DeleteLbEdgeExtension</c> and
+        /// <c>DepServiceClient.DeleteLbEdgeExtensionAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// Uses default <see cref="gax::PollSettings"/> of:
+        /// <list type="bullet">
+        /// <item><description>Initial delay: 20 seconds.</description></item>
+        /// <item><description>Delay multiplier: 1.5</description></item>
+        /// <item><description>Maximum delay: 45 seconds.</description></item>
+        /// <item><description>Total timeout: 24 hours.</description></item>
+        /// </list>
+        /// </remarks>
+        public lro::OperationsSettings DeleteLbEdgeExtensionOperationsSettings { get; set; } = new lro::OperationsSettings
         {
             DefaultPollSettings = new gax::PollSettings(gax::Expiration.FromTimeout(sys::TimeSpan.FromHours(24)), sys::TimeSpan.FromSeconds(20), 1.5, sys::TimeSpan.FromSeconds(45)),
         };
@@ -2035,6 +2157,723 @@ namespace Google.Cloud.NetworkServices.V1
             DeleteLbRouteExtensionAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
+        /// Lists `LbEdgeExtension` resources in a given project and location.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="LbEdgeExtension"/> resources.</returns>
+        public virtual gax::PagedEnumerable<ListLbEdgeExtensionsResponse, LbEdgeExtension> ListLbEdgeExtensions(ListLbEdgeExtensionsRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Lists `LbEdgeExtension` resources in a given project and location.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="LbEdgeExtension"/> resources.</returns>
+        public virtual gax::PagedAsyncEnumerable<ListLbEdgeExtensionsResponse, LbEdgeExtension> ListLbEdgeExtensionsAsync(ListLbEdgeExtensionsRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Lists `LbEdgeExtension` resources in a given project and location.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The project and location from which the `LbEdgeExtension`
+        /// resources are listed. These values are specified in the following format:
+        /// `projects/{project}/locations/{location}`.
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="LbEdgeExtension"/> resources.</returns>
+        public virtual gax::PagedEnumerable<ListLbEdgeExtensionsResponse, LbEdgeExtension> ListLbEdgeExtensions(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListLbEdgeExtensionsRequest request = new ListLbEdgeExtensionsRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListLbEdgeExtensions(request, callSettings);
+        }
+
+        /// <summary>
+        /// Lists `LbEdgeExtension` resources in a given project and location.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The project and location from which the `LbEdgeExtension`
+        /// resources are listed. These values are specified in the following format:
+        /// `projects/{project}/locations/{location}`.
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="LbEdgeExtension"/> resources.</returns>
+        public virtual gax::PagedAsyncEnumerable<ListLbEdgeExtensionsResponse, LbEdgeExtension> ListLbEdgeExtensionsAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListLbEdgeExtensionsRequest request = new ListLbEdgeExtensionsRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListLbEdgeExtensionsAsync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Lists `LbEdgeExtension` resources in a given project and location.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The project and location from which the `LbEdgeExtension`
+        /// resources are listed. These values are specified in the following format:
+        /// `projects/{project}/locations/{location}`.
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="LbEdgeExtension"/> resources.</returns>
+        public virtual gax::PagedEnumerable<ListLbEdgeExtensionsResponse, LbEdgeExtension> ListLbEdgeExtensions(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListLbEdgeExtensionsRequest request = new ListLbEdgeExtensionsRequest
+            {
+                ParentAsLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListLbEdgeExtensions(request, callSettings);
+        }
+
+        /// <summary>
+        /// Lists `LbEdgeExtension` resources in a given project and location.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The project and location from which the `LbEdgeExtension`
+        /// resources are listed. These values are specified in the following format:
+        /// `projects/{project}/locations/{location}`.
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="LbEdgeExtension"/> resources.</returns>
+        public virtual gax::PagedAsyncEnumerable<ListLbEdgeExtensionsResponse, LbEdgeExtension> ListLbEdgeExtensionsAsync(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListLbEdgeExtensionsRequest request = new ListLbEdgeExtensionsRequest
+            {
+                ParentAsLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListLbEdgeExtensionsAsync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Gets details of the specified `LbEdgeExtension` resource.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual LbEdgeExtension GetLbEdgeExtension(GetLbEdgeExtensionRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Gets details of the specified `LbEdgeExtension` resource.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<LbEdgeExtension> GetLbEdgeExtensionAsync(GetLbEdgeExtensionRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Gets details of the specified `LbEdgeExtension` resource.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<LbEdgeExtension> GetLbEdgeExtensionAsync(GetLbEdgeExtensionRequest request, st::CancellationToken cancellationToken) =>
+            GetLbEdgeExtensionAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Gets details of the specified `LbEdgeExtension` resource.
+        /// </summary>
+        /// <param name="name">
+        /// Required. A name of the `LbEdgeExtension` resource to get. Must be in the
+        /// format
+        /// `projects/{project}/locations/{location}/lbEdgeExtensions/{lb_edge_extension}`.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual LbEdgeExtension GetLbEdgeExtension(string name, gaxgrpc::CallSettings callSettings = null) =>
+            GetLbEdgeExtension(new GetLbEdgeExtensionRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Gets details of the specified `LbEdgeExtension` resource.
+        /// </summary>
+        /// <param name="name">
+        /// Required. A name of the `LbEdgeExtension` resource to get. Must be in the
+        /// format
+        /// `projects/{project}/locations/{location}/lbEdgeExtensions/{lb_edge_extension}`.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<LbEdgeExtension> GetLbEdgeExtensionAsync(string name, gaxgrpc::CallSettings callSettings = null) =>
+            GetLbEdgeExtensionAsync(new GetLbEdgeExtensionRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Gets details of the specified `LbEdgeExtension` resource.
+        /// </summary>
+        /// <param name="name">
+        /// Required. A name of the `LbEdgeExtension` resource to get. Must be in the
+        /// format
+        /// `projects/{project}/locations/{location}/lbEdgeExtensions/{lb_edge_extension}`.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<LbEdgeExtension> GetLbEdgeExtensionAsync(string name, st::CancellationToken cancellationToken) =>
+            GetLbEdgeExtensionAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Gets details of the specified `LbEdgeExtension` resource.
+        /// </summary>
+        /// <param name="name">
+        /// Required. A name of the `LbEdgeExtension` resource to get. Must be in the
+        /// format
+        /// `projects/{project}/locations/{location}/lbEdgeExtensions/{lb_edge_extension}`.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual LbEdgeExtension GetLbEdgeExtension(LbEdgeExtensionName name, gaxgrpc::CallSettings callSettings = null) =>
+            GetLbEdgeExtension(new GetLbEdgeExtensionRequest
+            {
+                LbEdgeExtensionName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Gets details of the specified `LbEdgeExtension` resource.
+        /// </summary>
+        /// <param name="name">
+        /// Required. A name of the `LbEdgeExtension` resource to get. Must be in the
+        /// format
+        /// `projects/{project}/locations/{location}/lbEdgeExtensions/{lb_edge_extension}`.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<LbEdgeExtension> GetLbEdgeExtensionAsync(LbEdgeExtensionName name, gaxgrpc::CallSettings callSettings = null) =>
+            GetLbEdgeExtensionAsync(new GetLbEdgeExtensionRequest
+            {
+                LbEdgeExtensionName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Gets details of the specified `LbEdgeExtension` resource.
+        /// </summary>
+        /// <param name="name">
+        /// Required. A name of the `LbEdgeExtension` resource to get. Must be in the
+        /// format
+        /// `projects/{project}/locations/{location}/lbEdgeExtensions/{lb_edge_extension}`.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<LbEdgeExtension> GetLbEdgeExtensionAsync(LbEdgeExtensionName name, st::CancellationToken cancellationToken) =>
+            GetLbEdgeExtensionAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Creates a new `LbEdgeExtension` resource in a given project and location.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<LbEdgeExtension, OperationMetadata> CreateLbEdgeExtension(CreateLbEdgeExtensionRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Creates a new `LbEdgeExtension` resource in a given project and location.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<LbEdgeExtension, OperationMetadata>> CreateLbEdgeExtensionAsync(CreateLbEdgeExtensionRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Creates a new `LbEdgeExtension` resource in a given project and location.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<LbEdgeExtension, OperationMetadata>> CreateLbEdgeExtensionAsync(CreateLbEdgeExtensionRequest request, st::CancellationToken cancellationToken) =>
+            CreateLbEdgeExtensionAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>The long-running operations client for <c>CreateLbEdgeExtension</c>.</summary>
+        public virtual lro::OperationsClient CreateLbEdgeExtensionOperationsClient => throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Poll an operation once, using an <c>operationName</c> from a previous invocation of <c>CreateLbEdgeExtension</c>
+        /// .
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The result of polling the operation.</returns>
+        public virtual lro::Operation<LbEdgeExtension, OperationMetadata> PollOnceCreateLbEdgeExtension(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<LbEdgeExtension, OperationMetadata>.PollOnceFromName(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), CreateLbEdgeExtensionOperationsClient, callSettings);
+
+        /// <summary>
+        /// Asynchronously poll an operation once, using an <c>operationName</c> from a previous invocation of
+        /// <c>CreateLbEdgeExtension</c>.
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A task representing the result of polling the operation.</returns>
+        public virtual stt::Task<lro::Operation<LbEdgeExtension, OperationMetadata>> PollOnceCreateLbEdgeExtensionAsync(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<LbEdgeExtension, OperationMetadata>.PollOnceFromNameAsync(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), CreateLbEdgeExtensionOperationsClient, callSettings);
+
+        /// <summary>
+        /// Creates a new `LbEdgeExtension` resource in a given project and location.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent resource of the `LbEdgeExtension` resource. Must be in
+        /// the format `projects/{project}/locations/{location}`.
+        /// </param>
+        /// <param name="lbEdgeExtension">
+        /// Required. `LbEdgeExtension` resource to be created.
+        /// </param>
+        /// <param name="lbEdgeExtensionId">
+        /// Required. User-provided ID of the `LbEdgeExtension` resource to be created.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<LbEdgeExtension, OperationMetadata> CreateLbEdgeExtension(string parent, LbEdgeExtension lbEdgeExtension, string lbEdgeExtensionId, gaxgrpc::CallSettings callSettings = null) =>
+            CreateLbEdgeExtension(new CreateLbEdgeExtensionRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+                LbEdgeExtensionId = gax::GaxPreconditions.CheckNotNullOrEmpty(lbEdgeExtensionId, nameof(lbEdgeExtensionId)),
+                LbEdgeExtension = gax::GaxPreconditions.CheckNotNull(lbEdgeExtension, nameof(lbEdgeExtension)),
+            }, callSettings);
+
+        /// <summary>
+        /// Creates a new `LbEdgeExtension` resource in a given project and location.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent resource of the `LbEdgeExtension` resource. Must be in
+        /// the format `projects/{project}/locations/{location}`.
+        /// </param>
+        /// <param name="lbEdgeExtension">
+        /// Required. `LbEdgeExtension` resource to be created.
+        /// </param>
+        /// <param name="lbEdgeExtensionId">
+        /// Required. User-provided ID of the `LbEdgeExtension` resource to be created.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<LbEdgeExtension, OperationMetadata>> CreateLbEdgeExtensionAsync(string parent, LbEdgeExtension lbEdgeExtension, string lbEdgeExtensionId, gaxgrpc::CallSettings callSettings = null) =>
+            CreateLbEdgeExtensionAsync(new CreateLbEdgeExtensionRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+                LbEdgeExtensionId = gax::GaxPreconditions.CheckNotNullOrEmpty(lbEdgeExtensionId, nameof(lbEdgeExtensionId)),
+                LbEdgeExtension = gax::GaxPreconditions.CheckNotNull(lbEdgeExtension, nameof(lbEdgeExtension)),
+            }, callSettings);
+
+        /// <summary>
+        /// Creates a new `LbEdgeExtension` resource in a given project and location.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent resource of the `LbEdgeExtension` resource. Must be in
+        /// the format `projects/{project}/locations/{location}`.
+        /// </param>
+        /// <param name="lbEdgeExtension">
+        /// Required. `LbEdgeExtension` resource to be created.
+        /// </param>
+        /// <param name="lbEdgeExtensionId">
+        /// Required. User-provided ID of the `LbEdgeExtension` resource to be created.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<LbEdgeExtension, OperationMetadata>> CreateLbEdgeExtensionAsync(string parent, LbEdgeExtension lbEdgeExtension, string lbEdgeExtensionId, st::CancellationToken cancellationToken) =>
+            CreateLbEdgeExtensionAsync(parent, lbEdgeExtension, lbEdgeExtensionId, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Creates a new `LbEdgeExtension` resource in a given project and location.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent resource of the `LbEdgeExtension` resource. Must be in
+        /// the format `projects/{project}/locations/{location}`.
+        /// </param>
+        /// <param name="lbEdgeExtension">
+        /// Required. `LbEdgeExtension` resource to be created.
+        /// </param>
+        /// <param name="lbEdgeExtensionId">
+        /// Required. User-provided ID of the `LbEdgeExtension` resource to be created.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<LbEdgeExtension, OperationMetadata> CreateLbEdgeExtension(gagr::LocationName parent, LbEdgeExtension lbEdgeExtension, string lbEdgeExtensionId, gaxgrpc::CallSettings callSettings = null) =>
+            CreateLbEdgeExtension(new CreateLbEdgeExtensionRequest
+            {
+                ParentAsLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                LbEdgeExtensionId = gax::GaxPreconditions.CheckNotNullOrEmpty(lbEdgeExtensionId, nameof(lbEdgeExtensionId)),
+                LbEdgeExtension = gax::GaxPreconditions.CheckNotNull(lbEdgeExtension, nameof(lbEdgeExtension)),
+            }, callSettings);
+
+        /// <summary>
+        /// Creates a new `LbEdgeExtension` resource in a given project and location.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent resource of the `LbEdgeExtension` resource. Must be in
+        /// the format `projects/{project}/locations/{location}`.
+        /// </param>
+        /// <param name="lbEdgeExtension">
+        /// Required. `LbEdgeExtension` resource to be created.
+        /// </param>
+        /// <param name="lbEdgeExtensionId">
+        /// Required. User-provided ID of the `LbEdgeExtension` resource to be created.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<LbEdgeExtension, OperationMetadata>> CreateLbEdgeExtensionAsync(gagr::LocationName parent, LbEdgeExtension lbEdgeExtension, string lbEdgeExtensionId, gaxgrpc::CallSettings callSettings = null) =>
+            CreateLbEdgeExtensionAsync(new CreateLbEdgeExtensionRequest
+            {
+                ParentAsLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                LbEdgeExtensionId = gax::GaxPreconditions.CheckNotNullOrEmpty(lbEdgeExtensionId, nameof(lbEdgeExtensionId)),
+                LbEdgeExtension = gax::GaxPreconditions.CheckNotNull(lbEdgeExtension, nameof(lbEdgeExtension)),
+            }, callSettings);
+
+        /// <summary>
+        /// Creates a new `LbEdgeExtension` resource in a given project and location.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent resource of the `LbEdgeExtension` resource. Must be in
+        /// the format `projects/{project}/locations/{location}`.
+        /// </param>
+        /// <param name="lbEdgeExtension">
+        /// Required. `LbEdgeExtension` resource to be created.
+        /// </param>
+        /// <param name="lbEdgeExtensionId">
+        /// Required. User-provided ID of the `LbEdgeExtension` resource to be created.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<LbEdgeExtension, OperationMetadata>> CreateLbEdgeExtensionAsync(gagr::LocationName parent, LbEdgeExtension lbEdgeExtension, string lbEdgeExtensionId, st::CancellationToken cancellationToken) =>
+            CreateLbEdgeExtensionAsync(parent, lbEdgeExtension, lbEdgeExtensionId, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Updates the parameters of the specified `LbEdgeExtension` resource.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<LbEdgeExtension, OperationMetadata> UpdateLbEdgeExtension(UpdateLbEdgeExtensionRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Updates the parameters of the specified `LbEdgeExtension` resource.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<LbEdgeExtension, OperationMetadata>> UpdateLbEdgeExtensionAsync(UpdateLbEdgeExtensionRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Updates the parameters of the specified `LbEdgeExtension` resource.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<LbEdgeExtension, OperationMetadata>> UpdateLbEdgeExtensionAsync(UpdateLbEdgeExtensionRequest request, st::CancellationToken cancellationToken) =>
+            UpdateLbEdgeExtensionAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>The long-running operations client for <c>UpdateLbEdgeExtension</c>.</summary>
+        public virtual lro::OperationsClient UpdateLbEdgeExtensionOperationsClient => throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Poll an operation once, using an <c>operationName</c> from a previous invocation of <c>UpdateLbEdgeExtension</c>
+        /// .
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The result of polling the operation.</returns>
+        public virtual lro::Operation<LbEdgeExtension, OperationMetadata> PollOnceUpdateLbEdgeExtension(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<LbEdgeExtension, OperationMetadata>.PollOnceFromName(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), UpdateLbEdgeExtensionOperationsClient, callSettings);
+
+        /// <summary>
+        /// Asynchronously poll an operation once, using an <c>operationName</c> from a previous invocation of
+        /// <c>UpdateLbEdgeExtension</c>.
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A task representing the result of polling the operation.</returns>
+        public virtual stt::Task<lro::Operation<LbEdgeExtension, OperationMetadata>> PollOnceUpdateLbEdgeExtensionAsync(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<LbEdgeExtension, OperationMetadata>.PollOnceFromNameAsync(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), UpdateLbEdgeExtensionOperationsClient, callSettings);
+
+        /// <summary>
+        /// Updates the parameters of the specified `LbEdgeExtension` resource.
+        /// </summary>
+        /// <param name="lbEdgeExtension">
+        /// Required. `LbEdgeExtension` resource being updated.
+        /// </param>
+        /// <param name="updateMask">
+        /// Optional. Used to specify the fields to be overwritten in the
+        /// `LbEdgeExtension` resource by the update.
+        /// The fields specified in the `update_mask` are relative to the resource, not
+        /// the full request. A field is overwritten if it is in the mask. If the
+        /// user does not specify a mask, then all fields are overwritten.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<LbEdgeExtension, OperationMetadata> UpdateLbEdgeExtension(LbEdgeExtension lbEdgeExtension, wkt::FieldMask updateMask, gaxgrpc::CallSettings callSettings = null) =>
+            UpdateLbEdgeExtension(new UpdateLbEdgeExtensionRequest
+            {
+                UpdateMask = updateMask,
+                LbEdgeExtension = gax::GaxPreconditions.CheckNotNull(lbEdgeExtension, nameof(lbEdgeExtension)),
+            }, callSettings);
+
+        /// <summary>
+        /// Updates the parameters of the specified `LbEdgeExtension` resource.
+        /// </summary>
+        /// <param name="lbEdgeExtension">
+        /// Required. `LbEdgeExtension` resource being updated.
+        /// </param>
+        /// <param name="updateMask">
+        /// Optional. Used to specify the fields to be overwritten in the
+        /// `LbEdgeExtension` resource by the update.
+        /// The fields specified in the `update_mask` are relative to the resource, not
+        /// the full request. A field is overwritten if it is in the mask. If the
+        /// user does not specify a mask, then all fields are overwritten.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<LbEdgeExtension, OperationMetadata>> UpdateLbEdgeExtensionAsync(LbEdgeExtension lbEdgeExtension, wkt::FieldMask updateMask, gaxgrpc::CallSettings callSettings = null) =>
+            UpdateLbEdgeExtensionAsync(new UpdateLbEdgeExtensionRequest
+            {
+                UpdateMask = updateMask,
+                LbEdgeExtension = gax::GaxPreconditions.CheckNotNull(lbEdgeExtension, nameof(lbEdgeExtension)),
+            }, callSettings);
+
+        /// <summary>
+        /// Updates the parameters of the specified `LbEdgeExtension` resource.
+        /// </summary>
+        /// <param name="lbEdgeExtension">
+        /// Required. `LbEdgeExtension` resource being updated.
+        /// </param>
+        /// <param name="updateMask">
+        /// Optional. Used to specify the fields to be overwritten in the
+        /// `LbEdgeExtension` resource by the update.
+        /// The fields specified in the `update_mask` are relative to the resource, not
+        /// the full request. A field is overwritten if it is in the mask. If the
+        /// user does not specify a mask, then all fields are overwritten.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<LbEdgeExtension, OperationMetadata>> UpdateLbEdgeExtensionAsync(LbEdgeExtension lbEdgeExtension, wkt::FieldMask updateMask, st::CancellationToken cancellationToken) =>
+            UpdateLbEdgeExtensionAsync(lbEdgeExtension, updateMask, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Deletes the specified `LbEdgeExtension` resource.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<wkt::Empty, OperationMetadata> DeleteLbEdgeExtension(DeleteLbEdgeExtensionRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Deletes the specified `LbEdgeExtension` resource.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<wkt::Empty, OperationMetadata>> DeleteLbEdgeExtensionAsync(DeleteLbEdgeExtensionRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Deletes the specified `LbEdgeExtension` resource.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<wkt::Empty, OperationMetadata>> DeleteLbEdgeExtensionAsync(DeleteLbEdgeExtensionRequest request, st::CancellationToken cancellationToken) =>
+            DeleteLbEdgeExtensionAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>The long-running operations client for <c>DeleteLbEdgeExtension</c>.</summary>
+        public virtual lro::OperationsClient DeleteLbEdgeExtensionOperationsClient => throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Poll an operation once, using an <c>operationName</c> from a previous invocation of <c>DeleteLbEdgeExtension</c>
+        /// .
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The result of polling the operation.</returns>
+        public virtual lro::Operation<wkt::Empty, OperationMetadata> PollOnceDeleteLbEdgeExtension(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<wkt::Empty, OperationMetadata>.PollOnceFromName(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), DeleteLbEdgeExtensionOperationsClient, callSettings);
+
+        /// <summary>
+        /// Asynchronously poll an operation once, using an <c>operationName</c> from a previous invocation of
+        /// <c>DeleteLbEdgeExtension</c>.
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A task representing the result of polling the operation.</returns>
+        public virtual stt::Task<lro::Operation<wkt::Empty, OperationMetadata>> PollOnceDeleteLbEdgeExtensionAsync(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<wkt::Empty, OperationMetadata>.PollOnceFromNameAsync(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), DeleteLbEdgeExtensionOperationsClient, callSettings);
+
+        /// <summary>
+        /// Deletes the specified `LbEdgeExtension` resource.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the `LbEdgeExtension` resource to delete. Must be in
+        /// the format
+        /// `projects/{project}/locations/{location}/lbEdgeExtensions/{lb_edge_extension}`.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<wkt::Empty, OperationMetadata> DeleteLbEdgeExtension(string name, gaxgrpc::CallSettings callSettings = null) =>
+            DeleteLbEdgeExtension(new DeleteLbEdgeExtensionRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Deletes the specified `LbEdgeExtension` resource.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the `LbEdgeExtension` resource to delete. Must be in
+        /// the format
+        /// `projects/{project}/locations/{location}/lbEdgeExtensions/{lb_edge_extension}`.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<wkt::Empty, OperationMetadata>> DeleteLbEdgeExtensionAsync(string name, gaxgrpc::CallSettings callSettings = null) =>
+            DeleteLbEdgeExtensionAsync(new DeleteLbEdgeExtensionRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Deletes the specified `LbEdgeExtension` resource.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the `LbEdgeExtension` resource to delete. Must be in
+        /// the format
+        /// `projects/{project}/locations/{location}/lbEdgeExtensions/{lb_edge_extension}`.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<wkt::Empty, OperationMetadata>> DeleteLbEdgeExtensionAsync(string name, st::CancellationToken cancellationToken) =>
+            DeleteLbEdgeExtensionAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Deletes the specified `LbEdgeExtension` resource.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the `LbEdgeExtension` resource to delete. Must be in
+        /// the format
+        /// `projects/{project}/locations/{location}/lbEdgeExtensions/{lb_edge_extension}`.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<wkt::Empty, OperationMetadata> DeleteLbEdgeExtension(LbEdgeExtensionName name, gaxgrpc::CallSettings callSettings = null) =>
+            DeleteLbEdgeExtension(new DeleteLbEdgeExtensionRequest
+            {
+                LbEdgeExtensionName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Deletes the specified `LbEdgeExtension` resource.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the `LbEdgeExtension` resource to delete. Must be in
+        /// the format
+        /// `projects/{project}/locations/{location}/lbEdgeExtensions/{lb_edge_extension}`.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<wkt::Empty, OperationMetadata>> DeleteLbEdgeExtensionAsync(LbEdgeExtensionName name, gaxgrpc::CallSettings callSettings = null) =>
+            DeleteLbEdgeExtensionAsync(new DeleteLbEdgeExtensionRequest
+            {
+                LbEdgeExtensionName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Deletes the specified `LbEdgeExtension` resource.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the `LbEdgeExtension` resource to delete. Must be in
+        /// the format
+        /// `projects/{project}/locations/{location}/lbEdgeExtensions/{lb_edge_extension}`.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<wkt::Empty, OperationMetadata>> DeleteLbEdgeExtensionAsync(LbEdgeExtensionName name, st::CancellationToken cancellationToken) =>
+            DeleteLbEdgeExtensionAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
         /// Lists `AuthzExtension` resources in a given project and location.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
@@ -2799,6 +3638,16 @@ namespace Google.Cloud.NetworkServices.V1
 
         private readonly gaxgrpc::ApiCall<DeleteLbRouteExtensionRequest, lro::Operation> _callDeleteLbRouteExtension;
 
+        private readonly gaxgrpc::ApiCall<ListLbEdgeExtensionsRequest, ListLbEdgeExtensionsResponse> _callListLbEdgeExtensions;
+
+        private readonly gaxgrpc::ApiCall<GetLbEdgeExtensionRequest, LbEdgeExtension> _callGetLbEdgeExtension;
+
+        private readonly gaxgrpc::ApiCall<CreateLbEdgeExtensionRequest, lro::Operation> _callCreateLbEdgeExtension;
+
+        private readonly gaxgrpc::ApiCall<UpdateLbEdgeExtensionRequest, lro::Operation> _callUpdateLbEdgeExtension;
+
+        private readonly gaxgrpc::ApiCall<DeleteLbEdgeExtensionRequest, lro::Operation> _callDeleteLbEdgeExtension;
+
         private readonly gaxgrpc::ApiCall<ListAuthzExtensionsRequest, ListAuthzExtensionsResponse> _callListAuthzExtensions;
 
         private readonly gaxgrpc::ApiCall<GetAuthzExtensionRequest, AuthzExtension> _callGetAuthzExtension;
@@ -2830,6 +3679,9 @@ namespace Google.Cloud.NetworkServices.V1
             CreateLbRouteExtensionOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.CreateLbRouteExtensionOperationsSettings, logger);
             UpdateLbRouteExtensionOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.UpdateLbRouteExtensionOperationsSettings, logger);
             DeleteLbRouteExtensionOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.DeleteLbRouteExtensionOperationsSettings, logger);
+            CreateLbEdgeExtensionOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.CreateLbEdgeExtensionOperationsSettings, logger);
+            UpdateLbEdgeExtensionOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.UpdateLbEdgeExtensionOperationsSettings, logger);
+            DeleteLbEdgeExtensionOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.DeleteLbEdgeExtensionOperationsSettings, logger);
             CreateAuthzExtensionOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.CreateAuthzExtensionOperationsSettings, logger);
             UpdateAuthzExtensionOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.UpdateAuthzExtensionOperationsSettings, logger);
             DeleteAuthzExtensionOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.DeleteAuthzExtensionOperationsSettings, logger);
@@ -2865,6 +3717,21 @@ namespace Google.Cloud.NetworkServices.V1
             _callDeleteLbRouteExtension = clientHelper.BuildApiCall<DeleteLbRouteExtensionRequest, lro::Operation>("DeleteLbRouteExtension", grpcClient.DeleteLbRouteExtensionAsync, grpcClient.DeleteLbRouteExtension, effectiveSettings.DeleteLbRouteExtensionSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callDeleteLbRouteExtension);
             Modify_DeleteLbRouteExtensionApiCall(ref _callDeleteLbRouteExtension);
+            _callListLbEdgeExtensions = clientHelper.BuildApiCall<ListLbEdgeExtensionsRequest, ListLbEdgeExtensionsResponse>("ListLbEdgeExtensions", grpcClient.ListLbEdgeExtensionsAsync, grpcClient.ListLbEdgeExtensions, effectiveSettings.ListLbEdgeExtensionsSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            Modify_ApiCall(ref _callListLbEdgeExtensions);
+            Modify_ListLbEdgeExtensionsApiCall(ref _callListLbEdgeExtensions);
+            _callGetLbEdgeExtension = clientHelper.BuildApiCall<GetLbEdgeExtensionRequest, LbEdgeExtension>("GetLbEdgeExtension", grpcClient.GetLbEdgeExtensionAsync, grpcClient.GetLbEdgeExtension, effectiveSettings.GetLbEdgeExtensionSettings).WithGoogleRequestParam("name", request => request.Name);
+            Modify_ApiCall(ref _callGetLbEdgeExtension);
+            Modify_GetLbEdgeExtensionApiCall(ref _callGetLbEdgeExtension);
+            _callCreateLbEdgeExtension = clientHelper.BuildApiCall<CreateLbEdgeExtensionRequest, lro::Operation>("CreateLbEdgeExtension", grpcClient.CreateLbEdgeExtensionAsync, grpcClient.CreateLbEdgeExtension, effectiveSettings.CreateLbEdgeExtensionSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            Modify_ApiCall(ref _callCreateLbEdgeExtension);
+            Modify_CreateLbEdgeExtensionApiCall(ref _callCreateLbEdgeExtension);
+            _callUpdateLbEdgeExtension = clientHelper.BuildApiCall<UpdateLbEdgeExtensionRequest, lro::Operation>("UpdateLbEdgeExtension", grpcClient.UpdateLbEdgeExtensionAsync, grpcClient.UpdateLbEdgeExtension, effectiveSettings.UpdateLbEdgeExtensionSettings).WithGoogleRequestParam("lb_edge_extension.name", request => request.LbEdgeExtension?.Name);
+            Modify_ApiCall(ref _callUpdateLbEdgeExtension);
+            Modify_UpdateLbEdgeExtensionApiCall(ref _callUpdateLbEdgeExtension);
+            _callDeleteLbEdgeExtension = clientHelper.BuildApiCall<DeleteLbEdgeExtensionRequest, lro::Operation>("DeleteLbEdgeExtension", grpcClient.DeleteLbEdgeExtensionAsync, grpcClient.DeleteLbEdgeExtension, effectiveSettings.DeleteLbEdgeExtensionSettings).WithGoogleRequestParam("name", request => request.Name);
+            Modify_ApiCall(ref _callDeleteLbEdgeExtension);
+            Modify_DeleteLbEdgeExtensionApiCall(ref _callDeleteLbEdgeExtension);
             _callListAuthzExtensions = clientHelper.BuildApiCall<ListAuthzExtensionsRequest, ListAuthzExtensionsResponse>("ListAuthzExtensions", grpcClient.ListAuthzExtensionsAsync, grpcClient.ListAuthzExtensions, effectiveSettings.ListAuthzExtensionsSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callListAuthzExtensions);
             Modify_ListAuthzExtensionsApiCall(ref _callListAuthzExtensions);
@@ -2904,6 +3771,16 @@ namespace Google.Cloud.NetworkServices.V1
         partial void Modify_UpdateLbRouteExtensionApiCall(ref gaxgrpc::ApiCall<UpdateLbRouteExtensionRequest, lro::Operation> call);
 
         partial void Modify_DeleteLbRouteExtensionApiCall(ref gaxgrpc::ApiCall<DeleteLbRouteExtensionRequest, lro::Operation> call);
+
+        partial void Modify_ListLbEdgeExtensionsApiCall(ref gaxgrpc::ApiCall<ListLbEdgeExtensionsRequest, ListLbEdgeExtensionsResponse> call);
+
+        partial void Modify_GetLbEdgeExtensionApiCall(ref gaxgrpc::ApiCall<GetLbEdgeExtensionRequest, LbEdgeExtension> call);
+
+        partial void Modify_CreateLbEdgeExtensionApiCall(ref gaxgrpc::ApiCall<CreateLbEdgeExtensionRequest, lro::Operation> call);
+
+        partial void Modify_UpdateLbEdgeExtensionApiCall(ref gaxgrpc::ApiCall<UpdateLbEdgeExtensionRequest, lro::Operation> call);
+
+        partial void Modify_DeleteLbEdgeExtensionApiCall(ref gaxgrpc::ApiCall<DeleteLbEdgeExtensionRequest, lro::Operation> call);
 
         partial void Modify_ListAuthzExtensionsApiCall(ref gaxgrpc::ApiCall<ListAuthzExtensionsRequest, ListAuthzExtensionsResponse> call);
 
@@ -2945,6 +3822,16 @@ namespace Google.Cloud.NetworkServices.V1
         partial void Modify_UpdateLbRouteExtensionRequest(ref UpdateLbRouteExtensionRequest request, ref gaxgrpc::CallSettings settings);
 
         partial void Modify_DeleteLbRouteExtensionRequest(ref DeleteLbRouteExtensionRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_ListLbEdgeExtensionsRequest(ref ListLbEdgeExtensionsRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_GetLbEdgeExtensionRequest(ref GetLbEdgeExtensionRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_CreateLbEdgeExtensionRequest(ref CreateLbEdgeExtensionRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_UpdateLbEdgeExtensionRequest(ref UpdateLbEdgeExtensionRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_DeleteLbEdgeExtensionRequest(ref DeleteLbEdgeExtensionRequest request, ref gaxgrpc::CallSettings settings);
 
         partial void Modify_ListAuthzExtensionsRequest(ref ListAuthzExtensionsRequest request, ref gaxgrpc::CallSettings settings);
 
@@ -3217,6 +4104,135 @@ namespace Google.Cloud.NetworkServices.V1
         }
 
         /// <summary>
+        /// Lists `LbEdgeExtension` resources in a given project and location.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="LbEdgeExtension"/> resources.</returns>
+        public override gax::PagedEnumerable<ListLbEdgeExtensionsResponse, LbEdgeExtension> ListLbEdgeExtensions(ListLbEdgeExtensionsRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_ListLbEdgeExtensionsRequest(ref request, ref callSettings);
+            return new gaxgrpc::GrpcPagedEnumerable<ListLbEdgeExtensionsRequest, ListLbEdgeExtensionsResponse, LbEdgeExtension>(_callListLbEdgeExtensions, request, callSettings);
+        }
+
+        /// <summary>
+        /// Lists `LbEdgeExtension` resources in a given project and location.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="LbEdgeExtension"/> resources.</returns>
+        public override gax::PagedAsyncEnumerable<ListLbEdgeExtensionsResponse, LbEdgeExtension> ListLbEdgeExtensionsAsync(ListLbEdgeExtensionsRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_ListLbEdgeExtensionsRequest(ref request, ref callSettings);
+            return new gaxgrpc::GrpcPagedAsyncEnumerable<ListLbEdgeExtensionsRequest, ListLbEdgeExtensionsResponse, LbEdgeExtension>(_callListLbEdgeExtensions, request, callSettings);
+        }
+
+        /// <summary>
+        /// Gets details of the specified `LbEdgeExtension` resource.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override LbEdgeExtension GetLbEdgeExtension(GetLbEdgeExtensionRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_GetLbEdgeExtensionRequest(ref request, ref callSettings);
+            return _callGetLbEdgeExtension.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Gets details of the specified `LbEdgeExtension` resource.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override stt::Task<LbEdgeExtension> GetLbEdgeExtensionAsync(GetLbEdgeExtensionRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_GetLbEdgeExtensionRequest(ref request, ref callSettings);
+            return _callGetLbEdgeExtension.Async(request, callSettings);
+        }
+
+        /// <summary>The long-running operations client for <c>CreateLbEdgeExtension</c>.</summary>
+        public override lro::OperationsClient CreateLbEdgeExtensionOperationsClient { get; }
+
+        /// <summary>
+        /// Creates a new `LbEdgeExtension` resource in a given project and location.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override lro::Operation<LbEdgeExtension, OperationMetadata> CreateLbEdgeExtension(CreateLbEdgeExtensionRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_CreateLbEdgeExtensionRequest(ref request, ref callSettings);
+            return new lro::Operation<LbEdgeExtension, OperationMetadata>(_callCreateLbEdgeExtension.Sync(request, callSettings), CreateLbEdgeExtensionOperationsClient);
+        }
+
+        /// <summary>
+        /// Creates a new `LbEdgeExtension` resource in a given project and location.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override async stt::Task<lro::Operation<LbEdgeExtension, OperationMetadata>> CreateLbEdgeExtensionAsync(CreateLbEdgeExtensionRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_CreateLbEdgeExtensionRequest(ref request, ref callSettings);
+            return new lro::Operation<LbEdgeExtension, OperationMetadata>(await _callCreateLbEdgeExtension.Async(request, callSettings).ConfigureAwait(false), CreateLbEdgeExtensionOperationsClient);
+        }
+
+        /// <summary>The long-running operations client for <c>UpdateLbEdgeExtension</c>.</summary>
+        public override lro::OperationsClient UpdateLbEdgeExtensionOperationsClient { get; }
+
+        /// <summary>
+        /// Updates the parameters of the specified `LbEdgeExtension` resource.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override lro::Operation<LbEdgeExtension, OperationMetadata> UpdateLbEdgeExtension(UpdateLbEdgeExtensionRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_UpdateLbEdgeExtensionRequest(ref request, ref callSettings);
+            return new lro::Operation<LbEdgeExtension, OperationMetadata>(_callUpdateLbEdgeExtension.Sync(request, callSettings), UpdateLbEdgeExtensionOperationsClient);
+        }
+
+        /// <summary>
+        /// Updates the parameters of the specified `LbEdgeExtension` resource.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override async stt::Task<lro::Operation<LbEdgeExtension, OperationMetadata>> UpdateLbEdgeExtensionAsync(UpdateLbEdgeExtensionRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_UpdateLbEdgeExtensionRequest(ref request, ref callSettings);
+            return new lro::Operation<LbEdgeExtension, OperationMetadata>(await _callUpdateLbEdgeExtension.Async(request, callSettings).ConfigureAwait(false), UpdateLbEdgeExtensionOperationsClient);
+        }
+
+        /// <summary>The long-running operations client for <c>DeleteLbEdgeExtension</c>.</summary>
+        public override lro::OperationsClient DeleteLbEdgeExtensionOperationsClient { get; }
+
+        /// <summary>
+        /// Deletes the specified `LbEdgeExtension` resource.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override lro::Operation<wkt::Empty, OperationMetadata> DeleteLbEdgeExtension(DeleteLbEdgeExtensionRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_DeleteLbEdgeExtensionRequest(ref request, ref callSettings);
+            return new lro::Operation<wkt::Empty, OperationMetadata>(_callDeleteLbEdgeExtension.Sync(request, callSettings), DeleteLbEdgeExtensionOperationsClient);
+        }
+
+        /// <summary>
+        /// Deletes the specified `LbEdgeExtension` resource.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override async stt::Task<lro::Operation<wkt::Empty, OperationMetadata>> DeleteLbEdgeExtensionAsync(DeleteLbEdgeExtensionRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_DeleteLbEdgeExtensionRequest(ref request, ref callSettings);
+            return new lro::Operation<wkt::Empty, OperationMetadata>(await _callDeleteLbEdgeExtension.Async(request, callSettings).ConfigureAwait(false), DeleteLbEdgeExtensionOperationsClient);
+        }
+
+        /// <summary>
         /// Lists `AuthzExtension` resources in a given project and location.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
@@ -3358,6 +4374,10 @@ namespace Google.Cloud.NetworkServices.V1
     {
     }
 
+    public partial class ListLbEdgeExtensionsRequest : gaxgrpc::IPageRequest
+    {
+    }
+
     public partial class ListAuthzExtensionsRequest : gaxgrpc::IPageRequest
     {
     }
@@ -3374,6 +4394,14 @@ namespace Google.Cloud.NetworkServices.V1
     {
         /// <summary>Returns an enumerator that iterates through the resources in this response.</summary>
         public scg::IEnumerator<LbRouteExtension> GetEnumerator() => LbRouteExtensions.GetEnumerator();
+
+        sc::IEnumerator sc::IEnumerable.GetEnumerator() => GetEnumerator();
+    }
+
+    public partial class ListLbEdgeExtensionsResponse : gaxgrpc::IPageResponse<LbEdgeExtension>
+    {
+        /// <summary>Returns an enumerator that iterates through the resources in this response.</summary>
+        public scg::IEnumerator<LbEdgeExtension> GetEnumerator() => LbEdgeExtensions.GetEnumerator();
 
         sc::IEnumerator sc::IEnumerable.GetEnumerator() => GetEnumerator();
     }

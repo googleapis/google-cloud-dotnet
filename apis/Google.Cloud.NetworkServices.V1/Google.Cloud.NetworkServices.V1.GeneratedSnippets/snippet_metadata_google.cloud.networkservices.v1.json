@@ -2835,6 +2835,1418 @@
       ]
     },
     {
+      "regionTag": "networkservices_v1_generated_DepService_ListLbEdgeExtensions_sync",
+      "title": "ListLbEdgeExtensionsRequestObject",
+      "description": "Snippet for ListLbEdgeExtensions",
+      "file": "DepServiceClient.ListLbEdgeExtensionsRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListLbEdgeExtensions",
+        "fullName": "Google.Cloud.NetworkServices.V1.DepServiceClient.ListLbEdgeExtensions",
+        "parameters": [
+          {
+            "type": "Google.Cloud.NetworkServices.V1.ListLbEdgeExtensionsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.NetworkServices.V1.ListLbEdgeExtensionsResponse, Google.Cloud.NetworkServices.V1.LbEdgeExtension>",
+        "client": {
+          "shortName": "DepServiceClient",
+          "fullName": "Google.Cloud.NetworkServices.V1.DepServiceClient"
+        },
+        "method": {
+          "shortName": "ListLbEdgeExtensions",
+          "fullName": "google.cloud.networkservices.v1.DepService.ListLbEdgeExtensions",
+          "service": {
+            "shortName": "DepService",
+            "fullName": "google.cloud.networkservices.v1.DepService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 81,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 79,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "networkservices_v1_generated_DepService_ListLbEdgeExtensions_async",
+      "title": "ListLbEdgeExtensionsRequestObjectAsync",
+      "description": "Snippet for ListLbEdgeExtensionsAsync",
+      "file": "DepServiceClient.ListLbEdgeExtensionsRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListLbEdgeExtensionsAsync",
+        "fullName": "Google.Cloud.NetworkServices.V1.DepServiceClient.ListLbEdgeExtensionsAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.NetworkServices.V1.ListLbEdgeExtensionsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.NetworkServices.V1.ListLbEdgeExtensionsResponse, Google.Cloud.NetworkServices.V1.LbEdgeExtension>",
+        "client": {
+          "shortName": "DepServiceClient",
+          "fullName": "Google.Cloud.NetworkServices.V1.DepServiceClient"
+        },
+        "method": {
+          "shortName": "ListLbEdgeExtensions",
+          "fullName": "google.cloud.networkservices.v1.DepService.ListLbEdgeExtensions",
+          "service": {
+            "shortName": "DepService",
+            "fullName": "google.cloud.networkservices.v1.DepService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 83,
+          "type": "FULL"
+        },
+        {
+          "start": 39,
+          "end": 81,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "networkservices_v1_generated_DepService_ListLbEdgeExtensions_sync_flattened",
+      "title": "ListLbEdgeExtensions",
+      "description": "Snippet for ListLbEdgeExtensions",
+      "file": "DepServiceClient.ListLbEdgeExtensionsSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListLbEdgeExtensions",
+        "fullName": "Google.Cloud.NetworkServices.V1.DepServiceClient.ListLbEdgeExtensions",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.NetworkServices.V1.ListLbEdgeExtensionsResponse, Google.Cloud.NetworkServices.V1.LbEdgeExtension>",
+        "client": {
+          "shortName": "DepServiceClient",
+          "fullName": "Google.Cloud.NetworkServices.V1.DepServiceClient"
+        },
+        "method": {
+          "shortName": "ListLbEdgeExtensions",
+          "fullName": "google.cloud.networkservices.v1.DepService.ListLbEdgeExtensions",
+          "service": {
+            "shortName": "DepService",
+            "fullName": "google.cloud.networkservices.v1.DepService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 75,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 73,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "networkservices_v1_generated_DepService_ListLbEdgeExtensions_async_flattened",
+      "title": "ListLbEdgeExtensionsAsync",
+      "description": "Snippet for ListLbEdgeExtensionsAsync",
+      "file": "DepServiceClient.ListLbEdgeExtensionsAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListLbEdgeExtensionsAsync",
+        "fullName": "Google.Cloud.NetworkServices.V1.DepServiceClient.ListLbEdgeExtensionsAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.NetworkServices.V1.ListLbEdgeExtensionsResponse, Google.Cloud.NetworkServices.V1.LbEdgeExtension>",
+        "client": {
+          "shortName": "DepServiceClient",
+          "fullName": "Google.Cloud.NetworkServices.V1.DepServiceClient"
+        },
+        "method": {
+          "shortName": "ListLbEdgeExtensions",
+          "fullName": "google.cloud.networkservices.v1.DepService.ListLbEdgeExtensions",
+          "service": {
+            "shortName": "DepService",
+            "fullName": "google.cloud.networkservices.v1.DepService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 77,
+          "type": "FULL"
+        },
+        {
+          "start": 38,
+          "end": 75,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "networkservices_v1_generated_DepService_ListLbEdgeExtensions_sync_flattened_resourceNames",
+      "title": "ListLbEdgeExtensionsResourceNames",
+      "description": "Snippet for ListLbEdgeExtensions",
+      "file": "DepServiceClient.ListLbEdgeExtensionsResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListLbEdgeExtensions",
+        "fullName": "Google.Cloud.NetworkServices.V1.DepServiceClient.ListLbEdgeExtensions",
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.LocationName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.NetworkServices.V1.ListLbEdgeExtensionsResponse, Google.Cloud.NetworkServices.V1.LbEdgeExtension>",
+        "client": {
+          "shortName": "DepServiceClient",
+          "fullName": "Google.Cloud.NetworkServices.V1.DepServiceClient"
+        },
+        "method": {
+          "shortName": "ListLbEdgeExtensions",
+          "fullName": "google.cloud.networkservices.v1.DepService.ListLbEdgeExtensions",
+          "service": {
+            "shortName": "DepService",
+            "fullName": "google.cloud.networkservices.v1.DepService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 76,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 74,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "networkservices_v1_generated_DepService_ListLbEdgeExtensions_async_flattened_resourceNames",
+      "title": "ListLbEdgeExtensionsResourceNamesAsync",
+      "description": "Snippet for ListLbEdgeExtensionsAsync",
+      "file": "DepServiceClient.ListLbEdgeExtensionsResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListLbEdgeExtensionsAsync",
+        "fullName": "Google.Cloud.NetworkServices.V1.DepServiceClient.ListLbEdgeExtensionsAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.LocationName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.NetworkServices.V1.ListLbEdgeExtensionsResponse, Google.Cloud.NetworkServices.V1.LbEdgeExtension>",
+        "client": {
+          "shortName": "DepServiceClient",
+          "fullName": "Google.Cloud.NetworkServices.V1.DepServiceClient"
+        },
+        "method": {
+          "shortName": "ListLbEdgeExtensions",
+          "fullName": "google.cloud.networkservices.v1.DepService.ListLbEdgeExtensions",
+          "service": {
+            "shortName": "DepService",
+            "fullName": "google.cloud.networkservices.v1.DepService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 78,
+          "type": "FULL"
+        },
+        {
+          "start": 39,
+          "end": 76,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "networkservices_v1_generated_DepService_GetLbEdgeExtension_sync",
+      "title": "GetLbEdgeExtensionRequestObject",
+      "description": "Snippet for GetLbEdgeExtension",
+      "file": "DepServiceClient.GetLbEdgeExtensionRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetLbEdgeExtension",
+        "fullName": "Google.Cloud.NetworkServices.V1.DepServiceClient.GetLbEdgeExtension",
+        "parameters": [
+          {
+            "type": "Google.Cloud.NetworkServices.V1.GetLbEdgeExtensionRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.NetworkServices.V1.LbEdgeExtension",
+        "client": {
+          "shortName": "DepServiceClient",
+          "fullName": "Google.Cloud.NetworkServices.V1.DepServiceClient"
+        },
+        "method": {
+          "shortName": "GetLbEdgeExtension",
+          "fullName": "google.cloud.networkservices.v1.DepService.GetLbEdgeExtension",
+          "service": {
+            "shortName": "DepService",
+            "fullName": "google.cloud.networkservices.v1.DepService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 44,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 42,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "networkservices_v1_generated_DepService_GetLbEdgeExtension_async",
+      "title": "GetLbEdgeExtensionRequestObjectAsync",
+      "description": "Snippet for GetLbEdgeExtensionAsync",
+      "file": "DepServiceClient.GetLbEdgeExtensionRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetLbEdgeExtensionAsync",
+        "fullName": "Google.Cloud.NetworkServices.V1.DepServiceClient.GetLbEdgeExtensionAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.NetworkServices.V1.GetLbEdgeExtensionRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.NetworkServices.V1.LbEdgeExtension>",
+        "client": {
+          "shortName": "DepServiceClient",
+          "fullName": "Google.Cloud.NetworkServices.V1.DepServiceClient"
+        },
+        "method": {
+          "shortName": "GetLbEdgeExtension",
+          "fullName": "google.cloud.networkservices.v1.DepService.GetLbEdgeExtension",
+          "service": {
+            "shortName": "DepService",
+            "fullName": "google.cloud.networkservices.v1.DepService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 45,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 43,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "networkservices_v1_generated_DepService_GetLbEdgeExtension_sync_flattened",
+      "title": "GetLbEdgeExtension",
+      "description": "Snippet for GetLbEdgeExtension",
+      "file": "DepServiceClient.GetLbEdgeExtensionSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetLbEdgeExtension",
+        "fullName": "Google.Cloud.NetworkServices.V1.DepServiceClient.GetLbEdgeExtension",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.NetworkServices.V1.LbEdgeExtension",
+        "client": {
+          "shortName": "DepServiceClient",
+          "fullName": "Google.Cloud.NetworkServices.V1.DepServiceClient"
+        },
+        "method": {
+          "shortName": "GetLbEdgeExtension",
+          "fullName": "google.cloud.networkservices.v1.DepService.GetLbEdgeExtension",
+          "service": {
+            "shortName": "DepService",
+            "fullName": "google.cloud.networkservices.v1.DepService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "networkservices_v1_generated_DepService_GetLbEdgeExtension_async_flattened",
+      "title": "GetLbEdgeExtensionAsync",
+      "description": "Snippet for GetLbEdgeExtensionAsync",
+      "file": "DepServiceClient.GetLbEdgeExtensionAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetLbEdgeExtensionAsync",
+        "fullName": "Google.Cloud.NetworkServices.V1.DepServiceClient.GetLbEdgeExtensionAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.NetworkServices.V1.LbEdgeExtension>",
+        "client": {
+          "shortName": "DepServiceClient",
+          "fullName": "Google.Cloud.NetworkServices.V1.DepServiceClient"
+        },
+        "method": {
+          "shortName": "GetLbEdgeExtension",
+          "fullName": "google.cloud.networkservices.v1.DepService.GetLbEdgeExtension",
+          "service": {
+            "shortName": "DepService",
+            "fullName": "google.cloud.networkservices.v1.DepService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "networkservices_v1_generated_DepService_GetLbEdgeExtension_sync_flattened_resourceNames",
+      "title": "GetLbEdgeExtensionResourceNames",
+      "description": "Snippet for GetLbEdgeExtension",
+      "file": "DepServiceClient.GetLbEdgeExtensionResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetLbEdgeExtension",
+        "fullName": "Google.Cloud.NetworkServices.V1.DepServiceClient.GetLbEdgeExtension",
+        "parameters": [
+          {
+            "type": "Google.Cloud.NetworkServices.V1.LbEdgeExtensionName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.NetworkServices.V1.LbEdgeExtension",
+        "client": {
+          "shortName": "DepServiceClient",
+          "fullName": "Google.Cloud.NetworkServices.V1.DepServiceClient"
+        },
+        "method": {
+          "shortName": "GetLbEdgeExtension",
+          "fullName": "google.cloud.networkservices.v1.DepService.GetLbEdgeExtension",
+          "service": {
+            "shortName": "DepService",
+            "fullName": "google.cloud.networkservices.v1.DepService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "networkservices_v1_generated_DepService_GetLbEdgeExtension_async_flattened_resourceNames",
+      "title": "GetLbEdgeExtensionResourceNamesAsync",
+      "description": "Snippet for GetLbEdgeExtensionAsync",
+      "file": "DepServiceClient.GetLbEdgeExtensionResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetLbEdgeExtensionAsync",
+        "fullName": "Google.Cloud.NetworkServices.V1.DepServiceClient.GetLbEdgeExtensionAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.NetworkServices.V1.LbEdgeExtensionName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.NetworkServices.V1.LbEdgeExtension>",
+        "client": {
+          "shortName": "DepServiceClient",
+          "fullName": "Google.Cloud.NetworkServices.V1.DepServiceClient"
+        },
+        "method": {
+          "shortName": "GetLbEdgeExtension",
+          "fullName": "google.cloud.networkservices.v1.DepService.GetLbEdgeExtension",
+          "service": {
+            "shortName": "DepService",
+            "fullName": "google.cloud.networkservices.v1.DepService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "networkservices_v1_generated_DepService_CreateLbEdgeExtension_sync",
+      "title": "CreateLbEdgeExtensionRequestObject",
+      "description": "Snippet for CreateLbEdgeExtension",
+      "file": "DepServiceClient.CreateLbEdgeExtensionRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateLbEdgeExtension",
+        "fullName": "Google.Cloud.NetworkServices.V1.DepServiceClient.CreateLbEdgeExtension",
+        "parameters": [
+          {
+            "type": "Google.Cloud.NetworkServices.V1.CreateLbEdgeExtensionRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.NetworkServices.V1.LbEdgeExtension, Google.Cloud.NetworkServices.V1.OperationMetadata>",
+        "client": {
+          "shortName": "DepServiceClient",
+          "fullName": "Google.Cloud.NetworkServices.V1.DepServiceClient"
+        },
+        "method": {
+          "shortName": "CreateLbEdgeExtension",
+          "fullName": "google.cloud.networkservices.v1.DepService.CreateLbEdgeExtension",
+          "service": {
+            "shortName": "DepService",
+            "fullName": "google.cloud.networkservices.v1.DepService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 65,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 63,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "networkservices_v1_generated_DepService_CreateLbEdgeExtension_async",
+      "title": "CreateLbEdgeExtensionRequestObjectAsync",
+      "description": "Snippet for CreateLbEdgeExtensionAsync",
+      "file": "DepServiceClient.CreateLbEdgeExtensionRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateLbEdgeExtensionAsync",
+        "fullName": "Google.Cloud.NetworkServices.V1.DepServiceClient.CreateLbEdgeExtensionAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.NetworkServices.V1.CreateLbEdgeExtensionRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.NetworkServices.V1.LbEdgeExtension, Google.Cloud.NetworkServices.V1.OperationMetadata>>",
+        "client": {
+          "shortName": "DepServiceClient",
+          "fullName": "Google.Cloud.NetworkServices.V1.DepServiceClient"
+        },
+        "method": {
+          "shortName": "CreateLbEdgeExtension",
+          "fullName": "google.cloud.networkservices.v1.DepService.CreateLbEdgeExtension",
+          "service": {
+            "shortName": "DepService",
+            "fullName": "google.cloud.networkservices.v1.DepService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 66,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 64,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "networkservices_v1_generated_DepService_CreateLbEdgeExtension_sync_flattened",
+      "title": "CreateLbEdgeExtension",
+      "description": "Snippet for CreateLbEdgeExtension",
+      "file": "DepServiceClient.CreateLbEdgeExtensionSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateLbEdgeExtension",
+        "fullName": "Google.Cloud.NetworkServices.V1.DepServiceClient.CreateLbEdgeExtension",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.NetworkServices.V1.LbEdgeExtension",
+            "name": "lbEdgeExtension"
+          },
+          {
+            "type": "System.String",
+            "name": "lbEdgeExtensionId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.NetworkServices.V1.LbEdgeExtension, Google.Cloud.NetworkServices.V1.OperationMetadata>",
+        "client": {
+          "shortName": "DepServiceClient",
+          "fullName": "Google.Cloud.NetworkServices.V1.DepServiceClient"
+        },
+        "method": {
+          "shortName": "CreateLbEdgeExtension",
+          "fullName": "google.cloud.networkservices.v1.DepService.CreateLbEdgeExtension",
+          "service": {
+            "shortName": "DepService",
+            "fullName": "google.cloud.networkservices.v1.DepService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 60,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 58,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "networkservices_v1_generated_DepService_CreateLbEdgeExtension_async_flattened",
+      "title": "CreateLbEdgeExtensionAsync",
+      "description": "Snippet for CreateLbEdgeExtensionAsync",
+      "file": "DepServiceClient.CreateLbEdgeExtensionAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateLbEdgeExtensionAsync",
+        "fullName": "Google.Cloud.NetworkServices.V1.DepServiceClient.CreateLbEdgeExtensionAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.NetworkServices.V1.LbEdgeExtension",
+            "name": "lbEdgeExtension"
+          },
+          {
+            "type": "System.String",
+            "name": "lbEdgeExtensionId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.NetworkServices.V1.LbEdgeExtension, Google.Cloud.NetworkServices.V1.OperationMetadata>>",
+        "client": {
+          "shortName": "DepServiceClient",
+          "fullName": "Google.Cloud.NetworkServices.V1.DepServiceClient"
+        },
+        "method": {
+          "shortName": "CreateLbEdgeExtension",
+          "fullName": "google.cloud.networkservices.v1.DepService.CreateLbEdgeExtension",
+          "service": {
+            "shortName": "DepService",
+            "fullName": "google.cloud.networkservices.v1.DepService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 61,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 59,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "networkservices_v1_generated_DepService_CreateLbEdgeExtension_sync_flattened_resourceNames",
+      "title": "CreateLbEdgeExtensionResourceNames",
+      "description": "Snippet for CreateLbEdgeExtension",
+      "file": "DepServiceClient.CreateLbEdgeExtensionResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateLbEdgeExtension",
+        "fullName": "Google.Cloud.NetworkServices.V1.DepServiceClient.CreateLbEdgeExtension",
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.LocationName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.NetworkServices.V1.LbEdgeExtension",
+            "name": "lbEdgeExtension"
+          },
+          {
+            "type": "System.String",
+            "name": "lbEdgeExtensionId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.NetworkServices.V1.LbEdgeExtension, Google.Cloud.NetworkServices.V1.OperationMetadata>",
+        "client": {
+          "shortName": "DepServiceClient",
+          "fullName": "Google.Cloud.NetworkServices.V1.DepServiceClient"
+        },
+        "method": {
+          "shortName": "CreateLbEdgeExtension",
+          "fullName": "google.cloud.networkservices.v1.DepService.CreateLbEdgeExtension",
+          "service": {
+            "shortName": "DepService",
+            "fullName": "google.cloud.networkservices.v1.DepService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 61,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 59,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "networkservices_v1_generated_DepService_CreateLbEdgeExtension_async_flattened_resourceNames",
+      "title": "CreateLbEdgeExtensionResourceNamesAsync",
+      "description": "Snippet for CreateLbEdgeExtensionAsync",
+      "file": "DepServiceClient.CreateLbEdgeExtensionResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateLbEdgeExtensionAsync",
+        "fullName": "Google.Cloud.NetworkServices.V1.DepServiceClient.CreateLbEdgeExtensionAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.LocationName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.NetworkServices.V1.LbEdgeExtension",
+            "name": "lbEdgeExtension"
+          },
+          {
+            "type": "System.String",
+            "name": "lbEdgeExtensionId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.NetworkServices.V1.LbEdgeExtension, Google.Cloud.NetworkServices.V1.OperationMetadata>>",
+        "client": {
+          "shortName": "DepServiceClient",
+          "fullName": "Google.Cloud.NetworkServices.V1.DepServiceClient"
+        },
+        "method": {
+          "shortName": "CreateLbEdgeExtension",
+          "fullName": "google.cloud.networkservices.v1.DepService.CreateLbEdgeExtension",
+          "service": {
+            "shortName": "DepService",
+            "fullName": "google.cloud.networkservices.v1.DepService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 62,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 60,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "networkservices_v1_generated_DepService_UpdateLbEdgeExtension_sync",
+      "title": "UpdateLbEdgeExtensionRequestObject",
+      "description": "Snippet for UpdateLbEdgeExtension",
+      "file": "DepServiceClient.UpdateLbEdgeExtensionRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateLbEdgeExtension",
+        "fullName": "Google.Cloud.NetworkServices.V1.DepServiceClient.UpdateLbEdgeExtension",
+        "parameters": [
+          {
+            "type": "Google.Cloud.NetworkServices.V1.UpdateLbEdgeExtensionRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.NetworkServices.V1.LbEdgeExtension, Google.Cloud.NetworkServices.V1.OperationMetadata>",
+        "client": {
+          "shortName": "DepServiceClient",
+          "fullName": "Google.Cloud.NetworkServices.V1.DepServiceClient"
+        },
+        "method": {
+          "shortName": "UpdateLbEdgeExtension",
+          "fullName": "google.cloud.networkservices.v1.DepService.UpdateLbEdgeExtension",
+          "service": {
+            "shortName": "DepService",
+            "fullName": "google.cloud.networkservices.v1.DepService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 64,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 62,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "networkservices_v1_generated_DepService_UpdateLbEdgeExtension_async",
+      "title": "UpdateLbEdgeExtensionRequestObjectAsync",
+      "description": "Snippet for UpdateLbEdgeExtensionAsync",
+      "file": "DepServiceClient.UpdateLbEdgeExtensionRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateLbEdgeExtensionAsync",
+        "fullName": "Google.Cloud.NetworkServices.V1.DepServiceClient.UpdateLbEdgeExtensionAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.NetworkServices.V1.UpdateLbEdgeExtensionRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.NetworkServices.V1.LbEdgeExtension, Google.Cloud.NetworkServices.V1.OperationMetadata>>",
+        "client": {
+          "shortName": "DepServiceClient",
+          "fullName": "Google.Cloud.NetworkServices.V1.DepServiceClient"
+        },
+        "method": {
+          "shortName": "UpdateLbEdgeExtension",
+          "fullName": "google.cloud.networkservices.v1.DepService.UpdateLbEdgeExtension",
+          "service": {
+            "shortName": "DepService",
+            "fullName": "google.cloud.networkservices.v1.DepService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 65,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 63,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "networkservices_v1_generated_DepService_UpdateLbEdgeExtension_sync_flattened",
+      "title": "UpdateLbEdgeExtension",
+      "description": "Snippet for UpdateLbEdgeExtension",
+      "file": "DepServiceClient.UpdateLbEdgeExtensionSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateLbEdgeExtension",
+        "fullName": "Google.Cloud.NetworkServices.V1.DepServiceClient.UpdateLbEdgeExtension",
+        "parameters": [
+          {
+            "type": "Google.Cloud.NetworkServices.V1.LbEdgeExtension",
+            "name": "lbEdgeExtension"
+          },
+          {
+            "type": "Google.Protobuf.WellKnownTypes.FieldMask",
+            "name": "updateMask"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.NetworkServices.V1.LbEdgeExtension, Google.Cloud.NetworkServices.V1.OperationMetadata>",
+        "client": {
+          "shortName": "DepServiceClient",
+          "fullName": "Google.Cloud.NetworkServices.V1.DepServiceClient"
+        },
+        "method": {
+          "shortName": "UpdateLbEdgeExtension",
+          "fullName": "google.cloud.networkservices.v1.DepService.UpdateLbEdgeExtension",
+          "service": {
+            "shortName": "DepService",
+            "fullName": "google.cloud.networkservices.v1.DepService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 60,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 58,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "networkservices_v1_generated_DepService_UpdateLbEdgeExtension_async_flattened",
+      "title": "UpdateLbEdgeExtensionAsync",
+      "description": "Snippet for UpdateLbEdgeExtensionAsync",
+      "file": "DepServiceClient.UpdateLbEdgeExtensionAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateLbEdgeExtensionAsync",
+        "fullName": "Google.Cloud.NetworkServices.V1.DepServiceClient.UpdateLbEdgeExtensionAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.NetworkServices.V1.LbEdgeExtension",
+            "name": "lbEdgeExtension"
+          },
+          {
+            "type": "Google.Protobuf.WellKnownTypes.FieldMask",
+            "name": "updateMask"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.NetworkServices.V1.LbEdgeExtension, Google.Cloud.NetworkServices.V1.OperationMetadata>>",
+        "client": {
+          "shortName": "DepServiceClient",
+          "fullName": "Google.Cloud.NetworkServices.V1.DepServiceClient"
+        },
+        "method": {
+          "shortName": "UpdateLbEdgeExtension",
+          "fullName": "google.cloud.networkservices.v1.DepService.UpdateLbEdgeExtension",
+          "service": {
+            "shortName": "DepService",
+            "fullName": "google.cloud.networkservices.v1.DepService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 61,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 59,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "networkservices_v1_generated_DepService_DeleteLbEdgeExtension_sync",
+      "title": "DeleteLbEdgeExtensionRequestObject",
+      "description": "Snippet for DeleteLbEdgeExtension",
+      "file": "DepServiceClient.DeleteLbEdgeExtensionRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteLbEdgeExtension",
+        "fullName": "Google.Cloud.NetworkServices.V1.DepServiceClient.DeleteLbEdgeExtension",
+        "parameters": [
+          {
+            "type": "Google.Cloud.NetworkServices.V1.DeleteLbEdgeExtensionRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.NetworkServices.V1.OperationMetadata>",
+        "client": {
+          "shortName": "DepServiceClient",
+          "fullName": "Google.Cloud.NetworkServices.V1.DepServiceClient"
+        },
+        "method": {
+          "shortName": "DeleteLbEdgeExtension",
+          "fullName": "google.cloud.networkservices.v1.DepService.DeleteLbEdgeExtension",
+          "service": {
+            "shortName": "DepService",
+            "fullName": "google.cloud.networkservices.v1.DepService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 63,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 61,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "networkservices_v1_generated_DepService_DeleteLbEdgeExtension_async",
+      "title": "DeleteLbEdgeExtensionRequestObjectAsync",
+      "description": "Snippet for DeleteLbEdgeExtensionAsync",
+      "file": "DepServiceClient.DeleteLbEdgeExtensionRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteLbEdgeExtensionAsync",
+        "fullName": "Google.Cloud.NetworkServices.V1.DepServiceClient.DeleteLbEdgeExtensionAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.NetworkServices.V1.DeleteLbEdgeExtensionRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.NetworkServices.V1.OperationMetadata>>",
+        "client": {
+          "shortName": "DepServiceClient",
+          "fullName": "Google.Cloud.NetworkServices.V1.DepServiceClient"
+        },
+        "method": {
+          "shortName": "DeleteLbEdgeExtension",
+          "fullName": "google.cloud.networkservices.v1.DepService.DeleteLbEdgeExtension",
+          "service": {
+            "shortName": "DepService",
+            "fullName": "google.cloud.networkservices.v1.DepService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 64,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 62,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "networkservices_v1_generated_DepService_DeleteLbEdgeExtension_sync_flattened",
+      "title": "DeleteLbEdgeExtension",
+      "description": "Snippet for DeleteLbEdgeExtension",
+      "file": "DepServiceClient.DeleteLbEdgeExtensionSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteLbEdgeExtension",
+        "fullName": "Google.Cloud.NetworkServices.V1.DepServiceClient.DeleteLbEdgeExtension",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.NetworkServices.V1.OperationMetadata>",
+        "client": {
+          "shortName": "DepServiceClient",
+          "fullName": "Google.Cloud.NetworkServices.V1.DepServiceClient"
+        },
+        "method": {
+          "shortName": "DeleteLbEdgeExtension",
+          "fullName": "google.cloud.networkservices.v1.DepService.DeleteLbEdgeExtension",
+          "service": {
+            "shortName": "DepService",
+            "fullName": "google.cloud.networkservices.v1.DepService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 59,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 57,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "networkservices_v1_generated_DepService_DeleteLbEdgeExtension_async_flattened",
+      "title": "DeleteLbEdgeExtensionAsync",
+      "description": "Snippet for DeleteLbEdgeExtensionAsync",
+      "file": "DepServiceClient.DeleteLbEdgeExtensionAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteLbEdgeExtensionAsync",
+        "fullName": "Google.Cloud.NetworkServices.V1.DepServiceClient.DeleteLbEdgeExtensionAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.NetworkServices.V1.OperationMetadata>>",
+        "client": {
+          "shortName": "DepServiceClient",
+          "fullName": "Google.Cloud.NetworkServices.V1.DepServiceClient"
+        },
+        "method": {
+          "shortName": "DeleteLbEdgeExtension",
+          "fullName": "google.cloud.networkservices.v1.DepService.DeleteLbEdgeExtension",
+          "service": {
+            "shortName": "DepService",
+            "fullName": "google.cloud.networkservices.v1.DepService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 60,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 58,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "networkservices_v1_generated_DepService_DeleteLbEdgeExtension_sync_flattened_resourceNames",
+      "title": "DeleteLbEdgeExtensionResourceNames",
+      "description": "Snippet for DeleteLbEdgeExtension",
+      "file": "DepServiceClient.DeleteLbEdgeExtensionResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteLbEdgeExtension",
+        "fullName": "Google.Cloud.NetworkServices.V1.DepServiceClient.DeleteLbEdgeExtension",
+        "parameters": [
+          {
+            "type": "Google.Cloud.NetworkServices.V1.LbEdgeExtensionName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.NetworkServices.V1.OperationMetadata>",
+        "client": {
+          "shortName": "DepServiceClient",
+          "fullName": "Google.Cloud.NetworkServices.V1.DepServiceClient"
+        },
+        "method": {
+          "shortName": "DeleteLbEdgeExtension",
+          "fullName": "google.cloud.networkservices.v1.DepService.DeleteLbEdgeExtension",
+          "service": {
+            "shortName": "DepService",
+            "fullName": "google.cloud.networkservices.v1.DepService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 59,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 57,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "networkservices_v1_generated_DepService_DeleteLbEdgeExtension_async_flattened_resourceNames",
+      "title": "DeleteLbEdgeExtensionResourceNamesAsync",
+      "description": "Snippet for DeleteLbEdgeExtensionAsync",
+      "file": "DepServiceClient.DeleteLbEdgeExtensionResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteLbEdgeExtensionAsync",
+        "fullName": "Google.Cloud.NetworkServices.V1.DepServiceClient.DeleteLbEdgeExtensionAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.NetworkServices.V1.LbEdgeExtensionName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.NetworkServices.V1.OperationMetadata>>",
+        "client": {
+          "shortName": "DepServiceClient",
+          "fullName": "Google.Cloud.NetworkServices.V1.DepServiceClient"
+        },
+        "method": {
+          "shortName": "DeleteLbEdgeExtension",
+          "fullName": "google.cloud.networkservices.v1.DepService.DeleteLbEdgeExtension",
+          "service": {
+            "shortName": "DepService",
+            "fullName": "google.cloud.networkservices.v1.DepService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 60,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 58,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
       "regionTag": "networkservices_v1_generated_DepService_ListAuthzExtensions_sync",
       "title": "ListAuthzExtensionsRequestObject",
       "description": "Snippet for ListAuthzExtensions",

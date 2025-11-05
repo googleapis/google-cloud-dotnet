@@ -1786,6 +1786,885 @@ namespace GoogleCSharpSnippets
             // End snippet
         }
 
+        /// <summary>Snippet for ListLbEdgeExtensions</summary>
+        public void ListLbEdgeExtensionsRequestObject()
+        {
+            // Snippet: ListLbEdgeExtensions(ListLbEdgeExtensionsRequest, CallSettings)
+            // Create client
+            DepServiceClient depServiceClient = DepServiceClient.Create();
+            // Initialize request argument(s)
+            ListLbEdgeExtensionsRequest request = new ListLbEdgeExtensionsRequest
+            {
+                ParentAsLocationName = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
+                Filter = "",
+                OrderBy = "",
+            };
+            // Make the request
+            PagedEnumerable<ListLbEdgeExtensionsResponse, LbEdgeExtension> response = depServiceClient.ListLbEdgeExtensions(request);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            foreach (LbEdgeExtension item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (ListLbEdgeExtensionsResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (LbEdgeExtension item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<LbEdgeExtension> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (LbEdgeExtension item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListLbEdgeExtensionsAsync</summary>
+        public async Task ListLbEdgeExtensionsRequestObjectAsync()
+        {
+            // Snippet: ListLbEdgeExtensionsAsync(ListLbEdgeExtensionsRequest, CallSettings)
+            // Create client
+            DepServiceClient depServiceClient = await DepServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            ListLbEdgeExtensionsRequest request = new ListLbEdgeExtensionsRequest
+            {
+                ParentAsLocationName = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
+                Filter = "",
+                OrderBy = "",
+            };
+            // Make the request
+            PagedAsyncEnumerable<ListLbEdgeExtensionsResponse, LbEdgeExtension> response = depServiceClient.ListLbEdgeExtensionsAsync(request);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            await response.ForEachAsync((LbEdgeExtension item) =>
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            });
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await response.AsRawResponses().ForEachAsync((ListLbEdgeExtensionsResponse page) =>
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (LbEdgeExtension item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            });
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<LbEdgeExtension> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (LbEdgeExtension item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListLbEdgeExtensions</summary>
+        public void ListLbEdgeExtensions()
+        {
+            // Snippet: ListLbEdgeExtensions(string, string, int?, CallSettings)
+            // Create client
+            DepServiceClient depServiceClient = DepServiceClient.Create();
+            // Initialize request argument(s)
+            string parent = "projects/[PROJECT]/locations/[LOCATION]";
+            // Make the request
+            PagedEnumerable<ListLbEdgeExtensionsResponse, LbEdgeExtension> response = depServiceClient.ListLbEdgeExtensions(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            foreach (LbEdgeExtension item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (ListLbEdgeExtensionsResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (LbEdgeExtension item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<LbEdgeExtension> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (LbEdgeExtension item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListLbEdgeExtensionsAsync</summary>
+        public async Task ListLbEdgeExtensionsAsync()
+        {
+            // Snippet: ListLbEdgeExtensionsAsync(string, string, int?, CallSettings)
+            // Create client
+            DepServiceClient depServiceClient = await DepServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            string parent = "projects/[PROJECT]/locations/[LOCATION]";
+            // Make the request
+            PagedAsyncEnumerable<ListLbEdgeExtensionsResponse, LbEdgeExtension> response = depServiceClient.ListLbEdgeExtensionsAsync(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            await response.ForEachAsync((LbEdgeExtension item) =>
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            });
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await response.AsRawResponses().ForEachAsync((ListLbEdgeExtensionsResponse page) =>
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (LbEdgeExtension item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            });
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<LbEdgeExtension> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (LbEdgeExtension item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListLbEdgeExtensions</summary>
+        public void ListLbEdgeExtensionsResourceNames()
+        {
+            // Snippet: ListLbEdgeExtensions(LocationName, string, int?, CallSettings)
+            // Create client
+            DepServiceClient depServiceClient = DepServiceClient.Create();
+            // Initialize request argument(s)
+            LocationName parent = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]");
+            // Make the request
+            PagedEnumerable<ListLbEdgeExtensionsResponse, LbEdgeExtension> response = depServiceClient.ListLbEdgeExtensions(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            foreach (LbEdgeExtension item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (ListLbEdgeExtensionsResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (LbEdgeExtension item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<LbEdgeExtension> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (LbEdgeExtension item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListLbEdgeExtensionsAsync</summary>
+        public async Task ListLbEdgeExtensionsResourceNamesAsync()
+        {
+            // Snippet: ListLbEdgeExtensionsAsync(LocationName, string, int?, CallSettings)
+            // Create client
+            DepServiceClient depServiceClient = await DepServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            LocationName parent = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]");
+            // Make the request
+            PagedAsyncEnumerable<ListLbEdgeExtensionsResponse, LbEdgeExtension> response = depServiceClient.ListLbEdgeExtensionsAsync(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            await response.ForEachAsync((LbEdgeExtension item) =>
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            });
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await response.AsRawResponses().ForEachAsync((ListLbEdgeExtensionsResponse page) =>
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (LbEdgeExtension item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            });
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<LbEdgeExtension> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (LbEdgeExtension item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetLbEdgeExtension</summary>
+        public void GetLbEdgeExtensionRequestObject()
+        {
+            // Snippet: GetLbEdgeExtension(GetLbEdgeExtensionRequest, CallSettings)
+            // Create client
+            DepServiceClient depServiceClient = DepServiceClient.Create();
+            // Initialize request argument(s)
+            GetLbEdgeExtensionRequest request = new GetLbEdgeExtensionRequest
+            {
+                LbEdgeExtensionName = LbEdgeExtensionName.FromProjectLocationLbEdgeExtension("[PROJECT]", "[LOCATION]", "[LB_EDGE_EXTENSION]"),
+            };
+            // Make the request
+            LbEdgeExtension response = depServiceClient.GetLbEdgeExtension(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetLbEdgeExtensionAsync</summary>
+        public async Task GetLbEdgeExtensionRequestObjectAsync()
+        {
+            // Snippet: GetLbEdgeExtensionAsync(GetLbEdgeExtensionRequest, CallSettings)
+            // Additional: GetLbEdgeExtensionAsync(GetLbEdgeExtensionRequest, CancellationToken)
+            // Create client
+            DepServiceClient depServiceClient = await DepServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            GetLbEdgeExtensionRequest request = new GetLbEdgeExtensionRequest
+            {
+                LbEdgeExtensionName = LbEdgeExtensionName.FromProjectLocationLbEdgeExtension("[PROJECT]", "[LOCATION]", "[LB_EDGE_EXTENSION]"),
+            };
+            // Make the request
+            LbEdgeExtension response = await depServiceClient.GetLbEdgeExtensionAsync(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetLbEdgeExtension</summary>
+        public void GetLbEdgeExtension()
+        {
+            // Snippet: GetLbEdgeExtension(string, CallSettings)
+            // Create client
+            DepServiceClient depServiceClient = DepServiceClient.Create();
+            // Initialize request argument(s)
+            string name = "projects/[PROJECT]/locations/[LOCATION]/lbEdgeExtensions/[LB_EDGE_EXTENSION]";
+            // Make the request
+            LbEdgeExtension response = depServiceClient.GetLbEdgeExtension(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetLbEdgeExtensionAsync</summary>
+        public async Task GetLbEdgeExtensionAsync()
+        {
+            // Snippet: GetLbEdgeExtensionAsync(string, CallSettings)
+            // Additional: GetLbEdgeExtensionAsync(string, CancellationToken)
+            // Create client
+            DepServiceClient depServiceClient = await DepServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            string name = "projects/[PROJECT]/locations/[LOCATION]/lbEdgeExtensions/[LB_EDGE_EXTENSION]";
+            // Make the request
+            LbEdgeExtension response = await depServiceClient.GetLbEdgeExtensionAsync(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetLbEdgeExtension</summary>
+        public void GetLbEdgeExtensionResourceNames()
+        {
+            // Snippet: GetLbEdgeExtension(LbEdgeExtensionName, CallSettings)
+            // Create client
+            DepServiceClient depServiceClient = DepServiceClient.Create();
+            // Initialize request argument(s)
+            LbEdgeExtensionName name = LbEdgeExtensionName.FromProjectLocationLbEdgeExtension("[PROJECT]", "[LOCATION]", "[LB_EDGE_EXTENSION]");
+            // Make the request
+            LbEdgeExtension response = depServiceClient.GetLbEdgeExtension(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetLbEdgeExtensionAsync</summary>
+        public async Task GetLbEdgeExtensionResourceNamesAsync()
+        {
+            // Snippet: GetLbEdgeExtensionAsync(LbEdgeExtensionName, CallSettings)
+            // Additional: GetLbEdgeExtensionAsync(LbEdgeExtensionName, CancellationToken)
+            // Create client
+            DepServiceClient depServiceClient = await DepServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            LbEdgeExtensionName name = LbEdgeExtensionName.FromProjectLocationLbEdgeExtension("[PROJECT]", "[LOCATION]", "[LB_EDGE_EXTENSION]");
+            // Make the request
+            LbEdgeExtension response = await depServiceClient.GetLbEdgeExtensionAsync(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateLbEdgeExtension</summary>
+        public void CreateLbEdgeExtensionRequestObject()
+        {
+            // Snippet: CreateLbEdgeExtension(CreateLbEdgeExtensionRequest, CallSettings)
+            // Create client
+            DepServiceClient depServiceClient = DepServiceClient.Create();
+            // Initialize request argument(s)
+            CreateLbEdgeExtensionRequest request = new CreateLbEdgeExtensionRequest
+            {
+                ParentAsLocationName = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
+                LbEdgeExtensionId = "",
+                LbEdgeExtension = new LbEdgeExtension(),
+                RequestId = "",
+            };
+            // Make the request
+            Operation<LbEdgeExtension, OperationMetadata> response = depServiceClient.CreateLbEdgeExtension(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<LbEdgeExtension, OperationMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            LbEdgeExtension result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<LbEdgeExtension, OperationMetadata> retrievedResponse = depServiceClient.PollOnceCreateLbEdgeExtension(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                LbEdgeExtension retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateLbEdgeExtensionAsync</summary>
+        public async Task CreateLbEdgeExtensionRequestObjectAsync()
+        {
+            // Snippet: CreateLbEdgeExtensionAsync(CreateLbEdgeExtensionRequest, CallSettings)
+            // Additional: CreateLbEdgeExtensionAsync(CreateLbEdgeExtensionRequest, CancellationToken)
+            // Create client
+            DepServiceClient depServiceClient = await DepServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            CreateLbEdgeExtensionRequest request = new CreateLbEdgeExtensionRequest
+            {
+                ParentAsLocationName = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
+                LbEdgeExtensionId = "",
+                LbEdgeExtension = new LbEdgeExtension(),
+                RequestId = "",
+            };
+            // Make the request
+            Operation<LbEdgeExtension, OperationMetadata> response = await depServiceClient.CreateLbEdgeExtensionAsync(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<LbEdgeExtension, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            LbEdgeExtension result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<LbEdgeExtension, OperationMetadata> retrievedResponse = await depServiceClient.PollOnceCreateLbEdgeExtensionAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                LbEdgeExtension retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateLbEdgeExtension</summary>
+        public void CreateLbEdgeExtension()
+        {
+            // Snippet: CreateLbEdgeExtension(string, LbEdgeExtension, string, CallSettings)
+            // Create client
+            DepServiceClient depServiceClient = DepServiceClient.Create();
+            // Initialize request argument(s)
+            string parent = "projects/[PROJECT]/locations/[LOCATION]";
+            LbEdgeExtension lbEdgeExtension = new LbEdgeExtension();
+            string lbEdgeExtensionId = "";
+            // Make the request
+            Operation<LbEdgeExtension, OperationMetadata> response = depServiceClient.CreateLbEdgeExtension(parent, lbEdgeExtension, lbEdgeExtensionId);
+
+            // Poll until the returned long-running operation is complete
+            Operation<LbEdgeExtension, OperationMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            LbEdgeExtension result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<LbEdgeExtension, OperationMetadata> retrievedResponse = depServiceClient.PollOnceCreateLbEdgeExtension(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                LbEdgeExtension retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateLbEdgeExtensionAsync</summary>
+        public async Task CreateLbEdgeExtensionAsync()
+        {
+            // Snippet: CreateLbEdgeExtensionAsync(string, LbEdgeExtension, string, CallSettings)
+            // Additional: CreateLbEdgeExtensionAsync(string, LbEdgeExtension, string, CancellationToken)
+            // Create client
+            DepServiceClient depServiceClient = await DepServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            string parent = "projects/[PROJECT]/locations/[LOCATION]";
+            LbEdgeExtension lbEdgeExtension = new LbEdgeExtension();
+            string lbEdgeExtensionId = "";
+            // Make the request
+            Operation<LbEdgeExtension, OperationMetadata> response = await depServiceClient.CreateLbEdgeExtensionAsync(parent, lbEdgeExtension, lbEdgeExtensionId);
+
+            // Poll until the returned long-running operation is complete
+            Operation<LbEdgeExtension, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            LbEdgeExtension result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<LbEdgeExtension, OperationMetadata> retrievedResponse = await depServiceClient.PollOnceCreateLbEdgeExtensionAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                LbEdgeExtension retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateLbEdgeExtension</summary>
+        public void CreateLbEdgeExtensionResourceNames()
+        {
+            // Snippet: CreateLbEdgeExtension(LocationName, LbEdgeExtension, string, CallSettings)
+            // Create client
+            DepServiceClient depServiceClient = DepServiceClient.Create();
+            // Initialize request argument(s)
+            LocationName parent = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]");
+            LbEdgeExtension lbEdgeExtension = new LbEdgeExtension();
+            string lbEdgeExtensionId = "";
+            // Make the request
+            Operation<LbEdgeExtension, OperationMetadata> response = depServiceClient.CreateLbEdgeExtension(parent, lbEdgeExtension, lbEdgeExtensionId);
+
+            // Poll until the returned long-running operation is complete
+            Operation<LbEdgeExtension, OperationMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            LbEdgeExtension result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<LbEdgeExtension, OperationMetadata> retrievedResponse = depServiceClient.PollOnceCreateLbEdgeExtension(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                LbEdgeExtension retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateLbEdgeExtensionAsync</summary>
+        public async Task CreateLbEdgeExtensionResourceNamesAsync()
+        {
+            // Snippet: CreateLbEdgeExtensionAsync(LocationName, LbEdgeExtension, string, CallSettings)
+            // Additional: CreateLbEdgeExtensionAsync(LocationName, LbEdgeExtension, string, CancellationToken)
+            // Create client
+            DepServiceClient depServiceClient = await DepServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            LocationName parent = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]");
+            LbEdgeExtension lbEdgeExtension = new LbEdgeExtension();
+            string lbEdgeExtensionId = "";
+            // Make the request
+            Operation<LbEdgeExtension, OperationMetadata> response = await depServiceClient.CreateLbEdgeExtensionAsync(parent, lbEdgeExtension, lbEdgeExtensionId);
+
+            // Poll until the returned long-running operation is complete
+            Operation<LbEdgeExtension, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            LbEdgeExtension result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<LbEdgeExtension, OperationMetadata> retrievedResponse = await depServiceClient.PollOnceCreateLbEdgeExtensionAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                LbEdgeExtension retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for UpdateLbEdgeExtension</summary>
+        public void UpdateLbEdgeExtensionRequestObject()
+        {
+            // Snippet: UpdateLbEdgeExtension(UpdateLbEdgeExtensionRequest, CallSettings)
+            // Create client
+            DepServiceClient depServiceClient = DepServiceClient.Create();
+            // Initialize request argument(s)
+            UpdateLbEdgeExtensionRequest request = new UpdateLbEdgeExtensionRequest
+            {
+                UpdateMask = new FieldMask(),
+                LbEdgeExtension = new LbEdgeExtension(),
+                RequestId = "",
+            };
+            // Make the request
+            Operation<LbEdgeExtension, OperationMetadata> response = depServiceClient.UpdateLbEdgeExtension(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<LbEdgeExtension, OperationMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            LbEdgeExtension result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<LbEdgeExtension, OperationMetadata> retrievedResponse = depServiceClient.PollOnceUpdateLbEdgeExtension(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                LbEdgeExtension retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for UpdateLbEdgeExtensionAsync</summary>
+        public async Task UpdateLbEdgeExtensionRequestObjectAsync()
+        {
+            // Snippet: UpdateLbEdgeExtensionAsync(UpdateLbEdgeExtensionRequest, CallSettings)
+            // Additional: UpdateLbEdgeExtensionAsync(UpdateLbEdgeExtensionRequest, CancellationToken)
+            // Create client
+            DepServiceClient depServiceClient = await DepServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            UpdateLbEdgeExtensionRequest request = new UpdateLbEdgeExtensionRequest
+            {
+                UpdateMask = new FieldMask(),
+                LbEdgeExtension = new LbEdgeExtension(),
+                RequestId = "",
+            };
+            // Make the request
+            Operation<LbEdgeExtension, OperationMetadata> response = await depServiceClient.UpdateLbEdgeExtensionAsync(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<LbEdgeExtension, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            LbEdgeExtension result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<LbEdgeExtension, OperationMetadata> retrievedResponse = await depServiceClient.PollOnceUpdateLbEdgeExtensionAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                LbEdgeExtension retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for UpdateLbEdgeExtension</summary>
+        public void UpdateLbEdgeExtension()
+        {
+            // Snippet: UpdateLbEdgeExtension(LbEdgeExtension, FieldMask, CallSettings)
+            // Create client
+            DepServiceClient depServiceClient = DepServiceClient.Create();
+            // Initialize request argument(s)
+            LbEdgeExtension lbEdgeExtension = new LbEdgeExtension();
+            FieldMask updateMask = new FieldMask();
+            // Make the request
+            Operation<LbEdgeExtension, OperationMetadata> response = depServiceClient.UpdateLbEdgeExtension(lbEdgeExtension, updateMask);
+
+            // Poll until the returned long-running operation is complete
+            Operation<LbEdgeExtension, OperationMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            LbEdgeExtension result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<LbEdgeExtension, OperationMetadata> retrievedResponse = depServiceClient.PollOnceUpdateLbEdgeExtension(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                LbEdgeExtension retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for UpdateLbEdgeExtensionAsync</summary>
+        public async Task UpdateLbEdgeExtensionAsync()
+        {
+            // Snippet: UpdateLbEdgeExtensionAsync(LbEdgeExtension, FieldMask, CallSettings)
+            // Additional: UpdateLbEdgeExtensionAsync(LbEdgeExtension, FieldMask, CancellationToken)
+            // Create client
+            DepServiceClient depServiceClient = await DepServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            LbEdgeExtension lbEdgeExtension = new LbEdgeExtension();
+            FieldMask updateMask = new FieldMask();
+            // Make the request
+            Operation<LbEdgeExtension, OperationMetadata> response = await depServiceClient.UpdateLbEdgeExtensionAsync(lbEdgeExtension, updateMask);
+
+            // Poll until the returned long-running operation is complete
+            Operation<LbEdgeExtension, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            LbEdgeExtension result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<LbEdgeExtension, OperationMetadata> retrievedResponse = await depServiceClient.PollOnceUpdateLbEdgeExtensionAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                LbEdgeExtension retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteLbEdgeExtension</summary>
+        public void DeleteLbEdgeExtensionRequestObject()
+        {
+            // Snippet: DeleteLbEdgeExtension(DeleteLbEdgeExtensionRequest, CallSettings)
+            // Create client
+            DepServiceClient depServiceClient = DepServiceClient.Create();
+            // Initialize request argument(s)
+            DeleteLbEdgeExtensionRequest request = new DeleteLbEdgeExtensionRequest
+            {
+                LbEdgeExtensionName = LbEdgeExtensionName.FromProjectLocationLbEdgeExtension("[PROJECT]", "[LOCATION]", "[LB_EDGE_EXTENSION]"),
+                RequestId = "",
+            };
+            // Make the request
+            Operation<Empty, OperationMetadata> response = depServiceClient.DeleteLbEdgeExtension(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Empty, OperationMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            Empty result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Empty, OperationMetadata> retrievedResponse = depServiceClient.PollOnceDeleteLbEdgeExtension(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Empty retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteLbEdgeExtensionAsync</summary>
+        public async Task DeleteLbEdgeExtensionRequestObjectAsync()
+        {
+            // Snippet: DeleteLbEdgeExtensionAsync(DeleteLbEdgeExtensionRequest, CallSettings)
+            // Additional: DeleteLbEdgeExtensionAsync(DeleteLbEdgeExtensionRequest, CancellationToken)
+            // Create client
+            DepServiceClient depServiceClient = await DepServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            DeleteLbEdgeExtensionRequest request = new DeleteLbEdgeExtensionRequest
+            {
+                LbEdgeExtensionName = LbEdgeExtensionName.FromProjectLocationLbEdgeExtension("[PROJECT]", "[LOCATION]", "[LB_EDGE_EXTENSION]"),
+                RequestId = "",
+            };
+            // Make the request
+            Operation<Empty, OperationMetadata> response = await depServiceClient.DeleteLbEdgeExtensionAsync(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Empty, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            Empty result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Empty, OperationMetadata> retrievedResponse = await depServiceClient.PollOnceDeleteLbEdgeExtensionAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Empty retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteLbEdgeExtension</summary>
+        public void DeleteLbEdgeExtension()
+        {
+            // Snippet: DeleteLbEdgeExtension(string, CallSettings)
+            // Create client
+            DepServiceClient depServiceClient = DepServiceClient.Create();
+            // Initialize request argument(s)
+            string name = "projects/[PROJECT]/locations/[LOCATION]/lbEdgeExtensions/[LB_EDGE_EXTENSION]";
+            // Make the request
+            Operation<Empty, OperationMetadata> response = depServiceClient.DeleteLbEdgeExtension(name);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Empty, OperationMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            Empty result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Empty, OperationMetadata> retrievedResponse = depServiceClient.PollOnceDeleteLbEdgeExtension(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Empty retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteLbEdgeExtensionAsync</summary>
+        public async Task DeleteLbEdgeExtensionAsync()
+        {
+            // Snippet: DeleteLbEdgeExtensionAsync(string, CallSettings)
+            // Additional: DeleteLbEdgeExtensionAsync(string, CancellationToken)
+            // Create client
+            DepServiceClient depServiceClient = await DepServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            string name = "projects/[PROJECT]/locations/[LOCATION]/lbEdgeExtensions/[LB_EDGE_EXTENSION]";
+            // Make the request
+            Operation<Empty, OperationMetadata> response = await depServiceClient.DeleteLbEdgeExtensionAsync(name);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Empty, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            Empty result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Empty, OperationMetadata> retrievedResponse = await depServiceClient.PollOnceDeleteLbEdgeExtensionAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Empty retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteLbEdgeExtension</summary>
+        public void DeleteLbEdgeExtensionResourceNames()
+        {
+            // Snippet: DeleteLbEdgeExtension(LbEdgeExtensionName, CallSettings)
+            // Create client
+            DepServiceClient depServiceClient = DepServiceClient.Create();
+            // Initialize request argument(s)
+            LbEdgeExtensionName name = LbEdgeExtensionName.FromProjectLocationLbEdgeExtension("[PROJECT]", "[LOCATION]", "[LB_EDGE_EXTENSION]");
+            // Make the request
+            Operation<Empty, OperationMetadata> response = depServiceClient.DeleteLbEdgeExtension(name);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Empty, OperationMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            Empty result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Empty, OperationMetadata> retrievedResponse = depServiceClient.PollOnceDeleteLbEdgeExtension(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Empty retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteLbEdgeExtensionAsync</summary>
+        public async Task DeleteLbEdgeExtensionResourceNamesAsync()
+        {
+            // Snippet: DeleteLbEdgeExtensionAsync(LbEdgeExtensionName, CallSettings)
+            // Additional: DeleteLbEdgeExtensionAsync(LbEdgeExtensionName, CancellationToken)
+            // Create client
+            DepServiceClient depServiceClient = await DepServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            LbEdgeExtensionName name = LbEdgeExtensionName.FromProjectLocationLbEdgeExtension("[PROJECT]", "[LOCATION]", "[LB_EDGE_EXTENSION]");
+            // Make the request
+            Operation<Empty, OperationMetadata> response = await depServiceClient.DeleteLbEdgeExtensionAsync(name);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Empty, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            Empty result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Empty, OperationMetadata> retrievedResponse = await depServiceClient.PollOnceDeleteLbEdgeExtensionAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Empty retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
         /// <summary>Snippet for ListAuthzExtensions</summary>
         public void ListAuthzExtensionsRequestObject()
         {
