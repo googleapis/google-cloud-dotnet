@@ -1176,11 +1176,12 @@
         },
         {
             "id": "Google.Cloud.DataCatalog.Lineage.V1",
-            "currentVersion": "1.4.0",
+            "currentVersion": "1.5.0",
             "generationAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
             "releaseAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
-            "releaseTimestamp": "2024-05-13T17:48:24Z",
+            "releaseTimestamp": "2025-11-05T09:14:12.505729613Z",
             "lastGeneratedCommit": "888ae95dd6125f754650d55410b8c117b618a268",
+            "lastReleasedCommit": "888ae95dd6125f754650d55410b8c117b618a268",
             "apiPaths": [
                 "google/cloud/datacatalog/lineage/v1"
             ],
