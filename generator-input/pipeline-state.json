@@ -1577,11 +1577,12 @@
         },
         {
             "id": "Google.Cloud.EssentialContacts.V1",
-            "currentVersion": "2.5.0",
+            "currentVersion": "2.6.0",
             "generationAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
             "releaseAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
-            "releaseTimestamp": "2024-05-14T06:56:20Z",
+            "releaseTimestamp": "2025-11-05T16:57:53.203032325Z",
             "lastGeneratedCommit": "888ae95dd6125f754650d55410b8c117b618a268",
+            "lastReleasedCommit": "888ae95dd6125f754650d55410b8c117b618a268",
             "apiPaths": [
                 "google/cloud/essentialcontacts/v1"
             ],
