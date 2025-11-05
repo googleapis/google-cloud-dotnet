@@ -4,6 +4,12 @@ This package is primarily a dependency of Google.Cloud.Firestore. See the
 [Google.Cloud.Firestore version history](https://googleapis.dev/dotnet/Google.Cloud.Firestore/latest/history.html)
 for more details.
 
+## Version 3.12.0, released 2025-11-05
+
+### New features
+
+- Update dependencies
+
 ## Version 3.11.0, released 2025-10-15
 
 ### New features
