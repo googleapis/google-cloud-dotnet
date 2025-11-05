@@ -1011,11 +1011,12 @@
         },
         {
             "id": "Google.Cloud.CloudQuotas.V1",
-            "currentVersion": "1.1.0",
+            "currentVersion": "1.2.0",
             "generationAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
             "releaseAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
-            "releaseTimestamp": "2024-11-18T19:30:44Z",
+            "releaseTimestamp": "2025-11-05T09:01:50.482718573Z",
             "lastGeneratedCommit": "d03cc133141975f28a66554ddbd5c0e871946044",
+            "lastReleasedCommit": "d03cc133141975f28a66554ddbd5c0e871946044",
             "apiPaths": [
                 "google/api/cloudquotas/v1"
             ],
