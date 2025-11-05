@@ -1342,12 +1342,12 @@
         },
         {
             "id": "Google.Cloud.Deploy.V1",
-            "currentVersion": "3.6.0",
+            "currentVersion": "3.7.0",
             "generationAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
             "releaseAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
-            "releaseTimestamp": "2025-05-09T07:30:33.088739323Z",
+            "releaseTimestamp": "2025-11-05T16:41:40.913888991Z",
             "lastGeneratedCommit": "888ae95dd6125f754650d55410b8c117b618a268",
-            "lastReleasedCommit": "91c26618f1c8076e85582cceaeedfce3881145b8",
+            "lastReleasedCommit": "888ae95dd6125f754650d55410b8c117b618a268",
             "apiPaths": [
                 "google/cloud/deploy/v1"
             ],
