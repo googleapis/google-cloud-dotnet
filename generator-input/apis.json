@@ -3701,7 +3701,7 @@
     },
     {
       "id": "Google.Cloud.Memcache.V1",
-      "version": "2.5.0",
+      "version": "2.6.0",
       "type": "grpc",
       "productName": "Cloud Memorystore for Memcached",
       "productUrl": "https://cloud.google.com/memorystore/docs/memcached",
