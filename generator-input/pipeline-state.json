@@ -2238,12 +2238,12 @@
         },
         {
             "id": "Google.Cloud.NetworkConnectivity.V1",
-            "currentVersion": "2.12.0",
+            "currentVersion": "2.13.0",
             "generationAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
             "releaseAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
-            "releaseTimestamp": "2025-09-08T07:50:32.583261086Z",
+            "releaseTimestamp": "2025-11-05T22:02:36.565156812Z",
             "lastGeneratedCommit": "36533b09a6b383f3c30d13c3c26092154ecf5388",
-            "lastReleasedCommit": "a195f5bb74304d8f0f9138e9311301a2e8f40413",
+            "lastReleasedCommit": "36533b09a6b383f3c30d13c3c26092154ecf5388",
             "apiPaths": [
                 "google/cloud/networkconnectivity/v1"
             ],
