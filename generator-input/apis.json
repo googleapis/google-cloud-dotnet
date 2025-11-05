@@ -2113,7 +2113,7 @@
     },
     {
       "id": "Google.Cloud.Datastream.V1",
-      "version": "2.11.0",
+      "version": "2.12.0",
       "type": "grpc",
       "productName": "DataStream",
       "productUrl": "https://cloud.google.com/datastream/docs",
