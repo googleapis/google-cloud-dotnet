@@ -3309,11 +3309,12 @@
         },
         {
             "id": "Google.Cloud.Tasks.V2Beta3",
-            "currentVersion": "3.0.0-beta07",
+            "currentVersion": "3.0.0-beta08",
             "generationAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
             "releaseAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
-            "releaseTimestamp": "2024-05-09T17:10:16Z",
+            "releaseTimestamp": "2025-11-06T16:50:24.589816909Z",
             "lastGeneratedCommit": "0a0dffc19bed400afdeec0f67b1726b6b23173fb",
+            "lastReleasedCommit": "0a0dffc19bed400afdeec0f67b1726b6b23173fb",
             "apiPaths": [
                 "google/cloud/tasks/v2beta3"
             ],
