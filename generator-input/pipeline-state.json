@@ -4630,12 +4630,12 @@
         },
         {
             "id": "Google.Shopping.Merchant.OrderTracking.V1",
-            "currentVersion": "1.0.0",
+            "currentVersion": "1.1.0",
             "generationAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
             "releaseAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
-            "releaseTimestamp": "2025-08-05T17:05:14.238664508Z",
+            "releaseTimestamp": "2025-11-06T21:59:18.471840969Z",
             "lastGeneratedCommit": "4d8abb3f02f14d2906b2bb1f478e17afd95ec4fc",
-            "lastReleasedCommit": "438200a688c81b759c38747423079c2e1fab9dd9",
+            "lastReleasedCommit": "4d8abb3f02f14d2906b2bb1f478e17afd95ec4fc",
             "apiPaths": [
                 "google/shopping/merchant/ordertracking/v1"
             ],
