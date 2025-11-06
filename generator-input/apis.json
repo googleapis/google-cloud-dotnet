@@ -7213,7 +7213,7 @@
     },
     {
       "id": "Google.Shopping.Merchant.Promotions.V1Beta",
-      "version": "1.0.0-beta01",
+      "version": "1.0.0-beta02",
       "type": "grpc",
       "productName": "Merchant",
       "productUrl": "https://developers.google.com/merchant/api",
