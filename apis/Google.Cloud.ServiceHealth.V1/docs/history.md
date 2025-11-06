@@ -1,5 +1,15 @@
 # Version history
 
+## Version 1.4.0, released 2025-11-06
+
+### New features
+
+- Update dependencies
+
+### Documentation improvements
+
+- Update documentation for various messages
+
 ## Version 1.3.0, released 2024-12-06
 
 ### New features
