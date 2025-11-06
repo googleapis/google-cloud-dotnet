@@ -6648,7 +6648,7 @@
         "deliveries"
       ],
       "dependencies": {
-        "Google.Geo.Type": "1.2.0"
+        "Google.Geo.Type": "1.3.0"
       },
       "generator": "micro",
       "protoPath": "google/maps/fleetengine/delivery/v1",
@@ -6672,7 +6672,7 @@
         "fleet"
       ],
       "dependencies": {
-        "Google.Geo.Type": "1.2.0"
+        "Google.Geo.Type": "1.3.0"
       },
       "generator": "micro",
       "protoPath": "google/maps/fleetengine/v1",
@@ -6714,7 +6714,7 @@
         "maps"
       ],
       "dependencies": {
-        "Google.Geo.Type": "1.2.0"
+        "Google.Geo.Type": "1.3.0"
       },
       "generator": "micro",
       "protoPath": "google/maps/places/v1",
@@ -6736,7 +6736,7 @@
         "optimization"
       ],
       "dependencies": {
-        "Google.LongRunning": "3.4.0"
+        "Google.LongRunning": "3.5.0"
       },
       "generator": "micro",
       "protoPath": "google/maps/routeoptimization/v1",
@@ -6759,7 +6759,7 @@
         "geo"
       ],
       "dependencies": {
-        "Google.Geo.Type": "1.2.0"
+        "Google.Geo.Type": "1.3.0"
       },
       "generator": "micro",
       "protoPath": "google/maps/routing/v2",
