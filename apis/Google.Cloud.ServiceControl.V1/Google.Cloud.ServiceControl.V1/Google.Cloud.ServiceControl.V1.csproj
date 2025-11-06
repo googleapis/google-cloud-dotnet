@@ -10,7 +10,7 @@
   <ItemGroup>
     <PackageReference Include="ConfigureAwaitChecker.Analyzer" PrivateAssets="All" />
     <PackageReference Include="Google.Api.Gax.Grpc" />
-    <PackageReference Include="Google.Cloud.Logging.Type" VersionOverride="[4.2.0, 5.0.0)" />
+    <PackageReference Include="Google.Cloud.Logging.Type" VersionOverride="[4.3.0, 5.0.0)" />
     <PackageReference Include="Grpc.Core" PrivateAssets="None" Condition="'$(TargetFramework)'=='net462'" />
   </ItemGroup>
 </Project>
