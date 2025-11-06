@@ -7191,7 +7191,7 @@
     },
     {
       "id": "Google.Shopping.Merchant.Promotions.V1",
-      "version": "1.0.0",
+      "version": "1.1.0",
       "type": "grpc",
       "productName": "Merchant",
       "productUrl": "https://developers.google.com/merchant/api",

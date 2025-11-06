@@ -4660,12 +4660,12 @@
         },
         {
             "id": "Google.Shopping.Merchant.Promotions.V1",
-            "currentVersion": "1.0.0",
+            "currentVersion": "1.1.0",
             "generationAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
             "releaseAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
-            "releaseTimestamp": "2025-08-05T17:07:21.861999852Z",
+            "releaseTimestamp": "2025-11-06T22:00:24.264501416Z",
             "lastGeneratedCommit": "4d8abb3f02f14d2906b2bb1f478e17afd95ec4fc",
-            "lastReleasedCommit": "a3bdabe06a6814daefb532979b0b0cc65e362479",
+            "lastReleasedCommit": "4d8abb3f02f14d2906b2bb1f478e17afd95ec4fc",
             "apiPaths": [
                 "google/shopping/merchant/promotions/v1"
             ],
