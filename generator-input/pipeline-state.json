@@ -1993,20 +1993,20 @@
         },
         {
             "id": "Google.Cloud.Logging.Console",
-            "currentVersion": "1.5.0",
+            "currentVersion": "1.6.0",
             "generationAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
-            "releaseAutomationLevel": "AUTOMATION_LEVEL_BLOCKED",
-            "releaseTimestamp": "2025-05-07T16:47:16.929384664Z",
+            "releaseAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
+            "releaseTimestamp": "2025-11-05T21:47:30.538561985Z",
             "sourcePaths": [
                 "apis/Google.Cloud.Logging.Console/Google.Cloud.Logging.Console"
             ]
         },
         {
             "id": "Google.Cloud.Logging.NLog",
-            "currentVersion": "5.3.0",
+            "currentVersion": "5.2.0",
             "generationAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
-            "releaseAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
-            "releaseTimestamp": "2025-11-05T21:48:03.057216168Z",
+            "releaseAutomationLevel": "AUTOMATION_LEVEL_BLOCKED",
+            "releaseTimestamp": "2024-09-26T08:16:33Z",
             "sourcePaths": [
                 "apis/Google.Cloud.Logging.NLog/Google.Cloud.Logging.NLog"
             ]
