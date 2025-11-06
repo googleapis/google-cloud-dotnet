@@ -6221,7 +6221,7 @@
     },
     {
       "id": "Google.Cloud.VmwareEngine.V1",
-      "version": "1.6.0",
+      "version": "1.7.0",
       "type": "grpc",
       "productName": "VMware Engine",
       "productUrl": "https://cloud.google.com/vmware-engine/docs",
