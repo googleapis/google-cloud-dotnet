@@ -6146,7 +6146,7 @@
       "protoPath": "google/cloud/videointelligence/v1",
       "productName": "Google Cloud Video Intelligence",
       "productUrl": "https://cloud.google.com/video-intelligence",
-      "version": "3.4.0",
+      "version": "3.5.0",
       "type": "grpc",
       "metadataType": "GAPIC_COMBO",
       "description": "Recommended Google client library to access the Google Cloud Video Intelligence API.",
