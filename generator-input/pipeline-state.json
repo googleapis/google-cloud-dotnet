@@ -2883,11 +2883,12 @@
         },
         {
             "id": "Google.Cloud.SecretManager.V1Beta1",
-            "currentVersion": "3.0.0-beta06",
+            "currentVersion": "3.0.0-beta07",
             "generationAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
             "releaseAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
-            "releaseTimestamp": "2025-04-23T17:04:28Z",
+            "releaseTimestamp": "2025-11-06T09:39:01.001847865Z",
             "lastGeneratedCommit": "a32b926f35bf473f7ba31383e5247175beccd576",
+            "lastReleasedCommit": "a32b926f35bf473f7ba31383e5247175beccd576",
             "apiPaths": [
                 "google/cloud/secrets/v1beta1"
             ],
