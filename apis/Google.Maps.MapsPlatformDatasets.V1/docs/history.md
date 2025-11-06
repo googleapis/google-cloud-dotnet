@@ -1,5 +1,11 @@
 # Version history
 
+## Version 1.1.0, released 2025-11-06
+
+### New features
+
+- Update dependencies
+
 ## Version 1.0.0, released 2025-01-14
 
 No API surface changes; just promotion to GA.

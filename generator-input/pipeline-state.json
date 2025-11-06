@@ -3831,11 +3831,12 @@
         },
         {
             "id": "Google.Maps.MapsPlatformDatasets.V1",
-            "currentVersion": "1.0.0",
+            "currentVersion": "1.1.0",
             "generationAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
             "releaseAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
-            "releaseTimestamp": "2025-01-14T08:28:27Z",
+            "releaseTimestamp": "2025-11-06T21:38:57.275513779Z",
             "lastGeneratedCommit": "3fb120eb5c474ec18cddd88f8365e3c2c99289e5",
+            "lastReleasedCommit": "3fb120eb5c474ec18cddd88f8365e3c2c99289e5",
             "apiPaths": [
                 "google/maps/mapsplatformdatasets/v1"
             ],
