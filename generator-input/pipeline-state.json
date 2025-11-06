@@ -3060,11 +3060,12 @@
         },
         {
             "id": "Google.Cloud.ServiceDirectory.V1Beta1",
-            "currentVersion": "2.0.0-beta06",
+            "currentVersion": "2.0.0-beta07",
             "generationAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
             "releaseAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
-            "releaseTimestamp": "2024-05-09T16:34:35Z",
+            "releaseTimestamp": "2025-11-06T16:36:20.352407686Z",
             "lastGeneratedCommit": "0a0dffc19bed400afdeec0f67b1726b6b23173fb",
+            "lastReleasedCommit": "0a0dffc19bed400afdeec0f67b1726b6b23173fb",
             "apiPaths": [
                 "google/cloud/servicedirectory/v1beta1"
             ],

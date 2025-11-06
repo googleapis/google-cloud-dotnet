@@ -1,5 +1,17 @@
 # Version history
 
+## Version 2.0.0-beta07, released 2025-11-06
+
+### New features
+
+- Update dependencies
+
+### Documentation improvements
+
+- Add maximum page_size to ListNamespace API documentation
+- Add maximum page_size to ListService API documentation
+- Add maximum page_size to ListEndpoint API documentation
+
 ## Version 2.0.0-beta06, released 2024-05-08
 
 ### New features
