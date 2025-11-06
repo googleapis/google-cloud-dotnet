@@ -3429,10 +3429,10 @@
         },
         {
             "id": "Google.Cloud.Translation.V2",
-            "currentVersion": "3.4.0",
+            "currentVersion": "3.5.0",
             "generationAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
             "releaseAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
-            "releaseTimestamp": "2024-03-26T19:47:02Z",
+            "releaseTimestamp": "2025-11-06T16:58:06.480580171Z",
             "sourcePaths": [
                 "apis/Google.Cloud.Translation.V2/Google.Cloud.Translation.V2"
             ]
