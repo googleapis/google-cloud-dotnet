@@ -2955,11 +2955,12 @@
         },
         {
             "id": "Google.Cloud.SecurityCenter.Settings.V1Beta1",
-            "currentVersion": "2.0.0-beta04",
+            "currentVersion": "2.0.0-beta05",
             "generationAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
             "releaseAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
-            "releaseTimestamp": "2024-05-09T16:34:22Z",
+            "releaseTimestamp": "2025-11-06T09:42:08.370257021Z",
             "lastGeneratedCommit": "0a0dffc19bed400afdeec0f67b1726b6b23173fb",
+            "lastReleasedCommit": "0a0dffc19bed400afdeec0f67b1726b6b23173fb",
             "apiPaths": [
                 "google/cloud/securitycenter/settings/v1beta1"
             ],
