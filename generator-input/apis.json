@@ -6403,7 +6403,7 @@
     },
     {
       "id": "Google.Cloud.Workflows.V1",
-      "version": "2.6.0",
+      "version": "2.7.0",
       "commonResourcesConfig": "tweaks/Google.Cloud.Workflows.Common.V1/CommonResourcesConfig.json",
       "type": "grpc",
       "productName": "Workflows",
