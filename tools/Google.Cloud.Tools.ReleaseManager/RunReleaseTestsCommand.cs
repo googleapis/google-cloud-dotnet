@@ -17,6 +17,7 @@ using Google.Cloud.Tools.ReleaseManager.ContainerCommands;
 using LibGit2Sharp;
 using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 
 namespace Google.Cloud.Tools.ReleaseManager;
@@ -38,6 +39,8 @@ public sealed class RunReleaseTestsCommand : CommandBase
         bool seenReleaseId = false;
         var testCommand = new IntegrationTestLibraryCommand();
 
+        var releasesToTest = new List<ReleaseCommit>();
+
         // We go back until we *have* seen the target release ID,
         // then continue until we see a commit with a different/absent release ID.
         foreach (var commit in GetCommitSequence(repo.Head.Tip))
@@ -51,27 +54,46 @@ public sealed class RunReleaseTestsCommand : CommandBase
                     break;
                 }
                 // Keep looking back.
-                Console.WriteLine($"Skipping commit {commit.Sha}; no/wrong release ID");
+                Log($"Skipping commit {commit.Sha}; no/wrong release ID");
                 continue;
             }
             seenReleaseId = true;
 
-            // Definitely in the release; test the library for this commit.
+            // Definitely in the release; potentially test the library for this commit.
             var libraryId = GetReleaseLibrary(commit);
             if (libraryId.StartsWith(ContainerOptions.UtilityDocsLibraryPrefix, StringComparison.Ordinal))
             {
-                Console.WriteLine($"Skipping integration tests for {libraryId}; it's a docs package.");
+                Log($"Skipping integration tests for {libraryId}; it's a docs package.");
                 continue;
             }
             if (libraryId.StartsWith(ContainerCommand.ToolsLibraryPrefix, StringComparison.Ordinal))
             {
-                Console.WriteLine($"Skipping additional integration tests for {libraryId}; it's a tools package.");
+                Log($"Skipping additional integration tests for {libraryId}; it's a tools package.");
                 continue;
             }
-            Console.WriteLine($"Testing {libraryId} at {commit.Sha}");
 
+            // Note: this checks for the presence of integration tests at HEAD rather than at the given commit.
+            // It's *theoretically possible* that there were integration tests at the given commit which have
+            // since been deleted, but it's staggeringly unlikely - and this command is only run for
+            // extra confidence with respect to Windows. (The integration tests will be run on Linux in the release job
+            // anyway.)
+            if (!HasIntegrationTests(RootLayout.CreateRepositoryApiLayout(libraryId)))
+            {
+                Log($"Skipping additional integration tests for {libraryId}; there are no handwritten snippets or integration tests.");
+                continue;
+            }
+
+            releasesToTest.Add(new(libraryId, commit));
+        }
+
+        Log($"Running integration tests for {releasesToTest.Count} releases");
+
+        foreach (var (libraryId, commit) in releasesToTest)
+        {
+            Log($"Checking out repo at commit {commit.Sha}");
             Commands.Checkout(repo, commit.Sha);
 
+            Log($"Testing {libraryId} at {commit.Sha}");
             var commandArgs = new Dictionary<string, string>
             {
                 { ContainerOptions.LibraryIdOption, libraryId },
@@ -86,6 +108,51 @@ public sealed class RunReleaseTestsCommand : CommandBase
         }
         Console.WriteLine("All tests passed for all release commits.");
         return 0;
+
+        void Log(string message) =>
+            Console.WriteLine($"{DateTime.UtcNow:yyyy-MM-dd'T'HH:mm:ss.fff}Z {message}");
+    }
+
+    private record ReleaseCommit(string LibraryId, Commit commit);
+
+    /// <summary>
+    /// Checks whether files to run integration tests exist at the given commit.
+    /// If there are no snippets, no integration tests there's no point in checking out the repo.
+    /// Note that this returns false for a library which only has smoke tests, as we expect
+    /// this command to be run basically for Windows testing. A lot of libraries have smoke
+    /// tests but are otherwise purely generated - we don't need to test those.
+    /// </summary>
+    private static bool HasIntegrationTests(RepositoryApiLayout apiLayout)
+    {
+        string apiRoot = apiLayout.SourceDirectory;
+        string id = apiLayout.Id;
+        if (!Directory.Exists(apiRoot))
+        {
+            // This is probably a package group, so we should run the tests.
+            // If it's entirely incorrect, we'll figure that out when we try to run the tests.
+            return true;
+        }
+        // If an IntegrationTests directory exists at all, there will be integration tests.
+        if (Directory.Exists(Path.Combine(apiRoot, $"{id}.IntegrationTests")))
+        {
+            return true;
+        }
+        // Most libraries will have a snippets directory, but we only
+        // want to run the tests if there are handwritten files in it.
+        var snippetsDirectory = Path.Combine(apiRoot, $"{id}.Snippets");
+        if (!Directory.Exists(snippetsDirectory))
+        {
+            return false;
+        }
+        foreach (var file in Directory.EnumerateFiles(snippetsDirectory, "*.cs"))
+        {
+            if (!file.EndsWith(".g.cs", StringComparison.Ordinal))
+            {
+                return true;
+            }
+        }
+        // All snippets are generated; skip.
+        return false;
     }
 
     private static IEnumerable<Commit> GetCommitSequence(Commit commit)
