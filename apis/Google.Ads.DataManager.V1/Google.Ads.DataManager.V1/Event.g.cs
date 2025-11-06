@@ -33,7 +33,7 @@ namespace Google.Ads.DataManager.V1 {
             "ci92MS91c2VyX2RhdGEucHJvdG8aL2dvb2dsZS9hZHMvZGF0YW1hbmFnZXIv",
             "djEvdXNlcl9wcm9wZXJ0aWVzLnByb3RvGh9nb29nbGUvYXBpL2ZpZWxkX2Jl",
             "aGF2aW9yLnByb3RvGh9nb29nbGUvcHJvdG9idWYvdGltZXN0YW1wLnByb3Rv",
-            "IuIGCgVFdmVudBIjChZkZXN0aW5hdGlvbl9yZWZlcmVuY2VzGAEgAygJQgPg",
+            "Iv4HCgVFdmVudBIjChZkZXN0aW5hdGlvbl9yZWZlcmVuY2VzGAEgAygJQgPg",
             "QQESGwoOdHJhbnNhY3Rpb25faWQYAiABKAlCA+BBARI4Cg9ldmVudF90aW1l",
             "c3RhbXAYAyABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wQgPgQQIS",
             "PwoWbGFzdF91cGRhdGVkX3RpbWVzdGFtcBgEIAEoCzIaLmdvb2dsZS5wcm90",
@@ -52,26 +52,32 @@ namespace Google.Ads.DataManager.V1 {
             "ZXhwZXJpbWVudGFsX2ZpZWxkcxgOIAMoCzIsLmdvb2dsZS5hZHMuZGF0YW1h",
             "bmFnZXIudjEuRXhwZXJpbWVudGFsRmllbGRCA+BBARJHCg91c2VyX3Byb3Bl",
             "cnRpZXMYDyABKAsyKS5nb29nbGUuYWRzLmRhdGFtYW5hZ2VyLnYxLlVzZXJQ",
-            "cm9wZXJ0aWVzQgPgQQEivAEKDUFkSWRlbnRpZmllcnMSHwoSc2Vzc2lvbl9h",
-            "dHRyaWJ1dGVzGAEgASgJQgPgQQESEgoFZ2NsaWQYAiABKAlCA+BBARITCgZn",
-            "YnJhaWQYAyABKAlCA+BBARITCgZ3YnJhaWQYBCABKAlCA+BBARJMChhsYW5k",
-            "aW5nX3BhZ2VfZGV2aWNlX2luZm8YBSABKAsyJS5nb29nbGUuYWRzLmRhdGFt",
-            "YW5hZ2VyLnYxLkRldmljZUluZm9CA+BBASJgCg5DdXN0b21WYXJpYWJsZRIV",
-            "Cgh2YXJpYWJsZRgBIAEoCUID4EEBEhIKBXZhbHVlGAIgASgJQgPgQQESIwoW",
-            "ZGVzdGluYXRpb25fcmVmZXJlbmNlcxgDIAMoCUID4EEBKmEKC0V2ZW50U291",
-            "cmNlEhwKGEVWRU5UX1NPVVJDRV9VTlNQRUNJRklFRBAAEgcKA1dFQhABEgcK",
-            "A0FQUBACEgwKCElOX1NUT1JFEAMSCQoFUEhPTkUQBBIJCgVPVEhFUhAFQsoB",
-            "Ch1jb20uZ29vZ2xlLmFkcy5kYXRhbWFuYWdlci52MUIKRXZlbnRQcm90b1AB",
-            "WkRnb29nbGUuZ29sYW5nLm9yZy9nZW5wcm90by9nb29nbGVhcGlzL2Fkcy9k",
-            "YXRhbWFuYWdlci92MTtkYXRhbWFuYWdlcqoCGUdvb2dsZS5BZHMuRGF0YU1h",
-            "bmFnZXIuVjHKAhlHb29nbGVcQWRzXERhdGFNYW5hZ2VyXFYx6gIcR29vZ2xl",
-            "OjpBZHM6OkRhdGFNYW5hZ2VyOjpWMWIGcHJvdG8z"));
+            "cm9wZXJ0aWVzQgPgQQESFwoKZXZlbnRfbmFtZRgQIAEoCUID4EEBEhYKCWNs",
+            "aWVudF9pZBgRIAEoCUID4EEBEhQKB3VzZXJfaWQYEiABKAlCA+BBARJTChth",
+            "ZGRpdGlvbmFsX2V2ZW50X3BhcmFtZXRlcnMYEyADKAsyKS5nb29nbGUuYWRz",
+            "LmRhdGFtYW5hZ2VyLnYxLkV2ZW50UGFyYW1ldGVyQgPgQQEivAEKDUFkSWRl",
+            "bnRpZmllcnMSHwoSc2Vzc2lvbl9hdHRyaWJ1dGVzGAEgASgJQgPgQQESEgoF",
+            "Z2NsaWQYAiABKAlCA+BBARITCgZnYnJhaWQYAyABKAlCA+BBARITCgZ3YnJh",
+            "aWQYBCABKAlCA+BBARJMChhsYW5kaW5nX3BhZ2VfZGV2aWNlX2luZm8YBSAB",
+            "KAsyJS5nb29nbGUuYWRzLmRhdGFtYW5hZ2VyLnYxLkRldmljZUluZm9CA+BB",
+            "ASJgCg5DdXN0b21WYXJpYWJsZRIVCgh2YXJpYWJsZRgBIAEoCUID4EEBEhIK",
+            "BXZhbHVlGAIgASgJQgPgQQESIwoWZGVzdGluYXRpb25fcmVmZXJlbmNlcxgD",
+            "IAMoCUID4EEBIkEKDkV2ZW50UGFyYW1ldGVyEhsKDnBhcmFtZXRlcl9uYW1l",
+            "GAEgASgJQgPgQQISEgoFdmFsdWUYAiABKAlCA+BBAiphCgtFdmVudFNvdXJj",
+            "ZRIcChhFVkVOVF9TT1VSQ0VfVU5TUEVDSUZJRUQQABIHCgNXRUIQARIHCgNB",
+            "UFAQAhIMCghJTl9TVE9SRRADEgkKBVBIT05FEAQSCQoFT1RIRVIQBULKAQod",
+            "Y29tLmdvb2dsZS5hZHMuZGF0YW1hbmFnZXIudjFCCkV2ZW50UHJvdG9QAVpE",
+            "Z29vZ2xlLmdvbGFuZy5vcmcvZ2VucHJvdG8vZ29vZ2xlYXBpcy9hZHMvZGF0",
+            "YW1hbmFnZXIvdjE7ZGF0YW1hbmFnZXKqAhlHb29nbGUuQWRzLkRhdGFNYW5h",
+            "Z2VyLlYxygIZR29vZ2xlXEFkc1xEYXRhTWFuYWdlclxWMeoCHEdvb2dsZTo6",
+            "QWRzOjpEYXRhTWFuYWdlcjo6VjFiBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Ads.DataManager.V1.CartDataReflection.Descriptor, global::Google.Ads.DataManager.V1.ConsentReflection.Descriptor, global::Google.Ads.DataManager.V1.DeviceInfoReflection.Descriptor, global::Google.Ads.DataManager.V1.ExperimentalFieldReflection.Descriptor, global::Google.Ads.DataManager.V1.UserDataReflection.Descriptor, global::Google.Ads.DataManager.V1.UserPropertiesReflection.Descriptor, global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(new[] {typeof(global::Google.Ads.DataManager.V1.EventSource), }, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Ads.DataManager.V1.Event), global::Google.Ads.DataManager.V1.Event.Parser, new[]{ "DestinationReferences", "TransactionId", "EventTimestamp", "LastUpdatedTimestamp", "UserData", "Consent", "AdIdentifiers", "Currency", "ConversionValue", "EventSource", "EventDeviceInfo", "CartData", "CustomVariables", "ExperimentalFields", "UserProperties" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Ads.DataManager.V1.Event), global::Google.Ads.DataManager.V1.Event.Parser, new[]{ "DestinationReferences", "TransactionId", "EventTimestamp", "LastUpdatedTimestamp", "UserData", "Consent", "AdIdentifiers", "Currency", "ConversionValue", "EventSource", "EventDeviceInfo", "CartData", "CustomVariables", "ExperimentalFields", "UserProperties", "EventName", "ClientId", "UserId", "AdditionalEventParameters" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Ads.DataManager.V1.AdIdentifiers), global::Google.Ads.DataManager.V1.AdIdentifiers.Parser, new[]{ "SessionAttributes", "Gclid", "Gbraid", "Wbraid", "LandingPageDeviceInfo" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Ads.DataManager.V1.CustomVariable), global::Google.Ads.DataManager.V1.CustomVariable.Parser, new[]{ "Variable", "Value", "DestinationReferences" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Ads.DataManager.V1.CustomVariable), global::Google.Ads.DataManager.V1.CustomVariable.Parser, new[]{ "Variable", "Value", "DestinationReferences" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Ads.DataManager.V1.EventParameter), global::Google.Ads.DataManager.V1.EventParameter.Parser, new[]{ "ParameterName", "Value" }, null, null, null, null)
           }));
     }
     #endregion
@@ -164,6 +170,10 @@ namespace Google.Ads.DataManager.V1 {
       customVariables_ = other.customVariables_.Clone();
       experimentalFields_ = other.experimentalFields_.Clone();
       userProperties_ = other.userProperties_ != null ? other.userProperties_.Clone() : null;
+      eventName_ = other.eventName_;
+      clientId_ = other.clientId_;
+      userId_ = other.userId_;
+      additionalEventParameters_ = other.additionalEventParameters_.Clone();
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -409,6 +419,69 @@ namespace Google.Ads.DataManager.V1 {
       }
     }
 
+    /// <summary>Field number for the "event_name" field.</summary>
+    public const int EventNameFieldNumber = 16;
+    private string eventName_ = "";
+    /// <summary>
+    /// Optional. The name of the event. Required for GA4 events.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string EventName {
+      get { return eventName_; }
+      set {
+        eventName_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "client_id" field.</summary>
+    public const int ClientIdFieldNumber = 17;
+    private string clientId_ = "";
+    /// <summary>
+    /// Optional. A unique identifier for the user instance of a web client for
+    /// this GA4 web stream.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string ClientId {
+      get { return clientId_; }
+      set {
+        clientId_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "user_id" field.</summary>
+    public const int UserIdFieldNumber = 18;
+    private string userId_ = "";
+    /// <summary>
+    /// Optional. A unique identifier for a user, as defined by the advertiser.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string UserId {
+      get { return userId_; }
+      set {
+        userId_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "additional_event_parameters" field.</summary>
+    public const int AdditionalEventParametersFieldNumber = 19;
+    private static readonly pb::FieldCodec<global::Google.Ads.DataManager.V1.EventParameter> _repeated_additionalEventParameters_codec
+        = pb::FieldCodec.ForMessage(154, global::Google.Ads.DataManager.V1.EventParameter.Parser);
+    private readonly pbc::RepeatedField<global::Google.Ads.DataManager.V1.EventParameter> additionalEventParameters_ = new pbc::RepeatedField<global::Google.Ads.DataManager.V1.EventParameter>();
+    /// <summary>
+    /// Optional. A bucket of any [event
+    /// parameters](https://developers.google.com/analytics/devguides/collection/protocol/ga4/reference/events)
+    /// to be included within the event that were not already specified using other
+    /// structured fields.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pbc::RepeatedField<global::Google.Ads.DataManager.V1.EventParameter> AdditionalEventParameters {
+      get { return additionalEventParameters_; }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
@@ -439,6 +512,10 @@ namespace Google.Ads.DataManager.V1 {
       if(!customVariables_.Equals(other.customVariables_)) return false;
       if(!experimentalFields_.Equals(other.experimentalFields_)) return false;
       if (!object.Equals(UserProperties, other.UserProperties)) return false;
+      if (EventName != other.EventName) return false;
+      if (ClientId != other.ClientId) return false;
+      if (UserId != other.UserId) return false;
+      if(!additionalEventParameters_.Equals(other.additionalEventParameters_)) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -461,6 +538,10 @@ namespace Google.Ads.DataManager.V1 {
       hash ^= customVariables_.GetHashCode();
       hash ^= experimentalFields_.GetHashCode();
       if (userProperties_ != null) hash ^= UserProperties.GetHashCode();
+      if (EventName.Length != 0) hash ^= EventName.GetHashCode();
+      if (ClientId.Length != 0) hash ^= ClientId.GetHashCode();
+      if (UserId.Length != 0) hash ^= UserId.GetHashCode();
+      hash ^= additionalEventParameters_.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -530,6 +611,19 @@ namespace Google.Ads.DataManager.V1 {
         output.WriteRawTag(122);
         output.WriteMessage(UserProperties);
       }
+      if (EventName.Length != 0) {
+        output.WriteRawTag(130, 1);
+        output.WriteString(EventName);
+      }
+      if (ClientId.Length != 0) {
+        output.WriteRawTag(138, 1);
+        output.WriteString(ClientId);
+      }
+      if (UserId.Length != 0) {
+        output.WriteRawTag(146, 1);
+        output.WriteString(UserId);
+      }
+      additionalEventParameters_.WriteTo(output, _repeated_additionalEventParameters_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -591,6 +685,19 @@ namespace Google.Ads.DataManager.V1 {
         output.WriteRawTag(122);
         output.WriteMessage(UserProperties);
       }
+      if (EventName.Length != 0) {
+        output.WriteRawTag(130, 1);
+        output.WriteString(EventName);
+      }
+      if (ClientId.Length != 0) {
+        output.WriteRawTag(138, 1);
+        output.WriteString(ClientId);
+      }
+      if (UserId.Length != 0) {
+        output.WriteRawTag(146, 1);
+        output.WriteString(UserId);
+      }
+      additionalEventParameters_.WriteTo(ref output, _repeated_additionalEventParameters_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -640,6 +747,16 @@ namespace Google.Ads.DataManager.V1 {
       if (userProperties_ != null) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(UserProperties);
       }
+      if (EventName.Length != 0) {
+        size += 2 + pb::CodedOutputStream.ComputeStringSize(EventName);
+      }
+      if (ClientId.Length != 0) {
+        size += 2 + pb::CodedOutputStream.ComputeStringSize(ClientId);
+      }
+      if (UserId.Length != 0) {
+        size += 2 + pb::CodedOutputStream.ComputeStringSize(UserId);
+      }
+      size += additionalEventParameters_.CalculateSize(_repeated_additionalEventParameters_codec);
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
       }
@@ -715,6 +832,16 @@ namespace Google.Ads.DataManager.V1 {
         }
         UserProperties.MergeFrom(other.UserProperties);
       }
+      if (other.EventName.Length != 0) {
+        EventName = other.EventName;
+      }
+      if (other.ClientId.Length != 0) {
+        ClientId = other.ClientId;
+      }
+      if (other.UserId.Length != 0) {
+        UserId = other.UserId;
+      }
+      additionalEventParameters_.Add(other.additionalEventParameters_);
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 
@@ -814,6 +941,22 @@ namespace Google.Ads.DataManager.V1 {
             input.ReadMessage(UserProperties);
             break;
           }
+          case 130: {
+            EventName = input.ReadString();
+            break;
+          }
+          case 138: {
+            ClientId = input.ReadString();
+            break;
+          }
+          case 146: {
+            UserId = input.ReadString();
+            break;
+          }
+          case 154: {
+            additionalEventParameters_.AddEntriesFrom(input, _repeated_additionalEventParameters_codec);
+            break;
+          }
         }
       }
     #endif
@@ -911,6 +1054,22 @@ namespace Google.Ads.DataManager.V1 {
               UserProperties = new global::Google.Ads.DataManager.V1.UserProperties();
             }
             input.ReadMessage(UserProperties);
+            break;
+          }
+          case 130: {
+            EventName = input.ReadString();
+            break;
+          }
+          case 138: {
+            ClientId = input.ReadString();
+            break;
+          }
+          case 146: {
+            UserId = input.ReadString();
+            break;
+          }
+          case 154: {
+            additionalEventParameters_.AddEntriesFrom(ref input, _repeated_additionalEventParameters_codec);
             break;
           }
         }
@@ -1550,6 +1709,242 @@ namespace Google.Ads.DataManager.V1 {
           }
           case 26: {
             destinationReferences_.AddEntriesFrom(ref input, _repeated_destinationReferences_codec);
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+  }
+
+  /// <summary>
+  /// Event parameter for GA4 events.
+  /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+  public sealed partial class EventParameter : pb::IMessage<EventParameter>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<EventParameter> _parser = new pb::MessageParser<EventParameter>(() => new EventParameter());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<EventParameter> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Ads.DataManager.V1.EventReflection.Descriptor.MessageTypes[3]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public EventParameter() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public EventParameter(EventParameter other) : this() {
+      parameterName_ = other.parameterName_;
+      value_ = other.value_;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public EventParameter Clone() {
+      return new EventParameter(this);
+    }
+
+    /// <summary>Field number for the "parameter_name" field.</summary>
+    public const int ParameterNameFieldNumber = 1;
+    private string parameterName_ = "";
+    /// <summary>
+    /// Required. The name of the parameter to use.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string ParameterName {
+      get { return parameterName_; }
+      set {
+        parameterName_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "value" field.</summary>
+    public const int ValueFieldNumber = 2;
+    private string value_ = "";
+    /// <summary>
+    /// Required. The string representation of the value of the parameter to set.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string Value {
+      get { return value_; }
+      set {
+        value_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as EventParameter);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(EventParameter other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (ParameterName != other.ParameterName) return false;
+      if (Value != other.Value) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (ParameterName.Length != 0) hash ^= ParameterName.GetHashCode();
+      if (Value.Length != 0) hash ^= Value.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (ParameterName.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(ParameterName);
+      }
+      if (Value.Length != 0) {
+        output.WriteRawTag(18);
+        output.WriteString(Value);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (ParameterName.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(ParameterName);
+      }
+      if (Value.Length != 0) {
+        output.WriteRawTag(18);
+        output.WriteString(Value);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      if (ParameterName.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(ParameterName);
+      }
+      if (Value.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Value);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(EventParameter other) {
+      if (other == null) {
+        return;
+      }
+      if (other.ParameterName.Length != 0) {
+        ParameterName = other.ParameterName;
+      }
+      if (other.Value.Length != 0) {
+        Value = other.Value;
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            ParameterName = input.ReadString();
+            break;
+          }
+          case 18: {
+            Value = input.ReadString();
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            ParameterName = input.ReadString();
+            break;
+          }
+          case 18: {
+            Value = input.ReadString();
             break;
           }
         }

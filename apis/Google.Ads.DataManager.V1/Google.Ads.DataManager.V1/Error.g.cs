@@ -25,7 +25,7 @@ namespace Google.Ads.DataManager.V1 {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "CiVnb29nbGUvYWRzL2RhdGFtYW5hZ2VyL3YxL2Vycm9yLnByb3RvEhlnb29n",
-            "bGUuYWRzLmRhdGFtYW5hZ2VyLnYxKtMJCgtFcnJvclJlYXNvbhIcChhFUlJP",
+            "bGUuYWRzLmRhdGFtYW5hZ2VyLnYxKp8NCgtFcnJvclJlYXNvbhIcChhFUlJP",
             "Ul9SRUFTT05fVU5TUEVDSUZJRUQQABISCg5JTlRFUk5BTF9FUlJPUhABEhUK",
             "EURFQURMSU5FX0VYQ0VFREVEEAISFgoSUkVTT1VSQ0VfRVhIQVVTVEVEEAMS",
             "DQoJTk9UX0ZPVU5EEAQSFQoRUEVSTUlTU0lPTl9ERU5JRUQQBRIUChBJTlZB",
@@ -51,13 +51,23 @@ namespace Google.Ads.DataManager.V1 {
             "UxAhEkIKPkRFU1RJTkFUSU9OX0FDQ09VTlRfREFUQV9QT0xJQ1lfUFJPSElC",
             "SVRTX0VOSEFOQ0VEX0NPTlZFUlNJT05TECISPQo5REVTVElOQVRJT05fQUND",
             "T1VOVF9FTkhBTkNFRF9DT05WRVJTSU9OU19URVJNU19OT1RfU0lHTkVEECMS",
-            "IwofRFVQTElDQVRFX0RFU1RJTkFUSU9OX1JFRkVSRU5DRRAkEhsKF05PX0lE",
-            "RU5USUZJRVJTX1BST1ZJREVEECcSFgoSSU5WQUxJRF9SRVFVRVNUX0lEEDBC",
-            "ygEKHWNvbS5nb29nbGUuYWRzLmRhdGFtYW5hZ2VyLnYxQgpFcnJvclByb3Rv",
-            "UAFaRGdvb2dsZS5nb2xhbmcub3JnL2dlbnByb3RvL2dvb2dsZWFwaXMvYWRz",
-            "L2RhdGFtYW5hZ2VyL3YxO2RhdGFtYW5hZ2VyqgIZR29vZ2xlLkFkcy5EYXRh",
-            "TWFuYWdlci5WMcoCGUdvb2dsZVxBZHNcRGF0YU1hbmFnZXJcVjHqAhxHb29n",
-            "bGU6OkFkczo6RGF0YU1hbmFnZXI6OlYxYgZwcm90bzM="));
+            "IwofRFVQTElDQVRFX0RFU1RJTkFUSU9OX1JFRkVSRU5DRRAkEjIKLlVOU1VQ",
+            "UE9SVEVEX09QRVJBVElOR19BQ0NPVU5UX0ZPUl9EQVRBX1BBUlRORVIQJRIv",
+            "CitVTlNVUFBPUlRFRF9MSU5LRURfQUNDT1VOVF9GT1JfREFUQV9QQVJUTkVS",
+            "ECYSGwoXTk9fSURFTlRJRklFUlNfUFJPVklERUQQJxIZChVJTlZBTElEX1BS",
+            "T1BFUlRZX1RZUEUQKBIXChNJTlZBTElEX1NUUkVBTV9UWVBFECkSPwo7TElO",
+            "S0VEX0FDQ09VTlRfT05MWV9BTExPV0VEX1dJVEhfREFUQV9QQVJUTkVSX0xP",
+            "R0lOX0FDQ09VTlQQKhIsCihPUEVSQVRJTkdfQUNDT1VOVF9MT0dJTl9BQ0NP",
+            "VU5UX01JU01BVENIECsSFgoSRVZFTlRfVElNRV9JTlZBTElEECwSFgoSUkVT",
+            "RVJWRURfTkFNRV9VU0VEEC0SFgoSSU5WQUxJRF9FVkVOVF9OQU1FEC4SEwoP",
+            "Tk9UX0FMTE9XTElTVEVEEC8SFgoSSU5WQUxJRF9SRVFVRVNUX0lEEDASNAow",
+            "TVVMVElQTEVfREVTVElOQVRJT05TX0ZPUl9HT09HTEVfQU5BTFlUSUNTX0VW",
+            "RU5UEDESGAoURklFTERfVkFMVUVfVE9PX0xPTkcQMhIVChFUT09fTUFOWV9F",
+            "TEVNRU5UUxAzQsoBCh1jb20uZ29vZ2xlLmFkcy5kYXRhbWFuYWdlci52MUIK",
+            "RXJyb3JQcm90b1ABWkRnb29nbGUuZ29sYW5nLm9yZy9nZW5wcm90by9nb29n",
+            "bGVhcGlzL2Fkcy9kYXRhbWFuYWdlci92MTtkYXRhbWFuYWdlcqoCGUdvb2ds",
+            "ZS5BZHMuRGF0YU1hbmFnZXIuVjHKAhlHb29nbGVcQWRzXERhdGFNYW5hZ2Vy",
+            "XFYx6gIcR29vZ2xlOjpBZHM6OkRhdGFNYW5hZ2VyOjpWMWIGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(new[] {typeof(global::Google.Ads.DataManager.V1.ErrorReason), }, null, null));
@@ -222,15 +232,69 @@ namespace Google.Ads.DataManager.V1 {
     /// </summary>
     [pbr::OriginalName("DUPLICATE_DESTINATION_REFERENCE")] DuplicateDestinationReference = 36,
     /// <summary>
+    /// Unsupported operating account for data partner authorization.
+    /// </summary>
+    [pbr::OriginalName("UNSUPPORTED_OPERATING_ACCOUNT_FOR_DATA_PARTNER")] UnsupportedOperatingAccountForDataPartner = 37,
+    /// <summary>
+    /// Unsupported linked account for data partner authorization.
+    /// </summary>
+    [pbr::OriginalName("UNSUPPORTED_LINKED_ACCOUNT_FOR_DATA_PARTNER")] UnsupportedLinkedAccountForDataPartner = 38,
+    /// <summary>
     /// Events data contains no user identifiers or ad identifiers.
     /// </summary>
     [pbr::OriginalName("NO_IDENTIFIERS_PROVIDED")] NoIdentifiersProvided = 39,
+    /// <summary>
+    /// The property type is not supported.
+    /// </summary>
+    [pbr::OriginalName("INVALID_PROPERTY_TYPE")] InvalidPropertyType = 40,
+    /// <summary>
+    /// The stream type is not supported.
+    /// </summary>
+    [pbr::OriginalName("INVALID_STREAM_TYPE")] InvalidStreamType = 41,
+    /// <summary>
+    /// Linked account is only supported when the login account is a `DATA_PARTNER`
+    /// account.
+    /// </summary>
+    [pbr::OriginalName("LINKED_ACCOUNT_ONLY_ALLOWED_WITH_DATA_PARTNER_LOGIN_ACCOUNT")] LinkedAccountOnlyAllowedWithDataPartnerLoginAccount = 42,
+    /// <summary>
+    /// The login account must be the same as the operating account for the given
+    /// use case.
+    /// </summary>
+    [pbr::OriginalName("OPERATING_ACCOUNT_LOGIN_ACCOUNT_MISMATCH")] OperatingAccountLoginAccountMismatch = 43,
+    /// <summary>
+    /// Event did not occur within the acceptable time window.
+    /// </summary>
+    [pbr::OriginalName("EVENT_TIME_INVALID")] EventTimeInvalid = 44,
+    /// <summary>
+    /// Parameter uses a reserved name.
+    /// </summary>
+    [pbr::OriginalName("RESERVED_NAME_USED")] ReservedNameUsed = 45,
+    /// <summary>
+    /// The event name is not supported.
+    /// </summary>
+    [pbr::OriginalName("INVALID_EVENT_NAME")] InvalidEventName = 46,
+    /// <summary>
+    /// The account is not allowlisted for the given feature.
+    /// </summary>
+    [pbr::OriginalName("NOT_ALLOWLISTED")] NotAllowlisted = 47,
     /// <summary>
     /// The request ID used to retrieve the status of a request is not valid.
     /// Status can only be retrieved for requests that succeed and don't have
     /// `validate_only=true`.
     /// </summary>
     [pbr::OriginalName("INVALID_REQUEST_ID")] InvalidRequestId = 48,
+    /// <summary>
+    /// An event had 2 or more Google Analytics destinations.
+    /// </summary>
+    [pbr::OriginalName("MULTIPLE_DESTINATIONS_FOR_GOOGLE_ANALYTICS_EVENT")] MultipleDestinationsForGoogleAnalyticsEvent = 49,
+    /// <summary>
+    /// The field value is too long.
+    /// </summary>
+    [pbr::OriginalName("FIELD_VALUE_TOO_LONG")] FieldValueTooLong = 50,
+    /// <summary>
+    /// Too many elements in a list in the request.
+    /// </summary>
+    [pbr::OriginalName("TOO_MANY_ELEMENTS")] TooManyElements = 51,
   }
 
   #endregion

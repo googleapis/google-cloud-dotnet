@@ -33,7 +33,7 @@ namespace Google.Ads.DataManager.V1 {
             "PwoOd2FybmluZ19jb3VudHMYASADKAsyJy5nb29nbGUuYWRzLmRhdGFtYW5h",
             "Z2VyLnYxLldhcm5pbmdDb3VudCJoCgxXYXJuaW5nQ291bnQSFAoMcmVjb3Jk",
             "X2NvdW50GAEgASgDEkIKBnJlYXNvbhgCIAEoDjIyLmdvb2dsZS5hZHMuZGF0",
-            "YW1hbmFnZXIudjEuUHJvY2Vzc2luZ1dhcm5pbmdSZWFzb24q1AoKFVByb2Nl",
+            "YW1hbmFnZXIudjEuUHJvY2Vzc2luZ1dhcm5pbmdSZWFzb24qgQsKFVByb2Nl",
             "c3NpbmdFcnJvclJlYXNvbhInCiNQUk9DRVNTSU5HX0VSUk9SX1JFQVNPTl9V",
             "TlNQRUNJRklFRBAAEjMKL1BST0NFU1NJTkdfRVJST1JfUkVBU09OX0lOVkFM",
             "SURfQ1VTVE9NX1ZBUklBQkxFEAESNwozUFJPQ0VTU0lOR19FUlJPUl9SRUFT",
@@ -61,10 +61,11 @@ namespace Google.Ads.DataManager.V1 {
             "VkFMSURfV0lQEBUSJwojUFJPQ0VTU0lOR19FUlJPUl9SRUFTT05fSU5WQUxJ",
             "RF9LRUsQFhIrCidQUk9DRVNTSU5HX0VSUk9SX1JFQVNPTl9XSVBfQVVUSF9G",
             "QUlMRUQQFxIxCi1QUk9DRVNTSU5HX0VSUk9SX1JFQVNPTl9LRUtfUEVSTUlT",
-            "U0lPTl9ERU5JRUQQGBI8CjhQUk9DRVNTSU5HX0VSUk9SX1JFQVNPTl9VU0VS",
+            "U0lPTl9ERU5JRUQQGBIrCidQUk9DRVNTSU5HX0VSUk9SX1JFQVNPTl9BV1Nf",
+            "QVVUSF9GQUlMRUQQGxI8CjhQUk9DRVNTSU5HX0VSUk9SX1JFQVNPTl9VU0VS",
             "X0lERU5USUZJRVJfREVDUllQVElPTl9FUlJPUhAZEkEKPVBST0NFU1NJTkdf",
             "RVJST1JfT1BFUkFUSU5HX0FDQ09VTlRfTUlTTUFUQ0hfRk9SX0FEX0lERU5U",
-            "SUZJRVIQGirQAwoXUHJvY2Vzc2luZ1dhcm5pbmdSZWFzb24SKQolUFJPQ0VT",
+            "SUZJRVIQGir/AwoXUHJvY2Vzc2luZ1dhcm5pbmdSZWFzb24SKQolUFJPQ0VT",
             "U0lOR19XQVJOSU5HX1JFQVNPTl9VTlNQRUNJRklFRBAAEjMKL1BST0NFU1NJ",
             "TkdfV0FSTklOR19SRUFTT05fS0VLX1BFUk1JU1NJT05fREVOSUVEEAESMgou",
             "UFJPQ0VTU0lOR19XQVJOSU5HX1JFQVNPTl9ERUtfREVDUllQVElPTl9FUlJP",
@@ -74,12 +75,13 @@ namespace Google.Ads.DataManager.V1 {
             "X1dJUBAFEikKJVBST0NFU1NJTkdfV0FSTklOR19SRUFTT05fSU5WQUxJRF9L",
             "RUsQBhI+CjpQUk9DRVNTSU5HX1dBUk5JTkdfUkVBU09OX1VTRVJfSURFTlRJ",
             "RklFUl9ERUNSWVBUSU9OX0VSUk9SEAcSLAooUFJPQ0VTU0lOR19XQVJOSU5H",
-            "X1JFQVNPTl9JTlRFUk5BTF9FUlJPUhAIQtUBCh1jb20uZ29vZ2xlLmFkcy5k",
-            "YXRhbWFuYWdlci52MUIVUHJvY2Vzc2luZ0Vycm9yc1Byb3RvUAFaRGdvb2ds",
-            "ZS5nb2xhbmcub3JnL2dlbnByb3RvL2dvb2dsZWFwaXMvYWRzL2RhdGFtYW5h",
-            "Z2VyL3YxO2RhdGFtYW5hZ2VyqgIZR29vZ2xlLkFkcy5EYXRhTWFuYWdlci5W",
-            "McoCGUdvb2dsZVxBZHNcRGF0YU1hbmFnZXJcVjHqAhxHb29nbGU6OkFkczo6",
-            "RGF0YU1hbmFnZXI6OlYxYgZwcm90bzM="));
+            "X1JFQVNPTl9JTlRFUk5BTF9FUlJPUhAIEi0KKVBST0NFU1NJTkdfV0FSTklO",
+            "R19SRUFTT05fQVdTX0FVVEhfRkFJTEVEEAlC1QEKHWNvbS5nb29nbGUuYWRz",
+            "LmRhdGFtYW5hZ2VyLnYxQhVQcm9jZXNzaW5nRXJyb3JzUHJvdG9QAVpEZ29v",
+            "Z2xlLmdvbGFuZy5vcmcvZ2VucHJvdG8vZ29vZ2xlYXBpcy9hZHMvZGF0YW1h",
+            "bmFnZXIvdjE7ZGF0YW1hbmFnZXKqAhlHb29nbGUuQWRzLkRhdGFNYW5hZ2Vy",
+            "LlYxygIZR29vZ2xlXEFkc1xEYXRhTWFuYWdlclxWMeoCHEdvb2dsZTo6QWRz",
+            "OjpEYXRhTWFuYWdlcjo6VjFiBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(new[] {typeof(global::Google.Ads.DataManager.V1.ProcessingErrorReason), typeof(global::Google.Ads.DataManager.V1.ProcessingWarningReason), }, null, new pbr::GeneratedClrTypeInfo[] {
@@ -204,6 +206,10 @@ namespace Google.Ads.DataManager.V1 {
     /// </summary>
     [pbr::OriginalName("PROCESSING_ERROR_REASON_KEK_PERMISSION_DENIED")] KekPermissionDenied = 24,
     /// <summary>
+    /// The system failed to authenticate with AWS.
+    /// </summary>
+    [pbr::OriginalName("PROCESSING_ERROR_REASON_AWS_AUTH_FAILED")] AwsAuthFailed = 27,
+    /// <summary>
     /// Failed to decrypt the
     /// [UserIdentifier][google.ads.datamanager.v1.UserIdentifier] data using the
     /// DEK.
@@ -260,6 +266,10 @@ namespace Google.Ads.DataManager.V1 {
     /// Internal error.
     /// </summary>
     [pbr::OriginalName("PROCESSING_WARNING_REASON_INTERNAL_ERROR")] InternalError = 8,
+    /// <summary>
+    /// The system failed to authenticate with AWS.
+    /// </summary>
+    [pbr::OriginalName("PROCESSING_WARNING_REASON_AWS_AUTH_FAILED")] AwsAuthFailed = 9,
   }
 
   #endregion

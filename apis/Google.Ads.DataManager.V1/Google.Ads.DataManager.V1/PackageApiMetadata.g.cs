@@ -40,6 +40,7 @@ namespace Google.Ads.DataManager.V1
             yield return EventReflection.Descriptor;
             yield return ExperimentalFieldReflection.Descriptor;
             yield return IngestionServiceReflection.Descriptor;
+            yield return ItemParameterReflection.Descriptor;
             yield return MatchRateReflection.Descriptor;
             yield return ProcessingErrorsReflection.Descriptor;
             yield return RequestStatusPerDestinationReflection.Descriptor;
