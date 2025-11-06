@@ -1,5 +1,11 @@
 # Version history
 
+## Version 2.5.0, released 2025-11-06
+
+### New features
+
+- Adding `unreachable` field to `ListDataSourceReferences` API
+
 ## Version 2.4.0, released 2025-11-05
 
 ### New features
