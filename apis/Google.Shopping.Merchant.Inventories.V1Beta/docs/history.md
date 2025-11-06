@@ -1,5 +1,24 @@
 # Version history
 
+## Version 1.0.0-beta07, released 2025-11-06
+
+### New features
+
+- Update dependencies
+
+### Documentation improvements
+
+- Change in wording : feed specification -> data specification
+- A comment for message `LocalInventory` is changed
+- A comment for field `store_code` in message `.google.shopping.merchant.inventories.v1beta.LocalInventory` is changed
+- A comment for field `availability` in message `.google.shopping.merchant.inventories.v1beta.LocalInventory` is changed
+- A comment for field `pickup_method` in message `.google.shopping.merchant.inventories.v1beta.LocalInventory` is changed
+- A comment for field `pickup_sla` in message `.google.shopping.merchant.inventories.v1beta.LocalInventory` is changed
+- A comment for field `custom_attributes` in message `.google.shopping.merchant.inventories.v1beta.LocalInventory` is changed
+- A comment for message `RegionalInventory` is changed
+- A comment for field `availability` in message `.google.shopping.merchant.inventories.v1beta.RegionalInventory` is changed
+- A comment for field `custom_attributes` in message `.google.shopping.merchant.inventories.v1beta.RegionalInventory` is changed
+
 ## Version 1.0.0-beta06, released 2024-05-08
 
 ### New features
