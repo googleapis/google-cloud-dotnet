@@ -1,5 +1,15 @@
 # Version history
 
+## Version 1.0.0-beta04, released 2025-11-06
+
+### New features
+
+- Update dependencies
+
+### Documentation improvements
+
+- Add clarification to GetLfpMerchantState documentation
+
 ## Version 1.0.0-beta03, released 2025-04-22
 
 ### New features
