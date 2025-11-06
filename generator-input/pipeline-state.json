@@ -4056,12 +4056,12 @@
         },
         {
             "id": "Google.Shopping.Merchant.Reviews.V1Beta",
-            "currentVersion": "1.0.0-beta03",
+            "currentVersion": "1.0.0-beta04",
             "generationAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
             "releaseAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
-            "releaseTimestamp": "2025-07-28T07:36:48.558927766Z",
+            "releaseTimestamp": "2025-11-06T21:51:29.040470835Z",
             "lastGeneratedCommit": "4d8abb3f02f14d2906b2bb1f478e17afd95ec4fc",
-            "lastReleasedCommit": "dfb458ecabfe33a612c7fae239c2799cf863e4a2",
+            "lastReleasedCommit": "4d8abb3f02f14d2906b2bb1f478e17afd95ec4fc",
             "apiPaths": [
                 "google/shopping/merchant/reviews/v1beta"
             ],
