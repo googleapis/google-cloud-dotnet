@@ -4591,7 +4591,7 @@
     },
     {
       "id": "Google.Cloud.Profiler.V2",
-      "version": "2.6.0",
+      "version": "2.7.0",
       "type": "grpc",
       "productName": "Cloud Profiler",
       "productUrl": "https://cloud.google.com/profiler/",

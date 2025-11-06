@@ -2643,11 +2643,12 @@
         },
         {
             "id": "Google.Cloud.Profiler.V2",
-            "currentVersion": "2.6.0",
+            "currentVersion": "2.7.0",
             "generationAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
             "releaseAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
-            "releaseTimestamp": "2024-05-14T07:50:22Z",
+            "releaseTimestamp": "2025-11-06T08:57:56.981665492Z",
             "lastGeneratedCommit": "9215671dbc32a2bb26be3fe0678f7942ca12b365",
+            "lastReleasedCommit": "9215671dbc32a2bb26be3fe0678f7942ca12b365",
             "apiPaths": [
                 "google/devtools/cloudprofiler/v2"
             ],
