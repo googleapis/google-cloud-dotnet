@@ -4730,12 +4730,12 @@
         },
         {
             "id": "Google.Ads.DataManager.V1",
-            "currentVersion": "1.0.0-beta01",
+            "currentVersion": "1.0.0-beta02",
             "generationAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
             "releaseAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
-            "releaseTimestamp": "2025-10-24T07:32:40.749790022Z",
+            "releaseTimestamp": "2025-11-06T09:50:01.544087018Z",
             "lastGeneratedCommit": "e030b932b009475306781259763ca7fde8eb5eb2",
-            "lastReleasedCommit": "116326d69b63628d89f5d5d8a267c23b36372609",
+            "lastReleasedCommit": "e030b932b009475306781259763ca7fde8eb5eb2",
             "apiPaths": [
                 "google/ads/datamanager/v1"
             ],

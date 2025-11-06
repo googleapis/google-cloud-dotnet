@@ -24,7 +24,7 @@
     },
     {
       "id": "Google.Ads.DataManager.V1",
-      "version": "1.0.0-beta01",
+      "version": "1.0.0-beta02",
       "type": "grpc",
       "productName": "Ads Data Manager",
       "productUrl": "https://developers.google.com/data-manager",
