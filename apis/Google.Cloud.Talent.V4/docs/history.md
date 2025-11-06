@@ -1,5 +1,11 @@
 # Version history
 
+## Version 2.8.0, released 2025-11-06
+
+### New features
+
+- Update dependencies
+
 ## Version 2.7.0, released 2025-01-06
 
 ### New features
