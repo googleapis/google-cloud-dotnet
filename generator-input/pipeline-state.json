@@ -3354,10 +3354,10 @@
         },
         {
             "id": "Google.Cloud.TextToSpeech.V1Beta1",
-            "currentVersion": "2.0.0-beta16",
+            "currentVersion": "2.0.0-beta17",
             "generationAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
             "releaseAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
-            "releaseTimestamp": "2025-10-20T16:48:57.152727916Z",
+            "releaseTimestamp": "2025-11-06T16:53:22.593125785Z",
             "lastGeneratedCommit": "50d4eb9c778c4cfe10c6cf407bb25c9ef0bab349",
             "lastReleasedCommit": "50d4eb9c778c4cfe10c6cf407bb25c9ef0bab349",
             "apiPaths": [
