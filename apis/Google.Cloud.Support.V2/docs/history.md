@@ -1,5 +1,17 @@
 # Version history
 
+## Version 1.5.0, released 2025-11-06
+
+### New features
+
+- Update dependencies
+
+### Documentation improvements
+
+- Annotate all names with IDENTIFIER
+- Use backticks around `username` in documentation for `Actor.email`
+- Update Cloud Support RPC comments to no longer include cURL and Python examples
+
 ## Version 1.4.0, released 2025-05-15
 
 ### New features
