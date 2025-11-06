@@ -6244,7 +6244,7 @@
     },
     {
       "id": "Google.Cloud.VpcAccess.V1",
-      "version": "2.5.0",
+      "version": "2.6.0",
       "type": "grpc",
       "productName": "Serverless VPC Access",
       "productUrl": "https://cloud.google.com/vpc/docs/",
