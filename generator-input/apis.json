@@ -6597,7 +6597,7 @@
     },
     {
       "id": "Google.Maps.AerialView.V1",
-      "version": "1.0.0-beta01",
+      "version": "1.0.0-beta02",
       "type": "grpc",
       "productName": "Aerial View",
       "productUrl": "https://developers.google.com/maps/documentation/aerial-view",
