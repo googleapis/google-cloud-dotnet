@@ -3439,12 +3439,12 @@
         },
         {
             "id": "Google.Cloud.VMMigration.V1",
-            "currentVersion": "2.7.0",
+            "currentVersion": "2.8.0",
             "generationAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
             "releaseAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
-            "releaseTimestamp": "2025-09-08T07:57:58.995120236Z",
+            "releaseTimestamp": "2025-11-06T16:59:09.534126057Z",
             "lastGeneratedCommit": "0a0dffc19bed400afdeec0f67b1726b6b23173fb",
-            "lastReleasedCommit": "b7cf972f4c4b531c613050b47bdc333199b9bf50",
+            "lastReleasedCommit": "0a0dffc19bed400afdeec0f67b1726b6b23173fb",
             "apiPaths": [
                 "google/cloud/vmmigration/v1"
             ],
