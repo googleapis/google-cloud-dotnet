@@ -2583,11 +2583,12 @@
         },
         {
             "id": "Google.Cloud.PolicyTroubleshooter.Iam.V3",
-            "currentVersion": "1.2.0",
+            "currentVersion": "1.3.0",
             "generationAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
             "releaseAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
-            "releaseTimestamp": "2024-05-14T07:40:16Z",
+            "releaseTimestamp": "2025-11-06T08:54:08.127928759Z",
             "lastGeneratedCommit": "d9a16f2feec3d0f03899e48007a02ce154fc919d",
+            "lastReleasedCommit": "d9a16f2feec3d0f03899e48007a02ce154fc919d",
             "apiPaths": [
                 "google/cloud/policytroubleshooter/iam/v3"
             ],
