@@ -26,25 +26,33 @@ namespace Google.Ads.DataManager.V1 {
           string.Concat(
             "Ci9nb29nbGUvYWRzL2RhdGFtYW5hZ2VyL3YxL2VuY3J5cHRpb25faW5mby5w",
             "cm90bxIZZ29vZ2xlLmFkcy5kYXRhbWFuYWdlci52MRofZ29vZ2xlL2FwaS9m",
-            "aWVsZF9iZWhhdmlvci5wcm90byJtCg5FbmNyeXB0aW9uSW5mbxJMChRnY3Bf",
-            "d3JhcHBlZF9rZXlfaW5mbxgBIAEoCzIsLmdvb2dsZS5hZHMuZGF0YW1hbmFn",
-            "ZXIudjEuR2NwV3JhcHBlZEtleUluZm9IAEINCgt3cmFwcGVkX2tleSLqAQoR",
-            "R2NwV3JhcHBlZEtleUluZm8SSwoIa2V5X3R5cGUYASABKA4yNC5nb29nbGUu",
-            "YWRzLmRhdGFtYW5hZ2VyLnYxLkdjcFdyYXBwZWRLZXlJbmZvLktleVR5cGVC",
-            "A+BBAhIZCgx3aXBfcHJvdmlkZXIYAiABKAlCA+BBAhIUCgdrZWtfdXJpGAMg",
-            "ASgJQgPgQQISGgoNZW5jcnlwdGVkX2RlaxgEIAEoCUID4EECIjsKB0tleVR5",
-            "cGUSGAoUS0VZX1RZUEVfVU5TUEVDSUZJRUQQABIWChJYQ0hBQ0hBMjBfUE9M",
-            "WTEzMDUQAULTAQodY29tLmdvb2dsZS5hZHMuZGF0YW1hbmFnZXIudjFCE0Vu",
-            "Y3J5cHRpb25JbmZvUHJvdG9QAVpEZ29vZ2xlLmdvbGFuZy5vcmcvZ2VucHJv",
-            "dG8vZ29vZ2xlYXBpcy9hZHMvZGF0YW1hbmFnZXIvdjE7ZGF0YW1hbmFnZXKq",
-            "AhlHb29nbGUuQWRzLkRhdGFNYW5hZ2VyLlYxygIZR29vZ2xlXEFkc1xEYXRh",
-            "TWFuYWdlclxWMeoCHEdvb2dsZTo6QWRzOjpEYXRhTWFuYWdlcjo6VjFiBnBy",
-            "b3RvMw=="));
+            "aWVsZF9iZWhhdmlvci5wcm90byK7AQoORW5jcnlwdGlvbkluZm8STAoUZ2Nw",
+            "X3dyYXBwZWRfa2V5X2luZm8YASABKAsyLC5nb29nbGUuYWRzLmRhdGFtYW5h",
+            "Z2VyLnYxLkdjcFdyYXBwZWRLZXlJbmZvSAASTAoUYXdzX3dyYXBwZWRfa2V5",
+            "X2luZm8YAiABKAsyLC5nb29nbGUuYWRzLmRhdGFtYW5hZ2VyLnYxLkF3c1dy",
+            "YXBwZWRLZXlJbmZvSABCDQoLd3JhcHBlZF9rZXki6gEKEUdjcFdyYXBwZWRL",
+            "ZXlJbmZvEksKCGtleV90eXBlGAEgASgOMjQuZ29vZ2xlLmFkcy5kYXRhbWFu",
+            "YWdlci52MS5HY3BXcmFwcGVkS2V5SW5mby5LZXlUeXBlQgPgQQISGQoMd2lw",
+            "X3Byb3ZpZGVyGAIgASgJQgPgQQISFAoHa2VrX3VyaRgDIAEoCUID4EECEhoK",
+            "DWVuY3J5cHRlZF9kZWsYBCABKAlCA+BBAiI7CgdLZXlUeXBlEhgKFEtFWV9U",
+            "WVBFX1VOU1BFQ0lGSUVEEAASFgoSWENIQUNIQTIwX1BPTFkxMzA1EAEi5gEK",
+            "EUF3c1dyYXBwZWRLZXlJbmZvEksKCGtleV90eXBlGAEgASgOMjQuZ29vZ2xl",
+            "LmFkcy5kYXRhbWFuYWdlci52MS5Bd3NXcmFwcGVkS2V5SW5mby5LZXlUeXBl",
+            "QgPgQQISFQoIcm9sZV9hcm4YAiABKAlCA+BBAhIUCgdrZWtfdXJpGAMgASgJ",
+            "QgPgQQISGgoNZW5jcnlwdGVkX2RlaxgEIAEoCUID4EECIjsKB0tleVR5cGUS",
+            "GAoUS0VZX1RZUEVfVU5TUEVDSUZJRUQQABIWChJYQ0hBQ0hBMjBfUE9MWTEz",
+            "MDUQAULTAQodY29tLmdvb2dsZS5hZHMuZGF0YW1hbmFnZXIudjFCE0VuY3J5",
+            "cHRpb25JbmZvUHJvdG9QAVpEZ29vZ2xlLmdvbGFuZy5vcmcvZ2VucHJvdG8v",
+            "Z29vZ2xlYXBpcy9hZHMvZGF0YW1hbmFnZXIvdjE7ZGF0YW1hbmFnZXKqAhlH",
+            "b29nbGUuQWRzLkRhdGFNYW5hZ2VyLlYxygIZR29vZ2xlXEFkc1xEYXRhTWFu",
+            "YWdlclxWMeoCHEdvb2dsZTo6QWRzOjpEYXRhTWFuYWdlcjo6VjFiBnByb3Rv",
+            "Mw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Ads.DataManager.V1.EncryptionInfo), global::Google.Ads.DataManager.V1.EncryptionInfo.Parser, new[]{ "GcpWrappedKeyInfo" }, new[]{ "WrappedKey" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Ads.DataManager.V1.GcpWrappedKeyInfo), global::Google.Ads.DataManager.V1.GcpWrappedKeyInfo.Parser, new[]{ "KeyType", "WipProvider", "KekUri", "EncryptedDek" }, null, new[]{ typeof(global::Google.Ads.DataManager.V1.GcpWrappedKeyInfo.Types.KeyType) }, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Ads.DataManager.V1.EncryptionInfo), global::Google.Ads.DataManager.V1.EncryptionInfo.Parser, new[]{ "GcpWrappedKeyInfo", "AwsWrappedKeyInfo" }, new[]{ "WrappedKey" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Ads.DataManager.V1.GcpWrappedKeyInfo), global::Google.Ads.DataManager.V1.GcpWrappedKeyInfo.Parser, new[]{ "KeyType", "WipProvider", "KekUri", "EncryptedDek" }, null, new[]{ typeof(global::Google.Ads.DataManager.V1.GcpWrappedKeyInfo.Types.KeyType) }, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Ads.DataManager.V1.AwsWrappedKeyInfo), global::Google.Ads.DataManager.V1.AwsWrappedKeyInfo.Parser, new[]{ "KeyType", "RoleArn", "KekUri", "EncryptedDek" }, null, new[]{ typeof(global::Google.Ads.DataManager.V1.AwsWrappedKeyInfo.Types.KeyType) }, null, null)
           }));
     }
     #endregion
@@ -93,6 +101,9 @@ namespace Google.Ads.DataManager.V1 {
         case WrappedKeyOneofCase.GcpWrappedKeyInfo:
           GcpWrappedKeyInfo = other.GcpWrappedKeyInfo.Clone();
           break;
+        case WrappedKeyOneofCase.AwsWrappedKeyInfo:
+          AwsWrappedKeyInfo = other.AwsWrappedKeyInfo.Clone();
+          break;
       }
 
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
@@ -119,11 +130,27 @@ namespace Google.Ads.DataManager.V1 {
       }
     }
 
+    /// <summary>Field number for the "aws_wrapped_key_info" field.</summary>
+    public const int AwsWrappedKeyInfoFieldNumber = 2;
+    /// <summary>
+    /// Amazon Web Services wrapped key information.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Ads.DataManager.V1.AwsWrappedKeyInfo AwsWrappedKeyInfo {
+      get { return wrappedKeyCase_ == WrappedKeyOneofCase.AwsWrappedKeyInfo ? (global::Google.Ads.DataManager.V1.AwsWrappedKeyInfo) wrappedKey_ : null; }
+      set {
+        wrappedKey_ = value;
+        wrappedKeyCase_ = value == null ? WrappedKeyOneofCase.None : WrappedKeyOneofCase.AwsWrappedKeyInfo;
+      }
+    }
+
     private object wrappedKey_;
     /// <summary>Enum of possible cases for the "wrapped_key" oneof.</summary>
     public enum WrappedKeyOneofCase {
       None = 0,
       GcpWrappedKeyInfo = 1,
+      AwsWrappedKeyInfo = 2,
     }
     private WrappedKeyOneofCase wrappedKeyCase_ = WrappedKeyOneofCase.None;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -155,6 +182,7 @@ namespace Google.Ads.DataManager.V1 {
         return true;
       }
       if (!object.Equals(GcpWrappedKeyInfo, other.GcpWrappedKeyInfo)) return false;
+      if (!object.Equals(AwsWrappedKeyInfo, other.AwsWrappedKeyInfo)) return false;
       if (WrappedKeyCase != other.WrappedKeyCase) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
@@ -164,6 +192,7 @@ namespace Google.Ads.DataManager.V1 {
     public override int GetHashCode() {
       int hash = 1;
       if (wrappedKeyCase_ == WrappedKeyOneofCase.GcpWrappedKeyInfo) hash ^= GcpWrappedKeyInfo.GetHashCode();
+      if (wrappedKeyCase_ == WrappedKeyOneofCase.AwsWrappedKeyInfo) hash ^= AwsWrappedKeyInfo.GetHashCode();
       hash ^= (int) wrappedKeyCase_;
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
@@ -187,6 +216,10 @@ namespace Google.Ads.DataManager.V1 {
         output.WriteRawTag(10);
         output.WriteMessage(GcpWrappedKeyInfo);
       }
+      if (wrappedKeyCase_ == WrappedKeyOneofCase.AwsWrappedKeyInfo) {
+        output.WriteRawTag(18);
+        output.WriteMessage(AwsWrappedKeyInfo);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -201,6 +234,10 @@ namespace Google.Ads.DataManager.V1 {
         output.WriteRawTag(10);
         output.WriteMessage(GcpWrappedKeyInfo);
       }
+      if (wrappedKeyCase_ == WrappedKeyOneofCase.AwsWrappedKeyInfo) {
+        output.WriteRawTag(18);
+        output.WriteMessage(AwsWrappedKeyInfo);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -213,6 +250,9 @@ namespace Google.Ads.DataManager.V1 {
       int size = 0;
       if (wrappedKeyCase_ == WrappedKeyOneofCase.GcpWrappedKeyInfo) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(GcpWrappedKeyInfo);
+      }
+      if (wrappedKeyCase_ == WrappedKeyOneofCase.AwsWrappedKeyInfo) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(AwsWrappedKeyInfo);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -232,6 +272,12 @@ namespace Google.Ads.DataManager.V1 {
             GcpWrappedKeyInfo = new global::Google.Ads.DataManager.V1.GcpWrappedKeyInfo();
           }
           GcpWrappedKeyInfo.MergeFrom(other.GcpWrappedKeyInfo);
+          break;
+        case WrappedKeyOneofCase.AwsWrappedKeyInfo:
+          if (AwsWrappedKeyInfo == null) {
+            AwsWrappedKeyInfo = new global::Google.Ads.DataManager.V1.AwsWrappedKeyInfo();
+          }
+          AwsWrappedKeyInfo.MergeFrom(other.AwsWrappedKeyInfo);
           break;
       }
 
@@ -259,6 +305,15 @@ namespace Google.Ads.DataManager.V1 {
             GcpWrappedKeyInfo = subBuilder;
             break;
           }
+          case 18: {
+            global::Google.Ads.DataManager.V1.AwsWrappedKeyInfo subBuilder = new global::Google.Ads.DataManager.V1.AwsWrappedKeyInfo();
+            if (wrappedKeyCase_ == WrappedKeyOneofCase.AwsWrappedKeyInfo) {
+              subBuilder.MergeFrom(AwsWrappedKeyInfo);
+            }
+            input.ReadMessage(subBuilder);
+            AwsWrappedKeyInfo = subBuilder;
+            break;
+          }
         }
       }
     #endif
@@ -281,6 +336,15 @@ namespace Google.Ads.DataManager.V1 {
             }
             input.ReadMessage(subBuilder);
             GcpWrappedKeyInfo = subBuilder;
+            break;
+          }
+          case 18: {
+            global::Google.Ads.DataManager.V1.AwsWrappedKeyInfo subBuilder = new global::Google.Ads.DataManager.V1.AwsWrappedKeyInfo();
+            if (wrappedKeyCase_ == WrappedKeyOneofCase.AwsWrappedKeyInfo) {
+              subBuilder.MergeFrom(AwsWrappedKeyInfo);
+            }
+            input.ReadMessage(subBuilder);
+            AwsWrappedKeyInfo = subBuilder;
             break;
           }
         }
@@ -612,6 +676,347 @@ namespace Google.Ads.DataManager.V1 {
 
     #region Nested types
     /// <summary>Container for nested types declared in the GcpWrappedKeyInfo message type.</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static partial class Types {
+      /// <summary>
+      /// The type of algorithm used to encrypt the data.
+      /// </summary>
+      public enum KeyType {
+        /// <summary>
+        /// Unspecified key type. Should never be used.
+        /// </summary>
+        [pbr::OriginalName("KEY_TYPE_UNSPECIFIED")] Unspecified = 0,
+        /// <summary>
+        /// Algorithm XChaCha20-Poly1305
+        /// </summary>
+        [pbr::OriginalName("XCHACHA20_POLY1305")] Xchacha20Poly1305 = 1,
+      }
+
+    }
+    #endregion
+
+  }
+
+  /// <summary>
+  /// A data encryption key wrapped by an AWS KMS key.
+  /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+  public sealed partial class AwsWrappedKeyInfo : pb::IMessage<AwsWrappedKeyInfo>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<AwsWrappedKeyInfo> _parser = new pb::MessageParser<AwsWrappedKeyInfo>(() => new AwsWrappedKeyInfo());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<AwsWrappedKeyInfo> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Ads.DataManager.V1.EncryptionInfoReflection.Descriptor.MessageTypes[2]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public AwsWrappedKeyInfo() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public AwsWrappedKeyInfo(AwsWrappedKeyInfo other) : this() {
+      keyType_ = other.keyType_;
+      roleArn_ = other.roleArn_;
+      kekUri_ = other.kekUri_;
+      encryptedDek_ = other.encryptedDek_;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public AwsWrappedKeyInfo Clone() {
+      return new AwsWrappedKeyInfo(this);
+    }
+
+    /// <summary>Field number for the "key_type" field.</summary>
+    public const int KeyTypeFieldNumber = 1;
+    private global::Google.Ads.DataManager.V1.AwsWrappedKeyInfo.Types.KeyType keyType_ = global::Google.Ads.DataManager.V1.AwsWrappedKeyInfo.Types.KeyType.Unspecified;
+    /// <summary>
+    /// Required. The type of algorithm used to encrypt the data.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Ads.DataManager.V1.AwsWrappedKeyInfo.Types.KeyType KeyType {
+      get { return keyType_; }
+      set {
+        keyType_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "role_arn" field.</summary>
+    public const int RoleArnFieldNumber = 2;
+    private string roleArn_ = "";
+    /// <summary>
+    /// Required. The Amazon Resource Name of the IAM Role to assume for KMS
+    /// decryption access. Should be in the format of
+    /// "arn:{partition}:iam::{account_id}:role/{role_name}"
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string RoleArn {
+      get { return roleArn_; }
+      set {
+        roleArn_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "kek_uri" field.</summary>
+    public const int KekUriFieldNumber = 3;
+    private string kekUri_ = "";
+    /// <summary>
+    /// Required. The URI of the AWS KMS key used to decrypt the DEK. Should be in
+    /// the format of "arn:{partition}:kms:{region}:{account_id}:key/{key_id}"
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string KekUri {
+      get { return kekUri_; }
+      set {
+        kekUri_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "encrypted_dek" field.</summary>
+    public const int EncryptedDekFieldNumber = 4;
+    private string encryptedDek_ = "";
+    /// <summary>
+    /// Required. The base64 encoded encrypted data encryption key.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string EncryptedDek {
+      get { return encryptedDek_; }
+      set {
+        encryptedDek_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as AwsWrappedKeyInfo);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(AwsWrappedKeyInfo other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (KeyType != other.KeyType) return false;
+      if (RoleArn != other.RoleArn) return false;
+      if (KekUri != other.KekUri) return false;
+      if (EncryptedDek != other.EncryptedDek) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (KeyType != global::Google.Ads.DataManager.V1.AwsWrappedKeyInfo.Types.KeyType.Unspecified) hash ^= KeyType.GetHashCode();
+      if (RoleArn.Length != 0) hash ^= RoleArn.GetHashCode();
+      if (KekUri.Length != 0) hash ^= KekUri.GetHashCode();
+      if (EncryptedDek.Length != 0) hash ^= EncryptedDek.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (KeyType != global::Google.Ads.DataManager.V1.AwsWrappedKeyInfo.Types.KeyType.Unspecified) {
+        output.WriteRawTag(8);
+        output.WriteEnum((int) KeyType);
+      }
+      if (RoleArn.Length != 0) {
+        output.WriteRawTag(18);
+        output.WriteString(RoleArn);
+      }
+      if (KekUri.Length != 0) {
+        output.WriteRawTag(26);
+        output.WriteString(KekUri);
+      }
+      if (EncryptedDek.Length != 0) {
+        output.WriteRawTag(34);
+        output.WriteString(EncryptedDek);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (KeyType != global::Google.Ads.DataManager.V1.AwsWrappedKeyInfo.Types.KeyType.Unspecified) {
+        output.WriteRawTag(8);
+        output.WriteEnum((int) KeyType);
+      }
+      if (RoleArn.Length != 0) {
+        output.WriteRawTag(18);
+        output.WriteString(RoleArn);
+      }
+      if (KekUri.Length != 0) {
+        output.WriteRawTag(26);
+        output.WriteString(KekUri);
+      }
+      if (EncryptedDek.Length != 0) {
+        output.WriteRawTag(34);
+        output.WriteString(EncryptedDek);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      if (KeyType != global::Google.Ads.DataManager.V1.AwsWrappedKeyInfo.Types.KeyType.Unspecified) {
+        size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) KeyType);
+      }
+      if (RoleArn.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(RoleArn);
+      }
+      if (KekUri.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(KekUri);
+      }
+      if (EncryptedDek.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(EncryptedDek);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(AwsWrappedKeyInfo other) {
+      if (other == null) {
+        return;
+      }
+      if (other.KeyType != global::Google.Ads.DataManager.V1.AwsWrappedKeyInfo.Types.KeyType.Unspecified) {
+        KeyType = other.KeyType;
+      }
+      if (other.RoleArn.Length != 0) {
+        RoleArn = other.RoleArn;
+      }
+      if (other.KekUri.Length != 0) {
+        KekUri = other.KekUri;
+      }
+      if (other.EncryptedDek.Length != 0) {
+        EncryptedDek = other.EncryptedDek;
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 8: {
+            KeyType = (global::Google.Ads.DataManager.V1.AwsWrappedKeyInfo.Types.KeyType) input.ReadEnum();
+            break;
+          }
+          case 18: {
+            RoleArn = input.ReadString();
+            break;
+          }
+          case 26: {
+            KekUri = input.ReadString();
+            break;
+          }
+          case 34: {
+            EncryptedDek = input.ReadString();
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 8: {
+            KeyType = (global::Google.Ads.DataManager.V1.AwsWrappedKeyInfo.Types.KeyType) input.ReadEnum();
+            break;
+          }
+          case 18: {
+            RoleArn = input.ReadString();
+            break;
+          }
+          case 26: {
+            KekUri = input.ReadString();
+            break;
+          }
+          case 34: {
+            EncryptedDek = input.ReadString();
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+    #region Nested types
+    /// <summary>Container for nested types declared in the AwsWrappedKeyInfo message type.</summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static partial class Types {

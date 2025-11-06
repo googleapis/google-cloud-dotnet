@@ -25,24 +25,28 @@ namespace Google.Ads.DataManager.V1 {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "Cilnb29nbGUvYWRzL2RhdGFtYW5hZ2VyL3YxL2NhcnRfZGF0YS5wcm90bxIZ",
-            "Z29vZ2xlLmFkcy5kYXRhbWFuYWdlci52MRofZ29vZ2xlL2FwaS9maWVsZF9i",
-            "ZWhhdmlvci5wcm90byLIAQoIQ2FydERhdGESGAoLbWVyY2hhbnRfaWQYASAB",
-            "KAlCA+BBARIgChNtZXJjaGFudF9mZWVkX2xhYmVsGAIgASgJQgPgQQESKAob",
-            "bWVyY2hhbnRfZmVlZF9sYW5ndWFnZV9jb2RlGAMgASgJQgPgQQESIQoUdHJh",
-            "bnNhY3Rpb25fZGlzY291bnQYBCABKAFCA+BBARIzCgVpdGVtcxgFIAMoCzIf",
-            "Lmdvb2dsZS5hZHMuZGF0YW1hbmFnZXIudjEuSXRlbUID4EEBIlgKBEl0ZW0S",
-            "IAoTbWVyY2hhbnRfcHJvZHVjdF9pZBgBIAEoCUID4EEBEhUKCHF1YW50aXR5",
-            "GAIgASgDQgPgQQESFwoKdW5pdF9wcmljZRgDIAEoAUID4EEBQs0BCh1jb20u",
-            "Z29vZ2xlLmFkcy5kYXRhbWFuYWdlci52MUINQ2FydERhdGFQcm90b1ABWkRn",
-            "b29nbGUuZ29sYW5nLm9yZy9nZW5wcm90by9nb29nbGVhcGlzL2Fkcy9kYXRh",
-            "bWFuYWdlci92MTtkYXRhbWFuYWdlcqoCGUdvb2dsZS5BZHMuRGF0YU1hbmFn",
-            "ZXIuVjHKAhlHb29nbGVcQWRzXERhdGFNYW5hZ2VyXFYx6gIcR29vZ2xlOjpB",
-            "ZHM6OkRhdGFNYW5hZ2VyOjpWMWIGcHJvdG8z"));
+            "Z29vZ2xlLmFkcy5kYXRhbWFuYWdlci52MRouZ29vZ2xlL2Fkcy9kYXRhbWFu",
+            "YWdlci92MS9pdGVtX3BhcmFtZXRlci5wcm90bxofZ29vZ2xlL2FwaS9maWVs",
+            "ZF9iZWhhdmlvci5wcm90byLIAQoIQ2FydERhdGESGAoLbWVyY2hhbnRfaWQY",
+            "ASABKAlCA+BBARIgChNtZXJjaGFudF9mZWVkX2xhYmVsGAIgASgJQgPgQQES",
+            "KAobbWVyY2hhbnRfZmVlZF9sYW5ndWFnZV9jb2RlGAMgASgJQgPgQQESIQoU",
+            "dHJhbnNhY3Rpb25fZGlzY291bnQYBCABKAFCA+BBARIzCgVpdGVtcxgFIAMo",
+            "CzIfLmdvb2dsZS5hZHMuZGF0YW1hbmFnZXIudjEuSXRlbUID4EEBIsEBCgRJ",
+            "dGVtEiAKE21lcmNoYW50X3Byb2R1Y3RfaWQYASABKAlCA+BBARIVCghxdWFu",
+            "dGl0eRgCIAEoA0ID4EEBEhcKCnVuaXRfcHJpY2UYAyABKAFCA+BBARIUCgdp",
+            "dGVtX2lkGAQgASgJQgPgQQESUQoaYWRkaXRpb25hbF9pdGVtX3BhcmFtZXRl",
+            "cnMYBSADKAsyKC5nb29nbGUuYWRzLmRhdGFtYW5hZ2VyLnYxLkl0ZW1QYXJh",
+            "bWV0ZXJCA+BBAULNAQodY29tLmdvb2dsZS5hZHMuZGF0YW1hbmFnZXIudjFC",
+            "DUNhcnREYXRhUHJvdG9QAVpEZ29vZ2xlLmdvbGFuZy5vcmcvZ2VucHJvdG8v",
+            "Z29vZ2xlYXBpcy9hZHMvZGF0YW1hbmFnZXIvdjE7ZGF0YW1hbmFnZXKqAhlH",
+            "b29nbGUuQWRzLkRhdGFNYW5hZ2VyLlYxygIZR29vZ2xlXEFkc1xEYXRhTWFu",
+            "YWdlclxWMeoCHEdvb2dsZTo6QWRzOjpEYXRhTWFuYWdlcjo6VjFiBnByb3Rv",
+            "Mw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::Google.Ads.DataManager.V1.ItemParameterReflection.Descriptor, global::Google.Api.FieldBehaviorReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Ads.DataManager.V1.CartData), global::Google.Ads.DataManager.V1.CartData.Parser, new[]{ "MerchantId", "MerchantFeedLabel", "MerchantFeedLanguageCode", "TransactionDiscount", "Items" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Ads.DataManager.V1.Item), global::Google.Ads.DataManager.V1.Item.Parser, new[]{ "MerchantProductId", "Quantity", "UnitPrice" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Ads.DataManager.V1.Item), global::Google.Ads.DataManager.V1.Item.Parser, new[]{ "MerchantProductId", "Quantity", "UnitPrice", "ItemId", "AdditionalItemParameters" }, null, null, null, null)
           }));
     }
     #endregion
@@ -437,6 +441,8 @@ namespace Google.Ads.DataManager.V1 {
       merchantProductId_ = other.merchantProductId_;
       quantity_ = other.quantity_;
       unitPrice_ = other.unitPrice_;
+      itemId_ = other.itemId_;
+      additionalItemParameters_ = other.additionalItemParameters_.Clone();
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -492,6 +498,38 @@ namespace Google.Ads.DataManager.V1 {
       }
     }
 
+    /// <summary>Field number for the "item_id" field.</summary>
+    public const int ItemIdFieldNumber = 4;
+    private string itemId_ = "";
+    /// <summary>
+    /// Optional. A unique identifier to reference the item.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string ItemId {
+      get { return itemId_; }
+      set {
+        itemId_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "additional_item_parameters" field.</summary>
+    public const int AdditionalItemParametersFieldNumber = 5;
+    private static readonly pb::FieldCodec<global::Google.Ads.DataManager.V1.ItemParameter> _repeated_additionalItemParameters_codec
+        = pb::FieldCodec.ForMessage(42, global::Google.Ads.DataManager.V1.ItemParameter.Parser);
+    private readonly pbc::RepeatedField<global::Google.Ads.DataManager.V1.ItemParameter> additionalItemParameters_ = new pbc::RepeatedField<global::Google.Ads.DataManager.V1.ItemParameter>();
+    /// <summary>
+    /// Optional. A bucket of any [event parameters related to an
+    /// item](https://developers.google.com/analytics/devguides/collection/protocol/ga4/reference/events)
+    /// to be included within the event that were not already specified using other
+    /// structured fields.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pbc::RepeatedField<global::Google.Ads.DataManager.V1.ItemParameter> AdditionalItemParameters {
+      get { return additionalItemParameters_; }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
@@ -510,6 +548,8 @@ namespace Google.Ads.DataManager.V1 {
       if (MerchantProductId != other.MerchantProductId) return false;
       if (Quantity != other.Quantity) return false;
       if (!pbc::ProtobufEqualityComparers.BitwiseDoubleEqualityComparer.Equals(UnitPrice, other.UnitPrice)) return false;
+      if (ItemId != other.ItemId) return false;
+      if(!additionalItemParameters_.Equals(other.additionalItemParameters_)) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -520,6 +560,8 @@ namespace Google.Ads.DataManager.V1 {
       if (MerchantProductId.Length != 0) hash ^= MerchantProductId.GetHashCode();
       if (Quantity != 0L) hash ^= Quantity.GetHashCode();
       if (UnitPrice != 0D) hash ^= pbc::ProtobufEqualityComparers.BitwiseDoubleEqualityComparer.GetHashCode(UnitPrice);
+      if (ItemId.Length != 0) hash ^= ItemId.GetHashCode();
+      hash ^= additionalItemParameters_.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -550,6 +592,11 @@ namespace Google.Ads.DataManager.V1 {
         output.WriteRawTag(25);
         output.WriteDouble(UnitPrice);
       }
+      if (ItemId.Length != 0) {
+        output.WriteRawTag(34);
+        output.WriteString(ItemId);
+      }
+      additionalItemParameters_.WriteTo(output, _repeated_additionalItemParameters_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -572,6 +619,11 @@ namespace Google.Ads.DataManager.V1 {
         output.WriteRawTag(25);
         output.WriteDouble(UnitPrice);
       }
+      if (ItemId.Length != 0) {
+        output.WriteRawTag(34);
+        output.WriteString(ItemId);
+      }
+      additionalItemParameters_.WriteTo(ref output, _repeated_additionalItemParameters_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -591,6 +643,10 @@ namespace Google.Ads.DataManager.V1 {
       if (UnitPrice != 0D) {
         size += 1 + 8;
       }
+      if (ItemId.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(ItemId);
+      }
+      size += additionalItemParameters_.CalculateSize(_repeated_additionalItemParameters_codec);
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
       }
@@ -612,6 +668,10 @@ namespace Google.Ads.DataManager.V1 {
       if (other.UnitPrice != 0D) {
         UnitPrice = other.UnitPrice;
       }
+      if (other.ItemId.Length != 0) {
+        ItemId = other.ItemId;
+      }
+      additionalItemParameters_.Add(other.additionalItemParameters_);
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 
@@ -639,6 +699,14 @@ namespace Google.Ads.DataManager.V1 {
             UnitPrice = input.ReadDouble();
             break;
           }
+          case 34: {
+            ItemId = input.ReadString();
+            break;
+          }
+          case 42: {
+            additionalItemParameters_.AddEntriesFrom(input, _repeated_additionalItemParameters_codec);
+            break;
+          }
         }
       }
     #endif
@@ -664,6 +732,14 @@ namespace Google.Ads.DataManager.V1 {
           }
           case 25: {
             UnitPrice = input.ReadDouble();
+            break;
+          }
+          case 34: {
+            ItemId = input.ReadString();
+            break;
+          }
+          case 42: {
+            additionalItemParameters_.AddEntriesFrom(ref input, _repeated_additionalItemParameters_codec);
             break;
           }
         }
