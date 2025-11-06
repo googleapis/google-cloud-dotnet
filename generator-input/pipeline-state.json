@@ -2763,11 +2763,12 @@
         },
         {
             "id": "Google.Cloud.Redis.V1",
-            "currentVersion": "3.5.0",
+            "currentVersion": "3.6.0",
             "generationAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
             "releaseAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
-            "releaseTimestamp": "2024-05-14T07:48:30Z",
+            "releaseTimestamp": "2025-11-06T09:30:07.145175015Z",
             "lastGeneratedCommit": "0a0dffc19bed400afdeec0f67b1726b6b23173fb",
+            "lastReleasedCommit": "0a0dffc19bed400afdeec0f67b1726b6b23173fb",
             "apiPaths": [
                 "google/cloud/redis/v1"
             ],
