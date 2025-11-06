@@ -62,24 +62,24 @@ namespace Google.Cloud.BackupDR.V1 {
             "ZXNSZXF1ZXN0EkMKBnBhcmVudBgBIAEoCUIz4EEC+kEtEitiYWNrdXBkci5n",
             "b29nbGVhcGlzLmNvbS9EYXRhU291cmNlUmVmZXJlbmNlEhYKCXBhZ2Vfc2l6",
             "ZRgCIAEoBUID4EEBEhcKCnBhZ2VfdG9rZW4YAyABKAlCA+BBARITCgZmaWx0",
-            "ZXIYBCABKAlCA+BBARIVCghvcmRlcl9ieRgFIAEoCUID4EEBIooBCiBMaXN0",
+            "ZXIYBCABKAlCA+BBARIVCghvcmRlcl9ieRgFIAEoCUID4EEBIp8BCiBMaXN0",
             "RGF0YVNvdXJjZVJlZmVyZW5jZXNSZXNwb25zZRJNChZkYXRhX3NvdXJjZV9y",
             "ZWZlcmVuY2VzGAEgAygLMi0uZ29vZ2xlLmNsb3VkLmJhY2t1cGRyLnYxLkRh",
-            "dGFTb3VyY2VSZWZlcmVuY2USFwoPbmV4dF9wYWdlX3Rva2VuGAIgASgJIu8B",
-            "Ci9GZXRjaERhdGFTb3VyY2VSZWZlcmVuY2VzRm9yUmVzb3VyY2VUeXBlUmVx",
-            "dWVzdBJDCgZwYXJlbnQYASABKAlCM+BBAvpBLRIrYmFja3VwZHIuZ29vZ2xl",
-            "YXBpcy5jb20vRGF0YVNvdXJjZVJlZmVyZW5jZRIaCg1yZXNvdXJjZV90eXBl",
-            "GAIgASgJQgPgQQISFgoJcGFnZV9zaXplGAMgASgFQgPgQQESFwoKcGFnZV90",
-            "b2tlbhgEIAEoCUID4EEBEhMKBmZpbHRlchgFIAEoCUID4EEBEhUKCG9yZGVy",
-            "X2J5GAYgASgJQgPgQQEimgEKMEZldGNoRGF0YVNvdXJjZVJlZmVyZW5jZXNG",
-            "b3JSZXNvdXJjZVR5cGVSZXNwb25zZRJNChZkYXRhX3NvdXJjZV9yZWZlcmVu",
-            "Y2VzGAEgAygLMi0uZ29vZ2xlLmNsb3VkLmJhY2t1cGRyLnYxLkRhdGFTb3Vy",
-            "Y2VSZWZlcmVuY2USFwoPbmV4dF9wYWdlX3Rva2VuGAIgASgJQsgBChxjb20u",
-            "Z29vZ2xlLmNsb3VkLmJhY2t1cGRyLnYxQhhEYXRhU291cmNlUmVmZXJlbmNl",
-            "UHJvdG9QAVo4Y2xvdWQuZ29vZ2xlLmNvbS9nby9iYWNrdXBkci9hcGl2MS9i",
-            "YWNrdXBkcnBiO2JhY2t1cGRycGKqAhhHb29nbGUuQ2xvdWQuQmFja3VwRFIu",
-            "VjHKAhhHb29nbGVcQ2xvdWRcQmFja3VwRFJcVjHqAhtHb29nbGU6OkNsb3Vk",
-            "OjpCYWNrdXBEUjo6VjFiBnByb3RvMw=="));
+            "dGFTb3VyY2VSZWZlcmVuY2USFwoPbmV4dF9wYWdlX3Rva2VuGAIgASgJEhMK",
+            "C3VucmVhY2hhYmxlGAMgAygJIu8BCi9GZXRjaERhdGFTb3VyY2VSZWZlcmVu",
+            "Y2VzRm9yUmVzb3VyY2VUeXBlUmVxdWVzdBJDCgZwYXJlbnQYASABKAlCM+BB",
+            "AvpBLRIrYmFja3VwZHIuZ29vZ2xlYXBpcy5jb20vRGF0YVNvdXJjZVJlZmVy",
+            "ZW5jZRIaCg1yZXNvdXJjZV90eXBlGAIgASgJQgPgQQISFgoJcGFnZV9zaXpl",
+            "GAMgASgFQgPgQQESFwoKcGFnZV90b2tlbhgEIAEoCUID4EEBEhMKBmZpbHRl",
+            "chgFIAEoCUID4EEBEhUKCG9yZGVyX2J5GAYgASgJQgPgQQEimgEKMEZldGNo",
+            "RGF0YVNvdXJjZVJlZmVyZW5jZXNGb3JSZXNvdXJjZVR5cGVSZXNwb25zZRJN",
+            "ChZkYXRhX3NvdXJjZV9yZWZlcmVuY2VzGAEgAygLMi0uZ29vZ2xlLmNsb3Vk",
+            "LmJhY2t1cGRyLnYxLkRhdGFTb3VyY2VSZWZlcmVuY2USFwoPbmV4dF9wYWdl",
+            "X3Rva2VuGAIgASgJQsgBChxjb20uZ29vZ2xlLmNsb3VkLmJhY2t1cGRyLnYx",
+            "QhhEYXRhU291cmNlUmVmZXJlbmNlUHJvdG9QAVo4Y2xvdWQuZ29vZ2xlLmNv",
+            "bS9nby9iYWNrdXBkci9hcGl2MS9iYWNrdXBkcnBiO2JhY2t1cGRycGKqAhhH",
+            "b29nbGUuQ2xvdWQuQmFja3VwRFIuVjHKAhhHb29nbGVcQ2xvdWRcQmFja3Vw",
+            "RFJcVjHqAhtHb29nbGU6OkNsb3VkOjpCYWNrdXBEUjo6VjFiBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Cloud.BackupDR.V1.BackupvaultReflection.Descriptor, global::Google.Cloud.BackupDR.V1.BackupvaultCloudsqlReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
@@ -88,7 +88,7 @@ namespace Google.Cloud.BackupDR.V1 {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.BackupDR.V1.DataSourceGcpResourceInfo), global::Google.Cloud.BackupDR.V1.DataSourceGcpResourceInfo.Parser, new[]{ "GcpResourcename", "Type", "Location", "CloudSqlInstanceProperties" }, new[]{ "ResourceProperties" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.BackupDR.V1.GetDataSourceReferenceRequest), global::Google.Cloud.BackupDR.V1.GetDataSourceReferenceRequest.Parser, new[]{ "Name" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.BackupDR.V1.ListDataSourceReferencesRequest), global::Google.Cloud.BackupDR.V1.ListDataSourceReferencesRequest.Parser, new[]{ "Parent", "PageSize", "PageToken", "Filter", "OrderBy" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.BackupDR.V1.ListDataSourceReferencesResponse), global::Google.Cloud.BackupDR.V1.ListDataSourceReferencesResponse.Parser, new[]{ "DataSourceReferences", "NextPageToken" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.BackupDR.V1.ListDataSourceReferencesResponse), global::Google.Cloud.BackupDR.V1.ListDataSourceReferencesResponse.Parser, new[]{ "DataSourceReferences", "NextPageToken", "Unreachable" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.BackupDR.V1.FetchDataSourceReferencesForResourceTypeRequest), global::Google.Cloud.BackupDR.V1.FetchDataSourceReferencesForResourceTypeRequest.Parser, new[]{ "Parent", "ResourceType", "PageSize", "PageToken", "Filter", "OrderBy" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.BackupDR.V1.FetchDataSourceReferencesForResourceTypeResponse), global::Google.Cloud.BackupDR.V1.FetchDataSourceReferencesForResourceTypeResponse.Parser, new[]{ "DataSourceReferences", "NextPageToken" }, null, null, null, null)
           }));
@@ -1845,6 +1845,7 @@ namespace Google.Cloud.BackupDR.V1 {
     public ListDataSourceReferencesResponse(ListDataSourceReferencesResponse other) : this() {
       dataSourceReferences_ = other.dataSourceReferences_.Clone();
       nextPageToken_ = other.nextPageToken_;
+      unreachable_ = other.unreachable_.Clone();
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -1884,6 +1885,20 @@ namespace Google.Cloud.BackupDR.V1 {
       }
     }
 
+    /// <summary>Field number for the "unreachable" field.</summary>
+    public const int UnreachableFieldNumber = 3;
+    private static readonly pb::FieldCodec<string> _repeated_unreachable_codec
+        = pb::FieldCodec.ForString(26);
+    private readonly pbc::RepeatedField<string> unreachable_ = new pbc::RepeatedField<string>();
+    /// <summary>
+    /// Locations that could not be reached.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pbc::RepeatedField<string> Unreachable {
+      get { return unreachable_; }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
@@ -1901,6 +1916,7 @@ namespace Google.Cloud.BackupDR.V1 {
       }
       if(!dataSourceReferences_.Equals(other.dataSourceReferences_)) return false;
       if (NextPageToken != other.NextPageToken) return false;
+      if(!unreachable_.Equals(other.unreachable_)) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -1910,6 +1926,7 @@ namespace Google.Cloud.BackupDR.V1 {
       int hash = 1;
       hash ^= dataSourceReferences_.GetHashCode();
       if (NextPageToken.Length != 0) hash ^= NextPageToken.GetHashCode();
+      hash ^= unreachable_.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -1933,6 +1950,7 @@ namespace Google.Cloud.BackupDR.V1 {
         output.WriteRawTag(18);
         output.WriteString(NextPageToken);
       }
+      unreachable_.WriteTo(output, _repeated_unreachable_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -1948,6 +1966,7 @@ namespace Google.Cloud.BackupDR.V1 {
         output.WriteRawTag(18);
         output.WriteString(NextPageToken);
       }
+      unreachable_.WriteTo(ref output, _repeated_unreachable_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -1962,6 +1981,7 @@ namespace Google.Cloud.BackupDR.V1 {
       if (NextPageToken.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(NextPageToken);
       }
+      size += unreachable_.CalculateSize(_repeated_unreachable_codec);
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
       }
@@ -1978,6 +1998,7 @@ namespace Google.Cloud.BackupDR.V1 {
       if (other.NextPageToken.Length != 0) {
         NextPageToken = other.NextPageToken;
       }
+      unreachable_.Add(other.unreachable_);
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 
@@ -2001,6 +2022,10 @@ namespace Google.Cloud.BackupDR.V1 {
             NextPageToken = input.ReadString();
             break;
           }
+          case 26: {
+            unreachable_.AddEntriesFrom(input, _repeated_unreachable_codec);
+            break;
+          }
         }
       }
     #endif
@@ -2022,6 +2047,10 @@ namespace Google.Cloud.BackupDR.V1 {
           }
           case 18: {
             NextPageToken = input.ReadString();
+            break;
+          }
+          case 26: {
+            unreachable_.AddEntriesFrom(ref input, _repeated_unreachable_codec);
             break;
           }
         }
