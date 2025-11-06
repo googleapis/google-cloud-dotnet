@@ -2718,11 +2718,12 @@
         },
         {
             "id": "Google.Cloud.RecommendationEngine.V1Beta1",
-            "currentVersion": "2.0.0-beta06",
+            "currentVersion": "2.0.0-beta07",
             "generationAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
             "releaseAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
-            "releaseTimestamp": "2024-05-09T17:16:21Z",
+            "releaseTimestamp": "2025-11-06T09:26:52.029466295Z",
             "lastGeneratedCommit": "0a0dffc19bed400afdeec0f67b1726b6b23173fb",
+            "lastReleasedCommit": "0a0dffc19bed400afdeec0f67b1726b6b23173fb",
             "apiPaths": [
                 "google/cloud/recommendationengine/v1beta1"
             ],
