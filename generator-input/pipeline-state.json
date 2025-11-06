@@ -3681,11 +3681,12 @@
         },
         {
             "id": "Google.Cloud.Workflows.V1Beta",
-            "currentVersion": "2.0.0-beta05",
+            "currentVersion": "2.0.0-beta06",
             "generationAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
             "releaseAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
-            "releaseTimestamp": "2024-05-09T17:08:25Z",
+            "releaseTimestamp": "2025-11-06T17:14:35.550795243Z",
             "lastGeneratedCommit": "bab01b38ef7a0f3a756d38862d37e4380ff85753",
+            "lastReleasedCommit": "bab01b38ef7a0f3a756d38862d37e4380ff85753",
             "apiPaths": [
                 "google/cloud/workflows/v1beta"
             ],
