@@ -3846,10 +3846,10 @@
         },
         {
             "id": "Google.Maps.Places.V1",
-            "currentVersion": "1.0.0-beta17",
+            "currentVersion": "1.0.0-beta18",
             "generationAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
             "releaseAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
-            "releaseTimestamp": "2025-10-23T16:13:36.487624306Z",
+            "releaseTimestamp": "2025-11-06T21:39:39.306623617Z",
             "lastGeneratedCommit": "b61fb21bbac838de7f55cf2c60d371a47fc2799e",
             "lastReleasedCommit": "b61fb21bbac838de7f55cf2c60d371a47fc2799e",
             "apiPaths": [
