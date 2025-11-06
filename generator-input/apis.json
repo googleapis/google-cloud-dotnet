@@ -5050,7 +5050,7 @@
     },
     {
       "id": "Google.Cloud.Security.PublicCA.V1",
-      "version": "1.0.0",
+      "version": "1.1.0",
       "type": "grpc",
       "productName": "Public Certificate Authority",
       "productUrl": "https://cloud.google.com/certificate-manager/docs/public-ca",
