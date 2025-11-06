@@ -6050,7 +6050,7 @@
     },
     {
       "id": "Google.Cloud.VMMigration.V1",
-      "version": "2.7.0",
+      "version": "2.8.0",
       "type": "grpc",
       "productName": "VM Migration",
       "productUrl": "https://cloud.google.com/migrate/compute-engine/docs/",
