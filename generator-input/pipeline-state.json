@@ -3514,11 +3514,12 @@
         },
         {
             "id": "Google.Cloud.Vision.V1",
-            "currentVersion": "3.7.0",
+            "currentVersion": "3.8.0",
             "generationAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
             "releaseAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
-            "releaseTimestamp": "2024-05-14T07:52:17Z",
+            "releaseTimestamp": "2025-11-06T17:06:30.010474191Z",
             "lastGeneratedCommit": "a53e1e09d16d311ff6064d237abed3ddd7a5d1fe",
+            "lastReleasedCommit": "a53e1e09d16d311ff6064d237abed3ddd7a5d1fe",
             "apiPaths": [
                 "google/cloud/vision/v1"
             ],
