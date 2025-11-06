@@ -26,6 +26,16 @@ namespace Google.Cloud.Spanner.V1
     public partial class SpannerClientBuilder
     {
         /// <summary>
+        /// The process ID, assigned to each outgoing RPC to identify the request source. This can be overridden,
+        /// but only before it has been accessed.
+        /// </summary>
+        public string ProcessId
+        {
+            get => RequestIdSource.ProcessId;
+            set => RequestIdSource.ProcessId = value;
+        }
+
+        /// <summary>
         /// The Grpc.Gcp method configurations for pool options.
         /// </summary>
         private static readonly MethodConfig[] s_methodConfigs = new[]
