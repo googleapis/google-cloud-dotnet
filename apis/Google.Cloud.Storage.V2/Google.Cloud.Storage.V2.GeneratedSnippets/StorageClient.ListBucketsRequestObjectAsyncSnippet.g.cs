@@ -45,6 +45,7 @@ namespace GoogleCSharpSnippets
                 ParentAsProjectName = ProjectName.FromProject("[PROJECT]"),
                 Prefix = "",
                 ReadMask = new FieldMask(),
+                ReturnPartialSuccess = false,
             };
             // Make the request
             PagedAsyncEnumerable<ListBucketsResponse, Bucket> response = storageClient.ListBucketsAsync(request);

@@ -334,6 +334,7 @@ namespace GoogleCSharpSnippets
                 ParentAsProjectName = ProjectName.FromProject("[PROJECT]"),
                 Prefix = "",
                 ReadMask = new FieldMask(),
+                ReturnPartialSuccess = false,
             };
             // Make the request
             PagedEnumerable<gcsv::ListBucketsResponse, gcsv::Bucket> response = storageClient.ListBuckets(request);
@@ -384,6 +385,7 @@ namespace GoogleCSharpSnippets
                 ParentAsProjectName = ProjectName.FromProject("[PROJECT]"),
                 Prefix = "",
                 ReadMask = new FieldMask(),
+                ReturnPartialSuccess = false,
             };
             // Make the request
             PagedAsyncEnumerable<gcsv::ListBucketsResponse, gcsv::Bucket> response = storageClient.ListBucketsAsync(request);
