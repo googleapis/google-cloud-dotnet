@@ -3801,12 +3801,12 @@
         },
         {
             "id": "Google.Maps.FleetEngine.Delivery.V1",
-            "currentVersion": "2.3.0",
+            "currentVersion": "2.4.0",
             "generationAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
             "releaseAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
-            "releaseTimestamp": "2025-07-11T13:59:32.970159284Z",
+            "releaseTimestamp": "2025-11-06T21:37:52.786711156Z",
             "lastGeneratedCommit": "3fb120eb5c474ec18cddd88f8365e3c2c99289e5",
-            "lastReleasedCommit": "302273adb3293bb504ecd83be8e1467511d5c779",
+            "lastReleasedCommit": "3fb120eb5c474ec18cddd88f8365e3c2c99289e5",
             "apiPaths": [
                 "google/maps/fleetengine/delivery/v1"
             ],
