@@ -2448,11 +2448,12 @@
         },
         {
             "id": "Google.Cloud.OsConfig.V1Alpha",
-            "currentVersion": "2.0.0-alpha06",
+            "currentVersion": "2.0.0-alpha07",
             "generationAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
             "releaseAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
-            "releaseTimestamp": "2024-06-05T07:04:20Z",
+            "releaseTimestamp": "2025-11-06T08:46:12.578872402Z",
             "lastGeneratedCommit": "eb6cdb7e07f0faa7cd455513bcbbe859e71aaba3",
+            "lastReleasedCommit": "eb6cdb7e07f0faa7cd455513bcbbe859e71aaba3",
             "apiPaths": [
                 "google/cloud/osconfig/v1alpha"
             ],
