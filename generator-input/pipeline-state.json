@@ -3369,11 +3369,12 @@
         },
         {
             "id": "Google.Cloud.Tpu.V1",
-            "currentVersion": "2.4.0",
+            "currentVersion": "2.5.0",
             "generationAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
             "releaseAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
-            "releaseTimestamp": "2025-01-13T18:12:27Z",
+            "releaseTimestamp": "2025-11-06T16:54:47.571287309Z",
             "lastGeneratedCommit": "0a0dffc19bed400afdeec0f67b1726b6b23173fb",
+            "lastReleasedCommit": "0a0dffc19bed400afdeec0f67b1726b6b23173fb",
             "apiPaths": [
                 "google/cloud/tpu/v1"
             ],
