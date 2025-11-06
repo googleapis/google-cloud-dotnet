@@ -5317,7 +5317,7 @@
     },
     {
       "id": "Google.Cloud.ServiceUsage.V1",
-      "version": "2.5.0",
+      "version": "2.6.0",
       "type": "grpc",
       "productName": "Service Usage",
       "productUrl": "https://cloud.google.com/service-usage/docs/",
