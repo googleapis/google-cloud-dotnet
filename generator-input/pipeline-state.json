@@ -2493,11 +2493,12 @@
         },
         {
             "id": "Google.Cloud.OsLogin.V1Beta",
-            "currentVersion": "3.0.0-beta09",
+            "currentVersion": "3.0.0-beta10",
             "generationAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
             "releaseAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
-            "releaseTimestamp": "2024-05-14T07:28:25Z",
+            "releaseTimestamp": "2025-11-06T08:48:13.648942072Z",
             "lastGeneratedCommit": "bab01b38ef7a0f3a756d38862d37e4380ff85753",
+            "lastReleasedCommit": "bab01b38ef7a0f3a756d38862d37e4380ff85753",
             "apiPaths": [
                 "google/cloud/oslogin/v1beta"
             ],
