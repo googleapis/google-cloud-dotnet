@@ -3966,11 +3966,12 @@
         },
         {
             "id": "Google.Shopping.Merchant.Lfp.V1Beta",
-            "currentVersion": "1.0.0-beta03",
+            "currentVersion": "1.0.0-beta04",
             "generationAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
             "releaseAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
-            "releaseTimestamp": "2025-04-22T18:20:21Z",
+            "releaseTimestamp": "2025-11-06T21:47:05.629432505Z",
             "lastGeneratedCommit": "bab01b38ef7a0f3a756d38862d37e4380ff85753",
+            "lastReleasedCommit": "bab01b38ef7a0f3a756d38862d37e4380ff85753",
             "apiPaths": [
                 "google/shopping/merchant/lfp/v1beta"
             ],
