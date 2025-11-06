@@ -26,6 +26,16 @@ namespace Google.Cloud.Spanner.V1
     public partial class SpannerClientBuilder
     {
         /// <summary>
+        /// The process ID, assigned to each outgoing RPC to identify the request source. This can be set once,
+        /// but only before the process has made its first Spanner request.
+        /// </summary>
+        /// <exception cref="InvalidOperationException">The process ID has already been set.</exception>
+        public static ulong ProcessId
+        {
+            set => SpannerClientImpl.ProcessId = value;
+        }
+
+        /// <summary>
         /// The Grpc.Gcp method configurations for pool options.
         /// </summary>
         private static readonly MethodConfig[] s_methodConfigs = new[]
