@@ -1,5 +1,15 @@
 # Version history
 
+## Version 2.0.0-beta06, released 2025-11-06
+
+### New features
+
+- Update dependencies
+
+### Documentation improvements
+
+- Fixed format string formatting
+
 ## Version 2.0.0-beta05, released 2024-05-08
 
 ### New features
