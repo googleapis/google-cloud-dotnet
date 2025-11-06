@@ -50,7 +50,7 @@ public class SpannerRequestIdTests
 
         Assert.Equal("1", versionId);
         Assert.Equal(expectedClientId.ToString(), clientId);
-        Assert.Equal("0", channelId);
+        Assert.Equal("1", channelId);
         Assert.Equal(expectedRequestSequence.ToString(), requestSequence);
         Assert.Equal("1", attemptNum);
         Assert.True(ulong.TryParse(processIdString, out _));
