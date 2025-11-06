@@ -2628,12 +2628,12 @@
         },
         {
             "id": "Google.Cloud.PrivilegedAccessManager.V1",
-            "currentVersion": "1.1.0",
+            "currentVersion": "1.2.0",
             "generationAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
             "releaseAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
-            "releaseTimestamp": "2025-08-04T18:50:47.873527187Z",
+            "releaseTimestamp": "2025-11-06T08:57:21.106927594Z",
             "lastGeneratedCommit": "36533b09a6b383f3c30d13c3c26092154ecf5388",
-            "lastReleasedCommit": "fb0d2d75cadbe06b2ab06baf7239f279d907fc7c",
+            "lastReleasedCommit": "36533b09a6b383f3c30d13c3c26092154ecf5388",
             "apiPaths": [
                 "google/cloud/privilegedaccessmanager/v1"
             ],

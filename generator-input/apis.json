@@ -4567,7 +4567,7 @@
     },
     {
       "id": "Google.Cloud.PrivilegedAccessManager.V1",
-      "version": "1.1.0",
+      "version": "1.2.0",
       "type": "grpc",
       "productName": "Privileged Access Manager",
       "productUrl": "https://cloud.google.com/iam/docs/pam-overview",
