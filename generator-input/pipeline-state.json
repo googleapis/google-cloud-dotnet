@@ -2808,12 +2808,12 @@
         },
         {
             "id": "Google.Cloud.Retail.V2",
-            "currentVersion": "2.15.0",
+            "currentVersion": "2.16.0",
             "generationAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
             "releaseAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
-            "releaseTimestamp": "2025-09-08T07:53:19.224909082Z",
+            "releaseTimestamp": "2025-11-06T09:32:31.018459819Z",
             "lastGeneratedCommit": "0a0dffc19bed400afdeec0f67b1726b6b23173fb",
-            "lastReleasedCommit": "1f0e1273a66a11004d9d8152ea31da3dec68adf8",
+            "lastReleasedCommit": "0a0dffc19bed400afdeec0f67b1726b6b23173fb",
             "apiPaths": [
                 "google/cloud/retail/v2"
             ],
