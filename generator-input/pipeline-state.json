@@ -3090,11 +3090,12 @@
         },
         {
             "id": "Google.Cloud.ServiceManagement.V1",
-            "currentVersion": "2.4.0",
+            "currentVersion": "2.5.0",
             "generationAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
             "releaseAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
-            "releaseTimestamp": "2024-05-14T07:34:23Z",
+            "releaseTimestamp": "2025-11-06T16:37:34.165577708Z",
             "lastGeneratedCommit": "733b332962ae41f1a93cca2137096c05e0ef8fd4",
+            "lastReleasedCommit": "733b332962ae41f1a93cca2137096c05e0ef8fd4",
             "apiPaths": [
                 "google/api/servicemanagement/v1"
             ],

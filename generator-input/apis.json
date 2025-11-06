@@ -5293,7 +5293,7 @@
     },
     {
       "id": "Google.Cloud.ServiceManagement.V1",
-      "version": "2.4.0",
+      "version": "2.5.0",
       "type": "grpc",
       "productName": "Service Management",
       "productUrl": "https://cloud.google.com/service-infrastructure/docs/service-management/reference/rpc",
