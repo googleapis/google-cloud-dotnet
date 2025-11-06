@@ -2853,10 +2853,10 @@
         },
         {
             "id": "Google.Cloud.SecretManager.V1",
-            "currentVersion": "2.6.0",
+            "currentVersion": "2.7.0",
             "generationAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
             "releaseAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
-            "releaseTimestamp": "2025-06-09T17:17:52.549927191Z",
+            "releaseTimestamp": "2025-11-06T09:37:54.978321785Z",
             "lastGeneratedCommit": "02838cfff3c0aacdeb5142271bc60a82b6936b59",
             "lastReleasedCommit": "02838cfff3c0aacdeb5142271bc60a82b6936b59",
             "apiPaths": [
