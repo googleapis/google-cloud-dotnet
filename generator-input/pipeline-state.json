@@ -3206,18 +3206,6 @@
             ]
         },
         {
-            "id": "Google.Cloud.Storage.V2",
-            "generationAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
-            "releaseAutomationLevel": "AUTOMATION_LEVEL_BLOCKED",
-            "lastGeneratedCommit": "3a77bd60b37c086effb39819e9183fbc83e3a693",
-            "apiPaths": [
-                "google/storage/v2"
-            ],
-            "sourcePaths": [
-                "apis/Google.Cloud.Storage.V2/Google.Cloud.Storage.V2"
-            ]
-        },
-        {
             "id": "Google.Cloud.StorageInsights.V1",
             "currentVersion": "1.5.0",
             "generationAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
@@ -4787,6 +4775,7 @@
         }
     ],
     "ignoredApiPaths": [
+        "google/storage/v2",
         "google/cloud/securityposture/v1",
         "google/cloud/telcoautomation/v1alpha1",
         "google/shopping/merchant/productstudio/v1alpha",
