@@ -4998,32 +4998,6 @@
       "includeCommonResourcesProto": true
     },
     {
-      "id": "Google.Cloud.SecureSourceManager.V1",
-      "version": "1.0.0-beta00",
-      "type": "grpc",
-      "productName": "Secure Source Manager",
-      "productUrl": "https://cloud.google.com/secure-source-manager/docs/overview",
-      "description": "Recommended Google client library to access the Secure Source Manager API, which provides a regionally deployed, single-tenant managed source code repository hosted on Google Cloud.",
-      "tags": [
-        "repository",
-        "source",
-        "security"
-      ],
-      "dependencies": {
-        "Google.Cloud.Iam.V1": "3.4.0",
-        "Google.Cloud.Location": "2.3.0",
-        "Google.LongRunning": "3.4.0"
-      },
-      "generator": "micro",
-      "protoPath": "google/cloud/securesourcemanager/v1",
-      "shortName": "securesourcemanager",
-      "serviceConfigFile": "securesourcemanager_v1.yaml",
-      "restNumericEnums": true,
-      "includeCommonResourcesProto": true,
-      "blockRelease": "See b/305053862",
-      "transport": "grpc+rest"
-    },
-    {
       "id": "Google.Cloud.Security.PrivateCA.V1",
       "version": "3.11.0",
       "type": "grpc",
