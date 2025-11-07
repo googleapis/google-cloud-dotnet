@@ -5622,34 +5622,6 @@
       ]
     },
     {
-      "id": "Google.Cloud.Storage.V2",
-      "version": "1.0.0-beta00",
-      "type": "grpc",
-      "productName": "Google Cloud Storage",
-      "productUrl": "https://cloud.google.com/storage/",
-      "description": "EXPERIMENTAL: Not for release yet",
-      "tags": [
-        "Storage",
-        "gcs"
-      ],
-      "dependencies": {
-        "Google.Cloud.Iam.V1": "3.4.0"
-      },
-      "testDependencies": {
-        "Google.Cloud.Storage.V1": "4.13.0"
-      },
-      "generator": "micro",
-      "protoPath": "google/storage/v2",
-      "shortName": "storage",
-      "serviceConfigFile": "storage_v2.yaml",
-      "transport": "grpc",
-      "includeCommonResourcesProto": true,
-      "blockRelease": "Storage v2 is not supported for .NET yet",
-      "projects": [
-        "IntegrationTests"
-      ]
-    },
-    {
       "id": "Google.Cloud.StorageBatchOperations.V1",
       "version": "1.0.0-beta02",
       "type": "grpc",
