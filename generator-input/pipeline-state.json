@@ -2897,18 +2897,6 @@
             ]
         },
         {
-            "id": "Google.Cloud.SecureSourceManager.V1",
-            "generationAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
-            "releaseAutomationLevel": "AUTOMATION_LEVEL_BLOCKED",
-            "lastGeneratedCommit": "0a0dffc19bed400afdeec0f67b1726b6b23173fb",
-            "apiPaths": [
-                "google/cloud/securesourcemanager/v1"
-            ],
-            "sourcePaths": [
-                "apis/Google.Cloud.SecureSourceManager.V1/Google.Cloud.SecureSourceManager.V1"
-            ]
-        },
-        {
             "id": "Google.Cloud.Security.PrivateCA.V1",
             "currentVersion": "3.11.0",
             "generationAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
@@ -4783,6 +4771,7 @@
         "google/cloud/configdelivery/v1alpha",
         "google/cloud/geminidataanalytics/v1alpha",
         "google/shopping/merchant/reports/v1alpha",
-        "google/cloud/hypercomputecluster/v1beta"
+        "google/cloud/hypercomputecluster/v1beta",
+        "google/cloud/securesourcemanager/v1"
     ]
 }
