@@ -26,38 +26,40 @@ namespace Google.Cloud.BigQuery.Storage.V1 {
           string.Concat(
             "Cixnb29nbGUvY2xvdWQvYmlncXVlcnkvc3RvcmFnZS92MS90YWJsZS5wcm90",
             "bxIgZ29vZ2xlLmNsb3VkLmJpZ3F1ZXJ5LnN0b3JhZ2UudjEaH2dvb2dsZS9h",
-            "cGkvZmllbGRfYmVoYXZpb3IucHJvdG8iUQoLVGFibGVTY2hlbWESQgoGZmll",
-            "bGRzGAEgAygLMjIuZ29vZ2xlLmNsb3VkLmJpZ3F1ZXJ5LnN0b3JhZ2UudjEu",
-            "VGFibGVGaWVsZFNjaGVtYSL9BgoQVGFibGVGaWVsZFNjaGVtYRIRCgRuYW1l",
-            "GAEgASgJQgPgQQISSgoEdHlwZRgCIAEoDjI3Lmdvb2dsZS5jbG91ZC5iaWdx",
-            "dWVyeS5zdG9yYWdlLnYxLlRhYmxlRmllbGRTY2hlbWEuVHlwZUID4EECEkoK",
-            "BG1vZGUYAyABKA4yNy5nb29nbGUuY2xvdWQuYmlncXVlcnkuc3RvcmFnZS52",
-            "MS5UYWJsZUZpZWxkU2NoZW1hLk1vZGVCA+BBARJHCgZmaWVsZHMYBCADKAsy",
-            "Mi5nb29nbGUuY2xvdWQuYmlncXVlcnkuc3RvcmFnZS52MS5UYWJsZUZpZWxk",
-            "U2NoZW1hQgPgQQESGAoLZGVzY3JpcHRpb24YBiABKAlCA+BBARIXCgptYXhf",
-            "bGVuZ3RoGAcgASgDQgPgQQESFgoJcHJlY2lzaW9uGAggASgDQgPgQQESEgoF",
-            "c2NhbGUYCSABKANCA+BBARIlChhkZWZhdWx0X3ZhbHVlX2V4cHJlc3Npb24Y",
-            "CiABKAlCA+BBARJkChJyYW5nZV9lbGVtZW50X3R5cGUYCyABKAsyQy5nb29n",
-            "bGUuY2xvdWQuYmlncXVlcnkuc3RvcmFnZS52MS5UYWJsZUZpZWxkU2NoZW1h",
-            "LkZpZWxkRWxlbWVudFR5cGVCA+BBARpeChBGaWVsZEVsZW1lbnRUeXBlEkoK",
-            "BHR5cGUYASABKA4yNy5nb29nbGUuY2xvdWQuYmlncXVlcnkuc3RvcmFnZS52",
-            "MS5UYWJsZUZpZWxkU2NoZW1hLlR5cGVCA+BBAiLgAQoEVHlwZRIUChBUWVBF",
-            "X1VOU1BFQ0lGSUVEEAASCgoGU1RSSU5HEAESCQoFSU5UNjQQAhIKCgZET1VC",
-            "TEUQAxIKCgZTVFJVQ1QQBBIJCgVCWVRFUxAFEggKBEJPT0wQBhINCglUSU1F",
-            "U1RBTVAQBxIICgREQVRFEAgSCAoEVElNRRAJEgwKCERBVEVUSU1FEAoSDQoJ",
-            "R0VPR1JBUEhZEAsSCwoHTlVNRVJJQxAMEg4KCkJJR05VTUVSSUMQDRIMCghJ",
-            "TlRFUlZBTBAOEggKBEpTT04QDxIJCgVSQU5HRRAQIkYKBE1vZGUSFAoQTU9E",
-            "RV9VTlNQRUNJRklFRBAAEgwKCE5VTExBQkxFEAESDAoIUkVRVUlSRUQQAhIM",
-            "CghSRVBFQVRFRBADQroBCiRjb20uZ29vZ2xlLmNsb3VkLmJpZ3F1ZXJ5LnN0",
-            "b3JhZ2UudjFCClRhYmxlUHJvdG9QAVo+Y2xvdWQuZ29vZ2xlLmNvbS9nby9i",
-            "aWdxdWVyeS9zdG9yYWdlL2FwaXYxL3N0b3JhZ2VwYjtzdG9yYWdlcGKqAiBH",
-            "b29nbGUuQ2xvdWQuQmlnUXVlcnkuU3RvcmFnZS5WMcoCIEdvb2dsZVxDbG91",
-            "ZFxCaWdRdWVyeVxTdG9yYWdlXFYxYgZwcm90bzM="));
+            "cGkvZmllbGRfYmVoYXZpb3IucHJvdG8aHmdvb2dsZS9wcm90b2J1Zi93cmFw",
+            "cGVycy5wcm90byJRCgtUYWJsZVNjaGVtYRJCCgZmaWVsZHMYASADKAsyMi5n",
+            "b29nbGUuY2xvdWQuYmlncXVlcnkuc3RvcmFnZS52MS5UYWJsZUZpZWxkU2No",
+            "ZW1hIrwHChBUYWJsZUZpZWxkU2NoZW1hEhEKBG5hbWUYASABKAlCA+BBAhJK",
+            "CgR0eXBlGAIgASgOMjcuZ29vZ2xlLmNsb3VkLmJpZ3F1ZXJ5LnN0b3JhZ2Uu",
+            "djEuVGFibGVGaWVsZFNjaGVtYS5UeXBlQgPgQQISSgoEbW9kZRgDIAEoDjI3",
+            "Lmdvb2dsZS5jbG91ZC5iaWdxdWVyeS5zdG9yYWdlLnYxLlRhYmxlRmllbGRT",
+            "Y2hlbWEuTW9kZUID4EEBEkcKBmZpZWxkcxgEIAMoCzIyLmdvb2dsZS5jbG91",
+            "ZC5iaWdxdWVyeS5zdG9yYWdlLnYxLlRhYmxlRmllbGRTY2hlbWFCA+BBARIY",
+            "CgtkZXNjcmlwdGlvbhgGIAEoCUID4EEBEhcKCm1heF9sZW5ndGgYByABKANC",
+            "A+BBARIWCglwcmVjaXNpb24YCCABKANCA+BBARISCgVzY2FsZRgJIAEoA0ID",
+            "4EEBEiUKGGRlZmF1bHRfdmFsdWVfZXhwcmVzc2lvbhgKIAEoCUID4EEBEj0K",
+            "E3RpbWVzdGFtcF9wcmVjaXNpb24YGyABKAsyGy5nb29nbGUucHJvdG9idWYu",
+            "SW50NjRWYWx1ZUID4EEBEmQKEnJhbmdlX2VsZW1lbnRfdHlwZRgLIAEoCzJD",
+            "Lmdvb2dsZS5jbG91ZC5iaWdxdWVyeS5zdG9yYWdlLnYxLlRhYmxlRmllbGRT",
+            "Y2hlbWEuRmllbGRFbGVtZW50VHlwZUID4EEBGl4KEEZpZWxkRWxlbWVudFR5",
+            "cGUSSgoEdHlwZRgBIAEoDjI3Lmdvb2dsZS5jbG91ZC5iaWdxdWVyeS5zdG9y",
+            "YWdlLnYxLlRhYmxlRmllbGRTY2hlbWEuVHlwZUID4EECIuABCgRUeXBlEhQK",
+            "EFRZUEVfVU5TUEVDSUZJRUQQABIKCgZTVFJJTkcQARIJCgVJTlQ2NBACEgoK",
+            "BkRPVUJMRRADEgoKBlNUUlVDVBAEEgkKBUJZVEVTEAUSCAoEQk9PTBAGEg0K",
+            "CVRJTUVTVEFNUBAHEggKBERBVEUQCBIICgRUSU1FEAkSDAoIREFURVRJTUUQ",
+            "ChINCglHRU9HUkFQSFkQCxILCgdOVU1FUklDEAwSDgoKQklHTlVNRVJJQxAN",
+            "EgwKCElOVEVSVkFMEA4SCAoESlNPThAPEgkKBVJBTkdFEBAiRgoETW9kZRIU",
+            "ChBNT0RFX1VOU1BFQ0lGSUVEEAASDAoITlVMTEFCTEUQARIMCghSRVFVSVJF",
+            "RBACEgwKCFJFUEVBVEVEEANCugEKJGNvbS5nb29nbGUuY2xvdWQuYmlncXVl",
+            "cnkuc3RvcmFnZS52MUIKVGFibGVQcm90b1ABWj5jbG91ZC5nb29nbGUuY29t",
+            "L2dvL2JpZ3F1ZXJ5L3N0b3JhZ2UvYXBpdjEvc3RvcmFnZXBiO3N0b3JhZ2Vw",
+            "YqoCIEdvb2dsZS5DbG91ZC5CaWdRdWVyeS5TdG9yYWdlLlYxygIgR29vZ2xl",
+            "XENsb3VkXEJpZ1F1ZXJ5XFN0b3JhZ2VcVjFiBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.WrappersReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.BigQuery.Storage.V1.TableSchema), global::Google.Cloud.BigQuery.Storage.V1.TableSchema.Parser, new[]{ "Fields" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.BigQuery.Storage.V1.TableFieldSchema), global::Google.Cloud.BigQuery.Storage.V1.TableFieldSchema.Parser, new[]{ "Name", "Type", "Mode", "Fields", "Description", "MaxLength", "Precision", "Scale", "DefaultValueExpression", "RangeElementType" }, null, new[]{ typeof(global::Google.Cloud.BigQuery.Storage.V1.TableFieldSchema.Types.Type), typeof(global::Google.Cloud.BigQuery.Storage.V1.TableFieldSchema.Types.Mode) }, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.BigQuery.Storage.V1.TableFieldSchema.Types.FieldElementType), global::Google.Cloud.BigQuery.Storage.V1.TableFieldSchema.Types.FieldElementType.Parser, new[]{ "Type" }, null, null, null, null)})
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.BigQuery.Storage.V1.TableFieldSchema), global::Google.Cloud.BigQuery.Storage.V1.TableFieldSchema.Parser, new[]{ "Name", "Type", "Mode", "Fields", "Description", "MaxLength", "Precision", "Scale", "DefaultValueExpression", "TimestampPrecision", "RangeElementType" }, null, new[]{ typeof(global::Google.Cloud.BigQuery.Storage.V1.TableFieldSchema.Types.Type), typeof(global::Google.Cloud.BigQuery.Storage.V1.TableFieldSchema.Types.Mode) }, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.BigQuery.Storage.V1.TableFieldSchema.Types.FieldElementType), global::Google.Cloud.BigQuery.Storage.V1.TableFieldSchema.Types.FieldElementType.Parser, new[]{ "Type" }, null, null, null, null)})
           }));
     }
     #endregion
@@ -298,6 +300,7 @@ namespace Google.Cloud.BigQuery.Storage.V1 {
       precision_ = other.precision_;
       scale_ = other.scale_;
       defaultValueExpression_ = other.defaultValueExpression_;
+      TimestampPrecision = other.TimestampPrecision;
       rangeElementType_ = other.rangeElementType_ != null ? other.rangeElementType_.Clone() : null;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
@@ -488,6 +491,29 @@ namespace Google.Cloud.BigQuery.Storage.V1 {
       }
     }
 
+    /// <summary>Field number for the "timestamp_precision" field.</summary>
+    public const int TimestampPrecisionFieldNumber = 27;
+    private static readonly pb::FieldCodec<long?> _single_timestampPrecision_codec = pb::FieldCodec.ForStructWrapper<long>(218);
+    private long? timestampPrecision_;
+    /// <summary>
+    /// Optional. Precision (maximum number of total digits in base 10) for seconds
+    /// of TIMESTAMP type.
+    ///
+    /// Possible values include:
+    ///
+    /// * 6 (Default, for TIMESTAMP type with microsecond precision)
+    /// * 12 (For TIMESTAMP type with picosecond precision)
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public long? TimestampPrecision {
+      get { return timestampPrecision_; }
+      set {
+        timestampPrecision_ = value;
+      }
+    }
+
+
     /// <summary>Field number for the "range_element_type" field.</summary>
     public const int RangeElementTypeFieldNumber = 11;
     private global::Google.Cloud.BigQuery.Storage.V1.TableFieldSchema.Types.FieldElementType rangeElementType_;
@@ -532,6 +558,7 @@ namespace Google.Cloud.BigQuery.Storage.V1 {
       if (Precision != other.Precision) return false;
       if (Scale != other.Scale) return false;
       if (DefaultValueExpression != other.DefaultValueExpression) return false;
+      if (TimestampPrecision != other.TimestampPrecision) return false;
       if (!object.Equals(RangeElementType, other.RangeElementType)) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
@@ -549,6 +576,7 @@ namespace Google.Cloud.BigQuery.Storage.V1 {
       if (Precision != 0L) hash ^= Precision.GetHashCode();
       if (Scale != 0L) hash ^= Scale.GetHashCode();
       if (DefaultValueExpression.Length != 0) hash ^= DefaultValueExpression.GetHashCode();
+      if (timestampPrecision_ != null) hash ^= TimestampPrecision.GetHashCode();
       if (rangeElementType_ != null) hash ^= RangeElementType.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
@@ -605,6 +633,9 @@ namespace Google.Cloud.BigQuery.Storage.V1 {
         output.WriteRawTag(90);
         output.WriteMessage(RangeElementType);
       }
+      if (timestampPrecision_ != null) {
+        _single_timestampPrecision_codec.WriteTagAndValue(output, TimestampPrecision);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -652,6 +683,9 @@ namespace Google.Cloud.BigQuery.Storage.V1 {
         output.WriteRawTag(90);
         output.WriteMessage(RangeElementType);
       }
+      if (timestampPrecision_ != null) {
+        _single_timestampPrecision_codec.WriteTagAndValue(ref output, TimestampPrecision);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -686,6 +720,9 @@ namespace Google.Cloud.BigQuery.Storage.V1 {
       }
       if (DefaultValueExpression.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(DefaultValueExpression);
+      }
+      if (timestampPrecision_ != null) {
+        size += _single_timestampPrecision_codec.CalculateSizeWithTag(TimestampPrecision);
       }
       if (rangeElementType_ != null) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(RangeElementType);
@@ -726,6 +763,11 @@ namespace Google.Cloud.BigQuery.Storage.V1 {
       }
       if (other.DefaultValueExpression.Length != 0) {
         DefaultValueExpression = other.DefaultValueExpression;
+      }
+      if (other.timestampPrecision_ != null) {
+        if (timestampPrecision_ == null || other.TimestampPrecision != 0L) {
+          TimestampPrecision = other.TimestampPrecision;
+        }
       }
       if (other.rangeElementType_ != null) {
         if (rangeElementType_ == null) {
@@ -791,6 +833,13 @@ namespace Google.Cloud.BigQuery.Storage.V1 {
             input.ReadMessage(RangeElementType);
             break;
           }
+          case 218: {
+            long? value = _single_timestampPrecision_codec.Read(input);
+            if (timestampPrecision_ == null || value != 0L) {
+              TimestampPrecision = value;
+            }
+            break;
+          }
         }
       }
     #endif
@@ -847,6 +896,13 @@ namespace Google.Cloud.BigQuery.Storage.V1 {
               RangeElementType = new global::Google.Cloud.BigQuery.Storage.V1.TableFieldSchema.Types.FieldElementType();
             }
             input.ReadMessage(RangeElementType);
+            break;
+          }
+          case 218: {
+            long? value = _single_timestampPrecision_codec.Read(ref input);
+            if (timestampPrecision_ == null || value != 0L) {
+              TimestampPrecision = value;
+            }
             break;
           }
         }

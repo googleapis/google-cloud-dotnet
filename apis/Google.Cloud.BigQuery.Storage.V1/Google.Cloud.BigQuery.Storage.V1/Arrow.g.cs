@@ -28,22 +28,28 @@ namespace Google.Cloud.BigQuery.Storage.V1 {
             "bxIgZ29vZ2xlLmNsb3VkLmJpZ3F1ZXJ5LnN0b3JhZ2UudjEiKAoLQXJyb3dT",
             "Y2hlbWESGQoRc2VyaWFsaXplZF9zY2hlbWEYASABKAwiSgoQQXJyb3dSZWNv",
             "cmRCYXRjaBIfChdzZXJpYWxpemVkX3JlY29yZF9iYXRjaBgBIAEoDBIVCgly",
-            "b3dfY291bnQYAiABKANCAhgBIs8BChlBcnJvd1NlcmlhbGl6YXRpb25PcHRp",
+            "b3dfY291bnQYAiABKANCAhgBIuwDChlBcnJvd1NlcmlhbGl6YXRpb25PcHRp",
             "b25zEmgKEmJ1ZmZlcl9jb21wcmVzc2lvbhgCIAEoDjJMLmdvb2dsZS5jbG91",
             "ZC5iaWdxdWVyeS5zdG9yYWdlLnYxLkFycm93U2VyaWFsaXphdGlvbk9wdGlv",
-            "bnMuQ29tcHJlc3Npb25Db2RlYyJIChBDb21wcmVzc2lvbkNvZGVjEhsKF0NP",
-            "TVBSRVNTSU9OX1VOU1BFQ0lGSUVEEAASDQoJTFo0X0ZSQU1FEAESCAoEWlNU",
-            "RBACQroBCiRjb20uZ29vZ2xlLmNsb3VkLmJpZ3F1ZXJ5LnN0b3JhZ2UudjFC",
-            "CkFycm93UHJvdG9QAVo+Y2xvdWQuZ29vZ2xlLmNvbS9nby9iaWdxdWVyeS9z",
-            "dG9yYWdlL2FwaXYxL3N0b3JhZ2VwYjtzdG9yYWdlcGKqAiBHb29nbGUuQ2xv",
-            "dWQuQmlnUXVlcnkuU3RvcmFnZS5WMcoCIEdvb2dsZVxDbG91ZFxCaWdRdWVy",
-            "eVxTdG9yYWdlXFYxYgZwcm90bzM="));
+            "bnMuQ29tcHJlc3Npb25Db2RlYxJ2ChlwaWNvc190aW1lc3RhbXBfcHJlY2lz",
+            "aW9uGAMgASgOMlMuZ29vZ2xlLmNsb3VkLmJpZ3F1ZXJ5LnN0b3JhZ2UudjEu",
+            "QXJyb3dTZXJpYWxpemF0aW9uT3B0aW9ucy5QaWNvc1RpbWVzdGFtcFByZWNp",
+            "c2lvbiJIChBDb21wcmVzc2lvbkNvZGVjEhsKF0NPTVBSRVNTSU9OX1VOU1BF",
+            "Q0lGSUVEEAASDQoJTFo0X0ZSQU1FEAESCAoEWlNURBACIqIBChdQaWNvc1Rp",
+            "bWVzdGFtcFByZWNpc2lvbhIpCiVQSUNPU19USU1FU1RBTVBfUFJFQ0lTSU9O",
+            "X1VOU1BFQ0lGSUVEEAASHgoaVElNRVNUQU1QX1BSRUNJU0lPTl9NSUNST1MQ",
+            "ARIdChlUSU1FU1RBTVBfUFJFQ0lTSU9OX05BTk9TEAISHQoZVElNRVNUQU1Q",
+            "X1BSRUNJU0lPTl9QSUNPUxADQroBCiRjb20uZ29vZ2xlLmNsb3VkLmJpZ3F1",
+            "ZXJ5LnN0b3JhZ2UudjFCCkFycm93UHJvdG9QAVo+Y2xvdWQuZ29vZ2xlLmNv",
+            "bS9nby9iaWdxdWVyeS9zdG9yYWdlL2FwaXYxL3N0b3JhZ2VwYjtzdG9yYWdl",
+            "cGKqAiBHb29nbGUuQ2xvdWQuQmlnUXVlcnkuU3RvcmFnZS5WMcoCIEdvb2ds",
+            "ZVxDbG91ZFxCaWdRdWVyeVxTdG9yYWdlXFYxYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.BigQuery.Storage.V1.ArrowSchema), global::Google.Cloud.BigQuery.Storage.V1.ArrowSchema.Parser, new[]{ "SerializedSchema" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.BigQuery.Storage.V1.ArrowRecordBatch), global::Google.Cloud.BigQuery.Storage.V1.ArrowRecordBatch.Parser, new[]{ "SerializedRecordBatch", "RowCount" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.BigQuery.Storage.V1.ArrowSerializationOptions), global::Google.Cloud.BigQuery.Storage.V1.ArrowSerializationOptions.Parser, new[]{ "BufferCompression" }, null, new[]{ typeof(global::Google.Cloud.BigQuery.Storage.V1.ArrowSerializationOptions.Types.CompressionCodec) }, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.BigQuery.Storage.V1.ArrowSerializationOptions), global::Google.Cloud.BigQuery.Storage.V1.ArrowSerializationOptions.Parser, new[]{ "BufferCompression", "PicosTimestampPrecision" }, null, new[]{ typeof(global::Google.Cloud.BigQuery.Storage.V1.ArrowSerializationOptions.Types.CompressionCodec), typeof(global::Google.Cloud.BigQuery.Storage.V1.ArrowSerializationOptions.Types.PicosTimestampPrecision) }, null, null)
           }));
     }
     #endregion
@@ -528,6 +534,7 @@ namespace Google.Cloud.BigQuery.Storage.V1 {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public ArrowSerializationOptions(ArrowSerializationOptions other) : this() {
       bufferCompression_ = other.bufferCompression_;
+      picosTimestampPrecision_ = other.picosTimestampPrecision_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -553,6 +560,22 @@ namespace Google.Cloud.BigQuery.Storage.V1 {
       }
     }
 
+    /// <summary>Field number for the "picos_timestamp_precision" field.</summary>
+    public const int PicosTimestampPrecisionFieldNumber = 3;
+    private global::Google.Cloud.BigQuery.Storage.V1.ArrowSerializationOptions.Types.PicosTimestampPrecision picosTimestampPrecision_ = global::Google.Cloud.BigQuery.Storage.V1.ArrowSerializationOptions.Types.PicosTimestampPrecision.Unspecified;
+    /// <summary>
+    /// Optional. Set timestamp precision option. If not set, the default precision
+    /// is microseconds.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Cloud.BigQuery.Storage.V1.ArrowSerializationOptions.Types.PicosTimestampPrecision PicosTimestampPrecision {
+      get { return picosTimestampPrecision_; }
+      set {
+        picosTimestampPrecision_ = value;
+      }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
@@ -569,6 +592,7 @@ namespace Google.Cloud.BigQuery.Storage.V1 {
         return true;
       }
       if (BufferCompression != other.BufferCompression) return false;
+      if (PicosTimestampPrecision != other.PicosTimestampPrecision) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -577,6 +601,7 @@ namespace Google.Cloud.BigQuery.Storage.V1 {
     public override int GetHashCode() {
       int hash = 1;
       if (BufferCompression != global::Google.Cloud.BigQuery.Storage.V1.ArrowSerializationOptions.Types.CompressionCodec.CompressionUnspecified) hash ^= BufferCompression.GetHashCode();
+      if (PicosTimestampPrecision != global::Google.Cloud.BigQuery.Storage.V1.ArrowSerializationOptions.Types.PicosTimestampPrecision.Unspecified) hash ^= PicosTimestampPrecision.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -599,6 +624,10 @@ namespace Google.Cloud.BigQuery.Storage.V1 {
         output.WriteRawTag(16);
         output.WriteEnum((int) BufferCompression);
       }
+      if (PicosTimestampPrecision != global::Google.Cloud.BigQuery.Storage.V1.ArrowSerializationOptions.Types.PicosTimestampPrecision.Unspecified) {
+        output.WriteRawTag(24);
+        output.WriteEnum((int) PicosTimestampPrecision);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -613,6 +642,10 @@ namespace Google.Cloud.BigQuery.Storage.V1 {
         output.WriteRawTag(16);
         output.WriteEnum((int) BufferCompression);
       }
+      if (PicosTimestampPrecision != global::Google.Cloud.BigQuery.Storage.V1.ArrowSerializationOptions.Types.PicosTimestampPrecision.Unspecified) {
+        output.WriteRawTag(24);
+        output.WriteEnum((int) PicosTimestampPrecision);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -625,6 +658,9 @@ namespace Google.Cloud.BigQuery.Storage.V1 {
       int size = 0;
       if (BufferCompression != global::Google.Cloud.BigQuery.Storage.V1.ArrowSerializationOptions.Types.CompressionCodec.CompressionUnspecified) {
         size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) BufferCompression);
+      }
+      if (PicosTimestampPrecision != global::Google.Cloud.BigQuery.Storage.V1.ArrowSerializationOptions.Types.PicosTimestampPrecision.Unspecified) {
+        size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) PicosTimestampPrecision);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -640,6 +676,9 @@ namespace Google.Cloud.BigQuery.Storage.V1 {
       }
       if (other.BufferCompression != global::Google.Cloud.BigQuery.Storage.V1.ArrowSerializationOptions.Types.CompressionCodec.CompressionUnspecified) {
         BufferCompression = other.BufferCompression;
+      }
+      if (other.PicosTimestampPrecision != global::Google.Cloud.BigQuery.Storage.V1.ArrowSerializationOptions.Types.PicosTimestampPrecision.Unspecified) {
+        PicosTimestampPrecision = other.PicosTimestampPrecision;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -660,6 +699,10 @@ namespace Google.Cloud.BigQuery.Storage.V1 {
             BufferCompression = (global::Google.Cloud.BigQuery.Storage.V1.ArrowSerializationOptions.Types.CompressionCodec) input.ReadEnum();
             break;
           }
+          case 24: {
+            PicosTimestampPrecision = (global::Google.Cloud.BigQuery.Storage.V1.ArrowSerializationOptions.Types.PicosTimestampPrecision) input.ReadEnum();
+            break;
+          }
         }
       }
     #endif
@@ -677,6 +720,10 @@ namespace Google.Cloud.BigQuery.Storage.V1 {
             break;
           case 16: {
             BufferCompression = (global::Google.Cloud.BigQuery.Storage.V1.ArrowSerializationOptions.Types.CompressionCodec) input.ReadEnum();
+            break;
+          }
+          case 24: {
+            PicosTimestampPrecision = (global::Google.Cloud.BigQuery.Storage.V1.ArrowSerializationOptions.Types.PicosTimestampPrecision) input.ReadEnum();
             break;
           }
         }
@@ -705,6 +752,34 @@ namespace Google.Cloud.BigQuery.Storage.V1 {
         /// Zstandard compression.
         /// </summary>
         [pbr::OriginalName("ZSTD")] Zstd = 2,
+      }
+
+      /// <summary>
+      /// The precision of the timestamp value in the Avro message. This precision
+      /// will **only** be applied to the column(s) with the `TIMESTAMP_PICOS` type.
+      /// </summary>
+      public enum PicosTimestampPrecision {
+        /// <summary>
+        /// Unspecified timestamp precision. The default precision is microseconds.
+        /// </summary>
+        [pbr::OriginalName("PICOS_TIMESTAMP_PRECISION_UNSPECIFIED")] Unspecified = 0,
+        /// <summary>
+        /// Timestamp values returned by Read API will be truncated to microsecond
+        /// level precision. The value will be encoded as Arrow TIMESTAMP type in a
+        /// 64 bit integer.
+        /// </summary>
+        [pbr::OriginalName("TIMESTAMP_PRECISION_MICROS")] TimestampPrecisionMicros = 1,
+        /// <summary>
+        /// Timestamp values returned by Read API will be truncated to nanosecond
+        /// level precision. The value will be encoded as Arrow TIMESTAMP type in a
+        /// 64 bit integer.
+        /// </summary>
+        [pbr::OriginalName("TIMESTAMP_PRECISION_NANOS")] TimestampPrecisionNanos = 2,
+        /// <summary>
+        /// Read API will return full precision picosecond value. The value will be
+        /// encoded as a string which conforms to ISO 8601 format.
+        /// </summary>
+        [pbr::OriginalName("TIMESTAMP_PRECISION_PICOS")] TimestampPrecisionPicos = 3,
       }
 
     }

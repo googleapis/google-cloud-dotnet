@@ -27,19 +27,26 @@ namespace Google.Cloud.BigQuery.Storage.V1 {
             "Citnb29nbGUvY2xvdWQvYmlncXVlcnkvc3RvcmFnZS92MS9hdnJvLnByb3Rv",
             "EiBnb29nbGUuY2xvdWQuYmlncXVlcnkuc3RvcmFnZS52MSIcCgpBdnJvU2No",
             "ZW1hEg4KBnNjaGVtYRgBIAEoCSJBCghBdnJvUm93cxIeChZzZXJpYWxpemVk",
-            "X2JpbmFyeV9yb3dzGAEgASgMEhUKCXJvd19jb3VudBgCIAEoA0ICGAEiQQoY",
-            "QXZyb1NlcmlhbGl6YXRpb25PcHRpb25zEiUKHWVuYWJsZV9kaXNwbGF5X25h",
-            "bWVfYXR0cmlidXRlGAEgASgIQrkBCiRjb20uZ29vZ2xlLmNsb3VkLmJpZ3F1",
-            "ZXJ5LnN0b3JhZ2UudjFCCUF2cm9Qcm90b1ABWj5jbG91ZC5nb29nbGUuY29t",
-            "L2dvL2JpZ3F1ZXJ5L3N0b3JhZ2UvYXBpdjEvc3RvcmFnZXBiO3N0b3JhZ2Vw",
-            "YqoCIEdvb2dsZS5DbG91ZC5CaWdRdWVyeS5TdG9yYWdlLlYxygIgR29vZ2xl",
-            "XENsb3VkXEJpZ1F1ZXJ5XFN0b3JhZ2VcVjFiBnByb3RvMw=="));
+            "X2JpbmFyeV9yb3dzGAEgASgMEhUKCXJvd19jb3VudBgCIAEoA0ICGAEi3QIK",
+            "GEF2cm9TZXJpYWxpemF0aW9uT3B0aW9ucxIlCh1lbmFibGVfZGlzcGxheV9u",
+            "YW1lX2F0dHJpYnV0ZRgBIAEoCBJ1ChlwaWNvc190aW1lc3RhbXBfcHJlY2lz",
+            "aW9uGAIgASgOMlIuZ29vZ2xlLmNsb3VkLmJpZ3F1ZXJ5LnN0b3JhZ2UudjEu",
+            "QXZyb1NlcmlhbGl6YXRpb25PcHRpb25zLlBpY29zVGltZXN0YW1wUHJlY2lz",
+            "aW9uIqIBChdQaWNvc1RpbWVzdGFtcFByZWNpc2lvbhIpCiVQSUNPU19USU1F",
+            "U1RBTVBfUFJFQ0lTSU9OX1VOU1BFQ0lGSUVEEAASHgoaVElNRVNUQU1QX1BS",
+            "RUNJU0lPTl9NSUNST1MQARIdChlUSU1FU1RBTVBfUFJFQ0lTSU9OX05BTk9T",
+            "EAISHQoZVElNRVNUQU1QX1BSRUNJU0lPTl9QSUNPUxADQrkBCiRjb20uZ29v",
+            "Z2xlLmNsb3VkLmJpZ3F1ZXJ5LnN0b3JhZ2UudjFCCUF2cm9Qcm90b1ABWj5j",
+            "bG91ZC5nb29nbGUuY29tL2dvL2JpZ3F1ZXJ5L3N0b3JhZ2UvYXBpdjEvc3Rv",
+            "cmFnZXBiO3N0b3JhZ2VwYqoCIEdvb2dsZS5DbG91ZC5CaWdRdWVyeS5TdG9y",
+            "YWdlLlYxygIgR29vZ2xlXENsb3VkXEJpZ1F1ZXJ5XFN0b3JhZ2VcVjFiBnBy",
+            "b3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.BigQuery.Storage.V1.AvroSchema), global::Google.Cloud.BigQuery.Storage.V1.AvroSchema.Parser, new[]{ "Schema" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.BigQuery.Storage.V1.AvroRows), global::Google.Cloud.BigQuery.Storage.V1.AvroRows.Parser, new[]{ "SerializedBinaryRows", "RowCount" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.BigQuery.Storage.V1.AvroSerializationOptions), global::Google.Cloud.BigQuery.Storage.V1.AvroSerializationOptions.Parser, new[]{ "EnableDisplayNameAttribute" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.BigQuery.Storage.V1.AvroSerializationOptions), global::Google.Cloud.BigQuery.Storage.V1.AvroSerializationOptions.Parser, new[]{ "EnableDisplayNameAttribute", "PicosTimestampPrecision" }, null, new[]{ typeof(global::Google.Cloud.BigQuery.Storage.V1.AvroSerializationOptions.Types.PicosTimestampPrecision) }, null, null)
           }));
     }
     #endregion
@@ -520,6 +527,7 @@ namespace Google.Cloud.BigQuery.Storage.V1 {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public AvroSerializationOptions(AvroSerializationOptions other) : this() {
       enableDisplayNameAttribute_ = other.enableDisplayNameAttribute_;
+      picosTimestampPrecision_ = other.picosTimestampPrecision_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -553,6 +561,22 @@ namespace Google.Cloud.BigQuery.Storage.V1 {
       }
     }
 
+    /// <summary>Field number for the "picos_timestamp_precision" field.</summary>
+    public const int PicosTimestampPrecisionFieldNumber = 2;
+    private global::Google.Cloud.BigQuery.Storage.V1.AvroSerializationOptions.Types.PicosTimestampPrecision picosTimestampPrecision_ = global::Google.Cloud.BigQuery.Storage.V1.AvroSerializationOptions.Types.PicosTimestampPrecision.Unspecified;
+    /// <summary>
+    /// Optional. Set timestamp precision option. If not set, the default precision
+    /// is microseconds.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Cloud.BigQuery.Storage.V1.AvroSerializationOptions.Types.PicosTimestampPrecision PicosTimestampPrecision {
+      get { return picosTimestampPrecision_; }
+      set {
+        picosTimestampPrecision_ = value;
+      }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
@@ -569,6 +593,7 @@ namespace Google.Cloud.BigQuery.Storage.V1 {
         return true;
       }
       if (EnableDisplayNameAttribute != other.EnableDisplayNameAttribute) return false;
+      if (PicosTimestampPrecision != other.PicosTimestampPrecision) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -577,6 +602,7 @@ namespace Google.Cloud.BigQuery.Storage.V1 {
     public override int GetHashCode() {
       int hash = 1;
       if (EnableDisplayNameAttribute != false) hash ^= EnableDisplayNameAttribute.GetHashCode();
+      if (PicosTimestampPrecision != global::Google.Cloud.BigQuery.Storage.V1.AvroSerializationOptions.Types.PicosTimestampPrecision.Unspecified) hash ^= PicosTimestampPrecision.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -599,6 +625,10 @@ namespace Google.Cloud.BigQuery.Storage.V1 {
         output.WriteRawTag(8);
         output.WriteBool(EnableDisplayNameAttribute);
       }
+      if (PicosTimestampPrecision != global::Google.Cloud.BigQuery.Storage.V1.AvroSerializationOptions.Types.PicosTimestampPrecision.Unspecified) {
+        output.WriteRawTag(16);
+        output.WriteEnum((int) PicosTimestampPrecision);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -613,6 +643,10 @@ namespace Google.Cloud.BigQuery.Storage.V1 {
         output.WriteRawTag(8);
         output.WriteBool(EnableDisplayNameAttribute);
       }
+      if (PicosTimestampPrecision != global::Google.Cloud.BigQuery.Storage.V1.AvroSerializationOptions.Types.PicosTimestampPrecision.Unspecified) {
+        output.WriteRawTag(16);
+        output.WriteEnum((int) PicosTimestampPrecision);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -625,6 +659,9 @@ namespace Google.Cloud.BigQuery.Storage.V1 {
       int size = 0;
       if (EnableDisplayNameAttribute != false) {
         size += 1 + 1;
+      }
+      if (PicosTimestampPrecision != global::Google.Cloud.BigQuery.Storage.V1.AvroSerializationOptions.Types.PicosTimestampPrecision.Unspecified) {
+        size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) PicosTimestampPrecision);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -640,6 +677,9 @@ namespace Google.Cloud.BigQuery.Storage.V1 {
       }
       if (other.EnableDisplayNameAttribute != false) {
         EnableDisplayNameAttribute = other.EnableDisplayNameAttribute;
+      }
+      if (other.PicosTimestampPrecision != global::Google.Cloud.BigQuery.Storage.V1.AvroSerializationOptions.Types.PicosTimestampPrecision.Unspecified) {
+        PicosTimestampPrecision = other.PicosTimestampPrecision;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -658,6 +698,10 @@ namespace Google.Cloud.BigQuery.Storage.V1 {
             break;
           case 8: {
             EnableDisplayNameAttribute = input.ReadBool();
+            break;
+          }
+          case 16: {
+            PicosTimestampPrecision = (global::Google.Cloud.BigQuery.Storage.V1.AvroSerializationOptions.Types.PicosTimestampPrecision) input.ReadEnum();
             break;
           }
         }
@@ -679,10 +723,50 @@ namespace Google.Cloud.BigQuery.Storage.V1 {
             EnableDisplayNameAttribute = input.ReadBool();
             break;
           }
+          case 16: {
+            PicosTimestampPrecision = (global::Google.Cloud.BigQuery.Storage.V1.AvroSerializationOptions.Types.PicosTimestampPrecision) input.ReadEnum();
+            break;
+          }
         }
       }
     }
     #endif
+
+    #region Nested types
+    /// <summary>Container for nested types declared in the AvroSerializationOptions message type.</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static partial class Types {
+      /// <summary>
+      /// The precision of the timestamp value in the Avro message. This precision
+      /// will **only** be applied to the column(s) with the `TIMESTAMP_PICOS` type.
+      /// </summary>
+      public enum PicosTimestampPrecision {
+        /// <summary>
+        /// Unspecified timestamp precision. The default precision is microseconds.
+        /// </summary>
+        [pbr::OriginalName("PICOS_TIMESTAMP_PRECISION_UNSPECIFIED")] Unspecified = 0,
+        /// <summary>
+        /// Timestamp values returned by Read API will be truncated to microsecond
+        /// level precision. The value will be encoded as Avro TIMESTAMP type in a
+        /// 64 bit integer.
+        /// </summary>
+        [pbr::OriginalName("TIMESTAMP_PRECISION_MICROS")] TimestampPrecisionMicros = 1,
+        /// <summary>
+        /// Timestamp values returned by Read API will be truncated to nanosecond
+        /// level precision. The value will be encoded as Avro TIMESTAMP type in a
+        /// 64 bit integer.
+        /// </summary>
+        [pbr::OriginalName("TIMESTAMP_PRECISION_NANOS")] TimestampPrecisionNanos = 2,
+        /// <summary>
+        /// Read API will return full precision picosecond value. The value will be
+        /// encoded as a string which conforms to ISO 8601 format.
+        /// </summary>
+        [pbr::OriginalName("TIMESTAMP_PRECISION_PICOS")] TimestampPrecisionPicos = 3,
+      }
+
+    }
+    #endregion
 
   }
 
