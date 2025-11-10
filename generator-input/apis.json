@@ -1941,6 +1941,23 @@
       "includeCommonResourcesProto": true
     },
     {
+      "id": "Google.Cloud.DatabaseCenter.V1Beta",
+      "version": "1.0.0-beta00",
+      "type": "grpc",
+      "productName": "Database Center",
+      "productUrl": "https://cloud.google.com/database-center/docs/overview",
+      "description": "Database Center provides an organization-wide, cross-product fleet health platform to eliminate the overhead, complexity, and risk associated with aggregating and summarizing health signals through custom dashboards. Through Database Center’s fleet health dashboard and API, database platform teams that are responsible for reliability, compliance, security, cost, and administration of database fleets will now have a single pane of glass that pinpoints issues relevant to each team.",
+      "tags": [],
+      "dependencies": {},
+      "generator": "micro",
+      "protoPath": "google/cloud/databasecenter/v1beta",
+      "includeCommonResourcesProto": true,
+      "shortName": "databasecenter",
+      "serviceConfigFile": "databasecenter_v1beta.yaml",
+      "transport": "grpc+rest",
+      "restNumericEnums": true
+    },
+    {
       "id": "Google.Cloud.Dataflow.V1Beta3",
       "version": "2.0.0-beta09",
       "type": "grpc",
