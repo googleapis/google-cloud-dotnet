@@ -2683,6 +2683,290 @@
       ]
     },
     {
+      "regionTag": "geminidataanalytics_v1beta_generated_DataChatService_DeleteConversation_sync",
+      "title": "DeleteConversationRequestObject",
+      "description": "Snippet for DeleteConversation",
+      "file": "DataChatServiceClient.DeleteConversationRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteConversation",
+        "fullName": "Google.Cloud.GeminiDataAnalytics.V1Beta.DataChatServiceClient.DeleteConversation",
+        "parameters": [
+          {
+            "type": "Google.Cloud.GeminiDataAnalytics.V1Beta.DeleteConversationRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "client": {
+          "shortName": "DataChatServiceClient",
+          "fullName": "Google.Cloud.GeminiDataAnalytics.V1Beta.DataChatServiceClient"
+        },
+        "method": {
+          "shortName": "DeleteConversation",
+          "fullName": "google.cloud.geminidataanalytics.v1beta.DataChatService.DeleteConversation",
+          "service": {
+            "shortName": "DataChatService",
+            "fullName": "google.cloud.geminidataanalytics.v1beta.DataChatService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 44,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 42,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "geminidataanalytics_v1beta_generated_DataChatService_DeleteConversation_async",
+      "title": "DeleteConversationRequestObjectAsync",
+      "description": "Snippet for DeleteConversationAsync",
+      "file": "DataChatServiceClient.DeleteConversationRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteConversationAsync",
+        "fullName": "Google.Cloud.GeminiDataAnalytics.V1Beta.DataChatServiceClient.DeleteConversationAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.GeminiDataAnalytics.V1Beta.DeleteConversationRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task",
+        "client": {
+          "shortName": "DataChatServiceClient",
+          "fullName": "Google.Cloud.GeminiDataAnalytics.V1Beta.DataChatServiceClient"
+        },
+        "method": {
+          "shortName": "DeleteConversation",
+          "fullName": "google.cloud.geminidataanalytics.v1beta.DataChatService.DeleteConversation",
+          "service": {
+            "shortName": "DataChatService",
+            "fullName": "google.cloud.geminidataanalytics.v1beta.DataChatService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 45,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 43,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "geminidataanalytics_v1beta_generated_DataChatService_DeleteConversation_sync_flattened",
+      "title": "DeleteConversation",
+      "description": "Snippet for DeleteConversation",
+      "file": "DataChatServiceClient.DeleteConversationSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteConversation",
+        "fullName": "Google.Cloud.GeminiDataAnalytics.V1Beta.DataChatServiceClient.DeleteConversation",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "client": {
+          "shortName": "DataChatServiceClient",
+          "fullName": "Google.Cloud.GeminiDataAnalytics.V1Beta.DataChatServiceClient"
+        },
+        "method": {
+          "shortName": "DeleteConversation",
+          "fullName": "google.cloud.geminidataanalytics.v1beta.DataChatService.DeleteConversation",
+          "service": {
+            "shortName": "DataChatService",
+            "fullName": "google.cloud.geminidataanalytics.v1beta.DataChatService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "geminidataanalytics_v1beta_generated_DataChatService_DeleteConversation_async_flattened",
+      "title": "DeleteConversationAsync",
+      "description": "Snippet for DeleteConversationAsync",
+      "file": "DataChatServiceClient.DeleteConversationAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteConversationAsync",
+        "fullName": "Google.Cloud.GeminiDataAnalytics.V1Beta.DataChatServiceClient.DeleteConversationAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task",
+        "client": {
+          "shortName": "DataChatServiceClient",
+          "fullName": "Google.Cloud.GeminiDataAnalytics.V1Beta.DataChatServiceClient"
+        },
+        "method": {
+          "shortName": "DeleteConversation",
+          "fullName": "google.cloud.geminidataanalytics.v1beta.DataChatService.DeleteConversation",
+          "service": {
+            "shortName": "DataChatService",
+            "fullName": "google.cloud.geminidataanalytics.v1beta.DataChatService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "geminidataanalytics_v1beta_generated_DataChatService_DeleteConversation_sync_flattened_resourceNames",
+      "title": "DeleteConversationResourceNames",
+      "description": "Snippet for DeleteConversation",
+      "file": "DataChatServiceClient.DeleteConversationResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteConversation",
+        "fullName": "Google.Cloud.GeminiDataAnalytics.V1Beta.DataChatServiceClient.DeleteConversation",
+        "parameters": [
+          {
+            "type": "Google.Cloud.GeminiDataAnalytics.V1Beta.ConversationName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "client": {
+          "shortName": "DataChatServiceClient",
+          "fullName": "Google.Cloud.GeminiDataAnalytics.V1Beta.DataChatServiceClient"
+        },
+        "method": {
+          "shortName": "DeleteConversation",
+          "fullName": "google.cloud.geminidataanalytics.v1beta.DataChatService.DeleteConversation",
+          "service": {
+            "shortName": "DataChatService",
+            "fullName": "google.cloud.geminidataanalytics.v1beta.DataChatService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "geminidataanalytics_v1beta_generated_DataChatService_DeleteConversation_async_flattened_resourceNames",
+      "title": "DeleteConversationResourceNamesAsync",
+      "description": "Snippet for DeleteConversationAsync",
+      "file": "DataChatServiceClient.DeleteConversationResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteConversationAsync",
+        "fullName": "Google.Cloud.GeminiDataAnalytics.V1Beta.DataChatServiceClient.DeleteConversationAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.GeminiDataAnalytics.V1Beta.ConversationName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task",
+        "client": {
+          "shortName": "DataChatServiceClient",
+          "fullName": "Google.Cloud.GeminiDataAnalytics.V1Beta.DataChatServiceClient"
+        },
+        "method": {
+          "shortName": "DeleteConversation",
+          "fullName": "google.cloud.geminidataanalytics.v1beta.DataChatService.DeleteConversation",
+          "service": {
+            "shortName": "DataChatService",
+            "fullName": "google.cloud.geminidataanalytics.v1beta.DataChatService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
       "regionTag": "geminidataanalytics_v1beta_generated_DataChatService_GetConversation_sync",
       "title": "GetConversationRequestObject",
       "description": "Snippet for GetConversation",

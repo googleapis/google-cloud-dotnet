@@ -53,14 +53,16 @@ namespace Google.Cloud.GeminiDataAnalytics.V1Beta {
             "AyABKAlCA+BBARITCgZmaWx0ZXIYBCABKAlCA+BBASKCAQoZTGlzdENvbnZl",
             "cnNhdGlvbnNSZXNwb25zZRJMCg1jb252ZXJzYXRpb25zGAEgAygLMjUuZ29v",
             "Z2xlLmNsb3VkLmdlbWluaWRhdGFhbmFseXRpY3MudjFiZXRhLkNvbnZlcnNh",
-            "dGlvbhIXCg9uZXh0X3BhZ2VfdG9rZW4YAiABKAlCogIKK2NvbS5nb29nbGUu",
-            "Y2xvdWQuZ2VtaW5pZGF0YWFuYWx5dGljcy52MWJldGFCEUNvbnZlcnNhdGlv",
-            "blByb3RvUAFaXWNsb3VkLmdvb2dsZS5jb20vZ28vZ2VtaW5pZGF0YWFuYWx5",
-            "dGljcy9hcGl2MWJldGEvZ2VtaW5pZGF0YWFuYWx5dGljc3BiO2dlbWluaWRh",
-            "dGFhbmFseXRpY3NwYqoCJ0dvb2dsZS5DbG91ZC5HZW1pbmlEYXRhQW5hbHl0",
-            "aWNzLlYxQmV0YcoCJ0dvb2dsZVxDbG91ZFxHZW1pbmlEYXRhQW5hbHl0aWNz",
-            "XFYxYmV0YeoCKkdvb2dsZTo6Q2xvdWQ6OkdlbWluaURhdGFBbmFseXRpY3M6",
-            "OlYxYmV0YWIGcHJvdG8z"));
+            "dGlvbhIXCg9uZXh0X3BhZ2VfdG9rZW4YAiABKAkiYgoZRGVsZXRlQ29udmVy",
+            "c2F0aW9uUmVxdWVzdBJFCgRuYW1lGAEgASgJQjfgQQL6QTEKL2dlbWluaWRh",
+            "dGFhbmFseXRpY3MuZ29vZ2xlYXBpcy5jb20vQ29udmVyc2F0aW9uQqICCitj",
+            "b20uZ29vZ2xlLmNsb3VkLmdlbWluaWRhdGFhbmFseXRpY3MudjFiZXRhQhFD",
+            "b252ZXJzYXRpb25Qcm90b1ABWl1jbG91ZC5nb29nbGUuY29tL2dvL2dlbWlu",
+            "aWRhdGFhbmFseXRpY3MvYXBpdjFiZXRhL2dlbWluaWRhdGFhbmFseXRpY3Nw",
+            "YjtnZW1pbmlkYXRhYW5hbHl0aWNzcGKqAidHb29nbGUuQ2xvdWQuR2VtaW5p",
+            "RGF0YUFuYWx5dGljcy5WMUJldGHKAidHb29nbGVcQ2xvdWRcR2VtaW5pRGF0",
+            "YUFuYWx5dGljc1xWMWJldGHqAipHb29nbGU6OkNsb3VkOjpHZW1pbmlEYXRh",
+            "QW5hbHl0aWNzOjpWMWJldGFiBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.FieldInfoReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
@@ -68,7 +70,8 @@ namespace Google.Cloud.GeminiDataAnalytics.V1Beta {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.GeminiDataAnalytics.V1Beta.CreateConversationRequest), global::Google.Cloud.GeminiDataAnalytics.V1Beta.CreateConversationRequest.Parser, new[]{ "Parent", "ConversationId", "Conversation", "RequestId" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.GeminiDataAnalytics.V1Beta.GetConversationRequest), global::Google.Cloud.GeminiDataAnalytics.V1Beta.GetConversationRequest.Parser, new[]{ "Name" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.GeminiDataAnalytics.V1Beta.ListConversationsRequest), global::Google.Cloud.GeminiDataAnalytics.V1Beta.ListConversationsRequest.Parser, new[]{ "Parent", "PageSize", "PageToken", "Filter" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.GeminiDataAnalytics.V1Beta.ListConversationsResponse), global::Google.Cloud.GeminiDataAnalytics.V1Beta.ListConversationsResponse.Parser, new[]{ "Conversations", "NextPageToken" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.GeminiDataAnalytics.V1Beta.ListConversationsResponse), global::Google.Cloud.GeminiDataAnalytics.V1Beta.ListConversationsResponse.Parser, new[]{ "Conversations", "NextPageToken" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.GeminiDataAnalytics.V1Beta.DeleteConversationRequest), global::Google.Cloud.GeminiDataAnalytics.V1Beta.DeleteConversationRequest.Parser, new[]{ "Name" }, null, null, null, null)
           }));
     }
     #endregion
@@ -138,7 +141,7 @@ namespace Google.Cloud.GeminiDataAnalytics.V1Beta {
     /// https://google.aip.dev/122#resource-id-segments
     ///
     /// Example:
-    /// `projects/1234567890/locations/us-central1/conversations/my-conversation`.
+    /// `projects/1234567890/locations/global/conversations/my-conversation`.
     ///
     /// It is recommended to skip setting this field during conversation creation
     /// as it will be inferred automatically and overwritten with the
@@ -1078,7 +1081,7 @@ namespace Google.Cloud.GeminiDataAnalytics.V1Beta {
     /// <summary>
     /// Optional. Returned conversations will match criteria specified within the
     /// filter. ListConversations allows filtering by:
-    ///  * agent_id
+    ///  * agents
     ///  * labels
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1511,6 +1514,204 @@ namespace Google.Cloud.GeminiDataAnalytics.V1Beta {
           }
           case 18: {
             NextPageToken = input.ReadString();
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+  }
+
+  /// <summary>
+  /// Request for deleting a conversation based on parent and conversation id.
+  /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+  public sealed partial class DeleteConversationRequest : pb::IMessage<DeleteConversationRequest>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<DeleteConversationRequest> _parser = new pb::MessageParser<DeleteConversationRequest>(() => new DeleteConversationRequest());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<DeleteConversationRequest> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Cloud.GeminiDataAnalytics.V1Beta.ConversationReflection.Descriptor.MessageTypes[5]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public DeleteConversationRequest() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public DeleteConversationRequest(DeleteConversationRequest other) : this() {
+      name_ = other.name_;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public DeleteConversationRequest Clone() {
+      return new DeleteConversationRequest(this);
+    }
+
+    /// <summary>Field number for the "name" field.</summary>
+    public const int NameFieldNumber = 1;
+    private string name_ = "";
+    /// <summary>
+    /// Required. Name of the resource.
+    /// Format:
+    /// `projects/{project}/locations/{location}/conversations/{conversation}`
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string Name {
+      get { return name_; }
+      set {
+        name_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as DeleteConversationRequest);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(DeleteConversationRequest other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (Name != other.Name) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (Name.Length != 0) hash ^= Name.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (Name.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(Name);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (Name.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(Name);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      if (Name.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Name);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(DeleteConversationRequest other) {
+      if (other == null) {
+        return;
+      }
+      if (other.Name.Length != 0) {
+        Name = other.Name;
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            Name = input.ReadString();
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            Name = input.ReadString();
             break;
           }
         }

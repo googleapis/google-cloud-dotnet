@@ -322,4 +322,16 @@ namespace Google.Cloud.GeminiDataAnalytics.V1Beta
             set => Parent = value?.ToString() ?? "";
         }
     }
+
+    public partial class DeleteConversationRequest
+    {
+        /// <summary>
+        /// <see cref="gcgv::ConversationName"/>-typed view over the <see cref="Name"/> resource name property.
+        /// </summary>
+        public gcgv::ConversationName ConversationName
+        {
+            get => string.IsNullOrEmpty(Name) ? null : gcgv::ConversationName.Parse(Name, allowUnparsed: true);
+            set => Name = value?.ToString() ?? "";
+        }
+    }
 }

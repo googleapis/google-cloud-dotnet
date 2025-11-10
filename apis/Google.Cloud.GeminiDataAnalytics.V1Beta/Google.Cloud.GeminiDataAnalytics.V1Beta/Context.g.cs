@@ -28,43 +28,67 @@ namespace Google.Cloud.GeminiDataAnalytics.V1Beta {
             "dGV4dC5wcm90bxInZ29vZ2xlLmNsb3VkLmdlbWluaWRhdGFhbmFseXRpY3Mu",
             "djFiZXRhGh9nb29nbGUvYXBpL2ZpZWxkX2JlaGF2aW9yLnByb3RvGjhnb29n",
             "bGUvY2xvdWQvZ2VtaW5pZGF0YWFuYWx5dGljcy92MWJldGEvZGF0YXNvdXJj",
-            "ZS5wcm90byK2AgoHQ29udGV4dBIfChJzeXN0ZW1faW5zdHJ1Y3Rpb24YASAB",
-            "KAlCA+BBARJhChVkYXRhc291cmNlX3JlZmVyZW5jZXMYByABKAsyPS5nb29n",
-            "bGUuY2xvdWQuZ2VtaW5pZGF0YWFuYWx5dGljcy52MWJldGEuRGF0YXNvdXJj",
-            "ZVJlZmVyZW5jZXNCA+BBAhJSCgdvcHRpb25zGAMgASgLMjwuZ29vZ2xlLmNs",
-            "b3VkLmdlbWluaWRhdGFhbmFseXRpY3MudjFiZXRhLkNvbnZlcnNhdGlvbk9w",
-            "dGlvbnNCA+BBARJTCg9leGFtcGxlX3F1ZXJpZXMYBSADKAsyNS5nb29nbGUu",
-            "Y2xvdWQuZ2VtaW5pZGF0YWFuYWx5dGljcy52MWJldGEuRXhhbXBsZVF1ZXJ5",
-            "QgPgQQEiWQoMRXhhbXBsZVF1ZXJ5EhgKCXNxbF9xdWVyeRhlIAEoCUID4EEB",
-            "SAASJgoZbmF0dXJhbF9sYW5ndWFnZV9xdWVzdGlvbhgBIAEoCUID4EEBQgcK",
-            "BXF1ZXJ5IrEBChNDb252ZXJzYXRpb25PcHRpb25zEkkKBWNoYXJ0GAEgASgL",
-            "MjUuZ29vZ2xlLmNsb3VkLmdlbWluaWRhdGFhbmFseXRpY3MudjFiZXRhLkNo",
-            "YXJ0T3B0aW9uc0ID4EEBEk8KCGFuYWx5c2lzGAIgASgLMjguZ29vZ2xlLmNs",
-            "b3VkLmdlbWluaWRhdGFhbmFseXRpY3MudjFiZXRhLkFuYWx5c2lzT3B0aW9u",
-            "c0ID4EEBItYCCgxDaGFydE9wdGlvbnMSVgoFaW1hZ2UYASABKAsyQi5nb29n",
-            "bGUuY2xvdWQuZ2VtaW5pZGF0YWFuYWx5dGljcy52MWJldGEuQ2hhcnRPcHRp",
-            "b25zLkltYWdlT3B0aW9uc0ID4EEBGu0BCgxJbWFnZU9wdGlvbnMSXgoIbm9f",
-            "aW1hZ2UYASABKAsySi5nb29nbGUuY2xvdWQuZ2VtaW5pZGF0YWFuYWx5dGlj",
-            "cy52MWJldGEuQ2hhcnRPcHRpb25zLkltYWdlT3B0aW9ucy5Ob0ltYWdlSAAS",
-            "XAoDc3ZnGAIgASgLMk0uZ29vZ2xlLmNsb3VkLmdlbWluaWRhdGFhbmFseXRp",
-            "Y3MudjFiZXRhLkNoYXJ0T3B0aW9ucy5JbWFnZU9wdGlvbnMuU3ZnT3B0aW9u",
-            "c0gAGgkKB05vSW1hZ2UaDAoKU3ZnT3B0aW9uc0IGCgRraW5kIocBCg9BbmFs",
-            "eXNpc09wdGlvbnMSVAoGcHl0aG9uGAEgASgLMj8uZ29vZ2xlLmNsb3VkLmdl",
-            "bWluaWRhdGFhbmFseXRpY3MudjFiZXRhLkFuYWx5c2lzT3B0aW9ucy5QeXRo",
-            "b25CA+BBARoeCgZQeXRob24SFAoHZW5hYmxlZBgBIAEoCEID4EEBQp0CCitj",
-            "b20uZ29vZ2xlLmNsb3VkLmdlbWluaWRhdGFhbmFseXRpY3MudjFiZXRhQgxD",
-            "b250ZXh0UHJvdG9QAVpdY2xvdWQuZ29vZ2xlLmNvbS9nby9nZW1pbmlkYXRh",
-            "YW5hbHl0aWNzL2FwaXYxYmV0YS9nZW1pbmlkYXRhYW5hbHl0aWNzcGI7Z2Vt",
-            "aW5pZGF0YWFuYWx5dGljc3BiqgInR29vZ2xlLkNsb3VkLkdlbWluaURhdGFB",
-            "bmFseXRpY3MuVjFCZXRhygInR29vZ2xlXENsb3VkXEdlbWluaURhdGFBbmFs",
-            "eXRpY3NcVjFiZXRh6gIqR29vZ2xlOjpDbG91ZDo6R2VtaW5pRGF0YUFuYWx5",
-            "dGljczo6VjFiZXRhYgZwcm90bzM="));
+            "ZS5wcm90bxoeZ29vZ2xlL3Byb3RvYnVmL3dyYXBwZXJzLnByb3RvIvkHCgdD",
+            "b250ZXh0Eh8KEnN5c3RlbV9pbnN0cnVjdGlvbhgBIAEoCUID4EEBEmEKFWRh",
+            "dGFzb3VyY2VfcmVmZXJlbmNlcxgHIAEoCzI9Lmdvb2dsZS5jbG91ZC5nZW1p",
+            "bmlkYXRhYW5hbHl0aWNzLnYxYmV0YS5EYXRhc291cmNlUmVmZXJlbmNlc0ID",
+            "4EECElIKB29wdGlvbnMYAyABKAsyPC5nb29nbGUuY2xvdWQuZ2VtaW5pZGF0",
+            "YWFuYWx5dGljcy52MWJldGEuQ29udmVyc2F0aW9uT3B0aW9uc0ID4EEBElMK",
+            "D2V4YW1wbGVfcXVlcmllcxgFIAMoCzI1Lmdvb2dsZS5jbG91ZC5nZW1pbmlk",
+            "YXRhYW5hbHl0aWNzLnYxYmV0YS5FeGFtcGxlUXVlcnlCA+BBARJSCg5nbG9z",
+            "c2FyeV90ZXJtcxgIIAMoCzI1Lmdvb2dsZS5jbG91ZC5nZW1pbmlkYXRhYW5h",
+            "bHl0aWNzLnYxYmV0YS5HbG9zc2FyeVRlcm1CA+BBARJmChRzY2hlbWFfcmVs",
+            "YXRpb25zaGlwcxgJIAMoCzJDLmdvb2dsZS5jbG91ZC5nZW1pbmlkYXRhYW5h",
+            "bHl0aWNzLnYxYmV0YS5Db250ZXh0LlNjaGVtYVJlbGF0aW9uc2hpcEID4EEB",
+            "GoQEChJTY2hlbWFSZWxhdGlvbnNoaXASagoRbGVmdF9zY2hlbWFfcGF0aHMY",
+            "ASABKAsyTy5nb29nbGUuY2xvdWQuZ2VtaW5pZGF0YWFuYWx5dGljcy52MWJl",
+            "dGEuQ29udGV4dC5TY2hlbWFSZWxhdGlvbnNoaXAuU2NoZW1hUGF0aHMSawoS",
+            "cmlnaHRfc2NoZW1hX3BhdGhzGAIgASgLMk8uZ29vZ2xlLmNsb3VkLmdlbWlu",
+            "aWRhdGFhbmFseXRpY3MudjFiZXRhLkNvbnRleHQuU2NoZW1hUmVsYXRpb25z",
+            "aGlwLlNjaGVtYVBhdGhzElsKB3NvdXJjZXMYAyADKA4ySi5nb29nbGUuY2xv",
+            "dWQuZ2VtaW5pZGF0YWFuYWx5dGljcy52MWJldGEuQ29udGV4dC5TY2hlbWFS",
+            "ZWxhdGlvbnNoaXAuU291cmNlEhgKEGNvbmZpZGVuY2Vfc2NvcmUYBCABKAIa",
+            "LwoLU2NoZW1hUGF0aHMSEQoJdGFibGVfZnFuGAEgASgJEg0KBXBhdGhzGAIg",
+            "AygJIm0KBlNvdXJjZRIWChJTT1VSQ0VfVU5TUEVDSUZJRUQQABIYChRCSUdR",
+            "VUVSWV9KT0JfSElTVE9SWRABEhEKDUxMTV9TVUdHRVNURUQQAhIeChpCSUdR",
+            "VUVSWV9UQUJMRV9DT05TVFJBSU5UUxADIlkKDEV4YW1wbGVRdWVyeRIYCglz",
+            "cWxfcXVlcnkYZSABKAlCA+BBAUgAEiYKGW5hdHVyYWxfbGFuZ3VhZ2VfcXVl",
+            "c3Rpb24YASABKAlCA+BBAUIHCgVxdWVyeSJYCgxHbG9zc2FyeVRlcm0SGQoM",
+            "ZGlzcGxheV9uYW1lGAEgASgJQgPgQQISGAoLZGVzY3JpcHRpb24YAiABKAlC",
+            "A+BBAhITCgZsYWJlbHMYAyADKAlCA+BBASKGAgoTQ29udmVyc2F0aW9uT3B0",
+            "aW9ucxJJCgVjaGFydBgBIAEoCzI1Lmdvb2dsZS5jbG91ZC5nZW1pbmlkYXRh",
+            "YW5hbHl0aWNzLnYxYmV0YS5DaGFydE9wdGlvbnNCA+BBARJPCghhbmFseXNp",
+            "cxgCIAEoCzI4Lmdvb2dsZS5jbG91ZC5nZW1pbmlkYXRhYW5hbHl0aWNzLnYx",
+            "YmV0YS5BbmFseXNpc09wdGlvbnNCA+BBARJTCgpkYXRhc291cmNlGAMgASgL",
+            "MjouZ29vZ2xlLmNsb3VkLmdlbWluaWRhdGFhbmFseXRpY3MudjFiZXRhLkRh",
+            "dGFzb3VyY2VPcHRpb25zQgPgQQEiWQoRRGF0YXNvdXJjZU9wdGlvbnMSRAoa",
+            "YmlnX3F1ZXJ5X21heF9iaWxsZWRfYnl0ZXMYASABKAsyGy5nb29nbGUucHJv",
+            "dG9idWYuSW50NjRWYWx1ZUID4EEBItYCCgxDaGFydE9wdGlvbnMSVgoFaW1h",
+            "Z2UYASABKAsyQi5nb29nbGUuY2xvdWQuZ2VtaW5pZGF0YWFuYWx5dGljcy52",
+            "MWJldGEuQ2hhcnRPcHRpb25zLkltYWdlT3B0aW9uc0ID4EEBGu0BCgxJbWFn",
+            "ZU9wdGlvbnMSXgoIbm9faW1hZ2UYASABKAsySi5nb29nbGUuY2xvdWQuZ2Vt",
+            "aW5pZGF0YWFuYWx5dGljcy52MWJldGEuQ2hhcnRPcHRpb25zLkltYWdlT3B0",
+            "aW9ucy5Ob0ltYWdlSAASXAoDc3ZnGAIgASgLMk0uZ29vZ2xlLmNsb3VkLmdl",
+            "bWluaWRhdGFhbmFseXRpY3MudjFiZXRhLkNoYXJ0T3B0aW9ucy5JbWFnZU9w",
+            "dGlvbnMuU3ZnT3B0aW9uc0gAGgkKB05vSW1hZ2UaDAoKU3ZnT3B0aW9uc0IG",
+            "CgRraW5kIocBCg9BbmFseXNpc09wdGlvbnMSVAoGcHl0aG9uGAEgASgLMj8u",
+            "Z29vZ2xlLmNsb3VkLmdlbWluaWRhdGFhbmFseXRpY3MudjFiZXRhLkFuYWx5",
+            "c2lzT3B0aW9ucy5QeXRob25CA+BBARoeCgZQeXRob24SFAoHZW5hYmxlZBgB",
+            "IAEoCEID4EEBQp0CCitjb20uZ29vZ2xlLmNsb3VkLmdlbWluaWRhdGFhbmFs",
+            "eXRpY3MudjFiZXRhQgxDb250ZXh0UHJvdG9QAVpdY2xvdWQuZ29vZ2xlLmNv",
+            "bS9nby9nZW1pbmlkYXRhYW5hbHl0aWNzL2FwaXYxYmV0YS9nZW1pbmlkYXRh",
+            "YW5hbHl0aWNzcGI7Z2VtaW5pZGF0YWFuYWx5dGljc3BiqgInR29vZ2xlLkNs",
+            "b3VkLkdlbWluaURhdGFBbmFseXRpY3MuVjFCZXRhygInR29vZ2xlXENsb3Vk",
+            "XEdlbWluaURhdGFBbmFseXRpY3NcVjFiZXRh6gIqR29vZ2xlOjpDbG91ZDo6",
+            "R2VtaW5pRGF0YUFuYWx5dGljczo6VjFiZXRhYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Cloud.GeminiDataAnalytics.V1Beta.DatasourceReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Cloud.GeminiDataAnalytics.V1Beta.DatasourceReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.WrappersReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.GeminiDataAnalytics.V1Beta.Context), global::Google.Cloud.GeminiDataAnalytics.V1Beta.Context.Parser, new[]{ "SystemInstruction", "DatasourceReferences", "Options", "ExampleQueries" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.GeminiDataAnalytics.V1Beta.Context), global::Google.Cloud.GeminiDataAnalytics.V1Beta.Context.Parser, new[]{ "SystemInstruction", "DatasourceReferences", "Options", "ExampleQueries", "GlossaryTerms", "SchemaRelationships" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.GeminiDataAnalytics.V1Beta.Context.Types.SchemaRelationship), global::Google.Cloud.GeminiDataAnalytics.V1Beta.Context.Types.SchemaRelationship.Parser, new[]{ "LeftSchemaPaths", "RightSchemaPaths", "Sources", "ConfidenceScore" }, null, new[]{ typeof(global::Google.Cloud.GeminiDataAnalytics.V1Beta.Context.Types.SchemaRelationship.Types.Source) }, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.GeminiDataAnalytics.V1Beta.Context.Types.SchemaRelationship.Types.SchemaPaths), global::Google.Cloud.GeminiDataAnalytics.V1Beta.Context.Types.SchemaRelationship.Types.SchemaPaths.Parser, new[]{ "TableFqn", "Paths" }, null, null, null, null)})}),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.GeminiDataAnalytics.V1Beta.ExampleQuery), global::Google.Cloud.GeminiDataAnalytics.V1Beta.ExampleQuery.Parser, new[]{ "SqlQuery", "NaturalLanguageQuestion" }, new[]{ "Query" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.GeminiDataAnalytics.V1Beta.ConversationOptions), global::Google.Cloud.GeminiDataAnalytics.V1Beta.ConversationOptions.Parser, new[]{ "Chart", "Analysis" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.GeminiDataAnalytics.V1Beta.GlossaryTerm), global::Google.Cloud.GeminiDataAnalytics.V1Beta.GlossaryTerm.Parser, new[]{ "DisplayName", "Description", "Labels" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.GeminiDataAnalytics.V1Beta.ConversationOptions), global::Google.Cloud.GeminiDataAnalytics.V1Beta.ConversationOptions.Parser, new[]{ "Chart", "Analysis", "Datasource" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.GeminiDataAnalytics.V1Beta.DatasourceOptions), global::Google.Cloud.GeminiDataAnalytics.V1Beta.DatasourceOptions.Parser, new[]{ "BigQueryMaxBilledBytes" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.GeminiDataAnalytics.V1Beta.ChartOptions), global::Google.Cloud.GeminiDataAnalytics.V1Beta.ChartOptions.Parser, new[]{ "Image" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.GeminiDataAnalytics.V1Beta.ChartOptions.Types.ImageOptions), global::Google.Cloud.GeminiDataAnalytics.V1Beta.ChartOptions.Types.ImageOptions.Parser, new[]{ "NoImage", "Svg" }, new[]{ "Kind" }, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.GeminiDataAnalytics.V1Beta.ChartOptions.Types.ImageOptions.Types.NoImage), global::Google.Cloud.GeminiDataAnalytics.V1Beta.ChartOptions.Types.ImageOptions.Types.NoImage.Parser, null, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.GeminiDataAnalytics.V1Beta.ChartOptions.Types.ImageOptions.Types.SvgOptions), global::Google.Cloud.GeminiDataAnalytics.V1Beta.ChartOptions.Types.ImageOptions.Types.SvgOptions.Parser, null, null, null, null, null)})}),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.GeminiDataAnalytics.V1Beta.AnalysisOptions), global::Google.Cloud.GeminiDataAnalytics.V1Beta.AnalysisOptions.Parser, new[]{ "Python" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.GeminiDataAnalytics.V1Beta.AnalysisOptions.Types.Python), global::Google.Cloud.GeminiDataAnalytics.V1Beta.AnalysisOptions.Types.Python.Parser, new[]{ "Enabled" }, null, null, null, null)})
@@ -116,6 +140,8 @@ namespace Google.Cloud.GeminiDataAnalytics.V1Beta {
       datasourceReferences_ = other.datasourceReferences_ != null ? other.datasourceReferences_.Clone() : null;
       options_ = other.options_ != null ? other.options_.Clone() : null;
       exampleQueries_ = other.exampleQueries_.Clone();
+      glossaryTerms_ = other.glossaryTerms_.Clone();
+      schemaRelationships_ = other.schemaRelationships_.Clone();
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -183,12 +209,41 @@ namespace Google.Cloud.GeminiDataAnalytics.V1Beta {
     /// <summary>
     /// Optional. A list of example queries, providing examples of relevant and
     /// commonly used SQL queries and their corresponding natural language queries
-    /// optionally present.
+    /// optionally present. Currently only used for BigQuery data sources.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public pbc::RepeatedField<global::Google.Cloud.GeminiDataAnalytics.V1Beta.ExampleQuery> ExampleQueries {
       get { return exampleQueries_; }
+    }
+
+    /// <summary>Field number for the "glossary_terms" field.</summary>
+    public const int GlossaryTermsFieldNumber = 8;
+    private static readonly pb::FieldCodec<global::Google.Cloud.GeminiDataAnalytics.V1Beta.GlossaryTerm> _repeated_glossaryTerms_codec
+        = pb::FieldCodec.ForMessage(66, global::Google.Cloud.GeminiDataAnalytics.V1Beta.GlossaryTerm.Parser);
+    private readonly pbc::RepeatedField<global::Google.Cloud.GeminiDataAnalytics.V1Beta.GlossaryTerm> glossaryTerms_ = new pbc::RepeatedField<global::Google.Cloud.GeminiDataAnalytics.V1Beta.GlossaryTerm>();
+    /// <summary>
+    /// Optional. Term definitions (currently, only user authored)
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pbc::RepeatedField<global::Google.Cloud.GeminiDataAnalytics.V1Beta.GlossaryTerm> GlossaryTerms {
+      get { return glossaryTerms_; }
+    }
+
+    /// <summary>Field number for the "schema_relationships" field.</summary>
+    public const int SchemaRelationshipsFieldNumber = 9;
+    private static readonly pb::FieldCodec<global::Google.Cloud.GeminiDataAnalytics.V1Beta.Context.Types.SchemaRelationship> _repeated_schemaRelationships_codec
+        = pb::FieldCodec.ForMessage(74, global::Google.Cloud.GeminiDataAnalytics.V1Beta.Context.Types.SchemaRelationship.Parser);
+    private readonly pbc::RepeatedField<global::Google.Cloud.GeminiDataAnalytics.V1Beta.Context.Types.SchemaRelationship> schemaRelationships_ = new pbc::RepeatedField<global::Google.Cloud.GeminiDataAnalytics.V1Beta.Context.Types.SchemaRelationship>();
+    /// <summary>
+    /// Optional. Relationships between table schema, including referencing and
+    /// referenced columns.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pbc::RepeatedField<global::Google.Cloud.GeminiDataAnalytics.V1Beta.Context.Types.SchemaRelationship> SchemaRelationships {
+      get { return schemaRelationships_; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -210,6 +265,8 @@ namespace Google.Cloud.GeminiDataAnalytics.V1Beta {
       if (!object.Equals(DatasourceReferences, other.DatasourceReferences)) return false;
       if (!object.Equals(Options, other.Options)) return false;
       if(!exampleQueries_.Equals(other.exampleQueries_)) return false;
+      if(!glossaryTerms_.Equals(other.glossaryTerms_)) return false;
+      if(!schemaRelationships_.Equals(other.schemaRelationships_)) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -221,6 +278,8 @@ namespace Google.Cloud.GeminiDataAnalytics.V1Beta {
       if (datasourceReferences_ != null) hash ^= DatasourceReferences.GetHashCode();
       if (options_ != null) hash ^= Options.GetHashCode();
       hash ^= exampleQueries_.GetHashCode();
+      hash ^= glossaryTerms_.GetHashCode();
+      hash ^= schemaRelationships_.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -252,6 +311,8 @@ namespace Google.Cloud.GeminiDataAnalytics.V1Beta {
         output.WriteRawTag(58);
         output.WriteMessage(DatasourceReferences);
       }
+      glossaryTerms_.WriteTo(output, _repeated_glossaryTerms_codec);
+      schemaRelationships_.WriteTo(output, _repeated_schemaRelationships_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -275,6 +336,8 @@ namespace Google.Cloud.GeminiDataAnalytics.V1Beta {
         output.WriteRawTag(58);
         output.WriteMessage(DatasourceReferences);
       }
+      glossaryTerms_.WriteTo(ref output, _repeated_glossaryTerms_codec);
+      schemaRelationships_.WriteTo(ref output, _repeated_schemaRelationships_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -295,6 +358,8 @@ namespace Google.Cloud.GeminiDataAnalytics.V1Beta {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(Options);
       }
       size += exampleQueries_.CalculateSize(_repeated_exampleQueries_codec);
+      size += glossaryTerms_.CalculateSize(_repeated_glossaryTerms_codec);
+      size += schemaRelationships_.CalculateSize(_repeated_schemaRelationships_codec);
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
       }
@@ -323,6 +388,8 @@ namespace Google.Cloud.GeminiDataAnalytics.V1Beta {
         Options.MergeFrom(other.Options);
       }
       exampleQueries_.Add(other.exampleQueries_);
+      glossaryTerms_.Add(other.glossaryTerms_);
+      schemaRelationships_.Add(other.schemaRelationships_);
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 
@@ -358,6 +425,14 @@ namespace Google.Cloud.GeminiDataAnalytics.V1Beta {
               DatasourceReferences = new global::Google.Cloud.GeminiDataAnalytics.V1Beta.DatasourceReferences();
             }
             input.ReadMessage(DatasourceReferences);
+            break;
+          }
+          case 66: {
+            glossaryTerms_.AddEntriesFrom(input, _repeated_glossaryTerms_codec);
+            break;
+          }
+          case 74: {
+            schemaRelationships_.AddEntriesFrom(input, _repeated_schemaRelationships_codec);
             break;
           }
         }
@@ -397,16 +472,624 @@ namespace Google.Cloud.GeminiDataAnalytics.V1Beta {
             input.ReadMessage(DatasourceReferences);
             break;
           }
+          case 66: {
+            glossaryTerms_.AddEntriesFrom(ref input, _repeated_glossaryTerms_codec);
+            break;
+          }
+          case 74: {
+            schemaRelationships_.AddEntriesFrom(ref input, _repeated_schemaRelationships_codec);
+            break;
+          }
         }
       }
     }
     #endif
 
+    #region Nested types
+    /// <summary>Container for nested types declared in the Context message type.</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static partial class Types {
+      /// <summary>
+      /// The relationship between two tables, including referencing and referenced
+      /// columns. This is a derived context retrieved from Dataplex Dataset
+      /// Insights.
+      /// </summary>
+      [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+      public sealed partial class SchemaRelationship : pb::IMessage<SchemaRelationship>
+      #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          , pb::IBufferMessage
+      #endif
+      {
+        private static readonly pb::MessageParser<SchemaRelationship> _parser = new pb::MessageParser<SchemaRelationship>(() => new SchemaRelationship());
+        private pb::UnknownFieldSet _unknownFields;
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public static pb::MessageParser<SchemaRelationship> Parser { get { return _parser; } }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public static pbr::MessageDescriptor Descriptor {
+          get { return global::Google.Cloud.GeminiDataAnalytics.V1Beta.Context.Descriptor.NestedTypes[0]; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        pbr::MessageDescriptor pb::IMessage.Descriptor {
+          get { return Descriptor; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public SchemaRelationship() {
+          OnConstruction();
+        }
+
+        partial void OnConstruction();
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public SchemaRelationship(SchemaRelationship other) : this() {
+          leftSchemaPaths_ = other.leftSchemaPaths_ != null ? other.leftSchemaPaths_.Clone() : null;
+          rightSchemaPaths_ = other.rightSchemaPaths_ != null ? other.rightSchemaPaths_.Clone() : null;
+          sources_ = other.sources_.Clone();
+          confidenceScore_ = other.confidenceScore_;
+          _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public SchemaRelationship Clone() {
+          return new SchemaRelationship(this);
+        }
+
+        /// <summary>Field number for the "left_schema_paths" field.</summary>
+        public const int LeftSchemaPathsFieldNumber = 1;
+        private global::Google.Cloud.GeminiDataAnalytics.V1Beta.Context.Types.SchemaRelationship.Types.SchemaPaths leftSchemaPaths_;
+        /// <summary>
+        /// An ordered list of fields for the join from the first table.
+        /// The size of this list must be the same as `right_schema_paths`.
+        /// Each field at index i in this list must correspond to a field at the same
+        /// index in the `right_schema_paths` list.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public global::Google.Cloud.GeminiDataAnalytics.V1Beta.Context.Types.SchemaRelationship.Types.SchemaPaths LeftSchemaPaths {
+          get { return leftSchemaPaths_; }
+          set {
+            leftSchemaPaths_ = value;
+          }
+        }
+
+        /// <summary>Field number for the "right_schema_paths" field.</summary>
+        public const int RightSchemaPathsFieldNumber = 2;
+        private global::Google.Cloud.GeminiDataAnalytics.V1Beta.Context.Types.SchemaRelationship.Types.SchemaPaths rightSchemaPaths_;
+        /// <summary>
+        /// An ordered list of fields for the join from the second table.
+        /// The size of this list must be the same as `left_schema_paths`.
+        /// Each field at index i in this list must correspond to a field at the same
+        /// index in the `left_schema_paths` list.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public global::Google.Cloud.GeminiDataAnalytics.V1Beta.Context.Types.SchemaRelationship.Types.SchemaPaths RightSchemaPaths {
+          get { return rightSchemaPaths_; }
+          set {
+            rightSchemaPaths_ = value;
+          }
+        }
+
+        /// <summary>Field number for the "sources" field.</summary>
+        public const int SourcesFieldNumber = 3;
+        private static readonly pb::FieldCodec<global::Google.Cloud.GeminiDataAnalytics.V1Beta.Context.Types.SchemaRelationship.Types.Source> _repeated_sources_codec
+            = pb::FieldCodec.ForEnum(26, x => (int) x, x => (global::Google.Cloud.GeminiDataAnalytics.V1Beta.Context.Types.SchemaRelationship.Types.Source) x);
+        private readonly pbc::RepeatedField<global::Google.Cloud.GeminiDataAnalytics.V1Beta.Context.Types.SchemaRelationship.Types.Source> sources_ = new pbc::RepeatedField<global::Google.Cloud.GeminiDataAnalytics.V1Beta.Context.Types.SchemaRelationship.Types.Source>();
+        /// <summary>
+        /// Sources which generated the schema relation edge.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public pbc::RepeatedField<global::Google.Cloud.GeminiDataAnalytics.V1Beta.Context.Types.SchemaRelationship.Types.Source> Sources {
+          get { return sources_; }
+        }
+
+        /// <summary>Field number for the "confidence_score" field.</summary>
+        public const int ConfidenceScoreFieldNumber = 4;
+        private float confidenceScore_;
+        /// <summary>
+        /// A confidence score for the suggested relationship.
+        /// Manually added edges have the highest confidence score.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public float ConfidenceScore {
+          get { return confidenceScore_; }
+          set {
+            confidenceScore_ = value;
+          }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override bool Equals(object other) {
+          return Equals(other as SchemaRelationship);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public bool Equals(SchemaRelationship other) {
+          if (ReferenceEquals(other, null)) {
+            return false;
+          }
+          if (ReferenceEquals(other, this)) {
+            return true;
+          }
+          if (!object.Equals(LeftSchemaPaths, other.LeftSchemaPaths)) return false;
+          if (!object.Equals(RightSchemaPaths, other.RightSchemaPaths)) return false;
+          if(!sources_.Equals(other.sources_)) return false;
+          if (!pbc::ProtobufEqualityComparers.BitwiseSingleEqualityComparer.Equals(ConfidenceScore, other.ConfidenceScore)) return false;
+          return Equals(_unknownFields, other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override int GetHashCode() {
+          int hash = 1;
+          if (leftSchemaPaths_ != null) hash ^= LeftSchemaPaths.GetHashCode();
+          if (rightSchemaPaths_ != null) hash ^= RightSchemaPaths.GetHashCode();
+          hash ^= sources_.GetHashCode();
+          if (ConfidenceScore != 0F) hash ^= pbc::ProtobufEqualityComparers.BitwiseSingleEqualityComparer.GetHashCode(ConfidenceScore);
+          if (_unknownFields != null) {
+            hash ^= _unknownFields.GetHashCode();
+          }
+          return hash;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override string ToString() {
+          return pb::JsonFormatter.ToDiagnosticString(this);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void WriteTo(pb::CodedOutputStream output) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          output.WriteRawMessage(this);
+        #else
+          if (leftSchemaPaths_ != null) {
+            output.WriteRawTag(10);
+            output.WriteMessage(LeftSchemaPaths);
+          }
+          if (rightSchemaPaths_ != null) {
+            output.WriteRawTag(18);
+            output.WriteMessage(RightSchemaPaths);
+          }
+          sources_.WriteTo(output, _repeated_sources_codec);
+          if (ConfidenceScore != 0F) {
+            output.WriteRawTag(37);
+            output.WriteFloat(ConfidenceScore);
+          }
+          if (_unknownFields != null) {
+            _unknownFields.WriteTo(output);
+          }
+        #endif
+        }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+          if (leftSchemaPaths_ != null) {
+            output.WriteRawTag(10);
+            output.WriteMessage(LeftSchemaPaths);
+          }
+          if (rightSchemaPaths_ != null) {
+            output.WriteRawTag(18);
+            output.WriteMessage(RightSchemaPaths);
+          }
+          sources_.WriteTo(ref output, _repeated_sources_codec);
+          if (ConfidenceScore != 0F) {
+            output.WriteRawTag(37);
+            output.WriteFloat(ConfidenceScore);
+          }
+          if (_unknownFields != null) {
+            _unknownFields.WriteTo(ref output);
+          }
+        }
+        #endif
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public int CalculateSize() {
+          int size = 0;
+          if (leftSchemaPaths_ != null) {
+            size += 1 + pb::CodedOutputStream.ComputeMessageSize(LeftSchemaPaths);
+          }
+          if (rightSchemaPaths_ != null) {
+            size += 1 + pb::CodedOutputStream.ComputeMessageSize(RightSchemaPaths);
+          }
+          size += sources_.CalculateSize(_repeated_sources_codec);
+          if (ConfidenceScore != 0F) {
+            size += 1 + 4;
+          }
+          if (_unknownFields != null) {
+            size += _unknownFields.CalculateSize();
+          }
+          return size;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void MergeFrom(SchemaRelationship other) {
+          if (other == null) {
+            return;
+          }
+          if (other.leftSchemaPaths_ != null) {
+            if (leftSchemaPaths_ == null) {
+              LeftSchemaPaths = new global::Google.Cloud.GeminiDataAnalytics.V1Beta.Context.Types.SchemaRelationship.Types.SchemaPaths();
+            }
+            LeftSchemaPaths.MergeFrom(other.LeftSchemaPaths);
+          }
+          if (other.rightSchemaPaths_ != null) {
+            if (rightSchemaPaths_ == null) {
+              RightSchemaPaths = new global::Google.Cloud.GeminiDataAnalytics.V1Beta.Context.Types.SchemaRelationship.Types.SchemaPaths();
+            }
+            RightSchemaPaths.MergeFrom(other.RightSchemaPaths);
+          }
+          sources_.Add(other.sources_);
+          if (other.ConfidenceScore != 0F) {
+            ConfidenceScore = other.ConfidenceScore;
+          }
+          _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void MergeFrom(pb::CodedInputStream input) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          input.ReadRawMessage(this);
+        #else
+          uint tag;
+          while ((tag = input.ReadTag()) != 0) {
+            switch(tag) {
+              default:
+                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+                break;
+              case 10: {
+                if (leftSchemaPaths_ == null) {
+                  LeftSchemaPaths = new global::Google.Cloud.GeminiDataAnalytics.V1Beta.Context.Types.SchemaRelationship.Types.SchemaPaths();
+                }
+                input.ReadMessage(LeftSchemaPaths);
+                break;
+              }
+              case 18: {
+                if (rightSchemaPaths_ == null) {
+                  RightSchemaPaths = new global::Google.Cloud.GeminiDataAnalytics.V1Beta.Context.Types.SchemaRelationship.Types.SchemaPaths();
+                }
+                input.ReadMessage(RightSchemaPaths);
+                break;
+              }
+              case 26:
+              case 24: {
+                sources_.AddEntriesFrom(input, _repeated_sources_codec);
+                break;
+              }
+              case 37: {
+                ConfidenceScore = input.ReadFloat();
+                break;
+              }
+            }
+          }
+        #endif
+        }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+          uint tag;
+          while ((tag = input.ReadTag()) != 0) {
+            switch(tag) {
+              default:
+                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+                break;
+              case 10: {
+                if (leftSchemaPaths_ == null) {
+                  LeftSchemaPaths = new global::Google.Cloud.GeminiDataAnalytics.V1Beta.Context.Types.SchemaRelationship.Types.SchemaPaths();
+                }
+                input.ReadMessage(LeftSchemaPaths);
+                break;
+              }
+              case 18: {
+                if (rightSchemaPaths_ == null) {
+                  RightSchemaPaths = new global::Google.Cloud.GeminiDataAnalytics.V1Beta.Context.Types.SchemaRelationship.Types.SchemaPaths();
+                }
+                input.ReadMessage(RightSchemaPaths);
+                break;
+              }
+              case 26:
+              case 24: {
+                sources_.AddEntriesFrom(ref input, _repeated_sources_codec);
+                break;
+              }
+              case 37: {
+                ConfidenceScore = input.ReadFloat();
+                break;
+              }
+            }
+          }
+        }
+        #endif
+
+        #region Nested types
+        /// <summary>Container for nested types declared in the SchemaRelationship message type.</summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public static partial class Types {
+          /// <summary>
+          /// Source which generated the schema relation edge.
+          /// </summary>
+          public enum Source {
+            /// <summary>
+            /// The source of the schema relationship is unspecified.
+            /// </summary>
+            [pbr::OriginalName("SOURCE_UNSPECIFIED")] Unspecified = 0,
+            /// <summary>
+            /// The source of the schema relationship is BigQuery job history.
+            /// </summary>
+            [pbr::OriginalName("BIGQUERY_JOB_HISTORY")] BigqueryJobHistory = 1,
+            /// <summary>
+            /// The source of the schema relationship is LLM suggested.
+            /// </summary>
+            [pbr::OriginalName("LLM_SUGGESTED")] LlmSuggested = 2,
+            /// <summary>
+            /// The source of the schema relationship is BigQuery table constraints.
+            /// </summary>
+            [pbr::OriginalName("BIGQUERY_TABLE_CONSTRAINTS")] BigqueryTableConstraints = 3,
+          }
+
+          /// <summary>
+          /// Represents an ordered set of paths within the table schema.
+          /// </summary>
+          [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+          public sealed partial class SchemaPaths : pb::IMessage<SchemaPaths>
+          #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+              , pb::IBufferMessage
+          #endif
+          {
+            private static readonly pb::MessageParser<SchemaPaths> _parser = new pb::MessageParser<SchemaPaths>(() => new SchemaPaths());
+            private pb::UnknownFieldSet _unknownFields;
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public static pb::MessageParser<SchemaPaths> Parser { get { return _parser; } }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public static pbr::MessageDescriptor Descriptor {
+              get { return global::Google.Cloud.GeminiDataAnalytics.V1Beta.Context.Types.SchemaRelationship.Descriptor.NestedTypes[0]; }
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            pbr::MessageDescriptor pb::IMessage.Descriptor {
+              get { return Descriptor; }
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public SchemaPaths() {
+              OnConstruction();
+            }
+
+            partial void OnConstruction();
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public SchemaPaths(SchemaPaths other) : this() {
+              tableFqn_ = other.tableFqn_;
+              paths_ = other.paths_.Clone();
+              _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public SchemaPaths Clone() {
+              return new SchemaPaths(this);
+            }
+
+            /// <summary>Field number for the "table_fqn" field.</summary>
+            public const int TableFqnFieldNumber = 1;
+            private string tableFqn_ = "";
+            /// <summary>
+            /// The service-qualified full resource name of the table
+            /// Ex:
+            /// bigquery.googleapis.com/projects/PROJECT_ID/datasets/DATASET_ID/tables/TABLE_ID
+            /// </summary>
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public string TableFqn {
+              get { return tableFqn_; }
+              set {
+                tableFqn_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+              }
+            }
+
+            /// <summary>Field number for the "paths" field.</summary>
+            public const int PathsFieldNumber = 2;
+            private static readonly pb::FieldCodec<string> _repeated_paths_codec
+                = pb::FieldCodec.ForString(18);
+            private readonly pbc::RepeatedField<string> paths_ = new pbc::RepeatedField<string>();
+            /// <summary>
+            /// The ordered list of paths within the table schema.
+            /// </summary>
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public pbc::RepeatedField<string> Paths {
+              get { return paths_; }
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public override bool Equals(object other) {
+              return Equals(other as SchemaPaths);
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public bool Equals(SchemaPaths other) {
+              if (ReferenceEquals(other, null)) {
+                return false;
+              }
+              if (ReferenceEquals(other, this)) {
+                return true;
+              }
+              if (TableFqn != other.TableFqn) return false;
+              if(!paths_.Equals(other.paths_)) return false;
+              return Equals(_unknownFields, other._unknownFields);
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public override int GetHashCode() {
+              int hash = 1;
+              if (TableFqn.Length != 0) hash ^= TableFqn.GetHashCode();
+              hash ^= paths_.GetHashCode();
+              if (_unknownFields != null) {
+                hash ^= _unknownFields.GetHashCode();
+              }
+              return hash;
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public override string ToString() {
+              return pb::JsonFormatter.ToDiagnosticString(this);
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public void WriteTo(pb::CodedOutputStream output) {
+            #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+              output.WriteRawMessage(this);
+            #else
+              if (TableFqn.Length != 0) {
+                output.WriteRawTag(10);
+                output.WriteString(TableFqn);
+              }
+              paths_.WriteTo(output, _repeated_paths_codec);
+              if (_unknownFields != null) {
+                _unknownFields.WriteTo(output);
+              }
+            #endif
+            }
+
+            #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+              if (TableFqn.Length != 0) {
+                output.WriteRawTag(10);
+                output.WriteString(TableFqn);
+              }
+              paths_.WriteTo(ref output, _repeated_paths_codec);
+              if (_unknownFields != null) {
+                _unknownFields.WriteTo(ref output);
+              }
+            }
+            #endif
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public int CalculateSize() {
+              int size = 0;
+              if (TableFqn.Length != 0) {
+                size += 1 + pb::CodedOutputStream.ComputeStringSize(TableFqn);
+              }
+              size += paths_.CalculateSize(_repeated_paths_codec);
+              if (_unknownFields != null) {
+                size += _unknownFields.CalculateSize();
+              }
+              return size;
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public void MergeFrom(SchemaPaths other) {
+              if (other == null) {
+                return;
+              }
+              if (other.TableFqn.Length != 0) {
+                TableFqn = other.TableFqn;
+              }
+              paths_.Add(other.paths_);
+              _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public void MergeFrom(pb::CodedInputStream input) {
+            #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+              input.ReadRawMessage(this);
+            #else
+              uint tag;
+              while ((tag = input.ReadTag()) != 0) {
+                switch(tag) {
+                  default:
+                    _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+                    break;
+                  case 10: {
+                    TableFqn = input.ReadString();
+                    break;
+                  }
+                  case 18: {
+                    paths_.AddEntriesFrom(input, _repeated_paths_codec);
+                    break;
+                  }
+                }
+              }
+            #endif
+            }
+
+            #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+              uint tag;
+              while ((tag = input.ReadTag()) != 0) {
+                switch(tag) {
+                  default:
+                    _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+                    break;
+                  case 10: {
+                    TableFqn = input.ReadString();
+                    break;
+                  }
+                  case 18: {
+                    paths_.AddEntriesFrom(ref input, _repeated_paths_codec);
+                    break;
+                  }
+                }
+              }
+            }
+            #endif
+
+          }
+
+        }
+        #endregion
+
+      }
+
+    }
+    #endregion
+
   }
 
   /// <summary>
   /// Example of relevant and commonly used SQL query and its corresponding natural
-  /// language queries optionally present.
+  /// language queries optionally present. Currently only used for BigQuery data
+  /// sources.
   /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class ExampleQuery : pb::IMessage<ExampleQuery>
@@ -689,6 +1372,275 @@ namespace Google.Cloud.GeminiDataAnalytics.V1Beta {
   }
 
   /// <summary>
+  /// Definition of a term within a specific domain.
+  /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+  public sealed partial class GlossaryTerm : pb::IMessage<GlossaryTerm>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<GlossaryTerm> _parser = new pb::MessageParser<GlossaryTerm>(() => new GlossaryTerm());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<GlossaryTerm> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Cloud.GeminiDataAnalytics.V1Beta.ContextReflection.Descriptor.MessageTypes[2]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public GlossaryTerm() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public GlossaryTerm(GlossaryTerm other) : this() {
+      displayName_ = other.displayName_;
+      description_ = other.description_;
+      labels_ = other.labels_.Clone();
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public GlossaryTerm Clone() {
+      return new GlossaryTerm(this);
+    }
+
+    /// <summary>Field number for the "display_name" field.</summary>
+    public const int DisplayNameFieldNumber = 1;
+    private string displayName_ = "";
+    /// <summary>
+    /// Required. User friendly display name of the glossary term being defined.
+    /// For example: "CTR", "conversion rate", "pending"
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string DisplayName {
+      get { return displayName_; }
+      set {
+        displayName_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "description" field.</summary>
+    public const int DescriptionFieldNumber = 2;
+    private string description_ = "";
+    /// <summary>
+    /// Required. The description or meaning of the term.
+    /// For example: "Click-through rate", "The percentage of users who complete a
+    /// desired action", "An order that is waiting to be processed."
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string Description {
+      get { return description_; }
+      set {
+        description_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "labels" field.</summary>
+    public const int LabelsFieldNumber = 3;
+    private static readonly pb::FieldCodec<string> _repeated_labels_codec
+        = pb::FieldCodec.ForString(26);
+    private readonly pbc::RepeatedField<string> labels_ = new pbc::RepeatedField<string>();
+    /// <summary>
+    /// Optional. A list of general purpose labels associated to this term.
+    /// For example: ["click rate", "clickthrough", "waiting"]
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pbc::RepeatedField<string> Labels {
+      get { return labels_; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as GlossaryTerm);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(GlossaryTerm other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (DisplayName != other.DisplayName) return false;
+      if (Description != other.Description) return false;
+      if(!labels_.Equals(other.labels_)) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (DisplayName.Length != 0) hash ^= DisplayName.GetHashCode();
+      if (Description.Length != 0) hash ^= Description.GetHashCode();
+      hash ^= labels_.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (DisplayName.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(DisplayName);
+      }
+      if (Description.Length != 0) {
+        output.WriteRawTag(18);
+        output.WriteString(Description);
+      }
+      labels_.WriteTo(output, _repeated_labels_codec);
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (DisplayName.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(DisplayName);
+      }
+      if (Description.Length != 0) {
+        output.WriteRawTag(18);
+        output.WriteString(Description);
+      }
+      labels_.WriteTo(ref output, _repeated_labels_codec);
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      if (DisplayName.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(DisplayName);
+      }
+      if (Description.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Description);
+      }
+      size += labels_.CalculateSize(_repeated_labels_codec);
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(GlossaryTerm other) {
+      if (other == null) {
+        return;
+      }
+      if (other.DisplayName.Length != 0) {
+        DisplayName = other.DisplayName;
+      }
+      if (other.Description.Length != 0) {
+        Description = other.Description;
+      }
+      labels_.Add(other.labels_);
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            DisplayName = input.ReadString();
+            break;
+          }
+          case 18: {
+            Description = input.ReadString();
+            break;
+          }
+          case 26: {
+            labels_.AddEntriesFrom(input, _repeated_labels_codec);
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            DisplayName = input.ReadString();
+            break;
+          }
+          case 18: {
+            Description = input.ReadString();
+            break;
+          }
+          case 26: {
+            labels_.AddEntriesFrom(ref input, _repeated_labels_codec);
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+  }
+
+  /// <summary>
   /// Options for the conversation.
   /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
@@ -706,7 +1658,7 @@ namespace Google.Cloud.GeminiDataAnalytics.V1Beta {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.GeminiDataAnalytics.V1Beta.ContextReflection.Descriptor.MessageTypes[2]; }
+      get { return global::Google.Cloud.GeminiDataAnalytics.V1Beta.ContextReflection.Descriptor.MessageTypes[3]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -728,6 +1680,7 @@ namespace Google.Cloud.GeminiDataAnalytics.V1Beta {
     public ConversationOptions(ConversationOptions other) : this() {
       chart_ = other.chart_ != null ? other.chart_.Clone() : null;
       analysis_ = other.analysis_ != null ? other.analysis_.Clone() : null;
+      datasource_ = other.datasource_ != null ? other.datasource_.Clone() : null;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -767,6 +1720,21 @@ namespace Google.Cloud.GeminiDataAnalytics.V1Beta {
       }
     }
 
+    /// <summary>Field number for the "datasource" field.</summary>
+    public const int DatasourceFieldNumber = 3;
+    private global::Google.Cloud.GeminiDataAnalytics.V1Beta.DatasourceOptions datasource_;
+    /// <summary>
+    /// Optional. Options for datasources.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Cloud.GeminiDataAnalytics.V1Beta.DatasourceOptions Datasource {
+      get { return datasource_; }
+      set {
+        datasource_ = value;
+      }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
@@ -784,6 +1752,7 @@ namespace Google.Cloud.GeminiDataAnalytics.V1Beta {
       }
       if (!object.Equals(Chart, other.Chart)) return false;
       if (!object.Equals(Analysis, other.Analysis)) return false;
+      if (!object.Equals(Datasource, other.Datasource)) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -793,6 +1762,7 @@ namespace Google.Cloud.GeminiDataAnalytics.V1Beta {
       int hash = 1;
       if (chart_ != null) hash ^= Chart.GetHashCode();
       if (analysis_ != null) hash ^= Analysis.GetHashCode();
+      if (datasource_ != null) hash ^= Datasource.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -819,6 +1789,10 @@ namespace Google.Cloud.GeminiDataAnalytics.V1Beta {
         output.WriteRawTag(18);
         output.WriteMessage(Analysis);
       }
+      if (datasource_ != null) {
+        output.WriteRawTag(26);
+        output.WriteMessage(Datasource);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -837,6 +1811,10 @@ namespace Google.Cloud.GeminiDataAnalytics.V1Beta {
         output.WriteRawTag(18);
         output.WriteMessage(Analysis);
       }
+      if (datasource_ != null) {
+        output.WriteRawTag(26);
+        output.WriteMessage(Datasource);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -852,6 +1830,9 @@ namespace Google.Cloud.GeminiDataAnalytics.V1Beta {
       }
       if (analysis_ != null) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(Analysis);
+      }
+      if (datasource_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(Datasource);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -876,6 +1857,12 @@ namespace Google.Cloud.GeminiDataAnalytics.V1Beta {
           Analysis = new global::Google.Cloud.GeminiDataAnalytics.V1Beta.AnalysisOptions();
         }
         Analysis.MergeFrom(other.Analysis);
+      }
+      if (other.datasource_ != null) {
+        if (datasource_ == null) {
+          Datasource = new global::Google.Cloud.GeminiDataAnalytics.V1Beta.DatasourceOptions();
+        }
+        Datasource.MergeFrom(other.Datasource);
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -904,6 +1891,13 @@ namespace Google.Cloud.GeminiDataAnalytics.V1Beta {
               Analysis = new global::Google.Cloud.GeminiDataAnalytics.V1Beta.AnalysisOptions();
             }
             input.ReadMessage(Analysis);
+            break;
+          }
+          case 26: {
+            if (datasource_ == null) {
+              Datasource = new global::Google.Cloud.GeminiDataAnalytics.V1Beta.DatasourceOptions();
+            }
+            input.ReadMessage(Datasource);
             break;
           }
         }
@@ -935,6 +1929,220 @@ namespace Google.Cloud.GeminiDataAnalytics.V1Beta {
             input.ReadMessage(Analysis);
             break;
           }
+          case 26: {
+            if (datasource_ == null) {
+              Datasource = new global::Google.Cloud.GeminiDataAnalytics.V1Beta.DatasourceOptions();
+            }
+            input.ReadMessage(Datasource);
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+  }
+
+  /// <summary>
+  /// Options for datasources configurations.
+  /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+  public sealed partial class DatasourceOptions : pb::IMessage<DatasourceOptions>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<DatasourceOptions> _parser = new pb::MessageParser<DatasourceOptions>(() => new DatasourceOptions());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<DatasourceOptions> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Cloud.GeminiDataAnalytics.V1Beta.ContextReflection.Descriptor.MessageTypes[4]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public DatasourceOptions() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public DatasourceOptions(DatasourceOptions other) : this() {
+      BigQueryMaxBilledBytes = other.BigQueryMaxBilledBytes;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public DatasourceOptions Clone() {
+      return new DatasourceOptions(this);
+    }
+
+    /// <summary>Field number for the "big_query_max_billed_bytes" field.</summary>
+    public const int BigQueryMaxBilledBytesFieldNumber = 1;
+    private static readonly pb::FieldCodec<long?> _single_bigQueryMaxBilledBytes_codec = pb::FieldCodec.ForStructWrapper<long>(10);
+    private long? bigQueryMaxBilledBytes_;
+    /// <summary>
+    /// Optional. This option applies to datasources that require BigQuery queries
+    /// only. Limits the bytes billed for each BQ query job. Queries that will have
+    /// bytes billed beyond this limit will fail (without incurring a charge).
+    /// If unspecified, no limit will be applied.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public long? BigQueryMaxBilledBytes {
+      get { return bigQueryMaxBilledBytes_; }
+      set {
+        bigQueryMaxBilledBytes_ = value;
+      }
+    }
+
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as DatasourceOptions);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(DatasourceOptions other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (BigQueryMaxBilledBytes != other.BigQueryMaxBilledBytes) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (bigQueryMaxBilledBytes_ != null) hash ^= BigQueryMaxBilledBytes.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (bigQueryMaxBilledBytes_ != null) {
+        _single_bigQueryMaxBilledBytes_codec.WriteTagAndValue(output, BigQueryMaxBilledBytes);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (bigQueryMaxBilledBytes_ != null) {
+        _single_bigQueryMaxBilledBytes_codec.WriteTagAndValue(ref output, BigQueryMaxBilledBytes);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      if (bigQueryMaxBilledBytes_ != null) {
+        size += _single_bigQueryMaxBilledBytes_codec.CalculateSizeWithTag(BigQueryMaxBilledBytes);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(DatasourceOptions other) {
+      if (other == null) {
+        return;
+      }
+      if (other.bigQueryMaxBilledBytes_ != null) {
+        if (bigQueryMaxBilledBytes_ == null || other.BigQueryMaxBilledBytes != 0L) {
+          BigQueryMaxBilledBytes = other.BigQueryMaxBilledBytes;
+        }
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            long? value = _single_bigQueryMaxBilledBytes_codec.Read(input);
+            if (bigQueryMaxBilledBytes_ == null || value != 0L) {
+              BigQueryMaxBilledBytes = value;
+            }
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            long? value = _single_bigQueryMaxBilledBytes_codec.Read(ref input);
+            if (bigQueryMaxBilledBytes_ == null || value != 0L) {
+              BigQueryMaxBilledBytes = value;
+            }
+            break;
+          }
         }
       }
     }
@@ -960,7 +2168,7 @@ namespace Google.Cloud.GeminiDataAnalytics.V1Beta {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.GeminiDataAnalytics.V1Beta.ContextReflection.Descriptor.MessageTypes[3]; }
+      get { return global::Google.Cloud.GeminiDataAnalytics.V1Beta.ContextReflection.Descriptor.MessageTypes[5]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1789,7 +2997,7 @@ namespace Google.Cloud.GeminiDataAnalytics.V1Beta {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.GeminiDataAnalytics.V1Beta.ContextReflection.Descriptor.MessageTypes[4]; }
+      get { return global::Google.Cloud.GeminiDataAnalytics.V1Beta.ContextReflection.Descriptor.MessageTypes[6]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
