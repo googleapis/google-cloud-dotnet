@@ -1,5 +1,19 @@
 # Version history
 
+## Version 1.0.0-beta04, released 2025-11-10
+
+### New features
+
+- Adding a new SchemaRelationship message to define relationships between table schema
+- Adding a new TextType PROGRESS to provide informational messages about an agent's progress for supporting more granular Agent RAG tools
+- Adding struct_schema to Datasource to support flexible schemas, particularly for Looker datasources
+- Adding client_managed_resource_context to allow clients to manage their own conversation and agent resources
+- Adding a DeleteConversation RPC to allow for the deletion of conversations
+- Adding a GlossaryTerm message to allow users to provide definitions for domain-specific terms
+- Adding an ExampleQueries message to surface derived and authored example queries
+- Adding DatasourceOptions to provide configuration options for datasources
+- Adding support for LookerQuery within the DataQuery message for retrieving data from Looker explores
+
 ## Version 1.0.0-beta03, released 2025-11-05
 
 ### New features
