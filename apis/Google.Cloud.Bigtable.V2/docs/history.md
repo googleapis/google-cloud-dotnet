@@ -1,5 +1,11 @@
 # Version history
 
+## Version 3.26.0, released 2025-11-10
+
+### New features
+
+- Add PeerInfo proto in Bigtable API
+
 ## Version 3.25.0, released 2025-11-05
 
 ### New features
