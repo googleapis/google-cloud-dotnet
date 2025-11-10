@@ -79,6 +79,12 @@
                 "CreateConversationAsync"
               ]
             },
+            "DeleteConversation": {
+              "methods": [
+                "DeleteConversation",
+                "DeleteConversationAsync"
+              ]
+            },
             "GetConversation": {
               "methods": [
                 "GetConversation",

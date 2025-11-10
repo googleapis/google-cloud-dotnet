@@ -28,69 +28,71 @@ namespace Google.Cloud.GeminiDataAnalytics.V1Beta {
             "YXNvdXJjZS5wcm90bxInZ29vZ2xlLmNsb3VkLmdlbWluaWRhdGFhbmFseXRp",
             "Y3MudjFiZXRhGh9nb29nbGUvYXBpL2ZpZWxkX2JlaGF2aW9yLnByb3RvGjln",
             "b29nbGUvY2xvdWQvZ2VtaW5pZGF0YWFuYWx5dGljcy92MWJldGEvY3JlZGVu",
-            "dGlhbHMucHJvdG8inwIKFERhdGFzb3VyY2VSZWZlcmVuY2VzEk4KAmJxGAEg",
-            "ASgLMkAuZ29vZ2xlLmNsb3VkLmdlbWluaWRhdGFhbmFseXRpY3MudjFiZXRh",
-            "LkJpZ1F1ZXJ5VGFibGVSZWZlcmVuY2VzSAASVQoGc3R1ZGlvGAIgASgLMkMu",
-            "Z29vZ2xlLmNsb3VkLmdlbWluaWRhdGFhbmFseXRpY3MudjFiZXRhLlN0dWRp",
-            "b0RhdGFzb3VyY2VSZWZlcmVuY2VzSAASUgoGbG9va2VyGAMgASgLMkAuZ29v",
-            "Z2xlLmNsb3VkLmdlbWluaWRhdGFhbmFseXRpY3MudjFiZXRhLkxvb2tlckV4",
-            "cGxvcmVSZWZlcmVuY2VzSABCDAoKcmVmZXJlbmNlcyJ5ChdCaWdRdWVyeVRh",
-            "YmxlUmVmZXJlbmNlcxJeChB0YWJsZV9yZWZlcmVuY2VzGAEgAygLMj8uZ29v",
-            "Z2xlLmNsb3VkLmdlbWluaWRhdGFhbmFseXRpY3MudjFiZXRhLkJpZ1F1ZXJ5",
-            "VGFibGVSZWZlcmVuY2VCA+BBAiKnAQoWQmlnUXVlcnlUYWJsZVJlZmVyZW5j",
-            "ZRIXCgpwcm9qZWN0X2lkGAEgASgJQgPgQQISFwoKZGF0YXNldF9pZBgDIAEo",
-            "CUID4EECEhUKCHRhYmxlX2lkGAQgASgJQgPgQQISRAoGc2NoZW1hGAYgASgL",
-            "Mi8uZ29vZ2xlLmNsb3VkLmdlbWluaWRhdGFhbmFseXRpY3MudjFiZXRhLlNj",
-            "aGVtYUID4EEBInsKGlN0dWRpb0RhdGFzb3VyY2VSZWZlcmVuY2VzEl0KEXN0",
-            "dWRpb19yZWZlcmVuY2VzGAIgAygLMkIuZ29vZ2xlLmNsb3VkLmdlbWluaWRh",
-            "dGFhbmFseXRpY3MudjFiZXRhLlN0dWRpb0RhdGFzb3VyY2VSZWZlcmVuY2Ui",
-            "NwoZU3R1ZGlvRGF0YXNvdXJjZVJlZmVyZW5jZRIaCg1kYXRhc291cmNlX2lk",
-            "GAEgASgJQgPgQQIiywEKF0xvb2tlckV4cGxvcmVSZWZlcmVuY2VzEmAKEmV4",
-            "cGxvcmVfcmVmZXJlbmNlcxgBIAMoCzI/Lmdvb2dsZS5jbG91ZC5nZW1pbmlk",
-            "YXRhYW5hbHl0aWNzLnYxYmV0YS5Mb29rZXJFeHBsb3JlUmVmZXJlbmNlQgPg",
-            "QQISTgoLY3JlZGVudGlhbHMYAiABKAsyNC5nb29nbGUuY2xvdWQuZ2VtaW5p",
-            "ZGF0YWFuYWx5dGljcy52MWJldGEuQ3JlZGVudGlhbHNCA+BBASKmAgoWTG9v",
-            "a2VyRXhwbG9yZVJlZmVyZW5jZRIdChNsb29rZXJfaW5zdGFuY2VfdXJpGAkg",
-            "ASgJSAASagoccHJpdmF0ZV9sb29rZXJfaW5zdGFuY2VfaW5mbxgKIAEoCzJC",
-            "Lmdvb2dsZS5jbG91ZC5nZW1pbmlkYXRhYW5hbHl0aWNzLnYxYmV0YS5Qcml2",
-            "YXRlTG9va2VySW5zdGFuY2VJbmZvSAASGQoMbG9va21sX21vZGVsGAQgASgJ",
-            "QgPgQQISFAoHZXhwbG9yZRgFIAEoCUID4EECEkQKBnNjaGVtYRgIIAEoCzIv",
+            "dGlhbHMucHJvdG8aHGdvb2dsZS9wcm90b2J1Zi9zdHJ1Y3QucHJvdG8inwIK",
+            "FERhdGFzb3VyY2VSZWZlcmVuY2VzEk4KAmJxGAEgASgLMkAuZ29vZ2xlLmNs",
+            "b3VkLmdlbWluaWRhdGFhbmFseXRpY3MudjFiZXRhLkJpZ1F1ZXJ5VGFibGVS",
+            "ZWZlcmVuY2VzSAASVQoGc3R1ZGlvGAIgASgLMkMuZ29vZ2xlLmNsb3VkLmdl",
+            "bWluaWRhdGFhbmFseXRpY3MudjFiZXRhLlN0dWRpb0RhdGFzb3VyY2VSZWZl",
+            "cmVuY2VzSAASUgoGbG9va2VyGAMgASgLMkAuZ29vZ2xlLmNsb3VkLmdlbWlu",
+            "aWRhdGFhbmFseXRpY3MudjFiZXRhLkxvb2tlckV4cGxvcmVSZWZlcmVuY2Vz",
+            "SABCDAoKcmVmZXJlbmNlcyJ5ChdCaWdRdWVyeVRhYmxlUmVmZXJlbmNlcxJe",
+            "ChB0YWJsZV9yZWZlcmVuY2VzGAEgAygLMj8uZ29vZ2xlLmNsb3VkLmdlbWlu",
+            "aWRhdGFhbmFseXRpY3MudjFiZXRhLkJpZ1F1ZXJ5VGFibGVSZWZlcmVuY2VC",
+            "A+BBAiKnAQoWQmlnUXVlcnlUYWJsZVJlZmVyZW5jZRIXCgpwcm9qZWN0X2lk",
+            "GAEgASgJQgPgQQISFwoKZGF0YXNldF9pZBgDIAEoCUID4EECEhUKCHRhYmxl",
+            "X2lkGAQgASgJQgPgQQISRAoGc2NoZW1hGAYgASgLMi8uZ29vZ2xlLmNsb3Vk",
+            "LmdlbWluaWRhdGFhbmFseXRpY3MudjFiZXRhLlNjaGVtYUID4EEBInsKGlN0",
+            "dWRpb0RhdGFzb3VyY2VSZWZlcmVuY2VzEl0KEXN0dWRpb19yZWZlcmVuY2Vz",
+            "GAIgAygLMkIuZ29vZ2xlLmNsb3VkLmdlbWluaWRhdGFhbmFseXRpY3MudjFi",
+            "ZXRhLlN0dWRpb0RhdGFzb3VyY2VSZWZlcmVuY2UiNwoZU3R1ZGlvRGF0YXNv",
+            "dXJjZVJlZmVyZW5jZRIaCg1kYXRhc291cmNlX2lkGAEgASgJQgPgQQIiywEK",
+            "F0xvb2tlckV4cGxvcmVSZWZlcmVuY2VzEmAKEmV4cGxvcmVfcmVmZXJlbmNl",
+            "cxgBIAMoCzI/Lmdvb2dsZS5jbG91ZC5nZW1pbmlkYXRhYW5hbHl0aWNzLnYx",
+            "YmV0YS5Mb29rZXJFeHBsb3JlUmVmZXJlbmNlQgPgQQISTgoLY3JlZGVudGlh",
+            "bHMYAiABKAsyNC5nb29nbGUuY2xvdWQuZ2VtaW5pZGF0YWFuYWx5dGljcy52",
+            "MWJldGEuQ3JlZGVudGlhbHNCA+BBASKmAgoWTG9va2VyRXhwbG9yZVJlZmVy",
+            "ZW5jZRIdChNsb29rZXJfaW5zdGFuY2VfdXJpGAkgASgJSAASagoccHJpdmF0",
+            "ZV9sb29rZXJfaW5zdGFuY2VfaW5mbxgKIAEoCzJCLmdvb2dsZS5jbG91ZC5n",
+            "ZW1pbmlkYXRhYW5hbHl0aWNzLnYxYmV0YS5Qcml2YXRlTG9va2VySW5zdGFu",
+            "Y2VJbmZvSAASGQoMbG9va21sX21vZGVsGAQgASgJQgPgQQISFAoHZXhwbG9y",
+            "ZRgFIAEoCUID4EECEkQKBnNjaGVtYRgIIAEoCzIvLmdvb2dsZS5jbG91ZC5n",
+            "ZW1pbmlkYXRhYW5hbHl0aWNzLnYxYmV0YS5TY2hlbWFCA+BBAUIKCghpbnN0",
+            "YW5jZSJXChlQcml2YXRlTG9va2VySW5zdGFuY2VJbmZvEhoKEmxvb2tlcl9p",
+            "bnN0YW5jZV9pZBgBIAEoCRIeChZzZXJ2aWNlX2RpcmVjdG9yeV9uYW1lGAIg",
+            "ASgJIv4CCgpEYXRhc291cmNlEmMKGGJpZ3F1ZXJ5X3RhYmxlX3JlZmVyZW5j",
+            "ZRgBIAEoCzI/Lmdvb2dsZS5jbG91ZC5nZW1pbmlkYXRhYW5hbHl0aWNzLnYx",
+            "YmV0YS5CaWdRdWVyeVRhYmxlUmVmZXJlbmNlSAASHgoUc3R1ZGlvX2RhdGFz",
+            "b3VyY2VfaWQYAiABKAlIABJjChhsb29rZXJfZXhwbG9yZV9yZWZlcmVuY2UY",
+            "BCABKAsyPy5nb29nbGUuY2xvdWQuZ2VtaW5pZGF0YWFuYWx5dGljcy52MWJl",
+            "dGEuTG9va2VyRXhwbG9yZVJlZmVyZW5jZUgAEkQKBnNjaGVtYRgHIAEoCzIv",
             "Lmdvb2dsZS5jbG91ZC5nZW1pbmlkYXRhYW5hbHl0aWNzLnYxYmV0YS5TY2hl",
-            "bWFCA+BBAUIKCghpbnN0YW5jZSJXChlQcml2YXRlTG9va2VySW5zdGFuY2VJ",
-            "bmZvEhoKEmxvb2tlcl9pbnN0YW5jZV9pZBgBIAEoCRIeChZzZXJ2aWNlX2Rp",
-            "cmVjdG9yeV9uYW1lGAIgASgJIskCCgpEYXRhc291cmNlEmMKGGJpZ3F1ZXJ5",
-            "X3RhYmxlX3JlZmVyZW5jZRgBIAEoCzI/Lmdvb2dsZS5jbG91ZC5nZW1pbmlk",
-            "YXRhYW5hbHl0aWNzLnYxYmV0YS5CaWdRdWVyeVRhYmxlUmVmZXJlbmNlSAAS",
-            "HgoUc3R1ZGlvX2RhdGFzb3VyY2VfaWQYAiABKAlIABJjChhsb29rZXJfZXhw",
-            "bG9yZV9yZWZlcmVuY2UYBCABKAsyPy5nb29nbGUuY2xvdWQuZ2VtaW5pZGF0",
-            "YWFuYWx5dGljcy52MWJldGEuTG9va2VyRXhwbG9yZVJlZmVyZW5jZUgAEkQK",
-            "BnNjaGVtYRgHIAEoCzIvLmdvb2dsZS5jbG91ZC5nZW1pbmlkYXRhYW5hbHl0",
-            "aWNzLnYxYmV0YS5TY2hlbWFCA+BBAUILCglyZWZlcmVuY2Ui9wEKBlNjaGVt",
-            "YRJDCgZmaWVsZHMYASADKAsyLi5nb29nbGUuY2xvdWQuZ2VtaW5pZGF0YWFu",
-            "YWx5dGljcy52MWJldGEuRmllbGRCA+BBARIYCgtkZXNjcmlwdGlvbhgCIAEo",
-            "CUID4EEBEhUKCHN5bm9ueW1zGAMgAygJQgPgQQESEQoEdGFncxgEIAMoCUID",
-            "4EEBEhkKDGRpc3BsYXlfbmFtZRgFIAEoCUID4EEBEkkKB2ZpbHRlcnMYBiAD",
-            "KAsyMy5nb29nbGUuY2xvdWQuZ2VtaW5pZGF0YWFuYWx5dGljcy52MWJldGEu",
-            "RGF0YUZpbHRlckID4EEBIpkCCgVGaWVsZBIRCgRuYW1lGAEgASgJQgPgQQES",
-            "EQoEdHlwZRgCIAEoCUID4EEBEhgKC2Rlc2NyaXB0aW9uGAMgASgJQgPgQQES",
-            "EQoEbW9kZRgEIAEoCUID4EEBEhUKCHN5bm9ueW1zGAYgAygJQgPgQQESEQoE",
-            "dGFncxgHIAMoCUID4EEBEhkKDGRpc3BsYXlfbmFtZRgIIAEoCUID4EEBEkYK",
-            "CXN1YmZpZWxkcxgJIAMoCzIuLmdvb2dsZS5jbG91ZC5nZW1pbmlkYXRhYW5h",
-            "bHl0aWNzLnYxYmV0YS5GaWVsZEID4EEBEhUKCGNhdGVnb3J5GAogASgJQgPg",
-            "QQESGQoMdmFsdWVfZm9ybWF0GAsgASgJQgPgQQEigAEKCkRhdGFGaWx0ZXIS",
-            "EgoFZmllbGQYASABKAlCA+BBARISCgV2YWx1ZRgCIAEoCUID4EEBEkoKBHR5",
-            "cGUYAyABKA4yNy5nb29nbGUuY2xvdWQuZ2VtaW5pZGF0YWFuYWx5dGljcy52",
-            "MWJldGEuRGF0YUZpbHRlclR5cGVCA+BBASpFCg5EYXRhRmlsdGVyVHlwZRIg",
-            "ChxEQVRBX0ZJTFRFUl9UWVBFX1VOU1BFQ0lGSUVEEAASEQoNQUxXQVlTX0ZJ",
-            "TFRFUhABQqACCitjb20uZ29vZ2xlLmNsb3VkLmdlbWluaWRhdGFhbmFseXRp",
-            "Y3MudjFiZXRhQg9EYXRhc291cmNlUHJvdG9QAVpdY2xvdWQuZ29vZ2xlLmNv",
-            "bS9nby9nZW1pbmlkYXRhYW5hbHl0aWNzL2FwaXYxYmV0YS9nZW1pbmlkYXRh",
-            "YW5hbHl0aWNzcGI7Z2VtaW5pZGF0YWFuYWx5dGljc3BiqgInR29vZ2xlLkNs",
-            "b3VkLkdlbWluaURhdGFBbmFseXRpY3MuVjFCZXRhygInR29vZ2xlXENsb3Vk",
-            "XEdlbWluaURhdGFBbmFseXRpY3NcVjFiZXRh6gIqR29vZ2xlOjpDbG91ZDo6",
-            "R2VtaW5pRGF0YUFuYWx5dGljczo6VjFiZXRhYgZwcm90bzM="));
+            "bWFCA+BBARIzCg1zdHJ1Y3Rfc2NoZW1hGAogASgLMhcuZ29vZ2xlLnByb3Rv",
+            "YnVmLlN0cnVjdEID4EEBQgsKCXJlZmVyZW5jZSL3AQoGU2NoZW1hEkMKBmZp",
+            "ZWxkcxgBIAMoCzIuLmdvb2dsZS5jbG91ZC5nZW1pbmlkYXRhYW5hbHl0aWNz",
+            "LnYxYmV0YS5GaWVsZEID4EEBEhgKC2Rlc2NyaXB0aW9uGAIgASgJQgPgQQES",
+            "FQoIc3lub255bXMYAyADKAlCA+BBARIRCgR0YWdzGAQgAygJQgPgQQESGQoM",
+            "ZGlzcGxheV9uYW1lGAUgASgJQgPgQQESSQoHZmlsdGVycxgGIAMoCzIzLmdv",
+            "b2dsZS5jbG91ZC5nZW1pbmlkYXRhYW5hbHl0aWNzLnYxYmV0YS5EYXRhRmls",
+            "dGVyQgPgQQEimQIKBUZpZWxkEhEKBG5hbWUYASABKAlCA+BBARIRCgR0eXBl",
+            "GAIgASgJQgPgQQESGAoLZGVzY3JpcHRpb24YAyABKAlCA+BBARIRCgRtb2Rl",
+            "GAQgASgJQgPgQQESFQoIc3lub255bXMYBiADKAlCA+BBARIRCgR0YWdzGAcg",
+            "AygJQgPgQQESGQoMZGlzcGxheV9uYW1lGAggASgJQgPgQQESRgoJc3ViZmll",
+            "bGRzGAkgAygLMi4uZ29vZ2xlLmNsb3VkLmdlbWluaWRhdGFhbmFseXRpY3Mu",
+            "djFiZXRhLkZpZWxkQgPgQQESFQoIY2F0ZWdvcnkYCiABKAlCA+BBARIZCgx2",
+            "YWx1ZV9mb3JtYXQYCyABKAlCA+BBASKAAQoKRGF0YUZpbHRlchISCgVmaWVs",
+            "ZBgBIAEoCUID4EEBEhIKBXZhbHVlGAIgASgJQgPgQQESSgoEdHlwZRgDIAEo",
+            "DjI3Lmdvb2dsZS5jbG91ZC5nZW1pbmlkYXRhYW5hbHl0aWNzLnYxYmV0YS5E",
+            "YXRhRmlsdGVyVHlwZUID4EEBKkUKDkRhdGFGaWx0ZXJUeXBlEiAKHERBVEFf",
+            "RklMVEVSX1RZUEVfVU5TUEVDSUZJRUQQABIRCg1BTFdBWVNfRklMVEVSEAFC",
+            "oAIKK2NvbS5nb29nbGUuY2xvdWQuZ2VtaW5pZGF0YWFuYWx5dGljcy52MWJl",
+            "dGFCD0RhdGFzb3VyY2VQcm90b1ABWl1jbG91ZC5nb29nbGUuY29tL2dvL2dl",
+            "bWluaWRhdGFhbmFseXRpY3MvYXBpdjFiZXRhL2dlbWluaWRhdGFhbmFseXRp",
+            "Y3NwYjtnZW1pbmlkYXRhYW5hbHl0aWNzcGKqAidHb29nbGUuQ2xvdWQuR2Vt",
+            "aW5pRGF0YUFuYWx5dGljcy5WMUJldGHKAidHb29nbGVcQ2xvdWRcR2VtaW5p",
+            "RGF0YUFuYWx5dGljc1xWMWJldGHqAipHb29nbGU6OkNsb3VkOjpHZW1pbmlE",
+            "YXRhQW5hbHl0aWNzOjpWMWJldGFiBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Cloud.GeminiDataAnalytics.V1Beta.CredentialsReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Cloud.GeminiDataAnalytics.V1Beta.CredentialsReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.StructReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(new[] {typeof(global::Google.Cloud.GeminiDataAnalytics.V1Beta.DataFilterType), }, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.GeminiDataAnalytics.V1Beta.DatasourceReferences), global::Google.Cloud.GeminiDataAnalytics.V1Beta.DatasourceReferences.Parser, new[]{ "Bq", "Studio", "Looker" }, new[]{ "References" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.GeminiDataAnalytics.V1Beta.BigQueryTableReferences), global::Google.Cloud.GeminiDataAnalytics.V1Beta.BigQueryTableReferences.Parser, new[]{ "TableReferences" }, null, null, null, null),
@@ -100,7 +102,7 @@ namespace Google.Cloud.GeminiDataAnalytics.V1Beta {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.GeminiDataAnalytics.V1Beta.LookerExploreReferences), global::Google.Cloud.GeminiDataAnalytics.V1Beta.LookerExploreReferences.Parser, new[]{ "ExploreReferences", "Credentials" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.GeminiDataAnalytics.V1Beta.LookerExploreReference), global::Google.Cloud.GeminiDataAnalytics.V1Beta.LookerExploreReference.Parser, new[]{ "LookerInstanceUri", "PrivateLookerInstanceInfo", "LookmlModel", "Explore", "Schema" }, new[]{ "Instance" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.GeminiDataAnalytics.V1Beta.PrivateLookerInstanceInfo), global::Google.Cloud.GeminiDataAnalytics.V1Beta.PrivateLookerInstanceInfo.Parser, new[]{ "LookerInstanceId", "ServiceDirectoryName" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.GeminiDataAnalytics.V1Beta.Datasource), global::Google.Cloud.GeminiDataAnalytics.V1Beta.Datasource.Parser, new[]{ "BigqueryTableReference", "StudioDatasourceId", "LookerExploreReference", "Schema" }, new[]{ "Reference" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.GeminiDataAnalytics.V1Beta.Datasource), global::Google.Cloud.GeminiDataAnalytics.V1Beta.Datasource.Parser, new[]{ "BigqueryTableReference", "StudioDatasourceId", "LookerExploreReference", "Schema", "StructSchema" }, new[]{ "Reference" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.GeminiDataAnalytics.V1Beta.Schema), global::Google.Cloud.GeminiDataAnalytics.V1Beta.Schema.Parser, new[]{ "Fields", "Description", "Synonyms", "Tags", "DisplayName", "Filters" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.GeminiDataAnalytics.V1Beta.Field), global::Google.Cloud.GeminiDataAnalytics.V1Beta.Field.Parser, new[]{ "Name", "Type", "Description", "Mode", "Synonyms", "Tags", "DisplayName", "Subfields", "Category", "ValueFormat" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.GeminiDataAnalytics.V1Beta.DataFilter), global::Google.Cloud.GeminiDataAnalytics.V1Beta.DataFilter.Parser, new[]{ "Field", "Value", "Type" }, null, null, null, null)
@@ -2317,6 +2319,7 @@ namespace Google.Cloud.GeminiDataAnalytics.V1Beta {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public Datasource(Datasource other) : this() {
       schema_ = other.schema_ != null ? other.schema_.Clone() : null;
+      structSchema_ = other.structSchema_ != null ? other.structSchema_.Clone() : null;
       switch (other.ReferenceCase) {
         case ReferenceOneofCase.BigqueryTableReference:
           BigqueryTableReference = other.BigqueryTableReference.Clone();
@@ -2412,6 +2415,26 @@ namespace Google.Cloud.GeminiDataAnalytics.V1Beta {
       }
     }
 
+    /// <summary>Field number for the "struct_schema" field.</summary>
+    public const int StructSchemaFieldNumber = 10;
+    private global::Google.Protobuf.WellKnownTypes.Struct structSchema_;
+    /// <summary>
+    /// Optional. A struct representation of the schema.
+    /// This is populated for datasources with schemas that cannot be
+    /// fully represented by the strongly-typed `schema` field.
+    ///
+    /// For Looker datasources, this maps to the LookmlModelExplore type:
+    /// https://cloud.google.com/looker/docs/reference/looker-api/latest/types/LookmlModelExplore
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Protobuf.WellKnownTypes.Struct StructSchema {
+      get { return structSchema_; }
+      set {
+        structSchema_ = value;
+      }
+    }
+
     private object reference_;
     /// <summary>Enum of possible cases for the "reference" oneof.</summary>
     public enum ReferenceOneofCase {
@@ -2453,6 +2476,7 @@ namespace Google.Cloud.GeminiDataAnalytics.V1Beta {
       if (StudioDatasourceId != other.StudioDatasourceId) return false;
       if (!object.Equals(LookerExploreReference, other.LookerExploreReference)) return false;
       if (!object.Equals(Schema, other.Schema)) return false;
+      if (!object.Equals(StructSchema, other.StructSchema)) return false;
       if (ReferenceCase != other.ReferenceCase) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
@@ -2465,6 +2489,7 @@ namespace Google.Cloud.GeminiDataAnalytics.V1Beta {
       if (HasStudioDatasourceId) hash ^= StudioDatasourceId.GetHashCode();
       if (referenceCase_ == ReferenceOneofCase.LookerExploreReference) hash ^= LookerExploreReference.GetHashCode();
       if (schema_ != null) hash ^= Schema.GetHashCode();
+      if (structSchema_ != null) hash ^= StructSchema.GetHashCode();
       hash ^= (int) referenceCase_;
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
@@ -2500,6 +2525,10 @@ namespace Google.Cloud.GeminiDataAnalytics.V1Beta {
         output.WriteRawTag(58);
         output.WriteMessage(Schema);
       }
+      if (structSchema_ != null) {
+        output.WriteRawTag(82);
+        output.WriteMessage(StructSchema);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -2526,6 +2555,10 @@ namespace Google.Cloud.GeminiDataAnalytics.V1Beta {
         output.WriteRawTag(58);
         output.WriteMessage(Schema);
       }
+      if (structSchema_ != null) {
+        output.WriteRawTag(82);
+        output.WriteMessage(StructSchema);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -2548,6 +2581,9 @@ namespace Google.Cloud.GeminiDataAnalytics.V1Beta {
       if (schema_ != null) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(Schema);
       }
+      if (structSchema_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(StructSchema);
+      }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
       }
@@ -2565,6 +2601,12 @@ namespace Google.Cloud.GeminiDataAnalytics.V1Beta {
           Schema = new global::Google.Cloud.GeminiDataAnalytics.V1Beta.Schema();
         }
         Schema.MergeFrom(other.Schema);
+      }
+      if (other.structSchema_ != null) {
+        if (structSchema_ == null) {
+          StructSchema = new global::Google.Protobuf.WellKnownTypes.Struct();
+        }
+        StructSchema.MergeFrom(other.StructSchema);
       }
       switch (other.ReferenceCase) {
         case ReferenceOneofCase.BigqueryTableReference:
@@ -2628,6 +2670,13 @@ namespace Google.Cloud.GeminiDataAnalytics.V1Beta {
             input.ReadMessage(Schema);
             break;
           }
+          case 82: {
+            if (structSchema_ == null) {
+              StructSchema = new global::Google.Protobuf.WellKnownTypes.Struct();
+            }
+            input.ReadMessage(StructSchema);
+            break;
+          }
         }
       }
     #endif
@@ -2670,6 +2719,13 @@ namespace Google.Cloud.GeminiDataAnalytics.V1Beta {
               Schema = new global::Google.Cloud.GeminiDataAnalytics.V1Beta.Schema();
             }
             input.ReadMessage(Schema);
+            break;
+          }
+          case 82: {
+            if (structSchema_ == null) {
+              StructSchema = new global::Google.Protobuf.WellKnownTypes.Struct();
+            }
+            input.ReadMessage(StructSchema);
             break;
           }
         }
@@ -2752,7 +2808,7 @@ namespace Google.Cloud.GeminiDataAnalytics.V1Beta {
     /// <summary>
     /// Optional. A textual description of the table's content and purpose.
     /// For example: "Contains information about customer orders in our e-commerce
-    /// store."
+    /// store." Currently only used for BigQuery data sources.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -2770,7 +2826,8 @@ namespace Google.Cloud.GeminiDataAnalytics.V1Beta {
     private readonly pbc::RepeatedField<string> synonyms_ = new pbc::RepeatedField<string>();
     /// <summary>
     /// Optional. A list of alternative names or synonyms that can be used to refer
-    /// to the table. For example: ["sales", "orders", "purchases"]
+    /// to the table. For example: ["sales", "orders", "purchases"]. Currently only
+    /// used for BigQuery data sources.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -2785,7 +2842,8 @@ namespace Google.Cloud.GeminiDataAnalytics.V1Beta {
     private readonly pbc::RepeatedField<string> tags_ = new pbc::RepeatedField<string>();
     /// <summary>
     /// Optional. A list of tags or keywords associated with the table, used for
-    /// categorization. For example: ["transaction", "revenue", "customer_data"]
+    /// categorization. For example: ["transaction", "revenue", "customer_data"].
+    /// Currently only used for BigQuery data sources.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -3162,7 +3220,8 @@ namespace Google.Cloud.GeminiDataAnalytics.V1Beta {
     private readonly pbc::RepeatedField<string> synonyms_ = new pbc::RepeatedField<string>();
     /// <summary>
     /// Optional. A list of alternative names or synonyms that can be used to refer
-    /// to this field. For example: ["id", "customerid", "cust_id"]
+    /// to this field. For example: ["id", "customerid", "cust_id"]. Currently only
+    /// used for BigQuery data sources.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -3177,7 +3236,8 @@ namespace Google.Cloud.GeminiDataAnalytics.V1Beta {
     private readonly pbc::RepeatedField<string> tags_ = new pbc::RepeatedField<string>();
     /// <summary>
     /// Optional. A list of tags or keywords associated with the field, used for
-    /// categorization. For example: ["identifier", "customer", "pii"]
+    /// categorization. For example: ["identifier", "customer", "pii"]. Currently
+    /// only used for BigQuery data sources.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
