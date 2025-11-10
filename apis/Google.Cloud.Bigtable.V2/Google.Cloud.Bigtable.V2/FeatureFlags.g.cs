@@ -25,22 +25,22 @@ namespace Google.Cloud.Bigtable.V2 {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "CiZnb29nbGUvYmlndGFibGUvdjIvZmVhdHVyZV9mbGFncy5wcm90bxISZ29v",
-            "Z2xlLmJpZ3RhYmxlLnYyIp4CCgxGZWF0dXJlRmxhZ3MSFQoNcmV2ZXJzZV9z",
+            "Z2xlLmJpZ3RhYmxlLnYyIrECCgxGZWF0dXJlRmxhZ3MSFQoNcmV2ZXJzZV9z",
             "Y2FucxgBIAEoCBIeChZtdXRhdGVfcm93c19yYXRlX2xpbWl0GAMgASgIEh8K",
             "F211dGF0ZV9yb3dzX3JhdGVfbGltaXQyGAUgASgIEiIKGmxhc3Rfc2Nhbm5l",
             "ZF9yb3dfcmVzcG9uc2VzGAQgASgIEhYKDnJvdXRpbmdfY29va2llGAYgASgI",
             "EhIKCnJldHJ5X2luZm8YByABKAgSIwobY2xpZW50X3NpZGVfbWV0cmljc19l",
             "bmFibGVkGAggASgIEiAKGHRyYWZmaWNfZGlyZWN0b3JfZW5hYmxlZBgJIAEo",
-            "CBIfChdkaXJlY3RfYWNjZXNzX3JlcXVlc3RlZBgKIAEoCEK7AQoWY29tLmdv",
-            "b2dsZS5iaWd0YWJsZS52MkIRRmVhdHVyZUZsYWdzUHJvdG9QAVo4Y2xvdWQu",
-            "Z29vZ2xlLmNvbS9nby9iaWd0YWJsZS9hcGl2Mi9iaWd0YWJsZXBiO2JpZ3Rh",
-            "YmxlcGKqAhhHb29nbGUuQ2xvdWQuQmlndGFibGUuVjLKAhhHb29nbGVcQ2xv",
-            "dWRcQmlndGFibGVcVjLqAhtHb29nbGU6OkNsb3VkOjpCaWd0YWJsZTo6VjJi",
-            "BnByb3RvMw=="));
+            "CBIfChdkaXJlY3RfYWNjZXNzX3JlcXVlc3RlZBgKIAEoCBIRCglwZWVyX2lu",
+            "Zm8YCyABKAhCuwEKFmNvbS5nb29nbGUuYmlndGFibGUudjJCEUZlYXR1cmVG",
+            "bGFnc1Byb3RvUAFaOGNsb3VkLmdvb2dsZS5jb20vZ28vYmlndGFibGUvYXBp",
+            "djIvYmlndGFibGVwYjtiaWd0YWJsZXBiqgIYR29vZ2xlLkNsb3VkLkJpZ3Rh",
+            "YmxlLlYyygIYR29vZ2xlXENsb3VkXEJpZ3RhYmxlXFYy6gIbR29vZ2xlOjpD",
+            "bG91ZDo6QmlndGFibGU6OlYyYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Bigtable.V2.FeatureFlags), global::Google.Cloud.Bigtable.V2.FeatureFlags.Parser, new[]{ "ReverseScans", "MutateRowsRateLimit", "MutateRowsRateLimit2", "LastScannedRowResponses", "RoutingCookie", "RetryInfo", "ClientSideMetricsEnabled", "TrafficDirectorEnabled", "DirectAccessRequested" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Bigtable.V2.FeatureFlags), global::Google.Cloud.Bigtable.V2.FeatureFlags.Parser, new[]{ "ReverseScans", "MutateRowsRateLimit", "MutateRowsRateLimit2", "LastScannedRowResponses", "RoutingCookie", "RetryInfo", "ClientSideMetricsEnabled", "TrafficDirectorEnabled", "DirectAccessRequested", "PeerInfo" }, null, null, null, null)
           }));
     }
     #endregion
@@ -101,6 +101,7 @@ namespace Google.Cloud.Bigtable.V2 {
       clientSideMetricsEnabled_ = other.clientSideMetricsEnabled_;
       trafficDirectorEnabled_ = other.trafficDirectorEnabled_;
       directAccessRequested_ = other.directAccessRequested_;
+      peerInfo_ = other.peerInfo_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -253,6 +254,21 @@ namespace Google.Cloud.Bigtable.V2 {
       }
     }
 
+    /// <summary>Field number for the "peer_info" field.</summary>
+    public const int PeerInfoFieldNumber = 11;
+    private bool peerInfo_;
+    /// <summary>
+    /// If the client can support using BigtablePeerInfo.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool PeerInfo {
+      get { return peerInfo_; }
+      set {
+        peerInfo_ = value;
+      }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
@@ -277,6 +293,7 @@ namespace Google.Cloud.Bigtable.V2 {
       if (ClientSideMetricsEnabled != other.ClientSideMetricsEnabled) return false;
       if (TrafficDirectorEnabled != other.TrafficDirectorEnabled) return false;
       if (DirectAccessRequested != other.DirectAccessRequested) return false;
+      if (PeerInfo != other.PeerInfo) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -293,6 +310,7 @@ namespace Google.Cloud.Bigtable.V2 {
       if (ClientSideMetricsEnabled != false) hash ^= ClientSideMetricsEnabled.GetHashCode();
       if (TrafficDirectorEnabled != false) hash ^= TrafficDirectorEnabled.GetHashCode();
       if (DirectAccessRequested != false) hash ^= DirectAccessRequested.GetHashCode();
+      if (PeerInfo != false) hash ^= PeerInfo.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -347,6 +365,10 @@ namespace Google.Cloud.Bigtable.V2 {
         output.WriteRawTag(80);
         output.WriteBool(DirectAccessRequested);
       }
+      if (PeerInfo != false) {
+        output.WriteRawTag(88);
+        output.WriteBool(PeerInfo);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -393,6 +415,10 @@ namespace Google.Cloud.Bigtable.V2 {
         output.WriteRawTag(80);
         output.WriteBool(DirectAccessRequested);
       }
+      if (PeerInfo != false) {
+        output.WriteRawTag(88);
+        output.WriteBool(PeerInfo);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -428,6 +454,9 @@ namespace Google.Cloud.Bigtable.V2 {
         size += 1 + 1;
       }
       if (DirectAccessRequested != false) {
+        size += 1 + 1;
+      }
+      if (PeerInfo != false) {
         size += 1 + 1;
       }
       if (_unknownFields != null) {
@@ -468,6 +497,9 @@ namespace Google.Cloud.Bigtable.V2 {
       }
       if (other.DirectAccessRequested != false) {
         DirectAccessRequested = other.DirectAccessRequested;
+      }
+      if (other.PeerInfo != false) {
+        PeerInfo = other.PeerInfo;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -520,6 +552,10 @@ namespace Google.Cloud.Bigtable.V2 {
             DirectAccessRequested = input.ReadBool();
             break;
           }
+          case 88: {
+            PeerInfo = input.ReadBool();
+            break;
+          }
         }
       }
     #endif
@@ -569,6 +605,10 @@ namespace Google.Cloud.Bigtable.V2 {
           }
           case 80: {
             DirectAccessRequested = input.ReadBool();
+            break;
+          }
+          case 88: {
+            PeerInfo = input.ReadBool();
             break;
           }
         }
