@@ -78,7 +78,7 @@ namespace Google.Cloud.BigQuery.Storage.V1 {
             "YWJsZV9zY2hlbWEYBSABKAsyLS5nb29nbGUuY2xvdWQuYmlncXVlcnkuc3Rv",
             "cmFnZS52MS5UYWJsZVNjaGVtYUID4EEDElAKCndyaXRlX21vZGUYByABKA4y",
             "Ny5nb29nbGUuY2xvdWQuYmlncXVlcnkuc3RvcmFnZS52MS5Xcml0ZVN0cmVh",
-            "bS5Xcml0ZU1vZGVCA+BBBRIVCghsb2NhdGlvbhgIIAEoCUID4EEFIkYKBFR5",
+            "bS5Xcml0ZU1vZGVCA+BBBRIVCghsb2NhdGlvbhgIIAEoCUID4EEDIkYKBFR5",
             "cGUSFAoQVFlQRV9VTlNQRUNJRklFRBAAEg0KCUNPTU1JVFRFRBABEgsKB1BF",
             "TkRJTkcQAhIMCghCVUZGRVJFRBADIjMKCVdyaXRlTW9kZRIaChZXUklURV9N",
             "T0RFX1VOU1BFQ0lGSUVEEAASCgoGSU5TRVJUEAE6dupBcwoqYmlncXVlcnlz",
@@ -2060,8 +2060,8 @@ namespace Google.Cloud.BigQuery.Storage.V1 {
     public const int LocationFieldNumber = 8;
     private string location_ = "";
     /// <summary>
-    /// Immutable. The geographic location where the stream's dataset resides. See
-    /// https://cloud.google.com/bigquery/docs/locations for supported
+    /// Output only. The geographic location where the stream's dataset resides.
+    /// See https://cloud.google.com/bigquery/docs/locations for supported
     /// locations.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]

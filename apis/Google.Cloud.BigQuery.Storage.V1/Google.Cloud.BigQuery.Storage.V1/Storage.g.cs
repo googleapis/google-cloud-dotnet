@@ -3001,8 +3001,7 @@ namespace Google.Cloud.BigQuery.Storage.V1 {
     /// <summary>Field number for the "arrow_rows" field.</summary>
     public const int ArrowRowsFieldNumber = 5;
     /// <summary>
-    /// Rows in arrow format. This is an experimental feature only selected for
-    /// allowlisted customers.
+    /// Rows in arrow format.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -3067,8 +3066,8 @@ namespace Google.Cloud.BigQuery.Storage.V1 {
     /// <summary>
     /// Optional. Default missing value interpretation for all columns in the
     /// table. When a value is specified on an `AppendRowsRequest`, it is applied
-    /// to all requests on the connection from that point forward, until a
-    /// subsequent `AppendRowsRequest` sets it to a different value.
+    /// to all requests from that point forward, until a subsequent
+    /// `AppendRowsRequest` sets it to a different value.
     /// `missing_value_interpretation` can override
     /// `default_missing_value_interpretation`. For example, if you want to write
     /// `NULL` instead of using default values for some columns, you can set
@@ -3436,8 +3435,6 @@ namespace Google.Cloud.BigQuery.Storage.V1 {
 
       /// <summary>
       /// Arrow schema and data.
-      /// Arrow format is an experimental feature only selected for allowlisted
-      /// customers.
       /// </summary>
       [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
       public sealed partial class ArrowData : pb::IMessage<ArrowData>
@@ -3744,8 +3741,8 @@ namespace Google.Cloud.BigQuery.Storage.V1 {
         public const int WriterSchemaFieldNumber = 1;
         private global::Google.Cloud.BigQuery.Storage.V1.ProtoSchema writerSchema_;
         /// <summary>
-        /// The protocol buffer schema used to serialize the data. Provide this value
-        /// whenever:
+        /// Optional. The protocol buffer schema used to serialize the data. Provide
+        /// this value whenever:
         ///
         /// * You send the first request of an RPC connection.
         ///
@@ -3766,7 +3763,7 @@ namespace Google.Cloud.BigQuery.Storage.V1 {
         public const int RowsFieldNumber = 2;
         private global::Google.Cloud.BigQuery.Storage.V1.ProtoRows rows_;
         /// <summary>
-        /// Serialized row data in protobuf message format.
+        /// Required. Serialized row data in protobuf message format.
         /// Currently, the backend expects the serialized rows to adhere to
         /// proto2 semantics when appending rows, particularly with respect to
         /// how default values are encoded.
