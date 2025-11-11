@@ -171,7 +171,7 @@ namespace Google.Cloud.Dialogflow.V2Beta1 {
             "aW9uX3ZlcnNpb24YAiABKAlCBRgB4EEBEi0KHmVuYWJsZV9jb21wbGV0ZW5l",
             "c3NfZXZhbHVhdGlvbhgDIAEoCEIFGAHgQQESLgofY29tcGxldGVuZXNzX2V2",
             "YWx1YXRpb25fdmVyc2lvbhgEIAEoCUIFGAHgQQESIwoRZXZhbHVhdG9yX3Zl",
-            "cnNpb24YBSABKAlCA+BBA0gAiAEBQhQKEl9ldmFsdWF0b3JfdmVyc2lvbiJ5",
+            "cnNpb24YBSABKAlCA+BBAUgAiAEBQhQKEl9ldmFsdWF0b3JfdmVyc2lvbiJ5",
             "ChNJbnB1dERhdGFTb3VyY2VUeXBlEiYKIklOUFVUX0RBVEFfU09VUkNFX1RZ",
             "UEVfVU5TUEVDSUZJRUQQABIeChpBR0VOVF9BU1NJU1RfQ09OVkVSU0FUSU9O",
             "UxABEhoKFklOU0lHSFRTX0NPTlZFUlNBVElPTlMQAkIbChlldmFsdWF0aW9u",
@@ -7462,7 +7462,7 @@ namespace Google.Cloud.Dialogflow.V2Beta1 {
 
         private string evaluatorVersion_;
         /// <summary>
-        /// Output only. Version for summarization evaluation.
+        /// Optional. Version for summarization evaluation.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]

@@ -503,6 +503,8 @@ namespace Google.Cloud.Dialogflow.V2Beta1 {
         /// <summary>
         /// An existing conversation has closed. This is fired when a telephone call
         /// is terminated, or a conversation is closed via the API.
+        /// The event is fired for every CompleteConversation call, even if the
+        /// conversation is already closed.
         /// </summary>
         [pbr::OriginalName("CONVERSATION_FINISHED")] ConversationFinished = 2,
         /// <summary>
