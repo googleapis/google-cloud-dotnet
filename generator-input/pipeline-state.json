@@ -4766,6 +4766,7 @@
             "nextVersion": "1.0.0-beta01",
             "generationAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
             "releaseAutomationLevel": "AUTOMATION_LEVEL_BLOCKED",
+            "lastGeneratedCommit": "8b80b1498e7016be58f6c09d0a86ddf0ea37feae",
             "apiPaths": [
                 "google/cloud/databasecenter/v1beta"
             ],
