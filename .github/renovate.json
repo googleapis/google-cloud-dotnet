@@ -97,6 +97,7 @@
     "apis/Google.Cloud.DataCatalog.Lineage.V1/Google.Cloud.DataCatalog.Lineage.V1/**",
     "apis/Google.Cloud.DataCatalog.V1/Google.Cloud.DataCatalog.V1/**",
     "apis/Google.Cloud.DataFusion.V1/Google.Cloud.DataFusion.V1/**",
+    "apis/Google.Cloud.DatabaseCenter.V1Beta/Google.Cloud.DatabaseCenter.V1Beta/**",
     "apis/Google.Cloud.Dataflow.V1Beta3/Google.Cloud.Dataflow.V1Beta3/**",
     "apis/Google.Cloud.Dataform.V1/Google.Cloud.Dataform.V1/**",
     "apis/Google.Cloud.Dataform.V1Beta1/Google.Cloud.Dataform.V1Beta1/**",
