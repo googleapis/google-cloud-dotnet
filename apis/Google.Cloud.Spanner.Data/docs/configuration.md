@@ -208,7 +208,7 @@ An alternative to modifying the options used by the default
 `SessionPoolManager` is to create a new manager object with a new
 set of options. The `SessionPoolManager` can then be set in
 `SpannerConnectionStringBuilder` which is then used to build a
-`SpannerConnection`. Typically a single SessionPoolManager can be reused
-by connections throughout the application.For example:
+`SpannerConnection`. Typically, a single `SessionPoolManager` can be reused
+by connections throughout the application. For example:
 
 {{sample:SpannerConnection.CustomSessionPoolManager}}
