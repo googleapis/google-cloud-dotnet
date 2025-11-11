@@ -31,6 +31,7 @@ namespace Google.Cloud.Storage.V1.Tests
             Assert.Null(request.MaxResults);
             Assert.Null(request.PageToken);
             Assert.Null(request.SoftDeleted);
+            Assert.Null(request.ReturnPartialSuccess);
         }
 
         [Fact]
@@ -45,6 +46,7 @@ namespace Google.Cloud.Storage.V1.Tests
                 PageToken = "nextpage",
                 Fields = "items(name),nextPageToken",
                 SoftDeletedOnly = true,
+                ReturnPartialSuccess = true
             };
             options.ModifyRequest(request);
             Assert.Equal(10, request.MaxResults);
@@ -53,6 +55,7 @@ namespace Google.Cloud.Storage.V1.Tests
             Assert.Equal("nextpage", request.PageToken);
             Assert.Equal("items(name),nextPageToken", request.Fields);
             Assert.True(request.SoftDeleted);
+            Assert.True(request.ReturnPartialSuccess);
         }
     }
 }

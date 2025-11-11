@@ -68,6 +68,12 @@ namespace Google.Cloud.Storage.V1
         public bool? SoftDeletedOnly { get; set; }
 
         /// <summary>
+        /// If true, buckets from reachable locations are returned. The resource names of buckets from unreachable locations will be available on the <c>Unreachable</c>
+        /// property of a raw response from <see cref="PagedEnumerable{TResponse, TResource}.AsRawResponses"/>. The default is false.
+        /// </summary>
+        public bool? ReturnPartialSuccess { get; set; }
+
+        /// <summary>
         /// Modifies the specified request for all non-null properties of this options object.
         /// </summary>
         /// <param name="request">The request to modify</param>
@@ -96,6 +102,10 @@ namespace Google.Cloud.Storage.V1
             if (SoftDeletedOnly != null)
             {
                 request.SoftDeleted = SoftDeletedOnly;
+            }
+            if (ReturnPartialSuccess != null)
+            {
+                request.ReturnPartialSuccess = ReturnPartialSuccess;
             }
         }
     }
