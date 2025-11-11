@@ -1,5 +1,16 @@
 # Version history
 
+## Version 1.0.0-beta26, released 2025-11-11
+
+### New features
+
+- Add agentDesktopSource field to the Participant object
+
+### Documentation improvements
+
+- Update evaluator version from output only to optional.
+- Add further clarification for when the event Type CONVERSATION_FINISHED is fired
+
 ## Version 1.0.0-beta25, released 2025-11-05
 
 ### New features
