@@ -30,6 +30,7 @@ namespace Google.Shopping.Merchant.Quota.V1
 
         private static scg::IEnumerable<gpr::FileDescriptor> GetFileDescriptors()
         {
+            yield return AccountlimitsReflection.Descriptor;
             yield return QuotaReflection.Descriptor;
         }
     }
