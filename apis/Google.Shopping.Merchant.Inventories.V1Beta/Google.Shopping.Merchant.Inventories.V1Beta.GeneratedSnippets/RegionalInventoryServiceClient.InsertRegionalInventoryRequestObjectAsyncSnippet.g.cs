@@ -39,6 +39,7 @@ namespace GoogleCSharpSnippets
             {
                 ParentAsProductName = ProductName.FromAccountProduct("[ACCOUNT]", "[PRODUCT]"),
                 RegionalInventory = new RegionalInventory(),
+                ProductIdBase64UrlEncoded = false,
             };
             // Make the request
             RegionalInventory response = await regionalInventoryServiceClient.InsertRegionalInventoryAsync(request);

@@ -37,6 +37,7 @@ namespace GoogleCSharpSnippets
             DeleteLocalInventoryRequest request = new DeleteLocalInventoryRequest
             {
                 LocalInventoryName = LocalInventoryName.FromAccountProductStoreCode("[ACCOUNT]", "[PRODUCT]", "[STORE_CODE]"),
+                ProductIdBase64UrlEncoded = false,
             };
             // Make the request
             localInventoryServiceClient.DeleteLocalInventory(request);
