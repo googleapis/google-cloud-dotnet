@@ -28,80 +28,88 @@ namespace Google.Cloud.ArtifactRegistry.V1 {
             "dC5wcm90bxIjZ29vZ2xlLmRldnRvb2xzLmFydGlmYWN0cmVnaXN0cnkudjEa",
             "H2dvb2dsZS9hcGkvZmllbGRfYmVoYXZpb3IucHJvdG8aGWdvb2dsZS9hcGkv",
             "cmVzb3VyY2UucHJvdG8aH2dvb2dsZS9wcm90b2J1Zi90aW1lc3RhbXAucHJv",
-            "dG8imAMKC0RvY2tlckltYWdlEhEKBG5hbWUYASABKAlCA+BBAhIQCgN1cmkY",
+            "dG8igQQKC0RvY2tlckltYWdlEhEKBG5hbWUYASABKAlCA+BBAhIQCgN1cmkY",
             "AiABKAlCA+BBAhIMCgR0YWdzGAMgAygJEhgKEGltYWdlX3NpemVfYnl0ZXMY",
             "BCABKAMSLwoLdXBsb2FkX3RpbWUYBSABKAsyGi5nb29nbGUucHJvdG9idWYu",
             "VGltZXN0YW1wEhIKCm1lZGlhX3R5cGUYBiABKAkSLgoKYnVpbGRfdGltZRgH",
             "IAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXASNAoLdXBkYXRlX3Rp",
-            "bWUYCCABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wQgPgQQM6kAHq",
-            "QYwBCithcnRpZmFjdHJlZ2lzdHJ5Lmdvb2dsZWFwaXMuY29tL0RvY2tlcklt",
-            "YWdlEl1wcm9qZWN0cy97cHJvamVjdH0vbG9jYXRpb25zL3tsb2NhdGlvbn0v",
-            "cmVwb3NpdG9yaWVzL3tyZXBvc2l0b3J5fS9kb2NrZXJJbWFnZXMve2RvY2tl",
-            "cl9pbWFnZX0iZwoXTGlzdERvY2tlckltYWdlc1JlcXVlc3QSEwoGcGFyZW50",
-            "GAEgASgJQgPgQQISEQoJcGFnZV9zaXplGAIgASgFEhIKCnBhZ2VfdG9rZW4Y",
-            "AyABKAkSEAoIb3JkZXJfYnkYBCABKAkifAoYTGlzdERvY2tlckltYWdlc1Jl",
-            "c3BvbnNlEkcKDWRvY2tlcl9pbWFnZXMYASADKAsyMC5nb29nbGUuZGV2dG9v",
-            "bHMuYXJ0aWZhY3RyZWdpc3RyeS52MS5Eb2NrZXJJbWFnZRIXCg9uZXh0X3Bh",
-            "Z2VfdG9rZW4YAiABKAkiWgoVR2V0RG9ja2VySW1hZ2VSZXF1ZXN0EkEKBG5h",
-            "bWUYASABKAlCM+BBAvpBLQorYXJ0aWZhY3RyZWdpc3RyeS5nb29nbGVhcGlz",
-            "LmNvbS9Eb2NrZXJJbWFnZSL1AgoNTWF2ZW5BcnRpZmFjdBIRCgRuYW1lGAEg",
-            "ASgJQgPgQQISFAoHcG9tX3VyaRgCIAEoCUID4EECEhAKCGdyb3VwX2lkGAMg",
-            "ASgJEhMKC2FydGlmYWN0X2lkGAQgASgJEg8KB3ZlcnNpb24YBSABKAkSNAoL",
-            "Y3JlYXRlX3RpbWUYBiABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1w",
-            "QgPgQQMSNAoLdXBkYXRlX3RpbWUYByABKAsyGi5nb29nbGUucHJvdG9idWYu",
-            "VGltZXN0YW1wQgPgQQM6lgHqQZIBCi1hcnRpZmFjdHJlZ2lzdHJ5Lmdvb2ds",
-            "ZWFwaXMuY29tL01hdmVuQXJ0aWZhY3QSYXByb2plY3RzL3twcm9qZWN0fS9s",
-            "b2NhdGlvbnMve2xvY2F0aW9ufS9yZXBvc2l0b3JpZXMve3JlcG9zaXRvcnl9",
-            "L21hdmVuQXJ0aWZhY3RzL3ttYXZlbl9hcnRpZmFjdH0iiQEKGUxpc3RNYXZl",
-            "bkFydGlmYWN0c1JlcXVlc3QSRQoGcGFyZW50GAEgASgJQjXgQQL6QS8SLWFy",
-            "dGlmYWN0cmVnaXN0cnkuZ29vZ2xlYXBpcy5jb20vTWF2ZW5BcnRpZmFjdBIR",
-            "CglwYWdlX3NpemUYAiABKAUSEgoKcGFnZV90b2tlbhgDIAEoCSKCAQoaTGlz",
-            "dE1hdmVuQXJ0aWZhY3RzUmVzcG9uc2USSwoPbWF2ZW5fYXJ0aWZhY3RzGAEg",
-            "AygLMjIuZ29vZ2xlLmRldnRvb2xzLmFydGlmYWN0cmVnaXN0cnkudjEuTWF2",
-            "ZW5BcnRpZmFjdBIXCg9uZXh0X3BhZ2VfdG9rZW4YAiABKAkiXgoXR2V0TWF2",
-            "ZW5BcnRpZmFjdFJlcXVlc3QSQwoEbmFtZRgBIAEoCUI14EEC+kEvCi1hcnRp",
-            "ZmFjdHJlZ2lzdHJ5Lmdvb2dsZWFwaXMuY29tL01hdmVuQXJ0aWZhY3Qi0AIK",
-            "Ck5wbVBhY2thZ2USEQoEbmFtZRgBIAEoCUID4EECEhQKDHBhY2thZ2VfbmFt",
-            "ZRgDIAEoCRIPCgd2ZXJzaW9uGAQgASgJEgwKBHRhZ3MYBSADKAkSNAoLY3Jl",
-            "YXRlX3RpbWUYBiABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wQgPg",
-            "QQMSNAoLdXBkYXRlX3RpbWUYByABKAsyGi5nb29nbGUucHJvdG9idWYuVGlt",
-            "ZXN0YW1wQgPgQQM6jQHqQYkBCiphcnRpZmFjdHJlZ2lzdHJ5Lmdvb2dsZWFw",
-            "aXMuY29tL05wbVBhY2thZ2USW3Byb2plY3RzL3twcm9qZWN0fS9sb2NhdGlv",
-            "bnMve2xvY2F0aW9ufS9yZXBvc2l0b3JpZXMve3JlcG9zaXRvcnl9L25wbVBh",
-            "Y2thZ2VzL3tucG1fcGFja2FnZX0igwEKFkxpc3ROcG1QYWNrYWdlc1JlcXVl",
-            "c3QSQgoGcGFyZW50GAEgASgJQjLgQQL6QSwSKmFydGlmYWN0cmVnaXN0cnku",
-            "Z29vZ2xlYXBpcy5jb20vTnBtUGFja2FnZRIRCglwYWdlX3NpemUYAiABKAUS",
-            "EgoKcGFnZV90b2tlbhgDIAEoCSJ5ChdMaXN0TnBtUGFja2FnZXNSZXNwb25z",
-            "ZRJFCgxucG1fcGFja2FnZXMYASADKAsyLy5nb29nbGUuZGV2dG9vbHMuYXJ0",
-            "aWZhY3RyZWdpc3RyeS52MS5OcG1QYWNrYWdlEhcKD25leHRfcGFnZV90b2tl",
-            "bhgCIAEoCSJYChRHZXROcG1QYWNrYWdlUmVxdWVzdBJACgRuYW1lGAEgASgJ",
-            "QjLgQQL6QSwKKmFydGlmYWN0cmVnaXN0cnkuZ29vZ2xlYXBpcy5jb20vTnBt",
-            "UGFja2FnZSLgAgoNUHl0aG9uUGFja2FnZRIRCgRuYW1lGAEgASgJQgPgQQIS",
-            "EAoDdXJpGAIgASgJQgPgQQISFAoMcGFja2FnZV9uYW1lGAMgASgJEg8KB3Zl",
-            "cnNpb24YBCABKAkSNAoLY3JlYXRlX3RpbWUYBiABKAsyGi5nb29nbGUucHJv",
-            "dG9idWYuVGltZXN0YW1wQgPgQQMSNAoLdXBkYXRlX3RpbWUYByABKAsyGi5n",
-            "b29nbGUucHJvdG9idWYuVGltZXN0YW1wQgPgQQM6lgHqQZIBCi1hcnRpZmFj",
-            "dHJlZ2lzdHJ5Lmdvb2dsZWFwaXMuY29tL1B5dGhvblBhY2thZ2USYXByb2pl",
-            "Y3RzL3twcm9qZWN0fS9sb2NhdGlvbnMve2xvY2F0aW9ufS9yZXBvc2l0b3Jp",
-            "ZXMve3JlcG9zaXRvcnl9L3B5dGhvblBhY2thZ2VzL3tweXRob25fcGFja2Fn",
-            "ZX0iiQEKGUxpc3RQeXRob25QYWNrYWdlc1JlcXVlc3QSRQoGcGFyZW50GAEg",
-            "ASgJQjXgQQL6QS8SLWFydGlmYWN0cmVnaXN0cnkuZ29vZ2xlYXBpcy5jb20v",
-            "UHl0aG9uUGFja2FnZRIRCglwYWdlX3NpemUYAiABKAUSEgoKcGFnZV90b2tl",
-            "bhgDIAEoCSKCAQoaTGlzdFB5dGhvblBhY2thZ2VzUmVzcG9uc2USSwoPcHl0",
-            "aG9uX3BhY2thZ2VzGAEgAygLMjIuZ29vZ2xlLmRldnRvb2xzLmFydGlmYWN0",
-            "cmVnaXN0cnkudjEuUHl0aG9uUGFja2FnZRIXCg9uZXh0X3BhZ2VfdG9rZW4Y",
-            "AiABKAkiXgoXR2V0UHl0aG9uUGFja2FnZVJlcXVlc3QSQwoEbmFtZRgBIAEo",
-            "CUI14EEC+kEvCi1hcnRpZmFjdHJlZ2lzdHJ5Lmdvb2dsZWFwaXMuY29tL1B5",
-            "dGhvblBhY2thZ2VC+AEKJ2NvbS5nb29nbGUuZGV2dG9vbHMuYXJ0aWZhY3Ry",
-            "ZWdpc3RyeS52MUINQXJ0aWZhY3RQcm90b1ABWlBjbG91ZC5nb29nbGUuY29t",
-            "L2dvL2FydGlmYWN0cmVnaXN0cnkvYXBpdjEvYXJ0aWZhY3RyZWdpc3RyeXBi",
-            "O2FydGlmYWN0cmVnaXN0cnlwYqoCIEdvb2dsZS5DbG91ZC5BcnRpZmFjdFJl",
-            "Z2lzdHJ5LlYxygIgR29vZ2xlXENsb3VkXEFydGlmYWN0UmVnaXN0cnlcVjHq",
-            "AiNHb29nbGU6OkNsb3VkOjpBcnRpZmFjdFJlZ2lzdHJ5OjpWMWIGcHJvdG8z"));
+            "bWUYCCABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wQgPgQQMSFQoN",
+            "YXJ0aWZhY3RfdHlwZRgJIAEoCRJQCg9pbWFnZV9tYW5pZmVzdHMYCyADKAsy",
+            "Mi5nb29nbGUuZGV2dG9vbHMuYXJ0aWZhY3RyZWdpc3RyeS52MS5JbWFnZU1h",
+            "bmlmZXN0QgPgQQE6kAHqQYwBCithcnRpZmFjdHJlZ2lzdHJ5Lmdvb2dsZWFw",
+            "aXMuY29tL0RvY2tlckltYWdlEl1wcm9qZWN0cy97cHJvamVjdH0vbG9jYXRp",
+            "b25zL3tsb2NhdGlvbn0vcmVwb3NpdG9yaWVzL3tyZXBvc2l0b3J5fS9kb2Nr",
+            "ZXJJbWFnZXMve2RvY2tlcl9pbWFnZX0isgEKDUltYWdlTWFuaWZlc3QSGQoM",
+            "YXJjaGl0ZWN0dXJlGAEgASgJQgPgQQESDwoCb3MYAiABKAlCA+BBARITCgZk",
+            "aWdlc3QYAyABKAlCA+BBARIXCgptZWRpYV90eXBlGAQgASgJQgPgQQESFwoK",
+            "b3NfdmVyc2lvbhgFIAEoCUID4EEBEhgKC29zX2ZlYXR1cmVzGAYgAygJQgPg",
+            "QQESFAoHdmFyaWFudBgHIAEoCUID4EEBImcKF0xpc3REb2NrZXJJbWFnZXNS",
+            "ZXF1ZXN0EhMKBnBhcmVudBgBIAEoCUID4EECEhEKCXBhZ2Vfc2l6ZRgCIAEo",
+            "BRISCgpwYWdlX3Rva2VuGAMgASgJEhAKCG9yZGVyX2J5GAQgASgJInwKGExp",
+            "c3REb2NrZXJJbWFnZXNSZXNwb25zZRJHCg1kb2NrZXJfaW1hZ2VzGAEgAygL",
+            "MjAuZ29vZ2xlLmRldnRvb2xzLmFydGlmYWN0cmVnaXN0cnkudjEuRG9ja2Vy",
+            "SW1hZ2USFwoPbmV4dF9wYWdlX3Rva2VuGAIgASgJIloKFUdldERvY2tlcklt",
+            "YWdlUmVxdWVzdBJBCgRuYW1lGAEgASgJQjPgQQL6QS0KK2FydGlmYWN0cmVn",
+            "aXN0cnkuZ29vZ2xlYXBpcy5jb20vRG9ja2VySW1hZ2Ui9QIKDU1hdmVuQXJ0",
+            "aWZhY3QSEQoEbmFtZRgBIAEoCUID4EECEhQKB3BvbV91cmkYAiABKAlCA+BB",
+            "AhIQCghncm91cF9pZBgDIAEoCRITCgthcnRpZmFjdF9pZBgEIAEoCRIPCgd2",
+            "ZXJzaW9uGAUgASgJEjQKC2NyZWF0ZV90aW1lGAYgASgLMhouZ29vZ2xlLnBy",
+            "b3RvYnVmLlRpbWVzdGFtcEID4EEDEjQKC3VwZGF0ZV90aW1lGAcgASgLMhou",
+            "Z29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcEID4EEDOpYB6kGSAQotYXJ0aWZh",
+            "Y3RyZWdpc3RyeS5nb29nbGVhcGlzLmNvbS9NYXZlbkFydGlmYWN0EmFwcm9q",
+            "ZWN0cy97cHJvamVjdH0vbG9jYXRpb25zL3tsb2NhdGlvbn0vcmVwb3NpdG9y",
+            "aWVzL3tyZXBvc2l0b3J5fS9tYXZlbkFydGlmYWN0cy97bWF2ZW5fYXJ0aWZh",
+            "Y3R9IokBChlMaXN0TWF2ZW5BcnRpZmFjdHNSZXF1ZXN0EkUKBnBhcmVudBgB",
+            "IAEoCUI14EEC+kEvEi1hcnRpZmFjdHJlZ2lzdHJ5Lmdvb2dsZWFwaXMuY29t",
+            "L01hdmVuQXJ0aWZhY3QSEQoJcGFnZV9zaXplGAIgASgFEhIKCnBhZ2VfdG9r",
+            "ZW4YAyABKAkiggEKGkxpc3RNYXZlbkFydGlmYWN0c1Jlc3BvbnNlEksKD21h",
+            "dmVuX2FydGlmYWN0cxgBIAMoCzIyLmdvb2dsZS5kZXZ0b29scy5hcnRpZmFj",
+            "dHJlZ2lzdHJ5LnYxLk1hdmVuQXJ0aWZhY3QSFwoPbmV4dF9wYWdlX3Rva2Vu",
+            "GAIgASgJIl4KF0dldE1hdmVuQXJ0aWZhY3RSZXF1ZXN0EkMKBG5hbWUYASAB",
+            "KAlCNeBBAvpBLwotYXJ0aWZhY3RyZWdpc3RyeS5nb29nbGVhcGlzLmNvbS9N",
+            "YXZlbkFydGlmYWN0ItACCgpOcG1QYWNrYWdlEhEKBG5hbWUYASABKAlCA+BB",
+            "AhIUCgxwYWNrYWdlX25hbWUYAyABKAkSDwoHdmVyc2lvbhgEIAEoCRIMCgR0",
+            "YWdzGAUgAygJEjQKC2NyZWF0ZV90aW1lGAYgASgLMhouZ29vZ2xlLnByb3Rv",
+            "YnVmLlRpbWVzdGFtcEID4EEDEjQKC3VwZGF0ZV90aW1lGAcgASgLMhouZ29v",
+            "Z2xlLnByb3RvYnVmLlRpbWVzdGFtcEID4EEDOo0B6kGJAQoqYXJ0aWZhY3Ry",
+            "ZWdpc3RyeS5nb29nbGVhcGlzLmNvbS9OcG1QYWNrYWdlEltwcm9qZWN0cy97",
+            "cHJvamVjdH0vbG9jYXRpb25zL3tsb2NhdGlvbn0vcmVwb3NpdG9yaWVzL3ty",
+            "ZXBvc2l0b3J5fS9ucG1QYWNrYWdlcy97bnBtX3BhY2thZ2V9IoMBChZMaXN0",
+            "TnBtUGFja2FnZXNSZXF1ZXN0EkIKBnBhcmVudBgBIAEoCUIy4EEC+kEsEiph",
+            "cnRpZmFjdHJlZ2lzdHJ5Lmdvb2dsZWFwaXMuY29tL05wbVBhY2thZ2USEQoJ",
+            "cGFnZV9zaXplGAIgASgFEhIKCnBhZ2VfdG9rZW4YAyABKAkieQoXTGlzdE5w",
+            "bVBhY2thZ2VzUmVzcG9uc2USRQoMbnBtX3BhY2thZ2VzGAEgAygLMi8uZ29v",
+            "Z2xlLmRldnRvb2xzLmFydGlmYWN0cmVnaXN0cnkudjEuTnBtUGFja2FnZRIX",
+            "Cg9uZXh0X3BhZ2VfdG9rZW4YAiABKAkiWAoUR2V0TnBtUGFja2FnZVJlcXVl",
+            "c3QSQAoEbmFtZRgBIAEoCUIy4EEC+kEsCiphcnRpZmFjdHJlZ2lzdHJ5Lmdv",
+            "b2dsZWFwaXMuY29tL05wbVBhY2thZ2Ui4AIKDVB5dGhvblBhY2thZ2USEQoE",
+            "bmFtZRgBIAEoCUID4EECEhAKA3VyaRgCIAEoCUID4EECEhQKDHBhY2thZ2Vf",
+            "bmFtZRgDIAEoCRIPCgd2ZXJzaW9uGAQgASgJEjQKC2NyZWF0ZV90aW1lGAYg",
+            "ASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcEID4EEDEjQKC3VwZGF0",
+            "ZV90aW1lGAcgASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcEID4EED",
+            "OpYB6kGSAQotYXJ0aWZhY3RyZWdpc3RyeS5nb29nbGVhcGlzLmNvbS9QeXRo",
+            "b25QYWNrYWdlEmFwcm9qZWN0cy97cHJvamVjdH0vbG9jYXRpb25zL3tsb2Nh",
+            "dGlvbn0vcmVwb3NpdG9yaWVzL3tyZXBvc2l0b3J5fS9weXRob25QYWNrYWdl",
+            "cy97cHl0aG9uX3BhY2thZ2V9IokBChlMaXN0UHl0aG9uUGFja2FnZXNSZXF1",
+            "ZXN0EkUKBnBhcmVudBgBIAEoCUI14EEC+kEvEi1hcnRpZmFjdHJlZ2lzdHJ5",
+            "Lmdvb2dsZWFwaXMuY29tL1B5dGhvblBhY2thZ2USEQoJcGFnZV9zaXplGAIg",
+            "ASgFEhIKCnBhZ2VfdG9rZW4YAyABKAkiggEKGkxpc3RQeXRob25QYWNrYWdl",
+            "c1Jlc3BvbnNlEksKD3B5dGhvbl9wYWNrYWdlcxgBIAMoCzIyLmdvb2dsZS5k",
+            "ZXZ0b29scy5hcnRpZmFjdHJlZ2lzdHJ5LnYxLlB5dGhvblBhY2thZ2USFwoP",
+            "bmV4dF9wYWdlX3Rva2VuGAIgASgJIl4KF0dldFB5dGhvblBhY2thZ2VSZXF1",
+            "ZXN0EkMKBG5hbWUYASABKAlCNeBBAvpBLwotYXJ0aWZhY3RyZWdpc3RyeS5n",
+            "b29nbGVhcGlzLmNvbS9QeXRob25QYWNrYWdlQvgBCidjb20uZ29vZ2xlLmRl",
+            "dnRvb2xzLmFydGlmYWN0cmVnaXN0cnkudjFCDUFydGlmYWN0UHJvdG9QAVpQ",
+            "Y2xvdWQuZ29vZ2xlLmNvbS9nby9hcnRpZmFjdHJlZ2lzdHJ5L2FwaXYxL2Fy",
+            "dGlmYWN0cmVnaXN0cnlwYjthcnRpZmFjdHJlZ2lzdHJ5cGKqAiBHb29nbGUu",
+            "Q2xvdWQuQXJ0aWZhY3RSZWdpc3RyeS5WMcoCIEdvb2dsZVxDbG91ZFxBcnRp",
+            "ZmFjdFJlZ2lzdHJ5XFYx6gIjR29vZ2xlOjpDbG91ZDo6QXJ0aWZhY3RSZWdp",
+            "c3RyeTo6VjFiBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.ArtifactRegistry.V1.DockerImage), global::Google.Cloud.ArtifactRegistry.V1.DockerImage.Parser, new[]{ "Name", "Uri", "Tags", "ImageSizeBytes", "UploadTime", "MediaType", "BuildTime", "UpdateTime" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.ArtifactRegistry.V1.DockerImage), global::Google.Cloud.ArtifactRegistry.V1.DockerImage.Parser, new[]{ "Name", "Uri", "Tags", "ImageSizeBytes", "UploadTime", "MediaType", "BuildTime", "UpdateTime", "ArtifactType", "ImageManifests" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.ArtifactRegistry.V1.ImageManifest), global::Google.Cloud.ArtifactRegistry.V1.ImageManifest.Parser, new[]{ "Architecture", "Os", "Digest", "MediaType", "OsVersion", "OsFeatures", "Variant" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.ArtifactRegistry.V1.ListDockerImagesRequest), global::Google.Cloud.ArtifactRegistry.V1.ListDockerImagesRequest.Parser, new[]{ "Parent", "PageSize", "PageToken", "OrderBy" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.ArtifactRegistry.V1.ListDockerImagesResponse), global::Google.Cloud.ArtifactRegistry.V1.ListDockerImagesResponse.Parser, new[]{ "DockerImages", "NextPageToken" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.ArtifactRegistry.V1.GetDockerImageRequest), global::Google.Cloud.ArtifactRegistry.V1.GetDockerImageRequest.Parser, new[]{ "Name" }, null, null, null, null),
@@ -174,6 +182,8 @@ namespace Google.Cloud.ArtifactRegistry.V1 {
       mediaType_ = other.mediaType_;
       buildTime_ = other.buildTime_ != null ? other.buildTime_.Clone() : null;
       updateTime_ = other.updateTime_ != null ? other.updateTime_.Clone() : null;
+      artifactType_ = other.artifactType_;
+      imageManifests_ = other.imageManifests_.Clone();
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -189,7 +199,7 @@ namespace Google.Cloud.ArtifactRegistry.V1 {
     /// <summary>
     /// Required. registry_location, project_id, repository_name and image id forms
     /// a unique image
-    /// name:`projects/&lt;project_id>/locations/&lt;location>/repository/&lt;repository_name>/dockerImages/&lt;docker_image>`.
+    /// name:`projects/&lt;project_id>/locations/&lt;location>/repositories/&lt;repository_name>/dockerImages/&lt;docker_image>`.
     /// For example,
     /// "projects/test-project/locations/us-west4/repositories/test-repo/dockerImages/
     /// nginx@sha256:e9954c1fc875017be1c3e36eca16be2d9e9bccc4bf072163515467d6a823c7cf",
@@ -322,6 +332,39 @@ namespace Google.Cloud.ArtifactRegistry.V1 {
       }
     }
 
+    /// <summary>Field number for the "artifact_type" field.</summary>
+    public const int ArtifactTypeFieldNumber = 9;
+    private string artifactType_ = "";
+    /// <summary>
+    /// ArtifactType of this image, e.g. "application/vnd.example+type".
+    /// If the `subject_digest` is set and no `artifact_type` is given, the
+    /// `media_type` will be considered as the `artifact_type`. This field is
+    /// returned as the `metadata.artifactType` field in the Version resource.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string ArtifactType {
+      get { return artifactType_; }
+      set {
+        artifactType_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "image_manifests" field.</summary>
+    public const int ImageManifestsFieldNumber = 11;
+    private static readonly pb::FieldCodec<global::Google.Cloud.ArtifactRegistry.V1.ImageManifest> _repeated_imageManifests_codec
+        = pb::FieldCodec.ForMessage(90, global::Google.Cloud.ArtifactRegistry.V1.ImageManifest.Parser);
+    private readonly pbc::RepeatedField<global::Google.Cloud.ArtifactRegistry.V1.ImageManifest> imageManifests_ = new pbc::RepeatedField<global::Google.Cloud.ArtifactRegistry.V1.ImageManifest>();
+    /// <summary>
+    /// Optional. For multi-arch images (manifest lists), this field contains the
+    /// list of image manifests.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pbc::RepeatedField<global::Google.Cloud.ArtifactRegistry.V1.ImageManifest> ImageManifests {
+      get { return imageManifests_; }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
@@ -345,6 +388,8 @@ namespace Google.Cloud.ArtifactRegistry.V1 {
       if (MediaType != other.MediaType) return false;
       if (!object.Equals(BuildTime, other.BuildTime)) return false;
       if (!object.Equals(UpdateTime, other.UpdateTime)) return false;
+      if (ArtifactType != other.ArtifactType) return false;
+      if(!imageManifests_.Equals(other.imageManifests_)) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -360,6 +405,8 @@ namespace Google.Cloud.ArtifactRegistry.V1 {
       if (MediaType.Length != 0) hash ^= MediaType.GetHashCode();
       if (buildTime_ != null) hash ^= BuildTime.GetHashCode();
       if (updateTime_ != null) hash ^= UpdateTime.GetHashCode();
+      if (ArtifactType.Length != 0) hash ^= ArtifactType.GetHashCode();
+      hash ^= imageManifests_.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -407,6 +454,11 @@ namespace Google.Cloud.ArtifactRegistry.V1 {
         output.WriteRawTag(66);
         output.WriteMessage(UpdateTime);
       }
+      if (ArtifactType.Length != 0) {
+        output.WriteRawTag(74);
+        output.WriteString(ArtifactType);
+      }
+      imageManifests_.WriteTo(output, _repeated_imageManifests_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -446,6 +498,11 @@ namespace Google.Cloud.ArtifactRegistry.V1 {
         output.WriteRawTag(66);
         output.WriteMessage(UpdateTime);
       }
+      if (ArtifactType.Length != 0) {
+        output.WriteRawTag(74);
+        output.WriteString(ArtifactType);
+      }
+      imageManifests_.WriteTo(ref output, _repeated_imageManifests_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -478,6 +535,10 @@ namespace Google.Cloud.ArtifactRegistry.V1 {
       if (updateTime_ != null) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(UpdateTime);
       }
+      if (ArtifactType.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(ArtifactType);
+      }
+      size += imageManifests_.CalculateSize(_repeated_imageManifests_codec);
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
       }
@@ -521,6 +582,10 @@ namespace Google.Cloud.ArtifactRegistry.V1 {
         }
         UpdateTime.MergeFrom(other.UpdateTime);
       }
+      if (other.ArtifactType.Length != 0) {
+        ArtifactType = other.ArtifactType;
+      }
+      imageManifests_.Add(other.imageManifests_);
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 
@@ -575,6 +640,14 @@ namespace Google.Cloud.ArtifactRegistry.V1 {
               UpdateTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
             }
             input.ReadMessage(UpdateTime);
+            break;
+          }
+          case 74: {
+            ArtifactType = input.ReadString();
+            break;
+          }
+          case 90: {
+            imageManifests_.AddEntriesFrom(input, _repeated_imageManifests_codec);
             break;
           }
         }
@@ -633,6 +706,448 @@ namespace Google.Cloud.ArtifactRegistry.V1 {
             input.ReadMessage(UpdateTime);
             break;
           }
+          case 74: {
+            ArtifactType = input.ReadString();
+            break;
+          }
+          case 90: {
+            imageManifests_.AddEntriesFrom(ref input, _repeated_imageManifests_codec);
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+  }
+
+  /// <summary>
+  /// Details of a single image manifest within a multi-arch image.
+  /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+  public sealed partial class ImageManifest : pb::IMessage<ImageManifest>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<ImageManifest> _parser = new pb::MessageParser<ImageManifest>(() => new ImageManifest());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<ImageManifest> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Cloud.ArtifactRegistry.V1.ArtifactReflection.Descriptor.MessageTypes[1]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public ImageManifest() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public ImageManifest(ImageManifest other) : this() {
+      architecture_ = other.architecture_;
+      os_ = other.os_;
+      digest_ = other.digest_;
+      mediaType_ = other.mediaType_;
+      osVersion_ = other.osVersion_;
+      osFeatures_ = other.osFeatures_.Clone();
+      variant_ = other.variant_;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public ImageManifest Clone() {
+      return new ImageManifest(this);
+    }
+
+    /// <summary>Field number for the "architecture" field.</summary>
+    public const int ArchitectureFieldNumber = 1;
+    private string architecture_ = "";
+    /// <summary>
+    /// Optional. The CPU architecture of the image.
+    /// Values are provided by the Docker client and are not validated by Artifact
+    /// Registry. Example values include "amd64", "arm64", "ppc64le", "s390x",
+    /// "riscv64", "mips64le", etc.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string Architecture {
+      get { return architecture_; }
+      set {
+        architecture_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "os" field.</summary>
+    public const int OsFieldNumber = 2;
+    private string os_ = "";
+    /// <summary>
+    /// Optional. The operating system of the image.
+    /// Values are provided by the Docker client and are not validated by Artifact
+    /// Registry. Example values include "linux", "windows", "darwin", "aix", etc.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string Os {
+      get { return os_; }
+      set {
+        os_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "digest" field.</summary>
+    public const int DigestFieldNumber = 3;
+    private string digest_ = "";
+    /// <summary>
+    /// Optional. The manifest digest, in the format "sha256:&lt;sha256_hex_digest>".
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string Digest {
+      get { return digest_; }
+      set {
+        digest_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "media_type" field.</summary>
+    public const int MediaTypeFieldNumber = 4;
+    private string mediaType_ = "";
+    /// <summary>
+    /// Optional. The media type of the manifest, e.g.,
+    /// "application/vnd.docker.distribution.manifest.v2+json"
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string MediaType {
+      get { return mediaType_; }
+      set {
+        mediaType_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "os_version" field.</summary>
+    public const int OsVersionFieldNumber = 5;
+    private string osVersion_ = "";
+    /// <summary>
+    /// Optional. The OS version of the image, for example on Windows
+    /// `10.0.14393.1066`.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string OsVersion {
+      get { return osVersion_; }
+      set {
+        osVersion_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "os_features" field.</summary>
+    public const int OsFeaturesFieldNumber = 6;
+    private static readonly pb::FieldCodec<string> _repeated_osFeatures_codec
+        = pb::FieldCodec.ForString(50);
+    private readonly pbc::RepeatedField<string> osFeatures_ = new pbc::RepeatedField<string>();
+    /// <summary>
+    /// Optional. The required OS features for the image, for example on Windows
+    /// `win32k`.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pbc::RepeatedField<string> OsFeatures {
+      get { return osFeatures_; }
+    }
+
+    /// <summary>Field number for the "variant" field.</summary>
+    public const int VariantFieldNumber = 7;
+    private string variant_ = "";
+    /// <summary>
+    /// Optional. The variant of the CPU in the image, for example `v7` to specify
+    /// ARMv7 when architecture is `arm`.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string Variant {
+      get { return variant_; }
+      set {
+        variant_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as ImageManifest);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(ImageManifest other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (Architecture != other.Architecture) return false;
+      if (Os != other.Os) return false;
+      if (Digest != other.Digest) return false;
+      if (MediaType != other.MediaType) return false;
+      if (OsVersion != other.OsVersion) return false;
+      if(!osFeatures_.Equals(other.osFeatures_)) return false;
+      if (Variant != other.Variant) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (Architecture.Length != 0) hash ^= Architecture.GetHashCode();
+      if (Os.Length != 0) hash ^= Os.GetHashCode();
+      if (Digest.Length != 0) hash ^= Digest.GetHashCode();
+      if (MediaType.Length != 0) hash ^= MediaType.GetHashCode();
+      if (OsVersion.Length != 0) hash ^= OsVersion.GetHashCode();
+      hash ^= osFeatures_.GetHashCode();
+      if (Variant.Length != 0) hash ^= Variant.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (Architecture.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(Architecture);
+      }
+      if (Os.Length != 0) {
+        output.WriteRawTag(18);
+        output.WriteString(Os);
+      }
+      if (Digest.Length != 0) {
+        output.WriteRawTag(26);
+        output.WriteString(Digest);
+      }
+      if (MediaType.Length != 0) {
+        output.WriteRawTag(34);
+        output.WriteString(MediaType);
+      }
+      if (OsVersion.Length != 0) {
+        output.WriteRawTag(42);
+        output.WriteString(OsVersion);
+      }
+      osFeatures_.WriteTo(output, _repeated_osFeatures_codec);
+      if (Variant.Length != 0) {
+        output.WriteRawTag(58);
+        output.WriteString(Variant);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (Architecture.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(Architecture);
+      }
+      if (Os.Length != 0) {
+        output.WriteRawTag(18);
+        output.WriteString(Os);
+      }
+      if (Digest.Length != 0) {
+        output.WriteRawTag(26);
+        output.WriteString(Digest);
+      }
+      if (MediaType.Length != 0) {
+        output.WriteRawTag(34);
+        output.WriteString(MediaType);
+      }
+      if (OsVersion.Length != 0) {
+        output.WriteRawTag(42);
+        output.WriteString(OsVersion);
+      }
+      osFeatures_.WriteTo(ref output, _repeated_osFeatures_codec);
+      if (Variant.Length != 0) {
+        output.WriteRawTag(58);
+        output.WriteString(Variant);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      if (Architecture.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Architecture);
+      }
+      if (Os.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Os);
+      }
+      if (Digest.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Digest);
+      }
+      if (MediaType.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(MediaType);
+      }
+      if (OsVersion.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(OsVersion);
+      }
+      size += osFeatures_.CalculateSize(_repeated_osFeatures_codec);
+      if (Variant.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Variant);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(ImageManifest other) {
+      if (other == null) {
+        return;
+      }
+      if (other.Architecture.Length != 0) {
+        Architecture = other.Architecture;
+      }
+      if (other.Os.Length != 0) {
+        Os = other.Os;
+      }
+      if (other.Digest.Length != 0) {
+        Digest = other.Digest;
+      }
+      if (other.MediaType.Length != 0) {
+        MediaType = other.MediaType;
+      }
+      if (other.OsVersion.Length != 0) {
+        OsVersion = other.OsVersion;
+      }
+      osFeatures_.Add(other.osFeatures_);
+      if (other.Variant.Length != 0) {
+        Variant = other.Variant;
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            Architecture = input.ReadString();
+            break;
+          }
+          case 18: {
+            Os = input.ReadString();
+            break;
+          }
+          case 26: {
+            Digest = input.ReadString();
+            break;
+          }
+          case 34: {
+            MediaType = input.ReadString();
+            break;
+          }
+          case 42: {
+            OsVersion = input.ReadString();
+            break;
+          }
+          case 50: {
+            osFeatures_.AddEntriesFrom(input, _repeated_osFeatures_codec);
+            break;
+          }
+          case 58: {
+            Variant = input.ReadString();
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            Architecture = input.ReadString();
+            break;
+          }
+          case 18: {
+            Os = input.ReadString();
+            break;
+          }
+          case 26: {
+            Digest = input.ReadString();
+            break;
+          }
+          case 34: {
+            MediaType = input.ReadString();
+            break;
+          }
+          case 42: {
+            OsVersion = input.ReadString();
+            break;
+          }
+          case 50: {
+            osFeatures_.AddEntriesFrom(ref input, _repeated_osFeatures_codec);
+            break;
+          }
+          case 58: {
+            Variant = input.ReadString();
+            break;
+          }
         }
       }
     }
@@ -658,7 +1173,7 @@ namespace Google.Cloud.ArtifactRegistry.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.ArtifactRegistry.V1.ArtifactReflection.Descriptor.MessageTypes[1]; }
+      get { return global::Google.Cloud.ArtifactRegistry.V1.ArtifactReflection.Descriptor.MessageTypes[2]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -975,7 +1490,7 @@ namespace Google.Cloud.ArtifactRegistry.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.ArtifactRegistry.V1.ArtifactReflection.Descriptor.MessageTypes[2]; }
+      get { return global::Google.Cloud.ArtifactRegistry.V1.ArtifactReflection.Descriptor.MessageTypes[3]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1201,7 +1716,7 @@ namespace Google.Cloud.ArtifactRegistry.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.ArtifactRegistry.V1.ArtifactReflection.Descriptor.MessageTypes[3]; }
+      get { return global::Google.Cloud.ArtifactRegistry.V1.ArtifactReflection.Descriptor.MessageTypes[4]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1397,7 +1912,7 @@ namespace Google.Cloud.ArtifactRegistry.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.ArtifactRegistry.V1.ArtifactReflection.Descriptor.MessageTypes[4]; }
+      get { return global::Google.Cloud.ArtifactRegistry.V1.ArtifactReflection.Descriptor.MessageTypes[5]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1862,7 +2377,7 @@ namespace Google.Cloud.ArtifactRegistry.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.ArtifactRegistry.V1.ArtifactReflection.Descriptor.MessageTypes[5]; }
+      get { return global::Google.Cloud.ArtifactRegistry.V1.ArtifactReflection.Descriptor.MessageTypes[6]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -2139,7 +2654,7 @@ namespace Google.Cloud.ArtifactRegistry.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.ArtifactRegistry.V1.ArtifactReflection.Descriptor.MessageTypes[6]; }
+      get { return global::Google.Cloud.ArtifactRegistry.V1.ArtifactReflection.Descriptor.MessageTypes[7]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -2365,7 +2880,7 @@ namespace Google.Cloud.ArtifactRegistry.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.ArtifactRegistry.V1.ArtifactReflection.Descriptor.MessageTypes[7]; }
+      get { return global::Google.Cloud.ArtifactRegistry.V1.ArtifactReflection.Descriptor.MessageTypes[8]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -2561,7 +3076,7 @@ namespace Google.Cloud.ArtifactRegistry.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.ArtifactRegistry.V1.ArtifactReflection.Descriptor.MessageTypes[8]; }
+      get { return global::Google.Cloud.ArtifactRegistry.V1.ArtifactReflection.Descriptor.MessageTypes[9]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -2970,7 +3485,7 @@ namespace Google.Cloud.ArtifactRegistry.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.ArtifactRegistry.V1.ArtifactReflection.Descriptor.MessageTypes[9]; }
+      get { return global::Google.Cloud.ArtifactRegistry.V1.ArtifactReflection.Descriptor.MessageTypes[10]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -3247,7 +3762,7 @@ namespace Google.Cloud.ArtifactRegistry.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.ArtifactRegistry.V1.ArtifactReflection.Descriptor.MessageTypes[10]; }
+      get { return global::Google.Cloud.ArtifactRegistry.V1.ArtifactReflection.Descriptor.MessageTypes[11]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -3473,7 +3988,7 @@ namespace Google.Cloud.ArtifactRegistry.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.ArtifactRegistry.V1.ArtifactReflection.Descriptor.MessageTypes[11]; }
+      get { return global::Google.Cloud.ArtifactRegistry.V1.ArtifactReflection.Descriptor.MessageTypes[12]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -3669,7 +4184,7 @@ namespace Google.Cloud.ArtifactRegistry.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.ArtifactRegistry.V1.ArtifactReflection.Descriptor.MessageTypes[12]; }
+      get { return global::Google.Cloud.ArtifactRegistry.V1.ArtifactReflection.Descriptor.MessageTypes[13]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -4093,7 +4608,7 @@ namespace Google.Cloud.ArtifactRegistry.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.ArtifactRegistry.V1.ArtifactReflection.Descriptor.MessageTypes[13]; }
+      get { return global::Google.Cloud.ArtifactRegistry.V1.ArtifactReflection.Descriptor.MessageTypes[14]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -4370,7 +4885,7 @@ namespace Google.Cloud.ArtifactRegistry.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.ArtifactRegistry.V1.ArtifactReflection.Descriptor.MessageTypes[14]; }
+      get { return global::Google.Cloud.ArtifactRegistry.V1.ArtifactReflection.Descriptor.MessageTypes[15]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -4596,7 +5111,7 @@ namespace Google.Cloud.ArtifactRegistry.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.ArtifactRegistry.V1.ArtifactReflection.Descriptor.MessageTypes[15]; }
+      get { return global::Google.Cloud.ArtifactRegistry.V1.ArtifactReflection.Descriptor.MessageTypes[16]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
