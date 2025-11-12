@@ -4006,7 +4006,7 @@
             "generationAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
             "releaseAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
             "releaseTimestamp": "2025-11-06T21:50:22.461955241Z",
-            "lastGeneratedCommit": "bab01b38ef7a0f3a756d38862d37e4380ff85753",
+            "lastGeneratedCommit": "3568ce2d811cc5062b3992f19b8bcc5846573659",
             "lastReleasedCommit": "bab01b38ef7a0f3a756d38862d37e4380ff85753",
             "apiPaths": [
                 "google/shopping/merchant/quota/v1beta"
