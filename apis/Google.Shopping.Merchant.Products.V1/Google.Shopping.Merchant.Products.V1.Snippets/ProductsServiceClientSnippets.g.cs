@@ -35,6 +35,7 @@ namespace GoogleCSharpSnippets
             GetProductRequest request = new GetProductRequest
             {
                 ProductName = ProductName.FromAccountProduct("[ACCOUNT]", "[PRODUCT]"),
+                ProductIdBase64UrlEncoded = false,
             };
             // Make the request
             Product response = productsServiceClient.GetProduct(request);
@@ -52,6 +53,7 @@ namespace GoogleCSharpSnippets
             GetProductRequest request = new GetProductRequest
             {
                 ProductName = ProductName.FromAccountProduct("[ACCOUNT]", "[PRODUCT]"),
+                ProductIdBase64UrlEncoded = false,
             };
             // Make the request
             Product response = await productsServiceClient.GetProductAsync(request);
