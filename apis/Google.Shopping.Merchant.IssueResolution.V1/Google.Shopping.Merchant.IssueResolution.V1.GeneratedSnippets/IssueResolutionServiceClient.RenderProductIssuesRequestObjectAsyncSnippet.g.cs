@@ -41,6 +41,7 @@ namespace GoogleCSharpSnippets
                 LanguageCode = "",
                 TimeZone = "",
                 Payload = new RenderIssuesRequestPayload(),
+                ProductIdBase64UrlEncoded = false,
             };
             // Make the request
             RenderProductIssuesResponse response = await issueResolutionServiceClient.RenderProductIssuesAsync(request);
