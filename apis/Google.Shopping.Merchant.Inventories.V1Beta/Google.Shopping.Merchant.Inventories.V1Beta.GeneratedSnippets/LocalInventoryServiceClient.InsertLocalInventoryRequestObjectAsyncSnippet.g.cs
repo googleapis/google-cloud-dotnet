@@ -39,6 +39,7 @@ namespace GoogleCSharpSnippets
             {
                 ParentAsProductName = ProductName.FromAccountProduct("[ACCOUNT]", "[PRODUCT]"),
                 LocalInventory = new LocalInventory(),
+                ProductIdBase64UrlEncoded = false,
             };
             // Make the request
             LocalInventory response = await localInventoryServiceClient.InsertLocalInventoryAsync(request);

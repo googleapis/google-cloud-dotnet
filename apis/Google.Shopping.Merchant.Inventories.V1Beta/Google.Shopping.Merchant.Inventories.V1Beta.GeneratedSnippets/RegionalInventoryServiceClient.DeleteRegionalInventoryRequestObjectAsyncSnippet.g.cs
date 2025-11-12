@@ -38,6 +38,7 @@ namespace GoogleCSharpSnippets
             DeleteRegionalInventoryRequest request = new DeleteRegionalInventoryRequest
             {
                 RegionalInventoryName = RegionalInventoryName.FromAccountProductRegion("[ACCOUNT]", "[PRODUCT]", "[REGION]"),
+                ProductIdBase64UrlEncoded = false,
             };
             // Make the request
             await regionalInventoryServiceClient.DeleteRegionalInventoryAsync(request);
