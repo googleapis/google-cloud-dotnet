@@ -38,53 +38,56 @@ namespace Google.Shopping.Merchant.Inventories.V1 {
             "dmVudG9yeUF0dHJpYnV0ZXNCA+BBATp16kFyCixtZXJjaGFudGFwaS5nb29n",
             "bGVhcGlzLmNvbS9SZWdpb25hbEludmVudG9yeRJCYWNjb3VudHMve2FjY291",
             "bnR9L3Byb2R1Y3RzL3twcm9kdWN0fS9yZWdpb25hbEludmVudG9yaWVzL3ty",
-            "ZWdpb259Io0BCh5MaXN0UmVnaW9uYWxJbnZlbnRvcmllc1JlcXVlc3QSRAoG",
+            "ZWdpb259IrkBCh5MaXN0UmVnaW9uYWxJbnZlbnRvcmllc1JlcXVlc3QSRAoG",
             "cGFyZW50GAEgASgJQjTgQQL6QS4SLG1lcmNoYW50YXBpLmdvb2dsZWFwaXMu",
             "Y29tL1JlZ2lvbmFsSW52ZW50b3J5EhEKCXBhZ2Vfc2l6ZRgCIAEoBRISCgpw",
-            "YWdlX3Rva2VuGAMgASgJIpQBCh9MaXN0UmVnaW9uYWxJbnZlbnRvcmllc1Jl",
-            "c3BvbnNlElgKFHJlZ2lvbmFsX2ludmVudG9yaWVzGAEgAygLMjouZ29vZ2xl",
-            "LnNob3BwaW5nLm1lcmNoYW50LmludmVudG9yaWVzLnYxLlJlZ2lvbmFsSW52",
-            "ZW50b3J5EhcKD25leHRfcGFnZV90b2tlbhgCIAEoCSLDAQoeSW5zZXJ0UmVn",
-            "aW9uYWxJbnZlbnRvcnlSZXF1ZXN0EkQKBnBhcmVudBgBIAEoCUI04EEC+kEu",
-            "EixtZXJjaGFudGFwaS5nb29nbGVhcGlzLmNvbS9SZWdpb25hbEludmVudG9y",
-            "eRJbChJyZWdpb25hbF9pbnZlbnRvcnkYAiABKAsyOi5nb29nbGUuc2hvcHBp",
-            "bmcubWVyY2hhbnQuaW52ZW50b3JpZXMudjEuUmVnaW9uYWxJbnZlbnRvcnlC",
-            "A+BBAiJkCh5EZWxldGVSZWdpb25hbEludmVudG9yeVJlcXVlc3QSQgoEbmFt",
-            "ZRgBIAEoCUI04EEC+kEuCixtZXJjaGFudGFwaS5nb29nbGVhcGlzLmNvbS9S",
-            "ZWdpb25hbEludmVudG9yeTK/BgoYUmVnaW9uYWxJbnZlbnRvcnlTZXJ2aWNl",
-            "EoECChdMaXN0UmVnaW9uYWxJbnZlbnRvcmllcxJHLmdvb2dsZS5zaG9wcGlu",
-            "Zy5tZXJjaGFudC5pbnZlbnRvcmllcy52MS5MaXN0UmVnaW9uYWxJbnZlbnRv",
-            "cmllc1JlcXVlc3QaSC5nb29nbGUuc2hvcHBpbmcubWVyY2hhbnQuaW52ZW50",
-            "b3JpZXMudjEuTGlzdFJlZ2lvbmFsSW52ZW50b3JpZXNSZXNwb25zZSJT2kEG",
-            "cGFyZW50gtPkkwJEEkIvaW52ZW50b3JpZXMvdjEve3BhcmVudD1hY2NvdW50",
-            "cy8qL3Byb2R1Y3RzLyp9L3JlZ2lvbmFsSW52ZW50b3JpZXMShQIKF0luc2Vy",
-            "dFJlZ2lvbmFsSW52ZW50b3J5EkcuZ29vZ2xlLnNob3BwaW5nLm1lcmNoYW50",
-            "LmludmVudG9yaWVzLnYxLkluc2VydFJlZ2lvbmFsSW52ZW50b3J5UmVxdWVz",
-            "dBo6Lmdvb2dsZS5zaG9wcGluZy5tZXJjaGFudC5pbnZlbnRvcmllcy52MS5S",
-            "ZWdpb25hbEludmVudG9yeSJlgtPkkwJfIkkvaW52ZW50b3JpZXMvdjEve3Bh",
-            "cmVudD1hY2NvdW50cy8qL3Byb2R1Y3RzLyp9L3JlZ2lvbmFsSW52ZW50b3Jp",
-            "ZXM6aW5zZXJ0OhJyZWdpb25hbF9pbnZlbnRvcnkSzQEKF0RlbGV0ZVJlZ2lv",
-            "bmFsSW52ZW50b3J5EkcuZ29vZ2xlLnNob3BwaW5nLm1lcmNoYW50LmludmVu",
-            "dG9yaWVzLnYxLkRlbGV0ZVJlZ2lvbmFsSW52ZW50b3J5UmVxdWVzdBoWLmdv",
-            "b2dsZS5wcm90b2J1Zi5FbXB0eSJR2kEEbmFtZYLT5JMCRCpCL2ludmVudG9y",
-            "aWVzL3YxL3tuYW1lPWFjY291bnRzLyovcHJvZHVjdHMvKi9yZWdpb25hbElu",
-            "dmVudG9yaWVzLyp9GkfKQRptZXJjaGFudGFwaS5nb29nbGVhcGlzLmNvbdJB",
-            "J2h0dHBzOi8vd3d3Lmdvb2dsZWFwaXMuY29tL2F1dGgvY29udGVudEKeAgor",
-            "Y29tLmdvb2dsZS5zaG9wcGluZy5tZXJjaGFudC5pbnZlbnRvcmllcy52MUIW",
-            "UmVnaW9uYWxJbnZlbnRvcnlQcm90b1ABWlNjbG91ZC5nb29nbGUuY29tL2dv",
-            "L3Nob3BwaW5nL21lcmNoYW50L2ludmVudG9yaWVzL2FwaXYxL2ludmVudG9y",
-            "aWVzcGI7aW52ZW50b3JpZXNwYqoCJ0dvb2dsZS5TaG9wcGluZy5NZXJjaGFu",
-            "dC5JbnZlbnRvcmllcy5WMcoCJ0dvb2dsZVxTaG9wcGluZ1xNZXJjaGFudFxJ",
-            "bnZlbnRvcmllc1xWMeoCK0dvb2dsZTo6U2hvcHBpbmc6Ok1lcmNoYW50OjpJ",
-            "bnZlbnRvcmllczo6VjFiBnByb3RvMw=="));
+            "YWdlX3Rva2VuGAMgASgJEioKHXByb2R1Y3RfaWRfYmFzZTY0X3VybF9lbmNv",
+            "ZGVkGAQgASgIQgPgQQEilAEKH0xpc3RSZWdpb25hbEludmVudG9yaWVzUmVz",
+            "cG9uc2USWAoUcmVnaW9uYWxfaW52ZW50b3JpZXMYASADKAsyOi5nb29nbGUu",
+            "c2hvcHBpbmcubWVyY2hhbnQuaW52ZW50b3JpZXMudjEuUmVnaW9uYWxJbnZl",
+            "bnRvcnkSFwoPbmV4dF9wYWdlX3Rva2VuGAIgASgJIu8BCh5JbnNlcnRSZWdp",
+            "b25hbEludmVudG9yeVJlcXVlc3QSRAoGcGFyZW50GAEgASgJQjTgQQL6QS4S",
+            "LG1lcmNoYW50YXBpLmdvb2dsZWFwaXMuY29tL1JlZ2lvbmFsSW52ZW50b3J5",
+            "ElsKEnJlZ2lvbmFsX2ludmVudG9yeRgCIAEoCzI6Lmdvb2dsZS5zaG9wcGlu",
+            "Zy5tZXJjaGFudC5pbnZlbnRvcmllcy52MS5SZWdpb25hbEludmVudG9yeUID",
+            "4EECEioKHXByb2R1Y3RfaWRfYmFzZTY0X3VybF9lbmNvZGVkGAMgASgIQgPg",
+            "QQEikAEKHkRlbGV0ZVJlZ2lvbmFsSW52ZW50b3J5UmVxdWVzdBJCCgRuYW1l",
+            "GAEgASgJQjTgQQL6QS4KLG1lcmNoYW50YXBpLmdvb2dsZWFwaXMuY29tL1Jl",
+            "Z2lvbmFsSW52ZW50b3J5EioKHXByb2R1Y3RfaWRfYmFzZTY0X3VybF9lbmNv",
+            "ZGVkGAIgASgIQgPgQQEyvwYKGFJlZ2lvbmFsSW52ZW50b3J5U2VydmljZRKB",
+            "AgoXTGlzdFJlZ2lvbmFsSW52ZW50b3JpZXMSRy5nb29nbGUuc2hvcHBpbmcu",
+            "bWVyY2hhbnQuaW52ZW50b3JpZXMudjEuTGlzdFJlZ2lvbmFsSW52ZW50b3Jp",
+            "ZXNSZXF1ZXN0GkguZ29vZ2xlLnNob3BwaW5nLm1lcmNoYW50LmludmVudG9y",
+            "aWVzLnYxLkxpc3RSZWdpb25hbEludmVudG9yaWVzUmVzcG9uc2UiU9pBBnBh",
+            "cmVudILT5JMCRBJCL2ludmVudG9yaWVzL3YxL3twYXJlbnQ9YWNjb3VudHMv",
+            "Ki9wcm9kdWN0cy8qfS9yZWdpb25hbEludmVudG9yaWVzEoUCChdJbnNlcnRS",
+            "ZWdpb25hbEludmVudG9yeRJHLmdvb2dsZS5zaG9wcGluZy5tZXJjaGFudC5p",
+            "bnZlbnRvcmllcy52MS5JbnNlcnRSZWdpb25hbEludmVudG9yeVJlcXVlc3Qa",
+            "Oi5nb29nbGUuc2hvcHBpbmcubWVyY2hhbnQuaW52ZW50b3JpZXMudjEuUmVn",
+            "aW9uYWxJbnZlbnRvcnkiZYLT5JMCXyJJL2ludmVudG9yaWVzL3YxL3twYXJl",
+            "bnQ9YWNjb3VudHMvKi9wcm9kdWN0cy8qfS9yZWdpb25hbEludmVudG9yaWVz",
+            "Omluc2VydDoScmVnaW9uYWxfaW52ZW50b3J5Es0BChdEZWxldGVSZWdpb25h",
+            "bEludmVudG9yeRJHLmdvb2dsZS5zaG9wcGluZy5tZXJjaGFudC5pbnZlbnRv",
+            "cmllcy52MS5EZWxldGVSZWdpb25hbEludmVudG9yeVJlcXVlc3QaFi5nb29n",
+            "bGUucHJvdG9idWYuRW1wdHkiUdpBBG5hbWWC0+STAkQqQi9pbnZlbnRvcmll",
+            "cy92MS97bmFtZT1hY2NvdW50cy8qL3Byb2R1Y3RzLyovcmVnaW9uYWxJbnZl",
+            "bnRvcmllcy8qfRpHykEabWVyY2hhbnRhcGkuZ29vZ2xlYXBpcy5jb23SQSdo",
+            "dHRwczovL3d3dy5nb29nbGVhcGlzLmNvbS9hdXRoL2NvbnRlbnRCngIKK2Nv",
+            "bS5nb29nbGUuc2hvcHBpbmcubWVyY2hhbnQuaW52ZW50b3JpZXMudjFCFlJl",
+            "Z2lvbmFsSW52ZW50b3J5UHJvdG9QAVpTY2xvdWQuZ29vZ2xlLmNvbS9nby9z",
+            "aG9wcGluZy9tZXJjaGFudC9pbnZlbnRvcmllcy9hcGl2MS9pbnZlbnRvcmll",
+            "c3BiO2ludmVudG9yaWVzcGKqAidHb29nbGUuU2hvcHBpbmcuTWVyY2hhbnQu",
+            "SW52ZW50b3JpZXMuVjHKAidHb29nbGVcU2hvcHBpbmdcTWVyY2hhbnRcSW52",
+            "ZW50b3JpZXNcVjHqAitHb29nbGU6OlNob3BwaW5nOjpNZXJjaGFudDo6SW52",
+            "ZW50b3JpZXM6OlYxYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Api.ClientReflection.Descriptor, global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.EmptyReflection.Descriptor, global::Google.Shopping.Merchant.Inventories.V1.InventoriesCommonReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Shopping.Merchant.Inventories.V1.RegionalInventory), global::Google.Shopping.Merchant.Inventories.V1.RegionalInventory.Parser, new[]{ "Name", "Account", "Region", "RegionalInventoryAttributes" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Shopping.Merchant.Inventories.V1.ListRegionalInventoriesRequest), global::Google.Shopping.Merchant.Inventories.V1.ListRegionalInventoriesRequest.Parser, new[]{ "Parent", "PageSize", "PageToken" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Shopping.Merchant.Inventories.V1.ListRegionalInventoriesRequest), global::Google.Shopping.Merchant.Inventories.V1.ListRegionalInventoriesRequest.Parser, new[]{ "Parent", "PageSize", "PageToken", "ProductIdBase64UrlEncoded" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Shopping.Merchant.Inventories.V1.ListRegionalInventoriesResponse), global::Google.Shopping.Merchant.Inventories.V1.ListRegionalInventoriesResponse.Parser, new[]{ "RegionalInventories", "NextPageToken" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Shopping.Merchant.Inventories.V1.InsertRegionalInventoryRequest), global::Google.Shopping.Merchant.Inventories.V1.InsertRegionalInventoryRequest.Parser, new[]{ "Parent", "RegionalInventory" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Shopping.Merchant.Inventories.V1.DeleteRegionalInventoryRequest), global::Google.Shopping.Merchant.Inventories.V1.DeleteRegionalInventoryRequest.Parser, new[]{ "Name" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Shopping.Merchant.Inventories.V1.InsertRegionalInventoryRequest), global::Google.Shopping.Merchant.Inventories.V1.InsertRegionalInventoryRequest.Parser, new[]{ "Parent", "RegionalInventory", "ProductIdBase64UrlEncoded" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Shopping.Merchant.Inventories.V1.DeleteRegionalInventoryRequest), global::Google.Shopping.Merchant.Inventories.V1.DeleteRegionalInventoryRequest.Parser, new[]{ "Name", "ProductIdBase64UrlEncoded" }, null, null, null, null)
           }));
     }
     #endregion
@@ -468,6 +471,7 @@ namespace Google.Shopping.Merchant.Inventories.V1 {
       parent_ = other.parent_;
       pageSize_ = other.pageSize_;
       pageToken_ = other.pageToken_;
+      productIdBase64UrlEncoded_ = other.productIdBase64UrlEncoded_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -533,6 +537,30 @@ namespace Google.Shopping.Merchant.Inventories.V1 {
       }
     }
 
+    /// <summary>Field number for the "product_id_base64_url_encoded" field.</summary>
+    public const int ProductIdBase64UrlEncodedFieldNumber = 4;
+    private bool productIdBase64UrlEncoded_;
+    /// <summary>
+    /// Optional. If true, the `{product}` in the `parent` field of the request
+    /// will be interpreted as unpadded base64url-encoded and decoded during
+    /// request processing to match the decoded value. Default value is `false`.
+    /// Use this if your `{product}` contains special characters, such as forward
+    /// slash `/` or other characters that are unpadded base64url-encoded (as per
+    /// RFC 7515: https://datatracker.ietf.org/doc/html/rfc7515#section-2).
+    ///
+    /// Note that future versions of the API will only accept unpadded
+    /// base64url-encoded product ids, so we strongly recommend proactively setting
+    /// this to `true` and encoding the product ids.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool ProductIdBase64UrlEncoded {
+      get { return productIdBase64UrlEncoded_; }
+      set {
+        productIdBase64UrlEncoded_ = value;
+      }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
@@ -551,6 +579,7 @@ namespace Google.Shopping.Merchant.Inventories.V1 {
       if (Parent != other.Parent) return false;
       if (PageSize != other.PageSize) return false;
       if (PageToken != other.PageToken) return false;
+      if (ProductIdBase64UrlEncoded != other.ProductIdBase64UrlEncoded) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -561,6 +590,7 @@ namespace Google.Shopping.Merchant.Inventories.V1 {
       if (Parent.Length != 0) hash ^= Parent.GetHashCode();
       if (PageSize != 0) hash ^= PageSize.GetHashCode();
       if (PageToken.Length != 0) hash ^= PageToken.GetHashCode();
+      if (ProductIdBase64UrlEncoded != false) hash ^= ProductIdBase64UrlEncoded.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -591,6 +621,10 @@ namespace Google.Shopping.Merchant.Inventories.V1 {
         output.WriteRawTag(26);
         output.WriteString(PageToken);
       }
+      if (ProductIdBase64UrlEncoded != false) {
+        output.WriteRawTag(32);
+        output.WriteBool(ProductIdBase64UrlEncoded);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -613,6 +647,10 @@ namespace Google.Shopping.Merchant.Inventories.V1 {
         output.WriteRawTag(26);
         output.WriteString(PageToken);
       }
+      if (ProductIdBase64UrlEncoded != false) {
+        output.WriteRawTag(32);
+        output.WriteBool(ProductIdBase64UrlEncoded);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -631,6 +669,9 @@ namespace Google.Shopping.Merchant.Inventories.V1 {
       }
       if (PageToken.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(PageToken);
+      }
+      if (ProductIdBase64UrlEncoded != false) {
+        size += 1 + 1;
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -652,6 +693,9 @@ namespace Google.Shopping.Merchant.Inventories.V1 {
       }
       if (other.PageToken.Length != 0) {
         PageToken = other.PageToken;
+      }
+      if (other.ProductIdBase64UrlEncoded != false) {
+        ProductIdBase64UrlEncoded = other.ProductIdBase64UrlEncoded;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -680,6 +724,10 @@ namespace Google.Shopping.Merchant.Inventories.V1 {
             PageToken = input.ReadString();
             break;
           }
+          case 32: {
+            ProductIdBase64UrlEncoded = input.ReadBool();
+            break;
+          }
         }
       }
     #endif
@@ -705,6 +753,10 @@ namespace Google.Shopping.Merchant.Inventories.V1 {
           }
           case 26: {
             PageToken = input.ReadString();
+            break;
+          }
+          case 32: {
+            ProductIdBase64UrlEncoded = input.ReadBool();
             break;
           }
         }
@@ -981,6 +1033,7 @@ namespace Google.Shopping.Merchant.Inventories.V1 {
     public InsertRegionalInventoryRequest(InsertRegionalInventoryRequest other) : this() {
       parent_ = other.parent_;
       regionalInventory_ = other.regionalInventory_ != null ? other.regionalInventory_.Clone() : null;
+      productIdBase64UrlEncoded_ = other.productIdBase64UrlEncoded_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -1023,6 +1076,30 @@ namespace Google.Shopping.Merchant.Inventories.V1 {
       }
     }
 
+    /// <summary>Field number for the "product_id_base64_url_encoded" field.</summary>
+    public const int ProductIdBase64UrlEncodedFieldNumber = 3;
+    private bool productIdBase64UrlEncoded_;
+    /// <summary>
+    /// Optional. If true, the `{product}` in the `parent` field of the request
+    /// will be interpreted as unpadded base64url-encoded and decoded during
+    /// request processing to match the decoded value. Default value is `false`.
+    /// Use this if your `{product}` contains special characters, such as forward
+    /// slash `/` or other characters that are unpadded base64url-encoded (as per
+    /// RFC 7515: https://datatracker.ietf.org/doc/html/rfc7515#section-2).
+    ///
+    /// Note that future versions of the API will only accept unpadded
+    /// base64url-encoded product ids, so we strongly recommend proactively setting
+    /// this to `true` and encoding the product ids.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool ProductIdBase64UrlEncoded {
+      get { return productIdBase64UrlEncoded_; }
+      set {
+        productIdBase64UrlEncoded_ = value;
+      }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
@@ -1040,6 +1117,7 @@ namespace Google.Shopping.Merchant.Inventories.V1 {
       }
       if (Parent != other.Parent) return false;
       if (!object.Equals(RegionalInventory, other.RegionalInventory)) return false;
+      if (ProductIdBase64UrlEncoded != other.ProductIdBase64UrlEncoded) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -1049,6 +1127,7 @@ namespace Google.Shopping.Merchant.Inventories.V1 {
       int hash = 1;
       if (Parent.Length != 0) hash ^= Parent.GetHashCode();
       if (regionalInventory_ != null) hash ^= RegionalInventory.GetHashCode();
+      if (ProductIdBase64UrlEncoded != false) hash ^= ProductIdBase64UrlEncoded.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -1075,6 +1154,10 @@ namespace Google.Shopping.Merchant.Inventories.V1 {
         output.WriteRawTag(18);
         output.WriteMessage(RegionalInventory);
       }
+      if (ProductIdBase64UrlEncoded != false) {
+        output.WriteRawTag(24);
+        output.WriteBool(ProductIdBase64UrlEncoded);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -1093,6 +1176,10 @@ namespace Google.Shopping.Merchant.Inventories.V1 {
         output.WriteRawTag(18);
         output.WriteMessage(RegionalInventory);
       }
+      if (ProductIdBase64UrlEncoded != false) {
+        output.WriteRawTag(24);
+        output.WriteBool(ProductIdBase64UrlEncoded);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -1108,6 +1195,9 @@ namespace Google.Shopping.Merchant.Inventories.V1 {
       }
       if (regionalInventory_ != null) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(RegionalInventory);
+      }
+      if (ProductIdBase64UrlEncoded != false) {
+        size += 1 + 1;
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -1129,6 +1219,9 @@ namespace Google.Shopping.Merchant.Inventories.V1 {
           RegionalInventory = new global::Google.Shopping.Merchant.Inventories.V1.RegionalInventory();
         }
         RegionalInventory.MergeFrom(other.RegionalInventory);
+      }
+      if (other.ProductIdBase64UrlEncoded != false) {
+        ProductIdBase64UrlEncoded = other.ProductIdBase64UrlEncoded;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -1156,6 +1249,10 @@ namespace Google.Shopping.Merchant.Inventories.V1 {
             input.ReadMessage(RegionalInventory);
             break;
           }
+          case 24: {
+            ProductIdBase64UrlEncoded = input.ReadBool();
+            break;
+          }
         }
       }
     #endif
@@ -1180,6 +1277,10 @@ namespace Google.Shopping.Merchant.Inventories.V1 {
               RegionalInventory = new global::Google.Shopping.Merchant.Inventories.V1.RegionalInventory();
             }
             input.ReadMessage(RegionalInventory);
+            break;
+          }
+          case 24: {
+            ProductIdBase64UrlEncoded = input.ReadBool();
             break;
           }
         }
@@ -1228,6 +1329,7 @@ namespace Google.Shopping.Merchant.Inventories.V1 {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public DeleteRegionalInventoryRequest(DeleteRegionalInventoryRequest other) : this() {
       name_ = other.name_;
+      productIdBase64UrlEncoded_ = other.productIdBase64UrlEncoded_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -1254,6 +1356,30 @@ namespace Google.Shopping.Merchant.Inventories.V1 {
       }
     }
 
+    /// <summary>Field number for the "product_id_base64_url_encoded" field.</summary>
+    public const int ProductIdBase64UrlEncodedFieldNumber = 2;
+    private bool productIdBase64UrlEncoded_;
+    /// <summary>
+    /// Optional. If true, the `{product}` in the `name` field of the request will
+    /// be interpreted as unpadded base64url-encoded and decoded during request
+    /// processing to match the decoded value. Default value is `false`. Use this
+    /// if your `{product}` contains special characters, such as forward slash `/`
+    /// or other characters that are unpadded base64url-encoded (as per RFC 7515:
+    /// https://datatracker.ietf.org/doc/html/rfc7515#section-2).
+    ///
+    /// Note that future versions of the API will only accept unpadded
+    /// base64url-encoded product ids, so we strongly recommend proactively setting
+    /// this to `true` and encoding the product ids.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool ProductIdBase64UrlEncoded {
+      get { return productIdBase64UrlEncoded_; }
+      set {
+        productIdBase64UrlEncoded_ = value;
+      }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
@@ -1270,6 +1396,7 @@ namespace Google.Shopping.Merchant.Inventories.V1 {
         return true;
       }
       if (Name != other.Name) return false;
+      if (ProductIdBase64UrlEncoded != other.ProductIdBase64UrlEncoded) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -1278,6 +1405,7 @@ namespace Google.Shopping.Merchant.Inventories.V1 {
     public override int GetHashCode() {
       int hash = 1;
       if (Name.Length != 0) hash ^= Name.GetHashCode();
+      if (ProductIdBase64UrlEncoded != false) hash ^= ProductIdBase64UrlEncoded.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -1300,6 +1428,10 @@ namespace Google.Shopping.Merchant.Inventories.V1 {
         output.WriteRawTag(10);
         output.WriteString(Name);
       }
+      if (ProductIdBase64UrlEncoded != false) {
+        output.WriteRawTag(16);
+        output.WriteBool(ProductIdBase64UrlEncoded);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -1314,6 +1446,10 @@ namespace Google.Shopping.Merchant.Inventories.V1 {
         output.WriteRawTag(10);
         output.WriteString(Name);
       }
+      if (ProductIdBase64UrlEncoded != false) {
+        output.WriteRawTag(16);
+        output.WriteBool(ProductIdBase64UrlEncoded);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -1326,6 +1462,9 @@ namespace Google.Shopping.Merchant.Inventories.V1 {
       int size = 0;
       if (Name.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(Name);
+      }
+      if (ProductIdBase64UrlEncoded != false) {
+        size += 1 + 1;
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -1341,6 +1480,9 @@ namespace Google.Shopping.Merchant.Inventories.V1 {
       }
       if (other.Name.Length != 0) {
         Name = other.Name;
+      }
+      if (other.ProductIdBase64UrlEncoded != false) {
+        ProductIdBase64UrlEncoded = other.ProductIdBase64UrlEncoded;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -1361,6 +1503,10 @@ namespace Google.Shopping.Merchant.Inventories.V1 {
             Name = input.ReadString();
             break;
           }
+          case 16: {
+            ProductIdBase64UrlEncoded = input.ReadBool();
+            break;
+          }
         }
       }
     #endif
@@ -1378,6 +1524,10 @@ namespace Google.Shopping.Merchant.Inventories.V1 {
             break;
           case 10: {
             Name = input.ReadString();
+            break;
+          }
+          case 16: {
+            ProductIdBase64UrlEncoded = input.ReadBool();
             break;
           }
         }

@@ -35,6 +35,7 @@ namespace GoogleCSharpSnippets
             ListLocalInventoriesRequest request = new ListLocalInventoriesRequest
             {
                 ParentAsProductName = ProductName.FromAccountProduct("[ACCOUNT]", "[PRODUCT]"),
+                ProductIdBase64UrlEncoded = false,
             };
             // Make the request
             PagedEnumerable<ListLocalInventoriesResponse, LocalInventory> response = localInventoryServiceClient.ListLocalInventories(request);
@@ -83,6 +84,7 @@ namespace GoogleCSharpSnippets
             ListLocalInventoriesRequest request = new ListLocalInventoriesRequest
             {
                 ParentAsProductName = ProductName.FromAccountProduct("[ACCOUNT]", "[PRODUCT]"),
+                ProductIdBase64UrlEncoded = false,
             };
             // Make the request
             PagedAsyncEnumerable<ListLocalInventoriesResponse, LocalInventory> response = localInventoryServiceClient.ListLocalInventoriesAsync(request);
@@ -312,6 +314,7 @@ namespace GoogleCSharpSnippets
             {
                 ParentAsProductName = ProductName.FromAccountProduct("[ACCOUNT]", "[PRODUCT]"),
                 LocalInventory = new LocalInventory(),
+                ProductIdBase64UrlEncoded = false,
             };
             // Make the request
             LocalInventory response = localInventoryServiceClient.InsertLocalInventory(request);
@@ -330,6 +333,7 @@ namespace GoogleCSharpSnippets
             {
                 ParentAsProductName = ProductName.FromAccountProduct("[ACCOUNT]", "[PRODUCT]"),
                 LocalInventory = new LocalInventory(),
+                ProductIdBase64UrlEncoded = false,
             };
             // Make the request
             LocalInventory response = await localInventoryServiceClient.InsertLocalInventoryAsync(request);
@@ -346,6 +350,7 @@ namespace GoogleCSharpSnippets
             DeleteLocalInventoryRequest request = new DeleteLocalInventoryRequest
             {
                 LocalInventoryName = LocalInventoryName.FromAccountProductStoreCode("[ACCOUNT]", "[PRODUCT]", "[STORE_CODE]"),
+                ProductIdBase64UrlEncoded = false,
             };
             // Make the request
             localInventoryServiceClient.DeleteLocalInventory(request);
@@ -363,6 +368,7 @@ namespace GoogleCSharpSnippets
             DeleteLocalInventoryRequest request = new DeleteLocalInventoryRequest
             {
                 LocalInventoryName = LocalInventoryName.FromAccountProductStoreCode("[ACCOUNT]", "[PRODUCT]", "[STORE_CODE]"),
+                ProductIdBase64UrlEncoded = false,
             };
             // Make the request
             await localInventoryServiceClient.DeleteLocalInventoryAsync(request);

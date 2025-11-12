@@ -39,6 +39,7 @@ namespace GoogleCSharpSnippets
             ListRegionalInventoriesRequest request = new ListRegionalInventoriesRequest
             {
                 ParentAsProductName = ProductName.FromAccountProduct("[ACCOUNT]", "[PRODUCT]"),
+                ProductIdBase64UrlEncoded = false,
             };
             // Make the request
             PagedEnumerable<ListRegionalInventoriesResponse, RegionalInventory> response = regionalInventoryServiceClient.ListRegionalInventories(request);
