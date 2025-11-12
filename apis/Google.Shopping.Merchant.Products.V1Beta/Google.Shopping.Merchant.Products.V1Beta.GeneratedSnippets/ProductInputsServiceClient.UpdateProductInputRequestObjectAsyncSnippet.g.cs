@@ -41,6 +41,7 @@ namespace GoogleCSharpSnippets
                 ProductInput = new ProductInput(),
                 UpdateMask = new FieldMask(),
                 DataSource = "",
+                ProductIdBase64UrlEncoded = false,
             };
             // Make the request
             ProductInput response = await productInputsServiceClient.UpdateProductInputAsync(request);
