@@ -9,6 +9,6 @@
     <ProjectReference Include="..\Google.Cloud.Firestore\Google.Cloud.Firestore.csproj" />
   </ItemGroup>
   <ItemGroup>
-    <PackageReference Include="Google.Cloud.Firestore.Admin.V1" VersionOverride="3.15.0" />
+    <PackageReference Include="Google.Cloud.Firestore.Admin.V1" VersionOverride="3.16.0" />
   </ItemGroup>
 </Project>
