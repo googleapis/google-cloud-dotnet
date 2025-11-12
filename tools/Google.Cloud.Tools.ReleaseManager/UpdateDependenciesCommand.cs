@@ -69,13 +69,19 @@ public sealed class UpdateDependenciesCommand : CommandBase
                 if (allInternalPackageVersions.TryGetValue(package, out var latestVersion))
                 {
                     var currentDependencyVersion = dependencies[package];
-                    if (currentDependencyVersion == NonSourceGenerator.DefaultVersionValue ||
-                        currentDependencyVersion == NonSourceGenerator.ProjectVersionValue ||
+                    if (currentDependencyVersion == ApiMetadata.DefaultVersionValue ||
+                        currentDependencyVersion == ApiMetadata.ProjectVersionValue ||
                         latestVersion == currentDependencyVersion)
                     {
                         continue;
                     }
                     var structuredDefaultVersion = StructuredVersion.FromString(latestVersion);
+                    // If the latest version is actually not valid for release (e.g. preparing for a new major version)
+                    // we should skip it.
+                    if (structuredDefaultVersion.IsNonRelease)
+                    {
+                        continue;
+                    }
                     var structuredCurrentVersion = StructuredVersion.FromString(currentDependencyVersion);
                     if (structuredDefaultVersion.CompareTo(structuredCurrentVersion) > 0 &&
                         structuredDefaultVersion.Major == structuredCurrentVersion.Major &&

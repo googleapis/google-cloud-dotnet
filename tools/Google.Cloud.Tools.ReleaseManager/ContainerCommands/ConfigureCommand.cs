@@ -57,8 +57,8 @@ public class ConfigureCommand : IContainerCommand
         libraries.Add(new JObject()
         {
             ["id"] = api.Id,
-            ["generationAutomationLevel"] = "AUTOMATION_LEVEL_AUTOMATIC",
-            ["releaseAutomationLevel"] = "AUTOMATION_LEVEL_BLOCKED",
+            ["generationAutomationLevel"] = PipelineState.AutomationLevelAutomatic,
+            ["releaseAutomationLevel"] = PipelineState.AutomationLevelBlocked,
             ["apiPaths"] = new JArray(apiPath),
             ["sourcePaths"] = new JArray($"apis/{api.Id}/{api.Id}"),
             // Prepare for the first release with an alpha or beta.
