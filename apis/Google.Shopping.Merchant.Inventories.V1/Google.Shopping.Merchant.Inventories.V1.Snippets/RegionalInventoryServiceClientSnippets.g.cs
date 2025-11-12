@@ -35,6 +35,7 @@ namespace GoogleCSharpSnippets
             ListRegionalInventoriesRequest request = new ListRegionalInventoriesRequest
             {
                 ParentAsProductName = ProductName.FromAccountProduct("[ACCOUNT]", "[PRODUCT]"),
+                ProductIdBase64UrlEncoded = false,
             };
             // Make the request
             PagedEnumerable<ListRegionalInventoriesResponse, RegionalInventory> response = regionalInventoryServiceClient.ListRegionalInventories(request);
@@ -83,6 +84,7 @@ namespace GoogleCSharpSnippets
             ListRegionalInventoriesRequest request = new ListRegionalInventoriesRequest
             {
                 ParentAsProductName = ProductName.FromAccountProduct("[ACCOUNT]", "[PRODUCT]"),
+                ProductIdBase64UrlEncoded = false,
             };
             // Make the request
             PagedAsyncEnumerable<ListRegionalInventoriesResponse, RegionalInventory> response = regionalInventoryServiceClient.ListRegionalInventoriesAsync(request);
@@ -312,6 +314,7 @@ namespace GoogleCSharpSnippets
             {
                 ParentAsProductName = ProductName.FromAccountProduct("[ACCOUNT]", "[PRODUCT]"),
                 RegionalInventory = new RegionalInventory(),
+                ProductIdBase64UrlEncoded = false,
             };
             // Make the request
             RegionalInventory response = regionalInventoryServiceClient.InsertRegionalInventory(request);
@@ -330,6 +333,7 @@ namespace GoogleCSharpSnippets
             {
                 ParentAsProductName = ProductName.FromAccountProduct("[ACCOUNT]", "[PRODUCT]"),
                 RegionalInventory = new RegionalInventory(),
+                ProductIdBase64UrlEncoded = false,
             };
             // Make the request
             RegionalInventory response = await regionalInventoryServiceClient.InsertRegionalInventoryAsync(request);
@@ -346,6 +350,7 @@ namespace GoogleCSharpSnippets
             DeleteRegionalInventoryRequest request = new DeleteRegionalInventoryRequest
             {
                 RegionalInventoryName = RegionalInventoryName.FromAccountProductRegion("[ACCOUNT]", "[PRODUCT]", "[REGION]"),
+                ProductIdBase64UrlEncoded = false,
             };
             // Make the request
             regionalInventoryServiceClient.DeleteRegionalInventory(request);
@@ -363,6 +368,7 @@ namespace GoogleCSharpSnippets
             DeleteRegionalInventoryRequest request = new DeleteRegionalInventoryRequest
             {
                 RegionalInventoryName = RegionalInventoryName.FromAccountProductRegion("[ACCOUNT]", "[PRODUCT]", "[REGION]"),
+                ProductIdBase64UrlEncoded = false,
             };
             // Make the request
             await regionalInventoryServiceClient.DeleteRegionalInventoryAsync(request);
