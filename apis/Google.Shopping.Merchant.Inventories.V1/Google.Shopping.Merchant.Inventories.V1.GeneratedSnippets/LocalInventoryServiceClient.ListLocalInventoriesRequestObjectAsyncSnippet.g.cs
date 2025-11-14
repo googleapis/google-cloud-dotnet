@@ -41,7 +41,6 @@ namespace GoogleCSharpSnippets
             ListLocalInventoriesRequest request = new ListLocalInventoriesRequest
             {
                 ParentAsProductName = ProductName.FromAccountProduct("[ACCOUNT]", "[PRODUCT]"),
-                ProductIdBase64UrlEncoded = false,
             };
             // Make the request
             PagedAsyncEnumerable<ListLocalInventoriesResponse, LocalInventory> response = localInventoryServiceClient.ListLocalInventoriesAsync(request);

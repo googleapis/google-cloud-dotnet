@@ -4520,7 +4520,7 @@
             "generationAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
             "releaseAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
             "releaseTimestamp": "2025-11-06T21:55:30.486512130Z",
-            "lastGeneratedCommit": "5fa0268f3042c0569933022e138a5df19c8b2c9f",
+            "lastGeneratedCommit": "c2db528a3e4d12b95666c719ee0db30a3d4c78ad",
             "lastReleasedCommit": "4d8abb3f02f14d2906b2bb1f478e17afd95ec4fc",
             "apiPaths": [
                 "google/shopping/merchant/inventories/v1"
