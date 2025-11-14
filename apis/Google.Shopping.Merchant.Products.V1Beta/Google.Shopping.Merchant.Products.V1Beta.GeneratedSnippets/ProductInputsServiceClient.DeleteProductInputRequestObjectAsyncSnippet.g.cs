@@ -39,7 +39,6 @@ namespace GoogleCSharpSnippets
             {
                 ProductInputName = ProductInputName.FromAccountProductinput("[ACCOUNT]", "[PRODUCTINPUT]"),
                 DataSource = "",
-                ProductIdBase64UrlEncoded = false,
             };
             // Make the request
             await productInputsServiceClient.DeleteProductInputAsync(request);

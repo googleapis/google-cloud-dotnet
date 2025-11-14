@@ -271,15 +271,11 @@ namespace Google.Shopping.Merchant.Products.V1Beta
         /// </summary>
         /// <param name="name">
         /// Required. The name of the product to retrieve.
-        /// Format:
-        /// `accounts/{account}/products/{product}` where the last
-        /// section `product` consists of:
-        /// `content_language~feed_label~offer_id`
-        /// example for product name is `accounts/123/products/en~US~sku123`. A legacy
-        /// local product name would be `accounts/123/products/local~en~US~sku123`.
-        /// Note: For calls to the v1beta version, the `product` section consists
-        /// of: `channel~content_language~feed_label~offer_id`, for example:
-        /// `accounts/123/products/online~en~US~sku123`.
+        /// Format: `accounts/{account}/products/{product}`
+        /// where the last section `product` consists of 4 parts:
+        /// `channel~content_language~feed_label~offer_id`
+        /// example for product name is
+        /// `accounts/123/products/online~en~US~sku123`
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -297,15 +293,11 @@ namespace Google.Shopping.Merchant.Products.V1Beta
         /// </summary>
         /// <param name="name">
         /// Required. The name of the product to retrieve.
-        /// Format:
-        /// `accounts/{account}/products/{product}` where the last
-        /// section `product` consists of:
-        /// `content_language~feed_label~offer_id`
-        /// example for product name is `accounts/123/products/en~US~sku123`. A legacy
-        /// local product name would be `accounts/123/products/local~en~US~sku123`.
-        /// Note: For calls to the v1beta version, the `product` section consists
-        /// of: `channel~content_language~feed_label~offer_id`, for example:
-        /// `accounts/123/products/online~en~US~sku123`.
+        /// Format: `accounts/{account}/products/{product}`
+        /// where the last section `product` consists of 4 parts:
+        /// `channel~content_language~feed_label~offer_id`
+        /// example for product name is
+        /// `accounts/123/products/online~en~US~sku123`
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -323,15 +315,11 @@ namespace Google.Shopping.Merchant.Products.V1Beta
         /// </summary>
         /// <param name="name">
         /// Required. The name of the product to retrieve.
-        /// Format:
-        /// `accounts/{account}/products/{product}` where the last
-        /// section `product` consists of:
-        /// `content_language~feed_label~offer_id`
-        /// example for product name is `accounts/123/products/en~US~sku123`. A legacy
-        /// local product name would be `accounts/123/products/local~en~US~sku123`.
-        /// Note: For calls to the v1beta version, the `product` section consists
-        /// of: `channel~content_language~feed_label~offer_id`, for example:
-        /// `accounts/123/products/online~en~US~sku123`.
+        /// Format: `accounts/{account}/products/{product}`
+        /// where the last section `product` consists of 4 parts:
+        /// `channel~content_language~feed_label~offer_id`
+        /// example for product name is
+        /// `accounts/123/products/online~en~US~sku123`
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -346,15 +334,11 @@ namespace Google.Shopping.Merchant.Products.V1Beta
         /// </summary>
         /// <param name="name">
         /// Required. The name of the product to retrieve.
-        /// Format:
-        /// `accounts/{account}/products/{product}` where the last
-        /// section `product` consists of:
-        /// `content_language~feed_label~offer_id`
-        /// example for product name is `accounts/123/products/en~US~sku123`. A legacy
-        /// local product name would be `accounts/123/products/local~en~US~sku123`.
-        /// Note: For calls to the v1beta version, the `product` section consists
-        /// of: `channel~content_language~feed_label~offer_id`, for example:
-        /// `accounts/123/products/online~en~US~sku123`.
+        /// Format: `accounts/{account}/products/{product}`
+        /// where the last section `product` consists of 4 parts:
+        /// `channel~content_language~feed_label~offer_id`
+        /// example for product name is
+        /// `accounts/123/products/online~en~US~sku123`
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -372,15 +356,11 @@ namespace Google.Shopping.Merchant.Products.V1Beta
         /// </summary>
         /// <param name="name">
         /// Required. The name of the product to retrieve.
-        /// Format:
-        /// `accounts/{account}/products/{product}` where the last
-        /// section `product` consists of:
-        /// `content_language~feed_label~offer_id`
-        /// example for product name is `accounts/123/products/en~US~sku123`. A legacy
-        /// local product name would be `accounts/123/products/local~en~US~sku123`.
-        /// Note: For calls to the v1beta version, the `product` section consists
-        /// of: `channel~content_language~feed_label~offer_id`, for example:
-        /// `accounts/123/products/online~en~US~sku123`.
+        /// Format: `accounts/{account}/products/{product}`
+        /// where the last section `product` consists of 4 parts:
+        /// `channel~content_language~feed_label~offer_id`
+        /// example for product name is
+        /// `accounts/123/products/online~en~US~sku123`
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -398,15 +378,11 @@ namespace Google.Shopping.Merchant.Products.V1Beta
         /// </summary>
         /// <param name="name">
         /// Required. The name of the product to retrieve.
-        /// Format:
-        /// `accounts/{account}/products/{product}` where the last
-        /// section `product` consists of:
-        /// `content_language~feed_label~offer_id`
-        /// example for product name is `accounts/123/products/en~US~sku123`. A legacy
-        /// local product name would be `accounts/123/products/local~en~US~sku123`.
-        /// Note: For calls to the v1beta version, the `product` section consists
-        /// of: `channel~content_language~feed_label~offer_id`, for example:
-        /// `accounts/123/products/online~en~US~sku123`.
+        /// Format: `accounts/{account}/products/{product}`
+        /// where the last section `product` consists of 4 parts:
+        /// `channel~content_language~feed_label~offer_id`
+        /// example for product name is
+        /// `accounts/123/products/online~en~US~sku123`
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
