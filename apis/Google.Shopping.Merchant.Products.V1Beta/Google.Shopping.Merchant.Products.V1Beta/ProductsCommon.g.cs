@@ -171,85 +171,80 @@ namespace Google.Shopping.Merchant.Products.V1Beta {
             "Cg5zaGlwcGluZ19sYWJlbBgHIAEoCUgGiAEBQhAKDl9wcm9ncmFtX2xhYmVs",
             "Qg0KC190aWVyX2xhYmVsQggKBl9wcmljZUIaChhfY2FzaGJhY2tfZm9yX2Z1",
             "dHVyZV91c2VCEQoPX2xveWFsdHlfcG9pbnRzQh4KHF9tZW1iZXJfcHJpY2Vf",
-            "ZWZmZWN0aXZlX2RhdGVCEQoPX3NoaXBwaW5nX2xhYmVsIoMECghTaGlwcGlu",
+            "ZWZmZWN0aXZlX2RhdGVCEQoPX3NoaXBwaW5nX2xhYmVsIoMDCghTaGlwcGlu",
             "ZxIqCgVwcmljZRgBIAEoCzIbLmdvb2dsZS5zaG9wcGluZy50eXBlLlByaWNl",
             "Eg8KB2NvdW50cnkYAiABKAkSDgoGcmVnaW9uGAMgASgJEg8KB3NlcnZpY2UY",
             "BCABKAkSEwoLbG9jYXRpb25faWQYBSABKAMSGwoTbG9jYXRpb25fZ3JvdXBf",
             "bmFtZRgGIAEoCRITCgtwb3N0YWxfY29kZRgHIAEoCRIeChFtaW5faGFuZGxp",
             "bmdfdGltZRgIIAEoA0gAiAEBEh4KEW1heF9oYW5kbGluZ190aW1lGAkgASgD",
             "SAGIAQESHQoQbWluX3RyYW5zaXRfdGltZRgKIAEoA0gCiAEBEh0KEG1heF90",
-            "cmFuc2l0X3RpbWUYCyABKANIA4gBARIhChRoYW5kbGluZ19jdXRvZmZfdGlt",
-            "ZRgMIAEoCUgEiAEBEiUKGGhhbmRsaW5nX2N1dG9mZl90aW1lem9uZRgNIAEo",
-            "CUgFiAEBQhQKEl9taW5faGFuZGxpbmdfdGltZUIUChJfbWF4X2hhbmRsaW5n",
-            "X3RpbWVCEwoRX21pbl90cmFuc2l0X3RpbWVCEwoRX21heF90cmFuc2l0X3Rp",
-            "bWVCFwoVX2hhbmRsaW5nX2N1dG9mZl90aW1lQhsKGV9oYW5kbGluZ19jdXRv",
-            "ZmZfdGltZXpvbmUiiAEKFUZyZWVTaGlwcGluZ1RocmVzaG9sZBIUCgdjb3Vu",
-            "dHJ5GAEgASgJSACIAQESOQoPcHJpY2VfdGhyZXNob2xkGAIgASgLMhsuZ29v",
-            "Z2xlLnNob3BwaW5nLnR5cGUuUHJpY2VIAYgBAUIKCghfY291bnRyeUISChBf",
-            "cHJpY2VfdGhyZXNob2xkIlYKDVByb2R1Y3REZXRhaWwSFAoMc2VjdGlvbl9u",
-            "YW1lGAEgASgJEhYKDmF0dHJpYnV0ZV9uYW1lGAIgASgJEhcKD2F0dHJpYnV0",
-            "ZV92YWx1ZRgDIAEoCSL7AQoNQ2VydGlmaWNhdGlvbhIkChdjZXJ0aWZpY2F0",
-            "aW9uX2F1dGhvcml0eRgBIAEoCUgAiAEBEh8KEmNlcnRpZmljYXRpb25fbmFt",
-            "ZRgCIAEoCUgBiAEBEh8KEmNlcnRpZmljYXRpb25fY29kZRgDIAEoCUgCiAEB",
-            "EiAKE2NlcnRpZmljYXRpb25fdmFsdWUYBCABKAlIA4gBAUIaChhfY2VydGlm",
-            "aWNhdGlvbl9hdXRob3JpdHlCFQoTX2NlcnRpZmljYXRpb25fbmFtZUIVChNf",
-            "Y2VydGlmaWNhdGlvbl9jb2RlQhYKFF9jZXJ0aWZpY2F0aW9uX3ZhbHVlInQK",
-            "FlByb2R1Y3RTdHJ1Y3R1cmVkVGl0bGUSIAoTZGlnaXRhbF9zb3VyY2VfdHlw",
-            "ZRgBIAEoCUgAiAEBEhQKB2NvbnRlbnQYAiABKAlIAYgBAUIWChRfZGlnaXRh",
-            "bF9zb3VyY2VfdHlwZUIKCghfY29udGVudCJ6ChxQcm9kdWN0U3RydWN0dXJl",
-            "ZERlc2NyaXB0aW9uEiAKE2RpZ2l0YWxfc291cmNlX3R5cGUYASABKAlIAIgB",
-            "ARIUCgdjb250ZW50GAIgASgJSAGIAQFCFgoUX2RpZ2l0YWxfc291cmNlX3R5",
-            "cGVCCgoIX2NvbnRlbnQiOQoQUHJvZHVjdERpbWVuc2lvbhISCgV2YWx1ZRgB",
-            "IAEoAUID4EECEhEKBHVuaXQYAiABKAlCA+BBAiI2Cg1Qcm9kdWN0V2VpZ2h0",
-            "EhIKBXZhbHVlGAEgASgBQgPgQQISEQoEdW5pdBgCIAEoCUID4EECIvcHCg1Q",
-            "cm9kdWN0U3RhdHVzEmcKFGRlc3RpbmF0aW9uX3N0YXR1c2VzGAMgAygLMkku",
-            "Z29vZ2xlLnNob3BwaW5nLm1lcmNoYW50LnByb2R1Y3RzLnYxYmV0YS5Qcm9k",
-            "dWN0U3RhdHVzLkRlc3RpbmF0aW9uU3RhdHVzEmEKEWl0ZW1fbGV2ZWxfaXNz",
-            "dWVzGAQgAygLMkYuZ29vZ2xlLnNob3BwaW5nLm1lcmNoYW50LnByb2R1Y3Rz",
-            "LnYxYmV0YS5Qcm9kdWN0U3RhdHVzLkl0ZW1MZXZlbElzc3VlEjEKDWNyZWF0",
-            "aW9uX2RhdGUYBSABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wEjQK",
-            "EGxhc3RfdXBkYXRlX2RhdGUYBiABKAsyGi5nb29nbGUucHJvdG9idWYuVGlt",
-            "ZXN0YW1wEjoKFmdvb2dsZV9leHBpcmF0aW9uX2RhdGUYByABKAsyGi5nb29n",
-            "bGUucHJvdG9idWYuVGltZXN0YW1wGsEBChFEZXN0aW5hdGlvblN0YXR1cxJW",
-            "ChFyZXBvcnRpbmdfY29udGV4dBgBIAEoDjI7Lmdvb2dsZS5zaG9wcGluZy50",
-            "eXBlLlJlcG9ydGluZ0NvbnRleHQuUmVwb3J0aW5nQ29udGV4dEVudW0SGgoS",
-            "YXBwcm92ZWRfY291bnRyaWVzGAIgAygJEhkKEXBlbmRpbmdfY291bnRyaWVz",
-            "GAMgAygJEh0KFWRpc2FwcHJvdmVkX2NvdW50cmllcxgEIAMoCRqwAwoOSXRl",
-            "bUxldmVsSXNzdWUSDAoEY29kZRgBIAEoCRJhCghzZXZlcml0eRgCIAEoDjJP",
-            "Lmdvb2dsZS5zaG9wcGluZy5tZXJjaGFudC5wcm9kdWN0cy52MWJldGEuUHJv",
-            "ZHVjdFN0YXR1cy5JdGVtTGV2ZWxJc3N1ZS5TZXZlcml0eRISCgpyZXNvbHV0",
-            "aW9uGAMgASgJEhEKCWF0dHJpYnV0ZRgEIAEoCRJWChFyZXBvcnRpbmdfY29u",
-            "dGV4dBgFIAEoDjI7Lmdvb2dsZS5zaG9wcGluZy50eXBlLlJlcG9ydGluZ0Nv",
-            "bnRleHQuUmVwb3J0aW5nQ29udGV4dEVudW0SEwoLZGVzY3JpcHRpb24YBiAB",
-            "KAkSDgoGZGV0YWlsGAcgASgJEhUKDWRvY3VtZW50YXRpb24YCCABKAkSHAoU",
-            "YXBwbGljYWJsZV9jb3VudHJpZXMYCSADKAkiVAoIU2V2ZXJpdHkSGAoUU0VW",
-            "RVJJVFlfVU5TUEVDSUZJRUQQABIQCgxOT1RfSU1QQUNURUQQARILCgdERU1P",
-            "VEVEEAISDwoLRElTQVBQUk9WRUQQAyKlAgofQ2xvdWRFeHBvcnRBZGRpdGlv",
-            "bmFsUHJvcGVydGllcxIaCg1wcm9wZXJ0eV9uYW1lGAEgASgJSACIAQESEgoK",
-            "dGV4dF92YWx1ZRgCIAMoCRIXCgpib29sX3ZhbHVlGAMgASgISAGIAQESEQoJ",
-            "aW50X3ZhbHVlGAQgAygDEhMKC2Zsb2F0X3ZhbHVlGAUgAygCEhYKCW1pbl92",
-            "YWx1ZRgGIAEoAkgCiAEBEhYKCW1heF92YWx1ZRgHIAEoAkgDiAEBEhYKCXVu",
-            "aXRfY29kZRgIIAEoCUgEiAEBQhAKDl9wcm9wZXJ0eV9uYW1lQg0KC19ib29s",
-            "X3ZhbHVlQgwKCl9taW5fdmFsdWVCDAoKX21heF92YWx1ZUIMCgpfdW5pdF9j",
-            "b2RlIqECCh5Qcm9kdWN0U3VzdGFpbmFiaWxpdHlJbmNlbnRpdmUSLQoGYW1v",
-            "dW50GAIgASgLMhsuZ29vZ2xlLnNob3BwaW5nLnR5cGUuUHJpY2VIABIUCgpw",
-            "ZXJjZW50YWdlGAMgASgBSAASYAoEdHlwZRgBIAEoDjJNLmdvb2dsZS5zaG9w",
-            "cGluZy5tZXJjaGFudC5wcm9kdWN0cy52MWJldGEuUHJvZHVjdFN1c3RhaW5h",
-            "YmlsaXR5SW5jZW50aXZlLlR5cGVIAYgBASJGCgRUeXBlEhQKEFRZUEVfVU5T",
-            "UEVDSUZJRUQQABIRCg1FVl9UQVhfQ1JFRElUEAESFQoRRVZfUFJJQ0VfRElT",
-            "Q09VTlQQAkIHCgV2YWx1ZUIHCgVfdHlwZSK0AQoSQXV0b21hdGVkRGlzY291",
-            "bnRzEjAKC3ByaW9yX3ByaWNlGAEgASgLMhsuZ29vZ2xlLnNob3BwaW5nLnR5",
-            "cGUuUHJpY2USPAoXcHJpb3JfcHJpY2VfcHJvZ3Jlc3NpdmUYAiABKAsyGy5n",
-            "b29nbGUuc2hvcHBpbmcudHlwZS5QcmljZRIuCglnYWRfcHJpY2UYAyABKAsy",
-            "Gy5nb29nbGUuc2hvcHBpbmcudHlwZS5QcmljZSpOChJTdWJzY3JpcHRpb25Q",
-            "ZXJpb2QSIwofU1VCU0NSSVBUSU9OX1BFUklPRF9VTlNQRUNJRklFRBAAEgkK",
-            "BU1PTlRIEAESCAoEWUVBUhACQpoCCixjb20uZ29vZ2xlLnNob3BwaW5nLm1l",
-            "cmNoYW50LnByb2R1Y3RzLnYxYmV0YUITUHJvZHVjdHNDb21tb25Qcm90b1AB",
-            "Wk5jbG91ZC5nb29nbGUuY29tL2dvL3Nob3BwaW5nL21lcmNoYW50L3Byb2R1",
-            "Y3RzL2FwaXYxYmV0YS9wcm9kdWN0c3BiO3Byb2R1Y3RzcGKqAihHb29nbGUu",
-            "U2hvcHBpbmcuTWVyY2hhbnQuUHJvZHVjdHMuVjFCZXRhygIoR29vZ2xlXFNo",
-            "b3BwaW5nXE1lcmNoYW50XFByb2R1Y3RzXFYxYmV0YeoCLEdvb2dsZTo6U2hv",
-            "cHBpbmc6Ok1lcmNoYW50OjpQcm9kdWN0czo6VjFiZXRhYgZwcm90bzM="));
+            "cmFuc2l0X3RpbWUYCyABKANIA4gBAUIUChJfbWluX2hhbmRsaW5nX3RpbWVC",
+            "FAoSX21heF9oYW5kbGluZ190aW1lQhMKEV9taW5fdHJhbnNpdF90aW1lQhMK",
+            "EV9tYXhfdHJhbnNpdF90aW1lIogBChVGcmVlU2hpcHBpbmdUaHJlc2hvbGQS",
+            "FAoHY291bnRyeRgBIAEoCUgAiAEBEjkKD3ByaWNlX3RocmVzaG9sZBgCIAEo",
+            "CzIbLmdvb2dsZS5zaG9wcGluZy50eXBlLlByaWNlSAGIAQFCCgoIX2NvdW50",
+            "cnlCEgoQX3ByaWNlX3RocmVzaG9sZCJWCg1Qcm9kdWN0RGV0YWlsEhQKDHNl",
+            "Y3Rpb25fbmFtZRgBIAEoCRIWCg5hdHRyaWJ1dGVfbmFtZRgCIAEoCRIXCg9h",
+            "dHRyaWJ1dGVfdmFsdWUYAyABKAki+wEKDUNlcnRpZmljYXRpb24SJAoXY2Vy",
+            "dGlmaWNhdGlvbl9hdXRob3JpdHkYASABKAlIAIgBARIfChJjZXJ0aWZpY2F0",
+            "aW9uX25hbWUYAiABKAlIAYgBARIfChJjZXJ0aWZpY2F0aW9uX2NvZGUYAyAB",
+            "KAlIAogBARIgChNjZXJ0aWZpY2F0aW9uX3ZhbHVlGAQgASgJSAOIAQFCGgoY",
+            "X2NlcnRpZmljYXRpb25fYXV0aG9yaXR5QhUKE19jZXJ0aWZpY2F0aW9uX25h",
+            "bWVCFQoTX2NlcnRpZmljYXRpb25fY29kZUIWChRfY2VydGlmaWNhdGlvbl92",
+            "YWx1ZSJ0ChZQcm9kdWN0U3RydWN0dXJlZFRpdGxlEiAKE2RpZ2l0YWxfc291",
+            "cmNlX3R5cGUYASABKAlIAIgBARIUCgdjb250ZW50GAIgASgJSAGIAQFCFgoU",
+            "X2RpZ2l0YWxfc291cmNlX3R5cGVCCgoIX2NvbnRlbnQiegocUHJvZHVjdFN0",
+            "cnVjdHVyZWREZXNjcmlwdGlvbhIgChNkaWdpdGFsX3NvdXJjZV90eXBlGAEg",
+            "ASgJSACIAQESFAoHY29udGVudBgCIAEoCUgBiAEBQhYKFF9kaWdpdGFsX3Nv",
+            "dXJjZV90eXBlQgoKCF9jb250ZW50IjkKEFByb2R1Y3REaW1lbnNpb24SEgoF",
+            "dmFsdWUYASABKAFCA+BBAhIRCgR1bml0GAIgASgJQgPgQQIiNgoNUHJvZHVj",
+            "dFdlaWdodBISCgV2YWx1ZRgBIAEoAUID4EECEhEKBHVuaXQYAiABKAlCA+BB",
+            "AiL3BwoNUHJvZHVjdFN0YXR1cxJnChRkZXN0aW5hdGlvbl9zdGF0dXNlcxgD",
+            "IAMoCzJJLmdvb2dsZS5zaG9wcGluZy5tZXJjaGFudC5wcm9kdWN0cy52MWJl",
+            "dGEuUHJvZHVjdFN0YXR1cy5EZXN0aW5hdGlvblN0YXR1cxJhChFpdGVtX2xl",
+            "dmVsX2lzc3VlcxgEIAMoCzJGLmdvb2dsZS5zaG9wcGluZy5tZXJjaGFudC5w",
+            "cm9kdWN0cy52MWJldGEuUHJvZHVjdFN0YXR1cy5JdGVtTGV2ZWxJc3N1ZRIx",
+            "Cg1jcmVhdGlvbl9kYXRlGAUgASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVz",
+            "dGFtcBI0ChBsYXN0X3VwZGF0ZV9kYXRlGAYgASgLMhouZ29vZ2xlLnByb3Rv",
+            "YnVmLlRpbWVzdGFtcBI6ChZnb29nbGVfZXhwaXJhdGlvbl9kYXRlGAcgASgL",
+            "MhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcBrBAQoRRGVzdGluYXRpb25T",
+            "dGF0dXMSVgoRcmVwb3J0aW5nX2NvbnRleHQYASABKA4yOy5nb29nbGUuc2hv",
+            "cHBpbmcudHlwZS5SZXBvcnRpbmdDb250ZXh0LlJlcG9ydGluZ0NvbnRleHRF",
+            "bnVtEhoKEmFwcHJvdmVkX2NvdW50cmllcxgCIAMoCRIZChFwZW5kaW5nX2Nv",
+            "dW50cmllcxgDIAMoCRIdChVkaXNhcHByb3ZlZF9jb3VudHJpZXMYBCADKAka",
+            "sAMKDkl0ZW1MZXZlbElzc3VlEgwKBGNvZGUYASABKAkSYQoIc2V2ZXJpdHkY",
+            "AiABKA4yTy5nb29nbGUuc2hvcHBpbmcubWVyY2hhbnQucHJvZHVjdHMudjFi",
+            "ZXRhLlByb2R1Y3RTdGF0dXMuSXRlbUxldmVsSXNzdWUuU2V2ZXJpdHkSEgoK",
+            "cmVzb2x1dGlvbhgDIAEoCRIRCglhdHRyaWJ1dGUYBCABKAkSVgoRcmVwb3J0",
+            "aW5nX2NvbnRleHQYBSABKA4yOy5nb29nbGUuc2hvcHBpbmcudHlwZS5SZXBv",
+            "cnRpbmdDb250ZXh0LlJlcG9ydGluZ0NvbnRleHRFbnVtEhMKC2Rlc2NyaXB0",
+            "aW9uGAYgASgJEg4KBmRldGFpbBgHIAEoCRIVCg1kb2N1bWVudGF0aW9uGAgg",
+            "ASgJEhwKFGFwcGxpY2FibGVfY291bnRyaWVzGAkgAygJIlQKCFNldmVyaXR5",
+            "EhgKFFNFVkVSSVRZX1VOU1BFQ0lGSUVEEAASEAoMTk9UX0lNUEFDVEVEEAES",
+            "CwoHREVNT1RFRBACEg8KC0RJU0FQUFJPVkVEEAMipQIKH0Nsb3VkRXhwb3J0",
+            "QWRkaXRpb25hbFByb3BlcnRpZXMSGgoNcHJvcGVydHlfbmFtZRgBIAEoCUgA",
+            "iAEBEhIKCnRleHRfdmFsdWUYAiADKAkSFwoKYm9vbF92YWx1ZRgDIAEoCEgB",
+            "iAEBEhEKCWludF92YWx1ZRgEIAMoAxITCgtmbG9hdF92YWx1ZRgFIAMoAhIW",
+            "CgltaW5fdmFsdWUYBiABKAJIAogBARIWCgltYXhfdmFsdWUYByABKAJIA4gB",
+            "ARIWCgl1bml0X2NvZGUYCCABKAlIBIgBAUIQCg5fcHJvcGVydHlfbmFtZUIN",
+            "CgtfYm9vbF92YWx1ZUIMCgpfbWluX3ZhbHVlQgwKCl9tYXhfdmFsdWVCDAoK",
+            "X3VuaXRfY29kZSKhAgoeUHJvZHVjdFN1c3RhaW5hYmlsaXR5SW5jZW50aXZl",
+            "Ei0KBmFtb3VudBgCIAEoCzIbLmdvb2dsZS5zaG9wcGluZy50eXBlLlByaWNl",
+            "SAASFAoKcGVyY2VudGFnZRgDIAEoAUgAEmAKBHR5cGUYASABKA4yTS5nb29n",
+            "bGUuc2hvcHBpbmcubWVyY2hhbnQucHJvZHVjdHMudjFiZXRhLlByb2R1Y3RT",
+            "dXN0YWluYWJpbGl0eUluY2VudGl2ZS5UeXBlSAGIAQEiRgoEVHlwZRIUChBU",
+            "WVBFX1VOU1BFQ0lGSUVEEAASEQoNRVZfVEFYX0NSRURJVBABEhUKEUVWX1BS",
+            "SUNFX0RJU0NPVU5UEAJCBwoFdmFsdWVCBwoFX3R5cGUitAEKEkF1dG9tYXRl",
+            "ZERpc2NvdW50cxIwCgtwcmlvcl9wcmljZRgBIAEoCzIbLmdvb2dsZS5zaG9w",
+            "cGluZy50eXBlLlByaWNlEjwKF3ByaW9yX3ByaWNlX3Byb2dyZXNzaXZlGAIg",
+            "ASgLMhsuZ29vZ2xlLnNob3BwaW5nLnR5cGUuUHJpY2USLgoJZ2FkX3ByaWNl",
+            "GAMgASgLMhsuZ29vZ2xlLnNob3BwaW5nLnR5cGUuUHJpY2UqTgoSU3Vic2Ny",
+            "aXB0aW9uUGVyaW9kEiMKH1NVQlNDUklQVElPTl9QRVJJT0RfVU5TUEVDSUZJ",
+            "RUQQABIJCgVNT05USBABEggKBFlFQVIQAkKVAQosY29tLmdvb2dsZS5zaG9w",
+            "cGluZy5tZXJjaGFudC5wcm9kdWN0cy52MWJldGFCE1Byb2R1Y3RzQ29tbW9u",
+            "UHJvdG9QAVpOY2xvdWQuZ29vZ2xlLmNvbS9nby9zaG9wcGluZy9tZXJjaGFu",
+            "dC9wcm9kdWN0cy9hcGl2MWJldGEvcHJvZHVjdHNwYjtwcm9kdWN0c3BiYgZw",
+            "cm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, global::Google.Shopping.Type.TypesReflection.Descriptor, global::Google.Type.IntervalReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(new[] {typeof(global::Google.Shopping.Merchant.Products.V1Beta.SubscriptionPeriod), }, null, new pbr::GeneratedClrTypeInfo[] {
@@ -263,7 +258,7 @@ namespace Google.Shopping.Merchant.Products.V1Beta {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Shopping.Merchant.Products.V1Beta.Installment), global::Google.Shopping.Merchant.Products.V1Beta.Installment.Parser, new[]{ "Months", "Amount", "Downpayment", "CreditType" }, new[]{ "Downpayment", "CreditType" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Shopping.Merchant.Products.V1Beta.LoyaltyPoints), global::Google.Shopping.Merchant.Products.V1Beta.LoyaltyPoints.Parser, new[]{ "Name", "PointsValue", "Ratio" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Shopping.Merchant.Products.V1Beta.LoyaltyProgram), global::Google.Shopping.Merchant.Products.V1Beta.LoyaltyProgram.Parser, new[]{ "ProgramLabel", "TierLabel", "Price", "CashbackForFutureUse", "LoyaltyPoints", "MemberPriceEffectiveDate", "ShippingLabel" }, new[]{ "ProgramLabel", "TierLabel", "Price", "CashbackForFutureUse", "LoyaltyPoints", "MemberPriceEffectiveDate", "ShippingLabel" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Shopping.Merchant.Products.V1Beta.Shipping), global::Google.Shopping.Merchant.Products.V1Beta.Shipping.Parser, new[]{ "Price", "Country", "Region", "Service", "LocationId", "LocationGroupName", "PostalCode", "MinHandlingTime", "MaxHandlingTime", "MinTransitTime", "MaxTransitTime", "HandlingCutoffTime", "HandlingCutoffTimezone" }, new[]{ "MinHandlingTime", "MaxHandlingTime", "MinTransitTime", "MaxTransitTime", "HandlingCutoffTime", "HandlingCutoffTimezone" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Shopping.Merchant.Products.V1Beta.Shipping), global::Google.Shopping.Merchant.Products.V1Beta.Shipping.Parser, new[]{ "Price", "Country", "Region", "Service", "LocationId", "LocationGroupName", "PostalCode", "MinHandlingTime", "MaxHandlingTime", "MinTransitTime", "MaxTransitTime" }, new[]{ "MinHandlingTime", "MaxHandlingTime", "MinTransitTime", "MaxTransitTime" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Shopping.Merchant.Products.V1Beta.FreeShippingThreshold), global::Google.Shopping.Merchant.Products.V1Beta.FreeShippingThreshold.Parser, new[]{ "Country", "PriceThreshold" }, new[]{ "Country", "PriceThreshold" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Shopping.Merchant.Products.V1Beta.ProductDetail), global::Google.Shopping.Merchant.Products.V1Beta.ProductDetail.Parser, new[]{ "SectionName", "AttributeName", "AttributeValue" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Shopping.Merchant.Products.V1Beta.Certification), global::Google.Shopping.Merchant.Products.V1Beta.Certification.Parser, new[]{ "CertificationAuthority", "CertificationName", "CertificationCode", "CertificationValue" }, new[]{ "CertificationAuthority", "CertificationName", "CertificationCode", "CertificationValue" }, null, null, null),
@@ -1023,7 +1018,7 @@ namespace Google.Shopping.Merchant.Products.V1Beta {
         = pb::FieldCodec.ForString(1122);
     private readonly pbc::RepeatedField<string> gtins_ = new pbc::RepeatedField<string>();
     /// <summary>
-    /// A list of Global Trade Item Numbers
+    /// Global Trade Item Numbers
     /// ([GTIN](https://support.google.com/merchants/answer/188494#gtin)) of the
     /// item.
     /// You can provide up to 10 GTINs.
@@ -1878,7 +1873,7 @@ namespace Google.Shopping.Merchant.Products.V1Beta {
 
     private string adsGrouping_;
     /// <summary>
-    /// Used to group items in an arbitrary way. Only for CPA, discouraged
+    /// Used to group items in an arbitrary way. Only for CPA%, discouraged
     /// otherwise. For more information, see
     /// [Display ads
     /// attribute](https://support.google.com/merchants/answer/6069387).
@@ -2419,9 +2414,6 @@ namespace Google.Shopping.Merchant.Products.V1Beta {
         = pb::FieldCodec.ForString(610);
     private readonly pbc::RepeatedField<string> includedDestinations_ = new pbc::RepeatedField<string>();
     /// <summary>
-    /// Destinations also known as [Marketing
-    /// methods](https://support.google.com/merchants/answer/15130232) selections.
-    ///
     /// The list of destinations to include for this target (corresponds to
     /// checked check boxes in Merchant Center). Default destinations are always
     /// included unless provided in `excludedDestinations`.
@@ -2445,9 +2437,6 @@ namespace Google.Shopping.Merchant.Products.V1Beta {
         = pb::FieldCodec.ForString(618);
     private readonly pbc::RepeatedField<string> excludedDestinations_ = new pbc::RepeatedField<string>();
     /// <summary>
-    /// Destinations also known as [Marketing
-    /// methods](https://support.google.com/merchants/answer/15130232) selections.
-    ///
     /// The list of destinations to exclude for this target (corresponds to
     /// unchecked check boxes in Merchant Center).
     ///
@@ -2658,10 +2647,10 @@ namespace Google.Shopping.Merchant.Products.V1Beta {
     /// <summary>
     /// A safeguard in the [automated discounts]
     /// (https://support.google.com/merchants/answer/10295759) and
-    /// ["dynamic
-    /// promotions"](https://support.google.com/merchants/answer/13949249)
-    /// projects, ensuring that discounts on business offers do not fall below this
-    /// value, thereby preserving the offer's value and profitability.
+    /// "Dynamic Promotions"
+    /// (https://support.google.com/merchants/answer/13949249) projects,
+    /// ensuring that discounts on business offers do not fall below this value,
+    /// thereby preserving the offer's value and profitability.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -7932,8 +7921,6 @@ namespace Google.Shopping.Merchant.Products.V1Beta {
       maxHandlingTime_ = other.maxHandlingTime_;
       minTransitTime_ = other.minTransitTime_;
       maxTransitTime_ = other.maxTransitTime_;
-      handlingCutoffTime_ = other.handlingCutoffTime_;
-      handlingCutoffTimezone_ = other.handlingCutoffTimezone_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -8213,72 +8200,6 @@ namespace Google.Shopping.Merchant.Products.V1Beta {
       _hasBits0 &= ~8;
     }
 
-    /// <summary>Field number for the "handling_cutoff_time" field.</summary>
-    public const int HandlingCutoffTimeFieldNumber = 12;
-    private readonly static string HandlingCutoffTimeDefaultValue = "";
-
-    private string handlingCutoffTime_;
-    /// <summary>
-    /// The handling cutoff time until which an order has to be placed to be
-    /// processed in the same day. This is a string in format of HHMM (e.g.
-    /// `1530`) for 3:30 PM. If not configured, the cutoff time will be defaulted
-    /// to 8AM PST and `handling_cutoff_timezone` will be ignored.
-    /// </summary>
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public string HandlingCutoffTime {
-      get { return handlingCutoffTime_ ?? HandlingCutoffTimeDefaultValue; }
-      set {
-        handlingCutoffTime_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
-      }
-    }
-    /// <summary>Gets whether the "handling_cutoff_time" field is set</summary>
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public bool HasHandlingCutoffTime {
-      get { return handlingCutoffTime_ != null; }
-    }
-    /// <summary>Clears the value of the "handling_cutoff_time" field</summary>
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public void ClearHandlingCutoffTime() {
-      handlingCutoffTime_ = null;
-    }
-
-    /// <summary>Field number for the "handling_cutoff_timezone" field.</summary>
-    public const int HandlingCutoffTimezoneFieldNumber = 13;
-    private readonly static string HandlingCutoffTimezoneDefaultValue = "";
-
-    private string handlingCutoffTimezone_;
-    /// <summary>
-    /// [Timezone
-    /// identifier](https://developers.google.com/adwords/api/docs/appendix/codes-formats#timezone-ids)
-    /// For example `Europe/Zurich`. This field only applies if
-    /// `handling_cutoff_time` is set. If `handling_cutoff_time` is set but this
-    /// field is not set, the shipping destination timezone will be used. If both
-    /// fields are not set, the handling cutoff time will default to 8AM PST.
-    /// </summary>
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public string HandlingCutoffTimezone {
-      get { return handlingCutoffTimezone_ ?? HandlingCutoffTimezoneDefaultValue; }
-      set {
-        handlingCutoffTimezone_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
-      }
-    }
-    /// <summary>Gets whether the "handling_cutoff_timezone" field is set</summary>
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public bool HasHandlingCutoffTimezone {
-      get { return handlingCutoffTimezone_ != null; }
-    }
-    /// <summary>Clears the value of the "handling_cutoff_timezone" field</summary>
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public void ClearHandlingCutoffTimezone() {
-      handlingCutoffTimezone_ = null;
-    }
-
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
@@ -8305,8 +8226,6 @@ namespace Google.Shopping.Merchant.Products.V1Beta {
       if (MaxHandlingTime != other.MaxHandlingTime) return false;
       if (MinTransitTime != other.MinTransitTime) return false;
       if (MaxTransitTime != other.MaxTransitTime) return false;
-      if (HandlingCutoffTime != other.HandlingCutoffTime) return false;
-      if (HandlingCutoffTimezone != other.HandlingCutoffTimezone) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -8325,8 +8244,6 @@ namespace Google.Shopping.Merchant.Products.V1Beta {
       if (HasMaxHandlingTime) hash ^= MaxHandlingTime.GetHashCode();
       if (HasMinTransitTime) hash ^= MinTransitTime.GetHashCode();
       if (HasMaxTransitTime) hash ^= MaxTransitTime.GetHashCode();
-      if (HasHandlingCutoffTime) hash ^= HandlingCutoffTime.GetHashCode();
-      if (HasHandlingCutoffTimezone) hash ^= HandlingCutoffTimezone.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -8389,14 +8306,6 @@ namespace Google.Shopping.Merchant.Products.V1Beta {
         output.WriteRawTag(88);
         output.WriteInt64(MaxTransitTime);
       }
-      if (HasHandlingCutoffTime) {
-        output.WriteRawTag(98);
-        output.WriteString(HandlingCutoffTime);
-      }
-      if (HasHandlingCutoffTimezone) {
-        output.WriteRawTag(106);
-        output.WriteString(HandlingCutoffTimezone);
-      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -8451,14 +8360,6 @@ namespace Google.Shopping.Merchant.Products.V1Beta {
         output.WriteRawTag(88);
         output.WriteInt64(MaxTransitTime);
       }
-      if (HasHandlingCutoffTime) {
-        output.WriteRawTag(98);
-        output.WriteString(HandlingCutoffTime);
-      }
-      if (HasHandlingCutoffTimezone) {
-        output.WriteRawTag(106);
-        output.WriteString(HandlingCutoffTimezone);
-      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -8501,12 +8402,6 @@ namespace Google.Shopping.Merchant.Products.V1Beta {
       }
       if (HasMaxTransitTime) {
         size += 1 + pb::CodedOutputStream.ComputeInt64Size(MaxTransitTime);
-      }
-      if (HasHandlingCutoffTime) {
-        size += 1 + pb::CodedOutputStream.ComputeStringSize(HandlingCutoffTime);
-      }
-      if (HasHandlingCutoffTimezone) {
-        size += 1 + pb::CodedOutputStream.ComputeStringSize(HandlingCutoffTimezone);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -8555,12 +8450,6 @@ namespace Google.Shopping.Merchant.Products.V1Beta {
       }
       if (other.HasMaxTransitTime) {
         MaxTransitTime = other.MaxTransitTime;
-      }
-      if (other.HasHandlingCutoffTime) {
-        HandlingCutoffTime = other.HandlingCutoffTime;
-      }
-      if (other.HasHandlingCutoffTimezone) {
-        HandlingCutoffTimezone = other.HandlingCutoffTimezone;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -8624,14 +8513,6 @@ namespace Google.Shopping.Merchant.Products.V1Beta {
             MaxTransitTime = input.ReadInt64();
             break;
           }
-          case 98: {
-            HandlingCutoffTime = input.ReadString();
-            break;
-          }
-          case 106: {
-            HandlingCutoffTimezone = input.ReadString();
-            break;
-          }
         }
       }
     #endif
@@ -8692,14 +8573,6 @@ namespace Google.Shopping.Merchant.Products.V1Beta {
           }
           case 88: {
             MaxTransitTime = input.ReadInt64();
-            break;
-          }
-          case 98: {
-            HandlingCutoffTime = input.ReadString();
-            break;
-          }
-          case 106: {
-            HandlingCutoffTimezone = input.ReadString();
             break;
           }
         }
