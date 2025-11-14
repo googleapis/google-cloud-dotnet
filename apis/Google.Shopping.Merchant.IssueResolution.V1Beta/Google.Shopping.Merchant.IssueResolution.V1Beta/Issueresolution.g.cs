@@ -46,116 +46,114 @@ namespace Google.Shopping.Merchant.IssueResolution.V1Beta {
             "b250ZW50X29wdGlvbkIbChlfdXNlcl9pbnB1dF9hY3Rpb25fb3B0aW9uInYK",
             "G1JlbmRlclByb2R1Y3RJc3N1ZXNSZXNwb25zZRJXCg9yZW5kZXJlZF9pc3N1",
             "ZXMYASADKAsyPi5nb29nbGUuc2hvcHBpbmcubWVyY2hhbnQuaXNzdWVyZXNv",
-            "bHV0aW9uLnYxYmV0YS5SZW5kZXJlZElzc3VlIpkCChpSZW5kZXJQcm9kdWN0",
+            "bHV0aW9uLnYxYmV0YS5SZW5kZXJlZElzc3VlIu0BChpSZW5kZXJQcm9kdWN0",
             "SXNzdWVzUmVxdWVzdBI4CgRuYW1lGAEgASgJQirgQQL6QSQKIm1lcmNoYW50",
             "YXBpLmdvb2dsZWFwaXMuY29tL1Byb2R1Y3QSGgoNbGFuZ3VhZ2VfY29kZRgC",
             "IAEoCUID4EEBEhYKCXRpbWVfem9uZRgDIAEoCUID4EEBEmEKB3BheWxvYWQY",
             "BCABKAsySy5nb29nbGUuc2hvcHBpbmcubWVyY2hhbnQuaXNzdWVyZXNvbHV0",
-            "aW9uLnYxYmV0YS5SZW5kZXJJc3N1ZXNSZXF1ZXN0UGF5bG9hZEID4EEBEioK",
-            "HXByb2R1Y3RfaWRfYmFzZTY0X3VybF9lbmNvZGVkGAUgASgIQgPgQQEitQIK",
-            "DVJlbmRlcmVkSXNzdWUSHQoTcHJlcmVuZGVyZWRfY29udGVudBgDIAEoCUgA",
-            "EjUKK3ByZXJlbmRlcmVkX291dF9vZl9jb3VydF9kaXNwdXRlX3NldHRsZW1l",
-            "bnQYBSABKAlIARINCgV0aXRsZRgBIAEoCRJHCgZpbXBhY3QYAiABKAsyNy5n",
-            "b29nbGUuc2hvcHBpbmcubWVyY2hhbnQuaXNzdWVyZXNvbHV0aW9uLnYxYmV0",
-            "YS5JbXBhY3QSSAoHYWN0aW9ucxgEIAMoCzI3Lmdvb2dsZS5zaG9wcGluZy5t",
-            "ZXJjaGFudC5pc3N1ZXJlc29sdXRpb24udjFiZXRhLkFjdGlvbkIJCgdjb250",
-            "ZW50QiEKH291dF9vZl9jb3VydF9kaXNwdXRlX3NldHRsZW1lbnQiuwEKBklt",
-            "cGFjdBIUCgdtZXNzYWdlGAEgASgJQgPgQQESSwoIc2V2ZXJpdHkYAiABKA4y",
-            "OS5nb29nbGUuc2hvcHBpbmcubWVyY2hhbnQuaXNzdWVyZXNvbHV0aW9uLnYx",
-            "YmV0YS5TZXZlcml0eRJOCgpicmVha2Rvd25zGAMgAygLMjouZ29vZ2xlLnNo",
-            "b3BwaW5nLm1lcmNoYW50Lmlzc3VlcmVzb2x1dGlvbi52MWJldGEuQnJlYWtk",
-            "b3duIpYBCglCcmVha2Rvd24SUgoHcmVnaW9ucxgBIAMoCzJBLmdvb2dsZS5z",
+            "aW9uLnYxYmV0YS5SZW5kZXJJc3N1ZXNSZXF1ZXN0UGF5bG9hZEID4EEBIrUC",
+            "Cg1SZW5kZXJlZElzc3VlEh0KE3ByZXJlbmRlcmVkX2NvbnRlbnQYAyABKAlI",
+            "ABI1CitwcmVyZW5kZXJlZF9vdXRfb2ZfY291cnRfZGlzcHV0ZV9zZXR0bGVt",
+            "ZW50GAUgASgJSAESDQoFdGl0bGUYASABKAkSRwoGaW1wYWN0GAIgASgLMjcu",
+            "Z29vZ2xlLnNob3BwaW5nLm1lcmNoYW50Lmlzc3VlcmVzb2x1dGlvbi52MWJl",
+            "dGEuSW1wYWN0EkgKB2FjdGlvbnMYBCADKAsyNy5nb29nbGUuc2hvcHBpbmcu",
+            "bWVyY2hhbnQuaXNzdWVyZXNvbHV0aW9uLnYxYmV0YS5BY3Rpb25CCQoHY29u",
+            "dGVudEIhCh9vdXRfb2ZfY291cnRfZGlzcHV0ZV9zZXR0bGVtZW50IrsBCgZJ",
+            "bXBhY3QSFAoHbWVzc2FnZRgBIAEoCUID4EEBEksKCHNldmVyaXR5GAIgASgO",
+            "MjkuZ29vZ2xlLnNob3BwaW5nLm1lcmNoYW50Lmlzc3VlcmVzb2x1dGlvbi52",
+            "MWJldGEuU2V2ZXJpdHkSTgoKYnJlYWtkb3ducxgDIAMoCzI6Lmdvb2dsZS5z",
             "aG9wcGluZy5tZXJjaGFudC5pc3N1ZXJlc29sdXRpb24udjFiZXRhLkJyZWFr",
-            "ZG93bi5SZWdpb24SDwoHZGV0YWlscxgEIAMoCRokCgZSZWdpb24SDAoEY29k",
-            "ZRgBIAEoCRIMCgRuYW1lGAIgASgJItoECgZBY3Rpb24SZQoVYnVpbHRpbl9z",
-            "aW1wbGVfYWN0aW9uGAIgASgLMkQuZ29vZ2xlLnNob3BwaW5nLm1lcmNoYW50",
-            "Lmlzc3VlcmVzb2x1dGlvbi52MWJldGEuQnVpbHRJblNpbXBsZUFjdGlvbkgA",
-            "EloKD2V4dGVybmFsX2FjdGlvbhgDIAEoCzI/Lmdvb2dsZS5zaG9wcGluZy5t",
-            "ZXJjaGFudC5pc3N1ZXJlc29sdXRpb24udjFiZXRhLkV4dGVybmFsQWN0aW9u",
-            "SAASbAoZYnVpbHRpbl91c2VyX2lucHV0X2FjdGlvbhgHIAEoCzJHLmdvb2ds",
-            "ZS5zaG9wcGluZy5tZXJjaGFudC5pc3N1ZXJlc29sdXRpb24udjFiZXRhLkJ1",
-            "aWx0SW5Vc2VySW5wdXRBY3Rpb25IABIUCgxidXR0b25fbGFiZWwYBCABKAkS",
-            "FAoMaXNfYXZhaWxhYmxlGAUgASgIEk8KB3JlYXNvbnMYBiADKAsyPi5nb29n",
-            "bGUuc2hvcHBpbmcubWVyY2hhbnQuaXNzdWVyZXNvbHV0aW9uLnYxYmV0YS5B",
-            "Y3Rpb24uUmVhc29uGpcBCgZSZWFzb24SDwoHbWVzc2FnZRgBIAEoCRITCgZk",
-            "ZXRhaWwYAiABKAlIAIgBARJRCgZhY3Rpb24YAyABKAsyNy5nb29nbGUuc2hv",
-            "cHBpbmcubWVyY2hhbnQuaXNzdWVyZXNvbHV0aW9uLnYxYmV0YS5BY3Rpb25C",
-            "A+BBAUgBiAEBQgkKB19kZXRhaWxCCQoHX2FjdGlvbkIICgZhY3Rpb24imAUK",
-            "E0J1aWx0SW5TaW1wbGVBY3Rpb24SagoEdHlwZRgBIAEoDjJcLmdvb2dsZS5z",
-            "aG9wcGluZy5tZXJjaGFudC5pc3N1ZXJlc29sdXRpb24udjFiZXRhLkJ1aWx0",
-            "SW5TaW1wbGVBY3Rpb24uQnVpbHRJblNpbXBsZUFjdGlvblR5cGUSGwoOYXR0",
-            "cmlidXRlX2NvZGUYAiABKAlIAIgBARJ3ChJhZGRpdGlvbmFsX2NvbnRlbnQY",
-            "AyABKAsyVi5nb29nbGUuc2hvcHBpbmcubWVyY2hhbnQuaXNzdWVyZXNvbHV0",
-            "aW9uLnYxYmV0YS5CdWlsdEluU2ltcGxlQWN0aW9uLkFkZGl0aW9uYWxDb250",
-            "ZW50SAGIAQEaNgoRQWRkaXRpb25hbENvbnRlbnQSDQoFdGl0bGUYASABKAkS",
-            "EgoKcGFyYWdyYXBocxgCIAMoCSKcAgoXQnVpbHRJblNpbXBsZUFjdGlvblR5",
-            "cGUSKwonQlVJTFRfSU5fU0lNUExFX0FDVElPTl9UWVBFX1VOU1BFQ0lGSUVE",
-            "EAASEAoMVkVSSUZZX1BIT05FEAESEQoNQ0xBSU1fV0VCU0lURRACEhAKDEFE",
-            "RF9QUk9EVUNUUxADEhQKEEFERF9DT05UQUNUX0lORk8QBBIUChBMSU5LX0FE",
-            "U19BQ0NPVU5UEAUSJAogQUREX0JVU0lORVNTX1JFR0lTVFJBVElPTl9OVU1C",
-            "RVIQBhIXChNFRElUX0lURU1fQVRUUklCVVRFEAcSFQoRRklYX0FDQ09VTlRf",
-            "SVNTVUUQCBIbChdTSE9XX0FERElUSU9OQUxfQ09OVEVOVBAJQhEKD19hdHRy",
-            "aWJ1dGVfY29kZUIVChNfYWRkaXRpb25hbF9jb250ZW50InwKFkJ1aWx0SW5V",
-            "c2VySW5wdXRBY3Rpb24SFgoOYWN0aW9uX2NvbnRleHQYASABKAkSSgoFZmxv",
-            "d3MYAyADKAsyOy5nb29nbGUuc2hvcHBpbmcubWVyY2hhbnQuaXNzdWVyZXNv",
-            "bHV0aW9uLnYxYmV0YS5BY3Rpb25GbG93IoMDCgpBY3Rpb25GbG93EgoKAmlk",
-            "GAEgASgJEg0KBWxhYmVsGAIgASgJEksKBmlucHV0cxgDIAMoCzI7Lmdvb2ds",
-            "ZS5zaG9wcGluZy5tZXJjaGFudC5pc3N1ZXJlc29sdXRpb24udjFiZXRhLklu",
-            "cHV0RmllbGQSFAoMZGlhbG9nX3RpdGxlGAQgASgJEl0KDmRpYWxvZ19tZXNz",
-            "YWdlGAcgASgLMkAuZ29vZ2xlLnNob3BwaW5nLm1lcmNoYW50Lmlzc3VlcmVz",
-            "b2x1dGlvbi52MWJldGEuVGV4dFdpdGhUb29sdGlwSACIAQESVQoOZGlhbG9n",
-            "X2NhbGxvdXQYCCABKAsyOC5nb29nbGUuc2hvcHBpbmcubWVyY2hhbnQuaXNz",
-            "dWVyZXNvbHV0aW9uLnYxYmV0YS5DYWxsb3V0SAGIAQESGwoTZGlhbG9nX2J1",
-            "dHRvbl9sYWJlbBgJIAEoCUIRCg9fZGlhbG9nX21lc3NhZ2VCEQoPX2RpYWxv",
-            "Z19jYWxsb3V0IrYJCgpJbnB1dEZpZWxkElsKCnRleHRfaW5wdXQYBCABKAsy",
-            "RS5nb29nbGUuc2hvcHBpbmcubWVyY2hhbnQuaXNzdWVyZXNvbHV0aW9uLnYx",
-            "YmV0YS5JbnB1dEZpZWxkLlRleHRJbnB1dEgAEl8KDGNob2ljZV9pbnB1dBgF",
-            "IAEoCzJHLmdvb2dsZS5zaG9wcGluZy5tZXJjaGFudC5pc3N1ZXJlc29sdXRp",
-            "b24udjFiZXRhLklucHV0RmllbGQuQ2hvaWNlSW5wdXRIABJjCg5jaGVja2Jv",
-            "eF9pbnB1dBgGIAEoCzJJLmdvb2dsZS5zaG9wcGluZy5tZXJjaGFudC5pc3N1",
-            "ZXJlc29sdXRpb24udjFiZXRhLklucHV0RmllbGQuQ2hlY2tib3hJbnB1dEgA",
-            "EgoKAmlkGAEgASgJEk8KBWxhYmVsGAIgASgLMkAuZ29vZ2xlLnNob3BwaW5n",
-            "Lm1lcmNoYW50Lmlzc3VlcmVzb2x1dGlvbi52MWJldGEuVGV4dFdpdGhUb29s",
-            "dGlwEhAKCHJlcXVpcmVkGAMgASgIGpUDCglUZXh0SW5wdXQSYQoEdHlwZRgB",
-            "IAEoDjJTLmdvb2dsZS5zaG9wcGluZy5tZXJjaGFudC5pc3N1ZXJlc29sdXRp",
-            "b24udjFiZXRhLklucHV0RmllbGQuVGV4dElucHV0LlRleHRJbnB1dFR5cGUS",
-            "XgoPYWRkaXRpb25hbF9pbmZvGAIgASgLMkAuZ29vZ2xlLnNob3BwaW5nLm1l",
-            "cmNoYW50Lmlzc3VlcmVzb2x1dGlvbi52MWJldGEuVGV4dFdpdGhUb29sdGlw",
-            "SACIAQESGAoLZm9ybWF0X2luZm8YAyABKAlIAYgBARIXCgphcmlhX2xhYmVs",
-            "GAQgASgJSAKIAQEiXwoNVGV4dElucHV0VHlwZRIfChtURVhUX0lOUFVUX1RZ",
-            "UEVfVU5TUEVDSUZJRUQQABIWChJHRU5FUklDX1NIT1JUX1RFWFQQARIVChFH",
-            "RU5FUklDX0xPTkdfVEVYVBACQhIKEF9hZGRpdGlvbmFsX2luZm9CDgoMX2Zv",
-            "cm1hdF9pbmZvQg0KC19hcmlhX2xhYmVsGt0CCgtDaG9pY2VJbnB1dBJqCgdv",
-            "cHRpb25zGAEgAygLMlkuZ29vZ2xlLnNob3BwaW5nLm1lcmNoYW50Lmlzc3Vl",
-            "cmVzb2x1dGlvbi52MWJldGEuSW5wdXRGaWVsZC5DaG9pY2VJbnB1dC5DaG9p",
-            "Y2VJbnB1dE9wdGlvbhrhAQoRQ2hvaWNlSW5wdXRPcHRpb24SCgoCaWQYASAB",
-            "KAkSTwoFbGFiZWwYAiABKAsyQC5nb29nbGUuc2hvcHBpbmcubWVyY2hhbnQu",
-            "aXNzdWVyZXNvbHV0aW9uLnYxYmV0YS5UZXh0V2l0aFRvb2x0aXASWgoQYWRk",
-            "aXRpb25hbF9pbnB1dBgDIAEoCzI7Lmdvb2dsZS5zaG9wcGluZy5tZXJjaGFu",
-            "dC5pc3N1ZXJlc29sdXRpb24udjFiZXRhLklucHV0RmllbGRIAIgBAUITChFf",
-            "YWRkaXRpb25hbF9pbnB1dBoPCg1DaGVja2JveElucHV0Qg0KC3ZhbHVlX2lu",
-            "cHV0IqICCg9UZXh0V2l0aFRvb2x0aXASFgoMc2ltcGxlX3ZhbHVlGAEgASgJ",
-            "SAASHgoUc2ltcGxlX3Rvb2x0aXBfdmFsdWUYAiABKAlIARJtChJ0b29sdGlw",
-            "X2ljb25fc3R5bGUYAyABKA4yUS5nb29nbGUuc2hvcHBpbmcubWVyY2hhbnQu",
-            "aXNzdWVyZXNvbHV0aW9uLnYxYmV0YS5UZXh0V2l0aFRvb2x0aXAuVG9vbHRp",
-            "cEljb25TdHlsZSJOChBUb29sdGlwSWNvblN0eWxlEiIKHlRPT0xUSVBfSUNP",
-            "Tl9TVFlMRV9VTlNQRUNJRklFRBAAEggKBElORk8QARIMCghRVUVTVElPThAC",
-            "QgcKBXZhbHVlQg8KDXRvb2x0aXBfdmFsdWUimgIKB0NhbGxvdXQSXQoKc3R5",
-            "bGVfaGludBgBIAEoDjJJLmdvb2dsZS5zaG9wcGluZy5tZXJjaGFudC5pc3N1",
-            "ZXJlc29sdXRpb24udjFiZXRhLkNhbGxvdXQuQ2FsbG91dFN0eWxlSGludBJW",
-            "CgxmdWxsX21lc3NhZ2UYAyABKAsyQC5nb29nbGUuc2hvcHBpbmcubWVyY2hh",
-            "bnQuaXNzdWVyZXNvbHV0aW9uLnYxYmV0YS5UZXh0V2l0aFRvb2x0aXAiWAoQ",
-            "Q2FsbG91dFN0eWxlSGludBIiCh5DQUxMT1VUX1NUWUxFX0hJTlRfVU5TUEVD",
-            "SUZJRUQQABIJCgVFUlJPUhABEgsKB1dBUk5JTkcQAhIICgRJTkZPEAMijQMK",
-            "DkV4dGVybmFsQWN0aW9uEmAKBHR5cGUYASABKA4yUi5nb29nbGUuc2hvcHBp",
-            "bmcubWVyY2hhbnQuaXNzdWVyZXNvbHV0aW9uLnYxYmV0YS5FeHRlcm5hbEFj",
-            "dGlvbi5FeHRlcm5hbEFjdGlvblR5cGUSCwoDdXJpGAIgASgJIosCChJFeHRl",
-            "cm5hbEFjdGlvblR5cGUSJAogRVhURVJOQUxfQUNUSU9OX1RZUEVfVU5TUEVD",
-            "SUZJRUQQABIrCidSRVZJRVdfUFJPRFVDVF9JU1NVRV9JTl9NRVJDSEFOVF9D",
-            "RU5URVIQARIrCidSRVZJRVdfQUNDT1VOVF9JU1NVRV9JTl9NRVJDSEFOVF9D",
-            "RU5URVIQAhIfChtMRUdBTF9BUFBFQUxfSU5fSEVMUF9DRU5URVIQAxImCiJW",
-            "RVJJRllfSURFTlRJVFlfSU5fTUVSQ0hBTlRfQ0VOVEVSEAQSLAooVkVSSUZZ",
-            "X0JVU0lORVNTX1ZJREVPX0lOX01FUkNIQU5UX0NFTlRFUhAFIskBChRUcmln",
+            "ZG93biKWAQoJQnJlYWtkb3duElIKB3JlZ2lvbnMYASADKAsyQS5nb29nbGUu",
+            "c2hvcHBpbmcubWVyY2hhbnQuaXNzdWVyZXNvbHV0aW9uLnYxYmV0YS5CcmVh",
+            "a2Rvd24uUmVnaW9uEg8KB2RldGFpbHMYBCADKAkaJAoGUmVnaW9uEgwKBGNv",
+            "ZGUYASABKAkSDAoEbmFtZRgCIAEoCSLaBAoGQWN0aW9uEmUKFWJ1aWx0aW5f",
+            "c2ltcGxlX2FjdGlvbhgCIAEoCzJELmdvb2dsZS5zaG9wcGluZy5tZXJjaGFu",
+            "dC5pc3N1ZXJlc29sdXRpb24udjFiZXRhLkJ1aWx0SW5TaW1wbGVBY3Rpb25I",
+            "ABJaCg9leHRlcm5hbF9hY3Rpb24YAyABKAsyPy5nb29nbGUuc2hvcHBpbmcu",
+            "bWVyY2hhbnQuaXNzdWVyZXNvbHV0aW9uLnYxYmV0YS5FeHRlcm5hbEFjdGlv",
+            "bkgAEmwKGWJ1aWx0aW5fdXNlcl9pbnB1dF9hY3Rpb24YByABKAsyRy5nb29n",
+            "bGUuc2hvcHBpbmcubWVyY2hhbnQuaXNzdWVyZXNvbHV0aW9uLnYxYmV0YS5C",
+            "dWlsdEluVXNlcklucHV0QWN0aW9uSAASFAoMYnV0dG9uX2xhYmVsGAQgASgJ",
+            "EhQKDGlzX2F2YWlsYWJsZRgFIAEoCBJPCgdyZWFzb25zGAYgAygLMj4uZ29v",
+            "Z2xlLnNob3BwaW5nLm1lcmNoYW50Lmlzc3VlcmVzb2x1dGlvbi52MWJldGEu",
+            "QWN0aW9uLlJlYXNvbhqXAQoGUmVhc29uEg8KB21lc3NhZ2UYASABKAkSEwoG",
+            "ZGV0YWlsGAIgASgJSACIAQESUQoGYWN0aW9uGAMgASgLMjcuZ29vZ2xlLnNo",
+            "b3BwaW5nLm1lcmNoYW50Lmlzc3VlcmVzb2x1dGlvbi52MWJldGEuQWN0aW9u",
+            "QgPgQQFIAYgBAUIJCgdfZGV0YWlsQgkKB19hY3Rpb25CCAoGYWN0aW9uIpgF",
+            "ChNCdWlsdEluU2ltcGxlQWN0aW9uEmoKBHR5cGUYASABKA4yXC5nb29nbGUu",
+            "c2hvcHBpbmcubWVyY2hhbnQuaXNzdWVyZXNvbHV0aW9uLnYxYmV0YS5CdWls",
+            "dEluU2ltcGxlQWN0aW9uLkJ1aWx0SW5TaW1wbGVBY3Rpb25UeXBlEhsKDmF0",
+            "dHJpYnV0ZV9jb2RlGAIgASgJSACIAQESdwoSYWRkaXRpb25hbF9jb250ZW50",
+            "GAMgASgLMlYuZ29vZ2xlLnNob3BwaW5nLm1lcmNoYW50Lmlzc3VlcmVzb2x1",
+            "dGlvbi52MWJldGEuQnVpbHRJblNpbXBsZUFjdGlvbi5BZGRpdGlvbmFsQ29u",
+            "dGVudEgBiAEBGjYKEUFkZGl0aW9uYWxDb250ZW50Eg0KBXRpdGxlGAEgASgJ",
+            "EhIKCnBhcmFncmFwaHMYAiADKAkinAIKF0J1aWx0SW5TaW1wbGVBY3Rpb25U",
+            "eXBlEisKJ0JVSUxUX0lOX1NJTVBMRV9BQ1RJT05fVFlQRV9VTlNQRUNJRklF",
+            "RBAAEhAKDFZFUklGWV9QSE9ORRABEhEKDUNMQUlNX1dFQlNJVEUQAhIQCgxB",
+            "RERfUFJPRFVDVFMQAxIUChBBRERfQ09OVEFDVF9JTkZPEAQSFAoQTElOS19B",
+            "RFNfQUNDT1VOVBAFEiQKIEFERF9CVVNJTkVTU19SRUdJU1RSQVRJT05fTlVN",
+            "QkVSEAYSFwoTRURJVF9JVEVNX0FUVFJJQlVURRAHEhUKEUZJWF9BQ0NPVU5U",
+            "X0lTU1VFEAgSGwoXU0hPV19BRERJVElPTkFMX0NPTlRFTlQQCUIRCg9fYXR0",
+            "cmlidXRlX2NvZGVCFQoTX2FkZGl0aW9uYWxfY29udGVudCJ8ChZCdWlsdElu",
+            "VXNlcklucHV0QWN0aW9uEhYKDmFjdGlvbl9jb250ZXh0GAEgASgJEkoKBWZs",
+            "b3dzGAMgAygLMjsuZ29vZ2xlLnNob3BwaW5nLm1lcmNoYW50Lmlzc3VlcmVz",
+            "b2x1dGlvbi52MWJldGEuQWN0aW9uRmxvdyKDAwoKQWN0aW9uRmxvdxIKCgJp",
+            "ZBgBIAEoCRINCgVsYWJlbBgCIAEoCRJLCgZpbnB1dHMYAyADKAsyOy5nb29n",
+            "bGUuc2hvcHBpbmcubWVyY2hhbnQuaXNzdWVyZXNvbHV0aW9uLnYxYmV0YS5J",
+            "bnB1dEZpZWxkEhQKDGRpYWxvZ190aXRsZRgEIAEoCRJdCg5kaWFsb2dfbWVz",
+            "c2FnZRgHIAEoCzJALmdvb2dsZS5zaG9wcGluZy5tZXJjaGFudC5pc3N1ZXJl",
+            "c29sdXRpb24udjFiZXRhLlRleHRXaXRoVG9vbHRpcEgAiAEBElUKDmRpYWxv",
+            "Z19jYWxsb3V0GAggASgLMjguZ29vZ2xlLnNob3BwaW5nLm1lcmNoYW50Lmlz",
+            "c3VlcmVzb2x1dGlvbi52MWJldGEuQ2FsbG91dEgBiAEBEhsKE2RpYWxvZ19i",
+            "dXR0b25fbGFiZWwYCSABKAlCEQoPX2RpYWxvZ19tZXNzYWdlQhEKD19kaWFs",
+            "b2dfY2FsbG91dCK2CQoKSW5wdXRGaWVsZBJbCgp0ZXh0X2lucHV0GAQgASgL",
+            "MkUuZ29vZ2xlLnNob3BwaW5nLm1lcmNoYW50Lmlzc3VlcmVzb2x1dGlvbi52",
+            "MWJldGEuSW5wdXRGaWVsZC5UZXh0SW5wdXRIABJfCgxjaG9pY2VfaW5wdXQY",
+            "BSABKAsyRy5nb29nbGUuc2hvcHBpbmcubWVyY2hhbnQuaXNzdWVyZXNvbHV0",
+            "aW9uLnYxYmV0YS5JbnB1dEZpZWxkLkNob2ljZUlucHV0SAASYwoOY2hlY2ti",
+            "b3hfaW5wdXQYBiABKAsySS5nb29nbGUuc2hvcHBpbmcubWVyY2hhbnQuaXNz",
+            "dWVyZXNvbHV0aW9uLnYxYmV0YS5JbnB1dEZpZWxkLkNoZWNrYm94SW5wdXRI",
+            "ABIKCgJpZBgBIAEoCRJPCgVsYWJlbBgCIAEoCzJALmdvb2dsZS5zaG9wcGlu",
+            "Zy5tZXJjaGFudC5pc3N1ZXJlc29sdXRpb24udjFiZXRhLlRleHRXaXRoVG9v",
+            "bHRpcBIQCghyZXF1aXJlZBgDIAEoCBqVAwoJVGV4dElucHV0EmEKBHR5cGUY",
+            "ASABKA4yUy5nb29nbGUuc2hvcHBpbmcubWVyY2hhbnQuaXNzdWVyZXNvbHV0",
+            "aW9uLnYxYmV0YS5JbnB1dEZpZWxkLlRleHRJbnB1dC5UZXh0SW5wdXRUeXBl",
+            "El4KD2FkZGl0aW9uYWxfaW5mbxgCIAEoCzJALmdvb2dsZS5zaG9wcGluZy5t",
+            "ZXJjaGFudC5pc3N1ZXJlc29sdXRpb24udjFiZXRhLlRleHRXaXRoVG9vbHRp",
+            "cEgAiAEBEhgKC2Zvcm1hdF9pbmZvGAMgASgJSAGIAQESFwoKYXJpYV9sYWJl",
+            "bBgEIAEoCUgCiAEBIl8KDVRleHRJbnB1dFR5cGUSHwobVEVYVF9JTlBVVF9U",
+            "WVBFX1VOU1BFQ0lGSUVEEAASFgoSR0VORVJJQ19TSE9SVF9URVhUEAESFQoR",
+            "R0VORVJJQ19MT05HX1RFWFQQAkISChBfYWRkaXRpb25hbF9pbmZvQg4KDF9m",
+            "b3JtYXRfaW5mb0INCgtfYXJpYV9sYWJlbBrdAgoLQ2hvaWNlSW5wdXQSagoH",
+            "b3B0aW9ucxgBIAMoCzJZLmdvb2dsZS5zaG9wcGluZy5tZXJjaGFudC5pc3N1",
+            "ZXJlc29sdXRpb24udjFiZXRhLklucHV0RmllbGQuQ2hvaWNlSW5wdXQuQ2hv",
+            "aWNlSW5wdXRPcHRpb24a4QEKEUNob2ljZUlucHV0T3B0aW9uEgoKAmlkGAEg",
+            "ASgJEk8KBWxhYmVsGAIgASgLMkAuZ29vZ2xlLnNob3BwaW5nLm1lcmNoYW50",
+            "Lmlzc3VlcmVzb2x1dGlvbi52MWJldGEuVGV4dFdpdGhUb29sdGlwEloKEGFk",
+            "ZGl0aW9uYWxfaW5wdXQYAyABKAsyOy5nb29nbGUuc2hvcHBpbmcubWVyY2hh",
+            "bnQuaXNzdWVyZXNvbHV0aW9uLnYxYmV0YS5JbnB1dEZpZWxkSACIAQFCEwoR",
+            "X2FkZGl0aW9uYWxfaW5wdXQaDwoNQ2hlY2tib3hJbnB1dEINCgt2YWx1ZV9p",
+            "bnB1dCKiAgoPVGV4dFdpdGhUb29sdGlwEhYKDHNpbXBsZV92YWx1ZRgBIAEo",
+            "CUgAEh4KFHNpbXBsZV90b29sdGlwX3ZhbHVlGAIgASgJSAESbQoSdG9vbHRp",
+            "cF9pY29uX3N0eWxlGAMgASgOMlEuZ29vZ2xlLnNob3BwaW5nLm1lcmNoYW50",
+            "Lmlzc3VlcmVzb2x1dGlvbi52MWJldGEuVGV4dFdpdGhUb29sdGlwLlRvb2x0",
+            "aXBJY29uU3R5bGUiTgoQVG9vbHRpcEljb25TdHlsZRIiCh5UT09MVElQX0lD",
+            "T05fU1RZTEVfVU5TUEVDSUZJRUQQABIICgRJTkZPEAESDAoIUVVFU1RJT04Q",
+            "AkIHCgV2YWx1ZUIPCg10b29sdGlwX3ZhbHVlIpoCCgdDYWxsb3V0El0KCnN0",
+            "eWxlX2hpbnQYASABKA4ySS5nb29nbGUuc2hvcHBpbmcubWVyY2hhbnQuaXNz",
+            "dWVyZXNvbHV0aW9uLnYxYmV0YS5DYWxsb3V0LkNhbGxvdXRTdHlsZUhpbnQS",
+            "VgoMZnVsbF9tZXNzYWdlGAMgASgLMkAuZ29vZ2xlLnNob3BwaW5nLm1lcmNo",
+            "YW50Lmlzc3VlcmVzb2x1dGlvbi52MWJldGEuVGV4dFdpdGhUb29sdGlwIlgK",
+            "EENhbGxvdXRTdHlsZUhpbnQSIgoeQ0FMTE9VVF9TVFlMRV9ISU5UX1VOU1BF",
+            "Q0lGSUVEEAASCQoFRVJST1IQARILCgdXQVJOSU5HEAISCAoESU5GTxADIt8C",
+            "Cg5FeHRlcm5hbEFjdGlvbhJgCgR0eXBlGAEgASgOMlIuZ29vZ2xlLnNob3Bw",
+            "aW5nLm1lcmNoYW50Lmlzc3VlcmVzb2x1dGlvbi52MWJldGEuRXh0ZXJuYWxB",
+            "Y3Rpb24uRXh0ZXJuYWxBY3Rpb25UeXBlEgsKA3VyaRgCIAEoCSLdAQoSRXh0",
+            "ZXJuYWxBY3Rpb25UeXBlEiQKIEVYVEVSTkFMX0FDVElPTl9UWVBFX1VOU1BF",
+            "Q0lGSUVEEAASKwonUkVWSUVXX1BST0RVQ1RfSVNTVUVfSU5fTUVSQ0hBTlRf",
+            "Q0VOVEVSEAESKwonUkVWSUVXX0FDQ09VTlRfSVNTVUVfSU5fTUVSQ0hBTlRf",
+            "Q0VOVEVSEAISHwobTEVHQUxfQVBQRUFMX0lOX0hFTFBfQ0VOVEVSEAMSJgoi",
+            "VkVSSUZZX0lERU5USVRZX0lOX01FUkNIQU5UX0NFTlRFUhAEIskBChRUcmln",
             "Z2VyQWN0aW9uUmVxdWVzdBI4CgRuYW1lGAEgASgJQirgQQL6QSQKIm1lcmNo",
             "YW50YXBpLmdvb2dsZWFwaXMuY29tL0FjY291bnQSWwoHcGF5bG9hZBgCIAEo",
             "CzJFLmdvb2dsZS5zaG9wcGluZy5tZXJjaGFudC5pc3N1ZXJlc29sdXRpb24u",
@@ -223,7 +221,7 @@ namespace Google.Shopping.Merchant.IssueResolution.V1Beta {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Shopping.Merchant.IssueResolution.V1Beta.RenderAccountIssuesRequest), global::Google.Shopping.Merchant.IssueResolution.V1Beta.RenderAccountIssuesRequest.Parser, new[]{ "Name", "LanguageCode", "TimeZone", "Payload" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Shopping.Merchant.IssueResolution.V1Beta.RenderIssuesRequestPayload), global::Google.Shopping.Merchant.IssueResolution.V1Beta.RenderIssuesRequestPayload.Parser, new[]{ "ContentOption", "UserInputActionOption" }, new[]{ "ContentOption", "UserInputActionOption" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Shopping.Merchant.IssueResolution.V1Beta.RenderProductIssuesResponse), global::Google.Shopping.Merchant.IssueResolution.V1Beta.RenderProductIssuesResponse.Parser, new[]{ "RenderedIssues" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Shopping.Merchant.IssueResolution.V1Beta.RenderProductIssuesRequest), global::Google.Shopping.Merchant.IssueResolution.V1Beta.RenderProductIssuesRequest.Parser, new[]{ "Name", "LanguageCode", "TimeZone", "Payload", "ProductIdBase64UrlEncoded" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Shopping.Merchant.IssueResolution.V1Beta.RenderProductIssuesRequest), global::Google.Shopping.Merchant.IssueResolution.V1Beta.RenderProductIssuesRequest.Parser, new[]{ "Name", "LanguageCode", "TimeZone", "Payload" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Shopping.Merchant.IssueResolution.V1Beta.RenderedIssue), global::Google.Shopping.Merchant.IssueResolution.V1Beta.RenderedIssue.Parser, new[]{ "PrerenderedContent", "PrerenderedOutOfCourtDisputeSettlement", "Title", "Impact", "Actions" }, new[]{ "Content", "OutOfCourtDisputeSettlement" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Shopping.Merchant.IssueResolution.V1Beta.Impact), global::Google.Shopping.Merchant.IssueResolution.V1Beta.Impact.Parser, new[]{ "Message", "Severity", "Breakdowns" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Shopping.Merchant.IssueResolution.V1Beta.Breakdown), global::Google.Shopping.Merchant.IssueResolution.V1Beta.Breakdown.Parser, new[]{ "Regions", "Details" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Shopping.Merchant.IssueResolution.V1Beta.Breakdown.Types.Region), global::Google.Shopping.Merchant.IssueResolution.V1Beta.Breakdown.Types.Region.Parser, new[]{ "Code", "Name" }, null, null, null, null)}),
@@ -1353,7 +1351,6 @@ namespace Google.Shopping.Merchant.IssueResolution.V1Beta {
       languageCode_ = other.languageCode_;
       timeZone_ = other.timeZone_;
       payload_ = other.payload_ != null ? other.payload_.Clone() : null;
-      productIdBase64UrlEncoded_ = other.productIdBase64UrlEncoded_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -1428,30 +1425,6 @@ namespace Google.Shopping.Merchant.IssueResolution.V1Beta {
       }
     }
 
-    /// <summary>Field number for the "product_id_base64_url_encoded" field.</summary>
-    public const int ProductIdBase64UrlEncodedFieldNumber = 5;
-    private bool productIdBase64UrlEncoded_;
-    /// <summary>
-    /// Optional. If true, the `{product}` in the `name` field of the request will
-    /// be interpreted as unpadded base64url-encoded and decoded during request
-    /// processing to match the decoded value. Default value is `false`. Use this
-    /// if your `{product}` contains special characters, such as forward slash `/`
-    /// or other characters that are unpadded base64url-encoded (as per RFC 7515:
-    /// https://datatracker.ietf.org/doc/html/rfc7515#section-2).
-    ///
-    /// Note that future versions of the API will only accept unpadded
-    /// base64url-encoded product ids, so we strongly recommend proactively setting
-    /// this to `true` and encoding the product ids.
-    /// </summary>
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public bool ProductIdBase64UrlEncoded {
-      get { return productIdBase64UrlEncoded_; }
-      set {
-        productIdBase64UrlEncoded_ = value;
-      }
-    }
-
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
@@ -1471,7 +1444,6 @@ namespace Google.Shopping.Merchant.IssueResolution.V1Beta {
       if (LanguageCode != other.LanguageCode) return false;
       if (TimeZone != other.TimeZone) return false;
       if (!object.Equals(Payload, other.Payload)) return false;
-      if (ProductIdBase64UrlEncoded != other.ProductIdBase64UrlEncoded) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -1483,7 +1455,6 @@ namespace Google.Shopping.Merchant.IssueResolution.V1Beta {
       if (LanguageCode.Length != 0) hash ^= LanguageCode.GetHashCode();
       if (TimeZone.Length != 0) hash ^= TimeZone.GetHashCode();
       if (payload_ != null) hash ^= Payload.GetHashCode();
-      if (ProductIdBase64UrlEncoded != false) hash ^= ProductIdBase64UrlEncoded.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -1518,10 +1489,6 @@ namespace Google.Shopping.Merchant.IssueResolution.V1Beta {
         output.WriteRawTag(34);
         output.WriteMessage(Payload);
       }
-      if (ProductIdBase64UrlEncoded != false) {
-        output.WriteRawTag(40);
-        output.WriteBool(ProductIdBase64UrlEncoded);
-      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -1548,10 +1515,6 @@ namespace Google.Shopping.Merchant.IssueResolution.V1Beta {
         output.WriteRawTag(34);
         output.WriteMessage(Payload);
       }
-      if (ProductIdBase64UrlEncoded != false) {
-        output.WriteRawTag(40);
-        output.WriteBool(ProductIdBase64UrlEncoded);
-      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -1573,9 +1536,6 @@ namespace Google.Shopping.Merchant.IssueResolution.V1Beta {
       }
       if (payload_ != null) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(Payload);
-      }
-      if (ProductIdBase64UrlEncoded != false) {
-        size += 1 + 1;
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -1603,9 +1563,6 @@ namespace Google.Shopping.Merchant.IssueResolution.V1Beta {
           Payload = new global::Google.Shopping.Merchant.IssueResolution.V1Beta.RenderIssuesRequestPayload();
         }
         Payload.MergeFrom(other.Payload);
-      }
-      if (other.ProductIdBase64UrlEncoded != false) {
-        ProductIdBase64UrlEncoded = other.ProductIdBase64UrlEncoded;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -1641,10 +1598,6 @@ namespace Google.Shopping.Merchant.IssueResolution.V1Beta {
             input.ReadMessage(Payload);
             break;
           }
-          case 40: {
-            ProductIdBase64UrlEncoded = input.ReadBool();
-            break;
-          }
         }
       }
     #endif
@@ -1677,10 +1630,6 @@ namespace Google.Shopping.Merchant.IssueResolution.V1Beta {
               Payload = new global::Google.Shopping.Merchant.IssueResolution.V1Beta.RenderIssuesRequestPayload();
             }
             input.ReadMessage(Payload);
-            break;
-          }
-          case 40: {
-            ProductIdBase64UrlEncoded = input.ReadBool();
             break;
           }
         }
@@ -7582,11 +7531,6 @@ namespace Google.Shopping.Merchant.IssueResolution.V1Beta {
         /// verification.
         /// </summary>
         [pbr::OriginalName("VERIFY_IDENTITY_IN_MERCHANT_CENTER")] VerifyIdentityInMerchantCenter = 4,
-        /// <summary>
-        /// Redirect to Merchant Center where the business can perform business
-        /// video verification.
-        /// </summary>
-        [pbr::OriginalName("VERIFY_BUSINESS_VIDEO_IN_MERCHANT_CENTER")] VerifyBusinessVideoInMerchantCenter = 5,
       }
 
     }
