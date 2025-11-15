@@ -14,6 +14,7 @@
 
 using Google.Api.Gax.Grpc;
 using Google.Cloud.Spanner.Common.V1;
+using System.Threading;
 
 namespace Google.Cloud.Spanner.V1
 {
@@ -49,6 +50,25 @@ namespace Google.Cloud.Spanner.V1
     public partial class SpannerClientImpl
     {
         /// <summary>
+        /// A counter incremented on the instation of each new Spanner client
+        /// </summary>
+        private static int s_clientIdCounter;
+
+        /// <summary>
+        /// Creates the request ID associated with each RPC.
+        /// </summary>
+        private SpannerRequestId.Generator _requestIdGenerator;
+
+        /// <summary>
+        /// The process ID, assigned to each outgoing request in the x-goog-spanner-request-id header.
+        /// </summary>
+        public string ProcessId
+        {
+            get => SpannerRequestId.s_processId;
+            set => SpannerRequestId.s_processId = value;
+        }
+
+        /// <summary>
         /// The name of the header used for efficiently routing requests.
         /// </summary>
         /// <remarks>
@@ -64,78 +84,100 @@ namespace Google.Cloud.Spanner.V1
         partial void OnConstruction(Spanner.SpannerClient grpcClient, SpannerSettings effectiveSettings, ClientHelper clientHelper)
         {
             Settings = effectiveSettings;
+            _requestIdGenerator = new SpannerRequestId.Generator(Interlocked.Increment(ref s_clientIdCounter));
         }
 
         partial void Modify_CreateSessionRequest(ref CreateSessionRequest request, ref CallSettings settings)
         {
             ApplyResourcePrefixHeaderFromDatabase(ref settings, request.Database);
             MaybeApplyRouteToLeaderHeader(ref settings);
+            ApplyRequestIdToHeader(ref settings);
         }
 
         partial void Modify_BatchCreateSessionsRequest(ref BatchCreateSessionsRequest request, ref CallSettings settings)
         {
             ApplyResourcePrefixHeaderFromDatabase(ref settings, request.Database);
             MaybeApplyRouteToLeaderHeader(ref settings);
+            ApplyRequestIdToHeader(ref settings);
         }
 
         partial void Modify_GetSessionRequest(ref GetSessionRequest request, ref CallSettings settings)
         {
             ApplyResourcePrefixHeaderFromSession(ref settings, request.Name);
             MaybeApplyRouteToLeaderHeader(ref settings);
+            ApplyRequestIdToHeader(ref settings);
         }
 
-        partial void Modify_ListSessionsRequest(ref ListSessionsRequest request, ref CallSettings settings) =>
+        partial void Modify_ListSessionsRequest(ref ListSessionsRequest request, ref CallSettings settings)
+        {
             // This operation is never routed to leader so we don't call MaybeApplyRouteToLeaderHeader.
             ApplyResourcePrefixHeaderFromDatabase(ref settings, request.Database);
+            ApplyRequestIdToHeader(ref settings);
+        }
 
-        partial void Modify_DeleteSessionRequest(ref DeleteSessionRequest request, ref CallSettings settings) =>
+        partial void Modify_DeleteSessionRequest(ref DeleteSessionRequest request, ref CallSettings settings)
+        {
             // This operation is never routed to leader so we don't call MaybeApplyRouteToLeaderHeader.
             ApplyResourcePrefixHeaderFromSession(ref settings, request.Name);
+            ApplyRequestIdToHeader(ref settings);
+        }
 
-        partial void Modify_ExecuteSqlRequest(ref ExecuteSqlRequest request, ref CallSettings settings) =>
+        partial void Modify_ExecuteSqlRequest(ref ExecuteSqlRequest request, ref CallSettings settings)
+        {
             // This operations is routed to leader only if the transaction it uses is of a certain type.
             // We don't have that information here so the leader routing header needs to be applied elsewhere.
             ApplyResourcePrefixHeaderFromSession(ref settings, request.Session);
+            ApplyRequestIdToHeader(ref settings);
+        }
 
         partial void Modify_ExecuteBatchDmlRequest(ref ExecuteBatchDmlRequest request, ref CallSettings settings)
         {
             ApplyResourcePrefixHeaderFromSession(ref settings, request.Session);
             MaybeApplyRouteToLeaderHeader(ref settings);
+            ApplyRequestIdToHeader(ref settings);
         }
 
-        partial void Modify_ReadRequest(ref ReadRequest request, ref CallSettings settings) =>
+        partial void Modify_ReadRequest(ref ReadRequest request, ref CallSettings settings)
+        {
             // This operations is routed to leader only if the transaction it uses is of a certain type.
             // We don't have that information here so the leader routing header needs to be applied elsewhere.
             ApplyResourcePrefixHeaderFromSession(ref settings, request.Session);
+            ApplyRequestIdToHeader(ref settings);
+        }
 
         partial void Modify_BeginTransactionRequest(ref BeginTransactionRequest request, ref CallSettings settings)
         {
             ApplyResourcePrefixHeaderFromSession(ref settings, request.Session);
             MaybeApplyRouteToLeaderHeader(ref settings, request.Options?.ModeCase ?? TransactionOptions.ModeOneofCase.None);
+            ApplyRequestIdToHeader(ref settings);
         }
 
         partial void Modify_CommitRequest(ref CommitRequest request, ref CallSettings settings)
         {
             ApplyResourcePrefixHeaderFromSession(ref settings, request.Session);
             MaybeApplyRouteToLeaderHeader(ref settings);
+            ApplyRequestIdToHeader(ref settings);
         }
 
         partial void Modify_RollbackRequest(ref RollbackRequest request, ref CallSettings settings)
         {
             ApplyResourcePrefixHeaderFromSession(ref settings, request.Session);
             MaybeApplyRouteToLeaderHeader(ref settings);
+            ApplyRequestIdToHeader(ref settings);
         }
 
         partial void Modify_PartitionQueryRequest(ref PartitionQueryRequest request, ref CallSettings settings)
         {
             ApplyResourcePrefixHeaderFromSession(ref settings, request.Session);
             MaybeApplyRouteToLeaderHeader(ref settings);
+            ApplyRequestIdToHeader(ref settings);
         }
 
         partial void Modify_PartitionReadRequest(ref PartitionReadRequest request, ref CallSettings settings)
         {
             ApplyResourcePrefixHeaderFromSession(ref settings, request.Session);
             MaybeApplyRouteToLeaderHeader(ref settings);
+            ApplyRequestIdToHeader(ref settings);
         }
 
         internal static void ApplyResourcePrefixHeaderFromDatabase(ref CallSettings settings, string resource)
@@ -166,6 +208,16 @@ namespace Google.Cloud.Spanner.V1
                     session.ProjectId, session.InstanceId, session.DatabaseId);
                 settings = settings.WithHeader(ResourcePrefixHeader, database.ToString());
             }
+        }
+
+        internal void ApplyRequestIdToHeader(ref CallSettings settings)
+        {
+            var requestId = _requestIdGenerator.Generate();
+
+            // The header mutation increments the attempt each time the header is populated which happens right before a
+            // call. This allows us to increment the attempt num and assign a unique request id in the case of retries
+            var newSettings = CallSettings.FromHeaderMutation(metadata => metadata.Add(SpannerRequestId.HeaderKey, requestId.IncrementAttempt()));
+            settings = settings.MergedWith(newSettings);
         }
     }
 }

@@ -16,6 +16,7 @@ using Google.Api.Gax;
 using Google.Api.Gax.Grpc;
 using Google.Api.Gax.Grpc.Gcp;
 using Grpc.Core;
+using Grpc.Core.Interceptors;
 using System;
 using System.Threading;
 using System.Threading.Tasks;
@@ -150,8 +151,9 @@ namespace Google.Cloud.Spanner.V1
             task = MaybeCreateEmulatorClientBuilder()?.BuildAsync(cancellationToken);
 
         /// <inheritdoc/>
-        protected override CallInvoker CreateCallInvoker() =>
-            AffinityChannelPoolConfiguration is null
+        protected override CallInvoker CreateCallInvoker()
+        {
+            var invoker = AffinityChannelPoolConfiguration is null
                 ? base.CreateCallInvoker()
                 : new GcpCallInvoker(
                     ServiceMetadata,
@@ -160,10 +162,13 @@ namespace Google.Cloud.Spanner.V1
                     GetChannelOptions(),
                     GetApiConfig(),
                     EffectiveGrpcAdapter);
+            return invoker.Intercept(new SpannerRequestIdCallInterceptor());
+        }
 
         /// <inheritdoc/>
-        protected override async Task<CallInvoker> CreateCallInvokerAsync(CancellationToken cancellationToken) =>
-            AffinityChannelPoolConfiguration is null
+        protected override async Task<CallInvoker> CreateCallInvokerAsync(CancellationToken cancellationToken)
+        {
+            var invoker = AffinityChannelPoolConfiguration is null
                 ? await base.CreateCallInvokerAsync(cancellationToken).ConfigureAwait(false)
                 : new GcpCallInvoker(
                     ServiceMetadata,
@@ -172,6 +177,8 @@ namespace Google.Cloud.Spanner.V1
                     GetChannelOptions(),
                     GetApiConfig(),
                     EffectiveGrpcAdapter);
+            return invoker.Intercept(new SpannerRequestIdCallInterceptor());
+        }
 
         private ApiConfig GetApiConfig() => new ApiConfig
         {
