@@ -638,5 +638,92 @@ namespace GoogleCSharpSnippets
             string nextPageToken = singlePage.NextPageToken;
             // End snippet
         }
+
+        /// <summary>Snippet for VerifySelf</summary>
+        public void VerifySelfRequestObject()
+        {
+            // Snippet: VerifySelf(VerifySelfRequest, CallSettings)
+            // Create client
+            UserServiceClient userServiceClient = UserServiceClient.Create();
+            // Initialize request argument(s)
+            VerifySelfRequest request = new VerifySelfRequest
+            {
+                AccountAsAccountName = AccountName.FromAccount("[ACCOUNT]"),
+            };
+            // Make the request
+            User response = userServiceClient.VerifySelf(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for VerifySelfAsync</summary>
+        public async Task VerifySelfRequestObjectAsync()
+        {
+            // Snippet: VerifySelfAsync(VerifySelfRequest, CallSettings)
+            // Additional: VerifySelfAsync(VerifySelfRequest, CancellationToken)
+            // Create client
+            UserServiceClient userServiceClient = await UserServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            VerifySelfRequest request = new VerifySelfRequest
+            {
+                AccountAsAccountName = AccountName.FromAccount("[ACCOUNT]"),
+            };
+            // Make the request
+            User response = await userServiceClient.VerifySelfAsync(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for VerifySelf</summary>
+        public void VerifySelf()
+        {
+            // Snippet: VerifySelf(string, CallSettings)
+            // Create client
+            UserServiceClient userServiceClient = UserServiceClient.Create();
+            // Initialize request argument(s)
+            string account = "accounts/[ACCOUNT]";
+            // Make the request
+            User response = userServiceClient.VerifySelf(account);
+            // End snippet
+        }
+
+        /// <summary>Snippet for VerifySelfAsync</summary>
+        public async Task VerifySelfAsync()
+        {
+            // Snippet: VerifySelfAsync(string, CallSettings)
+            // Additional: VerifySelfAsync(string, CancellationToken)
+            // Create client
+            UserServiceClient userServiceClient = await UserServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            string account = "accounts/[ACCOUNT]";
+            // Make the request
+            User response = await userServiceClient.VerifySelfAsync(account);
+            // End snippet
+        }
+
+        /// <summary>Snippet for VerifySelf</summary>
+        public void VerifySelfResourceNames()
+        {
+            // Snippet: VerifySelf(AccountName, CallSettings)
+            // Create client
+            UserServiceClient userServiceClient = UserServiceClient.Create();
+            // Initialize request argument(s)
+            AccountName account = AccountName.FromAccount("[ACCOUNT]");
+            // Make the request
+            User response = userServiceClient.VerifySelf(account);
+            // End snippet
+        }
+
+        /// <summary>Snippet for VerifySelfAsync</summary>
+        public async Task VerifySelfResourceNamesAsync()
+        {
+            // Snippet: VerifySelfAsync(AccountName, CallSettings)
+            // Additional: VerifySelfAsync(AccountName, CancellationToken)
+            // Create client
+            UserServiceClient userServiceClient = await UserServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            AccountName account = AccountName.FromAccount("[ACCOUNT]");
+            // Make the request
+            User response = await userServiceClient.VerifySelfAsync(account);
+            // End snippet
+        }
     }
 }

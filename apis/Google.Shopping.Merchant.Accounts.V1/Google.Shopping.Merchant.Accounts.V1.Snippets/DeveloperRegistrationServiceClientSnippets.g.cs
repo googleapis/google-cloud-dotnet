@@ -16,6 +16,7 @@
 
 namespace GoogleCSharpSnippets
 {
+    using Google.Protobuf.WellKnownTypes;
     using Google.Shopping.Merchant.Accounts.V1;
     using System.Threading.Tasks;
 
@@ -174,6 +175,33 @@ namespace GoogleCSharpSnippets
             };
             // Make the request
             await developerRegistrationServiceClient.UnregisterGcpAsync(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetAccountForGcpRegistration</summary>
+        public void GetAccountForGcpRegistrationRequestObject()
+        {
+            // Snippet: GetAccountForGcpRegistration(Empty, CallSettings)
+            // Create client
+            DeveloperRegistrationServiceClient developerRegistrationServiceClient = DeveloperRegistrationServiceClient.Create();
+            // Initialize request argument(s)
+            Empty request = new Empty { };
+            // Make the request
+            GetAccountForGcpRegistrationResponse response = developerRegistrationServiceClient.GetAccountForGcpRegistration(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetAccountForGcpRegistrationAsync</summary>
+        public async Task GetAccountForGcpRegistrationRequestObjectAsync()
+        {
+            // Snippet: GetAccountForGcpRegistrationAsync(Empty, CallSettings)
+            // Additional: GetAccountForGcpRegistrationAsync(Empty, CancellationToken)
+            // Create client
+            DeveloperRegistrationServiceClient developerRegistrationServiceClient = await DeveloperRegistrationServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            Empty request = new Empty { };
+            // Make the request
+            GetAccountForGcpRegistrationResponse response = await developerRegistrationServiceClient.GetAccountForGcpRegistrationAsync(request);
             // End snippet
         }
     }

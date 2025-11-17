@@ -45,7 +45,8 @@ namespace Google.Shopping.Merchant.Accounts.V1 {
   }
   #region Enums
   /// <summary>
-  /// The access right.
+  /// The access right defines the level of permission a
+  /// user has within a Merchant Center account.
   /// </summary>
   public enum AccessRight {
     /// <summary>
@@ -71,7 +72,8 @@ namespace Google.Shopping.Merchant.Accounts.V1 {
     [pbr::OriginalName("PERFORMANCE_REPORTING")] PerformanceReporting = 3,
     /// <summary>
     /// Users with this right have access to Merchant API and its notifications.
-    /// This role is only accessible to accounts that has a developer registration.
+    /// This role is only accessible to accounts that have a developer
+    /// registration.
     /// </summary>
     [pbr::OriginalName("API_DEVELOPER")] ApiDeveloper = 5,
   }

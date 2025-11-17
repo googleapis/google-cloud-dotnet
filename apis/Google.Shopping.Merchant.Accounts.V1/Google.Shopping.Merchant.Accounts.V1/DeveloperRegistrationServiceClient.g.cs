@@ -50,6 +50,7 @@ namespace Google.Shopping.Merchant.Accounts.V1
             RegisterGcpSettings = existing.RegisterGcpSettings;
             GetDeveloperRegistrationSettings = existing.GetDeveloperRegistrationSettings;
             UnregisterGcpSettings = existing.UnregisterGcpSettings;
+            GetAccountForGcpRegistrationSettings = existing.GetAccountForGcpRegistrationSettings;
             OnCopy(existing);
         }
 
@@ -111,6 +112,25 @@ namespace Google.Shopping.Merchant.Accounts.V1
         /// </list>
         /// </remarks>
         public gaxgrpc::CallSettings UnregisterGcpSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 5, initialBackoff: sys::TimeSpan.FromMilliseconds(1000), maxBackoff: sys::TimeSpan.FromMilliseconds(10000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Unavailable)));
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>DeveloperRegistrationServiceClient.GetAccountForGcpRegistration</c> and
+        /// <c>DeveloperRegistrationServiceClient.GetAccountForGcpRegistrationAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>Initial retry delay: 1000 milliseconds.</description></item>
+        /// <item><description>Retry delay multiplier: 1.3</description></item>
+        /// <item><description>Retry maximum delay: 10000 milliseconds.</description></item>
+        /// <item><description>Maximum attempts: 5</description></item>
+        /// <item>
+        /// <description>Retriable status codes: <see cref="grpccore::StatusCode.Unavailable"/>.</description>
+        /// </item>
+        /// <item><description>Timeout: 60 seconds.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings GetAccountForGcpRegistrationSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 5, initialBackoff: sys::TimeSpan.FromMilliseconds(1000), maxBackoff: sys::TimeSpan.FromMilliseconds(10000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Unavailable)));
 
         /// <summary>Creates a deep clone of this object, with all the same property values.</summary>
         /// <returns>A deep clone of this <see cref="DeveloperRegistrationServiceSettings"/> object.</returns>
@@ -427,6 +447,33 @@ namespace Google.Shopping.Merchant.Accounts.V1
         /// <returns>A Task containing the RPC response.</returns>
         public virtual stt::Task UnregisterGcpAsync(UnregisterGcpRequest request, st::CancellationToken cancellationToken) =>
             UnregisterGcpAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Retrieves the merchant account that the calling GCP is registered with.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual GetAccountForGcpRegistrationResponse GetAccountForGcpRegistration(wkt::Empty request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Retrieves the merchant account that the calling GCP is registered with.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<GetAccountForGcpRegistrationResponse> GetAccountForGcpRegistrationAsync(wkt::Empty request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Retrieves the merchant account that the calling GCP is registered with.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<GetAccountForGcpRegistrationResponse> GetAccountForGcpRegistrationAsync(wkt::Empty request, st::CancellationToken cancellationToken) =>
+            GetAccountForGcpRegistrationAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
     }
 
     /// <summary>DeveloperRegistrationService client wrapper implementation, for convenient use.</summary>
@@ -440,6 +487,8 @@ namespace Google.Shopping.Merchant.Accounts.V1
         private readonly gaxgrpc::ApiCall<GetDeveloperRegistrationRequest, DeveloperRegistration> _callGetDeveloperRegistration;
 
         private readonly gaxgrpc::ApiCall<UnregisterGcpRequest, wkt::Empty> _callUnregisterGcp;
+
+        private readonly gaxgrpc::ApiCall<wkt::Empty, GetAccountForGcpRegistrationResponse> _callGetAccountForGcpRegistration;
 
         /// <summary>
         /// Constructs a client wrapper for the DeveloperRegistrationService service, with the specified gRPC client and
@@ -468,6 +517,9 @@ namespace Google.Shopping.Merchant.Accounts.V1
             _callUnregisterGcp = clientHelper.BuildApiCall<UnregisterGcpRequest, wkt::Empty>("UnregisterGcp", grpcClient.UnregisterGcpAsync, grpcClient.UnregisterGcp, effectiveSettings.UnregisterGcpSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callUnregisterGcp);
             Modify_UnregisterGcpApiCall(ref _callUnregisterGcp);
+            _callGetAccountForGcpRegistration = clientHelper.BuildApiCall<wkt::Empty, GetAccountForGcpRegistrationResponse>("GetAccountForGcpRegistration", grpcClient.GetAccountForGcpRegistrationAsync, grpcClient.GetAccountForGcpRegistration, effectiveSettings.GetAccountForGcpRegistrationSettings);
+            Modify_ApiCall(ref _callGetAccountForGcpRegistration);
+            Modify_GetAccountForGcpRegistrationApiCall(ref _callGetAccountForGcpRegistration);
             OnConstruction(grpcClient, effectiveSettings, clientHelper);
         }
 
@@ -479,6 +531,8 @@ namespace Google.Shopping.Merchant.Accounts.V1
 
         partial void Modify_UnregisterGcpApiCall(ref gaxgrpc::ApiCall<UnregisterGcpRequest, wkt::Empty> call);
 
+        partial void Modify_GetAccountForGcpRegistrationApiCall(ref gaxgrpc::ApiCall<wkt::Empty, GetAccountForGcpRegistrationResponse> call);
+
         partial void OnConstruction(DeveloperRegistrationService.DeveloperRegistrationServiceClient grpcClient, DeveloperRegistrationServiceSettings effectiveSettings, gaxgrpc::ClientHelper clientHelper);
 
         /// <summary>The underlying gRPC DeveloperRegistrationService client</summary>
@@ -489,6 +543,8 @@ namespace Google.Shopping.Merchant.Accounts.V1
         partial void Modify_GetDeveloperRegistrationRequest(ref GetDeveloperRegistrationRequest request, ref gaxgrpc::CallSettings settings);
 
         partial void Modify_UnregisterGcpRequest(ref UnregisterGcpRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_Empty(ref wkt::Empty request, ref gaxgrpc::CallSettings settings);
 
         /// <summary>
         /// Registers the GCP used for the API call to the shopping account passed in
@@ -570,6 +626,30 @@ namespace Google.Shopping.Merchant.Accounts.V1
         {
             Modify_UnregisterGcpRequest(ref request, ref callSettings);
             return _callUnregisterGcp.Async(request, callSettings);
+        }
+
+        /// <summary>
+        /// Retrieves the merchant account that the calling GCP is registered with.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override GetAccountForGcpRegistrationResponse GetAccountForGcpRegistration(wkt::Empty request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_Empty(ref request, ref callSettings);
+            return _callGetAccountForGcpRegistration.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Retrieves the merchant account that the calling GCP is registered with.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override stt::Task<GetAccountForGcpRegistrationResponse> GetAccountForGcpRegistrationAsync(wkt::Empty request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_Empty(ref request, ref callSettings);
+            return _callGetAccountForGcpRegistration.Async(request, callSettings);
         }
     }
 }

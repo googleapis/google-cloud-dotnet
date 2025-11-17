@@ -51,6 +51,7 @@ namespace Google.Shopping.Merchant.Accounts.V1
             DeleteUserSettings = existing.DeleteUserSettings;
             UpdateUserSettings = existing.UpdateUserSettings;
             ListUsersSettings = existing.ListUsersSettings;
+            VerifySelfSettings = existing.VerifySelfSettings;
             OnCopy(existing);
         }
 
@@ -145,6 +146,24 @@ namespace Google.Shopping.Merchant.Accounts.V1
         /// </list>
         /// </remarks>
         public gaxgrpc::CallSettings ListUsersSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 5, initialBackoff: sys::TimeSpan.FromMilliseconds(1000), maxBackoff: sys::TimeSpan.FromMilliseconds(10000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Unavailable)));
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>UserServiceClient.VerifySelf</c> and <c>UserServiceClient.VerifySelfAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>Initial retry delay: 1000 milliseconds.</description></item>
+        /// <item><description>Retry delay multiplier: 1.3</description></item>
+        /// <item><description>Retry maximum delay: 10000 milliseconds.</description></item>
+        /// <item><description>Maximum attempts: 5</description></item>
+        /// <item>
+        /// <description>Retriable status codes: <see cref="grpccore::StatusCode.Unavailable"/>.</description>
+        /// </item>
+        /// <item><description>Timeout: 60 seconds.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings VerifySelfSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 5, initialBackoff: sys::TimeSpan.FromMilliseconds(1000), maxBackoff: sys::TimeSpan.FromMilliseconds(10000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Unavailable)));
 
         /// <summary>Creates a deep clone of this object, with all the same property values.</summary>
         /// <returns>A deep clone of this <see cref="UserServiceSettings"/> object.</returns>
@@ -1005,6 +1024,126 @@ namespace Google.Shopping.Merchant.Accounts.V1
             }
             return ListUsersAsync(request, callSettings);
         }
+
+        /// <summary>
+        /// Updates the user that is represented by the caller from pending to
+        /// verified.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual User VerifySelf(VerifySelfRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Updates the user that is represented by the caller from pending to
+        /// verified.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<User> VerifySelfAsync(VerifySelfRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Updates the user that is represented by the caller from pending to
+        /// verified.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<User> VerifySelfAsync(VerifySelfRequest request, st::CancellationToken cancellationToken) =>
+            VerifySelfAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Updates the user that is represented by the caller from pending to
+        /// verified.
+        /// </summary>
+        /// <param name="account">
+        /// Required. The name of the account under which the caller is a user.
+        /// Format: `accounts/{account}`
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual User VerifySelf(string account, gaxgrpc::CallSettings callSettings = null) =>
+            VerifySelf(new VerifySelfRequest
+            {
+                Account = gax::GaxPreconditions.CheckNotNullOrEmpty(account, nameof(account)),
+            }, callSettings);
+
+        /// <summary>
+        /// Updates the user that is represented by the caller from pending to
+        /// verified.
+        /// </summary>
+        /// <param name="account">
+        /// Required. The name of the account under which the caller is a user.
+        /// Format: `accounts/{account}`
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<User> VerifySelfAsync(string account, gaxgrpc::CallSettings callSettings = null) =>
+            VerifySelfAsync(new VerifySelfRequest
+            {
+                Account = gax::GaxPreconditions.CheckNotNullOrEmpty(account, nameof(account)),
+            }, callSettings);
+
+        /// <summary>
+        /// Updates the user that is represented by the caller from pending to
+        /// verified.
+        /// </summary>
+        /// <param name="account">
+        /// Required. The name of the account under which the caller is a user.
+        /// Format: `accounts/{account}`
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<User> VerifySelfAsync(string account, st::CancellationToken cancellationToken) =>
+            VerifySelfAsync(account, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Updates the user that is represented by the caller from pending to
+        /// verified.
+        /// </summary>
+        /// <param name="account">
+        /// Required. The name of the account under which the caller is a user.
+        /// Format: `accounts/{account}`
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual User VerifySelf(AccountName account, gaxgrpc::CallSettings callSettings = null) =>
+            VerifySelf(new VerifySelfRequest
+            {
+                AccountAsAccountName = gax::GaxPreconditions.CheckNotNull(account, nameof(account)),
+            }, callSettings);
+
+        /// <summary>
+        /// Updates the user that is represented by the caller from pending to
+        /// verified.
+        /// </summary>
+        /// <param name="account">
+        /// Required. The name of the account under which the caller is a user.
+        /// Format: `accounts/{account}`
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<User> VerifySelfAsync(AccountName account, gaxgrpc::CallSettings callSettings = null) =>
+            VerifySelfAsync(new VerifySelfRequest
+            {
+                AccountAsAccountName = gax::GaxPreconditions.CheckNotNull(account, nameof(account)),
+            }, callSettings);
+
+        /// <summary>
+        /// Updates the user that is represented by the caller from pending to
+        /// verified.
+        /// </summary>
+        /// <param name="account">
+        /// Required. The name of the account under which the caller is a user.
+        /// Format: `accounts/{account}`
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<User> VerifySelfAsync(AccountName account, st::CancellationToken cancellationToken) =>
+            VerifySelfAsync(account, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
     }
 
     /// <summary>UserService client wrapper implementation, for convenient use.</summary>
@@ -1022,6 +1161,8 @@ namespace Google.Shopping.Merchant.Accounts.V1
         private readonly gaxgrpc::ApiCall<UpdateUserRequest, User> _callUpdateUser;
 
         private readonly gaxgrpc::ApiCall<ListUsersRequest, ListUsersResponse> _callListUsers;
+
+        private readonly gaxgrpc::ApiCall<VerifySelfRequest, User> _callVerifySelf;
 
         /// <summary>
         /// Constructs a client wrapper for the UserService service, with the specified gRPC client and settings.
@@ -1053,6 +1194,9 @@ namespace Google.Shopping.Merchant.Accounts.V1
             _callListUsers = clientHelper.BuildApiCall<ListUsersRequest, ListUsersResponse>("ListUsers", grpcClient.ListUsersAsync, grpcClient.ListUsers, effectiveSettings.ListUsersSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callListUsers);
             Modify_ListUsersApiCall(ref _callListUsers);
+            _callVerifySelf = clientHelper.BuildApiCall<VerifySelfRequest, User>("VerifySelf", grpcClient.VerifySelfAsync, grpcClient.VerifySelf, effectiveSettings.VerifySelfSettings).WithGoogleRequestParam("account", request => request.Account);
+            Modify_ApiCall(ref _callVerifySelf);
+            Modify_VerifySelfApiCall(ref _callVerifySelf);
             OnConstruction(grpcClient, effectiveSettings, clientHelper);
         }
 
@@ -1068,6 +1212,8 @@ namespace Google.Shopping.Merchant.Accounts.V1
 
         partial void Modify_ListUsersApiCall(ref gaxgrpc::ApiCall<ListUsersRequest, ListUsersResponse> call);
 
+        partial void Modify_VerifySelfApiCall(ref gaxgrpc::ApiCall<VerifySelfRequest, User> call);
+
         partial void OnConstruction(UserService.UserServiceClient grpcClient, UserServiceSettings effectiveSettings, gaxgrpc::ClientHelper clientHelper);
 
         /// <summary>The underlying gRPC UserService client</summary>
@@ -1082,6 +1228,8 @@ namespace Google.Shopping.Merchant.Accounts.V1
         partial void Modify_UpdateUserRequest(ref UpdateUserRequest request, ref gaxgrpc::CallSettings settings);
 
         partial void Modify_ListUsersRequest(ref ListUsersRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_VerifySelfRequest(ref VerifySelfRequest request, ref gaxgrpc::CallSettings settings);
 
         /// <summary>
         /// Retrieves a Merchant Center account user.
@@ -1211,6 +1359,32 @@ namespace Google.Shopping.Merchant.Accounts.V1
         {
             Modify_ListUsersRequest(ref request, ref callSettings);
             return new gaxgrpc::GrpcPagedAsyncEnumerable<ListUsersRequest, ListUsersResponse, User>(_callListUsers, request, callSettings);
+        }
+
+        /// <summary>
+        /// Updates the user that is represented by the caller from pending to
+        /// verified.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override User VerifySelf(VerifySelfRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_VerifySelfRequest(ref request, ref callSettings);
+            return _callVerifySelf.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Updates the user that is represented by the caller from pending to
+        /// verified.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override stt::Task<User> VerifySelfAsync(VerifySelfRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_VerifySelfRequest(ref request, ref callSettings);
+            return _callVerifySelf.Async(request, callSettings);
         }
     }
 

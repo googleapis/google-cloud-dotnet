@@ -79,6 +79,8 @@ namespace Google.Shopping.Merchant.Accounts.V1 {
     static readonly grpc::Marshaller<global::Google.Shopping.Merchant.Accounts.V1.ListUsersRequest> __Marshaller_google_shopping_merchant_accounts_v1_ListUsersRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Shopping.Merchant.Accounts.V1.ListUsersRequest.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Shopping.Merchant.Accounts.V1.ListUsersResponse> __Marshaller_google_shopping_merchant_accounts_v1_ListUsersResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Shopping.Merchant.Accounts.V1.ListUsersResponse.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Shopping.Merchant.Accounts.V1.VerifySelfRequest> __Marshaller_google_shopping_merchant_accounts_v1_VerifySelfRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Shopping.Merchant.Accounts.V1.VerifySelfRequest.Parser));
 
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Shopping.Merchant.Accounts.V1.GetUserRequest, global::Google.Shopping.Merchant.Accounts.V1.User> __Method_GetUser = new grpc::Method<global::Google.Shopping.Merchant.Accounts.V1.GetUserRequest, global::Google.Shopping.Merchant.Accounts.V1.User>(
@@ -119,6 +121,14 @@ namespace Google.Shopping.Merchant.Accounts.V1 {
         "ListUsers",
         __Marshaller_google_shopping_merchant_accounts_v1_ListUsersRequest,
         __Marshaller_google_shopping_merchant_accounts_v1_ListUsersResponse);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Shopping.Merchant.Accounts.V1.VerifySelfRequest, global::Google.Shopping.Merchant.Accounts.V1.User> __Method_VerifySelf = new grpc::Method<global::Google.Shopping.Merchant.Accounts.V1.VerifySelfRequest, global::Google.Shopping.Merchant.Accounts.V1.User>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "VerifySelf",
+        __Marshaller_google_shopping_merchant_accounts_v1_VerifySelfRequest,
+        __Marshaller_google_shopping_merchant_accounts_v1_User);
 
     /// <summary>Service descriptor</summary>
     public static global::Google.Protobuf.Reflection.ServiceDescriptor Descriptor
@@ -191,6 +201,19 @@ namespace Google.Shopping.Merchant.Accounts.V1 {
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Shopping.Merchant.Accounts.V1.ListUsersResponse> ListUsers(global::Google.Shopping.Merchant.Accounts.V1.ListUsersRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Updates the user that is represented by the caller from pending to
+      /// verified.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Shopping.Merchant.Accounts.V1.User> VerifySelf(global::Google.Shopping.Merchant.Accounts.V1.VerifySelfRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
       }
@@ -484,6 +507,58 @@ namespace Google.Shopping.Merchant.Accounts.V1 {
       {
         return CallInvoker.AsyncUnaryCall(__Method_ListUsers, null, options, request);
       }
+      /// <summary>
+      /// Updates the user that is represented by the caller from pending to
+      /// verified.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Shopping.Merchant.Accounts.V1.User VerifySelf(global::Google.Shopping.Merchant.Accounts.V1.VerifySelfRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return VerifySelf(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Updates the user that is represented by the caller from pending to
+      /// verified.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Shopping.Merchant.Accounts.V1.User VerifySelf(global::Google.Shopping.Merchant.Accounts.V1.VerifySelfRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_VerifySelf, null, options, request);
+      }
+      /// <summary>
+      /// Updates the user that is represented by the caller from pending to
+      /// verified.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Shopping.Merchant.Accounts.V1.User> VerifySelfAsync(global::Google.Shopping.Merchant.Accounts.V1.VerifySelfRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return VerifySelfAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Updates the user that is represented by the caller from pending to
+      /// verified.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Shopping.Merchant.Accounts.V1.User> VerifySelfAsync(global::Google.Shopping.Merchant.Accounts.V1.VerifySelfRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_VerifySelf, null, options, request);
+      }
       /// <summary>Creates a new instance of client from given <c>ClientBaseConfiguration</c>.</summary>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       protected override UserServiceClient NewInstance(ClientBaseConfiguration configuration)
@@ -502,7 +577,8 @@ namespace Google.Shopping.Merchant.Accounts.V1 {
           .AddMethod(__Method_CreateUser, serviceImpl.CreateUser)
           .AddMethod(__Method_DeleteUser, serviceImpl.DeleteUser)
           .AddMethod(__Method_UpdateUser, serviceImpl.UpdateUser)
-          .AddMethod(__Method_ListUsers, serviceImpl.ListUsers).Build();
+          .AddMethod(__Method_ListUsers, serviceImpl.ListUsers)
+          .AddMethod(__Method_VerifySelf, serviceImpl.VerifySelf).Build();
     }
 
     /// <summary>Register service method with a service binder with or without implementation. Useful when customizing the service binding logic.
@@ -517,6 +593,7 @@ namespace Google.Shopping.Merchant.Accounts.V1 {
       serviceBinder.AddMethod(__Method_DeleteUser, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Shopping.Merchant.Accounts.V1.DeleteUserRequest, global::Google.Protobuf.WellKnownTypes.Empty>(serviceImpl.DeleteUser));
       serviceBinder.AddMethod(__Method_UpdateUser, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Shopping.Merchant.Accounts.V1.UpdateUserRequest, global::Google.Shopping.Merchant.Accounts.V1.User>(serviceImpl.UpdateUser));
       serviceBinder.AddMethod(__Method_ListUsers, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Shopping.Merchant.Accounts.V1.ListUsersRequest, global::Google.Shopping.Merchant.Accounts.V1.ListUsersResponse>(serviceImpl.ListUsers));
+      serviceBinder.AddMethod(__Method_VerifySelf, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Shopping.Merchant.Accounts.V1.VerifySelfRequest, global::Google.Shopping.Merchant.Accounts.V1.User>(serviceImpl.VerifySelf));
     }
 
   }
