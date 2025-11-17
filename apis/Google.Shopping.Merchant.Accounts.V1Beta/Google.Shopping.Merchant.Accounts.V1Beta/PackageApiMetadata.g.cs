@@ -56,6 +56,7 @@ namespace Google.Shopping.Merchant.Accounts.V1Beta
             yield return TermsofserviceagreementstateReflection.Descriptor;
             yield return TermsofservicekindReflection.Descriptor;
             yield return UserReflection.Descriptor;
+            yield return VerificationmailsettingsReflection.Descriptor;
         }
     }
 }
