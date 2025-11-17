@@ -1433,7 +1433,7 @@ namespace Google.Cloud.VMMigration.V1 {
       }
 
       /// <summary>
-      /// Initiates the cancellation of a running clone job.
+      /// Initiates the cancellation of a running ImageImportJob.
       /// </summary>
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
@@ -4294,7 +4294,7 @@ namespace Google.Cloud.VMMigration.V1 {
         return CallInvoker.AsyncUnaryCall(__Method_GetImageImportJob, null, options, request);
       }
       /// <summary>
-      /// Initiates the cancellation of a running clone job.
+      /// Initiates the cancellation of a running ImageImportJob.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -4307,7 +4307,7 @@ namespace Google.Cloud.VMMigration.V1 {
         return CancelImageImportJob(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Initiates the cancellation of a running clone job.
+      /// Initiates the cancellation of a running ImageImportJob.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -4318,7 +4318,7 @@ namespace Google.Cloud.VMMigration.V1 {
         return CallInvoker.BlockingUnaryCall(__Method_CancelImageImportJob, null, options, request);
       }
       /// <summary>
-      /// Initiates the cancellation of a running clone job.
+      /// Initiates the cancellation of a running ImageImportJob.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -4331,7 +4331,7 @@ namespace Google.Cloud.VMMigration.V1 {
         return CancelImageImportJobAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Initiates the cancellation of a running clone job.
+      /// Initiates the cancellation of a running ImageImportJob.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
