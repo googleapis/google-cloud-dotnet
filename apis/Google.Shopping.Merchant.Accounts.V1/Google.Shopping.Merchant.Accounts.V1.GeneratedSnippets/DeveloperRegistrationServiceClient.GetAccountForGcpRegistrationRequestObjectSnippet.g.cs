@@ -16,12 +16,13 @@
 
 namespace GoogleCSharpSnippets
 {
-    // [START merchantapi_v1_generated_AccountsService_CreateAndConfigureAccount_sync]
+    // [START merchantapi_v1_generated_DeveloperRegistrationService_GetAccountForGcpRegistration_sync]
+    using Google.Protobuf.WellKnownTypes;
     using Google.Shopping.Merchant.Accounts.V1;
 
-    public sealed partial class GeneratedAccountsServiceClientSnippets
+    public sealed partial class GeneratedDeveloperRegistrationServiceClientSnippets
     {
-        /// <summary>Snippet for CreateAndConfigureAccount</summary>
+        /// <summary>Snippet for GetAccountForGcpRegistration</summary>
         /// <remarks>
         /// This snippet has been automatically generated and should be regarded as a code template only.
         /// It will require modifications to work:
@@ -29,30 +30,15 @@ namespace GoogleCSharpSnippets
         /// - It may require specifying regional endpoints when creating the service client as shown in
         ///   https://cloud.google.com/dotnet/docs/reference/help/client-configuration#endpoint.
         /// </remarks>
-        public void CreateAndConfigureAccountRequestObject()
+        public void GetAccountForGcpRegistrationRequestObject()
         {
             // Create client
-            AccountsServiceClient accountsServiceClient = AccountsServiceClient.Create();
+            DeveloperRegistrationServiceClient developerRegistrationServiceClient = DeveloperRegistrationServiceClient.Create();
             // Initialize request argument(s)
-            CreateAndConfigureAccountRequest request = new CreateAndConfigureAccountRequest
-            {
-                Account = new Account(),
-                User =
-                {
-                    new CreateAndConfigureAccountRequest.Types.AddUser(),
-                },
-                Service =
-                {
-                    new CreateAndConfigureAccountRequest.Types.AddAccountService(),
-                },
-                SetAlias =
-                {
-                    new CreateAndConfigureAccountRequest.Types.SetAliasForRelationship(),
-                },
-            };
+            Empty request = new Empty { };
             // Make the request
-            Account response = accountsServiceClient.CreateAndConfigureAccount(request);
+            GetAccountForGcpRegistrationResponse response = developerRegistrationServiceClient.GetAccountForGcpRegistration(request);
         }
     }
-    // [END merchantapi_v1_generated_AccountsService_CreateAndConfigureAccount_sync]
+    // [END merchantapi_v1_generated_DeveloperRegistrationService_GetAccountForGcpRegistration_sync]
 }

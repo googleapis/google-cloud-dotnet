@@ -73,6 +73,8 @@ namespace Google.Shopping.Merchant.Accounts.V1 {
     static readonly grpc::Marshaller<global::Google.Shopping.Merchant.Accounts.V1.UnregisterGcpRequest> __Marshaller_google_shopping_merchant_accounts_v1_UnregisterGcpRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Shopping.Merchant.Accounts.V1.UnregisterGcpRequest.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Protobuf.WellKnownTypes.Empty> __Marshaller_google_protobuf_Empty = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Protobuf.WellKnownTypes.Empty.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Shopping.Merchant.Accounts.V1.GetAccountForGcpRegistrationResponse> __Marshaller_google_shopping_merchant_accounts_v1_GetAccountForGcpRegistrationResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Shopping.Merchant.Accounts.V1.GetAccountForGcpRegistrationResponse.Parser));
 
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Shopping.Merchant.Accounts.V1.RegisterGcpRequest, global::Google.Shopping.Merchant.Accounts.V1.DeveloperRegistration> __Method_RegisterGcp = new grpc::Method<global::Google.Shopping.Merchant.Accounts.V1.RegisterGcpRequest, global::Google.Shopping.Merchant.Accounts.V1.DeveloperRegistration>(
@@ -97,6 +99,14 @@ namespace Google.Shopping.Merchant.Accounts.V1 {
         "UnregisterGcp",
         __Marshaller_google_shopping_merchant_accounts_v1_UnregisterGcpRequest,
         __Marshaller_google_protobuf_Empty);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Protobuf.WellKnownTypes.Empty, global::Google.Shopping.Merchant.Accounts.V1.GetAccountForGcpRegistrationResponse> __Method_GetAccountForGcpRegistration = new grpc::Method<global::Google.Protobuf.WellKnownTypes.Empty, global::Google.Shopping.Merchant.Accounts.V1.GetAccountForGcpRegistrationResponse>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "GetAccountForGcpRegistration",
+        __Marshaller_google_protobuf_Empty,
+        __Marshaller_google_shopping_merchant_accounts_v1_GetAccountForGcpRegistrationResponse);
 
     /// <summary>Service descriptor</summary>
     public static global::Google.Protobuf.Reflection.ServiceDescriptor Descriptor
@@ -145,6 +155,18 @@ namespace Google.Shopping.Merchant.Accounts.V1 {
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Protobuf.WellKnownTypes.Empty> UnregisterGcp(global::Google.Shopping.Merchant.Accounts.V1.UnregisterGcpRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Retrieves the merchant account that the calling GCP is registered with.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Shopping.Merchant.Accounts.V1.GetAccountForGcpRegistrationResponse> GetAccountForGcpRegistration(global::Google.Protobuf.WellKnownTypes.Empty request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
       }
@@ -342,6 +364,54 @@ namespace Google.Shopping.Merchant.Accounts.V1 {
       {
         return CallInvoker.AsyncUnaryCall(__Method_UnregisterGcp, null, options, request);
       }
+      /// <summary>
+      /// Retrieves the merchant account that the calling GCP is registered with.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Shopping.Merchant.Accounts.V1.GetAccountForGcpRegistrationResponse GetAccountForGcpRegistration(global::Google.Protobuf.WellKnownTypes.Empty request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return GetAccountForGcpRegistration(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Retrieves the merchant account that the calling GCP is registered with.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Shopping.Merchant.Accounts.V1.GetAccountForGcpRegistrationResponse GetAccountForGcpRegistration(global::Google.Protobuf.WellKnownTypes.Empty request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_GetAccountForGcpRegistration, null, options, request);
+      }
+      /// <summary>
+      /// Retrieves the merchant account that the calling GCP is registered with.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Shopping.Merchant.Accounts.V1.GetAccountForGcpRegistrationResponse> GetAccountForGcpRegistrationAsync(global::Google.Protobuf.WellKnownTypes.Empty request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return GetAccountForGcpRegistrationAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Retrieves the merchant account that the calling GCP is registered with.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Shopping.Merchant.Accounts.V1.GetAccountForGcpRegistrationResponse> GetAccountForGcpRegistrationAsync(global::Google.Protobuf.WellKnownTypes.Empty request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_GetAccountForGcpRegistration, null, options, request);
+      }
       /// <summary>Creates a new instance of client from given <c>ClientBaseConfiguration</c>.</summary>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       protected override DeveloperRegistrationServiceClient NewInstance(ClientBaseConfiguration configuration)
@@ -358,7 +428,8 @@ namespace Google.Shopping.Merchant.Accounts.V1 {
       return grpc::ServerServiceDefinition.CreateBuilder()
           .AddMethod(__Method_RegisterGcp, serviceImpl.RegisterGcp)
           .AddMethod(__Method_GetDeveloperRegistration, serviceImpl.GetDeveloperRegistration)
-          .AddMethod(__Method_UnregisterGcp, serviceImpl.UnregisterGcp).Build();
+          .AddMethod(__Method_UnregisterGcp, serviceImpl.UnregisterGcp)
+          .AddMethod(__Method_GetAccountForGcpRegistration, serviceImpl.GetAccountForGcpRegistration).Build();
     }
 
     /// <summary>Register service method with a service binder with or without implementation. Useful when customizing the service binding logic.
@@ -371,6 +442,7 @@ namespace Google.Shopping.Merchant.Accounts.V1 {
       serviceBinder.AddMethod(__Method_RegisterGcp, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Shopping.Merchant.Accounts.V1.RegisterGcpRequest, global::Google.Shopping.Merchant.Accounts.V1.DeveloperRegistration>(serviceImpl.RegisterGcp));
       serviceBinder.AddMethod(__Method_GetDeveloperRegistration, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Shopping.Merchant.Accounts.V1.GetDeveloperRegistrationRequest, global::Google.Shopping.Merchant.Accounts.V1.DeveloperRegistration>(serviceImpl.GetDeveloperRegistration));
       serviceBinder.AddMethod(__Method_UnregisterGcp, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Shopping.Merchant.Accounts.V1.UnregisterGcpRequest, global::Google.Protobuf.WellKnownTypes.Empty>(serviceImpl.UnregisterGcp));
+      serviceBinder.AddMethod(__Method_GetAccountForGcpRegistration, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Protobuf.WellKnownTypes.Empty, global::Google.Shopping.Merchant.Accounts.V1.GetAccountForGcpRegistrationResponse>(serviceImpl.GetAccountForGcpRegistration));
     }
 
   }

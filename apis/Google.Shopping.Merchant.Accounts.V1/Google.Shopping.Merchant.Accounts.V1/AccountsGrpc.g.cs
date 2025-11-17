@@ -172,10 +172,13 @@ namespace Google.Shopping.Merchant.Accounts.V1 {
       /// <summary>
       /// Deletes the specified account regardless of its type: standalone, advanced
       /// account or sub-account. Deleting an advanced account leads to the deletion
-      /// of all of its sub-accounts. Executing this method requires admin access.
-      /// The deletion succeeds only if the account does not provide services
-      /// to any other account and has no processed offers. You can use the `force`
-      /// parameter to override this.
+      /// of all of its sub-accounts. This also deletes the account's [developer
+      /// registration
+      /// entity](/merchant/api/reference/rest/accounts_v1/accounts.developerRegistration)
+      /// and any associated GCP project to the account. Executing this method
+      /// requires admin access. The deletion succeeds only if the account does not
+      /// provide services to any other account and has no processed offers. You can
+      /// use the `force` parameter to override this.
       /// </summary>
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
@@ -371,10 +374,13 @@ namespace Google.Shopping.Merchant.Accounts.V1 {
       /// <summary>
       /// Deletes the specified account regardless of its type: standalone, advanced
       /// account or sub-account. Deleting an advanced account leads to the deletion
-      /// of all of its sub-accounts. Executing this method requires admin access.
-      /// The deletion succeeds only if the account does not provide services
-      /// to any other account and has no processed offers. You can use the `force`
-      /// parameter to override this.
+      /// of all of its sub-accounts. This also deletes the account's [developer
+      /// registration
+      /// entity](/merchant/api/reference/rest/accounts_v1/accounts.developerRegistration)
+      /// and any associated GCP project to the account. Executing this method
+      /// requires admin access. The deletion succeeds only if the account does not
+      /// provide services to any other account and has no processed offers. You can
+      /// use the `force` parameter to override this.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -389,10 +395,13 @@ namespace Google.Shopping.Merchant.Accounts.V1 {
       /// <summary>
       /// Deletes the specified account regardless of its type: standalone, advanced
       /// account or sub-account. Deleting an advanced account leads to the deletion
-      /// of all of its sub-accounts. Executing this method requires admin access.
-      /// The deletion succeeds only if the account does not provide services
-      /// to any other account and has no processed offers. You can use the `force`
-      /// parameter to override this.
+      /// of all of its sub-accounts. This also deletes the account's [developer
+      /// registration
+      /// entity](/merchant/api/reference/rest/accounts_v1/accounts.developerRegistration)
+      /// and any associated GCP project to the account. Executing this method
+      /// requires admin access. The deletion succeeds only if the account does not
+      /// provide services to any other account and has no processed offers. You can
+      /// use the `force` parameter to override this.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -405,10 +414,13 @@ namespace Google.Shopping.Merchant.Accounts.V1 {
       /// <summary>
       /// Deletes the specified account regardless of its type: standalone, advanced
       /// account or sub-account. Deleting an advanced account leads to the deletion
-      /// of all of its sub-accounts. Executing this method requires admin access.
-      /// The deletion succeeds only if the account does not provide services
-      /// to any other account and has no processed offers. You can use the `force`
-      /// parameter to override this.
+      /// of all of its sub-accounts. This also deletes the account's [developer
+      /// registration
+      /// entity](/merchant/api/reference/rest/accounts_v1/accounts.developerRegistration)
+      /// and any associated GCP project to the account. Executing this method
+      /// requires admin access. The deletion succeeds only if the account does not
+      /// provide services to any other account and has no processed offers. You can
+      /// use the `force` parameter to override this.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -423,10 +435,13 @@ namespace Google.Shopping.Merchant.Accounts.V1 {
       /// <summary>
       /// Deletes the specified account regardless of its type: standalone, advanced
       /// account or sub-account. Deleting an advanced account leads to the deletion
-      /// of all of its sub-accounts. Executing this method requires admin access.
-      /// The deletion succeeds only if the account does not provide services
-      /// to any other account and has no processed offers. You can use the `force`
-      /// parameter to override this.
+      /// of all of its sub-accounts. This also deletes the account's [developer
+      /// registration
+      /// entity](/merchant/api/reference/rest/accounts_v1/accounts.developerRegistration)
+      /// and any associated GCP project to the account. Executing this method
+      /// requires admin access. The deletion succeeds only if the account does not
+      /// provide services to any other account and has no processed offers. You can
+      /// use the `force` parameter to override this.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>

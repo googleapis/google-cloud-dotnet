@@ -41,36 +41,43 @@ namespace Google.Shopping.Merchant.Accounts.V1 {
             "CjBtZXJjaGFudGFwaS5nb29nbGVhcGlzLmNvbS9EZXZlbG9wZXJSZWdpc3Ry",
             "YXRpb24iaQofR2V0RGV2ZWxvcGVyUmVnaXN0cmF0aW9uUmVxdWVzdBJGCgRu",
             "YW1lGAEgASgJQjjgQQL6QTIKMG1lcmNoYW50YXBpLmdvb2dsZWFwaXMuY29t",
-            "L0RldmVsb3BlclJlZ2lzdHJhdGlvbjLWBQocRGV2ZWxvcGVyUmVnaXN0cmF0",
-            "aW9uU2VydmljZRLRAQoLUmVnaXN0ZXJHY3ASOC5nb29nbGUuc2hvcHBpbmcu",
-            "bWVyY2hhbnQuYWNjb3VudHMudjEuUmVnaXN0ZXJHY3BSZXF1ZXN0GjsuZ29v",
-            "Z2xlLnNob3BwaW5nLm1lcmNoYW50LmFjY291bnRzLnYxLkRldmVsb3BlclJl",
-            "Z2lzdHJhdGlvbiJLgtPkkwJFIkAvYWNjb3VudHMvdjEve25hbWU9YWNjb3Vu",
-            "dHMvKi9kZXZlbG9wZXJSZWdpc3RyYXRpb259OnJlZ2lzdGVyR2NwOgEqEuMB",
-            "ChhHZXREZXZlbG9wZXJSZWdpc3RyYXRpb24SRS5nb29nbGUuc2hvcHBpbmcu",
-            "bWVyY2hhbnQuYWNjb3VudHMudjEuR2V0RGV2ZWxvcGVyUmVnaXN0cmF0aW9u",
-            "UmVxdWVzdBo7Lmdvb2dsZS5zaG9wcGluZy5tZXJjaGFudC5hY2NvdW50cy52",
-            "MS5EZXZlbG9wZXJSZWdpc3RyYXRpb24iQ9pBBG5hbWWC0+STAjYSNC9hY2Nv",
-            "dW50cy92MS97bmFtZT1hY2NvdW50cy8qL2RldmVsb3BlclJlZ2lzdHJhdGlv",
-            "bn0SsgEKDVVucmVnaXN0ZXJHY3ASOi5nb29nbGUuc2hvcHBpbmcubWVyY2hh",
-            "bnQuYWNjb3VudHMudjEuVW5yZWdpc3RlckdjcFJlcXVlc3QaFi5nb29nbGUu",
-            "cHJvdG9idWYuRW1wdHkiTYLT5JMCRyJCL2FjY291bnRzL3YxL3tuYW1lPWFj",
-            "Y291bnRzLyovZGV2ZWxvcGVyUmVnaXN0cmF0aW9ufTp1bnJlZ2lzdGVyR2Nw",
-            "OgEqGkfKQRptZXJjaGFudGFwaS5nb29nbGVhcGlzLmNvbdJBJ2h0dHBzOi8v",
-            "d3d3Lmdvb2dsZWFwaXMuY29tL2F1dGgvY29udGVudEKNAgooY29tLmdvb2ds",
-            "ZS5zaG9wcGluZy5tZXJjaGFudC5hY2NvdW50cy52MUIaRGV2ZWxvcGVyUmVn",
-            "aXN0cmF0aW9uUHJvdG9QAVpKY2xvdWQuZ29vZ2xlLmNvbS9nby9zaG9wcGlu",
-            "Zy9tZXJjaGFudC9hY2NvdW50cy9hcGl2MS9hY2NvdW50c3BiO2FjY291bnRz",
-            "cGKqAiRHb29nbGUuU2hvcHBpbmcuTWVyY2hhbnQuQWNjb3VudHMuVjHKAiRH",
-            "b29nbGVcU2hvcHBpbmdcTWVyY2hhbnRcQWNjb3VudHNcVjHqAihHb29nbGU6",
-            "OlNob3BwaW5nOjpNZXJjaGFudDo6QWNjb3VudHM6OlYxYgZwcm90bzM="));
+            "L0RldmVsb3BlclJlZ2lzdHJhdGlvbiI0CiRHZXRBY2NvdW50Rm9yR2NwUmVn",
+            "aXN0cmF0aW9uUmVzcG9uc2USDAoEbmFtZRgBIAEoCTKXBwocRGV2ZWxvcGVy",
+            "UmVnaXN0cmF0aW9uU2VydmljZRLRAQoLUmVnaXN0ZXJHY3ASOC5nb29nbGUu",
+            "c2hvcHBpbmcubWVyY2hhbnQuYWNjb3VudHMudjEuUmVnaXN0ZXJHY3BSZXF1",
+            "ZXN0GjsuZ29vZ2xlLnNob3BwaW5nLm1lcmNoYW50LmFjY291bnRzLnYxLkRl",
+            "dmVsb3BlclJlZ2lzdHJhdGlvbiJLgtPkkwJFIkAvYWNjb3VudHMvdjEve25h",
+            "bWU9YWNjb3VudHMvKi9kZXZlbG9wZXJSZWdpc3RyYXRpb259OnJlZ2lzdGVy",
+            "R2NwOgEqEuMBChhHZXREZXZlbG9wZXJSZWdpc3RyYXRpb24SRS5nb29nbGUu",
+            "c2hvcHBpbmcubWVyY2hhbnQuYWNjb3VudHMudjEuR2V0RGV2ZWxvcGVyUmVn",
+            "aXN0cmF0aW9uUmVxdWVzdBo7Lmdvb2dsZS5zaG9wcGluZy5tZXJjaGFudC5h",
+            "Y2NvdW50cy52MS5EZXZlbG9wZXJSZWdpc3RyYXRpb24iQ9pBBG5hbWWC0+ST",
+            "AjYSNC9hY2NvdW50cy92MS97bmFtZT1hY2NvdW50cy8qL2RldmVsb3BlclJl",
+            "Z2lzdHJhdGlvbn0SsgEKDVVucmVnaXN0ZXJHY3ASOi5nb29nbGUuc2hvcHBp",
+            "bmcubWVyY2hhbnQuYWNjb3VudHMudjEuVW5yZWdpc3RlckdjcFJlcXVlc3Qa",
+            "Fi5nb29nbGUucHJvdG9idWYuRW1wdHkiTYLT5JMCRyJCL2FjY291bnRzL3Yx",
+            "L3tuYW1lPWFjY291bnRzLyovZGV2ZWxvcGVyUmVnaXN0cmF0aW9ufTp1bnJl",
+            "Z2lzdGVyR2NwOgEqEr4BChxHZXRBY2NvdW50Rm9yR2NwUmVnaXN0cmF0aW9u",
+            "EhYuZ29vZ2xlLnByb3RvYnVmLkVtcHR5GkouZ29vZ2xlLnNob3BwaW5nLm1l",
+            "cmNoYW50LmFjY291bnRzLnYxLkdldEFjY291bnRGb3JHY3BSZWdpc3RyYXRp",
+            "b25SZXNwb25zZSI6gtPkkwI0EjIvYWNjb3VudHMvdjEvYWNjb3VudHM6Z2V0",
+            "QWNjb3VudEZvckdjcFJlZ2lzdHJhdGlvbhpHykEabWVyY2hhbnRhcGkuZ29v",
+            "Z2xlYXBpcy5jb23SQSdodHRwczovL3d3dy5nb29nbGVhcGlzLmNvbS9hdXRo",
+            "L2NvbnRlbnRCjQIKKGNvbS5nb29nbGUuc2hvcHBpbmcubWVyY2hhbnQuYWNj",
+            "b3VudHMudjFCGkRldmVsb3BlclJlZ2lzdHJhdGlvblByb3RvUAFaSmNsb3Vk",
+            "Lmdvb2dsZS5jb20vZ28vc2hvcHBpbmcvbWVyY2hhbnQvYWNjb3VudHMvYXBp",
+            "djEvYWNjb3VudHNwYjthY2NvdW50c3BiqgIkR29vZ2xlLlNob3BwaW5nLk1l",
+            "cmNoYW50LkFjY291bnRzLlYxygIkR29vZ2xlXFNob3BwaW5nXE1lcmNoYW50",
+            "XEFjY291bnRzXFYx6gIoR29vZ2xlOjpTaG9wcGluZzo6TWVyY2hhbnQ6OkFj",
+            "Y291bnRzOjpWMWIGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Api.ClientReflection.Descriptor, global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.EmptyReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Shopping.Merchant.Accounts.V1.DeveloperRegistration), global::Google.Shopping.Merchant.Accounts.V1.DeveloperRegistration.Parser, new[]{ "Name", "GcpIds" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Shopping.Merchant.Accounts.V1.RegisterGcpRequest), global::Google.Shopping.Merchant.Accounts.V1.RegisterGcpRequest.Parser, new[]{ "Name", "DeveloperEmail" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Shopping.Merchant.Accounts.V1.UnregisterGcpRequest), global::Google.Shopping.Merchant.Accounts.V1.UnregisterGcpRequest.Parser, new[]{ "Name" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Shopping.Merchant.Accounts.V1.GetDeveloperRegistrationRequest), global::Google.Shopping.Merchant.Accounts.V1.GetDeveloperRegistrationRequest.Parser, new[]{ "Name" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Shopping.Merchant.Accounts.V1.GetDeveloperRegistrationRequest), global::Google.Shopping.Merchant.Accounts.V1.GetDeveloperRegistrationRequest.Parser, new[]{ "Name" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Shopping.Merchant.Accounts.V1.GetAccountForGcpRegistrationResponse), global::Google.Shopping.Merchant.Accounts.V1.GetAccountForGcpRegistrationResponse.Parser, new[]{ "Name" }, null, null, null, null)
           }));
     }
     #endregion
@@ -380,7 +387,9 @@ namespace Google.Shopping.Merchant.Accounts.V1 {
     /// updated to have the new "API notifications" preference. If the developer
     /// email provided is not associated with any user we will just add it as a
     /// contact. The email preference corresponding to that contact will have the
-    /// new "API notifications" preference
+    /// new "API notifications" preference. Make sure the email used is associated
+    /// with a Google Account (Google Workspace account or Gmail account)
+    /// and is not a service account as service accounts can't receive emails.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -891,6 +900,202 @@ namespace Google.Shopping.Merchant.Accounts.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(GetDeveloperRegistrationRequest other) {
+      if (other == null) {
+        return;
+      }
+      if (other.Name.Length != 0) {
+        Name = other.Name;
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            Name = input.ReadString();
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            Name = input.ReadString();
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+  }
+
+  /// <summary>
+  /// Response message for the GetAccountForGcpRegistration method.
+  /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+  public sealed partial class GetAccountForGcpRegistrationResponse : pb::IMessage<GetAccountForGcpRegistrationResponse>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<GetAccountForGcpRegistrationResponse> _parser = new pb::MessageParser<GetAccountForGcpRegistrationResponse>(() => new GetAccountForGcpRegistrationResponse());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<GetAccountForGcpRegistrationResponse> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Shopping.Merchant.Accounts.V1.DeveloperregistrationReflection.Descriptor.MessageTypes[4]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public GetAccountForGcpRegistrationResponse() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public GetAccountForGcpRegistrationResponse(GetAccountForGcpRegistrationResponse other) : this() {
+      name_ = other.name_;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public GetAccountForGcpRegistrationResponse Clone() {
+      return new GetAccountForGcpRegistrationResponse(this);
+    }
+
+    /// <summary>Field number for the "name" field.</summary>
+    public const int NameFieldNumber = 1;
+    private string name_ = "";
+    /// <summary>
+    /// The name of the merchant account id that the GCP is registered with.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string Name {
+      get { return name_; }
+      set {
+        name_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as GetAccountForGcpRegistrationResponse);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(GetAccountForGcpRegistrationResponse other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (Name != other.Name) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (Name.Length != 0) hash ^= Name.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (Name.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(Name);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (Name.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(Name);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      if (Name.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Name);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(GetAccountForGcpRegistrationResponse other) {
       if (other == null) {
         return;
       }

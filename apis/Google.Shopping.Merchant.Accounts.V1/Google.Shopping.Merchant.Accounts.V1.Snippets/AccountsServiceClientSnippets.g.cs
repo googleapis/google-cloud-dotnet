@@ -131,6 +131,10 @@ namespace GoogleCSharpSnippets
                 {
                     new CreateAndConfigureAccountRequest.Types.AddAccountService(),
                 },
+                SetAlias =
+                {
+                    new CreateAndConfigureAccountRequest.Types.SetAliasForRelationship(),
+                },
             };
             // Make the request
             Account response = accountsServiceClient.CreateAndConfigureAccount(request);
@@ -155,6 +159,10 @@ namespace GoogleCSharpSnippets
                 Service =
                 {
                     new CreateAndConfigureAccountRequest.Types.AddAccountService(),
+                },
+                SetAlias =
+                {
+                    new CreateAndConfigureAccountRequest.Types.SetAliasForRelationship(),
                 },
             };
             // Make the request

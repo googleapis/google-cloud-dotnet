@@ -16,12 +16,13 @@
 
 namespace GoogleCSharpSnippets
 {
-    // [START merchantapi_v1_generated_AccountsService_CreateAndConfigureAccount_sync]
+    // [START merchantapi_v1_generated_UserService_VerifySelf_async_flattened]
     using Google.Shopping.Merchant.Accounts.V1;
+    using System.Threading.Tasks;
 
-    public sealed partial class GeneratedAccountsServiceClientSnippets
+    public sealed partial class GeneratedUserServiceClientSnippets
     {
-        /// <summary>Snippet for CreateAndConfigureAccount</summary>
+        /// <summary>Snippet for VerifySelfAsync</summary>
         /// <remarks>
         /// This snippet has been automatically generated and should be regarded as a code template only.
         /// It will require modifications to work:
@@ -29,30 +30,15 @@ namespace GoogleCSharpSnippets
         /// - It may require specifying regional endpoints when creating the service client as shown in
         ///   https://cloud.google.com/dotnet/docs/reference/help/client-configuration#endpoint.
         /// </remarks>
-        public void CreateAndConfigureAccountRequestObject()
+        public async Task VerifySelfAsync()
         {
             // Create client
-            AccountsServiceClient accountsServiceClient = AccountsServiceClient.Create();
+            UserServiceClient userServiceClient = await UserServiceClient.CreateAsync();
             // Initialize request argument(s)
-            CreateAndConfigureAccountRequest request = new CreateAndConfigureAccountRequest
-            {
-                Account = new Account(),
-                User =
-                {
-                    new CreateAndConfigureAccountRequest.Types.AddUser(),
-                },
-                Service =
-                {
-                    new CreateAndConfigureAccountRequest.Types.AddAccountService(),
-                },
-                SetAlias =
-                {
-                    new CreateAndConfigureAccountRequest.Types.SetAliasForRelationship(),
-                },
-            };
+            string account = "accounts/[ACCOUNT]";
             // Make the request
-            Account response = accountsServiceClient.CreateAndConfigureAccount(request);
+            User response = await userServiceClient.VerifySelfAsync(account);
         }
     }
-    // [END merchantapi_v1_generated_AccountsService_CreateAndConfigureAccount_sync]
+    // [END merchantapi_v1_generated_UserService_VerifySelf_async_flattened]
 }

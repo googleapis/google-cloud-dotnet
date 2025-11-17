@@ -32,85 +32,103 @@ namespace Google.Shopping.Merchant.Accounts.V1 {
             "bXB0eS5wcm90bxogZ29vZ2xlL3Byb3RvYnVmL2ZpZWxkX21hc2sucHJvdG8a",
             "Omdvb2dsZS9zaG9wcGluZy9tZXJjaGFudC9hY2NvdW50cy92MS9hY2NvdW50",
             "c2VydmljZXMucHJvdG8aL2dvb2dsZS9zaG9wcGluZy9tZXJjaGFudC9hY2Nv",
-            "dW50cy92MS91c2VyLnByb3RvGhpnb29nbGUvdHlwZS9kYXRldGltZS5wcm90",
-            "byK5AgoHQWNjb3VudBIRCgRuYW1lGAEgASgJQgPgQQgSFwoKYWNjb3VudF9p",
-            "ZBgCIAEoA0ID4EEDEhkKDGFjY291bnRfbmFtZRgDIAEoCUID4EECEh8KDWFk",
-            "dWx0X2NvbnRlbnQYBCABKAhCA+BBAUgAiAEBEhkKDHRlc3RfYWNjb3VudBgF",
-            "IAEoCEID4EEDEi0KCXRpbWVfem9uZRgGIAEoCzIVLmdvb2dsZS50eXBlLlRp",
-            "bWVab25lQgPgQQISGgoNbGFuZ3VhZ2VfY29kZRgHIAEoCUID4EECOk7qQUsK",
-            "Im1lcmNoYW50YXBpLmdvb2dsZWFwaXMuY29tL0FjY291bnQSEmFjY291bnRz",
-            "L3thY2NvdW50fSoIYWNjb3VudHMyB2FjY291bnRCEAoOX2FkdWx0X2NvbnRl",
-            "bnQiTQoRR2V0QWNjb3VudFJlcXVlc3QSOAoEbmFtZRgBIAEoCUIq4EEC+kEk",
-            "CiJtZXJjaGFudGFwaS5nb29nbGVhcGlzLmNvbS9BY2NvdW50IsIECiBDcmVh",
-            "dGVBbmRDb25maWd1cmVBY2NvdW50UmVxdWVzdBJDCgdhY2NvdW50GAEgASgL",
-            "Mi0uZ29vZ2xlLnNob3BwaW5nLm1lcmNoYW50LmFjY291bnRzLnYxLkFjY291",
-            "bnRCA+BBAhJhCgR1c2VyGAMgAygLMk4uZ29vZ2xlLnNob3BwaW5nLm1lcmNo",
-            "YW50LmFjY291bnRzLnYxLkNyZWF0ZUFuZENvbmZpZ3VyZUFjY291bnRSZXF1",
-            "ZXN0LkFkZFVzZXJCA+BBARJuCgdzZXJ2aWNlGAQgAygLMlguZ29vZ2xlLnNo",
-            "b3BwaW5nLm1lcmNoYW50LmFjY291bnRzLnYxLkNyZWF0ZUFuZENvbmZpZ3Vy",
-            "ZUFjY291bnRSZXF1ZXN0LkFkZEFjY291bnRTZXJ2aWNlQgPgQQIaXgoHQWRk",
-            "VXNlchIUCgd1c2VyX2lkGAEgASgJQgPgQQISPQoEdXNlchgCIAEoCzIqLmdv",
-            "b2dsZS5zaG9wcGluZy5tZXJjaGFudC5hY2NvdW50cy52MS5Vc2VyQgPgQQEa",
-            "pQEKEUFkZEFjY291bnRTZXJ2aWNlElcKE2FjY291bnRfYWdncmVnYXRpb24Y",
-            "ZyABKAsyOC5nb29nbGUuc2hvcHBpbmcubWVyY2hhbnQuYWNjb3VudHMudjEu",
-            "QWNjb3VudEFnZ3JlZ2F0aW9uSAASGgoIcHJvdmlkZXIYASABKAlCA+BBAkgB",
-            "iAEBQg4KDHNlcnZpY2VfdHlwZUILCglfcHJvdmlkZXIiZAoURGVsZXRlQWNj",
-            "b3VudFJlcXVlc3QSOAoEbmFtZRgBIAEoCUIq4EEC+kEkCiJtZXJjaGFudGFw",
-            "aS5nb29nbGVhcGlzLmNvbS9BY2NvdW50EhIKBWZvcmNlGAIgASgIQgPgQQEi",
-            "kQEKFFVwZGF0ZUFjY291bnRSZXF1ZXN0EkMKB2FjY291bnQYASABKAsyLS5n",
-            "b29nbGUuc2hvcHBpbmcubWVyY2hhbnQuYWNjb3VudHMudjEuQWNjb3VudEID",
-            "4EECEjQKC3VwZGF0ZV9tYXNrGAIgASgLMhouZ29vZ2xlLnByb3RvYnVmLkZp",
-            "ZWxkTWFza0ID4EEBIlsKE0xpc3RBY2NvdW50c1JlcXVlc3QSFgoJcGFnZV9z",
-            "aXplGAEgASgFQgPgQQESFwoKcGFnZV90b2tlbhgCIAEoCUID4EEBEhMKBmZp",
-            "bHRlchgDIAEoCUID4EEBInAKFExpc3RBY2NvdW50c1Jlc3BvbnNlEj8KCGFj",
-            "Y291bnRzGAEgAygLMi0uZ29vZ2xlLnNob3BwaW5nLm1lcmNoYW50LmFjY291",
-            "bnRzLnYxLkFjY291bnQSFwoPbmV4dF9wYWdlX3Rva2VuGAIgASgJIocBChZM",
-            "aXN0U3ViQWNjb3VudHNSZXF1ZXN0EjwKCHByb3ZpZGVyGAEgASgJQirgQQL6",
-            "QSQKIm1lcmNoYW50YXBpLmdvb2dsZWFwaXMuY29tL0FjY291bnQSFgoJcGFn",
-            "ZV9zaXplGAIgASgFQgPgQQESFwoKcGFnZV90b2tlbhgDIAEoCUID4EEBInMK",
-            "F0xpc3RTdWJBY2NvdW50c1Jlc3BvbnNlEj8KCGFjY291bnRzGAEgAygLMi0u",
-            "Z29vZ2xlLnNob3BwaW5nLm1lcmNoYW50LmFjY291bnRzLnYxLkFjY291bnQS",
-            "FwoPbmV4dF9wYWdlX3Rva2VuGAIgASgJMqoJCg9BY2NvdW50c1NlcnZpY2US",
-            "owEKCkdldEFjY291bnQSNy5nb29nbGUuc2hvcHBpbmcubWVyY2hhbnQuYWNj",
-            "b3VudHMudjEuR2V0QWNjb3VudFJlcXVlc3QaLS5nb29nbGUuc2hvcHBpbmcu",
-            "bWVyY2hhbnQuYWNjb3VudHMudjEuQWNjb3VudCIt2kEEbmFtZYLT5JMCIBIe",
-            "L2FjY291bnRzL3YxL3tuYW1lPWFjY291bnRzLyp9EscBChlDcmVhdGVBbmRD",
-            "b25maWd1cmVBY2NvdW50EkYuZ29vZ2xlLnNob3BwaW5nLm1lcmNoYW50LmFj",
-            "Y291bnRzLnYxLkNyZWF0ZUFuZENvbmZpZ3VyZUFjY291bnRSZXF1ZXN0Gi0u",
-            "Z29vZ2xlLnNob3BwaW5nLm1lcmNoYW50LmFjY291bnRzLnYxLkFjY291bnQi",
-            "M4LT5JMCLSIoL2FjY291bnRzL3YxL2FjY291bnRzOmNyZWF0ZUFuZENvbmZp",
-            "Z3VyZToBKhKSAQoNRGVsZXRlQWNjb3VudBI6Lmdvb2dsZS5zaG9wcGluZy5t",
-            "ZXJjaGFudC5hY2NvdW50cy52MS5EZWxldGVBY2NvdW50UmVxdWVzdBoWLmdv",
-            "b2dsZS5wcm90b2J1Zi5FbXB0eSIt2kEEbmFtZYLT5JMCICoeL2FjY291bnRz",
-            "L3YxL3tuYW1lPWFjY291bnRzLyp9EskBCg1VcGRhdGVBY2NvdW50EjouZ29v",
-            "Z2xlLnNob3BwaW5nLm1lcmNoYW50LmFjY291bnRzLnYxLlVwZGF0ZUFjY291",
-            "bnRSZXF1ZXN0Gi0uZ29vZ2xlLnNob3BwaW5nLm1lcmNoYW50LmFjY291bnRz",
-            "LnYxLkFjY291bnQiTdpBE2FjY291bnQsdXBkYXRlX21hc2uC0+STAjEyJi9h",
-            "Y2NvdW50cy92MS97YWNjb3VudC5uYW1lPWFjY291bnRzLyp9OgdhY2NvdW50",
-            "EqQBCgxMaXN0QWNjb3VudHMSOS5nb29nbGUuc2hvcHBpbmcubWVyY2hhbnQu",
-            "YWNjb3VudHMudjEuTGlzdEFjY291bnRzUmVxdWVzdBo6Lmdvb2dsZS5zaG9w",
-            "cGluZy5tZXJjaGFudC5hY2NvdW50cy52MS5MaXN0QWNjb3VudHNSZXNwb25z",
-            "ZSIdgtPkkwIXEhUvYWNjb3VudHMvdjEvYWNjb3VudHMS1QEKD0xpc3RTdWJB",
-            "Y2NvdW50cxI8Lmdvb2dsZS5zaG9wcGluZy5tZXJjaGFudC5hY2NvdW50cy52",
-            "MS5MaXN0U3ViQWNjb3VudHNSZXF1ZXN0Gj0uZ29vZ2xlLnNob3BwaW5nLm1l",
-            "cmNoYW50LmFjY291bnRzLnYxLkxpc3RTdWJBY2NvdW50c1Jlc3BvbnNlIkXa",
-            "QQhwcm92aWRlcoLT5JMCNBIyL2FjY291bnRzL3YxL3twcm92aWRlcj1hY2Nv",
-            "dW50cy8qfTpsaXN0U3ViYWNjb3VudHMaR8pBGm1lcmNoYW50YXBpLmdvb2ds",
-            "ZWFwaXMuY29t0kEnaHR0cHM6Ly93d3cuZ29vZ2xlYXBpcy5jb20vYXV0aC9j",
-            "b250ZW50QoACCihjb20uZ29vZ2xlLnNob3BwaW5nLm1lcmNoYW50LmFjY291",
-            "bnRzLnYxQg1BY2NvdW50c1Byb3RvUAFaSmNsb3VkLmdvb2dsZS5jb20vZ28v",
-            "c2hvcHBpbmcvbWVyY2hhbnQvYWNjb3VudHMvYXBpdjEvYWNjb3VudHNwYjth",
-            "Y2NvdW50c3BiqgIkR29vZ2xlLlNob3BwaW5nLk1lcmNoYW50LkFjY291bnRz",
-            "LlYxygIkR29vZ2xlXFNob3BwaW5nXE1lcmNoYW50XEFjY291bnRzXFYx6gIo",
-            "R29vZ2xlOjpTaG9wcGluZzo6TWVyY2hhbnQ6OkFjY291bnRzOjpWMWIGcHJv",
-            "dG8z"));
+            "dW50cy92MS91c2VyLnByb3RvGkNnb29nbGUvc2hvcHBpbmcvbWVyY2hhbnQv",
+            "YWNjb3VudHMvdjEvdmVyaWZpY2F0aW9ubWFpbHNldHRpbmdzLnByb3RvGhpn",
+            "b29nbGUvdHlwZS9kYXRldGltZS5wcm90byK5AgoHQWNjb3VudBIRCgRuYW1l",
+            "GAEgASgJQgPgQQgSFwoKYWNjb3VudF9pZBgCIAEoA0ID4EEDEhkKDGFjY291",
+            "bnRfbmFtZRgDIAEoCUID4EECEh8KDWFkdWx0X2NvbnRlbnQYBCABKAhCA+BB",
+            "AUgAiAEBEhkKDHRlc3RfYWNjb3VudBgFIAEoCEID4EEDEi0KCXRpbWVfem9u",
+            "ZRgGIAEoCzIVLmdvb2dsZS50eXBlLlRpbWVab25lQgPgQQISGgoNbGFuZ3Vh",
+            "Z2VfY29kZRgHIAEoCUID4EECOk7qQUsKIm1lcmNoYW50YXBpLmdvb2dsZWFw",
+            "aXMuY29tL0FjY291bnQSEmFjY291bnRzL3thY2NvdW50fSoIYWNjb3VudHMy",
+            "B2FjY291bnRCEAoOX2FkdWx0X2NvbnRlbnQiTQoRR2V0QWNjb3VudFJlcXVl",
+            "c3QSOAoEbmFtZRgBIAEoCUIq4EEC+kEkCiJtZXJjaGFudGFwaS5nb29nbGVh",
+            "cGlzLmNvbS9BY2NvdW50IvsJCiBDcmVhdGVBbmRDb25maWd1cmVBY2NvdW50",
+            "UmVxdWVzdBJDCgdhY2NvdW50GAEgASgLMi0uZ29vZ2xlLnNob3BwaW5nLm1l",
+            "cmNoYW50LmFjY291bnRzLnYxLkFjY291bnRCA+BBAhJhCgR1c2VyGAMgAygL",
+            "Mk4uZ29vZ2xlLnNob3BwaW5nLm1lcmNoYW50LmFjY291bnRzLnYxLkNyZWF0",
+            "ZUFuZENvbmZpZ3VyZUFjY291bnRSZXF1ZXN0LkFkZFVzZXJCA+BBARJuCgdz",
+            "ZXJ2aWNlGAQgAygLMlguZ29vZ2xlLnNob3BwaW5nLm1lcmNoYW50LmFjY291",
+            "bnRzLnYxLkNyZWF0ZUFuZENvbmZpZ3VyZUFjY291bnRSZXF1ZXN0LkFkZEFj",
+            "Y291bnRTZXJ2aWNlQgPgQQISdgoJc2V0X2FsaWFzGAUgAygLMl4uZ29vZ2xl",
+            "LnNob3BwaW5nLm1lcmNoYW50LmFjY291bnRzLnYxLkNyZWF0ZUFuZENvbmZp",
+            "Z3VyZUFjY291bnRSZXF1ZXN0LlNldEFsaWFzRm9yUmVsYXRpb25zaGlwQgPg",
+            "QQEaxwEKB0FkZFVzZXISFAoHdXNlcl9pZBgBIAEoCUID4EECEj0KBHVzZXIY",
+            "AiABKAsyKi5nb29nbGUuc2hvcHBpbmcubWVyY2hhbnQuYWNjb3VudHMudjEu",
+            "VXNlckID4EEBEmcKGnZlcmlmaWNhdGlvbl9tYWlsX3NldHRpbmdzGAMgASgL",
+            "Mj4uZ29vZ2xlLnNob3BwaW5nLm1lcmNoYW50LmFjY291bnRzLnYxLlZlcmlm",
+            "aWNhdGlvbk1haWxTZXR0aW5nc0ID4EEBGqsEChFBZGRBY2NvdW50U2Vydmlj",
+            "ZRJXChNhY2NvdW50X2FnZ3JlZ2F0aW9uGGcgASgLMjguZ29vZ2xlLnNob3Bw",
+            "aW5nLm1lcmNoYW50LmFjY291bnRzLnYxLkFjY291bnRBZ2dyZWdhdGlvbkgA",
+            "ElUKEmFjY291bnRfbWFuYWdlbWVudBhoIAEoCzI3Lmdvb2dsZS5zaG9wcGlu",
+            "Zy5tZXJjaGFudC5hY2NvdW50cy52MS5BY2NvdW50TWFuYWdlbWVudEgAElcK",
+            "E2NvbXBhcmlzb25fc2hvcHBpbmcYaSABKAsyOC5nb29nbGUuc2hvcHBpbmcu",
+            "bWVyY2hhbnQuYWNjb3VudHMudjEuQ29tcGFyaXNvblNob3BwaW5nSAASVwoT",
+            "cHJvZHVjdHNfbWFuYWdlbWVudBhqIAEoCzI4Lmdvb2dsZS5zaG9wcGluZy5t",
+            "ZXJjaGFudC5hY2NvdW50cy52MS5Qcm9kdWN0c01hbmFnZW1lbnRIABJZChRj",
+            "YW1wYWlnbnNfbWFuYWdlbWVudBhrIAEoCzI5Lmdvb2dsZS5zaG9wcGluZy5t",
+            "ZXJjaGFudC5hY2NvdW50cy52MS5DYW1wYWlnbnNNYW5hZ2VtZW50SAASGgoI",
+            "cHJvdmlkZXIYASABKAlCA+BBAkgBiAEBEiAKE2V4dGVybmFsX2FjY291bnRf",
+            "aWQYAyABKAlCA+BBBUIOCgxzZXJ2aWNlX3R5cGVCCwoJX3Byb3ZpZGVyGk8K",
+            "F1NldEFsaWFzRm9yUmVsYXRpb25zaGlwEhUKCHByb3ZpZGVyGAEgASgJQgPg",
+            "QQISHQoQYWNjb3VudF9pZF9hbGlhcxgCIAEoCUID4EECImQKFERlbGV0ZUFj",
+            "Y291bnRSZXF1ZXN0EjgKBG5hbWUYASABKAlCKuBBAvpBJAoibWVyY2hhbnRh",
+            "cGkuZ29vZ2xlYXBpcy5jb20vQWNjb3VudBISCgVmb3JjZRgCIAEoCEID4EEB",
+            "IpEBChRVcGRhdGVBY2NvdW50UmVxdWVzdBJDCgdhY2NvdW50GAEgASgLMi0u",
+            "Z29vZ2xlLnNob3BwaW5nLm1lcmNoYW50LmFjY291bnRzLnYxLkFjY291bnRC",
+            "A+BBAhI0Cgt1cGRhdGVfbWFzaxgCIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5G",
+            "aWVsZE1hc2tCA+BBASJbChNMaXN0QWNjb3VudHNSZXF1ZXN0EhYKCXBhZ2Vf",
+            "c2l6ZRgBIAEoBUID4EEBEhcKCnBhZ2VfdG9rZW4YAiABKAlCA+BBARITCgZm",
+            "aWx0ZXIYAyABKAlCA+BBASJwChRMaXN0QWNjb3VudHNSZXNwb25zZRI/Cghh",
+            "Y2NvdW50cxgBIAMoCzItLmdvb2dsZS5zaG9wcGluZy5tZXJjaGFudC5hY2Nv",
+            "dW50cy52MS5BY2NvdW50EhcKD25leHRfcGFnZV90b2tlbhgCIAEoCSKHAQoW",
+            "TGlzdFN1YkFjY291bnRzUmVxdWVzdBI8Cghwcm92aWRlchgBIAEoCUIq4EEC",
+            "+kEkCiJtZXJjaGFudGFwaS5nb29nbGVhcGlzLmNvbS9BY2NvdW50EhYKCXBh",
+            "Z2Vfc2l6ZRgCIAEoBUID4EEBEhcKCnBhZ2VfdG9rZW4YAyABKAlCA+BBASJz",
+            "ChdMaXN0U3ViQWNjb3VudHNSZXNwb25zZRI/CghhY2NvdW50cxgBIAMoCzIt",
+            "Lmdvb2dsZS5zaG9wcGluZy5tZXJjaGFudC5hY2NvdW50cy52MS5BY2NvdW50",
+            "EhcKD25leHRfcGFnZV90b2tlbhgCIAEoCTKqCQoPQWNjb3VudHNTZXJ2aWNl",
+            "EqMBCgpHZXRBY2NvdW50EjcuZ29vZ2xlLnNob3BwaW5nLm1lcmNoYW50LmFj",
+            "Y291bnRzLnYxLkdldEFjY291bnRSZXF1ZXN0Gi0uZ29vZ2xlLnNob3BwaW5n",
+            "Lm1lcmNoYW50LmFjY291bnRzLnYxLkFjY291bnQiLdpBBG5hbWWC0+STAiAS",
+            "Hi9hY2NvdW50cy92MS97bmFtZT1hY2NvdW50cy8qfRLHAQoZQ3JlYXRlQW5k",
+            "Q29uZmlndXJlQWNjb3VudBJGLmdvb2dsZS5zaG9wcGluZy5tZXJjaGFudC5h",
+            "Y2NvdW50cy52MS5DcmVhdGVBbmRDb25maWd1cmVBY2NvdW50UmVxdWVzdBot",
+            "Lmdvb2dsZS5zaG9wcGluZy5tZXJjaGFudC5hY2NvdW50cy52MS5BY2NvdW50",
+            "IjOC0+STAi0iKC9hY2NvdW50cy92MS9hY2NvdW50czpjcmVhdGVBbmRDb25m",
+            "aWd1cmU6ASoSkgEKDURlbGV0ZUFjY291bnQSOi5nb29nbGUuc2hvcHBpbmcu",
+            "bWVyY2hhbnQuYWNjb3VudHMudjEuRGVsZXRlQWNjb3VudFJlcXVlc3QaFi5n",
+            "b29nbGUucHJvdG9idWYuRW1wdHkiLdpBBG5hbWWC0+STAiAqHi9hY2NvdW50",
+            "cy92MS97bmFtZT1hY2NvdW50cy8qfRLJAQoNVXBkYXRlQWNjb3VudBI6Lmdv",
+            "b2dsZS5zaG9wcGluZy5tZXJjaGFudC5hY2NvdW50cy52MS5VcGRhdGVBY2Nv",
+            "dW50UmVxdWVzdBotLmdvb2dsZS5zaG9wcGluZy5tZXJjaGFudC5hY2NvdW50",
+            "cy52MS5BY2NvdW50Ik3aQRNhY2NvdW50LHVwZGF0ZV9tYXNrgtPkkwIxMiYv",
+            "YWNjb3VudHMvdjEve2FjY291bnQubmFtZT1hY2NvdW50cy8qfToHYWNjb3Vu",
+            "dBKkAQoMTGlzdEFjY291bnRzEjkuZ29vZ2xlLnNob3BwaW5nLm1lcmNoYW50",
+            "LmFjY291bnRzLnYxLkxpc3RBY2NvdW50c1JlcXVlc3QaOi5nb29nbGUuc2hv",
+            "cHBpbmcubWVyY2hhbnQuYWNjb3VudHMudjEuTGlzdEFjY291bnRzUmVzcG9u",
+            "c2UiHYLT5JMCFxIVL2FjY291bnRzL3YxL2FjY291bnRzEtUBCg9MaXN0U3Vi",
+            "QWNjb3VudHMSPC5nb29nbGUuc2hvcHBpbmcubWVyY2hhbnQuYWNjb3VudHMu",
+            "djEuTGlzdFN1YkFjY291bnRzUmVxdWVzdBo9Lmdvb2dsZS5zaG9wcGluZy5t",
+            "ZXJjaGFudC5hY2NvdW50cy52MS5MaXN0U3ViQWNjb3VudHNSZXNwb25zZSJF",
+            "2kEIcHJvdmlkZXKC0+STAjQSMi9hY2NvdW50cy92MS97cHJvdmlkZXI9YWNj",
+            "b3VudHMvKn06bGlzdFN1YmFjY291bnRzGkfKQRptZXJjaGFudGFwaS5nb29n",
+            "bGVhcGlzLmNvbdJBJ2h0dHBzOi8vd3d3Lmdvb2dsZWFwaXMuY29tL2F1dGgv",
+            "Y29udGVudEKAAgooY29tLmdvb2dsZS5zaG9wcGluZy5tZXJjaGFudC5hY2Nv",
+            "dW50cy52MUINQWNjb3VudHNQcm90b1ABWkpjbG91ZC5nb29nbGUuY29tL2dv",
+            "L3Nob3BwaW5nL21lcmNoYW50L2FjY291bnRzL2FwaXYxL2FjY291bnRzcGI7",
+            "YWNjb3VudHNwYqoCJEdvb2dsZS5TaG9wcGluZy5NZXJjaGFudC5BY2NvdW50",
+            "cy5WMcoCJEdvb2dsZVxTaG9wcGluZ1xNZXJjaGFudFxBY2NvdW50c1xWMeoC",
+            "KEdvb2dsZTo6U2hvcHBpbmc6Ok1lcmNoYW50OjpBY2NvdW50czo6VjFiBnBy",
+            "b3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Api.ClientReflection.Descriptor, global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.EmptyReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.FieldMaskReflection.Descriptor, global::Google.Shopping.Merchant.Accounts.V1.AccountservicesReflection.Descriptor, global::Google.Shopping.Merchant.Accounts.V1.UserReflection.Descriptor, global::Google.Type.DatetimeReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Api.ClientReflection.Descriptor, global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.EmptyReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.FieldMaskReflection.Descriptor, global::Google.Shopping.Merchant.Accounts.V1.AccountservicesReflection.Descriptor, global::Google.Shopping.Merchant.Accounts.V1.UserReflection.Descriptor, global::Google.Shopping.Merchant.Accounts.V1.VerificationmailsettingsReflection.Descriptor, global::Google.Type.DatetimeReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Shopping.Merchant.Accounts.V1.Account), global::Google.Shopping.Merchant.Accounts.V1.Account.Parser, new[]{ "Name", "AccountId", "AccountName", "AdultContent", "TestAccount", "TimeZone", "LanguageCode" }, new[]{ "AdultContent" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Shopping.Merchant.Accounts.V1.GetAccountRequest), global::Google.Shopping.Merchant.Accounts.V1.GetAccountRequest.Parser, new[]{ "Name" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Shopping.Merchant.Accounts.V1.CreateAndConfigureAccountRequest), global::Google.Shopping.Merchant.Accounts.V1.CreateAndConfigureAccountRequest.Parser, new[]{ "Account", "User", "Service" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Shopping.Merchant.Accounts.V1.CreateAndConfigureAccountRequest.Types.AddUser), global::Google.Shopping.Merchant.Accounts.V1.CreateAndConfigureAccountRequest.Types.AddUser.Parser, new[]{ "UserId", "User" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Shopping.Merchant.Accounts.V1.CreateAndConfigureAccountRequest.Types.AddAccountService), global::Google.Shopping.Merchant.Accounts.V1.CreateAndConfigureAccountRequest.Types.AddAccountService.Parser, new[]{ "AccountAggregation", "Provider" }, new[]{ "ServiceType", "Provider" }, null, null, null)}),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Shopping.Merchant.Accounts.V1.CreateAndConfigureAccountRequest), global::Google.Shopping.Merchant.Accounts.V1.CreateAndConfigureAccountRequest.Parser, new[]{ "Account", "User", "Service", "SetAlias" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Shopping.Merchant.Accounts.V1.CreateAndConfigureAccountRequest.Types.AddUser), global::Google.Shopping.Merchant.Accounts.V1.CreateAndConfigureAccountRequest.Types.AddUser.Parser, new[]{ "UserId", "User", "VerificationMailSettings" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Shopping.Merchant.Accounts.V1.CreateAndConfigureAccountRequest.Types.AddAccountService), global::Google.Shopping.Merchant.Accounts.V1.CreateAndConfigureAccountRequest.Types.AddAccountService.Parser, new[]{ "AccountAggregation", "AccountManagement", "ComparisonShopping", "ProductsManagement", "CampaignsManagement", "Provider", "ExternalAccountId" }, new[]{ "ServiceType", "Provider" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Shopping.Merchant.Accounts.V1.CreateAndConfigureAccountRequest.Types.SetAliasForRelationship), global::Google.Shopping.Merchant.Accounts.V1.CreateAndConfigureAccountRequest.Types.SetAliasForRelationship.Parser, new[]{ "Provider", "AccountIdAlias" }, null, null, null, null)}),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Shopping.Merchant.Accounts.V1.DeleteAccountRequest), global::Google.Shopping.Merchant.Accounts.V1.DeleteAccountRequest.Parser, new[]{ "Name", "Force" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Shopping.Merchant.Accounts.V1.UpdateAccountRequest), global::Google.Shopping.Merchant.Accounts.V1.UpdateAccountRequest.Parser, new[]{ "Account", "UpdateMask" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Shopping.Merchant.Accounts.V1.ListAccountsRequest), global::Google.Shopping.Merchant.Accounts.V1.ListAccountsRequest.Parser, new[]{ "PageSize", "PageToken", "Filter" }, null, null, null, null),
@@ -849,6 +867,7 @@ namespace Google.Shopping.Merchant.Accounts.V1 {
       account_ = other.account_ != null ? other.account_.Clone() : null;
       user_ = other.user_.Clone();
       service_ = other.service_.Clone();
+      setAlias_ = other.setAlias_.Clone();
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -907,6 +926,22 @@ namespace Google.Shopping.Merchant.Accounts.V1 {
       get { return service_; }
     }
 
+    /// <summary>Field number for the "set_alias" field.</summary>
+    public const int SetAliasFieldNumber = 5;
+    private static readonly pb::FieldCodec<global::Google.Shopping.Merchant.Accounts.V1.CreateAndConfigureAccountRequest.Types.SetAliasForRelationship> _repeated_setAlias_codec
+        = pb::FieldCodec.ForMessage(42, global::Google.Shopping.Merchant.Accounts.V1.CreateAndConfigureAccountRequest.Types.SetAliasForRelationship.Parser);
+    private readonly pbc::RepeatedField<global::Google.Shopping.Merchant.Accounts.V1.CreateAndConfigureAccountRequest.Types.SetAliasForRelationship> setAlias_ = new pbc::RepeatedField<global::Google.Shopping.Merchant.Accounts.V1.CreateAndConfigureAccountRequest.Types.SetAliasForRelationship>();
+    /// <summary>
+    /// Optional. If a relationship is created with a provider, you can set an
+    /// alias for it with this field. The calling user must be an admin on the
+    /// provider to be able to set an alias.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pbc::RepeatedField<global::Google.Shopping.Merchant.Accounts.V1.CreateAndConfigureAccountRequest.Types.SetAliasForRelationship> SetAlias {
+      get { return setAlias_; }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
@@ -925,6 +960,7 @@ namespace Google.Shopping.Merchant.Accounts.V1 {
       if (!object.Equals(Account, other.Account)) return false;
       if(!user_.Equals(other.user_)) return false;
       if(!service_.Equals(other.service_)) return false;
+      if(!setAlias_.Equals(other.setAlias_)) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -935,6 +971,7 @@ namespace Google.Shopping.Merchant.Accounts.V1 {
       if (account_ != null) hash ^= Account.GetHashCode();
       hash ^= user_.GetHashCode();
       hash ^= service_.GetHashCode();
+      hash ^= setAlias_.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -959,6 +996,7 @@ namespace Google.Shopping.Merchant.Accounts.V1 {
       }
       user_.WriteTo(output, _repeated_user_codec);
       service_.WriteTo(output, _repeated_service_codec);
+      setAlias_.WriteTo(output, _repeated_setAlias_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -975,6 +1013,7 @@ namespace Google.Shopping.Merchant.Accounts.V1 {
       }
       user_.WriteTo(ref output, _repeated_user_codec);
       service_.WriteTo(ref output, _repeated_service_codec);
+      setAlias_.WriteTo(ref output, _repeated_setAlias_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -990,6 +1029,7 @@ namespace Google.Shopping.Merchant.Accounts.V1 {
       }
       size += user_.CalculateSize(_repeated_user_codec);
       size += service_.CalculateSize(_repeated_service_codec);
+      size += setAlias_.CalculateSize(_repeated_setAlias_codec);
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
       }
@@ -1010,6 +1050,7 @@ namespace Google.Shopping.Merchant.Accounts.V1 {
       }
       user_.Add(other.user_);
       service_.Add(other.service_);
+      setAlias_.Add(other.setAlias_);
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 
@@ -1040,6 +1081,10 @@ namespace Google.Shopping.Merchant.Accounts.V1 {
             service_.AddEntriesFrom(input, _repeated_service_codec);
             break;
           }
+          case 42: {
+            setAlias_.AddEntriesFrom(input, _repeated_setAlias_codec);
+            break;
+          }
         }
       }
     #endif
@@ -1068,6 +1113,10 @@ namespace Google.Shopping.Merchant.Accounts.V1 {
           }
           case 34: {
             service_.AddEntriesFrom(ref input, _repeated_service_codec);
+            break;
+          }
+          case 42: {
+            setAlias_.AddEntriesFrom(ref input, _repeated_setAlias_codec);
             break;
           }
         }
@@ -1120,6 +1169,7 @@ namespace Google.Shopping.Merchant.Accounts.V1 {
         public AddUser(AddUser other) : this() {
           userId_ = other.userId_;
           user_ = other.user_ != null ? other.user_.Clone() : null;
+          verificationMailSettings_ = other.verificationMailSettings_ != null ? other.verificationMailSettings_.Clone() : null;
           _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
         }
 
@@ -1161,6 +1211,22 @@ namespace Google.Shopping.Merchant.Accounts.V1 {
           }
         }
 
+        /// <summary>Field number for the "verification_mail_settings" field.</summary>
+        public const int VerificationMailSettingsFieldNumber = 3;
+        private global::Google.Shopping.Merchant.Accounts.V1.VerificationMailSettings verificationMailSettings_;
+        /// <summary>
+        /// Optional. Settings related to configuring the verification email that is
+        /// sent after adding a user.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public global::Google.Shopping.Merchant.Accounts.V1.VerificationMailSettings VerificationMailSettings {
+          get { return verificationMailSettings_; }
+          set {
+            verificationMailSettings_ = value;
+          }
+        }
+
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public override bool Equals(object other) {
@@ -1178,6 +1244,7 @@ namespace Google.Shopping.Merchant.Accounts.V1 {
           }
           if (UserId != other.UserId) return false;
           if (!object.Equals(User, other.User)) return false;
+          if (!object.Equals(VerificationMailSettings, other.VerificationMailSettings)) return false;
           return Equals(_unknownFields, other._unknownFields);
         }
 
@@ -1187,6 +1254,7 @@ namespace Google.Shopping.Merchant.Accounts.V1 {
           int hash = 1;
           if (UserId.Length != 0) hash ^= UserId.GetHashCode();
           if (user_ != null) hash ^= User.GetHashCode();
+          if (verificationMailSettings_ != null) hash ^= VerificationMailSettings.GetHashCode();
           if (_unknownFields != null) {
             hash ^= _unknownFields.GetHashCode();
           }
@@ -1213,6 +1281,10 @@ namespace Google.Shopping.Merchant.Accounts.V1 {
             output.WriteRawTag(18);
             output.WriteMessage(User);
           }
+          if (verificationMailSettings_ != null) {
+            output.WriteRawTag(26);
+            output.WriteMessage(VerificationMailSettings);
+          }
           if (_unknownFields != null) {
             _unknownFields.WriteTo(output);
           }
@@ -1231,6 +1303,10 @@ namespace Google.Shopping.Merchant.Accounts.V1 {
             output.WriteRawTag(18);
             output.WriteMessage(User);
           }
+          if (verificationMailSettings_ != null) {
+            output.WriteRawTag(26);
+            output.WriteMessage(VerificationMailSettings);
+          }
           if (_unknownFields != null) {
             _unknownFields.WriteTo(ref output);
           }
@@ -1246,6 +1322,9 @@ namespace Google.Shopping.Merchant.Accounts.V1 {
           }
           if (user_ != null) {
             size += 1 + pb::CodedOutputStream.ComputeMessageSize(User);
+          }
+          if (verificationMailSettings_ != null) {
+            size += 1 + pb::CodedOutputStream.ComputeMessageSize(VerificationMailSettings);
           }
           if (_unknownFields != null) {
             size += _unknownFields.CalculateSize();
@@ -1267,6 +1346,12 @@ namespace Google.Shopping.Merchant.Accounts.V1 {
               User = new global::Google.Shopping.Merchant.Accounts.V1.User();
             }
             User.MergeFrom(other.User);
+          }
+          if (other.verificationMailSettings_ != null) {
+            if (verificationMailSettings_ == null) {
+              VerificationMailSettings = new global::Google.Shopping.Merchant.Accounts.V1.VerificationMailSettings();
+            }
+            VerificationMailSettings.MergeFrom(other.VerificationMailSettings);
           }
           _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
         }
@@ -1294,6 +1379,13 @@ namespace Google.Shopping.Merchant.Accounts.V1 {
                 input.ReadMessage(User);
                 break;
               }
+              case 26: {
+                if (verificationMailSettings_ == null) {
+                  VerificationMailSettings = new global::Google.Shopping.Merchant.Accounts.V1.VerificationMailSettings();
+                }
+                input.ReadMessage(VerificationMailSettings);
+                break;
+              }
             }
           }
         #endif
@@ -1318,6 +1410,13 @@ namespace Google.Shopping.Merchant.Accounts.V1 {
                   User = new global::Google.Shopping.Merchant.Accounts.V1.User();
                 }
                 input.ReadMessage(User);
+                break;
+              }
+              case 26: {
+                if (verificationMailSettings_ == null) {
+                  VerificationMailSettings = new global::Google.Shopping.Merchant.Accounts.V1.VerificationMailSettings();
+                }
+                input.ReadMessage(VerificationMailSettings);
                 break;
               }
             }
@@ -1367,9 +1466,22 @@ namespace Google.Shopping.Merchant.Accounts.V1 {
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public AddAccountService(AddAccountService other) : this() {
           provider_ = other.provider_;
+          externalAccountId_ = other.externalAccountId_;
           switch (other.ServiceTypeCase) {
             case ServiceTypeOneofCase.AccountAggregation:
               AccountAggregation = other.AccountAggregation.Clone();
+              break;
+            case ServiceTypeOneofCase.AccountManagement:
+              AccountManagement = other.AccountManagement.Clone();
+              break;
+            case ServiceTypeOneofCase.ComparisonShopping:
+              ComparisonShopping = other.ComparisonShopping.Clone();
+              break;
+            case ServiceTypeOneofCase.ProductsManagement:
+              ProductsManagement = other.ProductsManagement.Clone();
+              break;
+            case ServiceTypeOneofCase.CampaignsManagement:
+              CampaignsManagement = other.CampaignsManagement.Clone();
               break;
           }
 
@@ -1396,6 +1508,70 @@ namespace Google.Shopping.Merchant.Accounts.V1 {
           set {
             serviceType_ = value;
             serviceTypeCase_ = value == null ? ServiceTypeOneofCase.None : ServiceTypeOneofCase.AccountAggregation;
+          }
+        }
+
+        /// <summary>Field number for the "account_management" field.</summary>
+        public const int AccountManagementFieldNumber = 104;
+        /// <summary>
+        /// The provider manages this account. Payload for service type Account
+        /// Management.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public global::Google.Shopping.Merchant.Accounts.V1.AccountManagement AccountManagement {
+          get { return serviceTypeCase_ == ServiceTypeOneofCase.AccountManagement ? (global::Google.Shopping.Merchant.Accounts.V1.AccountManagement) serviceType_ : null; }
+          set {
+            serviceType_ = value;
+            serviceTypeCase_ = value == null ? ServiceTypeOneofCase.None : ServiceTypeOneofCase.AccountManagement;
+          }
+        }
+
+        /// <summary>Field number for the "comparison_shopping" field.</summary>
+        public const int ComparisonShoppingFieldNumber = 105;
+        /// <summary>
+        /// The provider is a CSS (Comparison Shopping Service) of this account.
+        /// Payload for service type Comparison Shopping.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public global::Google.Shopping.Merchant.Accounts.V1.ComparisonShopping ComparisonShopping {
+          get { return serviceTypeCase_ == ServiceTypeOneofCase.ComparisonShopping ? (global::Google.Shopping.Merchant.Accounts.V1.ComparisonShopping) serviceType_ : null; }
+          set {
+            serviceType_ = value;
+            serviceTypeCase_ = value == null ? ServiceTypeOneofCase.None : ServiceTypeOneofCase.ComparisonShopping;
+          }
+        }
+
+        /// <summary>Field number for the "products_management" field.</summary>
+        public const int ProductsManagementFieldNumber = 106;
+        /// <summary>
+        /// The provider manages products for this account. Payload for service
+        /// type products management.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public global::Google.Shopping.Merchant.Accounts.V1.ProductsManagement ProductsManagement {
+          get { return serviceTypeCase_ == ServiceTypeOneofCase.ProductsManagement ? (global::Google.Shopping.Merchant.Accounts.V1.ProductsManagement) serviceType_ : null; }
+          set {
+            serviceType_ = value;
+            serviceTypeCase_ = value == null ? ServiceTypeOneofCase.None : ServiceTypeOneofCase.ProductsManagement;
+          }
+        }
+
+        /// <summary>Field number for the "campaigns_management" field.</summary>
+        public const int CampaignsManagementFieldNumber = 107;
+        /// <summary>
+        /// The provider manages campaigns for this account. Payload for service
+        /// type campaigns management.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public global::Google.Shopping.Merchant.Accounts.V1.CampaignsManagement CampaignsManagement {
+          get { return serviceTypeCase_ == ServiceTypeOneofCase.CampaignsManagement ? (global::Google.Shopping.Merchant.Accounts.V1.CampaignsManagement) serviceType_ : null; }
+          set {
+            serviceType_ = value;
+            serviceTypeCase_ = value == null ? ServiceTypeOneofCase.None : ServiceTypeOneofCase.CampaignsManagement;
           }
         }
 
@@ -1430,11 +1606,47 @@ namespace Google.Shopping.Merchant.Accounts.V1 {
           provider_ = null;
         }
 
+        /// <summary>Field number for the "external_account_id" field.</summary>
+        public const int ExternalAccountIdFieldNumber = 3;
+        private string externalAccountId_ = "";
+        /// <summary>
+        /// Immutable. An optional, immutable identifier that Google uses to refer to
+        /// this account when communicating with the provider. This should be the
+        /// unique account ID within the provider's system (for example, your shop ID
+        /// in Shopify).
+        ///
+        /// If you have multiple accounts with the same provider - for instance,
+        /// different accounts for various regions — the `external_account_id`
+        /// differentiates between them, ensuring accurate linking and integration
+        /// between Google and the provider.
+        ///
+        /// The external account ID must be specified for the campaigns management
+        /// service type.
+        ///
+        /// The external account ID must not be specified for the account aggregation
+        /// service type.
+        ///
+        /// The external account ID is optional / may be specified for all other
+        /// service types.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public string ExternalAccountId {
+          get { return externalAccountId_; }
+          set {
+            externalAccountId_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+          }
+        }
+
         private object serviceType_;
         /// <summary>Enum of possible cases for the "service_type" oneof.</summary>
         public enum ServiceTypeOneofCase {
           None = 0,
           AccountAggregation = 103,
+          AccountManagement = 104,
+          ComparisonShopping = 105,
+          ProductsManagement = 106,
+          CampaignsManagement = 107,
         }
         private ServiceTypeOneofCase serviceTypeCase_ = ServiceTypeOneofCase.None;
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1466,7 +1678,12 @@ namespace Google.Shopping.Merchant.Accounts.V1 {
             return true;
           }
           if (!object.Equals(AccountAggregation, other.AccountAggregation)) return false;
+          if (!object.Equals(AccountManagement, other.AccountManagement)) return false;
+          if (!object.Equals(ComparisonShopping, other.ComparisonShopping)) return false;
+          if (!object.Equals(ProductsManagement, other.ProductsManagement)) return false;
+          if (!object.Equals(CampaignsManagement, other.CampaignsManagement)) return false;
           if (Provider != other.Provider) return false;
+          if (ExternalAccountId != other.ExternalAccountId) return false;
           if (ServiceTypeCase != other.ServiceTypeCase) return false;
           return Equals(_unknownFields, other._unknownFields);
         }
@@ -1476,7 +1693,12 @@ namespace Google.Shopping.Merchant.Accounts.V1 {
         public override int GetHashCode() {
           int hash = 1;
           if (serviceTypeCase_ == ServiceTypeOneofCase.AccountAggregation) hash ^= AccountAggregation.GetHashCode();
+          if (serviceTypeCase_ == ServiceTypeOneofCase.AccountManagement) hash ^= AccountManagement.GetHashCode();
+          if (serviceTypeCase_ == ServiceTypeOneofCase.ComparisonShopping) hash ^= ComparisonShopping.GetHashCode();
+          if (serviceTypeCase_ == ServiceTypeOneofCase.ProductsManagement) hash ^= ProductsManagement.GetHashCode();
+          if (serviceTypeCase_ == ServiceTypeOneofCase.CampaignsManagement) hash ^= CampaignsManagement.GetHashCode();
           if (HasProvider) hash ^= Provider.GetHashCode();
+          if (ExternalAccountId.Length != 0) hash ^= ExternalAccountId.GetHashCode();
           hash ^= (int) serviceTypeCase_;
           if (_unknownFields != null) {
             hash ^= _unknownFields.GetHashCode();
@@ -1500,9 +1722,29 @@ namespace Google.Shopping.Merchant.Accounts.V1 {
             output.WriteRawTag(10);
             output.WriteString(Provider);
           }
+          if (ExternalAccountId.Length != 0) {
+            output.WriteRawTag(26);
+            output.WriteString(ExternalAccountId);
+          }
           if (serviceTypeCase_ == ServiceTypeOneofCase.AccountAggregation) {
             output.WriteRawTag(186, 6);
             output.WriteMessage(AccountAggregation);
+          }
+          if (serviceTypeCase_ == ServiceTypeOneofCase.AccountManagement) {
+            output.WriteRawTag(194, 6);
+            output.WriteMessage(AccountManagement);
+          }
+          if (serviceTypeCase_ == ServiceTypeOneofCase.ComparisonShopping) {
+            output.WriteRawTag(202, 6);
+            output.WriteMessage(ComparisonShopping);
+          }
+          if (serviceTypeCase_ == ServiceTypeOneofCase.ProductsManagement) {
+            output.WriteRawTag(210, 6);
+            output.WriteMessage(ProductsManagement);
+          }
+          if (serviceTypeCase_ == ServiceTypeOneofCase.CampaignsManagement) {
+            output.WriteRawTag(218, 6);
+            output.WriteMessage(CampaignsManagement);
           }
           if (_unknownFields != null) {
             _unknownFields.WriteTo(output);
@@ -1518,9 +1760,29 @@ namespace Google.Shopping.Merchant.Accounts.V1 {
             output.WriteRawTag(10);
             output.WriteString(Provider);
           }
+          if (ExternalAccountId.Length != 0) {
+            output.WriteRawTag(26);
+            output.WriteString(ExternalAccountId);
+          }
           if (serviceTypeCase_ == ServiceTypeOneofCase.AccountAggregation) {
             output.WriteRawTag(186, 6);
             output.WriteMessage(AccountAggregation);
+          }
+          if (serviceTypeCase_ == ServiceTypeOneofCase.AccountManagement) {
+            output.WriteRawTag(194, 6);
+            output.WriteMessage(AccountManagement);
+          }
+          if (serviceTypeCase_ == ServiceTypeOneofCase.ComparisonShopping) {
+            output.WriteRawTag(202, 6);
+            output.WriteMessage(ComparisonShopping);
+          }
+          if (serviceTypeCase_ == ServiceTypeOneofCase.ProductsManagement) {
+            output.WriteRawTag(210, 6);
+            output.WriteMessage(ProductsManagement);
+          }
+          if (serviceTypeCase_ == ServiceTypeOneofCase.CampaignsManagement) {
+            output.WriteRawTag(218, 6);
+            output.WriteMessage(CampaignsManagement);
           }
           if (_unknownFields != null) {
             _unknownFields.WriteTo(ref output);
@@ -1535,8 +1797,23 @@ namespace Google.Shopping.Merchant.Accounts.V1 {
           if (serviceTypeCase_ == ServiceTypeOneofCase.AccountAggregation) {
             size += 2 + pb::CodedOutputStream.ComputeMessageSize(AccountAggregation);
           }
+          if (serviceTypeCase_ == ServiceTypeOneofCase.AccountManagement) {
+            size += 2 + pb::CodedOutputStream.ComputeMessageSize(AccountManagement);
+          }
+          if (serviceTypeCase_ == ServiceTypeOneofCase.ComparisonShopping) {
+            size += 2 + pb::CodedOutputStream.ComputeMessageSize(ComparisonShopping);
+          }
+          if (serviceTypeCase_ == ServiceTypeOneofCase.ProductsManagement) {
+            size += 2 + pb::CodedOutputStream.ComputeMessageSize(ProductsManagement);
+          }
+          if (serviceTypeCase_ == ServiceTypeOneofCase.CampaignsManagement) {
+            size += 2 + pb::CodedOutputStream.ComputeMessageSize(CampaignsManagement);
+          }
           if (HasProvider) {
             size += 1 + pb::CodedOutputStream.ComputeStringSize(Provider);
+          }
+          if (ExternalAccountId.Length != 0) {
+            size += 1 + pb::CodedOutputStream.ComputeStringSize(ExternalAccountId);
           }
           if (_unknownFields != null) {
             size += _unknownFields.CalculateSize();
@@ -1553,12 +1830,39 @@ namespace Google.Shopping.Merchant.Accounts.V1 {
           if (other.HasProvider) {
             Provider = other.Provider;
           }
+          if (other.ExternalAccountId.Length != 0) {
+            ExternalAccountId = other.ExternalAccountId;
+          }
           switch (other.ServiceTypeCase) {
             case ServiceTypeOneofCase.AccountAggregation:
               if (AccountAggregation == null) {
                 AccountAggregation = new global::Google.Shopping.Merchant.Accounts.V1.AccountAggregation();
               }
               AccountAggregation.MergeFrom(other.AccountAggregation);
+              break;
+            case ServiceTypeOneofCase.AccountManagement:
+              if (AccountManagement == null) {
+                AccountManagement = new global::Google.Shopping.Merchant.Accounts.V1.AccountManagement();
+              }
+              AccountManagement.MergeFrom(other.AccountManagement);
+              break;
+            case ServiceTypeOneofCase.ComparisonShopping:
+              if (ComparisonShopping == null) {
+                ComparisonShopping = new global::Google.Shopping.Merchant.Accounts.V1.ComparisonShopping();
+              }
+              ComparisonShopping.MergeFrom(other.ComparisonShopping);
+              break;
+            case ServiceTypeOneofCase.ProductsManagement:
+              if (ProductsManagement == null) {
+                ProductsManagement = new global::Google.Shopping.Merchant.Accounts.V1.ProductsManagement();
+              }
+              ProductsManagement.MergeFrom(other.ProductsManagement);
+              break;
+            case ServiceTypeOneofCase.CampaignsManagement:
+              if (CampaignsManagement == null) {
+                CampaignsManagement = new global::Google.Shopping.Merchant.Accounts.V1.CampaignsManagement();
+              }
+              CampaignsManagement.MergeFrom(other.CampaignsManagement);
               break;
           }
 
@@ -1581,6 +1885,10 @@ namespace Google.Shopping.Merchant.Accounts.V1 {
                 Provider = input.ReadString();
                 break;
               }
+              case 26: {
+                ExternalAccountId = input.ReadString();
+                break;
+              }
               case 826: {
                 global::Google.Shopping.Merchant.Accounts.V1.AccountAggregation subBuilder = new global::Google.Shopping.Merchant.Accounts.V1.AccountAggregation();
                 if (serviceTypeCase_ == ServiceTypeOneofCase.AccountAggregation) {
@@ -1588,6 +1896,42 @@ namespace Google.Shopping.Merchant.Accounts.V1 {
                 }
                 input.ReadMessage(subBuilder);
                 AccountAggregation = subBuilder;
+                break;
+              }
+              case 834: {
+                global::Google.Shopping.Merchant.Accounts.V1.AccountManagement subBuilder = new global::Google.Shopping.Merchant.Accounts.V1.AccountManagement();
+                if (serviceTypeCase_ == ServiceTypeOneofCase.AccountManagement) {
+                  subBuilder.MergeFrom(AccountManagement);
+                }
+                input.ReadMessage(subBuilder);
+                AccountManagement = subBuilder;
+                break;
+              }
+              case 842: {
+                global::Google.Shopping.Merchant.Accounts.V1.ComparisonShopping subBuilder = new global::Google.Shopping.Merchant.Accounts.V1.ComparisonShopping();
+                if (serviceTypeCase_ == ServiceTypeOneofCase.ComparisonShopping) {
+                  subBuilder.MergeFrom(ComparisonShopping);
+                }
+                input.ReadMessage(subBuilder);
+                ComparisonShopping = subBuilder;
+                break;
+              }
+              case 850: {
+                global::Google.Shopping.Merchant.Accounts.V1.ProductsManagement subBuilder = new global::Google.Shopping.Merchant.Accounts.V1.ProductsManagement();
+                if (serviceTypeCase_ == ServiceTypeOneofCase.ProductsManagement) {
+                  subBuilder.MergeFrom(ProductsManagement);
+                }
+                input.ReadMessage(subBuilder);
+                ProductsManagement = subBuilder;
+                break;
+              }
+              case 858: {
+                global::Google.Shopping.Merchant.Accounts.V1.CampaignsManagement subBuilder = new global::Google.Shopping.Merchant.Accounts.V1.CampaignsManagement();
+                if (serviceTypeCase_ == ServiceTypeOneofCase.CampaignsManagement) {
+                  subBuilder.MergeFrom(CampaignsManagement);
+                }
+                input.ReadMessage(subBuilder);
+                CampaignsManagement = subBuilder;
                 break;
               }
             }
@@ -1609,6 +1953,10 @@ namespace Google.Shopping.Merchant.Accounts.V1 {
                 Provider = input.ReadString();
                 break;
               }
+              case 26: {
+                ExternalAccountId = input.ReadString();
+                break;
+              }
               case 826: {
                 global::Google.Shopping.Merchant.Accounts.V1.AccountAggregation subBuilder = new global::Google.Shopping.Merchant.Accounts.V1.AccountAggregation();
                 if (serviceTypeCase_ == ServiceTypeOneofCase.AccountAggregation) {
@@ -1616,6 +1964,283 @@ namespace Google.Shopping.Merchant.Accounts.V1 {
                 }
                 input.ReadMessage(subBuilder);
                 AccountAggregation = subBuilder;
+                break;
+              }
+              case 834: {
+                global::Google.Shopping.Merchant.Accounts.V1.AccountManagement subBuilder = new global::Google.Shopping.Merchant.Accounts.V1.AccountManagement();
+                if (serviceTypeCase_ == ServiceTypeOneofCase.AccountManagement) {
+                  subBuilder.MergeFrom(AccountManagement);
+                }
+                input.ReadMessage(subBuilder);
+                AccountManagement = subBuilder;
+                break;
+              }
+              case 842: {
+                global::Google.Shopping.Merchant.Accounts.V1.ComparisonShopping subBuilder = new global::Google.Shopping.Merchant.Accounts.V1.ComparisonShopping();
+                if (serviceTypeCase_ == ServiceTypeOneofCase.ComparisonShopping) {
+                  subBuilder.MergeFrom(ComparisonShopping);
+                }
+                input.ReadMessage(subBuilder);
+                ComparisonShopping = subBuilder;
+                break;
+              }
+              case 850: {
+                global::Google.Shopping.Merchant.Accounts.V1.ProductsManagement subBuilder = new global::Google.Shopping.Merchant.Accounts.V1.ProductsManagement();
+                if (serviceTypeCase_ == ServiceTypeOneofCase.ProductsManagement) {
+                  subBuilder.MergeFrom(ProductsManagement);
+                }
+                input.ReadMessage(subBuilder);
+                ProductsManagement = subBuilder;
+                break;
+              }
+              case 858: {
+                global::Google.Shopping.Merchant.Accounts.V1.CampaignsManagement subBuilder = new global::Google.Shopping.Merchant.Accounts.V1.CampaignsManagement();
+                if (serviceTypeCase_ == ServiceTypeOneofCase.CampaignsManagement) {
+                  subBuilder.MergeFrom(CampaignsManagement);
+                }
+                input.ReadMessage(subBuilder);
+                CampaignsManagement = subBuilder;
+                break;
+              }
+            }
+          }
+        }
+        #endif
+
+      }
+
+      /// <summary>
+      /// Set an alias for a relationship between a provider and the account to
+      /// be created.
+      /// </summary>
+      [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+      public sealed partial class SetAliasForRelationship : pb::IMessage<SetAliasForRelationship>
+      #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          , pb::IBufferMessage
+      #endif
+      {
+        private static readonly pb::MessageParser<SetAliasForRelationship> _parser = new pb::MessageParser<SetAliasForRelationship>(() => new SetAliasForRelationship());
+        private pb::UnknownFieldSet _unknownFields;
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public static pb::MessageParser<SetAliasForRelationship> Parser { get { return _parser; } }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public static pbr::MessageDescriptor Descriptor {
+          get { return global::Google.Shopping.Merchant.Accounts.V1.CreateAndConfigureAccountRequest.Descriptor.NestedTypes[2]; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        pbr::MessageDescriptor pb::IMessage.Descriptor {
+          get { return Descriptor; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public SetAliasForRelationship() {
+          OnConstruction();
+        }
+
+        partial void OnConstruction();
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public SetAliasForRelationship(SetAliasForRelationship other) : this() {
+          provider_ = other.provider_;
+          accountIdAlias_ = other.accountIdAlias_;
+          _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public SetAliasForRelationship Clone() {
+          return new SetAliasForRelationship(this);
+        }
+
+        /// <summary>Field number for the "provider" field.</summary>
+        public const int ProviderFieldNumber = 1;
+        private string provider_ = "";
+        /// <summary>
+        /// Required. The provider of the service. This is a reference to an account
+        /// such as `providers/123` or `accounts/123`. The same provider must be
+        /// specified in at least one of the `service` fields.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public string Provider {
+          get { return provider_; }
+          set {
+            provider_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+          }
+        }
+
+        /// <summary>Field number for the "account_id_alias" field.</summary>
+        public const int AccountIdAliasFieldNumber = 2;
+        private string accountIdAlias_ = "";
+        /// <summary>
+        /// Required. The unique ID of this account in the provider's system.
+        /// The value must be unique across all accounts on the platform for this
+        /// provider.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public string AccountIdAlias {
+          get { return accountIdAlias_; }
+          set {
+            accountIdAlias_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+          }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override bool Equals(object other) {
+          return Equals(other as SetAliasForRelationship);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public bool Equals(SetAliasForRelationship other) {
+          if (ReferenceEquals(other, null)) {
+            return false;
+          }
+          if (ReferenceEquals(other, this)) {
+            return true;
+          }
+          if (Provider != other.Provider) return false;
+          if (AccountIdAlias != other.AccountIdAlias) return false;
+          return Equals(_unknownFields, other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override int GetHashCode() {
+          int hash = 1;
+          if (Provider.Length != 0) hash ^= Provider.GetHashCode();
+          if (AccountIdAlias.Length != 0) hash ^= AccountIdAlias.GetHashCode();
+          if (_unknownFields != null) {
+            hash ^= _unknownFields.GetHashCode();
+          }
+          return hash;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override string ToString() {
+          return pb::JsonFormatter.ToDiagnosticString(this);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void WriteTo(pb::CodedOutputStream output) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          output.WriteRawMessage(this);
+        #else
+          if (Provider.Length != 0) {
+            output.WriteRawTag(10);
+            output.WriteString(Provider);
+          }
+          if (AccountIdAlias.Length != 0) {
+            output.WriteRawTag(18);
+            output.WriteString(AccountIdAlias);
+          }
+          if (_unknownFields != null) {
+            _unknownFields.WriteTo(output);
+          }
+        #endif
+        }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+          if (Provider.Length != 0) {
+            output.WriteRawTag(10);
+            output.WriteString(Provider);
+          }
+          if (AccountIdAlias.Length != 0) {
+            output.WriteRawTag(18);
+            output.WriteString(AccountIdAlias);
+          }
+          if (_unknownFields != null) {
+            _unknownFields.WriteTo(ref output);
+          }
+        }
+        #endif
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public int CalculateSize() {
+          int size = 0;
+          if (Provider.Length != 0) {
+            size += 1 + pb::CodedOutputStream.ComputeStringSize(Provider);
+          }
+          if (AccountIdAlias.Length != 0) {
+            size += 1 + pb::CodedOutputStream.ComputeStringSize(AccountIdAlias);
+          }
+          if (_unknownFields != null) {
+            size += _unknownFields.CalculateSize();
+          }
+          return size;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void MergeFrom(SetAliasForRelationship other) {
+          if (other == null) {
+            return;
+          }
+          if (other.Provider.Length != 0) {
+            Provider = other.Provider;
+          }
+          if (other.AccountIdAlias.Length != 0) {
+            AccountIdAlias = other.AccountIdAlias;
+          }
+          _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void MergeFrom(pb::CodedInputStream input) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          input.ReadRawMessage(this);
+        #else
+          uint tag;
+          while ((tag = input.ReadTag()) != 0) {
+            switch(tag) {
+              default:
+                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+                break;
+              case 10: {
+                Provider = input.ReadString();
+                break;
+              }
+              case 18: {
+                AccountIdAlias = input.ReadString();
+                break;
+              }
+            }
+          }
+        #endif
+        }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+          uint tag;
+          while ((tag = input.ReadTag()) != 0) {
+            switch(tag) {
+              default:
+                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+                break;
+              case 10: {
+                Provider = input.ReadString();
+                break;
+              }
+              case 18: {
+                AccountIdAlias = input.ReadString();
                 break;
               }
             }

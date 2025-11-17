@@ -253,6 +253,12 @@
         "grpc": {
           "libraryClient": "DeveloperRegistrationServiceClient",
           "rpcs": {
+            "GetAccountForGcpRegistration": {
+              "methods": [
+                "GetAccountForGcpRegistration",
+                "GetAccountForGcpRegistrationAsync"
+              ]
+            },
             "GetDeveloperRegistration": {
               "methods": [
                 "GetDeveloperRegistration",
@@ -635,6 +641,12 @@
               "methods": [
                 "UpdateUser",
                 "UpdateUserAsync"
+              ]
+            },
+            "VerifySelf": {
+              "methods": [
+                "VerifySelf",
+                "VerifySelfAsync"
               ]
             }
           }

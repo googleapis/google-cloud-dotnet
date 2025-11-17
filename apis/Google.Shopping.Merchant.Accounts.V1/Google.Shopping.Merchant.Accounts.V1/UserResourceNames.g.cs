@@ -297,4 +297,16 @@ namespace Google.Shopping.Merchant.Accounts.V1
             set => Parent = value?.ToString() ?? "";
         }
     }
+
+    public partial class VerifySelfRequest
+    {
+        /// <summary>
+        /// <see cref="AccountName"/>-typed view over the <see cref="Account"/> resource name property.
+        /// </summary>
+        public AccountName AccountAsAccountName
+        {
+            get => string.IsNullOrEmpty(Account) ? null : AccountName.Parse(Account, allowUnparsed: true);
+            set => Account = value?.ToString() ?? "";
+        }
+    }
 }

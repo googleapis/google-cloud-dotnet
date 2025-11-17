@@ -2956,12 +2956,12 @@
       "segments": [
         {
           "start": 20,
-          "end": 52,
+          "end": 56,
           "type": "FULL"
         },
         {
           "start": 34,
-          "end": 50,
+          "end": 54,
           "type": "SHORT"
         }
       ]
@@ -3005,12 +3005,12 @@
       "segments": [
         {
           "start": 20,
-          "end": 53,
+          "end": 57,
           "type": "FULL"
         },
         {
           "start": 35,
-          "end": 51,
+          "end": 55,
           "type": "SHORT"
         }
       ]
@@ -7413,6 +7413,103 @@
         {
           "start": 35,
           "end": 43,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "merchantapi_v1_generated_DeveloperRegistrationService_GetAccountForGcpRegistration_sync",
+      "title": "GetAccountForGcpRegistrationRequestObject",
+      "description": "Snippet for GetAccountForGcpRegistration",
+      "file": "DeveloperRegistrationServiceClient.GetAccountForGcpRegistrationRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetAccountForGcpRegistration",
+        "fullName": "Google.Shopping.Merchant.Accounts.V1.DeveloperRegistrationServiceClient.GetAccountForGcpRegistration",
+        "parameters": [
+          {
+            "type": "Google.Protobuf.WellKnownTypes.Empty",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Shopping.Merchant.Accounts.V1.GetAccountForGcpRegistrationResponse",
+        "client": {
+          "shortName": "DeveloperRegistrationServiceClient",
+          "fullName": "Google.Shopping.Merchant.Accounts.V1.DeveloperRegistrationServiceClient"
+        },
+        "method": {
+          "shortName": "GetAccountForGcpRegistration",
+          "fullName": "google.shopping.merchant.accounts.v1.DeveloperRegistrationService.GetAccountForGcpRegistration",
+          "service": {
+            "shortName": "DeveloperRegistrationService",
+            "fullName": "google.shopping.merchant.accounts.v1.DeveloperRegistrationService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "merchantapi_v1_generated_DeveloperRegistrationService_GetAccountForGcpRegistration_async",
+      "title": "GetAccountForGcpRegistrationRequestObjectAsync",
+      "description": "Snippet for GetAccountForGcpRegistrationAsync",
+      "file": "DeveloperRegistrationServiceClient.GetAccountForGcpRegistrationRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetAccountForGcpRegistrationAsync",
+        "fullName": "Google.Shopping.Merchant.Accounts.V1.DeveloperRegistrationServiceClient.GetAccountForGcpRegistrationAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Protobuf.WellKnownTypes.Empty",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Shopping.Merchant.Accounts.V1.GetAccountForGcpRegistrationResponse>",
+        "client": {
+          "shortName": "DeveloperRegistrationServiceClient",
+          "fullName": "Google.Shopping.Merchant.Accounts.V1.DeveloperRegistrationServiceClient"
+        },
+        "method": {
+          "shortName": "GetAccountForGcpRegistration",
+          "fullName": "google.shopping.merchant.accounts.v1.DeveloperRegistrationService.GetAccountForGcpRegistration",
+          "service": {
+            "shortName": "DeveloperRegistrationService",
+            "fullName": "google.shopping.merchant.accounts.v1.DeveloperRegistrationService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 43,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 41,
           "type": "SHORT"
         }
       ]
@@ -18299,6 +18396,293 @@
         {
           "start": 38,
           "end": 75,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "merchantapi_v1_generated_UserService_VerifySelf_sync",
+      "title": "VerifySelfRequestObject",
+      "description": "Snippet for VerifySelf",
+      "file": "UserServiceClient.VerifySelfRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "VerifySelf",
+        "fullName": "Google.Shopping.Merchant.Accounts.V1.UserServiceClient.VerifySelf",
+        "parameters": [
+          {
+            "type": "Google.Shopping.Merchant.Accounts.V1.VerifySelfRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Shopping.Merchant.Accounts.V1.User",
+        "client": {
+          "shortName": "UserServiceClient",
+          "fullName": "Google.Shopping.Merchant.Accounts.V1.UserServiceClient"
+        },
+        "method": {
+          "shortName": "VerifySelf",
+          "fullName": "google.shopping.merchant.accounts.v1.UserService.VerifySelf",
+          "service": {
+            "shortName": "UserService",
+            "fullName": "google.shopping.merchant.accounts.v1.UserService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 44,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 42,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "merchantapi_v1_generated_UserService_VerifySelf_async",
+      "title": "VerifySelfRequestObjectAsync",
+      "description": "Snippet for VerifySelfAsync",
+      "file": "UserServiceClient.VerifySelfRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "VerifySelfAsync",
+        "fullName": "Google.Shopping.Merchant.Accounts.V1.UserServiceClient.VerifySelfAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Shopping.Merchant.Accounts.V1.VerifySelfRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Shopping.Merchant.Accounts.V1.User>",
+        "client": {
+          "shortName": "UserServiceClient",
+          "fullName": "Google.Shopping.Merchant.Accounts.V1.UserServiceClient"
+        },
+        "method": {
+          "shortName": "VerifySelf",
+          "fullName": "google.shopping.merchant.accounts.v1.UserService.VerifySelf",
+          "service": {
+            "shortName": "UserService",
+            "fullName": "google.shopping.merchant.accounts.v1.UserService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 45,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 43,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "merchantapi_v1_generated_UserService_VerifySelf_sync_flattened",
+      "title": "VerifySelf",
+      "description": "Snippet for VerifySelf",
+      "file": "UserServiceClient.VerifySelfSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "VerifySelf",
+        "fullName": "Google.Shopping.Merchant.Accounts.V1.UserServiceClient.VerifySelf",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "account"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Shopping.Merchant.Accounts.V1.User",
+        "client": {
+          "shortName": "UserServiceClient",
+          "fullName": "Google.Shopping.Merchant.Accounts.V1.UserServiceClient"
+        },
+        "method": {
+          "shortName": "VerifySelf",
+          "fullName": "google.shopping.merchant.accounts.v1.UserService.VerifySelf",
+          "service": {
+            "shortName": "UserService",
+            "fullName": "google.shopping.merchant.accounts.v1.UserService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "merchantapi_v1_generated_UserService_VerifySelf_async_flattened",
+      "title": "VerifySelfAsync",
+      "description": "Snippet for VerifySelfAsync",
+      "file": "UserServiceClient.VerifySelfAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "VerifySelfAsync",
+        "fullName": "Google.Shopping.Merchant.Accounts.V1.UserServiceClient.VerifySelfAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "account"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Shopping.Merchant.Accounts.V1.User>",
+        "client": {
+          "shortName": "UserServiceClient",
+          "fullName": "Google.Shopping.Merchant.Accounts.V1.UserServiceClient"
+        },
+        "method": {
+          "shortName": "VerifySelf",
+          "fullName": "google.shopping.merchant.accounts.v1.UserService.VerifySelf",
+          "service": {
+            "shortName": "UserService",
+            "fullName": "google.shopping.merchant.accounts.v1.UserService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "merchantapi_v1_generated_UserService_VerifySelf_sync_flattened_resourceNames",
+      "title": "VerifySelfResourceNames",
+      "description": "Snippet for VerifySelf",
+      "file": "UserServiceClient.VerifySelfResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "VerifySelf",
+        "fullName": "Google.Shopping.Merchant.Accounts.V1.UserServiceClient.VerifySelf",
+        "parameters": [
+          {
+            "type": "Google.Shopping.Merchant.Accounts.V1.AccountName",
+            "name": "account"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Shopping.Merchant.Accounts.V1.User",
+        "client": {
+          "shortName": "UserServiceClient",
+          "fullName": "Google.Shopping.Merchant.Accounts.V1.UserServiceClient"
+        },
+        "method": {
+          "shortName": "VerifySelf",
+          "fullName": "google.shopping.merchant.accounts.v1.UserService.VerifySelf",
+          "service": {
+            "shortName": "UserService",
+            "fullName": "google.shopping.merchant.accounts.v1.UserService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "merchantapi_v1_generated_UserService_VerifySelf_async_flattened_resourceNames",
+      "title": "VerifySelfResourceNamesAsync",
+      "description": "Snippet for VerifySelfAsync",
+      "file": "UserServiceClient.VerifySelfResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "VerifySelfAsync",
+        "fullName": "Google.Shopping.Merchant.Accounts.V1.UserServiceClient.VerifySelfAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Shopping.Merchant.Accounts.V1.AccountName",
+            "name": "account"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Shopping.Merchant.Accounts.V1.User>",
+        "client": {
+          "shortName": "UserServiceClient",
+          "fullName": "Google.Shopping.Merchant.Accounts.V1.UserServiceClient"
+        },
+        "method": {
+          "shortName": "VerifySelf",
+          "fullName": "google.shopping.merchant.accounts.v1.UserService.VerifySelf",
+          "service": {
+            "shortName": "UserService",
+            "fullName": "google.shopping.merchant.accounts.v1.UserService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
           "type": "SHORT"
         }
       ]
