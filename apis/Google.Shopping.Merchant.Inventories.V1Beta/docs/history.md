@@ -1,5 +1,16 @@
 # Version history
 
+## Version 1.0.0-beta08, released 2025-11-17
+
+### New features
+
+- Added the `product_id_base64_url_encoded` field to `ListLocalInventoriesRequest`, `InsertLocalInventoryRequest`, `DeleteLocalInventoryRequest`, `ListRegionalInventoriesRequest`, `InsertRegionalInventoryRequest`, and `DeleteRegionalInventoryRequest`. This allows for product IDs containing special characters to be correctly handled when base64url-encoded
+- Added C#, PHP, and Ruby namespace options to LocalInventory and RegionalInventory proto files for improved client library generation
+
+### Documentation improvements
+
+- Updated the API summary and overview in the service configuration
+
 ## Version 1.0.0-beta07, released 2025-11-06
 
 ### New features
