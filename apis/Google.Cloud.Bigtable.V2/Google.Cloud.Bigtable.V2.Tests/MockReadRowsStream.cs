@@ -60,7 +60,8 @@ namespace Google.Cloud.Bigtable.V2.Tests
 
             public async Task<bool> MoveNext(CancellationToken cancellationToken)
             {
-                if (await _underlyingStream.MoveNextAsync(cancellationToken))
+                cancellationToken.ThrowIfCancellationRequested();
+                if (await _underlyingStream.MoveNextAsync())
                 {
                     Current = _underlyingStream.Current;
                     return true;
