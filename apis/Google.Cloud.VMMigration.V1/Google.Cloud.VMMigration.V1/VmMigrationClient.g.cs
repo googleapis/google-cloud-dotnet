@@ -9053,7 +9053,7 @@ namespace Google.Cloud.VMMigration.V1
             GetImageImportJobAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Initiates the cancellation of a running clone job.
+        /// Initiates the cancellation of a running ImageImportJob.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -9062,7 +9062,7 @@ namespace Google.Cloud.VMMigration.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Initiates the cancellation of a running clone job.
+        /// Initiates the cancellation of a running ImageImportJob.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -9071,7 +9071,7 @@ namespace Google.Cloud.VMMigration.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Initiates the cancellation of a running clone job.
+        /// Initiates the cancellation of a running ImageImportJob.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -9107,7 +9107,7 @@ namespace Google.Cloud.VMMigration.V1
             lro::Operation<CancelImageImportJobResponse, OperationMetadata>.PollOnceFromNameAsync(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), CancelImageImportJobOperationsClient, callSettings);
 
         /// <summary>
-        /// Initiates the cancellation of a running clone job.
+        /// Initiates the cancellation of a running ImageImportJob.
         /// </summary>
         /// <param name="name">
         /// Required. The image import job id.
@@ -9121,7 +9121,7 @@ namespace Google.Cloud.VMMigration.V1
             }, callSettings);
 
         /// <summary>
-        /// Initiates the cancellation of a running clone job.
+        /// Initiates the cancellation of a running ImageImportJob.
         /// </summary>
         /// <param name="name">
         /// Required. The image import job id.
@@ -9135,7 +9135,7 @@ namespace Google.Cloud.VMMigration.V1
             }, callSettings);
 
         /// <summary>
-        /// Initiates the cancellation of a running clone job.
+        /// Initiates the cancellation of a running ImageImportJob.
         /// </summary>
         /// <param name="name">
         /// Required. The image import job id.
@@ -9146,7 +9146,7 @@ namespace Google.Cloud.VMMigration.V1
             CancelImageImportJobAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Initiates the cancellation of a running clone job.
+        /// Initiates the cancellation of a running ImageImportJob.
         /// </summary>
         /// <param name="name">
         /// Required. The image import job id.
@@ -9160,7 +9160,7 @@ namespace Google.Cloud.VMMigration.V1
             }, callSettings);
 
         /// <summary>
-        /// Initiates the cancellation of a running clone job.
+        /// Initiates the cancellation of a running ImageImportJob.
         /// </summary>
         /// <param name="name">
         /// Required. The image import job id.
@@ -9174,7 +9174,7 @@ namespace Google.Cloud.VMMigration.V1
             }, callSettings);
 
         /// <summary>
-        /// Initiates the cancellation of a running clone job.
+        /// Initiates the cancellation of a running ImageImportJob.
         /// </summary>
         /// <param name="name">
         /// Required. The image import job id.
@@ -12162,7 +12162,7 @@ namespace Google.Cloud.VMMigration.V1
         public override lro::OperationsClient CancelImageImportJobOperationsClient { get; }
 
         /// <summary>
-        /// Initiates the cancellation of a running clone job.
+        /// Initiates the cancellation of a running ImageImportJob.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -12174,7 +12174,7 @@ namespace Google.Cloud.VMMigration.V1
         }
 
         /// <summary>
-        /// Initiates the cancellation of a running clone job.
+        /// Initiates the cancellation of a running ImageImportJob.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
