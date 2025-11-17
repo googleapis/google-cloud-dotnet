@@ -627,10 +627,10 @@ namespace Google.Cloud.Spanner.V1 {
     public const int SessionCountFieldNumber = 3;
     private int sessionCount_;
     /// <summary>
-    /// Required. The number of sessions to be created in this batch call.
-    /// The API can return fewer than the requested number of sessions. If a
-    /// specific number of sessions are desired, the client can make additional
-    /// calls to `BatchCreateSessions` (adjusting
+    /// Required. The number of sessions to be created in this batch call. At least
+    /// one session is created. The API can return fewer than the requested number
+    /// of sessions. If a specific number of sessions are desired, the client can
+    /// make additional calls to `BatchCreateSessions` (adjusting
     /// [session_count][google.spanner.v1.BatchCreateSessionsRequest.session_count]
     /// as necessary).
     /// </summary>
@@ -1160,8 +1160,8 @@ namespace Google.Cloud.Spanner.V1 {
     private bool multiplexed_;
     /// <summary>
     /// Optional. If `true`, specifies a multiplexed session. Use a multiplexed
-    /// session for multiple, concurrent read-only operations. Don't use them for
-    /// read-write transactions, partitioned reads, or partitioned queries. Use
+    /// session for multiple, concurrent operations including any combination of
+    /// read-only and read-write transactions. Use
     /// [`sessions.create`][google.spanner.v1.Spanner.CreateSession] to create
     /// multiplexed sessions. Don't use
     /// [BatchCreateSessions][google.spanner.v1.Spanner.BatchCreateSessions] to

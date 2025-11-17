@@ -835,10 +835,10 @@ namespace Google.Cloud.Spanner.V1
         /// Required. The database in which the new sessions are created.
         /// </param>
         /// <param name="sessionCount">
-        /// Required. The number of sessions to be created in this batch call.
-        /// The API can return fewer than the requested number of sessions. If a
-        /// specific number of sessions are desired, the client can make additional
-        /// calls to `BatchCreateSessions` (adjusting
+        /// Required. The number of sessions to be created in this batch call. At least
+        /// one session is created. The API can return fewer than the requested number
+        /// of sessions. If a specific number of sessions are desired, the client can
+        /// make additional calls to `BatchCreateSessions` (adjusting
         /// [session_count][google.spanner.v1.BatchCreateSessionsRequest.session_count]
         /// as necessary).
         /// </param>
@@ -861,10 +861,10 @@ namespace Google.Cloud.Spanner.V1
         /// Required. The database in which the new sessions are created.
         /// </param>
         /// <param name="sessionCount">
-        /// Required. The number of sessions to be created in this batch call.
-        /// The API can return fewer than the requested number of sessions. If a
-        /// specific number of sessions are desired, the client can make additional
-        /// calls to `BatchCreateSessions` (adjusting
+        /// Required. The number of sessions to be created in this batch call. At least
+        /// one session is created. The API can return fewer than the requested number
+        /// of sessions. If a specific number of sessions are desired, the client can
+        /// make additional calls to `BatchCreateSessions` (adjusting
         /// [session_count][google.spanner.v1.BatchCreateSessionsRequest.session_count]
         /// as necessary).
         /// </param>
@@ -887,10 +887,10 @@ namespace Google.Cloud.Spanner.V1
         /// Required. The database in which the new sessions are created.
         /// </param>
         /// <param name="sessionCount">
-        /// Required. The number of sessions to be created in this batch call.
-        /// The API can return fewer than the requested number of sessions. If a
-        /// specific number of sessions are desired, the client can make additional
-        /// calls to `BatchCreateSessions` (adjusting
+        /// Required. The number of sessions to be created in this batch call. At least
+        /// one session is created. The API can return fewer than the requested number
+        /// of sessions. If a specific number of sessions are desired, the client can
+        /// make additional calls to `BatchCreateSessions` (adjusting
         /// [session_count][google.spanner.v1.BatchCreateSessionsRequest.session_count]
         /// as necessary).
         /// </param>
@@ -909,10 +909,10 @@ namespace Google.Cloud.Spanner.V1
         /// Required. The database in which the new sessions are created.
         /// </param>
         /// <param name="sessionCount">
-        /// Required. The number of sessions to be created in this batch call.
-        /// The API can return fewer than the requested number of sessions. If a
-        /// specific number of sessions are desired, the client can make additional
-        /// calls to `BatchCreateSessions` (adjusting
+        /// Required. The number of sessions to be created in this batch call. At least
+        /// one session is created. The API can return fewer than the requested number
+        /// of sessions. If a specific number of sessions are desired, the client can
+        /// make additional calls to `BatchCreateSessions` (adjusting
         /// [session_count][google.spanner.v1.BatchCreateSessionsRequest.session_count]
         /// as necessary).
         /// </param>
@@ -935,10 +935,10 @@ namespace Google.Cloud.Spanner.V1
         /// Required. The database in which the new sessions are created.
         /// </param>
         /// <param name="sessionCount">
-        /// Required. The number of sessions to be created in this batch call.
-        /// The API can return fewer than the requested number of sessions. If a
-        /// specific number of sessions are desired, the client can make additional
-        /// calls to `BatchCreateSessions` (adjusting
+        /// Required. The number of sessions to be created in this batch call. At least
+        /// one session is created. The API can return fewer than the requested number
+        /// of sessions. If a specific number of sessions are desired, the client can
+        /// make additional calls to `BatchCreateSessions` (adjusting
         /// [session_count][google.spanner.v1.BatchCreateSessionsRequest.session_count]
         /// as necessary).
         /// </param>
@@ -961,10 +961,10 @@ namespace Google.Cloud.Spanner.V1
         /// Required. The database in which the new sessions are created.
         /// </param>
         /// <param name="sessionCount">
-        /// Required. The number of sessions to be created in this batch call.
-        /// The API can return fewer than the requested number of sessions. If a
-        /// specific number of sessions are desired, the client can make additional
-        /// calls to `BatchCreateSessions` (adjusting
+        /// Required. The number of sessions to be created in this batch call. At least
+        /// one session is created. The API can return fewer than the requested number
+        /// of sessions. If a specific number of sessions are desired, the client can
+        /// make additional calls to `BatchCreateSessions` (adjusting
         /// [session_count][google.spanner.v1.BatchCreateSessionsRequest.session_count]
         /// as necessary).
         /// </param>
