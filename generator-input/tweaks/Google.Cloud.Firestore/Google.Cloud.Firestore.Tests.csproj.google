@@ -11,4 +11,9 @@
       <DependentUpon>QueryTest.cs</DependentUpon>
     </Compile>
   </ItemGroup>
+  
+  <!-- Remove after the System.Linq.Async dependency is removed -->
+  <ItemGroup>
+    <PackageReference Include="System.Linq.Async" ExcludeAssets="compile"/>
+  </ItemGroup>
 </Project>

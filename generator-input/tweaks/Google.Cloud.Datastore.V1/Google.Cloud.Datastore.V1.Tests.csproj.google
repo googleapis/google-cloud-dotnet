@@ -1,0 +1,7 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project Sdk="Microsoft.NET.Sdk">
+  <!-- Remove after the System.Linq.Async dependency is removed -->
+  <ItemGroup>
+    <PackageReference Include="System.Linq.Async" ExcludeAssets="compile"/>
+  </ItemGroup>
+</Project>
