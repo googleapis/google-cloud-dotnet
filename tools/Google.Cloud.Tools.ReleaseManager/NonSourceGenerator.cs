@@ -114,7 +114,7 @@ internal sealed class NonSourceGenerator
         { "xunit.runner.visualstudio", DefaultVersionValue },
         { "Xunit.SkippableFact", DefaultVersionValue },
         { "NSubstitute", DefaultVersionValue },
-        { "System.Linq.Async", DefaultVersionValue },
+        { "System.Linq.AsyncEnumerable", DefaultVersionValue },
     };
 
     // Hard-coded versions for dependencies for production packages that can be updated arbitrarily, as their assets are all private.
