@@ -1,5 +1,17 @@
 # Version history
 
+## Version 2.9.0, released 2025-11-17
+
+### New features
+
+- Add adaptation modifiers and storage pools to MigratingVM target defaults
+- Add adaptation modifiers and guest OS features to ImageImport target details
+
+### Documentation improvements
+
+- A comment for method `CancelImageImportJob` in service `VmMigration` is changed
+- A comment for message `DataDiskImageImport` is changed
+
 ## Version 2.8.0, released 2025-11-06
 
 ### New features
