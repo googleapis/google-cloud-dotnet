@@ -4546,12 +4546,12 @@
         },
         {
             "id": "Google.Shopping.Merchant.IssueResolution.V1",
-            "currentVersion": "1.1.0",
+            "currentVersion": "1.2.0",
             "generationAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
             "releaseAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
-            "releaseTimestamp": "2025-11-06T21:56:35.483941214Z",
+            "releaseTimestamp": "2025-11-17T14:39:04.577650371Z",
             "lastGeneratedCommit": "66ed09cfd237e5acd4b3eb43f73e963b3f87c563",
-            "lastReleasedCommit": "4d8abb3f02f14d2906b2bb1f478e17afd95ec4fc",
+            "lastReleasedCommit": "66ed09cfd237e5acd4b3eb43f73e963b3f87c563",
             "apiPaths": [
                 "google/shopping/merchant/issueresolution/v1"
             ],
