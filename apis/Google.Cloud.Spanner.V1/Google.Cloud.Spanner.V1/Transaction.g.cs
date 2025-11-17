@@ -543,7 +543,9 @@ namespace Google.Cloud.Spanner.V1 {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static partial class Types {
       /// <summary>
-      /// `IsolationLevel` is used when setting `isolation_level` for a transaction.
+      /// `IsolationLevel` is used when setting the [isolation
+      /// level](https://cloud.google.com/spanner/docs/isolation-levels) for a
+      /// transaction.
       /// </summary>
       public enum IsolationLevel {
         /// <summary>
@@ -572,7 +574,7 @@ namespace Google.Cloud.Spanner.V1 {
         /// `SERIALIZABLE` transactions, only write-write conflicts are detected in
         /// snapshot transactions.
         ///
-        /// This isolation level does not support Read-only and Partitioned DML
+        /// This isolation level does not support read-only and partitioned DML
         /// transactions.
         ///
         /// When `REPEATABLE_READ` is specified on a read-write transaction, the
