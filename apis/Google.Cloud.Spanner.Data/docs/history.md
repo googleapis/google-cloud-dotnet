@@ -1,5 +1,17 @@
 # Version history
 
+## Version 5.7.0, released 2025-11-17
+
+### New features
+
+- Add Send and Ack mutations for Queues
+- Add QueryAdvisorResult for query plan
+
+### Documentation improvements
+
+- Update description for the BatchCreateSessionsRequest and Session
+- Update description for the IsolationLevel
+
 ## Version 5.6.0, released 2025-11-06
 
 ### New features
