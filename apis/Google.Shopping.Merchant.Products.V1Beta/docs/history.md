@@ -1,5 +1,17 @@
 # Version history
 
+## Version 1.0.0-beta07, released 2025-11-17
+
+### New features
+
+- Added the `product_id_base64_url_encoded` field to `InsertProductInputRequest`, `DeleteProductInputRequest`, and `GetProductRequest`. This allows for product IDs containing special characters to be correctly handled when unpadded base64url-encoded
+- Added `handling_cutoff_time` and `handling_cutoff_timezone` fields to the `Shipping` message within `Attributes`
+- Added C#, PHP, and Ruby namespace options to ProductInputs, Products, and ProductsCommon proto files for improved client library generation
+
+### Documentation improvements
+
+- Updated comments for several fields, including product name formats, data source creation, destination field descriptions (now also referred to as Marketing Methods), and the default page size for `ListProductsRequest`
+
 ## Version 1.0.0-beta06, released 2025-11-06
 
 ### New features
