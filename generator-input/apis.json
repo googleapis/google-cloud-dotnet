@@ -2807,7 +2807,7 @@
       "testDependencies": {
         "Google.Api.Gax.Grpc.Testing": "default",
         "Google.Api.Gax.Testing": "default",
-        "Google.Cloud.Firestore.Admin.V1": "3.15.0",
+        "Google.Cloud.Firestore.Admin.V1": "3.16.0",
         "Grpc.Core.Testing": "2.46.6",
         "System.ValueTuple": "default",
         "Xunit.Combinatorial": "default"
