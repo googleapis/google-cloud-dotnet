@@ -1,5 +1,11 @@
 # Version history
 
+## Version 4.17.0, released 2025-11-18
+
+### New features
+
+- Update documentation with .NET 10 compatibility workaround
+
 ## Version 4.16.0, released 2025-11-05
 
 ### New features
