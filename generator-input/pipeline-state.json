@@ -4186,19 +4186,6 @@
             ]
         },
         {
-            "id": "Google.Geo.Weather.V1",
-            "nextVersion": "1.0.0-beta01",
-            "generationAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
-            "releaseAutomationLevel": "AUTOMATION_LEVEL_BLOCKED",
-            "lastGeneratedCommit": "3fb120eb5c474ec18cddd88f8365e3c2c99289e5",
-            "apiPaths": [
-                "google/maps/weather/v1"
-            ],
-            "sourcePaths": [
-                "apis/Google.Geo.Weather.V1/Google.Geo.Weather.V1"
-            ]
-        },
-        {
             "id": "Google.Cloud.Chronicle.V1",
             "currentVersion": "1.0.0-beta03",
             "generationAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
@@ -4787,6 +4774,7 @@
         "google/cloud/geminidataanalytics/v1alpha",
         "google/shopping/merchant/reports/v1alpha",
         "google/cloud/hypercomputecluster/v1beta",
-        "google/cloud/securesourcemanager/v1"
-    ]
+        "google/cloud/securesourcemanager/v1",
+        "google/maps/weather/v1"
+   ]
 }
