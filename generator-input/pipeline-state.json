@@ -277,7 +277,7 @@
             "generationAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
             "releaseAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
             "releaseTimestamp": "2025-11-05T08:36:15.449615426Z",
-            "lastGeneratedCommit": "faa7932e61d781ccb0647d4b25c2b452cb206af4",
+            "lastGeneratedCommit": "a17b84add8318f780fcc8a027815d5fee644b9f7",
             "lastReleasedCommit": "faa7932e61d781ccb0647d4b25c2b452cb206af4",
             "apiPaths": [
                 "google/cloud/aiplatform/v1beta1"
@@ -4776,5 +4776,5 @@
         "google/cloud/hypercomputecluster/v1beta",
         "google/cloud/securesourcemanager/v1",
         "google/maps/weather/v1"
-   ]
+    ]
 }
