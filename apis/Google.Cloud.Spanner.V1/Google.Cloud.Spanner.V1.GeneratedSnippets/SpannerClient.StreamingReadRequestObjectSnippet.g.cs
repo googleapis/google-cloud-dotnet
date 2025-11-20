@@ -53,6 +53,7 @@ namespace GoogleCSharpSnippets
                 DataBoostEnabled = false,
                 OrderBy = ReadRequest.Types.OrderBy.Unspecified,
                 LockHint = ReadRequest.Types.LockHint.Unspecified,
+                RoutingHint = new RoutingHint(),
             };
             // Make the request, returning a streaming response
             using SpannerClient.StreamingReadStream response = spannerClient.StreamingRead(request);

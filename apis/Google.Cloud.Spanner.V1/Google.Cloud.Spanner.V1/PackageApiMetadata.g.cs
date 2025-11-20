@@ -33,6 +33,7 @@ namespace Google.Cloud.Spanner.V1
             yield return ChangeStreamReflection.Descriptor;
             yield return CommitResponseReflection.Descriptor;
             yield return KeysReflection.Descriptor;
+            yield return LocationReflection.Descriptor;
             yield return MutationReflection.Descriptor;
             yield return QueryPlanReflection.Descriptor;
             yield return ResultSetReflection.Descriptor;
