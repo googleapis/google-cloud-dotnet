@@ -19,6 +19,7 @@ namespace GoogleCSharpSnippets
     // [START backupdr_v1_generated_BackupDR_RestoreBackup_sync]
     using Google.Cloud.BackupDR.V1;
     using Google.LongRunning;
+    using Google.Protobuf.WellKnownTypes;
 
     public sealed partial class GeneratedBackupDRClientSnippets
     {
@@ -41,6 +42,7 @@ namespace GoogleCSharpSnippets
                 RequestId = "",
                 ComputeInstanceTargetEnvironment = new ComputeInstanceTargetEnvironment(),
                 ComputeInstanceRestoreProperties = new ComputeInstanceRestoreProperties(),
+                ClearOverridesFieldMask = new FieldMask(),
             };
             // Make the request
             Operation<RestoreBackupResponse, OperationMetadata> response = backupDRClient.RestoreBackup(request);
