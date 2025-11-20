@@ -277,7 +277,7 @@
             "generationAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
             "releaseAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
             "releaseTimestamp": "2025-11-05T08:36:15.449615426Z",
-            "lastGeneratedCommit": "faa7932e61d781ccb0647d4b25c2b452cb206af4",
+            "lastGeneratedCommit": "a17b84add8318f780fcc8a027815d5fee644b9f7",
             "lastReleasedCommit": "faa7932e61d781ccb0647d4b25c2b452cb206af4",
             "apiPaths": [
                 "google/cloud/aiplatform/v1beta1"
@@ -292,7 +292,7 @@
             "generationAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
             "releaseAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
             "releaseTimestamp": "2025-11-05T08:37:54.033318229Z",
-            "lastGeneratedCommit": "3c56d78d700a2d6d35f48171874cb8b0d66f184f",
+            "lastGeneratedCommit": "8d526e8f172f8d5a640190dd11ac9390a46bf7b7",
             "lastReleasedCommit": "3c56d78d700a2d6d35f48171874cb8b0d66f184f",
             "apiPaths": [
                 "google/cloud/aiplatform/v1"
@@ -517,7 +517,7 @@
             "generationAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
             "releaseAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
             "releaseTimestamp": "2025-11-06T08:41:58.278986473Z",
-            "lastGeneratedCommit": "73c06412f4311dc2a337db927f2c6b0ce0c433a0",
+            "lastGeneratedCommit": "6a7d453e1bd3f1ed759e6ab4546fe96a45b6bd1c",
             "lastReleasedCommit": "73c06412f4311dc2a337db927f2c6b0ce0c433a0",
             "apiPaths": [
                 "google/cloud/backupdr/v1"
@@ -547,7 +547,7 @@
             "generationAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
             "releaseAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
             "releaseTimestamp": "2025-11-03T19:01:11.050220137Z",
-            "lastGeneratedCommit": "3021374c68bbc640c1f75bfffcadbd5c279811ee",
+            "lastGeneratedCommit": "e48d9994008bcebaa2f3a6f334e6a8de0dd1d994",
             "lastReleasedCommit": "3021374c68bbc640c1f75bfffcadbd5c279811ee",
             "apiPaths": [
                 "google/cloud/batch/v1"
@@ -3736,7 +3736,7 @@
             "generationAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
             "releaseAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
             "releaseTimestamp": "2025-11-03T16:58:18.576709211Z",
-            "lastGeneratedCommit": "1b141494162fee2993345d056cf709ebf1d0402c",
+            "lastGeneratedCommit": "bd94e0b8c4975af0a66dc1f846c63c77dbc0064e",
             "lastReleasedCommit": "1b141494162fee2993345d056cf709ebf1d0402c",
             "apiPaths": [
                 "google/longrunning"
@@ -4051,7 +4051,7 @@
             "generationAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
             "releaseAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
             "releaseTimestamp": "2025-08-05T06:10:24.636412761Z",
-            "lastGeneratedCommit": "9415ba048aa587b1b2df2b96fc00aa009c831597",
+            "lastGeneratedCommit": "bd94e0b8c4975af0a66dc1f846c63c77dbc0064e",
             "lastReleasedCommit": "9415ba048aa587b1b2df2b96fc00aa009c831597",
             "apiPaths": [
                 "google/shopping/type"
@@ -4066,7 +4066,7 @@
             "generationAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
             "releaseAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
             "releaseTimestamp": "2025-11-17T14:11:14.520600297Z",
-            "lastGeneratedCommit": "0eeb1be5b78a9c7e006ee57cde95349834ae9f3b",
+            "lastGeneratedCommit": "7418c8b06d261f9f86ee521430c97e934ea64f92",
             "lastReleasedCommit": "0eeb1be5b78a9c7e006ee57cde95349834ae9f3b",
             "apiPaths": [
                 "google/spanner/admin/database/v1",
@@ -4776,5 +4776,5 @@
         "google/cloud/hypercomputecluster/v1beta",
         "google/cloud/securesourcemanager/v1",
         "google/maps/weather/v1"
-   ]
+    ]
 }

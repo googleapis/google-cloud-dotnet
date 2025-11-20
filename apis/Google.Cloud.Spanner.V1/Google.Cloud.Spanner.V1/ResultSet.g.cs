@@ -26,39 +26,41 @@ namespace Google.Cloud.Spanner.V1 {
           string.Concat(
             "CiJnb29nbGUvc3Bhbm5lci92MS9yZXN1bHRfc2V0LnByb3RvEhFnb29nbGUu",
             "c3Bhbm5lci52MRofZ29vZ2xlL2FwaS9maWVsZF9iZWhhdmlvci5wcm90bxoc",
-            "Z29vZ2xlL3Byb3RvYnVmL3N0cnVjdC5wcm90bxoiZ29vZ2xlL3NwYW5uZXIv",
-            "djEvcXVlcnlfcGxhbi5wcm90bxojZ29vZ2xlL3NwYW5uZXIvdjEvdHJhbnNh",
-            "Y3Rpb24ucHJvdG8aHGdvb2dsZS9zcGFubmVyL3YxL3R5cGUucHJvdG8i8gEK",
-            "CVJlc3VsdFNldBI2CghtZXRhZGF0YRgBIAEoCzIkLmdvb2dsZS5zcGFubmVy",
-            "LnYxLlJlc3VsdFNldE1ldGFkYXRhEigKBHJvd3MYAiADKAsyGi5nb29nbGUu",
-            "cHJvdG9idWYuTGlzdFZhbHVlEjAKBXN0YXRzGAMgASgLMiEuZ29vZ2xlLnNw",
-            "YW5uZXIudjEuUmVzdWx0U2V0U3RhdHMSUQoPcHJlY29tbWl0X3Rva2VuGAUg",
-            "ASgLMjMuZ29vZ2xlLnNwYW5uZXIudjEuTXVsdGlwbGV4ZWRTZXNzaW9uUHJl",
-            "Y29tbWl0VG9rZW5CA+BBASK3AgoQUGFydGlhbFJlc3VsdFNldBI2CghtZXRh",
-            "ZGF0YRgBIAEoCzIkLmdvb2dsZS5zcGFubmVyLnYxLlJlc3VsdFNldE1ldGFk",
-            "YXRhEiYKBnZhbHVlcxgCIAMoCzIWLmdvb2dsZS5wcm90b2J1Zi5WYWx1ZRIV",
-            "Cg1jaHVua2VkX3ZhbHVlGAMgASgIEhQKDHJlc3VtZV90b2tlbhgEIAEoDBIw",
-            "CgVzdGF0cxgFIAEoCzIhLmdvb2dsZS5zcGFubmVyLnYxLlJlc3VsdFNldFN0",
-            "YXRzElEKD3ByZWNvbW1pdF90b2tlbhgIIAEoCzIzLmdvb2dsZS5zcGFubmVy",
-            "LnYxLk11bHRpcGxleGVkU2Vzc2lvblByZWNvbW1pdFRva2VuQgPgQQESEQoE",
-            "bGFzdBgJIAEoCEID4EEBIrcBChFSZXN1bHRTZXRNZXRhZGF0YRIvCghyb3df",
-            "dHlwZRgBIAEoCzIdLmdvb2dsZS5zcGFubmVyLnYxLlN0cnVjdFR5cGUSMwoL",
-            "dHJhbnNhY3Rpb24YAiABKAsyHi5nb29nbGUuc3Bhbm5lci52MS5UcmFuc2Fj",
-            "dGlvbhI8ChV1bmRlY2xhcmVkX3BhcmFtZXRlcnMYAyABKAsyHS5nb29nbGUu",
-            "c3Bhbm5lci52MS5TdHJ1Y3RUeXBlIrkBCg5SZXN1bHRTZXRTdGF0cxIwCgpx",
-            "dWVyeV9wbGFuGAEgASgLMhwuZ29vZ2xlLnNwYW5uZXIudjEuUXVlcnlQbGFu",
-            "EiwKC3F1ZXJ5X3N0YXRzGAIgASgLMhcuZ29vZ2xlLnByb3RvYnVmLlN0cnVj",
-            "dBIZCg9yb3dfY291bnRfZXhhY3QYAyABKANIABIfChVyb3dfY291bnRfbG93",
-            "ZXJfYm91bmQYBCABKANIAEILCglyb3dfY291bnRCsQEKFWNvbS5nb29nbGUu",
-            "c3Bhbm5lci52MUIOUmVzdWx0U2V0UHJvdG9QAVo1Y2xvdWQuZ29vZ2xlLmNv",
-            "bS9nby9zcGFubmVyL2FwaXYxL3NwYW5uZXJwYjtzcGFubmVycGKqAhdHb29n",
-            "bGUuQ2xvdWQuU3Bhbm5lci5WMcoCF0dvb2dsZVxDbG91ZFxTcGFubmVyXFYx",
-            "6gIaR29vZ2xlOjpDbG91ZDo6U3Bhbm5lcjo6VjFiBnByb3RvMw=="));
+            "Z29vZ2xlL3Byb3RvYnVmL3N0cnVjdC5wcm90bxogZ29vZ2xlL3NwYW5uZXIv",
+            "djEvbG9jYXRpb24ucHJvdG8aImdvb2dsZS9zcGFubmVyL3YxL3F1ZXJ5X3Bs",
+            "YW4ucHJvdG8aI2dvb2dsZS9zcGFubmVyL3YxL3RyYW5zYWN0aW9uLnByb3Rv",
+            "Ghxnb29nbGUvc3Bhbm5lci92MS90eXBlLnByb3RvIvIBCglSZXN1bHRTZXQS",
+            "NgoIbWV0YWRhdGEYASABKAsyJC5nb29nbGUuc3Bhbm5lci52MS5SZXN1bHRT",
+            "ZXRNZXRhZGF0YRIoCgRyb3dzGAIgAygLMhouZ29vZ2xlLnByb3RvYnVmLkxp",
+            "c3RWYWx1ZRIwCgVzdGF0cxgDIAEoCzIhLmdvb2dsZS5zcGFubmVyLnYxLlJl",
+            "c3VsdFNldFN0YXRzElEKD3ByZWNvbW1pdF90b2tlbhgFIAEoCzIzLmdvb2ds",
+            "ZS5zcGFubmVyLnYxLk11bHRpcGxleGVkU2Vzc2lvblByZWNvbW1pdFRva2Vu",
+            "QgPgQQEi8gIKEFBhcnRpYWxSZXN1bHRTZXQSNgoIbWV0YWRhdGEYASABKAsy",
+            "JC5nb29nbGUuc3Bhbm5lci52MS5SZXN1bHRTZXRNZXRhZGF0YRImCgZ2YWx1",
+            "ZXMYAiADKAsyFi5nb29nbGUucHJvdG9idWYuVmFsdWUSFQoNY2h1bmtlZF92",
+            "YWx1ZRgDIAEoCBIUCgxyZXN1bWVfdG9rZW4YBCABKAwSMAoFc3RhdHMYBSAB",
+            "KAsyIS5nb29nbGUuc3Bhbm5lci52MS5SZXN1bHRTZXRTdGF0cxJRCg9wcmVj",
+            "b21taXRfdG9rZW4YCCABKAsyMy5nb29nbGUuc3Bhbm5lci52MS5NdWx0aXBs",
+            "ZXhlZFNlc3Npb25QcmVjb21taXRUb2tlbkID4EEBEhEKBGxhc3QYCSABKAhC",
+            "A+BBARI5CgxjYWNoZV91cGRhdGUYCiABKAsyHi5nb29nbGUuc3Bhbm5lci52",
+            "MS5DYWNoZVVwZGF0ZUID4EEBIrcBChFSZXN1bHRTZXRNZXRhZGF0YRIvCghy",
+            "b3dfdHlwZRgBIAEoCzIdLmdvb2dsZS5zcGFubmVyLnYxLlN0cnVjdFR5cGUS",
+            "MwoLdHJhbnNhY3Rpb24YAiABKAsyHi5nb29nbGUuc3Bhbm5lci52MS5UcmFu",
+            "c2FjdGlvbhI8ChV1bmRlY2xhcmVkX3BhcmFtZXRlcnMYAyABKAsyHS5nb29n",
+            "bGUuc3Bhbm5lci52MS5TdHJ1Y3RUeXBlIrkBCg5SZXN1bHRTZXRTdGF0cxIw",
+            "CgpxdWVyeV9wbGFuGAEgASgLMhwuZ29vZ2xlLnNwYW5uZXIudjEuUXVlcnlQ",
+            "bGFuEiwKC3F1ZXJ5X3N0YXRzGAIgASgLMhcuZ29vZ2xlLnByb3RvYnVmLlN0",
+            "cnVjdBIZCg9yb3dfY291bnRfZXhhY3QYAyABKANIABIfChVyb3dfY291bnRf",
+            "bG93ZXJfYm91bmQYBCABKANIAEILCglyb3dfY291bnRCsQEKFWNvbS5nb29n",
+            "bGUuc3Bhbm5lci52MUIOUmVzdWx0U2V0UHJvdG9QAVo1Y2xvdWQuZ29vZ2xl",
+            "LmNvbS9nby9zcGFubmVyL2FwaXYxL3NwYW5uZXJwYjtzcGFubmVycGKqAhdH",
+            "b29nbGUuQ2xvdWQuU3Bhbm5lci5WMcoCF0dvb2dsZVxDbG91ZFxTcGFubmVy",
+            "XFYx6gIaR29vZ2xlOjpDbG91ZDo6U3Bhbm5lcjo6VjFiBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.StructReflection.Descriptor, global::Google.Cloud.Spanner.V1.QueryPlanReflection.Descriptor, global::Google.Cloud.Spanner.V1.TransactionReflection.Descriptor, global::Google.Cloud.Spanner.V1.TypeReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.StructReflection.Descriptor, global::Google.Cloud.Spanner.V1.LocationReflection.Descriptor, global::Google.Cloud.Spanner.V1.QueryPlanReflection.Descriptor, global::Google.Cloud.Spanner.V1.TransactionReflection.Descriptor, global::Google.Cloud.Spanner.V1.TypeReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Spanner.V1.ResultSet), global::Google.Cloud.Spanner.V1.ResultSet.Parser, new[]{ "Metadata", "Rows", "Stats", "PrecommitToken" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Spanner.V1.PartialResultSet), global::Google.Cloud.Spanner.V1.PartialResultSet.Parser, new[]{ "Metadata", "Values", "ChunkedValue", "ResumeToken", "Stats", "PrecommitToken", "Last" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Spanner.V1.PartialResultSet), global::Google.Cloud.Spanner.V1.PartialResultSet.Parser, new[]{ "Metadata", "Values", "ChunkedValue", "ResumeToken", "Stats", "PrecommitToken", "Last", "CacheUpdate" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Spanner.V1.ResultSetMetadata), global::Google.Cloud.Spanner.V1.ResultSetMetadata.Parser, new[]{ "RowType", "Transaction", "UndeclaredParameters" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Spanner.V1.ResultSetStats), global::Google.Cloud.Spanner.V1.ResultSetStats.Parser, new[]{ "QueryPlan", "QueryStats", "RowCountExact", "RowCountLowerBound" }, new[]{ "RowCount" }, null, null, null)
           }));
@@ -462,6 +464,7 @@ namespace Google.Cloud.Spanner.V1 {
       stats_ = other.stats_ != null ? other.stats_.Clone() : null;
       precommitToken_ = other.precommitToken_ != null ? other.precommitToken_.Clone() : null;
       last_ = other.last_;
+      cacheUpdate_ = other.cacheUpdate_ != null ? other.cacheUpdate_.Clone() : null;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -669,6 +672,26 @@ namespace Google.Cloud.Spanner.V1 {
       }
     }
 
+    /// <summary>Field number for the "cache_update" field.</summary>
+    public const int CacheUpdateFieldNumber = 10;
+    private global::Google.Cloud.Spanner.V1.CacheUpdate cacheUpdate_;
+    /// <summary>
+    /// Optional. A cache update expresses a set of changes the client should
+    /// incorporate into its location cache. The client should discard the changes
+    /// if they are older than the data it already has. This data can be obtained
+    /// in response to requests that included a `RoutingHint` field, but may also
+    /// be obtained by explicit location-fetching RPCs which may be added in the
+    /// future.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Cloud.Spanner.V1.CacheUpdate CacheUpdate {
+      get { return cacheUpdate_; }
+      set {
+        cacheUpdate_ = value;
+      }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
@@ -691,6 +714,7 @@ namespace Google.Cloud.Spanner.V1 {
       if (!object.Equals(Stats, other.Stats)) return false;
       if (!object.Equals(PrecommitToken, other.PrecommitToken)) return false;
       if (Last != other.Last) return false;
+      if (!object.Equals(CacheUpdate, other.CacheUpdate)) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -705,6 +729,7 @@ namespace Google.Cloud.Spanner.V1 {
       if (stats_ != null) hash ^= Stats.GetHashCode();
       if (precommitToken_ != null) hash ^= PrecommitToken.GetHashCode();
       if (Last != false) hash ^= Last.GetHashCode();
+      if (cacheUpdate_ != null) hash ^= CacheUpdate.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -748,6 +773,10 @@ namespace Google.Cloud.Spanner.V1 {
         output.WriteRawTag(72);
         output.WriteBool(Last);
       }
+      if (cacheUpdate_ != null) {
+        output.WriteRawTag(82);
+        output.WriteMessage(CacheUpdate);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -783,6 +812,10 @@ namespace Google.Cloud.Spanner.V1 {
         output.WriteRawTag(72);
         output.WriteBool(Last);
       }
+      if (cacheUpdate_ != null) {
+        output.WriteRawTag(82);
+        output.WriteMessage(CacheUpdate);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -811,6 +844,9 @@ namespace Google.Cloud.Spanner.V1 {
       }
       if (Last != false) {
         size += 1 + 1;
+      }
+      if (cacheUpdate_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(CacheUpdate);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -851,6 +887,12 @@ namespace Google.Cloud.Spanner.V1 {
       }
       if (other.Last != false) {
         Last = other.Last;
+      }
+      if (other.cacheUpdate_ != null) {
+        if (cacheUpdate_ == null) {
+          CacheUpdate = new global::Google.Cloud.Spanner.V1.CacheUpdate();
+        }
+        CacheUpdate.MergeFrom(other.CacheUpdate);
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -904,6 +946,13 @@ namespace Google.Cloud.Spanner.V1 {
             Last = input.ReadBool();
             break;
           }
+          case 82: {
+            if (cacheUpdate_ == null) {
+              CacheUpdate = new global::Google.Cloud.Spanner.V1.CacheUpdate();
+            }
+            input.ReadMessage(CacheUpdate);
+            break;
+          }
         }
       }
     #endif
@@ -954,6 +1003,13 @@ namespace Google.Cloud.Spanner.V1 {
           }
           case 72: {
             Last = input.ReadBool();
+            break;
+          }
+          case 82: {
+            if (cacheUpdate_ == null) {
+              CacheUpdate = new global::Google.Cloud.Spanner.V1.CacheUpdate();
+            }
+            input.ReadMessage(CacheUpdate);
             break;
           }
         }
