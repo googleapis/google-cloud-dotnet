@@ -276,13 +276,12 @@ namespace Google.Cloud.Logging.NLog
             var nullLogEvent = LogEventInfo.CreateNullEvent();
             var credentialFile = CredentialFile?.Render(nullLogEvent);
             var credentialJson = CredentialJson?.Render(nullLogEvent);
+            var credentialType = CredentialType?.Render(nullLogEvent);
             GaxPreconditions.CheckState(string.IsNullOrWhiteSpace(credentialFile) || string.IsNullOrWhiteSpace(credentialJson),
                 $"{nameof(CredentialFile)} and {nameof(CredentialJson)} must not both be set.");
             var credential =
-#pragma warning disable CS0618 // Temporarily disable warnings for obsolete methods. See b/453009677 for more details.
-                !string.IsNullOrWhiteSpace(credentialFile) ? GoogleCredential.FromFile(credentialFile) :
-                !string.IsNullOrWhiteSpace(credentialJson) ? GoogleCredential.FromJson(credentialJson) :
-#pragma warning restore CS0618
+                !string.IsNullOrWhiteSpace(credentialFile) ? CredentialFactory.FromFile(credentialFile, credentialType) :
+                !string.IsNullOrWhiteSpace(credentialJson) ? CredentialFactory.FromJson(credentialJson, credentialType) :
                 null;
             if (credential == null)
             {
