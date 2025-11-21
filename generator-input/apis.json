@@ -3595,7 +3595,6 @@
         "Google.Api.Gax.Testing": "default"
       },
       "projects": [
-        "IntegrationTests",
         "Snippets",
         "Tests"
       ]
@@ -3634,7 +3633,8 @@
         "Stackdriver"
       ],
       "dependencies": {
-        "Google.Api.Gax.Grpc": "default",
+        "Google.Api.Gax": "4.13.0",
+        "Google.Api.Gax.Grpc": "4.13.0",
         "Google.Cloud.DevTools.Common": "3.3.0",
         "Google.Cloud.Logging.V2": "4.5.0",
         "Grpc.Core": "default",
@@ -3644,7 +3644,6 @@
         "Google.Api.Gax.Testing": "default"
       },
       "projects": [
-        "IntegrationTests",
         "Snippets",
         "Tests"
       ]

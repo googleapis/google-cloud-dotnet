@@ -46,6 +46,7 @@ then the `projectId="PROJECT_ID"` configuration setting can be omitted; it will 
 - `ContextProperty` - Allows custom labels to be added to the log entries as extra metadata.
 - `CredentialFile` - Credentials using a JSON file, instead of using the application default credentials
 - `CredentialJson` - Credentials using raw JSON input, instead of using the application default credentials
+- `CredentialType` - Specifies the type of credential being used (Default = "service_account"). The value must be a valid type as defined on [JsonCredentialParameters](https://docs.cloud.google.com/dotnet/docs/reference/Google.Apis/latest/Google.Apis.Auth.OAuth2.JsonCredentialParameters); possible values include "service_account", "authorized_user", "external_account", and "impersonated_service_account".
 - `IncludeCallSite` - Include `LogEntrySourceLocation` extracted from NLog callsite. (This only includes the function name.)
 - `IncludeCallSiteStackTrace` - Include `LogEntrySourceLocation` extracted from NLog callsite. (This also includes file name and line number.)
 - `IncludeEventProperties` - Includes structured logging properties from NLog `LogEventInfo.Properties`.
