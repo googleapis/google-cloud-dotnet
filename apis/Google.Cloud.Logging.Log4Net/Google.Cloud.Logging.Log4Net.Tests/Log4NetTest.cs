@@ -14,6 +14,8 @@
 
 using Google.Api.Gax;
 using Google.Api.Gax.Testing;
+using Google.Apis.Auth.OAuth2;
+using Google.Cloud.Logging.Log4Net;
 using Google.Cloud.Logging.V2;
 using Google.Protobuf.WellKnownTypes;
 using Grpc.Core;
@@ -25,6 +27,7 @@ using NSubstitute;
 using NSubstitute.Extensions;
 using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Reflection;
 using System.Runtime.CompilerServices;
@@ -36,6 +39,19 @@ namespace Google.Cloud.Logging.Log4Net.Tests
 {
     public class Log4NetTest
     {
+        private const string DummyServiceAccountCredentialJson = @"{
+            ""type"": ""service_account"",
+            ""project_id"": ""test-project"",
+            ""private_key_id"": ""a1b2c3d4e5f6a1b2c3d4e5f6a1b2c3d4e5f6a1b2"",
+            ""private_key"": ""-----BEGIN PRIVATE KEY-----\n...\n-----END PRIVATE KEY-----\n"",
+            ""client_email"": ""test-service-account@test-project.iam.gserviceaccount.com"",
+            ""client_id"": ""123456789012"",
+            ""auth_uri"": ""https://accounts.google.com/o/oauth2/auth"",
+            ""token_uri"": ""https://oauth2.googleapis.com/token"",
+            ""auth_provider_x509_cert_url"": ""https://www.googleapis.com/oauth2/v1/certs"",
+            ""client_x509_cert_url"": ""https://www.googleapis.com/robot/v1/metadata/x509/test-service-account%40test-project.iam.gserviceaccount.com""
+        }";
+
         // At the top of the file to minimize line number changes.
         [MethodImpl(MethodImplOptions.NoInlining)]
         private void LogInfo(IEnumerable<string> messages)
@@ -347,7 +363,7 @@ namespace Google.Cloud.Logging.Log4Net.Tests
                 Assert.True(string.IsNullOrEmpty(entry0.SourceLocation.File) || entry0.SourceLocation.File.EndsWith("Log4NetTest.cs"),
                 $"Actual 'entry0.SourceLocation.File' = '{entry0.SourceLocation.File}'");
                 // The exact line number seems to vary depending on framework (Core or desktop) and CI system.
-                Assert.True(entry0.SourceLocation.Line == 0L || entry0.SourceLocation.Line == 46L || entry0.SourceLocation.Line == 44L,
+                Assert.True(entry0.SourceLocation.Line == 0L || entry0.SourceLocation.Line == 46L || entry0.SourceLocation.Line == 44L || entry0.SourceLocation.Line == 62L,
                     $"Actual 'entry0.SourceLocation.Line' = '{entry0.SourceLocation.Line}'"); // This may change when this file is edited ;)
                 Assert.Matches(@"\[Google\.Cloud\.Logging\.Log4Net\.Tests\.Log4NetTest, Google\.Cloud\.Logging\.Log4Net\.Tests, .*]\.LogInfo", entry0.SourceLocation.Function);
             }
@@ -693,6 +709,37 @@ namespace Google.Cloud.Logging.Log4Net.Tests
             Assert.Equal("PlatformProjectId", r.Labels["project_id"]);
             Assert.Equal("FakeService", r.Labels["module_id"]);
             Assert.Equal("FakeVersion", r.Labels["version_id"]);
+        }
+
+        [Fact]
+        public void GoogleStackdriverAppender_FromFile_InvalidType_ThrowsArgumentException()
+        {
+            var tempFile = Path.GetTempFileName();
+            File.WriteAllText(tempFile, DummyServiceAccountCredentialJson);
+            try
+            {
+                var appender = new GoogleStackdriverAppender
+                {
+                    CredentialFile = tempFile,
+                    CredentialType = "invalid_type"
+                };
+                Assert.Throws<InvalidOperationException>(() => appender.ActivateOptions());
+            }
+            finally
+            {
+                File.Delete(tempFile);
+            }
+        }
+
+        [Fact]
+        public void GoogleStackdriverAppender_FromJson_InvalidType_ThrowsArgumentException()
+        {
+            var appender = new GoogleStackdriverAppender
+            {
+                CredentialJson = DummyServiceAccountCredentialJson,
+                CredentialType = "invalid_type"
+            };
+            Assert.Throws<InvalidOperationException>(() => appender.ActivateOptions());
         }
     }
 }
