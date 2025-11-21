@@ -127,6 +127,14 @@ If `resourceType` has been manually set, then `resourceLabel` is used to specify
 
 Defaults to `false`. Setting this to `true` disables automatic `resourceType` setting based on platform detection.
 
+### CredentialType
+
+```xml
+<credentialType value="service_account" />
+```
+
+Specifies the type of credential being used. Defaults to `service_account`. The value must be a valid type as defined on [JsonCredentialParameters](https://docs.cloud.google.com/dotnet/docs/reference/Google.Apis/latest/Google.Apis.Auth.OAuth2.JsonCredentialParameters); possible values include `service_account`, `authorized_user`, `external_account`, and `impersonated_service_account`.
+
 ### CredentialFile
 
 ```xml
@@ -197,7 +205,7 @@ The following in-memory options are available:
 <MaxMemorySize value="<maximum number of bytes to queue>"/>
 ```
 
-Restricts the amount of memory used for local queuing. If memory is exceeded then the 
+Restricts the amount of memory used for local queuing. If memory is exceeded then the
 oldest log entries will be discarded. A best-effort attempt will be made to log a warning
 to Google Cloud Logging that some log messages have been discarded.
 A value of 0 means there is no byte limit.
@@ -239,16 +247,16 @@ You would then configure the appender in XML like this:
 
 ```xml
 <appender name="CloudLogger" type="Google.Cloud.Logging.Log4Net.GoogleStackdriverAppender,Google.Cloud.Logging.Log4Net">
-  <!-- The IJsonLayout implementation used to create JSON payloads -->  
+  <!-- The IJsonLayout implementation used to create JSON payloads -->
   <jsonLayout type="YourNamespace.SampleJsonLayout,YourAssemblyName">
     <sampleConfigurationValue value="10" />
   </jsonLayout>
 
-  <!-- 
+  <!--
     - Other configuration as normal. The textlayout is used if the
     -  JSON layout returns null.
     -->
-  
+
   <layout type="log4net.Layout.PatternLayout">
     <conversionPattern value="%-4timestamp [%thread] %-5level %logger %ndc - %message" />
   </layout>
