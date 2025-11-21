@@ -5,8 +5,6 @@ VisualStudioVersion = 17.2.32516.85
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Google.Cloud.Logging.NLog", "Google.Cloud.Logging.NLog\Google.Cloud.Logging.NLog.csproj", "{6D49EF6F-7560-6F97-397E-078969D8757B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Google.Cloud.Logging.NLog.IntegrationTests", "Google.Cloud.Logging.NLog.IntegrationTests\Google.Cloud.Logging.NLog.IntegrationTests.csproj", "{ACEC53F3-0EFD-91A5-CF74-305332D20A9F}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Google.Cloud.Logging.NLog.Snippets", "Google.Cloud.Logging.NLog.Snippets\Google.Cloud.Logging.NLog.Snippets.csproj", "{881DAAA0-40C6-1230-750F-3A3190D4F3A7}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Google.Cloud.Logging.NLog.Tests", "Google.Cloud.Logging.NLog.Tests\Google.Cloud.Logging.NLog.Tests.csproj", "{940DDEF4-FECB-9507-8D65-591A7A7D8BD6}"
@@ -23,10 +21,6 @@ Global
 		{6D49EF6F-7560-6F97-397E-078969D8757B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{6D49EF6F-7560-6F97-397E-078969D8757B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{6D49EF6F-7560-6F97-397E-078969D8757B}.Release|Any CPU.Build.0 = Release|Any CPU
-		{ACEC53F3-0EFD-91A5-CF74-305332D20A9F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{ACEC53F3-0EFD-91A5-CF74-305332D20A9F}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{ACEC53F3-0EFD-91A5-CF74-305332D20A9F}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{ACEC53F3-0EFD-91A5-CF74-305332D20A9F}.Release|Any CPU.Build.0 = Release|Any CPU
 		{881DAAA0-40C6-1230-750F-3A3190D4F3A7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{881DAAA0-40C6-1230-750F-3A3190D4F3A7}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{881DAAA0-40C6-1230-750F-3A3190D4F3A7}.Release|Any CPU.ActiveCfg = Release|Any CPU
