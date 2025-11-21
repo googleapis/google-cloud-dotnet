@@ -100,7 +100,7 @@ namespace Google.Cloud.NetApp.V1 {
             "bHVtZXMyBnZvbHVtZUIQCg5fYmFja3VwX2NvbmZpZ0IRCg9fdGllcmluZ19w",
             "b2xpY3kiUgoMRXhwb3J0UG9saWN5EkIKBXJ1bGVzGAEgAygLMi4uZ29vZ2xl",
             "LmNsb3VkLm5ldGFwcC52MS5TaW1wbGVFeHBvcnRQb2xpY3lSdWxlQgPgQQIi",
-            "/AQKFlNpbXBsZUV4cG9ydFBvbGljeVJ1bGUSHAoPYWxsb3dlZF9jbGllbnRz",
+            "7wYKFlNpbXBsZUV4cG9ydFBvbGljeVJ1bGUSHAoPYWxsb3dlZF9jbGllbnRz",
             "GAEgASgJSACIAQESHAoPaGFzX3Jvb3RfYWNjZXNzGAIgASgJSAGIAQESPAoL",
             "YWNjZXNzX3R5cGUYAyABKA4yIi5nb29nbGUuY2xvdWQubmV0YXBwLnYxLkFj",
             "Y2Vzc1R5cGVIAogBARISCgVuZnN2MxgEIAEoCEgDiAEBEhIKBW5mc3Y0GAUg",
@@ -109,87 +109,93 @@ namespace Google.Cloud.NetApp.V1 {
             "c181aV9yZWFkX29ubHkYCCABKAhIB4gBARIjChZrZXJiZXJvc181aV9yZWFk",
             "X3dyaXRlGAkgASgISAiIAQESIgoVa2VyYmVyb3NfNXBfcmVhZF9vbmx5GAog",
             "ASgISAmIAQESIwoWa2VyYmVyb3NfNXBfcmVhZF93cml0ZRgLIAEoCEgKiAEB",
-            "QhIKEF9hbGxvd2VkX2NsaWVudHNCEgoQX2hhc19yb290X2FjY2Vzc0IOCgxf",
-            "YWNjZXNzX3R5cGVCCAoGX25mc3YzQggKBl9uZnN2NEIXChVfa2VyYmVyb3Nf",
-            "NV9yZWFkX29ubHlCGAoWX2tlcmJlcm9zXzVfcmVhZF93cml0ZUIYChZfa2Vy",
-            "YmVyb3NfNWlfcmVhZF9vbmx5QhkKF19rZXJiZXJvc181aV9yZWFkX3dyaXRl",
-            "QhgKFl9rZXJiZXJvc181cF9yZWFkX29ubHlCGQoXX2tlcmJlcm9zXzVwX3Jl",
-            "YWRfd3JpdGUimgMKDlNuYXBzaG90UG9saWN5EhQKB2VuYWJsZWQYASABKAhI",
-            "AIgBARJECg9ob3VybHlfc2NoZWR1bGUYAiABKAsyJi5nb29nbGUuY2xvdWQu",
-            "bmV0YXBwLnYxLkhvdXJseVNjaGVkdWxlSAGIAQESQgoOZGFpbHlfc2NoZWR1",
-            "bGUYAyABKAsyJS5nb29nbGUuY2xvdWQubmV0YXBwLnYxLkRhaWx5U2NoZWR1",
-            "bGVIAogBARJECg93ZWVrbHlfc2NoZWR1bGUYBCABKAsyJi5nb29nbGUuY2xv",
-            "dWQubmV0YXBwLnYxLldlZWtseVNjaGVkdWxlSAOIAQESRgoQbW9udGhseV9z",
-            "Y2hlZHVsZRgFIAEoCzInLmdvb2dsZS5jbG91ZC5uZXRhcHAudjEuTW9udGhs",
-            "eVNjaGVkdWxlSASIAQFCCgoIX2VuYWJsZWRCEgoQX2hvdXJseV9zY2hlZHVs",
-            "ZUIRCg9fZGFpbHlfc2NoZWR1bGVCEgoQX3dlZWtseV9zY2hlZHVsZUITChFf",
-            "bW9udGhseV9zY2hlZHVsZSJmCg5Ib3VybHlTY2hlZHVsZRIeChFzbmFwc2hv",
-            "dHNfdG9fa2VlcBgBIAEoAUgAiAEBEhMKBm1pbnV0ZRgCIAEoAUgBiAEBQhQK",
-            "El9zbmFwc2hvdHNfdG9fa2VlcEIJCgdfbWludXRlIoEBCg1EYWlseVNjaGVk",
-            "dWxlEh4KEXNuYXBzaG90c190b19rZWVwGAEgASgBSACIAQESEwoGbWludXRl",
-            "GAIgASgBSAGIAQESEQoEaG91chgDIAEoAUgCiAEBQhQKEl9zbmFwc2hvdHNf",
-            "dG9fa2VlcEIJCgdfbWludXRlQgcKBV9ob3VyIpwBCg5XZWVrbHlTY2hlZHVs",
-            "ZRIeChFzbmFwc2hvdHNfdG9fa2VlcBgBIAEoAUgAiAEBEhMKBm1pbnV0ZRgC",
-            "IAEoAUgBiAEBEhEKBGhvdXIYAyABKAFIAogBARIQCgNkYXkYBCABKAlIA4gB",
-            "AUIUChJfc25hcHNob3RzX3RvX2tlZXBCCQoHX21pbnV0ZUIHCgVfaG91ckIG",
-            "CgRfZGF5IrEBCg9Nb250aGx5U2NoZWR1bGUSHgoRc25hcHNob3RzX3RvX2tl",
-            "ZXAYASABKAFIAIgBARITCgZtaW51dGUYAiABKAFIAYgBARIRCgRob3VyGAMg",
-            "ASgBSAKIAQESGgoNZGF5c19vZl9tb250aBgEIAEoCUgDiAEBQhQKEl9zbmFw",
-            "c2hvdHNfdG9fa2VlcEIJCgdfbWludXRlQgcKBV9ob3VyQhAKDl9kYXlzX29m",
-            "X21vbnRoIp4BCgtNb3VudE9wdGlvbhIOCgZleHBvcnQYASABKAkSEwoLZXhw",
-            "b3J0X2Z1bGwYAiABKAkSMwoIcHJvdG9jb2wYAyABKA4yIS5nb29nbGUuY2xv",
-            "dWQubmV0YXBwLnYxLlByb3RvY29scxIUCgxpbnN0cnVjdGlvbnMYBCABKAkS",
-            "HwoKaXBfYWRkcmVzcxgFIAEoCUIL4EED4ozP1wgCCAIiUQoRUmVzdG9yZVBh",
-            "cmFtZXRlcnMSGQoPc291cmNlX3NuYXBzaG90GAEgASgJSAASFwoNc291cmNl",
-            "X2JhY2t1cBgCIAEoCUgAQggKBnNvdXJjZSKaAgoMQmFja3VwQ29uZmlnEkMK",
-            "D2JhY2t1cF9wb2xpY2llcxgBIAMoCUIq4EEB+kEkCiJuZXRhcHAuZ29vZ2xl",
-            "YXBpcy5jb20vQmFja3VwUG9saWN5Ej8KDGJhY2t1cF92YXVsdBgCIAEoCUIp",
-            "4EEB+kEjCiFuZXRhcHAuZ29vZ2xlYXBpcy5jb20vQmFja3VwVmF1bHQSKgoY",
-            "c2NoZWR1bGVkX2JhY2t1cF9lbmFibGVkGAMgASgIQgPgQQFIAIgBARIkChJi",
-            "YWNrdXBfY2hhaW5fYnl0ZXMYBCABKANCA+BBA0gBiAEBQhsKGV9zY2hlZHVs",
-            "ZWRfYmFja3VwX2VuYWJsZWRCFQoTX2JhY2t1cF9jaGFpbl9ieXRlcyLKAgoN",
-            "VGllcmluZ1BvbGljeRJPCgt0aWVyX2FjdGlvbhgBIAEoDjIwLmdvb2dsZS5j",
-            "bG91ZC5uZXRhcHAudjEuVGllcmluZ1BvbGljeS5UaWVyQWN0aW9uQgPgQQFI",
-            "AIgBARIoChZjb29saW5nX3RocmVzaG9sZF9kYXlzGAIgASgFQgPgQQFIAYgB",
-            "ARIuChxob3RfdGllcl9ieXBhc3NfbW9kZV9lbmFibGVkGAMgASgIQgPgQQFI",
-            "AogBASJCCgpUaWVyQWN0aW9uEhsKF1RJRVJfQUNUSU9OX1VOU1BFQ0lGSUVE",
-            "EAASCwoHRU5BQkxFRBABEgoKBlBBVVNFRBACQg4KDF90aWVyX2FjdGlvbkIZ",
-            "ChdfY29vbGluZ190aHJlc2hvbGRfZGF5c0IfCh1faG90X3RpZXJfYnlwYXNz",
-            "X21vZGVfZW5hYmxlZCLDBgobSHlicmlkUmVwbGljYXRpb25QYXJhbWV0ZXJz",
-            "Ej4KC3JlcGxpY2F0aW9uGAEgASgJQingQQL6QSMKIW5ldGFwcC5nb29nbGVh",
-            "cGlzLmNvbS9SZXBsaWNhdGlvbhIdChBwZWVyX3ZvbHVtZV9uYW1lGAIgASgJ",
-            "QgPgQQISHgoRcGVlcl9jbHVzdGVyX25hbWUYAyABKAlCA+BBAhIaCg1wZWVy",
-            "X3N2bV9uYW1lGAQgASgJQgPgQQISHgoRcGVlcl9pcF9hZGRyZXNzZXMYBSAD",
-            "KAlCA+BBAhIdChBjbHVzdGVyX2xvY2F0aW9uGAYgASgJQgPgQQESGAoLZGVz",
-            "Y3JpcHRpb24YByABKAlCA+BBARJUCgZsYWJlbHMYCCADKAsyPy5nb29nbGUu",
-            "Y2xvdWQubmV0YXBwLnYxLkh5YnJpZFJlcGxpY2F0aW9uUGFyYW1ldGVycy5M",
-            "YWJlbHNFbnRyeUID4EEBElQKFHJlcGxpY2F0aW9uX3NjaGVkdWxlGAkgASgO",
-            "MjEuZ29vZ2xlLmNsb3VkLm5ldGFwcC52MS5IeWJyaWRSZXBsaWNhdGlvblNj",
-            "aGVkdWxlQgPgQQESdQoXaHlicmlkX3JlcGxpY2F0aW9uX3R5cGUYCiABKA4y",
-            "Ty5nb29nbGUuY2xvdWQubmV0YXBwLnYxLkh5YnJpZFJlcGxpY2F0aW9uUGFy",
-            "YW1ldGVycy5Wb2x1bWVIeWJyaWRSZXBsaWNhdGlvblR5cGVCA+BBARIrCh5s",
-            "YXJnZV92b2x1bWVfY29uc3RpdHVlbnRfY291bnQYCyABKAVCA+BBARotCgtM",
-            "YWJlbHNFbnRyeRILCgNrZXkYASABKAkSDQoFdmFsdWUYAiABKAk6AjgBIrAB",
-            "ChtWb2x1bWVIeWJyaWRSZXBsaWNhdGlvblR5cGUSLgoqVk9MVU1FX0hZQlJJ",
-            "RF9SRVBMSUNBVElPTl9UWVBFX1VOU1BFQ0lGSUVEEAASDQoJTUlHUkFUSU9O",
-            "EAESGgoWQ09OVElOVU9VU19SRVBMSUNBVElPThACEhYKEk9OUFJFTV9SRVBM",
-            "SUNBVElPThADEh4KGlJFVkVSU0VfT05QUkVNX1JFUExJQ0FUSU9OEAQqRQoJ",
-            "UHJvdG9jb2xzEhkKFVBST1RPQ09MU19VTlNQRUNJRklFRBAAEgkKBU5GU1Yz",
-            "EAESCQoFTkZTVjQQAhIHCgNTTUIQAypXCgpBY2Nlc3NUeXBlEhsKF0FDQ0VT",
-            "U19UWVBFX1VOU1BFQ0lGSUVEEAASDQoJUkVBRF9PTkxZEAESDgoKUkVBRF9X",
-            "UklURRACEg0KCVJFQURfTk9ORRADKugBCgtTTUJTZXR0aW5ncxIcChhTTUJf",
-            "U0VUVElOR1NfVU5TUEVDSUZJRUQQABIQCgxFTkNSWVBUX0RBVEEQARINCglC",
-            "Uk9XU0FCTEUQAhIRCg1DSEFOR0VfTk9USUZZEAMSEQoNTk9OX0JST1dTQUJM",
-            "RRAEEgsKB09QTE9DS1MQBRIRCg1TSE9XX1NOQVBTSE9UEAYSGgoWU0hPV19Q",
-            "UkVWSU9VU19WRVJTSU9OUxAHEhwKGEFDQ0VTU19CQVNFRF9FTlVNRVJBVElP",
-            "ThAIEhoKFkNPTlRJTlVPVVNMWV9BVkFJTEFCTEUQCSpDCg1TZWN1cml0eVN0",
-            "eWxlEh4KGlNFQ1VSSVRZX1NUWUxFX1VOU1BFQ0lGSUVEEAASCAoETlRGUxAB",
-            "EggKBFVOSVgQAipBChBSZXN0cmljdGVkQWN0aW9uEiEKHVJFU1RSSUNURURf",
-            "QUNUSU9OX1VOU1BFQ0lGSUVEEAASCgoGREVMRVRFEAFCrQEKGmNvbS5nb29n",
-            "bGUuY2xvdWQubmV0YXBwLnYxQgtWb2x1bWVQcm90b1ABWjJjbG91ZC5nb29n",
-            "bGUuY29tL2dvL25ldGFwcC9hcGl2MS9uZXRhcHBwYjtuZXRhcHBwYqoCFkdv",
-            "b2dsZS5DbG91ZC5OZXRBcHAuVjHKAhZHb29nbGVcQ2xvdWRcTmV0QXBwXFYx",
-            "6gIZR29vZ2xlOjpDbG91ZDo6TmV0QXBwOjpWMWIGcHJvdG8z"));
+            "ElgKC3NxdWFzaF9tb2RlGAwgASgOMjkuZ29vZ2xlLmNsb3VkLm5ldGFwcC52",
+            "MS5TaW1wbGVFeHBvcnRQb2xpY3lSdWxlLlNxdWFzaE1vZGVCA+BBAUgLiAEB",
+            "EhoKCGFub25fdWlkGA0gASgDQgPgQQFIDIgBASJeCgpTcXVhc2hNb2RlEhsK",
+            "F1NRVUFTSF9NT0RFX1VOU1BFQ0lGSUVEEAASEgoOTk9fUk9PVF9TUVVBU0gQ",
+            "ARIPCgtST09UX1NRVUFTSBACEg4KCkFMTF9TUVVBU0gQA0ISChBfYWxsb3dl",
+            "ZF9jbGllbnRzQhIKEF9oYXNfcm9vdF9hY2Nlc3NCDgoMX2FjY2Vzc190eXBl",
+            "QggKBl9uZnN2M0IICgZfbmZzdjRCFwoVX2tlcmJlcm9zXzVfcmVhZF9vbmx5",
+            "QhgKFl9rZXJiZXJvc181X3JlYWRfd3JpdGVCGAoWX2tlcmJlcm9zXzVpX3Jl",
+            "YWRfb25seUIZChdfa2VyYmVyb3NfNWlfcmVhZF93cml0ZUIYChZfa2VyYmVy",
+            "b3NfNXBfcmVhZF9vbmx5QhkKF19rZXJiZXJvc181cF9yZWFkX3dyaXRlQg4K",
+            "DF9zcXVhc2hfbW9kZUILCglfYW5vbl91aWQimgMKDlNuYXBzaG90UG9saWN5",
+            "EhQKB2VuYWJsZWQYASABKAhIAIgBARJECg9ob3VybHlfc2NoZWR1bGUYAiAB",
+            "KAsyJi5nb29nbGUuY2xvdWQubmV0YXBwLnYxLkhvdXJseVNjaGVkdWxlSAGI",
+            "AQESQgoOZGFpbHlfc2NoZWR1bGUYAyABKAsyJS5nb29nbGUuY2xvdWQubmV0",
+            "YXBwLnYxLkRhaWx5U2NoZWR1bGVIAogBARJECg93ZWVrbHlfc2NoZWR1bGUY",
+            "BCABKAsyJi5nb29nbGUuY2xvdWQubmV0YXBwLnYxLldlZWtseVNjaGVkdWxl",
+            "SAOIAQESRgoQbW9udGhseV9zY2hlZHVsZRgFIAEoCzInLmdvb2dsZS5jbG91",
+            "ZC5uZXRhcHAudjEuTW9udGhseVNjaGVkdWxlSASIAQFCCgoIX2VuYWJsZWRC",
+            "EgoQX2hvdXJseV9zY2hlZHVsZUIRCg9fZGFpbHlfc2NoZWR1bGVCEgoQX3dl",
+            "ZWtseV9zY2hlZHVsZUITChFfbW9udGhseV9zY2hlZHVsZSJmCg5Ib3VybHlT",
+            "Y2hlZHVsZRIeChFzbmFwc2hvdHNfdG9fa2VlcBgBIAEoAUgAiAEBEhMKBm1p",
+            "bnV0ZRgCIAEoAUgBiAEBQhQKEl9zbmFwc2hvdHNfdG9fa2VlcEIJCgdfbWlu",
+            "dXRlIoEBCg1EYWlseVNjaGVkdWxlEh4KEXNuYXBzaG90c190b19rZWVwGAEg",
+            "ASgBSACIAQESEwoGbWludXRlGAIgASgBSAGIAQESEQoEaG91chgDIAEoAUgC",
+            "iAEBQhQKEl9zbmFwc2hvdHNfdG9fa2VlcEIJCgdfbWludXRlQgcKBV9ob3Vy",
+            "IpwBCg5XZWVrbHlTY2hlZHVsZRIeChFzbmFwc2hvdHNfdG9fa2VlcBgBIAEo",
+            "AUgAiAEBEhMKBm1pbnV0ZRgCIAEoAUgBiAEBEhEKBGhvdXIYAyABKAFIAogB",
+            "ARIQCgNkYXkYBCABKAlIA4gBAUIUChJfc25hcHNob3RzX3RvX2tlZXBCCQoH",
+            "X21pbnV0ZUIHCgVfaG91ckIGCgRfZGF5IrEBCg9Nb250aGx5U2NoZWR1bGUS",
+            "HgoRc25hcHNob3RzX3RvX2tlZXAYASABKAFIAIgBARITCgZtaW51dGUYAiAB",
+            "KAFIAYgBARIRCgRob3VyGAMgASgBSAKIAQESGgoNZGF5c19vZl9tb250aBgE",
+            "IAEoCUgDiAEBQhQKEl9zbmFwc2hvdHNfdG9fa2VlcEIJCgdfbWludXRlQgcK",
+            "BV9ob3VyQhAKDl9kYXlzX29mX21vbnRoIp4BCgtNb3VudE9wdGlvbhIOCgZl",
+            "eHBvcnQYASABKAkSEwoLZXhwb3J0X2Z1bGwYAiABKAkSMwoIcHJvdG9jb2wY",
+            "AyABKA4yIS5nb29nbGUuY2xvdWQubmV0YXBwLnYxLlByb3RvY29scxIUCgxp",
+            "bnN0cnVjdGlvbnMYBCABKAkSHwoKaXBfYWRkcmVzcxgFIAEoCUIL4EED4ozP",
+            "1wgCCAIiUQoRUmVzdG9yZVBhcmFtZXRlcnMSGQoPc291cmNlX3NuYXBzaG90",
+            "GAEgASgJSAASFwoNc291cmNlX2JhY2t1cBgCIAEoCUgAQggKBnNvdXJjZSKa",
+            "AgoMQmFja3VwQ29uZmlnEkMKD2JhY2t1cF9wb2xpY2llcxgBIAMoCUIq4EEB",
+            "+kEkCiJuZXRhcHAuZ29vZ2xlYXBpcy5jb20vQmFja3VwUG9saWN5Ej8KDGJh",
+            "Y2t1cF92YXVsdBgCIAEoCUIp4EEB+kEjCiFuZXRhcHAuZ29vZ2xlYXBpcy5j",
+            "b20vQmFja3VwVmF1bHQSKgoYc2NoZWR1bGVkX2JhY2t1cF9lbmFibGVkGAMg",
+            "ASgIQgPgQQFIAIgBARIkChJiYWNrdXBfY2hhaW5fYnl0ZXMYBCABKANCA+BB",
+            "A0gBiAEBQhsKGV9zY2hlZHVsZWRfYmFja3VwX2VuYWJsZWRCFQoTX2JhY2t1",
+            "cF9jaGFpbl9ieXRlcyLKAgoNVGllcmluZ1BvbGljeRJPCgt0aWVyX2FjdGlv",
+            "bhgBIAEoDjIwLmdvb2dsZS5jbG91ZC5uZXRhcHAudjEuVGllcmluZ1BvbGlj",
+            "eS5UaWVyQWN0aW9uQgPgQQFIAIgBARIoChZjb29saW5nX3RocmVzaG9sZF9k",
+            "YXlzGAIgASgFQgPgQQFIAYgBARIuChxob3RfdGllcl9ieXBhc3NfbW9kZV9l",
+            "bmFibGVkGAMgASgIQgPgQQFIAogBASJCCgpUaWVyQWN0aW9uEhsKF1RJRVJf",
+            "QUNUSU9OX1VOU1BFQ0lGSUVEEAASCwoHRU5BQkxFRBABEgoKBlBBVVNFRBAC",
+            "Qg4KDF90aWVyX2FjdGlvbkIZChdfY29vbGluZ190aHJlc2hvbGRfZGF5c0If",
+            "Ch1faG90X3RpZXJfYnlwYXNzX21vZGVfZW5hYmxlZCLDBgobSHlicmlkUmVw",
+            "bGljYXRpb25QYXJhbWV0ZXJzEj4KC3JlcGxpY2F0aW9uGAEgASgJQingQQL6",
+            "QSMKIW5ldGFwcC5nb29nbGVhcGlzLmNvbS9SZXBsaWNhdGlvbhIdChBwZWVy",
+            "X3ZvbHVtZV9uYW1lGAIgASgJQgPgQQISHgoRcGVlcl9jbHVzdGVyX25hbWUY",
+            "AyABKAlCA+BBAhIaCg1wZWVyX3N2bV9uYW1lGAQgASgJQgPgQQISHgoRcGVl",
+            "cl9pcF9hZGRyZXNzZXMYBSADKAlCA+BBAhIdChBjbHVzdGVyX2xvY2F0aW9u",
+            "GAYgASgJQgPgQQESGAoLZGVzY3JpcHRpb24YByABKAlCA+BBARJUCgZsYWJl",
+            "bHMYCCADKAsyPy5nb29nbGUuY2xvdWQubmV0YXBwLnYxLkh5YnJpZFJlcGxp",
+            "Y2F0aW9uUGFyYW1ldGVycy5MYWJlbHNFbnRyeUID4EEBElQKFHJlcGxpY2F0",
+            "aW9uX3NjaGVkdWxlGAkgASgOMjEuZ29vZ2xlLmNsb3VkLm5ldGFwcC52MS5I",
+            "eWJyaWRSZXBsaWNhdGlvblNjaGVkdWxlQgPgQQESdQoXaHlicmlkX3JlcGxp",
+            "Y2F0aW9uX3R5cGUYCiABKA4yTy5nb29nbGUuY2xvdWQubmV0YXBwLnYxLkh5",
+            "YnJpZFJlcGxpY2F0aW9uUGFyYW1ldGVycy5Wb2x1bWVIeWJyaWRSZXBsaWNh",
+            "dGlvblR5cGVCA+BBARIrCh5sYXJnZV92b2x1bWVfY29uc3RpdHVlbnRfY291",
+            "bnQYCyABKAVCA+BBARotCgtMYWJlbHNFbnRyeRILCgNrZXkYASABKAkSDQoF",
+            "dmFsdWUYAiABKAk6AjgBIrABChtWb2x1bWVIeWJyaWRSZXBsaWNhdGlvblR5",
+            "cGUSLgoqVk9MVU1FX0hZQlJJRF9SRVBMSUNBVElPTl9UWVBFX1VOU1BFQ0lG",
+            "SUVEEAASDQoJTUlHUkFUSU9OEAESGgoWQ09OVElOVU9VU19SRVBMSUNBVElP",
+            "ThACEhYKEk9OUFJFTV9SRVBMSUNBVElPThADEh4KGlJFVkVSU0VfT05QUkVN",
+            "X1JFUExJQ0FUSU9OEAQqRQoJUHJvdG9jb2xzEhkKFVBST1RPQ09MU19VTlNQ",
+            "RUNJRklFRBAAEgkKBU5GU1YzEAESCQoFTkZTVjQQAhIHCgNTTUIQAypXCgpB",
+            "Y2Nlc3NUeXBlEhsKF0FDQ0VTU19UWVBFX1VOU1BFQ0lGSUVEEAASDQoJUkVB",
+            "RF9PTkxZEAESDgoKUkVBRF9XUklURRACEg0KCVJFQURfTk9ORRADKugBCgtT",
+            "TUJTZXR0aW5ncxIcChhTTUJfU0VUVElOR1NfVU5TUEVDSUZJRUQQABIQCgxF",
+            "TkNSWVBUX0RBVEEQARINCglCUk9XU0FCTEUQAhIRCg1DSEFOR0VfTk9USUZZ",
+            "EAMSEQoNTk9OX0JST1dTQUJMRRAEEgsKB09QTE9DS1MQBRIRCg1TSE9XX1NO",
+            "QVBTSE9UEAYSGgoWU0hPV19QUkVWSU9VU19WRVJTSU9OUxAHEhwKGEFDQ0VT",
+            "U19CQVNFRF9FTlVNRVJBVElPThAIEhoKFkNPTlRJTlVPVVNMWV9BVkFJTEFC",
+            "TEUQCSpDCg1TZWN1cml0eVN0eWxlEh4KGlNFQ1VSSVRZX1NUWUxFX1VOU1BF",
+            "Q0lGSUVEEAASCAoETlRGUxABEggKBFVOSVgQAipBChBSZXN0cmljdGVkQWN0",
+            "aW9uEiEKHVJFU1RSSUNURURfQUNUSU9OX1VOU1BFQ0lGSUVEEAASCgoGREVM",
+            "RVRFEAFCrQEKGmNvbS5nb29nbGUuY2xvdWQubmV0YXBwLnYxQgtWb2x1bWVQ",
+            "cm90b1ABWjJjbG91ZC5nb29nbGUuY29tL2dvL25ldGFwcC9hcGl2MS9uZXRh",
+            "cHBwYjtuZXRhcHBwYqoCFkdvb2dsZS5DbG91ZC5OZXRBcHAuVjHKAhZHb29n",
+            "bGVcQ2xvdWRcTmV0QXBwXFYx6gIZR29vZ2xlOjpDbG91ZDo6TmV0QXBwOjpW",
+            "MWIGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.FieldInfoReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Cloud.NetApp.V1.CommonReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.FieldMaskReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(new[] {typeof(global::Google.Cloud.NetApp.V1.Protocols), typeof(global::Google.Cloud.NetApp.V1.AccessType), typeof(global::Google.Cloud.NetApp.V1.SMBSettings), typeof(global::Google.Cloud.NetApp.V1.SecurityStyle), typeof(global::Google.Cloud.NetApp.V1.RestrictedAction), }, null, new pbr::GeneratedClrTypeInfo[] {
@@ -202,7 +208,7 @@ namespace Google.Cloud.NetApp.V1 {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.NetApp.V1.RevertVolumeRequest), global::Google.Cloud.NetApp.V1.RevertVolumeRequest.Parser, new[]{ "Name", "SnapshotId" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.NetApp.V1.Volume), global::Google.Cloud.NetApp.V1.Volume.Parser, new[]{ "Name", "State", "StateDetails", "CreateTime", "ShareName", "PsaRange", "StoragePool", "Network", "ServiceLevel", "CapacityGib", "ExportPolicy", "Protocols", "SmbSettings", "MountOptions", "UnixPermissions", "Labels", "Description", "SnapshotPolicy", "SnapReserve", "SnapshotDirectory", "UsedGib", "SecurityStyle", "KerberosEnabled", "LdapEnabled", "ActiveDirectory", "RestoreParameters", "KmsConfig", "EncryptionType", "HasReplication", "BackupConfig", "RestrictedActions", "LargeCapacity", "MultipleEndpoints", "TieringPolicy", "ReplicaZone", "Zone", "ColdTierSizeGib", "HybridReplicationParameters", "ThroughputMibps", "HotTierSizeUsedGib" }, new[]{ "BackupConfig", "TieringPolicy" }, new[]{ typeof(global::Google.Cloud.NetApp.V1.Volume.Types.State) }, null, new pbr::GeneratedClrTypeInfo[] { null, }),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.NetApp.V1.ExportPolicy), global::Google.Cloud.NetApp.V1.ExportPolicy.Parser, new[]{ "Rules" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.NetApp.V1.SimpleExportPolicyRule), global::Google.Cloud.NetApp.V1.SimpleExportPolicyRule.Parser, new[]{ "AllowedClients", "HasRootAccess", "AccessType", "Nfsv3", "Nfsv4", "Kerberos5ReadOnly", "Kerberos5ReadWrite", "Kerberos5IReadOnly", "Kerberos5IReadWrite", "Kerberos5PReadOnly", "Kerberos5PReadWrite" }, new[]{ "AllowedClients", "HasRootAccess", "AccessType", "Nfsv3", "Nfsv4", "Kerberos5ReadOnly", "Kerberos5ReadWrite", "Kerberos5IReadOnly", "Kerberos5IReadWrite", "Kerberos5PReadOnly", "Kerberos5PReadWrite" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.NetApp.V1.SimpleExportPolicyRule), global::Google.Cloud.NetApp.V1.SimpleExportPolicyRule.Parser, new[]{ "AllowedClients", "HasRootAccess", "AccessType", "Nfsv3", "Nfsv4", "Kerberos5ReadOnly", "Kerberos5ReadWrite", "Kerberos5IReadOnly", "Kerberos5IReadWrite", "Kerberos5PReadOnly", "Kerberos5PReadWrite", "SquashMode", "AnonUid" }, new[]{ "AllowedClients", "HasRootAccess", "AccessType", "Nfsv3", "Nfsv4", "Kerberos5ReadOnly", "Kerberos5ReadWrite", "Kerberos5IReadOnly", "Kerberos5IReadWrite", "Kerberos5PReadOnly", "Kerberos5PReadWrite", "SquashMode", "AnonUid" }, new[]{ typeof(global::Google.Cloud.NetApp.V1.SimpleExportPolicyRule.Types.SquashMode) }, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.NetApp.V1.SnapshotPolicy), global::Google.Cloud.NetApp.V1.SnapshotPolicy.Parser, new[]{ "Enabled", "HourlySchedule", "DailySchedule", "WeeklySchedule", "MonthlySchedule" }, new[]{ "Enabled", "HourlySchedule", "DailySchedule", "WeeklySchedule", "MonthlySchedule" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.NetApp.V1.HourlySchedule), global::Google.Cloud.NetApp.V1.HourlySchedule.Parser, new[]{ "SnapshotsToKeep", "Minute" }, new[]{ "SnapshotsToKeep", "Minute" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.NetApp.V1.DailySchedule), global::Google.Cloud.NetApp.V1.DailySchedule.Parser, new[]{ "SnapshotsToKeep", "Minute", "Hour" }, new[]{ "SnapshotsToKeep", "Minute", "Hour" }, null, null, null),
@@ -4251,6 +4257,8 @@ namespace Google.Cloud.NetApp.V1 {
       kerberos5IReadWrite_ = other.kerberos5IReadWrite_;
       kerberos5PReadOnly_ = other.kerberos5PReadOnly_;
       kerberos5PReadWrite_ = other.kerberos5PReadWrite_;
+      squashMode_ = other.squashMode_;
+      anonUid_ = other.anonUid_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -4603,6 +4611,69 @@ namespace Google.Cloud.NetApp.V1 {
       _hasBits0 &= ~256;
     }
 
+    /// <summary>Field number for the "squash_mode" field.</summary>
+    public const int SquashModeFieldNumber = 12;
+    private readonly static global::Google.Cloud.NetApp.V1.SimpleExportPolicyRule.Types.SquashMode SquashModeDefaultValue = global::Google.Cloud.NetApp.V1.SimpleExportPolicyRule.Types.SquashMode.Unspecified;
+
+    private global::Google.Cloud.NetApp.V1.SimpleExportPolicyRule.Types.SquashMode squashMode_;
+    /// <summary>
+    /// Optional. Defines how user identity squashing is applied for this export
+    /// rule. This field is the preferred way to configure squashing behavior and
+    /// takes precedence over `has_root_access` if both are provided.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Cloud.NetApp.V1.SimpleExportPolicyRule.Types.SquashMode SquashMode {
+      get { if ((_hasBits0 & 512) != 0) { return squashMode_; } else { return SquashModeDefaultValue; } }
+      set {
+        _hasBits0 |= 512;
+        squashMode_ = value;
+      }
+    }
+    /// <summary>Gets whether the "squash_mode" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasSquashMode {
+      get { return (_hasBits0 & 512) != 0; }
+    }
+    /// <summary>Clears the value of the "squash_mode" field</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearSquashMode() {
+      _hasBits0 &= ~512;
+    }
+
+    /// <summary>Field number for the "anon_uid" field.</summary>
+    public const int AnonUidFieldNumber = 13;
+    private readonly static long AnonUidDefaultValue = 0L;
+
+    private long anonUid_;
+    /// <summary>
+    /// Optional. An integer representing the anonymous user ID. Range is 0 to
+    /// 4294967295. Required when squash_mode is ROOT_SQUASH or ALL_SQUASH.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public long AnonUid {
+      get { if ((_hasBits0 & 1024) != 0) { return anonUid_; } else { return AnonUidDefaultValue; } }
+      set {
+        _hasBits0 |= 1024;
+        anonUid_ = value;
+      }
+    }
+    /// <summary>Gets whether the "anon_uid" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasAnonUid {
+      get { return (_hasBits0 & 1024) != 0; }
+    }
+    /// <summary>Clears the value of the "anon_uid" field</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearAnonUid() {
+      _hasBits0 &= ~1024;
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
@@ -4629,6 +4700,8 @@ namespace Google.Cloud.NetApp.V1 {
       if (Kerberos5IReadWrite != other.Kerberos5IReadWrite) return false;
       if (Kerberos5PReadOnly != other.Kerberos5PReadOnly) return false;
       if (Kerberos5PReadWrite != other.Kerberos5PReadWrite) return false;
+      if (SquashMode != other.SquashMode) return false;
+      if (AnonUid != other.AnonUid) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -4647,6 +4720,8 @@ namespace Google.Cloud.NetApp.V1 {
       if (HasKerberos5IReadWrite) hash ^= Kerberos5IReadWrite.GetHashCode();
       if (HasKerberos5PReadOnly) hash ^= Kerberos5PReadOnly.GetHashCode();
       if (HasKerberos5PReadWrite) hash ^= Kerberos5PReadWrite.GetHashCode();
+      if (HasSquashMode) hash ^= SquashMode.GetHashCode();
+      if (HasAnonUid) hash ^= AnonUid.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -4709,6 +4784,14 @@ namespace Google.Cloud.NetApp.V1 {
         output.WriteRawTag(88);
         output.WriteBool(Kerberos5PReadWrite);
       }
+      if (HasSquashMode) {
+        output.WriteRawTag(96);
+        output.WriteEnum((int) SquashMode);
+      }
+      if (HasAnonUid) {
+        output.WriteRawTag(104);
+        output.WriteInt64(AnonUid);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -4763,6 +4846,14 @@ namespace Google.Cloud.NetApp.V1 {
         output.WriteRawTag(88);
         output.WriteBool(Kerberos5PReadWrite);
       }
+      if (HasSquashMode) {
+        output.WriteRawTag(96);
+        output.WriteEnum((int) SquashMode);
+      }
+      if (HasAnonUid) {
+        output.WriteRawTag(104);
+        output.WriteInt64(AnonUid);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -4805,6 +4896,12 @@ namespace Google.Cloud.NetApp.V1 {
       }
       if (HasKerberos5PReadWrite) {
         size += 1 + 1;
+      }
+      if (HasSquashMode) {
+        size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) SquashMode);
+      }
+      if (HasAnonUid) {
+        size += 1 + pb::CodedOutputStream.ComputeInt64Size(AnonUid);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -4850,6 +4947,12 @@ namespace Google.Cloud.NetApp.V1 {
       }
       if (other.HasKerberos5PReadWrite) {
         Kerberos5PReadWrite = other.Kerberos5PReadWrite;
+      }
+      if (other.HasSquashMode) {
+        SquashMode = other.SquashMode;
+      }
+      if (other.HasAnonUid) {
+        AnonUid = other.AnonUid;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -4908,6 +5011,14 @@ namespace Google.Cloud.NetApp.V1 {
           }
           case 88: {
             Kerberos5PReadWrite = input.ReadBool();
+            break;
+          }
+          case 96: {
+            SquashMode = (global::Google.Cloud.NetApp.V1.SimpleExportPolicyRule.Types.SquashMode) input.ReadEnum();
+            break;
+          }
+          case 104: {
+            AnonUid = input.ReadInt64();
             break;
           }
         }
@@ -4969,10 +5080,52 @@ namespace Google.Cloud.NetApp.V1 {
             Kerberos5PReadWrite = input.ReadBool();
             break;
           }
+          case 96: {
+            SquashMode = (global::Google.Cloud.NetApp.V1.SimpleExportPolicyRule.Types.SquashMode) input.ReadEnum();
+            break;
+          }
+          case 104: {
+            AnonUid = input.ReadInt64();
+            break;
+          }
         }
       }
     }
     #endif
+
+    #region Nested types
+    /// <summary>Container for nested types declared in the SimpleExportPolicyRule message type.</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static partial class Types {
+      /// <summary>
+      /// SquashMode defines how remote user privileges are restricted when accessing
+      /// an NFS export. It controls how user identities (like root) are mapped to
+      /// anonymous users to limit access and enforce security.
+      /// </summary>
+      public enum SquashMode {
+        /// <summary>
+        /// Defaults to NO_ROOT_SQUASH.
+        /// </summary>
+        [pbr::OriginalName("SQUASH_MODE_UNSPECIFIED")] Unspecified = 0,
+        /// <summary>
+        /// The root user (UID 0) retains full access. Other users are
+        /// unaffected.
+        /// </summary>
+        [pbr::OriginalName("NO_ROOT_SQUASH")] NoRootSquash = 1,
+        /// <summary>
+        /// The root user (UID 0) is squashed to anonymous user ID. Other users are
+        /// unaffected.
+        /// </summary>
+        [pbr::OriginalName("ROOT_SQUASH")] RootSquash = 2,
+        /// <summary>
+        /// All users are squashed to anonymous user ID.
+        /// </summary>
+        [pbr::OriginalName("ALL_SQUASH")] AllSquash = 3,
+      }
+
+    }
+    #endregion
 
   }
 
