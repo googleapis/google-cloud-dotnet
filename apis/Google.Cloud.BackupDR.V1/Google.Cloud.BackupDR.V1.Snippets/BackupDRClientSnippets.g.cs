@@ -3444,6 +3444,7 @@ namespace GoogleCSharpSnippets
                 RequestId = "",
                 ComputeInstanceTargetEnvironment = new ComputeInstanceTargetEnvironment(),
                 ComputeInstanceRestoreProperties = new ComputeInstanceRestoreProperties(),
+                ClearOverridesFieldMask = new FieldMask(),
             };
             // Make the request
             Operation<RestoreBackupResponse, OperationMetadata> response = backupDRClient.RestoreBackup(request);
@@ -3480,6 +3481,7 @@ namespace GoogleCSharpSnippets
                 RequestId = "",
                 ComputeInstanceTargetEnvironment = new ComputeInstanceTargetEnvironment(),
                 ComputeInstanceRestoreProperties = new ComputeInstanceRestoreProperties(),
+                ClearOverridesFieldMask = new FieldMask(),
             };
             // Make the request
             Operation<RestoreBackupResponse, OperationMetadata> response = await backupDRClient.RestoreBackupAsync(request);
