@@ -233,10 +233,8 @@ namespace Google.Cloud.Logging.Log4Net
         private GoogleCredential GetCredentialFromConfiguration()
         {
             var credential =
-#pragma warning disable CS0618 // Temporarily disable warnings for obsolete methods. See b/453009677 for more details.
-                !string.IsNullOrWhiteSpace(CredentialFile) ? GoogleCredential.FromFile(CredentialFile) :
-                !string.IsNullOrWhiteSpace(CredentialJson) ? GoogleCredential.FromJson(CredentialJson) :
-#pragma warning restore CS0618
+                !string.IsNullOrWhiteSpace(CredentialFile) ? CredentialFactory.FromFile(CredentialFile, CredentialType) :
+                !string.IsNullOrWhiteSpace(CredentialJson) ? CredentialFactory.FromJson(CredentialJson, CredentialType) :
                 null;
             if (credential == null)
             {
