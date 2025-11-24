@@ -1,5 +1,11 @@
 # Version history
 
+## Version 2.6.0, released 2025-11-24
+
+### New features
+
+- Adding new fields for CMEK and Retention Inheritance features
+
 ## Version 2.5.0, released 2025-11-06
 
 ### New features
