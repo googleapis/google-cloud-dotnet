@@ -1,5 +1,18 @@
 # Version history
 
+## Version 3.57.0, released 2025-11-24
+
+### New features
+
+- Add `ReplicatedVoiceConfig` to `VoiceConfig` to enable Gemini TTS voice replication
+- Add `gpu_partition_size` in `machine_spec` v1 api
+- Add support for developer connect based deployment
+
+### Documentation improvements
+
+- A comment for message `ReasoningEngineSpec` is changed
+- A comment for field `package_spec` in message `.google.cloud.aiplatform.v1.ReasoningEngineSpec` is changed
+
 ## Version 3.56.0, released 2025-11-05
 
 ### New features
