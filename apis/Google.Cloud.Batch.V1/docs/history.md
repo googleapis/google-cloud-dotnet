@@ -1,5 +1,11 @@
 # Version history
 
+## Version 2.15.0, released 2025-11-24
+
+### New features
+
+- Added new provisioning models
+
 ## Version 2.14.0, released 2025-11-03
 
 ### New features
