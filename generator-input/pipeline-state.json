@@ -2223,12 +2223,12 @@
         },
         {
             "id": "Google.Cloud.NetApp.V1",
-            "currentVersion": "1.12.0",
+            "currentVersion": "1.13.0",
             "generationAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
             "releaseAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
-            "releaseTimestamp": "2025-11-05T22:01:53.904139055Z",
+            "releaseTimestamp": "2025-11-24T14:12:22.291772176Z",
             "lastGeneratedCommit": "0a299a257825ea10afd0f84282d2a1740ebf6584",
-            "lastReleasedCommit": "36533b09a6b383f3c30d13c3c26092154ecf5388",
+            "lastReleasedCommit": "0a299a257825ea10afd0f84282d2a1740ebf6584",
             "apiPaths": [
                 "google/cloud/netapp/v1"
             ],

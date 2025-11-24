@@ -1,5 +1,11 @@
 # Version history
 
+## Version 1.13.0, released 2025-11-24
+
+### New features
+
+- Add Squash Mode to Export Policy
+
 ## Version 1.12.0, released 2025-11-05
 
 ### New features
