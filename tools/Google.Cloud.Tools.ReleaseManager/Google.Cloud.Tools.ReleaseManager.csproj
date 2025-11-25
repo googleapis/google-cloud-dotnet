@@ -23,6 +23,9 @@
     <!-- Ensure that we've got the default version of GAX available. -->
     <PackageReference Include="Google.Api.Gax.Grpc" />
 
+    <!-- Ensure that Microsoft.Bcl.AsyncInterfaces is available. -->
+    <PackageReference Include="Microsoft.Bcl.AsyncInterfaces" />
+
     <!--
       - Used to publish documentation. It doesn't matter if this ends up being fairly stale,
       - so long as that doesn't cause other dependency conflicts.
