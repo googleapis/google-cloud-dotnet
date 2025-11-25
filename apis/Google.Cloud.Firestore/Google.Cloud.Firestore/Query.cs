@@ -726,7 +726,7 @@ namespace Google.Cloud.Firestore
             Timestamp? readTime = null;
             List<DocumentSnapshot> snapshots = new List<DocumentSnapshot>();
             ExplainMetrics metrics = null;
-            await responses.ForEachAsync(response =>
+            await foreach (var response in responses.WithCancellation(cancellationToken).ConfigureAwait(false))
             {
                 if (response.Document != null)
                 {
@@ -738,7 +738,7 @@ namespace Google.Cloud.Firestore
                 }
                 // This will be set on the last response, so we can always just remember "just the last value we saw".
                 metrics = response.ExplainMetrics;
-            }, cancellationToken).ConfigureAwait(false);
+            }
 
             bool planOnly = explainOptions?.Analyze == false;
             GaxPreconditions.CheckState(readTime is not null || planOnly, "The stream returned from RunQuery did not provide a read timestamp.");
