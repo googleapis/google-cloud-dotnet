@@ -34,7 +34,4 @@
       <DependentUpon>QueryTest.cs</DependentUpon>
     </Compile>
   </ItemGroup>
-  <ItemGroup>
-    <PackageReference Include="System.Linq.Async" ExcludeAssets="compile" />
-  </ItemGroup>
 </Project>
