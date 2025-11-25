@@ -95,15 +95,7 @@ public sealed class AggregateQuery : IEquatable<AggregateQuery>
             queryAliasToUserAlias[aggregate.GetAliasForIndex(i)] = aggregate.Alias;
         }
         ExplainMetrics metrics = null;
-        await responseStream.ForEachAsync(ProcessResponse, cancellationToken).ConfigureAwait(false);
-        bool planOnly = explainOptions?.Analyze == false;
-        GaxPreconditions.CheckState(readTime is not null || planOnly, "The stream returned from RunAggregationQueryQuery did not provide a read timestamp.");
-        GaxPreconditions.CheckState(explainOptions is null || metrics is not null, "The stream returned from RunAggregationQuery did not provide metrics.");
-
-        var snapshot = planOnly ? null : new AggregateQuerySnapshot(this, readTime.Value, data);
-        return new ExplainResults<AggregateQuerySnapshot>(snapshot, metrics);
-
-        void ProcessResponse(RunAggregationQueryResponse response)
+        await foreach (var response in responseStream.WithCancellation(cancellationToken).ConfigureAwait(false))
         {
             if (response.Result?.AggregateFields is { } aggregateFields)
             {
@@ -118,6 +110,12 @@ public sealed class AggregateQuery : IEquatable<AggregateQuery>
             readTime ??= Timestamp.FromProtoOrNull(response.ReadTime);
             metrics = response.ExplainMetrics;
         }
+        bool planOnly = explainOptions?.Analyze == false;
+        GaxPreconditions.CheckState(readTime is not null || planOnly, "The stream returned from RunAggregationQueryQuery did not provide a read timestamp.");
+        GaxPreconditions.CheckState(explainOptions is null || metrics is not null, "The stream returned from RunAggregationQuery did not provide metrics.");
+
+        var snapshot = planOnly ? null : new AggregateQuerySnapshot(this, readTime.Value, data);
+        return new ExplainResults<AggregateQuerySnapshot>(snapshot, metrics);
     }
 
     // Note: this *could* just return FirestoreClient.RunAggregationQueryStream, as it's only called
