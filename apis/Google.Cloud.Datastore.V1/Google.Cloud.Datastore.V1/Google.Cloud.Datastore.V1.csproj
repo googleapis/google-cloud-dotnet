@@ -12,6 +12,7 @@
     <PackageReference Include="Google.Api.Gax.Grpc" />
     <PackageReference Include="Google.LongRunning" VersionOverride="[3.5.0, 4.0.0)" />
     <PackageReference Include="Grpc.Core" PrivateAssets="None" Condition="'$(TargetFramework)'=='net462'" />
-    <PackageReference Include="System.Linq.Async" />
+    <PackageReference Include="Microsoft.Bcl.AsyncInterfaces" />
+    <PackageReference Include="System.Linq.AsyncEnumerable" />
   </ItemGroup>
 </Project>
