@@ -29,7 +29,7 @@ namespace Google.Cloud.Eventarc.V1 {
             "aWVsZF9iZWhhdmlvci5wcm90bxobZ29vZ2xlL2FwaS9maWVsZF9pbmZvLnBy",
             "b3RvGhlnb29nbGUvYXBpL3Jlc291cmNlLnByb3RvGi1nb29nbGUvY2xvdWQv",
             "ZXZlbnRhcmMvdjEvbG9nZ2luZ19jb25maWcucHJvdG8aH2dvb2dsZS9wcm90",
-            "b2J1Zi90aW1lc3RhbXAucHJvdG8iyQYKD0dvb2dsZUFwaVNvdXJjZRIRCgRu",
+            "b2J1Zi90aW1lc3RhbXAucHJvdG8ilQkKD0dvb2dsZUFwaVNvdXJjZRIRCgRu",
             "YW1lGAEgASgJQgPgQQgSGAoDdWlkGAIgASgJQgvgQQPijM/XCAIIARIRCgRl",
             "dGFnGAMgASgJQgPgQQMSNAoLY3JlYXRlX3RpbWUYBCABKAsyGi5nb29nbGUu",
             "cHJvdG9idWYuVGltZXN0YW1wQgPgQQMSNAoLdXBkYXRlX3RpbWUYBSABKAsy",
@@ -42,21 +42,31 @@ namespace Google.Cloud.Eventarc.V1 {
             "cy5jb20vTWVzc2FnZUJ1cxJCCg9jcnlwdG9fa2V5X25hbWUYCiABKAlCKeBB",
             "AfpBIwohY2xvdWRrbXMuZ29vZ2xlYXBpcy5jb20vQ3J5cHRvS2V5EkQKDmxv",
             "Z2dpbmdfY29uZmlnGAsgASgLMicuZ29vZ2xlLmNsb3VkLmV2ZW50YXJjLnYx",
-            "LkxvZ2dpbmdDb25maWdCA+BBARotCgtMYWJlbHNFbnRyeRILCgNrZXkYASAB",
-            "KAkSDQoFdmFsdWUYAiABKAk6AjgBGjIKEEFubm90YXRpb25zRW50cnkSCwoD",
-            "a2V5GAEgASgJEg0KBXZhbHVlGAIgASgJOgI4ATqeAepBmgEKJ2V2ZW50YXJj",
-            "Lmdvb2dsZWFwaXMuY29tL0dvb2dsZUFwaVNvdXJjZRJMcHJvamVjdHMve3By",
-            "b2plY3R9L2xvY2F0aW9ucy97bG9jYXRpb259L2dvb2dsZUFwaVNvdXJjZXMv",
-            "e2dvb2dsZV9hcGlfc291cmNlfSoQZ29vZ2xlQXBpU291cmNlczIPZ29vZ2xl",
-            "QXBpU291cmNlQsQBChxjb20uZ29vZ2xlLmNsb3VkLmV2ZW50YXJjLnYxQhRH",
-            "b29nbGVBcGlTb3VyY2VQcm90b1ABWjhjbG91ZC5nb29nbGUuY29tL2dvL2V2",
-            "ZW50YXJjL2FwaXYxL2V2ZW50YXJjcGI7ZXZlbnRhcmNwYqoCGEdvb2dsZS5D",
-            "bG91ZC5FdmVudGFyYy5WMcoCGEdvb2dsZVxDbG91ZFxFdmVudGFyY1xWMeoC",
-            "G0dvb2dsZTo6Q2xvdWQ6OkV2ZW50YXJjOjpWMWIGcHJvdG8z"));
+            "LkxvZ2dpbmdDb25maWdCA+BBARJsChlvcmdhbml6YXRpb25fc3Vic2NyaXB0",
+            "aW9uGAwgASgLMkIuZ29vZ2xlLmNsb3VkLmV2ZW50YXJjLnYxLkdvb2dsZUFw",
+            "aVNvdXJjZS5Pcmdhbml6YXRpb25TdWJzY3JpcHRpb25CA+BBAUgAEmQKFXBy",
+            "b2plY3Rfc3Vic2NyaXB0aW9ucxgNIAEoCzI+Lmdvb2dsZS5jbG91ZC5ldmVu",
+            "dGFyYy52MS5Hb29nbGVBcGlTb3VyY2UuUHJvamVjdFN1YnNjcmlwdGlvbnNC",
+            "A+BBAUgAGikKFFByb2plY3RTdWJzY3JpcHRpb25zEhEKBGxpc3QYASADKAlC",
+            "A+BBAhowChhPcmdhbml6YXRpb25TdWJzY3JpcHRpb24SFAoHZW5hYmxlZBgB",
+            "IAEoCEID4EECGi0KC0xhYmVsc0VudHJ5EgsKA2tleRgBIAEoCRINCgV2YWx1",
+            "ZRgCIAEoCToCOAEaMgoQQW5ub3RhdGlvbnNFbnRyeRILCgNrZXkYASABKAkS",
+            "DQoFdmFsdWUYAiABKAk6AjgBOp4B6kGaAQonZXZlbnRhcmMuZ29vZ2xlYXBp",
+            "cy5jb20vR29vZ2xlQXBpU291cmNlEkxwcm9qZWN0cy97cHJvamVjdH0vbG9j",
+            "YXRpb25zL3tsb2NhdGlvbn0vZ29vZ2xlQXBpU291cmNlcy97Z29vZ2xlX2Fw",
+            "aV9zb3VyY2V9KhBnb29nbGVBcGlTb3VyY2VzMg9nb29nbGVBcGlTb3VyY2VC",
+            "GQoXd2lkZV9zY29wZV9zdWJzY3JpcHRpb25CxAEKHGNvbS5nb29nbGUuY2xv",
+            "dWQuZXZlbnRhcmMudjFCFEdvb2dsZUFwaVNvdXJjZVByb3RvUAFaOGNsb3Vk",
+            "Lmdvb2dsZS5jb20vZ28vZXZlbnRhcmMvYXBpdjEvZXZlbnRhcmNwYjtldmVu",
+            "dGFyY3BiqgIYR29vZ2xlLkNsb3VkLkV2ZW50YXJjLlYxygIYR29vZ2xlXENs",
+            "b3VkXEV2ZW50YXJjXFYx6gIbR29vZ2xlOjpDbG91ZDo6RXZlbnRhcmM6OlYx",
+            "YgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.FieldInfoReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Cloud.Eventarc.V1.LoggingConfigReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Eventarc.V1.GoogleApiSource), global::Google.Cloud.Eventarc.V1.GoogleApiSource.Parser, new[]{ "Name", "Uid", "Etag", "CreateTime", "UpdateTime", "Labels", "Annotations", "DisplayName", "Destination", "CryptoKeyName", "LoggingConfig" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { null, null, })
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Eventarc.V1.GoogleApiSource), global::Google.Cloud.Eventarc.V1.GoogleApiSource.Parser, new[]{ "Name", "Uid", "Etag", "CreateTime", "UpdateTime", "Labels", "Annotations", "DisplayName", "Destination", "CryptoKeyName", "LoggingConfig", "OrganizationSubscription", "ProjectSubscriptions" }, new[]{ "WideScopeSubscription" }, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Eventarc.V1.GoogleApiSource.Types.ProjectSubscriptions), global::Google.Cloud.Eventarc.V1.GoogleApiSource.Types.ProjectSubscriptions.Parser, new[]{ "List" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Eventarc.V1.GoogleApiSource.Types.OrganizationSubscription), global::Google.Cloud.Eventarc.V1.GoogleApiSource.Types.OrganizationSubscription.Parser, new[]{ "Enabled" }, null, null, null, null),
+            null, null, })
           }));
     }
     #endregion
@@ -112,6 +122,15 @@ namespace Google.Cloud.Eventarc.V1 {
       destination_ = other.destination_;
       cryptoKeyName_ = other.cryptoKeyName_;
       loggingConfig_ = other.loggingConfig_ != null ? other.loggingConfig_.Clone() : null;
+      switch (other.WideScopeSubscriptionCase) {
+        case WideScopeSubscriptionOneofCase.OrganizationSubscription:
+          OrganizationSubscription = other.OrganizationSubscription.Clone();
+          break;
+        case WideScopeSubscriptionOneofCase.ProjectSubscriptions:
+          ProjectSubscriptions = other.ProjectSubscriptions.Clone();
+          break;
+      }
+
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -296,6 +315,61 @@ namespace Google.Cloud.Eventarc.V1 {
       }
     }
 
+    /// <summary>Field number for the "organization_subscription" field.</summary>
+    public const int OrganizationSubscriptionFieldNumber = 12;
+    /// <summary>
+    /// Optional. Config to enable subscribing to events from all projects in the
+    /// GoogleApiSource's org.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Cloud.Eventarc.V1.GoogleApiSource.Types.OrganizationSubscription OrganizationSubscription {
+      get { return wideScopeSubscriptionCase_ == WideScopeSubscriptionOneofCase.OrganizationSubscription ? (global::Google.Cloud.Eventarc.V1.GoogleApiSource.Types.OrganizationSubscription) wideScopeSubscription_ : null; }
+      set {
+        wideScopeSubscription_ = value;
+        wideScopeSubscriptionCase_ = value == null ? WideScopeSubscriptionOneofCase.None : WideScopeSubscriptionOneofCase.OrganizationSubscription;
+      }
+    }
+
+    /// <summary>Field number for the "project_subscriptions" field.</summary>
+    public const int ProjectSubscriptionsFieldNumber = 13;
+    /// <summary>
+    /// Optional. Config to enable subscribing to all events from a list of
+    /// projects.
+    ///
+    /// All the projects must be in the same org as the GoogleApiSource.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Cloud.Eventarc.V1.GoogleApiSource.Types.ProjectSubscriptions ProjectSubscriptions {
+      get { return wideScopeSubscriptionCase_ == WideScopeSubscriptionOneofCase.ProjectSubscriptions ? (global::Google.Cloud.Eventarc.V1.GoogleApiSource.Types.ProjectSubscriptions) wideScopeSubscription_ : null; }
+      set {
+        wideScopeSubscription_ = value;
+        wideScopeSubscriptionCase_ = value == null ? WideScopeSubscriptionOneofCase.None : WideScopeSubscriptionOneofCase.ProjectSubscriptions;
+      }
+    }
+
+    private object wideScopeSubscription_;
+    /// <summary>Enum of possible cases for the "wide_scope_subscription" oneof.</summary>
+    public enum WideScopeSubscriptionOneofCase {
+      None = 0,
+      OrganizationSubscription = 12,
+      ProjectSubscriptions = 13,
+    }
+    private WideScopeSubscriptionOneofCase wideScopeSubscriptionCase_ = WideScopeSubscriptionOneofCase.None;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public WideScopeSubscriptionOneofCase WideScopeSubscriptionCase {
+      get { return wideScopeSubscriptionCase_; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearWideScopeSubscription() {
+      wideScopeSubscriptionCase_ = WideScopeSubscriptionOneofCase.None;
+      wideScopeSubscription_ = null;
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
@@ -322,6 +396,9 @@ namespace Google.Cloud.Eventarc.V1 {
       if (Destination != other.Destination) return false;
       if (CryptoKeyName != other.CryptoKeyName) return false;
       if (!object.Equals(LoggingConfig, other.LoggingConfig)) return false;
+      if (!object.Equals(OrganizationSubscription, other.OrganizationSubscription)) return false;
+      if (!object.Equals(ProjectSubscriptions, other.ProjectSubscriptions)) return false;
+      if (WideScopeSubscriptionCase != other.WideScopeSubscriptionCase) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -340,6 +417,9 @@ namespace Google.Cloud.Eventarc.V1 {
       if (Destination.Length != 0) hash ^= Destination.GetHashCode();
       if (CryptoKeyName.Length != 0) hash ^= CryptoKeyName.GetHashCode();
       if (loggingConfig_ != null) hash ^= LoggingConfig.GetHashCode();
+      if (wideScopeSubscriptionCase_ == WideScopeSubscriptionOneofCase.OrganizationSubscription) hash ^= OrganizationSubscription.GetHashCode();
+      if (wideScopeSubscriptionCase_ == WideScopeSubscriptionOneofCase.ProjectSubscriptions) hash ^= ProjectSubscriptions.GetHashCode();
+      hash ^= (int) wideScopeSubscriptionCase_;
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -396,6 +476,14 @@ namespace Google.Cloud.Eventarc.V1 {
         output.WriteRawTag(90);
         output.WriteMessage(LoggingConfig);
       }
+      if (wideScopeSubscriptionCase_ == WideScopeSubscriptionOneofCase.OrganizationSubscription) {
+        output.WriteRawTag(98);
+        output.WriteMessage(OrganizationSubscription);
+      }
+      if (wideScopeSubscriptionCase_ == WideScopeSubscriptionOneofCase.ProjectSubscriptions) {
+        output.WriteRawTag(106);
+        output.WriteMessage(ProjectSubscriptions);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -444,6 +532,14 @@ namespace Google.Cloud.Eventarc.V1 {
         output.WriteRawTag(90);
         output.WriteMessage(LoggingConfig);
       }
+      if (wideScopeSubscriptionCase_ == WideScopeSubscriptionOneofCase.OrganizationSubscription) {
+        output.WriteRawTag(98);
+        output.WriteMessage(OrganizationSubscription);
+      }
+      if (wideScopeSubscriptionCase_ == WideScopeSubscriptionOneofCase.ProjectSubscriptions) {
+        output.WriteRawTag(106);
+        output.WriteMessage(ProjectSubscriptions);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -482,6 +578,12 @@ namespace Google.Cloud.Eventarc.V1 {
       }
       if (loggingConfig_ != null) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(LoggingConfig);
+      }
+      if (wideScopeSubscriptionCase_ == WideScopeSubscriptionOneofCase.OrganizationSubscription) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(OrganizationSubscription);
+      }
+      if (wideScopeSubscriptionCase_ == WideScopeSubscriptionOneofCase.ProjectSubscriptions) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(ProjectSubscriptions);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -533,6 +635,21 @@ namespace Google.Cloud.Eventarc.V1 {
         }
         LoggingConfig.MergeFrom(other.LoggingConfig);
       }
+      switch (other.WideScopeSubscriptionCase) {
+        case WideScopeSubscriptionOneofCase.OrganizationSubscription:
+          if (OrganizationSubscription == null) {
+            OrganizationSubscription = new global::Google.Cloud.Eventarc.V1.GoogleApiSource.Types.OrganizationSubscription();
+          }
+          OrganizationSubscription.MergeFrom(other.OrganizationSubscription);
+          break;
+        case WideScopeSubscriptionOneofCase.ProjectSubscriptions:
+          if (ProjectSubscriptions == null) {
+            ProjectSubscriptions = new global::Google.Cloud.Eventarc.V1.GoogleApiSource.Types.ProjectSubscriptions();
+          }
+          ProjectSubscriptions.MergeFrom(other.ProjectSubscriptions);
+          break;
+      }
+
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 
@@ -599,6 +716,24 @@ namespace Google.Cloud.Eventarc.V1 {
               LoggingConfig = new global::Google.Cloud.Eventarc.V1.LoggingConfig();
             }
             input.ReadMessage(LoggingConfig);
+            break;
+          }
+          case 98: {
+            global::Google.Cloud.Eventarc.V1.GoogleApiSource.Types.OrganizationSubscription subBuilder = new global::Google.Cloud.Eventarc.V1.GoogleApiSource.Types.OrganizationSubscription();
+            if (wideScopeSubscriptionCase_ == WideScopeSubscriptionOneofCase.OrganizationSubscription) {
+              subBuilder.MergeFrom(OrganizationSubscription);
+            }
+            input.ReadMessage(subBuilder);
+            OrganizationSubscription = subBuilder;
+            break;
+          }
+          case 106: {
+            global::Google.Cloud.Eventarc.V1.GoogleApiSource.Types.ProjectSubscriptions subBuilder = new global::Google.Cloud.Eventarc.V1.GoogleApiSource.Types.ProjectSubscriptions();
+            if (wideScopeSubscriptionCase_ == WideScopeSubscriptionOneofCase.ProjectSubscriptions) {
+              subBuilder.MergeFrom(ProjectSubscriptions);
+            }
+            input.ReadMessage(subBuilder);
+            ProjectSubscriptions = subBuilder;
             break;
           }
         }
@@ -669,10 +804,422 @@ namespace Google.Cloud.Eventarc.V1 {
             input.ReadMessage(LoggingConfig);
             break;
           }
+          case 98: {
+            global::Google.Cloud.Eventarc.V1.GoogleApiSource.Types.OrganizationSubscription subBuilder = new global::Google.Cloud.Eventarc.V1.GoogleApiSource.Types.OrganizationSubscription();
+            if (wideScopeSubscriptionCase_ == WideScopeSubscriptionOneofCase.OrganizationSubscription) {
+              subBuilder.MergeFrom(OrganizationSubscription);
+            }
+            input.ReadMessage(subBuilder);
+            OrganizationSubscription = subBuilder;
+            break;
+          }
+          case 106: {
+            global::Google.Cloud.Eventarc.V1.GoogleApiSource.Types.ProjectSubscriptions subBuilder = new global::Google.Cloud.Eventarc.V1.GoogleApiSource.Types.ProjectSubscriptions();
+            if (wideScopeSubscriptionCase_ == WideScopeSubscriptionOneofCase.ProjectSubscriptions) {
+              subBuilder.MergeFrom(ProjectSubscriptions);
+            }
+            input.ReadMessage(subBuilder);
+            ProjectSubscriptions = subBuilder;
+            break;
+          }
         }
       }
     }
     #endif
+
+    #region Nested types
+    /// <summary>Container for nested types declared in the GoogleApiSource message type.</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static partial class Types {
+      /// <summary>
+      /// Config to enable subscribing to all events from a list of projects.
+      /// </summary>
+      [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+      public sealed partial class ProjectSubscriptions : pb::IMessage<ProjectSubscriptions>
+      #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          , pb::IBufferMessage
+      #endif
+      {
+        private static readonly pb::MessageParser<ProjectSubscriptions> _parser = new pb::MessageParser<ProjectSubscriptions>(() => new ProjectSubscriptions());
+        private pb::UnknownFieldSet _unknownFields;
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public static pb::MessageParser<ProjectSubscriptions> Parser { get { return _parser; } }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public static pbr::MessageDescriptor Descriptor {
+          get { return global::Google.Cloud.Eventarc.V1.GoogleApiSource.Descriptor.NestedTypes[0]; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        pbr::MessageDescriptor pb::IMessage.Descriptor {
+          get { return Descriptor; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public ProjectSubscriptions() {
+          OnConstruction();
+        }
+
+        partial void OnConstruction();
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public ProjectSubscriptions(ProjectSubscriptions other) : this() {
+          list_ = other.list_.Clone();
+          _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public ProjectSubscriptions Clone() {
+          return new ProjectSubscriptions(this);
+        }
+
+        /// <summary>Field number for the "list" field.</summary>
+        public const int ListFieldNumber = 1;
+        private static readonly pb::FieldCodec<string> _repeated_list_codec
+            = pb::FieldCodec.ForString(10);
+        private readonly pbc::RepeatedField<string> list_ = new pbc::RepeatedField<string>();
+        /// <summary>
+        /// Required. A list of projects to receive events from.
+        ///
+        /// All the projects must be in the same org. The listed projects should have
+        /// the format project/{identifier} where identifier can be either the
+        /// project id for project number. A single list may contain both formats. At
+        /// most 100 projects can be listed.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public pbc::RepeatedField<string> List {
+          get { return list_; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override bool Equals(object other) {
+          return Equals(other as ProjectSubscriptions);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public bool Equals(ProjectSubscriptions other) {
+          if (ReferenceEquals(other, null)) {
+            return false;
+          }
+          if (ReferenceEquals(other, this)) {
+            return true;
+          }
+          if(!list_.Equals(other.list_)) return false;
+          return Equals(_unknownFields, other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override int GetHashCode() {
+          int hash = 1;
+          hash ^= list_.GetHashCode();
+          if (_unknownFields != null) {
+            hash ^= _unknownFields.GetHashCode();
+          }
+          return hash;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override string ToString() {
+          return pb::JsonFormatter.ToDiagnosticString(this);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void WriteTo(pb::CodedOutputStream output) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          output.WriteRawMessage(this);
+        #else
+          list_.WriteTo(output, _repeated_list_codec);
+          if (_unknownFields != null) {
+            _unknownFields.WriteTo(output);
+          }
+        #endif
+        }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+          list_.WriteTo(ref output, _repeated_list_codec);
+          if (_unknownFields != null) {
+            _unknownFields.WriteTo(ref output);
+          }
+        }
+        #endif
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public int CalculateSize() {
+          int size = 0;
+          size += list_.CalculateSize(_repeated_list_codec);
+          if (_unknownFields != null) {
+            size += _unknownFields.CalculateSize();
+          }
+          return size;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void MergeFrom(ProjectSubscriptions other) {
+          if (other == null) {
+            return;
+          }
+          list_.Add(other.list_);
+          _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void MergeFrom(pb::CodedInputStream input) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          input.ReadRawMessage(this);
+        #else
+          uint tag;
+          while ((tag = input.ReadTag()) != 0) {
+            switch(tag) {
+              default:
+                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+                break;
+              case 10: {
+                list_.AddEntriesFrom(input, _repeated_list_codec);
+                break;
+              }
+            }
+          }
+        #endif
+        }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+          uint tag;
+          while ((tag = input.ReadTag()) != 0) {
+            switch(tag) {
+              default:
+                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+                break;
+              case 10: {
+                list_.AddEntriesFrom(ref input, _repeated_list_codec);
+                break;
+              }
+            }
+          }
+        }
+        #endif
+
+      }
+
+      /// <summary>
+      /// Config to enabled subscribing to events from other projects in the org.
+      /// </summary>
+      [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+      public sealed partial class OrganizationSubscription : pb::IMessage<OrganizationSubscription>
+      #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          , pb::IBufferMessage
+      #endif
+      {
+        private static readonly pb::MessageParser<OrganizationSubscription> _parser = new pb::MessageParser<OrganizationSubscription>(() => new OrganizationSubscription());
+        private pb::UnknownFieldSet _unknownFields;
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public static pb::MessageParser<OrganizationSubscription> Parser { get { return _parser; } }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public static pbr::MessageDescriptor Descriptor {
+          get { return global::Google.Cloud.Eventarc.V1.GoogleApiSource.Descriptor.NestedTypes[1]; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        pbr::MessageDescriptor pb::IMessage.Descriptor {
+          get { return Descriptor; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public OrganizationSubscription() {
+          OnConstruction();
+        }
+
+        partial void OnConstruction();
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public OrganizationSubscription(OrganizationSubscription other) : this() {
+          enabled_ = other.enabled_;
+          _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public OrganizationSubscription Clone() {
+          return new OrganizationSubscription(this);
+        }
+
+        /// <summary>Field number for the "enabled" field.</summary>
+        public const int EnabledFieldNumber = 1;
+        private bool enabled_;
+        /// <summary>
+        /// Required. Enable org level subscription.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public bool Enabled {
+          get { return enabled_; }
+          set {
+            enabled_ = value;
+          }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override bool Equals(object other) {
+          return Equals(other as OrganizationSubscription);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public bool Equals(OrganizationSubscription other) {
+          if (ReferenceEquals(other, null)) {
+            return false;
+          }
+          if (ReferenceEquals(other, this)) {
+            return true;
+          }
+          if (Enabled != other.Enabled) return false;
+          return Equals(_unknownFields, other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override int GetHashCode() {
+          int hash = 1;
+          if (Enabled != false) hash ^= Enabled.GetHashCode();
+          if (_unknownFields != null) {
+            hash ^= _unknownFields.GetHashCode();
+          }
+          return hash;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override string ToString() {
+          return pb::JsonFormatter.ToDiagnosticString(this);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void WriteTo(pb::CodedOutputStream output) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          output.WriteRawMessage(this);
+        #else
+          if (Enabled != false) {
+            output.WriteRawTag(8);
+            output.WriteBool(Enabled);
+          }
+          if (_unknownFields != null) {
+            _unknownFields.WriteTo(output);
+          }
+        #endif
+        }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+          if (Enabled != false) {
+            output.WriteRawTag(8);
+            output.WriteBool(Enabled);
+          }
+          if (_unknownFields != null) {
+            _unknownFields.WriteTo(ref output);
+          }
+        }
+        #endif
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public int CalculateSize() {
+          int size = 0;
+          if (Enabled != false) {
+            size += 1 + 1;
+          }
+          if (_unknownFields != null) {
+            size += _unknownFields.CalculateSize();
+          }
+          return size;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void MergeFrom(OrganizationSubscription other) {
+          if (other == null) {
+            return;
+          }
+          if (other.Enabled != false) {
+            Enabled = other.Enabled;
+          }
+          _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void MergeFrom(pb::CodedInputStream input) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          input.ReadRawMessage(this);
+        #else
+          uint tag;
+          while ((tag = input.ReadTag()) != 0) {
+            switch(tag) {
+              default:
+                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+                break;
+              case 8: {
+                Enabled = input.ReadBool();
+                break;
+              }
+            }
+          }
+        #endif
+        }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+          uint tag;
+          while ((tag = input.ReadTag()) != 0) {
+            switch(tag) {
+              default:
+                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+                break;
+              case 8: {
+                Enabled = input.ReadBool();
+                break;
+              }
+            }
+          }
+        }
+        #endif
+
+      }
+
+    }
+    #endregion
 
   }
 
