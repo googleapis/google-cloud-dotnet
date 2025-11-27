@@ -4762,6 +4762,18 @@
             "sourcePaths": [
                 "apis/Google.Cloud.DatabaseCenter.V1Beta/Google.Cloud.DatabaseCenter.V1Beta"
             ]
+        },
+        {
+            "id": "Google.Cloud.NetworkSecurity.V1Alpha1",
+            "nextVersion": "1.0.0-alpha01",
+            "generationAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
+            "releaseAutomationLevel": "AUTOMATION_LEVEL_BLOCKED",
+            "apiPaths": [
+                "google/cloud/networksecurity/v1alpha1"
+            ],
+            "sourcePaths": [
+                "apis/Google.Cloud.NetworkSecurity.V1Alpha1/Google.Cloud.NetworkSecurity.V1Alpha1"
+            ]
         }
     ],
     "ignoredApiPaths": [
