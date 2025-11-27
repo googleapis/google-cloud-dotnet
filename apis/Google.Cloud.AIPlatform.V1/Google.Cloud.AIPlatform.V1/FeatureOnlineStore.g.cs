@@ -30,7 +30,7 @@ namespace Google.Cloud.AIPlatform.V1 {
             "Y2UucHJvdG8aMGdvb2dsZS9jbG91ZC9haXBsYXRmb3JtL3YxL2VuY3J5cHRp",
             "b25fc3BlYy5wcm90bxozZ29vZ2xlL2Nsb3VkL2FpcGxhdGZvcm0vdjEvc2Vy",
             "dmljZV9uZXR3b3JraW5nLnByb3RvGh9nb29nbGUvcHJvdG9idWYvdGltZXN0",
-            "YW1wLnByb3RvIvUMChJGZWF0dXJlT25saW5lU3RvcmUSSwoIYmlndGFibGUY",
+            "YW1wLnByb3RvIogNChJGZWF0dXJlT25saW5lU3RvcmUSSwoIYmlndGFibGUY",
             "CCABKAsyNy5nb29nbGUuY2xvdWQuYWlwbGF0Zm9ybS52MS5GZWF0dXJlT25s",
             "aW5lU3RvcmUuQmlndGFibGVIABJNCglvcHRpbWl6ZWQYDCABKAsyOC5nb29n",
             "bGUuY2xvdWQuYWlwbGF0Zm9ybS52MS5GZWF0dXJlT25saW5lU3RvcmUuT3B0",
@@ -46,36 +46,37 @@ namespace Google.Cloud.AIPlatform.V1 {
             "cnZpbmdFbmRwb2ludEID4EEBEkgKD2VuY3J5cHRpb25fc3BlYxgNIAEoCzIq",
             "Lmdvb2dsZS5jbG91ZC5haXBsYXRmb3JtLnYxLkVuY3J5cHRpb25TcGVjQgPg",
             "QQESGgoNc2F0aXNmaWVzX3B6cxgPIAEoCEID4EEDEhoKDXNhdGlzZmllc19w",
-            "emkYECABKAhCA+BBAxrEAwoIQmlndGFibGUSXgoMYXV0b19zY2FsaW5nGAEg",
+            "emkYECABKAhCA+BBAxrXAwoIQmlndGFibGUSXgoMYXV0b19zY2FsaW5nGAEg",
             "ASgLMkMuZ29vZ2xlLmNsb3VkLmFpcGxhdGZvcm0udjEuRmVhdHVyZU9ubGlu",
             "ZVN0b3JlLkJpZ3RhYmxlLkF1dG9TY2FsaW5nQgPgQQISKgodZW5hYmxlX2Rp",
             "cmVjdF9iaWd0YWJsZV9hY2Nlc3MYAyABKAhCA+BBARJoChFiaWd0YWJsZV9t",
             "ZXRhZGF0YRgEIAEoCzJILmdvb2dsZS5jbG91ZC5haXBsYXRmb3JtLnYxLkZl",
             "YXR1cmVPbmxpbmVTdG9yZS5CaWd0YWJsZS5CaWd0YWJsZU1ldGFkYXRhQgPg",
-            "QQMabAoLQXV0b1NjYWxpbmcSGwoObWluX25vZGVfY291bnQYASABKAVCA+BB",
-            "AhIbCg5tYXhfbm9kZV9jb3VudBgCIAEoBUID4EECEiMKFmNwdV91dGlsaXph",
-            "dGlvbl90YXJnZXQYAyABKAVCA+BBARpUChBCaWd0YWJsZU1ldGFkYXRhEhkK",
-            "EXRlbmFudF9wcm9qZWN0X2lkGAEgASgJEhMKC2luc3RhbmNlX2lkGAIgASgJ",
-            "EhAKCHRhYmxlX2lkGAMgASgJGgsKCU9wdGltaXplZBrLAQoYRGVkaWNhdGVk",
-            "U2VydmluZ0VuZHBvaW50EigKG3B1YmxpY19lbmRwb2ludF9kb21haW5fbmFt",
-            "ZRgCIAEoCUID4EEDEmQKHnByaXZhdGVfc2VydmljZV9jb25uZWN0X2NvbmZp",
-            "ZxgDIAEoCzI3Lmdvb2dsZS5jbG91ZC5haXBsYXRmb3JtLnYxLlByaXZhdGVT",
-            "ZXJ2aWNlQ29ubmVjdENvbmZpZ0ID4EEBEh8KEnNlcnZpY2VfYXR0YWNobWVu",
-            "dBgEIAEoCUID4EEDGi0KC0xhYmVsc0VudHJ5EgsKA2tleRgBIAEoCRINCgV2",
-            "YWx1ZRgCIAEoCToCOAEiOAoFU3RhdGUSFQoRU1RBVEVfVU5TUEVDSUZJRUQQ",
-            "ABIKCgZTVEFCTEUQARIMCghVUERBVElORxACOoYB6kGCAQosYWlwbGF0Zm9y",
-            "bS5nb29nbGVhcGlzLmNvbS9GZWF0dXJlT25saW5lU3RvcmUSUnByb2plY3Rz",
-            "L3twcm9qZWN0fS9sb2NhdGlvbnMve2xvY2F0aW9ufS9mZWF0dXJlT25saW5l",
-            "U3RvcmVzL3tmZWF0dXJlX29ubGluZV9zdG9yZX1CDgoMc3RvcmFnZV90eXBl",
-            "QtUBCh5jb20uZ29vZ2xlLmNsb3VkLmFpcGxhdGZvcm0udjFCF0ZlYXR1cmVP",
-            "bmxpbmVTdG9yZVByb3RvUAFaPmNsb3VkLmdvb2dsZS5jb20vZ28vYWlwbGF0",
-            "Zm9ybS9hcGl2MS9haXBsYXRmb3JtcGI7YWlwbGF0Zm9ybXBiqgIaR29vZ2xl",
-            "LkNsb3VkLkFJUGxhdGZvcm0uVjHKAhpHb29nbGVcQ2xvdWRcQUlQbGF0Zm9y",
-            "bVxWMeoCHUdvb2dsZTo6Q2xvdWQ6OkFJUGxhdGZvcm06OlYxYgZwcm90bzM="));
+            "QQMSEQoEem9uZRgFIAEoCUID4EEBGmwKC0F1dG9TY2FsaW5nEhsKDm1pbl9u",
+            "b2RlX2NvdW50GAEgASgFQgPgQQISGwoObWF4X25vZGVfY291bnQYAiABKAVC",
+            "A+BBAhIjChZjcHVfdXRpbGl6YXRpb25fdGFyZ2V0GAMgASgFQgPgQQEaVAoQ",
+            "QmlndGFibGVNZXRhZGF0YRIZChF0ZW5hbnRfcHJvamVjdF9pZBgBIAEoCRIT",
+            "CgtpbnN0YW5jZV9pZBgCIAEoCRIQCgh0YWJsZV9pZBgDIAEoCRoLCglPcHRp",
+            "bWl6ZWQaywEKGERlZGljYXRlZFNlcnZpbmdFbmRwb2ludBIoChtwdWJsaWNf",
+            "ZW5kcG9pbnRfZG9tYWluX25hbWUYAiABKAlCA+BBAxJkCh5wcml2YXRlX3Nl",
+            "cnZpY2VfY29ubmVjdF9jb25maWcYAyABKAsyNy5nb29nbGUuY2xvdWQuYWlw",
+            "bGF0Zm9ybS52MS5Qcml2YXRlU2VydmljZUNvbm5lY3RDb25maWdCA+BBARIf",
+            "ChJzZXJ2aWNlX2F0dGFjaG1lbnQYBCABKAlCA+BBAxotCgtMYWJlbHNFbnRy",
+            "eRILCgNrZXkYASABKAkSDQoFdmFsdWUYAiABKAk6AjgBIjgKBVN0YXRlEhUK",
+            "EVNUQVRFX1VOU1BFQ0lGSUVEEAASCgoGU1RBQkxFEAESDAoIVVBEQVRJTkcQ",
+            "AjqGAepBggEKLGFpcGxhdGZvcm0uZ29vZ2xlYXBpcy5jb20vRmVhdHVyZU9u",
+            "bGluZVN0b3JlElJwcm9qZWN0cy97cHJvamVjdH0vbG9jYXRpb25zL3tsb2Nh",
+            "dGlvbn0vZmVhdHVyZU9ubGluZVN0b3Jlcy97ZmVhdHVyZV9vbmxpbmVfc3Rv",
+            "cmV9Qg4KDHN0b3JhZ2VfdHlwZULVAQoeY29tLmdvb2dsZS5jbG91ZC5haXBs",
+            "YXRmb3JtLnYxQhdGZWF0dXJlT25saW5lU3RvcmVQcm90b1ABWj5jbG91ZC5n",
+            "b29nbGUuY29tL2dvL2FpcGxhdGZvcm0vYXBpdjEvYWlwbGF0Zm9ybXBiO2Fp",
+            "cGxhdGZvcm1wYqoCGkdvb2dsZS5DbG91ZC5BSVBsYXRmb3JtLlYxygIaR29v",
+            "Z2xlXENsb3VkXEFJUGxhdGZvcm1cVjHqAh1Hb29nbGU6OkNsb3VkOjpBSVBs",
+            "YXRmb3JtOjpWMWIGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Cloud.AIPlatform.V1.EncryptionSpecReflection.Descriptor, global::Google.Cloud.AIPlatform.V1.ServiceNetworkingReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1.FeatureOnlineStore), global::Google.Cloud.AIPlatform.V1.FeatureOnlineStore.Parser, new[]{ "Bigtable", "Optimized", "Name", "CreateTime", "UpdateTime", "Etag", "Labels", "State", "DedicatedServingEndpoint", "EncryptionSpec", "SatisfiesPzs", "SatisfiesPzi" }, new[]{ "StorageType" }, new[]{ typeof(global::Google.Cloud.AIPlatform.V1.FeatureOnlineStore.Types.State) }, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1.FeatureOnlineStore.Types.Bigtable), global::Google.Cloud.AIPlatform.V1.FeatureOnlineStore.Types.Bigtable.Parser, new[]{ "AutoScaling", "EnableDirectBigtableAccess", "BigtableMetadata" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1.FeatureOnlineStore.Types.Bigtable.Types.AutoScaling), global::Google.Cloud.AIPlatform.V1.FeatureOnlineStore.Types.Bigtable.Types.AutoScaling.Parser, new[]{ "MinNodeCount", "MaxNodeCount", "CpuUtilizationTarget" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1.FeatureOnlineStore), global::Google.Cloud.AIPlatform.V1.FeatureOnlineStore.Parser, new[]{ "Bigtable", "Optimized", "Name", "CreateTime", "UpdateTime", "Etag", "Labels", "State", "DedicatedServingEndpoint", "EncryptionSpec", "SatisfiesPzs", "SatisfiesPzi" }, new[]{ "StorageType" }, new[]{ typeof(global::Google.Cloud.AIPlatform.V1.FeatureOnlineStore.Types.State) }, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1.FeatureOnlineStore.Types.Bigtable), global::Google.Cloud.AIPlatform.V1.FeatureOnlineStore.Types.Bigtable.Parser, new[]{ "AutoScaling", "EnableDirectBigtableAccess", "BigtableMetadata", "Zone" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1.FeatureOnlineStore.Types.Bigtable.Types.AutoScaling), global::Google.Cloud.AIPlatform.V1.FeatureOnlineStore.Types.Bigtable.Types.AutoScaling.Parser, new[]{ "MinNodeCount", "MaxNodeCount", "CpuUtilizationTarget" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1.FeatureOnlineStore.Types.Bigtable.Types.BigtableMetadata), global::Google.Cloud.AIPlatform.V1.FeatureOnlineStore.Types.Bigtable.Types.BigtableMetadata.Parser, new[]{ "TenantProjectId", "InstanceId", "TableId" }, null, null, null, null)}),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1.FeatureOnlineStore.Types.Optimized), global::Google.Cloud.AIPlatform.V1.FeatureOnlineStore.Types.Optimized.Parser, null, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1.FeatureOnlineStore.Types.DedicatedServingEndpoint), global::Google.Cloud.AIPlatform.V1.FeatureOnlineStore.Types.DedicatedServingEndpoint.Parser, new[]{ "PublicEndpointDomainName", "PrivateServiceConnectConfig", "ServiceAttachment" }, null, null, null, null),
@@ -892,6 +893,7 @@ namespace Google.Cloud.AIPlatform.V1 {
           autoScaling_ = other.autoScaling_ != null ? other.autoScaling_.Clone() : null;
           enableDirectBigtableAccess_ = other.enableDirectBigtableAccess_;
           bigtableMetadata_ = other.bigtableMetadata_ != null ? other.bigtableMetadata_.Clone() : null;
+          zone_ = other.zone_;
           _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
         }
 
@@ -947,6 +949,23 @@ namespace Google.Cloud.AIPlatform.V1 {
           }
         }
 
+        /// <summary>Field number for the "zone" field.</summary>
+        public const int ZoneFieldNumber = 5;
+        private string zone_ = "";
+        /// <summary>
+        /// Optional. The zone where the underlying Bigtable cluster for the primary
+        /// Bigtable instance will be provisioned. Only the zone must be provided.
+        /// For example, only "us-central1-a" should be provided.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public string Zone {
+          get { return zone_; }
+          set {
+            zone_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+          }
+        }
+
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public override bool Equals(object other) {
@@ -965,6 +984,7 @@ namespace Google.Cloud.AIPlatform.V1 {
           if (!object.Equals(AutoScaling, other.AutoScaling)) return false;
           if (EnableDirectBigtableAccess != other.EnableDirectBigtableAccess) return false;
           if (!object.Equals(BigtableMetadata, other.BigtableMetadata)) return false;
+          if (Zone != other.Zone) return false;
           return Equals(_unknownFields, other._unknownFields);
         }
 
@@ -975,6 +995,7 @@ namespace Google.Cloud.AIPlatform.V1 {
           if (autoScaling_ != null) hash ^= AutoScaling.GetHashCode();
           if (EnableDirectBigtableAccess != false) hash ^= EnableDirectBigtableAccess.GetHashCode();
           if (bigtableMetadata_ != null) hash ^= BigtableMetadata.GetHashCode();
+          if (Zone.Length != 0) hash ^= Zone.GetHashCode();
           if (_unknownFields != null) {
             hash ^= _unknownFields.GetHashCode();
           }
@@ -1005,6 +1026,10 @@ namespace Google.Cloud.AIPlatform.V1 {
             output.WriteRawTag(34);
             output.WriteMessage(BigtableMetadata);
           }
+          if (Zone.Length != 0) {
+            output.WriteRawTag(42);
+            output.WriteString(Zone);
+          }
           if (_unknownFields != null) {
             _unknownFields.WriteTo(output);
           }
@@ -1027,6 +1052,10 @@ namespace Google.Cloud.AIPlatform.V1 {
             output.WriteRawTag(34);
             output.WriteMessage(BigtableMetadata);
           }
+          if (Zone.Length != 0) {
+            output.WriteRawTag(42);
+            output.WriteString(Zone);
+          }
           if (_unknownFields != null) {
             _unknownFields.WriteTo(ref output);
           }
@@ -1045,6 +1074,9 @@ namespace Google.Cloud.AIPlatform.V1 {
           }
           if (bigtableMetadata_ != null) {
             size += 1 + pb::CodedOutputStream.ComputeMessageSize(BigtableMetadata);
+          }
+          if (Zone.Length != 0) {
+            size += 1 + pb::CodedOutputStream.ComputeStringSize(Zone);
           }
           if (_unknownFields != null) {
             size += _unknownFields.CalculateSize();
@@ -1072,6 +1104,9 @@ namespace Google.Cloud.AIPlatform.V1 {
               BigtableMetadata = new global::Google.Cloud.AIPlatform.V1.FeatureOnlineStore.Types.Bigtable.Types.BigtableMetadata();
             }
             BigtableMetadata.MergeFrom(other.BigtableMetadata);
+          }
+          if (other.Zone.Length != 0) {
+            Zone = other.Zone;
           }
           _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
         }
@@ -1106,6 +1141,10 @@ namespace Google.Cloud.AIPlatform.V1 {
                 input.ReadMessage(BigtableMetadata);
                 break;
               }
+              case 42: {
+                Zone = input.ReadString();
+                break;
+              }
             }
           }
         #endif
@@ -1137,6 +1176,10 @@ namespace Google.Cloud.AIPlatform.V1 {
                   BigtableMetadata = new global::Google.Cloud.AIPlatform.V1.FeatureOnlineStore.Types.Bigtable.Types.BigtableMetadata();
                 }
                 input.ReadMessage(BigtableMetadata);
+                break;
+              }
+              case 42: {
+                Zone = input.ReadString();
                 break;
               }
             }
