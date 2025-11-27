@@ -73,6 +73,7 @@ namespace Google.Cloud.CloudBuild.V1
             UpdateWorkerPoolSettings = existing.UpdateWorkerPoolSettings;
             UpdateWorkerPoolOperationsSettings = existing.UpdateWorkerPoolOperationsSettings.Clone();
             ListWorkerPoolsSettings = existing.ListWorkerPoolsSettings;
+            GetDefaultServiceAccountSettings = existing.GetDefaultServiceAccountSettings;
             OnCopy(existing);
         }
 
@@ -483,6 +484,18 @@ namespace Google.Cloud.CloudBuild.V1
         /// </remarks>
         public gaxgrpc::CallSettings ListWorkerPoolsSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(600000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 2147483647, initialBackoff: sys::TimeSpan.FromMilliseconds(100), maxBackoff: sys::TimeSpan.FromMilliseconds(60000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Unavailable, grpccore::StatusCode.DeadlineExceeded)));
 
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>CloudBuildClient.GetDefaultServiceAccount</c> and <c>CloudBuildClient.GetDefaultServiceAccountAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>No timeout is applied.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings GetDefaultServiceAccountSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
+
         /// <summary>Creates a deep clone of this object, with all the same property values.</summary>
         /// <returns>A deep clone of this <see cref="CloudBuildSettings"/> object.</returns>
         public CloudBuildSettings Clone() => new CloudBuildSettings(this);
@@ -758,6 +771,162 @@ namespace Google.Cloud.CloudBuild.V1
             CreateBuildAsync(projectId, build, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
+        /// Starts a build with the specified configuration.
+        /// 
+        /// This method returns a long-running `Operation`, which includes the build
+        /// ID. Pass the build ID to `GetBuild` to determine the build status (such as
+        /// `SUCCESS` or `FAILURE`).
+        /// </summary>
+        /// <param name="parent">
+        /// The parent resource where this build will be created.
+        /// Format: `projects/{project}/locations/{location}`
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<Build, BuildOperationMetadata> CreateBuild(string parent, gaxgrpc::CallSettings callSettings = null) =>
+            CreateBuild(new CreateBuildRequest { Parent = parent ?? "", }, callSettings);
+
+        /// <summary>
+        /// Starts a build with the specified configuration.
+        /// 
+        /// This method returns a long-running `Operation`, which includes the build
+        /// ID. Pass the build ID to `GetBuild` to determine the build status (such as
+        /// `SUCCESS` or `FAILURE`).
+        /// </summary>
+        /// <param name="parent">
+        /// The parent resource where this build will be created.
+        /// Format: `projects/{project}/locations/{location}`
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<Build, BuildOperationMetadata>> CreateBuildAsync(string parent, gaxgrpc::CallSettings callSettings = null) =>
+            CreateBuildAsync(new CreateBuildRequest { Parent = parent ?? "", }, callSettings);
+
+        /// <summary>
+        /// Starts a build with the specified configuration.
+        /// 
+        /// This method returns a long-running `Operation`, which includes the build
+        /// ID. Pass the build ID to `GetBuild` to determine the build status (such as
+        /// `SUCCESS` or `FAILURE`).
+        /// </summary>
+        /// <param name="parent">
+        /// The parent resource where this build will be created.
+        /// Format: `projects/{project}/locations/{location}`
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<Build, BuildOperationMetadata>> CreateBuildAsync(string parent, st::CancellationToken cancellationToken) =>
+            CreateBuildAsync(parent, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Starts a build with the specified configuration.
+        /// 
+        /// This method returns a long-running `Operation`, which includes the build
+        /// ID. Pass the build ID to `GetBuild` to determine the build status (such as
+        /// `SUCCESS` or `FAILURE`).
+        /// </summary>
+        /// <param name="parent">
+        /// The parent resource where this build will be created.
+        /// Format: `projects/{project}/locations/{location}`
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<Build, BuildOperationMetadata> CreateBuild(gagr::ProjectName parent, gaxgrpc::CallSettings callSettings = null) =>
+            CreateBuild(new CreateBuildRequest
+            {
+                ParentAsProjectName = parent,
+            }, callSettings);
+
+        /// <summary>
+        /// Starts a build with the specified configuration.
+        /// 
+        /// This method returns a long-running `Operation`, which includes the build
+        /// ID. Pass the build ID to `GetBuild` to determine the build status (such as
+        /// `SUCCESS` or `FAILURE`).
+        /// </summary>
+        /// <param name="parent">
+        /// The parent resource where this build will be created.
+        /// Format: `projects/{project}/locations/{location}`
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<Build, BuildOperationMetadata>> CreateBuildAsync(gagr::ProjectName parent, gaxgrpc::CallSettings callSettings = null) =>
+            CreateBuildAsync(new CreateBuildRequest
+            {
+                ParentAsProjectName = parent,
+            }, callSettings);
+
+        /// <summary>
+        /// Starts a build with the specified configuration.
+        /// 
+        /// This method returns a long-running `Operation`, which includes the build
+        /// ID. Pass the build ID to `GetBuild` to determine the build status (such as
+        /// `SUCCESS` or `FAILURE`).
+        /// </summary>
+        /// <param name="parent">
+        /// The parent resource where this build will be created.
+        /// Format: `projects/{project}/locations/{location}`
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<Build, BuildOperationMetadata>> CreateBuildAsync(gagr::ProjectName parent, st::CancellationToken cancellationToken) =>
+            CreateBuildAsync(parent, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Starts a build with the specified configuration.
+        /// 
+        /// This method returns a long-running `Operation`, which includes the build
+        /// ID. Pass the build ID to `GetBuild` to determine the build status (such as
+        /// `SUCCESS` or `FAILURE`).
+        /// </summary>
+        /// <param name="parent">
+        /// The parent resource where this build will be created.
+        /// Format: `projects/{project}/locations/{location}`
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<Build, BuildOperationMetadata> CreateBuild(gagr::LocationName parent, gaxgrpc::CallSettings callSettings = null) =>
+            CreateBuild(new CreateBuildRequest
+            {
+                ParentAsLocationName = parent,
+            }, callSettings);
+
+        /// <summary>
+        /// Starts a build with the specified configuration.
+        /// 
+        /// This method returns a long-running `Operation`, which includes the build
+        /// ID. Pass the build ID to `GetBuild` to determine the build status (such as
+        /// `SUCCESS` or `FAILURE`).
+        /// </summary>
+        /// <param name="parent">
+        /// The parent resource where this build will be created.
+        /// Format: `projects/{project}/locations/{location}`
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<Build, BuildOperationMetadata>> CreateBuildAsync(gagr::LocationName parent, gaxgrpc::CallSettings callSettings = null) =>
+            CreateBuildAsync(new CreateBuildRequest
+            {
+                ParentAsLocationName = parent,
+            }, callSettings);
+
+        /// <summary>
+        /// Starts a build with the specified configuration.
+        /// 
+        /// This method returns a long-running `Operation`, which includes the build
+        /// ID. Pass the build ID to `GetBuild` to determine the build status (such as
+        /// `SUCCESS` or `FAILURE`).
+        /// </summary>
+        /// <param name="parent">
+        /// The parent resource where this build will be created.
+        /// Format: `projects/{project}/locations/{location}`
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<Build, BuildOperationMetadata>> CreateBuildAsync(gagr::LocationName parent, st::CancellationToken cancellationToken) =>
+            CreateBuildAsync(parent, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
         /// Returns information about a previously requested build.
         /// 
         /// The `Build` that is returned includes its status (such as `SUCCESS`,
@@ -851,6 +1020,96 @@ namespace Google.Cloud.CloudBuild.V1
         /// <returns>A Task containing the RPC response.</returns>
         public virtual stt::Task<Build> GetBuildAsync(string projectId, string id, st::CancellationToken cancellationToken) =>
             GetBuildAsync(projectId, id, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Returns information about a previously requested build.
+        /// 
+        /// The `Build` that is returned includes its status (such as `SUCCESS`,
+        /// `FAILURE`, or `WORKING`), and timing information.
+        /// </summary>
+        /// <param name="name">
+        /// The name of the `Build` to retrieve.
+        /// Format: `projects/{project}/locations/{location}/builds/{build}`
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual Build GetBuild(string name, gaxgrpc::CallSettings callSettings = null) =>
+            GetBuild(new GetBuildRequest { Name = name ?? "", }, callSettings);
+
+        /// <summary>
+        /// Returns information about a previously requested build.
+        /// 
+        /// The `Build` that is returned includes its status (such as `SUCCESS`,
+        /// `FAILURE`, or `WORKING`), and timing information.
+        /// </summary>
+        /// <param name="name">
+        /// The name of the `Build` to retrieve.
+        /// Format: `projects/{project}/locations/{location}/builds/{build}`
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<Build> GetBuildAsync(string name, gaxgrpc::CallSettings callSettings = null) =>
+            GetBuildAsync(new GetBuildRequest { Name = name ?? "", }, callSettings);
+
+        /// <summary>
+        /// Returns information about a previously requested build.
+        /// 
+        /// The `Build` that is returned includes its status (such as `SUCCESS`,
+        /// `FAILURE`, or `WORKING`), and timing information.
+        /// </summary>
+        /// <param name="name">
+        /// The name of the `Build` to retrieve.
+        /// Format: `projects/{project}/locations/{location}/builds/{build}`
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<Build> GetBuildAsync(string name, st::CancellationToken cancellationToken) =>
+            GetBuildAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Returns information about a previously requested build.
+        /// 
+        /// The `Build` that is returned includes its status (such as `SUCCESS`,
+        /// `FAILURE`, or `WORKING`), and timing information.
+        /// </summary>
+        /// <param name="name">
+        /// The name of the `Build` to retrieve.
+        /// Format: `projects/{project}/locations/{location}/builds/{build}`
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual Build GetBuild(BuildName name, gaxgrpc::CallSettings callSettings = null) =>
+            GetBuild(new GetBuildRequest { BuildName = name, }, callSettings);
+
+        /// <summary>
+        /// Returns information about a previously requested build.
+        /// 
+        /// The `Build` that is returned includes its status (such as `SUCCESS`,
+        /// `FAILURE`, or `WORKING`), and timing information.
+        /// </summary>
+        /// <param name="name">
+        /// The name of the `Build` to retrieve.
+        /// Format: `projects/{project}/locations/{location}/builds/{build}`
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<Build> GetBuildAsync(BuildName name, gaxgrpc::CallSettings callSettings = null) =>
+            GetBuildAsync(new GetBuildRequest { BuildName = name, }, callSettings);
+
+        /// <summary>
+        /// Returns information about a previously requested build.
+        /// 
+        /// The `Build` that is returned includes its status (such as `SUCCESS`,
+        /// `FAILURE`, or `WORKING`), and timing information.
+        /// </summary>
+        /// <param name="name">
+        /// The name of the `Build` to retrieve.
+        /// Format: `projects/{project}/locations/{location}/builds/{build}`
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<Build> GetBuildAsync(BuildName name, st::CancellationToken cancellationToken) =>
+            GetBuildAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
         /// Lists previously requested builds.
@@ -1032,6 +1291,78 @@ namespace Google.Cloud.CloudBuild.V1
         /// <returns>A Task containing the RPC response.</returns>
         public virtual stt::Task<Build> CancelBuildAsync(string projectId, string id, st::CancellationToken cancellationToken) =>
             CancelBuildAsync(projectId, id, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Cancels a build in progress.
+        /// </summary>
+        /// <param name="name">
+        /// The name of the `Build` to cancel.
+        /// Format: `projects/{project}/locations/{location}/builds/{build}`
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual Build CancelBuild(string name, gaxgrpc::CallSettings callSettings = null) =>
+            CancelBuild(new CancelBuildRequest { Name = name ?? "", }, callSettings);
+
+        /// <summary>
+        /// Cancels a build in progress.
+        /// </summary>
+        /// <param name="name">
+        /// The name of the `Build` to cancel.
+        /// Format: `projects/{project}/locations/{location}/builds/{build}`
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<Build> CancelBuildAsync(string name, gaxgrpc::CallSettings callSettings = null) =>
+            CancelBuildAsync(new CancelBuildRequest { Name = name ?? "", }, callSettings);
+
+        /// <summary>
+        /// Cancels a build in progress.
+        /// </summary>
+        /// <param name="name">
+        /// The name of the `Build` to cancel.
+        /// Format: `projects/{project}/locations/{location}/builds/{build}`
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<Build> CancelBuildAsync(string name, st::CancellationToken cancellationToken) =>
+            CancelBuildAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Cancels a build in progress.
+        /// </summary>
+        /// <param name="name">
+        /// The name of the `Build` to cancel.
+        /// Format: `projects/{project}/locations/{location}/builds/{build}`
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual Build CancelBuild(BuildName name, gaxgrpc::CallSettings callSettings = null) =>
+            CancelBuild(new CancelBuildRequest { BuildName = name, }, callSettings);
+
+        /// <summary>
+        /// Cancels a build in progress.
+        /// </summary>
+        /// <param name="name">
+        /// The name of the `Build` to cancel.
+        /// Format: `projects/{project}/locations/{location}/builds/{build}`
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<Build> CancelBuildAsync(BuildName name, gaxgrpc::CallSettings callSettings = null) =>
+            CancelBuildAsync(new CancelBuildRequest { BuildName = name, }, callSettings);
+
+        /// <summary>
+        /// Cancels a build in progress.
+        /// </summary>
+        /// <param name="name">
+        /// The name of the `Build` to cancel.
+        /// Format: `projects/{project}/locations/{location}/builds/{build}`
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<Build> CancelBuildAsync(BuildName name, st::CancellationToken cancellationToken) =>
+            CancelBuildAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
         /// Creates a new build based on the specified build.
@@ -1293,10 +1624,238 @@ namespace Google.Cloud.CloudBuild.V1
             RetryBuildAsync(projectId, id, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
+        /// Creates a new build based on the specified build.
+        /// 
+        /// This method creates a new build using the original build request, which may
+        /// or may not result in an identical build.
+        /// 
+        /// For triggered builds:
+        /// 
+        /// * Triggered builds resolve to a precise revision; therefore a retry of a
+        /// triggered build will result in a build that uses the same revision.
+        /// 
+        /// For non-triggered builds that specify `RepoSource`:
+        /// 
+        /// * If the original build built from the tip of a branch, the retried build
+        /// will build from the tip of that branch, which may not be the same revision
+        /// as the original build.
+        /// * If the original build specified a commit sha or revision ID, the retried
+        /// build will use the identical source.
+        /// 
+        /// For builds that specify `StorageSource`:
+        /// 
+        /// * If the original build pulled source from Cloud Storage without
+        /// specifying the generation of the object, the new build will use the current
+        /// object, which may be different from the original build source.
+        /// * If the original build pulled source from Cloud Storage and specified the
+        /// generation of the object, the new build will attempt to use the same
+        /// object, which may or may not be available depending on the bucket's
+        /// lifecycle management settings.
+        /// </summary>
+        /// <param name="name">
+        /// The name of the `Build` to retry.
+        /// Format: `projects/{project}/locations/{location}/builds/{build}`
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<Build, BuildOperationMetadata> RetryBuild(string name, gaxgrpc::CallSettings callSettings = null) =>
+            RetryBuild(new RetryBuildRequest { Name = name ?? "", }, callSettings);
+
+        /// <summary>
+        /// Creates a new build based on the specified build.
+        /// 
+        /// This method creates a new build using the original build request, which may
+        /// or may not result in an identical build.
+        /// 
+        /// For triggered builds:
+        /// 
+        /// * Triggered builds resolve to a precise revision; therefore a retry of a
+        /// triggered build will result in a build that uses the same revision.
+        /// 
+        /// For non-triggered builds that specify `RepoSource`:
+        /// 
+        /// * If the original build built from the tip of a branch, the retried build
+        /// will build from the tip of that branch, which may not be the same revision
+        /// as the original build.
+        /// * If the original build specified a commit sha or revision ID, the retried
+        /// build will use the identical source.
+        /// 
+        /// For builds that specify `StorageSource`:
+        /// 
+        /// * If the original build pulled source from Cloud Storage without
+        /// specifying the generation of the object, the new build will use the current
+        /// object, which may be different from the original build source.
+        /// * If the original build pulled source from Cloud Storage and specified the
+        /// generation of the object, the new build will attempt to use the same
+        /// object, which may or may not be available depending on the bucket's
+        /// lifecycle management settings.
+        /// </summary>
+        /// <param name="name">
+        /// The name of the `Build` to retry.
+        /// Format: `projects/{project}/locations/{location}/builds/{build}`
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<Build, BuildOperationMetadata>> RetryBuildAsync(string name, gaxgrpc::CallSettings callSettings = null) =>
+            RetryBuildAsync(new RetryBuildRequest { Name = name ?? "", }, callSettings);
+
+        /// <summary>
+        /// Creates a new build based on the specified build.
+        /// 
+        /// This method creates a new build using the original build request, which may
+        /// or may not result in an identical build.
+        /// 
+        /// For triggered builds:
+        /// 
+        /// * Triggered builds resolve to a precise revision; therefore a retry of a
+        /// triggered build will result in a build that uses the same revision.
+        /// 
+        /// For non-triggered builds that specify `RepoSource`:
+        /// 
+        /// * If the original build built from the tip of a branch, the retried build
+        /// will build from the tip of that branch, which may not be the same revision
+        /// as the original build.
+        /// * If the original build specified a commit sha or revision ID, the retried
+        /// build will use the identical source.
+        /// 
+        /// For builds that specify `StorageSource`:
+        /// 
+        /// * If the original build pulled source from Cloud Storage without
+        /// specifying the generation of the object, the new build will use the current
+        /// object, which may be different from the original build source.
+        /// * If the original build pulled source from Cloud Storage and specified the
+        /// generation of the object, the new build will attempt to use the same
+        /// object, which may or may not be available depending on the bucket's
+        /// lifecycle management settings.
+        /// </summary>
+        /// <param name="name">
+        /// The name of the `Build` to retry.
+        /// Format: `projects/{project}/locations/{location}/builds/{build}`
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<Build, BuildOperationMetadata>> RetryBuildAsync(string name, st::CancellationToken cancellationToken) =>
+            RetryBuildAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Creates a new build based on the specified build.
+        /// 
+        /// This method creates a new build using the original build request, which may
+        /// or may not result in an identical build.
+        /// 
+        /// For triggered builds:
+        /// 
+        /// * Triggered builds resolve to a precise revision; therefore a retry of a
+        /// triggered build will result in a build that uses the same revision.
+        /// 
+        /// For non-triggered builds that specify `RepoSource`:
+        /// 
+        /// * If the original build built from the tip of a branch, the retried build
+        /// will build from the tip of that branch, which may not be the same revision
+        /// as the original build.
+        /// * If the original build specified a commit sha or revision ID, the retried
+        /// build will use the identical source.
+        /// 
+        /// For builds that specify `StorageSource`:
+        /// 
+        /// * If the original build pulled source from Cloud Storage without
+        /// specifying the generation of the object, the new build will use the current
+        /// object, which may be different from the original build source.
+        /// * If the original build pulled source from Cloud Storage and specified the
+        /// generation of the object, the new build will attempt to use the same
+        /// object, which may or may not be available depending on the bucket's
+        /// lifecycle management settings.
+        /// </summary>
+        /// <param name="name">
+        /// The name of the `Build` to retry.
+        /// Format: `projects/{project}/locations/{location}/builds/{build}`
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<Build, BuildOperationMetadata> RetryBuild(BuildName name, gaxgrpc::CallSettings callSettings = null) =>
+            RetryBuild(new RetryBuildRequest { BuildName = name, }, callSettings);
+
+        /// <summary>
+        /// Creates a new build based on the specified build.
+        /// 
+        /// This method creates a new build using the original build request, which may
+        /// or may not result in an identical build.
+        /// 
+        /// For triggered builds:
+        /// 
+        /// * Triggered builds resolve to a precise revision; therefore a retry of a
+        /// triggered build will result in a build that uses the same revision.
+        /// 
+        /// For non-triggered builds that specify `RepoSource`:
+        /// 
+        /// * If the original build built from the tip of a branch, the retried build
+        /// will build from the tip of that branch, which may not be the same revision
+        /// as the original build.
+        /// * If the original build specified a commit sha or revision ID, the retried
+        /// build will use the identical source.
+        /// 
+        /// For builds that specify `StorageSource`:
+        /// 
+        /// * If the original build pulled source from Cloud Storage without
+        /// specifying the generation of the object, the new build will use the current
+        /// object, which may be different from the original build source.
+        /// * If the original build pulled source from Cloud Storage and specified the
+        /// generation of the object, the new build will attempt to use the same
+        /// object, which may or may not be available depending on the bucket's
+        /// lifecycle management settings.
+        /// </summary>
+        /// <param name="name">
+        /// The name of the `Build` to retry.
+        /// Format: `projects/{project}/locations/{location}/builds/{build}`
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<Build, BuildOperationMetadata>> RetryBuildAsync(BuildName name, gaxgrpc::CallSettings callSettings = null) =>
+            RetryBuildAsync(new RetryBuildRequest { BuildName = name, }, callSettings);
+
+        /// <summary>
+        /// Creates a new build based on the specified build.
+        /// 
+        /// This method creates a new build using the original build request, which may
+        /// or may not result in an identical build.
+        /// 
+        /// For triggered builds:
+        /// 
+        /// * Triggered builds resolve to a precise revision; therefore a retry of a
+        /// triggered build will result in a build that uses the same revision.
+        /// 
+        /// For non-triggered builds that specify `RepoSource`:
+        /// 
+        /// * If the original build built from the tip of a branch, the retried build
+        /// will build from the tip of that branch, which may not be the same revision
+        /// as the original build.
+        /// * If the original build specified a commit sha or revision ID, the retried
+        /// build will use the identical source.
+        /// 
+        /// For builds that specify `StorageSource`:
+        /// 
+        /// * If the original build pulled source from Cloud Storage without
+        /// specifying the generation of the object, the new build will use the current
+        /// object, which may be different from the original build source.
+        /// * If the original build pulled source from Cloud Storage and specified the
+        /// generation of the object, the new build will attempt to use the same
+        /// object, which may or may not be available depending on the bucket's
+        /// lifecycle management settings.
+        /// </summary>
+        /// <param name="name">
+        /// The name of the `Build` to retry.
+        /// Format: `projects/{project}/locations/{location}/builds/{build}`
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<Build, BuildOperationMetadata>> RetryBuildAsync(BuildName name, st::CancellationToken cancellationToken) =>
+            RetryBuildAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
         /// Approves or rejects a pending build.
         /// 
-        /// If approved, the returned LRO will be analogous to the LRO returned from
-        /// a CreateBuild call.
+        /// If approved, the returned long-running operation (LRO) will be analogous to
+        /// the LRO returned from a CreateBuild call.
         /// 
         /// If rejected, the returned LRO will be immediately done.
         /// </summary>
@@ -1309,8 +1868,8 @@ namespace Google.Cloud.CloudBuild.V1
         /// <summary>
         /// Approves or rejects a pending build.
         /// 
-        /// If approved, the returned LRO will be analogous to the LRO returned from
-        /// a CreateBuild call.
+        /// If approved, the returned long-running operation (LRO) will be analogous to
+        /// the LRO returned from a CreateBuild call.
         /// 
         /// If rejected, the returned LRO will be immediately done.
         /// </summary>
@@ -1323,8 +1882,8 @@ namespace Google.Cloud.CloudBuild.V1
         /// <summary>
         /// Approves or rejects a pending build.
         /// 
-        /// If approved, the returned LRO will be analogous to the LRO returned from
-        /// a CreateBuild call.
+        /// If approved, the returned long-running operation (LRO) will be analogous to
+        /// the LRO returned from a CreateBuild call.
         /// 
         /// If rejected, the returned LRO will be immediately done.
         /// </summary>
@@ -1363,8 +1922,8 @@ namespace Google.Cloud.CloudBuild.V1
         /// <summary>
         /// Approves or rejects a pending build.
         /// 
-        /// If approved, the returned LRO will be analogous to the LRO returned from
-        /// a CreateBuild call.
+        /// If approved, the returned long-running operation (LRO) will be analogous to
+        /// the LRO returned from a CreateBuild call.
         /// 
         /// If rejected, the returned LRO will be immediately done.
         /// </summary>
@@ -1387,8 +1946,8 @@ namespace Google.Cloud.CloudBuild.V1
         /// <summary>
         /// Approves or rejects a pending build.
         /// 
-        /// If approved, the returned LRO will be analogous to the LRO returned from
-        /// a CreateBuild call.
+        /// If approved, the returned long-running operation (LRO) will be analogous to
+        /// the LRO returned from a CreateBuild call.
         /// 
         /// If rejected, the returned LRO will be immediately done.
         /// </summary>
@@ -1411,8 +1970,8 @@ namespace Google.Cloud.CloudBuild.V1
         /// <summary>
         /// Approves or rejects a pending build.
         /// 
-        /// If approved, the returned LRO will be analogous to the LRO returned from
-        /// a CreateBuild call.
+        /// If approved, the returned long-running operation (LRO) will be analogous to
+        /// the LRO returned from a CreateBuild call.
         /// 
         /// If rejected, the returned LRO will be immediately done.
         /// </summary>
@@ -1430,8 +1989,6 @@ namespace Google.Cloud.CloudBuild.V1
 
         /// <summary>
         /// Creates a new `BuildTrigger`.
-        /// 
-        /// This API is experimental.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1441,8 +1998,6 @@ namespace Google.Cloud.CloudBuild.V1
 
         /// <summary>
         /// Creates a new `BuildTrigger`.
-        /// 
-        /// This API is experimental.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1452,8 +2007,6 @@ namespace Google.Cloud.CloudBuild.V1
 
         /// <summary>
         /// Creates a new `BuildTrigger`.
-        /// 
-        /// This API is experimental.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -1463,8 +2016,6 @@ namespace Google.Cloud.CloudBuild.V1
 
         /// <summary>
         /// Creates a new `BuildTrigger`.
-        /// 
-        /// This API is experimental.
         /// </summary>
         /// <param name="projectId">
         /// Required. ID of the project for which to configure automatic builds.
@@ -1483,8 +2034,6 @@ namespace Google.Cloud.CloudBuild.V1
 
         /// <summary>
         /// Creates a new `BuildTrigger`.
-        /// 
-        /// This API is experimental.
         /// </summary>
         /// <param name="projectId">
         /// Required. ID of the project for which to configure automatic builds.
@@ -1503,8 +2052,6 @@ namespace Google.Cloud.CloudBuild.V1
 
         /// <summary>
         /// Creates a new `BuildTrigger`.
-        /// 
-        /// This API is experimental.
         /// </summary>
         /// <param name="projectId">
         /// Required. ID of the project for which to configure automatic builds.
@@ -1518,9 +2065,127 @@ namespace Google.Cloud.CloudBuild.V1
             CreateBuildTriggerAsync(projectId, trigger, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
+        /// Creates a new `BuildTrigger`.
+        /// </summary>
+        /// <param name="parent">
+        /// The parent resource where this trigger will be created.
+        /// Format: `projects/{project}/locations/{location}`
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual BuildTrigger CreateBuildTrigger(string parent, gaxgrpc::CallSettings callSettings = null) =>
+            CreateBuildTrigger(new CreateBuildTriggerRequest { Parent = parent ?? "", }, callSettings);
+
+        /// <summary>
+        /// Creates a new `BuildTrigger`.
+        /// </summary>
+        /// <param name="parent">
+        /// The parent resource where this trigger will be created.
+        /// Format: `projects/{project}/locations/{location}`
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<BuildTrigger> CreateBuildTriggerAsync(string parent, gaxgrpc::CallSettings callSettings = null) =>
+            CreateBuildTriggerAsync(new CreateBuildTriggerRequest { Parent = parent ?? "", }, callSettings);
+
+        /// <summary>
+        /// Creates a new `BuildTrigger`.
+        /// </summary>
+        /// <param name="parent">
+        /// The parent resource where this trigger will be created.
+        /// Format: `projects/{project}/locations/{location}`
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<BuildTrigger> CreateBuildTriggerAsync(string parent, st::CancellationToken cancellationToken) =>
+            CreateBuildTriggerAsync(parent, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Creates a new `BuildTrigger`.
+        /// </summary>
+        /// <param name="parent">
+        /// The parent resource where this trigger will be created.
+        /// Format: `projects/{project}/locations/{location}`
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual BuildTrigger CreateBuildTrigger(gagr::ProjectName parent, gaxgrpc::CallSettings callSettings = null) =>
+            CreateBuildTrigger(new CreateBuildTriggerRequest
+            {
+                ParentAsProjectName = parent,
+            }, callSettings);
+
+        /// <summary>
+        /// Creates a new `BuildTrigger`.
+        /// </summary>
+        /// <param name="parent">
+        /// The parent resource where this trigger will be created.
+        /// Format: `projects/{project}/locations/{location}`
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<BuildTrigger> CreateBuildTriggerAsync(gagr::ProjectName parent, gaxgrpc::CallSettings callSettings = null) =>
+            CreateBuildTriggerAsync(new CreateBuildTriggerRequest
+            {
+                ParentAsProjectName = parent,
+            }, callSettings);
+
+        /// <summary>
+        /// Creates a new `BuildTrigger`.
+        /// </summary>
+        /// <param name="parent">
+        /// The parent resource where this trigger will be created.
+        /// Format: `projects/{project}/locations/{location}`
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<BuildTrigger> CreateBuildTriggerAsync(gagr::ProjectName parent, st::CancellationToken cancellationToken) =>
+            CreateBuildTriggerAsync(parent, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Creates a new `BuildTrigger`.
+        /// </summary>
+        /// <param name="parent">
+        /// The parent resource where this trigger will be created.
+        /// Format: `projects/{project}/locations/{location}`
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual BuildTrigger CreateBuildTrigger(gagr::LocationName parent, gaxgrpc::CallSettings callSettings = null) =>
+            CreateBuildTrigger(new CreateBuildTriggerRequest
+            {
+                ParentAsLocationName = parent,
+            }, callSettings);
+
+        /// <summary>
+        /// Creates a new `BuildTrigger`.
+        /// </summary>
+        /// <param name="parent">
+        /// The parent resource where this trigger will be created.
+        /// Format: `projects/{project}/locations/{location}`
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<BuildTrigger> CreateBuildTriggerAsync(gagr::LocationName parent, gaxgrpc::CallSettings callSettings = null) =>
+            CreateBuildTriggerAsync(new CreateBuildTriggerRequest
+            {
+                ParentAsLocationName = parent,
+            }, callSettings);
+
+        /// <summary>
+        /// Creates a new `BuildTrigger`.
+        /// </summary>
+        /// <param name="parent">
+        /// The parent resource where this trigger will be created.
+        /// Format: `projects/{project}/locations/{location}`
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<BuildTrigger> CreateBuildTriggerAsync(gagr::LocationName parent, st::CancellationToken cancellationToken) =>
+            CreateBuildTriggerAsync(parent, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
         /// Returns information about a `BuildTrigger`.
-        /// 
-        /// This API is experimental.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1530,8 +2195,6 @@ namespace Google.Cloud.CloudBuild.V1
 
         /// <summary>
         /// Returns information about a `BuildTrigger`.
-        /// 
-        /// This API is experimental.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1541,8 +2204,6 @@ namespace Google.Cloud.CloudBuild.V1
 
         /// <summary>
         /// Returns information about a `BuildTrigger`.
-        /// 
-        /// This API is experimental.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -1552,8 +2213,6 @@ namespace Google.Cloud.CloudBuild.V1
 
         /// <summary>
         /// Returns information about a `BuildTrigger`.
-        /// 
-        /// This API is experimental.
         /// </summary>
         /// <param name="projectId">
         /// Required. ID of the project that owns the trigger.
@@ -1572,8 +2231,6 @@ namespace Google.Cloud.CloudBuild.V1
 
         /// <summary>
         /// Returns information about a `BuildTrigger`.
-        /// 
-        /// This API is experimental.
         /// </summary>
         /// <param name="projectId">
         /// Required. ID of the project that owns the trigger.
@@ -1592,8 +2249,6 @@ namespace Google.Cloud.CloudBuild.V1
 
         /// <summary>
         /// Returns information about a `BuildTrigger`.
-        /// 
-        /// This API is experimental.
         /// </summary>
         /// <param name="projectId">
         /// Required. ID of the project that owns the trigger.
@@ -1607,9 +2262,85 @@ namespace Google.Cloud.CloudBuild.V1
             GetBuildTriggerAsync(projectId, triggerId, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
+        /// Returns information about a `BuildTrigger`.
+        /// </summary>
+        /// <param name="name">
+        /// The name of the `Trigger` to retrieve.
+        /// Format: `projects/{project}/locations/{location}/triggers/{trigger}`
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual BuildTrigger GetBuildTrigger(string name, gaxgrpc::CallSettings callSettings = null) =>
+            GetBuildTrigger(new GetBuildTriggerRequest { Name = name ?? "", }, callSettings);
+
+        /// <summary>
+        /// Returns information about a `BuildTrigger`.
+        /// </summary>
+        /// <param name="name">
+        /// The name of the `Trigger` to retrieve.
+        /// Format: `projects/{project}/locations/{location}/triggers/{trigger}`
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<BuildTrigger> GetBuildTriggerAsync(string name, gaxgrpc::CallSettings callSettings = null) =>
+            GetBuildTriggerAsync(new GetBuildTriggerRequest { Name = name ?? "", }, callSettings);
+
+        /// <summary>
+        /// Returns information about a `BuildTrigger`.
+        /// </summary>
+        /// <param name="name">
+        /// The name of the `Trigger` to retrieve.
+        /// Format: `projects/{project}/locations/{location}/triggers/{trigger}`
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<BuildTrigger> GetBuildTriggerAsync(string name, st::CancellationToken cancellationToken) =>
+            GetBuildTriggerAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Returns information about a `BuildTrigger`.
+        /// </summary>
+        /// <param name="name">
+        /// The name of the `Trigger` to retrieve.
+        /// Format: `projects/{project}/locations/{location}/triggers/{trigger}`
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual BuildTrigger GetBuildTrigger(BuildTriggerName name, gaxgrpc::CallSettings callSettings = null) =>
+            GetBuildTrigger(new GetBuildTriggerRequest
+            {
+                BuildTriggerName = name,
+            }, callSettings);
+
+        /// <summary>
+        /// Returns information about a `BuildTrigger`.
+        /// </summary>
+        /// <param name="name">
+        /// The name of the `Trigger` to retrieve.
+        /// Format: `projects/{project}/locations/{location}/triggers/{trigger}`
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<BuildTrigger> GetBuildTriggerAsync(BuildTriggerName name, gaxgrpc::CallSettings callSettings = null) =>
+            GetBuildTriggerAsync(new GetBuildTriggerRequest
+            {
+                BuildTriggerName = name,
+            }, callSettings);
+
+        /// <summary>
+        /// Returns information about a `BuildTrigger`.
+        /// </summary>
+        /// <param name="name">
+        /// The name of the `Trigger` to retrieve.
+        /// Format: `projects/{project}/locations/{location}/triggers/{trigger}`
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<BuildTrigger> GetBuildTriggerAsync(BuildTriggerName name, st::CancellationToken cancellationToken) =>
+            GetBuildTriggerAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
         /// Lists existing `BuildTrigger`s.
-        /// 
-        /// This API is experimental.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1619,8 +2350,6 @@ namespace Google.Cloud.CloudBuild.V1
 
         /// <summary>
         /// Lists existing `BuildTrigger`s.
-        /// 
-        /// This API is experimental.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1630,8 +2359,6 @@ namespace Google.Cloud.CloudBuild.V1
 
         /// <summary>
         /// Lists existing `BuildTrigger`s.
-        /// 
-        /// This API is experimental.
         /// </summary>
         /// <param name="projectId">
         /// Required. ID of the project for which to list BuildTriggers.
@@ -1665,8 +2392,6 @@ namespace Google.Cloud.CloudBuild.V1
 
         /// <summary>
         /// Lists existing `BuildTrigger`s.
-        /// 
-        /// This API is experimental.
         /// </summary>
         /// <param name="projectId">
         /// Required. ID of the project for which to list BuildTriggers.
@@ -1700,8 +2425,6 @@ namespace Google.Cloud.CloudBuild.V1
 
         /// <summary>
         /// Deletes a `BuildTrigger` by its project ID and trigger ID.
-        /// 
-        /// This API is experimental.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1711,8 +2434,6 @@ namespace Google.Cloud.CloudBuild.V1
 
         /// <summary>
         /// Deletes a `BuildTrigger` by its project ID and trigger ID.
-        /// 
-        /// This API is experimental.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1722,8 +2443,6 @@ namespace Google.Cloud.CloudBuild.V1
 
         /// <summary>
         /// Deletes a `BuildTrigger` by its project ID and trigger ID.
-        /// 
-        /// This API is experimental.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -1733,8 +2452,6 @@ namespace Google.Cloud.CloudBuild.V1
 
         /// <summary>
         /// Deletes a `BuildTrigger` by its project ID and trigger ID.
-        /// 
-        /// This API is experimental.
         /// </summary>
         /// <param name="projectId">
         /// Required. ID of the project that owns the trigger.
@@ -1753,8 +2470,6 @@ namespace Google.Cloud.CloudBuild.V1
 
         /// <summary>
         /// Deletes a `BuildTrigger` by its project ID and trigger ID.
-        /// 
-        /// This API is experimental.
         /// </summary>
         /// <param name="projectId">
         /// Required. ID of the project that owns the trigger.
@@ -1773,8 +2488,6 @@ namespace Google.Cloud.CloudBuild.V1
 
         /// <summary>
         /// Deletes a `BuildTrigger` by its project ID and trigger ID.
-        /// 
-        /// This API is experimental.
         /// </summary>
         /// <param name="projectId">
         /// Required. ID of the project that owns the trigger.
@@ -1788,9 +2501,85 @@ namespace Google.Cloud.CloudBuild.V1
             DeleteBuildTriggerAsync(projectId, triggerId, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
+        /// Deletes a `BuildTrigger` by its project ID and trigger ID.
+        /// </summary>
+        /// <param name="name">
+        /// The name of the `Trigger` to delete.
+        /// Format: `projects/{project}/locations/{location}/triggers/{trigger}`
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual void DeleteBuildTrigger(string name, gaxgrpc::CallSettings callSettings = null) =>
+            DeleteBuildTrigger(new DeleteBuildTriggerRequest { Name = name ?? "", }, callSettings);
+
+        /// <summary>
+        /// Deletes a `BuildTrigger` by its project ID and trigger ID.
+        /// </summary>
+        /// <param name="name">
+        /// The name of the `Trigger` to delete.
+        /// Format: `projects/{project}/locations/{location}/triggers/{trigger}`
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task DeleteBuildTriggerAsync(string name, gaxgrpc::CallSettings callSettings = null) =>
+            DeleteBuildTriggerAsync(new DeleteBuildTriggerRequest { Name = name ?? "", }, callSettings);
+
+        /// <summary>
+        /// Deletes a `BuildTrigger` by its project ID and trigger ID.
+        /// </summary>
+        /// <param name="name">
+        /// The name of the `Trigger` to delete.
+        /// Format: `projects/{project}/locations/{location}/triggers/{trigger}`
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task DeleteBuildTriggerAsync(string name, st::CancellationToken cancellationToken) =>
+            DeleteBuildTriggerAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Deletes a `BuildTrigger` by its project ID and trigger ID.
+        /// </summary>
+        /// <param name="name">
+        /// The name of the `Trigger` to delete.
+        /// Format: `projects/{project}/locations/{location}/triggers/{trigger}`
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual void DeleteBuildTrigger(BuildTriggerName name, gaxgrpc::CallSettings callSettings = null) =>
+            DeleteBuildTrigger(new DeleteBuildTriggerRequest
+            {
+                BuildTriggerName = name,
+            }, callSettings);
+
+        /// <summary>
+        /// Deletes a `BuildTrigger` by its project ID and trigger ID.
+        /// </summary>
+        /// <param name="name">
+        /// The name of the `Trigger` to delete.
+        /// Format: `projects/{project}/locations/{location}/triggers/{trigger}`
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task DeleteBuildTriggerAsync(BuildTriggerName name, gaxgrpc::CallSettings callSettings = null) =>
+            DeleteBuildTriggerAsync(new DeleteBuildTriggerRequest
+            {
+                BuildTriggerName = name,
+            }, callSettings);
+
+        /// <summary>
+        /// Deletes a `BuildTrigger` by its project ID and trigger ID.
+        /// </summary>
+        /// <param name="name">
+        /// The name of the `Trigger` to delete.
+        /// Format: `projects/{project}/locations/{location}/triggers/{trigger}`
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task DeleteBuildTriggerAsync(BuildTriggerName name, st::CancellationToken cancellationToken) =>
+            DeleteBuildTriggerAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
         /// Updates a `BuildTrigger` by its project ID and trigger ID.
-        /// 
-        /// This API is experimental.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1800,8 +2589,6 @@ namespace Google.Cloud.CloudBuild.V1
 
         /// <summary>
         /// Updates a `BuildTrigger` by its project ID and trigger ID.
-        /// 
-        /// This API is experimental.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1811,8 +2598,6 @@ namespace Google.Cloud.CloudBuild.V1
 
         /// <summary>
         /// Updates a `BuildTrigger` by its project ID and trigger ID.
-        /// 
-        /// This API is experimental.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -1822,8 +2607,6 @@ namespace Google.Cloud.CloudBuild.V1
 
         /// <summary>
         /// Updates a `BuildTrigger` by its project ID and trigger ID.
-        /// 
-        /// This API is experimental.
         /// </summary>
         /// <param name="projectId">
         /// Required. ID of the project that owns the trigger.
@@ -1846,8 +2629,6 @@ namespace Google.Cloud.CloudBuild.V1
 
         /// <summary>
         /// Updates a `BuildTrigger` by its project ID and trigger ID.
-        /// 
-        /// This API is experimental.
         /// </summary>
         /// <param name="projectId">
         /// Required. ID of the project that owns the trigger.
@@ -1870,8 +2651,6 @@ namespace Google.Cloud.CloudBuild.V1
 
         /// <summary>
         /// Updates a `BuildTrigger` by its project ID and trigger ID.
-        /// 
-        /// This API is experimental.
         /// </summary>
         /// <param name="projectId">
         /// Required. ID of the project that owns the trigger.
@@ -2592,7 +3371,7 @@ namespace Google.Cloud.CloudBuild.V1
         /// Format: `projects/{project}/locations/{location}/workerPools/{workerPool}`.
         /// </param>
         /// <param name="updateMask">
-        /// A mask specifying which fields in `worker_pool` to update.
+        /// Optional. A mask specifying which fields in `worker_pool` to update.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -2613,7 +3392,7 @@ namespace Google.Cloud.CloudBuild.V1
         /// Format: `projects/{project}/locations/{location}/workerPools/{workerPool}`.
         /// </param>
         /// <param name="updateMask">
-        /// A mask specifying which fields in `worker_pool` to update.
+        /// Optional. A mask specifying which fields in `worker_pool` to update.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -2634,7 +3413,7 @@ namespace Google.Cloud.CloudBuild.V1
         /// Format: `projects/{project}/locations/{location}/workerPools/{workerPool}`.
         /// </param>
         /// <param name="updateMask">
-        /// A mask specifying which fields in `worker_pool` to update.
+        /// Optional. A mask specifying which fields in `worker_pool` to update.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -2794,6 +3573,123 @@ namespace Google.Cloud.CloudBuild.V1
             }
             return ListWorkerPoolsAsync(request, callSettings);
         }
+
+        /// <summary>
+        /// Returns the `DefaultServiceAccount` used by the project.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual DefaultServiceAccount GetDefaultServiceAccount(GetDefaultServiceAccountRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Returns the `DefaultServiceAccount` used by the project.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<DefaultServiceAccount> GetDefaultServiceAccountAsync(GetDefaultServiceAccountRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Returns the `DefaultServiceAccount` used by the project.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<DefaultServiceAccount> GetDefaultServiceAccountAsync(GetDefaultServiceAccountRequest request, st::CancellationToken cancellationToken) =>
+            GetDefaultServiceAccountAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Returns the `DefaultServiceAccount` used by the project.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the `DefaultServiceAccount` to retrieve.
+        /// Format:
+        /// `projects/{project}/locations/{location}/defaultServiceAccount`
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual DefaultServiceAccount GetDefaultServiceAccount(string name, gaxgrpc::CallSettings callSettings = null) =>
+            GetDefaultServiceAccount(new GetDefaultServiceAccountRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Returns the `DefaultServiceAccount` used by the project.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the `DefaultServiceAccount` to retrieve.
+        /// Format:
+        /// `projects/{project}/locations/{location}/defaultServiceAccount`
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<DefaultServiceAccount> GetDefaultServiceAccountAsync(string name, gaxgrpc::CallSettings callSettings = null) =>
+            GetDefaultServiceAccountAsync(new GetDefaultServiceAccountRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Returns the `DefaultServiceAccount` used by the project.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the `DefaultServiceAccount` to retrieve.
+        /// Format:
+        /// `projects/{project}/locations/{location}/defaultServiceAccount`
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<DefaultServiceAccount> GetDefaultServiceAccountAsync(string name, st::CancellationToken cancellationToken) =>
+            GetDefaultServiceAccountAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Returns the `DefaultServiceAccount` used by the project.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the `DefaultServiceAccount` to retrieve.
+        /// Format:
+        /// `projects/{project}/locations/{location}/defaultServiceAccount`
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual DefaultServiceAccount GetDefaultServiceAccount(DefaultServiceAccountName name, gaxgrpc::CallSettings callSettings = null) =>
+            GetDefaultServiceAccount(new GetDefaultServiceAccountRequest
+            {
+                DefaultServiceAccountName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Returns the `DefaultServiceAccount` used by the project.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the `DefaultServiceAccount` to retrieve.
+        /// Format:
+        /// `projects/{project}/locations/{location}/defaultServiceAccount`
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<DefaultServiceAccount> GetDefaultServiceAccountAsync(DefaultServiceAccountName name, gaxgrpc::CallSettings callSettings = null) =>
+            GetDefaultServiceAccountAsync(new GetDefaultServiceAccountRequest
+            {
+                DefaultServiceAccountName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Returns the `DefaultServiceAccount` used by the project.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the `DefaultServiceAccount` to retrieve.
+        /// Format:
+        /// `projects/{project}/locations/{location}/defaultServiceAccount`
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<DefaultServiceAccount> GetDefaultServiceAccountAsync(DefaultServiceAccountName name, st::CancellationToken cancellationToken) =>
+            GetDefaultServiceAccountAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
     }
 
     /// <summary>CloudBuild client wrapper implementation, for convenient use.</summary>
@@ -2844,6 +3740,8 @@ namespace Google.Cloud.CloudBuild.V1
         private readonly gaxgrpc::ApiCall<UpdateWorkerPoolRequest, lro::Operation> _callUpdateWorkerPool;
 
         private readonly gaxgrpc::ApiCall<ListWorkerPoolsRequest, ListWorkerPoolsResponse> _callListWorkerPools;
+
+        private readonly gaxgrpc::ApiCall<GetDefaultServiceAccountRequest, DefaultServiceAccount> _callGetDefaultServiceAccount;
 
         /// <summary>
         /// Constructs a client wrapper for the CloudBuild service, with the specified gRPC client and settings.
@@ -2921,6 +3819,9 @@ namespace Google.Cloud.CloudBuild.V1
             _callListWorkerPools = clientHelper.BuildApiCall<ListWorkerPoolsRequest, ListWorkerPoolsResponse>("ListWorkerPools", grpcClient.ListWorkerPoolsAsync, grpcClient.ListWorkerPools, effectiveSettings.ListWorkerPoolsSettings).WithExtractedGoogleRequestParam(new gaxgrpc::RoutingHeaderExtractor<ListWorkerPoolsRequest>().WithExtractedParameter("location", "^projects/[^/]+/locations/([^/]+)/?$", request => request.Parent));
             Modify_ApiCall(ref _callListWorkerPools);
             Modify_ListWorkerPoolsApiCall(ref _callListWorkerPools);
+            _callGetDefaultServiceAccount = clientHelper.BuildApiCall<GetDefaultServiceAccountRequest, DefaultServiceAccount>("GetDefaultServiceAccount", grpcClient.GetDefaultServiceAccountAsync, grpcClient.GetDefaultServiceAccount, effectiveSettings.GetDefaultServiceAccountSettings).WithExtractedGoogleRequestParam(new gaxgrpc::RoutingHeaderExtractor<GetDefaultServiceAccountRequest>().WithExtractedParameter("location", "^projects/[^/]+/locations/([^/]+)/defaultServiceAccount/?$", request => request.Name));
+            Modify_ApiCall(ref _callGetDefaultServiceAccount);
+            Modify_GetDefaultServiceAccountApiCall(ref _callGetDefaultServiceAccount);
             OnConstruction(grpcClient, effectiveSettings, clientHelper);
         }
 
@@ -2962,6 +3863,8 @@ namespace Google.Cloud.CloudBuild.V1
 
         partial void Modify_ListWorkerPoolsApiCall(ref gaxgrpc::ApiCall<ListWorkerPoolsRequest, ListWorkerPoolsResponse> call);
 
+        partial void Modify_GetDefaultServiceAccountApiCall(ref gaxgrpc::ApiCall<GetDefaultServiceAccountRequest, DefaultServiceAccount> call);
+
         partial void OnConstruction(CloudBuild.CloudBuildClient grpcClient, CloudBuildSettings effectiveSettings, gaxgrpc::ClientHelper clientHelper);
 
         /// <summary>The underlying gRPC CloudBuild client</summary>
@@ -3002,6 +3905,8 @@ namespace Google.Cloud.CloudBuild.V1
         partial void Modify_UpdateWorkerPoolRequest(ref UpdateWorkerPoolRequest request, ref gaxgrpc::CallSettings settings);
 
         partial void Modify_ListWorkerPoolsRequest(ref ListWorkerPoolsRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_GetDefaultServiceAccountRequest(ref GetDefaultServiceAccountRequest request, ref gaxgrpc::CallSettings settings);
 
         /// <summary>The long-running operations client for <c>CreateBuild</c>.</summary>
         public override lro::OperationsClient CreateBuildOperationsClient { get; }
@@ -3207,8 +4112,8 @@ namespace Google.Cloud.CloudBuild.V1
         /// <summary>
         /// Approves or rejects a pending build.
         /// 
-        /// If approved, the returned LRO will be analogous to the LRO returned from
-        /// a CreateBuild call.
+        /// If approved, the returned long-running operation (LRO) will be analogous to
+        /// the LRO returned from a CreateBuild call.
         /// 
         /// If rejected, the returned LRO will be immediately done.
         /// </summary>
@@ -3224,8 +4129,8 @@ namespace Google.Cloud.CloudBuild.V1
         /// <summary>
         /// Approves or rejects a pending build.
         /// 
-        /// If approved, the returned LRO will be analogous to the LRO returned from
-        /// a CreateBuild call.
+        /// If approved, the returned long-running operation (LRO) will be analogous to
+        /// the LRO returned from a CreateBuild call.
         /// 
         /// If rejected, the returned LRO will be immediately done.
         /// </summary>
@@ -3240,8 +4145,6 @@ namespace Google.Cloud.CloudBuild.V1
 
         /// <summary>
         /// Creates a new `BuildTrigger`.
-        /// 
-        /// This API is experimental.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -3254,8 +4157,6 @@ namespace Google.Cloud.CloudBuild.V1
 
         /// <summary>
         /// Creates a new `BuildTrigger`.
-        /// 
-        /// This API is experimental.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -3268,8 +4169,6 @@ namespace Google.Cloud.CloudBuild.V1
 
         /// <summary>
         /// Returns information about a `BuildTrigger`.
-        /// 
-        /// This API is experimental.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -3282,8 +4181,6 @@ namespace Google.Cloud.CloudBuild.V1
 
         /// <summary>
         /// Returns information about a `BuildTrigger`.
-        /// 
-        /// This API is experimental.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -3296,8 +4193,6 @@ namespace Google.Cloud.CloudBuild.V1
 
         /// <summary>
         /// Lists existing `BuildTrigger`s.
-        /// 
-        /// This API is experimental.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -3310,8 +4205,6 @@ namespace Google.Cloud.CloudBuild.V1
 
         /// <summary>
         /// Lists existing `BuildTrigger`s.
-        /// 
-        /// This API is experimental.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -3324,8 +4217,6 @@ namespace Google.Cloud.CloudBuild.V1
 
         /// <summary>
         /// Deletes a `BuildTrigger` by its project ID and trigger ID.
-        /// 
-        /// This API is experimental.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -3338,8 +4229,6 @@ namespace Google.Cloud.CloudBuild.V1
 
         /// <summary>
         /// Deletes a `BuildTrigger` by its project ID and trigger ID.
-        /// 
-        /// This API is experimental.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -3352,8 +4241,6 @@ namespace Google.Cloud.CloudBuild.V1
 
         /// <summary>
         /// Updates a `BuildTrigger` by its project ID and trigger ID.
-        /// 
-        /// This API is experimental.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -3366,8 +4253,6 @@ namespace Google.Cloud.CloudBuild.V1
 
         /// <summary>
         /// Updates a `BuildTrigger` by its project ID and trigger ID.
-        /// 
-        /// This API is experimental.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -3570,6 +4455,30 @@ namespace Google.Cloud.CloudBuild.V1
         {
             Modify_ListWorkerPoolsRequest(ref request, ref callSettings);
             return new gaxgrpc::GrpcPagedAsyncEnumerable<ListWorkerPoolsRequest, ListWorkerPoolsResponse, WorkerPool>(_callListWorkerPools, request, callSettings);
+        }
+
+        /// <summary>
+        /// Returns the `DefaultServiceAccount` used by the project.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override DefaultServiceAccount GetDefaultServiceAccount(GetDefaultServiceAccountRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_GetDefaultServiceAccountRequest(ref request, ref callSettings);
+            return _callGetDefaultServiceAccount.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Returns the `DefaultServiceAccount` used by the project.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override stt::Task<DefaultServiceAccount> GetDefaultServiceAccountAsync(GetDefaultServiceAccountRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_GetDefaultServiceAccountRequest(ref request, ref callSettings);
+            return _callGetDefaultServiceAccount.Async(request, callSettings);
         }
     }
 

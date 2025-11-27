@@ -16,12 +16,14 @@
 
 namespace GoogleCSharpSnippets
 {
-    // [START cloudbuild_v1_generated_CloudBuild_GetBuild_sync_flattened]
+    // [START cloudbuild_v1_generated_CloudBuild_CreateBuildTrigger_async_flattened2_resourceNames2]
+    using Google.Api.Gax.ResourceNames;
     using Google.Cloud.CloudBuild.V1;
+    using System.Threading.Tasks;
 
     public sealed partial class GeneratedCloudBuildClientSnippets
     {
-        /// <summary>Snippet for GetBuild</summary>
+        /// <summary>Snippet for CreateBuildTriggerAsync</summary>
         /// <remarks>
         /// This snippet has been automatically generated and should be regarded as a code template only.
         /// It will require modifications to work:
@@ -29,16 +31,15 @@ namespace GoogleCSharpSnippets
         /// - It may require specifying regional endpoints when creating the service client as shown in
         ///   https://cloud.google.com/dotnet/docs/reference/help/client-configuration#endpoint.
         /// </remarks>
-        public void GetBuild()
+        public async Task CreateBuildTrigger2ResourceNames2Async()
         {
             // Create client
-            CloudBuildClient cloudBuildClient = CloudBuildClient.Create();
+            CloudBuildClient cloudBuildClient = await CloudBuildClient.CreateAsync();
             // Initialize request argument(s)
-            string projectId = "";
-            string id = "";
+            LocationName parent = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]");
             // Make the request
-            Build response = cloudBuildClient.GetBuild(projectId, id);
+            BuildTrigger response = await cloudBuildClient.CreateBuildTriggerAsync(parent);
         }
     }
-    // [END cloudbuild_v1_generated_CloudBuild_GetBuild_sync_flattened]
+    // [END cloudbuild_v1_generated_CloudBuild_CreateBuildTrigger_async_flattened2_resourceNames2]
 }

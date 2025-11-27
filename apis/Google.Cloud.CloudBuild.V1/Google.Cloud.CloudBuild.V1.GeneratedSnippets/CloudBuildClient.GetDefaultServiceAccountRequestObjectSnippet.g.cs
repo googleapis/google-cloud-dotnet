@@ -16,13 +16,12 @@
 
 namespace GoogleCSharpSnippets
 {
-    // [START cloudbuild_v1_generated_CloudBuild_CreateBuild_sync_flattened]
+    // [START cloudbuild_v1_generated_CloudBuild_GetDefaultServiceAccount_sync]
     using Google.Cloud.CloudBuild.V1;
-    using Google.LongRunning;
 
     public sealed partial class GeneratedCloudBuildClientSnippets
     {
-        /// <summary>Snippet for CreateBuild</summary>
+        /// <summary>Snippet for GetDefaultServiceAccount</summary>
         /// <remarks>
         /// This snippet has been automatically generated and should be regarded as a code template only.
         /// It will require modifications to work:
@@ -30,32 +29,18 @@ namespace GoogleCSharpSnippets
         /// - It may require specifying regional endpoints when creating the service client as shown in
         ///   https://cloud.google.com/dotnet/docs/reference/help/client-configuration#endpoint.
         /// </remarks>
-        public void CreateBuild()
+        public void GetDefaultServiceAccountRequestObject()
         {
             // Create client
             CloudBuildClient cloudBuildClient = CloudBuildClient.Create();
             // Initialize request argument(s)
-            string projectId = "";
-            Build build = new Build();
-            // Make the request
-            Operation<Build, BuildOperationMetadata> response = cloudBuildClient.CreateBuild(projectId, build);
-
-            // Poll until the returned long-running operation is complete
-            Operation<Build, BuildOperationMetadata> completedResponse = response.PollUntilCompleted();
-            // Retrieve the operation result
-            Build result = completedResponse.Result;
-
-            // Or get the name of the operation
-            string operationName = response.Name;
-            // This name can be stored, then the long-running operation retrieved later by name
-            Operation<Build, BuildOperationMetadata> retrievedResponse = cloudBuildClient.PollOnceCreateBuild(operationName);
-            // Check if the retrieved long-running operation has completed
-            if (retrievedResponse.IsCompleted)
+            GetDefaultServiceAccountRequest request = new GetDefaultServiceAccountRequest
             {
-                // If it has completed, then access the result
-                Build retrievedResult = retrievedResponse.Result;
-            }
+                DefaultServiceAccountName = DefaultServiceAccountName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
+            };
+            // Make the request
+            DefaultServiceAccount response = cloudBuildClient.GetDefaultServiceAccount(request);
         }
     }
-    // [END cloudbuild_v1_generated_CloudBuild_CreateBuild_sync_flattened]
+    // [END cloudbuild_v1_generated_CloudBuild_GetDefaultServiceAccount_sync]
 }

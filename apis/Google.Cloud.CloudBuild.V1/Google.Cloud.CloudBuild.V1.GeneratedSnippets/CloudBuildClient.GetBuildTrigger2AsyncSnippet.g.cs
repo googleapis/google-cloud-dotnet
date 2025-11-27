@@ -16,14 +16,13 @@
 
 namespace GoogleCSharpSnippets
 {
-    // [START cloudbuild_v1_generated_CloudBuild_CreateBuild_async_flattened]
+    // [START cloudbuild_v1_generated_CloudBuild_GetBuildTrigger_async_flattened2]
     using Google.Cloud.CloudBuild.V1;
-    using Google.LongRunning;
     using System.Threading.Tasks;
 
     public sealed partial class GeneratedCloudBuildClientSnippets
     {
-        /// <summary>Snippet for CreateBuildAsync</summary>
+        /// <summary>Snippet for GetBuildTriggerAsync</summary>
         /// <remarks>
         /// This snippet has been automatically generated and should be regarded as a code template only.
         /// It will require modifications to work:
@@ -31,32 +30,15 @@ namespace GoogleCSharpSnippets
         /// - It may require specifying regional endpoints when creating the service client as shown in
         ///   https://cloud.google.com/dotnet/docs/reference/help/client-configuration#endpoint.
         /// </remarks>
-        public async Task CreateBuildAsync()
+        public async Task GetBuildTrigger2Async()
         {
             // Create client
             CloudBuildClient cloudBuildClient = await CloudBuildClient.CreateAsync();
             // Initialize request argument(s)
-            string projectId = "";
-            Build build = new Build();
+            string name = "projects/[PROJECT]/triggers/[TRIGGER]";
             // Make the request
-            Operation<Build, BuildOperationMetadata> response = await cloudBuildClient.CreateBuildAsync(projectId, build);
-
-            // Poll until the returned long-running operation is complete
-            Operation<Build, BuildOperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
-            // Retrieve the operation result
-            Build result = completedResponse.Result;
-
-            // Or get the name of the operation
-            string operationName = response.Name;
-            // This name can be stored, then the long-running operation retrieved later by name
-            Operation<Build, BuildOperationMetadata> retrievedResponse = await cloudBuildClient.PollOnceCreateBuildAsync(operationName);
-            // Check if the retrieved long-running operation has completed
-            if (retrievedResponse.IsCompleted)
-            {
-                // If it has completed, then access the result
-                Build retrievedResult = retrievedResponse.Result;
-            }
+            BuildTrigger response = await cloudBuildClient.GetBuildTriggerAsync(name);
         }
     }
-    // [END cloudbuild_v1_generated_CloudBuild_CreateBuild_async_flattened]
+    // [END cloudbuild_v1_generated_CloudBuild_GetBuildTrigger_async_flattened2]
 }

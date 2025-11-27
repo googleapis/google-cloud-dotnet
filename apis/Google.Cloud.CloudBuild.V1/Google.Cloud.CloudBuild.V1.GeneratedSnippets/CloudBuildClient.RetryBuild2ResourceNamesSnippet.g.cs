@@ -16,14 +16,13 @@
 
 namespace GoogleCSharpSnippets
 {
-    // [START cloudbuild_v1_generated_CloudBuild_RetryBuild_async_flattened]
+    // [START cloudbuild_v1_generated_CloudBuild_RetryBuild_sync_flattened2_resourceNames]
     using Google.Cloud.CloudBuild.V1;
     using Google.LongRunning;
-    using System.Threading.Tasks;
 
     public sealed partial class GeneratedCloudBuildClientSnippets
     {
-        /// <summary>Snippet for RetryBuildAsync</summary>
+        /// <summary>Snippet for RetryBuild</summary>
         /// <remarks>
         /// This snippet has been automatically generated and should be regarded as a code template only.
         /// It will require modifications to work:
@@ -31,25 +30,24 @@ namespace GoogleCSharpSnippets
         /// - It may require specifying regional endpoints when creating the service client as shown in
         ///   https://cloud.google.com/dotnet/docs/reference/help/client-configuration#endpoint.
         /// </remarks>
-        public async Task RetryBuildAsync()
+        public void RetryBuild2ResourceNames()
         {
             // Create client
-            CloudBuildClient cloudBuildClient = await CloudBuildClient.CreateAsync();
+            CloudBuildClient cloudBuildClient = CloudBuildClient.Create();
             // Initialize request argument(s)
-            string projectId = "";
-            string id = "";
+            BuildName name = BuildName.FromProjectBuild("[PROJECT]", "[BUILD]");
             // Make the request
-            Operation<Build, BuildOperationMetadata> response = await cloudBuildClient.RetryBuildAsync(projectId, id);
+            Operation<Build, BuildOperationMetadata> response = cloudBuildClient.RetryBuild(name);
 
             // Poll until the returned long-running operation is complete
-            Operation<Build, BuildOperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            Operation<Build, BuildOperationMetadata> completedResponse = response.PollUntilCompleted();
             // Retrieve the operation result
             Build result = completedResponse.Result;
 
             // Or get the name of the operation
             string operationName = response.Name;
             // This name can be stored, then the long-running operation retrieved later by name
-            Operation<Build, BuildOperationMetadata> retrievedResponse = await cloudBuildClient.PollOnceRetryBuildAsync(operationName);
+            Operation<Build, BuildOperationMetadata> retrievedResponse = cloudBuildClient.PollOnceRetryBuild(operationName);
             // Check if the retrieved long-running operation has completed
             if (retrievedResponse.IsCompleted)
             {
@@ -58,5 +56,5 @@ namespace GoogleCSharpSnippets
             }
         }
     }
-    // [END cloudbuild_v1_generated_CloudBuild_RetryBuild_async_flattened]
+    // [END cloudbuild_v1_generated_CloudBuild_RetryBuild_sync_flattened2_resourceNames]
 }

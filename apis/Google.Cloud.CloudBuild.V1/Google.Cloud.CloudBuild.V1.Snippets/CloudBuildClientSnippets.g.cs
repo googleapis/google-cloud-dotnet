@@ -99,7 +99,7 @@ namespace GoogleCSharpSnippets
         }
 
         /// <summary>Snippet for CreateBuild</summary>
-        public void CreateBuild()
+        public void CreateBuild1()
         {
             // Snippet: CreateBuild(string, Build, CallSettings)
             // Create client
@@ -129,7 +129,7 @@ namespace GoogleCSharpSnippets
         }
 
         /// <summary>Snippet for CreateBuildAsync</summary>
-        public async Task CreateBuildAsync()
+        public async Task CreateBuild1Async()
         {
             // Snippet: CreateBuildAsync(string, Build, CallSettings)
             // Additional: CreateBuildAsync(string, Build, CancellationToken)
@@ -140,6 +140,183 @@ namespace GoogleCSharpSnippets
             Build build = new Build();
             // Make the request
             Operation<Build, BuildOperationMetadata> response = await cloudBuildClient.CreateBuildAsync(projectId, build);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Build, BuildOperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            Build result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Build, BuildOperationMetadata> retrievedResponse = await cloudBuildClient.PollOnceCreateBuildAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Build retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateBuild</summary>
+        public void CreateBuild2()
+        {
+            // Snippet: CreateBuild(string, CallSettings)
+            // Create client
+            CloudBuildClient cloudBuildClient = CloudBuildClient.Create();
+            // Initialize request argument(s)
+            string parent = "projects/[PROJECT]";
+            // Make the request
+            Operation<Build, BuildOperationMetadata> response = cloudBuildClient.CreateBuild(parent);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Build, BuildOperationMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            Build result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Build, BuildOperationMetadata> retrievedResponse = cloudBuildClient.PollOnceCreateBuild(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Build retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateBuildAsync</summary>
+        public async Task CreateBuild2Async()
+        {
+            // Snippet: CreateBuildAsync(string, CallSettings)
+            // Additional: CreateBuildAsync(string, CancellationToken)
+            // Create client
+            CloudBuildClient cloudBuildClient = await CloudBuildClient.CreateAsync();
+            // Initialize request argument(s)
+            string parent = "projects/[PROJECT]";
+            // Make the request
+            Operation<Build, BuildOperationMetadata> response = await cloudBuildClient.CreateBuildAsync(parent);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Build, BuildOperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            Build result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Build, BuildOperationMetadata> retrievedResponse = await cloudBuildClient.PollOnceCreateBuildAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Build retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateBuild</summary>
+        public void CreateBuild2ResourceNames1()
+        {
+            // Snippet: CreateBuild(ProjectName, CallSettings)
+            // Create client
+            CloudBuildClient cloudBuildClient = CloudBuildClient.Create();
+            // Initialize request argument(s)
+            ProjectName parent = ProjectName.FromProject("[PROJECT]");
+            // Make the request
+            Operation<Build, BuildOperationMetadata> response = cloudBuildClient.CreateBuild(parent);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Build, BuildOperationMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            Build result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Build, BuildOperationMetadata> retrievedResponse = cloudBuildClient.PollOnceCreateBuild(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Build retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateBuildAsync</summary>
+        public async Task CreateBuild2ResourceNames1Async()
+        {
+            // Snippet: CreateBuildAsync(ProjectName, CallSettings)
+            // Additional: CreateBuildAsync(ProjectName, CancellationToken)
+            // Create client
+            CloudBuildClient cloudBuildClient = await CloudBuildClient.CreateAsync();
+            // Initialize request argument(s)
+            ProjectName parent = ProjectName.FromProject("[PROJECT]");
+            // Make the request
+            Operation<Build, BuildOperationMetadata> response = await cloudBuildClient.CreateBuildAsync(parent);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Build, BuildOperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            Build result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Build, BuildOperationMetadata> retrievedResponse = await cloudBuildClient.PollOnceCreateBuildAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Build retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateBuild</summary>
+        public void CreateBuild2ResourceNames2()
+        {
+            // Snippet: CreateBuild(LocationName, CallSettings)
+            // Create client
+            CloudBuildClient cloudBuildClient = CloudBuildClient.Create();
+            // Initialize request argument(s)
+            LocationName parent = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]");
+            // Make the request
+            Operation<Build, BuildOperationMetadata> response = cloudBuildClient.CreateBuild(parent);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Build, BuildOperationMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            Build result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Build, BuildOperationMetadata> retrievedResponse = cloudBuildClient.PollOnceCreateBuild(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Build retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateBuildAsync</summary>
+        public async Task CreateBuild2ResourceNames2Async()
+        {
+            // Snippet: CreateBuildAsync(LocationName, CallSettings)
+            // Additional: CreateBuildAsync(LocationName, CancellationToken)
+            // Create client
+            CloudBuildClient cloudBuildClient = await CloudBuildClient.CreateAsync();
+            // Initialize request argument(s)
+            LocationName parent = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]");
+            // Make the request
+            Operation<Build, BuildOperationMetadata> response = await cloudBuildClient.CreateBuildAsync(parent);
 
             // Poll until the returned long-running operation is complete
             Operation<Build, BuildOperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
@@ -197,7 +374,7 @@ namespace GoogleCSharpSnippets
         }
 
         /// <summary>Snippet for GetBuild</summary>
-        public void GetBuild()
+        public void GetBuild1()
         {
             // Snippet: GetBuild(string, string, CallSettings)
             // Create client
@@ -211,7 +388,7 @@ namespace GoogleCSharpSnippets
         }
 
         /// <summary>Snippet for GetBuildAsync</summary>
-        public async Task GetBuildAsync()
+        public async Task GetBuild1Async()
         {
             // Snippet: GetBuildAsync(string, string, CallSettings)
             // Additional: GetBuildAsync(string, string, CancellationToken)
@@ -222,6 +399,60 @@ namespace GoogleCSharpSnippets
             string id = "";
             // Make the request
             Build response = await cloudBuildClient.GetBuildAsync(projectId, id);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetBuild</summary>
+        public void GetBuild2()
+        {
+            // Snippet: GetBuild(string, CallSettings)
+            // Create client
+            CloudBuildClient cloudBuildClient = CloudBuildClient.Create();
+            // Initialize request argument(s)
+            string name = "projects/[PROJECT]/builds/[BUILD]";
+            // Make the request
+            Build response = cloudBuildClient.GetBuild(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetBuildAsync</summary>
+        public async Task GetBuild2Async()
+        {
+            // Snippet: GetBuildAsync(string, CallSettings)
+            // Additional: GetBuildAsync(string, CancellationToken)
+            // Create client
+            CloudBuildClient cloudBuildClient = await CloudBuildClient.CreateAsync();
+            // Initialize request argument(s)
+            string name = "projects/[PROJECT]/builds/[BUILD]";
+            // Make the request
+            Build response = await cloudBuildClient.GetBuildAsync(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetBuild</summary>
+        public void GetBuild2ResourceNames()
+        {
+            // Snippet: GetBuild(BuildName, CallSettings)
+            // Create client
+            CloudBuildClient cloudBuildClient = CloudBuildClient.Create();
+            // Initialize request argument(s)
+            BuildName name = BuildName.FromProjectBuild("[PROJECT]", "[BUILD]");
+            // Make the request
+            Build response = cloudBuildClient.GetBuild(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetBuildAsync</summary>
+        public async Task GetBuild2ResourceNamesAsync()
+        {
+            // Snippet: GetBuildAsync(BuildName, CallSettings)
+            // Additional: GetBuildAsync(BuildName, CancellationToken)
+            // Create client
+            CloudBuildClient cloudBuildClient = await CloudBuildClient.CreateAsync();
+            // Initialize request argument(s)
+            BuildName name = BuildName.FromProjectBuild("[PROJECT]", "[BUILD]");
+            // Make the request
+            Build response = await cloudBuildClient.GetBuildAsync(name);
             // End snippet
         }
 
@@ -455,7 +686,7 @@ namespace GoogleCSharpSnippets
         }
 
         /// <summary>Snippet for CancelBuild</summary>
-        public void CancelBuild()
+        public void CancelBuild1()
         {
             // Snippet: CancelBuild(string, string, CallSettings)
             // Create client
@@ -469,7 +700,7 @@ namespace GoogleCSharpSnippets
         }
 
         /// <summary>Snippet for CancelBuildAsync</summary>
-        public async Task CancelBuildAsync()
+        public async Task CancelBuild1Async()
         {
             // Snippet: CancelBuildAsync(string, string, CallSettings)
             // Additional: CancelBuildAsync(string, string, CancellationToken)
@@ -480,6 +711,60 @@ namespace GoogleCSharpSnippets
             string id = "";
             // Make the request
             Build response = await cloudBuildClient.CancelBuildAsync(projectId, id);
+            // End snippet
+        }
+
+        /// <summary>Snippet for CancelBuild</summary>
+        public void CancelBuild2()
+        {
+            // Snippet: CancelBuild(string, CallSettings)
+            // Create client
+            CloudBuildClient cloudBuildClient = CloudBuildClient.Create();
+            // Initialize request argument(s)
+            string name = "projects/[PROJECT]/builds/[BUILD]";
+            // Make the request
+            Build response = cloudBuildClient.CancelBuild(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for CancelBuildAsync</summary>
+        public async Task CancelBuild2Async()
+        {
+            // Snippet: CancelBuildAsync(string, CallSettings)
+            // Additional: CancelBuildAsync(string, CancellationToken)
+            // Create client
+            CloudBuildClient cloudBuildClient = await CloudBuildClient.CreateAsync();
+            // Initialize request argument(s)
+            string name = "projects/[PROJECT]/builds/[BUILD]";
+            // Make the request
+            Build response = await cloudBuildClient.CancelBuildAsync(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for CancelBuild</summary>
+        public void CancelBuild2ResourceNames()
+        {
+            // Snippet: CancelBuild(BuildName, CallSettings)
+            // Create client
+            CloudBuildClient cloudBuildClient = CloudBuildClient.Create();
+            // Initialize request argument(s)
+            BuildName name = BuildName.FromProjectBuild("[PROJECT]", "[BUILD]");
+            // Make the request
+            Build response = cloudBuildClient.CancelBuild(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for CancelBuildAsync</summary>
+        public async Task CancelBuild2ResourceNamesAsync()
+        {
+            // Snippet: CancelBuildAsync(BuildName, CallSettings)
+            // Additional: CancelBuildAsync(BuildName, CancellationToken)
+            // Create client
+            CloudBuildClient cloudBuildClient = await CloudBuildClient.CreateAsync();
+            // Initialize request argument(s)
+            BuildName name = BuildName.FromProjectBuild("[PROJECT]", "[BUILD]");
+            // Make the request
+            Build response = await cloudBuildClient.CancelBuildAsync(name);
             // End snippet
         }
 
@@ -553,7 +838,7 @@ namespace GoogleCSharpSnippets
         }
 
         /// <summary>Snippet for RetryBuild</summary>
-        public void RetryBuild()
+        public void RetryBuild1()
         {
             // Snippet: RetryBuild(string, string, CallSettings)
             // Create client
@@ -583,7 +868,7 @@ namespace GoogleCSharpSnippets
         }
 
         /// <summary>Snippet for RetryBuildAsync</summary>
-        public async Task RetryBuildAsync()
+        public async Task RetryBuild1Async()
         {
             // Snippet: RetryBuildAsync(string, string, CallSettings)
             // Additional: RetryBuildAsync(string, string, CancellationToken)
@@ -594,6 +879,124 @@ namespace GoogleCSharpSnippets
             string id = "";
             // Make the request
             Operation<Build, BuildOperationMetadata> response = await cloudBuildClient.RetryBuildAsync(projectId, id);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Build, BuildOperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            Build result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Build, BuildOperationMetadata> retrievedResponse = await cloudBuildClient.PollOnceRetryBuildAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Build retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for RetryBuild</summary>
+        public void RetryBuild2()
+        {
+            // Snippet: RetryBuild(string, CallSettings)
+            // Create client
+            CloudBuildClient cloudBuildClient = CloudBuildClient.Create();
+            // Initialize request argument(s)
+            string name = "projects/[PROJECT]/builds/[BUILD]";
+            // Make the request
+            Operation<Build, BuildOperationMetadata> response = cloudBuildClient.RetryBuild(name);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Build, BuildOperationMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            Build result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Build, BuildOperationMetadata> retrievedResponse = cloudBuildClient.PollOnceRetryBuild(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Build retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for RetryBuildAsync</summary>
+        public async Task RetryBuild2Async()
+        {
+            // Snippet: RetryBuildAsync(string, CallSettings)
+            // Additional: RetryBuildAsync(string, CancellationToken)
+            // Create client
+            CloudBuildClient cloudBuildClient = await CloudBuildClient.CreateAsync();
+            // Initialize request argument(s)
+            string name = "projects/[PROJECT]/builds/[BUILD]";
+            // Make the request
+            Operation<Build, BuildOperationMetadata> response = await cloudBuildClient.RetryBuildAsync(name);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Build, BuildOperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            Build result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Build, BuildOperationMetadata> retrievedResponse = await cloudBuildClient.PollOnceRetryBuildAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Build retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for RetryBuild</summary>
+        public void RetryBuild2ResourceNames()
+        {
+            // Snippet: RetryBuild(BuildName, CallSettings)
+            // Create client
+            CloudBuildClient cloudBuildClient = CloudBuildClient.Create();
+            // Initialize request argument(s)
+            BuildName name = BuildName.FromProjectBuild("[PROJECT]", "[BUILD]");
+            // Make the request
+            Operation<Build, BuildOperationMetadata> response = cloudBuildClient.RetryBuild(name);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Build, BuildOperationMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            Build result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Build, BuildOperationMetadata> retrievedResponse = cloudBuildClient.PollOnceRetryBuild(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Build retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for RetryBuildAsync</summary>
+        public async Task RetryBuild2ResourceNamesAsync()
+        {
+            // Snippet: RetryBuildAsync(BuildName, CallSettings)
+            // Additional: RetryBuildAsync(BuildName, CancellationToken)
+            // Create client
+            CloudBuildClient cloudBuildClient = await CloudBuildClient.CreateAsync();
+            // Initialize request argument(s)
+            BuildName name = BuildName.FromProjectBuild("[PROJECT]", "[BUILD]");
+            // Make the request
+            Operation<Build, BuildOperationMetadata> response = await cloudBuildClient.RetryBuildAsync(name);
 
             // Poll until the returned long-running operation is complete
             Operation<Build, BuildOperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
@@ -779,7 +1182,7 @@ namespace GoogleCSharpSnippets
         }
 
         /// <summary>Snippet for CreateBuildTrigger</summary>
-        public void CreateBuildTrigger()
+        public void CreateBuildTrigger1()
         {
             // Snippet: CreateBuildTrigger(string, BuildTrigger, CallSettings)
             // Create client
@@ -793,7 +1196,7 @@ namespace GoogleCSharpSnippets
         }
 
         /// <summary>Snippet for CreateBuildTriggerAsync</summary>
-        public async Task CreateBuildTriggerAsync()
+        public async Task CreateBuildTrigger1Async()
         {
             // Snippet: CreateBuildTriggerAsync(string, BuildTrigger, CallSettings)
             // Additional: CreateBuildTriggerAsync(string, BuildTrigger, CancellationToken)
@@ -804,6 +1207,87 @@ namespace GoogleCSharpSnippets
             BuildTrigger trigger = new BuildTrigger();
             // Make the request
             BuildTrigger response = await cloudBuildClient.CreateBuildTriggerAsync(projectId, trigger);
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateBuildTrigger</summary>
+        public void CreateBuildTrigger2()
+        {
+            // Snippet: CreateBuildTrigger(string, CallSettings)
+            // Create client
+            CloudBuildClient cloudBuildClient = CloudBuildClient.Create();
+            // Initialize request argument(s)
+            string parent = "projects/[PROJECT]";
+            // Make the request
+            BuildTrigger response = cloudBuildClient.CreateBuildTrigger(parent);
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateBuildTriggerAsync</summary>
+        public async Task CreateBuildTrigger2Async()
+        {
+            // Snippet: CreateBuildTriggerAsync(string, CallSettings)
+            // Additional: CreateBuildTriggerAsync(string, CancellationToken)
+            // Create client
+            CloudBuildClient cloudBuildClient = await CloudBuildClient.CreateAsync();
+            // Initialize request argument(s)
+            string parent = "projects/[PROJECT]";
+            // Make the request
+            BuildTrigger response = await cloudBuildClient.CreateBuildTriggerAsync(parent);
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateBuildTrigger</summary>
+        public void CreateBuildTrigger2ResourceNames1()
+        {
+            // Snippet: CreateBuildTrigger(ProjectName, CallSettings)
+            // Create client
+            CloudBuildClient cloudBuildClient = CloudBuildClient.Create();
+            // Initialize request argument(s)
+            ProjectName parent = ProjectName.FromProject("[PROJECT]");
+            // Make the request
+            BuildTrigger response = cloudBuildClient.CreateBuildTrigger(parent);
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateBuildTriggerAsync</summary>
+        public async Task CreateBuildTrigger2ResourceNames1Async()
+        {
+            // Snippet: CreateBuildTriggerAsync(ProjectName, CallSettings)
+            // Additional: CreateBuildTriggerAsync(ProjectName, CancellationToken)
+            // Create client
+            CloudBuildClient cloudBuildClient = await CloudBuildClient.CreateAsync();
+            // Initialize request argument(s)
+            ProjectName parent = ProjectName.FromProject("[PROJECT]");
+            // Make the request
+            BuildTrigger response = await cloudBuildClient.CreateBuildTriggerAsync(parent);
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateBuildTrigger</summary>
+        public void CreateBuildTrigger2ResourceNames2()
+        {
+            // Snippet: CreateBuildTrigger(LocationName, CallSettings)
+            // Create client
+            CloudBuildClient cloudBuildClient = CloudBuildClient.Create();
+            // Initialize request argument(s)
+            LocationName parent = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]");
+            // Make the request
+            BuildTrigger response = cloudBuildClient.CreateBuildTrigger(parent);
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateBuildTriggerAsync</summary>
+        public async Task CreateBuildTrigger2ResourceNames2Async()
+        {
+            // Snippet: CreateBuildTriggerAsync(LocationName, CallSettings)
+            // Additional: CreateBuildTriggerAsync(LocationName, CancellationToken)
+            // Create client
+            CloudBuildClient cloudBuildClient = await CloudBuildClient.CreateAsync();
+            // Initialize request argument(s)
+            LocationName parent = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]");
+            // Make the request
+            BuildTrigger response = await cloudBuildClient.CreateBuildTriggerAsync(parent);
             // End snippet
         }
 
@@ -845,7 +1329,7 @@ namespace GoogleCSharpSnippets
         }
 
         /// <summary>Snippet for GetBuildTrigger</summary>
-        public void GetBuildTrigger()
+        public void GetBuildTrigger1()
         {
             // Snippet: GetBuildTrigger(string, string, CallSettings)
             // Create client
@@ -859,7 +1343,7 @@ namespace GoogleCSharpSnippets
         }
 
         /// <summary>Snippet for GetBuildTriggerAsync</summary>
-        public async Task GetBuildTriggerAsync()
+        public async Task GetBuildTrigger1Async()
         {
             // Snippet: GetBuildTriggerAsync(string, string, CallSettings)
             // Additional: GetBuildTriggerAsync(string, string, CancellationToken)
@@ -870,6 +1354,60 @@ namespace GoogleCSharpSnippets
             string triggerId = "";
             // Make the request
             BuildTrigger response = await cloudBuildClient.GetBuildTriggerAsync(projectId, triggerId);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetBuildTrigger</summary>
+        public void GetBuildTrigger2()
+        {
+            // Snippet: GetBuildTrigger(string, CallSettings)
+            // Create client
+            CloudBuildClient cloudBuildClient = CloudBuildClient.Create();
+            // Initialize request argument(s)
+            string name = "projects/[PROJECT]/triggers/[TRIGGER]";
+            // Make the request
+            BuildTrigger response = cloudBuildClient.GetBuildTrigger(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetBuildTriggerAsync</summary>
+        public async Task GetBuildTrigger2Async()
+        {
+            // Snippet: GetBuildTriggerAsync(string, CallSettings)
+            // Additional: GetBuildTriggerAsync(string, CancellationToken)
+            // Create client
+            CloudBuildClient cloudBuildClient = await CloudBuildClient.CreateAsync();
+            // Initialize request argument(s)
+            string name = "projects/[PROJECT]/triggers/[TRIGGER]";
+            // Make the request
+            BuildTrigger response = await cloudBuildClient.GetBuildTriggerAsync(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetBuildTrigger</summary>
+        public void GetBuildTrigger2ResourceNames()
+        {
+            // Snippet: GetBuildTrigger(BuildTriggerName, CallSettings)
+            // Create client
+            CloudBuildClient cloudBuildClient = CloudBuildClient.Create();
+            // Initialize request argument(s)
+            BuildTriggerName name = BuildTriggerName.FromProjectTrigger("[PROJECT]", "[TRIGGER]");
+            // Make the request
+            BuildTrigger response = cloudBuildClient.GetBuildTrigger(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetBuildTriggerAsync</summary>
+        public async Task GetBuildTrigger2ResourceNamesAsync()
+        {
+            // Snippet: GetBuildTriggerAsync(BuildTriggerName, CallSettings)
+            // Additional: GetBuildTriggerAsync(BuildTriggerName, CancellationToken)
+            // Create client
+            CloudBuildClient cloudBuildClient = await CloudBuildClient.CreateAsync();
+            // Initialize request argument(s)
+            BuildTriggerName name = BuildTriggerName.FromProjectTrigger("[PROJECT]", "[TRIGGER]");
+            // Make the request
+            BuildTrigger response = await cloudBuildClient.GetBuildTriggerAsync(name);
             // End snippet
         }
 
@@ -1099,7 +1637,7 @@ namespace GoogleCSharpSnippets
         }
 
         /// <summary>Snippet for DeleteBuildTrigger</summary>
-        public void DeleteBuildTrigger()
+        public void DeleteBuildTrigger1()
         {
             // Snippet: DeleteBuildTrigger(string, string, CallSettings)
             // Create client
@@ -1113,7 +1651,7 @@ namespace GoogleCSharpSnippets
         }
 
         /// <summary>Snippet for DeleteBuildTriggerAsync</summary>
-        public async Task DeleteBuildTriggerAsync()
+        public async Task DeleteBuildTrigger1Async()
         {
             // Snippet: DeleteBuildTriggerAsync(string, string, CallSettings)
             // Additional: DeleteBuildTriggerAsync(string, string, CancellationToken)
@@ -1124,6 +1662,60 @@ namespace GoogleCSharpSnippets
             string triggerId = "";
             // Make the request
             await cloudBuildClient.DeleteBuildTriggerAsync(projectId, triggerId);
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteBuildTrigger</summary>
+        public void DeleteBuildTrigger2()
+        {
+            // Snippet: DeleteBuildTrigger(string, CallSettings)
+            // Create client
+            CloudBuildClient cloudBuildClient = CloudBuildClient.Create();
+            // Initialize request argument(s)
+            string name = "projects/[PROJECT]/triggers/[TRIGGER]";
+            // Make the request
+            cloudBuildClient.DeleteBuildTrigger(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteBuildTriggerAsync</summary>
+        public async Task DeleteBuildTrigger2Async()
+        {
+            // Snippet: DeleteBuildTriggerAsync(string, CallSettings)
+            // Additional: DeleteBuildTriggerAsync(string, CancellationToken)
+            // Create client
+            CloudBuildClient cloudBuildClient = await CloudBuildClient.CreateAsync();
+            // Initialize request argument(s)
+            string name = "projects/[PROJECT]/triggers/[TRIGGER]";
+            // Make the request
+            await cloudBuildClient.DeleteBuildTriggerAsync(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteBuildTrigger</summary>
+        public void DeleteBuildTrigger2ResourceNames()
+        {
+            // Snippet: DeleteBuildTrigger(BuildTriggerName, CallSettings)
+            // Create client
+            CloudBuildClient cloudBuildClient = CloudBuildClient.Create();
+            // Initialize request argument(s)
+            BuildTriggerName name = BuildTriggerName.FromProjectTrigger("[PROJECT]", "[TRIGGER]");
+            // Make the request
+            cloudBuildClient.DeleteBuildTrigger(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteBuildTriggerAsync</summary>
+        public async Task DeleteBuildTrigger2ResourceNamesAsync()
+        {
+            // Snippet: DeleteBuildTriggerAsync(BuildTriggerName, CallSettings)
+            // Additional: DeleteBuildTriggerAsync(BuildTriggerName, CancellationToken)
+            // Create client
+            CloudBuildClient cloudBuildClient = await CloudBuildClient.CreateAsync();
+            // Initialize request argument(s)
+            BuildTriggerName name = BuildTriggerName.FromProjectTrigger("[PROJECT]", "[TRIGGER]");
+            // Make the request
+            await cloudBuildClient.DeleteBuildTriggerAsync(name);
             // End snippet
         }
 
@@ -2248,6 +2840,93 @@ namespace GoogleCSharpSnippets
             }
             // Store the pageToken, for when the next page is required.
             string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetDefaultServiceAccount</summary>
+        public void GetDefaultServiceAccountRequestObject()
+        {
+            // Snippet: GetDefaultServiceAccount(GetDefaultServiceAccountRequest, CallSettings)
+            // Create client
+            CloudBuildClient cloudBuildClient = CloudBuildClient.Create();
+            // Initialize request argument(s)
+            GetDefaultServiceAccountRequest request = new GetDefaultServiceAccountRequest
+            {
+                DefaultServiceAccountName = DefaultServiceAccountName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
+            };
+            // Make the request
+            DefaultServiceAccount response = cloudBuildClient.GetDefaultServiceAccount(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetDefaultServiceAccountAsync</summary>
+        public async Task GetDefaultServiceAccountRequestObjectAsync()
+        {
+            // Snippet: GetDefaultServiceAccountAsync(GetDefaultServiceAccountRequest, CallSettings)
+            // Additional: GetDefaultServiceAccountAsync(GetDefaultServiceAccountRequest, CancellationToken)
+            // Create client
+            CloudBuildClient cloudBuildClient = await CloudBuildClient.CreateAsync();
+            // Initialize request argument(s)
+            GetDefaultServiceAccountRequest request = new GetDefaultServiceAccountRequest
+            {
+                DefaultServiceAccountName = DefaultServiceAccountName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
+            };
+            // Make the request
+            DefaultServiceAccount response = await cloudBuildClient.GetDefaultServiceAccountAsync(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetDefaultServiceAccount</summary>
+        public void GetDefaultServiceAccount()
+        {
+            // Snippet: GetDefaultServiceAccount(string, CallSettings)
+            // Create client
+            CloudBuildClient cloudBuildClient = CloudBuildClient.Create();
+            // Initialize request argument(s)
+            string name = "projects/[PROJECT]/locations/[LOCATION]/defaultServiceAccount";
+            // Make the request
+            DefaultServiceAccount response = cloudBuildClient.GetDefaultServiceAccount(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetDefaultServiceAccountAsync</summary>
+        public async Task GetDefaultServiceAccountAsync()
+        {
+            // Snippet: GetDefaultServiceAccountAsync(string, CallSettings)
+            // Additional: GetDefaultServiceAccountAsync(string, CancellationToken)
+            // Create client
+            CloudBuildClient cloudBuildClient = await CloudBuildClient.CreateAsync();
+            // Initialize request argument(s)
+            string name = "projects/[PROJECT]/locations/[LOCATION]/defaultServiceAccount";
+            // Make the request
+            DefaultServiceAccount response = await cloudBuildClient.GetDefaultServiceAccountAsync(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetDefaultServiceAccount</summary>
+        public void GetDefaultServiceAccountResourceNames()
+        {
+            // Snippet: GetDefaultServiceAccount(DefaultServiceAccountName, CallSettings)
+            // Create client
+            CloudBuildClient cloudBuildClient = CloudBuildClient.Create();
+            // Initialize request argument(s)
+            DefaultServiceAccountName name = DefaultServiceAccountName.FromProjectLocation("[PROJECT]", "[LOCATION]");
+            // Make the request
+            DefaultServiceAccount response = cloudBuildClient.GetDefaultServiceAccount(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetDefaultServiceAccountAsync</summary>
+        public async Task GetDefaultServiceAccountResourceNamesAsync()
+        {
+            // Snippet: GetDefaultServiceAccountAsync(DefaultServiceAccountName, CallSettings)
+            // Additional: GetDefaultServiceAccountAsync(DefaultServiceAccountName, CancellationToken)
+            // Create client
+            CloudBuildClient cloudBuildClient = await CloudBuildClient.CreateAsync();
+            // Initialize request argument(s)
+            DefaultServiceAccountName name = DefaultServiceAccountName.FromProjectLocation("[PROJECT]", "[LOCATION]");
+            // Make the request
+            DefaultServiceAccount response = await cloudBuildClient.GetDefaultServiceAccountAsync(name);
             // End snippet
         }
     }

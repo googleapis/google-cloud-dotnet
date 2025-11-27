@@ -64,6 +64,12 @@
                 "GetBuildTriggerAsync"
               ]
             },
+            "GetDefaultServiceAccount": {
+              "methods": [
+                "GetDefaultServiceAccount",
+                "GetDefaultServiceAccountAsync"
+              ]
+            },
             "GetWorkerPool": {
               "methods": [
                 "GetWorkerPool",
