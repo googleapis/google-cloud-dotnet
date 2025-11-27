@@ -16,12 +16,12 @@
 
 namespace GoogleCSharpSnippets
 {
-    // [START cloudbuild_v1_generated_CloudBuild_DeleteBuildTrigger_sync_flattened]
+    // [START cloudbuild_v1_generated_CloudBuild_GetBuild_sync_flattened1]
     using Google.Cloud.CloudBuild.V1;
 
     public sealed partial class GeneratedCloudBuildClientSnippets
     {
-        /// <summary>Snippet for DeleteBuildTrigger</summary>
+        /// <summary>Snippet for GetBuild</summary>
         /// <remarks>
         /// This snippet has been automatically generated and should be regarded as a code template only.
         /// It will require modifications to work:
@@ -29,16 +29,16 @@ namespace GoogleCSharpSnippets
         /// - It may require specifying regional endpoints when creating the service client as shown in
         ///   https://cloud.google.com/dotnet/docs/reference/help/client-configuration#endpoint.
         /// </remarks>
-        public void DeleteBuildTrigger()
+        public void GetBuild1()
         {
             // Create client
             CloudBuildClient cloudBuildClient = CloudBuildClient.Create();
             // Initialize request argument(s)
             string projectId = "";
-            string triggerId = "";
+            string id = "";
             // Make the request
-            cloudBuildClient.DeleteBuildTrigger(projectId, triggerId);
+            Build response = cloudBuildClient.GetBuild(projectId, id);
         }
     }
-    // [END cloudbuild_v1_generated_CloudBuild_DeleteBuildTrigger_sync_flattened]
+    // [END cloudbuild_v1_generated_CloudBuild_GetBuild_sync_flattened1]
 }

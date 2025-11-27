@@ -16,13 +16,13 @@
 
 namespace GoogleCSharpSnippets
 {
-    // [START cloudbuild_v1_generated_CloudBuild_CancelBuild_async_flattened]
+    // [START cloudbuild_v1_generated_CloudBuild_GetDefaultServiceAccount_async_flattened]
     using Google.Cloud.CloudBuild.V1;
     using System.Threading.Tasks;
 
     public sealed partial class GeneratedCloudBuildClientSnippets
     {
-        /// <summary>Snippet for CancelBuildAsync</summary>
+        /// <summary>Snippet for GetDefaultServiceAccountAsync</summary>
         /// <remarks>
         /// This snippet has been automatically generated and should be regarded as a code template only.
         /// It will require modifications to work:
@@ -30,16 +30,15 @@ namespace GoogleCSharpSnippets
         /// - It may require specifying regional endpoints when creating the service client as shown in
         ///   https://cloud.google.com/dotnet/docs/reference/help/client-configuration#endpoint.
         /// </remarks>
-        public async Task CancelBuildAsync()
+        public async Task GetDefaultServiceAccountAsync()
         {
             // Create client
             CloudBuildClient cloudBuildClient = await CloudBuildClient.CreateAsync();
             // Initialize request argument(s)
-            string projectId = "";
-            string id = "";
+            string name = "projects/[PROJECT]/locations/[LOCATION]/defaultServiceAccount";
             // Make the request
-            Build response = await cloudBuildClient.CancelBuildAsync(projectId, id);
+            DefaultServiceAccount response = await cloudBuildClient.GetDefaultServiceAccountAsync(name);
         }
     }
-    // [END cloudbuild_v1_generated_CloudBuild_CancelBuild_async_flattened]
+    // [END cloudbuild_v1_generated_CloudBuild_GetDefaultServiceAccount_async_flattened]
 }

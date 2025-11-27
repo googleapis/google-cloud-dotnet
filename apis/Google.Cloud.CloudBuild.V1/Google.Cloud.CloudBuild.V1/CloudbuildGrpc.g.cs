@@ -124,6 +124,10 @@ namespace Google.Cloud.CloudBuild.V1 {
     static readonly grpc::Marshaller<global::Google.Cloud.CloudBuild.V1.ListWorkerPoolsRequest> __Marshaller_google_devtools_cloudbuild_v1_ListWorkerPoolsRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.CloudBuild.V1.ListWorkerPoolsRequest.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.CloudBuild.V1.ListWorkerPoolsResponse> __Marshaller_google_devtools_cloudbuild_v1_ListWorkerPoolsResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.CloudBuild.V1.ListWorkerPoolsResponse.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.CloudBuild.V1.GetDefaultServiceAccountRequest> __Marshaller_google_devtools_cloudbuild_v1_GetDefaultServiceAccountRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.CloudBuild.V1.GetDefaultServiceAccountRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.CloudBuild.V1.DefaultServiceAccount> __Marshaller_google_devtools_cloudbuild_v1_DefaultServiceAccount = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.CloudBuild.V1.DefaultServiceAccount.Parser));
 
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.CloudBuild.V1.CreateBuildRequest, global::Google.LongRunning.Operation> __Method_CreateBuild = new grpc::Method<global::Google.Cloud.CloudBuild.V1.CreateBuildRequest, global::Google.LongRunning.Operation>(
@@ -269,6 +273,14 @@ namespace Google.Cloud.CloudBuild.V1 {
         __Marshaller_google_devtools_cloudbuild_v1_ListWorkerPoolsRequest,
         __Marshaller_google_devtools_cloudbuild_v1_ListWorkerPoolsResponse);
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.CloudBuild.V1.GetDefaultServiceAccountRequest, global::Google.Cloud.CloudBuild.V1.DefaultServiceAccount> __Method_GetDefaultServiceAccount = new grpc::Method<global::Google.Cloud.CloudBuild.V1.GetDefaultServiceAccountRequest, global::Google.Cloud.CloudBuild.V1.DefaultServiceAccount>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "GetDefaultServiceAccount",
+        __Marshaller_google_devtools_cloudbuild_v1_GetDefaultServiceAccountRequest,
+        __Marshaller_google_devtools_cloudbuild_v1_DefaultServiceAccount);
+
     /// <summary>Service descriptor</summary>
     public static global::Google.Protobuf.Reflection.ServiceDescriptor Descriptor
     {
@@ -378,8 +390,8 @@ namespace Google.Cloud.CloudBuild.V1 {
       /// <summary>
       /// Approves or rejects a pending build.
       ///
-      /// If approved, the returned LRO will be analogous to the LRO returned from
-      /// a CreateBuild call.
+      /// If approved, the returned long-running operation (LRO) will be analogous to
+      /// the LRO returned from a CreateBuild call.
       ///
       /// If rejected, the returned LRO will be immediately done.
       /// </summary>
@@ -394,8 +406,6 @@ namespace Google.Cloud.CloudBuild.V1 {
 
       /// <summary>
       /// Creates a new `BuildTrigger`.
-      ///
-      /// This API is experimental.
       /// </summary>
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
@@ -408,8 +418,6 @@ namespace Google.Cloud.CloudBuild.V1 {
 
       /// <summary>
       /// Returns information about a `BuildTrigger`.
-      ///
-      /// This API is experimental.
       /// </summary>
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
@@ -422,8 +430,6 @@ namespace Google.Cloud.CloudBuild.V1 {
 
       /// <summary>
       /// Lists existing `BuildTrigger`s.
-      ///
-      /// This API is experimental.
       /// </summary>
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
@@ -436,8 +442,6 @@ namespace Google.Cloud.CloudBuild.V1 {
 
       /// <summary>
       /// Deletes a `BuildTrigger` by its project ID and trigger ID.
-      ///
-      /// This API is experimental.
       /// </summary>
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
@@ -450,8 +454,6 @@ namespace Google.Cloud.CloudBuild.V1 {
 
       /// <summary>
       /// Updates a `BuildTrigger` by its project ID and trigger ID.
-      ///
-      /// This API is experimental.
       /// </summary>
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
@@ -549,6 +551,18 @@ namespace Google.Cloud.CloudBuild.V1 {
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.CloudBuild.V1.ListWorkerPoolsResponse> ListWorkerPools(global::Google.Cloud.CloudBuild.V1.ListWorkerPoolsRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Returns the `DefaultServiceAccount` used by the project.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.CloudBuild.V1.DefaultServiceAccount> GetDefaultServiceAccount(global::Google.Cloud.CloudBuild.V1.GetDefaultServiceAccountRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
       }
@@ -969,8 +983,8 @@ namespace Google.Cloud.CloudBuild.V1 {
       /// <summary>
       /// Approves or rejects a pending build.
       ///
-      /// If approved, the returned LRO will be analogous to the LRO returned from
-      /// a CreateBuild call.
+      /// If approved, the returned long-running operation (LRO) will be analogous to
+      /// the LRO returned from a CreateBuild call.
       ///
       /// If rejected, the returned LRO will be immediately done.
       /// </summary>
@@ -987,8 +1001,8 @@ namespace Google.Cloud.CloudBuild.V1 {
       /// <summary>
       /// Approves or rejects a pending build.
       ///
-      /// If approved, the returned LRO will be analogous to the LRO returned from
-      /// a CreateBuild call.
+      /// If approved, the returned long-running operation (LRO) will be analogous to
+      /// the LRO returned from a CreateBuild call.
       ///
       /// If rejected, the returned LRO will be immediately done.
       /// </summary>
@@ -1003,8 +1017,8 @@ namespace Google.Cloud.CloudBuild.V1 {
       /// <summary>
       /// Approves or rejects a pending build.
       ///
-      /// If approved, the returned LRO will be analogous to the LRO returned from
-      /// a CreateBuild call.
+      /// If approved, the returned long-running operation (LRO) will be analogous to
+      /// the LRO returned from a CreateBuild call.
       ///
       /// If rejected, the returned LRO will be immediately done.
       /// </summary>
@@ -1021,8 +1035,8 @@ namespace Google.Cloud.CloudBuild.V1 {
       /// <summary>
       /// Approves or rejects a pending build.
       ///
-      /// If approved, the returned LRO will be analogous to the LRO returned from
-      /// a CreateBuild call.
+      /// If approved, the returned long-running operation (LRO) will be analogous to
+      /// the LRO returned from a CreateBuild call.
       ///
       /// If rejected, the returned LRO will be immediately done.
       /// </summary>
@@ -1036,8 +1050,6 @@ namespace Google.Cloud.CloudBuild.V1 {
       }
       /// <summary>
       /// Creates a new `BuildTrigger`.
-      ///
-      /// This API is experimental.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -1051,8 +1063,6 @@ namespace Google.Cloud.CloudBuild.V1 {
       }
       /// <summary>
       /// Creates a new `BuildTrigger`.
-      ///
-      /// This API is experimental.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -1064,8 +1074,6 @@ namespace Google.Cloud.CloudBuild.V1 {
       }
       /// <summary>
       /// Creates a new `BuildTrigger`.
-      ///
-      /// This API is experimental.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -1079,8 +1087,6 @@ namespace Google.Cloud.CloudBuild.V1 {
       }
       /// <summary>
       /// Creates a new `BuildTrigger`.
-      ///
-      /// This API is experimental.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -1092,8 +1098,6 @@ namespace Google.Cloud.CloudBuild.V1 {
       }
       /// <summary>
       /// Returns information about a `BuildTrigger`.
-      ///
-      /// This API is experimental.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -1107,8 +1111,6 @@ namespace Google.Cloud.CloudBuild.V1 {
       }
       /// <summary>
       /// Returns information about a `BuildTrigger`.
-      ///
-      /// This API is experimental.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -1120,8 +1122,6 @@ namespace Google.Cloud.CloudBuild.V1 {
       }
       /// <summary>
       /// Returns information about a `BuildTrigger`.
-      ///
-      /// This API is experimental.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -1135,8 +1135,6 @@ namespace Google.Cloud.CloudBuild.V1 {
       }
       /// <summary>
       /// Returns information about a `BuildTrigger`.
-      ///
-      /// This API is experimental.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -1148,8 +1146,6 @@ namespace Google.Cloud.CloudBuild.V1 {
       }
       /// <summary>
       /// Lists existing `BuildTrigger`s.
-      ///
-      /// This API is experimental.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -1163,8 +1159,6 @@ namespace Google.Cloud.CloudBuild.V1 {
       }
       /// <summary>
       /// Lists existing `BuildTrigger`s.
-      ///
-      /// This API is experimental.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -1176,8 +1170,6 @@ namespace Google.Cloud.CloudBuild.V1 {
       }
       /// <summary>
       /// Lists existing `BuildTrigger`s.
-      ///
-      /// This API is experimental.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -1191,8 +1183,6 @@ namespace Google.Cloud.CloudBuild.V1 {
       }
       /// <summary>
       /// Lists existing `BuildTrigger`s.
-      ///
-      /// This API is experimental.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -1204,8 +1194,6 @@ namespace Google.Cloud.CloudBuild.V1 {
       }
       /// <summary>
       /// Deletes a `BuildTrigger` by its project ID and trigger ID.
-      ///
-      /// This API is experimental.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -1219,8 +1207,6 @@ namespace Google.Cloud.CloudBuild.V1 {
       }
       /// <summary>
       /// Deletes a `BuildTrigger` by its project ID and trigger ID.
-      ///
-      /// This API is experimental.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -1232,8 +1218,6 @@ namespace Google.Cloud.CloudBuild.V1 {
       }
       /// <summary>
       /// Deletes a `BuildTrigger` by its project ID and trigger ID.
-      ///
-      /// This API is experimental.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -1247,8 +1231,6 @@ namespace Google.Cloud.CloudBuild.V1 {
       }
       /// <summary>
       /// Deletes a `BuildTrigger` by its project ID and trigger ID.
-      ///
-      /// This API is experimental.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -1260,8 +1242,6 @@ namespace Google.Cloud.CloudBuild.V1 {
       }
       /// <summary>
       /// Updates a `BuildTrigger` by its project ID and trigger ID.
-      ///
-      /// This API is experimental.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -1275,8 +1255,6 @@ namespace Google.Cloud.CloudBuild.V1 {
       }
       /// <summary>
       /// Updates a `BuildTrigger` by its project ID and trigger ID.
-      ///
-      /// This API is experimental.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -1288,8 +1266,6 @@ namespace Google.Cloud.CloudBuild.V1 {
       }
       /// <summary>
       /// Updates a `BuildTrigger` by its project ID and trigger ID.
-      ///
-      /// This API is experimental.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -1303,8 +1279,6 @@ namespace Google.Cloud.CloudBuild.V1 {
       }
       /// <summary>
       /// Updates a `BuildTrigger` by its project ID and trigger ID.
-      ///
-      /// This API is experimental.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -1678,6 +1652,54 @@ namespace Google.Cloud.CloudBuild.V1 {
       {
         return CallInvoker.AsyncUnaryCall(__Method_ListWorkerPools, null, options, request);
       }
+      /// <summary>
+      /// Returns the `DefaultServiceAccount` used by the project.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.CloudBuild.V1.DefaultServiceAccount GetDefaultServiceAccount(global::Google.Cloud.CloudBuild.V1.GetDefaultServiceAccountRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return GetDefaultServiceAccount(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Returns the `DefaultServiceAccount` used by the project.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.CloudBuild.V1.DefaultServiceAccount GetDefaultServiceAccount(global::Google.Cloud.CloudBuild.V1.GetDefaultServiceAccountRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_GetDefaultServiceAccount, null, options, request);
+      }
+      /// <summary>
+      /// Returns the `DefaultServiceAccount` used by the project.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.CloudBuild.V1.DefaultServiceAccount> GetDefaultServiceAccountAsync(global::Google.Cloud.CloudBuild.V1.GetDefaultServiceAccountRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return GetDefaultServiceAccountAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Returns the `DefaultServiceAccount` used by the project.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.CloudBuild.V1.DefaultServiceAccount> GetDefaultServiceAccountAsync(global::Google.Cloud.CloudBuild.V1.GetDefaultServiceAccountRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_GetDefaultServiceAccount, null, options, request);
+      }
       /// <summary>Creates a new instance of client from given <c>ClientBaseConfiguration</c>.</summary>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       protected override CloudBuildClient NewInstance(ClientBaseConfiguration configuration)
@@ -1709,7 +1731,8 @@ namespace Google.Cloud.CloudBuild.V1 {
           .AddMethod(__Method_GetWorkerPool, serviceImpl.GetWorkerPool)
           .AddMethod(__Method_DeleteWorkerPool, serviceImpl.DeleteWorkerPool)
           .AddMethod(__Method_UpdateWorkerPool, serviceImpl.UpdateWorkerPool)
-          .AddMethod(__Method_ListWorkerPools, serviceImpl.ListWorkerPools).Build();
+          .AddMethod(__Method_ListWorkerPools, serviceImpl.ListWorkerPools)
+          .AddMethod(__Method_GetDefaultServiceAccount, serviceImpl.GetDefaultServiceAccount).Build();
     }
 
     /// <summary>Register service method with a service binder with or without implementation. Useful when customizing the service binding logic.
@@ -1737,6 +1760,7 @@ namespace Google.Cloud.CloudBuild.V1 {
       serviceBinder.AddMethod(__Method_DeleteWorkerPool, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.CloudBuild.V1.DeleteWorkerPoolRequest, global::Google.LongRunning.Operation>(serviceImpl.DeleteWorkerPool));
       serviceBinder.AddMethod(__Method_UpdateWorkerPool, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.CloudBuild.V1.UpdateWorkerPoolRequest, global::Google.LongRunning.Operation>(serviceImpl.UpdateWorkerPool));
       serviceBinder.AddMethod(__Method_ListWorkerPools, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.CloudBuild.V1.ListWorkerPoolsRequest, global::Google.Cloud.CloudBuild.V1.ListWorkerPoolsResponse>(serviceImpl.ListWorkerPools));
+      serviceBinder.AddMethod(__Method_GetDefaultServiceAccount, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.CloudBuild.V1.GetDefaultServiceAccountRequest, global::Google.Cloud.CloudBuild.V1.DefaultServiceAccount>(serviceImpl.GetDefaultServiceAccount));
     }
 
   }

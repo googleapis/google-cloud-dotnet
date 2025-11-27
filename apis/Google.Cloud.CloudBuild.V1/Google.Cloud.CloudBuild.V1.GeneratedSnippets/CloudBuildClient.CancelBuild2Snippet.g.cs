@@ -16,13 +16,12 @@
 
 namespace GoogleCSharpSnippets
 {
-    // [START cloudbuild_v1_generated_CloudBuild_GetBuildTrigger_async_flattened]
+    // [START cloudbuild_v1_generated_CloudBuild_CancelBuild_sync_flattened2]
     using Google.Cloud.CloudBuild.V1;
-    using System.Threading.Tasks;
 
     public sealed partial class GeneratedCloudBuildClientSnippets
     {
-        /// <summary>Snippet for GetBuildTriggerAsync</summary>
+        /// <summary>Snippet for CancelBuild</summary>
         /// <remarks>
         /// This snippet has been automatically generated and should be regarded as a code template only.
         /// It will require modifications to work:
@@ -30,16 +29,15 @@ namespace GoogleCSharpSnippets
         /// - It may require specifying regional endpoints when creating the service client as shown in
         ///   https://cloud.google.com/dotnet/docs/reference/help/client-configuration#endpoint.
         /// </remarks>
-        public async Task GetBuildTriggerAsync()
+        public void CancelBuild2()
         {
             // Create client
-            CloudBuildClient cloudBuildClient = await CloudBuildClient.CreateAsync();
+            CloudBuildClient cloudBuildClient = CloudBuildClient.Create();
             // Initialize request argument(s)
-            string projectId = "";
-            string triggerId = "";
+            string name = "projects/[PROJECT]/builds/[BUILD]";
             // Make the request
-            BuildTrigger response = await cloudBuildClient.GetBuildTriggerAsync(projectId, triggerId);
+            Build response = cloudBuildClient.CancelBuild(name);
         }
     }
-    // [END cloudbuild_v1_generated_CloudBuild_GetBuildTrigger_async_flattened]
+    // [END cloudbuild_v1_generated_CloudBuild_CancelBuild_sync_flattened2]
 }

@@ -16,12 +16,12 @@
 
 namespace GoogleCSharpSnippets
 {
-    // [START cloudbuild_v1_generated_CloudBuild_CreateBuildTrigger_sync_flattened]
+    // [START cloudbuild_v1_generated_CloudBuild_GetBuildTrigger_sync_flattened2]
     using Google.Cloud.CloudBuild.V1;
 
     public sealed partial class GeneratedCloudBuildClientSnippets
     {
-        /// <summary>Snippet for CreateBuildTrigger</summary>
+        /// <summary>Snippet for GetBuildTrigger</summary>
         /// <remarks>
         /// This snippet has been automatically generated and should be regarded as a code template only.
         /// It will require modifications to work:
@@ -29,16 +29,15 @@ namespace GoogleCSharpSnippets
         /// - It may require specifying regional endpoints when creating the service client as shown in
         ///   https://cloud.google.com/dotnet/docs/reference/help/client-configuration#endpoint.
         /// </remarks>
-        public void CreateBuildTrigger()
+        public void GetBuildTrigger2()
         {
             // Create client
             CloudBuildClient cloudBuildClient = CloudBuildClient.Create();
             // Initialize request argument(s)
-            string projectId = "";
-            BuildTrigger trigger = new BuildTrigger();
+            string name = "projects/[PROJECT]/triggers/[TRIGGER]";
             // Make the request
-            BuildTrigger response = cloudBuildClient.CreateBuildTrigger(projectId, trigger);
+            BuildTrigger response = cloudBuildClient.GetBuildTrigger(name);
         }
     }
-    // [END cloudbuild_v1_generated_CloudBuild_CreateBuildTrigger_sync_flattened]
+    // [END cloudbuild_v1_generated_CloudBuild_GetBuildTrigger_sync_flattened2]
 }
