@@ -173,7 +173,7 @@ namespace Google.Cloud.Spanner.Data
                 switch (CommandTextBuilder.SpannerCommandType)
                 {
                     case SpannerCommandType.Ddl:
-                        return ExecuteDdlAsync(pollUntilCompleted: true, cancellationToken).ContinueWith(_ => 0, TaskContinuationOptions.ExecuteSynchronously);
+                        return ExecuteDdlAsync(cancellationToken);
                     case SpannerCommandType.Delete:
                     case SpannerCommandType.Insert:
                     case SpannerCommandType.InsertOrUpdate:
@@ -233,6 +233,12 @@ namespace Google.Cloud.Spanner.Data
                 IDisposable resourceToClose = (behavior & CommandBehavior.CloseConnection) == CommandBehavior.CloseConnection ? Connection : null;
 
                 return new SpannerDataReader(Connection.Logger, resultSet, Transaction?.ReadTimestamp, resourceToClose, ConversionOptions, enableGetSchemaTable, CommandTimeout);
+            }
+
+            private async Task<int> ExecuteDdlAsync(CancellationToken cancellationToken)
+            {
+                await ExecuteDdlAsync(pollUntilCompleted: true, cancellationToken).ConfigureAwait(false);
+                return 0;
             }
 
             internal async Task<Operation> ExecuteDdlAsync(bool pollUntilCompleted, CancellationToken cancellationToken)
