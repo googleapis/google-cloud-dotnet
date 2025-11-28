@@ -17,6 +17,7 @@ using Google.Api.Gax.Grpc;
 using Google.Cloud.Spanner.Admin.Database.V1;
 using Google.Cloud.Spanner.Common.V1;
 using Google.Cloud.Spanner.V1;
+using Google.LongRunning;
 using Google.Protobuf;
 using Google.Protobuf.WellKnownTypes;
 using Grpc.Core;
@@ -236,9 +237,16 @@ namespace Google.Cloud.Spanner.Data
 
             private async Task<int> ExecuteDdlAsync(CancellationToken cancellationToken)
             {
+                await ExecuteDdlAsync(pollUntilCompleted: true, cancellationToken).ConfigureAwait(false);
+                return 0;
+            }
+
+            internal async Task<Operation> ExecuteDdlAsync(bool pollUntilCompleted, CancellationToken cancellationToken)
+            {
                 string commandText = CommandTextBuilder.CommandText;
                 var builder = Connection.Builder;
                 var connectionOptions = new SpannerClientCreationOptions(builder);
+                Operation operation = null;
 
                 // Create the builder separately from actually building, so we can note the channel that it created.
                 // (This is fairly unpleasant, but we'll try to improve this in the next version of GAX.)
@@ -258,7 +266,11 @@ namespace Google.Cloud.Spanner.Data
                             ProtoDescriptors = CommandTextBuilder.ProtobufDescriptors?.ToByteString() ?? ByteString.Empty,
                         };
                         var response = await databaseAdminClient.CreateDatabaseAsync(request).ConfigureAwait(false);
-                        response = await response.PollUntilCompletedAsync().ConfigureAwait(false);
+                        operation = response.RpcMessage;
+                        if (pollUntilCompleted)
+                        {
+                            response = await response.PollUntilCompletedAsync().ConfigureAwait(false);
+                        }
                         if (response.IsFaulted)
                         {
                             throw SpannerException.FromOperationFailedException(response.Exception);
@@ -295,7 +307,11 @@ namespace Google.Cloud.Spanner.Data
                         };
 
                         var response = await databaseAdminClient.UpdateDatabaseDdlAsync(request).ConfigureAwait(false);
-                        response = await response.PollUntilCompletedAsync().ConfigureAwait(false);
+                        operation = response.RpcMessage;
+                        if (pollUntilCompleted)
+                        {
+                            response = await response.PollUntilCompletedAsync().ConfigureAwait(false);
+                        }
                         if (response.IsFaulted)
                         {
                             throw SpannerException.FromOperationFailedException(response.Exception);
@@ -312,7 +328,7 @@ namespace Google.Cloud.Spanner.Data
                     channel?.Shutdown();
                 }
 
-                return 0;
+                return operation;
             }
 
             private async Task<int> ExecuteMutationsAsync(CancellationToken cancellationToken)
